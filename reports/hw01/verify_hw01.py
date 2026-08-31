@@ -186,7 +186,8 @@ def validate_pdf(path: Path) -> tuple[bool, str]:
         return False, "Missing PDF version header"
     if len(data) < 1024:
         return False, "PDF is unexpectedly small"
-    if b"/Type/Page" not in data:
+    page_objects = re.findall(rb"/Type\s*/Page\b", data)
+    if not page_objects:
         return False, "PDF contains no page objects"
 
     trailer = re.search(rb"startxref\s+(\d+)\s+%%EOF\s*$", data)
@@ -196,7 +197,7 @@ def validate_pdf(path: Path) -> tuple[bool, str]:
     if xref_offset >= len(data) or data[xref_offset : xref_offset + 4] != b"xref":
         return False, "PDF cross-reference offset is invalid"
 
-    page_count = data.count(b"/Type/Page") - data.count(b"/Type/Pages")
+    page_count = len(page_objects)
     return True, f"PDF structure is valid; {page_count} page objects found"
 
 
