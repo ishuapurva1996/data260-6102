@@ -115,43 +115,6 @@ MARKDOWN_REQUIREMENTS: dict[str, tuple[Path, MarkdownChecks]] = {
             ),
         ),
     ),
-    "PART2.md": (
-        HW_DIR / "PART2.md",
-        (
-            ("configuration section", r"^## Configuration$"),
-            ("exact-command section", r"^## Exact command$"),
-            ("console-evidence section", r"^## Console evidence$"),
-            ("short-answers section", r"^## Short answers$"),
-            ("step explanation", r"^## Step-by-step explanation$"),
-            ("reproduction section", r"^## Reproduction instructions$"),
-            ("verification section", r"^## Verification$"),
-        ),
-    ),
-    "PART4.md": (
-        HW_DIR / "PART4.md",
-        (
-            ("implementation section", r"^## Implementation$"),
-            ("recorded-command section", r"^## Recorded command$"),
-            ("token-results section", r"^## Recorded token results$"),
-            ("required-explanations section", r"^## Required explanations$"),
-            (
-                "prior-context explanation",
-                r"^### Why is prior conversation context resent with every turn\?$",
-            ),
-            (
-                "system-prompt explanation",
-                r"^### How is a system prompt different from a user message\?$",
-            ),
-            (
-                "input-token explanation",
-                r"^### Why do input tokens grow during a conversation\?$",
-            ),
-            (
-                "growth-limit explanation",
-                r"^### What eventually limits that growth\?$",
-            ),
-        ),
-    ),
 }
 
 
@@ -175,8 +138,6 @@ def _required_files() -> dict[str, Path]:
         "Part 4 token counts": HW_DIR / "raw" / "part4_token_counts.json",
         "AI disclosure": HW_DIR / "AI_USE.md",
         "Part 3 metrics": HW_DIR / "METRICS.md",
-        "Part 2 guide": HW_DIR / "PART2.md",
-        "Part 4 guide": HW_DIR / "PART4.md",
         "reproducible instructions": HW_DIR / "REPRODUCIBLE_RUN_INSTRUCTIONS.md",
         "report": HW_DIR / "report.pdf",
     }
@@ -209,7 +170,7 @@ def validate_markdown_deliverables(
     if problems:
         return False, "; ".join(problems)
     if using_default_manifest:
-        return True, "All 5 required and 2 supporting Markdown files have the expected structure"
+        return True, "All 5 assignment-required Markdown files have the expected structure"
     return True, f"All {len(selected)} supplied Markdown files have the expected structure"
 
 

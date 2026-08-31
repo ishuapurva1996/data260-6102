@@ -16,7 +16,7 @@ class VerificationTests(unittest.TestCase):
         passed, detail = verify_hw01.validate_markdown_deliverables()
 
         self.assertTrue(passed, detail)
-        self.assertIn("5 required and 2 supporting Markdown files", detail)
+        self.assertIn("5 assignment-required Markdown files", detail)
 
         markdown_paths = {
             path for path, _checks in verify_hw01.MARKDOWN_REQUIREMENTS.values()
@@ -87,18 +87,18 @@ class VerificationTests(unittest.TestCase):
         self.assertIn("acceptable-variation example", detail)
 
         with tempfile.TemporaryDirectory() as directory:
-            missing = Path(directory) / "PART2.md"
+            missing = Path(directory) / "README.md"
             requirements = {
-                "PART2.md": (
+                "README.md": (
                     missing,
-                    (("configuration section", r"^## Configuration$"),),
+                    (("Part 1 heading", r"^## Part 1 - Web application$"),),
                 )
             }
 
             passed, detail = verify_hw01.validate_markdown_deliverables(requirements)
 
         self.assertFalse(passed)
-        self.assertIn("PART2.md", detail)
+        self.assertIn("README.md", detail)
         self.assertIn("could not read file", detail)
 
 

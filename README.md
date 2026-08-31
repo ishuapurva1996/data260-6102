@@ -42,8 +42,6 @@ data260-6102/
 - `reports/hw01/raw/` - Part 2 output, all 40 Part 3 runs, and Part 4 token counts
 - `reports/hw01/METRICS.md` - Part 3 tables and interpretation
 - `reports/hw01/AI_USE.md` - required AI-assistant disclosure
-- `reports/hw01/PART2.md` - Part 2 command, answers, screenshots, and explanation
-- `reports/hw01/PART4.md` - Part 4 implementation, token results, and explanations
 - `AGENT.md` - strict bullet-only code-review instructions for Part 4
 - `reports/hw01/verification.json` - generated self-check result
 - `reports/hw01/REPRODUCIBLE_RUN_INSTRUCTIONS.md` - commands for reproducing all four parts
@@ -77,7 +75,7 @@ Run from the repository root:
 python code/agents_demo.py --title "Modern Two-Bedroom Apartment Near Downtown San Jose" --content "Bright two-bedroom apartment with in-unit laundry, covered parking, pet-friendly policies, and convenient light rail access near downtown San Jose." --model qwen3:1.7b --temperature 0.0
 ```
 
-The Planner response is passed to the Reviewer in its raw form. The deterministic Python Finalizer then parses, normalizes, validates, and publishes exactly three input-derived tags plus a summary of at most 25 words. More detail is in [`reports/hw01/PART2.md`](reports/hw01/PART2.md).
+The Planner response is passed to the Reviewer in its raw form. The deterministic Python Finalizer then parses, normalizes, validates, and publishes exactly three input-derived tags plus a summary of at most 25 words. The exact recorded output and explanation are in `reports/hw01/report.pdf` and `reports/hw01/RUN_LOG.txt`.
 
 ## Part 3 - Non-determinism experiment
 

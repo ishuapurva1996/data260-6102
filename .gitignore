@@ -207,6 +207,13 @@ tempCodeRunnerFile.py
 .DS_Store
 tmp/
 reports/hw01/drafts/
+reports/hw01/raw/*.tmp
+
+# Local editor settings and swap files
+.idea/
+.vscode/
+*.swp
+*.swo
 
 # Ruff stuff:
 .ruff_cache/
