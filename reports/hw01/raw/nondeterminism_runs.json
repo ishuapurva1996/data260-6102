@@ -1,0 +1,804 @@
+{
+  "schema_version": 1,
+  "experiment": "DATA 260 HW1 Part 3 - Measuring Non-Determinism",
+  "started_at": "2026-08-31T02:05:20.084501Z",
+  "completed_at": "2026-08-31T02:23:34.327966Z",
+  "status": "complete",
+  "model": "qwen3:1.7b",
+  "base_url": "http://localhost:11434",
+  "timeout": 120.0,
+  "runs_per_temperature": 20,
+  "temperature_order": [
+    0.7,
+    0.0
+  ],
+  "input": {
+    "title": "Modern Two-Bedroom Apartment Near Downtown San Jose",
+    "content": "Bright two-bedroom apartment with in-unit laundry, covered parking, pet-friendly policies, and convenient light rail access near downtown San Jose.",
+    "email": "student@example.com"
+  },
+  "runs": {
+    "0.7": [
+      {
+        "attempt": 1,
+        "run": 1,
+        "status": "ok",
+        "started_at": "2026-08-31T02:05:20.446894Z",
+        "tags": [
+          "near downtown san",
+          "downtown san jose",
+          "modern two-bedroom apartment"
+        ],
+        "summary": "Bright two-bedroom apartment with in-unit laundry, covered parking, pet-friendly policies, and convenient light rail access near downtown San Jose.",
+        "reviewer_changed": true,
+        "latency_ms": {
+          "planner": 10288,
+          "reviewer": 8852,
+          "total": 19140
+        }
+      },
+      {
+        "attempt": 2,
+        "status": "error",
+        "started_at": "2026-08-31T02:05:39.587492Z",
+        "elapsed_ms": 35142,
+        "error": "ValueError: Reviewer reported unresolved issues; refusing to create publish output: Tags are distinct and align with content"
+      },
+      {
+        "attempt": 3,
+        "run": 2,
+        "status": "ok",
+        "started_at": "2026-08-31T02:06:14.730517Z",
+        "tags": [
+          "modern two-bedroom apartment",
+          "pet-friendly",
+          "light rail access"
+        ],
+        "summary": "Modern two-bedroom apartment near downtown San Jose with pet-friendly policies and light rail access.",
+        "reviewer_changed": false,
+        "latency_ms": {
+          "planner": 7735,
+          "reviewer": 39900,
+          "total": 47635
+        }
+      },
+      {
+        "attempt": 4,
+        "run": 3,
+        "status": "ok",
+        "started_at": "2026-08-31T02:07:02.368346Z",
+        "tags": [
+          "modern two-bedroom apartment",
+          "downtown san jose",
+          "in-unit laundry & light rail"
+        ],
+        "summary": "Modern two-bedroom apartment in downtown San Jose with in-unit laundry, covered parking, and light rail access.",
+        "reviewer_changed": false,
+        "latency_ms": {
+          "planner": 12076,
+          "reviewer": 10620,
+          "total": 22696
+        }
+      },
+      {
+        "attempt": 5,
+        "run": 4,
+        "status": "ok",
+        "started_at": "2026-08-31T02:07:25.066462Z",
+        "tags": [
+          "near downtown san",
+          "downtown san jose",
+          "modern two-bedroom apartment"
+        ],
+        "summary": "Bright two-bedroom apartment with in-unit laundry, covered parking, pet-friendly policies, and convenient light rail access near downtown San Jose.",
+        "reviewer_changed": true,
+        "latency_ms": {
+          "planner": 9485,
+          "reviewer": 7917,
+          "total": 17402
+        }
+      },
+      {
+        "attempt": 6,
+        "run": 5,
+        "status": "ok",
+        "started_at": "2026-08-31T02:07:42.470789Z",
+        "tags": [
+          "modern",
+          "near downtown san",
+          "downtown san jose"
+        ],
+        "summary": "A modern two-bedroom apartment in downtown San Jose offers light rail access, in-unit laundry, pet-friendly policies, and covered parking.",
+        "reviewer_changed": false,
+        "latency_ms": {
+          "planner": 16266,
+          "reviewer": 10951,
+          "total": 27217
+        }
+      },
+      {
+        "attempt": 7,
+        "run": 6,
+        "status": "ok",
+        "started_at": "2026-08-31T02:08:09.692506Z",
+        "tags": [
+          "near downtown san",
+          "downtown san jose",
+          "modern two-bedroom apartment"
+        ],
+        "summary": "Bright two-bedroom apartment with in-unit laundry, covered parking, pet-friendly policies, and convenient light rail access near downtown San Jose.",
+        "reviewer_changed": true,
+        "latency_ms": {
+          "planner": 9888,
+          "reviewer": 7139,
+          "total": 17027
+        }
+      },
+      {
+        "attempt": 8,
+        "run": 7,
+        "status": "ok",
+        "started_at": "2026-08-31T02:08:26.721393Z",
+        "tags": [
+          "modern two-bedroom apartment",
+          "convenient light rail access",
+          "pet-friendly policies"
+        ],
+        "summary": "Modern two-bedroom apartment near downtown San Jose with in-unit laundry, pet-friendly policies, and light rail access.",
+        "reviewer_changed": false,
+        "latency_ms": {
+          "planner": 8740,
+          "reviewer": 17178,
+          "total": 25918
+        }
+      },
+      {
+        "attempt": 9,
+        "run": 8,
+        "status": "ok",
+        "started_at": "2026-08-31T02:08:52.642124Z",
+        "tags": [
+          "modern two-bedroom apartment",
+          "downtown san jose",
+          "pet-friendly policies"
+        ],
+        "summary": "Modern two-bedroom apartment in downtown San Jose, pet-friendly, and light rail access.",
+        "reviewer_changed": true,
+        "latency_ms": {
+          "planner": 12489,
+          "reviewer": 26566,
+          "total": 39055
+        }
+      },
+      {
+        "attempt": 10,
+        "run": 9,
+        "status": "ok",
+        "started_at": "2026-08-31T02:09:31.699239Z",
+        "tags": [
+          "modern two-bedroom apartment",
+          "pet-friendly and light rail access",
+          "near downtown san"
+        ],
+        "summary": "Modern two-bedroom apartment in downtown San Jose with in-unit laundry, pet-friendly, and light rail access.",
+        "reviewer_changed": false,
+        "latency_ms": {
+          "planner": 9247,
+          "reviewer": 21551,
+          "total": 30798
+        }
+      },
+      {
+        "attempt": 11,
+        "run": 10,
+        "status": "ok",
+        "started_at": "2026-08-31T02:10:02.499631Z",
+        "tags": [
+          "modern two-bedroom apartment",
+          "pet-friendly",
+          "light rail access"
+        ],
+        "summary": "Modern two-bedroom apartment with pet-friendly policy and light rail access near downtown San Jose.",
+        "reviewer_changed": false,
+        "latency_ms": {
+          "planner": 8333,
+          "reviewer": 10993,
+          "total": 19326
+        }
+      },
+      {
+        "attempt": 12,
+        "run": 11,
+        "status": "ok",
+        "started_at": "2026-08-31T02:10:21.828118Z",
+        "tags": [
+          "modern two-bedroom apartment",
+          "light rail access",
+          "near downtown san"
+        ],
+        "summary": "Modern two-bedroom apartment in downtown San Jose offers light rail access and pet-friendly policies.",
+        "reviewer_changed": false,
+        "latency_ms": {
+          "planner": 8760,
+          "reviewer": 15331,
+          "total": 24091
+        }
+      },
+      {
+        "attempt": 13,
+        "run": 12,
+        "status": "ok",
+        "started_at": "2026-08-31T02:10:45.923316Z",
+        "tags": [
+          "modern two-bedroom apartment",
+          "downtown san jose",
+          "pet-friendly"
+        ],
+        "summary": "Modern two-bedroom apartment in downtown San Jose with pet-friendly policies and light rail access.",
+        "reviewer_changed": false,
+        "latency_ms": {
+          "planner": 9603,
+          "reviewer": 9222,
+          "total": 18825
+        }
+      },
+      {
+        "attempt": 14,
+        "run": 13,
+        "status": "ok",
+        "started_at": "2026-08-31T02:11:04.750609Z",
+        "tags": [
+          "modern two-bedroom apartment",
+          "near downtown san jose",
+          "pet-friendly"
+        ],
+        "summary": "Modern two-bedroom apartment near downtown San Jose with pet-friendly policies and light rail access.",
+        "reviewer_changed": true,
+        "latency_ms": {
+          "planner": 8109,
+          "reviewer": 13174,
+          "total": 21283
+        }
+      },
+      {
+        "attempt": 15,
+        "run": 14,
+        "status": "ok",
+        "started_at": "2026-08-31T02:11:26.035410Z",
+        "tags": [
+          "near downtown san",
+          "downtown san jose",
+          "modern two-bedroom apartment"
+        ],
+        "summary": "Modern two-bedroom apartment in downtown San Jose with in-unit laundry, pet-friendly, and light rail access.",
+        "reviewer_changed": false,
+        "latency_ms": {
+          "planner": 13231,
+          "reviewer": 9714,
+          "total": 22945
+        }
+      },
+      {
+        "attempt": 16,
+        "run": 15,
+        "status": "ok",
+        "started_at": "2026-08-31T02:11:48.982755Z",
+        "tags": [
+          "near downtown san",
+          "downtown san jose",
+          "modern two-bedroom apartment"
+        ],
+        "summary": "Bright two-bedroom apartment with in-unit laundry, covered parking, pet-friendly policies, and convenient light rail access near downtown San Jose.",
+        "reviewer_changed": true,
+        "latency_ms": {
+          "planner": 9481,
+          "reviewer": 11109,
+          "total": 20590
+        }
+      },
+      {
+        "attempt": 17,
+        "status": "error",
+        "started_at": "2026-08-31T02:12:09.575275Z",
+        "elapsed_ms": 22881,
+        "error": "ValueError: Reviewer reported unresolved issues; refusing to create publish output: Tags must be distinct and reflect content; Summary must be concise and accurate"
+      },
+      {
+        "attempt": 18,
+        "run": 16,
+        "status": "ok",
+        "started_at": "2026-08-31T02:12:32.457516Z",
+        "tags": [
+          "modern two-bedroom apartment",
+          "downtown san jose light rail",
+          "pet-friendly policies"
+        ],
+        "summary": "Modern two-bedroom apartment in downtown San Jose with light rail access and pet-friendly policies.",
+        "reviewer_changed": false,
+        "latency_ms": {
+          "planner": 9956,
+          "reviewer": 11499,
+          "total": 21455
+        }
+      },
+      {
+        "attempt": 19,
+        "run": 17,
+        "status": "ok",
+        "started_at": "2026-08-31T02:12:53.915468Z",
+        "tags": [
+          "near downtown san",
+          "downtown san jose",
+          "modern two-bedroom apartment"
+        ],
+        "summary": "Bright two-bedroom apartment with in-unit laundry, covered parking, pet-friendly policies, and convenient light rail access near downtown San Jose.",
+        "reviewer_changed": true,
+        "latency_ms": {
+          "planner": 11294,
+          "reviewer": 8846,
+          "total": 20140
+        }
+      },
+      {
+        "attempt": 20,
+        "run": 18,
+        "status": "ok",
+        "started_at": "2026-08-31T02:13:14.058069Z",
+        "tags": [
+          "modern two-bedroom apartment",
+          "downtown san jose",
+          "pet-friendly"
+        ],
+        "summary": "Modern two-bedroom apartment in downtown San Jose with pet-friendly policies and light rail access.",
+        "reviewer_changed": true,
+        "latency_ms": {
+          "planner": 10143,
+          "reviewer": 45506,
+          "total": 55649
+        }
+      },
+      {
+        "attempt": 21,
+        "run": 19,
+        "status": "ok",
+        "started_at": "2026-08-31T02:14:09.710789Z",
+        "tags": [
+          "near downtown san",
+          "downtown san jose",
+          "modern two-bedroom apartment"
+        ],
+        "summary": "Bright two-bedroom apartment with in-unit laundry, covered parking, pet-friendly policies, and convenient light rail access near downtown San Jose.",
+        "reviewer_changed": true,
+        "latency_ms": {
+          "planner": 13244,
+          "reviewer": 14712,
+          "total": 27956
+        }
+      },
+      {
+        "attempt": 22,
+        "run": 20,
+        "status": "ok",
+        "started_at": "2026-08-31T02:14:37.668785Z",
+        "tags": [
+          "modern apartment",
+          "pet-friendly with parking",
+          "near downtown san"
+        ],
+        "summary": "Modern two-bedroom apartment in downtown San Jose with in-unit laundry, pet-friendly policies, and covered parking.",
+        "reviewer_changed": false,
+        "latency_ms": {
+          "planner": 8165,
+          "reviewer": 18123,
+          "total": 26288
+        }
+      }
+    ],
+    "0.0": [
+      {
+        "attempt": 1,
+        "run": 1,
+        "status": "ok",
+        "started_at": "2026-08-31T02:15:35.074793Z",
+        "tags": [
+          "modern two-bedroom apartment",
+          "pet-friendly",
+          "light rail access"
+        ],
+        "summary": "Modern two-bedroom apartment near downtown San Jose with pet-friendly policies and light rail access.",
+        "reviewer_changed": false,
+        "latency_ms": {
+          "planner": 6582,
+          "reviewer": 12780,
+          "total": 19362
+        }
+      },
+      {
+        "attempt": 2,
+        "run": 2,
+        "status": "ok",
+        "started_at": "2026-08-31T02:15:54.437109Z",
+        "tags": [
+          "modern two-bedroom apartment",
+          "pet-friendly",
+          "downtown san jose"
+        ],
+        "summary": "Modern two-bedroom apartment in downtown San Jose with pet-friendly policies and light rail access.",
+        "reviewer_changed": true,
+        "latency_ms": {
+          "planner": 6025,
+          "reviewer": 9440,
+          "total": 15465
+        }
+      },
+      {
+        "attempt": 3,
+        "run": 3,
+        "status": "ok",
+        "started_at": "2026-08-31T02:16:09.902749Z",
+        "tags": [
+          "modern two-bedroom apartment",
+          "pet-friendly",
+          "downtown san jose"
+        ],
+        "summary": "Modern two-bedroom apartment in downtown San Jose with pet-friendly policies and light rail access.",
+        "reviewer_changed": true,
+        "latency_ms": {
+          "planner": 6047,
+          "reviewer": 9084,
+          "total": 15131
+        }
+      },
+      {
+        "attempt": 4,
+        "run": 4,
+        "status": "ok",
+        "started_at": "2026-08-31T02:16:25.034578Z",
+        "tags": [
+          "modern two-bedroom apartment",
+          "pet-friendly",
+          "downtown san jose"
+        ],
+        "summary": "Modern two-bedroom apartment in downtown San Jose with pet-friendly policies and light rail access.",
+        "reviewer_changed": true,
+        "latency_ms": {
+          "planner": 6713,
+          "reviewer": 9868,
+          "total": 16581
+        }
+      },
+      {
+        "attempt": 5,
+        "run": 5,
+        "status": "ok",
+        "started_at": "2026-08-31T02:16:41.617689Z",
+        "tags": [
+          "modern two-bedroom apartment",
+          "pet-friendly",
+          "downtown san jose"
+        ],
+        "summary": "Modern two-bedroom apartment in downtown San Jose with pet-friendly policies and light rail access.",
+        "reviewer_changed": true,
+        "latency_ms": {
+          "planner": 6902,
+          "reviewer": 10952,
+          "total": 17854
+        }
+      },
+      {
+        "attempt": 6,
+        "run": 6,
+        "status": "ok",
+        "started_at": "2026-08-31T02:16:59.474000Z",
+        "tags": [
+          "modern two-bedroom apartment",
+          "pet-friendly",
+          "downtown san jose"
+        ],
+        "summary": "Modern two-bedroom apartment in downtown San Jose with pet-friendly policies and light rail access.",
+        "reviewer_changed": true,
+        "latency_ms": {
+          "planner": 8067,
+          "reviewer": 13294,
+          "total": 21361
+        }
+      },
+      {
+        "attempt": 7,
+        "run": 7,
+        "status": "ok",
+        "started_at": "2026-08-31T02:17:20.838299Z",
+        "tags": [
+          "modern two-bedroom apartment",
+          "pet-friendly",
+          "downtown san jose"
+        ],
+        "summary": "Modern two-bedroom apartment in downtown San Jose with pet-friendly policies and light rail access.",
+        "reviewer_changed": true,
+        "latency_ms": {
+          "planner": 9728,
+          "reviewer": 15042,
+          "total": 24770
+        }
+      },
+      {
+        "attempt": 8,
+        "run": 8,
+        "status": "ok",
+        "started_at": "2026-08-31T02:17:45.610888Z",
+        "tags": [
+          "modern two-bedroom apartment",
+          "pet-friendly",
+          "downtown san jose"
+        ],
+        "summary": "Modern two-bedroom apartment in downtown San Jose with pet-friendly policies and light rail access.",
+        "reviewer_changed": true,
+        "latency_ms": {
+          "planner": 10503,
+          "reviewer": 15592,
+          "total": 26095
+        }
+      },
+      {
+        "attempt": 9,
+        "run": 9,
+        "status": "ok",
+        "started_at": "2026-08-31T02:18:11.708372Z",
+        "tags": [
+          "modern two-bedroom apartment",
+          "pet-friendly",
+          "downtown san jose"
+        ],
+        "summary": "Modern two-bedroom apartment in downtown San Jose with pet-friendly policies and light rail access.",
+        "reviewer_changed": true,
+        "latency_ms": {
+          "planner": 9094,
+          "reviewer": 8643,
+          "total": 17737
+        }
+      },
+      {
+        "attempt": 10,
+        "run": 10,
+        "status": "ok",
+        "started_at": "2026-08-31T02:19:55.313294Z",
+        "tags": [
+          "modern two-bedroom apartment",
+          "pet-friendly",
+          "downtown san jose"
+        ],
+        "summary": "Modern two-bedroom apartment in downtown San Jose with pet-friendly policies and light rail access.",
+        "reviewer_changed": true,
+        "latency_ms": {
+          "planner": 5791,
+          "reviewer": 8801,
+          "total": 14592
+        }
+      },
+      {
+        "attempt": 11,
+        "run": 11,
+        "status": "ok",
+        "started_at": "2026-08-31T02:20:09.905617Z",
+        "tags": [
+          "modern two-bedroom apartment",
+          "pet-friendly",
+          "downtown san jose"
+        ],
+        "summary": "Modern two-bedroom apartment in downtown San Jose with pet-friendly policies and light rail access.",
+        "reviewer_changed": true,
+        "latency_ms": {
+          "planner": 5900,
+          "reviewer": 8798,
+          "total": 14698
+        }
+      },
+      {
+        "attempt": 12,
+        "run": 12,
+        "status": "ok",
+        "started_at": "2026-08-31T02:20:24.604135Z",
+        "tags": [
+          "modern two-bedroom apartment",
+          "pet-friendly",
+          "downtown san jose"
+        ],
+        "summary": "Modern two-bedroom apartment in downtown San Jose with pet-friendly policies and light rail access.",
+        "reviewer_changed": true,
+        "latency_ms": {
+          "planner": 5943,
+          "reviewer": 9034,
+          "total": 14977
+        }
+      },
+      {
+        "attempt": 13,
+        "run": 13,
+        "status": "ok",
+        "started_at": "2026-08-31T02:20:39.582994Z",
+        "tags": [
+          "modern two-bedroom apartment",
+          "pet-friendly",
+          "downtown san jose"
+        ],
+        "summary": "Modern two-bedroom apartment in downtown San Jose with pet-friendly policies and light rail access.",
+        "reviewer_changed": true,
+        "latency_ms": {
+          "planner": 6697,
+          "reviewer": 9994,
+          "total": 16691
+        }
+      },
+      {
+        "attempt": 14,
+        "run": 14,
+        "status": "ok",
+        "started_at": "2026-08-31T02:20:56.275867Z",
+        "tags": [
+          "modern two-bedroom apartment",
+          "pet-friendly",
+          "downtown san jose"
+        ],
+        "summary": "Modern two-bedroom apartment in downtown San Jose with pet-friendly policies and light rail access.",
+        "reviewer_changed": true,
+        "latency_ms": {
+          "planner": 6941,
+          "reviewer": 11386,
+          "total": 18327
+        }
+      },
+      {
+        "attempt": 15,
+        "run": 15,
+        "status": "ok",
+        "started_at": "2026-08-31T02:21:14.605063Z",
+        "tags": [
+          "modern two-bedroom apartment",
+          "pet-friendly",
+          "downtown san jose"
+        ],
+        "summary": "Modern two-bedroom apartment in downtown San Jose with pet-friendly policies and light rail access.",
+        "reviewer_changed": true,
+        "latency_ms": {
+          "planner": 7884,
+          "reviewer": 12029,
+          "total": 19913
+        }
+      },
+      {
+        "attempt": 16,
+        "run": 16,
+        "status": "ok",
+        "started_at": "2026-08-31T02:21:34.521123Z",
+        "tags": [
+          "modern two-bedroom apartment",
+          "pet-friendly",
+          "downtown san jose"
+        ],
+        "summary": "Modern two-bedroom apartment in downtown San Jose with pet-friendly policies and light rail access.",
+        "reviewer_changed": true,
+        "latency_ms": {
+          "planner": 8457,
+          "reviewer": 14123,
+          "total": 22580
+        }
+      },
+      {
+        "attempt": 17,
+        "run": 17,
+        "status": "ok",
+        "started_at": "2026-08-31T02:21:57.103244Z",
+        "tags": [
+          "modern two-bedroom apartment",
+          "pet-friendly",
+          "downtown san jose"
+        ],
+        "summary": "Modern two-bedroom apartment in downtown San Jose with pet-friendly policies and light rail access.",
+        "reviewer_changed": true,
+        "latency_ms": {
+          "planner": 10439,
+          "reviewer": 15288,
+          "total": 25727
+        }
+      },
+      {
+        "attempt": 18,
+        "run": 18,
+        "status": "ok",
+        "started_at": "2026-08-31T02:22:22.832820Z",
+        "tags": [
+          "modern two-bedroom apartment",
+          "pet-friendly",
+          "downtown san jose"
+        ],
+        "summary": "Modern two-bedroom apartment in downtown San Jose with pet-friendly policies and light rail access.",
+        "reviewer_changed": true,
+        "latency_ms": {
+          "planner": 10358,
+          "reviewer": 14645,
+          "total": 25003
+        }
+      },
+      {
+        "attempt": 19,
+        "run": 19,
+        "status": "ok",
+        "started_at": "2026-08-31T02:22:47.838550Z",
+        "tags": [
+          "modern two-bedroom apartment",
+          "pet-friendly",
+          "downtown san jose"
+        ],
+        "summary": "Modern two-bedroom apartment in downtown San Jose with pet-friendly policies and light rail access.",
+        "reviewer_changed": true,
+        "latency_ms": {
+          "planner": 9597,
+          "reviewer": 13973,
+          "total": 23570
+        }
+      },
+      {
+        "attempt": 20,
+        "run": 20,
+        "status": "ok",
+        "started_at": "2026-08-31T02:23:11.411285Z",
+        "tags": [
+          "modern two-bedroom apartment",
+          "pet-friendly",
+          "downtown san jose"
+        ],
+        "summary": "Modern two-bedroom apartment in downtown San Jose with pet-friendly policies and light rail access.",
+        "reviewer_changed": true,
+        "latency_ms": {
+          "planner": 9329,
+          "reviewer": 13585,
+          "total": 22914
+        }
+      }
+    ]
+  },
+  "metrics": {
+    "0.7": {
+      "runs_requested": 20,
+      "attempts": 22,
+      "successful_runs": 20,
+      "failed_attempts": 2,
+      "distinct_tag_sets": 12,
+      "tags_in_all_successful_runs": [],
+      "tags_in_exactly_one_run": [
+        "convenient light rail access",
+        "downtown san jose light rail",
+        "in-unit laundry & light rail",
+        "modern",
+        "modern apartment",
+        "near downtown san jose",
+        "pet-friendly and light rail access",
+        "pet-friendly with parking"
+      ],
+      "latency_ms": {
+        "p50": 22820.5,
+        "p95": 48035.7,
+        "p99": 54126.34
+      }
+    },
+    "0.0": {
+      "runs_requested": 20,
+      "attempts": 20,
+      "successful_runs": 20,
+      "failed_attempts": 0,
+      "distinct_tag_sets": 2,
+      "tags_in_all_successful_runs": [
+        "modern two-bedroom apartment",
+        "pet-friendly"
+      ],
+      "tags_in_exactly_one_run": [
+        "light rail access"
+      ],
+      "latency_ms": {
+        "p50": 18844.5,
+        "p95": 25745.4,
+        "p99": 26025.08
+      }
+    }
+  }
+}

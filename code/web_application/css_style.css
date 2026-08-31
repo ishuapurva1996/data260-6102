@@ -1,0 +1,134 @@
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(237, 237, 237);
+    margin: 0;
+    padding: 50px 24px;
+}
+
+form {
+    background-color: white;
+    width: 100%;
+    max-width: 710px;
+    margin: 30px auto;
+    padding: 39px 55px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px gray;
+}
+
+h1 {
+    font-family: Arial;
+    font-size: 35px;
+    font-weight: 750;
+    text-align: center;
+    border-bottom: 2px solid rgb(57, 191, 57);
+    padding-bottom: 15px;
+    margin: 0 auto auto auto;
+    width: 100%;
+    max-width: 670px;
+    box-sizing: border-box;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    box-sizing: border-box;
+    align-items: center;
+    border: 2px solid rgb(223, 220, 220);
+    border-radius: 5px;
+    margin-bottom: 25px;
+}
+
+input[type="checkbox"] + label {
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
+button {
+    display: block;
+    margin: 30px auto 20px;
+    background-color: rgb(65, 192, 65);
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    padding: 15px 30px;
+    border: none;
+}
+
+button:hover {
+    background-color: rgb(43, 130, 43);
+}
+
+h2 {
+    width: 100%;
+    max-width: 710px;
+    margin: 70px auto 20px;
+    color: rgb(70, 70, 70);
+    font-size: 30px;
+}
+
+#rentalList {
+    background-color: white;
+    width: 100%;
+    max-width: 710px;
+    min-height: 20px;
+    margin: 0 auto;
+    padding: 30px 55px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px gray;
+    list-style: none;
+}
+
+#rentalList li {
+    background-color: rgb(249, 249, 249);
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 4px solid rgb(65, 192, 65);
+}
+
+#rentalList button {
+    display: block;
+    margin: 10px 0 0;
+    padding: 8px 15px;
+    background-color: rgb(255, 68, 68);
+    font-size: 14px;
+}
+
+#rentalList button:hover {
+    background-color: rgb(204, 0, 0);
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 24px 16px;
+    }
+
+    form,
+    #rentalList {
+        padding: 28px 24px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        margin-top: 48px;
+        font-size: 26px;
+    }
+}

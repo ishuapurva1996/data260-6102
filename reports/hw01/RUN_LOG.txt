@@ -1,0 +1,134 @@
+DATA 260 HW1 - Part 2 Run Log
+
+Run timestamp (UTC): 2026-08-30T23:32:41Z
+Run timestamp (local): 2026-08-30T16:32:41-0700
+Python: 3.12.13
+Ollama: 0.33.0
+Model: qwen3:1.7b
+Temperature: 0.0
+Exit code: 0
+
+Exact command (run from reports/hw01):
+python agents_demo.py --title "Modern Two-Bedroom Apartment Near Downtown San Jose" --content "Bright two-bedroom apartment with in-unit laundry, covered parking, pet-friendly policies, and convenient light rail access near downtown San Jose." --model qwen3:1.7b --temperature 0.0
+
+Current equivalent after shared-code reorganization (run from repository root):
+python code/agents_demo.py --title "Modern Two-Bedroom Apartment Near Downtown San Jose" --content "Bright two-bedroom apartment with in-unit laundry, covered parking, pet-friendly policies, and convenient light rail access near downtown San Jose." --model qwen3:1.7b --temperature 0.0
+
+Console output:
+
+--- Planner (5939 ms) ---
+{
+  "thought": "Identified three relevant tags: 'Modern Two-Bedroom Apartment,' 'Pet-Friendly,' and 'Light Rail Access.' Summary focuses on key features and location. Issues: summary exceeds 25 words, tags may overlap.",
+  "message": "Modern two-bedroom apartment near downtown San Jose with pet-friendly policies and light rail access.",
+  "data": {
+    "tags": ["modern two-bedroom apartment", "pet-friendly", "light rail access"],
+    "summary": "Modern two-bedroom apartment near downtown San Jose with pet-friendly policies and light rail access.",
+    "issues": []
+  }
+}
+
+--- Reviewer (8574 ms) ---
+{
+  "thought": "Identified three distinct tags: 'Modern Two-Bedroom Apartment,' 'Pet-Friendly,' and 'Light Rail Access.' Summary focuses on key features and location. Issues: summary exceeds 25 words.",
+  "message": "Modern two-bedroom apartment near downtown San Jose, pet-friendly, and light rail access.",
+  "data": {
+    "tags": ["modern two-bedroom apartment", "pet-friendly", "light rail access"],
+    "summary": "Modern two-bedroom apartment near downtown San Jose, pet-friendly, and light rail access.",
+    "issues": []
+  }
+}
+
+--- Finalized Output ---
+{
+  "thought": "Reviewer proposal selected and schema validated.",
+  "message": "Final tags and summary are ready for publishing.",
+  "data": {
+    "tags": ["modern two-bedroom apartment", "pet-friendly", "light rail access"],
+    "summary": "Modern two-bedroom apartment near downtown San Jose, pet-friendly, and light rail access.",
+    "issues": []
+  }
+}
+
+Publish output was also emitted as valid JSON. The complete unabridged console output is saved in raw/part2_console_output.txt.
+
+Verification timestamp (UTC): 2026-08-30T23:32:51Z
+Command: python -m unittest discover -s reports/hw01/tests -v
+Result: 7 tests passed.
+
+
+DATA 260 HW1 - Part 3 Non-Determinism Run
+
+Experiment start (UTC): 2026-08-31T02:05:20.084501Z
+Experiment completion (UTC): 2026-08-31T02:23:34.327966Z
+Python: 3.12.13
+Ollama: 0.33.0
+Model: qwen3:1.7b
+Successful runs: 40 total (20 at temperature 0.7, then 20 at temperature 0.0)
+Exit code: 0
+
+Exact command (run from reports/hw01):
+python run_nondeterminism.py --model qwen3:1.7b --count 20 --temperatures 0.7 0.0 --timeout 120 --max-errors 10
+
+Current equivalent after shared-code reorganization (run from repository root):
+python reports/hw01/run_nondeterminism.py --model qwen3:1.7b --count 20 --temperatures 0.7 0.0 --timeout 120 --max-errors 10
+
+Temperature 0.7:
+- Attempts: 22
+- Successful runs: 20
+- Rejected attempts: 2
+- Distinct tag sets: 12
+- Latency p50 / p95 / p99 (ms): 22820.50 / 48035.70 / 54126.34
+
+Temperature 0.0:
+- Attempts: 20
+- Successful runs: 20
+- Rejected attempts: 0
+- Distinct tag sets: 2
+- Latency p50 / p95 / p99 (ms): 18844.50 / 25745.40 / 26025.08
+
+Raw checkpoint and per-run results:
+raw/nondeterminism_runs.json
+
+
+DATA 260 HW1 - Part 4 Model Client and Token Accounting
+
+Run timestamp (UTC): 2026-08-31T04:11:27.558449Z
+Python: 3.12.13
+Ollama: 0.33.0
+Model: qwen3:1.7b
+Temperature: 0.0
+Exit code: 0
+
+Exact command (run from repository root):
+python code/hw1_client.py --demo --model qwen3:1.7b --temperature 0.0 --timeout 120 --output reports/hw01/raw/part4_five_turn_conversation.txt --metrics-output reports/hw01/raw/part4_token_counts.json --overwrite
+
+Recorded result:
+- Five model turns completed.
+- Every response passed the AGENT.md bullet-only check.
+- /stats after turn 3: 501 input tokens, 81 output tokens, 731 serialized-history characters.
+- /stats after turn 5: 1078 input tokens, 155 output tokens, 1348 serialized-history characters.
+- Exit totals: 5 turns, 1078 input tokens, 155 output tokens, 1233 total tokens.
+
+Raw console transcript:
+raw/part4_five_turn_conversation.txt
+
+Machine-readable per-turn counts:
+raw/part4_token_counts.json
+
+
+DATA 260 HW1 - Final Local Verification
+
+Verification timestamp (UTC): 2026-08-31T06:47:48.431819Z
+Status: PASS
+
+Recorded result:
+- Python 3.12.13 is within the required 3.11/3.12 range.
+- All required submission files are present.
+- JavaScript syntax validation passed.
+- All 46 automated tests passed.
+- Part 3 contains 20 successful runs at temperature 0.7 and 20 at temperature 0.0.
+- Part 4 contains five turns and complete token accounting.
+- The 23-page report PDF passed structural validation and was visually inspected.
+
+Machine-readable verification record:
+verification.json

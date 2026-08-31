@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-08-31T09:27:07.902955Z",
+  "status": "pass",
+  "checks": [
+    {
+      "name": "python_version",
+      "status": "pass",
+      "detail": "Python 3.12.13 (requires 3.11 or 3.12)"
+    },
+    {
+      "name": "required_files",
+      "status": "pass",
+      "detail": "All required files are present"
+    },
+    {
+      "name": "markdown_deliverables",
+      "status": "pass",
+      "detail": "All 5 required and 2 supporting Markdown files have the expected structure"
+    },
+    {
+      "name": "javascript_syntax",
+      "status": "pass",
+      "detail": "Node.js syntax check passed"
+    },
+    {
+      "name": "automated_tests",
+      "status": "pass",
+      "detail": "46 tests passed"
+    },
+    {
+      "name": "part3_raw_results",
+      "status": "pass",
+      "detail": "Successful runs by temperature: {'0.7': 20, '0.0': 20}"
+    },
+    {
+      "name": "part4_token_accounting",
+      "status": "pass",
+      "detail": "5 turns; cumulative tokens: input=1078, output=155, total=1233"
+    },
+    {
+      "name": "report_pdf",
+      "status": "pass",
+      "detail": "PDF structure is valid; 24 page objects found"
+    }
+  ],
+  "submission_note": "Create the final commit and hw1 tag before GitHub submission."
+}
