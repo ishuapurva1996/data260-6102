@@ -210,6 +210,7 @@ tmp/
 reports/hw01/drafts/
 reports/hw01/raw/*.tmp
 agent_outputs/
+node_modules/
 
 # Local editor settings and swap files
 .idea/

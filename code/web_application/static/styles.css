@@ -41,6 +41,15 @@ h1 {
     text-align: center;
 }
 
+.form-intro {
+    line-height: 1.5;
+    color: rgb(78, 78, 78);
+}
+
+#updateAvailability {
+    margin-bottom: 22px;
+}
+
 form,
 .list-card {
     width: 100%;
@@ -76,6 +85,7 @@ select {
     border-radius: 5px;
     background-color: white;
     font: inherit;
+    min-width: 0;
 }
 
 textarea {
@@ -138,6 +148,54 @@ button:disabled {
     background-color: rgb(99, 150, 99);
     cursor: wait;
     opacity: 0.85;
+}
+
+.action-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.action-group button {
+    flex: 1;
+    margin: 0;
+}
+
+.secondary-button {
+    background-color: rgb(76, 91, 107);
+}
+
+.secondary-button:hover {
+    background-color: rgb(49, 63, 78);
+}
+
+.danger-button {
+    background-color: rgb(185, 42, 42);
+}
+
+.danger-button:hover {
+    background-color: rgb(148, 27, 27);
+}
+
+#deleteHighestButton {
+    width: 100%;
+    margin: 14px 0 8px;
+}
+
+.store-summary,
+.search-summary {
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.store-summary {
+    font-weight: bold;
+    margin-top: 0;
+}
+
+#listStatus {
+    margin-top: 20px;
 }
 
 .status-message {
@@ -210,6 +268,15 @@ h2 {
     margin-bottom: 0;
 }
 
+#rentalList h3 {
+    margin: 0 0 12px;
+    font-size: 19px;
+}
+
+#rentalList p {
+    margin: 8px 0;
+}
+
 #rentalList button {
     min-height: 40px;
     margin: 14px 0 0;
@@ -220,6 +287,12 @@ h2 {
 
 #rentalList button:hover {
     background-color: rgb(183, 33, 33);
+}
+
+button:disabled,
+button:disabled:hover {
+    background-color: rgb(107, 119, 107);
+    cursor: not-allowed;
 }
 
 @media (max-width: 600px) {
@@ -236,8 +309,13 @@ h2 {
         padding: 28px 24px;
     }
 
-    button[type="submit"] {
+    button[type="submit"],
+    .action-group button {
         width: 100%;
+    }
+
+    .action-group {
+        flex-direction: column;
     }
 
     .list-section {

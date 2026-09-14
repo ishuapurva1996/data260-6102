@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HW2 Part 1 - Rental Housing Listings</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Rental Housing Listings</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="icon" href="data:,">
 </head>
 
 <body>
@@ -14,6 +15,7 @@
         <p class="page-intro">Create and manage rental housing listings.</p>
 
         <form id="rentalForm" novalidate>
+            <h2>Create a listing</h2>
             <div class="form-field">
                 <label for="listingTitle">Listing Title <span aria-hidden="true">*</span></label>
                 <input type="text" id="listingTitle" name="listingTitle" placeholder="e.g., Zia Apartment"
@@ -55,20 +57,50 @@
                 <label for="termsAccepted">I agree to the terms and conditions.</label>
             </div>
 
-            <button id="submitButton" type="submit">Create Rental Listing</button>
+            <button id="submitButton" type="submit" disabled>Create Rental Listing</button>
             <p id="formStatus" class="status-message" role="status" aria-live="polite" hidden></p>
+        </form>
+
+        <form id="updateForm" novalidate aria-labelledby="updateHeading">
+            <h2 id="updateHeading">Update Listing ID 1</h2>
+            <p class="form-intro">Change its title and address. Other listing details stay the same.</p>
+            <p id="updateAvailability" class="field-hint">Loading listing availability...</p>
+            <div class="form-field">
+                <label for="updateTitle">New Listing Title <span aria-hidden="true">*</span></label>
+                <input type="text" id="updateTitle" name="listingTitle" required>
+            </div>
+            <div class="form-field">
+                <label for="updateAddress">New Address <span aria-hidden="true">*</span></label>
+                <input type="text" id="updateAddress" name="propertyAddress" required>
+            </div>
+            <button id="updateButton" type="submit" disabled>Update Listing ID 1</button>
+            <p id="updateStatus" class="status-message" role="status" aria-live="polite" hidden></p>
         </form>
 
         <section class="list-section" aria-labelledby="listHeading">
             <h2 id="listHeading">Submitted Rental Listings</h2>
+            <form id="searchForm" role="search">
+                <label for="searchQuery">Search by title or address</label>
+                <input type="text" id="searchQuery" name="q" placeholder="e.g., Downtown or Willow Street">
+                <div class="action-group">
+                    <button id="searchButton" type="submit">Search</button>
+                    <button id="clearSearchButton" type="button" class="secondary-button">Clear</button>
+                </div>
+            </form>
             <div class="list-card">
-                <p id="emptyState" class="empty-state">No rental listings yet. Create your first listing above.</p>
+                <p id="storeSummary" class="store-summary">Loading listing count...</p>
+                <button id="deleteHighestButton" type="button" class="danger-button" disabled>Delete highest-ID listing</button>
+                <p class="field-hint">Deletes from all listings, including any hidden by your search.</p>
+                <p id="listStatus" class="status-message status-loading" role="status" aria-live="polite">Loading rental listings...</p>
+                <button id="retryButton" type="button" class="secondary-button" hidden>Retry loading listings</button>
+                <p id="searchSummary" class="search-summary" aria-live="polite"></p>
+                <p id="emptyState" class="empty-state" hidden>No rental listings yet. Create your first listing above.</p>
                 <ul id="rentalList" aria-live="polite" hidden></ul>
             </div>
         </section>
     </main>
 
-    <script src="app.js"></script>
+    <script src="/static/app.js"></script>
 </body>
 
 </html>

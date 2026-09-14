@@ -1,0 +1,13 @@
+{
+  "name": "data260-homework-browser-checks",
+  "private": true,
+  "scripts": {
+    "test:browser": "node tests/browser_part2.cjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1"
+  }
+}

@@ -12,12 +12,14 @@ Application code lives in shared root-level `code/` and `src/` folders. Assignme
 cd "/Users/pragyaapurva/Documents/SJSU/DATA 260/data260-6102"
 ```
 
-The active web application includes the completed HW2 Part 1 improvements. The `hw1` Git tag preserves the exact original HW1 source and submission. Historical reports, logs, and recorded results retain their original contents.
+The active web application includes the HW2 Part 1 interface and Part 2 FastAPI backend. The `hw1` Git tag preserves the exact original HW1 source and submission. Historical reports, logs, and recorded results retain their original contents.
 
 ```text
 data260-6102/
 ├── code/
 │   ├── web_application/
+│   │   ├── main.py
+│   │   ├── README.md
 │   │   └── static/
 │   │       ├── index.html
 │   │       ├── styles.css
@@ -40,6 +42,11 @@ data260-6102/
 │       └── README.md
 ├── AGENT.md
 ├── DOMAIN_SCHEMA.md
+├── requirements.txt
+├── package.json
+├── tests/
+│   ├── test_api.py
+│   └── browser_part2.cjs
 └── README.md
 ```
 
@@ -47,15 +54,18 @@ Course instructions, lecturer practice scripts, implementation plans, and agent 
 
 ## Current HW2 progress
 
-Part 1 is implemented: a 375px responsive form/list with visible loading, empty, and error states. Part 2 is planned; the current save is still a browser-only demonstration. Run the current application with:
+The shared application provides create, update-ID-1, highest-ID deletion, per-row deletion, and title/address search through FastAPI. It retains the 375px layout and visible loading, empty, and error states. Use a separate web environment so its dependencies stay independent of the Part 3 agent environment:
 
 ```bash
-python3 -m http.server 8702 --bind 127.0.0.1 --directory code/web_application/static
+python3.12 -m venv .venv-web
+source .venv-web/bin/activate
+python -m pip install -r requirements.txt
+python code/web_application/main.py
 ```
 
-Open [the application](http://127.0.0.1:8702/), [the eight-second loading demo](http://127.0.0.1:8702/?slowSave=true), or [the controlled save-error demo](http://127.0.0.1:8702/?simulateError=true). Stop the server with `Control-C`. Only one application can use port 8702 at a time.
+Open [the application](http://127.0.0.1:8702/) or [the API documentation](http://127.0.0.1:8702/docs). Records survive page reloads; restarting the single server process restores seed IDs 1 and 2. Stop it with `Control-C`. Only one application can use port 8702 at a time.
 
-The screenshot guide is outside Git at `../HW2/agent_outputs/SCREENSHOT_EVIDENCE_PLAN.md`. [HW2 submission evidence](reports/hw02/README.md) describes where final report artifacts belong.
+See the [web application guide](code/web_application/README.md) for Docker, API tests, browser checks, and controlled screenshot aids. The Part 1 and Part 2 screenshot guides remain outside Git at `../HW2/agent_outputs/SCREENSHOT_EVIDENCE_PLAN.md` and `../HW2/agent_outputs/PART2_SCREENSHOT_EVIDENCE_PLAN.md`. [HW2 submission evidence](reports/hw02/README.md) describes where final report artifacts belong.
 
 ## Reproducing the original HW1 submission
 
@@ -94,11 +104,11 @@ ollama pull qwen3:1.7b
 ## Part 1 - Web application
 
 ```bash
-docker build --platform linux/amd64 -t rental-housing-app:latest code
-docker run -d --name rental-housing-hw1 -p 8702:80 rental-housing-app:latest
+docker build -f code/Dockerfile -t rental-housing-app:latest .
+docker run --rm --name rental-housing-web -p 127.0.0.1:8702:8702 rental-housing-app:latest
 ```
 
-Open `http://localhost:8702`. This container serves the current Part 1 interface. For the exact HW1 interface, build at the `hw1` tag. The HW1 report contains the historical one-task AWS ECS deployment and public-IP screenshots.
+Open `http://localhost:8702`. This container serves the current interface and FastAPI backend. For the exact HW1 interface and its historical Docker commands, build at the `hw1` tag. The HW1 report contains the historical one-task AWS ECS deployment and public-IP screenshots.
 
 ## Part 2 - Planner, Reviewer, and Finalizer
 

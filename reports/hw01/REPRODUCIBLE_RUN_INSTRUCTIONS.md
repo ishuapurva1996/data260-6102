@@ -6,7 +6,7 @@ Run every command from the Git repository root unless a command says otherwise:
 cd "/Users/pragyaapurva/Documents/SJSU/DATA 260/data260-6102"
 ```
 
-All paths below are relative to the repository root. The shared web app now includes HW2 Part 1 improvements; the remaining HW1 agent workflows are retained. The submitted report and recorded logs retain their original contents. For exact HW1 source and behavior, create a separate historical checkout with `git worktree add --detach ../data260-6102-hw1-reproduction refs/tags/hw1`, then follow its README. This does not add a duplicate application to the submission repository.
+All paths below are relative to the repository root. The shared web app now includes HW2 Parts 1 and 2, with a FastAPI backend; the remaining HW1 agent workflows are retained. The submitted report and recorded logs retain their original contents. For exact HW1 source and behavior, create a separate historical checkout with `git worktree add --detach ../data260-6102-hw1-reproduction refs/tags/hw1`, then follow its README. This does not add a duplicate application to the submission repository.
 
 ## Environment
 
@@ -21,11 +21,11 @@ ollama pull qwen3:1.7b
 ## Part 1 - Web application
 
 ```bash
-docker build --platform linux/amd64 -t rental-housing-app:latest code
-docker run -d --name rental-housing-hw1 -p 8702:80 rental-housing-app:latest
+docker build --platform linux/amd64 -f code/Dockerfile -t rental-housing-app:latest .
+docker run -d --name rental-housing-hw1 -p 127.0.0.1:8702:8702 rental-housing-app:latest
 ```
 
-This serves the current shared Part 1 interface. Open `http://localhost:8702` and stop the container afterward with:
+This serves the current shared interface and API. Stop any Python server using port 8702 before starting the container. Open `http://localhost:8702` and stop the container afterward with:
 
 ```bash
 docker stop rental-housing-hw1

@@ -12,32 +12,28 @@ class Part1Tests(unittest.TestCase):
     def test_required_form_controls_are_present(self):
         html = (WEB_APP_DIR / "index.html").read_text(encoding="utf-8")
 
-        self.assertIn("<title>HW2 Part 1 - Rental Housing Listings</title>", html)
         self.assertIn("<h1>Rental Housing Listings</h1>", html)
         self.assertIn('id="listingTitle"', html)
         self.assertIn("required autofocus", html)
         self.assertIn('type="email"', html)
         self.assertIn("I agree to the terms and conditions.", html)
         self.assertEqual(html.count("<option value="), 5)
-        self.assertLess(html.index("</form>"), html.index('<script src="app.js"></script>'))
+        self.assertIn('id="updateForm"', html)
+        self.assertIn('id="searchForm"', html)
+        self.assertIn('id="deleteHighestButton"', html)
+        self.assertLess(html.index("</form>"), html.index('<script src="/static/app.js"></script>'))
 
-    def test_javascript_contains_required_language_features(self):
-        script = (WEB_APP_DIR / "app.js").read_text(encoding="utf-8")
-
-        self.assertIn("const validateForm = () =>", script)
-        self.assertIn("description.length <= 25", script)
-        self.assertIn("!termsAcceptedInput.checked", script)
-        self.assertIn("JSON.stringify", script)
-        self.assertIn("JSON.parse", script)
-        self.assertIn("const {listingTitle:", script)
-        self.assertIn("...parsedRentalData", script)
-        self.assertIn("submissionDate:", script)
-        self.assertIn("const submissionCounter = (() =>", script)
-        self.assertIn("if (isSubmitting) return", script)
-        self.assertIn("setSubmittingState(true)", script)
-        self.assertIn("submitButton.disabled = submitting", script)
-        self.assertIn("finally {", script)
-        self.assertIn("setSubmittingState(false)", script)
+    def test_accessible_feedback_and_local_assets(self):
+        # The original HW1 language-feature demonstration is preserved at its
+        # Git tag. Live API behavior is covered by tests/test_api.py and the
+        # browser walkthrough; retain the form's accessibility/asset contract.
+        html = (WEB_APP_DIR / "index.html").read_text(encoding="utf-8")
+        self.assertIn('id="emptyState"', html)
+        self.assertIn('role="status"', html)
+        self.assertIn('aria-live="polite"', html)
+        self.assertIn('href="/static/styles.css"', html)
+        self.assertTrue((WEB_APP_DIR / "styles.css").is_file())
+        self.assertTrue((WEB_APP_DIR / "app.js").is_file())
 
     def test_javascript_parses(self):
         node = os.environ.get("NODE_BIN") or shutil.which("node")
