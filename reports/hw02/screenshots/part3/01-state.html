@@ -1,0 +1,50 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Part 3 · State and strict response contracts</title><style>body{min-width:1180px;margin:24px;background:#f3f5f9;color:#162134;font:15px system-ui}h1{font-size:23px;margin:0 0 8px}p{margin:8px 0;color:#485775;font-size:13px}pre{margin:12px 0;background:#fff;border:1px solid #ccd5e3;border-radius:8px;padding:16px;white-space:pre-wrap;overflow-wrap:anywhere;font:13px/1.4 ui-monospace,monospace}a{color:#235aaa}.cols{display:grid;grid-template-columns:1fr 1fr;gap:14px}</style></head><body><h1>Part 3 · State and strict response contracts</h1><p>Actual implementation source. The runtime adapter remains outside serialized evidence.</p><div class="cols"><div><p>src/agent_graph/state.py</p><pre>  8  class AgentState(TypedDict):
+  9      title: str
+ 10      content: str
+ 11      email: str | None
+ 12      strict: bool
+ 13      task: str
+ 14      llm: Any  # Runtime adapter only; never serialize or checkpoint it.
+ 15      planner_proposal: dict[str, Any] | None
+ 16      planner_raw: Any
+ 17      proposal_revision: int
+ 18      reviewer_feedback: dict[str, Any] | None
+ 19      reviewer_raw: Any
+ 20      reviewed_revision: int | None
+ 21      revision_context: dict[str, Any]
+ 22      retry_target: Literal[&quot;planner&quot;, &quot;reviewer&quot;] | None
+ 23      retry_feedback: str | None
+ 24      turn_count: int
+ 25      max_turns: int
+ 26      pending_worker_turn: bool
+ 27      status: Literal[&quot;running&quot;, &quot;accepted&quot;, &quot;turn_limit&quot;, &quot;error&quot;]
+ 28      stop_reason: str | None
+ 29      error: dict[str, str] | None
+ 30      controlled_reviewer: bool
+ 31      trace: list[dict[str, Any]]
+ 32      adapter_response_count: int
+ 33      input_tokens: int
+ 34      output_tokens: int
+ 35      total_tokens: int
+ 36
+ 37  </pre></div><div><p>src/agent_graph/contracts.py</p><pre> 38
+ 39
+ 40  def validate_planner_proposal(value: Any) -&gt; dict[str, Any]:
+ 41      &quot;&quot;&quot;Validate without changing tags, trimming text, or supplying missing values.&quot;&quot;&quot;
+ 42
+ 43      if not isinstance(value, dict) or set(value) != {&quot;tags&quot;, &quot;summary&quot;}:
+ 44          raise ResponseContractError(&quot;Planner object must contain only tags and summary&quot;)
+ 45      tags = value[&quot;tags&quot;]
+ 46      if not isinstance(tags, list) or len(tags) != 3:
+ 47          raise ResponseContractError(&quot;tags must contain exactly three strings&quot;)
+ 48      if any(not isinstance(tag, str) or not tag.strip() for tag in tags):
+ 49          raise ResponseContractError(&quot;Every tag must be a nonblank string&quot;)
+ 50      summary = value[&quot;summary&quot;]
+ 51      if not isinstance(summary, str) or not summary.strip():
+ 52          raise ResponseContractError(&quot;summary must be a nonblank string&quot;)
+ 53      if len(summary.split()) &gt; 25:
+ 54          raise ResponseContractError(&quot;summary must contain at most 25 whitespace-delimited words&quot;)
+ 55      return value
+ 56
+ 57
+ 58  def parse_planner_response(raw: Any) -&gt; dict[str, Any]:</pre></div></div></body></html>

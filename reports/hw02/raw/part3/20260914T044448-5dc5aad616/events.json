@@ -1,0 +1,513 @@
+{
+  "trace": [
+    {
+      "worker": "planner",
+      "attempt": 1,
+      "revision": 1,
+      "raw": "{\"tags\": [\"apartment\", \"downtown\", \"pet-friendly\"], \"summary\": \"Modern two-bedroom apartment near downtown San Jose with in-unit laundry and light rail access.\"}",
+      "outcome": "valid",
+      "usage": {
+        "input_tokens": 221,
+        "output_tokens": 38,
+        "total_tokens": 259
+      },
+      "controlled": false,
+      "parsed": {
+        "tags": [
+          "apartment",
+          "downtown",
+          "pet-friendly"
+        ],
+        "summary": "Modern two-bedroom apartment near downtown San Jose with in-unit laundry and light rail access."
+      },
+      "elapsed_ms": 585.095
+    },
+    {
+      "worker": "reviewer",
+      "attempt": 2,
+      "revision": 1,
+      "raw": "{\n  \"issues\": [],\n  \"message\": \"The proposal meets all the requirements: three nonblank string tags, a summary of at most 25 whitespace-delimited words, topical relevance, and no unsupported factual claims.\"\n}",
+      "outcome": "valid",
+      "usage": {
+        "input_tokens": 273,
+        "output_tokens": 48,
+        "total_tokens": 321
+      },
+      "controlled": true,
+      "parsed": {
+        "issues": [
+          "[CONTROLLED DEMO] Always-issue Reviewer requires another revision."
+        ],
+        "message": "The proposal meets all the requirements: three nonblank string tags, a summary of at most 25 whitespace-delimited words, topical relevance, and no unsupported factual claims."
+      },
+      "elapsed_ms": 734.725
+    },
+    {
+      "worker": "planner",
+      "attempt": 3,
+      "revision": 2,
+      "raw": "{\n  \"tags\": [\"apartment\", \"downtown\", \"pet-friendly\"],\n  \"summary\": \"Modern two-bedroom apartment near downtown San Jose with in-unit laundry and light rail access.\"\n}",
+      "outcome": "valid",
+      "usage": {
+        "input_tokens": 313,
+        "output_tokens": 41,
+        "total_tokens": 354
+      },
+      "controlled": false,
+      "parsed": {
+        "tags": [
+          "apartment",
+          "downtown",
+          "pet-friendly"
+        ],
+        "summary": "Modern two-bedroom apartment near downtown San Jose with in-unit laundry and light rail access."
+      },
+      "elapsed_ms": 765.354
+    },
+    {
+      "worker": "reviewer",
+      "attempt": 4,
+      "revision": 2,
+      "raw": "{\n  \"issues\": [],\n  \"message\": \"The proposal meets all the requirements: three nonblank string tags, a summary of at most 25 whitespace-delimited words, topical relevance, and no unsupported factual claims.\"\n}",
+      "outcome": "valid",
+      "usage": {
+        "input_tokens": 273,
+        "output_tokens": 48,
+        "total_tokens": 321
+      },
+      "controlled": true,
+      "parsed": {
+        "issues": [
+          "[CONTROLLED DEMO] Always-issue Reviewer requires another revision."
+        ],
+        "message": "The proposal meets all the requirements: three nonblank string tags, a summary of at most 25 whitespace-delimited words, topical relevance, and no unsupported factual claims."
+      },
+      "elapsed_ms": 771.446
+    },
+    {
+      "worker": "planner",
+      "attempt": 5,
+      "revision": 3,
+      "raw": "{\n  \"tags\": [\"apartment\", \"downtown\", \"pet-friendly\"],\n  \"summary\": \"Modern two-bedroom apartment near downtown San Jose with in-unit laundry and light rail access.\"\n}",
+      "outcome": "valid",
+      "usage": {
+        "input_tokens": 313,
+        "output_tokens": 41,
+        "total_tokens": 354
+      },
+      "controlled": false,
+      "parsed": {
+        "tags": [
+          "apartment",
+          "downtown",
+          "pet-friendly"
+        ],
+        "summary": "Modern two-bedroom apartment near downtown San Jose with in-unit laundry and light rail access."
+      },
+      "elapsed_ms": 631.272
+    },
+    {
+      "worker": "reviewer",
+      "attempt": 6,
+      "revision": 3,
+      "raw": "{\n  \"issues\": [],\n  \"message\": \"The proposal meets all the requirements: three nonblank string tags, a summary of at most 25 whitespace-delimited words, topical relevance, and no unsupported factual claims.\"\n}",
+      "outcome": "valid",
+      "usage": {
+        "input_tokens": 273,
+        "output_tokens": 48,
+        "total_tokens": 321
+      },
+      "controlled": true,
+      "parsed": {
+        "issues": [
+          "[CONTROLLED DEMO] Always-issue Reviewer requires another revision."
+        ],
+        "message": "The proposal meets all the requirements: three nonblank string tags, a summary of at most 25 whitespace-delimited words, topical relevance, and no unsupported factual claims."
+      },
+      "elapsed_ms": 778.462
+    },
+    {
+      "worker": "planner",
+      "attempt": 7,
+      "revision": 4,
+      "raw": "{\n  \"tags\": [\"apartment\", \"downtown\", \"pet-friendly\"],\n  \"summary\": \"Modern two-bedroom apartment near downtown San Jose with in-unit laundry and light rail access.\"\n}",
+      "outcome": "valid",
+      "usage": {
+        "input_tokens": 313,
+        "output_tokens": 41,
+        "total_tokens": 354
+      },
+      "controlled": false,
+      "parsed": {
+        "tags": [
+          "apartment",
+          "downtown",
+          "pet-friendly"
+        ],
+        "summary": "Modern two-bedroom apartment near downtown San Jose with in-unit laundry and light rail access."
+      },
+      "elapsed_ms": 641.853
+    },
+    {
+      "worker": "reviewer",
+      "attempt": 8,
+      "revision": 4,
+      "raw": "{\n  \"issues\": [],\n  \"message\": \"The proposal meets all the requirements: three nonblank string tags, a summary of at most 25 whitespace-delimited words, topical relevance, and no unsupported factual claims.\"\n}",
+      "outcome": "valid",
+      "usage": {
+        "input_tokens": 273,
+        "output_tokens": 48,
+        "total_tokens": 321
+      },
+      "controlled": true,
+      "parsed": {
+        "issues": [
+          "[CONTROLLED DEMO] Always-issue Reviewer requires another revision."
+        ],
+        "message": "The proposal meets all the requirements: three nonblank string tags, a summary of at most 25 whitespace-delimited words, topical relevance, and no unsupported factual claims."
+      },
+      "elapsed_ms": 778.761
+    },
+    {
+      "worker": "planner",
+      "attempt": 9,
+      "revision": 5,
+      "raw": "{\n  \"tags\": [\"apartment\", \"downtown\", \"pet-friendly\"],\n  \"summary\": \"Modern two-bedroom apartment near downtown San Jose with in-unit laundry and light rail access.\"\n}",
+      "outcome": "valid",
+      "usage": {
+        "input_tokens": 313,
+        "output_tokens": 41,
+        "total_tokens": 354
+      },
+      "controlled": false,
+      "parsed": {
+        "tags": [
+          "apartment",
+          "downtown",
+          "pet-friendly"
+        ],
+        "summary": "Modern two-bedroom apartment near downtown San Jose with in-unit laundry and light rail access."
+      },
+      "elapsed_ms": 630.3
+    },
+    {
+      "worker": "reviewer",
+      "attempt": 10,
+      "revision": 5,
+      "raw": "{\n  \"issues\": [],\n  \"message\": \"The proposal meets all the requirements: three nonblank string tags, a summary of at most 25 whitespace-delimited words, topical relevance, and no unsupported factual claims.\"\n}",
+      "outcome": "valid",
+      "usage": {
+        "input_tokens": 273,
+        "output_tokens": 48,
+        "total_tokens": 321
+      },
+      "controlled": true,
+      "parsed": {
+        "issues": [
+          "[CONTROLLED DEMO] Always-issue Reviewer requires another revision."
+        ],
+        "message": "The proposal meets all the requirements: three nonblank string tags, a summary of at most 25 whitespace-delimited words, topical relevance, and no unsupported factual claims."
+      },
+      "elapsed_ms": 766.452
+    }
+  ],
+  "events": [
+    {
+      "node": "supervisor",
+      "turn_count": 0,
+      "pending_worker_turn": false,
+      "status": "running",
+      "stop_reason": null
+    },
+    {
+      "node": "planner",
+      "worker": "planner",
+      "attempt": 1,
+      "revision": 1,
+      "raw": "{\"tags\": [\"apartment\", \"downtown\", \"pet-friendly\"], \"summary\": \"Modern two-bedroom apartment near downtown San Jose with in-unit laundry and light rail access.\"}",
+      "outcome": "valid",
+      "usage": {
+        "input_tokens": 221,
+        "output_tokens": 38,
+        "total_tokens": 259
+      },
+      "controlled": false,
+      "parsed": {
+        "tags": [
+          "apartment",
+          "downtown",
+          "pet-friendly"
+        ],
+        "summary": "Modern two-bedroom apartment near downtown San Jose with in-unit laundry and light rail access."
+      },
+      "elapsed_ms": 585.095
+    },
+    {
+      "node": "supervisor",
+      "turn_count": 1,
+      "pending_worker_turn": false,
+      "status": "running",
+      "stop_reason": null
+    },
+    {
+      "node": "reviewer",
+      "worker": "reviewer",
+      "attempt": 2,
+      "revision": 1,
+      "raw": "{\n  \"issues\": [],\n  \"message\": \"The proposal meets all the requirements: three nonblank string tags, a summary of at most 25 whitespace-delimited words, topical relevance, and no unsupported factual claims.\"\n}",
+      "outcome": "valid",
+      "usage": {
+        "input_tokens": 273,
+        "output_tokens": 48,
+        "total_tokens": 321
+      },
+      "controlled": true,
+      "parsed": {
+        "issues": [
+          "[CONTROLLED DEMO] Always-issue Reviewer requires another revision."
+        ],
+        "message": "The proposal meets all the requirements: three nonblank string tags, a summary of at most 25 whitespace-delimited words, topical relevance, and no unsupported factual claims."
+      },
+      "elapsed_ms": 734.725
+    },
+    {
+      "node": "supervisor",
+      "turn_count": 2,
+      "pending_worker_turn": false,
+      "status": "running",
+      "stop_reason": null
+    },
+    {
+      "node": "planner",
+      "worker": "planner",
+      "attempt": 3,
+      "revision": 2,
+      "raw": "{\n  \"tags\": [\"apartment\", \"downtown\", \"pet-friendly\"],\n  \"summary\": \"Modern two-bedroom apartment near downtown San Jose with in-unit laundry and light rail access.\"\n}",
+      "outcome": "valid",
+      "usage": {
+        "input_tokens": 313,
+        "output_tokens": 41,
+        "total_tokens": 354
+      },
+      "controlled": false,
+      "parsed": {
+        "tags": [
+          "apartment",
+          "downtown",
+          "pet-friendly"
+        ],
+        "summary": "Modern two-bedroom apartment near downtown San Jose with in-unit laundry and light rail access."
+      },
+      "elapsed_ms": 765.354
+    },
+    {
+      "node": "supervisor",
+      "turn_count": 3,
+      "pending_worker_turn": false,
+      "status": "running",
+      "stop_reason": null
+    },
+    {
+      "node": "reviewer",
+      "worker": "reviewer",
+      "attempt": 4,
+      "revision": 2,
+      "raw": "{\n  \"issues\": [],\n  \"message\": \"The proposal meets all the requirements: three nonblank string tags, a summary of at most 25 whitespace-delimited words, topical relevance, and no unsupported factual claims.\"\n}",
+      "outcome": "valid",
+      "usage": {
+        "input_tokens": 273,
+        "output_tokens": 48,
+        "total_tokens": 321
+      },
+      "controlled": true,
+      "parsed": {
+        "issues": [
+          "[CONTROLLED DEMO] Always-issue Reviewer requires another revision."
+        ],
+        "message": "The proposal meets all the requirements: three nonblank string tags, a summary of at most 25 whitespace-delimited words, topical relevance, and no unsupported factual claims."
+      },
+      "elapsed_ms": 771.446
+    },
+    {
+      "node": "supervisor",
+      "turn_count": 4,
+      "pending_worker_turn": false,
+      "status": "running",
+      "stop_reason": null
+    },
+    {
+      "node": "planner",
+      "worker": "planner",
+      "attempt": 5,
+      "revision": 3,
+      "raw": "{\n  \"tags\": [\"apartment\", \"downtown\", \"pet-friendly\"],\n  \"summary\": \"Modern two-bedroom apartment near downtown San Jose with in-unit laundry and light rail access.\"\n}",
+      "outcome": "valid",
+      "usage": {
+        "input_tokens": 313,
+        "output_tokens": 41,
+        "total_tokens": 354
+      },
+      "controlled": false,
+      "parsed": {
+        "tags": [
+          "apartment",
+          "downtown",
+          "pet-friendly"
+        ],
+        "summary": "Modern two-bedroom apartment near downtown San Jose with in-unit laundry and light rail access."
+      },
+      "elapsed_ms": 631.272
+    },
+    {
+      "node": "supervisor",
+      "turn_count": 5,
+      "pending_worker_turn": false,
+      "status": "running",
+      "stop_reason": null
+    },
+    {
+      "node": "reviewer",
+      "worker": "reviewer",
+      "attempt": 6,
+      "revision": 3,
+      "raw": "{\n  \"issues\": [],\n  \"message\": \"The proposal meets all the requirements: three nonblank string tags, a summary of at most 25 whitespace-delimited words, topical relevance, and no unsupported factual claims.\"\n}",
+      "outcome": "valid",
+      "usage": {
+        "input_tokens": 273,
+        "output_tokens": 48,
+        "total_tokens": 321
+      },
+      "controlled": true,
+      "parsed": {
+        "issues": [
+          "[CONTROLLED DEMO] Always-issue Reviewer requires another revision."
+        ],
+        "message": "The proposal meets all the requirements: three nonblank string tags, a summary of at most 25 whitespace-delimited words, topical relevance, and no unsupported factual claims."
+      },
+      "elapsed_ms": 778.462
+    },
+    {
+      "node": "supervisor",
+      "turn_count": 6,
+      "pending_worker_turn": false,
+      "status": "running",
+      "stop_reason": null
+    },
+    {
+      "node": "planner",
+      "worker": "planner",
+      "attempt": 7,
+      "revision": 4,
+      "raw": "{\n  \"tags\": [\"apartment\", \"downtown\", \"pet-friendly\"],\n  \"summary\": \"Modern two-bedroom apartment near downtown San Jose with in-unit laundry and light rail access.\"\n}",
+      "outcome": "valid",
+      "usage": {
+        "input_tokens": 313,
+        "output_tokens": 41,
+        "total_tokens": 354
+      },
+      "controlled": false,
+      "parsed": {
+        "tags": [
+          "apartment",
+          "downtown",
+          "pet-friendly"
+        ],
+        "summary": "Modern two-bedroom apartment near downtown San Jose with in-unit laundry and light rail access."
+      },
+      "elapsed_ms": 641.853
+    },
+    {
+      "node": "supervisor",
+      "turn_count": 7,
+      "pending_worker_turn": false,
+      "status": "running",
+      "stop_reason": null
+    },
+    {
+      "node": "reviewer",
+      "worker": "reviewer",
+      "attempt": 8,
+      "revision": 4,
+      "raw": "{\n  \"issues\": [],\n  \"message\": \"The proposal meets all the requirements: three nonblank string tags, a summary of at most 25 whitespace-delimited words, topical relevance, and no unsupported factual claims.\"\n}",
+      "outcome": "valid",
+      "usage": {
+        "input_tokens": 273,
+        "output_tokens": 48,
+        "total_tokens": 321
+      },
+      "controlled": true,
+      "parsed": {
+        "issues": [
+          "[CONTROLLED DEMO] Always-issue Reviewer requires another revision."
+        ],
+        "message": "The proposal meets all the requirements: three nonblank string tags, a summary of at most 25 whitespace-delimited words, topical relevance, and no unsupported factual claims."
+      },
+      "elapsed_ms": 778.761
+    },
+    {
+      "node": "supervisor",
+      "turn_count": 8,
+      "pending_worker_turn": false,
+      "status": "running",
+      "stop_reason": null
+    },
+    {
+      "node": "planner",
+      "worker": "planner",
+      "attempt": 9,
+      "revision": 5,
+      "raw": "{\n  \"tags\": [\"apartment\", \"downtown\", \"pet-friendly\"],\n  \"summary\": \"Modern two-bedroom apartment near downtown San Jose with in-unit laundry and light rail access.\"\n}",
+      "outcome": "valid",
+      "usage": {
+        "input_tokens": 313,
+        "output_tokens": 41,
+        "total_tokens": 354
+      },
+      "controlled": false,
+      "parsed": {
+        "tags": [
+          "apartment",
+          "downtown",
+          "pet-friendly"
+        ],
+        "summary": "Modern two-bedroom apartment near downtown San Jose with in-unit laundry and light rail access."
+      },
+      "elapsed_ms": 630.3
+    },
+    {
+      "node": "supervisor",
+      "turn_count": 9,
+      "pending_worker_turn": false,
+      "status": "running",
+      "stop_reason": null
+    },
+    {
+      "node": "reviewer",
+      "worker": "reviewer",
+      "attempt": 10,
+      "revision": 5,
+      "raw": "{\n  \"issues\": [],\n  \"message\": \"The proposal meets all the requirements: three nonblank string tags, a summary of at most 25 whitespace-delimited words, topical relevance, and no unsupported factual claims.\"\n}",
+      "outcome": "valid",
+      "usage": {
+        "input_tokens": 273,
+        "output_tokens": 48,
+        "total_tokens": 321
+      },
+      "controlled": true,
+      "parsed": {
+        "issues": [
+          "[CONTROLLED DEMO] Always-issue Reviewer requires another revision."
+        ],
+        "message": "The proposal meets all the requirements: three nonblank string tags, a summary of at most 25 whitespace-delimited words, topical relevance, and no unsupported factual claims."
+      },
+      "elapsed_ms": 766.452
+    },
+    {
+      "node": "supervisor",
+      "turn_count": 10,
+      "pending_worker_turn": false,
+      "status": "turn_limit",
+      "stop_reason": "Worker turn ceiling reached without an approved current proposal."
+    }
+  ]
+}

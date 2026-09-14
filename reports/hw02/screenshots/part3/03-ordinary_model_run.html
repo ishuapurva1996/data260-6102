@@ -1,0 +1,27 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Part 3 · Ordinary listing: accepted in two turns</title><style>body{min-width:1180px;margin:24px;background:#f3f5f9;color:#162134;font:15px system-ui}h1{font-size:23px;margin:0 0 8px}p{margin:8px 0;color:#485775;font-size:13px}pre{margin:12px 0;background:#fff;border:1px solid #ccd5e3;border-radius:8px;padding:16px;white-space:pre-wrap;overflow-wrap:anywhere;font:13px/1.4 ui-monospace,monospace}a{color:#235aaa}.cols{display:grid;grid-template-columns:1fr 1fr;gap:14px}</style></head><body><h1>Part 3 · Ordinary listing: accepted in two turns</h1><p>Browser rendering of saved CLI output; not a Terminal screenshot. Raw stderr is unchanged. Run 20260914T044444-c467a8e18f</p><div class="cols"><div><p>Recorded stderr (complete)</p><pre>run=20260914T044444-c467a8e18f config={&quot;model&quot;: &quot;qwen3:1.7b&quot;, &quot;base_url&quot;: &quot;http://localhost:11434&quot;, &quot;temperature&quot;: 0.0, &quot;timeout&quot;: 120.0, &quot;max_turns&quot;: 10, &quot;response_format&quot;: &quot;json&quot;, &quot;reasoning&quot;: false, &quot;controlled_reviewer&quot;: false, &quot;turn_definition&quot;: &quot;one Planner or Reviewer execution&quot;}
+supervisor turn_count=0 status=running stop_reason=None
+planner attempt=1 revision=1 outcome=valid
+  raw=&quot;{\&quot;tags\&quot;: [\&quot;apartment\&quot;, \&quot;downtown\&quot;, \&quot;pet-friendly\&quot;], \&quot;summary\&quot;: \&quot;Modern two-bedroom apartment near downtown San Jose with in-unit laundry and light rail access.\&quot;}&quot;
+supervisor turn_count=1 status=running stop_reason=None
+reviewer attempt=2 revision=1 outcome=valid
+  raw=&quot;{\n  \&quot;issues\&quot;: [],\n  \&quot;message\&quot;: \&quot;The proposal meets all the requirements: three nonblank string tags, a summary of at most 25 whitespace-delimited words, topical relevance, and no unsupported factual claims.\&quot;\n}&quot;
+supervisor turn_count=2 status=accepted stop_reason=Current Planner proposal approved by Reviewer.
+terminal status=accepted turn_count=2/10
+</pre></div><div><p>Fields from recorded terminal JSON</p><pre>{
+  &quot;run_id&quot;: &quot;20260914T044444-c467a8e18f&quot;,
+  &quot;status&quot;: &quot;accepted&quot;,
+  &quot;turn_count&quot;: 2,
+  &quot;max_turns&quot;: 10,
+  &quot;final_output&quot;: {
+    &quot;tags&quot;: [
+      &quot;apartment&quot;,
+      &quot;downtown&quot;,
+      &quot;pet-friendly&quot;
+    ],
+    &quot;summary&quot;: &quot;Modern two-bedroom apartment near downtown San Jose with in-unit laundry and light rail access.&quot;
+  },
+  &quot;proposal_revision&quot;: 1,
+  &quot;reviewed_revision&quot;: 1,
+  &quot;adapter_response_count&quot;: 2,
+  &quot;total_tokens&quot;: 580
+}</pre><p>Full artifacts: reports/hw02/raw/part3/20260914T044444-c467a8e18f</p></div></div></body></html>

@@ -1,0 +1,44 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Part 3 · Graph construction and supervisor</title><style>body{min-width:1180px;margin:24px;background:#f3f5f9;color:#162134;font:15px system-ui}h1{font-size:23px;margin:0 0 8px}p{margin:8px 0;color:#485775;font-size:13px}pre{margin:12px 0;background:#fff;border:1px solid #ccd5e3;border-radius:8px;padding:16px;white-space:pre-wrap;overflow-wrap:anywhere;font:13px/1.4 ui-monospace,monospace}a{color:#235aaa}.cols{display:grid;grid-template-columns:1fr 1fr;gap:14px}</style></head><body><h1>Part 3 · Graph construction and supervisor</h1><p>Actual implementation source. One turn is one Planner or Reviewer execution.</p><div class="cols"><div><p>src/agent_graph/workflow.py</p><pre>  1  &quot;&quot;&quot;Compile the actual LangGraph supervisor workflow.&quot;&quot;&quot;
+  2
+  3  from langgraph.graph import END, START, StateGraph
+  4
+  5  from .nodes import planner_node, reviewer_node, supervisor_node
+  6  from .router import router_logic
+  7  from .state import AgentState, create_initial_state
+  8
+  9
+ 10  def recursion_limit(max_turns: int) -&gt; int:
+ 11      &quot;&quot;&quot;Allow initial supervisor + worker/supervisor pairs and terminal headroom.&quot;&quot;&quot;
+ 12
+ 13      if type(max_turns) is not int or max_turns &lt; 1:
+ 14          raise ValueError(&quot;max_turns must be a positive integer&quot;)
+ 15      return 2 * max_turns + 10
+ 16
+ 17
+ 18  def build_graph():
+ 19      graph = StateGraph(AgentState)
+ 20      graph.add_node(&quot;supervisor&quot;, supervisor_node)
+ 21      graph.add_node(&quot;planner&quot;, planner_node)
+ 22      graph.add_node(&quot;reviewer&quot;, reviewer_node)
+ 23      graph.add_edge(START, &quot;supervisor&quot;)
+ 24      graph.add_conditional_edges(
+ 25          &quot;supervisor&quot;, router_logic,
+ 26          {&quot;planner&quot;: &quot;planner&quot;, &quot;reviewer&quot;: &quot;reviewer&quot;, END: END},
+ 27      )
+ 28      graph.add_edge(&quot;planner&quot;, &quot;supervisor&quot;)
+ 29      graph.add_edge(&quot;reviewer&quot;, &quot;supervisor&quot;)
+ 30      return graph.compile()</pre></div><div><p>src/agent_graph/nodes.py</p><pre>172
+173  def supervisor_node(state: AgentState) -&gt; dict[str, Any]:
+174      &quot;&quot;&quot;Commit one pending worker attempt, then apply terminal precedence.&quot;&quot;&quot;
+175
+176      turns = state[&quot;turn_count&quot;] + int(state[&quot;pending_worker_turn&quot;])
+177      updates: dict[str, Any] = {&quot;turn_count&quot;: turns, &quot;pending_worker_turn&quot;: False}
+178      if state[&quot;error&quot;] is not None:
+179          updates.update(status=&quot;error&quot;, stop_reason=state[&quot;error&quot;][&quot;message&quot;])
+180      elif has_current_approval(state):
+181          updates.update(status=&quot;accepted&quot;, stop_reason=&quot;Current Planner proposal approved by Reviewer.&quot;)
+182      elif turns &gt;= state[&quot;max_turns&quot;]:
+183          updates.update(status=&quot;turn_limit&quot;, stop_reason=&quot;Worker turn ceiling reached without an approved current proposal.&quot;)
+184      else:
+185          updates.update(status=&quot;running&quot;, stop_reason=None)
+186      return updates</pre></div></div></body></html>

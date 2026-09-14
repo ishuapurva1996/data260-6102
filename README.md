@@ -25,10 +25,12 @@ data260-6102/
 │   │       ├── styles.css
 │   │       └── app.js
 │   ├── agents_demo.py
+│   ├── agents_graph.py
 │   ├── hw1_client.py
 │   └── Dockerfile
 ├── src/
-│   └── model_client.py
+│   ├── model_client.py
+│   └── agent_graph/
 ├── reports/
 │   ├── hw01/
 │   │   ├── raw/
@@ -39,14 +41,22 @@ data260-6102/
 │   │   ├── verification.json
 │   │   └── REPRODUCIBLE_RUN_INSTRUCTIONS.md
 │   └── hw02/
-│       └── README.md
+│       ├── README.md
+│       ├── PART3_IMPLEMENTATION.md
+│       └── verification_part3.json
+├── docs/
+│   └── agent_graph.md
+├── scripts/
+│   └── verify_part3.py
 ├── AGENT.md
 ├── DOMAIN_SCHEMA.md
 ├── requirements.txt
+├── requirements-agents.txt
 ├── package.json
 ├── tests/
 │   ├── test_api.py
-│   └── browser_part2.cjs
+│   ├── browser_part2.cjs
+│   └── agent_graph/
 └── README.md
 ```
 
@@ -66,6 +76,21 @@ python code/web_application/main.py
 Open [the application](http://127.0.0.1:8702/) or [the API documentation](http://127.0.0.1:8702/docs). Records survive page reloads; restarting the single server process restores seed IDs 1 and 2. Stop it with `Control-C`. Only one application can use port 8702 at a time.
 
 See the [web application guide](code/web_application/README.md) for Docker, API tests, browser checks, and controlled screenshot aids. The Part 1 and Part 2 screenshot guides remain outside Git at `../HW2/agent_outputs/SCREENSHOT_EVIDENCE_PLAN.md` and `../HW2/agent_outputs/PART2_SCREENSHOT_EVIDENCE_PLAN.md`. [HW2 submission evidence](reports/hw02/README.md) describes where final report artifacts belong.
+
+### HW2 Part 3 - Planner/Reviewer graph
+
+Part 3 uses LangGraph to draft listing metadata, review it, and request revisions within a configurable worker-turn limit. It reuses the shared model adapter and runs directly from the CLI. With Ollama running and `qwen3:1.7b` installed, set up the separate agent environment:
+
+```bash
+python3.12 -m venv .venv-agents
+source .venv-agents/bin/activate
+python -m pip install -r requirements-agents.txt
+python code/agents_graph.py --input-json reports/hw02/cases/part3_listing.json --evidence-dir reports/hw02/raw/part3
+```
+
+If `.venv-agents` is already prepared, run `.venv-agents/bin/python code/agents_graph.py --input-json reports/hw02/cases/part3_listing.json`.
+
+See the [Part 3 usage and architecture guide](docs/agent_graph.md) for turn counting, response validation, controlled Reviewer mode, and test commands. The [implementation results](reports/hw02/PART3_IMPLEMENTATION.md) link the recorded tests, real-model runs, and screenshots. Part 4 experiments and final combined HW2 submission artifacts remain pending.
 
 ## Reproducing the original HW1 submission
 

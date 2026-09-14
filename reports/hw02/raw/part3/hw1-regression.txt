@@ -1,0 +1,61 @@
+test_agent_rejects_non_json_or_wrong_typed_output (test_agents_demo.AgentsDemoTests.test_agent_rejects_non_json_or_wrong_typed_output) ... ok
+test_coerce_reply_discards_false_schema_issues (test_agents_demo.AgentsDemoTests.test_coerce_reply_discards_false_schema_issues) ... ok
+test_coerce_reply_enforces_exact_tags_and_summary_limit (test_agents_demo.AgentsDemoTests.test_coerce_reply_enforces_exact_tags_and_summary_limit) ... ok
+test_coerce_reply_keeps_only_first_sentence (test_agents_demo.AgentsDemoTests.test_coerce_reply_keeps_only_first_sentence) ... ok
+test_coerce_reply_rejects_partly_hallucinated_tag (test_agents_demo.AgentsDemoTests.test_coerce_reply_rejects_partly_hallucinated_tag) ... ok
+test_coerce_reply_replaces_an_unsupported_summary (test_agents_demo.AgentsDemoTests.test_coerce_reply_replaces_an_unsupported_summary) ... ok
+test_coerce_reply_replaces_copied_schema_placeholder (test_agents_demo.AgentsDemoTests.test_coerce_reply_replaces_copied_schema_placeholder) ... ok
+test_create_model_passes_timeout_to_sync_and_async_clients (test_agents_demo.AgentsDemoTests.test_create_model_passes_timeout_to_sync_and_async_clients) ... ok
+test_extract_json_block_ignores_surrounding_text_and_fences (test_agents_demo.AgentsDemoTests.test_extract_json_block_ignores_surrounding_text_and_fences) ... ok
+test_finalize_refuses_unresolved_reviewer_issues (test_agents_demo.AgentsDemoTests.test_finalize_refuses_unresolved_reviewer_issues) ... ok
+test_main_rejects_unsupported_python_before_model_creation (test_agents_demo.AgentsDemoTests.test_main_rejects_unsupported_python_before_model_creation) ... ok
+test_main_returns_one_and_prints_setup_guidance_on_runtime_failure (test_agents_demo.AgentsDemoTests.test_main_returns_one_and_prints_setup_guidance_on_runtime_failure) ... ok
+test_missing_dependency_error_names_part2_requirements (test_agents_demo.AgentsDemoTests.test_missing_dependency_error_names_part2_requirements) ... ok
+test_parse_failure_still_returns_valid_schema (test_agents_demo.AgentsDemoTests.test_parse_failure_still_returns_valid_schema) ... ok
+test_parser_timeout_defaults_to_120_and_must_be_positive (test_agents_demo.AgentsDemoTests.test_parser_timeout_defaults_to_120_and_must_be_positive) ... ok
+test_phrase_candidates_are_derived_from_input (test_agents_demo.AgentsDemoTests.test_phrase_candidates_are_derived_from_input) ... ok
+test_pipeline_rejects_insufficient_topical_input_before_model_call (test_agents_demo.AgentsDemoTests.test_pipeline_rejects_insufficient_topical_input_before_model_call) ... ok
+test_pipeline_uses_two_model_calls_and_reviewer_can_change_output (test_agents_demo.AgentsDemoTests.test_pipeline_uses_two_model_calls_and_reviewer_can_change_output) ... ok
+test_reviewer_receives_raw_unrepaired_planner_response (test_agents_demo.AgentsDemoTests.test_reviewer_receives_raw_unrepaired_planner_response) ... ok
+test_bullet_only_validation (test_hw1_client.Hw1ClientTests.test_bullet_only_validation) ... ok
+test_save_output_creates_parent_directory (test_hw1_client.Hw1ClientTests.test_save_output_creates_parent_directory) ... ok
+test_stats_does_not_mutate_history (test_hw1_client.Hw1ClientTests.test_stats_does_not_mutate_history) ... ok
+test_tee_stream_writes_to_terminal_and_transcript (test_hw1_client.Hw1ClientTests.test_tee_stream_writes_to_terminal_and_transcript) ... ok
+test_complete_normalizes_usage_and_updates_cumulative_stats (test_model_client.ModelClientTests.test_complete_normalizes_usage_and_updates_cumulative_stats) ... ok
+test_missing_total_is_derived_from_input_and_output (test_model_client.ModelClientTests.test_missing_total_is_derived_from_input_and_output) ... ok
+test_checked_in_raw_experiment_integrity (test_nondeterminism.NondeterminismTests.test_checked_in_raw_experiment_integrity) ... ok
+test_checkpoint_identity_includes_schema_base_url_and_timeout (test_nondeterminism.NondeterminismTests.test_checkpoint_identity_includes_schema_base_url_and_timeout) ... ok
+test_completed_checkpoint_is_validated_before_resume_returns (test_nondeterminism.NondeterminismTests.test_completed_checkpoint_is_validated_before_resume_returns) ... ok
+test_completed_checkpoint_rejects_malformed_records_and_stale_metrics (test_nondeterminism.NondeterminismTests.test_completed_checkpoint_rejects_malformed_records_and_stale_metrics) ... ok
+test_error_then_success_has_correct_attempt_metrics (test_nondeterminism.NondeterminismTests.test_error_then_success_has_correct_attempt_metrics) ... temp=0.7 attempt=1 ERROR elapsed_ms=0: temporary
+temp=0.7 run=1/1 latency_ms=30 tags=["modern apartment", "covered parking", "light rail"]
+ok
+test_explicit_overwrite_replaces_existing_output (test_nondeterminism.NondeterminismTests.test_explicit_overwrite_replaces_existing_output) ... temp=0.7 run=1/1 latency_ms=30 tags=["modern apartment", "covered parking", "light rail"]
+ok
+test_keyboard_interrupt_is_checkpointed_and_reraised (test_nondeterminism.NondeterminismTests.test_keyboard_interrupt_is_checkpointed_and_reraised) ... ok
+test_max_errors_writes_a_terminal_failed_checkpoint (test_nondeterminism.NondeterminismTests.test_max_errors_writes_a_terminal_failed_checkpoint) ... temp=0.7 attempt=1 ERROR elapsed_ms=0: first
+temp=0.7 attempt=2 ERROR elapsed_ms=0: second
+ok
+test_models_are_created_in_temperature_order (test_nondeterminism.NondeterminismTests.test_models_are_created_in_temperature_order) ... temp=0.7 run=1/1 latency_ms=30 tags=["modern apartment", "covered parking", "light rail"]
+temp=0.0 run=1/1 latency_ms=30 tags=["modern apartment", "covered parking", "light rail"]
+ok
+test_non_resume_refuses_overwrite_and_preserves_bytes (test_nondeterminism.NondeterminismTests.test_non_resume_refuses_overwrite_and_preserves_bytes) ... ok
+test_one_run_checkpoints_running_state_then_completes (test_nondeterminism.NondeterminismTests.test_one_run_checkpoints_running_state_then_completes) ... temp=0.7 run=1/1 latency_ms=30 tags=["modern apartment", "covered parking", "light rail"]
+ok
+test_partial_resume_preserves_success_and_error_records (test_nondeterminism.NondeterminismTests.test_partial_resume_preserves_success_and_error_records) ... temp=0.7 run=2/2 latency_ms=30 tags=["modern apartment", "covered parking", "light rail"]
+ok
+test_percentile_uses_linear_interpolation (test_nondeterminism.NondeterminismTests.test_percentile_uses_linear_interpolation) ... ok
+test_resume_converts_stale_running_record_without_reusing_attempt (test_nondeterminism.NondeterminismTests.test_resume_converts_stale_running_record_without_reusing_attempt) ... temp=0.7 run=1/1 latency_ms=30 tags=["modern apartment", "covered parking", "light rail"]
+ok
+test_resume_rejects_stale_completed_metrics (test_nondeterminism.NondeterminismTests.test_resume_rejects_stale_completed_metrics) ... ok
+test_summarize_runs_reports_tag_frequency_and_latency (test_nondeterminism.NondeterminismTests.test_summarize_runs_reports_tag_frequency_and_latency) ... ok
+test_accessible_feedback_and_local_assets (test_part1.Part1Tests.test_accessible_feedback_and_local_assets) ... ok
+test_javascript_parses (test_part1.Part1Tests.test_javascript_parses) ... skipped 'Node.js is not available for syntax validation'
+test_required_form_controls_are_present (test_part1.Part1Tests.test_required_form_controls_are_present) ... ok
+test_checked_in_submission_artifacts_are_valid (test_verify_hw01.VerificationTests.test_checked_in_submission_artifacts_are_valid) ... ok
+test_rejects_invalid_submission_artifacts (test_verify_hw01.VerificationTests.test_rejects_invalid_submission_artifacts) ... ok
+
+----------------------------------------------------------------------
+Ran 46 tests in 0.020s
+
+OK (skipped=1)

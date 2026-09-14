@@ -1,0 +1,33 @@
+run=20260914T044448-5dc5aad616 config={"model": "qwen3:1.7b", "base_url": "http://localhost:11434", "temperature": 0.0, "timeout": 120.0, "max_turns": 10, "response_format": "json", "reasoning": false, "controlled_reviewer": true, "turn_definition": "one Planner or Reviewer execution"}
+supervisor turn_count=0 status=running stop_reason=None
+planner attempt=1 revision=1 outcome=valid
+  raw="{\"tags\": [\"apartment\", \"downtown\", \"pet-friendly\"], \"summary\": \"Modern two-bedroom apartment near downtown San Jose with in-unit laundry and light rail access.\"}"
+supervisor turn_count=1 status=running stop_reason=None
+reviewer attempt=2 revision=1 outcome=valid controlled_reviewer=true
+  raw="{\n  \"issues\": [],\n  \"message\": \"The proposal meets all the requirements: three nonblank string tags, a summary of at most 25 whitespace-delimited words, topical relevance, and no unsupported factual claims.\"\n}"
+supervisor turn_count=2 status=running stop_reason=None
+planner attempt=3 revision=2 outcome=valid
+  raw="{\n  \"tags\": [\"apartment\", \"downtown\", \"pet-friendly\"],\n  \"summary\": \"Modern two-bedroom apartment near downtown San Jose with in-unit laundry and light rail access.\"\n}"
+supervisor turn_count=3 status=running stop_reason=None
+reviewer attempt=4 revision=2 outcome=valid controlled_reviewer=true
+  raw="{\n  \"issues\": [],\n  \"message\": \"The proposal meets all the requirements: three nonblank string tags, a summary of at most 25 whitespace-delimited words, topical relevance, and no unsupported factual claims.\"\n}"
+supervisor turn_count=4 status=running stop_reason=None
+planner attempt=5 revision=3 outcome=valid
+  raw="{\n  \"tags\": [\"apartment\", \"downtown\", \"pet-friendly\"],\n  \"summary\": \"Modern two-bedroom apartment near downtown San Jose with in-unit laundry and light rail access.\"\n}"
+supervisor turn_count=5 status=running stop_reason=None
+reviewer attempt=6 revision=3 outcome=valid controlled_reviewer=true
+  raw="{\n  \"issues\": [],\n  \"message\": \"The proposal meets all the requirements: three nonblank string tags, a summary of at most 25 whitespace-delimited words, topical relevance, and no unsupported factual claims.\"\n}"
+supervisor turn_count=6 status=running stop_reason=None
+planner attempt=7 revision=4 outcome=valid
+  raw="{\n  \"tags\": [\"apartment\", \"downtown\", \"pet-friendly\"],\n  \"summary\": \"Modern two-bedroom apartment near downtown San Jose with in-unit laundry and light rail access.\"\n}"
+supervisor turn_count=7 status=running stop_reason=None
+reviewer attempt=8 revision=4 outcome=valid controlled_reviewer=true
+  raw="{\n  \"issues\": [],\n  \"message\": \"The proposal meets all the requirements: three nonblank string tags, a summary of at most 25 whitespace-delimited words, topical relevance, and no unsupported factual claims.\"\n}"
+supervisor turn_count=8 status=running stop_reason=None
+planner attempt=9 revision=5 outcome=valid
+  raw="{\n  \"tags\": [\"apartment\", \"downtown\", \"pet-friendly\"],\n  \"summary\": \"Modern two-bedroom apartment near downtown San Jose with in-unit laundry and light rail access.\"\n}"
+supervisor turn_count=9 status=running stop_reason=None
+reviewer attempt=10 revision=5 outcome=valid controlled_reviewer=true
+  raw="{\n  \"issues\": [],\n  \"message\": \"The proposal meets all the requirements: three nonblank string tags, a summary of at most 25 whitespace-delimited words, topical relevance, and no unsupported factual claims.\"\n}"
+supervisor turn_count=10 status=turn_limit stop_reason=Worker turn ceiling reached without an approved current proposal.
+terminal status=turn_limit turn_count=10/10
