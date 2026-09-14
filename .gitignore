@@ -151,6 +151,7 @@ activemq-data/
 .env
 .envrc
 .venv
+.venv-*/
 env/
 venv/
 ENV/
@@ -206,8 +207,9 @@ tempCodeRunnerFile.py
 # macOS and local report-build artifacts
 .DS_Store
 tmp/
-reports/hw01/drafts/
-reports/hw01/raw/*.tmp
+HW1/reports/hw01/drafts/
+HW1/reports/hw01/raw/*.tmp
+agent_outputs/
 
 # Local editor settings and swap files
 .idea/

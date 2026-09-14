@@ -1,0 +1,250 @@
+:root {
+    color-scheme: light;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+body {
+    min-width: 0;
+    margin: 0;
+    padding: 50px 24px;
+    background-color: rgb(237, 237, 237);
+    color: rgb(31, 31, 31);
+    font-family: Arial, sans-serif;
+}
+
+.page-shell {
+    width: 100%;
+    max-width: 710px;
+    margin: 0 auto;
+}
+
+h1 {
+    width: 100%;
+    margin: 0;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgb(57, 191, 57);
+    font-size: 35px;
+    font-weight: 750;
+    text-align: center;
+}
+
+.page-intro {
+    margin: 14px 0 0;
+    color: rgb(78, 78, 78);
+    text-align: center;
+}
+
+form,
+.list-card {
+    width: 100%;
+    padding: 39px 55px;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgb(160, 160, 160);
+}
+
+form {
+    margin: 30px auto;
+}
+
+.form-field {
+    margin-bottom: 26px;
+}
+
+label {
+    display: block;
+    margin-bottom: 9px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    width: 100%;
+    min-height: 44px;
+    padding: 10px;
+    border: 2px solid rgb(223, 220, 220);
+    border-radius: 5px;
+    background-color: white;
+    font: inherit;
+}
+
+textarea {
+    min-height: 92px;
+    resize: vertical;
+}
+
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+button:focus-visible {
+    outline: 3px solid rgba(33, 105, 190, 0.35);
+    outline-offset: 2px;
+}
+
+.field-hint {
+    margin: 7px 0 0;
+    color: rgb(92, 92, 92);
+    font-size: 13px;
+}
+
+.terms-field {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    margin-top: 4px;
+}
+
+.terms-field input {
+    width: 18px;
+    height: 18px;
+    flex: 0 0 auto;
+    margin: 0;
+}
+
+.terms-field label {
+    margin: 1px 0 0;
+    line-height: 1.35;
+}
+
+button {
+    display: block;
+    min-height: 48px;
+    margin: 30px auto 20px;
+    padding: 12px 30px;
+    border: 0;
+    border-radius: 5px;
+    background-color: rgb(45, 153, 45);
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: rgb(35, 119, 35);
+}
+
+button:disabled {
+    background-color: rgb(99, 150, 99);
+    cursor: wait;
+    opacity: 0.85;
+}
+
+.status-message {
+    margin: 0;
+    padding: 12px 14px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.status-loading {
+    border-color: rgb(151, 191, 230);
+    background-color: rgb(234, 245, 255);
+    color: rgb(25, 76, 128);
+}
+
+.status-success {
+    border-color: rgb(156, 205, 156);
+    background-color: rgb(237, 249, 237);
+    color: rgb(27, 104, 27);
+}
+
+.status-error {
+    border-color: rgb(225, 157, 157);
+    background-color: rgb(255, 239, 239);
+    color: rgb(157, 30, 30);
+}
+
+.list-section {
+    margin-top: 64px;
+}
+
+h2 {
+    margin: 0 0 20px;
+    color: rgb(70, 70, 70);
+    font-size: 30px;
+}
+
+.list-card {
+    min-height: 86px;
+}
+
+.empty-state {
+    margin: 0;
+    color: rgb(87, 87, 87);
+    line-height: 1.5;
+    text-align: center;
+}
+
+#rentalList {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#rentalList li {
+    margin: 0 0 14px;
+    padding: 15px;
+    border-left: 4px solid rgb(65, 192, 65);
+    border-radius: 5px;
+    background-color: rgb(249, 249, 249);
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+}
+
+#rentalList li:last-child {
+    margin-bottom: 0;
+}
+
+#rentalList button {
+    min-height: 40px;
+    margin: 14px 0 0;
+    padding: 8px 15px;
+    background-color: rgb(225, 54, 54);
+    font-size: 14px;
+}
+
+#rentalList button:hover {
+    background-color: rgb(183, 33, 33);
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 24px 16px 36px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    form,
+    .list-card {
+        padding: 28px 24px;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+    }
+
+    .list-section {
+        margin-top: 48px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+}

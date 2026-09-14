@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW2 Part 1 - Rental Housing Listings</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main class="page-shell">
+        <h1>Rental Housing Listings</h1>
+        <p class="page-intro">Create and manage rental housing listings.</p>
+
+        <form id="rentalForm" novalidate>
+            <div class="form-field">
+                <label for="listingTitle">Listing Title <span aria-hidden="true">*</span></label>
+                <input type="text" id="listingTitle" name="listingTitle" placeholder="e.g., Zia Apartment"
+                    autocomplete="off" required autofocus>
+            </div>
+
+            <div class="form-field">
+                <label for="propertyAddress">Address <span aria-hidden="true">*</span></label>
+                <input type="text" id="propertyAddress" name="propertyAddress"
+                    placeholder="e.g., 999 Main Street, CA" autocomplete="street-address" required>
+            </div>
+
+            <div class="form-field">
+                <label for="submitterEmail">Landlord Email <span aria-hidden="true">*</span></label>
+                <input type="email" id="submitterEmail" name="submitterEmail" placeholder="landlord@email.com"
+                    autocomplete="email" required>
+            </div>
+
+            <div class="form-field">
+                <label for="description">Description <span aria-hidden="true">*</span></label>
+                <textarea name="description" id="description"
+                    placeholder="e.g., Spacious two-bedroom apartment with parking" rows="3" required></textarea>
+                <p class="field-hint">Enter more than 25 characters.</p>
+            </div>
+
+            <div class="form-field">
+                <label for="propertyType">Property Type <span aria-hidden="true">*</span></label>
+                <select name="propertyType" id="propertyType" required>
+                    <option value="" selected disabled>Choose a property type</option>
+                    <option value="apartment">Apartment</option>
+                    <option value="house">House</option>
+                    <option value="condo">Condo</option>
+                    <option value="townhouse">Townhouse</option>
+                </select>
+            </div>
+
+            <div class="terms-field">
+                <input type="checkbox" id="termsAccepted" name="termsAccepted" required>
+                <label for="termsAccepted">I agree to the terms and conditions.</label>
+            </div>
+
+            <button id="submitButton" type="submit">Create Rental Listing</button>
+            <p id="formStatus" class="status-message" role="status" aria-live="polite" hidden></p>
+        </form>
+
+        <section class="list-section" aria-labelledby="listHeading">
+            <h2 id="listHeading">Submitted Rental Listings</h2>
+            <div class="list-card">
+                <p id="emptyState" class="empty-state">No rental listings yet. Create your first listing above.</p>
+                <ul id="rentalList" aria-live="polite" hidden></ul>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

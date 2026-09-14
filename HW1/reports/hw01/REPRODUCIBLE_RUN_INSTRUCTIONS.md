@@ -1,6 +1,12 @@
 # Homework 1 Reproducible Run Instructions
 
-Run every command from the repository root unless a command says otherwise.
+Run every command from the `HW1/` assignment root unless a command says otherwise. From the Git repository root, first run:
+
+```bash
+cd HW1
+```
+
+All paths below are relative to that assignment root. The historical Git tag `hw1` preserves the original submission and its earlier repository layout. The submitted report and recorded logs retain their original contents and historical paths.
 
 ## Environment
 
