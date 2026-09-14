@@ -33,8 +33,8 @@
       "sha256": "dec42206a88cc48f5ad34304733e684ac55e3885ff12fbac825eb2aab426e303"
     },
     "reports/hw02/AI_USE.md": {
-      "bytes": 2242,
-      "sha256": "bfdb0713ba3b761f7b09cfd29cdf2d52c24b24cad171d37af4ccba55ce93db51"
+      "bytes": 2301,
+      "sha256": "fc5a5aa4d94f539f925847e2aad5e2762fa3c9d9b0544c4512b2dd956723dfde"
     },
     "reports/hw02/METRICS.md": {
       "bytes": 13572,
@@ -73,8 +73,8 @@
       "sha256": "8975dec90d2fa1ee59abaa167f9b8bff086d717c5a8600b912491786963415dd"
     },
     "reports/hw02/RUN_LOG_SUBMISSION.txt": {
-      "bytes": 6273,
-      "sha256": "605e2187e900559a903db4109d7a8b6c6890524e16c15c49a60acb429815d4b0"
+      "bytes": 7656,
+      "sha256": "eb47b9810aef4849b8241bfe05315d21f679bca75bd80785c8ccdd449e093ae2"
     },
     "reports/hw02/SUBMISSION_CHECKLIST.md": {
       "bytes": 7385,
@@ -3158,7 +3158,7 @@
     },
     "reports/hw02/verification.json": {
       "bytes": 143352,
-      "sha256": "16df53197b49b6c8ad8982afcbff8b472d2c0ad0bdc1af50af7ea2ac868989d5"
+      "sha256": "0dcfd459f3a3c7e07913c099cc48a2d93c86815632dc2b8949244bc3f77c0521"
     },
     "reports/hw02/verification_part3.json": {
       "bytes": 1922,
@@ -3204,5 +3204,7 @@
   "previous_package_tag": "hw2-report-v2",
   "previous_package_commit": "3d1b5f77aa09ed639db4fef828c8e87705471d13",
   "published_branch_url": "https://github.com/ishuapurva1996/data260-6102/tree/codex/fix-hw1-form",
-  "artifact_refresh_scope": "Report artifact hashes were refreshed after checking runtime-source continuity; the original successful live/model checks and timestamps were preserved, not rerun."
+  "artifact_refresh_scope": "Report artifact hashes were refreshed after checking runtime-source continuity; the original successful live/model checks and timestamps were preserved, not rerun.",
+  "updated_at": "2026-09-14T08:49:05.277234+00:00",
+  "post_package_revision_note": "AI_USE.md was revised after the hw2-report-v3 PDF package to emphasize code review and output validation while retaining coding assistance and student contributions. The file inventory and artifact verification reflect this documentation revision; the PDF and runtime source are unchanged."
 }

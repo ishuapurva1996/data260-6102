@@ -2,7 +2,7 @@
 
 ## 1. What I used AI for and what I did myself
 
-I used Codex to help interpret the assignment, compare the helper code with my existing application, implement and revise the web app and agent graph, run automated checks and local-model experiments, organize evidence, and prepare this report. Codex also helped capture screenshots and check the recorded results.
+I used Codex to help interpret the assignment, compare the teacher’s helper code with my existing implementation, and assist with implementing and refining the web app and agent graph. I also used it to review the code, check application logic, run automated tests and local-model experiments, and verify whether the generated outputs met the assignment’s requirements.
 
 I supplied the assignment and project context, reviewed the plans, questioned design choices, and directed revisions. I also performed extensive UI validations and logic checks. For example, I questioned why the first interface only allowed updating listing ID 1 when the application should let a user edit other listings too.
 
