@@ -1,0 +1,1988 @@
+{
+  "startedAt": "2026-09-14T07:17:16.699Z",
+  "baseURL": "http://127.0.0.1:18702",
+  "provenance": "Unaltered PNG captures produced by Playwright page.screenshot in Chromium. No app DOM, styling, data response, or screenshot pixels are replaced or overlaid. Mutations use actual browser controls and real local HTTP requests.",
+  "isolation": "Port 8702 was already occupied by an existing Python process. This capture owns a separate single-worker Uvicorn process on 18702, restarted between Parts 1 and 2. The existing process and its in-memory records were not modified. The submitted main.py default remains PORT_BASE=8702.",
+  "limitation": "Headless Chromium screenshots contain page content only; browser chrome and DevTools width toolbar are absent. Each Part 1 original PNG is 375x812 at device scale factor 1. Metadata records the actual innerWidth and document scrollWidth; report captions must state the viewport explicitly. The capture port is an isolated verification port, not the assignment default.",
+  "screenshots": [
+    {
+      "filename": "reports/hw02/screenshots/part1/P1-01-empty.png",
+      "at": "2026-09-14T07:17:19.190Z",
+      "stage": "P1 true-empty list",
+      "caption": "At an actual 375 \u00d7 812 viewport, the empty store shows 0 listings and an explicit no-record message; highest-ID deletion is disabled.",
+      "url": "http://127.0.0.1:18702/",
+      "captureType": "Unaltered viewport screenshot",
+      "pngWidth": 375,
+      "pngHeight": 812,
+      "sha256": "ca2064d48b087977aff191c6571b6a8b9ad5f88b321bdad1609552cee668a493",
+      "metrics": {
+        "innerWidth": 375,
+        "innerHeight": 812,
+        "devicePixelRatio": 1,
+        "scrollY": 852,
+        "documentScrollWidth": 375,
+        "bodyScrollWidth": 375,
+        "visibleIDs": [],
+        "storeSummary": "0 listings total.",
+        "searchSummary": "Showing all 0 listings.",
+        "searchQuery": "",
+        "formStatus": null,
+        "submitDisabled": false,
+        "createValues": {
+          "listingTitle": "",
+          "propertyAddress": "",
+          "submitterEmail": "",
+          "description": "",
+          "propertyType": "",
+          "termsAccepted": false
+        }
+      }
+    },
+    {
+      "filename": "reports/hw02/screenshots/part1/P1-02a-form-upper.png",
+      "at": "2026-09-14T07:17:19.838Z",
+      "stage": "P1 filled form",
+      "caption": "Filled responsive create form at 375px width, upper fields. Single-line inputs may horizontally clip long values.",
+      "url": "http://127.0.0.1:18702/?slowSave=true",
+      "captureType": "Unaltered viewport screenshot",
+      "pngWidth": 375,
+      "pngHeight": 812,
+      "sha256": "451d6b9a34bae05fb2939c4accbe7a3b25cbbcd01bce037ccfeb40225e251a82",
+      "metrics": {
+        "innerWidth": 375,
+        "innerHeight": 812,
+        "devicePixelRatio": 1,
+        "scrollY": 153,
+        "documentScrollWidth": 375,
+        "bodyScrollWidth": 375,
+        "visibleIDs": [],
+        "storeSummary": "0 listings total.",
+        "searchSummary": "Showing all 0 listings.",
+        "searchQuery": "",
+        "formStatus": null,
+        "submitDisabled": false,
+        "createValues": {
+          "listingTitle": "Downtown San Jose Studio",
+          "propertyAddress": "999 Main Street, San Jose, CA",
+          "submitterEmail": "sanjosedowntownrentalpropertymanagementoffice@example.com",
+          "description": "Bright studio with covered parking and convenient light rail access.",
+          "propertyType": "apartment",
+          "termsAccepted": true
+        }
+      }
+    },
+    {
+      "filename": "reports/hw02/screenshots/part1/P1-02b-form-lower.png",
+      "at": "2026-09-14T07:17:19.890Z",
+      "stage": "P1 filled form",
+      "caption": "Filled responsive create form at 375px width, description, property type, terms, and reachable submit control.",
+      "url": "http://127.0.0.1:18702/?slowSave=true",
+      "captureType": "Unaltered viewport screenshot",
+      "pngWidth": 375,
+      "pngHeight": 812,
+      "sha256": "39851854ff9e2abfa671c9a1f9e7d9c64e51d8175442afc878a0c2077b8ee0e4",
+      "metrics": {
+        "innerWidth": 375,
+        "innerHeight": 812,
+        "devicePixelRatio": 1,
+        "scrollY": 494,
+        "documentScrollWidth": 375,
+        "bodyScrollWidth": 375,
+        "visibleIDs": [],
+        "storeSummary": "0 listings total.",
+        "searchSummary": "Showing all 0 listings.",
+        "searchQuery": "",
+        "formStatus": null,
+        "submitDisabled": false,
+        "createValues": {
+          "listingTitle": "Downtown San Jose Studio",
+          "propertyAddress": "999 Main Street, San Jose, CA",
+          "submitterEmail": "sanjosedowntownrentalpropertymanagementoffice@example.com",
+          "description": "Bright studio with covered parking and convenient light rail access.",
+          "propertyType": "apartment",
+          "termsAccepted": true
+        }
+      }
+    },
+    {
+      "filename": "reports/hw02/screenshots/part1/P1-03-loading.png",
+      "at": "2026-09-14T07:17:19.992Z",
+      "stage": "P1 controlled loading",
+      "caption": "Controlled slowSave=true adds eight seconds before a real POST. Saving status and disabled controls are visible at 375px.",
+      "url": "http://127.0.0.1:18702/?slowSave=true",
+      "captureType": "Unaltered viewport screenshot",
+      "pngWidth": 375,
+      "pngHeight": 812,
+      "sha256": "5c68514e195b936534ca13286abc2dcfaedd7e23269a5e2f758f25a26fc94624",
+      "metrics": {
+        "innerWidth": 375,
+        "innerHeight": 812,
+        "devicePixelRatio": 1,
+        "scrollY": 509,
+        "documentScrollWidth": 375,
+        "bodyScrollWidth": 375,
+        "visibleIDs": [],
+        "storeSummary": "0 listings total.",
+        "searchSummary": "Showing all 0 listings.",
+        "searchQuery": "",
+        "formStatus": "Saving your rental listing...",
+        "submitDisabled": true,
+        "createValues": {
+          "listingTitle": "Downtown San Jose Studio",
+          "propertyAddress": "999 Main Street, San Jose, CA",
+          "submitterEmail": "sanjosedowntownrentalpropertymanagementoffice@example.com",
+          "description": "Bright studio with covered parking and convenient light rail access.",
+          "propertyType": "apartment",
+          "termsAccepted": true
+        }
+      }
+    },
+    {
+      "filename": "reports/hw02/screenshots/part1/P1-04-list.png",
+      "at": "2026-09-14T07:17:28.523Z",
+      "stage": "P1 populated mobile list",
+      "caption": "Actual 375px populated list with new ID 1, long email wrapping in the card, and reachable Edit/Delete controls.",
+      "url": "http://127.0.0.1:18702/",
+      "captureType": "Unaltered viewport screenshot",
+      "pngWidth": 375,
+      "pngHeight": 812,
+      "sha256": "6051227a6985f0a2ff6ef2df67027454a3e270bc79fb7382ec18cac8b3054094",
+      "metrics": {
+        "innerWidth": 375,
+        "innerHeight": 812,
+        "devicePixelRatio": 1,
+        "scrollY": 1244,
+        "documentScrollWidth": 375,
+        "bodyScrollWidth": 375,
+        "visibleIDs": [
+          1
+        ],
+        "storeSummary": "1 listing total. Highest ID: 1.",
+        "searchSummary": "Showing all 1 listing.",
+        "searchQuery": "",
+        "formStatus": null,
+        "submitDisabled": false,
+        "createValues": {
+          "listingTitle": "",
+          "propertyAddress": "",
+          "submitterEmail": "",
+          "description": "",
+          "propertyType": "",
+          "termsAccepted": false
+        }
+      }
+    },
+    {
+      "filename": "reports/hw02/screenshots/part1/P1-05-editor.png",
+      "at": "2026-09-14T07:17:28.624Z",
+      "stage": "P1 populated mobile list",
+      "caption": "Supplemental 375px editor: ID 1 is prefilled and Save changes/Cancel remain reachable.",
+      "url": "http://127.0.0.1:18702/",
+      "captureType": "Unaltered viewport screenshot",
+      "pngWidth": 375,
+      "pngHeight": 812,
+      "sha256": "39103e68a46b8c12b5c2c430c2459121f9a0e8c46c7ac6487b3dd1e3430d3eed",
+      "metrics": {
+        "innerWidth": 375,
+        "innerHeight": 812,
+        "devicePixelRatio": 1,
+        "scrollY": 963,
+        "documentScrollWidth": 375,
+        "bodyScrollWidth": 375,
+        "visibleIDs": [
+          1
+        ],
+        "storeSummary": "1 listing total. Highest ID: 1.",
+        "searchSummary": "Showing all 1 listing.",
+        "searchQuery": "",
+        "formStatus": null,
+        "submitDisabled": false,
+        "createValues": {
+          "listingTitle": "",
+          "propertyAddress": "",
+          "submitterEmail": "",
+          "description": "",
+          "propertyType": "",
+          "termsAccepted": false
+        }
+      }
+    },
+    {
+      "filename": "reports/hw02/screenshots/part1/P1-06-error.png",
+      "at": "2026-09-14T07:17:31.329Z",
+      "stage": "P1 controlled UI error",
+      "caption": "Controlled simulateError=true UI failure: visible error, retained lower form input, and restored controls. No POST or backend rejection occurs.",
+      "url": "http://127.0.0.1:18702/?simulateError=true",
+      "captureType": "Unaltered viewport screenshot",
+      "pngWidth": 375,
+      "pngHeight": 812,
+      "sha256": "19c3a5c438482551b6272062648714d299bb5946cf4a898dbc07dcaf32faac08",
+      "metrics": {
+        "innerWidth": 375,
+        "innerHeight": 812,
+        "devicePixelRatio": 1,
+        "scrollY": 524,
+        "documentScrollWidth": 375,
+        "bodyScrollWidth": 375,
+        "visibleIDs": [
+          1
+        ],
+        "storeSummary": "1 listing total. Highest ID: 1.",
+        "searchSummary": "Showing all 1 listing.",
+        "searchQuery": "",
+        "formStatus": "The rental listing could not be saved. Please try again.",
+        "submitDisabled": false,
+        "createValues": {
+          "listingTitle": "Downtown San Jose Studio",
+          "propertyAddress": "999 Main Street, San Jose, CA",
+          "submitterEmail": "sanjosedowntownrentalpropertymanagementoffice@example.com",
+          "description": "Bright studio with covered parking and convenient light rail access.",
+          "propertyType": "apartment",
+          "termsAccepted": true
+        }
+      }
+    },
+    {
+      "filename": "reports/hw02/screenshots/part1/P1-06b-retained-upper.png",
+      "at": "2026-09-14T07:17:31.373Z",
+      "stage": "P1 controlled UI error",
+      "caption": "Supplemental retained title, address, and email after the controlled UI error; original viewport remains 375 \u00d7 812.",
+      "url": "http://127.0.0.1:18702/?simulateError=true",
+      "captureType": "Unaltered viewport screenshot",
+      "pngWidth": 375,
+      "pngHeight": 812,
+      "sha256": "4c6050e79dbc7010ac046ebefdf1d39da8e7453c15f03e73cf3b9d31a58cfe69",
+      "metrics": {
+        "innerWidth": 375,
+        "innerHeight": 812,
+        "devicePixelRatio": 1,
+        "scrollY": 153,
+        "documentScrollWidth": 375,
+        "bodyScrollWidth": 375,
+        "visibleIDs": [
+          1
+        ],
+        "storeSummary": "1 listing total. Highest ID: 1.",
+        "searchSummary": "Showing all 1 listing.",
+        "searchQuery": "",
+        "formStatus": "The rental listing could not be saved. Please try again.",
+        "submitDisabled": false,
+        "createValues": {
+          "listingTitle": "Downtown San Jose Studio",
+          "propertyAddress": "999 Main Street, San Jose, CA",
+          "submitterEmail": "sanjosedowntownrentalpropertymanagementoffice@example.com",
+          "description": "Bright studio with covered parking and convenient light rail access.",
+          "propertyType": "apartment",
+          "termsAccepted": true
+        }
+      }
+    },
+    {
+      "filename": "reports/hw02/screenshots/part2/P2-00-seeds.png",
+      "at": "2026-09-14T07:17:32.418Z",
+      "stage": "P2 fresh baseline",
+      "caption": "Fresh isolated app instance contains original seed IDs 1 and 2.",
+      "url": "http://127.0.0.1:18702/",
+      "captureType": "Unaltered viewport screenshot",
+      "pngWidth": 1100,
+      "pngHeight": 1100,
+      "sha256": "e36baf1ecae89824adab0d98618a35e33f67c3b03a403aea21c5320fadcaf1ec",
+      "metrics": {
+        "innerWidth": 1100,
+        "innerHeight": 1100,
+        "devicePixelRatio": 1,
+        "scrollY": 1020,
+        "documentScrollWidth": 1100,
+        "bodyScrollWidth": 1100,
+        "visibleIDs": [
+          1,
+          2
+        ],
+        "storeSummary": "2 listings total. Highest ID: 2.",
+        "searchSummary": "Showing all 2 listings.",
+        "searchQuery": "",
+        "formStatus": null,
+        "submitDisabled": false,
+        "createValues": {
+          "listingTitle": "",
+          "propertyAddress": "",
+          "submitterEmail": "",
+          "description": "",
+          "propertyType": "",
+          "termsAccepted": false
+        }
+      }
+    },
+    {
+      "filename": "reports/hw02/screenshots/part2/P2-Q1-input.png",
+      "at": "2026-09-14T07:17:32.547Z",
+      "stage": "P2 Q1 create",
+      "caption": "Create input for Downtown San Jose Studio before submission.",
+      "url": "http://127.0.0.1:18702/",
+      "captureType": "Unaltered viewport screenshot",
+      "pngWidth": 1100,
+      "pngHeight": 1100,
+      "sha256": "f475cf00f7a88ae70bd3ae5a1f2dc1750578dc41aca628e75fbcaab3de25223d",
+      "metrics": {
+        "innerWidth": 1100,
+        "innerHeight": 1100,
+        "devicePixelRatio": 1,
+        "scrollY": 151,
+        "documentScrollWidth": 1100,
+        "bodyScrollWidth": 1100,
+        "visibleIDs": [
+          1,
+          2
+        ],
+        "storeSummary": "2 listings total. Highest ID: 2.",
+        "searchSummary": "Showing all 2 listings.",
+        "searchQuery": "",
+        "formStatus": null,
+        "submitDisabled": false,
+        "createValues": {
+          "listingTitle": "Downtown San Jose Studio",
+          "propertyAddress": "999 Main Street, San Jose, CA",
+          "submitterEmail": "sanjosedowntownrentalpropertymanagementoffice@example.com",
+          "description": "Bright studio with covered parking and convenient light rail access.",
+          "propertyType": "apartment",
+          "termsAccepted": true
+        }
+      }
+    },
+    {
+      "filename": "reports/hw02/screenshots/part2/P2-Q1-created.png",
+      "at": "2026-09-14T07:17:33.202Z",
+      "stage": "P2 Q1 create",
+      "caption": "Create returned home with newly assigned ID 3; its title, address, and remaining fields are displayed.",
+      "url": "http://127.0.0.1:18702/",
+      "captureType": "Unaltered viewport screenshot",
+      "pngWidth": 1100,
+      "pngHeight": 1100,
+      "sha256": "cdd16f0563f1dab60bca3ca6a755bf786a02bbe4b855855894d8ec15be8b3c72",
+      "metrics": {
+        "innerWidth": 1100,
+        "innerHeight": 1100,
+        "devicePixelRatio": 1,
+        "scrollY": 1302,
+        "documentScrollWidth": 1100,
+        "bodyScrollWidth": 1100,
+        "visibleIDs": [
+          1,
+          2,
+          3
+        ],
+        "storeSummary": "3 listings total. Highest ID: 3.",
+        "searchSummary": "Showing all 3 listings.",
+        "searchQuery": "",
+        "formStatus": null,
+        "submitDisabled": false,
+        "createValues": {
+          "listingTitle": "",
+          "propertyAddress": "",
+          "submitterEmail": "",
+          "description": "",
+          "propertyType": "",
+          "termsAccepted": false
+        }
+      }
+    },
+    {
+      "filename": "reports/hw02/screenshots/part2/P2-Q2-before.png",
+      "at": "2026-09-14T07:17:33.314Z",
+      "stage": "P2 Q2 update ID1",
+      "caption": "Before update: editor targets ID 1 with its original title and address prefilled.",
+      "url": "http://127.0.0.1:18702/",
+      "captureType": "Unaltered viewport screenshot",
+      "pngWidth": 1100,
+      "pngHeight": 1100,
+      "sha256": "212b30b5038fa9b2ba20e93150ef164542bf60a9246a03745bb5f54eb1dde606",
+      "metrics": {
+        "innerWidth": 1100,
+        "innerHeight": 1100,
+        "devicePixelRatio": 1,
+        "scrollY": 986,
+        "documentScrollWidth": 1100,
+        "bodyScrollWidth": 1100,
+        "visibleIDs": [
+          1,
+          2,
+          3
+        ],
+        "storeSummary": "3 listings total. Highest ID: 3.",
+        "searchSummary": "Showing all 3 listings.",
+        "searchQuery": "",
+        "formStatus": null,
+        "submitDisabled": false,
+        "createValues": {
+          "listingTitle": "",
+          "propertyAddress": "",
+          "submitterEmail": "",
+          "description": "",
+          "propertyType": "",
+          "termsAccepted": false
+        }
+      }
+    },
+    {
+      "filename": "reports/hw02/screenshots/part2/P2-Q2-updated.png",
+      "at": "2026-09-14T07:17:33.949Z",
+      "stage": "P2 Q2 update ID1",
+      "caption": "ID 1 now has Updated Downtown Apartment and 900 Market Street, San Jose, CA. Other fields and IDs 2 and 3 remain unchanged.",
+      "url": "http://127.0.0.1:18702/",
+      "captureType": "Unaltered viewport screenshot",
+      "pngWidth": 1100,
+      "pngHeight": 1100,
+      "sha256": "5297ce2f4f7a6547ba3725ef15a02952e21eba04a38d49c4fc5bf52ca28261ac",
+      "metrics": {
+        "innerWidth": 1100,
+        "innerHeight": 1100,
+        "devicePixelRatio": 1,
+        "scrollY": 1302,
+        "documentScrollWidth": 1100,
+        "bodyScrollWidth": 1100,
+        "visibleIDs": [
+          1,
+          2,
+          3
+        ],
+        "storeSummary": "3 listings total. Highest ID: 3.",
+        "searchSummary": "Showing all 3 listings.",
+        "searchQuery": "",
+        "formStatus": null,
+        "submitDisabled": false,
+        "createValues": {
+          "listingTitle": "",
+          "propertyAddress": "",
+          "submitterEmail": "",
+          "description": "",
+          "propertyType": "",
+          "termsAccepted": false
+        }
+      }
+    },
+    {
+      "filename": "reports/hw02/screenshots/part2/P2-Q3-before.png",
+      "at": "2026-09-14T07:17:34.017Z",
+      "stage": "P2 Q3 delete highest",
+      "caption": "Before deletion: total 3, highest ID 3, and global Delete highest-ID listing (3) action.",
+      "url": "http://127.0.0.1:18702/",
+      "captureType": "Unaltered viewport screenshot",
+      "pngWidth": 1100,
+      "pngHeight": 1100,
+      "sha256": "5297ce2f4f7a6547ba3725ef15a02952e21eba04a38d49c4fc5bf52ca28261ac",
+      "metrics": {
+        "innerWidth": 1100,
+        "innerHeight": 1100,
+        "devicePixelRatio": 1,
+        "scrollY": 1302,
+        "documentScrollWidth": 1100,
+        "bodyScrollWidth": 1100,
+        "visibleIDs": [
+          1,
+          2,
+          3
+        ],
+        "storeSummary": "3 listings total. Highest ID: 3.",
+        "searchSummary": "Showing all 3 listings.",
+        "searchQuery": "",
+        "formStatus": null,
+        "submitDisabled": false,
+        "createValues": {
+          "listingTitle": "",
+          "propertyAddress": "",
+          "submitterEmail": "",
+          "description": "",
+          "propertyType": "",
+          "termsAccepted": false
+        }
+      }
+    },
+    {
+      "filename": "reports/hw02/screenshots/part2/P2-Q3-after.png",
+      "at": "2026-09-14T07:17:34.648Z",
+      "stage": "P2 Q3 delete highest",
+      "caption": "The actual highest-ID DELETE returned 204; home now displays only IDs 1 and 2, total 2 and highest ID 2.",
+      "url": "http://127.0.0.1:18702/",
+      "captureType": "Unaltered viewport screenshot",
+      "pngWidth": 1100,
+      "pngHeight": 1100,
+      "sha256": "3571520db0690f6f804dd9e1817eddef518c79b9458cacd2110686274bb6f1f5",
+      "metrics": {
+        "innerWidth": 1100,
+        "innerHeight": 1100,
+        "devicePixelRatio": 1,
+        "scrollY": 1020,
+        "documentScrollWidth": 1100,
+        "bodyScrollWidth": 1100,
+        "visibleIDs": [
+          1,
+          2
+        ],
+        "storeSummary": "2 listings total. Highest ID: 2.",
+        "searchSummary": "Showing all 2 listings.",
+        "searchQuery": "",
+        "formStatus": null,
+        "submitDisabled": false,
+        "createValues": {
+          "listingTitle": "",
+          "propertyAddress": "",
+          "submitterEmail": "",
+          "description": "",
+          "propertyType": "",
+          "termsAccepted": false
+        }
+      }
+    },
+    {
+      "filename": "reports/hw02/screenshots/part2/P2-Q4-title.png",
+      "at": "2026-09-14T07:17:34.763Z",
+      "stage": "P2 Q4 search",
+      "caption": "Title-only search Downtown returns ID 1. Downtown is absent from its address; the global store still contains two records.",
+      "url": "http://127.0.0.1:18702/",
+      "captureType": "Unaltered viewport screenshot",
+      "pngWidth": 1100,
+      "pngHeight": 1100,
+      "sha256": "e8c970c976b556c6b3030a373f8c90fbb40af042529173bc0d268e7aec8100a9",
+      "metrics": {
+        "innerWidth": 1100,
+        "innerHeight": 1100,
+        "devicePixelRatio": 1,
+        "scrollY": 786,
+        "documentScrollWidth": 1100,
+        "bodyScrollWidth": 1100,
+        "visibleIDs": [
+          1
+        ],
+        "storeSummary": "2 listings total. Highest ID: 2.",
+        "searchSummary": "1 match for \u201cDowntown\u201d.",
+        "searchQuery": "Downtown",
+        "formStatus": null,
+        "submitDisabled": false,
+        "createValues": {
+          "listingTitle": "",
+          "propertyAddress": "",
+          "submitterEmail": "",
+          "description": "",
+          "propertyType": "",
+          "termsAccepted": false
+        }
+      }
+    },
+    {
+      "filename": "reports/hw02/screenshots/part2/P2-Q4-address.png",
+      "at": "2026-09-14T07:17:34.879Z",
+      "stage": "P2 Q4 search",
+      "caption": "Address-only search Market returns ID 1. Market is absent from its title; the global store still contains two records.",
+      "url": "http://127.0.0.1:18702/",
+      "captureType": "Unaltered viewport screenshot",
+      "pngWidth": 1100,
+      "pngHeight": 1100,
+      "sha256": "1e9b7c7a78e235a7f2edab28b68a1a08dd6e347bf869370c819f67b519e8872f",
+      "metrics": {
+        "innerWidth": 1100,
+        "innerHeight": 1100,
+        "devicePixelRatio": 1,
+        "scrollY": 786,
+        "documentScrollWidth": 1100,
+        "bodyScrollWidth": 1100,
+        "visibleIDs": [
+          1
+        ],
+        "storeSummary": "2 listings total. Highest ID: 2.",
+        "searchSummary": "1 match for \u201cMarket\u201d.",
+        "searchQuery": "Market",
+        "formStatus": null,
+        "submitDisabled": false,
+        "createValues": {
+          "listingTitle": "",
+          "propertyAddress": "",
+          "submitterEmail": "",
+          "description": "",
+          "propertyType": "",
+          "termsAccepted": false
+        }
+      }
+    },
+    {
+      "filename": "reports/hw02/screenshots/part2/P2-Q4-clear.png",
+      "at": "2026-09-14T07:17:34.999Z",
+      "stage": "P2 Q4 search",
+      "caption": "Clear restores the two remaining records and an empty search query.",
+      "url": "http://127.0.0.1:18702/",
+      "captureType": "Unaltered viewport screenshot",
+      "pngWidth": 1100,
+      "pngHeight": 1100,
+      "sha256": "3571520db0690f6f804dd9e1817eddef518c79b9458cacd2110686274bb6f1f5",
+      "metrics": {
+        "innerWidth": 1100,
+        "innerHeight": 1100,
+        "devicePixelRatio": 1,
+        "scrollY": 1020,
+        "documentScrollWidth": 1100,
+        "bodyScrollWidth": 1100,
+        "visibleIDs": [
+          1,
+          2
+        ],
+        "storeSummary": "2 listings total. Highest ID: 2.",
+        "searchSummary": "Showing all 2 listings.",
+        "searchQuery": "",
+        "formStatus": null,
+        "submitDisabled": false,
+        "createValues": {
+          "listingTitle": "",
+          "propertyAddress": "",
+          "submitterEmail": "",
+          "description": "",
+          "propertyType": "",
+          "termsAccepted": false
+        }
+      }
+    },
+    {
+      "filename": "reports/hw02/screenshots/part2/P2-Q4-no-match.png",
+      "at": "2026-09-14T07:17:35.112Z",
+      "stage": "P2 Q4 search",
+      "caption": "Supplemental no-match state retains the global two-record summary; this is distinct from Part 1\u2019s truly empty store.",
+      "url": "http://127.0.0.1:18702/",
+      "captureType": "Unaltered viewport screenshot",
+      "pngWidth": 1100,
+      "pngHeight": 1100,
+      "sha256": "ebfc9b3ac7dbe34beb9d297947b1250749e20f124f94abe77bbde0781f79c9f5",
+      "metrics": {
+        "innerWidth": 1100,
+        "innerHeight": 1100,
+        "devicePixelRatio": 1,
+        "scrollY": 565,
+        "documentScrollWidth": 1100,
+        "bodyScrollWidth": 1100,
+        "visibleIDs": [],
+        "storeSummary": "2 listings total. Highest ID: 2.",
+        "searchSummary": "0 matches for \u201cno-such-rental-6102\u201d.",
+        "searchQuery": "no-such-rental-6102",
+        "formStatus": null,
+        "submitDisabled": false,
+        "createValues": {
+          "listingTitle": "",
+          "propertyAddress": "",
+          "submitterEmail": "",
+          "description": "",
+          "propertyType": "",
+          "termsAccepted": false
+        }
+      }
+    }
+  ],
+  "apiSnapshots": [
+    {
+      "file": "p1-00-seeds.json",
+      "at": "2026-09-14T07:17:17.962Z",
+      "ids": [
+        1,
+        2
+      ]
+    },
+    {
+      "file": "p1-01-empty.json",
+      "at": "2026-09-14T07:17:19.135Z",
+      "ids": []
+    },
+    {
+      "file": "p1-04-created.json",
+      "at": "2026-09-14T07:17:28.466Z",
+      "ids": [
+        1
+      ]
+    },
+    {
+      "file": "p1-06-after-controlled-error.json",
+      "at": "2026-09-14T07:17:31.274Z",
+      "ids": [
+        1
+      ]
+    },
+    {
+      "file": "p2-00-seeds.json",
+      "at": "2026-09-14T07:17:32.350Z",
+      "ids": [
+        1,
+        2
+      ]
+    },
+    {
+      "file": "p2-q1-after-create.json",
+      "at": "2026-09-14T07:17:33.124Z",
+      "ids": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "file": "p2-q2-after-update.json",
+      "at": "2026-09-14T07:17:33.889Z",
+      "ids": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "file": "p2-q3-before-delete.json",
+      "at": "2026-09-14T07:17:33.951Z",
+      "ids": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "file": "p2-q3-after-delete.json",
+      "at": "2026-09-14T07:17:34.585Z",
+      "ids": [
+        1,
+        2
+      ]
+    },
+    {
+      "file": "p2-final-records.json",
+      "at": "2026-09-14T07:17:35.168Z",
+      "ids": [
+        1,
+        2
+      ]
+    }
+  ],
+  "checkpoints": [
+    {
+      "at": "2026-09-14T07:17:16.877Z",
+      "stage": "P1 baseline",
+      "name": "server-start",
+      "detail": {
+        "part": "Part 1",
+        "executable": "/Users/pragyaapurva/Documents/SJSU/DATA 260/data260-6102/.venv-web/bin/python",
+        "arguments": [
+          "-m",
+          "uvicorn",
+          "main:app",
+          "--app-dir",
+          "/Users/pragyaapurva/Documents/SJSU/DATA 260/data260-6102/code/web_application",
+          "--host",
+          "127.0.0.1",
+          "--port",
+          "18702",
+          "--workers",
+          "1"
+        ]
+      }
+    },
+    {
+      "at": "2026-09-14T07:17:17.196Z",
+      "stage": "P1 baseline",
+      "name": "server-ready",
+      "detail": {
+        "part": "Part 1",
+        "pid": 65504,
+        "baseURL": "http://127.0.0.1:18702"
+      }
+    },
+    {
+      "at": "2026-09-14T07:17:18.011Z",
+      "stage": "P1 true-empty list",
+      "name": "browser-confirmation-accepted",
+      "detail": {
+        "message": "Delete the highest-ID listing from all listings, including those hidden by search? Last loaded highest ID: 2."
+      }
+    },
+    {
+      "at": "2026-09-14T07:17:18.601Z",
+      "stage": "P1 true-empty list",
+      "name": "browser-confirmation-accepted",
+      "detail": {
+        "message": "Delete the highest-ID listing from all listings, including those hidden by search? Last loaded highest ID: 1."
+      }
+    },
+    {
+      "at": "2026-09-14T07:17:19.190Z",
+      "stage": "P1 true-empty list",
+      "name": "screenshot",
+      "detail": {
+        "filename": "reports/hw02/screenshots/part1/P1-01-empty.png",
+        "pixels": [
+          375,
+          812
+        ],
+        "url": "http://127.0.0.1:18702/"
+      }
+    },
+    {
+      "at": "2026-09-14T07:17:19.838Z",
+      "stage": "P1 filled form",
+      "name": "screenshot",
+      "detail": {
+        "filename": "reports/hw02/screenshots/part1/P1-02a-form-upper.png",
+        "pixels": [
+          375,
+          812
+        ],
+        "url": "http://127.0.0.1:18702/?slowSave=true"
+      }
+    },
+    {
+      "at": "2026-09-14T07:17:19.890Z",
+      "stage": "P1 filled form",
+      "name": "screenshot",
+      "detail": {
+        "filename": "reports/hw02/screenshots/part1/P1-02b-form-lower.png",
+        "pixels": [
+          375,
+          812
+        ],
+        "url": "http://127.0.0.1:18702/?slowSave=true"
+      }
+    },
+    {
+      "at": "2026-09-14T07:17:19.992Z",
+      "stage": "P1 controlled loading",
+      "name": "screenshot",
+      "detail": {
+        "filename": "reports/hw02/screenshots/part1/P1-03-loading.png",
+        "pixels": [
+          375,
+          812
+        ],
+        "url": "http://127.0.0.1:18702/?slowSave=true"
+      }
+    },
+    {
+      "at": "2026-09-14T07:17:28.463Z",
+      "stage": "P1 controlled loading",
+      "name": "slow-save-completed",
+      "detail": {
+        "elapsedMs": 8573,
+        "urlAfter": "http://127.0.0.1:18702/"
+      }
+    },
+    {
+      "at": "2026-09-14T07:17:28.523Z",
+      "stage": "P1 populated mobile list",
+      "name": "screenshot",
+      "detail": {
+        "filename": "reports/hw02/screenshots/part1/P1-04-list.png",
+        "pixels": [
+          375,
+          812
+        ],
+        "url": "http://127.0.0.1:18702/"
+      }
+    },
+    {
+      "at": "2026-09-14T07:17:28.624Z",
+      "stage": "P1 populated mobile list",
+      "name": "screenshot",
+      "detail": {
+        "filename": "reports/hw02/screenshots/part1/P1-05-editor.png",
+        "pixels": [
+          375,
+          812
+        ],
+        "url": "http://127.0.0.1:18702/"
+      }
+    },
+    {
+      "at": "2026-09-14T07:17:31.275Z",
+      "stage": "P1 controlled UI error",
+      "name": "controlled-error-no-post",
+      "detail": {
+        "postRequestsDuringError": 0,
+        "storedIDs": [
+          1
+        ],
+        "retainedInput": true,
+        "controlsEnabled": true
+      }
+    },
+    {
+      "at": "2026-09-14T07:17:31.329Z",
+      "stage": "P1 controlled UI error",
+      "name": "screenshot",
+      "detail": {
+        "filename": "reports/hw02/screenshots/part1/P1-06-error.png",
+        "pixels": [
+          375,
+          812
+        ],
+        "url": "http://127.0.0.1:18702/?simulateError=true"
+      }
+    },
+    {
+      "at": "2026-09-14T07:17:31.373Z",
+      "stage": "P1 controlled UI error",
+      "name": "screenshot",
+      "detail": {
+        "filename": "reports/hw02/screenshots/part1/P1-06b-retained-upper.png",
+        "pixels": [
+          375,
+          812
+        ],
+        "url": "http://127.0.0.1:18702/?simulateError=true"
+      }
+    },
+    {
+      "at": "2026-09-14T07:17:31.579Z",
+      "stage": "P1 controlled UI error",
+      "name": "owned-server-stopped",
+      "detail": {
+        "pid": 65504,
+        "exitCode": 0
+      }
+    },
+    {
+      "at": "2026-09-14T07:17:31.580Z",
+      "stage": "P2 fresh baseline",
+      "name": "server-start",
+      "detail": {
+        "part": "Part 2",
+        "executable": "/Users/pragyaapurva/Documents/SJSU/DATA 260/data260-6102/.venv-web/bin/python",
+        "arguments": [
+          "-m",
+          "uvicorn",
+          "main:app",
+          "--app-dir",
+          "/Users/pragyaapurva/Documents/SJSU/DATA 260/data260-6102/code/web_application",
+          "--host",
+          "127.0.0.1",
+          "--port",
+          "18702",
+          "--workers",
+          "1"
+        ]
+      }
+    },
+    {
+      "at": "2026-09-14T07:17:31.785Z",
+      "stage": "P2 fresh baseline",
+      "name": "server-ready",
+      "detail": {
+        "part": "Part 2",
+        "pid": 65536,
+        "baseURL": "http://127.0.0.1:18702"
+      }
+    },
+    {
+      "at": "2026-09-14T07:17:32.418Z",
+      "stage": "P2 fresh baseline",
+      "name": "screenshot",
+      "detail": {
+        "filename": "reports/hw02/screenshots/part2/P2-00-seeds.png",
+        "pixels": [
+          1100,
+          1100
+        ],
+        "url": "http://127.0.0.1:18702/"
+      }
+    },
+    {
+      "at": "2026-09-14T07:17:32.547Z",
+      "stage": "P2 Q1 create",
+      "name": "screenshot",
+      "detail": {
+        "filename": "reports/hw02/screenshots/part2/P2-Q1-input.png",
+        "pixels": [
+          1100,
+          1100
+        ],
+        "url": "http://127.0.0.1:18702/"
+      }
+    },
+    {
+      "at": "2026-09-14T07:17:33.202Z",
+      "stage": "P2 Q1 create",
+      "name": "screenshot",
+      "detail": {
+        "filename": "reports/hw02/screenshots/part2/P2-Q1-created.png",
+        "pixels": [
+          1100,
+          1100
+        ],
+        "url": "http://127.0.0.1:18702/"
+      }
+    },
+    {
+      "at": "2026-09-14T07:17:33.314Z",
+      "stage": "P2 Q2 update ID1",
+      "name": "screenshot",
+      "detail": {
+        "filename": "reports/hw02/screenshots/part2/P2-Q2-before.png",
+        "pixels": [
+          1100,
+          1100
+        ],
+        "url": "http://127.0.0.1:18702/"
+      }
+    },
+    {
+      "at": "2026-09-14T07:17:33.949Z",
+      "stage": "P2 Q2 update ID1",
+      "name": "screenshot",
+      "detail": {
+        "filename": "reports/hw02/screenshots/part2/P2-Q2-updated.png",
+        "pixels": [
+          1100,
+          1100
+        ],
+        "url": "http://127.0.0.1:18702/"
+      }
+    },
+    {
+      "at": "2026-09-14T07:17:34.017Z",
+      "stage": "P2 Q3 delete highest",
+      "name": "screenshot",
+      "detail": {
+        "filename": "reports/hw02/screenshots/part2/P2-Q3-before.png",
+        "pixels": [
+          1100,
+          1100
+        ],
+        "url": "http://127.0.0.1:18702/"
+      }
+    },
+    {
+      "at": "2026-09-14T07:17:34.051Z",
+      "stage": "P2 Q3 delete highest",
+      "name": "browser-confirmation-accepted",
+      "detail": {
+        "message": "Delete the highest-ID listing from all listings, including those hidden by search? Last loaded highest ID: 3."
+      }
+    },
+    {
+      "at": "2026-09-14T07:17:34.648Z",
+      "stage": "P2 Q3 delete highest",
+      "name": "screenshot",
+      "detail": {
+        "filename": "reports/hw02/screenshots/part2/P2-Q3-after.png",
+        "pixels": [
+          1100,
+          1100
+        ],
+        "url": "http://127.0.0.1:18702/"
+      }
+    },
+    {
+      "at": "2026-09-14T07:17:34.763Z",
+      "stage": "P2 Q4 search",
+      "name": "screenshot",
+      "detail": {
+        "filename": "reports/hw02/screenshots/part2/P2-Q4-title.png",
+        "pixels": [
+          1100,
+          1100
+        ],
+        "url": "http://127.0.0.1:18702/"
+      }
+    },
+    {
+      "at": "2026-09-14T07:17:34.879Z",
+      "stage": "P2 Q4 search",
+      "name": "screenshot",
+      "detail": {
+        "filename": "reports/hw02/screenshots/part2/P2-Q4-address.png",
+        "pixels": [
+          1100,
+          1100
+        ],
+        "url": "http://127.0.0.1:18702/"
+      }
+    },
+    {
+      "at": "2026-09-14T07:17:35.000Z",
+      "stage": "P2 Q4 search",
+      "name": "screenshot",
+      "detail": {
+        "filename": "reports/hw02/screenshots/part2/P2-Q4-clear.png",
+        "pixels": [
+          1100,
+          1100
+        ],
+        "url": "http://127.0.0.1:18702/"
+      }
+    },
+    {
+      "at": "2026-09-14T07:17:35.112Z",
+      "stage": "P2 Q4 search",
+      "name": "screenshot",
+      "detail": {
+        "filename": "reports/hw02/screenshots/part2/P2-Q4-no-match.png",
+        "pixels": [
+          1100,
+          1100
+        ],
+        "url": "http://127.0.0.1:18702/"
+      }
+    },
+    {
+      "at": "2026-09-14T07:17:35.401Z",
+      "stage": "P2 Q4 search",
+      "name": "owned-server-stopped",
+      "detail": {
+        "pid": 65536,
+        "exitCode": 0
+      }
+    },
+    {
+      "at": "2026-09-14T07:17:35.401Z",
+      "stage": "P2 Q4 search",
+      "name": "capture-complete",
+      "detail": {
+        "screenshots": 19,
+        "unexpectedPageErrors": 0
+      }
+    }
+  ],
+  "browserConsole": [],
+  "pageErrors": [],
+  "network": [
+    {
+      "event": "request",
+      "at": "2026-09-14T07:17:17.401Z",
+      "stage": "P1 baseline",
+      "method": "GET",
+      "url": "http://127.0.0.1:18702/api/rentals",
+      "postData": null
+    },
+    {
+      "event": "response",
+      "at": "2026-09-14T07:17:17.425Z",
+      "stage": "P1 baseline",
+      "method": "GET",
+      "url": "http://127.0.0.1:18702/api/rentals",
+      "status": 200,
+      "statusText": "OK",
+      "body": "[{\"listingTitle\":\"Sunny Downtown Apartment\",\"propertyAddress\":\"123 San Carlos Street, San Jose, CA\",\"submitterEmail\":\"downtown@example.com\",\"description\":\"A bright apartment close to campus, shops, and public transit.\",\"propertyType\":\"apartment\",\"termsAccepted\":true,\"id\":1},{\"listingTitle\":\"Spacious Garden House\",\"propertyAddress\":\"456 Willow Street, San Jose, CA\",\"submitterEmail\":\"garden@example.com\",\"description\":\"A comfortable house with a private garden and a sunny living room.\",\"propertyType\":\"house\",\"termsAccepted\":true,\"id\":2}]"
+    },
+    {
+      "event": "request",
+      "at": "2026-09-14T07:17:18.014Z",
+      "stage": "P1 true-empty list",
+      "method": "DELETE",
+      "url": "http://127.0.0.1:18702/api/rentals/highest",
+      "postData": null
+    },
+    {
+      "event": "response",
+      "at": "2026-09-14T07:17:18.043Z",
+      "stage": "P1 true-empty list",
+      "method": "DELETE",
+      "url": "http://127.0.0.1:18702/api/rentals/highest",
+      "status": 204,
+      "statusText": "No Content",
+      "body": ""
+    },
+    {
+      "event": "request",
+      "at": "2026-09-14T07:17:18.050Z",
+      "stage": "P1 true-empty list",
+      "method": "GET",
+      "url": "http://127.0.0.1:18702/api/rentals",
+      "postData": null
+    },
+    {
+      "event": "response",
+      "at": "2026-09-14T07:17:18.051Z",
+      "stage": "P1 true-empty list",
+      "method": "GET",
+      "url": "http://127.0.0.1:18702/api/rentals",
+      "status": 200,
+      "statusText": "OK",
+      "body": "[{\"listingTitle\":\"Sunny Downtown Apartment\",\"propertyAddress\":\"123 San Carlos Street, San Jose, CA\",\"submitterEmail\":\"downtown@example.com\",\"description\":\"A bright apartment close to campus, shops, and public transit.\",\"propertyType\":\"apartment\",\"termsAccepted\":true,\"id\":1}]"
+    },
+    {
+      "event": "request",
+      "at": "2026-09-14T07:17:18.603Z",
+      "stage": "P1 true-empty list",
+      "method": "DELETE",
+      "url": "http://127.0.0.1:18702/api/rentals/highest",
+      "postData": null
+    },
+    {
+      "event": "response",
+      "at": "2026-09-14T07:17:18.617Z",
+      "stage": "P1 true-empty list",
+      "method": "DELETE",
+      "url": "http://127.0.0.1:18702/api/rentals/highest",
+      "status": 204,
+      "statusText": "No Content",
+      "body": ""
+    },
+    {
+      "event": "request",
+      "at": "2026-09-14T07:17:18.622Z",
+      "stage": "P1 true-empty list",
+      "method": "GET",
+      "url": "http://127.0.0.1:18702/api/rentals",
+      "postData": null
+    },
+    {
+      "event": "response",
+      "at": "2026-09-14T07:17:18.624Z",
+      "stage": "P1 true-empty list",
+      "method": "GET",
+      "url": "http://127.0.0.1:18702/api/rentals",
+      "status": 200,
+      "statusText": "OK",
+      "body": "[]"
+    },
+    {
+      "event": "request",
+      "at": "2026-09-14T07:17:19.195Z",
+      "stage": "P1 filled form",
+      "method": "GET",
+      "url": "http://127.0.0.1:18702/api/rentals",
+      "postData": null
+    },
+    {
+      "event": "response",
+      "at": "2026-09-14T07:17:19.196Z",
+      "stage": "P1 filled form",
+      "method": "GET",
+      "url": "http://127.0.0.1:18702/api/rentals",
+      "status": 200,
+      "statusText": "OK",
+      "body": "[]"
+    },
+    {
+      "event": "request",
+      "at": "2026-09-14T07:17:27.925Z",
+      "stage": "P1 controlled loading",
+      "method": "POST",
+      "url": "http://127.0.0.1:18702/api/rentals",
+      "postData": "{\"listingTitle\":\"Downtown San Jose Studio\",\"propertyAddress\":\"999 Main Street, San Jose, CA\",\"submitterEmail\":\"sanjosedowntownrentalpropertymanagementoffice@example.com\",\"description\":\"Bright studio with covered parking and convenient light rail access.\",\"propertyType\":\"apartment\",\"termsAccepted\":true}"
+    },
+    {
+      "event": "response",
+      "at": "2026-09-14T07:17:27.928Z",
+      "stage": "P1 controlled loading",
+      "method": "POST",
+      "url": "http://127.0.0.1:18702/api/rentals",
+      "status": 201,
+      "statusText": "Created",
+      "bodyReadError": "response.text: Protocol error (Network.getResponseBody): No resource with given identifier found\nResponse body is not available for a response that was navigated away from. Read response.body() before triggering any navigation."
+    },
+    {
+      "event": "request",
+      "at": "2026-09-14T07:17:27.943Z",
+      "stage": "P1 controlled loading",
+      "method": "GET",
+      "url": "http://127.0.0.1:18702/api/rentals",
+      "postData": null
+    },
+    {
+      "event": "response",
+      "at": "2026-09-14T07:17:27.944Z",
+      "stage": "P1 controlled loading",
+      "method": "GET",
+      "url": "http://127.0.0.1:18702/api/rentals",
+      "status": 200,
+      "statusText": "OK",
+      "body": "[{\"listingTitle\":\"Downtown San Jose Studio\",\"propertyAddress\":\"999 Main Street, San Jose, CA\",\"submitterEmail\":\"sanjosedowntownrentalpropertymanagementoffice@example.com\",\"description\":\"Bright studio with covered parking and convenient light rail access.\",\"propertyType\":\"apartment\",\"termsAccepted\":true,\"id\":1}]"
+    },
+    {
+      "event": "request",
+      "at": "2026-09-14T07:17:28.658Z",
+      "stage": "P1 controlled UI error",
+      "method": "GET",
+      "url": "http://127.0.0.1:18702/api/rentals",
+      "postData": null
+    },
+    {
+      "event": "response",
+      "at": "2026-09-14T07:17:28.659Z",
+      "stage": "P1 controlled UI error",
+      "method": "GET",
+      "url": "http://127.0.0.1:18702/api/rentals",
+      "status": 200,
+      "statusText": "OK",
+      "body": "[{\"listingTitle\":\"Downtown San Jose Studio\",\"propertyAddress\":\"999 Main Street, San Jose, CA\",\"submitterEmail\":\"sanjosedowntownrentalpropertymanagementoffice@example.com\",\"description\":\"Bright studio with covered parking and convenient light rail access.\",\"propertyType\":\"apartment\",\"termsAccepted\":true,\"id\":1}]"
+    },
+    {
+      "event": "request",
+      "at": "2026-09-14T07:17:31.831Z",
+      "stage": "P2 fresh baseline",
+      "method": "GET",
+      "url": "http://127.0.0.1:18702/api/rentals",
+      "postData": null
+    },
+    {
+      "event": "response",
+      "at": "2026-09-14T07:17:31.832Z",
+      "stage": "P2 fresh baseline",
+      "method": "GET",
+      "url": "http://127.0.0.1:18702/api/rentals",
+      "status": 200,
+      "statusText": "OK",
+      "body": "[{\"listingTitle\":\"Sunny Downtown Apartment\",\"propertyAddress\":\"123 San Carlos Street, San Jose, CA\",\"submitterEmail\":\"downtown@example.com\",\"description\":\"A bright apartment close to campus, shops, and public transit.\",\"propertyType\":\"apartment\",\"termsAccepted\":true,\"id\":1},{\"listingTitle\":\"Spacious Garden House\",\"propertyAddress\":\"456 Willow Street, San Jose, CA\",\"submitterEmail\":\"garden@example.com\",\"description\":\"A comfortable house with a private garden and a sunny living room.\",\"propertyType\":\"house\",\"termsAccepted\":true,\"id\":2}]"
+    },
+    {
+      "event": "request",
+      "at": "2026-09-14T07:17:32.585Z",
+      "stage": "P2 Q1 create",
+      "method": "POST",
+      "url": "http://127.0.0.1:18702/api/rentals",
+      "postData": "{\"listingTitle\":\"Downtown San Jose Studio\",\"propertyAddress\":\"999 Main Street, San Jose, CA\",\"submitterEmail\":\"sanjosedowntownrentalpropertymanagementoffice@example.com\",\"description\":\"Bright studio with covered parking and convenient light rail access.\",\"propertyType\":\"apartment\",\"termsAccepted\":true}"
+    },
+    {
+      "event": "response",
+      "at": "2026-09-14T07:17:32.600Z",
+      "stage": "P2 Q1 create",
+      "method": "POST",
+      "url": "http://127.0.0.1:18702/api/rentals",
+      "status": 201,
+      "statusText": "Created",
+      "bodyReadError": "response.text: Protocol error (Network.getResponseBody): No resource with given identifier found\nResponse body is not available for a response that was navigated away from. Read response.body() before triggering any navigation."
+    },
+    {
+      "event": "request",
+      "at": "2026-09-14T07:17:32.606Z",
+      "stage": "P2 Q1 create",
+      "method": "GET",
+      "url": "http://127.0.0.1:18702/api/rentals",
+      "postData": null
+    },
+    {
+      "event": "response",
+      "at": "2026-09-14T07:17:32.608Z",
+      "stage": "P2 Q1 create",
+      "method": "GET",
+      "url": "http://127.0.0.1:18702/api/rentals",
+      "status": 200,
+      "statusText": "OK",
+      "body": "[{\"listingTitle\":\"Sunny Downtown Apartment\",\"propertyAddress\":\"123 San Carlos Street, San Jose, CA\",\"submitterEmail\":\"downtown@example.com\",\"description\":\"A bright apartment close to campus, shops, and public transit.\",\"propertyType\":\"apartment\",\"termsAccepted\":true,\"id\":1},{\"listingTitle\":\"Spacious Garden House\",\"propertyAddress\":\"456 Willow Street, San Jose, CA\",\"submitterEmail\":\"garden@example.com\",\"description\":\"A comfortable house with a private garden and a sunny living room.\",\"propertyType\":\"house\",\"termsAccepted\":true,\"id\":2},{\"listingTitle\":\"Downtown San Jose Studio\",\"propertyAddress\":\"999 Main Street, San Jose, CA\",\"submitterEmail\":\"sanjosedowntownrentalpropertymanagementoffice@example.com\",\"description\":\"Bright studio with covered parking and convenient light rail access.\",\"propertyType\":\"apartment\",\"termsAccepted\":true,\"id\":3}]"
+    },
+    {
+      "event": "request",
+      "at": "2026-09-14T07:17:33.352Z",
+      "stage": "P2 Q2 update ID1",
+      "method": "PUT",
+      "url": "http://127.0.0.1:18702/api/rentals/1",
+      "postData": "{\"listingTitle\":\"Updated Downtown Apartment\",\"propertyAddress\":\"900 Market Street, San Jose, CA\"}"
+    },
+    {
+      "event": "response",
+      "at": "2026-09-14T07:17:33.367Z",
+      "stage": "P2 Q2 update ID1",
+      "method": "PUT",
+      "url": "http://127.0.0.1:18702/api/rentals/1",
+      "status": 200,
+      "statusText": "OK",
+      "bodyReadError": "response.text: Protocol error (Network.getResponseBody): No resource with given identifier found\nResponse body is not available for a response that was navigated away from. Read response.body() before triggering any navigation."
+    },
+    {
+      "event": "request",
+      "at": "2026-09-14T07:17:33.372Z",
+      "stage": "P2 Q2 update ID1",
+      "method": "GET",
+      "url": "http://127.0.0.1:18702/api/rentals",
+      "postData": null
+    },
+    {
+      "event": "response",
+      "at": "2026-09-14T07:17:33.373Z",
+      "stage": "P2 Q2 update ID1",
+      "method": "GET",
+      "url": "http://127.0.0.1:18702/api/rentals",
+      "status": 200,
+      "statusText": "OK",
+      "body": "[{\"listingTitle\":\"Updated Downtown Apartment\",\"propertyAddress\":\"900 Market Street, San Jose, CA\",\"submitterEmail\":\"downtown@example.com\",\"description\":\"A bright apartment close to campus, shops, and public transit.\",\"propertyType\":\"apartment\",\"termsAccepted\":true,\"id\":1},{\"listingTitle\":\"Spacious Garden House\",\"propertyAddress\":\"456 Willow Street, San Jose, CA\",\"submitterEmail\":\"garden@example.com\",\"description\":\"A comfortable house with a private garden and a sunny living room.\",\"propertyType\":\"house\",\"termsAccepted\":true,\"id\":2},{\"listingTitle\":\"Downtown San Jose Studio\",\"propertyAddress\":\"999 Main Street, San Jose, CA\",\"submitterEmail\":\"sanjosedowntownrentalpropertymanagementoffice@example.com\",\"description\":\"Bright studio with covered parking and convenient light rail access.\",\"propertyType\":\"apartment\",\"termsAccepted\":true,\"id\":3}]"
+    },
+    {
+      "event": "request",
+      "at": "2026-09-14T07:17:34.052Z",
+      "stage": "P2 Q3 delete highest",
+      "method": "DELETE",
+      "url": "http://127.0.0.1:18702/api/rentals/highest",
+      "postData": null
+    },
+    {
+      "event": "response",
+      "at": "2026-09-14T07:17:34.067Z",
+      "stage": "P2 Q3 delete highest",
+      "method": "DELETE",
+      "url": "http://127.0.0.1:18702/api/rentals/highest",
+      "status": 204,
+      "statusText": "No Content",
+      "body": ""
+    },
+    {
+      "event": "request",
+      "at": "2026-09-14T07:17:34.072Z",
+      "stage": "P2 Q3 delete highest",
+      "method": "GET",
+      "url": "http://127.0.0.1:18702/api/rentals",
+      "postData": null
+    },
+    {
+      "event": "response",
+      "at": "2026-09-14T07:17:34.073Z",
+      "stage": "P2 Q3 delete highest",
+      "method": "GET",
+      "url": "http://127.0.0.1:18702/api/rentals",
+      "status": 200,
+      "statusText": "OK",
+      "body": "[{\"listingTitle\":\"Updated Downtown Apartment\",\"propertyAddress\":\"900 Market Street, San Jose, CA\",\"submitterEmail\":\"downtown@example.com\",\"description\":\"A bright apartment close to campus, shops, and public transit.\",\"propertyType\":\"apartment\",\"termsAccepted\":true,\"id\":1},{\"listingTitle\":\"Spacious Garden House\",\"propertyAddress\":\"456 Willow Street, San Jose, CA\",\"submitterEmail\":\"garden@example.com\",\"description\":\"A comfortable house with a private garden and a sunny living room.\",\"propertyType\":\"house\",\"termsAccepted\":true,\"id\":2}]"
+    },
+    {
+      "event": "request",
+      "at": "2026-09-14T07:17:34.685Z",
+      "stage": "P2 Q4 search",
+      "method": "GET",
+      "url": "http://127.0.0.1:18702/api/rentals",
+      "postData": null
+    },
+    {
+      "event": "request",
+      "at": "2026-09-14T07:17:34.685Z",
+      "stage": "P2 Q4 search",
+      "method": "GET",
+      "url": "http://127.0.0.1:18702/api/rentals?q=Downtown",
+      "postData": null
+    },
+    {
+      "event": "response",
+      "at": "2026-09-14T07:17:34.700Z",
+      "stage": "P2 Q4 search",
+      "method": "GET",
+      "url": "http://127.0.0.1:18702/api/rentals",
+      "status": 200,
+      "statusText": "OK",
+      "body": "[{\"listingTitle\":\"Updated Downtown Apartment\",\"propertyAddress\":\"900 Market Street, San Jose, CA\",\"submitterEmail\":\"downtown@example.com\",\"description\":\"A bright apartment close to campus, shops, and public transit.\",\"propertyType\":\"apartment\",\"termsAccepted\":true,\"id\":1},{\"listingTitle\":\"Spacious Garden House\",\"propertyAddress\":\"456 Willow Street, San Jose, CA\",\"submitterEmail\":\"garden@example.com\",\"description\":\"A comfortable house with a private garden and a sunny living room.\",\"propertyType\":\"house\",\"termsAccepted\":true,\"id\":2}]"
+    },
+    {
+      "event": "response",
+      "at": "2026-09-14T07:17:34.700Z",
+      "stage": "P2 Q4 search",
+      "method": "GET",
+      "url": "http://127.0.0.1:18702/api/rentals?q=Downtown",
+      "status": 200,
+      "statusText": "OK",
+      "body": "[{\"listingTitle\":\"Updated Downtown Apartment\",\"propertyAddress\":\"900 Market Street, San Jose, CA\",\"submitterEmail\":\"downtown@example.com\",\"description\":\"A bright apartment close to campus, shops, and public transit.\",\"propertyType\":\"apartment\",\"termsAccepted\":true,\"id\":1}]"
+    },
+    {
+      "event": "request",
+      "at": "2026-09-14T07:17:34.801Z",
+      "stage": "P2 Q4 search",
+      "method": "GET",
+      "url": "http://127.0.0.1:18702/api/rentals",
+      "postData": null
+    },
+    {
+      "event": "request",
+      "at": "2026-09-14T07:17:34.801Z",
+      "stage": "P2 Q4 search",
+      "method": "GET",
+      "url": "http://127.0.0.1:18702/api/rentals?q=Market",
+      "postData": null
+    },
+    {
+      "event": "response",
+      "at": "2026-09-14T07:17:34.816Z",
+      "stage": "P2 Q4 search",
+      "method": "GET",
+      "url": "http://127.0.0.1:18702/api/rentals",
+      "status": 200,
+      "statusText": "OK",
+      "body": "[{\"listingTitle\":\"Updated Downtown Apartment\",\"propertyAddress\":\"900 Market Street, San Jose, CA\",\"submitterEmail\":\"downtown@example.com\",\"description\":\"A bright apartment close to campus, shops, and public transit.\",\"propertyType\":\"apartment\",\"termsAccepted\":true,\"id\":1},{\"listingTitle\":\"Spacious Garden House\",\"propertyAddress\":\"456 Willow Street, San Jose, CA\",\"submitterEmail\":\"garden@example.com\",\"description\":\"A comfortable house with a private garden and a sunny living room.\",\"propertyType\":\"house\",\"termsAccepted\":true,\"id\":2}]"
+    },
+    {
+      "event": "response",
+      "at": "2026-09-14T07:17:34.817Z",
+      "stage": "P2 Q4 search",
+      "method": "GET",
+      "url": "http://127.0.0.1:18702/api/rentals?q=Market",
+      "status": 200,
+      "statusText": "OK",
+      "body": "[{\"listingTitle\":\"Updated Downtown Apartment\",\"propertyAddress\":\"900 Market Street, San Jose, CA\",\"submitterEmail\":\"downtown@example.com\",\"description\":\"A bright apartment close to campus, shops, and public transit.\",\"propertyType\":\"apartment\",\"termsAccepted\":true,\"id\":1}]"
+    },
+    {
+      "event": "request",
+      "at": "2026-09-14T07:17:34.901Z",
+      "stage": "P2 Q4 search",
+      "method": "GET",
+      "url": "http://127.0.0.1:18702/api/rentals",
+      "postData": null
+    },
+    {
+      "event": "response",
+      "at": "2026-09-14T07:17:34.916Z",
+      "stage": "P2 Q4 search",
+      "method": "GET",
+      "url": "http://127.0.0.1:18702/api/rentals",
+      "status": 200,
+      "statusText": "OK",
+      "body": "[{\"listingTitle\":\"Updated Downtown Apartment\",\"propertyAddress\":\"900 Market Street, San Jose, CA\",\"submitterEmail\":\"downtown@example.com\",\"description\":\"A bright apartment close to campus, shops, and public transit.\",\"propertyType\":\"apartment\",\"termsAccepted\":true,\"id\":1},{\"listingTitle\":\"Spacious Garden House\",\"propertyAddress\":\"456 Willow Street, San Jose, CA\",\"submitterEmail\":\"garden@example.com\",\"description\":\"A comfortable house with a private garden and a sunny living room.\",\"propertyType\":\"house\",\"termsAccepted\":true,\"id\":2}]"
+    },
+    {
+      "event": "request",
+      "at": "2026-09-14T07:17:35.034Z",
+      "stage": "P2 Q4 search",
+      "method": "GET",
+      "url": "http://127.0.0.1:18702/api/rentals",
+      "postData": null
+    },
+    {
+      "event": "request",
+      "at": "2026-09-14T07:17:35.034Z",
+      "stage": "P2 Q4 search",
+      "method": "GET",
+      "url": "http://127.0.0.1:18702/api/rentals?q=no-such-rental-6102",
+      "postData": null
+    },
+    {
+      "event": "response",
+      "at": "2026-09-14T07:17:35.050Z",
+      "stage": "P2 Q4 search",
+      "method": "GET",
+      "url": "http://127.0.0.1:18702/api/rentals",
+      "status": 200,
+      "statusText": "OK",
+      "body": "[{\"listingTitle\":\"Updated Downtown Apartment\",\"propertyAddress\":\"900 Market Street, San Jose, CA\",\"submitterEmail\":\"downtown@example.com\",\"description\":\"A bright apartment close to campus, shops, and public transit.\",\"propertyType\":\"apartment\",\"termsAccepted\":true,\"id\":1},{\"listingTitle\":\"Spacious Garden House\",\"propertyAddress\":\"456 Willow Street, San Jose, CA\",\"submitterEmail\":\"garden@example.com\",\"description\":\"A comfortable house with a private garden and a sunny living room.\",\"propertyType\":\"house\",\"termsAccepted\":true,\"id\":2}]"
+    },
+    {
+      "event": "response",
+      "at": "2026-09-14T07:17:35.050Z",
+      "stage": "P2 Q4 search",
+      "method": "GET",
+      "url": "http://127.0.0.1:18702/api/rentals?q=no-such-rental-6102",
+      "status": 200,
+      "statusText": "OK",
+      "body": "[]"
+    },
+    {
+      "event": "request",
+      "at": "2026-09-14T07:17:35.134Z",
+      "stage": "P2 Q4 search",
+      "method": "GET",
+      "url": "http://127.0.0.1:18702/api/rentals",
+      "postData": null
+    },
+    {
+      "event": "response",
+      "at": "2026-09-14T07:17:35.150Z",
+      "stage": "P2 Q4 search",
+      "method": "GET",
+      "url": "http://127.0.0.1:18702/api/rentals",
+      "status": 200,
+      "statusText": "OK",
+      "body": "[{\"listingTitle\":\"Updated Downtown Apartment\",\"propertyAddress\":\"900 Market Street, San Jose, CA\",\"submitterEmail\":\"downtown@example.com\",\"description\":\"A bright apartment close to campus, shops, and public transit.\",\"propertyType\":\"apartment\",\"termsAccepted\":true,\"id\":1},{\"listingTitle\":\"Spacious Garden House\",\"propertyAddress\":\"456 Willow Street, San Jose, CA\",\"submitterEmail\":\"garden@example.com\",\"description\":\"A comfortable house with a private garden and a sunny living room.\",\"propertyType\":\"house\",\"termsAccepted\":true,\"id\":2}]"
+    }
+  ],
+  "serverConsole": [
+    {
+      "at": "2026-09-14T07:17:17.101Z",
+      "part": "Part 1",
+      "stream": "stderr",
+      "text": "INFO:     Started server process [65504]\n"
+    },
+    {
+      "at": "2026-09-14T07:17:17.101Z",
+      "part": "Part 1",
+      "stream": "stderr",
+      "text": "INFO:     Waiting for application startup.\nINFO:     Application startup complete.\n"
+    },
+    {
+      "at": "2026-09-14T07:17:17.102Z",
+      "part": "Part 1",
+      "stream": "stderr",
+      "text": "INFO:     Uvicorn running on http://127.0.0.1:18702 (Press CTRL+C to quit)\n"
+    },
+    {
+      "at": "2026-09-14T07:17:17.194Z",
+      "part": "Part 1",
+      "stream": "stdout",
+      "text": "INFO:     127.0.0.1:62246 - \"GET /api/rentals HTTP/1.1\" 200 OK\n"
+    },
+    {
+      "at": "2026-09-14T07:17:17.373Z",
+      "part": "Part 1",
+      "stream": "stdout",
+      "text": "INFO:     127.0.0.1:62247 - \"GET / HTTP/1.1\" 200 OK\n"
+    },
+    {
+      "at": "2026-09-14T07:17:17.386Z",
+      "part": "Part 1",
+      "stream": "stdout",
+      "text": "INFO:     127.0.0.1:62247 - \"GET /static/styles.css HTTP/1.1\" 200 OK\n"
+    },
+    {
+      "at": "2026-09-14T07:17:17.387Z",
+      "part": "Part 1",
+      "stream": "stdout",
+      "text": "INFO:     127.0.0.1:62248 - \"GET /static/app.js HTTP/1.1\" 200 OK\n"
+    },
+    {
+      "at": "2026-09-14T07:17:17.401Z",
+      "part": "Part 1",
+      "stream": "stdout",
+      "text": "INFO:     127.0.0.1:62248 - \"GET /api/rentals HTTP/1.1\" 200 OK\n"
+    },
+    {
+      "at": "2026-09-14T07:17:17.960Z",
+      "part": "Part 1",
+      "stream": "stdout",
+      "text": "INFO:     127.0.0.1:62246 - \"GET /api/rentals HTTP/1.1\" 200 OK\n"
+    },
+    {
+      "at": "2026-09-14T07:17:18.013Z",
+      "part": "Part 1",
+      "stream": "stdout",
+      "text": "INFO:     127.0.0.1:62248 - \"DELETE /api/rentals/highest HTTP/1.1\" 204 No Content\n"
+    },
+    {
+      "at": "2026-09-14T07:17:18.045Z",
+      "part": "Part 1",
+      "stream": "stdout",
+      "text": "INFO:     127.0.0.1:62248 - \"GET / HTTP/1.1\" 200 OK\n"
+    },
+    {
+      "at": "2026-09-14T07:17:18.051Z",
+      "part": "Part 1",
+      "stream": "stdout",
+      "text": "INFO:     127.0.0.1:62248 - \"GET /api/rentals HTTP/1.1\" 200 OK\n"
+    },
+    {
+      "at": "2026-09-14T07:17:18.603Z",
+      "part": "Part 1",
+      "stream": "stdout",
+      "text": "INFO:     127.0.0.1:62248 - \"DELETE /api/rentals/highest HTTP/1.1\" 204 No Content\n"
+    },
+    {
+      "at": "2026-09-14T07:17:18.618Z",
+      "part": "Part 1",
+      "stream": "stdout",
+      "text": "INFO:     127.0.0.1:62248 - \"GET / HTTP/1.1\" 200 OK\n"
+    },
+    {
+      "at": "2026-09-14T07:17:18.623Z",
+      "part": "Part 1",
+      "stream": "stdout",
+      "text": "INFO:     127.0.0.1:62248 - \"GET /api/rentals HTTP/1.1\" 200 OK\n"
+    },
+    {
+      "at": "2026-09-14T07:17:19.134Z",
+      "part": "Part 1",
+      "stream": "stdout",
+      "text": "INFO:     127.0.0.1:62246 - \"GET /api/rentals HTTP/1.1\" 200 OK\n"
+    },
+    {
+      "at": "2026-09-14T07:17:19.192Z",
+      "part": "Part 1",
+      "stream": "stdout",
+      "text": "INFO:     127.0.0.1:62248 - \"GET /?slowSave=true HTTP/1.1\" 200 OK\n"
+    },
+    {
+      "at": "2026-09-14T07:17:19.195Z",
+      "part": "Part 1",
+      "stream": "stdout",
+      "text": "INFO:     127.0.0.1:62248 - \"GET /api/rentals HTTP/1.1\" 200 OK\n"
+    },
+    {
+      "at": "2026-09-14T07:17:27.926Z",
+      "part": "Part 1",
+      "stream": "stdout",
+      "text": "INFO:     127.0.0.1:62257 - \"POST /api/rentals HTTP/1.1\" 201 Created\n"
+    },
+    {
+      "at": "2026-09-14T07:17:27.931Z",
+      "part": "Part 1",
+      "stream": "stdout",
+      "text": "INFO:     127.0.0.1:62257 - \"GET / HTTP/1.1\" 200 OK\n"
+    },
+    {
+      "at": "2026-09-14T07:17:27.943Z",
+      "part": "Part 1",
+      "stream": "stdout",
+      "text": "INFO:     127.0.0.1:62257 - \"GET /api/rentals HTTP/1.1\" 200 OK\n"
+    },
+    {
+      "at": "2026-09-14T07:17:28.465Z",
+      "part": "Part 1",
+      "stream": "stdout",
+      "text": "INFO:     127.0.0.1:62258 - \"GET /api/rentals HTTP/1.1\" 200 OK\n"
+    },
+    {
+      "at": "2026-09-14T07:17:28.654Z",
+      "part": "Part 1",
+      "stream": "stdout",
+      "text": "INFO:     127.0.0.1:62257 - \"GET /?simulateError=true HTTP/1.1\" 200 OK\n"
+    },
+    {
+      "at": "2026-09-14T07:17:28.658Z",
+      "part": "Part 1",
+      "stream": "stdout",
+      "text": "INFO:     127.0.0.1:62257 - \"GET /api/rentals HTTP/1.1\" 200 OK\n"
+    },
+    {
+      "at": "2026-09-14T07:17:31.273Z",
+      "part": "Part 1",
+      "stream": "stdout",
+      "text": "INFO:     127.0.0.1:62258 - \"GET /api/rentals HTTP/1.1\" 200 OK\n"
+    },
+    {
+      "at": "2026-09-14T07:17:31.451Z",
+      "part": "Part 1",
+      "stream": "stderr",
+      "text": "INFO:     Shutting down\n"
+    },
+    {
+      "at": "2026-09-14T07:17:31.553Z",
+      "part": "Part 1",
+      "stream": "stderr",
+      "text": "INFO:     Waiting for application shutdown.\n"
+    },
+    {
+      "at": "2026-09-14T07:17:31.553Z",
+      "part": "Part 1",
+      "stream": "stderr",
+      "text": "INFO:     Application shutdown complete.\n"
+    },
+    {
+      "at": "2026-09-14T07:17:31.553Z",
+      "part": "Part 1",
+      "stream": "stderr",
+      "text": "INFO:     Finished server process [65504]\n"
+    },
+    {
+      "at": "2026-09-14T07:17:31.727Z",
+      "part": "Part 2",
+      "stream": "stderr",
+      "text": "INFO:     Started server process [65536]\n"
+    },
+    {
+      "at": "2026-09-14T07:17:31.727Z",
+      "part": "Part 2",
+      "stream": "stderr",
+      "text": "INFO:     Waiting for application startup.\n"
+    },
+    {
+      "at": "2026-09-14T07:17:31.727Z",
+      "part": "Part 2",
+      "stream": "stderr",
+      "text": "INFO:     Application startup complete.\n"
+    },
+    {
+      "at": "2026-09-14T07:17:31.728Z",
+      "part": "Part 2",
+      "stream": "stderr",
+      "text": "INFO:     Uvicorn running on http://127.0.0.1:18702 (Press CTRL+C to quit)\n"
+    },
+    {
+      "at": "2026-09-14T07:17:31.785Z",
+      "part": "Part 2",
+      "stream": "stdout",
+      "text": "INFO:     127.0.0.1:62262 - \"GET /api/rentals HTTP/1.1\" 200 OK\n"
+    },
+    {
+      "at": "2026-09-14T07:17:31.819Z",
+      "part": "Part 2",
+      "stream": "stdout",
+      "text": "INFO:     127.0.0.1:62263 - \"GET / HTTP/1.1\" 200 OK\n"
+    },
+    {
+      "at": "2026-09-14T07:17:31.824Z",
+      "part": "Part 2",
+      "stream": "stdout",
+      "text": "INFO:     127.0.0.1:62263 - \"GET /static/styles.css HTTP/1.1\" 200 OK\n"
+    },
+    {
+      "at": "2026-09-14T07:17:31.824Z",
+      "part": "Part 2",
+      "stream": "stdout",
+      "text": "INFO:     127.0.0.1:62264 - \"GET /static/app.js HTTP/1.1\" 200 OK\n"
+    },
+    {
+      "at": "2026-09-14T07:17:31.832Z",
+      "part": "Part 2",
+      "stream": "stdout",
+      "text": "INFO:     127.0.0.1:62264 - \"GET /api/rentals HTTP/1.1\" 200 OK\n"
+    },
+    {
+      "at": "2026-09-14T07:17:32.349Z",
+      "part": "Part 2",
+      "stream": "stdout",
+      "text": "INFO:     127.0.0.1:62262 - \"GET /api/rentals HTTP/1.1\" 200 OK\n"
+    },
+    {
+      "at": "2026-09-14T07:17:32.586Z",
+      "part": "Part 2",
+      "stream": "stdout",
+      "text": "INFO:     127.0.0.1:62264 - \"POST /api/rentals HTTP/1.1\" 201 Created\n"
+    },
+    {
+      "at": "2026-09-14T07:17:32.602Z",
+      "part": "Part 2",
+      "stream": "stdout",
+      "text": "INFO:     127.0.0.1:62264 - \"GET / HTTP/1.1\" 200 OK\n"
+    },
+    {
+      "at": "2026-09-14T07:17:32.607Z",
+      "part": "Part 2",
+      "stream": "stdout",
+      "text": "INFO:     127.0.0.1:62264 - \"GET /api/rentals HTTP/1.1\" 200 OK\n"
+    },
+    {
+      "at": "2026-09-14T07:17:33.123Z",
+      "part": "Part 2",
+      "stream": "stdout",
+      "text": "INFO:     127.0.0.1:62262 - \"GET /api/rentals HTTP/1.1\" 200 OK\n"
+    },
+    {
+      "at": "2026-09-14T07:17:33.352Z",
+      "part": "Part 2",
+      "stream": "stdout",
+      "text": "INFO:     127.0.0.1:62264 - \"PUT /api/rentals/1 HTTP/1.1\" 200 OK\n"
+    },
+    {
+      "at": "2026-09-14T07:17:33.369Z",
+      "part": "Part 2",
+      "stream": "stdout",
+      "text": "INFO:     127.0.0.1:62264 - \"GET / HTTP/1.1\" 200 OK\n"
+    },
+    {
+      "at": "2026-09-14T07:17:33.372Z",
+      "part": "Part 2",
+      "stream": "stdout",
+      "text": "INFO:     127.0.0.1:62264 - \"GET /api/rentals HTTP/1.1\" 200 OK\n"
+    },
+    {
+      "at": "2026-09-14T07:17:33.889Z",
+      "part": "Part 2",
+      "stream": "stdout",
+      "text": "INFO:     127.0.0.1:62262 - \"GET /api/rentals HTTP/1.1\" 200 OK\n"
+    },
+    {
+      "at": "2026-09-14T07:17:33.951Z",
+      "part": "Part 2",
+      "stream": "stdout",
+      "text": "INFO:     127.0.0.1:62262 - \"GET /api/rentals HTTP/1.1\" 200 OK\n"
+    },
+    {
+      "at": "2026-09-14T07:17:34.052Z",
+      "part": "Part 2",
+      "stream": "stdout",
+      "text": "INFO:     127.0.0.1:62264 - \"DELETE /api/rentals/highest HTTP/1.1\" 204 No Content\n"
+    },
+    {
+      "at": "2026-09-14T07:17:34.068Z",
+      "part": "Part 2",
+      "stream": "stdout",
+      "text": "INFO:     127.0.0.1:62264 - \"GET / HTTP/1.1\" 200 OK\n"
+    },
+    {
+      "at": "2026-09-14T07:17:34.072Z",
+      "part": "Part 2",
+      "stream": "stdout",
+      "text": "INFO:     127.0.0.1:62264 - \"GET /api/rentals HTTP/1.1\" 200 OK\n"
+    },
+    {
+      "at": "2026-09-14T07:17:34.584Z",
+      "part": "Part 2",
+      "stream": "stdout",
+      "text": "INFO:     127.0.0.1:62262 - \"GET /api/rentals HTTP/1.1\" 200 OK\n"
+    },
+    {
+      "at": "2026-09-14T07:17:34.686Z",
+      "part": "Part 2",
+      "stream": "stdout",
+      "text": "INFO:     127.0.0.1:62264 - \"GET /api/rentals HTTP/1.1\" 200 OK\n"
+    },
+    {
+      "at": "2026-09-14T07:17:34.686Z",
+      "part": "Part 2",
+      "stream": "stdout",
+      "text": "INFO:     127.0.0.1:62263 - \"GET /api/rentals?q=Downtown HTTP/1.1\" 200 OK\n"
+    },
+    {
+      "at": "2026-09-14T07:17:34.801Z",
+      "part": "Part 2",
+      "stream": "stdout",
+      "text": "INFO:     127.0.0.1:62263 - \"GET /api/rentals HTTP/1.1\" 200 OK\n"
+    },
+    {
+      "at": "2026-09-14T07:17:34.801Z",
+      "part": "Part 2",
+      "stream": "stdout",
+      "text": "INFO:     127.0.0.1:62264 - \"GET /api/rentals?q=Market HTTP/1.1\" 200 OK\n"
+    },
+    {
+      "at": "2026-09-14T07:17:34.901Z",
+      "part": "Part 2",
+      "stream": "stdout",
+      "text": "INFO:     127.0.0.1:62264 - \"GET /api/rentals HTTP/1.1\" 200 OK\n"
+    },
+    {
+      "at": "2026-09-14T07:17:35.034Z",
+      "part": "Part 2",
+      "stream": "stdout",
+      "text": "INFO:     127.0.0.1:62264 - \"GET /api/rentals HTTP/1.1\" 200 OK\n"
+    },
+    {
+      "at": "2026-09-14T07:17:35.035Z",
+      "part": "Part 2",
+      "stream": "stdout",
+      "text": "INFO:     127.0.0.1:62263 - \"GET /api/rentals?q=no-such-rental-6102 HTTP/1.1\" 200 OK\n"
+    },
+    {
+      "at": "2026-09-14T07:17:35.134Z",
+      "part": "Part 2",
+      "stream": "stdout",
+      "text": "INFO:     127.0.0.1:62263 - \"GET /api/rentals HTTP/1.1\" 200 OK\n"
+    },
+    {
+      "at": "2026-09-14T07:17:35.168Z",
+      "part": "Part 2",
+      "stream": "stdout",
+      "text": "INFO:     127.0.0.1:62262 - \"GET /api/rentals HTTP/1.1\" 200 OK\n"
+    },
+    {
+      "at": "2026-09-14T07:17:35.262Z",
+      "part": "Part 2",
+      "stream": "stderr",
+      "text": "INFO:     Shutting down\n"
+    },
+    {
+      "at": "2026-09-14T07:17:35.363Z",
+      "part": "Part 2",
+      "stream": "stderr",
+      "text": "INFO:     Waiting for application shutdown.\n"
+    },
+    {
+      "at": "2026-09-14T07:17:35.363Z",
+      "part": "Part 2",
+      "stream": "stderr",
+      "text": "INFO:     Application shutdown complete.\n"
+    },
+    {
+      "at": "2026-09-14T07:17:35.363Z",
+      "part": "Part 2",
+      "stream": "stderr",
+      "text": "INFO:     Finished server process [65536]\n"
+    }
+  ],
+  "sourceHashes": {
+    "code/web_application/main.py": "72854596c956365df801bc86afb13e98b2eedefc1e910fc03b2cdf7aea824610",
+    "code/web_application/static/index.html": "f692b1133214d5da8e5a6e3e0bf35d454af287e7b4def2825cdce26b46f14efa",
+    "code/web_application/static/styles.css": "e318ec9f8e810b538390b957f35cb0ead807ba6c87846782776672de6f6eb403",
+    "code/web_application/static/app.js": "eda37f2102208b8ad74c3157699b7558c6b324d515f7648ad9915ed3173d04aa"
+  },
+  "headAtCapture": "4b8875ac247168a3aa06464f735157d00bf97351",
+  "sourceWorkingTreeStatus": "",
+  "browserVersion": "151.0.7922.34",
+  "playwrightVersion": "1.62.1",
+  "outcome": "PASS",
+  "finishedAt": "2026-09-14T07:17:35.417Z",
+  "responseBodyLimitation": "Immediate home navigation prevented Playwright from retaining three POST/PUT response bodies; their actual HTTP statuses and request payloads are logged, and authoritative GET snapshots prove the stored records. DELETE 204 correctly has an empty body. Search GET response bodies are available. No mutation body is reconstructed or presented as a captured response.",
+  "visualQA": {
+    "all19OriginalsInspected": true,
+    "result": "PASS: Required fields/states/results readable; no horizontal viewport overflow; some supplemental screenshots intentionally show scrolled or partially clipped adjacent sections.",
+    "duplicatePixels": "P2-Q2-updated and P2-Q3-before are separate captures of unchanged state, so identical hashes are expected. P2-Q3-after and P2-Q4-clear likewise show the same restored list."
+  }
+}

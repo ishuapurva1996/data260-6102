@@ -1,12 +1,51 @@
-# HW2 reproducible run instructions: Part 4 contribution
+# HW2 reproducible run instructions
 
-Run commands from the repository root. This guide covers the shared Planner–Reviewer
-graph and Part 4 experiments. See the [graph guide](../../docs/agent_graph.md) for
-contracts and routing, and the [web app guide](../../code/web_application/README.md)
-for Parts 1–2. Integration into the final combined Parts 1–4 instructions remains
-pending.
+Run from the repository root. The final application uses shared `code/` and `src/` folders. Use separate Python environments for the web and agent dependencies. Original measured evidence stays unchanged.
 
-## Environment and fast checks
+## Parts 1 and 2: web application
+
+```sh
+python3.12 -m venv .venv-web
+source .venv-web/bin/activate
+python -m pip install -r requirements.txt
+python code/web_application/main.py
+```
+
+Open `http://127.0.0.1:8702/`. Keep the process running. A browser reload keeps the in-memory records; stopping and restarting the server restores seed IDs 1 and 2. Use one worker. The UI supports create, Edit on any listing, Cancel, highest-ID deletion, per-row deletion, and case-insensitive title/address search. Use ID 1 for the required update example.
+
+For visible-state demonstrations, `/?slowSave=true` delays eight seconds before a real create request. `/?simulateError=true` shows a controlled UI failure after two seconds without sending a create request. Ordinary saves use `/` without these flags. Mobile screenshot evidence uses a genuine 375 x 812 viewport.
+
+The fresh report capture used isolated port 18702 to preserve an existing server on 8702. Its scripts and exact inputs are in `scripts/capture_part12.cjs` and `raw/part12/capture-manifest.json`. A separate read-only 8702 observation proves the assignment port, in `raw/part12/port8702-readonly.json`.
+
+## Final tagged smoke check
+
+The immutable local `hw2-code` tag identifies the application, dependencies and verifier. The later `hw2` package tag includes the report and generated evidence without changing that runtime source. Generated files cannot embed the hash of their own containing commit; the report therefore names the verified code tag and hash explicitly. Both tags must be pushed before remote reproduction.
+
+First complete the Parts 3 and 4 agent-environment and Ollama setup below. Keep the web app running in its own terminal on 8702. Run the following in a second terminal from the repository root, with Ollama serving `qwen3:1.7b`:
+
+```sh
+.venv-agents/bin/python scripts/verify_hw02.py \
+  --ref hw2-code --live --model-timeout 120 --require-submission \
+  --evidence-dir reports/hw02/raw/submission-smoke/reproduction \
+  --output reports/hw02/verification_hw02_reproduction.json
+```
+
+This checks source bytes against the tag, isolated CRUD, deterministic graph approval/repair/ceiling, all preserved Part 4 trial records, live GET responses on 8702, and two real graph runs. The live model runs are a normal case and a controlled always-issue Reviewer case, both with ceiling 10. The controlled exit is expected. No mutation touches the running 8702 app, and no application source is changed. Reproduction uses separate output paths so the submitted verification and original runs remain intact.
+
+Without Ollama or a running web server, omit `--live` and `--require-submission` for offline checks. That result is not a claim that the live system was tested. A failed check is retained as a failure; the script does not fix source code or invent success.
+
+## Rebuild the report
+
+Use a Python environment with ReportLab and Pillow installed:
+
+```sh
+python scripts/build_hw02_report.py --code-ref hw2-code \
+  --upload-copy ../HW2/Apurva_HW2.pdf
+```
+
+The builder reads real source excerpts and saved screenshots; it does not rerun experiments. It writes `report.pdf`, a Markdown text copy `report.md`, and `report-layout.json`. Edit the report narrative in `scripts/build_hw02_report.py` and the AI statement in `AI_USE.md` before rebuilding. Direct edits to the generated `report.md` are not used by the builder and would be overwritten. Review a rendered PDF after changing content or images. The upload copy must match `reports/hw02/report.pdf` byte-for-byte. After a rebuild, regenerate final verification so its report hashes match the new PDF.
+
+## Parts 3 and 4: agent environment and checks
 
 Use Python 3.11 or 3.12 and a separate agent environment. The recorded campaign
 used Python 3.12.14 on macOS arm64; exact package versions, platform information,
@@ -238,10 +277,4 @@ This live demonstration is separate from the 75 Part 4 measurements and should
 run after any active measured campaign. Never run the Part 3 verifier into its
 historical default output paths.
 
-The Part 4 results and scoped verification are contributions to the final
-submission. The full report PDF with matching code/output evidence, personal
-AI-use answers, combined Parts 1–4 run log/instructions, final whole-assignment
-`verification.json`, collaborator-access check, final HW2 tag, and tagged smoke
-verification remain integration tasks. Reproduction does not require pushing,
-tagging, or rewriting Git history. The implementation plan remains outside the
-repository.
+The original Part 4 records retain their capture-time Git metadata, including a dirty working tree. This is historical provenance, not an instruction to undo the final integration. The current tagged smoke output and submission manifest identify the final application and report. Do not overwrite the baseline campaign or historical Part 3 evidence when reproducing results.

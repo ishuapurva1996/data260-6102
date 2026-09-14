@@ -60,7 +60,7 @@ data260-6102/
 └── README.md
 ```
 
-Course instructions, lecturer practice scripts, implementation plans, and agent working notes remain outside this repository in the sibling `HW1 assignment instructions/` and `HW2/agent_outputs/` folders. Future HW2 code will extend the shared application; there are no separate HW1/HW2 application copies.
+Course instructions, lecturer practice scripts, implementation plans, and agent working notes remain outside this repository in the sibling `HW1 assignment instructions/` and `HW2/agent_outputs/` folders. HW2 extends the shared application; there are no separate HW1/HW2 application copies.
 
 ## Current HW2 progress
 
@@ -75,7 +75,7 @@ python code/web_application/main.py
 
 Open [the application](http://127.0.0.1:8702/) or [the API documentation](http://127.0.0.1:8702/docs). Records survive page reloads; restarting the single server process restores seed IDs 1 and 2. Stop it with `Control-C`. Only one application can use port 8702 at a time.
 
-See the [web application guide](code/web_application/README.md) for Docker, API tests, browser checks, and controlled screenshot aids. The Part 1 and Part 2 screenshot guides remain outside Git at `../HW2/agent_outputs/SCREENSHOT_EVIDENCE_PLAN.md` and `../HW2/agent_outputs/PART2_SCREENSHOT_EVIDENCE_PLAN.md`. [HW2 submission evidence](reports/hw02/README.md) describes where final report artifacts belong.
+See the [web application guide](code/web_application/README.md) for Docker, API tests, browser checks, and controlled screenshot aids. The Part 1 and Part 2 screenshot guides remain outside Git at `../HW2/agent_outputs/SCREENSHOT_EVIDENCE_PLAN.md` and `../HW2/agent_outputs/PART2_SCREENSHOT_EVIDENCE_PLAN.md`. [The complete HW2 report and submission package](reports/hw02/README.md) include all four parts, raw results, screenshots and reproduction instructions.
 
 ### HW2 Part 3 - Planner/Reviewer graph
 
@@ -90,7 +90,7 @@ python code/agents_graph.py --input-json reports/hw02/cases/part3_listing.json -
 
 If `.venv-agents` is already prepared, run `.venv-agents/bin/python code/agents_graph.py --input-json reports/hw02/cases/part3_listing.json`.
 
-See the [Part 3 usage and architecture guide](docs/agent_graph.md) for turn counting, response validation, controlled Reviewer mode, and test commands. The [implementation results](reports/hw02/PART3_IMPLEMENTATION.md) link the recorded tests, real-model runs, and screenshots. Part 4 results are linked below; final combined HW2 submission artifacts remain pending.
+See the [Part 3 usage and architecture guide](docs/agent_graph.md) for turn counting, response validation, controlled Reviewer mode, and test commands. The [implementation results](reports/hw02/PART3_IMPLEMENTATION.md) link the recorded tests, real-model runs, and screenshots. The [combined HW2 report](reports/hw02/report.pdf) includes Parts 1-4. The `hw2-code` tag identifies verified runtime source; `hw2` identifies the complete local submission package. Follow the [submission checklist](reports/hw02/SUBMISSION_CHECKLIST.md) before submitting online.
 
 ## Reproducing the original HW1 submission
 

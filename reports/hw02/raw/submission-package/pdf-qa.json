@@ -1,0 +1,13 @@
+{
+  "checked_at": "2026-09-14T07:46:51.834300+00:00",
+  "pdf": "reports/hw02/report.pdf",
+  "sha256": "4deda56c09a1f24030e247b239147bb092f7a461fa2c8a4d95f35b1372dc0146",
+  "pages": 28,
+  "render_tool": "pdftoppm",
+  "render_dpi": 120,
+  "visual_review": "All 28 pages reviewed. The final three changed pages (4,6,22) were inspected again; other 25 pages rendered identically to the previously inspected version.",
+  "defects_remaining": [],
+  "code_excerpts": "All source excerpts are nonempty and within actual file ranges.",
+  "upload_copy_matches": true,
+  "scope": "Document layout, visible code/output pairing, page numbering, identity fields and matching upload copy. Does not establish instructor approval or online submission."
+}

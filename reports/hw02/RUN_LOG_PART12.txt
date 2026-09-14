@@ -1,0 +1,186 @@
+HW2 Parts 1 and 2 — actual browser capture run
+Started: 2026-09-14T07:17:16.699Z
+Finished: 2026-09-14T07:17:35.417Z
+Outcome: PASS
+HEAD at capture: 4b8875ac247168a3aa06464f735157d00bf97351
+Web source working-tree status: clean
+Chromium: 151.0.7922.34; Playwright: 1.62.1
+Capture server: http://127.0.0.1:18702
+Port 8702 was already occupied by an existing Python process. This capture owns a separate single-worker Uvicorn process on 18702, restarted between Parts 1 and 2. The existing process and its in-memory records were not modified. The submitted main.py default remains PORT_BASE=8702.
+Unaltered PNG captures produced by Playwright page.screenshot in Chromium. No app DOM, styling, data response, or screenshot pixels are replaced or overlaid. Mutations use actual browser controls and real local HTTP requests.
+Headless Chromium screenshots contain page content only; browser chrome and DevTools width toolbar are absent. Each Part 1 original PNG is 375x812 at device scale factor 1. Metadata records the actual innerWidth and document scrollWidth; report captions must state the viewport explicitly. The capture port is an isolated verification port, not the assignment default.
+Controlled modes: slowSave=true delays a real POST by eight seconds; simulateError=true throws a UI error after two seconds without sending a POST. Neither is a measured backend outage.
+Capture script: scripts/capture_part12.cjs
+Raw manifest: reports/hw02/raw/part12/capture-manifest.json
+Actual request/response metadata and available bodies: reports/hw02/raw/part12/network-events.json
+Timestamped Uvicorn output: reports/hw02/raw/part12/server-console.txt
+
+2026-09-14T07:17:16.877Z P1 baseline | server-start: {"part":"Part 1","executable":"/Users/pragyaapurva/Documents/SJSU/DATA 260/data260-6102/.venv-web/bin/python","arguments":["-m","uvicorn","main:app","--app-dir","/Users/pragyaapurva/Documents/SJSU/DATA 260/data260-6102/code/web_application","--host","127.0.0.1","--port","18702","--workers","1"]}
+2026-09-14T07:17:17.196Z P1 baseline | server-ready: {"part":"Part 1","pid":65504,"baseURL":"http://127.0.0.1:18702"}
+2026-09-14T07:17:18.011Z P1 true-empty list | browser-confirmation-accepted: {"message":"Delete the highest-ID listing from all listings, including those hidden by search? Last loaded highest ID: 2."}
+2026-09-14T07:17:18.601Z P1 true-empty list | browser-confirmation-accepted: {"message":"Delete the highest-ID listing from all listings, including those hidden by search? Last loaded highest ID: 1."}
+2026-09-14T07:17:19.190Z P1 true-empty list | screenshot: {"filename":"reports/hw02/screenshots/part1/P1-01-empty.png","pixels":[375,812],"url":"http://127.0.0.1:18702/"}
+2026-09-14T07:17:19.838Z P1 filled form | screenshot: {"filename":"reports/hw02/screenshots/part1/P1-02a-form-upper.png","pixels":[375,812],"url":"http://127.0.0.1:18702/?slowSave=true"}
+2026-09-14T07:17:19.890Z P1 filled form | screenshot: {"filename":"reports/hw02/screenshots/part1/P1-02b-form-lower.png","pixels":[375,812],"url":"http://127.0.0.1:18702/?slowSave=true"}
+2026-09-14T07:17:19.992Z P1 controlled loading | screenshot: {"filename":"reports/hw02/screenshots/part1/P1-03-loading.png","pixels":[375,812],"url":"http://127.0.0.1:18702/?slowSave=true"}
+2026-09-14T07:17:28.463Z P1 controlled loading | slow-save-completed: {"elapsedMs":8573,"urlAfter":"http://127.0.0.1:18702/"}
+2026-09-14T07:17:28.523Z P1 populated mobile list | screenshot: {"filename":"reports/hw02/screenshots/part1/P1-04-list.png","pixels":[375,812],"url":"http://127.0.0.1:18702/"}
+2026-09-14T07:17:28.624Z P1 populated mobile list | screenshot: {"filename":"reports/hw02/screenshots/part1/P1-05-editor.png","pixels":[375,812],"url":"http://127.0.0.1:18702/"}
+2026-09-14T07:17:31.275Z P1 controlled UI error | controlled-error-no-post: {"postRequestsDuringError":0,"storedIDs":[1],"retainedInput":true,"controlsEnabled":true}
+2026-09-14T07:17:31.329Z P1 controlled UI error | screenshot: {"filename":"reports/hw02/screenshots/part1/P1-06-error.png","pixels":[375,812],"url":"http://127.0.0.1:18702/?simulateError=true"}
+2026-09-14T07:17:31.373Z P1 controlled UI error | screenshot: {"filename":"reports/hw02/screenshots/part1/P1-06b-retained-upper.png","pixels":[375,812],"url":"http://127.0.0.1:18702/?simulateError=true"}
+2026-09-14T07:17:31.579Z P1 controlled UI error | owned-server-stopped: {"pid":65504,"exitCode":0}
+2026-09-14T07:17:31.580Z P2 fresh baseline | server-start: {"part":"Part 2","executable":"/Users/pragyaapurva/Documents/SJSU/DATA 260/data260-6102/.venv-web/bin/python","arguments":["-m","uvicorn","main:app","--app-dir","/Users/pragyaapurva/Documents/SJSU/DATA 260/data260-6102/code/web_application","--host","127.0.0.1","--port","18702","--workers","1"]}
+2026-09-14T07:17:31.785Z P2 fresh baseline | server-ready: {"part":"Part 2","pid":65536,"baseURL":"http://127.0.0.1:18702"}
+2026-09-14T07:17:32.418Z P2 fresh baseline | screenshot: {"filename":"reports/hw02/screenshots/part2/P2-00-seeds.png","pixels":[1100,1100],"url":"http://127.0.0.1:18702/"}
+2026-09-14T07:17:32.547Z P2 Q1 create | screenshot: {"filename":"reports/hw02/screenshots/part2/P2-Q1-input.png","pixels":[1100,1100],"url":"http://127.0.0.1:18702/"}
+2026-09-14T07:17:33.202Z P2 Q1 create | screenshot: {"filename":"reports/hw02/screenshots/part2/P2-Q1-created.png","pixels":[1100,1100],"url":"http://127.0.0.1:18702/"}
+2026-09-14T07:17:33.314Z P2 Q2 update ID1 | screenshot: {"filename":"reports/hw02/screenshots/part2/P2-Q2-before.png","pixels":[1100,1100],"url":"http://127.0.0.1:18702/"}
+2026-09-14T07:17:33.949Z P2 Q2 update ID1 | screenshot: {"filename":"reports/hw02/screenshots/part2/P2-Q2-updated.png","pixels":[1100,1100],"url":"http://127.0.0.1:18702/"}
+2026-09-14T07:17:34.017Z P2 Q3 delete highest | screenshot: {"filename":"reports/hw02/screenshots/part2/P2-Q3-before.png","pixels":[1100,1100],"url":"http://127.0.0.1:18702/"}
+2026-09-14T07:17:34.051Z P2 Q3 delete highest | browser-confirmation-accepted: {"message":"Delete the highest-ID listing from all listings, including those hidden by search? Last loaded highest ID: 3."}
+2026-09-14T07:17:34.648Z P2 Q3 delete highest | screenshot: {"filename":"reports/hw02/screenshots/part2/P2-Q3-after.png","pixels":[1100,1100],"url":"http://127.0.0.1:18702/"}
+2026-09-14T07:17:34.763Z P2 Q4 search | screenshot: {"filename":"reports/hw02/screenshots/part2/P2-Q4-title.png","pixels":[1100,1100],"url":"http://127.0.0.1:18702/"}
+2026-09-14T07:17:34.879Z P2 Q4 search | screenshot: {"filename":"reports/hw02/screenshots/part2/P2-Q4-address.png","pixels":[1100,1100],"url":"http://127.0.0.1:18702/"}
+2026-09-14T07:17:35.000Z P2 Q4 search | screenshot: {"filename":"reports/hw02/screenshots/part2/P2-Q4-clear.png","pixels":[1100,1100],"url":"http://127.0.0.1:18702/"}
+2026-09-14T07:17:35.112Z P2 Q4 search | screenshot: {"filename":"reports/hw02/screenshots/part2/P2-Q4-no-match.png","pixels":[1100,1100],"url":"http://127.0.0.1:18702/"}
+2026-09-14T07:17:35.401Z P2 Q4 search | owned-server-stopped: {"pid":65536,"exitCode":0}
+2026-09-14T07:17:35.401Z P2 Q4 search | capture-complete: {"screenshots":19,"unexpectedPageErrors":0}
+
+Server console (timestamp prefixed as received):
+[2026-09-14T07:17:17.101Z] [Part 1] INFO:     Started server process [65504]
+
+[2026-09-14T07:17:17.101Z] [Part 1] INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+
+[2026-09-14T07:17:17.102Z] [Part 1] INFO:     Uvicorn running on http://127.0.0.1:18702 (Press CTRL+C to quit)
+
+[2026-09-14T07:17:17.194Z] [Part 1] INFO:     127.0.0.1:62246 - "GET /api/rentals HTTP/1.1" 200 OK
+
+[2026-09-14T07:17:17.373Z] [Part 1] INFO:     127.0.0.1:62247 - "GET / HTTP/1.1" 200 OK
+
+[2026-09-14T07:17:17.386Z] [Part 1] INFO:     127.0.0.1:62247 - "GET /static/styles.css HTTP/1.1" 200 OK
+
+[2026-09-14T07:17:17.387Z] [Part 1] INFO:     127.0.0.1:62248 - "GET /static/app.js HTTP/1.1" 200 OK
+
+[2026-09-14T07:17:17.401Z] [Part 1] INFO:     127.0.0.1:62248 - "GET /api/rentals HTTP/1.1" 200 OK
+
+[2026-09-14T07:17:17.960Z] [Part 1] INFO:     127.0.0.1:62246 - "GET /api/rentals HTTP/1.1" 200 OK
+
+[2026-09-14T07:17:18.013Z] [Part 1] INFO:     127.0.0.1:62248 - "DELETE /api/rentals/highest HTTP/1.1" 204 No Content
+
+[2026-09-14T07:17:18.045Z] [Part 1] INFO:     127.0.0.1:62248 - "GET / HTTP/1.1" 200 OK
+
+[2026-09-14T07:17:18.051Z] [Part 1] INFO:     127.0.0.1:62248 - "GET /api/rentals HTTP/1.1" 200 OK
+
+[2026-09-14T07:17:18.603Z] [Part 1] INFO:     127.0.0.1:62248 - "DELETE /api/rentals/highest HTTP/1.1" 204 No Content
+
+[2026-09-14T07:17:18.618Z] [Part 1] INFO:     127.0.0.1:62248 - "GET / HTTP/1.1" 200 OK
+
+[2026-09-14T07:17:18.623Z] [Part 1] INFO:     127.0.0.1:62248 - "GET /api/rentals HTTP/1.1" 200 OK
+
+[2026-09-14T07:17:19.134Z] [Part 1] INFO:     127.0.0.1:62246 - "GET /api/rentals HTTP/1.1" 200 OK
+
+[2026-09-14T07:17:19.192Z] [Part 1] INFO:     127.0.0.1:62248 - "GET /?slowSave=true HTTP/1.1" 200 OK
+
+[2026-09-14T07:17:19.195Z] [Part 1] INFO:     127.0.0.1:62248 - "GET /api/rentals HTTP/1.1" 200 OK
+
+[2026-09-14T07:17:27.926Z] [Part 1] INFO:     127.0.0.1:62257 - "POST /api/rentals HTTP/1.1" 201 Created
+
+[2026-09-14T07:17:27.931Z] [Part 1] INFO:     127.0.0.1:62257 - "GET / HTTP/1.1" 200 OK
+
+[2026-09-14T07:17:27.943Z] [Part 1] INFO:     127.0.0.1:62257 - "GET /api/rentals HTTP/1.1" 200 OK
+
+[2026-09-14T07:17:28.465Z] [Part 1] INFO:     127.0.0.1:62258 - "GET /api/rentals HTTP/1.1" 200 OK
+
+[2026-09-14T07:17:28.654Z] [Part 1] INFO:     127.0.0.1:62257 - "GET /?simulateError=true HTTP/1.1" 200 OK
+
+[2026-09-14T07:17:28.658Z] [Part 1] INFO:     127.0.0.1:62257 - "GET /api/rentals HTTP/1.1" 200 OK
+
+[2026-09-14T07:17:31.273Z] [Part 1] INFO:     127.0.0.1:62258 - "GET /api/rentals HTTP/1.1" 200 OK
+
+[2026-09-14T07:17:31.451Z] [Part 1] INFO:     Shutting down
+
+[2026-09-14T07:17:31.553Z] [Part 1] INFO:     Waiting for application shutdown.
+
+[2026-09-14T07:17:31.553Z] [Part 1] INFO:     Application shutdown complete.
+
+[2026-09-14T07:17:31.553Z] [Part 1] INFO:     Finished server process [65504]
+
+[2026-09-14T07:17:31.727Z] [Part 2] INFO:     Started server process [65536]
+
+[2026-09-14T07:17:31.727Z] [Part 2] INFO:     Waiting for application startup.
+
+[2026-09-14T07:17:31.727Z] [Part 2] INFO:     Application startup complete.
+
+[2026-09-14T07:17:31.728Z] [Part 2] INFO:     Uvicorn running on http://127.0.0.1:18702 (Press CTRL+C to quit)
+
+[2026-09-14T07:17:31.785Z] [Part 2] INFO:     127.0.0.1:62262 - "GET /api/rentals HTTP/1.1" 200 OK
+
+[2026-09-14T07:17:31.819Z] [Part 2] INFO:     127.0.0.1:62263 - "GET / HTTP/1.1" 200 OK
+
+[2026-09-14T07:17:31.824Z] [Part 2] INFO:     127.0.0.1:62263 - "GET /static/styles.css HTTP/1.1" 200 OK
+
+[2026-09-14T07:17:31.824Z] [Part 2] INFO:     127.0.0.1:62264 - "GET /static/app.js HTTP/1.1" 200 OK
+
+[2026-09-14T07:17:31.832Z] [Part 2] INFO:     127.0.0.1:62264 - "GET /api/rentals HTTP/1.1" 200 OK
+
+[2026-09-14T07:17:32.349Z] [Part 2] INFO:     127.0.0.1:62262 - "GET /api/rentals HTTP/1.1" 200 OK
+
+[2026-09-14T07:17:32.586Z] [Part 2] INFO:     127.0.0.1:62264 - "POST /api/rentals HTTP/1.1" 201 Created
+
+[2026-09-14T07:17:32.602Z] [Part 2] INFO:     127.0.0.1:62264 - "GET / HTTP/1.1" 200 OK
+
+[2026-09-14T07:17:32.607Z] [Part 2] INFO:     127.0.0.1:62264 - "GET /api/rentals HTTP/1.1" 200 OK
+
+[2026-09-14T07:17:33.123Z] [Part 2] INFO:     127.0.0.1:62262 - "GET /api/rentals HTTP/1.1" 200 OK
+
+[2026-09-14T07:17:33.352Z] [Part 2] INFO:     127.0.0.1:62264 - "PUT /api/rentals/1 HTTP/1.1" 200 OK
+
+[2026-09-14T07:17:33.369Z] [Part 2] INFO:     127.0.0.1:62264 - "GET / HTTP/1.1" 200 OK
+
+[2026-09-14T07:17:33.372Z] [Part 2] INFO:     127.0.0.1:62264 - "GET /api/rentals HTTP/1.1" 200 OK
+
+[2026-09-14T07:17:33.889Z] [Part 2] INFO:     127.0.0.1:62262 - "GET /api/rentals HTTP/1.1" 200 OK
+
+[2026-09-14T07:17:33.951Z] [Part 2] INFO:     127.0.0.1:62262 - "GET /api/rentals HTTP/1.1" 200 OK
+
+[2026-09-14T07:17:34.052Z] [Part 2] INFO:     127.0.0.1:62264 - "DELETE /api/rentals/highest HTTP/1.1" 204 No Content
+
+[2026-09-14T07:17:34.068Z] [Part 2] INFO:     127.0.0.1:62264 - "GET / HTTP/1.1" 200 OK
+
+[2026-09-14T07:17:34.072Z] [Part 2] INFO:     127.0.0.1:62264 - "GET /api/rentals HTTP/1.1" 200 OK
+
+[2026-09-14T07:17:34.584Z] [Part 2] INFO:     127.0.0.1:62262 - "GET /api/rentals HTTP/1.1" 200 OK
+
+[2026-09-14T07:17:34.686Z] [Part 2] INFO:     127.0.0.1:62264 - "GET /api/rentals HTTP/1.1" 200 OK
+
+[2026-09-14T07:17:34.686Z] [Part 2] INFO:     127.0.0.1:62263 - "GET /api/rentals?q=Downtown HTTP/1.1" 200 OK
+
+[2026-09-14T07:17:34.801Z] [Part 2] INFO:     127.0.0.1:62263 - "GET /api/rentals HTTP/1.1" 200 OK
+
+[2026-09-14T07:17:34.801Z] [Part 2] INFO:     127.0.0.1:62264 - "GET /api/rentals?q=Market HTTP/1.1" 200 OK
+
+[2026-09-14T07:17:34.901Z] [Part 2] INFO:     127.0.0.1:62264 - "GET /api/rentals HTTP/1.1" 200 OK
+
+[2026-09-14T07:17:35.034Z] [Part 2] INFO:     127.0.0.1:62264 - "GET /api/rentals HTTP/1.1" 200 OK
+
+[2026-09-14T07:17:35.035Z] [Part 2] INFO:     127.0.0.1:62263 - "GET /api/rentals?q=no-such-rental-6102 HTTP/1.1" 200 OK
+
+[2026-09-14T07:17:35.134Z] [Part 2] INFO:     127.0.0.1:62263 - "GET /api/rentals HTTP/1.1" 200 OK
+
+[2026-09-14T07:17:35.168Z] [Part 2] INFO:     127.0.0.1:62262 - "GET /api/rentals HTTP/1.1" 200 OK
+
+[2026-09-14T07:17:35.262Z] [Part 2] INFO:     Shutting down
+
+[2026-09-14T07:17:35.363Z] [Part 2] INFO:     Waiting for application shutdown.
+
+[2026-09-14T07:17:35.363Z] [Part 2] INFO:     Application shutdown complete.
+
+[2026-09-14T07:17:35.363Z] [Part 2] INFO:     Finished server process [65536]
+
+
+Response-body capture limitation: Immediate home navigation prevented Playwright from retaining three POST/PUT response bodies; their actual HTTP statuses and request payloads are logged, and authoritative GET snapshots prove the stored records. DELETE 204 correctly has an empty body. Search GET response bodies are available. No mutation body is reconstructed or presented as a captured response.
+Visual QA: All 19 original PNGs inspected and readable for their stated purpose.
+
+2026-09-14T07:19:56.212Z Supplemental read-only port8702 proof: home GET 200, API GET 200, current IDs 1,2; no form submissions or mutation requests.

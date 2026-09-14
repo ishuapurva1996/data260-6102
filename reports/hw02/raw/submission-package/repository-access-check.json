@@ -1,0 +1,15 @@
+{
+  "observed_on": "2026-09-14",
+  "method": "Authenticated browser UI inspection",
+  "repository_url": "https://github.com/ishuapurva1996/data260-6102",
+  "repository_page_opened": true,
+  "visibility_observed": "Public",
+  "settings_url": "https://github.com/ishuapurva1996/data260-6102/settings/access",
+  "settings_observation": "Confirm access; Verify via email",
+  "required_collaborators": {
+    "Sbnikitha": "not_confirmed",
+    "supriyaselvanganesan": "not_confirmed"
+  },
+  "limitation": "Identity confirmation was required before the collaborator list could be inspected. No verification email was triggered and no collaborator changes were made. Public readability does not establish collaborator membership.",
+  "online_hw2_upload": "not_performed"
+}

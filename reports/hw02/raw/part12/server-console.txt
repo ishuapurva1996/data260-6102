@@ -1,0 +1,66 @@
+[2026-09-14T07:17:17.101Z] [Part 1] [stderr] INFO:     Started server process [65504]
+[2026-09-14T07:17:17.101Z] [Part 1] [stderr] INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[2026-09-14T07:17:17.102Z] [Part 1] [stderr] INFO:     Uvicorn running on http://127.0.0.1:18702 (Press CTRL+C to quit)
+[2026-09-14T07:17:17.194Z] [Part 1] [stdout] INFO:     127.0.0.1:62246 - "GET /api/rentals HTTP/1.1" 200 OK
+[2026-09-14T07:17:17.373Z] [Part 1] [stdout] INFO:     127.0.0.1:62247 - "GET / HTTP/1.1" 200 OK
+[2026-09-14T07:17:17.386Z] [Part 1] [stdout] INFO:     127.0.0.1:62247 - "GET /static/styles.css HTTP/1.1" 200 OK
+[2026-09-14T07:17:17.387Z] [Part 1] [stdout] INFO:     127.0.0.1:62248 - "GET /static/app.js HTTP/1.1" 200 OK
+[2026-09-14T07:17:17.401Z] [Part 1] [stdout] INFO:     127.0.0.1:62248 - "GET /api/rentals HTTP/1.1" 200 OK
+[2026-09-14T07:17:17.960Z] [Part 1] [stdout] INFO:     127.0.0.1:62246 - "GET /api/rentals HTTP/1.1" 200 OK
+[2026-09-14T07:17:18.013Z] [Part 1] [stdout] INFO:     127.0.0.1:62248 - "DELETE /api/rentals/highest HTTP/1.1" 204 No Content
+[2026-09-14T07:17:18.045Z] [Part 1] [stdout] INFO:     127.0.0.1:62248 - "GET / HTTP/1.1" 200 OK
+[2026-09-14T07:17:18.051Z] [Part 1] [stdout] INFO:     127.0.0.1:62248 - "GET /api/rentals HTTP/1.1" 200 OK
+[2026-09-14T07:17:18.603Z] [Part 1] [stdout] INFO:     127.0.0.1:62248 - "DELETE /api/rentals/highest HTTP/1.1" 204 No Content
+[2026-09-14T07:17:18.618Z] [Part 1] [stdout] INFO:     127.0.0.1:62248 - "GET / HTTP/1.1" 200 OK
+[2026-09-14T07:17:18.623Z] [Part 1] [stdout] INFO:     127.0.0.1:62248 - "GET /api/rentals HTTP/1.1" 200 OK
+[2026-09-14T07:17:19.134Z] [Part 1] [stdout] INFO:     127.0.0.1:62246 - "GET /api/rentals HTTP/1.1" 200 OK
+[2026-09-14T07:17:19.192Z] [Part 1] [stdout] INFO:     127.0.0.1:62248 - "GET /?slowSave=true HTTP/1.1" 200 OK
+[2026-09-14T07:17:19.195Z] [Part 1] [stdout] INFO:     127.0.0.1:62248 - "GET /api/rentals HTTP/1.1" 200 OK
+[2026-09-14T07:17:27.926Z] [Part 1] [stdout] INFO:     127.0.0.1:62257 - "POST /api/rentals HTTP/1.1" 201 Created
+[2026-09-14T07:17:27.931Z] [Part 1] [stdout] INFO:     127.0.0.1:62257 - "GET / HTTP/1.1" 200 OK
+[2026-09-14T07:17:27.943Z] [Part 1] [stdout] INFO:     127.0.0.1:62257 - "GET /api/rentals HTTP/1.1" 200 OK
+[2026-09-14T07:17:28.465Z] [Part 1] [stdout] INFO:     127.0.0.1:62258 - "GET /api/rentals HTTP/1.1" 200 OK
+[2026-09-14T07:17:28.654Z] [Part 1] [stdout] INFO:     127.0.0.1:62257 - "GET /?simulateError=true HTTP/1.1" 200 OK
+[2026-09-14T07:17:28.658Z] [Part 1] [stdout] INFO:     127.0.0.1:62257 - "GET /api/rentals HTTP/1.1" 200 OK
+[2026-09-14T07:17:31.273Z] [Part 1] [stdout] INFO:     127.0.0.1:62258 - "GET /api/rentals HTTP/1.1" 200 OK
+[2026-09-14T07:17:31.451Z] [Part 1] [stderr] INFO:     Shutting down
+[2026-09-14T07:17:31.553Z] [Part 1] [stderr] INFO:     Waiting for application shutdown.
+[2026-09-14T07:17:31.553Z] [Part 1] [stderr] INFO:     Application shutdown complete.
+[2026-09-14T07:17:31.553Z] [Part 1] [stderr] INFO:     Finished server process [65504]
+[2026-09-14T07:17:31.727Z] [Part 2] [stderr] INFO:     Started server process [65536]
+[2026-09-14T07:17:31.727Z] [Part 2] [stderr] INFO:     Waiting for application startup.
+[2026-09-14T07:17:31.727Z] [Part 2] [stderr] INFO:     Application startup complete.
+[2026-09-14T07:17:31.728Z] [Part 2] [stderr] INFO:     Uvicorn running on http://127.0.0.1:18702 (Press CTRL+C to quit)
+[2026-09-14T07:17:31.785Z] [Part 2] [stdout] INFO:     127.0.0.1:62262 - "GET /api/rentals HTTP/1.1" 200 OK
+[2026-09-14T07:17:31.819Z] [Part 2] [stdout] INFO:     127.0.0.1:62263 - "GET / HTTP/1.1" 200 OK
+[2026-09-14T07:17:31.824Z] [Part 2] [stdout] INFO:     127.0.0.1:62263 - "GET /static/styles.css HTTP/1.1" 200 OK
+[2026-09-14T07:17:31.824Z] [Part 2] [stdout] INFO:     127.0.0.1:62264 - "GET /static/app.js HTTP/1.1" 200 OK
+[2026-09-14T07:17:31.832Z] [Part 2] [stdout] INFO:     127.0.0.1:62264 - "GET /api/rentals HTTP/1.1" 200 OK
+[2026-09-14T07:17:32.349Z] [Part 2] [stdout] INFO:     127.0.0.1:62262 - "GET /api/rentals HTTP/1.1" 200 OK
+[2026-09-14T07:17:32.586Z] [Part 2] [stdout] INFO:     127.0.0.1:62264 - "POST /api/rentals HTTP/1.1" 201 Created
+[2026-09-14T07:17:32.602Z] [Part 2] [stdout] INFO:     127.0.0.1:62264 - "GET / HTTP/1.1" 200 OK
+[2026-09-14T07:17:32.607Z] [Part 2] [stdout] INFO:     127.0.0.1:62264 - "GET /api/rentals HTTP/1.1" 200 OK
+[2026-09-14T07:17:33.123Z] [Part 2] [stdout] INFO:     127.0.0.1:62262 - "GET /api/rentals HTTP/1.1" 200 OK
+[2026-09-14T07:17:33.352Z] [Part 2] [stdout] INFO:     127.0.0.1:62264 - "PUT /api/rentals/1 HTTP/1.1" 200 OK
+[2026-09-14T07:17:33.369Z] [Part 2] [stdout] INFO:     127.0.0.1:62264 - "GET / HTTP/1.1" 200 OK
+[2026-09-14T07:17:33.372Z] [Part 2] [stdout] INFO:     127.0.0.1:62264 - "GET /api/rentals HTTP/1.1" 200 OK
+[2026-09-14T07:17:33.889Z] [Part 2] [stdout] INFO:     127.0.0.1:62262 - "GET /api/rentals HTTP/1.1" 200 OK
+[2026-09-14T07:17:33.951Z] [Part 2] [stdout] INFO:     127.0.0.1:62262 - "GET /api/rentals HTTP/1.1" 200 OK
+[2026-09-14T07:17:34.052Z] [Part 2] [stdout] INFO:     127.0.0.1:62264 - "DELETE /api/rentals/highest HTTP/1.1" 204 No Content
+[2026-09-14T07:17:34.068Z] [Part 2] [stdout] INFO:     127.0.0.1:62264 - "GET / HTTP/1.1" 200 OK
+[2026-09-14T07:17:34.072Z] [Part 2] [stdout] INFO:     127.0.0.1:62264 - "GET /api/rentals HTTP/1.1" 200 OK
+[2026-09-14T07:17:34.584Z] [Part 2] [stdout] INFO:     127.0.0.1:62262 - "GET /api/rentals HTTP/1.1" 200 OK
+[2026-09-14T07:17:34.686Z] [Part 2] [stdout] INFO:     127.0.0.1:62264 - "GET /api/rentals HTTP/1.1" 200 OK
+[2026-09-14T07:17:34.686Z] [Part 2] [stdout] INFO:     127.0.0.1:62263 - "GET /api/rentals?q=Downtown HTTP/1.1" 200 OK
+[2026-09-14T07:17:34.801Z] [Part 2] [stdout] INFO:     127.0.0.1:62263 - "GET /api/rentals HTTP/1.1" 200 OK
+[2026-09-14T07:17:34.801Z] [Part 2] [stdout] INFO:     127.0.0.1:62264 - "GET /api/rentals?q=Market HTTP/1.1" 200 OK
+[2026-09-14T07:17:34.901Z] [Part 2] [stdout] INFO:     127.0.0.1:62264 - "GET /api/rentals HTTP/1.1" 200 OK
+[2026-09-14T07:17:35.034Z] [Part 2] [stdout] INFO:     127.0.0.1:62264 - "GET /api/rentals HTTP/1.1" 200 OK
+[2026-09-14T07:17:35.035Z] [Part 2] [stdout] INFO:     127.0.0.1:62263 - "GET /api/rentals?q=no-such-rental-6102 HTTP/1.1" 200 OK
+[2026-09-14T07:17:35.134Z] [Part 2] [stdout] INFO:     127.0.0.1:62263 - "GET /api/rentals HTTP/1.1" 200 OK
+[2026-09-14T07:17:35.168Z] [Part 2] [stdout] INFO:     127.0.0.1:62262 - "GET /api/rentals HTTP/1.1" 200 OK
+[2026-09-14T07:17:35.262Z] [Part 2] [stderr] INFO:     Shutting down
+[2026-09-14T07:17:35.363Z] [Part 2] [stderr] INFO:     Waiting for application shutdown.
+[2026-09-14T07:17:35.363Z] [Part 2] [stderr] INFO:     Application shutdown complete.
+[2026-09-14T07:17:35.363Z] [Part 2] [stderr] INFO:     Finished server process [65536]

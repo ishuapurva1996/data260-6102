@@ -1,0 +1,64 @@
+{
+  "at": "2026-09-14T07:19:56.212Z",
+  "purpose": "Read-only inspection of the already-running assignment-port app; separate from the deterministic isolated sequence.",
+  "requests": [
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8702/"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8702/static/styles.css"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8702/static/app.js"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8702/api/rentals"
+    }
+  ],
+  "home": {
+    "url": "http://127.0.0.1:8702/",
+    "status": 200
+  },
+  "api": {
+    "method": "GET",
+    "url": "http://127.0.0.1:8702/api/rentals",
+    "status": 200,
+    "body": [
+      {
+        "listingTitle": "Sunny Downtown Apartment",
+        "propertyAddress": "123 San Carlos Street, San Jose, CA",
+        "submitterEmail": "downtown@example.com",
+        "description": "A bright apartment close to campus, shops, and public transit.",
+        "propertyType": "apartment",
+        "termsAccepted": true,
+        "id": 1
+      },
+      {
+        "listingTitle": "Spacious Garden House",
+        "propertyAddress": "456 Willow Street, San Jose, CA",
+        "submitterEmail": "garden@example.com",
+        "description": "A comfortable house with a private garden and a sunny living room.",
+        "propertyType": "house",
+        "termsAccepted": true,
+        "id": 2
+      }
+    ]
+  },
+  "metrics": {
+    "innerWidth": 1100,
+    "innerHeight": 1100,
+    "devicePixelRatio": 1,
+    "scrollY": 1020,
+    "documentScrollWidth": 1100
+  },
+  "screenshot": "reports/hw02/screenshots/part2/P2-00-port8702-readonly.png",
+  "pngWidth": 1100,
+  "pngHeight": 1100,
+  "sha256": "e36baf1ecae89824adab0d98618a35e33f67c3b03a403aea21c5320fadcaf1ec",
+  "caption": "Supplemental read-only verification of the existing application at http://127.0.0.1:8702/. This current state is not the seed baseline of the isolated 18702 sequence. URL and successful GET responses are in the adjacent JSON provenance; browser chrome is not part of this image.",
+  "outcome": "PASS"
+}

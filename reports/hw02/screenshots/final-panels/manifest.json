@@ -1,0 +1,559 @@
+{
+  "purpose": "Compact browser-renderable recorded-output panels for final HW2 report; code is typeset above each panel by the report author.",
+  "created_at": "2026-09-14T07:21:10.017917+00:00",
+  "capture_needed": false,
+  "new_model_runs": 0,
+  "external_dependencies": false,
+  "panels": [
+    {
+      "id": "p4q1-schema-valid-output",
+      "html_path": "reports/hw02/screenshots/final-panels/p4q1-schema-valid-output.html",
+      "suggested_png_path": "reports/hw02/screenshots/final-panels/p4q1-schema-valid-output.png",
+      "title": "Part 4.1 - Valid Planner output",
+      "caption": "Real schema-01 Planner output passed Pydantic validation and received current Reviewer approval in two turns. Browser rendering of recorded output.",
+      "evidence_type": "real_model_run",
+      "recorded_at": "2026-09-14T06:06:49.853156+00:00",
+      "derived_from_saved_values": false,
+      "source_paths": [
+        "reports/hw02/raw/part4/20260914T0610-baseline/trials/schema-01/cli/20260914T060649-ccacf7a836/result.json"
+      ],
+      "source_sha256": {
+        "reports/hw02/raw/part4/20260914T0610-baseline/trials/schema-01/cli/20260914T060649-ccacf7a836/result.json": "60325aa6f2d024be77fa82525be52b96a2e9fa5cd2e979042d0b296c0260cd0b"
+      },
+      "width_px": 900,
+      "target_max_height_px": 650,
+      "body_font_px": 22,
+      "monospace_font_px": 18,
+      "provenance_line": "Browser-rendered saved evidence | Real model run: schema-01 | 2026-09-14 06:06:49 UTC",
+      "html_sha256": "775fbe84a3ac32d3432b9b7c29886a81cc5c50023e4efe584860705ae00b2d0b",
+      "png_path": "reports/hw02/screenshots/final-panels/p4q1-schema-valid-output.png",
+      "png_sha256": "d61a9d95e03431d557f81b4d7fbcd246183bad019ef0fe47dbf07751d346d592",
+      "png_width_px": 900,
+      "png_height_px": 463,
+      "captured_at": "2026-09-14T07:40:17.406Z",
+      "capture": {
+        "method": "Playwright Chromium main-element PNG screenshot of the supplied local HTML",
+        "provenance": "Browser-rendered saved output, tables, and recorded evidence as labeled in the panel. Not a live app or terminal screenshot. No new model calls. No pixel overlays or image reconstruction.",
+        "browser_version": "151.0.7922.34",
+        "playwright_version": "1.62.1",
+        "page_url": "file:///Users/pragyaapurva/Documents/SJSU/DATA%20260/data260-6102/reports/hw02/screenshots/final-panels/p4q1-schema-valid-output.html",
+        "metrics": {
+          "width": 900,
+          "height": 462.15625,
+          "scrollWidth": 900,
+          "scrollHeight": 462,
+          "documentScrollWidth": 900,
+          "viewportWidth": 900,
+          "viewportHeight": 800,
+          "devicePixelRatio": 1
+        },
+        "within_target_height": true,
+        "no_horizontal_overflow": true
+      },
+      "visual_qa": {
+        "inspected": true,
+        "result": "PASS",
+        "notes": "All text, tables, code-style output, and provenance are fully visible and readable; no clipped content or horizontal overflow."
+      }
+    },
+    {
+      "id": "p4q2-scripted-repair-output",
+      "html_path": "reports/hw02/screenshots/final-panels/p4q2-scripted-repair-output.html",
+      "suggested_png_path": "reports/hw02/screenshots/final-panels/p4q2-scripted-repair-output.png",
+      "title": "Part 4.2 - Validation feedback and retry",
+      "caption": "Scripted responses exercise the actual compiled graph: invalid Planner output, corrected Planner output, then Reviewer approval at turn three. This is test evidence, not a measured local-model repair.",
+      "evidence_type": "scripted_test_excluded_from_measurements",
+      "recorded_at": "2026-09-14T06:09:43.928965+00:00",
+      "derived_from_saved_values": false,
+      "source_paths": [
+        "reports/hw02/raw/part4/checks/schema-repair-demonstration.json"
+      ],
+      "source_sha256": {
+        "reports/hw02/raw/part4/checks/schema-repair-demonstration.json": "26dccbee088dca39819074f6311ca96ec5568202330db164e71a22e2b40f9492"
+      },
+      "width_px": 900,
+      "target_max_height_px": 650,
+      "body_font_px": 22,
+      "monospace_font_px": 18,
+      "provenance_line": "Browser-rendered saved test evidence | Scripted repair | 2026-09-14 06:09:43 UTC",
+      "html_sha256": "a33db1f3512d74bdf1b303fd98cb0d888562ce38259f356a31f77effe82311a9",
+      "png_path": "reports/hw02/screenshots/final-panels/p4q2-scripted-repair-output.png",
+      "png_sha256": "07228430edb9b21cf85364c8f26b74b3b98ce3104cea5cdaa93be25440801a33",
+      "png_width_px": 900,
+      "png_height_px": 482,
+      "captured_at": "2026-09-14T07:40:17.539Z",
+      "capture": {
+        "method": "Playwright Chromium main-element PNG screenshot of the supplied local HTML",
+        "provenance": "Browser-rendered saved output, tables, and recorded evidence as labeled in the panel. Not a live app or terminal screenshot. No new model calls. No pixel overlays or image reconstruction.",
+        "browser_version": "151.0.7922.34",
+        "playwright_version": "1.62.1",
+        "page_url": "file:///Users/pragyaapurva/Documents/SJSU/DATA%20260/data260-6102/reports/hw02/screenshots/final-panels/p4q2-scripted-repair-output.html",
+        "metrics": {
+          "width": 900,
+          "height": 481.453125,
+          "scrollWidth": 900,
+          "scrollHeight": 481,
+          "documentScrollWidth": 900,
+          "viewportWidth": 900,
+          "viewportHeight": 800,
+          "devicePixelRatio": 1
+        },
+        "within_target_height": true,
+        "no_horizontal_overflow": true
+      },
+      "visual_qa": {
+        "inspected": true,
+        "result": "PASS",
+        "notes": "All text, tables, code-style output, and provenance are fully visible and readable; no clipped content or horizontal overflow."
+      }
+    },
+    {
+      "id": "p4q3-schema-thirty-run-table",
+      "html_path": "reports/hw02/screenshots/final-panels/p4q3-schema-thirty-run-table.html",
+      "suggested_png_path": "reports/hw02/screenshots/final-panels/p4q3-schema-thirty-run-table.png",
+      "title": "Part 4.3 - Thirty frozen-input runs",
+      "caption": "Four required outcome buckets derived from the 30 saved schema trials. All runs were accepted after their first Planner attempt; the other buckets are empty.",
+      "evidence_type": "derived_table_from_real_model_runs",
+      "recorded_at": "2026-09-14T06:06:36.412599+00:00",
+      "derived_from_saved_values": true,
+      "source_paths": [
+        "reports/hw02/raw/part4/20260914T0610-baseline/results.jsonl",
+        "reports/hw02/raw/part4/20260914T0610-baseline/manifest.json"
+      ],
+      "source_sha256": {
+        "reports/hw02/raw/part4/20260914T0610-baseline/results.jsonl": "7388c9c378a32b10d2903540f21ee3ca47a3486f8609d7f22b6ffd59036b2092",
+        "reports/hw02/raw/part4/20260914T0610-baseline/manifest.json": "54caf100a4c6f570b217d9abfa94de1fbc1bc1831f452deb995e62e55cab091f"
+      },
+      "width_px": 900,
+      "target_max_height_px": 650,
+      "body_font_px": 22,
+      "monospace_font_px": 18,
+      "provenance_line": "Browser-rendered saved evidence | Derived from 30 recorded trials | Prepared 2026-09-14 06:06:36 UTC",
+      "html_sha256": "78ff8da91db840ce966dccf65b3f0ea26b68e519601053ebfe9fccb6f2d57110",
+      "png_path": "reports/hw02/screenshots/final-panels/p4q3-schema-thirty-run-table.png",
+      "png_sha256": "240adad7e4ddfdd87d804bc92ab7e76a63ec5fc345f67d7f27fe1d2307c46363",
+      "png_width_px": 900,
+      "png_height_px": 431,
+      "captured_at": "2026-09-14T07:40:17.673Z",
+      "capture": {
+        "method": "Playwright Chromium main-element PNG screenshot of the supplied local HTML",
+        "provenance": "Browser-rendered saved output, tables, and recorded evidence as labeled in the panel. Not a live app or terminal screenshot. No new model calls. No pixel overlays or image reconstruction.",
+        "browser_version": "151.0.7922.34",
+        "playwright_version": "1.62.1",
+        "page_url": "file:///Users/pragyaapurva/Documents/SJSU/DATA%20260/data260-6102/reports/hw02/screenshots/final-panels/p4q3-schema-thirty-run-table.html",
+        "metrics": {
+          "width": 900,
+          "height": 430.453125,
+          "scrollWidth": 900,
+          "scrollHeight": 430,
+          "documentScrollWidth": 900,
+          "viewportWidth": 900,
+          "viewportHeight": 800,
+          "devicePixelRatio": 1
+        },
+        "within_target_height": true,
+        "no_horizontal_overflow": true
+      },
+      "visual_qa": {
+        "inspected": true,
+        "result": "PASS",
+        "notes": "All text, tables, code-style output, and provenance are fully visible and readable; no clipped content or horizontal overflow."
+      }
+    },
+    {
+      "id": "p4q4-ceiling-comparison-table",
+      "html_path": "reports/hw02/screenshots/final-panels/p4q4-ceiling-comparison-table.html",
+      "suggested_png_path": "reports/hw02/screenshots/final-panels/p4q4-ceiling-comparison-table.png",
+      "title": "Part 4.4 - Turn ceiling comparison",
+      "caption": "Both ceilings accepted 20 of 20 runs. The declared latency tie-break selects ceiling 10, with a 2472.25 ms mean versus 2485.63 ms for ceiling 2.",
+      "evidence_type": "derived_table_and_recorded_choice",
+      "recorded_at": "2026-09-14T06:06:36.412599+00:00",
+      "derived_from_saved_values": true,
+      "source_paths": [
+        "reports/hw02/raw/part4/20260914T0610-baseline/results.jsonl",
+        "reports/hw02/raw/part4/20260914T0610-baseline/manifest.json",
+        "reports/hw02/deployment_choice.json"
+      ],
+      "source_sha256": {
+        "reports/hw02/raw/part4/20260914T0610-baseline/results.jsonl": "7388c9c378a32b10d2903540f21ee3ca47a3486f8609d7f22b6ffd59036b2092",
+        "reports/hw02/raw/part4/20260914T0610-baseline/manifest.json": "54caf100a4c6f570b217d9abfa94de1fbc1bc1831f452deb995e62e55cab091f",
+        "reports/hw02/deployment_choice.json": "88f1a223214f5f534ba94f2e004d0e8201187bb660afe783e89e16b6d5ac2c7f"
+      },
+      "width_px": 900,
+      "target_max_height_px": 650,
+      "body_font_px": 22,
+      "monospace_font_px": 18,
+      "provenance_line": "Browser-rendered saved evidence | 20 recorded trials per ceiling | Prepared 2026-09-14 06:06:36 UTC",
+      "html_sha256": "8786e06f09a11232472c8ad5b320def584f81785931cba4e37614b0c302ddb81",
+      "png_path": "reports/hw02/screenshots/final-panels/p4q4-ceiling-comparison-table.png",
+      "png_sha256": "9ccbda2a0b250ca4ea54b9777e803c0ddf418e653ca09deca8315d96e57ae185",
+      "png_width_px": 900,
+      "png_height_px": 373,
+      "captured_at": "2026-09-14T07:40:17.788Z",
+      "capture": {
+        "method": "Playwright Chromium main-element PNG screenshot of the supplied local HTML",
+        "provenance": "Browser-rendered saved output, tables, and recorded evidence as labeled in the panel. Not a live app or terminal screenshot. No new model calls. No pixel overlays or image reconstruction.",
+        "browser_version": "151.0.7922.34",
+        "playwright_version": "1.62.1",
+        "page_url": "file:///Users/pragyaapurva/Documents/SJSU/DATA%20260/data260-6102/reports/hw02/screenshots/final-panels/p4q4-ceiling-comparison-table.html",
+        "metrics": {
+          "width": 900,
+          "height": 372.265625,
+          "scrollWidth": 900,
+          "scrollHeight": 372,
+          "documentScrollWidth": 900,
+          "viewportWidth": 900,
+          "viewportHeight": 800,
+          "devicePixelRatio": 1
+        },
+        "within_target_height": true,
+        "no_horizontal_overflow": true
+      },
+      "visual_qa": {
+        "inspected": true,
+        "result": "PASS",
+        "notes": "All text, tables, code-style output, and provenance are fully visible and readable; no clipped content or horizontal overflow."
+      }
+    },
+    {
+      "id": "p4q5-adversarial-results",
+      "html_path": "reports/hw02/screenshots/final-panels/p4q5-adversarial-results.html",
+      "suggested_png_path": "reports/hw02/screenshots/final-panels/p4q5-adversarial-results.png",
+      "title": "Part 4.5 - Five adversarial runs",
+      "caption": "All five saved adversarial runs reached the ceiling. The actual first response retained the injected two-character AI and SJ tags, which failed minimum-length validation; none of these trials reached the Reviewer.",
+      "evidence_type": "real_model_runs_with_actual_trace_excerpt",
+      "recorded_at": "2026-09-14T06:10:23.543779+00:00",
+      "derived_from_saved_values": true,
+      "source_paths": [
+        "reports/hw02/raw/part4/20260914T0610-baseline/results.jsonl",
+        "reports/hw02/raw/part4/20260914T0610-baseline/trials/adversarial-01/cli/20260914T061023-45e9525e7e/result.json"
+      ],
+      "source_sha256": {
+        "reports/hw02/raw/part4/20260914T0610-baseline/results.jsonl": "7388c9c378a32b10d2903540f21ee3ca47a3486f8609d7f22b6ffd59036b2092",
+        "reports/hw02/raw/part4/20260914T0610-baseline/trials/adversarial-01/cli/20260914T061023-45e9525e7e/result.json": "9bab0e6245129389d2ffea156b064a21008cfd93e2d48ab1f45540f013a9850f"
+      },
+      "width_px": 900,
+      "target_max_height_px": 650,
+      "body_font_px": 22,
+      "monospace_font_px": 18,
+      "provenance_line": "Browser-rendered saved evidence | Real runs; excerpt 2026-09-14 06:10:23 UTC",
+      "html_sha256": "67e644a2a48bffe82cfea09dccab58841b2e91bd4f319dc512114dd605ca9c1a",
+      "png_path": "reports/hw02/screenshots/final-panels/p4q5-adversarial-results.png",
+      "png_sha256": "83495bf3b8ef640475ce8068479ab08b9b1f460e962d78db0e41405c4046eea1",
+      "png_width_px": 900,
+      "png_height_px": 587,
+      "captured_at": "2026-09-14T07:40:17.907Z",
+      "capture": {
+        "method": "Playwright Chromium main-element PNG screenshot of the supplied local HTML",
+        "provenance": "Browser-rendered saved output, tables, and recorded evidence as labeled in the panel. Not a live app or terminal screenshot. No new model calls. No pixel overlays or image reconstruction.",
+        "browser_version": "151.0.7922.34",
+        "playwright_version": "1.62.1",
+        "page_url": "file:///Users/pragyaapurva/Documents/SJSU/DATA%20260/data260-6102/reports/hw02/screenshots/final-panels/p4q5-adversarial-results.html",
+        "metrics": {
+          "width": 900,
+          "height": 586.9375,
+          "scrollWidth": 900,
+          "scrollHeight": 587,
+          "documentScrollWidth": 900,
+          "viewportWidth": 900,
+          "viewportHeight": 800,
+          "devicePixelRatio": 1
+        },
+        "within_target_height": true,
+        "no_horizontal_overflow": true
+      },
+      "visual_qa": {
+        "inspected": true,
+        "result": "PASS",
+        "notes": "All text, tables, code-style output, and provenance are fully visible and readable; no clipped content or horizontal overflow."
+      }
+    },
+    {
+      "id": "P3-normal",
+      "html_path": "reports/hw02/screenshots/final-panels/P3-normal.html",
+      "suggested_png_path": "reports/hw02/screenshots/final-panels/P3-normal.png",
+      "title": "Part 3 - Normal Reviewer smoke run",
+      "caption": "Selected recorded stream events and the actual approved final output from the normal-Reviewer smoke test at hw2-code. One Planner and one Reviewer completed in two worker turns.",
+      "evidence_type": "real_model_smoke_normal_reviewer",
+      "run_id": "20260914T073451-641e4026fd",
+      "recorded_at": "2026-09-14T07:34:51.028562+00:00",
+      "tag": "hw2-code",
+      "commit": "6a076db1447f00a0097cfc16f5de460c37e65079",
+      "recorded_dirty_working_tree": true,
+      "derived_from_saved_values": true,
+      "source_paths": [
+        "reports/hw02/raw/submission-smoke/tagged-code/normal_reviewer/20260914T073451-641e4026fd/result.json",
+        "reports/hw02/raw/submission-smoke/tagged-code/normal_reviewer/20260914T073451-641e4026fd/events.json",
+        "reports/hw02/raw/submission-smoke/tagged-code/normal_reviewer/20260914T073451-641e4026fd/stderr.txt"
+      ],
+      "source_sha256": {
+        "reports/hw02/raw/submission-smoke/tagged-code/normal_reviewer/20260914T073451-641e4026fd/result.json": "4b9f84660d5517afbe1cdc02952a7d05bc3fa33133a78f15d37950217175afa6",
+        "reports/hw02/raw/submission-smoke/tagged-code/normal_reviewer/20260914T073451-641e4026fd/events.json": "973445b18a8d9d6e22310a730cb4e06813022ca6e03bdf1701c077a23c83755a",
+        "reports/hw02/raw/submission-smoke/tagged-code/normal_reviewer/20260914T073451-641e4026fd/stderr.txt": "138bb6e0fc13a7112a50cb4aedcba9b6cb708cf0066d68743106a1c8465d6e1b"
+      },
+      "width_px": 900,
+      "target_max_height_px": 500,
+      "body_font_px": 20,
+      "monospace_font_px": 18,
+      "provenance_line": "Browser-rendered recorded smoke output | hw2-code @ 6a076db | 2026-09-14 07:34:51 UTC | Recorded working tree: dirty",
+      "html_sha256": "b2705b21ae87d0e3c67e6224990027390c1f753deb13cbe061afae928c512bcf",
+      "png_path": "reports/hw02/screenshots/final-panels/P3-normal.png",
+      "png_sha256": "bf234ab1fb1fccdc19baeac1ebd24745d2ad9b85f4f24efba4a1a21c5fb6dd36",
+      "png_width_px": 900,
+      "png_height_px": 404,
+      "captured_at": "2026-09-14T07:40:18.022Z",
+      "capture": {
+        "method": "Playwright Chromium main-element PNG screenshot of the supplied local HTML",
+        "provenance": "Browser-rendered saved output, tables, and recorded evidence as labeled in the panel. Not a live app or terminal screenshot. No new model calls. No pixel overlays or image reconstruction.",
+        "browser_version": "151.0.7922.34",
+        "playwright_version": "1.62.1",
+        "page_url": "file:///Users/pragyaapurva/Documents/SJSU/DATA%20260/data260-6102/reports/hw02/screenshots/final-panels/P3-normal.html",
+        "metrics": {
+          "width": 900,
+          "height": 403.75,
+          "scrollWidth": 900,
+          "scrollHeight": 404,
+          "documentScrollWidth": 900,
+          "viewportWidth": 900,
+          "viewportHeight": 800,
+          "devicePixelRatio": 1
+        },
+        "within_target_height": true,
+        "no_horizontal_overflow": true
+      },
+      "visual_qa": {
+        "inspected": true,
+        "result": "PASS",
+        "notes": "All text, tables, code-style output, and provenance are fully visible and readable; no clipped content or horizontal overflow."
+      }
+    },
+    {
+      "id": "P3-normal-short",
+      "html_path": "reports/hw02/screenshots/final-panels/P3-normal-short.html",
+      "suggested_png_path": "reports/hw02/screenshots/final-panels/P3-normal-short.png",
+      "title": "Part 3 - Accepted output",
+      "caption": "Compact selected terminal fields and actual final_output from the recorded normal-Reviewer smoke test; accepted in two of ten allowed worker turns.",
+      "evidence_type": "real_model_smoke_normal_reviewer",
+      "run_id": "20260914T073451-641e4026fd",
+      "recorded_at": "2026-09-14T07:34:51.028562+00:00",
+      "tag": "hw2-code",
+      "commit": "6a076db1447f00a0097cfc16f5de460c37e65079",
+      "recorded_dirty_working_tree": true,
+      "derived_from_saved_values": true,
+      "source_paths": [
+        "reports/hw02/raw/submission-smoke/tagged-code/normal_reviewer/20260914T073451-641e4026fd/result.json",
+        "reports/hw02/raw/submission-smoke/tagged-code/normal_reviewer/20260914T073451-641e4026fd/events.json",
+        "reports/hw02/raw/submission-smoke/tagged-code/normal_reviewer/20260914T073451-641e4026fd/stderr.txt"
+      ],
+      "source_sha256": {
+        "reports/hw02/raw/submission-smoke/tagged-code/normal_reviewer/20260914T073451-641e4026fd/result.json": "4b9f84660d5517afbe1cdc02952a7d05bc3fa33133a78f15d37950217175afa6",
+        "reports/hw02/raw/submission-smoke/tagged-code/normal_reviewer/20260914T073451-641e4026fd/events.json": "973445b18a8d9d6e22310a730cb4e06813022ca6e03bdf1701c077a23c83755a",
+        "reports/hw02/raw/submission-smoke/tagged-code/normal_reviewer/20260914T073451-641e4026fd/stderr.txt": "138bb6e0fc13a7112a50cb4aedcba9b6cb708cf0066d68743106a1c8465d6e1b"
+      },
+      "width_px": 900,
+      "target_max_height_px": 230,
+      "body_font_px": 20,
+      "monospace_font_px": 18,
+      "provenance_line": "Browser-rendered recorded smoke output | hw2-code @ 6a076db | 2026-09-14 07:34:51 UTC | Recorded working tree: dirty",
+      "html_sha256": "fa360ffad9b91fe489f5fcf2391f9507dbf11f9405ecf2c1a350d9c6dd5869ed",
+      "png_path": "reports/hw02/screenshots/final-panels/P3-normal-short.png",
+      "png_sha256": "8ef7f31d9dfe82ecf8561820119ce8bd94d2e6c6b464150548f0b6e343cd415f",
+      "png_width_px": 900,
+      "png_height_px": 219,
+      "captured_at": "2026-09-14T07:40:18.136Z",
+      "capture": {
+        "method": "Playwright Chromium main-element PNG screenshot of the supplied local HTML",
+        "provenance": "Browser-rendered saved output, tables, and recorded evidence as labeled in the panel. Not a live app or terminal screenshot. No new model calls. No pixel overlays or image reconstruction.",
+        "browser_version": "151.0.7922.34",
+        "playwright_version": "1.62.1",
+        "page_url": "file:///Users/pragyaapurva/Documents/SJSU/DATA%20260/data260-6102/reports/hw02/screenshots/final-panels/P3-normal-short.html",
+        "metrics": {
+          "width": 900,
+          "height": 218.03125,
+          "scrollWidth": 900,
+          "scrollHeight": 218,
+          "documentScrollWidth": 900,
+          "viewportWidth": 900,
+          "viewportHeight": 800,
+          "devicePixelRatio": 1
+        },
+        "within_target_height": true,
+        "no_horizontal_overflow": true
+      },
+      "visual_qa": {
+        "inspected": true,
+        "result": "PASS",
+        "notes": "All text, tables, code-style output, and provenance are fully visible and readable; no clipped content or horizontal overflow."
+      }
+    },
+    {
+      "id": "P3-controlled",
+      "html_path": "reports/hw02/screenshots/final-panels/P3-controlled.html",
+      "suggested_png_path": "reports/hw02/screenshots/final-panels/P3-controlled.png",
+      "title": "Part 3 - Controlled correction loop",
+      "caption": "All ten recorded worker events, each followed by the saved Supervisor turn and status. A deliberately appended issue makes each valid Reviewer response require another Planner revision. The controlled smoke test ends normally at the ten-turn ceiling.",
+      "evidence_type": "real_model_smoke_controlled_reviewer",
+      "run_id": "20260914T073455-f96d038394",
+      "recorded_at": "2026-09-14T07:34:55.559072+00:00",
+      "tag": "hw2-code",
+      "commit": "6a076db1447f00a0097cfc16f5de460c37e65079",
+      "recorded_dirty_working_tree": true,
+      "derived_from_saved_values": true,
+      "source_paths": [
+        "reports/hw02/raw/submission-smoke/tagged-code/controlled_always_issue/20260914T073455-f96d038394/result.json",
+        "reports/hw02/raw/submission-smoke/tagged-code/controlled_always_issue/20260914T073455-f96d038394/events.json",
+        "reports/hw02/raw/submission-smoke/tagged-code/controlled_always_issue/20260914T073455-f96d038394/stderr.txt"
+      ],
+      "source_sha256": {
+        "reports/hw02/raw/submission-smoke/tagged-code/controlled_always_issue/20260914T073455-f96d038394/result.json": "2a48495fdf6bfc666cf13fface5fe4307086ab69cd8a94a7ced57ca4f94f8634",
+        "reports/hw02/raw/submission-smoke/tagged-code/controlled_always_issue/20260914T073455-f96d038394/events.json": "4a2be29da2b95dd27f47d6ffceaae144394a9db698fab78e7c45bb38890d5421",
+        "reports/hw02/raw/submission-smoke/tagged-code/controlled_always_issue/20260914T073455-f96d038394/stderr.txt": "aa814374b2b4b0e5537b1db20a36fff3090255210f8448fce5e2e63a74300e3d"
+      },
+      "width_px": 900,
+      "target_max_height_px": 500,
+      "body_font_px": 20,
+      "monospace_font_px": 18,
+      "provenance_line": "Browser-rendered recorded smoke output | hw2-code @ 6a076db | 2026-09-14 07:34:55 UTC | Recorded working tree: dirty",
+      "html_sha256": "cffb24edaf582c58055226db11b25e9c2ad11f902c78f6a51a9494e0029da8fa",
+      "png_path": "reports/hw02/screenshots/final-panels/P3-controlled.png",
+      "png_sha256": "0bff14d32b8ed876799e269e0dab03de24170a09f7b25e0875a569a2b1eedff1",
+      "png_width_px": 900,
+      "png_height_px": 422,
+      "captured_at": "2026-09-14T07:40:18.257Z",
+      "capture": {
+        "method": "Playwright Chromium main-element PNG screenshot of the supplied local HTML",
+        "provenance": "Browser-rendered saved output, tables, and recorded evidence as labeled in the panel. Not a live app or terminal screenshot. No new model calls. No pixel overlays or image reconstruction.",
+        "browser_version": "151.0.7922.34",
+        "playwright_version": "1.62.1",
+        "page_url": "file:///Users/pragyaapurva/Documents/SJSU/DATA%20260/data260-6102/reports/hw02/screenshots/final-panels/P3-controlled.html",
+        "metrics": {
+          "width": 900,
+          "height": 421.859375,
+          "scrollWidth": 900,
+          "scrollHeight": 422,
+          "documentScrollWidth": 900,
+          "viewportWidth": 900,
+          "viewportHeight": 800,
+          "devicePixelRatio": 1
+        },
+        "within_target_height": true,
+        "no_horizontal_overflow": true
+      },
+      "visual_qa": {
+        "inspected": true,
+        "result": "PASS",
+        "notes": "All text, tables, code-style output, and provenance are fully visible and readable; no clipped content or horizontal overflow."
+      }
+    },
+    {
+      "id": "P3-controlled-short",
+      "html_path": "reports/hw02/screenshots/final-panels/P3-controlled-short.html",
+      "suggested_png_path": "reports/hw02/screenshots/final-panels/P3-controlled-short.png",
+      "title": "Part 3 - Controlled loop stops at the ceiling",
+      "caption": "Actual selected terminal fields from the controlled always-issue Reviewer smoke test: turn_limit, ten worker turns, no accepted final output, and no error.",
+      "evidence_type": "real_model_smoke_controlled_reviewer",
+      "run_id": "20260914T073455-f96d038394",
+      "recorded_at": "2026-09-14T07:34:55.559072+00:00",
+      "tag": "hw2-code",
+      "commit": "6a076db1447f00a0097cfc16f5de460c37e65079",
+      "recorded_dirty_working_tree": true,
+      "derived_from_saved_values": true,
+      "source_paths": [
+        "reports/hw02/raw/submission-smoke/tagged-code/controlled_always_issue/20260914T073455-f96d038394/result.json",
+        "reports/hw02/raw/submission-smoke/tagged-code/controlled_always_issue/20260914T073455-f96d038394/events.json",
+        "reports/hw02/raw/submission-smoke/tagged-code/controlled_always_issue/20260914T073455-f96d038394/stderr.txt"
+      ],
+      "source_sha256": {
+        "reports/hw02/raw/submission-smoke/tagged-code/controlled_always_issue/20260914T073455-f96d038394/result.json": "2a48495fdf6bfc666cf13fface5fe4307086ab69cd8a94a7ced57ca4f94f8634",
+        "reports/hw02/raw/submission-smoke/tagged-code/controlled_always_issue/20260914T073455-f96d038394/events.json": "4a2be29da2b95dd27f47d6ffceaae144394a9db698fab78e7c45bb38890d5421",
+        "reports/hw02/raw/submission-smoke/tagged-code/controlled_always_issue/20260914T073455-f96d038394/stderr.txt": "aa814374b2b4b0e5537b1db20a36fff3090255210f8448fce5e2e63a74300e3d"
+      },
+      "width_px": 900,
+      "target_max_height_px": 230,
+      "body_font_px": 20,
+      "monospace_font_px": 18,
+      "provenance_line": "Browser-rendered recorded smoke output | hw2-code @ 6a076db | 2026-09-14 07:34:55 UTC | Recorded working tree: dirty",
+      "html_sha256": "047214c3eb936a5b753de75517f73d7e1d30a0571e2b3786ab639ffb820540a7",
+      "png_path": "reports/hw02/screenshots/final-panels/P3-controlled-short.png",
+      "png_sha256": "3140ce7dcd437deeb984c4ff59ce844c16ae932d651da9a8b11126e67f3a0f1f",
+      "png_width_px": 900,
+      "png_height_px": 204,
+      "captured_at": "2026-09-14T07:40:18.368Z",
+      "capture": {
+        "method": "Playwright Chromium main-element PNG screenshot of the supplied local HTML",
+        "provenance": "Browser-rendered saved output, tables, and recorded evidence as labeled in the panel. Not a live app or terminal screenshot. No new model calls. No pixel overlays or image reconstruction.",
+        "browser_version": "151.0.7922.34",
+        "playwright_version": "1.62.1",
+        "page_url": "file:///Users/pragyaapurva/Documents/SJSU/DATA%20260/data260-6102/reports/hw02/screenshots/final-panels/P3-controlled-short.html",
+        "metrics": {
+          "width": 900,
+          "height": 203.921875,
+          "scrollWidth": 900,
+          "scrollHeight": 204,
+          "documentScrollWidth": 900,
+          "viewportWidth": 900,
+          "viewportHeight": 800,
+          "devicePixelRatio": 1
+        },
+        "within_target_height": true,
+        "no_horizontal_overflow": true
+      },
+      "visual_qa": {
+        "inspected": true,
+        "result": "PASS",
+        "notes": "All text, tables, code-style output, and provenance are fully visible and readable; no clipped content or horizontal overflow."
+      }
+    }
+  ],
+  "validation": {
+    "html_semantics_and_source_hashes": "passed",
+    "rendered_height": "PASS: all nine images fit their individual height targets at 900px width.",
+    "no_scripts_external_styles_fonts_or_images": true,
+    "model_calls": 0,
+    "visual_qa": "PASS: All nine PNG originals visually inspected individually.",
+    "png_hashes_dimensions_and_current_html_hashes": "PASS",
+    "css_adjustments_for_capture": "None needed; original HTML styling fits every requested target.",
+    "app_server_access": "None; file URLs only. Existing port8702 untouched.",
+    "capture_script": "scripts/capture_hw2_final_panels.cjs"
+  },
+  "p3_validation": {
+    "source_commit_matches_hw2_code_tag": true,
+    "normal_status_and_turn_count_checked": true,
+    "controlled_ten_events_and_supervisor_updates_checked": true,
+    "controlled_issue_present_in_every_reviewer_event": true,
+    "new_model_runs_for_panel_creation": 0,
+    "rendered_heights": [
+      {
+        "id": "P3-normal",
+        "width": 900,
+        "height": 404,
+        "target": 500,
+        "withinTarget": true
+      },
+      {
+        "id": "P3-normal-short",
+        "width": 900,
+        "height": 219,
+        "target": 230,
+        "withinTarget": true
+      },
+      {
+        "id": "P3-controlled",
+        "width": 900,
+        "height": 422,
+        "target": 500,
+        "withinTarget": true
+      },
+      {
+        "id": "P3-controlled-short",
+        "width": 900,
+        "height": 204,
+        "target": 230,
+        "withinTarget": true
+      }
+    ]
+  },
+  "capture_completed_at": "2026-09-14T07:40:18.370Z",
+  "capture_provenance": "Nine unaltered Chromium element screenshots of the supplied HTML saved-output panels. No app server access or model execution.",
+  "visual_qa_completed_at": "2026-09-14T07:40:41.672640+00:00"
+}

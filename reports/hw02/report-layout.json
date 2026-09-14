@@ -1,0 +1,237 @@
+{
+  "pages": 28,
+  "code_ref": "hw2-code",
+  "code_commit": "6a076db1447f00a0097cfc16f5de460c37e65079",
+  "images": [
+    {
+      "page": 3,
+      "image": "reports/hw02/screenshots/part1/P1-02a-form-upper.png",
+      "original": [
+        375,
+        812
+      ],
+      "width_pt": 187.36,
+      "height_pt": 405.69
+    },
+    {
+      "page": 3,
+      "image": "reports/hw02/screenshots/part1/P1-02b-form-lower.png",
+      "original": [
+        375,
+        812
+      ],
+      "width_pt": 187.36,
+      "height_pt": 405.69
+    },
+    {
+      "page": 4,
+      "image": "reports/hw02/screenshots/part1/P1-04-list.png",
+      "original": [
+        375,
+        812
+      ],
+      "width_pt": 192.81,
+      "height_pt": 417.49
+    },
+    {
+      "page": 4,
+      "image": "reports/hw02/screenshots/part1/P1-05-editor.png",
+      "original": [
+        375,
+        812
+      ],
+      "width_pt": 192.81,
+      "height_pt": 417.49
+    },
+    {
+      "page": 5,
+      "image": "reports/hw02/screenshots/part1/P1-01-empty.png",
+      "original": [
+        375,
+        812
+      ],
+      "width_pt": 237.42,
+      "height_pt": 514.09
+    },
+    {
+      "page": 6,
+      "image": "reports/hw02/screenshots/part1/P1-03-loading.png",
+      "original": [
+        375,
+        812
+      ],
+      "width_pt": 201.3,
+      "height_pt": 435.89
+    },
+    {
+      "page": 7,
+      "image": "reports/hw02/screenshots/part1/P1-06-error.png",
+      "original": [
+        375,
+        812
+      ],
+      "width_pt": 195.85,
+      "height_pt": 424.09
+    },
+    {
+      "page": 7,
+      "image": "reports/hw02/screenshots/part1/P1-06b-retained-upper.png",
+      "original": [
+        375,
+        812
+      ],
+      "width_pt": 195.85,
+      "height_pt": 424.09
+    },
+    {
+      "page": 8,
+      "image": "reports/hw02/screenshots/part2/P2-00-port8702-readonly.png",
+      "original": [
+        1100,
+        1100
+      ],
+      "width_pt": 445.09,
+      "height_pt": 445.09
+    },
+    {
+      "page": 10,
+      "image": "reports/hw02/screenshots/part2/P2-Q1-created.png",
+      "original": [
+        1100,
+        1100
+      ],
+      "width_pt": 515.28,
+      "height_pt": 515.28
+    },
+    {
+      "page": 11,
+      "image": "reports/hw02/screenshots/part2/P2-Q2-updated.png",
+      "original": [
+        1100,
+        1100
+      ],
+      "width_pt": 515.28,
+      "height_pt": 515.28
+    },
+    {
+      "page": 12,
+      "image": "reports/hw02/screenshots/part2/P2-Q3-after.png",
+      "original": [
+        1100,
+        1100
+      ],
+      "width_pt": 454.29,
+      "height_pt": 454.29
+    },
+    {
+      "page": 13,
+      "image": "reports/hw02/screenshots/part2/P2-Q4-title.png",
+      "original": [
+        1100,
+        1100
+      ],
+      "width_pt": 493.89,
+      "height_pt": 493.89
+    },
+    {
+      "page": 14,
+      "image": "reports/hw02/screenshots/part2/P2-Q4-address.png",
+      "original": [
+        1100,
+        1100
+      ],
+      "width_pt": 515.28,
+      "height_pt": 515.28
+    },
+    {
+      "page": 15,
+      "image": "reports/hw02/screenshots/final-panels/P3-normal.png",
+      "original": [
+        900,
+        404
+      ],
+      "width_pt": 455.55,
+      "height_pt": 204.49
+    },
+    {
+      "page": 16,
+      "image": "reports/hw02/screenshots/final-panels/P3-normal-short.png",
+      "original": [
+        900,
+        219
+      ],
+      "width_pt": 475.44,
+      "height_pt": 115.69
+    },
+    {
+      "page": 17,
+      "image": "reports/hw02/screenshots/final-panels/P3-controlled-short.png",
+      "original": [
+        900,
+        204
+      ],
+      "width_pt": 515.28,
+      "height_pt": 116.8
+    },
+    {
+      "page": 18,
+      "image": "reports/hw02/screenshots/final-panels/P3-controlled.png",
+      "original": [
+        900,
+        422
+      ],
+      "width_pt": 515.28,
+      "height_pt": 241.61
+    },
+    {
+      "page": 19,
+      "image": "reports/hw02/screenshots/final-panels/p4q1-schema-valid-output.png",
+      "original": [
+        900,
+        463
+      ],
+      "width_pt": 494.69,
+      "height_pt": 254.49
+    },
+    {
+      "page": 20,
+      "image": "reports/hw02/screenshots/final-panels/p4q2-scripted-repair-output.png",
+      "original": [
+        900,
+        482
+      ],
+      "width_pt": 462.86,
+      "height_pt": 247.89
+    },
+    {
+      "page": 22,
+      "image": "reports/hw02/screenshots/final-panels/p4q3-schema-thirty-run-table.png",
+      "original": [
+        900,
+        431
+      ],
+      "width_pt": 515.28,
+      "height_pt": 246.76
+    },
+    {
+      "page": 23,
+      "image": "reports/hw02/screenshots/final-panels/p4q4-ceiling-comparison-table.png",
+      "original": [
+        900,
+        373
+      ],
+      "width_pt": 515.28,
+      "height_pt": 213.55
+    },
+    {
+      "page": 24,
+      "image": "reports/hw02/screenshots/final-panels/p4q5-adversarial-results.png",
+      "original": [
+        900,
+        587
+      ],
+      "width_pt": 408.28,
+      "height_pt": 266.29
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "at": "2026-09-14T07:17:31.274Z",
+  "stage": "P1 controlled UI error",
+  "request": {
+    "method": "GET",
+    "url": "http://127.0.0.1:18702/api/rentals",
+    "purpose": "Read-only capture checkpoint"
+  },
+  "status": 200,
+  "records": [
+    {
+      "listingTitle": "Downtown San Jose Studio",
+      "propertyAddress": "999 Main Street, San Jose, CA",
+      "submitterEmail": "sanjosedowntownrentalpropertymanagementoffice@example.com",
+      "description": "Bright studio with covered parking and convenient light rail access.",
+      "propertyType": "apartment",
+      "termsAccepted": true,
+      "id": 1
+    }
+  ]
+}

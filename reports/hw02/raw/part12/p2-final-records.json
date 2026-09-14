@@ -1,0 +1,30 @@
+{
+  "at": "2026-09-14T07:17:35.168Z",
+  "stage": "P2 Q4 search",
+  "request": {
+    "method": "GET",
+    "url": "http://127.0.0.1:18702/api/rentals",
+    "purpose": "Read-only capture checkpoint"
+  },
+  "status": 200,
+  "records": [
+    {
+      "listingTitle": "Updated Downtown Apartment",
+      "propertyAddress": "900 Market Street, San Jose, CA",
+      "submitterEmail": "downtown@example.com",
+      "description": "A bright apartment close to campus, shops, and public transit.",
+      "propertyType": "apartment",
+      "termsAccepted": true,
+      "id": 1
+    },
+    {
+      "listingTitle": "Spacious Garden House",
+      "propertyAddress": "456 Willow Street, San Jose, CA",
+      "submitterEmail": "garden@example.com",
+      "description": "A comfortable house with a private garden and a sunny living room.",
+      "propertyType": "house",
+      "termsAccepted": true,
+      "id": 2
+    }
+  ]
+}

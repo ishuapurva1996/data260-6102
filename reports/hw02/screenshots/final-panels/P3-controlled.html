@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=900, initial-scale=1"><title>Part 3 - Controlled correction loop</title><style>*{box-sizing:border-box}html,body{margin:0;padding:0;background:#fff;color:#172438}body{width:900px;font:20px/1.2 Arial,sans-serif}main{width:900px;padding:13px 20px}h1{font-size:25px;line-height:1.15;margin:0 0 9px}p{margin:7px 0}pre{font:18px/1.22 monospace;margin:7px 0;padding:9px 11px;border:1px solid #bdcbd5;border-radius:4px;background:#f5f8fb;white-space:pre-wrap;overflow-wrap:anywhere}.provenance{font-size:17px;line-height:1.2;color:#455766;border-top:1px solid #c7d1d9;padding-top:7px;margin:9px 0 0}.note{font-size:19px;color:#43596a}.result{font-weight:700}.short h1{font-size:23px;margin-bottom:7px}.short pre{padding:7px 10px;margin:6px 0}.short .provenance{margin-top:7px;padding-top:6px}</style></head><body><main aria-labelledby="panel-title"><h1 id="panel-title">Part 3 - Controlled correction loop</h1><p class="note">Controlled Reviewer: a forced issue is appended to each valid review.</p><pre>01 planner valid -&gt; supervisor turn=1 running
+02 reviewer valid [controlled] -&gt; supervisor turn=2 running
+03 planner valid -&gt; supervisor turn=3 running
+04 reviewer valid [controlled] -&gt; supervisor turn=4 running
+05 planner valid -&gt; supervisor turn=5 running
+06 reviewer valid [controlled] -&gt; supervisor turn=6 running
+07 planner valid -&gt; supervisor turn=7 running
+08 reviewer valid [controlled] -&gt; supervisor turn=8 running
+09 planner valid -&gt; supervisor turn=9 running
+10 reviewer valid [controlled] -&gt; supervisor turn=10 turn_limit</pre><p class="result">status: turn_limit | turns: 10/10 | final_output: null | error: null</p><p class="provenance">Browser-rendered recorded smoke output | hw2-code @ 6a076db<br>2026-09-14 07:34:55 UTC | Recorded working tree: dirty</p></main></body></html>

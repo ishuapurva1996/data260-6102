@@ -1,0 +1,57 @@
+
+START UTC: 2026-09-14T07:43:41.943508+00:00
+COMMAND: /Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 scripts/build_hw02_report.py --code-ref hw2-code --upload-copy ../HW2/Apurva_HW2.pdf
+{"pdf": "/Users/pragyaapurva/Documents/SJSU/DATA 260/data260-6102/reports/hw02/report.pdf", "pages": 28, "sha256": "78d0ac2e7dc7689542f988854e42a834a4a416d39677d0edc917ac5d89291d01"}
+
+END UTC: 2026-09-14T07:43:42.392217+00:00
+EXIT: 0
+
+START UTC: 2026-09-14T07:43:49.514447+00:00
+COMMAND: /opt/homebrew/bin/pdftoppm -r 120 -png reports/hw02/report.pdf ../HW2/agent_outputs/report-qa/final
+
+Fontconfig error: No writable cache directories
+	/opt/homebrew/var/cache/fontconfig
+	/Users/pragyaapurva/.cache/fontconfig
+	/Users/pragyaapurva/.fontconfig
+
+END UTC: 2026-09-14T07:43:52.986758+00:00
+EXIT: 0
+
+START UTC: 2026-09-14T07:45:02.642025+00:00
+COMMAND: /Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 scripts/build_hw02_report.py --code-ref hw2-code --upload-copy ../HW2/Apurva_HW2.pdf
+{"pdf": "/Users/pragyaapurva/Documents/SJSU/DATA 260/data260-6102/reports/hw02/report.pdf", "pages": 28, "sha256": "4deda56c09a1f24030e247b239147bb092f7a461fa2c8a4d95f35b1372dc0146"}
+
+END UTC: 2026-09-14T07:45:03.091815+00:00
+EXIT: 0
+
+START UTC: 2026-09-14T07:45:03.162279+00:00
+COMMAND: /opt/homebrew/bin/pdftoppm -r 120 -png reports/hw02/report.pdf ../HW2/agent_outputs/report-qa/release
+
+Fontconfig error: No writable cache directories
+	/opt/homebrew/var/cache/fontconfig
+	/Users/pragyaapurva/.cache/fontconfig
+	/Users/pragyaapurva/.fontconfig
+
+END UTC: 2026-09-14T07:45:06.632859+00:00
+EXIT: 0
+
+START UTC: 2026-09-14T07:45:28.209390+00:00
+COMMAND: .venv-agents/bin/python scripts/verify_hw02.py --ref hw2-code --live --model-timeout 120 --require-submission --evidence-dir reports/hw02/raw/submission-smoke/final --output reports/hw02/verification.json
+{
+  "passed": true,
+  "submission_ready": true,
+  "output": "/Users/pragyaapurva/Documents/SJSU/DATA 260/data260-6102/reports/hw02/verification.json",
+  "checks": {
+    "source_ref_matches_checkout": true,
+    "isolated_web_crud": true,
+    "deterministic_graph_smoke": true,
+    "saved_part4_evidence": true,
+    "live_web_8702": true,
+    "live_graph_termination": true,
+    "submission_artifacts": true,
+    "source_unchanged_during_checks": true
+  }
+}
+
+END UTC: 2026-09-14T07:45:46.029191+00:00
+EXIT: 0

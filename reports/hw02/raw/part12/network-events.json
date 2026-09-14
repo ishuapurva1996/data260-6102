@@ -1,0 +1,434 @@
+[
+  {
+    "event": "request",
+    "at": "2026-09-14T07:17:17.401Z",
+    "stage": "P1 baseline",
+    "method": "GET",
+    "url": "http://127.0.0.1:18702/api/rentals",
+    "postData": null
+  },
+  {
+    "event": "response",
+    "at": "2026-09-14T07:17:17.425Z",
+    "stage": "P1 baseline",
+    "method": "GET",
+    "url": "http://127.0.0.1:18702/api/rentals",
+    "status": 200,
+    "statusText": "OK",
+    "body": "[{\"listingTitle\":\"Sunny Downtown Apartment\",\"propertyAddress\":\"123 San Carlos Street, San Jose, CA\",\"submitterEmail\":\"downtown@example.com\",\"description\":\"A bright apartment close to campus, shops, and public transit.\",\"propertyType\":\"apartment\",\"termsAccepted\":true,\"id\":1},{\"listingTitle\":\"Spacious Garden House\",\"propertyAddress\":\"456 Willow Street, San Jose, CA\",\"submitterEmail\":\"garden@example.com\",\"description\":\"A comfortable house with a private garden and a sunny living room.\",\"propertyType\":\"house\",\"termsAccepted\":true,\"id\":2}]"
+  },
+  {
+    "event": "request",
+    "at": "2026-09-14T07:17:18.014Z",
+    "stage": "P1 true-empty list",
+    "method": "DELETE",
+    "url": "http://127.0.0.1:18702/api/rentals/highest",
+    "postData": null
+  },
+  {
+    "event": "response",
+    "at": "2026-09-14T07:17:18.043Z",
+    "stage": "P1 true-empty list",
+    "method": "DELETE",
+    "url": "http://127.0.0.1:18702/api/rentals/highest",
+    "status": 204,
+    "statusText": "No Content",
+    "body": ""
+  },
+  {
+    "event": "request",
+    "at": "2026-09-14T07:17:18.050Z",
+    "stage": "P1 true-empty list",
+    "method": "GET",
+    "url": "http://127.0.0.1:18702/api/rentals",
+    "postData": null
+  },
+  {
+    "event": "response",
+    "at": "2026-09-14T07:17:18.051Z",
+    "stage": "P1 true-empty list",
+    "method": "GET",
+    "url": "http://127.0.0.1:18702/api/rentals",
+    "status": 200,
+    "statusText": "OK",
+    "body": "[{\"listingTitle\":\"Sunny Downtown Apartment\",\"propertyAddress\":\"123 San Carlos Street, San Jose, CA\",\"submitterEmail\":\"downtown@example.com\",\"description\":\"A bright apartment close to campus, shops, and public transit.\",\"propertyType\":\"apartment\",\"termsAccepted\":true,\"id\":1}]"
+  },
+  {
+    "event": "request",
+    "at": "2026-09-14T07:17:18.603Z",
+    "stage": "P1 true-empty list",
+    "method": "DELETE",
+    "url": "http://127.0.0.1:18702/api/rentals/highest",
+    "postData": null
+  },
+  {
+    "event": "response",
+    "at": "2026-09-14T07:17:18.617Z",
+    "stage": "P1 true-empty list",
+    "method": "DELETE",
+    "url": "http://127.0.0.1:18702/api/rentals/highest",
+    "status": 204,
+    "statusText": "No Content",
+    "body": ""
+  },
+  {
+    "event": "request",
+    "at": "2026-09-14T07:17:18.622Z",
+    "stage": "P1 true-empty list",
+    "method": "GET",
+    "url": "http://127.0.0.1:18702/api/rentals",
+    "postData": null
+  },
+  {
+    "event": "response",
+    "at": "2026-09-14T07:17:18.624Z",
+    "stage": "P1 true-empty list",
+    "method": "GET",
+    "url": "http://127.0.0.1:18702/api/rentals",
+    "status": 200,
+    "statusText": "OK",
+    "body": "[]"
+  },
+  {
+    "event": "request",
+    "at": "2026-09-14T07:17:19.195Z",
+    "stage": "P1 filled form",
+    "method": "GET",
+    "url": "http://127.0.0.1:18702/api/rentals",
+    "postData": null
+  },
+  {
+    "event": "response",
+    "at": "2026-09-14T07:17:19.196Z",
+    "stage": "P1 filled form",
+    "method": "GET",
+    "url": "http://127.0.0.1:18702/api/rentals",
+    "status": 200,
+    "statusText": "OK",
+    "body": "[]"
+  },
+  {
+    "event": "request",
+    "at": "2026-09-14T07:17:27.925Z",
+    "stage": "P1 controlled loading",
+    "method": "POST",
+    "url": "http://127.0.0.1:18702/api/rentals",
+    "postData": "{\"listingTitle\":\"Downtown San Jose Studio\",\"propertyAddress\":\"999 Main Street, San Jose, CA\",\"submitterEmail\":\"sanjosedowntownrentalpropertymanagementoffice@example.com\",\"description\":\"Bright studio with covered parking and convenient light rail access.\",\"propertyType\":\"apartment\",\"termsAccepted\":true}"
+  },
+  {
+    "event": "response",
+    "at": "2026-09-14T07:17:27.928Z",
+    "stage": "P1 controlled loading",
+    "method": "POST",
+    "url": "http://127.0.0.1:18702/api/rentals",
+    "status": 201,
+    "statusText": "Created",
+    "bodyReadError": "response.text: Protocol error (Network.getResponseBody): No resource with given identifier found\nResponse body is not available for a response that was navigated away from. Read response.body() before triggering any navigation."
+  },
+  {
+    "event": "request",
+    "at": "2026-09-14T07:17:27.943Z",
+    "stage": "P1 controlled loading",
+    "method": "GET",
+    "url": "http://127.0.0.1:18702/api/rentals",
+    "postData": null
+  },
+  {
+    "event": "response",
+    "at": "2026-09-14T07:17:27.944Z",
+    "stage": "P1 controlled loading",
+    "method": "GET",
+    "url": "http://127.0.0.1:18702/api/rentals",
+    "status": 200,
+    "statusText": "OK",
+    "body": "[{\"listingTitle\":\"Downtown San Jose Studio\",\"propertyAddress\":\"999 Main Street, San Jose, CA\",\"submitterEmail\":\"sanjosedowntownrentalpropertymanagementoffice@example.com\",\"description\":\"Bright studio with covered parking and convenient light rail access.\",\"propertyType\":\"apartment\",\"termsAccepted\":true,\"id\":1}]"
+  },
+  {
+    "event": "request",
+    "at": "2026-09-14T07:17:28.658Z",
+    "stage": "P1 controlled UI error",
+    "method": "GET",
+    "url": "http://127.0.0.1:18702/api/rentals",
+    "postData": null
+  },
+  {
+    "event": "response",
+    "at": "2026-09-14T07:17:28.659Z",
+    "stage": "P1 controlled UI error",
+    "method": "GET",
+    "url": "http://127.0.0.1:18702/api/rentals",
+    "status": 200,
+    "statusText": "OK",
+    "body": "[{\"listingTitle\":\"Downtown San Jose Studio\",\"propertyAddress\":\"999 Main Street, San Jose, CA\",\"submitterEmail\":\"sanjosedowntownrentalpropertymanagementoffice@example.com\",\"description\":\"Bright studio with covered parking and convenient light rail access.\",\"propertyType\":\"apartment\",\"termsAccepted\":true,\"id\":1}]"
+  },
+  {
+    "event": "request",
+    "at": "2026-09-14T07:17:31.831Z",
+    "stage": "P2 fresh baseline",
+    "method": "GET",
+    "url": "http://127.0.0.1:18702/api/rentals",
+    "postData": null
+  },
+  {
+    "event": "response",
+    "at": "2026-09-14T07:17:31.832Z",
+    "stage": "P2 fresh baseline",
+    "method": "GET",
+    "url": "http://127.0.0.1:18702/api/rentals",
+    "status": 200,
+    "statusText": "OK",
+    "body": "[{\"listingTitle\":\"Sunny Downtown Apartment\",\"propertyAddress\":\"123 San Carlos Street, San Jose, CA\",\"submitterEmail\":\"downtown@example.com\",\"description\":\"A bright apartment close to campus, shops, and public transit.\",\"propertyType\":\"apartment\",\"termsAccepted\":true,\"id\":1},{\"listingTitle\":\"Spacious Garden House\",\"propertyAddress\":\"456 Willow Street, San Jose, CA\",\"submitterEmail\":\"garden@example.com\",\"description\":\"A comfortable house with a private garden and a sunny living room.\",\"propertyType\":\"house\",\"termsAccepted\":true,\"id\":2}]"
+  },
+  {
+    "event": "request",
+    "at": "2026-09-14T07:17:32.585Z",
+    "stage": "P2 Q1 create",
+    "method": "POST",
+    "url": "http://127.0.0.1:18702/api/rentals",
+    "postData": "{\"listingTitle\":\"Downtown San Jose Studio\",\"propertyAddress\":\"999 Main Street, San Jose, CA\",\"submitterEmail\":\"sanjosedowntownrentalpropertymanagementoffice@example.com\",\"description\":\"Bright studio with covered parking and convenient light rail access.\",\"propertyType\":\"apartment\",\"termsAccepted\":true}"
+  },
+  {
+    "event": "response",
+    "at": "2026-09-14T07:17:32.600Z",
+    "stage": "P2 Q1 create",
+    "method": "POST",
+    "url": "http://127.0.0.1:18702/api/rentals",
+    "status": 201,
+    "statusText": "Created",
+    "bodyReadError": "response.text: Protocol error (Network.getResponseBody): No resource with given identifier found\nResponse body is not available for a response that was navigated away from. Read response.body() before triggering any navigation."
+  },
+  {
+    "event": "request",
+    "at": "2026-09-14T07:17:32.606Z",
+    "stage": "P2 Q1 create",
+    "method": "GET",
+    "url": "http://127.0.0.1:18702/api/rentals",
+    "postData": null
+  },
+  {
+    "event": "response",
+    "at": "2026-09-14T07:17:32.608Z",
+    "stage": "P2 Q1 create",
+    "method": "GET",
+    "url": "http://127.0.0.1:18702/api/rentals",
+    "status": 200,
+    "statusText": "OK",
+    "body": "[{\"listingTitle\":\"Sunny Downtown Apartment\",\"propertyAddress\":\"123 San Carlos Street, San Jose, CA\",\"submitterEmail\":\"downtown@example.com\",\"description\":\"A bright apartment close to campus, shops, and public transit.\",\"propertyType\":\"apartment\",\"termsAccepted\":true,\"id\":1},{\"listingTitle\":\"Spacious Garden House\",\"propertyAddress\":\"456 Willow Street, San Jose, CA\",\"submitterEmail\":\"garden@example.com\",\"description\":\"A comfortable house with a private garden and a sunny living room.\",\"propertyType\":\"house\",\"termsAccepted\":true,\"id\":2},{\"listingTitle\":\"Downtown San Jose Studio\",\"propertyAddress\":\"999 Main Street, San Jose, CA\",\"submitterEmail\":\"sanjosedowntownrentalpropertymanagementoffice@example.com\",\"description\":\"Bright studio with covered parking and convenient light rail access.\",\"propertyType\":\"apartment\",\"termsAccepted\":true,\"id\":3}]"
+  },
+  {
+    "event": "request",
+    "at": "2026-09-14T07:17:33.352Z",
+    "stage": "P2 Q2 update ID1",
+    "method": "PUT",
+    "url": "http://127.0.0.1:18702/api/rentals/1",
+    "postData": "{\"listingTitle\":\"Updated Downtown Apartment\",\"propertyAddress\":\"900 Market Street, San Jose, CA\"}"
+  },
+  {
+    "event": "response",
+    "at": "2026-09-14T07:17:33.367Z",
+    "stage": "P2 Q2 update ID1",
+    "method": "PUT",
+    "url": "http://127.0.0.1:18702/api/rentals/1",
+    "status": 200,
+    "statusText": "OK",
+    "bodyReadError": "response.text: Protocol error (Network.getResponseBody): No resource with given identifier found\nResponse body is not available for a response that was navigated away from. Read response.body() before triggering any navigation."
+  },
+  {
+    "event": "request",
+    "at": "2026-09-14T07:17:33.372Z",
+    "stage": "P2 Q2 update ID1",
+    "method": "GET",
+    "url": "http://127.0.0.1:18702/api/rentals",
+    "postData": null
+  },
+  {
+    "event": "response",
+    "at": "2026-09-14T07:17:33.373Z",
+    "stage": "P2 Q2 update ID1",
+    "method": "GET",
+    "url": "http://127.0.0.1:18702/api/rentals",
+    "status": 200,
+    "statusText": "OK",
+    "body": "[{\"listingTitle\":\"Updated Downtown Apartment\",\"propertyAddress\":\"900 Market Street, San Jose, CA\",\"submitterEmail\":\"downtown@example.com\",\"description\":\"A bright apartment close to campus, shops, and public transit.\",\"propertyType\":\"apartment\",\"termsAccepted\":true,\"id\":1},{\"listingTitle\":\"Spacious Garden House\",\"propertyAddress\":\"456 Willow Street, San Jose, CA\",\"submitterEmail\":\"garden@example.com\",\"description\":\"A comfortable house with a private garden and a sunny living room.\",\"propertyType\":\"house\",\"termsAccepted\":true,\"id\":2},{\"listingTitle\":\"Downtown San Jose Studio\",\"propertyAddress\":\"999 Main Street, San Jose, CA\",\"submitterEmail\":\"sanjosedowntownrentalpropertymanagementoffice@example.com\",\"description\":\"Bright studio with covered parking and convenient light rail access.\",\"propertyType\":\"apartment\",\"termsAccepted\":true,\"id\":3}]"
+  },
+  {
+    "event": "request",
+    "at": "2026-09-14T07:17:34.052Z",
+    "stage": "P2 Q3 delete highest",
+    "method": "DELETE",
+    "url": "http://127.0.0.1:18702/api/rentals/highest",
+    "postData": null
+  },
+  {
+    "event": "response",
+    "at": "2026-09-14T07:17:34.067Z",
+    "stage": "P2 Q3 delete highest",
+    "method": "DELETE",
+    "url": "http://127.0.0.1:18702/api/rentals/highest",
+    "status": 204,
+    "statusText": "No Content",
+    "body": ""
+  },
+  {
+    "event": "request",
+    "at": "2026-09-14T07:17:34.072Z",
+    "stage": "P2 Q3 delete highest",
+    "method": "GET",
+    "url": "http://127.0.0.1:18702/api/rentals",
+    "postData": null
+  },
+  {
+    "event": "response",
+    "at": "2026-09-14T07:17:34.073Z",
+    "stage": "P2 Q3 delete highest",
+    "method": "GET",
+    "url": "http://127.0.0.1:18702/api/rentals",
+    "status": 200,
+    "statusText": "OK",
+    "body": "[{\"listingTitle\":\"Updated Downtown Apartment\",\"propertyAddress\":\"900 Market Street, San Jose, CA\",\"submitterEmail\":\"downtown@example.com\",\"description\":\"A bright apartment close to campus, shops, and public transit.\",\"propertyType\":\"apartment\",\"termsAccepted\":true,\"id\":1},{\"listingTitle\":\"Spacious Garden House\",\"propertyAddress\":\"456 Willow Street, San Jose, CA\",\"submitterEmail\":\"garden@example.com\",\"description\":\"A comfortable house with a private garden and a sunny living room.\",\"propertyType\":\"house\",\"termsAccepted\":true,\"id\":2}]"
+  },
+  {
+    "event": "request",
+    "at": "2026-09-14T07:17:34.685Z",
+    "stage": "P2 Q4 search",
+    "method": "GET",
+    "url": "http://127.0.0.1:18702/api/rentals",
+    "postData": null
+  },
+  {
+    "event": "request",
+    "at": "2026-09-14T07:17:34.685Z",
+    "stage": "P2 Q4 search",
+    "method": "GET",
+    "url": "http://127.0.0.1:18702/api/rentals?q=Downtown",
+    "postData": null
+  },
+  {
+    "event": "response",
+    "at": "2026-09-14T07:17:34.700Z",
+    "stage": "P2 Q4 search",
+    "method": "GET",
+    "url": "http://127.0.0.1:18702/api/rentals",
+    "status": 200,
+    "statusText": "OK",
+    "body": "[{\"listingTitle\":\"Updated Downtown Apartment\",\"propertyAddress\":\"900 Market Street, San Jose, CA\",\"submitterEmail\":\"downtown@example.com\",\"description\":\"A bright apartment close to campus, shops, and public transit.\",\"propertyType\":\"apartment\",\"termsAccepted\":true,\"id\":1},{\"listingTitle\":\"Spacious Garden House\",\"propertyAddress\":\"456 Willow Street, San Jose, CA\",\"submitterEmail\":\"garden@example.com\",\"description\":\"A comfortable house with a private garden and a sunny living room.\",\"propertyType\":\"house\",\"termsAccepted\":true,\"id\":2}]"
+  },
+  {
+    "event": "response",
+    "at": "2026-09-14T07:17:34.700Z",
+    "stage": "P2 Q4 search",
+    "method": "GET",
+    "url": "http://127.0.0.1:18702/api/rentals?q=Downtown",
+    "status": 200,
+    "statusText": "OK",
+    "body": "[{\"listingTitle\":\"Updated Downtown Apartment\",\"propertyAddress\":\"900 Market Street, San Jose, CA\",\"submitterEmail\":\"downtown@example.com\",\"description\":\"A bright apartment close to campus, shops, and public transit.\",\"propertyType\":\"apartment\",\"termsAccepted\":true,\"id\":1}]"
+  },
+  {
+    "event": "request",
+    "at": "2026-09-14T07:17:34.801Z",
+    "stage": "P2 Q4 search",
+    "method": "GET",
+    "url": "http://127.0.0.1:18702/api/rentals",
+    "postData": null
+  },
+  {
+    "event": "request",
+    "at": "2026-09-14T07:17:34.801Z",
+    "stage": "P2 Q4 search",
+    "method": "GET",
+    "url": "http://127.0.0.1:18702/api/rentals?q=Market",
+    "postData": null
+  },
+  {
+    "event": "response",
+    "at": "2026-09-14T07:17:34.816Z",
+    "stage": "P2 Q4 search",
+    "method": "GET",
+    "url": "http://127.0.0.1:18702/api/rentals",
+    "status": 200,
+    "statusText": "OK",
+    "body": "[{\"listingTitle\":\"Updated Downtown Apartment\",\"propertyAddress\":\"900 Market Street, San Jose, CA\",\"submitterEmail\":\"downtown@example.com\",\"description\":\"A bright apartment close to campus, shops, and public transit.\",\"propertyType\":\"apartment\",\"termsAccepted\":true,\"id\":1},{\"listingTitle\":\"Spacious Garden House\",\"propertyAddress\":\"456 Willow Street, San Jose, CA\",\"submitterEmail\":\"garden@example.com\",\"description\":\"A comfortable house with a private garden and a sunny living room.\",\"propertyType\":\"house\",\"termsAccepted\":true,\"id\":2}]"
+  },
+  {
+    "event": "response",
+    "at": "2026-09-14T07:17:34.817Z",
+    "stage": "P2 Q4 search",
+    "method": "GET",
+    "url": "http://127.0.0.1:18702/api/rentals?q=Market",
+    "status": 200,
+    "statusText": "OK",
+    "body": "[{\"listingTitle\":\"Updated Downtown Apartment\",\"propertyAddress\":\"900 Market Street, San Jose, CA\",\"submitterEmail\":\"downtown@example.com\",\"description\":\"A bright apartment close to campus, shops, and public transit.\",\"propertyType\":\"apartment\",\"termsAccepted\":true,\"id\":1}]"
+  },
+  {
+    "event": "request",
+    "at": "2026-09-14T07:17:34.901Z",
+    "stage": "P2 Q4 search",
+    "method": "GET",
+    "url": "http://127.0.0.1:18702/api/rentals",
+    "postData": null
+  },
+  {
+    "event": "response",
+    "at": "2026-09-14T07:17:34.916Z",
+    "stage": "P2 Q4 search",
+    "method": "GET",
+    "url": "http://127.0.0.1:18702/api/rentals",
+    "status": 200,
+    "statusText": "OK",
+    "body": "[{\"listingTitle\":\"Updated Downtown Apartment\",\"propertyAddress\":\"900 Market Street, San Jose, CA\",\"submitterEmail\":\"downtown@example.com\",\"description\":\"A bright apartment close to campus, shops, and public transit.\",\"propertyType\":\"apartment\",\"termsAccepted\":true,\"id\":1},{\"listingTitle\":\"Spacious Garden House\",\"propertyAddress\":\"456 Willow Street, San Jose, CA\",\"submitterEmail\":\"garden@example.com\",\"description\":\"A comfortable house with a private garden and a sunny living room.\",\"propertyType\":\"house\",\"termsAccepted\":true,\"id\":2}]"
+  },
+  {
+    "event": "request",
+    "at": "2026-09-14T07:17:35.034Z",
+    "stage": "P2 Q4 search",
+    "method": "GET",
+    "url": "http://127.0.0.1:18702/api/rentals",
+    "postData": null
+  },
+  {
+    "event": "request",
+    "at": "2026-09-14T07:17:35.034Z",
+    "stage": "P2 Q4 search",
+    "method": "GET",
+    "url": "http://127.0.0.1:18702/api/rentals?q=no-such-rental-6102",
+    "postData": null
+  },
+  {
+    "event": "response",
+    "at": "2026-09-14T07:17:35.050Z",
+    "stage": "P2 Q4 search",
+    "method": "GET",
+    "url": "http://127.0.0.1:18702/api/rentals",
+    "status": 200,
+    "statusText": "OK",
+    "body": "[{\"listingTitle\":\"Updated Downtown Apartment\",\"propertyAddress\":\"900 Market Street, San Jose, CA\",\"submitterEmail\":\"downtown@example.com\",\"description\":\"A bright apartment close to campus, shops, and public transit.\",\"propertyType\":\"apartment\",\"termsAccepted\":true,\"id\":1},{\"listingTitle\":\"Spacious Garden House\",\"propertyAddress\":\"456 Willow Street, San Jose, CA\",\"submitterEmail\":\"garden@example.com\",\"description\":\"A comfortable house with a private garden and a sunny living room.\",\"propertyType\":\"house\",\"termsAccepted\":true,\"id\":2}]"
+  },
+  {
+    "event": "response",
+    "at": "2026-09-14T07:17:35.050Z",
+    "stage": "P2 Q4 search",
+    "method": "GET",
+    "url": "http://127.0.0.1:18702/api/rentals?q=no-such-rental-6102",
+    "status": 200,
+    "statusText": "OK",
+    "body": "[]"
+  },
+  {
+    "event": "request",
+    "at": "2026-09-14T07:17:35.134Z",
+    "stage": "P2 Q4 search",
+    "method": "GET",
+    "url": "http://127.0.0.1:18702/api/rentals",
+    "postData": null
+  },
+  {
+    "event": "response",
+    "at": "2026-09-14T07:17:35.150Z",
+    "stage": "P2 Q4 search",
+    "method": "GET",
+    "url": "http://127.0.0.1:18702/api/rentals",
+    "status": 200,
+    "statusText": "OK",
+    "body": "[{\"listingTitle\":\"Updated Downtown Apartment\",\"propertyAddress\":\"900 Market Street, San Jose, CA\",\"submitterEmail\":\"downtown@example.com\",\"description\":\"A bright apartment close to campus, shops, and public transit.\",\"propertyType\":\"apartment\",\"termsAccepted\":true,\"id\":1},{\"listingTitle\":\"Spacious Garden House\",\"propertyAddress\":\"456 Willow Street, San Jose, CA\",\"submitterEmail\":\"garden@example.com\",\"description\":\"A comfortable house with a private garden and a sunny living room.\",\"propertyType\":\"house\",\"termsAccepted\":true,\"id\":2}]"
+  }
+]
