@@ -6,7 +6,7 @@ Prepared for Pragya Apurva, SID4 6102. Assignment source: `DATA260_HW2.pdf`, pag
 
 1. Upload **Apurva_HW2.pdf** from the sibling `../HW2/` folder to the course submission portal. It is identical to `reports/hw02/report.pdf` in Git.
 2. Provide the repository link: https://github.com/ishuapurva1996/data260-6102 . The same link appears in the PDF.
-3. Keep the required report folder and the shared application source in the repository. The HW2 branch is `codex/fix-hw1-form`; the revised report is identified by tag `hw2-report-v3`. No separate code ZIP is requested by the assignment PDF.
+3. Keep the required report folder and the shared application source in the repository. The HW2 branch is `codex/fix-hw1-form`; it contains the latest PDF, synchronized with the revised AI-use disclosure. The `hw2-report-v3` tag preserves the prior report snapshot. No separate code ZIP is requested by the assignment PDF.
 
 | Assignment requirement | Completed local item / evidence |
 |---|---|
@@ -53,6 +53,6 @@ The repeatable create/update/delete screenshots used isolated port 18702 to pres
 
 ## Tags and evidence integrity
 
-`hw2-code` freezes the implementation and verifier at `6a076db1447f00a0097cfc16f5de460c37e65079`. The `hw2` tag preserves the original package at `fd7baa27c3af50d6494f075f3df618e50ab4b4fa`. The `hw2-report-v3` tag identifies the revised report with clean output screenshots and closing GitHub links and unchanged application/verifier bytes. Use the code tag for runtime provenance and the revised package tag for the current submission. The PDF identifies the code tag because a generated file cannot embed the hash of its own containing commit.
+`hw2-code` freezes the implementation and verifier at `6a076db1447f00a0097cfc16f5de460c37e65079`. The `hw2` tag preserves the original package at `fd7baa27c3af50d6494f075f3df618e50ab4b4fa`. The `hw2-report-v3` tag preserves a prior report snapshot with clean output screenshots and closing GitHub links and unchanged application/verifier bytes. Use the code tag for runtime provenance and the current `codex/fix-hw1-form` branch for the latest PDF, synchronized with the revised AI-use disclosure. The PDF identifies the code tag because a generated file cannot embed the hash of its own containing commit.
 
 `submission-manifest.json` records deliverable hashes; individual screenshot/campaign manifests retain deeper provenance. Historical measured runs keep their actual execution hash and dirty state rather than being relabeled as executions at the later tag. A passing local verification does not imply that GitHub pushes, collaborator access or portal upload are complete.

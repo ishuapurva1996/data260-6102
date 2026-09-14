@@ -1,11 +1,10 @@
 {
-  "checked_at": "2026-09-14T08:19:21.108339+00:00",
+  "checked_at": "2026-09-14T09:26:03.744755+00:00",
   "pdf": "reports/hw02/report.pdf",
-  "sha256": "645fdf8e43ae985d4d093fc008329b100f1097eba1172b5a5c2dd483540ca363",
+  "sha256": "a3d1e536bc28062441c890b2daa1213e1c41b3dde3be3d92740f5feb68553ca3",
   "pages": 28,
   "render_tool": "pdftoppm",
-  "render_dpi": 120,
-  "visual_review": "Re-rendered all 28 pages. Visually reviewed changed pages 2,15,16,17,18,19,20,21,22,23,24,28; the other 16 pages are pixel-identical to the prior reviewed report.",
+  "visual_review": "Rendered and compared all 28 pages against the previously reviewed PDF. Page 27 was visually inspected at 1600px; it has readable text and no clipping or overlap. The other 27 pages are pixel-identical at 900px.",
   "defects_remaining": [],
   "code_excerpts": "All source excerpts are nonempty and within actual file ranges.",
   "upload_copy_matches": true,
@@ -15,5 +14,14 @@
     "https://github.com/ishuapurva1996/data260-6102/tree/codex/fix-hw1-form"
   ],
   "screenshot_footer_cleanup": "All nine recaptured result panels omit browser-rendering, source-tag, timestamp and working-tree footer labels. Saved result values and scripted/controlled distinctions are preserved.",
-  "unwanted_footer_text_absent": true
+  "unwanted_footer_text_absent": true,
+  "render_scale_to_pixels": 900,
+  "changed_page_review_scale_to_pixels": 1600,
+  "ai_use_body_matches_pdf": true,
+  "ai_use_body_paragraph_count": 6,
+  "changed_pages": [
+    27
+  ],
+  "editor_note_removed": true,
+  "placeholder_text_absent": true
 }

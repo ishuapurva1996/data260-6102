@@ -19,7 +19,7 @@ The fresh report capture used isolated port 18702 to preserve an existing server
 
 ## Final tagged smoke check
 
-The immutable `hw2-code` tag identifies the application, dependencies and verifier. The `hw2` tag preserves the original report package; `hw2-report-v3` includes the revised report with clean output screenshots and closing GitHub links and unchanged runtime source. Generated files cannot embed the hash of their own containing commit; the report therefore names the verified code tag and hash explicitly. Use the published `codex/fix-hw1-form` branch or `hw2-report-v3` tag to retrieve the revised report.
+The immutable `hw2-code` tag identifies the application, dependencies and verifier. The `hw2` tag preserves the original report package; `hw2-report-v3` preserves a prior report snapshot with clean output screenshots and closing GitHub links and unchanged runtime source. Generated files cannot embed the hash of their own containing commit; the report therefore names the verified code tag and hash explicitly. Use the published `codex/fix-hw1-form` branch to retrieve the latest PDF, synchronized with the revised AI-use disclosure.
 
 First complete the Parts 3 and 4 agent-environment and Ollama setup below. Keep the web app running in its own terminal on 8702. Run the following in a second terminal from the repository root, with Ollama serving `qwen3:1.7b`:
 

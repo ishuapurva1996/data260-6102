@@ -90,7 +90,7 @@ python code/agents_graph.py --input-json reports/hw02/cases/part3_listing.json -
 
 If `.venv-agents` is already prepared, run `.venv-agents/bin/python code/agents_graph.py --input-json reports/hw02/cases/part3_listing.json`.
 
-See the [Part 3 usage and architecture guide](docs/agent_graph.md) for turn counting, response validation, controlled Reviewer mode, and test commands. The [implementation results](reports/hw02/PART3_IMPLEMENTATION.md) link the recorded tests, real-model runs, and screenshots. The [combined HW2 report](reports/hw02/report.pdf) includes Parts 1-4. The `hw2-code` tag identifies verified runtime source; `hw2` preserves the original submission package, and `hw2-report-v3` identifies the revised report with clean output screenshots and closing GitHub links. Follow the [submission checklist](reports/hw02/SUBMISSION_CHECKLIST.md) before submitting online.
+See the [Part 3 usage and architecture guide](docs/agent_graph.md) for turn counting, response validation, controlled Reviewer mode, and test commands. The [implementation results](reports/hw02/PART3_IMPLEMENTATION.md) link the recorded tests, real-model runs, and screenshots. The [combined HW2 report](reports/hw02/report.pdf) includes Parts 1-4. The `hw2-code` tag identifies verified runtime source; `hw2` preserves the original submission package, and `hw2-report-v3` preserves a prior report snapshot with clean output screenshots and closing GitHub links. The current `codex/fix-hw1-form` branch contains the latest PDF, synchronized with the revised AI-use disclosure. Follow the [submission checklist](reports/hw02/SUBMISSION_CHECKLIST.md) before submitting online.
 
 ## Reproducing the original HW1 submission
 

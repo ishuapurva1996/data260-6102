@@ -18,4 +18,4 @@ While reviewing the interface and its logic, I asked why editing was limited to 
 
 At my direction, Codex added an Edit button to every listing. The editor identifies the selected record and prefills its title and address. Save sends the selected ID to the existing update endpoint; Cancel closes the editor without saving. This supports ordinary editing while still allowing the report to demonstrate the required ID-1 update. The final automated browser checks confirmed the selected-record behavior, including editing ID 2 after ID 1 was deleted.
 
-The personal contribution statement above reflects the student's description supplied on September 14, 2026. Automated checks and model executions are attributed to the assistant-assisted workflow rather than presented as manual student actions.
+I provided this description of my contributions on September 14, 2026. I used Codex to run the automated checks and model experiments described above.

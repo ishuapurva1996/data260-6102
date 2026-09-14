@@ -2063,8 +2063,8 @@
       "passed": true,
       "files": {
         "report.pdf": {
-          "bytes": 1410661,
-          "sha256": "645fdf8e43ae985d4d093fc008329b100f1097eba1172b5a5c2dd483540ca363"
+          "bytes": 1410621,
+          "sha256": "a3d1e536bc28062441c890b2daa1213e1c41b3dde3be3d92740f5feb68553ca3"
         },
         "RUN_LOG.txt": {
           "bytes": 169592,
@@ -2075,20 +2075,20 @@
           "sha256": "7444c898d94cc925de09c81f5de8c7948448515e93411910b299daf6b5e9af43"
         },
         "AI_USE.md": {
-          "bytes": 2301,
-          "sha256": "fc5a5aa4d94f539f925847e2aad5e2762fa3c9d9b0544c4512b2dd956723dfde"
+          "bytes": 2206,
+          "sha256": "50ec238a88af251979b531e994a9674ead06bbb23e609ade68fa0b91c5ad5f33"
         },
         "REPRODUCIBLE_RUN_INSTRUCTIONS.md": {
-          "bytes": 18158,
-          "sha256": "5ae1b93aed18bceaf10dc05380b7b3728bdb610c282be1d61eae0092fbf8ff79"
+          "bytes": 18186,
+          "sha256": "e723968998d99c22f668e43fb36ff6bba2eedca39026a7105e8f5400a0100359"
         },
         "README.md": {
-          "bytes": 3091,
-          "sha256": "8aa1823da52fb012cb25f06d4990bc10bc15d89c44bece476072e35368226ab3"
+          "bytes": 3211,
+          "sha256": "cd9fee1145d928bfcbba5aeba541b318f967496c0c79e0fc72771b3ba7022fd1"
         }
       },
       "scope": "Presence/nonempty/PDF-header only; report content and AI-use authorship require human review.",
-      "checked_at": "2026-09-14T08:48:53.783164+00:00"
+      "checked_at": "2026-09-14T09:26:10.795621+00:00"
     },
     "source_unchanged_during_checks": {
       "passed": true,
@@ -2176,7 +2176,7 @@
   "submission_ready": true,
   "scope": "Whole-HW2 executable smoke and saved evidence checks; offline success alone is not final live submission verification.",
   "artifact_refresh": {
-    "checked_at": "2026-09-14T08:48:53.404477+00:00",
+    "checked_at": "2026-09-14T09:26:10.473099+00:00",
     "command": [
       "/Users/pragyaapurva/Documents/SJSU/DATA 260/data260-6102/.venv-agents/bin/python",
       "/Users/pragyaapurva/Documents/SJSU/DATA 260/data260-6102/scripts/refresh_hw02_artifacts.py",
@@ -2210,7 +2210,7 @@
       "submission_artifacts": {
         "passed": true,
         "files_checked": 6,
-        "checked_at": "2026-09-14T08:48:53.783164+00:00"
+        "checked_at": "2026-09-14T09:26:10.795621+00:00"
       },
       "runtime_unchanged_during_refresh": {
         "passed": true,
@@ -2224,6 +2224,6 @@
       }
     },
     "passed": true,
-    "finished_at": "2026-09-14T08:48:54.064323+00:00"
+    "finished_at": "2026-09-14T09:26:11.134353+00:00"
   }
 }

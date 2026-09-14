@@ -7,11 +7,11 @@
   "branch": "codex/fix-hw1-form",
   "verified_code_tag": "hw2-code",
   "verified_code_commit": "6a076db1447f00a0097cfc16f5de460c37e65079",
-  "submission_package_tag": "hw2-report-v3",
-  "package_reference_note": "hw2 and hw2-report-v2 preserve earlier packages. hw2-report-v3 identifies the subsequent commit containing this report revision with clean result screenshots. Resolve that tag for its commit hash; runtime and original verifier source still match hw2-code.",
+  "submission_package_tag": null,
+  "package_reference_note": "The current codex/fix-hw1-form branch contains the report with page 27 synchronized to AI_USE.md. hw2, hw2-report-v2 and hw2-report-v3 preserve earlier report packages. Runtime and original verifier source still match hw2-code; existing tags are unchanged.",
   "canonical_pdf": "reports/hw02/report.pdf",
   "upload_filename": "Apurva_HW2.pdf",
-  "upload_copy_sha256": "645fdf8e43ae985d4d093fc008329b100f1097eba1172b5a5c2dd483540ca363",
+  "upload_copy_sha256": "a3d1e536bc28062441c890b2daa1213e1c41b3dde3be3d92740f5feb68553ca3",
   "pdf_pages": 28,
   "new_ui_screenshots": 20,
   "new_saved_output_screenshots": 9,
@@ -29,12 +29,12 @@
       "sha256": "547f59603028195ff9f8a87d04c4651551e8bd0d68f075257dfd549cd846b25b"
     },
     "README.md": {
-      "bytes": 10718,
-      "sha256": "dec42206a88cc48f5ad34304733e684ac55e3885ff12fbac825eb2aab426e303"
+      "bytes": 10836,
+      "sha256": "9fc0a1797fd0004eb4ac959238353757d7b4818d70334442814e06943404f971"
     },
     "reports/hw02/AI_USE.md": {
-      "bytes": 2301,
-      "sha256": "fc5a5aa4d94f539f925847e2aad5e2762fa3c9d9b0544c4512b2dd956723dfde"
+      "bytes": 2206,
+      "sha256": "50ec238a88af251979b531e994a9674ead06bbb23e609ade68fa0b91c5ad5f33"
     },
     "reports/hw02/METRICS.md": {
       "bytes": 13572,
@@ -49,12 +49,12 @@
       "sha256": "488dfa42f74634c2432c8a9923436c1027f11b7b8b753a5075443be955bc8b3b"
     },
     "reports/hw02/README.md": {
-      "bytes": 3091,
-      "sha256": "8aa1823da52fb012cb25f06d4990bc10bc15d89c44bece476072e35368226ab3"
+      "bytes": 3211,
+      "sha256": "cd9fee1145d928bfcbba5aeba541b318f967496c0c79e0fc72771b3ba7022fd1"
     },
     "reports/hw02/REPRODUCIBLE_RUN_INSTRUCTIONS.md": {
-      "bytes": 18158,
-      "sha256": "5ae1b93aed18bceaf10dc05380b7b3728bdb610c282be1d61eae0092fbf8ff79"
+      "bytes": 18186,
+      "sha256": "e723968998d99c22f668e43fb36ff6bba2eedca39026a7105e8f5400a0100359"
     },
     "reports/hw02/RUN_LOG.txt": {
       "bytes": 169592,
@@ -73,12 +73,12 @@
       "sha256": "8975dec90d2fa1ee59abaa167f9b8bff086d717c5a8600b912491786963415dd"
     },
     "reports/hw02/RUN_LOG_SUBMISSION.txt": {
-      "bytes": 7656,
-      "sha256": "eb47b9810aef4849b8241bfe05315d21f679bca75bd80785c8ccdd449e093ae2"
+      "bytes": 9508,
+      "sha256": "e43a9570b7a7f5bbe716c0ade9c2d726c106de82de635c3dd8ec6764613a61eb"
     },
     "reports/hw02/SUBMISSION_CHECKLIST.md": {
-      "bytes": 7385,
-      "sha256": "1f0c029085f3d900208305e52e71fca910d5293b29a699950ebee0172b87a81a"
+      "bytes": 7527,
+      "sha256": "6834b7759704eb0669a566d91be5d27256e792e4d095b9e9c16b5c3f357c2d9a"
     },
     "reports/hw02/cases/adversarial_input.json": {
       "bytes": 814,
@@ -2801,8 +2801,8 @@
       "sha256": "199124b15148753ce168358c62984eea5d294103b888626d9dfbe60087d09984"
     },
     "reports/hw02/raw/submission-package/pdf-qa.json": {
-      "bytes": 1170,
-      "sha256": "abe506e849f5c699df9b537291a01875219b83d13b17f748628484dd91edbdd1"
+      "bytes": 1448,
+      "sha256": "05e98b30c8ee29e6cb5623c4da5c826cf507fbe6a0a9c1dde243e794ac2e9c50"
     },
     "reports/hw02/raw/submission-package/repository-access-check.json": {
       "bytes": 764,
@@ -2921,12 +2921,12 @@
       "sha256": "652def431f19ba76e1c521c2d95bf13a43cf136e8cdbe0abe2befe5e316cc2ee"
     },
     "reports/hw02/report.md": {
-      "bytes": 43980,
-      "sha256": "78e6badb578f6ca1b6f6b88f288a1bef7b349f84be579a0dd79e4c0355696f5f"
+      "bytes": 43944,
+      "sha256": "b6f9a5a99fff8259701ea79cf96f07c240628ca70cd1945cae87de2334dca85d"
     },
     "reports/hw02/report.pdf": {
-      "bytes": 1410661,
-      "sha256": "645fdf8e43ae985d4d093fc008329b100f1097eba1172b5a5c2dd483540ca363"
+      "bytes": 1410621,
+      "sha256": "a3d1e536bc28062441c890b2daa1213e1c41b3dde3be3d92740f5feb68553ca3"
     },
     "reports/hw02/screenshots/final-panels/P3-controlled-short.html": {
       "bytes": 1302,
@@ -3158,7 +3158,7 @@
     },
     "reports/hw02/verification.json": {
       "bytes": 143352,
-      "sha256": "0dcfd459f3a3c7e07913c099cc48a2d93c86815632dc2b8949244bc3f77c0521"
+      "sha256": "b955620ffbf3c64e8d53462b0d468a7eab3fa4e0df2fa82c0afcb105e5932fb7"
     },
     "reports/hw02/verification_part3.json": {
       "bytes": 1922,
@@ -3201,10 +3201,11 @@
       "sha256": "2a7f3bee6e11b340228d3aeac3e34129b5ec504222a22046b602f2ba3a8345e6"
     }
   },
-  "previous_package_tag": "hw2-report-v2",
-  "previous_package_commit": "3d1b5f77aa09ed639db4fef828c8e87705471d13",
+  "previous_package_tag": "hw2-report-v3",
+  "previous_package_commit": "851c02ac8b14155a4b1824309ae05eb1a2d91019",
   "published_branch_url": "https://github.com/ishuapurva1996/data260-6102/tree/codex/fix-hw1-form",
   "artifact_refresh_scope": "Report artifact hashes were refreshed after checking runtime-source continuity; the original successful live/model checks and timestamps were preserved, not rerun.",
-  "updated_at": "2026-09-14T08:49:05.277234+00:00",
-  "post_package_revision_note": "AI_USE.md was revised after the hw2-report-v3 PDF package to emphasize code review and output validation while retaining coding assistance and student contributions. The file inventory and artifact verification reflect this documentation revision; the PDF and runtime source are unchanged."
+  "updated_at": "2026-09-14T09:26:34.657569+00:00",
+  "post_package_revision_note": "The current revision replaces the third-person editor note with first-person wording in AI_USE.md and rebuilds both PDF copies from its current body text. The report, Markdown copy, artifact verification, PDF QA and file inventory reflect that change. Application source and recorded experiment results are unchanged.",
+  "submission_package_ref": "refs/heads/codex/fix-hw1-form"
 }

@@ -879,7 +879,7 @@ Full environment setup, offline evidence checks and tagged smoke commands are in
 
 ## AI use and personal verification
 
-I used Codex to help interpret the assignment, compare the helper code with my existing application, implement and revise the web app and agent graph, run automated checks and local-model experiments, organize evidence, and prepare this report. Codex also helped capture screenshots and check the recorded results.
+I used Codex to help interpret the assignment, compare the teacher’s helper code with my existing implementation, and assist with implementing and refining the web app and agent graph. I also used it to review the code, check application logic, run automated tests and local-model experiments, and verify whether the generated outputs met the assignment’s requirements.
 
 I supplied the assignment and project context, reviewed the plans, questioned design choices, and directed revisions. I also performed extensive UI validations and logic checks. For example, I questioned why the first interface only allowed updating listing ID 1 when the application should let a user edit other listings too.
 
@@ -889,7 +889,7 @@ While reviewing the interface and its logic, I asked why editing was limited to 
 
 At my direction, Codex added an Edit button to every listing. The editor identifies the selected record and prefills its title and address. Save sends the selected ID to the existing update endpoint; Cancel closes the editor without saving. This supports ordinary editing while still allowing the report to demonstrate the required ID-1 update. The final automated browser checks confirmed the selected-record behavior, including editing ID 2 after ID 1 was deleted.
 
-The personal contribution statement above reflects the student's description supplied on September 14, 2026. Automated checks and model executions are attributed to the assistant-assisted workflow rather than presented as manual student actions.
+I provided this description of my contributions on September 14, 2026. I used Codex to run the automated checks and model experiments described above.
 
 ## Submission inventory and final actions
 
