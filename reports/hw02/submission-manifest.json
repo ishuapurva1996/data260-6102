@@ -2,16 +2,16 @@
   "assignment": "HW2",
   "student": "Pragya Apurva",
   "SID4": "6102",
-  "created_at": "2026-09-14T08:10:05.026630+00:00",
+  "created_at": "2026-09-14T08:21:18.235463+00:00",
   "repository_url": "https://github.com/ishuapurva1996/data260-6102",
   "branch": "codex/fix-hw1-form",
   "verified_code_tag": "hw2-code",
   "verified_code_commit": "6a076db1447f00a0097cfc16f5de460c37e65079",
-  "submission_package_tag": "hw2-report-v2",
-  "package_reference_note": "hw2 preserves the original package. hw2-report-v2 identifies the subsequent commit containing this closing-link report revision and manifest. Resolve that tag for its commit hash; runtime and verifier source still match hw2-code.",
+  "submission_package_tag": "hw2-report-v3",
+  "package_reference_note": "hw2 and hw2-report-v2 preserve earlier packages. hw2-report-v3 identifies the subsequent commit containing this report revision with clean result screenshots. Resolve that tag for its commit hash; runtime and original verifier source still match hw2-code.",
   "canonical_pdf": "reports/hw02/report.pdf",
   "upload_filename": "Apurva_HW2.pdf",
-  "upload_copy_sha256": "8daef8bbde02c983c554919345143f3d73fb9e9e1443cf3f515cad4ea8f4ff52",
+  "upload_copy_sha256": "645fdf8e43ae985d4d093fc008329b100f1097eba1172b5a5c2dd483540ca363",
   "pdf_pages": 28,
   "new_ui_screenshots": 20,
   "new_saved_output_screenshots": 9,
@@ -29,8 +29,8 @@
       "sha256": "547f59603028195ff9f8a87d04c4651551e8bd0d68f075257dfd549cd846b25b"
     },
     "README.md": {
-      "bytes": 10689,
-      "sha256": "8d58cd0dde9628f140d9f801a9d617690c38974889965ca6fe4335f6c12e0e48"
+      "bytes": 10718,
+      "sha256": "dec42206a88cc48f5ad34304733e684ac55e3885ff12fbac825eb2aab426e303"
     },
     "reports/hw02/AI_USE.md": {
       "bytes": 2242,
@@ -49,12 +49,12 @@
       "sha256": "488dfa42f74634c2432c8a9923436c1027f11b7b8b753a5075443be955bc8b3b"
     },
     "reports/hw02/README.md": {
-      "bytes": 3062,
-      "sha256": "49e35b5785a07c7d4a10b49bdd229617793f8c483fb1ff2b90fa17f2a470612e"
+      "bytes": 3091,
+      "sha256": "8aa1823da52fb012cb25f06d4990bc10bc15d89c44bece476072e35368226ab3"
     },
     "reports/hw02/REPRODUCIBLE_RUN_INSTRUCTIONS.md": {
-      "bytes": 17061,
-      "sha256": "5921d53de337a8f69c100669490c2d929850be5be32d5de2245d1c7ad1009235"
+      "bytes": 18158,
+      "sha256": "5ae1b93aed18bceaf10dc05380b7b3728bdb610c282be1d61eae0092fbf8ff79"
     },
     "reports/hw02/RUN_LOG.txt": {
       "bytes": 169592,
@@ -73,12 +73,12 @@
       "sha256": "8975dec90d2fa1ee59abaa167f9b8bff086d717c5a8600b912491786963415dd"
     },
     "reports/hw02/RUN_LOG_SUBMISSION.txt": {
-      "bytes": 4046,
-      "sha256": "30939967a9e0a37320210fdab829f716e4a740c45414119bab4237145583aa7e"
+      "bytes": 6273,
+      "sha256": "605e2187e900559a903db4109d7a8b6c6890524e16c15c49a60acb429815d4b0"
     },
     "reports/hw02/SUBMISSION_CHECKLIST.md": {
-      "bytes": 7287,
-      "sha256": "26b71cd64f5291819b6f045eeb9767968128fc99689bf0d3bac2072b2afa9efa"
+      "bytes": 7385,
+      "sha256": "1f0c029085f3d900208305e52e71fca910d5293b29a699950ebee0172b87a81a"
     },
     "reports/hw02/cases/adversarial_input.json": {
       "bytes": 814,
@@ -2801,8 +2801,8 @@
       "sha256": "199124b15148753ce168358c62984eea5d294103b888626d9dfbe60087d09984"
     },
     "reports/hw02/raw/submission-package/pdf-qa.json": {
-      "bytes": 928,
-      "sha256": "615f61ab7bf2fb7c39a3f56d84dd87d3dcd1e6099c4d170ded9d1478e8176017"
+      "bytes": 1170,
+      "sha256": "abe506e849f5c699df9b537291a01875219b83d13b17f748628484dd91edbdd1"
     },
     "reports/hw02/raw/submission-package/repository-access-check.json": {
       "bytes": 764,
@@ -2876,6 +2876,10 @@
       "bytes": 6808,
       "sha256": "b25298eaf72de6b8836009fb08dc7fc8c5e9a50356ebbd2fe0fb822ac24281c0"
     },
+    "reports/hw02/raw/submission-smoke/report-link-revision/verification.json": {
+      "bytes": 141154,
+      "sha256": "d28f324a993a49f6139f8b15133873991a947e77db15216806d3274a1c375c17"
+    },
     "reports/hw02/raw/submission-smoke/tagged-code/controlled_always_issue/20260914T073455-f96d038394/events.json": {
       "bytes": 21775,
       "sha256": "4a2be29da2b95dd27f47d6ffceaae144394a9db698fab78e7c45bb38890d5421"
@@ -2913,92 +2917,92 @@
       "sha256": "7fff27af7c1bfe5d2f994c3b39f260b5f1a0bb71c746125c245c09ced1ec30c3"
     },
     "reports/hw02/report-layout.json": {
-      "bytes": 4964,
-      "sha256": "7dc9f303b54297b700c0d945bf8ec6be1ef2b846d9b7285b035f88bd80c7060d"
+      "bytes": 4961,
+      "sha256": "652def431f19ba76e1c521c2d95bf13a43cf136e8cdbe0abe2befe5e316cc2ee"
     },
     "reports/hw02/report.md": {
-      "bytes": 44719,
-      "sha256": "0cb5c4f1fdd30904d8f5dde4c18c76b5b621342a208d6875f0becf0eec13fe39"
+      "bytes": 43980,
+      "sha256": "78e6badb578f6ca1b6f6b88f288a1bef7b349f84be579a0dd79e4c0355696f5f"
     },
     "reports/hw02/report.pdf": {
-      "bytes": 1498169,
-      "sha256": "8daef8bbde02c983c554919345143f3d73fb9e9e1443cf3f515cad4ea8f4ff52"
+      "bytes": 1410661,
+      "sha256": "645fdf8e43ae985d4d093fc008329b100f1097eba1172b5a5c2dd483540ca363"
     },
     "reports/hw02/screenshots/final-panels/P3-controlled-short.html": {
-      "bytes": 1445,
-      "sha256": "047214c3eb936a5b753de75517f73d7e1d30a0571e2b3786ab639ffb820540a7"
+      "bytes": 1302,
+      "sha256": "5f0fe1c481feddee396e958c95f72dcdc21fd26efebfc08dbcdb5587efb39a26"
     },
     "reports/hw02/screenshots/final-panels/P3-controlled-short.png": {
-      "bytes": 39682,
-      "sha256": "3140ce7dcd437deeb984c4ff59ce844c16ae932d651da9a8b11126e67f3a0f1f"
+      "bytes": 25224,
+      "sha256": "c6d51b805315bd77fb31cb88e5606d65f4c91744064f2c539d609c81cb03fc3a"
     },
     "reports/hw02/screenshots/final-panels/P3-controlled.html": {
-      "bytes": 1918,
-      "sha256": "cffb24edaf582c58055226db11b25e9c2ad11f902c78f6a51a9494e0029da8fa"
+      "bytes": 1775,
+      "sha256": "644c003139779fad255b551daa02ac01d838c4fa9e19ff3861e6fbf68db69687"
     },
     "reports/hw02/screenshots/final-panels/P3-controlled.png": {
-      "bytes": 108767,
-      "sha256": "0bff14d32b8ed876799e269e0dab03de24170a09f7b25e0875a569a2b1eedff1"
+      "bytes": 94245,
+      "sha256": "669d4fc7f2c025aadb92eec3e7dbc61df2e64a9c858b366d598f60e47e683970"
     },
     "reports/hw02/screenshots/final-panels/P3-normal-short.html": {
-      "bytes": 1451,
-      "sha256": "fa360ffad9b91fe489f5fcf2391f9507dbf11f9405ecf2c1a350d9c6dd5869ed"
+      "bytes": 1308,
+      "sha256": "8af0a3d6cad21fe2d8eae79e6399204100ebe9909f942cf3d3b0efe4212cbc40"
     },
     "reports/hw02/screenshots/final-panels/P3-normal-short.png": {
-      "bytes": 49600,
-      "sha256": "8ef7f31d9dfe82ecf8561820119ce8bd94d2e6c6b464150548f0b6e343cd415f"
+      "bytes": 35264,
+      "sha256": "f37337bc152f917d63030cf6837243239c633f0b6787217ebdf5d7f21ac473de"
     },
     "reports/hw02/screenshots/final-panels/P3-normal.html": {
-      "bytes": 1681,
-      "sha256": "b2705b21ae87d0e3c67e6224990027390c1f753deb13cbe061afae928c512bcf"
+      "bytes": 1538,
+      "sha256": "bc62771293023b3962613477c14ede631d9dcb5aae918e3cdb8d25b3dc450c71"
     },
     "reports/hw02/screenshots/final-panels/P3-normal.png": {
-      "bytes": 76782,
-      "sha256": "bf234ab1fb1fccdc19baeac1ebd24745d2ad9b85f4f24efba4a1a21c5fb6dd36"
+      "bytes": 62467,
+      "sha256": "1fcfb65d6d2a593f3a770819cf12fc06f4812e18a9bb74345512c15eb8aa59e3"
     },
     "reports/hw02/screenshots/final-panels/manifest.json": {
-      "bytes": 30764,
-      "sha256": "3b2a79e65e759d5dcad19303b958462de61a7d0fc7fb32fac3ef53e0301e92d9"
+      "bytes": 30524,
+      "sha256": "4ba853eeca98238e7a0764e4ffad2e85e29fe7d34a9e54c33586b5930ee962b6"
     },
     "reports/hw02/screenshots/final-panels/p4q1-schema-valid-output.html": {
-      "bytes": 1782,
-      "sha256": "775fbe84a3ac32d3432b9b7c29886a81cc5c50023e4efe584860705ae00b2d0b"
+      "bytes": 1671,
+      "sha256": "77728db54830a4f296bf08776716980a9bc8387fa7efae5da16dc21ea647f3e4"
     },
     "reports/hw02/screenshots/final-panels/p4q1-schema-valid-output.png": {
-      "bytes": 60703,
-      "sha256": "d61a9d95e03431d557f81b4d7fbcd246183bad019ef0fe47dbf07751d346d592"
+      "bytes": 52308,
+      "sha256": "a89505de8185a0ae40e6d6104b8d890f1711d6b37a44153d1b4be4ea39ce4b1d"
     },
     "reports/hw02/screenshots/final-panels/p4q2-scripted-repair-output.html": {
-      "bytes": 2140,
-      "sha256": "a33db1f3512d74bdf1b303fd98cb0d888562ce38259f356a31f77effe82311a9"
+      "bytes": 2034,
+      "sha256": "8ec1d9de349f8f595693be877e3ee762270c9e2b42749c747f8a030c7fda933d"
     },
     "reports/hw02/screenshots/final-panels/p4q2-scripted-repair-output.png": {
-      "bytes": 70823,
-      "sha256": "07228430edb9b21cf85364c8f26b74b3b98ce3104cea5cdaa93be25440801a33"
+      "bytes": 62249,
+      "sha256": "57f521916727bd39ddddfbd105ef5a583c920ac8b92c7198ff8f2aa32c96e862"
     },
     "reports/hw02/screenshots/final-panels/p4q3-schema-thirty-run-table.html": {
-      "bytes": 1998,
-      "sha256": "78ff8da91db840ce966dccf65b3f0ea26b68e519601053ebfe9fccb6f2d57110"
+      "bytes": 1872,
+      "sha256": "8a0fdeee6579ce661d00f7202c3e985405715c0163096c97cd67db17b5724c74"
     },
     "reports/hw02/screenshots/final-panels/p4q3-schema-thirty-run-table.png": {
-      "bytes": 65581,
-      "sha256": "240adad7e4ddfdd87d804bc92ab7e76a63ec5fc345f67d7f27fe1d2307c46363"
+      "bytes": 56785,
+      "sha256": "9f92937ee018eea230974316bf7820bae99fe3195f7c5d726b6d6047601cebb6"
     },
     "reports/hw02/screenshots/final-panels/p4q4-ceiling-comparison-table.html": {
-      "bytes": 1950,
-      "sha256": "8786e06f09a11232472c8ad5b320def584f81785931cba4e37614b0c302ddb81"
+      "bytes": 1825,
+      "sha256": "a966c846f76ff538ee52772634959a5a377c21420af4d77ef9713af8198d2133"
     },
     "reports/hw02/screenshots/final-panels/p4q4-ceiling-comparison-table.png": {
-      "bytes": 60069,
-      "sha256": "9ccbda2a0b250ca4ea54b9777e803c0ddf418e653ca09deca8315d96e57ae185"
+      "bytes": 51261,
+      "sha256": "759f617fae19678b3c9a1b8c5f1e64e95db7e8da9d350c828be6f236e0413f77"
     },
     "reports/hw02/screenshots/final-panels/p4q5-adversarial-results.html": {
-      "bytes": 2210,
-      "sha256": "67e644a2a48bffe82cfea09dccab58841b2e91bd4f319dc512114dd605ca9c1a"
+      "bytes": 2108,
+      "sha256": "82dcb5a74e7a134a1a044b71275a3e0463d5e81485ca55222227d17bba1f2d55"
     },
     "reports/hw02/screenshots/final-panels/p4q5-adversarial-results.png": {
-      "bytes": 75321,
-      "sha256": "83495bf3b8ef640475ce8068479ab08b9b1f460e962d78db0e41405c4046eea1"
+      "bytes": 67346,
+      "sha256": "2c98de6d9f335652365c6a4aac8e2128eaeeb72be928cfe6af4852ab38aaaec3"
     },
     "reports/hw02/screenshots/part1/P1-01-empty.png": {
       "bytes": 38498,
@@ -3153,8 +3157,8 @@
       "sha256": "9f99b7bab37be59ed599614122f6240034d8d9bc208f3c81e6d150d96bb5c9e6"
     },
     "reports/hw02/verification.json": {
-      "bytes": 141154,
-      "sha256": "d28f324a993a49f6139f8b15133873991a947e77db15216806d3274a1c375c17"
+      "bytes": 143352,
+      "sha256": "16df53197b49b6c8ad8982afcbff8b472d2c0ad0bdc1af50af7ea2ac868989d5"
     },
     "reports/hw02/verification_part3.json": {
       "bytes": 1922,
@@ -3165,12 +3169,12 @@
       "sha256": "73b70350c88ec91821b8853185ecbe4008c9331e91503d35c498016dd2d43dd0"
     },
     "scripts/build_hw02_report.py": {
-      "bytes": 35199,
-      "sha256": "1e1d473dccb673847a2b0c7ebc3a3014940113d7815d9adee1848db18344fda7"
+      "bytes": 34460,
+      "sha256": "a3b1f2ab41610cbf6fd80f56984191432a371609f97a3ad92914a1162e2be0a0"
     },
     "scripts/capture_hw2_final_panels.cjs": {
-      "bytes": 3667,
-      "sha256": "7899a5c2ac7e82bf742f3fcb30090ad1da00f1a7010706f8dc2151a65e59e864"
+      "bytes": 3939,
+      "sha256": "daea55d47b43e4ce52a555c75f6492a5dc15f0f2c627cbba7969acd0460a36bb"
     },
     "scripts/capture_part12.cjs": {
       "bytes": 21204,
@@ -3180,16 +3184,25 @@
       "bytes": 2902,
       "sha256": "8bb16895c09b60bd2391b0d57ed71d24d59b22fbe5ad7ede7799bfa57cdd058c"
     },
+    "scripts/refresh_hw02_artifacts.py": {
+      "bytes": 10501,
+      "sha256": "db918f895fe6a89f80a91f7f690ea02facb6b2dd96e977aea22d767b1c354ff1"
+    },
     "scripts/verify_hw02.py": {
       "bytes": 20721,
       "sha256": "80443fce491086bf0e4a252c7d750f3dda802cd6a853a9ef0fdbe99c13776032"
+    },
+    "tests/test_refresh_hw02_artifacts.py": {
+      "bytes": 7063,
+      "sha256": "b62b1b9ee32295a298473135135586d6ff46c3114a0e85ed1e39c0985203002e"
     },
     "tests/test_verify_hw02.py": {
       "bytes": 3063,
       "sha256": "2a7f3bee6e11b340228d3aeac3e34129b5ec504222a22046b602f2ba3a8345e6"
     }
   },
-  "previous_package_tag": "hw2",
-  "previous_package_commit": "fd7baa27c3af50d6494f075f3df618e50ab4b4fa",
-  "published_branch_url": "https://github.com/ishuapurva1996/data260-6102/tree/codex/fix-hw1-form"
+  "previous_package_tag": "hw2-report-v2",
+  "previous_package_commit": "3d1b5f77aa09ed639db4fef828c8e87705471d13",
+  "published_branch_url": "https://github.com/ishuapurva1996/data260-6102/tree/codex/fix-hw1-form",
+  "artifact_refresh_scope": "Report artifact hashes were refreshed after checking runtime-source continuity; the original successful live/model checks and timestamps were preserved, not rerun."
 }

@@ -148,90 +148,90 @@
       "image": "reports/hw02/screenshots/final-panels/P3-normal.png",
       "original": [
         900,
-        404
+        353
       ],
-      "width_pt": 455.55,
-      "height_pt": 204.49
+      "width_pt": 515.28,
+      "height_pt": 202.1
     },
     {
       "page": 16,
       "image": "reports/hw02/screenshots/final-panels/P3-normal-short.png",
       "original": [
         900,
-        219
+        170
       ],
-      "width_pt": 475.44,
-      "height_pt": 115.69
+      "width_pt": 515.28,
+      "height_pt": 97.33
     },
     {
       "page": 17,
       "image": "reports/hw02/screenshots/final-panels/P3-controlled-short.png",
       "original": [
         900,
-        204
+        156
       ],
       "width_pt": 515.28,
-      "height_pt": 116.8
+      "height_pt": 89.31
     },
     {
       "page": 18,
       "image": "reports/hw02/screenshots/final-panels/P3-controlled.png",
       "original": [
         900,
-        422
+        372
       ],
       "width_pt": 515.28,
-      "height_pt": 241.61
+      "height_pt": 212.98
     },
     {
       "page": 19,
       "image": "reports/hw02/screenshots/final-panels/p4q1-schema-valid-output.png",
       "original": [
         900,
-        463
+        426
       ],
-      "width_pt": 494.69,
-      "height_pt": 254.49
+      "width_pt": 515.28,
+      "height_pt": 243.9
     },
     {
       "page": 20,
       "image": "reports/hw02/screenshots/final-panels/p4q2-scripted-repair-output.png",
       "original": [
         900,
-        482
+        445
       ],
-      "width_pt": 462.86,
-      "height_pt": 247.89
+      "width_pt": 515.28,
+      "height_pt": 254.78
     },
     {
       "page": 22,
       "image": "reports/hw02/screenshots/final-panels/p4q3-schema-thirty-run-table.png",
       "original": [
         900,
-        431
+        394
       ],
       "width_pt": 515.28,
-      "height_pt": 246.76
+      "height_pt": 225.58
     },
     {
       "page": 23,
       "image": "reports/hw02/screenshots/final-panels/p4q4-ceiling-comparison-table.png",
       "original": [
         900,
-        373
+        336
       ],
       "width_pt": 515.28,
-      "height_pt": 213.55
+      "height_pt": 192.37
     },
     {
       "page": 24,
       "image": "reports/hw02/screenshots/final-panels/p4q5-adversarial-results.png",
       "original": [
         900,
-        587
+        549
       ],
-      "width_pt": 408.28,
-      "height_pt": 266.29
+      "width_pt": 454.57,
+      "height_pt": 277.29
     }
   ]
 }

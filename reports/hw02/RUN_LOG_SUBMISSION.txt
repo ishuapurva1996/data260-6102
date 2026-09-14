@@ -94,3 +94,62 @@ COMMAND: .venv-agents/bin/python scripts/verify_hw02.py --ref hw2-code --live --
 
 END UTC: 2026-09-14T08:09:34.260456+00:00
 EXIT: 0
+
+START UTC: 2026-09-14T08:17:23.213788+00:00
+COMMAND: /Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 scripts/build_hw02_report.py --code-ref hw2-code --upload-copy ../HW2/Apurva_HW2.pdf
+{"pdf": "/Users/pragyaapurva/Documents/SJSU/DATA 260/data260-6102/reports/hw02/report.pdf", "pages": 28, "sha256": "645fdf8e43ae985d4d093fc008329b100f1097eba1172b5a5c2dd483540ca363"}
+
+END UTC: 2026-09-14T08:17:23.687633+00:00
+EXIT: 0
+
+START UTC: 2026-09-14T08:17:23.752408+00:00
+COMMAND: /opt/homebrew/bin/pdftoppm -r 120 -png reports/hw02/report.pdf ../HW2/agent_outputs/report-clean-capture-qa/page
+
+Fontconfig error: No writable cache directories
+	/opt/homebrew/var/cache/fontconfig
+	/Users/pragyaapurva/.cache/fontconfig
+	/Users/pragyaapurva/.fontconfig
+
+END UTC: 2026-09-14T08:17:27.232425+00:00
+EXIT: 0
+
+START UTC: 2026-09-14T08:21:17.247570+00:00
+COMMAND: .venv-agents/bin/python scripts/refresh_hw02_artifacts.py --prior reports/hw02/raw/submission-smoke/report-link-revision/verification.json --output reports/hw02/verification.json
+{
+  "passed": true,
+  "output": "/Users/pragyaapurva/Documents/SJSU/DATA 260/data260-6102/reports/hw02/verification.json",
+  "model_calls": 0,
+  "refresh_checks": {
+    "prior_verification": {
+      "passed": true,
+      "historical_generated_at": "2026-09-14T08:09:16.462074+00:00",
+      "checks_reused": 8,
+      "live_runs_reused": 2
+    },
+    "runtime_matches_prior_and_tag": {
+      "passed": true,
+      "ref": "hw2-code",
+      "commit": "6a076db1447f00a0097cfc16f5de460c37e65079",
+      "files_checked": 27,
+      "source_map_sha256": "75a57eea6e51e723aab19e7f1379eab233102f37eb609c6b61c604da5a9b8304"
+    },
+    "submission_artifacts": {
+      "passed": true,
+      "files_checked": 6,
+      "checked_at": "2026-09-14T08:21:17.649710+00:00"
+    },
+    "runtime_unchanged_during_refresh": {
+      "passed": true,
+      "ref": "hw2-code",
+      "commit": "6a076db1447f00a0097cfc16f5de460c37e65079",
+      "files_checked": 27,
+      "source_map_sha256": "75a57eea6e51e723aab19e7f1379eab233102f37eb609c6b61c604da5a9b8304"
+    },
+    "prior_file_unchanged": {
+      "passed": true
+    }
+  }
+}
+
+END UTC: 2026-09-14T08:21:18.049555+00:00
+EXIT: 0

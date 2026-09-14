@@ -35,7 +35,7 @@ All runnable application code remains in the shared root-level code/ and src/ fo
 
 The rental's primary field is Listing Title; its secondary field is Address. Creation also collects email, description, property type and accepted terms. The server assigns IDs. A server restart restores two seed records; a browser reload preserves the current in-memory records.
 
-Evidence types are labeled throughout: actual browser UI captures; browser screenshots of saved console/JSON/tables; real local-model experiments; and deterministic tests using scripted responses. A scripted repair check is not counted as a successful model trial.
+The figures show the app interface, saved run output and experiment tables. Scripted tests and controlled Reviewer runs are labeled separately. Scripted tests are excluded from the model measurements.
 
 Part 1 images are original 375 x 812 screenshots. The capture manifest records innerWidth = document scrollWidth = body scrollWidth = 375. The images contain page content; the viewport measurements are recorded separately.
 
@@ -439,7 +439,7 @@ src/agent_graph/nodes.py | lines 83-88
 
 ![Part 3 | From a sequence to a graph](screenshots/final-panels/P3-normal.png)
 
-Fresh integrated-graph smoke output, rendered from saved real console/JSON. This is separate from the 75 measured Part 4 trials.
+Saved run output: the Planner and Reviewer finish in two turns. This check is separate from the 75 Part 4 measurements.
 
 ## Part 3 | Worker responsibilities
 
@@ -505,7 +505,7 @@ def reviewer_node(state: AgentState) -> dict[str, Any]:
 
 ![Part 3 | Worker responsibilities](screenshots/final-panels/P3-normal-short.png)
 
-Saved output from the current real smoke run: a schema-valid draft needs Reviewer approval before it becomes final output.
+Saved run output: the current draft passes validation and receives Reviewer approval.
 
 ## Part 3 | Supervisor and routing
 
@@ -551,7 +551,7 @@ def router_logic(state: AgentState) -> str:
 
 ![Part 3 | Supervisor and routing](screenshots/final-panels/P3-controlled-short.png)
 
-Fresh controlled smoke run: the forced Reviewer issue prevents approval and the graph stops at its configured ceiling.
+Saved controlled-run output: a forced Reviewer issue keeps the loop running until the ten-turn ceiling.
 
 ## Part 3 | Wiring, streaming and correction loop
 
@@ -592,7 +592,7 @@ code/agents_graph.py | lines 194-203
 
 ![Part 3 | Wiring, streaming and correction loop](screenshots/final-panels/P3-controlled.png)
 
-Screenshot of saved real-model streamed output with controlled Reviewer issues. Raw responses remain separate from the effective forced feedback. Historical Part 3 baseline evidence is preserved, but these report demonstrations use the final integrated graph.
+Saved controlled-run output: five Planner-Reviewer pairs end at the ten-turn ceiling.
 
 ## Part 4, Q1 | Enforce the output rules
 
@@ -639,7 +639,7 @@ class PlannerProposal(BaseModel):
 
 ![Part 4, Q1 | Enforce the output rules](screenshots/final-panels/p4q1-schema-valid-output.png)
 
-Browser-rendered saved output from a real schema trial. The raw trial and validation results remain available in the campaign directory.
+Saved run output from a real schema trial: validation and Reviewer approval both pass.
 
 ## Part 4, Q2 | Feed errors back and retry
 
@@ -684,7 +684,7 @@ def planner_node(state: AgentState) -> dict[str, Any]:
 
 ![Part 4, Q2 | Feed errors back and retry](screenshots/final-panels/p4q2-scripted-repair-output.png)
 
-Scripted test output, excluded from all 75 measured trials. It shows invalid Planner -> corrected Planner -> Reviewer approval, accepted on turn 3. A separate repeated-invalid test stops at its ceiling.
+Scripted test output: an invalid Planner response, a valid replacement, then Reviewer approval on turn 3. Excluded from all 75 measured trials.
 
 ## Part 4 | Frozen input and measurement method
 
@@ -698,7 +698,7 @@ Latency is the application's elapsed_ms: Git inspection, adapter and graph setup
 
 Model settings: qwen3:1.7b, temperature 0, JSON mode, reasoning disabled, context 4096, and 120-second timeout per call. SEED 6102 and VERIFY_SEED 266102 identify the assignment; they were not supplied as random-number seeds to the model. Temperature zero does not guarantee identical text.
 
-The campaign observed HEAD 17fd1b3 with uncommitted Part 4 work. Frozen source hashes identify those actual runtime files. Later changes to the runner and verifier hardened evidence handling; graph, schema, prompts, shared adapter and calculation rules were unchanged. The final code tag identifies the submitted implementation, not a fabricated earlier execution date.
+The campaign manifest records the exact source versions used for the measurements. Later changes to the runner and verifier improved evidence handling; the graph, schema, prompts, shared adapter and calculation rules were unchanged.
 
 Frozen input: reports/hw02/cases/schema_input.json
 
@@ -748,7 +748,7 @@ src/agent_graph/evaluation.py | lines 353-358
 
 ![Part 4, Q3 | Thirty schema trials](screenshots/final-panels/p4q3-schema-thirty-run-table.png)
 
-Screenshot of the table regenerated from the 30 saved trial records. Mean accepted-run latency was 2104.40 ms. Zero-count categories have no mean.
+Results from 30 saved trials: mean latency 2104.40 ms. Empty categories have no mean.
 
 ## Part 4, Q4 | Compare ceilings 2 and 10
 
@@ -780,7 +780,7 @@ Reproduce the selected deployment configuration
 
 ![Part 4, Q4 | Compare ceilings 2 and 10](screenshots/final-panels/p4q4-ceiling-comparison-table.png)
 
-Browser-rendered measured table: separate groups of 20 runs, same input/model settings, all-run latency means. The machine-readable decision is deployment_choice.json.
+Results from 20 trials per ceiling, using the same input and model settings. Latency means include every run. The choice is recorded in deployment_choice.json.
 
 ## Part 4, Q5 | Adversarial input and ceiling
 
@@ -822,7 +822,7 @@ src/agent_graph/nodes.py | lines 179-189
 
 ![Part 4, Q5 | Adversarial input and ceiling](screenshots/final-panels/p4q5-adversarial-results.png)
 
-Saved real adversarial results: 5/5 ceiling exits, mean latency 7439.33 ms. The first invalid response, field-specific error and final ceiling state are preserved.
+Results from five adversarial trials: 5/5 ceiling exits; mean latency 7439.33 ms. The excerpt shows an invalid response and its validation error.
 
 ## Part 4, Q5 | Proposed fix and limits
 
@@ -895,7 +895,7 @@ The personal contribution statement above reflects the student's description sup
 
 The assignment is submitted through the same data260-6102 repository, with the uploaded PDF named Apurva_HW2.pdf. The repository's canonical copy is reports/hw02/report.pdf; the upload copy is byte-for-byte identical.
 
-Code and output are paired throughout this report. Additional before/after, input, clear, no-match and historical screenshots remain in the repository for inspection. Browser-rendered saved output is labeled; it is not presented as a native Terminal capture.
+Code and output are paired throughout this report. Additional before/after, input, clear, no-match and historical screenshots remain in the repository.
 
 The links below identify the repository and its HW2 submission branch. Before submitting to the course portal, confirm that both required collaborators have access and upload the named PDF. Collaborator confirmation and portal upload remain separate steps.
 

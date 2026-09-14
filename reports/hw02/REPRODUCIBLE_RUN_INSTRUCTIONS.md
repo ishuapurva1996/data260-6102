@@ -19,7 +19,7 @@ The fresh report capture used isolated port 18702 to preserve an existing server
 
 ## Final tagged smoke check
 
-The immutable `hw2-code` tag identifies the application, dependencies and verifier. The `hw2` tag preserves the original report package; `hw2-report-v2` includes the revised report with closing GitHub links and unchanged runtime source. Generated files cannot embed the hash of their own containing commit; the report therefore names the verified code tag and hash explicitly. Use the published `codex/fix-hw1-form` branch or `hw2-report-v2` tag to retrieve the revised report.
+The immutable `hw2-code` tag identifies the application, dependencies and verifier. The `hw2` tag preserves the original report package; `hw2-report-v3` includes the revised report with clean output screenshots and closing GitHub links and unchanged runtime source. Generated files cannot embed the hash of their own containing commit; the report therefore names the verified code tag and hash explicitly. Use the published `codex/fix-hw1-form` branch or `hw2-report-v3` tag to retrieve the revised report.
 
 First complete the Parts 3 and 4 agent-environment and Ollama setup below. Keep the web app running in its own terminal on 8702. Run the following in a second terminal from the repository root, with Ollama serving `qwen3:1.7b`:
 
@@ -44,6 +44,20 @@ python scripts/build_hw02_report.py --code-ref hw2-code \
 ```
 
 The builder reads real source excerpts and saved screenshots; it does not rerun experiments. It writes `report.pdf`, a Markdown text copy `report.md`, and `report-layout.json`. Edit the report narrative in `scripts/build_hw02_report.py` and the AI statement in `AI_USE.md` before rebuilding. Direct edits to the generated `report.md` are not used by the builder and would be overwritten. Review a rendered PDF after changing content or images. The upload copy must match `reports/hw02/report.pdf` byte-for-byte. After a rebuild, regenerate final verification so its report hashes match the new PDF.
+
+## Refresh evidence after a report-only edit
+
+When application source and model configuration are unchanged, refresh the report-file hashes without rerunning the model:
+
+```sh
+.venv-agents/bin/python scripts/refresh_hw02_artifacts.py \
+  --prior reports/hw02/raw/submission-smoke/report-link-revision/verification.json \
+  --output reports/hw02/verification.json
+```
+
+The helper checks the current application against the previously verified tag and recorded source hashes. It preserves the original live-test results and timestamps, then records a separate artifact-refresh timestamp and command. It makes no HTTP or model calls. If application source changes, use the full tagged smoke check instead. The prior verification file is preserved.
+
+The screenshot helper refuses to capture result panels containing the removed browser-rendering, source-tag or working-tree footer labels. These details remain in the supporting manifest. After changing a panel, recapture it, rebuild the PDF, review its layout, refresh verification, then update the submission manifest.
 
 ## Parts 3 and 4: agent environment and checks
 

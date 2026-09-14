@@ -1,11 +1,11 @@
 {
-  "checked_at": "2026-09-14T08:10:05.025223+00:00",
+  "checked_at": "2026-09-14T08:19:21.108339+00:00",
   "pdf": "reports/hw02/report.pdf",
-  "sha256": "8daef8bbde02c983c554919345143f3d73fb9e9e1443cf3f515cad4ea8f4ff52",
+  "sha256": "645fdf8e43ae985d4d093fc008329b100f1097eba1172b5a5c2dd483540ca363",
   "pages": 28,
   "render_tool": "pdftoppm",
   "render_dpi": 120,
-  "visual_review": "Re-rendered all 28 pages for the closing-link revision. Visually inspected changed pages 2, 26 and 28; the other 25 pages are pixel-identical to the previously reviewed release.",
+  "visual_review": "Re-rendered all 28 pages. Visually reviewed changed pages 2,15,16,17,18,19,20,21,22,23,24,28; the other 16 pages are pixel-identical to the prior reviewed report.",
   "defects_remaining": [],
   "code_excerpts": "All source excerpts are nonempty and within actual file ranges.",
   "upload_copy_matches": true,
@@ -13,5 +13,7 @@
   "last_page_clickable_links": [
     "https://github.com/ishuapurva1996/data260-6102",
     "https://github.com/ishuapurva1996/data260-6102/tree/codex/fix-hw1-form"
-  ]
+  ],
+  "screenshot_footer_cleanup": "All nine recaptured result panels omit browser-rendering, source-tag, timestamp and working-tree footer labels. Saved result values and scripted/controlled distinctions are preserved.",
+  "unwanted_footer_text_absent": true
 }

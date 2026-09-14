@@ -2063,8 +2063,8 @@
       "passed": true,
       "files": {
         "report.pdf": {
-          "bytes": 1410661,
-          "sha256": "645fdf8e43ae985d4d093fc008329b100f1097eba1172b5a5c2dd483540ca363"
+          "bytes": 1498169,
+          "sha256": "8daef8bbde02c983c554919345143f3d73fb9e9e1443cf3f515cad4ea8f4ff52"
         },
         "RUN_LOG.txt": {
           "bytes": 169592,
@@ -2079,16 +2079,15 @@
           "sha256": "bfdb0713ba3b761f7b09cfd29cdf2d52c24b24cad171d37af4ccba55ce93db51"
         },
         "REPRODUCIBLE_RUN_INSTRUCTIONS.md": {
-          "bytes": 18158,
-          "sha256": "5ae1b93aed18bceaf10dc05380b7b3728bdb610c282be1d61eae0092fbf8ff79"
+          "bytes": 17061,
+          "sha256": "5921d53de337a8f69c100669490c2d929850be5be32d5de2245d1c7ad1009235"
         },
         "README.md": {
-          "bytes": 3091,
-          "sha256": "8aa1823da52fb012cb25f06d4990bc10bc15d89c44bece476072e35368226ab3"
+          "bytes": 3062,
+          "sha256": "49e35b5785a07c7d4a10b49bdd229617793f8c483fb1ff2b90fa17f2a470612e"
         }
       },
-      "scope": "Presence/nonempty/PDF-header only; report content and AI-use authorship require human review.",
-      "checked_at": "2026-09-14T08:21:17.649710+00:00"
+      "scope": "Presence/nonempty/PDF-header only; report content and AI-use authorship require human review."
     },
     "source_unchanged_during_checks": {
       "passed": true,
@@ -2174,56 +2173,5 @@
   },
   "passed": true,
   "submission_ready": true,
-  "scope": "Whole-HW2 executable smoke and saved evidence checks; offline success alone is not final live submission verification.",
-  "artifact_refresh": {
-    "checked_at": "2026-09-14T08:21:17.289353+00:00",
-    "command": [
-      "/Users/pragyaapurva/Documents/SJSU/DATA 260/data260-6102/.venv-agents/bin/python",
-      "/Users/pragyaapurva/Documents/SJSU/DATA 260/data260-6102/scripts/refresh_hw02_artifacts.py",
-      "--prior",
-      "reports/hw02/raw/submission-smoke/report-link-revision/verification.json",
-      "--output",
-      "reports/hw02/verification.json"
-    ],
-    "helper_source_sha256": "db918f895fe6a89f80a91f7f690ea02facb6b2dd96e977aea22d767b1c354ff1",
-    "prior_verification": {
-      "path": "/Users/pragyaapurva/Documents/SJSU/DATA 260/data260-6102/reports/hw02/raw/submission-smoke/report-link-revision/verification.json",
-      "sha256": "d28f324a993a49f6139f8b15133873991a947e77db15216806d3274a1c375c17"
-    },
-    "scope": "Only report artifacts and runtime-source continuity checked now. All live/model checks and their timestamps/results are retained from the prior verification and were not rerun.",
-    "live_checks_rerun": false,
-    "model_calls": 0,
-    "checks": {
-      "prior_verification": {
-        "passed": true,
-        "historical_generated_at": "2026-09-14T08:09:16.462074+00:00",
-        "checks_reused": 8,
-        "live_runs_reused": 2
-      },
-      "runtime_matches_prior_and_tag": {
-        "passed": true,
-        "ref": "hw2-code",
-        "commit": "6a076db1447f00a0097cfc16f5de460c37e65079",
-        "files_checked": 27,
-        "source_map_sha256": "75a57eea6e51e723aab19e7f1379eab233102f37eb609c6b61c604da5a9b8304"
-      },
-      "submission_artifacts": {
-        "passed": true,
-        "files_checked": 6,
-        "checked_at": "2026-09-14T08:21:17.649710+00:00"
-      },
-      "runtime_unchanged_during_refresh": {
-        "passed": true,
-        "ref": "hw2-code",
-        "commit": "6a076db1447f00a0097cfc16f5de460c37e65079",
-        "files_checked": 27,
-        "source_map_sha256": "75a57eea6e51e723aab19e7f1379eab233102f37eb609c6b61c604da5a9b8304"
-      },
-      "prior_file_unchanged": {
-        "passed": true
-      }
-    },
-    "passed": true,
-    "finished_at": "2026-09-14T08:21:18.040865+00:00"
-  }
+  "scope": "Whole-HW2 executable smoke and saved evidence checks; offline success alone is not final live submission verification."
 }

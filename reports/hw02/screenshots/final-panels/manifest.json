@@ -25,23 +25,23 @@
       "body_font_px": 22,
       "monospace_font_px": 18,
       "provenance_line": "Browser-rendered saved evidence | Real model run: schema-01 | 2026-09-14 06:06:49 UTC",
-      "html_sha256": "775fbe84a3ac32d3432b9b7c29886a81cc5c50023e4efe584860705ae00b2d0b",
+      "html_sha256": "77728db54830a4f296bf08776716980a9bc8387fa7efae5da16dc21ea647f3e4",
       "png_path": "reports/hw02/screenshots/final-panels/p4q1-schema-valid-output.png",
-      "png_sha256": "d61a9d95e03431d557f81b4d7fbcd246183bad019ef0fe47dbf07751d346d592",
+      "png_sha256": "a89505de8185a0ae40e6d6104b8d890f1711d6b37a44153d1b4be4ea39ce4b1d",
       "png_width_px": 900,
-      "png_height_px": 463,
-      "captured_at": "2026-09-14T07:40:17.406Z",
+      "png_height_px": 426,
+      "captured_at": "2026-09-14T08:16:56.718Z",
       "capture": {
         "method": "Playwright Chromium main-element PNG screenshot of the supplied local HTML",
-        "provenance": "Browser-rendered saved output, tables, and recorded evidence as labeled in the panel. Not a live app or terminal screenshot. No new model calls. No pixel overlays or image reconstruction.",
+        "provenance": "Browser screenshots of saved output and result tables. Technical provenance is retained in the sidecar manifest, outside the image. No new model calls, pixel overlays or image reconstruction.",
         "browser_version": "151.0.7922.34",
         "playwright_version": "1.62.1",
         "page_url": "file:///Users/pragyaapurva/Documents/SJSU/DATA%20260/data260-6102/reports/hw02/screenshots/final-panels/p4q1-schema-valid-output.html",
         "metrics": {
           "width": 900,
-          "height": 462.15625,
+          "height": 425.65625,
           "scrollWidth": 900,
-          "scrollHeight": 462,
+          "scrollHeight": 426,
           "documentScrollWidth": 900,
           "viewportWidth": 900,
           "viewportHeight": 800,
@@ -50,11 +50,7 @@
         "within_target_height": true,
         "no_horizontal_overflow": true
       },
-      "visual_qa": {
-        "inspected": true,
-        "result": "PASS",
-        "notes": "All text, tables, code-style output, and provenance are fully visible and readable; no clipped content or horizontal overflow."
-      }
+      "presentation_note": "Source, timestamp, revision and working-tree details are retained in this manifest rather than printed inside the screenshot."
     },
     {
       "id": "p4q2-scripted-repair-output",
@@ -76,23 +72,23 @@
       "body_font_px": 22,
       "monospace_font_px": 18,
       "provenance_line": "Browser-rendered saved test evidence | Scripted repair | 2026-09-14 06:09:43 UTC",
-      "html_sha256": "a33db1f3512d74bdf1b303fd98cb0d888562ce38259f356a31f77effe82311a9",
+      "html_sha256": "8ec1d9de349f8f595693be877e3ee762270c9e2b42749c747f8a030c7fda933d",
       "png_path": "reports/hw02/screenshots/final-panels/p4q2-scripted-repair-output.png",
-      "png_sha256": "07228430edb9b21cf85364c8f26b74b3b98ce3104cea5cdaa93be25440801a33",
+      "png_sha256": "57f521916727bd39ddddfbd105ef5a583c920ac8b92c7198ff8f2aa32c96e862",
       "png_width_px": 900,
-      "png_height_px": 482,
-      "captured_at": "2026-09-14T07:40:17.539Z",
+      "png_height_px": 445,
+      "captured_at": "2026-09-14T08:16:56.849Z",
       "capture": {
         "method": "Playwright Chromium main-element PNG screenshot of the supplied local HTML",
-        "provenance": "Browser-rendered saved output, tables, and recorded evidence as labeled in the panel. Not a live app or terminal screenshot. No new model calls. No pixel overlays or image reconstruction.",
+        "provenance": "Browser screenshots of saved output and result tables. Technical provenance is retained in the sidecar manifest, outside the image. No new model calls, pixel overlays or image reconstruction.",
         "browser_version": "151.0.7922.34",
         "playwright_version": "1.62.1",
         "page_url": "file:///Users/pragyaapurva/Documents/SJSU/DATA%20260/data260-6102/reports/hw02/screenshots/final-panels/p4q2-scripted-repair-output.html",
         "metrics": {
           "width": 900,
-          "height": 481.453125,
+          "height": 444.953125,
           "scrollWidth": 900,
-          "scrollHeight": 481,
+          "scrollHeight": 445,
           "documentScrollWidth": 900,
           "viewportWidth": 900,
           "viewportHeight": 800,
@@ -101,11 +97,7 @@
         "within_target_height": true,
         "no_horizontal_overflow": true
       },
-      "visual_qa": {
-        "inspected": true,
-        "result": "PASS",
-        "notes": "All text, tables, code-style output, and provenance are fully visible and readable; no clipped content or horizontal overflow."
-      }
+      "presentation_note": "Source, timestamp, revision and working-tree details are retained in this manifest rather than printed inside the screenshot."
     },
     {
       "id": "p4q3-schema-thirty-run-table",
@@ -129,23 +121,23 @@
       "body_font_px": 22,
       "monospace_font_px": 18,
       "provenance_line": "Browser-rendered saved evidence | Derived from 30 recorded trials | Prepared 2026-09-14 06:06:36 UTC",
-      "html_sha256": "78ff8da91db840ce966dccf65b3f0ea26b68e519601053ebfe9fccb6f2d57110",
+      "html_sha256": "8a0fdeee6579ce661d00f7202c3e985405715c0163096c97cd67db17b5724c74",
       "png_path": "reports/hw02/screenshots/final-panels/p4q3-schema-thirty-run-table.png",
-      "png_sha256": "240adad7e4ddfdd87d804bc92ab7e76a63ec5fc345f67d7f27fe1d2307c46363",
+      "png_sha256": "9f92937ee018eea230974316bf7820bae99fe3195f7c5d726b6d6047601cebb6",
       "png_width_px": 900,
-      "png_height_px": 431,
-      "captured_at": "2026-09-14T07:40:17.673Z",
+      "png_height_px": 394,
+      "captured_at": "2026-09-14T08:16:56.966Z",
       "capture": {
         "method": "Playwright Chromium main-element PNG screenshot of the supplied local HTML",
-        "provenance": "Browser-rendered saved output, tables, and recorded evidence as labeled in the panel. Not a live app or terminal screenshot. No new model calls. No pixel overlays or image reconstruction.",
+        "provenance": "Browser screenshots of saved output and result tables. Technical provenance is retained in the sidecar manifest, outside the image. No new model calls, pixel overlays or image reconstruction.",
         "browser_version": "151.0.7922.34",
         "playwright_version": "1.62.1",
         "page_url": "file:///Users/pragyaapurva/Documents/SJSU/DATA%20260/data260-6102/reports/hw02/screenshots/final-panels/p4q3-schema-thirty-run-table.html",
         "metrics": {
           "width": 900,
-          "height": 430.453125,
+          "height": 393.953125,
           "scrollWidth": 900,
-          "scrollHeight": 430,
+          "scrollHeight": 394,
           "documentScrollWidth": 900,
           "viewportWidth": 900,
           "viewportHeight": 800,
@@ -154,11 +146,7 @@
         "within_target_height": true,
         "no_horizontal_overflow": true
       },
-      "visual_qa": {
-        "inspected": true,
-        "result": "PASS",
-        "notes": "All text, tables, code-style output, and provenance are fully visible and readable; no clipped content or horizontal overflow."
-      }
+      "presentation_note": "Source, timestamp, revision and working-tree details are retained in this manifest rather than printed inside the screenshot."
     },
     {
       "id": "p4q4-ceiling-comparison-table",
@@ -184,23 +172,23 @@
       "body_font_px": 22,
       "monospace_font_px": 18,
       "provenance_line": "Browser-rendered saved evidence | 20 recorded trials per ceiling | Prepared 2026-09-14 06:06:36 UTC",
-      "html_sha256": "8786e06f09a11232472c8ad5b320def584f81785931cba4e37614b0c302ddb81",
+      "html_sha256": "a966c846f76ff538ee52772634959a5a377c21420af4d77ef9713af8198d2133",
       "png_path": "reports/hw02/screenshots/final-panels/p4q4-ceiling-comparison-table.png",
-      "png_sha256": "9ccbda2a0b250ca4ea54b9777e803c0ddf418e653ca09deca8315d96e57ae185",
+      "png_sha256": "759f617fae19678b3c9a1b8c5f1e64e95db7e8da9d350c828be6f236e0413f77",
       "png_width_px": 900,
-      "png_height_px": 373,
-      "captured_at": "2026-09-14T07:40:17.788Z",
+      "png_height_px": 336,
+      "captured_at": "2026-09-14T08:16:57.081Z",
       "capture": {
         "method": "Playwright Chromium main-element PNG screenshot of the supplied local HTML",
-        "provenance": "Browser-rendered saved output, tables, and recorded evidence as labeled in the panel. Not a live app or terminal screenshot. No new model calls. No pixel overlays or image reconstruction.",
+        "provenance": "Browser screenshots of saved output and result tables. Technical provenance is retained in the sidecar manifest, outside the image. No new model calls, pixel overlays or image reconstruction.",
         "browser_version": "151.0.7922.34",
         "playwright_version": "1.62.1",
         "page_url": "file:///Users/pragyaapurva/Documents/SJSU/DATA%20260/data260-6102/reports/hw02/screenshots/final-panels/p4q4-ceiling-comparison-table.html",
         "metrics": {
           "width": 900,
-          "height": 372.265625,
+          "height": 335.765625,
           "scrollWidth": 900,
-          "scrollHeight": 372,
+          "scrollHeight": 336,
           "documentScrollWidth": 900,
           "viewportWidth": 900,
           "viewportHeight": 800,
@@ -209,11 +197,7 @@
         "within_target_height": true,
         "no_horizontal_overflow": true
       },
-      "visual_qa": {
-        "inspected": true,
-        "result": "PASS",
-        "notes": "All text, tables, code-style output, and provenance are fully visible and readable; no clipped content or horizontal overflow."
-      }
+      "presentation_note": "Source, timestamp, revision and working-tree details are retained in this manifest rather than printed inside the screenshot."
     },
     {
       "id": "p4q5-adversarial-results",
@@ -237,23 +221,23 @@
       "body_font_px": 22,
       "monospace_font_px": 18,
       "provenance_line": "Browser-rendered saved evidence | Real runs; excerpt 2026-09-14 06:10:23 UTC",
-      "html_sha256": "67e644a2a48bffe82cfea09dccab58841b2e91bd4f319dc512114dd605ca9c1a",
+      "html_sha256": "82dcb5a74e7a134a1a044b71275a3e0463d5e81485ca55222227d17bba1f2d55",
       "png_path": "reports/hw02/screenshots/final-panels/p4q5-adversarial-results.png",
-      "png_sha256": "83495bf3b8ef640475ce8068479ab08b9b1f460e962d78db0e41405c4046eea1",
+      "png_sha256": "2c98de6d9f335652365c6a4aac8e2128eaeeb72be928cfe6af4852ab38aaaec3",
       "png_width_px": 900,
-      "png_height_px": 587,
-      "captured_at": "2026-09-14T07:40:17.907Z",
+      "png_height_px": 549,
+      "captured_at": "2026-09-14T08:16:57.200Z",
       "capture": {
         "method": "Playwright Chromium main-element PNG screenshot of the supplied local HTML",
-        "provenance": "Browser-rendered saved output, tables, and recorded evidence as labeled in the panel. Not a live app or terminal screenshot. No new model calls. No pixel overlays or image reconstruction.",
+        "provenance": "Browser screenshots of saved output and result tables. Technical provenance is retained in the sidecar manifest, outside the image. No new model calls, pixel overlays or image reconstruction.",
         "browser_version": "151.0.7922.34",
         "playwright_version": "1.62.1",
         "page_url": "file:///Users/pragyaapurva/Documents/SJSU/DATA%20260/data260-6102/reports/hw02/screenshots/final-panels/p4q5-adversarial-results.html",
         "metrics": {
           "width": 900,
-          "height": 586.9375,
+          "height": 548.4375,
           "scrollWidth": 900,
-          "scrollHeight": 587,
+          "scrollHeight": 548,
           "documentScrollWidth": 900,
           "viewportWidth": 900,
           "viewportHeight": 800,
@@ -262,11 +246,7 @@
         "within_target_height": true,
         "no_horizontal_overflow": true
       },
-      "visual_qa": {
-        "inspected": true,
-        "result": "PASS",
-        "notes": "All text, tables, code-style output, and provenance are fully visible and readable; no clipped content or horizontal overflow."
-      }
+      "presentation_note": "Source, timestamp, revision and working-tree details are retained in this manifest rather than printed inside the screenshot."
     },
     {
       "id": "P3-normal",
@@ -296,23 +276,23 @@
       "body_font_px": 20,
       "monospace_font_px": 18,
       "provenance_line": "Browser-rendered recorded smoke output | hw2-code @ 6a076db | 2026-09-14 07:34:51 UTC | Recorded working tree: dirty",
-      "html_sha256": "b2705b21ae87d0e3c67e6224990027390c1f753deb13cbe061afae928c512bcf",
+      "html_sha256": "bc62771293023b3962613477c14ede631d9dcb5aae918e3cdb8d25b3dc450c71",
       "png_path": "reports/hw02/screenshots/final-panels/P3-normal.png",
-      "png_sha256": "bf234ab1fb1fccdc19baeac1ebd24745d2ad9b85f4f24efba4a1a21c5fb6dd36",
+      "png_sha256": "1fcfb65d6d2a593f3a770819cf12fc06f4812e18a9bb74345512c15eb8aa59e3",
       "png_width_px": 900,
-      "png_height_px": 404,
-      "captured_at": "2026-09-14T07:40:18.022Z",
+      "png_height_px": 353,
+      "captured_at": "2026-09-14T08:16:57.314Z",
       "capture": {
         "method": "Playwright Chromium main-element PNG screenshot of the supplied local HTML",
-        "provenance": "Browser-rendered saved output, tables, and recorded evidence as labeled in the panel. Not a live app or terminal screenshot. No new model calls. No pixel overlays or image reconstruction.",
+        "provenance": "Browser screenshots of saved output and result tables. Technical provenance is retained in the sidecar manifest, outside the image. No new model calls, pixel overlays or image reconstruction.",
         "browser_version": "151.0.7922.34",
         "playwright_version": "1.62.1",
         "page_url": "file:///Users/pragyaapurva/Documents/SJSU/DATA%20260/data260-6102/reports/hw02/screenshots/final-panels/P3-normal.html",
         "metrics": {
           "width": 900,
-          "height": 403.75,
+          "height": 352.96875,
           "scrollWidth": 900,
-          "scrollHeight": 404,
+          "scrollHeight": 353,
           "documentScrollWidth": 900,
           "viewportWidth": 900,
           "viewportHeight": 800,
@@ -321,11 +301,7 @@
         "within_target_height": true,
         "no_horizontal_overflow": true
       },
-      "visual_qa": {
-        "inspected": true,
-        "result": "PASS",
-        "notes": "All text, tables, code-style output, and provenance are fully visible and readable; no clipped content or horizontal overflow."
-      }
+      "presentation_note": "Source, timestamp, revision and working-tree details are retained in this manifest rather than printed inside the screenshot."
     },
     {
       "id": "P3-normal-short",
@@ -355,23 +331,23 @@
       "body_font_px": 20,
       "monospace_font_px": 18,
       "provenance_line": "Browser-rendered recorded smoke output | hw2-code @ 6a076db | 2026-09-14 07:34:51 UTC | Recorded working tree: dirty",
-      "html_sha256": "fa360ffad9b91fe489f5fcf2391f9507dbf11f9405ecf2c1a350d9c6dd5869ed",
+      "html_sha256": "8af0a3d6cad21fe2d8eae79e6399204100ebe9909f942cf3d3b0efe4212cbc40",
       "png_path": "reports/hw02/screenshots/final-panels/P3-normal-short.png",
-      "png_sha256": "8ef7f31d9dfe82ecf8561820119ce8bd94d2e6c6b464150548f0b6e343cd415f",
+      "png_sha256": "f37337bc152f917d63030cf6837243239c633f0b6787217ebdf5d7f21ac473de",
       "png_width_px": 900,
-      "png_height_px": 219,
-      "captured_at": "2026-09-14T07:40:18.136Z",
+      "png_height_px": 170,
+      "captured_at": "2026-09-14T08:16:57.428Z",
       "capture": {
         "method": "Playwright Chromium main-element PNG screenshot of the supplied local HTML",
-        "provenance": "Browser-rendered saved output, tables, and recorded evidence as labeled in the panel. Not a live app or terminal screenshot. No new model calls. No pixel overlays or image reconstruction.",
+        "provenance": "Browser screenshots of saved output and result tables. Technical provenance is retained in the sidecar manifest, outside the image. No new model calls, pixel overlays or image reconstruction.",
         "browser_version": "151.0.7922.34",
         "playwright_version": "1.62.1",
         "page_url": "file:///Users/pragyaapurva/Documents/SJSU/DATA%20260/data260-6102/reports/hw02/screenshots/final-panels/P3-normal-short.html",
         "metrics": {
           "width": 900,
-          "height": 218.03125,
+          "height": 169.25,
           "scrollWidth": 900,
-          "scrollHeight": 218,
+          "scrollHeight": 169,
           "documentScrollWidth": 900,
           "viewportWidth": 900,
           "viewportHeight": 800,
@@ -380,11 +356,7 @@
         "within_target_height": true,
         "no_horizontal_overflow": true
       },
-      "visual_qa": {
-        "inspected": true,
-        "result": "PASS",
-        "notes": "All text, tables, code-style output, and provenance are fully visible and readable; no clipped content or horizontal overflow."
-      }
+      "presentation_note": "Source, timestamp, revision and working-tree details are retained in this manifest rather than printed inside the screenshot."
     },
     {
       "id": "P3-controlled",
@@ -414,23 +386,23 @@
       "body_font_px": 20,
       "monospace_font_px": 18,
       "provenance_line": "Browser-rendered recorded smoke output | hw2-code @ 6a076db | 2026-09-14 07:34:55 UTC | Recorded working tree: dirty",
-      "html_sha256": "cffb24edaf582c58055226db11b25e9c2ad11f902c78f6a51a9494e0029da8fa",
+      "html_sha256": "644c003139779fad255b551daa02ac01d838c4fa9e19ff3861e6fbf68db69687",
       "png_path": "reports/hw02/screenshots/final-panels/P3-controlled.png",
-      "png_sha256": "0bff14d32b8ed876799e269e0dab03de24170a09f7b25e0875a569a2b1eedff1",
+      "png_sha256": "669d4fc7f2c025aadb92eec3e7dbc61df2e64a9c858b366d598f60e47e683970",
       "png_width_px": 900,
-      "png_height_px": 422,
-      "captured_at": "2026-09-14T07:40:18.257Z",
+      "png_height_px": 372,
+      "captured_at": "2026-09-14T08:16:57.549Z",
       "capture": {
         "method": "Playwright Chromium main-element PNG screenshot of the supplied local HTML",
-        "provenance": "Browser-rendered saved output, tables, and recorded evidence as labeled in the panel. Not a live app or terminal screenshot. No new model calls. No pixel overlays or image reconstruction.",
+        "provenance": "Browser screenshots of saved output and result tables. Technical provenance is retained in the sidecar manifest, outside the image. No new model calls, pixel overlays or image reconstruction.",
         "browser_version": "151.0.7922.34",
         "playwright_version": "1.62.1",
         "page_url": "file:///Users/pragyaapurva/Documents/SJSU/DATA%20260/data260-6102/reports/hw02/screenshots/final-panels/P3-controlled.html",
         "metrics": {
           "width": 900,
-          "height": 421.859375,
+          "height": 371.078125,
           "scrollWidth": 900,
-          "scrollHeight": 422,
+          "scrollHeight": 371,
           "documentScrollWidth": 900,
           "viewportWidth": 900,
           "viewportHeight": 800,
@@ -439,11 +411,7 @@
         "within_target_height": true,
         "no_horizontal_overflow": true
       },
-      "visual_qa": {
-        "inspected": true,
-        "result": "PASS",
-        "notes": "All text, tables, code-style output, and provenance are fully visible and readable; no clipped content or horizontal overflow."
-      }
+      "presentation_note": "Source, timestamp, revision and working-tree details are retained in this manifest rather than printed inside the screenshot."
     },
     {
       "id": "P3-controlled-short",
@@ -473,23 +441,23 @@
       "body_font_px": 20,
       "monospace_font_px": 18,
       "provenance_line": "Browser-rendered recorded smoke output | hw2-code @ 6a076db | 2026-09-14 07:34:55 UTC | Recorded working tree: dirty",
-      "html_sha256": "047214c3eb936a5b753de75517f73d7e1d30a0571e2b3786ab639ffb820540a7",
+      "html_sha256": "5f0fe1c481feddee396e958c95f72dcdc21fd26efebfc08dbcdb5587efb39a26",
       "png_path": "reports/hw02/screenshots/final-panels/P3-controlled-short.png",
-      "png_sha256": "3140ce7dcd437deeb984c4ff59ce844c16ae932d651da9a8b11126e67f3a0f1f",
+      "png_sha256": "c6d51b805315bd77fb31cb88e5606d65f4c91744064f2c539d609c81cb03fc3a",
       "png_width_px": 900,
-      "png_height_px": 204,
-      "captured_at": "2026-09-14T07:40:18.368Z",
+      "png_height_px": 156,
+      "captured_at": "2026-09-14T08:16:57.661Z",
       "capture": {
         "method": "Playwright Chromium main-element PNG screenshot of the supplied local HTML",
-        "provenance": "Browser-rendered saved output, tables, and recorded evidence as labeled in the panel. Not a live app or terminal screenshot. No new model calls. No pixel overlays or image reconstruction.",
+        "provenance": "Browser screenshots of saved output and result tables. Technical provenance is retained in the sidecar manifest, outside the image. No new model calls, pixel overlays or image reconstruction.",
         "browser_version": "151.0.7922.34",
         "playwright_version": "1.62.1",
         "page_url": "file:///Users/pragyaapurva/Documents/SJSU/DATA%20260/data260-6102/reports/hw02/screenshots/final-panels/P3-controlled-short.html",
         "metrics": {
           "width": 900,
-          "height": 203.921875,
+          "height": 155.140625,
           "scrollWidth": 900,
-          "scrollHeight": 204,
+          "scrollHeight": 155,
           "documentScrollWidth": 900,
           "viewportWidth": 900,
           "viewportHeight": 800,
@@ -498,11 +466,7 @@
         "within_target_height": true,
         "no_horizontal_overflow": true
       },
-      "visual_qa": {
-        "inspected": true,
-        "result": "PASS",
-        "notes": "All text, tables, code-style output, and provenance are fully visible and readable; no clipped content or horizontal overflow."
-      }
+      "presentation_note": "Source, timestamp, revision and working-tree details are retained in this manifest rather than printed inside the screenshot."
     }
   ],
   "validation": {
@@ -526,34 +490,42 @@
       {
         "id": "P3-normal",
         "width": 900,
-        "height": 404,
+        "height": 353,
         "target": 500,
         "withinTarget": true
       },
       {
         "id": "P3-normal-short",
         "width": 900,
-        "height": 219,
+        "height": 170,
         "target": 230,
         "withinTarget": true
       },
       {
         "id": "P3-controlled",
         "width": 900,
-        "height": 422,
+        "height": 372,
         "target": 500,
         "withinTarget": true
       },
       {
         "id": "P3-controlled-short",
         "width": 900,
-        "height": 204,
+        "height": 156,
         "target": 230,
         "withinTarget": true
       }
     ]
   },
-  "capture_completed_at": "2026-09-14T07:40:18.370Z",
+  "capture_completed_at": "2026-09-14T08:16:57.662Z",
   "capture_provenance": "Nine unaltered Chromium element screenshots of the supplied HTML saved-output panels. No app server access or model execution.",
-  "visual_qa_completed_at": "2026-09-14T07:40:41.672640+00:00"
+  "visual_qa_completed_at": "2026-09-14T07:40:41.672640+00:00",
+  "presentation_cleanup": "Removed technical provenance footer from each displayed panel before recapturing. Original run metadata and source hashes remain in this manifest.",
+  "visual_review": {
+    "checked_at": "2026-09-14T08:19:21.109628+00:00",
+    "panels_reviewed": 9,
+    "unwanted_footer_labels_absent": true,
+    "results_preserved": true,
+    "layout_defects": []
+  }
 }

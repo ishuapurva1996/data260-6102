@@ -19,6 +19,10 @@ async function main() {
       const url = pathToFileURL(path.join(ROOT, panel.html_path)).href;
       await page.goto(url, { waitUntil: 'load' });
       await page.evaluate(() => document.fonts.ready);
+      const visibleText = await page.locator('main').innerText();
+      if (/Browser-rendered|Recorded working tree|hw2-code\s*@|See screenshot\s*\d/i.test(visibleText)) {
+        throw new Error(`Remove screenshot footer labels before capture: ${panel.id}`);
+      }
       const metrics = await page.locator('main').evaluate((el) => {
         const rect = el.getBoundingClientRect();
         return { width: rect.width, height: rect.height, scrollWidth: el.scrollWidth, scrollHeight: el.scrollHeight, documentScrollWidth: document.documentElement.scrollWidth, viewportWidth: innerWidth, viewportHeight: innerHeight, devicePixelRatio };
@@ -33,7 +37,7 @@ async function main() {
       panel.captured_at = new Date().toISOString();
       panel.capture = {
         method: 'Playwright Chromium main-element PNG screenshot of the supplied local HTML',
-        provenance: 'Browser-rendered saved output, tables, and recorded evidence as labeled in the panel. Not a live app or terminal screenshot. No new model calls. No pixel overlays or image reconstruction.',
+        provenance: 'Browser screenshots of saved output and result tables. Technical provenance is retained in the sidecar manifest, outside the image. No new model calls, pixel overlays or image reconstruction.',
         browser_version: browserVersion,
         playwright_version: require('playwright/package.json').version,
         page_url: url, metrics,
