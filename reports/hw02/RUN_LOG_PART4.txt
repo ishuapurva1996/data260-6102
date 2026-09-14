@@ -1,0 +1,773 @@
+HW2 PART 4 RUN LOG
+Log assembled at 2026-09-14T06:32:19.775651+00:00
+Campaign prepared at 2026-09-14T06:06:36.412599+00:00
+Execution HEAD 17fd1b38ee3bc7046ddccbc60c324258186da2e1; dirty=True; branch=codex/fix-hw1-form
+All timestamps in campaign output are actual UTC console timestamps. Check-file timestamps below are filesystem capture times, not inferred process start times.
+The model service was already running. Restricted-shell localhost access initially failed; the authorized local service check succeeded. No model call failed. No competing Ollama workload was observed. Ordinary local coding/review/test work continued on the host; this was not a dedicated isolated performance benchmark.
+75 real measured trials; one excluded ordinary warmup; no pilots. Scripted tests/demonstrations are excluded. No interrupted or failed measured trial occurred.
+Original trial stdout/stderr, events, terminal JSON, start marker and hashes are stored per trial under raw/part4/20260914T0610-baseline/trials/.
+After measurement, review strengthened excluded-warmup recovery, Git metadata deadlines and recommendation provenance verification. Original execution source snapshots and source hashes remain unchanged; no measured trial was rerun.
+The Part3 evidence and historical source hashes/timestamps were left unchanged. The plan stays outside Git. No index, commit, push or tag operation was performed by this task.
+Initial other-session staged Part2 changes were committed by that session as 17fd1b3 during intake; preserved.
+The agent venv has unittest but no pytest; initial attempted pytest command reported No module named pytest. All graph gates used the supported unittest runner.
+A discovery check during concurrent implementation saw test_evaluation before its module existed; preserved under initial-discovery-tests.txt. The later 90-test premeasurement gate passed before real execution.
+
+========================================================================
+COMMAND: .venv-agents/bin/python code/agents_experiments.py prepare --campaign reports/hw02/raw/part4/20260914T0610-baseline
+CAPTURED FILE: raw/part4/checks/prepare.txt
+CAPTURE TIME UTC: 2026-09-14T06:06:36.415292+00:00
+Prepared 20260914T0610-baseline: 75 frozen measured slots
+
+
+========================================================================
+COMMAND: .venv-agents/bin/python -m unittest discover -s tests/agent_graph -v
+CAPTURED FILE: raw/part4/checks/premeasurement-tests.txt
+CAPTURE TIME UTC: 2026-09-14T06:06:12.492481+00:00
+test_bad_json_input_types_fail_before_model (test_cli.CLITests.test_bad_json_input_types_fail_before_model) ... ok
+test_ceiling_has_no_publishable_output (test_cli.CLITests.test_ceiling_has_no_publishable_output) ... ok
+test_controlled_run_is_labeled_and_ends_unsuccessfully (test_cli.CLITests.test_controlled_run_is_labeled_and_ends_unsuccessfully) ... ok
+test_entry_point_resolves_imports_from_another_directory (test_cli.CLITests.test_entry_point_resolves_imports_from_another_directory) ... ok
+test_evidence_failure_is_explicit_and_has_failure_exit (test_cli.CLITests.test_evidence_failure_is_explicit_and_has_failure_exit) ... ok
+test_evidence_matches_emitted_stream_and_retains_rejected_raw (test_cli.CLITests.test_evidence_matches_emitted_stream_and_retains_rejected_raw) ... ok
+test_hw1_environment_overrides_are_resolved (test_cli.CLITests.test_hw1_environment_overrides_are_resolved) ... ok
+test_invalid_inputs_never_construct_model (test_cli.CLITests.test_invalid_inputs_never_construct_model) ... ok
+test_json_input_and_direct_mode_preserve_same_input (test_cli.CLITests.test_json_input_and_direct_mode_preserve_same_input) ... ok
+test_one_actual_stream_and_machine_readable_output (test_cli.CLITests.test_one_actual_stream_and_machine_readable_output) ... ok
+test_partial_evidence_write_never_publishes_success_directory (test_cli.CLITests.test_partial_evidence_write_never_publishes_success_directory) ... ok
+test_service_failure_is_error_not_ceiling (test_cli.CLITests.test_service_failure_is_error_not_ceiling) ... ok
+test_unexpected_stream_error_returns_terminal_error_without_rerun (test_cli.CLITests.test_unexpected_stream_error_returns_terminal_error_without_rerun) ... ok
+test_verifier_accepts_real_captured_ordinary_and_controlled_results (test_cli.CLITests.test_verifier_accepts_real_captured_ordinary_and_controlled_results) ... ok
+test_verifier_rejects_malformed_acceptance_records (test_cli.CLITests.test_verifier_rejects_malformed_acceptance_records) ... ok
+test_verifier_rejects_missing_or_tampered_evidence (test_cli.CLITests.test_verifier_rejects_missing_or_tampered_evidence) ... ok
+test_complete_arithmetic_and_deployment_rule (test_evaluation.AggregationTests.test_complete_arithmetic_and_deployment_rule) ... ok
+test_duplicate_identity_counter_and_provenance_tampering_fail (test_evaluation.AggregationTests.test_duplicate_identity_counter_and_provenance_tampering_fail) ... ok
+test_empty_and_partial_datasets_keep_expected_denominators (test_evaluation.AggregationTests.test_empty_and_partial_datasets_keep_expected_denominators) ... ok
+test_errors_and_unknown_never_make_campaign_complete (test_evaluation.AggregationTests.test_errors_and_unknown_never_make_campaign_complete) ... ok
+test_runner_operational_failures_remain_errors_without_invented_metrics (test_evaluation.AggregationTests.test_runner_operational_failures_remain_errors_without_invented_metrics) ... ok
+test_application_latency_cannot_be_shorter_than_workers (test_evaluation.ClassificationTests.test_application_latency_cannot_be_shorter_than_workers) ... ok
+test_execution_cannot_continue_after_approval (test_evaluation.ClassificationTests.test_execution_cannot_continue_after_approval) ... ok
+test_operational_failure_has_separate_category_and_response_count (test_evaluation.ClassificationTests.test_operational_failure_has_separate_category_and_response_count) ... ok
+test_reviewer_retry_counts_executions_after_invalid_feedback_only (test_evaluation.ClassificationTests.test_reviewer_retry_counts_executions_after_invalid_feedback_only) ... ok
+test_terminal_acceptance_buckets_distinguish_schema_and_semantic_repair (test_evaluation.ClassificationTests.test_terminal_acceptance_buckets_distinguish_schema_and_semantic_repair) ... ok
+test_trace_tampering_is_rejected (test_evaluation.ClassificationTests.test_trace_tampering_is_rejected) ... ok
+test_valid_unapproved_is_ceiling_and_final_turn_approval_succeeds (test_evaluation.ClassificationTests.test_valid_unapproved_is_ceiling_and_final_turn_approval_succeeds) ... ok
+test_zero_tokens_cannot_be_claimed_as_known_zero_consumption (test_evaluation.ClassificationTests.test_zero_tokens_cannot_be_claimed_as_known_zero_consumption) ... ok
+test_accepted_ceiling_error_exit_codes_and_raw_capture (test_experiments.CampaignTests.test_accepted_ceiling_error_exit_codes_and_raw_capture) ... 2026-09-14T06:06:09.008685+00:00 schema-01 status=accepted turns=2 elapsed_ms=22.361
+2026-09-14T06:06:09.065728+00:00 schema-02 status=turn_limit turns=10 elapsed_ms=24.309
+2026-09-14T06:06:09.119239+00:00 schema-03 status=error turns=1 elapsed_ms=21.832
+ok
+test_duplicate_runner_and_existing_campaign_refused (test_experiments.CampaignTests.test_duplicate_runner_and_existing_campaign_refused) ... ok
+test_identical_adversarial_input_is_rejected (test_experiments.CampaignTests.test_identical_adversarial_input_is_rejected) ... ok
+test_modified_input_source_model_and_config_rejected (test_experiments.CampaignTests.test_modified_input_source_model_and_config_rejected) ... ok
+test_offline_copy_report_never_queries_model (test_experiments.CampaignTests.test_offline_copy_report_never_queries_model) ... 2026-09-14T06:06:09.326505+00:00 schema-01 status=accepted turns=2 elapsed_ms=22.464
+ok
+test_outer_deadline_preserves_interruption_and_never_calls_it_ceiling (test_experiments.CampaignTests.test_outer_deadline_preserves_interruption_and_never_calls_it_ceiling) ... 2026-09-14T06:06:09.395412+00:00 schema-01 status=error turns=None elapsed_ms=None
+ok
+test_partial_directory_and_malformed_terminal_fail (test_experiments.CampaignTests.test_partial_directory_and_malformed_terminal_fail) ... ok
+test_resume_only_pending_slots_and_excludes_warmups (test_experiments.CampaignTests.test_resume_only_pending_slots_and_excludes_warmups) ... 2026-09-14T06:06:09.524891+00:00 warmup-0eb64238aaad status=accepted turns=2 elapsed_ms=22.769
+2026-09-14T06:06:09.579896+00:00 schema-01 status=accepted turns=2 elapsed_ms=22.847
+2026-09-14T06:06:09.640001+00:00 warmup-c47c2b58237c status=accepted turns=2 elapsed_ms=22.524
+2026-09-14T06:06:09.693859+00:00 schema-02 status=accepted turns=2 elapsed_ms=22.057
+ok
+test_tampered_stdout_fails_hash_check (test_experiments.CampaignTests.test_tampered_stdout_fails_hash_check) ... 2026-09-14T06:06:09.787148+00:00 schema-01 status=accepted turns=2 elapsed_ms=22.109
+ok
+test_unknown_start_is_preserved_and_resume_refuses (test_experiments.CampaignTests.test_unknown_start_is_preserved_and_resume_refuses) ... ok
+test_a_current_review_cannot_approve_a_schema_invalid_draft (test_nodes.NodeTests.test_a_current_review_cannot_approve_a_schema_invalid_draft) ... ok
+test_every_new_planner_attempt_invalidates_old_approval_even_on_failure (test_nodes.NodeTests.test_every_new_planner_attempt_invalidates_old_approval_even_on_failure) ... ok
+test_fatal_error_takes_precedence_over_approval (test_nodes.NodeTests.test_fatal_error_takes_precedence_over_approval) ... ok
+test_initial_states_own_fresh_mutable_collections (test_nodes.NodeTests.test_initial_states_own_fresh_mutable_collections) ... ok
+test_invalid_ceiling_fails_before_any_model_work (test_nodes.NodeTests.test_invalid_ceiling_fails_before_any_model_work) ... ok
+test_malformed_planner_preserves_raw_usage_and_requests_visible_retry (test_nodes.NodeTests.test_malformed_planner_preserves_raw_usage_and_requests_visible_retry) ... ok
+test_malformed_reviewer_invalidates_old_review_but_keeps_draft (test_nodes.NodeTests.test_malformed_reviewer_invalidates_old_review_but_keeps_draft) ... ok
+test_missing_usage_is_zero_without_erasing_the_response_count (test_nodes.NodeTests.test_missing_usage_is_zero_without_erasing_the_response_count) ... ok
+test_planner_prompt_receives_previous_draft_and_reviewer_issue (test_nodes.NodeTests.test_planner_prompt_receives_previous_draft_and_reviewer_issue) ... ok
+test_planner_returns_a_partial_update_without_mutating_state (test_nodes.NodeTests.test_planner_returns_a_partial_update_without_mutating_state) ... ok
+test_reviewer_returns_update_without_mutating_proposal_or_state (test_nodes.NodeTests.test_reviewer_returns_update_without_mutating_proposal_or_state) ... ok
+test_router_is_pure_and_does_not_make_model_calls (test_nodes.NodeTests.test_router_is_pure_and_does_not_make_model_calls) ... ok
+test_stale_review_cannot_approve_the_current_draft (test_nodes.NodeTests.test_stale_review_cannot_approve_the_current_draft) ... ok
+test_supervisor_consumes_worker_marker_exactly_once (test_nodes.NodeTests.test_supervisor_consumes_worker_marker_exactly_once) ... ok
+test_transport_failure_counts_attempt_but_not_successful_adapter_response (test_nodes.NodeTests.test_transport_failure_counts_attempt_but_not_successful_adapter_response) ... ok
+test_direct_validation_does_not_coerce_a_tuple_or_bytes (test_nodes.ResponseContractTests.test_direct_validation_does_not_coerce_a_tuple_or_bytes) ... ok
+test_empty_issue_list_does_not_require_an_explanation (test_nodes.ResponseContractTests.test_empty_issue_list_does_not_require_an_explanation) ... ok
+test_original_unicode_and_whitespace_are_counted_and_preserved (test_nodes.ResponseContractTests.test_original_unicode_and_whitespace_are_counted_and_preserved) ... ok
+test_part4_tag_character_boundaries (test_nodes.ResponseContractTests.test_part4_tag_character_boundaries) ... ok
+test_planner_rejects_invalid_shapes_without_repairing_them (test_nodes.ResponseContractTests.test_planner_rejects_invalid_shapes_without_repairing_them) ... ok
+test_reviewer_requires_an_explicit_list_of_string_issues (test_nodes.ResponseContractTests.test_reviewer_requires_an_explicit_list_of_string_issues) ... ok
+test_strict_json_loader_rejects_duplicate_keys_and_nonfinite_constants (test_nodes.ResponseContractTests.test_strict_json_loader_rejects_duplicate_keys_and_nonfinite_constants) ... ok
+test_summary_boundary_counts_whitespace_delimited_words (test_nodes.ResponseContractTests.test_summary_boundary_counts_whitespace_delimited_words) ... ok
+test_valid_outputs_are_preserved (test_nodes.ResponseContractTests.test_valid_outputs_are_preserved) ... ok
+test_cli_failure_returns_nonzero_and_writes_scoped_output (test_verify_part4.VerificationTests.test_cli_failure_returns_nonzero_and_writes_scoped_output) ... ok
+test_complete_copied_fixture_passes_without_model_or_network (test_verify_part4.VerificationTests.test_complete_copied_fixture_passes_without_model_or_network) ... ok
+test_derived_json_csv_and_summary_tampering_fail (test_verify_part4.VerificationTests.test_derived_json_csv_and_summary_tampering_fail) ... ok
+test_independent_trace_rejects_old_approval_unbounded_turns_and_false_schema (test_verify_part4.VerificationTests.test_independent_trace_rejects_old_approval_unbounded_turns_and_false_schema) ... ok
+test_input_source_and_duplicate_directory_tampering_fail (test_verify_part4.VerificationTests.test_input_source_and_duplicate_directory_tampering_fail) ... ok
+test_missing_or_tampered_excluded_warmup_fails (test_verify_part4.VerificationTests.test_missing_or_tampered_excluded_warmup_fails) ... ok
+test_missing_terminal_fails_and_preserves_interrupted_trial (test_verify_part4.VerificationTests.test_missing_terminal_fails_and_preserves_interrupted_trial) ... ok
+test_report_arithmetic_and_recommendation_are_checked (test_verify_part4.VerificationTests.test_report_arithmetic_and_recommendation_are_checked) ... ok
+test_a_compiled_graph_can_run_twice_without_leaking_state_or_usage (test_workflow.CompiledWorkflowTests.test_a_compiled_graph_can_run_twice_without_leaking_state_or_usage) ... ok
+test_all_malformed_planner_responses_exhaust_instead_of_being_repaired (test_workflow.CompiledWorkflowTests.test_all_malformed_planner_responses_exhaust_instead_of_being_repaired) ... ok
+test_controlled_issue_mode_performs_real_adapter_calls_and_never_approves (test_workflow.CompiledWorkflowTests.test_controlled_issue_mode_performs_real_adapter_calls_and_never_approves) ... ok
+test_framework_recursion_limit_includes_supervisor_steps (test_workflow.CompiledWorkflowTests.test_framework_recursion_limit_includes_supervisor_steps) ... ok
+test_malformed_planner_retries_planner_and_counts_the_bad_response (test_workflow.CompiledWorkflowTests.test_malformed_planner_retries_planner_and_counts_the_bad_response) ... ok
+test_malformed_review_at_the_ceiling_cannot_be_treated_as_approval (test_workflow.CompiledWorkflowTests.test_malformed_review_at_the_ceiling_cannot_be_treated_as_approval) ... ok
+test_malformed_revision_keeps_the_last_draft_and_critique_in_retry_context (test_workflow.CompiledWorkflowTests.test_malformed_revision_keeps_the_last_draft_and_critique_in_retry_context) ... ok
+test_missing_reviewer_issues_retries_the_same_revision (test_workflow.CompiledWorkflowTests.test_missing_reviewer_issues_retries_the_same_revision) ... ok
+test_odd_ceiling_never_reuses_an_old_review_for_a_new_draft (test_workflow.CompiledWorkflowTests.test_odd_ceiling_never_reuses_an_old_review_for_a_new_draft) ... ok
+test_one_turn_stops_with_an_unreviewed_draft (test_workflow.CompiledWorkflowTests.test_one_turn_stops_with_an_unreviewed_draft) ... ok
+test_rejection_on_last_turn_is_not_acceptance (test_workflow.CompiledWorkflowTests.test_rejection_on_last_turn_is_not_acceptance) ... ok
+test_revision_loop_can_succeed_on_fourth_turn (test_workflow.CompiledWorkflowTests.test_revision_loop_can_succeed_on_fourth_turn) ... ok
+test_schema_failure_feedback_repairs_in_three_turns (test_workflow.CompiledWorkflowTests.test_schema_failure_feedback_repairs_in_three_turns) ... ok
+test_schema_failures_consume_exactly_the_ceiling_without_hidden_repair (test_workflow.CompiledWorkflowTests.test_schema_failures_consume_exactly_the_ceiling_without_hidden_repair) ... ok
+test_schema_invalid_revision_retains_draft_and_critique_for_retry (test_workflow.CompiledWorkflowTests.test_schema_invalid_revision_retains_draft_and_critique_for_retry) ... ok
+test_schema_repair_on_final_turn_still_requires_a_current_review (test_workflow.CompiledWorkflowTests.test_schema_repair_on_final_turn_still_requires_a_current_review) ... ok
+test_ten_turn_persistent_issues_finish_normally_after_five_pairs (test_workflow.CompiledWorkflowTests.test_ten_turn_persistent_issues_finish_normally_after_five_pairs) ... ok
+test_transport_failure_stops_without_hidden_retries (test_workflow.CompiledWorkflowTests.test_transport_failure_stops_without_hidden_retries) ... ok
+test_two_turn_approval_at_the_exact_ceiling_succeeds (test_workflow.CompiledWorkflowTests.test_two_turn_approval_at_the_exact_ceiling_succeeds) ... ok
+
+----------------------------------------------------------------------
+Ran 90 tests in 4.820s
+
+OK
+
+
+========================================================================
+COMMAND: .venv-agents/bin/python -m pip check
+CAPTURED FILE: raw/part4/checks/dependency-check.txt
+CAPTURE TIME UTC: 2026-09-14T06:06:12.672186+00:00
+WARNING: The directory '/Users/pragyaapurva/Library/Caches/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+No broken requirements found.
+
+
+========================================================================
+COMMAND: .venv-agents/bin/python code/agents_experiments.py run --campaign reports/hw02/raw/part4/20260914T0610-baseline
+CAPTURED FILE: raw/part4/checks/campaign-run.txt
+CAPTURE TIME UTC: 2026-09-14T06:11:05.066272+00:00
+2026-09-14T06:06:49.581395+00:00 warmup-99bd87dc7f76 status=accepted turns=2 elapsed_ms=4077.717
+2026-09-14T06:06:51.866226+00:00 schema-01 status=accepted turns=2 elapsed_ms=1940.585
+2026-09-14T06:06:54.381578+00:00 schema-02 status=accepted turns=2 elapsed_ms=2124.049
+2026-09-14T06:06:56.912881+00:00 schema-03 status=accepted turns=2 elapsed_ms=2166.63
+2026-09-14T06:06:59.436317+00:00 schema-04 status=accepted turns=2 elapsed_ms=2121.118
+2026-09-14T06:07:01.929196+00:00 schema-05 status=accepted turns=2 elapsed_ms=2073.76
+2026-09-14T06:07:04.348001+00:00 schema-06 status=accepted turns=2 elapsed_ms=2056.256
+2026-09-14T06:07:06.821048+00:00 schema-07 status=accepted turns=2 elapsed_ms=2090.825
+2026-09-14T06:07:09.450239+00:00 schema-08 status=accepted turns=2 elapsed_ms=2110.037
+2026-09-14T06:07:12.005443+00:00 schema-09 status=accepted turns=2 elapsed_ms=2136.207
+2026-09-14T06:07:14.554284+00:00 schema-10 status=accepted turns=2 elapsed_ms=2073.18
+2026-09-14T06:07:17.048324+00:00 schema-11 status=accepted turns=2 elapsed_ms=2083.394
+2026-09-14T06:07:19.535932+00:00 schema-12 status=accepted turns=2 elapsed_ms=2030.254
+2026-09-14T06:07:22.075325+00:00 schema-13 status=accepted turns=2 elapsed_ms=2121.758
+2026-09-14T06:07:24.517587+00:00 schema-14 status=accepted turns=2 elapsed_ms=2024.777
+2026-09-14T06:07:27.064764+00:00 schema-15 status=accepted turns=2 elapsed_ms=2108.351
+2026-09-14T06:07:29.625566+00:00 schema-16 status=accepted turns=2 elapsed_ms=2095.294
+2026-09-14T06:07:32.223139+00:00 schema-17 status=accepted turns=2 elapsed_ms=2096.957
+2026-09-14T06:07:34.754595+00:00 schema-18 status=accepted turns=2 elapsed_ms=2115.616
+2026-09-14T06:07:37.305749+00:00 schema-19 status=accepted turns=2 elapsed_ms=2076.849
+2026-09-14T06:07:39.965648+00:00 schema-20 status=accepted turns=2 elapsed_ms=2133.743
+2026-09-14T06:07:42.557284+00:00 schema-21 status=accepted turns=2 elapsed_ms=2091.437
+2026-09-14T06:07:45.161888+00:00 schema-22 status=accepted turns=2 elapsed_ms=2108.654
+2026-09-14T06:07:47.663646+00:00 schema-23 status=accepted turns=2 elapsed_ms=2071.939
+2026-09-14T06:07:50.253525+00:00 schema-24 status=accepted turns=2 elapsed_ms=2132.921
+2026-09-14T06:07:52.868104+00:00 schema-25 status=accepted turns=2 elapsed_ms=2112.022
+2026-09-14T06:07:55.455386+00:00 schema-26 status=accepted turns=2 elapsed_ms=2115.936
+2026-09-14T06:07:58.121026+00:00 schema-27 status=accepted turns=2 elapsed_ms=2147.521
+2026-09-14T06:08:00.782263+00:00 schema-28 status=accepted turns=2 elapsed_ms=2199.796
+2026-09-14T06:08:03.397416+00:00 schema-29 status=accepted turns=2 elapsed_ms=2144.004
+2026-09-14T06:08:06.261503+00:00 schema-30 status=accepted turns=2 elapsed_ms=2228.172
+2026-09-14T06:08:09.114788+00:00 pair-01-c2 status=accepted turns=2 elapsed_ms=2062.517
+2026-09-14T06:08:11.937942+00:00 pair-01-c10 status=accepted turns=2 elapsed_ms=2254.369
+2026-09-14T06:08:14.702729+00:00 pair-02-c10 status=accepted turns=2 elapsed_ms=2108.641
+2026-09-14T06:08:17.657040+00:00 pair-02-c2 status=accepted turns=2 elapsed_ms=2264.834
+2026-09-14T06:08:20.426754+00:00 pair-03-c2 status=accepted turns=2 elapsed_ms=2133.772
+2026-09-14T06:08:23.346360+00:00 pair-03-c10 status=accepted turns=2 elapsed_ms=2327.707
+2026-09-14T06:08:26.232866+00:00 pair-04-c10 status=accepted turns=2 elapsed_ms=2143.692
+2026-09-14T06:08:29.234664+00:00 pair-04-c2 status=accepted turns=2 elapsed_ms=2252.2
+2026-09-14T06:08:32.262472+00:00 pair-05-c2 status=accepted turns=2 elapsed_ms=2269.036
+2026-09-14T06:08:35.323471+00:00 pair-05-c10 status=accepted turns=2 elapsed_ms=2242.787
+2026-09-14T06:08:38.331432+00:00 pair-06-c10 status=accepted turns=2 elapsed_ms=2264.672
+2026-09-14T06:08:41.484622+00:00 pair-06-c2 status=accepted turns=2 elapsed_ms=2320.638
+2026-09-14T06:08:44.610909+00:00 pair-07-c2 status=accepted turns=2 elapsed_ms=2288.232
+2026-09-14T06:08:48.037670+00:00 pair-07-c10 status=accepted turns=2 elapsed_ms=2405.957
+2026-09-14T06:08:51.283381+00:00 pair-08-c10 status=accepted turns=2 elapsed_ms=2359.2
+2026-09-14T06:08:54.607147+00:00 pair-08-c2 status=accepted turns=2 elapsed_ms=2447.217
+2026-09-14T06:08:58.189737+00:00 pair-09-c2 status=accepted turns=2 elapsed_ms=2579.891
+2026-09-14T06:09:01.547927+00:00 pair-09-c10 status=accepted turns=2 elapsed_ms=2439.678
+2026-09-14T06:09:05.016508+00:00 pair-10-c10 status=accepted turns=2 elapsed_ms=2479.637
+2026-09-14T06:09:08.931975+00:00 pair-10-c2 status=accepted turns=2 elapsed_ms=2762.701
+2026-09-14T06:09:12.549564+00:00 pair-11-c2 status=accepted turns=2 elapsed_ms=2578.009
+2026-09-14T06:09:16.518583+00:00 pair-11-c10 status=accepted turns=2 elapsed_ms=2788.532
+2026-09-14T06:09:20.513075+00:00 pair-12-c10 status=accepted turns=2 elapsed_ms=2796.707
+2026-09-14T06:09:24.308544+00:00 pair-12-c2 status=accepted turns=2 elapsed_ms=2653.861
+2026-09-14T06:09:28.146607+00:00 pair-13-c2 status=accepted turns=2 elapsed_ms=2591.161
+2026-09-14T06:09:31.568672+00:00 pair-13-c10 status=accepted turns=2 elapsed_ms=2512.746
+2026-09-14T06:09:35.556637+00:00 pair-14-c10 status=accepted turns=2 elapsed_ms=2741.579
+2026-09-14T06:09:39.290254+00:00 pair-14-c2 status=accepted turns=2 elapsed_ms=2631.895
+2026-09-14T06:09:43.291375+00:00 pair-15-c2 status=accepted turns=2 elapsed_ms=2817.738
+2026-09-14T06:09:46.997770+00:00 pair-15-c10 status=accepted turns=2 elapsed_ms=2607.433
+2026-09-14T06:09:50.614749+00:00 pair-16-c10 status=accepted turns=2 elapsed_ms=2698.097
+2026-09-14T06:09:54.540053+00:00 pair-16-c2 status=accepted turns=2 elapsed_ms=2754.436
+2026-09-14T06:09:58.201359+00:00 pair-17-c2 status=accepted turns=2 elapsed_ms=2558.368
+2026-09-14T06:10:01.843803+00:00 pair-17-c10 status=accepted turns=2 elapsed_ms=2692.98
+2026-09-14T06:10:05.221002+00:00 pair-18-c10 status=accepted turns=2 elapsed_ms=2493.425
+2026-09-14T06:10:08.879163+00:00 pair-18-c2 status=accepted turns=2 elapsed_ms=2613.23
+2026-09-14T06:10:12.403332+00:00 pair-19-c2 status=accepted turns=2 elapsed_ms=2620.696
+2026-09-14T06:10:15.777656+00:00 pair-19-c10 status=accepted turns=2 elapsed_ms=2477.795
+2026-09-14T06:10:19.355068+00:00 pair-20-c10 status=accepted turns=2 elapsed_ms=2609.288
+2026-09-14T06:10:22.794003+00:00 pair-20-c2 status=accepted turns=2 elapsed_ms=2512.254
+2026-09-14T06:10:31.476389+00:00 adversarial-01 status=turn_limit turns=10 elapsed_ms=7601.189
+2026-09-14T06:10:39.833033+00:00 adversarial-02 status=turn_limit turns=10 elapsed_ms=7346.801
+2026-09-14T06:10:48.023387+00:00 adversarial-03 status=turn_limit turns=10 elapsed_ms=7334.468
+2026-09-14T06:10:56.525981+00:00 adversarial-04 status=turn_limit turns=10 elapsed_ms=7595.119
+2026-09-14T06:11:04.873043+00:00 adversarial-05 status=turn_limit turns=10 elapsed_ms=7319.092
+{
+  "schema_version": 1,
+  "expected": 75,
+  "started": 75,
+  "pending": 0,
+  "terminal": 75,
+  "accepted": 70,
+  "ceiling": 5,
+  "error": 0,
+  "unknown": 0,
+  "complete": true,
+  "completion_rate_pct": 93.33333333333333,
+  "latency_observed_count": 75,
+  "mean_elapsed_ms": 2659.8175866666666,
+  "observed_mean_elapsed_ms": 2659.8175866666666,
+  "accepted_mean_elapsed_ms": 2318.4235714285714,
+  "campaign_id": "20260914T0610-baseline",
+  "config_fingerprint": "0080e40e43a8ad8f2b590b8d1e2b9c5e5fef98ca092bc92a1cb0581a61f94c25",
+  "source_fingerprint": "7814a2a02c60ddcfd23eace1bfc8a0bc02d98882440253f2c4ef4697be45febb",
+  "missing_trial_ids": [],
+  "cohorts": {
+    "schema": {
+      "expected": 30,
+      "started": 30,
+      "pending": 0,
+      "terminal": 30,
+      "accepted": 30,
+      "ceiling": 0,
+      "error": 0,
+      "unknown": 0,
+      "complete": true,
+      "completion_rate_pct": 100.0,
+      "latency_observed_count": 30,
+      "mean_elapsed_ms": 2104.4014,
+      "observed_mean_elapsed_ms": 2104.4014,
+      "accepted_mean_elapsed_ms": 2104.4014
+    },
+    "ceiling_2": {
+      "expected": 20,
+      "started": 20,
+      "pending": 0,
+      "terminal": 20,
+      "accepted": 20,
+      "ceiling": 0,
+      "error": 0,
+      "unknown": 0,
+      "complete": true,
+      "completion_rate_pct": 100.0,
+      "latency_observed_count": 20,
+      "mean_elapsed_ms": 2485.6343,
+      "observed_mean_elapsed_ms": 2485.6343,
+      "accepted_mean_elapsed_ms": 2485.6343
+    },
+    "ceiling_10": {
+      "expected": 20,
+      "started": 20,
+      "pending": 0,
+      "terminal": 20,
+      "accepted": 20,
+      "ceiling": 0,
+      "error": 0,
+      "unknown": 0,
+      "complete": true,
+      "completion_rate_pct": 100.0,
+      "latency_observed_count": 20,
+      "mean_elapsed_ms": 2472.2461,
+      "observed_mean_elapsed_ms": 2472.2461,
+      "accepted_mean_elapsed_ms": 2472.2461
+    },
+    "adversarial": {
+      "expected": 5,
+      "started": 5,
+      "pending": 0,
+      "terminal": 5,
+      "accepted": 0,
+      "ceiling": 5,
+      "error": 0,
+      "unknown": 0,
+      "complete": true,
+      "completion_rate_pct": 0.0,
+      "latency_observed_count": 5,
+      "mean_elapsed_ms": 7439.3338,
+      "observed_mean_elapsed_ms": 7439.3338,
+      "accepted_mean_elapsed_ms": null
+    }
+  },
+  "schema_categories": [
+    {
+      "category": "Valid first attempt",
+      "count": 30,
+      "mean_elapsed_ms": 2104.4014
+    },
+    {
+      "category": "Valid after 1 retry",
+      "count": 0,
+      "mean_elapsed_ms": null
+    },
+    {
+      "category": "Valid after 2+ retries",
+      "count": 0,
+      "mean_elapsed_ms": null
+    },
+    {
+      "category": "Hit turn ceiling",
+      "count": 0,
+      "mean_elapsed_ms": null
+    }
+  ],
+  "schema_first_valid": {
+    "observed_terminal_count": 30,
+    "trace_observed_count": 30,
+    "attempt_counts": {
+      "1": 30
+    },
+    "never_valid_count": 0,
+    "schema_failure_count": 0,
+    "runs_with_schema_failures": 0,
+    "planner_retries": 0,
+    "reviewer_issue_count": 0,
+    "reviewer_retry_count": 0
+  },
+  "deployment_choice": {
+    "max_turns": 10,
+    "reason": "lower mean application-run latency",
+    "rule": "Higher observed completion rate, then lower mean application-run latency across all 20 runs, then the smaller ceiling.",
+    "cohorts": {
+      "ceiling_2": {
+        "expected": 20,
+        "started": 20,
+        "pending": 0,
+        "terminal": 20,
+        "accepted": 20,
+        "ceiling": 0,
+        "error": 0,
+        "unknown": 0,
+        "complete": true,
+        "completion_rate_pct": 100.0,
+        "latency_observed_count": 20,
+        "mean_elapsed_ms": 2485.6343,
+        "observed_mean_elapsed_ms": 2485.6343,
+        "accepted_mean_elapsed_ms": 2485.6343
+      },
+      "ceiling_10": {
+        "expected": 20,
+        "started": 20,
+        "pending": 0,
+        "terminal": 20,
+        "accepted": 20,
+        "ceiling": 0,
+        "error": 0,
+        "unknown": 0,
+        "complete": true,
+        "completion_rate_pct": 100.0,
+        "latency_observed_count": 20,
+        "mean_elapsed_ms": 2472.2461,
+        "observed_mean_elapsed_ms": 2472.2461,
+        "accepted_mean_elapsed_ms": 2472.2461
+      }
+    },
+    "scope": "Observed results for this frozen model, ordinary input, configuration, and 20-run sample per ceiling."
+  },
+  "metric": "application-run latency (elapsed_ms); display rounding only; empty or incomplete all-run means are N/A",
+  "usage_note": "Reported token counts only. A zero count can mean usage metadata was unavailable; it does not establish zero token consumption."
+}
+
+
+========================================================================
+COMMAND: .venv-agents/bin/python scripts/report_part4.py --campaign reports/hw02/raw/part4/20260914T0610-baseline --report-dir reports/hw02
+CAPTURED FILE: raw/part4/checks/report-generation.txt
+CAPTURE TIME UTC: 2026-09-14T06:12:50.099759+00:00
+Offline tables: 75 trials; ceiling 10
+
+
+========================================================================
+COMMAND: .venv-agents/bin/python -m unittest discover -s tests/agent_graph -v
+CAPTURED FILE: raw/part4/checks/final-tests.txt
+CAPTURE TIME UTC: 2026-09-14T06:21:23.076746+00:00
+test_bad_json_input_types_fail_before_model (test_cli.CLITests.test_bad_json_input_types_fail_before_model) ... ok
+test_ceiling_has_no_publishable_output (test_cli.CLITests.test_ceiling_has_no_publishable_output) ... ok
+test_controlled_run_is_labeled_and_ends_unsuccessfully (test_cli.CLITests.test_controlled_run_is_labeled_and_ends_unsuccessfully) ... ok
+test_entry_point_resolves_imports_from_another_directory (test_cli.CLITests.test_entry_point_resolves_imports_from_another_directory) ... ok
+test_evidence_failure_is_explicit_and_has_failure_exit (test_cli.CLITests.test_evidence_failure_is_explicit_and_has_failure_exit) ... ok
+test_evidence_matches_emitted_stream_and_retains_rejected_raw (test_cli.CLITests.test_evidence_matches_emitted_stream_and_retains_rejected_raw) ... ok
+test_hw1_environment_overrides_are_resolved (test_cli.CLITests.test_hw1_environment_overrides_are_resolved) ... ok
+test_invalid_inputs_never_construct_model (test_cli.CLITests.test_invalid_inputs_never_construct_model) ... ok
+test_json_input_and_direct_mode_preserve_same_input (test_cli.CLITests.test_json_input_and_direct_mode_preserve_same_input) ... ok
+test_one_actual_stream_and_machine_readable_output (test_cli.CLITests.test_one_actual_stream_and_machine_readable_output) ... ok
+test_partial_evidence_write_never_publishes_success_directory (test_cli.CLITests.test_partial_evidence_write_never_publishes_success_directory) ... ok
+test_service_failure_is_error_not_ceiling (test_cli.CLITests.test_service_failure_is_error_not_ceiling) ... ok
+test_unexpected_stream_error_returns_terminal_error_without_rerun (test_cli.CLITests.test_unexpected_stream_error_returns_terminal_error_without_rerun) ... ok
+test_verifier_accepts_real_captured_ordinary_and_controlled_results (test_cli.CLITests.test_verifier_accepts_real_captured_ordinary_and_controlled_results) ... ok
+test_verifier_rejects_malformed_acceptance_records (test_cli.CLITests.test_verifier_rejects_malformed_acceptance_records) ... ok
+test_verifier_rejects_missing_or_tampered_evidence (test_cli.CLITests.test_verifier_rejects_missing_or_tampered_evidence) ... ok
+test_complete_arithmetic_and_deployment_rule (test_evaluation.AggregationTests.test_complete_arithmetic_and_deployment_rule) ... ok
+test_duplicate_identity_counter_and_provenance_tampering_fail (test_evaluation.AggregationTests.test_duplicate_identity_counter_and_provenance_tampering_fail) ... ok
+test_empty_and_partial_datasets_keep_expected_denominators (test_evaluation.AggregationTests.test_empty_and_partial_datasets_keep_expected_denominators) ... ok
+test_errors_and_unknown_never_make_campaign_complete (test_evaluation.AggregationTests.test_errors_and_unknown_never_make_campaign_complete) ... ok
+test_runner_operational_failures_remain_errors_without_invented_metrics (test_evaluation.AggregationTests.test_runner_operational_failures_remain_errors_without_invented_metrics) ... ok
+test_application_latency_cannot_be_shorter_than_workers (test_evaluation.ClassificationTests.test_application_latency_cannot_be_shorter_than_workers) ... ok
+test_execution_cannot_continue_after_approval (test_evaluation.ClassificationTests.test_execution_cannot_continue_after_approval) ... ok
+test_operational_failure_has_separate_category_and_response_count (test_evaluation.ClassificationTests.test_operational_failure_has_separate_category_and_response_count) ... ok
+test_reviewer_retry_counts_executions_after_invalid_feedback_only (test_evaluation.ClassificationTests.test_reviewer_retry_counts_executions_after_invalid_feedback_only) ... ok
+test_terminal_acceptance_buckets_distinguish_schema_and_semantic_repair (test_evaluation.ClassificationTests.test_terminal_acceptance_buckets_distinguish_schema_and_semantic_repair) ... ok
+test_trace_tampering_is_rejected (test_evaluation.ClassificationTests.test_trace_tampering_is_rejected) ... ok
+test_valid_unapproved_is_ceiling_and_final_turn_approval_succeeds (test_evaluation.ClassificationTests.test_valid_unapproved_is_ceiling_and_final_turn_approval_succeeds) ... ok
+test_zero_tokens_cannot_be_claimed_as_known_zero_consumption (test_evaluation.ClassificationTests.test_zero_tokens_cannot_be_claimed_as_known_zero_consumption) ... ok
+test_accepted_ceiling_error_exit_codes_and_raw_capture (test_experiments.CampaignTests.test_accepted_ceiling_error_exit_codes_and_raw_capture) ... 2026-09-14T06:21:18.314727+00:00 schema-01 status=accepted turns=2 elapsed_ms=22.774
+2026-09-14T06:21:18.371814+00:00 schema-02 status=turn_limit turns=10 elapsed_ms=24.235
+2026-09-14T06:21:18.426096+00:00 schema-03 status=error turns=1 elapsed_ms=22.263
+ok
+test_duplicate_runner_and_existing_campaign_refused (test_experiments.CampaignTests.test_duplicate_runner_and_existing_campaign_refused) ... ok
+test_failed_warmup_is_preserved_and_resume_refuses (test_experiments.CampaignTests.test_failed_warmup_is_preserved_and_resume_refuses) ... 2026-09-14T06:21:18.577802+00:00 warmup-1d8e9430396e status=error turns=1 elapsed_ms=22.345
+ok
+test_git_metadata_errors_leave_measured_slot_pending (test_experiments.CampaignTests.test_git_metadata_errors_leave_measured_slot_pending) ... ok
+test_git_timeout_starts_nothing_and_releases_campaign_lock (test_experiments.CampaignTests.test_git_timeout_starts_nothing_and_releases_campaign_lock) ... ok
+test_identical_adversarial_input_is_rejected (test_experiments.CampaignTests.test_identical_adversarial_input_is_rejected) ... ok
+test_modified_input_source_model_and_config_rejected (test_experiments.CampaignTests.test_modified_input_source_model_and_config_rejected) ... ok
+test_offline_copy_report_never_queries_model (test_experiments.CampaignTests.test_offline_copy_report_never_queries_model) ... 2026-09-14T06:21:18.802388+00:00 schema-01 status=accepted turns=2 elapsed_ms=23.1
+ok
+test_outer_deadline_preserves_interruption_and_never_calls_it_ceiling (test_experiments.CampaignTests.test_outer_deadline_preserves_interruption_and_never_calls_it_ceiling) ... 2026-09-14T06:21:18.877244+00:00 schema-01 status=error turns=None elapsed_ms=None
+ok
+test_partial_directory_and_malformed_terminal_fail (test_experiments.CampaignTests.test_partial_directory_and_malformed_terminal_fail) ... ok
+test_partial_warmup_is_preserved_and_resume_refuses (test_experiments.CampaignTests.test_partial_warmup_is_preserved_and_resume_refuses) ... ok
+test_resume_only_pending_slots_and_excludes_warmups (test_experiments.CampaignTests.test_resume_only_pending_slots_and_excludes_warmups) ... 2026-09-14T06:21:19.053631+00:00 warmup-f28ff7e08199 status=accepted turns=2 elapsed_ms=25.115
+2026-09-14T06:21:19.114482+00:00 schema-01 status=accepted turns=2 elapsed_ms=25.376
+2026-09-14T06:21:19.183942+00:00 warmup-5c13f2fa6998 status=accepted turns=2 elapsed_ms=25.724
+2026-09-14T06:21:19.248015+00:00 schema-02 status=accepted turns=2 elapsed_ms=25.373
+ok
+test_tampered_stdout_fails_hash_check (test_experiments.CampaignTests.test_tampered_stdout_fails_hash_check) ... 2026-09-14T06:21:19.355619+00:00 schema-01 status=accepted turns=2 elapsed_ms=24.272
+ok
+test_unknown_start_is_preserved_and_resume_refuses (test_experiments.CampaignTests.test_unknown_start_is_preserved_and_resume_refuses) ... ok
+test_unknown_warmup_is_preserved_and_resume_refuses (test_experiments.CampaignTests.test_unknown_warmup_is_preserved_and_resume_refuses) ... ok
+test_a_current_review_cannot_approve_a_schema_invalid_draft (test_nodes.NodeTests.test_a_current_review_cannot_approve_a_schema_invalid_draft) ... ok
+test_every_new_planner_attempt_invalidates_old_approval_even_on_failure (test_nodes.NodeTests.test_every_new_planner_attempt_invalidates_old_approval_even_on_failure) ... ok
+test_fatal_error_takes_precedence_over_approval (test_nodes.NodeTests.test_fatal_error_takes_precedence_over_approval) ... ok
+test_initial_states_own_fresh_mutable_collections (test_nodes.NodeTests.test_initial_states_own_fresh_mutable_collections) ... ok
+test_invalid_ceiling_fails_before_any_model_work (test_nodes.NodeTests.test_invalid_ceiling_fails_before_any_model_work) ... ok
+test_malformed_planner_preserves_raw_usage_and_requests_visible_retry (test_nodes.NodeTests.test_malformed_planner_preserves_raw_usage_and_requests_visible_retry) ... ok
+test_malformed_reviewer_invalidates_old_review_but_keeps_draft (test_nodes.NodeTests.test_malformed_reviewer_invalidates_old_review_but_keeps_draft) ... ok
+test_missing_usage_is_zero_without_erasing_the_response_count (test_nodes.NodeTests.test_missing_usage_is_zero_without_erasing_the_response_count) ... ok
+test_planner_prompt_receives_previous_draft_and_reviewer_issue (test_nodes.NodeTests.test_planner_prompt_receives_previous_draft_and_reviewer_issue) ... ok
+test_planner_returns_a_partial_update_without_mutating_state (test_nodes.NodeTests.test_planner_returns_a_partial_update_without_mutating_state) ... ok
+test_reviewer_returns_update_without_mutating_proposal_or_state (test_nodes.NodeTests.test_reviewer_returns_update_without_mutating_proposal_or_state) ... ok
+test_router_is_pure_and_does_not_make_model_calls (test_nodes.NodeTests.test_router_is_pure_and_does_not_make_model_calls) ... ok
+test_stale_review_cannot_approve_the_current_draft (test_nodes.NodeTests.test_stale_review_cannot_approve_the_current_draft) ... ok
+test_supervisor_consumes_worker_marker_exactly_once (test_nodes.NodeTests.test_supervisor_consumes_worker_marker_exactly_once) ... ok
+test_transport_failure_counts_attempt_but_not_successful_adapter_response (test_nodes.NodeTests.test_transport_failure_counts_attempt_but_not_successful_adapter_response) ... ok
+test_direct_validation_does_not_coerce_a_tuple_or_bytes (test_nodes.ResponseContractTests.test_direct_validation_does_not_coerce_a_tuple_or_bytes) ... ok
+test_empty_issue_list_does_not_require_an_explanation (test_nodes.ResponseContractTests.test_empty_issue_list_does_not_require_an_explanation) ... ok
+test_original_unicode_and_whitespace_are_counted_and_preserved (test_nodes.ResponseContractTests.test_original_unicode_and_whitespace_are_counted_and_preserved) ... ok
+test_part4_tag_character_boundaries (test_nodes.ResponseContractTests.test_part4_tag_character_boundaries) ... ok
+test_planner_rejects_invalid_shapes_without_repairing_them (test_nodes.ResponseContractTests.test_planner_rejects_invalid_shapes_without_repairing_them) ... ok
+test_reviewer_requires_an_explicit_list_of_string_issues (test_nodes.ResponseContractTests.test_reviewer_requires_an_explicit_list_of_string_issues) ... ok
+test_strict_json_loader_rejects_duplicate_keys_and_nonfinite_constants (test_nodes.ResponseContractTests.test_strict_json_loader_rejects_duplicate_keys_and_nonfinite_constants) ... ok
+test_summary_boundary_counts_whitespace_delimited_words (test_nodes.ResponseContractTests.test_summary_boundary_counts_whitespace_delimited_words) ... ok
+test_valid_outputs_are_preserved (test_nodes.ResponseContractTests.test_valid_outputs_are_preserved) ... ok
+test_cli_failure_returns_nonzero_and_writes_scoped_output (test_verify_part4.VerificationTests.test_cli_failure_returns_nonzero_and_writes_scoped_output) ... ok
+test_complete_copied_fixture_passes_without_model_or_network (test_verify_part4.VerificationTests.test_complete_copied_fixture_passes_without_model_or_network) ... ok
+test_derived_json_csv_and_summary_tampering_fail (test_verify_part4.VerificationTests.test_derived_json_csv_and_summary_tampering_fail) ... ok
+test_independent_trace_rejects_old_approval_unbounded_turns_and_false_schema (test_verify_part4.VerificationTests.test_independent_trace_rejects_old_approval_unbounded_turns_and_false_schema) ... ok
+test_input_source_and_duplicate_directory_tampering_fail (test_verify_part4.VerificationTests.test_input_source_and_duplicate_directory_tampering_fail) ... ok
+test_missing_or_tampered_excluded_warmup_fails (test_verify_part4.VerificationTests.test_missing_or_tampered_excluded_warmup_fails) ... ok
+test_missing_terminal_fails_and_preserves_interrupted_trial (test_verify_part4.VerificationTests.test_missing_terminal_fails_and_preserves_interrupted_trial) ... ok
+test_report_arithmetic_and_recommendation_are_checked (test_verify_part4.VerificationTests.test_report_arithmetic_and_recommendation_are_checked) ... ok
+test_a_compiled_graph_can_run_twice_without_leaking_state_or_usage (test_workflow.CompiledWorkflowTests.test_a_compiled_graph_can_run_twice_without_leaking_state_or_usage) ... ok
+test_all_malformed_planner_responses_exhaust_instead_of_being_repaired (test_workflow.CompiledWorkflowTests.test_all_malformed_planner_responses_exhaust_instead_of_being_repaired) ... ok
+test_controlled_issue_mode_performs_real_adapter_calls_and_never_approves (test_workflow.CompiledWorkflowTests.test_controlled_issue_mode_performs_real_adapter_calls_and_never_approves) ... ok
+test_framework_recursion_limit_includes_supervisor_steps (test_workflow.CompiledWorkflowTests.test_framework_recursion_limit_includes_supervisor_steps) ... ok
+test_malformed_planner_retries_planner_and_counts_the_bad_response (test_workflow.CompiledWorkflowTests.test_malformed_planner_retries_planner_and_counts_the_bad_response) ... ok
+test_malformed_review_at_the_ceiling_cannot_be_treated_as_approval (test_workflow.CompiledWorkflowTests.test_malformed_review_at_the_ceiling_cannot_be_treated_as_approval) ... ok
+test_malformed_revision_keeps_the_last_draft_and_critique_in_retry_context (test_workflow.CompiledWorkflowTests.test_malformed_revision_keeps_the_last_draft_and_critique_in_retry_context) ... ok
+test_missing_reviewer_issues_retries_the_same_revision (test_workflow.CompiledWorkflowTests.test_missing_reviewer_issues_retries_the_same_revision) ... ok
+test_odd_ceiling_never_reuses_an_old_review_for_a_new_draft (test_workflow.CompiledWorkflowTests.test_odd_ceiling_never_reuses_an_old_review_for_a_new_draft) ... ok
+test_one_turn_stops_with_an_unreviewed_draft (test_workflow.CompiledWorkflowTests.test_one_turn_stops_with_an_unreviewed_draft) ... ok
+test_rejection_on_last_turn_is_not_acceptance (test_workflow.CompiledWorkflowTests.test_rejection_on_last_turn_is_not_acceptance) ... ok
+test_revision_loop_can_succeed_on_fourth_turn (test_workflow.CompiledWorkflowTests.test_revision_loop_can_succeed_on_fourth_turn) ... ok
+test_schema_failure_feedback_repairs_in_three_turns (test_workflow.CompiledWorkflowTests.test_schema_failure_feedback_repairs_in_three_turns) ... ok
+test_schema_failures_consume_exactly_the_ceiling_without_hidden_repair (test_workflow.CompiledWorkflowTests.test_schema_failures_consume_exactly_the_ceiling_without_hidden_repair) ... ok
+test_schema_invalid_revision_retains_draft_and_critique_for_retry (test_workflow.CompiledWorkflowTests.test_schema_invalid_revision_retains_draft_and_critique_for_retry) ... ok
+test_schema_repair_on_final_turn_still_requires_a_current_review (test_workflow.CompiledWorkflowTests.test_schema_repair_on_final_turn_still_requires_a_current_review) ... ok
+test_ten_turn_persistent_issues_finish_normally_after_five_pairs (test_workflow.CompiledWorkflowTests.test_ten_turn_persistent_issues_finish_normally_after_five_pairs) ... ok
+test_transport_failure_stops_without_hidden_retries (test_workflow.CompiledWorkflowTests.test_transport_failure_stops_without_hidden_retries) ... ok
+test_two_turn_approval_at_the_exact_ceiling_succeeds (test_workflow.CompiledWorkflowTests.test_two_turn_approval_at_the_exact_ceiling_succeeds) ... ok
+
+----------------------------------------------------------------------
+Ran 95 tests in 6.001s
+
+OK
+
+
+========================================================================
+COMMAND: .venv-agents/bin/python -m unittest discover -s reports/hw01/tests -v
+CAPTURED FILE: raw/part4/checks/hw1-regression.txt
+CAPTURE TIME UTC: 2026-09-14T06:09:13.311670+00:00
+test_agent_rejects_non_json_or_wrong_typed_output (test_agents_demo.AgentsDemoTests.test_agent_rejects_non_json_or_wrong_typed_output) ... ok
+test_coerce_reply_discards_false_schema_issues (test_agents_demo.AgentsDemoTests.test_coerce_reply_discards_false_schema_issues) ... ok
+test_coerce_reply_enforces_exact_tags_and_summary_limit (test_agents_demo.AgentsDemoTests.test_coerce_reply_enforces_exact_tags_and_summary_limit) ... ok
+test_coerce_reply_keeps_only_first_sentence (test_agents_demo.AgentsDemoTests.test_coerce_reply_keeps_only_first_sentence) ... ok
+test_coerce_reply_rejects_partly_hallucinated_tag (test_agents_demo.AgentsDemoTests.test_coerce_reply_rejects_partly_hallucinated_tag) ... ok
+test_coerce_reply_replaces_an_unsupported_summary (test_agents_demo.AgentsDemoTests.test_coerce_reply_replaces_an_unsupported_summary) ... ok
+test_coerce_reply_replaces_copied_schema_placeholder (test_agents_demo.AgentsDemoTests.test_coerce_reply_replaces_copied_schema_placeholder) ... ok
+test_create_model_passes_timeout_to_sync_and_async_clients (test_agents_demo.AgentsDemoTests.test_create_model_passes_timeout_to_sync_and_async_clients) ... ok
+test_extract_json_block_ignores_surrounding_text_and_fences (test_agents_demo.AgentsDemoTests.test_extract_json_block_ignores_surrounding_text_and_fences) ... ok
+test_finalize_refuses_unresolved_reviewer_issues (test_agents_demo.AgentsDemoTests.test_finalize_refuses_unresolved_reviewer_issues) ... ok
+test_main_rejects_unsupported_python_before_model_creation (test_agents_demo.AgentsDemoTests.test_main_rejects_unsupported_python_before_model_creation) ... ok
+test_main_returns_one_and_prints_setup_guidance_on_runtime_failure (test_agents_demo.AgentsDemoTests.test_main_returns_one_and_prints_setup_guidance_on_runtime_failure) ... ok
+test_missing_dependency_error_names_part2_requirements (test_agents_demo.AgentsDemoTests.test_missing_dependency_error_names_part2_requirements) ... ok
+test_parse_failure_still_returns_valid_schema (test_agents_demo.AgentsDemoTests.test_parse_failure_still_returns_valid_schema) ... ok
+test_parser_timeout_defaults_to_120_and_must_be_positive (test_agents_demo.AgentsDemoTests.test_parser_timeout_defaults_to_120_and_must_be_positive) ... ok
+test_phrase_candidates_are_derived_from_input (test_agents_demo.AgentsDemoTests.test_phrase_candidates_are_derived_from_input) ... ok
+test_pipeline_rejects_insufficient_topical_input_before_model_call (test_agents_demo.AgentsDemoTests.test_pipeline_rejects_insufficient_topical_input_before_model_call) ... ok
+test_pipeline_uses_two_model_calls_and_reviewer_can_change_output (test_agents_demo.AgentsDemoTests.test_pipeline_uses_two_model_calls_and_reviewer_can_change_output) ... ok
+test_reviewer_receives_raw_unrepaired_planner_response (test_agents_demo.AgentsDemoTests.test_reviewer_receives_raw_unrepaired_planner_response) ... ok
+test_bullet_only_validation (test_hw1_client.Hw1ClientTests.test_bullet_only_validation) ... ok
+test_save_output_creates_parent_directory (test_hw1_client.Hw1ClientTests.test_save_output_creates_parent_directory) ... ok
+test_stats_does_not_mutate_history (test_hw1_client.Hw1ClientTests.test_stats_does_not_mutate_history) ... ok
+test_tee_stream_writes_to_terminal_and_transcript (test_hw1_client.Hw1ClientTests.test_tee_stream_writes_to_terminal_and_transcript) ... ok
+test_complete_normalizes_usage_and_updates_cumulative_stats (test_model_client.ModelClientTests.test_complete_normalizes_usage_and_updates_cumulative_stats) ... ok
+test_missing_total_is_derived_from_input_and_output (test_model_client.ModelClientTests.test_missing_total_is_derived_from_input_and_output) ... ok
+test_checked_in_raw_experiment_integrity (test_nondeterminism.NondeterminismTests.test_checked_in_raw_experiment_integrity) ... ok
+test_checkpoint_identity_includes_schema_base_url_and_timeout (test_nondeterminism.NondeterminismTests.test_checkpoint_identity_includes_schema_base_url_and_timeout) ... ok
+test_completed_checkpoint_is_validated_before_resume_returns (test_nondeterminism.NondeterminismTests.test_completed_checkpoint_is_validated_before_resume_returns) ... ok
+test_completed_checkpoint_rejects_malformed_records_and_stale_metrics (test_nondeterminism.NondeterminismTests.test_completed_checkpoint_rejects_malformed_records_and_stale_metrics) ... ok
+test_error_then_success_has_correct_attempt_metrics (test_nondeterminism.NondeterminismTests.test_error_then_success_has_correct_attempt_metrics) ... temp=0.7 attempt=1 ERROR elapsed_ms=0: temporary
+temp=0.7 run=1/1 latency_ms=30 tags=["modern apartment", "covered parking", "light rail"]
+ok
+test_explicit_overwrite_replaces_existing_output (test_nondeterminism.NondeterminismTests.test_explicit_overwrite_replaces_existing_output) ... temp=0.7 run=1/1 latency_ms=30 tags=["modern apartment", "covered parking", "light rail"]
+ok
+test_keyboard_interrupt_is_checkpointed_and_reraised (test_nondeterminism.NondeterminismTests.test_keyboard_interrupt_is_checkpointed_and_reraised) ... ok
+test_max_errors_writes_a_terminal_failed_checkpoint (test_nondeterminism.NondeterminismTests.test_max_errors_writes_a_terminal_failed_checkpoint) ... temp=0.7 attempt=1 ERROR elapsed_ms=0: first
+temp=0.7 attempt=2 ERROR elapsed_ms=0: second
+ok
+test_models_are_created_in_temperature_order (test_nondeterminism.NondeterminismTests.test_models_are_created_in_temperature_order) ... temp=0.7 run=1/1 latency_ms=30 tags=["modern apartment", "covered parking", "light rail"]
+temp=0.0 run=1/1 latency_ms=30 tags=["modern apartment", "covered parking", "light rail"]
+ok
+test_non_resume_refuses_overwrite_and_preserves_bytes (test_nondeterminism.NondeterminismTests.test_non_resume_refuses_overwrite_and_preserves_bytes) ... ok
+test_one_run_checkpoints_running_state_then_completes (test_nondeterminism.NondeterminismTests.test_one_run_checkpoints_running_state_then_completes) ... temp=0.7 run=1/1 latency_ms=30 tags=["modern apartment", "covered parking", "light rail"]
+ok
+test_partial_resume_preserves_success_and_error_records (test_nondeterminism.NondeterminismTests.test_partial_resume_preserves_success_and_error_records) ... temp=0.7 run=2/2 latency_ms=30 tags=["modern apartment", "covered parking", "light rail"]
+ok
+test_percentile_uses_linear_interpolation (test_nondeterminism.NondeterminismTests.test_percentile_uses_linear_interpolation) ... ok
+test_resume_converts_stale_running_record_without_reusing_attempt (test_nondeterminism.NondeterminismTests.test_resume_converts_stale_running_record_without_reusing_attempt) ... temp=0.7 run=1/1 latency_ms=30 tags=["modern apartment", "covered parking", "light rail"]
+ok
+test_resume_rejects_stale_completed_metrics (test_nondeterminism.NondeterminismTests.test_resume_rejects_stale_completed_metrics) ... ok
+test_summarize_runs_reports_tag_frequency_and_latency (test_nondeterminism.NondeterminismTests.test_summarize_runs_reports_tag_frequency_and_latency) ... ok
+test_accessible_feedback_and_local_assets (test_part1.Part1Tests.test_accessible_feedback_and_local_assets) ... ok
+test_javascript_parses (test_part1.Part1Tests.test_javascript_parses) ... skipped 'Node.js is not available for syntax validation'
+test_required_form_controls_are_present (test_part1.Part1Tests.test_required_form_controls_are_present) ... ok
+test_checked_in_submission_artifacts_are_valid (test_verify_hw01.VerificationTests.test_checked_in_submission_artifacts_are_valid) ... ok
+test_rejects_invalid_submission_artifacts (test_verify_hw01.VerificationTests.test_rejects_invalid_submission_artifacts) ... ok
+
+----------------------------------------------------------------------
+Ran 46 tests in 0.045s
+
+OK (skipped=1)
+
+
+========================================================================
+COMMAND: .venv-web/bin/python -m pytest tests/test_api.py -q
+CAPTURED FILE: raw/part4/checks/web-regression.txt
+CAPTURE TIME UTC: 2026-09-14T06:09:07.142594+00:00
+...................................                                      [100%]
+=============================== warnings summary ===============================
+.venv-web/lib/python3.12/site-packages/starlette/testclient.py:31
+  /Users/pragyaapurva/Documents/SJSU/DATA 260/data260-6102/.venv-web/lib/python3.12/site-packages/starlette/testclient.py:31: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    [], typing.ContextManager[anyio.abc.BlockingPortal]
+
+tests/test_api.py: 36 warnings
+  /Users/pragyaapurva/Documents/SJSU/DATA 260/data260-6102/.venv-web/lib/python3.12/site-packages/httpx/_client.py:690: DeprecationWarning: The 'app' shortcut is now deprecated. Use the explicit style 'transport=WSGITransport(app=...)' instead.
+    warnings.warn(message, DeprecationWarning)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+35 passed, 37 warnings in 0.83s
+
+
+========================================================================
+COMMAND: .venv-agents/bin/python scripts/verify_part4.py --campaign reports/hw02/raw/part4/20260914T0610-baseline --report-dir reports/hw02 --output reports/hw02/verification_part4.json
+CAPTURED FILE: raw/part4/checks/offline-verification.txt
+CAPTURE TIME UTC: 2026-09-14T06:21:23.510083+00:00
+{
+  "passed": true,
+  "output": "/Users/pragyaapurva/Documents/SJSU/DATA 260/data260-6102/reports/hw02/verification_part4.json",
+  "checks": {
+    "current_schema_boundaries": {
+      "passed": true,
+      "details": {
+        "valid_boundary_cases": 1,
+        "invalid_boundary_cases": 19
+      }
+    },
+    "verification_git_metadata": {
+      "passed": true,
+      "details": null
+    },
+    "campaign_integrity_and_provenance": {
+      "passed": true,
+      "details": {
+        "records_replayed": 75,
+        "hashes": "manifest, frozen sources, cases, trial files and raw CLI evidence"
+      }
+    },
+    "excluded_ordinary_warmups": {
+      "passed": true,
+      "details": {
+        "excluded_warmup_count": 1,
+        "run_ids": [
+          "20260914T060645-1e21bedac6"
+        ]
+      }
+    },
+    "independent_schema_approval_and_turn_accounting": {
+      "passed": true,
+      "details": {
+        "traces_checked": 75,
+        "normal_reviewer": true
+      }
+    },
+    "cohort_completeness_and_independent_arithmetic": {
+      "passed": true,
+      "details": {
+        "cohort_counts": {
+          "schema": 30,
+          "ceiling_2": 20,
+          "ceiling_10": 20,
+          "adversarial": 5
+        },
+        "deployment_max_turns": 10
+      }
+    },
+    "derived_campaign_files": {
+      "passed": true,
+      "details": {
+        "files": [
+          "results.jsonl",
+          "results.csv",
+          "summary.json"
+        ]
+      }
+    },
+    "published_tables_and_deployment_choice": {
+      "passed": true,
+      "details": {
+        "files": [
+          "METRICS.md",
+          "deployment_choice.json"
+        ],
+        "max_turns": 10
+      }
+    }
+  }
+}
+
+
+========================================================================
+COMMAND: PYTHONPATH=. .venv-agents/bin/python /tmp/hw2-part4-intake/schema-demo.py [scripted transport; excluded]
+CAPTURED FILE: raw/part4/checks/schema-repair-demonstration.txt
+CAPTURE TIME UTC: 2026-09-14T06:09:44.038811+00:00
+Deterministic scripted transport demonstration, excluded from all measured trials
+run=20260914T060943-d7edbba00d config={"model": "qwen3:1.7b", "base_url": "http://localhost:11434", "temperature": 0.0, "timeout": 120.0, "max_turns": 3, "response_format": "json", "reasoning": false, "controlled_reviewer": false, "turn_definition": "one Planner or Reviewer execution"}
+supervisor turn_count=0 status=running stop_reason=None
+planner attempt=1 revision=1 outcome=invalid
+  raw="{\"tags\": [\"AI\", \"parking\", \"transit\"], \"summary\": \"Rental near transit with parking.\"}"
+  error="tags.0: Value error, tag must contain at least 3 characters (Python string length)"
+supervisor turn_count=1 status=running stop_reason=None
+planner attempt=2 revision=2 outcome=valid
+  raw="{\"tags\": [\"rental\", \"parking\", \"transit\"], \"summary\": \"Rental near transit with parking.\"}"
+supervisor turn_count=2 status=running stop_reason=None
+reviewer attempt=3 revision=2 outcome=valid
+  raw="{\"issues\": []}"
+supervisor turn_count=3 status=accepted stop_reason=Current Planner proposal approved by Reviewer.
+terminal status=accepted turn_count=3/3
+run=20260914T060943-7590613842 config={"model": "qwen3:1.7b", "base_url": "http://localhost:11434", "temperature": 0.0, "timeout": 120.0, "max_turns": 4, "response_format": "json", "reasoning": false, "controlled_reviewer": false, "turn_definition": "one Planner or Reviewer execution"}
+supervisor turn_count=0 status=running stop_reason=None
+planner attempt=1 revision=1 outcome=invalid
+  raw="{\"tags\": [\"AI\", \"parking\", \"transit\"], \"summary\": \"Rental near transit with parking.\"}"
+  error="tags.0: Value error, tag must contain at least 3 characters (Python string length)"
+supervisor turn_count=1 status=running stop_reason=None
+planner attempt=2 revision=2 outcome=invalid
+  raw="{\"tags\": [\"AI\", \"parking\", \"transit\"], \"summary\": \"Rental near transit with parking.\"}"
+  error="tags.0: Value error, tag must contain at least 3 characters (Python string length)"
+supervisor turn_count=2 status=running stop_reason=None
+planner attempt=3 revision=3 outcome=invalid
+  raw="{\"tags\": [\"AI\", \"parking\", \"transit\"], \"summary\": \"Rental near transit with parking.\"}"
+  error="tags.0: Value error, tag must contain at least 3 characters (Python string length)"
+supervisor turn_count=3 status=running stop_reason=None
+planner attempt=4 revision=4 outcome=invalid
+  raw="{\"tags\": [\"AI\", \"parking\", \"transit\"], \"summary\": \"Rental near transit with parking.\"}"
+  error="tags.0: Value error, tag must contain at least 3 characters (Python string length)"
+supervisor turn_count=4 status=turn_limit stop_reason=Worker turn ceiling reached without an approved current proposal.
+terminal status=turn_limit turn_count=4/4
+
+
+========================================================================
+COMMAND: node /tmp/hw2-part4-intake/capture.cjs [renders saved local evidence only]
+CAPTURED FILE: raw/part4/checks/screenshot-capture.txt
+CAPTURE TIME UTC: 2026-09-14T06:16:58.583317+00:00
+01-schema-real-output.html { x: 56, y: 32, width: 1168, height: 1295.828125 }
+02-schema-repair-test.html { x: 56, y: 32, width: 1168, height: 768.203125 }
+03-bounded-termination.html { x: 56, y: 32, width: 1168, height: 1271.1875 }
+04-measured-tables.html { x: 56, y: 32, width: 1168, height: 1627.390625 }
+05-adversarial-output.html { x: 56, y: 32, width: 1168, height: 1685.75 }
+
+
+========================================================================
+COMMAND: Offline local link, source/hash and Git preservation checks
+CAPTURED FILE: raw/part4/checks/links-and-git.txt
+CAPTURE TIME UTC: 2026-09-14T06:32:19.744950+00:00
+Final Part 4 local checks
+2026-09-14T06:24:21.388733+00:00
+HEAD: 17fd1b38ee3bc7046ddccbc60c324258186da2e1
+Branch: codex/fix-hw1-form
+Part 3 84ff199 is an ancestor: PASS
+Index empty: PASS
+Worktrees:
+/Users/pragyaapurva/Documents/SJSU/DATA 260/data260-6102  17fd1b3 [codex/fix-hw1-form]
+
+Protected historical report/Part 3/web/shared files byte-identical to HEAD: PASS (37 files)
+Local Markdown links resolve: PASS (75 links in 6 documents)
+Changed/frozen Python source and presentation utility syntax: PASS
+Final offline verification: 8/8 PASS, zero model calls
+Postmeasurement changes limited to runner and verifier: PASS; graph/schema/prompts/adapter/calculations unchanged
+External plan is outside repository and not copied/staged: PASS
+git diff --check: PASS
+Final Git status (Part 4 remains uncommitted):
+ M README.md
+ M docs/agent_graph.md
+ M reports/hw02/README.md
+ M requirements-agents.txt
+ M src/agent_graph/contracts.py
+ M src/agent_graph/nodes.py
+ M tests/agent_graph/test_nodes.py
+ M tests/agent_graph/test_workflow.py
+?? code/agents_experiments.py
+?? reports/hw02/METRICS.md
+?? reports/hw02/PART4_IMPLEMENTATION.md
+?? reports/hw02/REPRODUCIBLE_RUN_INSTRUCTIONS.md
+?? reports/hw02/RUN_LOG.txt
+?? reports/hw02/RUN_LOG_PART4.txt
+?? reports/hw02/cases/adversarial_input.json
+?? reports/hw02/cases/schema_input.json
+?? reports/hw02/deployment_choice.json
+?? reports/hw02/presentation-provenance.json
+?? reports/hw02/raw/part4/
+?? reports/hw02/screenshots/part4/
+?? reports/hw02/verification_part4.json
+?? scripts/report_part4.py
+?? scripts/verify_part4.py
+?? src/agent_graph/evaluation.py
+?? tests/agent_graph/test_evaluation.py
+?? tests/agent_graph/test_experiments.py
+?? tests/agent_graph/test_verify_part4.py
+
+

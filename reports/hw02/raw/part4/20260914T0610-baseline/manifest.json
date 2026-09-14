@@ -1,0 +1,732 @@
+{
+  "campaign_id": "20260914T0610-baseline",
+  "config": {
+    "base_url": "http://localhost:11434",
+    "controlled_reviewer": false,
+    "model": "qwen3:1.7b",
+    "model_seed": null,
+    "num_ctx": 4096,
+    "reasoning": false,
+    "response_format": "json",
+    "temperature": 0.0,
+    "timeout": 120.0
+  },
+  "config_fingerprint": "0080e40e43a8ad8f2b590b8d1e2b9c5e5fef98ca092bc92a1cb0581a61f94c25",
+  "environment": {
+    "machine": "arm64",
+    "packages": {
+      "annotated-types": "0.8.0",
+      "anyio": "4.15.1",
+      "certifi": "2026.7.22",
+      "charset-normalizer": "3.5.1",
+      "distro": "1.9.0",
+      "h11": "0.16.0",
+      "httpcore": "1.0.9",
+      "httpcore2": "2.12.0",
+      "httpx": "0.28.1",
+      "httpx2": "2.12.0",
+      "idna": "3.19",
+      "jsonpatch": "1.33",
+      "jsonpointer": "3.1.1",
+      "langchain-core": "1.6.3",
+      "langchain-ollama": "1.1.0",
+      "langchain-protocol": "0.0.19",
+      "langgraph": "1.2.11",
+      "langgraph-checkpoint": "4.2.0",
+      "langgraph-prebuilt": "1.1.0",
+      "langgraph-sdk": "0.4.4",
+      "langsmith": "0.12.4",
+      "ollama": "0.6.2",
+      "orjson": "3.12.0",
+      "ormsgpack": "1.12.2",
+      "packaging": "26.3",
+      "pip": "25.0.1",
+      "pydantic": "2.13.5",
+      "pydantic_core": "2.46.5",
+      "pyyaml": "6.0.3",
+      "requests": "2.34.2",
+      "requests-toolbelt": "1.0.0",
+      "sniffio": "1.3.1",
+      "tenacity": "9.1.4",
+      "truststore": "0.10.4",
+      "typing-inspection": "0.4.4",
+      "typing_extensions": "4.16.0",
+      "urllib3": "2.7.0",
+      "uuid_utils": "0.17.1",
+      "websockets": "16.1.1",
+      "xxhash": "4.0.1",
+      "zstandard": "0.25.0"
+    },
+    "platform": "macOS-15.7.4-arm64-arm-64bit",
+    "python": "3.12.14"
+  },
+  "git": {
+    "branch": "codex/fix-hw1-form",
+    "commit": "17fd1b38ee3bc7046ddccbc60c324258186da2e1",
+    "dirty": true,
+    "status": "M requirements-agents.txt\n M src/agent_graph/contracts.py\n M src/agent_graph/nodes.py\n M tests/agent_graph/test_nodes.py\n M tests/agent_graph/test_workflow.py\n?? code/agents_experiments.py\n?? reports/hw02/cases/adversarial_input.json\n?? reports/hw02/cases/schema_input.json\n?? reports/hw02/raw/part4/\n?? scripts/verify_part4.py\n?? src/agent_graph/evaluation.py\n?? tests/agent_graph/test_evaluation.py\n?? tests/agent_graph/test_experiments.py\n?? tests/agent_graph/test_verify_part4.py"
+  },
+  "identity": {
+    "DOMAIN_ID": 6,
+    "SEED": 6102,
+    "SID4": 6102,
+    "VERIFY_SEED": 266102,
+    "homework": "HW2"
+  },
+  "inputs": {
+    "adversarial": {
+      "path": "inputs/adversarial_input.json",
+      "sha256": "3034c17f31a1da32a8295333ce09c2bf24c04f94d9647b79900048d0008c0e57"
+    },
+    "schema": {
+      "path": "inputs/schema_input.json",
+      "sha256": "7e0d1125428f52aac130395190ddd2c4cc66832c72e31a87284b17c810fa7537"
+    }
+  },
+  "metric_definitions": {
+    "choice": "higher completion rate, then lower all-run mean application latency, then smaller ceiling",
+    "completion": "accepted with schema-valid current proposal and matching normal Reviewer approval / all planned cohort trials",
+    "latency": "application-run elapsed_ms: Git inspection, adapter and graph construction, execution and trace handling; excludes process startup/imports and evidence writing",
+    "residency": "sequential fresh processes; normal Ollama caching and residency; excluded warm-up each session",
+    "schema_category": "terminal acceptance grouped by Planner attempts (1, 2, >=3); ceiling takes precedence; operational error/unknown separate",
+    "seeds": "SEED and VERIFY_SEED are assignment identity, not model RNG seeds",
+    "turn": "one Planner or Reviewer execution; supervisor is not a turn",
+    "usage": "reported usage only; zero may mean missing metadata"
+  },
+  "model_identity": {
+    "details": {
+      "context_length": 40960,
+      "embedding_length": 2048,
+      "families": [
+        "qwen3"
+      ],
+      "family": "qwen3",
+      "format": "gguf",
+      "parameter_size": "2.0B",
+      "parent_model": "",
+      "quantization_level": "Q4_K_M"
+    },
+    "digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+    "name": "qwen3:1.7b",
+    "ollama_version": "0.33.0"
+  },
+  "prepared_at": "2026-09-14T06:06:36.412599+00:00",
+  "schedule": [
+    {
+      "cohort": "schema",
+      "input_key": "schema",
+      "max_turns": 10,
+      "order": 1,
+      "pair": null,
+      "trial_id": "schema-01"
+    },
+    {
+      "cohort": "schema",
+      "input_key": "schema",
+      "max_turns": 10,
+      "order": 2,
+      "pair": null,
+      "trial_id": "schema-02"
+    },
+    {
+      "cohort": "schema",
+      "input_key": "schema",
+      "max_turns": 10,
+      "order": 3,
+      "pair": null,
+      "trial_id": "schema-03"
+    },
+    {
+      "cohort": "schema",
+      "input_key": "schema",
+      "max_turns": 10,
+      "order": 4,
+      "pair": null,
+      "trial_id": "schema-04"
+    },
+    {
+      "cohort": "schema",
+      "input_key": "schema",
+      "max_turns": 10,
+      "order": 5,
+      "pair": null,
+      "trial_id": "schema-05"
+    },
+    {
+      "cohort": "schema",
+      "input_key": "schema",
+      "max_turns": 10,
+      "order": 6,
+      "pair": null,
+      "trial_id": "schema-06"
+    },
+    {
+      "cohort": "schema",
+      "input_key": "schema",
+      "max_turns": 10,
+      "order": 7,
+      "pair": null,
+      "trial_id": "schema-07"
+    },
+    {
+      "cohort": "schema",
+      "input_key": "schema",
+      "max_turns": 10,
+      "order": 8,
+      "pair": null,
+      "trial_id": "schema-08"
+    },
+    {
+      "cohort": "schema",
+      "input_key": "schema",
+      "max_turns": 10,
+      "order": 9,
+      "pair": null,
+      "trial_id": "schema-09"
+    },
+    {
+      "cohort": "schema",
+      "input_key": "schema",
+      "max_turns": 10,
+      "order": 10,
+      "pair": null,
+      "trial_id": "schema-10"
+    },
+    {
+      "cohort": "schema",
+      "input_key": "schema",
+      "max_turns": 10,
+      "order": 11,
+      "pair": null,
+      "trial_id": "schema-11"
+    },
+    {
+      "cohort": "schema",
+      "input_key": "schema",
+      "max_turns": 10,
+      "order": 12,
+      "pair": null,
+      "trial_id": "schema-12"
+    },
+    {
+      "cohort": "schema",
+      "input_key": "schema",
+      "max_turns": 10,
+      "order": 13,
+      "pair": null,
+      "trial_id": "schema-13"
+    },
+    {
+      "cohort": "schema",
+      "input_key": "schema",
+      "max_turns": 10,
+      "order": 14,
+      "pair": null,
+      "trial_id": "schema-14"
+    },
+    {
+      "cohort": "schema",
+      "input_key": "schema",
+      "max_turns": 10,
+      "order": 15,
+      "pair": null,
+      "trial_id": "schema-15"
+    },
+    {
+      "cohort": "schema",
+      "input_key": "schema",
+      "max_turns": 10,
+      "order": 16,
+      "pair": null,
+      "trial_id": "schema-16"
+    },
+    {
+      "cohort": "schema",
+      "input_key": "schema",
+      "max_turns": 10,
+      "order": 17,
+      "pair": null,
+      "trial_id": "schema-17"
+    },
+    {
+      "cohort": "schema",
+      "input_key": "schema",
+      "max_turns": 10,
+      "order": 18,
+      "pair": null,
+      "trial_id": "schema-18"
+    },
+    {
+      "cohort": "schema",
+      "input_key": "schema",
+      "max_turns": 10,
+      "order": 19,
+      "pair": null,
+      "trial_id": "schema-19"
+    },
+    {
+      "cohort": "schema",
+      "input_key": "schema",
+      "max_turns": 10,
+      "order": 20,
+      "pair": null,
+      "trial_id": "schema-20"
+    },
+    {
+      "cohort": "schema",
+      "input_key": "schema",
+      "max_turns": 10,
+      "order": 21,
+      "pair": null,
+      "trial_id": "schema-21"
+    },
+    {
+      "cohort": "schema",
+      "input_key": "schema",
+      "max_turns": 10,
+      "order": 22,
+      "pair": null,
+      "trial_id": "schema-22"
+    },
+    {
+      "cohort": "schema",
+      "input_key": "schema",
+      "max_turns": 10,
+      "order": 23,
+      "pair": null,
+      "trial_id": "schema-23"
+    },
+    {
+      "cohort": "schema",
+      "input_key": "schema",
+      "max_turns": 10,
+      "order": 24,
+      "pair": null,
+      "trial_id": "schema-24"
+    },
+    {
+      "cohort": "schema",
+      "input_key": "schema",
+      "max_turns": 10,
+      "order": 25,
+      "pair": null,
+      "trial_id": "schema-25"
+    },
+    {
+      "cohort": "schema",
+      "input_key": "schema",
+      "max_turns": 10,
+      "order": 26,
+      "pair": null,
+      "trial_id": "schema-26"
+    },
+    {
+      "cohort": "schema",
+      "input_key": "schema",
+      "max_turns": 10,
+      "order": 27,
+      "pair": null,
+      "trial_id": "schema-27"
+    },
+    {
+      "cohort": "schema",
+      "input_key": "schema",
+      "max_turns": 10,
+      "order": 28,
+      "pair": null,
+      "trial_id": "schema-28"
+    },
+    {
+      "cohort": "schema",
+      "input_key": "schema",
+      "max_turns": 10,
+      "order": 29,
+      "pair": null,
+      "trial_id": "schema-29"
+    },
+    {
+      "cohort": "schema",
+      "input_key": "schema",
+      "max_turns": 10,
+      "order": 30,
+      "pair": null,
+      "trial_id": "schema-30"
+    },
+    {
+      "cohort": "ceiling_2",
+      "input_key": "schema",
+      "max_turns": 2,
+      "order": 31,
+      "pair": 1,
+      "trial_id": "pair-01-c2"
+    },
+    {
+      "cohort": "ceiling_10",
+      "input_key": "schema",
+      "max_turns": 10,
+      "order": 32,
+      "pair": 1,
+      "trial_id": "pair-01-c10"
+    },
+    {
+      "cohort": "ceiling_10",
+      "input_key": "schema",
+      "max_turns": 10,
+      "order": 33,
+      "pair": 2,
+      "trial_id": "pair-02-c10"
+    },
+    {
+      "cohort": "ceiling_2",
+      "input_key": "schema",
+      "max_turns": 2,
+      "order": 34,
+      "pair": 2,
+      "trial_id": "pair-02-c2"
+    },
+    {
+      "cohort": "ceiling_2",
+      "input_key": "schema",
+      "max_turns": 2,
+      "order": 35,
+      "pair": 3,
+      "trial_id": "pair-03-c2"
+    },
+    {
+      "cohort": "ceiling_10",
+      "input_key": "schema",
+      "max_turns": 10,
+      "order": 36,
+      "pair": 3,
+      "trial_id": "pair-03-c10"
+    },
+    {
+      "cohort": "ceiling_10",
+      "input_key": "schema",
+      "max_turns": 10,
+      "order": 37,
+      "pair": 4,
+      "trial_id": "pair-04-c10"
+    },
+    {
+      "cohort": "ceiling_2",
+      "input_key": "schema",
+      "max_turns": 2,
+      "order": 38,
+      "pair": 4,
+      "trial_id": "pair-04-c2"
+    },
+    {
+      "cohort": "ceiling_2",
+      "input_key": "schema",
+      "max_turns": 2,
+      "order": 39,
+      "pair": 5,
+      "trial_id": "pair-05-c2"
+    },
+    {
+      "cohort": "ceiling_10",
+      "input_key": "schema",
+      "max_turns": 10,
+      "order": 40,
+      "pair": 5,
+      "trial_id": "pair-05-c10"
+    },
+    {
+      "cohort": "ceiling_10",
+      "input_key": "schema",
+      "max_turns": 10,
+      "order": 41,
+      "pair": 6,
+      "trial_id": "pair-06-c10"
+    },
+    {
+      "cohort": "ceiling_2",
+      "input_key": "schema",
+      "max_turns": 2,
+      "order": 42,
+      "pair": 6,
+      "trial_id": "pair-06-c2"
+    },
+    {
+      "cohort": "ceiling_2",
+      "input_key": "schema",
+      "max_turns": 2,
+      "order": 43,
+      "pair": 7,
+      "trial_id": "pair-07-c2"
+    },
+    {
+      "cohort": "ceiling_10",
+      "input_key": "schema",
+      "max_turns": 10,
+      "order": 44,
+      "pair": 7,
+      "trial_id": "pair-07-c10"
+    },
+    {
+      "cohort": "ceiling_10",
+      "input_key": "schema",
+      "max_turns": 10,
+      "order": 45,
+      "pair": 8,
+      "trial_id": "pair-08-c10"
+    },
+    {
+      "cohort": "ceiling_2",
+      "input_key": "schema",
+      "max_turns": 2,
+      "order": 46,
+      "pair": 8,
+      "trial_id": "pair-08-c2"
+    },
+    {
+      "cohort": "ceiling_2",
+      "input_key": "schema",
+      "max_turns": 2,
+      "order": 47,
+      "pair": 9,
+      "trial_id": "pair-09-c2"
+    },
+    {
+      "cohort": "ceiling_10",
+      "input_key": "schema",
+      "max_turns": 10,
+      "order": 48,
+      "pair": 9,
+      "trial_id": "pair-09-c10"
+    },
+    {
+      "cohort": "ceiling_10",
+      "input_key": "schema",
+      "max_turns": 10,
+      "order": 49,
+      "pair": 10,
+      "trial_id": "pair-10-c10"
+    },
+    {
+      "cohort": "ceiling_2",
+      "input_key": "schema",
+      "max_turns": 2,
+      "order": 50,
+      "pair": 10,
+      "trial_id": "pair-10-c2"
+    },
+    {
+      "cohort": "ceiling_2",
+      "input_key": "schema",
+      "max_turns": 2,
+      "order": 51,
+      "pair": 11,
+      "trial_id": "pair-11-c2"
+    },
+    {
+      "cohort": "ceiling_10",
+      "input_key": "schema",
+      "max_turns": 10,
+      "order": 52,
+      "pair": 11,
+      "trial_id": "pair-11-c10"
+    },
+    {
+      "cohort": "ceiling_10",
+      "input_key": "schema",
+      "max_turns": 10,
+      "order": 53,
+      "pair": 12,
+      "trial_id": "pair-12-c10"
+    },
+    {
+      "cohort": "ceiling_2",
+      "input_key": "schema",
+      "max_turns": 2,
+      "order": 54,
+      "pair": 12,
+      "trial_id": "pair-12-c2"
+    },
+    {
+      "cohort": "ceiling_2",
+      "input_key": "schema",
+      "max_turns": 2,
+      "order": 55,
+      "pair": 13,
+      "trial_id": "pair-13-c2"
+    },
+    {
+      "cohort": "ceiling_10",
+      "input_key": "schema",
+      "max_turns": 10,
+      "order": 56,
+      "pair": 13,
+      "trial_id": "pair-13-c10"
+    },
+    {
+      "cohort": "ceiling_10",
+      "input_key": "schema",
+      "max_turns": 10,
+      "order": 57,
+      "pair": 14,
+      "trial_id": "pair-14-c10"
+    },
+    {
+      "cohort": "ceiling_2",
+      "input_key": "schema",
+      "max_turns": 2,
+      "order": 58,
+      "pair": 14,
+      "trial_id": "pair-14-c2"
+    },
+    {
+      "cohort": "ceiling_2",
+      "input_key": "schema",
+      "max_turns": 2,
+      "order": 59,
+      "pair": 15,
+      "trial_id": "pair-15-c2"
+    },
+    {
+      "cohort": "ceiling_10",
+      "input_key": "schema",
+      "max_turns": 10,
+      "order": 60,
+      "pair": 15,
+      "trial_id": "pair-15-c10"
+    },
+    {
+      "cohort": "ceiling_10",
+      "input_key": "schema",
+      "max_turns": 10,
+      "order": 61,
+      "pair": 16,
+      "trial_id": "pair-16-c10"
+    },
+    {
+      "cohort": "ceiling_2",
+      "input_key": "schema",
+      "max_turns": 2,
+      "order": 62,
+      "pair": 16,
+      "trial_id": "pair-16-c2"
+    },
+    {
+      "cohort": "ceiling_2",
+      "input_key": "schema",
+      "max_turns": 2,
+      "order": 63,
+      "pair": 17,
+      "trial_id": "pair-17-c2"
+    },
+    {
+      "cohort": "ceiling_10",
+      "input_key": "schema",
+      "max_turns": 10,
+      "order": 64,
+      "pair": 17,
+      "trial_id": "pair-17-c10"
+    },
+    {
+      "cohort": "ceiling_10",
+      "input_key": "schema",
+      "max_turns": 10,
+      "order": 65,
+      "pair": 18,
+      "trial_id": "pair-18-c10"
+    },
+    {
+      "cohort": "ceiling_2",
+      "input_key": "schema",
+      "max_turns": 2,
+      "order": 66,
+      "pair": 18,
+      "trial_id": "pair-18-c2"
+    },
+    {
+      "cohort": "ceiling_2",
+      "input_key": "schema",
+      "max_turns": 2,
+      "order": 67,
+      "pair": 19,
+      "trial_id": "pair-19-c2"
+    },
+    {
+      "cohort": "ceiling_10",
+      "input_key": "schema",
+      "max_turns": 10,
+      "order": 68,
+      "pair": 19,
+      "trial_id": "pair-19-c10"
+    },
+    {
+      "cohort": "ceiling_10",
+      "input_key": "schema",
+      "max_turns": 10,
+      "order": 69,
+      "pair": 20,
+      "trial_id": "pair-20-c10"
+    },
+    {
+      "cohort": "ceiling_2",
+      "input_key": "schema",
+      "max_turns": 2,
+      "order": 70,
+      "pair": 20,
+      "trial_id": "pair-20-c2"
+    },
+    {
+      "cohort": "adversarial",
+      "input_key": "adversarial",
+      "max_turns": 10,
+      "order": 71,
+      "pair": null,
+      "trial_id": "adversarial-01"
+    },
+    {
+      "cohort": "adversarial",
+      "input_key": "adversarial",
+      "max_turns": 10,
+      "order": 72,
+      "pair": null,
+      "trial_id": "adversarial-02"
+    },
+    {
+      "cohort": "adversarial",
+      "input_key": "adversarial",
+      "max_turns": 10,
+      "order": 73,
+      "pair": null,
+      "trial_id": "adversarial-03"
+    },
+    {
+      "cohort": "adversarial",
+      "input_key": "adversarial",
+      "max_turns": 10,
+      "order": 74,
+      "pair": null,
+      "trial_id": "adversarial-04"
+    },
+    {
+      "cohort": "adversarial",
+      "input_key": "adversarial",
+      "max_turns": 10,
+      "order": 75,
+      "pair": null,
+      "trial_id": "adversarial-05"
+    }
+  ],
+  "schema_version": 1,
+  "source_fingerprint": "7814a2a02c60ddcfd23eace1bfc8a0bc02d98882440253f2c4ef4697be45febb",
+  "source_sha256": {
+    "code/agents_experiments.py": "e39dbd9f361ff622aeb15da8ef4eed7118e9100a4fb22dc6ee3a925e2d6e4ef1",
+    "code/agents_graph.py": "2fd3d491a00253315a2ff405f993d14b5af38de4cdf356488cb4b1a0f98f7226",
+    "requirements-agents.txt": "32a34354cd2640d8c3e33e6bdd60bbbf0ca9a7aad49723efb52213907773dc60",
+    "scripts/verify_part4.py": "eeebc9d79efd2edde2bff541fe522f293c80ad50cae0d24715c10cea2b366cd6",
+    "src/agent_graph/__init__.py": "8230833e4dac07fb013f0a896f5e93c4105988f059b80851ca28bf54c7a5a1c0",
+    "src/agent_graph/contracts.py": "472cb6b472948016da09239f48752172ee9ff7f2778bdc334ba420689d3bb25e",
+    "src/agent_graph/evaluation.py": "1ea0afaf21ce22f09952b1ffe6082069a4d406f875233b0ad4124a3cc9876516",
+    "src/agent_graph/nodes.py": "f71cb8caff198e1b35845e8327d6bb75c0f6f83e24b79f53cbe41ebf569dd43f",
+    "src/agent_graph/router.py": "cfeb3b8886bde94ad5c19dfa0c7097924711aab2ea3fd12fe6e0502b89f05cb7",
+    "src/agent_graph/state.py": "4f21e720abd1321f553759a8b9d9f654f0a31c97233366c81a241cda058891de",
+    "src/agent_graph/workflow.py": "e91f09c9cafdfb8a5f485722b3ac1193a310b01d7a5fecd1315c8b3d53cf4420",
+    "src/model_client.py": "61afadc4260599e701b05ab6e4268ebbb792eb3fba0357653fb90a081f8cf48e"
+  }
+}

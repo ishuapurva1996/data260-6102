@@ -1,0 +1,44 @@
+{
+  "campaign_id": "20260914T0610-baseline",
+  "campaign_manifest_sha256": "54caf100a4c6f570b217d9abfa94de1fbc1bc1831f452deb995e62e55cab091f",
+  "cohorts": {
+    "ceiling_10": {
+      "accepted": 20,
+      "accepted_mean_elapsed_ms": 2472.2461,
+      "ceiling": 0,
+      "complete": true,
+      "completion_rate_pct": 100.0,
+      "error": 0,
+      "expected": 20,
+      "latency_observed_count": 20,
+      "mean_elapsed_ms": 2472.2461,
+      "observed_mean_elapsed_ms": 2472.2461,
+      "pending": 0,
+      "started": 20,
+      "terminal": 20,
+      "unknown": 0
+    },
+    "ceiling_2": {
+      "accepted": 20,
+      "accepted_mean_elapsed_ms": 2485.6343,
+      "ceiling": 0,
+      "complete": true,
+      "completion_rate_pct": 100.0,
+      "error": 0,
+      "expected": 20,
+      "latency_observed_count": 20,
+      "mean_elapsed_ms": 2485.6343,
+      "observed_mean_elapsed_ms": 2485.6343,
+      "pending": 0,
+      "started": 20,
+      "terminal": 20,
+      "unknown": 0
+    }
+  },
+  "command": ".venv-agents/bin/python code/agents_graph.py --input-json reports/hw02/cases/schema_input.json --max-turns 10",
+  "evidence": "raw/part4/20260914T0610-baseline/summary.json",
+  "max_turns": 10,
+  "reason": "lower mean application-run latency",
+  "rule": "Higher observed completion rate, then lower mean application-run latency across all 20 runs, then the smaller ceiling.",
+  "scope": "Observed results for this frozen model, ordinary input, configuration, and 20-run sample per ceiling."
+}

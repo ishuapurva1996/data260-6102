@@ -1,0 +1,30 @@
+{
+  "recorded_at": "2026-09-14T06:23:36.439558+00:00",
+  "review_run_id": "part4-20260914-final",
+  "status": "complete",
+  "original_review": "review-before-fixes.json",
+  "all_confirmed_findings_resolved": true,
+  "findings": [
+    {
+      "id": 1,
+      "resolution": "Refuse resume after any failed, unknown or partial excluded warm-up; preserve prior evidence and require a new campaign.",
+      "verification": "Failed/unknown/partial warm-up regressions prove no new model launch."
+    },
+    {
+      "id": 2,
+      "resolution": "Require the full deployment choice and bind its campaign identity, manifest hash, evidence path and command ceiling to the verified campaign.",
+      "verification": "Missing fields, wrong campaign/hash/evidence/command and controlled-reviewer corruption cases fail verification."
+    },
+    {
+      "id": 3,
+      "resolution": "Bound Git metadata subprocesses to 5 seconds, translate subprocess failures to IntegrityError, and collect metadata before trial-directory reservation.",
+      "verification": "Timeout leaves slot pending, makes no model launch, and releases runner ownership."
+    }
+  ],
+  "validation": {
+    "agent_graph_tests": "95 passed; final-tests.txt",
+    "offline_verification": "8 checks passed; ../../../verification_part4.json",
+    "model_calls_for_review_fixes": 0
+  },
+  "provenance": "The original 75 measured trials, one excluded warm-up, and execution-time source snapshots remain unchanged. Only runner lifecycle handling and offline verifier checks changed after measurement."
+}

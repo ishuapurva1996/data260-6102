@@ -1,0 +1,337 @@
+{
+  "DOMAIN_ID": 6,
+  "SEED": 6102,
+  "SID4": 6102,
+  "VERIFY_SEED": 266102,
+  "assignment": "HW2",
+  "campaign": "/Users/pragyaapurva/Documents/SJSU/DATA 260/data260-6102/reports/hw02/raw/part4/20260914T0610-baseline",
+  "campaign_id": "20260914T0610-baseline",
+  "campaign_manifest_sha256": "54caf100a4c6f570b217d9abfa94de1fbc1bc1831f452deb995e62e55cab091f",
+  "campaign_source_fingerprint": "7814a2a02c60ddcfd23eace1bfc8a0bc02d98882440253f2c4ef4697be45febb",
+  "campaign_source_sha256": {
+    "code/agents_experiments.py": "e39dbd9f361ff622aeb15da8ef4eed7118e9100a4fb22dc6ee3a925e2d6e4ef1",
+    "code/agents_graph.py": "2fd3d491a00253315a2ff405f993d14b5af38de4cdf356488cb4b1a0f98f7226",
+    "requirements-agents.txt": "32a34354cd2640d8c3e33e6bdd60bbbf0ca9a7aad49723efb52213907773dc60",
+    "scripts/verify_part4.py": "eeebc9d79efd2edde2bff541fe522f293c80ad50cae0d24715c10cea2b366cd6",
+    "src/agent_graph/__init__.py": "8230833e4dac07fb013f0a896f5e93c4105988f059b80851ca28bf54c7a5a1c0",
+    "src/agent_graph/contracts.py": "472cb6b472948016da09239f48752172ee9ff7f2778bdc334ba420689d3bb25e",
+    "src/agent_graph/evaluation.py": "1ea0afaf21ce22f09952b1ffe6082069a4d406f875233b0ad4124a3cc9876516",
+    "src/agent_graph/nodes.py": "f71cb8caff198e1b35845e8327d6bb75c0f6f83e24b79f53cbe41ebf569dd43f",
+    "src/agent_graph/router.py": "cfeb3b8886bde94ad5c19dfa0c7097924711aab2ea3fd12fe6e0502b89f05cb7",
+    "src/agent_graph/state.py": "4f21e720abd1321f553759a8b9d9f654f0a31c97233366c81a241cda058891de",
+    "src/agent_graph/workflow.py": "e91f09c9cafdfb8a5f485722b3ac1193a310b01d7a5fecd1315c8b3d53cf4420",
+    "src/model_client.py": "61afadc4260599e701b05ab6e4268ebbb792eb3fba0357653fb90a081f8cf48e"
+  },
+  "checks": {
+    "campaign_integrity_and_provenance": {
+      "details": {
+        "hashes": "manifest, frozen sources, cases, trial files and raw CLI evidence",
+        "records_replayed": 75
+      },
+      "passed": true
+    },
+    "cohort_completeness_and_independent_arithmetic": {
+      "details": {
+        "cohort_counts": {
+          "adversarial": 5,
+          "ceiling_10": 20,
+          "ceiling_2": 20,
+          "schema": 30
+        },
+        "deployment_max_turns": 10
+      },
+      "passed": true
+    },
+    "current_schema_boundaries": {
+      "details": {
+        "invalid_boundary_cases": 19,
+        "valid_boundary_cases": 1
+      },
+      "passed": true
+    },
+    "derived_campaign_files": {
+      "details": {
+        "files": [
+          "results.jsonl",
+          "results.csv",
+          "summary.json"
+        ]
+      },
+      "passed": true
+    },
+    "excluded_ordinary_warmups": {
+      "details": {
+        "excluded_warmup_count": 1,
+        "run_ids": [
+          "20260914T060645-1e21bedac6"
+        ]
+      },
+      "passed": true
+    },
+    "independent_schema_approval_and_turn_accounting": {
+      "details": {
+        "normal_reviewer": true,
+        "traces_checked": 75
+      },
+      "passed": true
+    },
+    "published_tables_and_deployment_choice": {
+      "details": {
+        "files": [
+          "METRICS.md",
+          "deployment_choice.json"
+        ],
+        "max_turns": 10
+      },
+      "passed": true
+    },
+    "verification_git_metadata": {
+      "details": null,
+      "passed": true
+    }
+  },
+  "command": [
+    "/Users/pragyaapurva/Documents/SJSU/DATA 260/data260-6102/.venv-agents/bin/python",
+    "/Users/pragyaapurva/Documents/SJSU/DATA 260/data260-6102/scripts/verify_part4.py",
+    "--campaign",
+    "reports/hw02/raw/part4/20260914T0610-baseline",
+    "--report-dir",
+    "reports/hw02",
+    "--output",
+    "reports/hw02/verification_part4.json"
+  ],
+  "config": {
+    "base_url": "http://localhost:11434",
+    "controlled_reviewer": false,
+    "model": "qwen3:1.7b",
+    "model_seed": null,
+    "num_ctx": 4096,
+    "reasoning": false,
+    "response_format": "json",
+    "temperature": 0.0,
+    "timeout": 120.0
+  },
+  "config_fingerprint": "0080e40e43a8ad8f2b590b8d1e2b9c5e5fef98ca092bc92a1cb0581a61f94c25",
+  "current_code_sha256": {
+    "code/agents_experiments.py": "405ec06ca85608ab2e943e8eccd159151a27bd57ab53444b3cac21a3910d7fcc",
+    "code/agents_graph.py": "2fd3d491a00253315a2ff405f993d14b5af38de4cdf356488cb4b1a0f98f7226",
+    "requirements-agents.txt": "32a34354cd2640d8c3e33e6bdd60bbbf0ca9a7aad49723efb52213907773dc60",
+    "scripts/verify_part4.py": "bbeebe8dfe27d3f12c1bd6d8112818a586e48cf29f7631dda4c607b6d5eb69b3",
+    "src/agent_graph/__init__.py": "8230833e4dac07fb013f0a896f5e93c4105988f059b80851ca28bf54c7a5a1c0",
+    "src/agent_graph/contracts.py": "472cb6b472948016da09239f48752172ee9ff7f2778bdc334ba420689d3bb25e",
+    "src/agent_graph/evaluation.py": "1ea0afaf21ce22f09952b1ffe6082069a4d406f875233b0ad4124a3cc9876516",
+    "src/agent_graph/nodes.py": "f71cb8caff198e1b35845e8327d6bb75c0f6f83e24b79f53cbe41ebf569dd43f",
+    "src/agent_graph/router.py": "cfeb3b8886bde94ad5c19dfa0c7097924711aab2ea3fd12fe6e0502b89f05cb7",
+    "src/agent_graph/state.py": "4f21e720abd1321f553759a8b9d9f654f0a31c97233366c81a241cda058891de",
+    "src/agent_graph/workflow.py": "e91f09c9cafdfb8a5f485722b3ac1193a310b01d7a5fecd1315c8b3d53cf4420",
+    "src/model_client.py": "61afadc4260599e701b05ab6e4268ebbb792eb3fba0357653fb90a081f8cf48e"
+  },
+  "environment": {
+    "machine": "arm64",
+    "packages": {
+      "annotated-types": "0.8.0",
+      "anyio": "4.15.1",
+      "certifi": "2026.7.22",
+      "charset-normalizer": "3.5.1",
+      "distro": "1.9.0",
+      "h11": "0.16.0",
+      "httpcore": "1.0.9",
+      "httpcore2": "2.12.0",
+      "httpx": "0.28.1",
+      "httpx2": "2.12.0",
+      "idna": "3.19",
+      "jsonpatch": "1.33",
+      "jsonpointer": "3.1.1",
+      "langchain-core": "1.6.3",
+      "langchain-ollama": "1.1.0",
+      "langchain-protocol": "0.0.19",
+      "langgraph": "1.2.11",
+      "langgraph-checkpoint": "4.2.0",
+      "langgraph-prebuilt": "1.1.0",
+      "langgraph-sdk": "0.4.4",
+      "langsmith": "0.12.4",
+      "ollama": "0.6.2",
+      "orjson": "3.12.0",
+      "ormsgpack": "1.12.2",
+      "packaging": "26.3",
+      "pip": "25.0.1",
+      "pydantic": "2.13.5",
+      "pydantic_core": "2.46.5",
+      "pyyaml": "6.0.3",
+      "requests": "2.34.2",
+      "requests-toolbelt": "1.0.0",
+      "sniffio": "1.3.1",
+      "tenacity": "9.1.4",
+      "truststore": "0.10.4",
+      "typing-inspection": "0.4.4",
+      "typing_extensions": "4.16.0",
+      "urllib3": "2.7.0",
+      "uuid_utils": "0.17.1",
+      "websockets": "16.1.1",
+      "xxhash": "4.0.1",
+      "zstandard": "0.25.0"
+    },
+    "platform": "macOS-15.7.4-arm64-arm-64bit",
+    "python": "3.12.14"
+  },
+  "execution_git": {
+    "branch": "codex/fix-hw1-form",
+    "commit": "17fd1b38ee3bc7046ddccbc60c324258186da2e1",
+    "dirty": true,
+    "status": "M requirements-agents.txt\n M src/agent_graph/contracts.py\n M src/agent_graph/nodes.py\n M tests/agent_graph/test_nodes.py\n M tests/agent_graph/test_workflow.py\n?? code/agents_experiments.py\n?? reports/hw02/cases/adversarial_input.json\n?? reports/hw02/cases/schema_input.json\n?? reports/hw02/raw/part4/\n?? scripts/verify_part4.py\n?? src/agent_graph/evaluation.py\n?? tests/agent_graph/test_evaluation.py\n?? tests/agent_graph/test_experiments.py\n?? tests/agent_graph/test_verify_part4.py"
+  },
+  "generated_at": "2026-09-14T06:21:23.358452+00:00",
+  "measured_counts": {
+    "adversarial": 5,
+    "ceiling_10": 20,
+    "ceiling_2": 20,
+    "schema": 30,
+    "total": 75
+  },
+  "model_calls": 0,
+  "model_identity": {
+    "details": {
+      "context_length": 40960,
+      "embedding_length": 2048,
+      "families": [
+        "qwen3"
+      ],
+      "family": "qwen3",
+      "format": "gguf",
+      "parameter_size": "2.0B",
+      "parent_model": "",
+      "quantization_level": "Q4_K_M"
+    },
+    "digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+    "name": "qwen3:1.7b",
+    "ollama_version": "0.33.0"
+  },
+  "offline": true,
+  "part": 4,
+  "passed": true,
+  "recomputed": {
+    "accepted": 70,
+    "adversarial_outcomes": [
+      {
+        "elapsed_ms": 7601.189,
+        "planner_attempts": 10,
+        "schema_failure_count": 10,
+        "status": "turn_limit",
+        "trial_id": "adversarial-01",
+        "turn_count": 10
+      },
+      {
+        "elapsed_ms": 7346.801,
+        "planner_attempts": 10,
+        "schema_failure_count": 10,
+        "status": "turn_limit",
+        "trial_id": "adversarial-02",
+        "turn_count": 10
+      },
+      {
+        "elapsed_ms": 7334.468,
+        "planner_attempts": 10,
+        "schema_failure_count": 10,
+        "status": "turn_limit",
+        "trial_id": "adversarial-03",
+        "turn_count": 10
+      },
+      {
+        "elapsed_ms": 7595.119,
+        "planner_attempts": 10,
+        "schema_failure_count": 10,
+        "status": "turn_limit",
+        "trial_id": "adversarial-04",
+        "turn_count": 10
+      },
+      {
+        "elapsed_ms": 7319.092,
+        "planner_attempts": 10,
+        "schema_failure_count": 10,
+        "status": "turn_limit",
+        "trial_id": "adversarial-05",
+        "turn_count": 10
+      }
+    ],
+    "ceiling": 5,
+    "cohorts": {
+      "adversarial": {
+        "accepted": 0,
+        "accepted_mean_elapsed_ms": null,
+        "ceiling": 5,
+        "completion_rate_pct": 0.0,
+        "expected": 5,
+        "mean_elapsed_ms": 7439.3338
+      },
+      "ceiling_10": {
+        "accepted": 20,
+        "accepted_mean_elapsed_ms": 2472.2461,
+        "ceiling": 0,
+        "completion_rate_pct": 100.0,
+        "expected": 20,
+        "mean_elapsed_ms": 2472.2461
+      },
+      "ceiling_2": {
+        "accepted": 20,
+        "accepted_mean_elapsed_ms": 2485.6343,
+        "ceiling": 0,
+        "completion_rate_pct": 100.0,
+        "expected": 20,
+        "mean_elapsed_ms": 2485.6343
+      },
+      "schema": {
+        "accepted": 30,
+        "accepted_mean_elapsed_ms": 2104.4014,
+        "ceiling": 0,
+        "completion_rate_pct": 100.0,
+        "expected": 30,
+        "mean_elapsed_ms": 2104.4014
+      }
+    },
+    "deployment_max_turns": 10,
+    "schema_categories": [
+      {
+        "category": "Valid first attempt",
+        "count": 30,
+        "mean_elapsed_ms": 2104.4014
+      },
+      {
+        "category": "Valid after 1 retry",
+        "count": 0,
+        "mean_elapsed_ms": null
+      },
+      {
+        "category": "Valid after 2+ retries",
+        "count": 0,
+        "mean_elapsed_ms": null
+      },
+      {
+        "category": "Hit turn ceiling",
+        "count": 0,
+        "mean_elapsed_ms": null
+      }
+    ],
+    "schema_first_valid": {
+      "attempt_counts": {
+        "1": 30
+      },
+      "never_valid_count": 0,
+      "observed_terminal_count": 30,
+      "planner_retries": 0,
+      "reviewer_issue_count": 0,
+      "reviewer_retry_count": 0,
+      "runs_with_schema_failures": 0,
+      "schema_failure_count": 0,
+      "trace_observed_count": 30
+    }
+  },
+  "report_dir": "/Users/pragyaapurva/Documents/SJSU/DATA 260/data260-6102/reports/hw02",
+  "scope": "Offline Part 4 evidence verification; not final tagged whole-assignment HW2 verification.json.",
+  "seed_note": "Assignment identity only; not model RNG seeds and no verification randomness is seeded.",
+  "verification_git": {
+    "branch": "codex/fix-hw1-form",
+    "commit": "17fd1b38ee3bc7046ddccbc60c324258186da2e1",
+    "dirty": true,
+    "status": "M README.md\n M docs/agent_graph.md\n M reports/hw02/README.md\n M requirements-agents.txt\n M src/agent_graph/contracts.py\n M src/agent_graph/nodes.py\n M tests/agent_graph/test_nodes.py\n M tests/agent_graph/test_workflow.py\n?? code/agents_experiments.py\n?? reports/hw02/METRICS.md\n?? reports/hw02/PART4_IMPLEMENTATION.md\n?? reports/hw02/REPRODUCIBLE_RUN_INSTRUCTIONS.md\n?? reports/hw02/RUN_LOG.txt\n?? reports/hw02/cases/adversarial_input.json\n?? reports/hw02/cases/schema_input.json\n?? reports/hw02/deployment_choice.json\n?? reports/hw02/presentation-provenance.json\n?? reports/hw02/raw/part4/\n?? reports/hw02/screenshots/part4/\n?? reports/hw02/verification_part4.json\n?? scripts/report_part4.py\n?? scripts/verify_part4.py\n?? src/agent_graph/evaluation.py\n?? tests/agent_graph/test_evaluation.py\n?? tests/agent_graph/test_experiments.py\n?? tests/agent_graph/test_verify_part4.py"
+  }
+}

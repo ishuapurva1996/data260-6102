@@ -1,0 +1,164 @@
+{
+  "accepted": 70,
+  "accepted_mean_elapsed_ms": 2318.4235714285714,
+  "campaign_id": "20260914T0610-baseline",
+  "ceiling": 5,
+  "cohorts": {
+    "adversarial": {
+      "accepted": 0,
+      "accepted_mean_elapsed_ms": null,
+      "ceiling": 5,
+      "complete": true,
+      "completion_rate_pct": 0.0,
+      "error": 0,
+      "expected": 5,
+      "latency_observed_count": 5,
+      "mean_elapsed_ms": 7439.3338,
+      "observed_mean_elapsed_ms": 7439.3338,
+      "pending": 0,
+      "started": 5,
+      "terminal": 5,
+      "unknown": 0
+    },
+    "ceiling_10": {
+      "accepted": 20,
+      "accepted_mean_elapsed_ms": 2472.2461,
+      "ceiling": 0,
+      "complete": true,
+      "completion_rate_pct": 100.0,
+      "error": 0,
+      "expected": 20,
+      "latency_observed_count": 20,
+      "mean_elapsed_ms": 2472.2461,
+      "observed_mean_elapsed_ms": 2472.2461,
+      "pending": 0,
+      "started": 20,
+      "terminal": 20,
+      "unknown": 0
+    },
+    "ceiling_2": {
+      "accepted": 20,
+      "accepted_mean_elapsed_ms": 2485.6343,
+      "ceiling": 0,
+      "complete": true,
+      "completion_rate_pct": 100.0,
+      "error": 0,
+      "expected": 20,
+      "latency_observed_count": 20,
+      "mean_elapsed_ms": 2485.6343,
+      "observed_mean_elapsed_ms": 2485.6343,
+      "pending": 0,
+      "started": 20,
+      "terminal": 20,
+      "unknown": 0
+    },
+    "schema": {
+      "accepted": 30,
+      "accepted_mean_elapsed_ms": 2104.4014,
+      "ceiling": 0,
+      "complete": true,
+      "completion_rate_pct": 100.0,
+      "error": 0,
+      "expected": 30,
+      "latency_observed_count": 30,
+      "mean_elapsed_ms": 2104.4014,
+      "observed_mean_elapsed_ms": 2104.4014,
+      "pending": 0,
+      "started": 30,
+      "terminal": 30,
+      "unknown": 0
+    }
+  },
+  "complete": true,
+  "completion_rate_pct": 93.33333333333333,
+  "config_fingerprint": "0080e40e43a8ad8f2b590b8d1e2b9c5e5fef98ca092bc92a1cb0581a61f94c25",
+  "deployment_choice": {
+    "cohorts": {
+      "ceiling_10": {
+        "accepted": 20,
+        "accepted_mean_elapsed_ms": 2472.2461,
+        "ceiling": 0,
+        "complete": true,
+        "completion_rate_pct": 100.0,
+        "error": 0,
+        "expected": 20,
+        "latency_observed_count": 20,
+        "mean_elapsed_ms": 2472.2461,
+        "observed_mean_elapsed_ms": 2472.2461,
+        "pending": 0,
+        "started": 20,
+        "terminal": 20,
+        "unknown": 0
+      },
+      "ceiling_2": {
+        "accepted": 20,
+        "accepted_mean_elapsed_ms": 2485.6343,
+        "ceiling": 0,
+        "complete": true,
+        "completion_rate_pct": 100.0,
+        "error": 0,
+        "expected": 20,
+        "latency_observed_count": 20,
+        "mean_elapsed_ms": 2485.6343,
+        "observed_mean_elapsed_ms": 2485.6343,
+        "pending": 0,
+        "started": 20,
+        "terminal": 20,
+        "unknown": 0
+      }
+    },
+    "max_turns": 10,
+    "reason": "lower mean application-run latency",
+    "rule": "Higher observed completion rate, then lower mean application-run latency across all 20 runs, then the smaller ceiling.",
+    "scope": "Observed results for this frozen model, ordinary input, configuration, and 20-run sample per ceiling."
+  },
+  "error": 0,
+  "expected": 75,
+  "latency_observed_count": 75,
+  "mean_elapsed_ms": 2659.8175866666666,
+  "metric": "application-run latency (elapsed_ms); display rounding only; empty or incomplete all-run means are N/A",
+  "missing_trial_ids": [],
+  "observed_mean_elapsed_ms": 2659.8175866666666,
+  "pending": 0,
+  "schema_categories": [
+    {
+      "category": "Valid first attempt",
+      "count": 30,
+      "mean_elapsed_ms": 2104.4014
+    },
+    {
+      "category": "Valid after 1 retry",
+      "count": 0,
+      "mean_elapsed_ms": null
+    },
+    {
+      "category": "Valid after 2+ retries",
+      "count": 0,
+      "mean_elapsed_ms": null
+    },
+    {
+      "category": "Hit turn ceiling",
+      "count": 0,
+      "mean_elapsed_ms": null
+    }
+  ],
+  "schema_first_valid": {
+    "attempt_counts": {
+      "1": 30
+    },
+    "never_valid_count": 0,
+    "observed_terminal_count": 30,
+    "planner_retries": 0,
+    "reviewer_issue_count": 0,
+    "reviewer_retry_count": 0,
+    "runs_with_schema_failures": 0,
+    "schema_failure_count": 0,
+    "trace_observed_count": 30
+  },
+  "schema_version": 1,
+  "source_fingerprint": "7814a2a02c60ddcfd23eace1bfc8a0bc02d98882440253f2c4ef4697be45febb",
+  "started": 75,
+  "terminal": 75,
+  "unknown": 0,
+  "usage_note": "Reported token counts only. A zero count can mean usage metadata was unavailable; it does not establish zero token consumption."
+}

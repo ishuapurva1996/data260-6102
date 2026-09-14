@@ -1,0 +1,5 @@
+01-schema-real-output.html { x: 56, y: 32, width: 1168, height: 1295.828125 }
+02-schema-repair-test.html { x: 56, y: 32, width: 1168, height: 768.203125 }
+03-bounded-termination.html { x: 56, y: 32, width: 1168, height: 1271.1875 }
+04-measured-tables.html { x: 56, y: 32, width: 1168, height: 1627.390625 }
+05-adversarial-output.html { x: 56, y: 32, width: 1168, height: 1685.75 }

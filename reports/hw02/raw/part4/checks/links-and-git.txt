@@ -1,0 +1,45 @@
+Final Part 4 local checks
+2026-09-14T06:24:21.388733+00:00
+HEAD: 17fd1b38ee3bc7046ddccbc60c324258186da2e1
+Branch: codex/fix-hw1-form
+Part 3 84ff199 is an ancestor: PASS
+Index empty: PASS
+Worktrees:
+/Users/pragyaapurva/Documents/SJSU/DATA 260/data260-6102  17fd1b3 [codex/fix-hw1-form]
+
+Protected historical report/Part 3/web/shared files byte-identical to HEAD: PASS (37 files)
+Local Markdown links resolve: PASS (75 links in 6 documents)
+Changed/frozen Python source and presentation utility syntax: PASS
+Final offline verification: 8/8 PASS, zero model calls
+Postmeasurement changes limited to runner and verifier: PASS; graph/schema/prompts/adapter/calculations unchanged
+External plan is outside repository and not copied/staged: PASS
+git diff --check: PASS
+Final Git status (Part 4 remains uncommitted):
+ M README.md
+ M docs/agent_graph.md
+ M reports/hw02/README.md
+ M requirements-agents.txt
+ M src/agent_graph/contracts.py
+ M src/agent_graph/nodes.py
+ M tests/agent_graph/test_nodes.py
+ M tests/agent_graph/test_workflow.py
+?? code/agents_experiments.py
+?? reports/hw02/METRICS.md
+?? reports/hw02/PART4_IMPLEMENTATION.md
+?? reports/hw02/REPRODUCIBLE_RUN_INSTRUCTIONS.md
+?? reports/hw02/RUN_LOG.txt
+?? reports/hw02/RUN_LOG_PART4.txt
+?? reports/hw02/cases/adversarial_input.json
+?? reports/hw02/cases/schema_input.json
+?? reports/hw02/deployment_choice.json
+?? reports/hw02/presentation-provenance.json
+?? reports/hw02/raw/part4/
+?? reports/hw02/screenshots/part4/
+?? reports/hw02/verification_part4.json
+?? scripts/report_part4.py
+?? scripts/verify_part4.py
+?? src/agent_graph/evaluation.py
+?? tests/agent_graph/test_evaluation.py
+?? tests/agent_graph/test_experiments.py
+?? tests/agent_graph/test_verify_part4.py
+

@@ -1,0 +1,33 @@
+Deterministic scripted transport demonstration, excluded from all measured trials
+run=20260914T060943-d7edbba00d config={"model": "qwen3:1.7b", "base_url": "http://localhost:11434", "temperature": 0.0, "timeout": 120.0, "max_turns": 3, "response_format": "json", "reasoning": false, "controlled_reviewer": false, "turn_definition": "one Planner or Reviewer execution"}
+supervisor turn_count=0 status=running stop_reason=None
+planner attempt=1 revision=1 outcome=invalid
+  raw="{\"tags\": [\"AI\", \"parking\", \"transit\"], \"summary\": \"Rental near transit with parking.\"}"
+  error="tags.0: Value error, tag must contain at least 3 characters (Python string length)"
+supervisor turn_count=1 status=running stop_reason=None
+planner attempt=2 revision=2 outcome=valid
+  raw="{\"tags\": [\"rental\", \"parking\", \"transit\"], \"summary\": \"Rental near transit with parking.\"}"
+supervisor turn_count=2 status=running stop_reason=None
+reviewer attempt=3 revision=2 outcome=valid
+  raw="{\"issues\": []}"
+supervisor turn_count=3 status=accepted stop_reason=Current Planner proposal approved by Reviewer.
+terminal status=accepted turn_count=3/3
+run=20260914T060943-7590613842 config={"model": "qwen3:1.7b", "base_url": "http://localhost:11434", "temperature": 0.0, "timeout": 120.0, "max_turns": 4, "response_format": "json", "reasoning": false, "controlled_reviewer": false, "turn_definition": "one Planner or Reviewer execution"}
+supervisor turn_count=0 status=running stop_reason=None
+planner attempt=1 revision=1 outcome=invalid
+  raw="{\"tags\": [\"AI\", \"parking\", \"transit\"], \"summary\": \"Rental near transit with parking.\"}"
+  error="tags.0: Value error, tag must contain at least 3 characters (Python string length)"
+supervisor turn_count=1 status=running stop_reason=None
+planner attempt=2 revision=2 outcome=invalid
+  raw="{\"tags\": [\"AI\", \"parking\", \"transit\"], \"summary\": \"Rental near transit with parking.\"}"
+  error="tags.0: Value error, tag must contain at least 3 characters (Python string length)"
+supervisor turn_count=2 status=running stop_reason=None
+planner attempt=3 revision=3 outcome=invalid
+  raw="{\"tags\": [\"AI\", \"parking\", \"transit\"], \"summary\": \"Rental near transit with parking.\"}"
+  error="tags.0: Value error, tag must contain at least 3 characters (Python string length)"
+supervisor turn_count=3 status=running stop_reason=None
+planner attempt=4 revision=4 outcome=invalid
+  raw="{\"tags\": [\"AI\", \"parking\", \"transit\"], \"summary\": \"Rental near transit with parking.\"}"
+  error="tags.0: Value error, tag must contain at least 3 characters (Python string length)"
+supervisor turn_count=4 status=turn_limit stop_reason=Worker turn ceiling reached without an approved current proposal.
+terminal status=turn_limit turn_count=4/4

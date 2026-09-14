@@ -1,0 +1,8 @@
+{
+  "calculation_source_fingerprint": "7814a2a02c60ddcfd23eace1bfc8a0bc02d98882440253f2c4ef4697be45febb",
+  "generated_at": "2026-09-14T06:12:50.099519+00:00",
+  "model_calls": 0,
+  "note": "Presentation was produced after measurement from verified saved calculations; it does not alter the frozen execution sources.",
+  "presentation_source": "scripts/report_part4.py",
+  "presentation_source_sha256": "7822122b0234399967ca35cf1e80c1f526ddd5a0cba40d913ec049e2894a238b"
+}

@@ -90,7 +90,7 @@ python code/agents_graph.py --input-json reports/hw02/cases/part3_listing.json -
 
 If `.venv-agents` is already prepared, run `.venv-agents/bin/python code/agents_graph.py --input-json reports/hw02/cases/part3_listing.json`.
 
-See the [Part 3 usage and architecture guide](docs/agent_graph.md) for turn counting, response validation, controlled Reviewer mode, and test commands. The [implementation results](reports/hw02/PART3_IMPLEMENTATION.md) link the recorded tests, real-model runs, and screenshots. Part 4 experiments and final combined HW2 submission artifacts remain pending.
+See the [Part 3 usage and architecture guide](docs/agent_graph.md) for turn counting, response validation, controlled Reviewer mode, and test commands. The [implementation results](reports/hw02/PART3_IMPLEMENTATION.md) link the recorded tests, real-model runs, and screenshots. Part 4 results are linked below; final combined HW2 submission artifacts remain pending.
 
 ## Reproducing the original HW1 submission
 
@@ -178,3 +178,14 @@ make -C reports/hw01 verify-hw01 PYTHON=python NODE_BIN=node
 ```
 
 The verifier checks the current shared checkout. Its default output replaces `reports/hw01/verification.json`; use `python reports/hw01/verify_hw01.py --output /tmp/data260-verification.json` to preserve the recorded submission result. The submitted PDF remains at `reports/hw01/report.pdf` and is unchanged from the `hw1` tag.
+
+## HW2 Part 4 — schema validation and loop safety
+
+The shared Planner–Reviewer graph now validates Planner output with Pydantic and retries within the worker-turn ceiling. The completed 75-run experiment uses real `qwen3:1.7b` calls with frozen inputs and settings.
+
+- [Measured tables and ceiling recommendation](reports/hw02/METRICS.md)
+- [Reproduction and offline verification](reports/hw02/REPRODUCIBLE_RUN_INSTRUCTIONS.md)
+- [Scoped Part 4 verification](reports/hw02/verification_part4.json)
+- [Part 4 evidence and screenshots](reports/hw02/PART4_IMPLEMENTATION.md)
+
+The final combined HW2 report, personal AI-use answers, tagged smoke verification, collaborator-access check, and submission tag remain whole-assignment tasks.

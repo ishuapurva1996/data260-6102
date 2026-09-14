@@ -1,0 +1,1 @@
+Offline tables: 75 trials; ceiling 10

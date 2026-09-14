@@ -160,6 +160,65 @@ class CompiledWorkflowTests(unittest.TestCase):
         self.assertEqual(final["trace"][1]["raw"], bad)
         self.assertIn(bad, human_context(transport.calls[2]).values())
 
+    def test_schema_failure_feedback_repairs_in_three_turns(self):
+        bad = {**DRAFT, "tags": ["AI", "parking", "transit"]}
+        final, transport, client, _ = execute([bad, DRAFT, APPROVED], 3)
+        self.assertEqual(final["status"], "accepted")
+        self.assertEqual(final["turn_count"], 3)
+        self.assertEqual(final["proposal_revision"], 2)
+        self.assertEqual(final["reviewed_revision"], 2)
+        self.assertEqual(final["planner_proposal"], DRAFT)
+        self.assertIsNone(final["error"])
+        self.assertEqual([event["worker"] for event in final["trace"]],
+                         ["planner", "planner", "reviewer"])
+        failure = final["trace"][0]
+        self.assertEqual(failure["raw"], json.dumps(bad))
+        self.assertEqual(failure["outcome"], "invalid")
+        self.assertIn("tags.0", failure["error"])
+        self.assertIn("3", failure["error"])
+        context = human_context(transport.calls[1])
+        self.assertEqual(context["previous_raw_response"], json.dumps(bad))
+        self.assertEqual(context["format_feedback"], failure["error"])
+        self.assertEqual(len(transport.calls), 3)
+        self.assertEqual(client.stats.turn_count, 3)
+
+    def test_schema_failures_consume_exactly_the_ceiling_without_hidden_repair(self):
+        bad = {**DRAFT, "tags": ["AI", "parking", "transit"]}
+        final, transport, _, _ = execute([bad] * 4, 4)
+        self.assertEqual(final["status"], "turn_limit")
+        self.assertEqual(final["turn_count"], 4)
+        self.assertEqual(final["proposal_revision"], 4)
+        self.assertIsNone(final["planner_proposal"])
+        self.assertIsNone(final["reviewed_revision"])
+        self.assertIsNone(final["error"])
+        self.assertEqual(len(transport.calls), 4)
+        self.assertTrue(all(event["worker"] == "planner" for event in final["trace"]))
+        self.assertTrue(all(event["outcome"] == "invalid" for event in final["trace"]))
+        self.assertTrue(all(event["raw"] == json.dumps(bad) for event in final["trace"]))
+
+    def test_schema_repair_on_final_turn_still_requires_a_current_review(self):
+        bad = {**DRAFT, "tags": ["AI", "parking", "transit"]}
+        final, transport, _, _ = execute([bad, DRAFT], 2)
+        self.assertEqual(final["status"], "turn_limit")
+        self.assertEqual(final["turn_count"], 2)
+        self.assertEqual(final["proposal_revision"], 2)
+        self.assertEqual(final["planner_proposal"], DRAFT)
+        self.assertIsNone(final["reviewed_revision"])
+        self.assertEqual(len(transport.calls), 2)
+
+    def test_schema_invalid_revision_retains_draft_and_critique_for_retry(self):
+        bad = {**REVISED, "tags": ["AI", "parking", "transit"]}
+        final, transport, _, _ = execute([DRAFT, REJECTED, bad, REVISED, APPROVED], 5)
+        self.assertEqual(final["status"], "accepted")
+        self.assertEqual(final["proposal_revision"], 3)
+        self.assertEqual(final["reviewed_revision"], 3)
+        self.assertEqual(final["turn_count"], 5)
+        retry_context = human_context(transport.calls[3])
+        self.assertEqual(retry_context["previous_proposal"], DRAFT)
+        self.assertEqual(retry_context["previous_review"], REJECTED)
+        self.assertEqual(retry_context["previous_raw_response"], json.dumps(bad))
+        self.assertIn("tags.0", retry_context["format_feedback"])
+
     def test_malformed_revision_keeps_the_last_draft_and_critique_in_retry_context(self):
         final, transport, _, _ = execute(
             [DRAFT, REJECTED, "invalid revision", REVISED, APPROVED], 5,

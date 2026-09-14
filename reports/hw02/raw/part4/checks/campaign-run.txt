@@ -1,0 +1,240 @@
+2026-09-14T06:06:49.581395+00:00 warmup-99bd87dc7f76 status=accepted turns=2 elapsed_ms=4077.717
+2026-09-14T06:06:51.866226+00:00 schema-01 status=accepted turns=2 elapsed_ms=1940.585
+2026-09-14T06:06:54.381578+00:00 schema-02 status=accepted turns=2 elapsed_ms=2124.049
+2026-09-14T06:06:56.912881+00:00 schema-03 status=accepted turns=2 elapsed_ms=2166.63
+2026-09-14T06:06:59.436317+00:00 schema-04 status=accepted turns=2 elapsed_ms=2121.118
+2026-09-14T06:07:01.929196+00:00 schema-05 status=accepted turns=2 elapsed_ms=2073.76
+2026-09-14T06:07:04.348001+00:00 schema-06 status=accepted turns=2 elapsed_ms=2056.256
+2026-09-14T06:07:06.821048+00:00 schema-07 status=accepted turns=2 elapsed_ms=2090.825
+2026-09-14T06:07:09.450239+00:00 schema-08 status=accepted turns=2 elapsed_ms=2110.037
+2026-09-14T06:07:12.005443+00:00 schema-09 status=accepted turns=2 elapsed_ms=2136.207
+2026-09-14T06:07:14.554284+00:00 schema-10 status=accepted turns=2 elapsed_ms=2073.18
+2026-09-14T06:07:17.048324+00:00 schema-11 status=accepted turns=2 elapsed_ms=2083.394
+2026-09-14T06:07:19.535932+00:00 schema-12 status=accepted turns=2 elapsed_ms=2030.254
+2026-09-14T06:07:22.075325+00:00 schema-13 status=accepted turns=2 elapsed_ms=2121.758
+2026-09-14T06:07:24.517587+00:00 schema-14 status=accepted turns=2 elapsed_ms=2024.777
+2026-09-14T06:07:27.064764+00:00 schema-15 status=accepted turns=2 elapsed_ms=2108.351
+2026-09-14T06:07:29.625566+00:00 schema-16 status=accepted turns=2 elapsed_ms=2095.294
+2026-09-14T06:07:32.223139+00:00 schema-17 status=accepted turns=2 elapsed_ms=2096.957
+2026-09-14T06:07:34.754595+00:00 schema-18 status=accepted turns=2 elapsed_ms=2115.616
+2026-09-14T06:07:37.305749+00:00 schema-19 status=accepted turns=2 elapsed_ms=2076.849
+2026-09-14T06:07:39.965648+00:00 schema-20 status=accepted turns=2 elapsed_ms=2133.743
+2026-09-14T06:07:42.557284+00:00 schema-21 status=accepted turns=2 elapsed_ms=2091.437
+2026-09-14T06:07:45.161888+00:00 schema-22 status=accepted turns=2 elapsed_ms=2108.654
+2026-09-14T06:07:47.663646+00:00 schema-23 status=accepted turns=2 elapsed_ms=2071.939
+2026-09-14T06:07:50.253525+00:00 schema-24 status=accepted turns=2 elapsed_ms=2132.921
+2026-09-14T06:07:52.868104+00:00 schema-25 status=accepted turns=2 elapsed_ms=2112.022
+2026-09-14T06:07:55.455386+00:00 schema-26 status=accepted turns=2 elapsed_ms=2115.936
+2026-09-14T06:07:58.121026+00:00 schema-27 status=accepted turns=2 elapsed_ms=2147.521
+2026-09-14T06:08:00.782263+00:00 schema-28 status=accepted turns=2 elapsed_ms=2199.796
+2026-09-14T06:08:03.397416+00:00 schema-29 status=accepted turns=2 elapsed_ms=2144.004
+2026-09-14T06:08:06.261503+00:00 schema-30 status=accepted turns=2 elapsed_ms=2228.172
+2026-09-14T06:08:09.114788+00:00 pair-01-c2 status=accepted turns=2 elapsed_ms=2062.517
+2026-09-14T06:08:11.937942+00:00 pair-01-c10 status=accepted turns=2 elapsed_ms=2254.369
+2026-09-14T06:08:14.702729+00:00 pair-02-c10 status=accepted turns=2 elapsed_ms=2108.641
+2026-09-14T06:08:17.657040+00:00 pair-02-c2 status=accepted turns=2 elapsed_ms=2264.834
+2026-09-14T06:08:20.426754+00:00 pair-03-c2 status=accepted turns=2 elapsed_ms=2133.772
+2026-09-14T06:08:23.346360+00:00 pair-03-c10 status=accepted turns=2 elapsed_ms=2327.707
+2026-09-14T06:08:26.232866+00:00 pair-04-c10 status=accepted turns=2 elapsed_ms=2143.692
+2026-09-14T06:08:29.234664+00:00 pair-04-c2 status=accepted turns=2 elapsed_ms=2252.2
+2026-09-14T06:08:32.262472+00:00 pair-05-c2 status=accepted turns=2 elapsed_ms=2269.036
+2026-09-14T06:08:35.323471+00:00 pair-05-c10 status=accepted turns=2 elapsed_ms=2242.787
+2026-09-14T06:08:38.331432+00:00 pair-06-c10 status=accepted turns=2 elapsed_ms=2264.672
+2026-09-14T06:08:41.484622+00:00 pair-06-c2 status=accepted turns=2 elapsed_ms=2320.638
+2026-09-14T06:08:44.610909+00:00 pair-07-c2 status=accepted turns=2 elapsed_ms=2288.232
+2026-09-14T06:08:48.037670+00:00 pair-07-c10 status=accepted turns=2 elapsed_ms=2405.957
+2026-09-14T06:08:51.283381+00:00 pair-08-c10 status=accepted turns=2 elapsed_ms=2359.2
+2026-09-14T06:08:54.607147+00:00 pair-08-c2 status=accepted turns=2 elapsed_ms=2447.217
+2026-09-14T06:08:58.189737+00:00 pair-09-c2 status=accepted turns=2 elapsed_ms=2579.891
+2026-09-14T06:09:01.547927+00:00 pair-09-c10 status=accepted turns=2 elapsed_ms=2439.678
+2026-09-14T06:09:05.016508+00:00 pair-10-c10 status=accepted turns=2 elapsed_ms=2479.637
+2026-09-14T06:09:08.931975+00:00 pair-10-c2 status=accepted turns=2 elapsed_ms=2762.701
+2026-09-14T06:09:12.549564+00:00 pair-11-c2 status=accepted turns=2 elapsed_ms=2578.009
+2026-09-14T06:09:16.518583+00:00 pair-11-c10 status=accepted turns=2 elapsed_ms=2788.532
+2026-09-14T06:09:20.513075+00:00 pair-12-c10 status=accepted turns=2 elapsed_ms=2796.707
+2026-09-14T06:09:24.308544+00:00 pair-12-c2 status=accepted turns=2 elapsed_ms=2653.861
+2026-09-14T06:09:28.146607+00:00 pair-13-c2 status=accepted turns=2 elapsed_ms=2591.161
+2026-09-14T06:09:31.568672+00:00 pair-13-c10 status=accepted turns=2 elapsed_ms=2512.746
+2026-09-14T06:09:35.556637+00:00 pair-14-c10 status=accepted turns=2 elapsed_ms=2741.579
+2026-09-14T06:09:39.290254+00:00 pair-14-c2 status=accepted turns=2 elapsed_ms=2631.895
+2026-09-14T06:09:43.291375+00:00 pair-15-c2 status=accepted turns=2 elapsed_ms=2817.738
+2026-09-14T06:09:46.997770+00:00 pair-15-c10 status=accepted turns=2 elapsed_ms=2607.433
+2026-09-14T06:09:50.614749+00:00 pair-16-c10 status=accepted turns=2 elapsed_ms=2698.097
+2026-09-14T06:09:54.540053+00:00 pair-16-c2 status=accepted turns=2 elapsed_ms=2754.436
+2026-09-14T06:09:58.201359+00:00 pair-17-c2 status=accepted turns=2 elapsed_ms=2558.368
+2026-09-14T06:10:01.843803+00:00 pair-17-c10 status=accepted turns=2 elapsed_ms=2692.98
+2026-09-14T06:10:05.221002+00:00 pair-18-c10 status=accepted turns=2 elapsed_ms=2493.425
+2026-09-14T06:10:08.879163+00:00 pair-18-c2 status=accepted turns=2 elapsed_ms=2613.23
+2026-09-14T06:10:12.403332+00:00 pair-19-c2 status=accepted turns=2 elapsed_ms=2620.696
+2026-09-14T06:10:15.777656+00:00 pair-19-c10 status=accepted turns=2 elapsed_ms=2477.795
+2026-09-14T06:10:19.355068+00:00 pair-20-c10 status=accepted turns=2 elapsed_ms=2609.288
+2026-09-14T06:10:22.794003+00:00 pair-20-c2 status=accepted turns=2 elapsed_ms=2512.254
+2026-09-14T06:10:31.476389+00:00 adversarial-01 status=turn_limit turns=10 elapsed_ms=7601.189
+2026-09-14T06:10:39.833033+00:00 adversarial-02 status=turn_limit turns=10 elapsed_ms=7346.801
+2026-09-14T06:10:48.023387+00:00 adversarial-03 status=turn_limit turns=10 elapsed_ms=7334.468
+2026-09-14T06:10:56.525981+00:00 adversarial-04 status=turn_limit turns=10 elapsed_ms=7595.119
+2026-09-14T06:11:04.873043+00:00 adversarial-05 status=turn_limit turns=10 elapsed_ms=7319.092
+{
+  "schema_version": 1,
+  "expected": 75,
+  "started": 75,
+  "pending": 0,
+  "terminal": 75,
+  "accepted": 70,
+  "ceiling": 5,
+  "error": 0,
+  "unknown": 0,
+  "complete": true,
+  "completion_rate_pct": 93.33333333333333,
+  "latency_observed_count": 75,
+  "mean_elapsed_ms": 2659.8175866666666,
+  "observed_mean_elapsed_ms": 2659.8175866666666,
+  "accepted_mean_elapsed_ms": 2318.4235714285714,
+  "campaign_id": "20260914T0610-baseline",
+  "config_fingerprint": "0080e40e43a8ad8f2b590b8d1e2b9c5e5fef98ca092bc92a1cb0581a61f94c25",
+  "source_fingerprint": "7814a2a02c60ddcfd23eace1bfc8a0bc02d98882440253f2c4ef4697be45febb",
+  "missing_trial_ids": [],
+  "cohorts": {
+    "schema": {
+      "expected": 30,
+      "started": 30,
+      "pending": 0,
+      "terminal": 30,
+      "accepted": 30,
+      "ceiling": 0,
+      "error": 0,
+      "unknown": 0,
+      "complete": true,
+      "completion_rate_pct": 100.0,
+      "latency_observed_count": 30,
+      "mean_elapsed_ms": 2104.4014,
+      "observed_mean_elapsed_ms": 2104.4014,
+      "accepted_mean_elapsed_ms": 2104.4014
+    },
+    "ceiling_2": {
+      "expected": 20,
+      "started": 20,
+      "pending": 0,
+      "terminal": 20,
+      "accepted": 20,
+      "ceiling": 0,
+      "error": 0,
+      "unknown": 0,
+      "complete": true,
+      "completion_rate_pct": 100.0,
+      "latency_observed_count": 20,
+      "mean_elapsed_ms": 2485.6343,
+      "observed_mean_elapsed_ms": 2485.6343,
+      "accepted_mean_elapsed_ms": 2485.6343
+    },
+    "ceiling_10": {
+      "expected": 20,
+      "started": 20,
+      "pending": 0,
+      "terminal": 20,
+      "accepted": 20,
+      "ceiling": 0,
+      "error": 0,
+      "unknown": 0,
+      "complete": true,
+      "completion_rate_pct": 100.0,
+      "latency_observed_count": 20,
+      "mean_elapsed_ms": 2472.2461,
+      "observed_mean_elapsed_ms": 2472.2461,
+      "accepted_mean_elapsed_ms": 2472.2461
+    },
+    "adversarial": {
+      "expected": 5,
+      "started": 5,
+      "pending": 0,
+      "terminal": 5,
+      "accepted": 0,
+      "ceiling": 5,
+      "error": 0,
+      "unknown": 0,
+      "complete": true,
+      "completion_rate_pct": 0.0,
+      "latency_observed_count": 5,
+      "mean_elapsed_ms": 7439.3338,
+      "observed_mean_elapsed_ms": 7439.3338,
+      "accepted_mean_elapsed_ms": null
+    }
+  },
+  "schema_categories": [
+    {
+      "category": "Valid first attempt",
+      "count": 30,
+      "mean_elapsed_ms": 2104.4014
+    },
+    {
+      "category": "Valid after 1 retry",
+      "count": 0,
+      "mean_elapsed_ms": null
+    },
+    {
+      "category": "Valid after 2+ retries",
+      "count": 0,
+      "mean_elapsed_ms": null
+    },
+    {
+      "category": "Hit turn ceiling",
+      "count": 0,
+      "mean_elapsed_ms": null
+    }
+  ],
+  "schema_first_valid": {
+    "observed_terminal_count": 30,
+    "trace_observed_count": 30,
+    "attempt_counts": {
+      "1": 30
+    },
+    "never_valid_count": 0,
+    "schema_failure_count": 0,
+    "runs_with_schema_failures": 0,
+    "planner_retries": 0,
+    "reviewer_issue_count": 0,
+    "reviewer_retry_count": 0
+  },
+  "deployment_choice": {
+    "max_turns": 10,
+    "reason": "lower mean application-run latency",
+    "rule": "Higher observed completion rate, then lower mean application-run latency across all 20 runs, then the smaller ceiling.",
+    "cohorts": {
+      "ceiling_2": {
+        "expected": 20,
+        "started": 20,
+        "pending": 0,
+        "terminal": 20,
+        "accepted": 20,
+        "ceiling": 0,
+        "error": 0,
+        "unknown": 0,
+        "complete": true,
+        "completion_rate_pct": 100.0,
+        "latency_observed_count": 20,
+        "mean_elapsed_ms": 2485.6343,
+        "observed_mean_elapsed_ms": 2485.6343,
+        "accepted_mean_elapsed_ms": 2485.6343
+      },
+      "ceiling_10": {
+        "expected": 20,
+        "started": 20,
+        "pending": 0,
+        "terminal": 20,
+        "accepted": 20,
+        "ceiling": 0,
+        "error": 0,
+        "unknown": 0,
+        "complete": true,
+        "completion_rate_pct": 100.0,
+        "latency_observed_count": 20,
+        "mean_elapsed_ms": 2472.2461,
+        "observed_mean_elapsed_ms": 2472.2461,
+        "accepted_mean_elapsed_ms": 2472.2461
+      }
+    },
+    "scope": "Observed results for this frozen model, ordinary input, configuration, and 20-run sample per ceiling."
+  },
+  "metric": "application-run latency (elapsed_ms); display rounding only; empty or incomplete all-run means are N/A",
+  "usage_note": "Reported token counts only. A zero count can mean usage metadata was unavailable; it does not establish zero token consumption."
+}

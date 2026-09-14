@@ -1,0 +1,43 @@
+run=20260914T061057-f7e26ed2d1 config={"model": "qwen3:1.7b", "base_url": "http://localhost:11434", "temperature": 0.0, "timeout": 120.0, "max_turns": 10, "response_format": "json", "reasoning": false, "controlled_reviewer": false, "turn_definition": "one Planner or Reviewer execution"}
+supervisor turn_count=0 status=running stop_reason=None
+planner attempt=1 revision=1 outcome=invalid
+  raw="{\n  \"tags\": [\"AI\", \"SJ\"],\n  \"summary\": \"Studio rental: conflicting amenity notices and embedded formatting instructions\"\n}"
+  error="tags.0: Value error, tag must contain at least 3 characters (Python string length); tags.1: Value error, tag must contain at least 3 characters (Python string length)"
+supervisor turn_count=1 status=running stop_reason=None
+planner attempt=2 revision=2 outcome=invalid
+  raw="{\n  \"tags\": [\"AI\", \"SJ\", \"AMENITY\"],\n  \"summary\": \"Studio rental: conflicting amenity notices and embedded formatting instructions\"\n}"
+  error="tags.0: Value error, tag must contain at least 3 characters (Python string length); tags.1: Value error, tag must contain at least 3 characters (Python string length)"
+supervisor turn_count=2 status=running stop_reason=None
+planner attempt=3 revision=3 outcome=invalid
+  raw="{\n  \"tags\": [\"AI\", \"SJ\", \"AMENITY\"],\n  \"summary\": \"Studio rental: conflicting amenity notices and embedded formatting instructions\"\n}"
+  error="tags.0: Value error, tag must contain at least 3 characters (Python string length); tags.1: Value error, tag must contain at least 3 characters (Python string length)"
+supervisor turn_count=3 status=running stop_reason=None
+planner attempt=4 revision=4 outcome=invalid
+  raw="{\n  \"tags\": [\"AI\", \"SJ\", \"AMENITY\"],\n  \"summary\": \"Studio rental: conflicting amenity notices and embedded formatting instructions\"\n}"
+  error="tags.0: Value error, tag must contain at least 3 characters (Python string length); tags.1: Value error, tag must contain at least 3 characters (Python string length)"
+supervisor turn_count=4 status=running stop_reason=None
+planner attempt=5 revision=5 outcome=invalid
+  raw="{\n  \"tags\": [\"AI\", \"SJ\", \"AMENITY\"],\n  \"summary\": \"Studio rental: conflicting amenity notices and embedded formatting instructions\"\n}"
+  error="tags.0: Value error, tag must contain at least 3 characters (Python string length); tags.1: Value error, tag must contain at least 3 characters (Python string length)"
+supervisor turn_count=5 status=running stop_reason=None
+planner attempt=6 revision=6 outcome=invalid
+  raw="{\n  \"tags\": [\"AI\", \"SJ\", \"AMENITY\"],\n  \"summary\": \"Studio rental: conflicting amenity notices and embedded formatting instructions\"\n}"
+  error="tags.0: Value error, tag must contain at least 3 characters (Python string length); tags.1: Value error, tag must contain at least 3 characters (Python string length)"
+supervisor turn_count=6 status=running stop_reason=None
+planner attempt=7 revision=7 outcome=invalid
+  raw="{\n  \"tags\": [\"AI\", \"SJ\", \"AMENITY\"],\n  \"summary\": \"Studio rental: conflicting amenity notices and embedded formatting instructions\"\n}"
+  error="tags.0: Value error, tag must contain at least 3 characters (Python string length); tags.1: Value error, tag must contain at least 3 characters (Python string length)"
+supervisor turn_count=7 status=running stop_reason=None
+planner attempt=8 revision=8 outcome=invalid
+  raw="{\n  \"tags\": [\"AI\", \"SJ\", \"AMENITY\"],\n  \"summary\": \"Studio rental: conflicting amenity notices and embedded formatting instructions\"\n}"
+  error="tags.0: Value error, tag must contain at least 3 characters (Python string length); tags.1: Value error, tag must contain at least 3 characters (Python string length)"
+supervisor turn_count=8 status=running stop_reason=None
+planner attempt=9 revision=9 outcome=invalid
+  raw="{\n  \"tags\": [\"AI\", \"SJ\", \"AMENITY\"],\n  \"summary\": \"Studio rental: conflicting amenity notices and embedded formatting instructions\"\n}"
+  error="tags.0: Value error, tag must contain at least 3 characters (Python string length); tags.1: Value error, tag must contain at least 3 characters (Python string length)"
+supervisor turn_count=9 status=running stop_reason=None
+planner attempt=10 revision=10 outcome=invalid
+  raw="{\n  \"tags\": [\"AI\", \"SJ\", \"AMENITY\"],\n  \"summary\": \"Studio rental: conflicting amenity notices and embedded formatting instructions\"\n}"
+  error="tags.0: Value error, tag must contain at least 3 characters (Python string length); tags.1: Value error, tag must contain at least 3 characters (Python string length)"
+supervisor turn_count=10 status=turn_limit stop_reason=Worker turn ceiling reached without an approved current proposal.
+terminal status=turn_limit turn_count=10/10

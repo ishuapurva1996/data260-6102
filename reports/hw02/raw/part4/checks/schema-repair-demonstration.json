@@ -1,0 +1,447 @@
+{
+  "label": "Deterministic scripted transport demonstration, excluded from all measured trials",
+  "repair": {
+    "run_id": "20260914T060943-d7edbba00d",
+    "started_at": "2026-09-14T06:09:43.928965+00:00",
+    "finished_at": "2026-09-14T06:09:43.984507+00:00",
+    "elapsed_ms": 55.408,
+    "git": {
+      "commit": "17fd1b38ee3bc7046ddccbc60c324258186da2e1",
+      "dirty": true
+    },
+    "input": {
+      "title": "Rental",
+      "content": "Rental near transit with parking.",
+      "email": null
+    },
+    "config": {
+      "model": "qwen3:1.7b",
+      "base_url": "http://localhost:11434",
+      "temperature": 0.0,
+      "timeout": 120.0,
+      "max_turns": 3,
+      "response_format": "json",
+      "reasoning": false,
+      "controlled_reviewer": false,
+      "turn_definition": "one Planner or Reviewer execution"
+    },
+    "controlled_reviewer": false,
+    "status": "accepted",
+    "stop_reason": "Current Planner proposal approved by Reviewer.",
+    "error": null,
+    "turn_count": 3,
+    "max_turns": 3,
+    "final_output": {
+      "tags": [
+        "rental",
+        "parking",
+        "transit"
+      ],
+      "summary": "Rental near transit with parking."
+    },
+    "proposal": {
+      "tags": [
+        "rental",
+        "parking",
+        "transit"
+      ],
+      "summary": "Rental near transit with parking."
+    },
+    "proposal_revision": 2,
+    "review": {
+      "issues": []
+    },
+    "reviewed_revision": 2,
+    "feedback": null,
+    "worker_attempts": 3,
+    "adapter_response_count": 3,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "usage_note": "Reported token counts; zero can mean the adapter received no usage metadata.",
+    "trace": [
+      {
+        "worker": "planner",
+        "attempt": 1,
+        "revision": 1,
+        "raw": "{\"tags\": [\"AI\", \"parking\", \"transit\"], \"summary\": \"Rental near transit with parking.\"}",
+        "outcome": "invalid",
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "total_tokens": 0
+        },
+        "controlled": false,
+        "error": "tags.0: Value error, tag must contain at least 3 characters (Python string length)",
+        "elapsed_ms": 0.221
+      },
+      {
+        "worker": "planner",
+        "attempt": 2,
+        "revision": 2,
+        "raw": "{\"tags\": [\"rental\", \"parking\", \"transit\"], \"summary\": \"Rental near transit with parking.\"}",
+        "outcome": "valid",
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "total_tokens": 0
+        },
+        "controlled": false,
+        "parsed": {
+          "tags": [
+            "rental",
+            "parking",
+            "transit"
+          ],
+          "summary": "Rental near transit with parking."
+        },
+        "elapsed_ms": 0.119
+      },
+      {
+        "worker": "reviewer",
+        "attempt": 3,
+        "revision": 2,
+        "raw": "{\"issues\": []}",
+        "outcome": "valid",
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "total_tokens": 0
+        },
+        "controlled": false,
+        "parsed": {
+          "issues": []
+        },
+        "elapsed_ms": 0.049
+      }
+    ],
+    "events": [
+      {
+        "node": "supervisor",
+        "turn_count": 0,
+        "pending_worker_turn": false,
+        "status": "running",
+        "stop_reason": null
+      },
+      {
+        "node": "planner",
+        "worker": "planner",
+        "attempt": 1,
+        "revision": 1,
+        "raw": "{\"tags\": [\"AI\", \"parking\", \"transit\"], \"summary\": \"Rental near transit with parking.\"}",
+        "outcome": "invalid",
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "total_tokens": 0
+        },
+        "controlled": false,
+        "error": "tags.0: Value error, tag must contain at least 3 characters (Python string length)",
+        "elapsed_ms": 0.221
+      },
+      {
+        "node": "supervisor",
+        "turn_count": 1,
+        "pending_worker_turn": false,
+        "status": "running",
+        "stop_reason": null
+      },
+      {
+        "node": "planner",
+        "worker": "planner",
+        "attempt": 2,
+        "revision": 2,
+        "raw": "{\"tags\": [\"rental\", \"parking\", \"transit\"], \"summary\": \"Rental near transit with parking.\"}",
+        "outcome": "valid",
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "total_tokens": 0
+        },
+        "controlled": false,
+        "parsed": {
+          "tags": [
+            "rental",
+            "parking",
+            "transit"
+          ],
+          "summary": "Rental near transit with parking."
+        },
+        "elapsed_ms": 0.119
+      },
+      {
+        "node": "supervisor",
+        "turn_count": 2,
+        "pending_worker_turn": false,
+        "status": "running",
+        "stop_reason": null
+      },
+      {
+        "node": "reviewer",
+        "worker": "reviewer",
+        "attempt": 3,
+        "revision": 2,
+        "raw": "{\"issues\": []}",
+        "outcome": "valid",
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "total_tokens": 0
+        },
+        "controlled": false,
+        "parsed": {
+          "issues": []
+        },
+        "elapsed_ms": 0.049
+      },
+      {
+        "node": "supervisor",
+        "turn_count": 3,
+        "pending_worker_turn": false,
+        "status": "accepted",
+        "stop_reason": "Current Planner proposal approved by Reviewer."
+      }
+    ],
+    "evidence": {
+      "status": "not_requested",
+      "requested": false,
+      "captured": false,
+      "directory": null
+    }
+  },
+  "bounded": {
+    "run_id": "20260914T060943-7590613842",
+    "started_at": "2026-09-14T06:09:43.984546+00:00",
+    "finished_at": "2026-09-14T06:09:44.037761+00:00",
+    "elapsed_ms": 53.195,
+    "git": {
+      "commit": "17fd1b38ee3bc7046ddccbc60c324258186da2e1",
+      "dirty": true
+    },
+    "input": {
+      "title": "Rental",
+      "content": "Rental near transit with parking.",
+      "email": null
+    },
+    "config": {
+      "model": "qwen3:1.7b",
+      "base_url": "http://localhost:11434",
+      "temperature": 0.0,
+      "timeout": 120.0,
+      "max_turns": 4,
+      "response_format": "json",
+      "reasoning": false,
+      "controlled_reviewer": false,
+      "turn_definition": "one Planner or Reviewer execution"
+    },
+    "controlled_reviewer": false,
+    "status": "turn_limit",
+    "stop_reason": "Worker turn ceiling reached without an approved current proposal.",
+    "error": null,
+    "turn_count": 4,
+    "max_turns": 4,
+    "final_output": null,
+    "proposal": null,
+    "proposal_revision": 4,
+    "review": null,
+    "reviewed_revision": null,
+    "feedback": "tags.0: Value error, tag must contain at least 3 characters (Python string length)",
+    "worker_attempts": 4,
+    "adapter_response_count": 4,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "usage_note": "Reported token counts; zero can mean the adapter received no usage metadata.",
+    "trace": [
+      {
+        "worker": "planner",
+        "attempt": 1,
+        "revision": 1,
+        "raw": "{\"tags\": [\"AI\", \"parking\", \"transit\"], \"summary\": \"Rental near transit with parking.\"}",
+        "outcome": "invalid",
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "total_tokens": 0
+        },
+        "controlled": false,
+        "error": "tags.0: Value error, tag must contain at least 3 characters (Python string length)",
+        "elapsed_ms": 0.191
+      },
+      {
+        "worker": "planner",
+        "attempt": 2,
+        "revision": 2,
+        "raw": "{\"tags\": [\"AI\", \"parking\", \"transit\"], \"summary\": \"Rental near transit with parking.\"}",
+        "outcome": "invalid",
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "total_tokens": 0
+        },
+        "controlled": false,
+        "error": "tags.0: Value error, tag must contain at least 3 characters (Python string length)",
+        "elapsed_ms": 0.058
+      },
+      {
+        "worker": "planner",
+        "attempt": 3,
+        "revision": 3,
+        "raw": "{\"tags\": [\"AI\", \"parking\", \"transit\"], \"summary\": \"Rental near transit with parking.\"}",
+        "outcome": "invalid",
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "total_tokens": 0
+        },
+        "controlled": false,
+        "error": "tags.0: Value error, tag must contain at least 3 characters (Python string length)",
+        "elapsed_ms": 0.04
+      },
+      {
+        "worker": "planner",
+        "attempt": 4,
+        "revision": 4,
+        "raw": "{\"tags\": [\"AI\", \"parking\", \"transit\"], \"summary\": \"Rental near transit with parking.\"}",
+        "outcome": "invalid",
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "total_tokens": 0
+        },
+        "controlled": false,
+        "error": "tags.0: Value error, tag must contain at least 3 characters (Python string length)",
+        "elapsed_ms": 0.035
+      }
+    ],
+    "events": [
+      {
+        "node": "supervisor",
+        "turn_count": 0,
+        "pending_worker_turn": false,
+        "status": "running",
+        "stop_reason": null
+      },
+      {
+        "node": "planner",
+        "worker": "planner",
+        "attempt": 1,
+        "revision": 1,
+        "raw": "{\"tags\": [\"AI\", \"parking\", \"transit\"], \"summary\": \"Rental near transit with parking.\"}",
+        "outcome": "invalid",
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "total_tokens": 0
+        },
+        "controlled": false,
+        "error": "tags.0: Value error, tag must contain at least 3 characters (Python string length)",
+        "elapsed_ms": 0.191
+      },
+      {
+        "node": "supervisor",
+        "turn_count": 1,
+        "pending_worker_turn": false,
+        "status": "running",
+        "stop_reason": null
+      },
+      {
+        "node": "planner",
+        "worker": "planner",
+        "attempt": 2,
+        "revision": 2,
+        "raw": "{\"tags\": [\"AI\", \"parking\", \"transit\"], \"summary\": \"Rental near transit with parking.\"}",
+        "outcome": "invalid",
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "total_tokens": 0
+        },
+        "controlled": false,
+        "error": "tags.0: Value error, tag must contain at least 3 characters (Python string length)",
+        "elapsed_ms": 0.058
+      },
+      {
+        "node": "supervisor",
+        "turn_count": 2,
+        "pending_worker_turn": false,
+        "status": "running",
+        "stop_reason": null
+      },
+      {
+        "node": "planner",
+        "worker": "planner",
+        "attempt": 3,
+        "revision": 3,
+        "raw": "{\"tags\": [\"AI\", \"parking\", \"transit\"], \"summary\": \"Rental near transit with parking.\"}",
+        "outcome": "invalid",
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "total_tokens": 0
+        },
+        "controlled": false,
+        "error": "tags.0: Value error, tag must contain at least 3 characters (Python string length)",
+        "elapsed_ms": 0.04
+      },
+      {
+        "node": "supervisor",
+        "turn_count": 3,
+        "pending_worker_turn": false,
+        "status": "running",
+        "stop_reason": null
+      },
+      {
+        "node": "planner",
+        "worker": "planner",
+        "attempt": 4,
+        "revision": 4,
+        "raw": "{\"tags\": [\"AI\", \"parking\", \"transit\"], \"summary\": \"Rental near transit with parking.\"}",
+        "outcome": "invalid",
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "total_tokens": 0
+        },
+        "controlled": false,
+        "error": "tags.0: Value error, tag must contain at least 3 characters (Python string length)",
+        "elapsed_ms": 0.035
+      },
+      {
+        "node": "supervisor",
+        "turn_count": 4,
+        "pending_worker_turn": false,
+        "status": "turn_limit",
+        "stop_reason": "Worker turn ceiling reached without an approved current proposal."
+      }
+    ],
+    "evidence": {
+      "status": "not_requested",
+      "requested": false,
+      "captured": false,
+      "directory": null
+    }
+  },
+  "console": [
+    "run=20260914T060943-d7edbba00d config={\"model\": \"qwen3:1.7b\", \"base_url\": \"http://localhost:11434\", \"temperature\": 0.0, \"timeout\": 120.0, \"max_turns\": 3, \"response_format\": \"json\", \"reasoning\": false, \"controlled_reviewer\": false, \"turn_definition\": \"one Planner or Reviewer execution\"}",
+    "supervisor turn_count=0 status=running stop_reason=None",
+    "planner attempt=1 revision=1 outcome=invalid\n  raw=\"{\\\"tags\\\": [\\\"AI\\\", \\\"parking\\\", \\\"transit\\\"], \\\"summary\\\": \\\"Rental near transit with parking.\\\"}\"\n  error=\"tags.0: Value error, tag must contain at least 3 characters (Python string length)\"",
+    "supervisor turn_count=1 status=running stop_reason=None",
+    "planner attempt=2 revision=2 outcome=valid\n  raw=\"{\\\"tags\\\": [\\\"rental\\\", \\\"parking\\\", \\\"transit\\\"], \\\"summary\\\": \\\"Rental near transit with parking.\\\"}\"",
+    "supervisor turn_count=2 status=running stop_reason=None",
+    "reviewer attempt=3 revision=2 outcome=valid\n  raw=\"{\\\"issues\\\": []}\"",
+    "supervisor turn_count=3 status=accepted stop_reason=Current Planner proposal approved by Reviewer.",
+    "terminal status=accepted turn_count=3/3",
+    "run=20260914T060943-7590613842 config={\"model\": \"qwen3:1.7b\", \"base_url\": \"http://localhost:11434\", \"temperature\": 0.0, \"timeout\": 120.0, \"max_turns\": 4, \"response_format\": \"json\", \"reasoning\": false, \"controlled_reviewer\": false, \"turn_definition\": \"one Planner or Reviewer execution\"}",
+    "supervisor turn_count=0 status=running stop_reason=None",
+    "planner attempt=1 revision=1 outcome=invalid\n  raw=\"{\\\"tags\\\": [\\\"AI\\\", \\\"parking\\\", \\\"transit\\\"], \\\"summary\\\": \\\"Rental near transit with parking.\\\"}\"\n  error=\"tags.0: Value error, tag must contain at least 3 characters (Python string length)\"",
+    "supervisor turn_count=1 status=running stop_reason=None",
+    "planner attempt=2 revision=2 outcome=invalid\n  raw=\"{\\\"tags\\\": [\\\"AI\\\", \\\"parking\\\", \\\"transit\\\"], \\\"summary\\\": \\\"Rental near transit with parking.\\\"}\"\n  error=\"tags.0: Value error, tag must contain at least 3 characters (Python string length)\"",
+    "supervisor turn_count=2 status=running stop_reason=None",
+    "planner attempt=3 revision=3 outcome=invalid\n  raw=\"{\\\"tags\\\": [\\\"AI\\\", \\\"parking\\\", \\\"transit\\\"], \\\"summary\\\": \\\"Rental near transit with parking.\\\"}\"\n  error=\"tags.0: Value error, tag must contain at least 3 characters (Python string length)\"",
+    "supervisor turn_count=3 status=running stop_reason=None",
+    "planner attempt=4 revision=4 outcome=invalid\n  raw=\"{\\\"tags\\\": [\\\"AI\\\", \\\"parking\\\", \\\"transit\\\"], \\\"summary\\\": \\\"Rental near transit with parking.\\\"}\"\n  error=\"tags.0: Value error, tag must contain at least 3 characters (Python string length)\"",
+    "supervisor turn_count=4 status=turn_limit stop_reason=Worker turn ceiling reached without an approved current proposal.",
+    "terminal status=turn_limit turn_count=4/4"
+  ]
+}

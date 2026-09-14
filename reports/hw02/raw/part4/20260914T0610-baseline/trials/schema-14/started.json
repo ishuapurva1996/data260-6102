@@ -1,0 +1,36 @@
+{
+  "campaign_id": "20260914T0610-baseline",
+  "cohort": "schema",
+  "command": [
+    "/Users/pragyaapurva/Documents/SJSU/DATA 260/data260-6102/.venv-agents/bin/python",
+    "/Users/pragyaapurva/Documents/SJSU/DATA 260/data260-6102/code/agents_graph.py",
+    "--input-json",
+    "/Users/pragyaapurva/Documents/SJSU/DATA 260/data260-6102/reports/hw02/raw/part4/20260914T0610-baseline/inputs/schema_input.json",
+    "--max-turns",
+    "10",
+    "--model",
+    "qwen3:1.7b",
+    "--base-url",
+    "http://localhost:11434",
+    "--temperature",
+    "0.0",
+    "--timeout",
+    "120.0",
+    "--evidence-dir",
+    "/Users/pragyaapurva/Documents/SJSU/DATA 260/data260-6102/reports/hw02/raw/part4/20260914T0610-baseline/trials/schema-14/cli"
+  ],
+  "config_fingerprint": "0080e40e43a8ad8f2b590b8d1e2b9c5e5fef98ca092bc92a1cb0581a61f94c25",
+  "git": {
+    "branch": "codex/fix-hw1-form",
+    "commit": "17fd1b38ee3bc7046ddccbc60c324258186da2e1",
+    "dirty": true,
+    "status": "M requirements-agents.txt\n M src/agent_graph/contracts.py\n M src/agent_graph/nodes.py\n M tests/agent_graph/test_nodes.py\n M tests/agent_graph/test_workflow.py\n?? code/agents_experiments.py\n?? reports/hw02/cases/adversarial_input.json\n?? reports/hw02/cases/schema_input.json\n?? reports/hw02/raw/part4/\n?? scripts/verify_part4.py\n?? src/agent_graph/evaluation.py\n?? tests/agent_graph/test_evaluation.py\n?? tests/agent_graph/test_experiments.py\n?? tests/agent_graph/test_verify_part4.py"
+  },
+  "input_sha256": "7e0d1125428f52aac130395190ddd2c4cc66832c72e31a87284b17c810fa7537",
+  "max_turns": 10,
+  "order": 14,
+  "schema_version": 1,
+  "source_fingerprint": "7814a2a02c60ddcfd23eace1bfc8a0bc02d98882440253f2c4ef4697be45febb",
+  "started_at": "2026-09-14T06:07:22.088735+00:00",
+  "trial_id": "schema-14"
+}

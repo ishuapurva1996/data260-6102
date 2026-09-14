@@ -1,0 +1,16 @@
+from pathlib import Path
+import json
+from code.agents_graph import parse_args, run_graph
+from src.model_client import OllamaModelClient
+from tests.agent_graph.test_experiments import Transport, DRAFT
+root=Path.cwd()
+args=parse_args(['--title','Rental','--content','Rental near transit with parking.','--max-turns','3'])
+lines=[]
+bad={'tags':['AI','parking','transit'],'summary':'Rental near transit with parking.'}
+repair=run_graph(args,llm=OllamaModelClient(Transport([bad,DRAFT,{'issues':[]}])),emit=lines.append)
+args.max_turns=4
+bounded=run_graph(args,llm=OllamaModelClient(Transport([bad]*4)),emit=lines.append)
+payload={'label':'Deterministic scripted transport demonstration, excluded from all measured trials','repair':repair,'bounded':bounded,'console':lines}
+(root/'reports/hw02/raw/part4/checks/schema-repair-demonstration.json').write_text(json.dumps(payload,indent=2)+'\n')
+print(payload['label'])
+print('\n'.join(lines))

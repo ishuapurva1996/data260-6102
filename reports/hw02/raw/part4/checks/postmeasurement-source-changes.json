@@ -1,0 +1,17 @@
+{
+  "recorded_at": "2026-09-14T06:32:19.775651+00:00",
+  "campaign_id": "20260914T0610-baseline",
+  "changes": {
+    "code/agents_experiments.py": {
+      "campaign_sha256": "e39dbd9f361ff622aeb15da8ef4eed7118e9100a4fb22dc6ee3a925e2d6e4ef1",
+      "current_sha256": "405ec06ca85608ab2e943e8eccd159151a27bd57ab53444b3cac21a3910d7fcc"
+    },
+    "scripts/verify_part4.py": {
+      "campaign_sha256": "eeebc9d79efd2edde2bff541fe522f293c80ad50cae0d24715c10cea2b366cd6",
+      "current_sha256": "bbeebe8dfe27d3f12c1bd6d8112818a586e48cf29f7631dda4c607b6d5eb69b3"
+    }
+  },
+  "measurement_sources_preserved": true,
+  "graph_schema_prompts_adapter_unchanged": true,
+  "reason": "Postmeasurement code review fixes only runner failure-path handling and offline recommendation provenance; metrics are replayed from immutable original execution evidence."
+}

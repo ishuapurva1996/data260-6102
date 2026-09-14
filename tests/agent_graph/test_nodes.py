@@ -7,7 +7,12 @@ import json
 import unittest
 from types import SimpleNamespace
 
-from src.agent_graph.contracts import parse_planner_response, parse_reviewer_response
+from src.agent_graph.contracts import (
+    ResponseContractError,
+    parse_planner_response,
+    parse_reviewer_response,
+    validate_planner_proposal,
+)
 from src.agent_graph.nodes import planner_node, reviewer_node, supervisor_node
 from src.agent_graph.router import router_logic
 from src.agent_graph.state import create_initial_state
@@ -93,22 +98,73 @@ class ResponseContractTests(unittest.TestCase):
             json.dumps({**PROPOSAL, "tags": ["one", "two"]}),
             json.dumps({**PROPOSAL, "tags": ["one", "two", "three", "four"]}),
             json.dumps({**PROPOSAL, "tags": ["one", "two", 3]}),
+            json.dumps({**PROPOSAL, "tags": ["one", "two", True]}),
+            json.dumps({**PROPOSAL, "tags": "one two three"}),
             json.dumps({**PROPOSAL, "tags": ["one", "two", "  "]}),
+            json.dumps({**PROPOSAL, "tags": ["one", "two", " \t "]}),
             json.dumps({**PROPOSAL, "summary": None}),
+            json.dumps({**PROPOSAL, "summary": 17}),
+            json.dumps({**PROPOSAL, "summary": True}),
             json.dumps({**PROPOSAL, "summary": "   "}),
             json.dumps({**PROPOSAL, "summary": " ".join(["word"] * 26)}),
+            json.dumps({**PROPOSAL, "extra": "not allowed"}),
+            json.dumps({"tags": PROPOSAL["tags"]}),
+            json.dumps({"summary": PROPOSAL["summary"]}),
         ]
         for raw in invalid:
-            with self.subTest(raw=raw), self.assertRaises(ValueError):
+            with self.subTest(raw=raw), self.assertRaises(ResponseContractError):
                 parse_planner_response(raw)
 
     def test_summary_boundary_counts_whitespace_delimited_words(self):
         proposal = {**PROPOSAL, "summary": "\t".join(["word"] * 25)}
         self.assertEqual(parse_planner_response(json.dumps(proposal)), proposal)
 
-    def test_part4_tag_character_constraints_are_not_applied_early(self):
-        proposal = {**PROPOSAL, "tags": ["a", "x" * 31, "transit"]}
+    def test_part4_tag_character_boundaries(self):
+        for length in (3, 30):
+            proposal = {**PROPOSAL, "tags": ["x" * length, "parking", "transit"]}
+            with self.subTest(length=length):
+                parsed = parse_planner_response(json.dumps(proposal))
+                self.assertEqual(parsed, proposal)
+                self.assertIs(type(parsed), dict)
+                self.assertIs(type(parsed["tags"]), list)
+        for length in (2, 31):
+            proposal = {**PROPOSAL, "tags": ["x" * length, "parking", "transit"]}
+            with self.subTest(length=length):
+                with self.assertRaises(ResponseContractError) as error:
+                    parse_planner_response(json.dumps(proposal))
+                self.assertIn("tags.0", str(error.exception))
+                self.assertIn("3" if length == 2 else "30", str(error.exception))
+
+    def test_original_unicode_and_whitespace_are_counted_and_preserved(self):
+        proposal = {
+            "tags": [" a ", "e\u0301x", "\U0001f3e0" * 30],
+            "summary": " \t" + "\u2003".join(["résumé"] * 25) + "\n",
+        }
         self.assertEqual(parse_planner_response(json.dumps(proposal)), proposal)
+        for tag in ("\U0001f3e0" * 2, "e\u0301", " " + "x" * 30):
+            with self.subTest(tag=tag), self.assertRaises(ResponseContractError):
+                parse_planner_response(json.dumps({**proposal, "tags": [tag, "two", "three"]}))
+        with self.assertRaises(ResponseContractError):
+            parse_planner_response(json.dumps({**proposal, "summary": proposal["summary"] + "word"}))
+
+    def test_direct_validation_does_not_coerce_a_tuple_or_bytes(self):
+        for value in (
+            {**PROPOSAL, "tags": tuple(PROPOSAL["tags"])},
+            {**PROPOSAL, "tags": [b"one", "two", "three"]},
+            {**PROPOSAL, "summary": b"A summary"},
+        ):
+            with self.subTest(value=value), self.assertRaises(ResponseContractError):
+                validate_planner_proposal(value)
+
+    def test_strict_json_loader_rejects_duplicate_keys_and_nonfinite_constants(self):
+        for raw in (
+            '{"tags":["one","two","three"],"summary":"first","summary":"second"}',
+            '{"tags":["one","two","three"],"summary":NaN}',
+            '{"tags":["one","two","three"],"summary":Infinity}',
+            '{"tags":["one","two","three"],"summary":-Infinity}',
+        ):
+            with self.subTest(raw=raw), self.assertRaises(ResponseContractError):
+                parse_planner_response(raw)
 
     def test_reviewer_requires_an_explicit_list_of_string_issues(self):
         invalid = [
@@ -177,7 +233,7 @@ class NodeTests(unittest.TestCase):
         self.assertEqual(update["trace"][-1]["outcome"], "invalid")
 
     def test_every_new_planner_attempt_invalidates_old_approval_even_on_failure(self):
-        state, _, _ = make_state("not JSON")
+        state, _, _ = make_state({**PROPOSAL, "tags": ["AI", "parking", "transit"]})
         state.update(
             planner_proposal=copy.deepcopy(PROPOSAL),
             proposal_revision=4,
@@ -192,6 +248,17 @@ class NodeTests(unittest.TestCase):
         state.update(supervisor_node(state))
         self.assertNotEqual(state["status"], "accepted")
         self.assertEqual(router_logic(state), "planner")
+
+    def test_a_current_review_cannot_approve_a_schema_invalid_draft(self):
+        state, _, _ = make_state()
+        state.update(
+            planner_proposal={**PROPOSAL, "tags": ["AI", "parking", "transit"]},
+            proposal_revision=1,
+            reviewer_feedback=copy.deepcopy(APPROVAL),
+            reviewed_revision=1,
+        )
+        state.update(supervisor_node(state))
+        self.assertNotEqual(state["status"], "accepted")
 
     def test_malformed_reviewer_invalidates_old_review_but_keeps_draft(self):
         state, _, _ = make_state('{"message": "Looks good"}')

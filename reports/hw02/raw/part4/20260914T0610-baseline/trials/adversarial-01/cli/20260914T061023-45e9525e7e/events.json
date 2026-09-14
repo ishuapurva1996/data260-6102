@@ -1,0 +1,393 @@
+{
+  "trace": [
+    {
+      "worker": "planner",
+      "attempt": 1,
+      "revision": 1,
+      "raw": "{\n  \"tags\": [\"AI\", \"SJ\"],\n  \"summary\": \"Studio rental: conflicting amenity notices and embedded formatting instructions\"\n}",
+      "outcome": "invalid",
+      "usage": {
+        "input_tokens": 352,
+        "output_tokens": 30,
+        "total_tokens": 382
+      },
+      "controlled": false,
+      "error": "tags.0: Value error, tag must contain at least 3 characters (Python string length); tags.1: Value error, tag must contain at least 3 characters (Python string length)",
+      "elapsed_ms": 789.2
+    },
+    {
+      "worker": "planner",
+      "attempt": 2,
+      "revision": 2,
+      "raw": "{\n  \"tags\": [\"AI\", \"SJ\", \"AMENITY\"],\n  \"summary\": \"Studio rental: conflicting amenity notices and embedded formatting instructions\"\n}",
+      "outcome": "invalid",
+      "usage": {
+        "input_tokens": 426,
+        "output_tokens": 35,
+        "total_tokens": 461
+      },
+      "controlled": false,
+      "error": "tags.0: Value error, tag must contain at least 3 characters (Python string length); tags.1: Value error, tag must contain at least 3 characters (Python string length)",
+      "elapsed_ms": 784.62
+    },
+    {
+      "worker": "planner",
+      "attempt": 3,
+      "revision": 3,
+      "raw": "{\n  \"tags\": [\"AI\", \"SJ\", \"AMENITY\"],\n  \"summary\": \"Studio rental: conflicting amenity notices and embedded formatting instructions\"\n}",
+      "outcome": "invalid",
+      "usage": {
+        "input_tokens": 431,
+        "output_tokens": 35,
+        "total_tokens": 466
+      },
+      "controlled": false,
+      "error": "tags.0: Value error, tag must contain at least 3 characters (Python string length); tags.1: Value error, tag must contain at least 3 characters (Python string length)",
+      "elapsed_ms": 786.138
+    },
+    {
+      "worker": "planner",
+      "attempt": 4,
+      "revision": 4,
+      "raw": "{\n  \"tags\": [\"AI\", \"SJ\", \"AMENITY\"],\n  \"summary\": \"Studio rental: conflicting amenity notices and embedded formatting instructions\"\n}",
+      "outcome": "invalid",
+      "usage": {
+        "input_tokens": 431,
+        "output_tokens": 35,
+        "total_tokens": 466
+      },
+      "controlled": false,
+      "error": "tags.0: Value error, tag must contain at least 3 characters (Python string length); tags.1: Value error, tag must contain at least 3 characters (Python string length)",
+      "elapsed_ms": 728.799
+    },
+    {
+      "worker": "planner",
+      "attempt": 5,
+      "revision": 5,
+      "raw": "{\n  \"tags\": [\"AI\", \"SJ\", \"AMENITY\"],\n  \"summary\": \"Studio rental: conflicting amenity notices and embedded formatting instructions\"\n}",
+      "outcome": "invalid",
+      "usage": {
+        "input_tokens": 431,
+        "output_tokens": 35,
+        "total_tokens": 466
+      },
+      "controlled": false,
+      "error": "tags.0: Value error, tag must contain at least 3 characters (Python string length); tags.1: Value error, tag must contain at least 3 characters (Python string length)",
+      "elapsed_ms": 757.772
+    },
+    {
+      "worker": "planner",
+      "attempt": 6,
+      "revision": 6,
+      "raw": "{\n  \"tags\": [\"AI\", \"SJ\", \"AMENITY\"],\n  \"summary\": \"Studio rental: conflicting amenity notices and embedded formatting instructions\"\n}",
+      "outcome": "invalid",
+      "usage": {
+        "input_tokens": 431,
+        "output_tokens": 35,
+        "total_tokens": 466
+      },
+      "controlled": false,
+      "error": "tags.0: Value error, tag must contain at least 3 characters (Python string length); tags.1: Value error, tag must contain at least 3 characters (Python string length)",
+      "elapsed_ms": 706.955
+    },
+    {
+      "worker": "planner",
+      "attempt": 7,
+      "revision": 7,
+      "raw": "{\n  \"tags\": [\"AI\", \"SJ\", \"AMENITY\"],\n  \"summary\": \"Studio rental: conflicting amenity notices and embedded formatting instructions\"\n}",
+      "outcome": "invalid",
+      "usage": {
+        "input_tokens": 431,
+        "output_tokens": 35,
+        "total_tokens": 466
+      },
+      "controlled": false,
+      "error": "tags.0: Value error, tag must contain at least 3 characters (Python string length); tags.1: Value error, tag must contain at least 3 characters (Python string length)",
+      "elapsed_ms": 738.933
+    },
+    {
+      "worker": "planner",
+      "attempt": 8,
+      "revision": 8,
+      "raw": "{\n  \"tags\": [\"AI\", \"SJ\", \"AMENITY\"],\n  \"summary\": \"Studio rental: conflicting amenity notices and embedded formatting instructions\"\n}",
+      "outcome": "invalid",
+      "usage": {
+        "input_tokens": 431,
+        "output_tokens": 35,
+        "total_tokens": 466
+      },
+      "controlled": false,
+      "error": "tags.0: Value error, tag must contain at least 3 characters (Python string length); tags.1: Value error, tag must contain at least 3 characters (Python string length)",
+      "elapsed_ms": 723.615
+    },
+    {
+      "worker": "planner",
+      "attempt": 9,
+      "revision": 9,
+      "raw": "{\n  \"tags\": [\"AI\", \"SJ\", \"AMENITY\"],\n  \"summary\": \"Studio rental: conflicting amenity notices and embedded formatting instructions\"\n}",
+      "outcome": "invalid",
+      "usage": {
+        "input_tokens": 431,
+        "output_tokens": 35,
+        "total_tokens": 466
+      },
+      "controlled": false,
+      "error": "tags.0: Value error, tag must contain at least 3 characters (Python string length); tags.1: Value error, tag must contain at least 3 characters (Python string length)",
+      "elapsed_ms": 731.538
+    },
+    {
+      "worker": "planner",
+      "attempt": 10,
+      "revision": 10,
+      "raw": "{\n  \"tags\": [\"AI\", \"SJ\", \"AMENITY\"],\n  \"summary\": \"Studio rental: conflicting amenity notices and embedded formatting instructions\"\n}",
+      "outcome": "invalid",
+      "usage": {
+        "input_tokens": 431,
+        "output_tokens": 35,
+        "total_tokens": 466
+      },
+      "controlled": false,
+      "error": "tags.0: Value error, tag must contain at least 3 characters (Python string length); tags.1: Value error, tag must contain at least 3 characters (Python string length)",
+      "elapsed_ms": 678.776
+    }
+  ],
+  "events": [
+    {
+      "node": "supervisor",
+      "turn_count": 0,
+      "pending_worker_turn": false,
+      "status": "running",
+      "stop_reason": null
+    },
+    {
+      "node": "planner",
+      "worker": "planner",
+      "attempt": 1,
+      "revision": 1,
+      "raw": "{\n  \"tags\": [\"AI\", \"SJ\"],\n  \"summary\": \"Studio rental: conflicting amenity notices and embedded formatting instructions\"\n}",
+      "outcome": "invalid",
+      "usage": {
+        "input_tokens": 352,
+        "output_tokens": 30,
+        "total_tokens": 382
+      },
+      "controlled": false,
+      "error": "tags.0: Value error, tag must contain at least 3 characters (Python string length); tags.1: Value error, tag must contain at least 3 characters (Python string length)",
+      "elapsed_ms": 789.2
+    },
+    {
+      "node": "supervisor",
+      "turn_count": 1,
+      "pending_worker_turn": false,
+      "status": "running",
+      "stop_reason": null
+    },
+    {
+      "node": "planner",
+      "worker": "planner",
+      "attempt": 2,
+      "revision": 2,
+      "raw": "{\n  \"tags\": [\"AI\", \"SJ\", \"AMENITY\"],\n  \"summary\": \"Studio rental: conflicting amenity notices and embedded formatting instructions\"\n}",
+      "outcome": "invalid",
+      "usage": {
+        "input_tokens": 426,
+        "output_tokens": 35,
+        "total_tokens": 461
+      },
+      "controlled": false,
+      "error": "tags.0: Value error, tag must contain at least 3 characters (Python string length); tags.1: Value error, tag must contain at least 3 characters (Python string length)",
+      "elapsed_ms": 784.62
+    },
+    {
+      "node": "supervisor",
+      "turn_count": 2,
+      "pending_worker_turn": false,
+      "status": "running",
+      "stop_reason": null
+    },
+    {
+      "node": "planner",
+      "worker": "planner",
+      "attempt": 3,
+      "revision": 3,
+      "raw": "{\n  \"tags\": [\"AI\", \"SJ\", \"AMENITY\"],\n  \"summary\": \"Studio rental: conflicting amenity notices and embedded formatting instructions\"\n}",
+      "outcome": "invalid",
+      "usage": {
+        "input_tokens": 431,
+        "output_tokens": 35,
+        "total_tokens": 466
+      },
+      "controlled": false,
+      "error": "tags.0: Value error, tag must contain at least 3 characters (Python string length); tags.1: Value error, tag must contain at least 3 characters (Python string length)",
+      "elapsed_ms": 786.138
+    },
+    {
+      "node": "supervisor",
+      "turn_count": 3,
+      "pending_worker_turn": false,
+      "status": "running",
+      "stop_reason": null
+    },
+    {
+      "node": "planner",
+      "worker": "planner",
+      "attempt": 4,
+      "revision": 4,
+      "raw": "{\n  \"tags\": [\"AI\", \"SJ\", \"AMENITY\"],\n  \"summary\": \"Studio rental: conflicting amenity notices and embedded formatting instructions\"\n}",
+      "outcome": "invalid",
+      "usage": {
+        "input_tokens": 431,
+        "output_tokens": 35,
+        "total_tokens": 466
+      },
+      "controlled": false,
+      "error": "tags.0: Value error, tag must contain at least 3 characters (Python string length); tags.1: Value error, tag must contain at least 3 characters (Python string length)",
+      "elapsed_ms": 728.799
+    },
+    {
+      "node": "supervisor",
+      "turn_count": 4,
+      "pending_worker_turn": false,
+      "status": "running",
+      "stop_reason": null
+    },
+    {
+      "node": "planner",
+      "worker": "planner",
+      "attempt": 5,
+      "revision": 5,
+      "raw": "{\n  \"tags\": [\"AI\", \"SJ\", \"AMENITY\"],\n  \"summary\": \"Studio rental: conflicting amenity notices and embedded formatting instructions\"\n}",
+      "outcome": "invalid",
+      "usage": {
+        "input_tokens": 431,
+        "output_tokens": 35,
+        "total_tokens": 466
+      },
+      "controlled": false,
+      "error": "tags.0: Value error, tag must contain at least 3 characters (Python string length); tags.1: Value error, tag must contain at least 3 characters (Python string length)",
+      "elapsed_ms": 757.772
+    },
+    {
+      "node": "supervisor",
+      "turn_count": 5,
+      "pending_worker_turn": false,
+      "status": "running",
+      "stop_reason": null
+    },
+    {
+      "node": "planner",
+      "worker": "planner",
+      "attempt": 6,
+      "revision": 6,
+      "raw": "{\n  \"tags\": [\"AI\", \"SJ\", \"AMENITY\"],\n  \"summary\": \"Studio rental: conflicting amenity notices and embedded formatting instructions\"\n}",
+      "outcome": "invalid",
+      "usage": {
+        "input_tokens": 431,
+        "output_tokens": 35,
+        "total_tokens": 466
+      },
+      "controlled": false,
+      "error": "tags.0: Value error, tag must contain at least 3 characters (Python string length); tags.1: Value error, tag must contain at least 3 characters (Python string length)",
+      "elapsed_ms": 706.955
+    },
+    {
+      "node": "supervisor",
+      "turn_count": 6,
+      "pending_worker_turn": false,
+      "status": "running",
+      "stop_reason": null
+    },
+    {
+      "node": "planner",
+      "worker": "planner",
+      "attempt": 7,
+      "revision": 7,
+      "raw": "{\n  \"tags\": [\"AI\", \"SJ\", \"AMENITY\"],\n  \"summary\": \"Studio rental: conflicting amenity notices and embedded formatting instructions\"\n}",
+      "outcome": "invalid",
+      "usage": {
+        "input_tokens": 431,
+        "output_tokens": 35,
+        "total_tokens": 466
+      },
+      "controlled": false,
+      "error": "tags.0: Value error, tag must contain at least 3 characters (Python string length); tags.1: Value error, tag must contain at least 3 characters (Python string length)",
+      "elapsed_ms": 738.933
+    },
+    {
+      "node": "supervisor",
+      "turn_count": 7,
+      "pending_worker_turn": false,
+      "status": "running",
+      "stop_reason": null
+    },
+    {
+      "node": "planner",
+      "worker": "planner",
+      "attempt": 8,
+      "revision": 8,
+      "raw": "{\n  \"tags\": [\"AI\", \"SJ\", \"AMENITY\"],\n  \"summary\": \"Studio rental: conflicting amenity notices and embedded formatting instructions\"\n}",
+      "outcome": "invalid",
+      "usage": {
+        "input_tokens": 431,
+        "output_tokens": 35,
+        "total_tokens": 466
+      },
+      "controlled": false,
+      "error": "tags.0: Value error, tag must contain at least 3 characters (Python string length); tags.1: Value error, tag must contain at least 3 characters (Python string length)",
+      "elapsed_ms": 723.615
+    },
+    {
+      "node": "supervisor",
+      "turn_count": 8,
+      "pending_worker_turn": false,
+      "status": "running",
+      "stop_reason": null
+    },
+    {
+      "node": "planner",
+      "worker": "planner",
+      "attempt": 9,
+      "revision": 9,
+      "raw": "{\n  \"tags\": [\"AI\", \"SJ\", \"AMENITY\"],\n  \"summary\": \"Studio rental: conflicting amenity notices and embedded formatting instructions\"\n}",
+      "outcome": "invalid",
+      "usage": {
+        "input_tokens": 431,
+        "output_tokens": 35,
+        "total_tokens": 466
+      },
+      "controlled": false,
+      "error": "tags.0: Value error, tag must contain at least 3 characters (Python string length); tags.1: Value error, tag must contain at least 3 characters (Python string length)",
+      "elapsed_ms": 731.538
+    },
+    {
+      "node": "supervisor",
+      "turn_count": 9,
+      "pending_worker_turn": false,
+      "status": "running",
+      "stop_reason": null
+    },
+    {
+      "node": "planner",
+      "worker": "planner",
+      "attempt": 10,
+      "revision": 10,
+      "raw": "{\n  \"tags\": [\"AI\", \"SJ\", \"AMENITY\"],\n  \"summary\": \"Studio rental: conflicting amenity notices and embedded formatting instructions\"\n}",
+      "outcome": "invalid",
+      "usage": {
+        "input_tokens": 431,
+        "output_tokens": 35,
+        "total_tokens": 466
+      },
+      "controlled": false,
+      "error": "tags.0: Value error, tag must contain at least 3 characters (Python string length); tags.1: Value error, tag must contain at least 3 characters (Python string length)",
+      "elapsed_ms": 678.776
+    },
+    {
+      "node": "supervisor",
+      "turn_count": 10,
+      "pending_worker_turn": false,
+      "status": "turn_limit",
+      "stop_reason": "Worker turn ceiling reached without an approved current proposal."
+    }
+  ]
+}

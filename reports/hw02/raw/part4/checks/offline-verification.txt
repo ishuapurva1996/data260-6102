@@ -1,0 +1,72 @@
+{
+  "passed": true,
+  "output": "/Users/pragyaapurva/Documents/SJSU/DATA 260/data260-6102/reports/hw02/verification_part4.json",
+  "checks": {
+    "current_schema_boundaries": {
+      "passed": true,
+      "details": {
+        "valid_boundary_cases": 1,
+        "invalid_boundary_cases": 19
+      }
+    },
+    "verification_git_metadata": {
+      "passed": true,
+      "details": null
+    },
+    "campaign_integrity_and_provenance": {
+      "passed": true,
+      "details": {
+        "records_replayed": 75,
+        "hashes": "manifest, frozen sources, cases, trial files and raw CLI evidence"
+      }
+    },
+    "excluded_ordinary_warmups": {
+      "passed": true,
+      "details": {
+        "excluded_warmup_count": 1,
+        "run_ids": [
+          "20260914T060645-1e21bedac6"
+        ]
+      }
+    },
+    "independent_schema_approval_and_turn_accounting": {
+      "passed": true,
+      "details": {
+        "traces_checked": 75,
+        "normal_reviewer": true
+      }
+    },
+    "cohort_completeness_and_independent_arithmetic": {
+      "passed": true,
+      "details": {
+        "cohort_counts": {
+          "schema": 30,
+          "ceiling_2": 20,
+          "ceiling_10": 20,
+          "adversarial": 5
+        },
+        "deployment_max_turns": 10
+      }
+    },
+    "derived_campaign_files": {
+      "passed": true,
+      "details": {
+        "files": [
+          "results.jsonl",
+          "results.csv",
+          "summary.json"
+        ]
+      }
+    },
+    "published_tables_and_deployment_choice": {
+      "passed": true,
+      "details": {
+        "files": [
+          "METRICS.md",
+          "deployment_choice.json"
+        ],
+        "max_turns": 10
+      }
+    }
+  }
+}

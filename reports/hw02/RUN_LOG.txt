@@ -1,0 +1,7 @@
+HW2 RUN LOG — integration index
+
+HW2 PART 4 LOG INTEGRATION
+The real Part 4 console transcript is RUN_LOG_PART4.txt.
+The historical Part 3 transcript remains RUN_LOG_PART3.txt.
+Raw Part 4 trial stdout/stderr and timestamps: raw/part4/20260914T0610-baseline/trials/.
+This is a combined-log integration index, not a claim that final Parts 1-4 log assembly is complete.

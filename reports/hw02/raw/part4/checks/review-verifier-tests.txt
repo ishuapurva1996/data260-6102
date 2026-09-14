@@ -1,0 +1,13 @@
+test_cli_failure_returns_nonzero_and_writes_scoped_output (tests.agent_graph.test_verify_part4.VerificationTests.test_cli_failure_returns_nonzero_and_writes_scoped_output) ... ok
+test_complete_copied_fixture_passes_without_model_or_network (tests.agent_graph.test_verify_part4.VerificationTests.test_complete_copied_fixture_passes_without_model_or_network) ... ok
+test_derived_json_csv_and_summary_tampering_fail (tests.agent_graph.test_verify_part4.VerificationTests.test_derived_json_csv_and_summary_tampering_fail) ... ok
+test_independent_trace_rejects_old_approval_unbounded_turns_and_false_schema (tests.agent_graph.test_verify_part4.VerificationTests.test_independent_trace_rejects_old_approval_unbounded_turns_and_false_schema) ... ok
+test_input_source_and_duplicate_directory_tampering_fail (tests.agent_graph.test_verify_part4.VerificationTests.test_input_source_and_duplicate_directory_tampering_fail) ... ok
+test_missing_or_tampered_excluded_warmup_fails (tests.agent_graph.test_verify_part4.VerificationTests.test_missing_or_tampered_excluded_warmup_fails) ... ok
+test_missing_terminal_fails_and_preserves_interrupted_trial (tests.agent_graph.test_verify_part4.VerificationTests.test_missing_terminal_fails_and_preserves_interrupted_trial) ... ok
+test_report_arithmetic_and_recommendation_are_checked (tests.agent_graph.test_verify_part4.VerificationTests.test_report_arithmetic_and_recommendation_are_checked) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 3.519s
+
+OK

@@ -1,0 +1,392 @@
+{
+  "status": "complete",
+  "verdict": "Ready with fixes",
+  "scope": {
+    "base": "17fd1b3",
+    "branch": "codex/fix-hw1-form",
+    "head_sha": "17fd1b38ee3bc7046ddccbc60c324258186da2e1",
+    "pr_url": null,
+    "files_changed": 11
+  },
+  "intent": "Extend the existing Planner-Reviewer LangGraph with strict Pydantic validation and bounded feedback repair; add frozen sequential 75-trial evidence, offline classification/arithmetic and verification. A turn is one worker execution; acceptance requires current-revision Reviewer approval.",
+  "intent_confidence": "explicit",
+  "reviewers": [
+    "correctness",
+    "testing",
+    "maintainability",
+    "agent-native",
+    "reliability",
+    "adversarial"
+  ],
+  "findings": [
+    {
+      "#": 1,
+      "autofix_class": "gated_auto",
+      "confidence": 100,
+      "evidence": [
+        "scripts/verify_part4.py:246 -- require(record is not None and record[\"status\"] in {\"accepted\", \"turn_limit\"}, \"Incomplete excluded warm-up\")",
+        "code/agents_experiments.py:358-359 -- if warm[\"status\"] == \"error\": raise IntegrityError(\"Excluded warm-up failed; no measured trial started\")",
+        "code/agents_experiments.py:348-349 -- _, records, summary = load_campaign(path); if summary[\"error\"] or summary[\"unknown\"]: [only measured records are examined for resume refusal]",
+        "code/agents_experiments.py:355-357 -- Every resumable invocation creates a new warmup UUID and calls execute_trial(..., folder=\"warmups\").",
+        "Read-only in-memory deterministic probe: first invocation raised 'Excluded warm-up failed; no measured trial started'; second invocation returned {'complete': True}; execution kinds were ['warmups', 'warmups', 'trials']; excluded_warmups over the preserved error and success then raised 'Incomplete excluded warm-up'. No source, campaign, or report files were created or changed by the probe."
+      ],
+      "file": "scripts/verify_part4.py",
+      "first_evidence": "scripts/verify_part4.py:246 -- require(record is not None and record[\"status\"] in {\"accepted\", \"turn_limit\"}, \"Incomplete excluded warm-up\")",
+      "independent_reviewers": [
+        "correctness"
+      ],
+      "line": 246,
+      "owner": "downstream-resolver",
+      "pre_existing": false,
+      "requires_verification": true,
+      "reviewers": [
+        "correctness"
+      ],
+      "severity": "P2",
+      "suggested_fix": "Before starting a new measurement session, inspect every preserved excluded warm-up. If any is error or unknown/incomplete, refuse resume and direct the operator to preserve this campaign and prepare a new one. Keep the verifier strict. Add a regression proving a failed or interrupted excluded warm-up prevents later measured launches and no prior evidence is deleted.",
+      "title": "Reconcile failed warm-up recovery with verification",
+      "why_it_matters": "An error or interrupted excluded warm-up can leave a later 75-run campaign permanently unverifiable. The runner permits another invocation to save a successful warm-up and continue measured slots, while the verifier rejects the preserved earlier failed warm-up. Following the selected recovery policy, inspect prior warm-ups before any later launch and refuse resume with instructions to preserve this campaign and prepare a new one; this avoids spending measured calls on a campaign that cannot pass verification.",
+      "validation_status": "confirmed",
+      "validation_reason": "Inspected run_campaign checks only measured errors before starting another warmup, whereas excluded_warmups rejects any saved warmup error/unknown; a prior failed warmup is reachable through execute_trial transport failure, although it did not occur in the recorded baseline. Refuse later resume and preserve the campaign.",
+      "protected_subject": null
+    },
+    {
+      "#": 2,
+      "autofix_class": "manual",
+      "confidence": 100,
+      "evidence": [
+        "scripts/verify_part4.py:297 --         if key in choice:",
+        "scripts/verify_part4.py:295 --     require(choice[\"max_turns\"] == computed[\"deployment_max_turns\"], \"Published deployment ceiling mismatch\")",
+        "tests/agent_graph/test_verify_part4.py:165-166 -- (report / \"deployment_choice.json\").write_text('{\"max_turns\": 2}'); self.assertTrue(verifier.verify_campaign(self.path, report)[\"passed\"])",
+        "Read-only in-memory probe called report_arithmetic with correct tables and a choice containing max_turns=2, campaign_id='unrelated-campaign', campaign_manifest_sha256='0'*64, evidence='nonexistent/summary.json', command='python code/agents_graph.py --max-turns 999', and no reason/rule/cohorts/scope. It returned {'files': ['METRICS.md', 'deployment_choice.json'], 'max_turns': 2} without failure. No campaign or report files were changed."
+      ],
+      "file": "scripts/verify_part4.py",
+      "first_evidence": "scripts/verify_part4.py:297 --         if key in choice:",
+      "independent_reviewers": [
+        "adversarial"
+      ],
+      "line": 297,
+      "owner": "downstream-resolver",
+      "pre_existing": false,
+      "requires_verification": true,
+      "reviewers": [
+        "adversarial"
+      ],
+      "severity": "P2",
+      "suggested_fix": "Require every field in summary['deployment_choice'] instead of checking it only when present. Pass the verified campaign identity/path and manifest hash into report_arithmetic, then require deployment_choice.json to identify that campaign and reference its verified summary; check the recorded command's --max-turns against the selected value. Add a focused regression for missing supporting fields and a same-ceiling recommendation copied from another campaign.",
+      "title": "Wrong-campaign deployment evidence passes published-report verification",
+      "why_it_matters": "The offline verifier reports the published deployment artifact as checked even when its supporting fields are missing, its campaign/hash refer to another experiment, or its evidence path does not exist. Only max_turns is required; all other summary fields are checked conditionally, and provenance/reference fields are never reconciled. Requiring the complete recommendation and binding its evidence to the campaign being verified prevents a copied or truncated deployment artifact from receiving a passing verification result.",
+      "validation_status": "confirmed",
+      "validation_reason": "Independent root probe on the saved 75-run baseline with a temporary report retained max_turns=10 but changed campaign_id, manifest SHA, evidence path and command to --max-turns 999; verify_campaign returned passed=true, confirming the missing provenance/command checks on reachable corrupted report data.",
+      "protected_subject": null
+    },
+    {
+      "#": 3,
+      "autofix_class": "gated_auto",
+      "confidence": 75,
+      "evidence": [
+        "code/agents_experiments.py:137 -- return subprocess.run([\"git\", *args], cwd=REPO_ROOT, text=True, capture_output=True, check=True).stdout.strip()",
+        "code/agents_experiments.py:244 -- write_new(directory/\"started.json\", dict(**base, started_at=utc_now(), command=args, git=git_metadata()))",
+        "code/agents_experiments.py:250-251 -- The timeout=slot[\"max_turns\"]*config[\"timeout\"]+90 deadline applies only to the later graph subprocess.",
+        "code/agents_graph.py:104-110 -- Existing Git metadata calls use subprocess.run(..., timeout=5).",
+        "scripts/verify_part4.py:323 -- check(\"verification_git_metadata\", lambda: report.update(verification_git=experiments.git_metadata()))"
+      ],
+      "file": "code/agents_experiments.py",
+      "first_evidence": "code/agents_experiments.py:137 -- return subprocess.run([\"git\", *args], cwd=REPO_ROOT, text=True, capture_output=True, check=True).stdout.strip()",
+      "independent_reviewers": [
+        "reliability"
+      ],
+      "line": 137,
+      "owner": "downstream-resolver",
+      "pre_existing": false,
+      "requires_verification": true,
+      "reviewers": [
+        "reliability"
+      ],
+      "severity": "P2",
+      "suggested_fix": "Give the Git subprocess.run calls an explicit short timeout, matching the graph CLI's timeout=5, and translate subprocess.SubprocessError into IntegrityError so runner and verifier failure handling remains structured. Collect metadata before reserving a new trial directory, so a pre-launch metadata failure leaves the slot pending rather than creating a partial trial without a start marker. Add a targeted timeout regression verifying no model subprocess starts and campaign ownership is released.",
+      "title": "Bound the runner's Git metadata subprocesses",
+      "why_it_matters": "A stalled Git metadata command can hang campaign preparation, a measurement session, or offline verification indefinitely even though model execution has a deadline. During measurement this helper runs while the campaign lock is held and before the graph subprocess deadline begins, so that deadline cannot stop the stall. The existing graph CLI already bounds the same metadata commands to five seconds; using that pattern here closes this integration point without changing measured model behavior.",
+      "validation_status": "confirmed",
+      "validation_reason": "Inspected git_metadata uses subprocess.run with no timeout; execute_trial reserves its directory before this call and before its model deadline, so a stalled Git process can hang indefinitely and leave no start marker. Existing agents_graph metadata calls use timeout=5; stall incidence was not measured in the baseline.",
+      "protected_subject": null
+    }
+  ],
+  "actionable_findings": [
+    {
+      "#": 1,
+      "autofix_class": "gated_auto",
+      "confidence": 100,
+      "evidence": [
+        "scripts/verify_part4.py:246 -- require(record is not None and record[\"status\"] in {\"accepted\", \"turn_limit\"}, \"Incomplete excluded warm-up\")",
+        "code/agents_experiments.py:358-359 -- if warm[\"status\"] == \"error\": raise IntegrityError(\"Excluded warm-up failed; no measured trial started\")",
+        "code/agents_experiments.py:348-349 -- _, records, summary = load_campaign(path); if summary[\"error\"] or summary[\"unknown\"]: [only measured records are examined for resume refusal]",
+        "code/agents_experiments.py:355-357 -- Every resumable invocation creates a new warmup UUID and calls execute_trial(..., folder=\"warmups\").",
+        "Read-only in-memory deterministic probe: first invocation raised 'Excluded warm-up failed; no measured trial started'; second invocation returned {'complete': True}; execution kinds were ['warmups', 'warmups', 'trials']; excluded_warmups over the preserved error and success then raised 'Incomplete excluded warm-up'. No source, campaign, or report files were created or changed by the probe."
+      ],
+      "file": "scripts/verify_part4.py",
+      "first_evidence": "scripts/verify_part4.py:246 -- require(record is not None and record[\"status\"] in {\"accepted\", \"turn_limit\"}, \"Incomplete excluded warm-up\")",
+      "independent_reviewers": [
+        "correctness"
+      ],
+      "line": 246,
+      "owner": "downstream-resolver",
+      "pre_existing": false,
+      "requires_verification": true,
+      "reviewers": [
+        "correctness"
+      ],
+      "severity": "P2",
+      "suggested_fix": "Before starting a new measurement session, inspect every preserved excluded warm-up. If any is error or unknown/incomplete, refuse resume and direct the operator to preserve this campaign and prepare a new one. Keep the verifier strict. Add a regression proving a failed or interrupted excluded warm-up prevents later measured launches and no prior evidence is deleted.",
+      "title": "Reconcile failed warm-up recovery with verification",
+      "why_it_matters": "An error or interrupted excluded warm-up can leave a later 75-run campaign permanently unverifiable. The runner permits another invocation to save a successful warm-up and continue measured slots, while the verifier rejects the preserved earlier failed warm-up. Following the selected recovery policy, inspect prior warm-ups before any later launch and refuse resume with instructions to preserve this campaign and prepare a new one; this avoids spending measured calls on a campaign that cannot pass verification.",
+      "validation_status": "confirmed",
+      "validation_reason": "Inspected run_campaign checks only measured errors before starting another warmup, whereas excluded_warmups rejects any saved warmup error/unknown; a prior failed warmup is reachable through execute_trial transport failure, although it did not occur in the recorded baseline. Refuse later resume and preserve the campaign.",
+      "protected_subject": null
+    },
+    {
+      "#": 2,
+      "autofix_class": "manual",
+      "confidence": 100,
+      "evidence": [
+        "scripts/verify_part4.py:297 --         if key in choice:",
+        "scripts/verify_part4.py:295 --     require(choice[\"max_turns\"] == computed[\"deployment_max_turns\"], \"Published deployment ceiling mismatch\")",
+        "tests/agent_graph/test_verify_part4.py:165-166 -- (report / \"deployment_choice.json\").write_text('{\"max_turns\": 2}'); self.assertTrue(verifier.verify_campaign(self.path, report)[\"passed\"])",
+        "Read-only in-memory probe called report_arithmetic with correct tables and a choice containing max_turns=2, campaign_id='unrelated-campaign', campaign_manifest_sha256='0'*64, evidence='nonexistent/summary.json', command='python code/agents_graph.py --max-turns 999', and no reason/rule/cohorts/scope. It returned {'files': ['METRICS.md', 'deployment_choice.json'], 'max_turns': 2} without failure. No campaign or report files were changed."
+      ],
+      "file": "scripts/verify_part4.py",
+      "first_evidence": "scripts/verify_part4.py:297 --         if key in choice:",
+      "independent_reviewers": [
+        "adversarial"
+      ],
+      "line": 297,
+      "owner": "downstream-resolver",
+      "pre_existing": false,
+      "requires_verification": true,
+      "reviewers": [
+        "adversarial"
+      ],
+      "severity": "P2",
+      "suggested_fix": "Require every field in summary['deployment_choice'] instead of checking it only when present. Pass the verified campaign identity/path and manifest hash into report_arithmetic, then require deployment_choice.json to identify that campaign and reference its verified summary; check the recorded command's --max-turns against the selected value. Add a focused regression for missing supporting fields and a same-ceiling recommendation copied from another campaign.",
+      "title": "Wrong-campaign deployment evidence passes published-report verification",
+      "why_it_matters": "The offline verifier reports the published deployment artifact as checked even when its supporting fields are missing, its campaign/hash refer to another experiment, or its evidence path does not exist. Only max_turns is required; all other summary fields are checked conditionally, and provenance/reference fields are never reconciled. Requiring the complete recommendation and binding its evidence to the campaign being verified prevents a copied or truncated deployment artifact from receiving a passing verification result.",
+      "validation_status": "confirmed",
+      "validation_reason": "Independent root probe on the saved 75-run baseline with a temporary report retained max_turns=10 but changed campaign_id, manifest SHA, evidence path and command to --max-turns 999; verify_campaign returned passed=true, confirming the missing provenance/command checks on reachable corrupted report data.",
+      "protected_subject": null
+    },
+    {
+      "#": 3,
+      "autofix_class": "gated_auto",
+      "confidence": 75,
+      "evidence": [
+        "code/agents_experiments.py:137 -- return subprocess.run([\"git\", *args], cwd=REPO_ROOT, text=True, capture_output=True, check=True).stdout.strip()",
+        "code/agents_experiments.py:244 -- write_new(directory/\"started.json\", dict(**base, started_at=utc_now(), command=args, git=git_metadata()))",
+        "code/agents_experiments.py:250-251 -- The timeout=slot[\"max_turns\"]*config[\"timeout\"]+90 deadline applies only to the later graph subprocess.",
+        "code/agents_graph.py:104-110 -- Existing Git metadata calls use subprocess.run(..., timeout=5).",
+        "scripts/verify_part4.py:323 -- check(\"verification_git_metadata\", lambda: report.update(verification_git=experiments.git_metadata()))"
+      ],
+      "file": "code/agents_experiments.py",
+      "first_evidence": "code/agents_experiments.py:137 -- return subprocess.run([\"git\", *args], cwd=REPO_ROOT, text=True, capture_output=True, check=True).stdout.strip()",
+      "independent_reviewers": [
+        "reliability"
+      ],
+      "line": 137,
+      "owner": "downstream-resolver",
+      "pre_existing": false,
+      "requires_verification": true,
+      "reviewers": [
+        "reliability"
+      ],
+      "severity": "P2",
+      "suggested_fix": "Give the Git subprocess.run calls an explicit short timeout, matching the graph CLI's timeout=5, and translate subprocess.SubprocessError into IntegrityError so runner and verifier failure handling remains structured. Collect metadata before reserving a new trial directory, so a pre-launch metadata failure leaves the slot pending rather than creating a partial trial without a start marker. Add a targeted timeout regression verifying no model subprocess starts and campaign ownership is released.",
+      "title": "Bound the runner's Git metadata subprocesses",
+      "why_it_matters": "A stalled Git metadata command can hang campaign preparation, a measurement session, or offline verification indefinitely even though model execution has a deadline. During measurement this helper runs while the campaign lock is held and before the graph subprocess deadline begins, so that deadline cannot stop the stall. The existing graph CLI already bounds the same metadata commands to five seconds; using that pattern here closes this integration point without changing measured model behavior.",
+      "validation_status": "confirmed",
+      "validation_reason": "Inspected git_metadata uses subprocess.run with no timeout; execute_trial reserves its directory before this call and before its model deadline, so a stalled Git process can hang indefinitely and leave no start marker. Existing agents_graph metadata calls use timeout=5; stall incidence was not measured in the baseline.",
+      "protected_subject": null
+    }
+  ],
+  "triage_groups": [
+    {
+      "title": "Campaign lifecycle boundaries",
+      "findings": [
+        1,
+        3
+      ],
+      "context": "A pre-launch metadata failure or an excluded warm-up failure must stop execution before unusable measured work accumulates.",
+      "preferred_resolution": "Apply-queue: add bounded pre-launch metadata handling (#3), then reject resume after failed or unknown excluded warm-ups (#1); verify each no-launch failure path.",
+      "why": "Both fixes preserve trial lifecycle honesty at the boundary before expensive graph execution."
+    }
+  ],
+  "pre_existing_findings": [],
+  "requirements_completeness": {
+    "plan": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW2/agent_outputs/2026-09-13-2228-feat-hw2-part4-schema-loop-safety-plan.md",
+    "source": "explicit",
+    "review_scope": "Code and tests only; measured campaign, tables, documentation and final submission integration were intentionally excluded.",
+    "requirements": [
+      {
+        "id": "R1",
+        "status": "met",
+        "detail": "Strict Pydantic schema and retained strict JSON checks are implemented and covered."
+      },
+      {
+        "id": "R2",
+        "status": "met",
+        "detail": "Bounded feedback repair and current-revision approval retain the shared model adapter."
+      },
+      {
+        "id": "R3",
+        "status": "partially addressed",
+        "detail": "Thirty-trial scheduling and four-category aggregation are present; actual measurement artifacts are outside this review."
+      },
+      {
+        "id": "R4",
+        "status": "partially addressed",
+        "detail": "Alternating 20-pair schedule and deployment calculation are present; published recommendation verification needs finding #2."
+      },
+      {
+        "id": "R5",
+        "status": "partially addressed",
+        "detail": "Five-trial adversarial scheduling is present; measured outcomes and explanation are outside this review."
+      },
+      {
+        "id": "R6",
+        "status": "partially addressed",
+        "detail": "Raw evidence, provenance, error accounting and offline replay are implemented; findings #1-#3 identify remaining failure-path and verification gaps."
+      },
+      {
+        "id": "R7",
+        "status": "met",
+        "detail": "Scoped changes use the existing root codebase and preserve historical Part3 evidence and Git history."
+      }
+    ],
+    "implementation_units": [
+      {
+        "id": "U1",
+        "status": "met",
+        "detail": "Dispatch records baseline ancestry, checkout ownership and dependency setup."
+      },
+      {
+        "id": "U2",
+        "status": "met",
+        "detail": "Schema boundaries and bounded-repair tests are included."
+      },
+      {
+        "id": "U3",
+        "status": "met",
+        "detail": "Offline classification and fixed-denominator aggregation are implemented."
+      },
+      {
+        "id": "U4",
+        "status": "partially addressed",
+        "detail": "Campaign lifecycle and immutable trial evidence are implemented; address findings #1 and #3."
+      },
+      {
+        "id": "U5",
+        "status": "not addressed",
+        "detail": "Intentionally outside this bounded review; parent reports all 75 real trials completed."
+      },
+      {
+        "id": "U6",
+        "status": "not addressed",
+        "detail": "Intentionally outside this bounded review; parent owns measured tables and recommendation."
+      },
+      {
+        "id": "U7",
+        "status": "partially addressed",
+        "detail": "Scoped verifier is reviewed and needs finding #2; documentation and handoff delivery are intentionally outside scope."
+      }
+    ]
+  },
+  "learnings": [],
+  "agent_native_gaps": [],
+  "deployment_notes": [],
+  "residual_risks": [],
+  "testing_gaps": [],
+  "coverage": {
+    "notes": [
+      "Scope: 11 named code/test/dependency paths and 2,268 diff lines; named untracked implementation files included, parent-owned evidence and documentation excluded. Not a lite review.",
+      "Part3 84ff199 is an ancestor of 17fd1b3; branch codex/fix-hw1-form, empty index at dispatch, original checkout retained. No review changes to source, reports, Git, model runs or historical evidence.",
+      "Four-thread cap required reused agents. Testing, maintainability and agent-native were assessed in dispatch context. Correctness/reliability reused the evaluation.py author; no independent coverage or confidence promotion is claimed for that component. Model overrides were unavailable.",
+      "Root implementation context provided the three confirmed validator verdicts after the cap prevented a fresh validator. This was a separate context, not blind or cross-model validation; no shortcuts or confidence promotions were used.",
+      "Parent reports 90 passing deterministic tests and 75 completed real trials with offline checks passing. This code review does not certify measured outcomes, final report prose or whole-assignment submission.",
+      "Findings #1 and #3 concern reachable failure paths not observed or measured in the baseline. Finding #2 was reproduced using temporary corrupted report data against the saved baseline.",
+      "Warm-up recovery follows the selected policy: refuse resume after failed or unknown excluded warm-ups, preserve evidence, and direct a new campaign; keep the verifier strict.",
+      "Automatic approval review rejected the external Claude launch before any peer job started because sending private repository code to that destination was not authorized by the user. No content was sent; the adversarial lens used the local fallback. No peer job remains."
+    ],
+    "reviewer_roster": [
+      {
+        "reviewer": "correctness",
+        "tier": "session",
+        "reason": "Always-on: schema/retry and runner/replay correctness"
+      },
+      {
+        "reviewer": "testing",
+        "tier": "mid-tier unavailable; dispatch context",
+        "reason": "Changed deterministic tests and verification harness"
+      },
+      {
+        "reviewer": "maintainability",
+        "tier": "mid-tier unavailable; dispatch context",
+        "reason": "Large structural addition spanning lifecycle, records, and verification"
+      },
+      {
+        "reviewer": "agent-native",
+        "tier": "mid-tier unavailable; dispatch context",
+        "reason": "Planner/Reviewer prompts and CLI context surface changed"
+      },
+      {
+        "reviewer": "reliability",
+        "tier": "inherited reused agent",
+        "reason": "Subprocess deadlines, persistence, interruptions and resume semantics"
+      },
+      {
+        "reviewer": "adversarial",
+        "tier": "session",
+        "reason": "Persistence/recovery ordering and silent-pass verifier fidelity"
+      }
+    ],
+    "standards": {
+      "criteria": [],
+      "fallback_named": false,
+      "not_run_reason": "Successful search found no applicable CODING_STANDARDS.md, AGENTS.md, or CLAUDE.md."
+    },
+    "compound_packs": {
+      "roots": [],
+      "warnings": [],
+      "errors": []
+    },
+    "first_evidence_backfilled": 0,
+    "quote_gate_demoted_count": 0,
+    "suppressed_by_confidence": {},
+    "mode_aware_demotion_count": 0,
+    "malformed_findings": 0,
+    "malformed_returns": 0,
+    "settlement_suppressed_count": 0,
+    "cross_model": {
+      "selected": true,
+      "target": "claude",
+      "outcome": "in-process-fallback",
+      "independence_verified": false,
+      "peer_job_outstanding": false
+    },
+    "validator": {
+      "outcome": "verdicts",
+      "selected": 3,
+      "confirmed": 3,
+      "rejected": 0,
+      "unresolved": 0,
+      "malformed": 0,
+      "failed": 0,
+      "shortcut_skipped": 0,
+      "bound_exceeded": false,
+      "protected_subject_reclassifications": 0
+    },
+    "failed_reviewers": [],
+    "timed_out_reviewers": [],
+    "apply_authorized": false
+  },
+  "verdict_reason": "Three confirmed P2 fixes remain. Address deployment-artifact provenance (#2), bounded metadata collection (#3), and failed-warmup resume refusal (#1). No fixes were applied by this review.",
+  "artifact_path": "/tmp/ce-code-review/part4-20260914-final",
+  "run_id": "part4-20260914-final"
+}
