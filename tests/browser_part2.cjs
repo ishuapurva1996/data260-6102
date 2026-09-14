@@ -138,6 +138,14 @@ async function main() {
       await waitForIDs(page, ids);
     }
 
+    async function edit(page, id) {
+      await page.getByRole('button', { name: `Edit listing ID ${id}`, exact: true }).click();
+      assert.equal(await page.locator('#updateForm').isVisible(), true);
+      assert.equal(await page.locator('#updateHeading').innerText(), `Edit Listing ID ${id}`);
+      assert.equal(await page.locator('#updateButton').innerText(), 'Save changes');
+      assert.equal(await page.locator('#cancelEditButton').innerText(), 'Cancel');
+    }
+
     async function noOverflow(page) {
       const sizes = await page.evaluate(() => ({
         viewport: window.innerWidth,
@@ -181,7 +189,8 @@ async function main() {
     await test('seeded list and usable 375px layout', async (page) => {
       assert.deepEqual((await rentals()).map((rental) => rental.id), [1, 2]);
       await open(page);
-      assert.equal(await page.locator('#updateButton').isEnabled(), true);
+      assert.equal(await page.locator('#updateForm').isHidden(), true);
+      assert.equal(await page.getByRole('button', { name: 'Edit listing ID 2', exact: true }).isEnabled(), true);
       await noOverflow(page);
       await screenshot(page, 'mobile-seeded-list');
     }, { fixtures: false });
@@ -197,17 +206,181 @@ async function main() {
       await noOverflow(page);
     });
 
-    await test('update changes only the title and address of ID 1', async (page) => {
-      const before = await rentals();
-      await open(page);
-      await page.locator('#updateTitle').fill('Updated First Rental');
-      await page.locator('#updateAddress').fill('6102 University Avenue, San Jose');
-      await navigateWith(page, () => page.locator('#updateButton').click());
-      const after = await rentals();
-      assert.deepEqual(after[0], {
-        ...before[0], listingTitle: 'Updated First Rental', propertyAddress: '6102 University Avenue, San Jose',
+    for (const id of [1, 2]) {
+      await test(`Edit prefills ID ${id} and updates only its title and address`, async (page) => {
+        const before = await rentals();
+        const original = before.find((rental) => rental.id === id);
+        await open(page);
+        await edit(page, id);
+        assert.equal(await page.locator('#updateTitle').inputValue(), original.listingTitle);
+        assert.equal(await page.locator('#updateAddress').inputValue(), original.propertyAddress);
+        const changes = { listingTitle: `Updated Rental ${id}`, propertyAddress: '6102 University Avenue, San Jose' };
+        await page.locator('#updateTitle').fill(changes.listingTitle);
+        await page.locator('#updateAddress').fill(changes.propertyAddress);
+        const saved = page.waitForRequest((req) => req.method() === 'PUT');
+        await navigateWith(page, () => page.locator('#updateButton').click());
+        const request = await saved;
+        assert.equal(new URL(request.url()).pathname, `/api/rentals/${id}`);
+        assert.deepEqual(request.postDataJSON(), changes);
+        assert.deepEqual(await rentals(), before.map((rental) => rental.id === id ? { ...rental, ...changes } : rental));
+        assert.equal(await page.locator('#updateForm').isHidden(), true);
       });
-      assert.deepEqual(after[1], before[1]);
+    }
+
+    await test('Cancel discards a draft without a request and restores focus', async (page) => {
+      await open(page);
+      const before = await rentals();
+      let writes = 0;
+      page.on('request', (req) => { if (['PUT', 'POST', 'DELETE'].includes(req.method())) writes += 1; });
+      await edit(page, 2);
+      await page.locator('#updateTitle').fill('Unsaved title');
+      await page.locator('#updateAddress').fill('Unsaved address');
+      await page.locator('#cancelEditButton').click();
+      assert.equal(await page.locator('#updateForm').isHidden(), true);
+      assert.equal(await page.getByRole('button', { name: 'Edit listing ID 2', exact: true }).evaluate((el) => el === document.activeElement), true);
+      await edit(page, 2);
+      assert.equal(await page.locator('#updateTitle').inputValue(), before[1].listingTitle);
+      assert.equal(await page.locator('#updateAddress').inputValue(), before[1].propertyAddress);
+      assert.equal(writes, 0);
+      assert.deepEqual(await rentals(), before);
+    });
+
+    await test('Cancel focuses search during a pending or failed list refresh', async (page) => {
+      await open(page);
+      await edit(page, 2);
+      let release;
+      const pending = new Promise((resolve) => { release = resolve; });
+      await page.route('**/api/rentals', async (route) => {
+        await pending;
+        await route.continue();
+      });
+      await page.locator('#clearSearchButton').click();
+      try {
+        assert.equal(await page.getByRole('button', { name: 'Edit listing ID 2', exact: true }).isDisabled(), true);
+        await page.locator('#cancelEditButton').click();
+        assert.equal(await page.locator('#updateForm').isHidden(), true);
+        assert.equal(await page.locator('#searchQuery').evaluate((el) => el === document.activeElement), true);
+      } finally {
+        release();
+      }
+      await page.waitForFunction(() => document.querySelector('#searchForm').getAttribute('aria-busy') === 'false');
+      await page.unroute('**/api/rentals');
+      await edit(page, 2);
+      await page.route('**/api/rentals', (route) => route.abort('failed'));
+      await page.locator('#clearSearchButton').click();
+      await page.locator('#retryButton').waitFor({ state: 'visible' });
+      assert.equal(await page.getByRole('button', { name: 'Edit listing ID 2', exact: true }).isDisabled(), true);
+      await page.locator('#cancelEditButton').click();
+      assert.equal(await page.locator('#updateForm').isHidden(), true);
+      assert.equal(await page.locator('#searchQuery').evaluate((el) => el === document.activeElement), true);
+    });
+
+    await test('same-record Edit preserves drafts and changing targets confirms discard', async (page) => {
+      await open(page);
+      await edit(page, 1);
+      await page.locator('#updateTitle').fill('Unsaved ID 1 title');
+      let dialogs = 0;
+      page.on('dialog', () => { dialogs += 1; });
+      await edit(page, 1);
+      assert.equal(await page.locator('#updateTitle').inputValue(), 'Unsaved ID 1 title');
+      assert.equal(dialogs, 0, 'Reopening the same record should not ask to discard');
+      page.once('dialog', (dialog) => dialog.dismiss());
+      await page.getByRole('button', { name: 'Edit listing ID 2', exact: true }).click();
+      assert.equal(await page.locator('#updateHeading').innerText(), 'Edit Listing ID 1');
+      assert.equal(await page.locator('#updateTitle').inputValue(), 'Unsaved ID 1 title');
+      page.once('dialog', (dialog) => dialog.accept());
+      await edit(page, 2);
+      assert.equal(await page.locator('#updateTitle').inputValue(), FIXTURES[1].listingTitle);
+      assert.equal(await page.locator('#updateAddress').inputValue(), FIXTURES[1].propertyAddress);
+      assert.equal(dialogs, 2);
+      assert.deepEqual(await rentals(), FIXTURES.map((rental, index) => ({ id: index + 1, ...rental })));
+    });
+
+    await test('search may hide the edited row without changing its draft or target', async (page) => {
+      await open(page);
+      await edit(page, 2);
+      await page.locator('#updateTitle').fill('Filtered-out draft');
+      await search(page, 'Willow', [1]);
+      assert.equal(await page.locator('#updateHeading').innerText(), 'Edit Listing ID 2');
+      assert.equal(await page.locator('#updateTitle').inputValue(), 'Filtered-out draft');
+      assert.equal(await page.locator('#updateButton').isEnabled(), true);
+      await noOverflow(page);
+      await screenshot(page, 'mobile-edit-filtered-out-listing');
+      await navigateWith(page, () => page.locator('#updateButton').click());
+      assert.equal((await rentals())[1].listingTitle, 'Filtered-out draft');
+      assert.equal((await rentals())[0].listingTitle, FIXTURES[0].listingTitle);
+    });
+
+    await test('a failed update preserves the selected record and draft for retry', async (page) => {
+      await open(page);
+      await edit(page, 2);
+      await page.locator('#updateTitle').fill('Retry rental');
+      await page.locator('#updateAddress').fill('42 Retry Road');
+      const before = await rentals();
+      await page.route('**/api/rentals/2', (route) => route.abort('failed'));
+      await page.locator('#updateButton').click();
+      await page.waitForFunction(() => !document.querySelector('#updateButton').disabled);
+      assert.match(await page.locator('#updateStatus').innerText(), /error|fail|could not|couldn't|unable|connect/i);
+      assert.equal(await page.locator('#updateHeading').innerText(), 'Edit Listing ID 2');
+      assert.equal(await page.locator('#updateTitle').inputValue(), 'Retry rental');
+      assert.equal(await page.locator('#updateAddress').inputValue(), '42 Retry Road');
+      assert.deepEqual(await rentals(), before);
+      await page.unroute('**/api/rentals/2');
+      await navigateWith(page, () => page.locator('#updateButton').click());
+      assert.deepEqual((await rentals())[1], { ...before[1], listingTitle: 'Retry rental', propertyAddress: '42 Retry Road' });
+    });
+
+    await test('a deleted selected record reports 404, retains the draft, and permits Cancel', async (page) => {
+      await open(page);
+      await edit(page, 2);
+      await page.locator('#updateTitle').fill('Draft for removed listing');
+      assert.equal((await api.delete('/api/rentals/2')).status(), 204);
+      const failed = page.waitForResponse((response) => response.request().method() === 'PUT');
+      await page.locator('#updateButton').click();
+      assert.equal((await failed).status(), 404);
+      await page.waitForFunction(() => document.querySelector('#updateStatus').textContent.trim().length > 0
+        && !document.querySelector('#cancelEditButton').disabled);
+      assert.match(await page.locator('#updateStatus').innerText(), /not found|unavailable|not available|no longer|does not exist/i);
+      assert.equal(await page.locator('#updateHeading').innerText(), 'Edit Listing ID 2');
+      assert.equal(await page.locator('#updateTitle').inputValue(), 'Draft for removed listing');
+      await search(page, 'Willow', [1]);
+      assert.equal(await page.locator('#updateButton').isDisabled(), true);
+      assert.match(await page.locator('#updateForm').innerText(), /not found|unavailable|not available|no longer|does not exist/i);
+      await page.locator('#cancelEditButton').click();
+      assert.equal(await page.locator('#updateForm').isHidden(), true);
+      assert.equal(await page.locator('#searchQuery').evaluate((el) => el === document.activeElement), true);
+      assert.deepEqual((await rentals()).map((rental) => rental.id), [1]);
+    });
+
+    await test('pending update disables competing actions and sends only one PUT', async (page) => {
+      await open(page);
+      await edit(page, 2);
+      await page.locator('#updateTitle').fill('One saved update');
+      let release;
+      let captured;
+      let writes = 0;
+      const started = new Promise((resolve) => { captured = resolve; });
+      await page.route('**/api/rentals/2', async (route) => {
+        writes += 1;
+        captured();
+        await new Promise((resolve) => { release = resolve; });
+        await route.continue();
+      });
+      await page.locator('#updateButton').click();
+      await Promise.race([started, delay(5000).then(() => { throw new Error('Update was not sent'); })]);
+      try {
+        for (const id of ['updateTitle', 'updateAddress', 'updateButton', 'cancelEditButton', 'submitButton', 'searchButton', 'deleteHighestButton']) {
+          assert.equal(await page.locator(`#${id}`).isDisabled(), true, `${id} should lock while saving`);
+        }
+        for (const button of await page.locator('#rentalList button').all()) assert.equal(await button.isDisabled(), true);
+        await page.locator('#updateForm').evaluate((form) => form.dispatchEvent(new Event('submit', { bubbles: true, cancelable: true })));
+        assert.equal(writes, 1);
+        await noOverflow(page);
+      } finally {
+        await navigateWith(page, async () => { release(); });
+      }
+      assert.equal(writes, 1);
+      assert.equal((await rentals())[1].listingTitle, 'One saved update');
     });
 
     await test('search matches either field, ignores case, and clears', async (page) => {
@@ -243,15 +416,18 @@ async function main() {
       assert.deepEqual((await rentals()).map((rental) => rental.id), [1]);
     });
 
-    await test('row deletion can be cancelled, accepts 204, and disables missing ID 1 update', async (page) => {
+    await test('row deletion can be cancelled, accepts 204, and ID 2 remains editable without ID 1', async (page) => {
       await open(page);
       page.once('dialog', (dialog) => dialog.dismiss());
       await page.getByRole('button', { name: 'Delete listing ID 1', exact: true }).click();
       assert.deepEqual((await rentals()).map((rental) => rental.id), [1, 2]);
       page.once('dialog', (dialog) => dialog.accept());
       await navigateWith(page, () => page.getByRole('button', { name: 'Delete listing ID 1', exact: true }).click());
-      assert.equal(await page.locator('#updateButton').isDisabled(), true);
-      assert.match(await page.locator('#updateForm').innerText(), /ID 1 is not available/i);
+      assert.equal(await page.locator('#updateForm').isHidden(), true);
+      await edit(page, 2);
+      await page.locator('#updateTitle').fill('Still editable without ID 1');
+      await navigateWith(page, () => page.locator('#updateButton').click());
+      assert.equal((await rentals())[0].listingTitle, 'Still editable without ID 1');
       page.once('dialog', (dialog) => dialog.accept());
       await navigateWith(page, () => page.locator('#deleteHighestButton').click());
       assert.deepEqual(await rentals(), []);
@@ -263,6 +439,7 @@ async function main() {
 
     await test('loading locks editing and duplicate submissions create only one record', async (page) => {
       await open(page, '/?slowSave=true');
+      await edit(page, 1);
       await fillCreate(page);
       let createRequests = 0;
       page.on('request', (req) => {
@@ -271,7 +448,7 @@ async function main() {
       const navigation = page.waitForNavigation({ waitUntil: 'domcontentloaded' });
       await page.locator('#submitButton').click();
       for (const id of ['listingTitle', 'propertyAddress', 'submitterEmail', 'description', 'propertyType',
-        'termsAccepted', 'submitButton', 'updateTitle', 'updateAddress', 'updateButton']) {
+        'termsAccepted', 'submitButton', 'updateTitle', 'updateAddress', 'updateButton', 'cancelEditButton']) {
         assert.equal(await page.locator(`#${id}`).isDisabled(), true, `${id} should be disabled while saving`);
       }
       assert.match(await page.locator('#formStatus').innerText(), /saving|creat|loading/i);
@@ -397,6 +574,7 @@ async function main() {
 
     await test('desktop list and forms remain usable', async (page) => {
       await open(page);
+      await edit(page, 2);
       for (const id of ['rentalForm', 'updateForm', 'searchForm', 'rentalList']) {
         assert.equal(await page.locator(`#${id}`).isVisible(), true);
       }

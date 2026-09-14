@@ -144,12 +144,6 @@ button:hover {
     background-color: rgb(35, 119, 35);
 }
 
-button:disabled {
-    background-color: rgb(99, 150, 99);
-    cursor: wait;
-    opacity: 0.85;
-}
-
 .action-group {
     display: flex;
     flex-wrap: wrap;
@@ -196,6 +190,10 @@ button:disabled {
 
 #listStatus {
     margin-top: 20px;
+}
+
+#updateStatus {
+    margin-top: 18px;
 }
 
 .status-message {
@@ -279,20 +277,26 @@ h2 {
 
 #rentalList button {
     min-height: 40px;
-    margin: 14px 0 0;
+    margin: 0;
     padding: 8px 15px;
-    background-color: rgb(225, 54, 54);
     font-size: 14px;
 }
 
-#rentalList button:hover {
+#rentalList button:not(.secondary-button) {
+    background-color: rgb(225, 54, 54);
+}
+
+#rentalList button:not(.secondary-button):hover {
     background-color: rgb(183, 33, 33);
 }
 
 button:disabled,
-button:disabled:hover {
+button:disabled:hover,
+#rentalList button:disabled,
+#rentalList button:disabled:hover {
     background-color: rgb(107, 119, 107);
     cursor: not-allowed;
+    opacity: 0.85;
 }
 
 @media (max-width: 600px) {

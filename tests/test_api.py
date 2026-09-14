@@ -129,18 +129,21 @@ def test_create_uses_current_maximum_and_starts_at_one_when_empty(payload):
         assert client.post("/api/rentals", json=payload).json()["id"] == 1
 
 
-def test_update_id_one_changes_only_title_and_address(client):
+@pytest.mark.parametrize("rental_id", [1, 2])
+def test_update_selected_id_changes_only_title_and_address(client, rental_id):
     before = client.get("/api/rentals").json()
-    response = client.put("/api/rentals/1", json={
+    response = client.put(f"/api/rentals/{rental_id}", json={
         "listingTitle": "  Updated downtown rental  ",
         "propertyAddress": "  42 New Street  ",
     })
     expected = {
-        **before[0], "listingTitle": "Updated downtown rental", "propertyAddress": "42 New Street",
+        **before[rental_id - 1], "listingTitle": "Updated downtown rental", "propertyAddress": "42 New Street",
     }
     assert response.status_code == 200
     assert response.json() == expected
-    assert client.get("/api/rentals").json() == [expected, before[1]]
+    assert client.get("/api/rentals").json() == [
+        expected if rental["id"] == rental_id else rental for rental in before
+    ]
 
 
 @pytest.mark.parametrize("changes", [

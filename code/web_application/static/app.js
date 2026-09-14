@@ -5,6 +5,8 @@ const updateForm = document.getElementById("updateForm");
 const searchForm = document.getElementById("searchForm");
 const submitButton = document.getElementById("submitButton");
 const updateButton = document.getElementById("updateButton");
+const cancelEditButton = document.getElementById("cancelEditButton");
+const updateHeading = document.getElementById("updateHeading");
 const formStatus = document.getElementById("formStatus");
 const updateStatus = document.getElementById("updateStatus");
 const listStatus = document.getElementById("listStatus");
@@ -25,6 +27,7 @@ let listBusy = false;
 let mutationBusy = false;
 let loadVersion = 0;
 let loadController;
+let editingRental = null;
 
 const showStatus = (element, message, type) => {
     element.textContent = message;
@@ -76,7 +79,12 @@ const updateControls = () => {
         for (const control of form.elements) control.disabled = mutationBusy;
     }
     submitButton.disabled = mutationBusy || listBusy;
-    updateButton.disabled = mutationBusy || listBusy || !storeKnown || !allRentals.some((rental) => rental.id === 1);
+    const selectedExists = editingRental && allRentals.some((rental) => rental.id === editingRental.id);
+    updateButton.disabled = mutationBusy || listBusy || !storeKnown || !selectedExists;
+    updateAvailability.hidden = !editingRental || (storeKnown && selectedExists);
+    updateAvailability.textContent = !storeKnown
+        ? "Reload listings to check whether this listing is still available."
+        : "This listing is no longer available. Cancel editing and choose another listing.";
     deleteHighestButton.disabled = mutationBusy || listBusy || !storeKnown || allRentals.length === 0;
     retryButton.disabled = mutationBusy || listBusy;
     for (const button of rentalList.querySelectorAll("button")) {
@@ -95,9 +103,26 @@ const renderStoreSummary = () => {
     deleteHighestButton.textContent = highest === null
         ? "Delete highest-ID listing"
         : `Delete highest-ID listing (${highest})`;
-    updateAvailability.textContent = allRentals.some((rental) => rental.id === 1)
-        ? "Listing ID 1 is available to update."
-        : "Listing ID 1 is not available. You can update it once it exists again.";
+};
+
+const beginEdit = (rental) => {
+    if (mutationBusy || listBusy || !storeKnown) return;
+    if (editingRental?.id !== rental.id) {
+        const hasChanges = editingRental && (
+            updateForm.elements.listingTitle.value !== editingRental.listingTitle
+            || updateForm.elements.propertyAddress.value !== editingRental.propertyAddress
+        );
+        if (hasChanges && !window.confirm("Discard unsaved changes and edit another listing?")) return;
+        editingRental = rental;
+        updateForm.elements.listingTitle.value = rental.listingTitle;
+        updateForm.elements.propertyAddress.value = rental.propertyAddress;
+        updateHeading.textContent = `Edit Listing ID ${rental.id}`;
+        clearStatus(updateStatus);
+    }
+    updateForm.hidden = false;
+    updateControls();
+    updateForm.scrollIntoView({ block: "start" });
+    updateForm.elements.listingTitle.focus({ preventScroll: true });
 };
 
 const renderRentals = (rentals, query) => {
@@ -117,6 +142,16 @@ const renderRentals = (rentals, query) => {
             line.textContent = `${label}: ${value}`;
             row.appendChild(line);
         }
+        const actions = document.createElement("div");
+        actions.className = "action-group";
+        const editButton = document.createElement("button");
+        editButton.type = "button";
+        editButton.className = "secondary-button";
+        editButton.textContent = "Edit";
+        editButton.dataset.editId = String(rental.id);
+        editButton.setAttribute("aria-label", `Edit listing ID ${rental.id}`);
+        editButton.addEventListener("click", () => beginEdit(rental));
+        actions.appendChild(editButton);
         const button = document.createElement("button");
         button.type = "button";
         button.textContent = "Delete";
@@ -126,7 +161,8 @@ const renderRentals = (rentals, query) => {
             if (!window.confirm(`Delete listing ID ${rental.id}: ${rental.listingTitle}?`)) return;
             performMutation(listStatus, "Deleting rental listing...", () => requestJSON(`/api/rentals/${rental.id}`, { method: "DELETE" }));
         });
-        row.appendChild(button);
+        actions.appendChild(button);
+        row.appendChild(actions);
         rentalList.appendChild(row);
     }
     rentalList.hidden = rentals.length === 0;
@@ -168,7 +204,6 @@ const loadRentals = async () => {
         showStatus(listStatus, errorMessage(error), "error");
         retryButton.hidden = false;
         storeSummary.textContent = "Listing count unavailable until loading succeeds.";
-        updateAvailability.textContent = "Reload listings to check whether ID 1 is available.";
     } finally {
         if (version === loadVersion) {
             listBusy = false;
@@ -248,7 +283,19 @@ updateForm.addEventListener("submit", (event) => {
         listingTitle: updateForm.elements.listingTitle.value.trim(),
         propertyAddress: updateForm.elements.propertyAddress.value.trim()
     };
-    performMutation(updateStatus, "Updating listing ID 1...", () => requestJSON("/api/rentals/1", { method: "PUT", body: JSON.stringify(payload) }));
+    const rentalId = editingRental.id;
+    performMutation(updateStatus, `Updating listing ID ${rentalId}...`, () => requestJSON(`/api/rentals/${rentalId}`, { method: "PUT", body: JSON.stringify(payload) }));
+});
+
+cancelEditButton.addEventListener("click", () => {
+    if (mutationBusy || !editingRental) return;
+    const editButton = rentalList.querySelector(`[data-edit-id="${editingRental.id}"]`);
+    editingRental = null;
+    updateForm.reset();
+    updateForm.hidden = true;
+    clearStatus(updateStatus);
+    updateControls();
+    (editButton && !editButton.disabled ? editButton : searchQuery).focus();
 });
 
 searchForm.addEventListener("submit", (event) => {

@@ -29,12 +29,14 @@ The web app uses its own `.venv-web` and root `requirements.txt`. Follow the sep
 ## Use the app
 
 1. **Create:** complete Listing Title, Address, Landlord Email, Description, Property Type, and the terms checkbox. Click **Create Rental Listing**. Success navigates home and displays the server-assigned ID.
-2. **Update:** fill **New Listing Title** and **New Address** under **Update Listing ID 1**. Email, description, type, and accepted terms remain unchanged. The button is unavailable if ID 1 does not exist.
+2. **Update:** click **Edit** on any listing. Its title and address appear in **Edit Listing ID N**. Change them and click **Save changes**, or **Cancel** to close the editor without saving. Email, description, type, and accepted terms remain unchanged. Use ID 1 for the assignment's required update evidence; other listings remain editable even if ID 1 is deleted.
 3. **Delete highest:** click **Delete highest-ID listing (N)** and confirm. The backend selects the maximum from the entire store, including records hidden by search. The count and button refer to the full collection.
 4. **Delete a selected listing:** click its **Delete** button and confirm. This is an additional convenience action.
 5. **Search:** enter a title or address fragment and click **Search**. Matching is case-insensitive, trims surrounding whitespace, and uses title **or** address. **Clear**, or a blank search, restores all records.
 
 Successful create/update/delete requests return JSON or an empty response to JavaScript, which navigates to `/`. The mutation endpoints do not themselves issue HTTP 303 redirects. Search refreshes the displayed list without navigating away. Mutations disable controls and show progress; errors preserve form input. Empty storage and a search with no matches have different messages. Long text wraps at a 375px viewport.
+
+The editor opens only after choosing a listing. Selecting another listing asks before discarding an unsaved draft; choosing the same listing again preserves that draft. Searching does not change the selected target or its draft. If a refreshed collection shows the selected record has been removed, saving is disabled with an explanation; Cancel remains available.
 
 ## API contract
 
@@ -43,7 +45,7 @@ Successful create/update/delete requests return JSON or an empty response to Jav
 | `GET /` | 200 HTML | Home page |
 | `GET /api/rentals?q=...` | 200 JSON array | List all or match title/address; `Cache-Control: no-store` |
 | `POST /api/rentals` | 201 JSON record | Create from all six fields; assign the ID on the server |
-| `PUT /api/rentals/{rental_id}` | 200 JSON record | Update title/address; the required UI targets ID 1 |
+| `PUT /api/rentals/{rental_id}` | 200 JSON record | Update title/address for the selected existing ID |
 | `DELETE /api/rentals/highest` | 204, empty body | Delete the current highest ID |
 | `DELETE /api/rentals/{rental_id}` | 204, empty body | Delete the selected ID |
 

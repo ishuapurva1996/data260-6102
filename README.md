@@ -64,7 +64,7 @@ Course instructions, lecturer practice scripts, implementation plans, and agent 
 
 ## Current HW2 progress
 
-The shared application provides create, update-ID-1, highest-ID deletion, per-row deletion, and title/address search through FastAPI. It retains the 375px layout and visible loading, empty, and error states. Use a separate web environment so its dependencies stay independent of the Part 3 agent environment:
+The shared application provides create, per-listing editing, highest-ID deletion, per-row deletion, and title/address search through FastAPI. It retains the 375px layout and visible loading, empty, and error states. Use a separate web environment so its dependencies stay independent of the Part 3 agent environment:
 
 ```bash
 python3.12 -m venv .venv-web

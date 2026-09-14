@@ -61,10 +61,10 @@
             <p id="formStatus" class="status-message" role="status" aria-live="polite" hidden></p>
         </form>
 
-        <form id="updateForm" novalidate aria-labelledby="updateHeading">
-            <h2 id="updateHeading">Update Listing ID 1</h2>
+        <form id="updateForm" novalidate aria-labelledby="updateHeading" hidden>
+            <h2 id="updateHeading">Edit Listing</h2>
             <p class="form-intro">Change its title and address. Other listing details stay the same.</p>
-            <p id="updateAvailability" class="field-hint">Loading listing availability...</p>
+            <p id="updateAvailability" class="field-hint" aria-live="polite" hidden></p>
             <div class="form-field">
                 <label for="updateTitle">New Listing Title <span aria-hidden="true">*</span></label>
                 <input type="text" id="updateTitle" name="listingTitle" required>
@@ -73,7 +73,10 @@
                 <label for="updateAddress">New Address <span aria-hidden="true">*</span></label>
                 <input type="text" id="updateAddress" name="propertyAddress" required>
             </div>
-            <button id="updateButton" type="submit" disabled>Update Listing ID 1</button>
+            <div class="action-group">
+                <button id="updateButton" type="submit" disabled>Save changes</button>
+                <button id="cancelEditButton" type="button" class="secondary-button">Cancel</button>
+            </div>
             <p id="updateStatus" class="status-message" role="status" aria-live="polite" hidden></p>
         </form>
 
