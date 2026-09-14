@@ -47,7 +47,7 @@ The repeatable create/update/delete screenshots used isolated port 18702 to pres
 ## Required user actions before submitting online
 
 - [ ] Review the report and personal contribution wording in `AI_USE.md`; revise if needed. After edits, rebuild the PDF and regenerate verification/hashes.
-- [ ] In GitHub, complete the identity confirmation and verify that **Sbnikitha** and **supriyaselvanganesan** appear as collaborators. The repository page opened successfully and was public, but the collaborator settings page requested identity confirmation. Public readability does not by itself confirm collaborator membership.
+- [ ] Verify that **Sbnikitha** and **supriyaselvanganesan** have accepted their invitations and have active collaborator access. Both invitations were sent and showed Pending Invite when checked on September 14, 2026. Public readability does not by itself confirm collaborator membership.
 - [x] Publish the committed HW2 work on `codex/fix-hw1-form` and the submission tags. The direct branch link is https://github.com/ishuapurva1996/data260-6102/tree/codex/fix-hw1-form. The repository default `main` branch retains HW1; use the direct HW2 branch link for this submission.
 - [ ] Upload `Apurva_HW2.pdf` and provide the working repository link in the course portal.
 

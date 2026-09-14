@@ -242,3 +242,77 @@ COMMAND: .venv-agents/bin/python scripts/refresh_hw02_artifacts.py --prior repor
 
 END UTC: 2026-09-14T09:26:11.142143+00:00
 EXIT: 0
+
+START UTC: 2026-09-14T09:33:01.020166+00:00
+COMMAND: /Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 scripts/build_hw02_report.py --code-ref hw2-code --upload-copy ../HW2/Apurva_HW2.pdf
+{"pdf": "/Users/pragyaapurva/Documents/SJSU/DATA 260/data260-6102/reports/hw02/report.pdf", "pages": 28, "sha256": "31d2838745cddb007636a2f6c8267344bf07e9b87173a3560788d19ece9dd98e"}
+
+END UTC: 2026-09-14T09:33:01.496648+00:00
+EXIT: 0
+
+START UTC: 2026-09-14T09:33:31.800978+00:00
+CHECK: PDF voice revision - all-page text and Poppler/Pillow pixel comparison; AI_USE body equality; matching upload PDF; placeholders and unchanged experiment qualifiers.
+{
+  "checked_at": "2026-09-14T09:33:35.405952+00:00",
+  "passed": true,
+  "pages": 28,
+  "changed_pages": [
+    1,
+    2,
+    23,
+    25,
+    26,
+    28
+  ],
+  "other_pages_pixel_identical": 22,
+  "ai_use_body_paragraph_count": 6,
+  "ai_use_body_matches_pdf": true,
+  "upload_copy_matches": true,
+  "flagged_phrases_removed": true,
+  "placeholder_text_absent": true,
+  "proposed_fix_untested_qualifier_preserved": true,
+  "sha256": "31d2838745cddb007636a2f6c8267344bf07e9b87173a3560788d19ece9dd98e"
+}
+END UTC: 2026-09-14T09:33:35.406848+00:00
+EXIT: 0
+
+START UTC: 2026-09-14T09:34:00.999257+00:00
+COMMAND: .venv-agents/bin/python scripts/refresh_hw02_artifacts.py --prior reports/hw02/raw/submission-smoke/report-link-revision/verification.json --output reports/hw02/verification.json
+{
+  "passed": true,
+  "output": "/Users/pragyaapurva/Documents/SJSU/DATA 260/data260-6102/reports/hw02/verification.json",
+  "model_calls": 0,
+  "refresh_checks": {
+    "prior_verification": {
+      "passed": true,
+      "historical_generated_at": "2026-09-14T08:09:16.462074+00:00",
+      "checks_reused": 8,
+      "live_runs_reused": 2
+    },
+    "runtime_matches_prior_and_tag": {
+      "passed": true,
+      "ref": "hw2-code",
+      "commit": "6a076db1447f00a0097cfc16f5de460c37e65079",
+      "files_checked": 27,
+      "source_map_sha256": "75a57eea6e51e723aab19e7f1379eab233102f37eb609c6b61c604da5a9b8304"
+    },
+    "submission_artifacts": {
+      "passed": true,
+      "files_checked": 6,
+      "checked_at": "2026-09-14T09:34:01.373619+00:00"
+    },
+    "runtime_unchanged_during_refresh": {
+      "passed": true,
+      "ref": "hw2-code",
+      "commit": "6a076db1447f00a0097cfc16f5de460c37e65079",
+      "files_checked": 27,
+      "source_map_sha256": "75a57eea6e51e723aab19e7f1379eab233102f37eb609c6b61c604da5a9b8304"
+    },
+    "prior_file_unchanged": {
+      "passed": true
+    }
+  }
+}
+
+END UTC: 2026-09-14T09:34:01.668611+00:00
+EXIT: 0

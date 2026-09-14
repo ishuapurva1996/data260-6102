@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-09-14T09:26:03.744755+00:00",
+  "checked_at": "2026-09-14T09:34:00.999044+00:00",
   "pdf": "reports/hw02/report.pdf",
-  "sha256": "a3d1e536bc28062441c890b2daa1213e1c41b3dde3be3d92740f5feb68553ca3",
+  "sha256": "31d2838745cddb007636a2f6c8267344bf07e9b87173a3560788d19ece9dd98e",
   "pages": 28,
   "render_tool": "pdftoppm",
-  "visual_review": "Rendered and compared all 28 pages against the previously reviewed PDF. Page 27 was visually inspected at 1600px; it has readable text and no clipping or overlap. The other 27 pages are pixel-identical at 900px.",
+  "visual_review": "Rendered and compared all 28 pages against the previously reviewed PDF. Changed pages 1, 2, 23, 25, 26 and 28 were visually inspected at 1600px with no clipping or overlap. The other 22 pages are pixel-identical at 900px. The AI-use disclosure remains accurate and matches page 27.",
   "defects_remaining": [],
   "code_excerpts": "All source excerpts are nonempty and within actual file ranges.",
   "upload_copy_matches": true,
@@ -20,8 +20,15 @@
   "ai_use_body_matches_pdf": true,
   "ai_use_body_paragraph_count": 6,
   "changed_pages": [
-    27
+    1,
+    2,
+    23,
+    25,
+    26,
+    28
   ],
   "editor_note_removed": true,
-  "placeholder_text_absent": true
+  "placeholder_text_absent": true,
+  "flagged_phrases_removed": true,
+  "proposed_fix_untested_qualifier_preserved": true
 }

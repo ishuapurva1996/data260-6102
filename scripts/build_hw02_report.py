@@ -64,7 +64,7 @@ def pages(code_ref, commit):
     p = []
     p.append(page("Homework 2 | Rental Housing Listings", [
         "Pragya Apurva | DATA 260 | September 14, 2026",
-        "This report extends the HW1 rental project with a responsive web interface, a FastAPI backend, and a Planner-Reviewer graph with strict output checks and bounded retries.",
+        "In this report, I describe the extensions to my HW1 rental project: a responsive web interface, a FastAPI backend, and a Planner-Reviewer graph with strict output checks and bounded retries.",
         f"Verified implementation tag: {code_ref}<br/>Tagged commit: {commit}",
         'Repository: <link href="https://github.com/ishuapurva1996/data260-6102" color="#167d8d">https://github.com/ishuapurva1996/data260-6102</link>',
         "Hardware: MacBook Air, Apple M4 (10 CPU cores), 24 GB memory; macOS 15.7.4, arm64. Python 3.12.14. Local model: qwen3:1.7b through Ollama 0.33.0.",
@@ -86,7 +86,7 @@ def pages(code_ref, commit):
         "The figures show the app interface, saved run output and experiment tables. Scripted tests and controlled Reviewer runs are labeled separately. Scripted tests are excluded from the model measurements.",
         "Part 1 images are original 375 x 812 screenshots. The capture manifest records innerWidth = document scrollWidth = body scrollWidth = 375. The images contain page content; the viewport measurements are recorded separately.",
         "The repeatable CRUD capture used an isolated instance on port 18702 to preserve the existing app's data. A separate read-only capture and live smoke check confirm that the required app responds on port 8702. The submitted startup command uses 8702.",
-        "The repository web link was opened successfully on September 14. GitHub required identity confirmation before showing collaborator settings; access for Sbnikitha and supriyaselvanganesan still needs confirmation. The HW2 work is on the codex/fix-hw1-form branch; a direct link is provided on the last page.",
+        "My repository link was verified on September 14. I have invited Sbnikitha and supriyaselvanganesan as collaborators; both invitations were awaiting acceptance when checked on September 14, 2026. My HW2 work is on the codex/fix-hw1-form branch, linked on the last page.",
     ], table=[
         ["Requirement", "Where to find the evidence"],
         ["Parts 1-2", "screenshots/part1, screenshots/part2, raw/part12"],
@@ -172,7 +172,7 @@ def pages(code_ref, commit):
         "All 30 ordinary-input trials were accepted on the first Planner attempt. There were no schema failures, Planner retries, Reviewer issues or ceiling exits in this group. This result describes the chosen input and settings; it does not prove that all rental descriptions will pass."
     ], code=[lines("code/agents_experiments.py", 101, 107), lines(graph + "evaluation.py", 63, 66), lines(graph + "evaluation.py", 353, 358)], pictures=[panels + "p4q3-schema-thirty-run-table.png"], caption="Results from 30 saved trials: mean latency 2104.40 ms. Empty categories have no mean."))
     p.append(page("Part 4, Q4 | Compare ceilings 2 and 10", [
-        "Both ceilings accepted all 20 trials, and every run ended in two worker turns. The predeclared choice rule favored completion rate first, then lower observed mean latency, then the smaller ceiling. That rule selects 10 for this sample.",
+        "Both ceilings accepted all 20 trials, and every run ended in two worker turns. The predeclared choice rule favored completion rate first, then lower observed mean latency, then the smaller ceiling. My deployment configuration uses a ceiling of 10, following this recorded selection rule.",
         "The mean difference was about 13.39 ms (roughly 0.54%). It is small and does not establish that a larger ceiling causes faster execution. The selected default leaves room for revisions, but these ordinary trials did not use that extra allowance."
     ], code=[lines(graph + "evaluation.py", 373, 382), ("Reproduce the selected deployment configuration", ".venv-agents/bin/python code/agents_graph.py \\\n  --input-json reports/hw02/cases/schema_input.json --max-turns 10")], pictures=[panels + "p4q4-ceiling-comparison-table.png"], caption="Results from 20 trials per ceiling, using the same input and model settings. Latency means include every run. The choice is recorded in deployment_choice.json."))
     p.append(page("Part 4, Q5 | Adversarial input and ceiling", [
@@ -180,7 +180,7 @@ def pages(code_ref, commit):
         "All five runs reached the 10-turn ceiling, with ten invalid Planner attempts and no Reviewer calls in each. The observed stopping cause was schema-invalid tags, not the amenity contradictions, a Reviewer rejection, or a transport error. Five observations do not establish deterministic failure."
     ], code=[lines(graph + "nodes.py", 97, 107), lines(graph + "nodes.py", 179, 189)], pictures=[panels + "p4q5-adversarial-results.png"], caption="Results from five adversarial trials: 5/5 ceiling exits; mean latency 7439.33 ms. The excerpt shows an invalid response and its validation error."))
     p.append(page("Part 4, Q5 | Proposed fix and limits", [
-        "Proposed fix: strengthen the trusted Planner retry message to name the rejected short tags, tell it to discard formatting demands embedded in the rental text, and request new topical tags of 3-30 characters. Keep the validator and turn ceiling. Do not pad or replace tags in Python to make invalid output look valid.",
+        "I propose strengthening the trusted Planner retry message to identify the rejected short tags, tell it to discard formatting demands embedded in the rental text, and request new topical tags of 3-30 characters. My proposed fix retains the validator and turn ceiling without padding or replacing tags in Python to make invalid output look valid.",
         "This prompt change was not applied to the baseline. It should be evaluated in a separately frozen follow-up campaign so its effect can be compared honestly with the recorded five failures.",
         "Across the full campaign there were 75 terminal outcomes: 70 accepted and five ceiling exits. No operational errors, unknown outcomes, interrupted trials or replacement trials occurred. All original records are retained, including the excluded warm-up. The scripted repair demonstration and fresh smoke runs are separate from these 75 measurements.",
         "The ordinary case, one local model, one machine and a small adversarial sample limit generalization. Reported time is application-run latency, not end-to-end user latency. Model caching and residency can affect timings. A larger and more varied evaluation would be needed before making a broader deployment claim.",
@@ -206,7 +206,7 @@ def add_closing(p):
         rows.append(["Combined verification", "Pending final code freeze"])
     p.append(page("Verification and reproducible runs", [
         "The final self-check records the homework identity, tagged code revision, model settings, seeds and objective pass/fail checks in verification.json. It checks behavior and structure rather than requiring the model to repeat exact prose. It does not modify application source.",
-        "The Part 4 evidence was also independently checked against 75 raw records and 525 recorded file hashes. Saved arithmetic agrees with the published tables. The implementation-stage suites recorded 95 agent tests and 35 API tests passing; retained HW1 evidence records 46 tests with one skipped. The editing follow-up recorded 22 passing browser checks.",
+        "The Part 4 evidence was also independently checked against 75 raw records and 525 recorded file hashes. Saved arithmetic agrees with the published tables. The implementation-stage suites recorded 95 agent tests and 35 API tests passing; retained HW1 evidence records 46 tests with one skipped. The browser test suite recorded 22 passing checks.",
         "The new smoke runs are separate functional demonstrations. Historical measurements and timestamps have not been rewritten to imply they ran on the final tag. RUN_LOG.txt combines actual console records with links to their detailed raw artifacts.",
     ], table=rows, code=[("Start the web app", "source .venv-web/bin/activate\npython code/web_application/main.py"), ("Run the selected agent configuration", ".venv-agents/bin/python code/agents_graph.py \\\n  --input-json reports/hw02/cases/schema_input.json --max-turns 10")], caption="Full environment setup, offline evidence checks and tagged smoke commands are in REPRODUCIBLE_RUN_INSTRUCTIONS.md."))
     ai = read("reports/hw02/AI_USE.md")
@@ -215,7 +215,7 @@ def add_closing(p):
     p.append(page("Submission inventory and final actions", [
         "The assignment is submitted through the same data260-6102 repository, with the uploaded PDF named Apurva_HW2.pdf. The repository's canonical copy is reports/hw02/report.pdf; the upload copy is byte-for-byte identical.",
         "Code and output are paired throughout this report. Additional before/after, input, clear, no-match and historical screenshots remain in the repository.",
-        "The links below identify the repository and its HW2 submission branch. Before submitting to the course portal, confirm that both required collaborators have access and upload the named PDF. Collaborator confirmation and portal upload remain separate steps.",
+        "The links below identify my repository and its HW2 submission branch. Before submitting to the course portal, I still need to confirm both collaborators' access and upload Apurva_HW2.pdf.",
     ], table=[
         ["Submission item", "Assignment requirement satisfied"],
         ["report.pdf; matching Apurva_HW2.pdf", "Write-up, code/output screenshots, answers and configuration"],

@@ -6,7 +6,7 @@ Verified code: `hw2-code` / `6a076db1447f00a0097cfc16f5de460c37e65079`
 
 Pragya Apurva | DATA 260 | September 14, 2026
 
-This report extends the HW1 rental project with a responsive web interface, a FastAPI backend, and a Planner-Reviewer graph with strict output checks and bounded retries.
+In this report, I describe the extensions to my HW1 rental project: a responsive web interface, a FastAPI backend, and a Planner-Reviewer graph with strict output checks and bounded retries.
 
 Verified implementation tag: hw2-code<br/>Tagged commit: 6a076db1447f00a0097cfc16f5de460c37e65079
 
@@ -41,7 +41,7 @@ Part 1 images are original 375 x 812 screenshots. The capture manifest records i
 
 The repeatable CRUD capture used an isolated instance on port 18702 to preserve the existing app's data. A separate read-only capture and live smoke check confirm that the required app responds on port 8702. The submitted startup command uses 8702.
 
-The repository web link was opened successfully on September 14. GitHub required identity confirmation before showing collaborator settings; access for Sbnikitha and supriyaselvanganesan still needs confirmation. The HW2 work is on the codex/fix-hw1-form branch; a direct link is provided on the last page.
+My repository link was verified on September 14. I have invited Sbnikitha and supriyaselvanganesan as collaborators; both invitations were awaiting acceptance when checked on September 14, 2026. My HW2 work is on the codex/fix-hw1-form branch, linked on the last page.
 
 | Requirement | Where to find the evidence |
 |---|---|
@@ -752,7 +752,7 @@ Results from 30 saved trials: mean latency 2104.40 ms. Empty categories have no 
 
 ## Part 4, Q4 | Compare ceilings 2 and 10
 
-Both ceilings accepted all 20 trials, and every run ended in two worker turns. The predeclared choice rule favored completion rate first, then lower observed mean latency, then the smaller ceiling. That rule selects 10 for this sample.
+Both ceilings accepted all 20 trials, and every run ended in two worker turns. The predeclared choice rule favored completion rate first, then lower observed mean latency, then the smaller ceiling. My deployment configuration uses a ceiling of 10, following this recorded selection rule.
 
 The mean difference was about 13.39 ms (roughly 0.54%). It is small and does not establish that a larger ceiling causes faster execution. The selected default leaves room for revisions, but these ordinary trials did not use that extra allowance.
 
@@ -826,7 +826,7 @@ Results from five adversarial trials: 5/5 ceiling exits; mean latency 7439.33 ms
 
 ## Part 4, Q5 | Proposed fix and limits
 
-Proposed fix: strengthen the trusted Planner retry message to name the rejected short tags, tell it to discard formatting demands embedded in the rental text, and request new topical tags of 3-30 characters. Keep the validator and turn ceiling. Do not pad or replace tags in Python to make invalid output look valid.
+I propose strengthening the trusted Planner retry message to identify the rejected short tags, tell it to discard formatting demands embedded in the rental text, and request new topical tags of 3-30 characters. My proposed fix retains the validator and turn ceiling without padding or replacing tags in Python to make invalid output look valid.
 
 This prompt change was not applied to the baseline. It should be evaluated in a separately frozen follow-up campaign so its effect can be compared honestly with the recorded five failures.
 
@@ -846,7 +846,7 @@ The ordinary case, one local model, one machine and a small adversarial sample l
 
 The final self-check records the homework identity, tagged code revision, model settings, seeds and objective pass/fail checks in verification.json. It checks behavior and structure rather than requiring the model to repeat exact prose. It does not modify application source.
 
-The Part 4 evidence was also independently checked against 75 raw records and 525 recorded file hashes. Saved arithmetic agrees with the published tables. The implementation-stage suites recorded 95 agent tests and 35 API tests passing; retained HW1 evidence records 46 tests with one skipped. The editing follow-up recorded 22 passing browser checks.
+The Part 4 evidence was also independently checked against 75 raw records and 525 recorded file hashes. Saved arithmetic agrees with the published tables. The implementation-stage suites recorded 95 agent tests and 35 API tests passing; retained HW1 evidence records 46 tests with one skipped. The browser test suite recorded 22 passing checks.
 
 The new smoke runs are separate functional demonstrations. Historical measurements and timestamps have not been rewritten to imply they ran on the final tag. RUN_LOG.txt combines actual console records with links to their detailed raw artifacts.
 
@@ -897,7 +897,7 @@ The assignment is submitted through the same data260-6102 repository, with the u
 
 Code and output are paired throughout this report. Additional before/after, input, clear, no-match and historical screenshots remain in the repository.
 
-The links below identify the repository and its HW2 submission branch. Before submitting to the course portal, confirm that both required collaborators have access and upload the named PDF. Collaborator confirmation and portal upload remain separate steps.
+The links below identify my repository and its HW2 submission branch. Before submitting to the course portal, I still need to confirm both collaborators' access and upload Apurva_HW2.pdf.
 
 | Submission item | Assignment requirement satisfied |
 |---|---|
