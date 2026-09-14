@@ -90,7 +90,7 @@ python code/agents_graph.py --input-json reports/hw02/cases/part3_listing.json -
 
 If `.venv-agents` is already prepared, run `.venv-agents/bin/python code/agents_graph.py --input-json reports/hw02/cases/part3_listing.json`.
 
-See the [Part 3 usage and architecture guide](docs/agent_graph.md) for turn counting, response validation, controlled Reviewer mode, and test commands. The [implementation results](reports/hw02/PART3_IMPLEMENTATION.md) link the recorded tests, real-model runs, and screenshots. The [combined HW2 report](reports/hw02/report.pdf) includes Parts 1-4. The `hw2-code` tag identifies verified runtime source; `hw2` identifies the complete local submission package. Follow the [submission checklist](reports/hw02/SUBMISSION_CHECKLIST.md) before submitting online.
+See the [Part 3 usage and architecture guide](docs/agent_graph.md) for turn counting, response validation, controlled Reviewer mode, and test commands. The [implementation results](reports/hw02/PART3_IMPLEMENTATION.md) link the recorded tests, real-model runs, and screenshots. The [combined HW2 report](reports/hw02/report.pdf) includes Parts 1-4. The `hw2-code` tag identifies verified runtime source; `hw2` preserves the original submission package, and `hw2-report-v2` identifies the revised report with closing GitHub links. Follow the [submission checklist](reports/hw02/SUBMISSION_CHECKLIST.md) before submitting online.
 
 ## Reproducing the original HW1 submission
 
@@ -188,4 +188,4 @@ The shared Planner–Reviewer graph now validates Planner output with Pydantic a
 - [Scoped Part 4 verification](reports/hw02/verification_part4.json)
 - [Part 4 evidence and screenshots](reports/hw02/PART4_IMPLEMENTATION.md)
 
-The final combined HW2 report, personal AI-use answers, tagged smoke verification, collaborator-access check, and submission tag remain whole-assignment tasks.
+The [complete HW2 report](reports/hw02/report.pdf), AI-use answers, raw evidence and passing tagged verification are included. The published HW2 branch is [codex/fix-hw1-form](https://github.com/ishuapurva1996/data260-6102/tree/codex/fix-hw1-form). Collaborator confirmation and the course-portal upload remain pending.

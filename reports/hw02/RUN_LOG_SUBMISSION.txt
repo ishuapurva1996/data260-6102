@@ -55,3 +55,42 @@ COMMAND: .venv-agents/bin/python scripts/verify_hw02.py --ref hw2-code --live --
 
 END UTC: 2026-09-14T07:45:46.029191+00:00
 EXIT: 0
+
+START UTC: 2026-09-14T08:08:45.850603+00:00
+COMMAND: /Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 scripts/build_hw02_report.py --code-ref hw2-code --upload-copy ../HW2/Apurva_HW2.pdf
+{"pdf": "/Users/pragyaapurva/Documents/SJSU/DATA 260/data260-6102/reports/hw02/report.pdf", "pages": 28, "sha256": "8daef8bbde02c983c554919345143f3d73fb9e9e1443cf3f515cad4ea8f4ff52"}
+
+END UTC: 2026-09-14T08:08:46.374718+00:00
+EXIT: 0
+
+START UTC: 2026-09-14T08:08:46.441766+00:00
+COMMAND: /opt/homebrew/bin/pdftoppm -r 120 -png reports/hw02/report.pdf ../HW2/agent_outputs/report-link-qa/page
+
+Fontconfig error: No writable cache directories
+	/opt/homebrew/var/cache/fontconfig
+	/Users/pragyaapurva/.cache/fontconfig
+	/Users/pragyaapurva/.fontconfig
+
+END UTC: 2026-09-14T08:08:49.979365+00:00
+EXIT: 0
+
+START UTC: 2026-09-14T08:09:16.428762+00:00
+COMMAND: .venv-agents/bin/python scripts/verify_hw02.py --ref hw2-code --live --model-timeout 120 --require-submission --evidence-dir reports/hw02/raw/submission-smoke/report-link-revision --output reports/hw02/verification.json
+{
+  "passed": true,
+  "submission_ready": true,
+  "output": "/Users/pragyaapurva/Documents/SJSU/DATA 260/data260-6102/reports/hw02/verification.json",
+  "checks": {
+    "source_ref_matches_checkout": true,
+    "isolated_web_crud": true,
+    "deterministic_graph_smoke": true,
+    "saved_part4_evidence": true,
+    "live_web_8702": true,
+    "live_graph_termination": true,
+    "submission_artifacts": true,
+    "source_unchanged_during_checks": true
+  }
+}
+
+END UTC: 2026-09-14T08:09:34.260456+00:00
+EXIT: 0

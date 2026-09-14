@@ -2,16 +2,16 @@
   "assignment": "HW2",
   "student": "Pragya Apurva",
   "SID4": "6102",
-  "created_at": "2026-09-14T07:46:51.931724+00:00",
+  "created_at": "2026-09-14T08:10:05.026630+00:00",
   "repository_url": "https://github.com/ishuapurva1996/data260-6102",
   "branch": "codex/fix-hw1-form",
   "verified_code_tag": "hw2-code",
   "verified_code_commit": "6a076db1447f00a0097cfc16f5de460c37e65079",
-  "submission_package_tag": "hw2",
-  "package_reference_note": "The hw2 tag is created on the subsequent commit containing this manifest. Resolve its commit with git rev-parse hw2^{commit}; a manifest cannot embed the hash of its own containing commit. Runtime and verifier source match hw2-code.",
+  "submission_package_tag": "hw2-report-v2",
+  "package_reference_note": "hw2 preserves the original package. hw2-report-v2 identifies the subsequent commit containing this closing-link report revision and manifest. Resolve that tag for its commit hash; runtime and verifier source still match hw2-code.",
   "canonical_pdf": "reports/hw02/report.pdf",
   "upload_filename": "Apurva_HW2.pdf",
-  "upload_copy_sha256": "4deda56c09a1f24030e247b239147bb092f7a461fa2c8a4d95f35b1372dc0146",
+  "upload_copy_sha256": "8daef8bbde02c983c554919345143f3d73fb9e9e1443cf3f515cad4ea8f4ff52",
   "pdf_pages": 28,
   "new_ui_screenshots": 20,
   "new_saved_output_screenshots": 9,
@@ -20,11 +20,18 @@
   "verification_check_count": 8,
   "external_steps_pending": [
     "Confirm both collaborators after GitHub identity verification",
-    "Push intended branch and hw2-code / hw2 tags",
     "Upload Apurva_HW2.pdf and repository link to course portal"
   ],
   "inventory_scope": "All version-controlled or currently untracked/nonignored reports/hw02 files, plus named source/presentation helpers. This manifest is excluded from its own hash list. Application source hashes are recorded by verification.json.",
   "files": {
+    ".gitattributes": {
+      "bytes": 13,
+      "sha256": "547f59603028195ff9f8a87d04c4651551e8bd0d68f075257dfd549cd846b25b"
+    },
+    "README.md": {
+      "bytes": 10689,
+      "sha256": "8d58cd0dde9628f140d9f801a9d617690c38974889965ca6fe4335f6c12e0e48"
+    },
     "reports/hw02/AI_USE.md": {
       "bytes": 2242,
       "sha256": "bfdb0713ba3b761f7b09cfd29cdf2d52c24b24cad171d37af4ccba55ce93db51"
@@ -42,12 +49,12 @@
       "sha256": "488dfa42f74634c2432c8a9923436c1027f11b7b8b753a5075443be955bc8b3b"
     },
     "reports/hw02/README.md": {
-      "bytes": 2891,
-      "sha256": "69553282f6b2ac11587df25c0bc6391723c434c377b3d655173fee03f9793e9c"
+      "bytes": 3062,
+      "sha256": "49e35b5785a07c7d4a10b49bdd229617793f8c483fb1ff2b90fa17f2a470612e"
     },
     "reports/hw02/REPRODUCIBLE_RUN_INSTRUCTIONS.md": {
-      "bytes": 16975,
-      "sha256": "636d35f2bdf1ccca95882036b495a392ec58f381243d74cf4157a4ce0db848d8"
+      "bytes": 17061,
+      "sha256": "5921d53de337a8f69c100669490c2d929850be5be32d5de2245d1c7ad1009235"
     },
     "reports/hw02/RUN_LOG.txt": {
       "bytes": 169592,
@@ -66,12 +73,12 @@
       "sha256": "8975dec90d2fa1ee59abaa167f9b8bff086d717c5a8600b912491786963415dd"
     },
     "reports/hw02/RUN_LOG_SUBMISSION.txt": {
-      "bytes": 2430,
-      "sha256": "2e5eef4363d6325c9ce4ad86eb5ca8a73d1c7ef0d704607ce92d376114c7415c"
+      "bytes": 4046,
+      "sha256": "30939967a9e0a37320210fdab829f716e4a740c45414119bab4237145583aa7e"
     },
     "reports/hw02/SUBMISSION_CHECKLIST.md": {
-      "bytes": 7160,
-      "sha256": "782f7750c5bf4eac07d062c895c5f45f2184f8d88c22bb77f0233ac2453ebf44"
+      "bytes": 7287,
+      "sha256": "26b71cd64f5291819b6f045eeb9767968128fc99689bf0d3bac2072b2afa9efa"
     },
     "reports/hw02/cases/adversarial_input.json": {
       "bytes": 814,
@@ -2794,8 +2801,8 @@
       "sha256": "199124b15148753ce168358c62984eea5d294103b888626d9dfbe60087d09984"
     },
     "reports/hw02/raw/submission-package/pdf-qa.json": {
-      "bytes": 738,
-      "sha256": "d8766ea230069ed3e44383b0ac0f8e2ca55abd05f318d4e702003468ca9f9097"
+      "bytes": 928,
+      "sha256": "615f61ab7bf2fb7c39a3f56d84dd87d3dcd1e6099c4d170ded9d1478e8176017"
     },
     "reports/hw02/raw/submission-package/repository-access-check.json": {
       "bytes": 764,
@@ -2832,6 +2839,42 @@
     "reports/hw02/raw/submission-smoke/final/normal_reviewer/20260914T074530-f0347db59c/stdout.json": {
       "bytes": 6793,
       "sha256": "91e5e00830b75a8db994ee74b6e51ada85aa09a98d1be61506f3aa5b6b83bfa5"
+    },
+    "reports/hw02/raw/submission-smoke/final/verification.json": {
+      "bytes": 141354,
+      "sha256": "c9139e0cf9bc5d85d1f3391337ad446af1fee6723e52a84724250a33f3e6f2ba"
+    },
+    "reports/hw02/raw/submission-smoke/report-link-revision/controlled_always_issue/20260914T080923-28c5955c11/events.json": {
+      "bytes": 21773,
+      "sha256": "c5d74bdd0a5b2bf4c5b5ebb76e6fef1e0937e5cd8fbf04356c2afa822ea6525d"
+    },
+    "reports/hw02/raw/submission-smoke/report-link-revision/controlled_always_issue/20260914T080923-28c5955c11/result.json": {
+      "bytes": 24132,
+      "sha256": "36eac8dcca1fff9f3ff0f5f357a004ddde6683770336e5962966c9dc87968adb"
+    },
+    "reports/hw02/raw/submission-smoke/report-link-revision/controlled_always_issue/20260914T080923-28c5955c11/stderr.txt": {
+      "bytes": 4694,
+      "sha256": "87e9dbeeda61f633c00744ceb80fee1ce458de1d1f5ed5dd2d13942484fb2a01"
+    },
+    "reports/hw02/raw/submission-smoke/report-link-revision/controlled_always_issue/20260914T080923-28c5955c11/stdout.json": {
+      "bytes": 24132,
+      "sha256": "36eac8dcca1fff9f3ff0f5f357a004ddde6683770336e5962966c9dc87968adb"
+    },
+    "reports/hw02/raw/submission-smoke/report-link-revision/normal_reviewer/20260914T080918-beccafcc9e/events.json": {
+      "bytes": 4353,
+      "sha256": "338169fdceb744060ba60dfe5b10bac85cf221fc36385922f21928eb96b57da8"
+    },
+    "reports/hw02/raw/submission-smoke/report-link-revision/normal_reviewer/20260914T080918-beccafcc9e/result.json": {
+      "bytes": 6808,
+      "sha256": "b25298eaf72de6b8836009fb08dc7fc8c5e9a50356ebbd2fe0fb822ac24281c0"
+    },
+    "reports/hw02/raw/submission-smoke/report-link-revision/normal_reviewer/20260914T080918-beccafcc9e/stderr.txt": {
+      "bytes": 1244,
+      "sha256": "f4002b5d13cdc860f4b1074d2f83e92c6f08f6c2557526da81771638c4a54693"
+    },
+    "reports/hw02/raw/submission-smoke/report-link-revision/normal_reviewer/20260914T080918-beccafcc9e/stdout.json": {
+      "bytes": 6808,
+      "sha256": "b25298eaf72de6b8836009fb08dc7fc8c5e9a50356ebbd2fe0fb822ac24281c0"
     },
     "reports/hw02/raw/submission-smoke/tagged-code/controlled_always_issue/20260914T073455-f96d038394/events.json": {
       "bytes": 21775,
@@ -2874,12 +2917,12 @@
       "sha256": "7dc9f303b54297b700c0d945bf8ec6be1ef2b846d9b7285b035f88bd80c7060d"
     },
     "reports/hw02/report.md": {
-      "bytes": 44344,
-      "sha256": "88ded852392883456072ee3179da4fcdc04f48a292852e47c558689727cf7fbb"
+      "bytes": 44719,
+      "sha256": "0cb5c4f1fdd30904d8f5dde4c18c76b5b621342a208d6875f0becf0eec13fe39"
     },
     "reports/hw02/report.pdf": {
-      "bytes": 1497529,
-      "sha256": "4deda56c09a1f24030e247b239147bb092f7a461fa2c8a4d95f35b1372dc0146"
+      "bytes": 1498169,
+      "sha256": "8daef8bbde02c983c554919345143f3d73fb9e9e1443cf3f515cad4ea8f4ff52"
     },
     "reports/hw02/screenshots/final-panels/P3-controlled-short.html": {
       "bytes": 1445,
@@ -3110,8 +3153,8 @@
       "sha256": "9f99b7bab37be59ed599614122f6240034d8d9bc208f3c81e6d150d96bb5c9e6"
     },
     "reports/hw02/verification.json": {
-      "bytes": 141354,
-      "sha256": "c9139e0cf9bc5d85d1f3391337ad446af1fee6723e52a84724250a33f3e6f2ba"
+      "bytes": 141154,
+      "sha256": "d28f324a993a49f6139f8b15133873991a947e77db15216806d3274a1c375c17"
     },
     "reports/hw02/verification_part3.json": {
       "bytes": 1922,
@@ -3121,13 +3164,13 @@
       "bytes": 12213,
       "sha256": "73b70350c88ec91821b8853185ecbe4008c9331e91503d35c498016dd2d43dd0"
     },
-    "README.md": {
-      "bytes": 10459,
-      "sha256": "9d0e2d9492e4d5b3ea1537add64371665e557d29b17a9a09aaefc99200b754b0"
-    },
     "scripts/build_hw02_report.py": {
-      "bytes": 34672,
-      "sha256": "e392f5d2cb5764b8e0df776b3d6de9458ac45c47c06db462450168b83fb5a4f5"
+      "bytes": 35199,
+      "sha256": "1e1d473dccb673847a2b0c7ebc3a3014940113d7815d9adee1848db18344fda7"
+    },
+    "scripts/capture_hw2_final_panels.cjs": {
+      "bytes": 3667,
+      "sha256": "7899a5c2ac7e82bf742f3fcb30090ad1da00f1a7010706f8dc2151a65e59e864"
     },
     "scripts/capture_part12.cjs": {
       "bytes": 21204,
@@ -3137,10 +3180,6 @@
       "bytes": 2902,
       "sha256": "8bb16895c09b60bd2391b0d57ed71d24d59b22fbe5ad7ede7799bfa57cdd058c"
     },
-    "scripts/capture_hw2_final_panels.cjs": {
-      "bytes": 3667,
-      "sha256": "7899a5c2ac7e82bf742f3fcb30090ad1da00f1a7010706f8dc2151a65e59e864"
-    },
     "scripts/verify_hw02.py": {
       "bytes": 20721,
       "sha256": "80443fce491086bf0e4a252c7d750f3dda802cd6a853a9ef0fdbe99c13776032"
@@ -3148,10 +3187,9 @@
     "tests/test_verify_hw02.py": {
       "bytes": 3063,
       "sha256": "2a7f3bee6e11b340228d3aeac3e34129b5ec504222a22046b602f2ba3a8345e6"
-    },
-    ".gitattributes": {
-      "bytes": 13,
-      "sha256": "547f59603028195ff9f8a87d04c4651551e8bd0d68f075257dfd549cd846b25b"
     }
-  }
+  },
+  "previous_package_tag": "hw2",
+  "previous_package_commit": "fd7baa27c3af50d6494f075f3df618e50ab4b4fa",
+  "published_branch_url": "https://github.com/ishuapurva1996/data260-6102/tree/codex/fix-hw1-form"
 }

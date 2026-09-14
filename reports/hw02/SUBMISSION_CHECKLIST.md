@@ -6,7 +6,7 @@ Prepared for Pragya Apurva, SID4 6102. Assignment source: `DATA260_HW2.pdf`, pag
 
 1. Upload **Apurva_HW2.pdf** from the sibling `../HW2/` folder to the course submission portal. It is identical to `reports/hw02/report.pdf` in Git.
 2. Provide the repository link: https://github.com/ishuapurva1996/data260-6102 . The same link appears in the PDF.
-3. Keep the required report folder and the shared application source in the repository. Push the intended branch plus both local tags before submitting the link. No separate code ZIP is requested by the assignment PDF.
+3. Keep the required report folder and the shared application source in the repository. The HW2 branch is `codex/fix-hw1-form`; the revised report is identified by tag `hw2-report-v2`. No separate code ZIP is requested by the assignment PDF.
 
 | Assignment requirement | Completed local item / evidence |
 |---|---|
@@ -48,11 +48,11 @@ The repeatable create/update/delete screenshots used isolated port 18702 to pres
 
 - [ ] Review the report and personal contribution wording in `AI_USE.md`; revise if needed. After edits, rebuild the PDF and regenerate verification/hashes.
 - [ ] In GitHub, complete the identity confirmation and verify that **Sbnikitha** and **supriyaselvanganesan** appear as collaborators. The repository page opened successfully and was public, but the collaborator settings page requested identity confirmation. Public readability does not by itself confirm collaborator membership.
-- [ ] Push the intended submission branch and `hw2-code` / `hw2` tags, then verify their contents remotely. These external actions were not performed during report preparation. If submitting through the default branch, merge the prepared branch through the user's chosen workflow first.
+- [x] Publish the committed HW2 work on `codex/fix-hw1-form` and the submission tags. The direct branch link is https://github.com/ishuapurva1996/data260-6102/tree/codex/fix-hw1-form. The repository default `main` branch retains HW1; use the direct HW2 branch link for this submission.
 - [ ] Upload `Apurva_HW2.pdf` and provide the working repository link in the course portal.
 
 ## Tags and evidence integrity
 
-`hw2-code` freezes the implementation and verifier at `6a076db1447f00a0097cfc16f5de460c37e65079`. The later `hw2` package tag includes generated report/evidence files with unchanged application and verifier bytes. Use the code tag for runtime provenance and the package tag for the complete submission. The PDF identifies the code tag because a generated file cannot embed the hash of its own containing commit.
+`hw2-code` freezes the implementation and verifier at `6a076db1447f00a0097cfc16f5de460c37e65079`. The `hw2` tag preserves the original package at `fd7baa27c3af50d6494f075f3df618e50ab4b4fa`. The `hw2-report-v2` tag identifies the revised report with closing GitHub links and unchanged application/verifier bytes. Use the code tag for runtime provenance and the revised package tag for the current submission. The PDF identifies the code tag because a generated file cannot embed the hash of its own containing commit.
 
 `submission-manifest.json` records deliverable hashes; individual screenshot/campaign manifests retain deeper provenance. Historical measured runs keep their actual execution hash and dirty state rather than being relabeled as executions at the later tag. A passing local verification does not imply that GitHub pushes, collaborator access or portal upload are complete.

@@ -41,7 +41,7 @@ Part 1 images are original 375 x 812 screenshots. The capture manifest records i
 
 The repeatable CRUD capture used an isolated instance on port 18702 to preserve the existing app's data. A separate read-only capture and live smoke check confirm that the required app responds on port 8702. The submitted startup command uses 8702.
 
-The repository web link was opened successfully on September 14. GitHub required identity confirmation before showing collaborator settings; access for Sbnikitha and supriyaselvanganesan still needs confirmation. HW2 commits and tags must be pushed before the repository becomes the complete online submission.
+The repository web link was opened successfully on September 14. GitHub required identity confirmation before showing collaborator settings; access for Sbnikitha and supriyaselvanganesan still needs confirmation. The HW2 work is on the codex/fix-hw1-form branch; a direct link is provided on the last page.
 
 | Requirement | Where to find the evidence |
 |---|---|
@@ -872,6 +872,7 @@ Run the selected agent configuration
 | saved part4 evidence | PASS |
 | live web 8702 | PASS |
 | live graph termination | PASS |
+| submission artifacts | PASS |
 | source unchanged during checks | PASS |
 
 Full environment setup, offline evidence checks and tagged smoke commands are in REPRODUCIBLE_RUN_INSTRUCTIONS.md.
@@ -896,7 +897,7 @@ The assignment is submitted through the same data260-6102 repository, with the u
 
 Code and output are paired throughout this report. Additional before/after, input, clear, no-match and historical screenshots remain in the repository for inspection. Browser-rendered saved output is labeled; it is not presented as a native Terminal capture.
 
-Before submitting online: confirm the required collaborators in GitHub, push the final branch and tags, and verify that the report and tag links are reachable remotely. Those external submission steps are not claimed complete in this locally prepared package.
+The links below identify the repository and its HW2 submission branch. Before submitting to the course portal, confirm that both required collaborators have access and upload the named PDF. Collaborator confirmation and portal upload remain separate steps.
 
 | Submission item | Assignment requirement satisfied |
 |---|---|
@@ -910,3 +911,7 @@ Before submitting online: confirm the required collaborators in GitHub, push the
 | verification.json + scripts/verify_hw02.py | Tagged implementation smoke test with objective checks |
 | screenshots/ and raw/part12/ | UI captures plus screenshot/request provenance |
 | SUBMISSION_CHECKLIST.md | Requirement mapping and remaining external actions |
+
+GitHub repository: <link href="https://github.com/ishuapurva1996/data260-6102" color="#167d8d">https://github.com/ishuapurva1996/data260-6102</link>
+
+HW2 code and report: <link href="https://github.com/ishuapurva1996/data260-6102/tree/codex/fix-hw1-form" color="#167d8d">https://github.com/ishuapurva1996/data260-6102/tree/codex/fix-hw1-form</link>

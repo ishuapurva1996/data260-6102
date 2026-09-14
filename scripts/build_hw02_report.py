@@ -86,7 +86,7 @@ def pages(code_ref, commit):
         "Evidence types are labeled throughout: actual browser UI captures; browser screenshots of saved console/JSON/tables; real local-model experiments; and deterministic tests using scripted responses. A scripted repair check is not counted as a successful model trial.",
         "Part 1 images are original 375 x 812 screenshots. The capture manifest records innerWidth = document scrollWidth = body scrollWidth = 375. The images contain page content; the viewport measurements are recorded separately.",
         "The repeatable CRUD capture used an isolated instance on port 18702 to preserve the existing app's data. A separate read-only capture and live smoke check confirm that the required app responds on port 8702. The submitted startup command uses 8702.",
-        "The repository web link was opened successfully on September 14. GitHub required identity confirmation before showing collaborator settings; access for Sbnikitha and supriyaselvanganesan still needs confirmation. HW2 commits and tags must be pushed before the repository becomes the complete online submission.",
+        "The repository web link was opened successfully on September 14. GitHub required identity confirmation before showing collaborator settings; access for Sbnikitha and supriyaselvanganesan still needs confirmation. The HW2 work is on the codex/fix-hw1-form branch; a direct link is provided on the last page.",
     ], table=[
         ["Requirement", "Where to find the evidence"],
         ["Parts 1-2", "screenshots/part1, screenshots/part2, raw/part12"],
@@ -215,7 +215,7 @@ def add_closing(p):
     p.append(page("Submission inventory and final actions", [
         "The assignment is submitted through the same data260-6102 repository, with the uploaded PDF named Apurva_HW2.pdf. The repository's canonical copy is reports/hw02/report.pdf; the upload copy is byte-for-byte identical.",
         "Code and output are paired throughout this report. Additional before/after, input, clear, no-match and historical screenshots remain in the repository for inspection. Browser-rendered saved output is labeled; it is not presented as a native Terminal capture.",
-        "Before submitting online: confirm the required collaborators in GitHub, push the final branch and tags, and verify that the report and tag links are reachable remotely. Those external submission steps are not claimed complete in this locally prepared package.",
+        "The links below identify the repository and its HW2 submission branch. Before submitting to the course portal, confirm that both required collaborators have access and upload the named PDF. Collaborator confirmation and portal upload remain separate steps.",
     ], table=[
         ["Submission item", "Assignment requirement satisfied"],
         ["report.pdf; matching Apurva_HW2.pdf", "Write-up, code/output screenshots, answers and configuration"],
@@ -229,6 +229,11 @@ def add_closing(p):
         ["screenshots/ and raw/part12/", "UI captures plus screenshot/request provenance"],
         ["SUBMISSION_CHECKLIST.md", "Requirement mapping and remaining external actions"],
     ]))
+
+    p[-1]["after_text"] = [
+        'GitHub repository: <link href="https://github.com/ishuapurva1996/data260-6102" color="#167d8d">https://github.com/ishuapurva1996/data260-6102</link>',
+        'HW2 code and report: <link href="https://github.com/ishuapurva1996/data260-6102/tree/codex/fix-hw1-form" color="#167d8d">https://github.com/ishuapurva1996/data260-6102/tree/codex/fix-hw1-form</link>',
+    ]
 
 
 def paragraph(c, text, x, y, width=WIDTH, style=BODY):
@@ -335,6 +340,9 @@ def build(args):
         if item["caption"]:
             y = paragraph(c, html.escape(item["caption"]), MARGIN, y, style=CAPTION)
             markdown += [item["caption"], ""]
+        for text in item.get("after_text", []):
+            y = paragraph(c, text, MARGIN, y)
+            markdown += [text, ""]
         assert y >= 39, f"Page {i} overflow: y={y}"
         c.setFillColor(GRAY)
         c.setFont("Helvetica", 8)
