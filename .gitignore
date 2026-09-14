@@ -207,8 +207,8 @@ tempCodeRunnerFile.py
 # macOS and local report-build artifacts
 .DS_Store
 tmp/
-HW1/reports/hw01/drafts/
-HW1/reports/hw01/raw/*.tmp
+reports/hw01/drafts/
+reports/hw01/raw/*.tmp
 agent_outputs/
 
 # Local editor settings and swap files

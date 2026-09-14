@@ -1,12 +1,12 @@
 # Homework 1 Reproducible Run Instructions
 
-Run every command from the `HW1/` assignment root unless a command says otherwise. From the Git repository root, first run:
+Run every command from the Git repository root unless a command says otherwise:
 
 ```bash
-cd HW1
+cd "/Users/pragyaapurva/Documents/SJSU/DATA 260/data260-6102"
 ```
 
-All paths below are relative to that assignment root. The historical Git tag `hw1` preserves the original submission and its earlier repository layout. The submitted report and recorded logs retain their original contents and historical paths.
+All paths below are relative to the repository root. The shared web app now includes HW2 Part 1 improvements; the remaining HW1 agent workflows are retained. The submitted report and recorded logs retain their original contents. For exact HW1 source and behavior, create a separate historical checkout with `git worktree add --detach ../data260-6102-hw1-reproduction refs/tags/hw1`, then follow its README. This does not add a duplicate application to the submission repository.
 
 ## Environment
 
@@ -25,7 +25,7 @@ docker build --platform linux/amd64 -t rental-housing-app:latest code
 docker run -d --name rental-housing-hw1 -p 8702:80 rental-housing-app:latest
 ```
 
-Open `http://localhost:8702` and stop the container afterward with:
+This serves the current shared Part 1 interface. Open `http://localhost:8702` and stop the container afterward with:
 
 ```bash
 docker stop rental-housing-hw1
@@ -60,4 +60,4 @@ python code/hw1_client.py --demo --model qwen3:1.7b --temperature 0.0 --timeout 
 make -C reports/hw01 verify-hw01 PYTHON=python NODE_BIN=node
 ```
 
-The command must finish with `"status": "pass"` and update `reports/hw01/verification.json`.
+The command must finish with `"status": "pass"` and updates `reports/hw01/verification.json`. To check the current checkout while preserving the recorded HW1 result, run `python reports/hw01/verify_hw01.py --output /tmp/data260-verification.json` instead.

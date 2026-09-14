@@ -18,7 +18,7 @@ from typing import Any, Sequence
 HW_DIR = Path(__file__).resolve().parent
 REPO_ROOT = HW_DIR.parents[1]
 CODE_DIR = REPO_ROOT / "code"
-WEB_APP_DIR = CODE_DIR / "web_application"
+WEB_APP_DIR = CODE_DIR / "web_application" / "static"
 DEFAULT_OUTPUT = HW_DIR / "verification.json"
 
 MarkdownChecks = tuple[tuple[str, str], ...]
@@ -126,8 +126,8 @@ def _required_files() -> dict[str, Path]:
     return {
         "domain schema": REPO_ROOT / "DOMAIN_SCHEMA.md",
         "repository README": REPO_ROOT / "README.md",
-        "HTML form": WEB_APP_DIR / "index_hw1.html",
-        "JavaScript": WEB_APP_DIR / "script_hw.js",
+        "HTML form": WEB_APP_DIR / "index.html",
+        "JavaScript": WEB_APP_DIR / "app.js",
         "Dockerfile": CODE_DIR / "Dockerfile",
         "Part 2 pipeline": CODE_DIR / "agents_demo.py",
         "Part 3 fixed input": HW_DIR / "cases" / "nondeterminism_input.json",
@@ -228,7 +228,7 @@ def run_verification(node_bin: str | None = None) -> dict[str, Any]:
     node = node_bin or os.environ.get("NODE_BIN") or shutil.which("node")
     if node:
         js_result = subprocess.run(
-            [node, "--check", str(WEB_APP_DIR / "script_hw.js")],
+            [node, "--check", str(WEB_APP_DIR / "app.js")],
             capture_output=True,
             text=True,
             check=False,
