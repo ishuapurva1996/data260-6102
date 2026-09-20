@@ -94,6 +94,11 @@ def verify_run(run_dir,root=ROOT,require_report=False):
     git(root,'merge-base','--is-ancestor',run['freeze_commit'],run['code_commit'])
     git(root,'merge-base','--is-ancestor',run['code_commit'],'HEAD')
     # Check archived tested-code hashes against its actual Git revision, allowing later evidence edits.
+    required_code=set(git(root,'ls-tree','-r','--name-only',run['code_commit'],'--',
+        'src/retrieval','code/retrieval_compare.py','code/retrieval_summarize.py','requirements-retrieval.txt',
+        'tests/retrieval','scripts/verify_hw03_part2.py').splitlines())
+    if set(run['code_hashes'])!=required_code or not required_code:
+        raise ValueError('Recorded code hash inventory is incomplete')
     for name,expected in run['code_hashes'].items():
         raw=subprocess.check_output(['git','-C',str(root),'show',f'{run["code_commit"]}:{name}'])
         if hashlib.sha256(raw).hexdigest()!=expected: raise ValueError('Recorded code hash mismatch')
@@ -132,7 +137,7 @@ def verify_run(run_dir,root=ROOT,require_report=False):
             'vector_checks':sum(len(r['hits']) for r in records),
             'corpus_text_bytes':manifest['total_text_bytes'],'source_count':len(manifest['sources']),
             'high_score_failures':summary['high_score_failures'],
-            'requirements':{f'R{i}':{'status':'pass','evidence':ev} for i,ev in enumerate([
+            'requirements':{f'R{i}':{'status':'not_checked' if i in (9,10,11) and not require_report else 'pass','evidence':ev} for i,ev in enumerate([
                 'experiment_config.yaml; isolated root-level CLI',
                 'CORPUS_MANIFEST.json and local source snapshot checks',
                 'questions.yaml; freeze commit ancestor; quote and input hashes validated',
