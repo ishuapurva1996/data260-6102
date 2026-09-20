@@ -1,0 +1,17 @@
+# Part 2 integration handoff
+
+Worktree: `/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/part2-retrieval`.
+Branch: `codex/hw3-part2-retrieval`.
+Common base: `3d5f99635c5b7129a2db7da23e075de48df94cb0`.
+
+- **Preserve input-before-results history.** Freeze commit `08bd6e0495ce03281aa8fab7f70ac0b51e1c1442` contains the local corpus, five gold questions, evidence audit and configuration. Graded tested-code commit is `cc0a57bae6e19778021643bffebf5c66d5e7c0a3`, following implementation commit `96f628848cd2dcc91db6a9bd5ea4e2c77b187ea5`. Raw data names the tested revision. Later report/verification commits do not rewrite those measurements. Use history-preserving integration; never squash or amend away the freeze.
+- **Ownership:** only `src/retrieval/`, the two retrieval CLIs, `requirements-retrieval.txt`, `tests/retrieval/`, Part 2 verifier, and assigned `reports/hw03/` input/evidence paths were changed. Web application, root web requirements, earlier homework evidence/tags, root README and `.gitignore` were left unchanged. Existing `.venv-*/` rules already ignore the environment/cache.
+- **Aggregate files remain yours:** incorporate Part 2 `REPORT_SECTION.md`, `RUN_LOG.txt`, `AI_USE.md`, reproducible instructions and `verification.json` into aggregate report material. Keep the required shared `reports/hw03/METRICS.md`, `SOURCES.md`, `CORPUS_MANIFEST.json` and `questions.yaml`. Root README can link the Part 2 CLI and evidence. An aggregate verifier can invoke `scripts/verify_hw03_part2.py` with the saved baseline run.
+- **Report assembly:** preserve adjacent snippets/screenshots; retain the explanation of source recall versus answer support, semantic truncation, the strict Q3 single-hit support definition and the Q5 annotation sensitivity. Put all six personal settings, hardware/model/revision and GitHub link near the report start. The report section already supplies these; update final tagged submission provenance only after integration, without claiming a self-referential hash.
+- **Hardware caveat:** the campaign's sandbox denied its CPU probe. `hardware.json` is an actual later read-only probe of the same host: Apple M4, 24 GiB memory, 10 logical CPUs. The experiment used CPU with one PyTorch thread. Preserve the supplemental-probe distinction.
+- **Inputs versus evidence:** the assignment PDF, tutor ZIP/files and execution plans remain outside the repository. Official public corpus snapshots are intentionally retained as required evidence. Environments and model caches are ignored and untracked. The corpus includes archived HUD rules; treat answers as snapshot facts, not current advice.
+- **Student review:** AI disclosure does not claim student-authored code, independent manual verification by the student, or performed collaborator checks. Those remain for the student/integration owner to state truthfully.
+
+This session produces no combined PDF, `hw3` tag, merge, push, pull request or submission. The later session owns `reports/hw03/report.pdf`, external upload copy `Apurva_HW3.pdf`, final `hw3` tag, collaborator access/link checks and publishing. Part 1 is not assessed here.
+
+`run.json` has `working_tree_dirty: true` because prior warm-up evidence remained untracked at campaign launch. The runner separately required committed and unchanged experiment code/tests and frozen inputs, and saved every experiment-code hash. This flag does not mean uncommitted code produced the graded run.

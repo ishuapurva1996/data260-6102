@@ -1,0 +1,2786 @@
+{
+  "code_commit": "cc0a57bae6e19778021643bffebf5c66d5e7c0a3",
+  "config": {
+    "DOMAIN_ID": 6,
+    "PORT_BASE": 8702,
+    "PREFIX": "s6102",
+    "SID4": 6102,
+    "VERIFY_SEED": 266102,
+    "batch_size": 32,
+    "designation": "baseline",
+    "device": "cpu",
+    "domain": "Rental Housing Listings",
+    "high_score_threshold": 0.5,
+    "k": 3,
+    "max_seq_length": 256,
+    "minimum_corpus_bytes": 204800,
+    "model_name": "sentence-transformers/all-MiniLM-L6-v2",
+    "model_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "normalize_embeddings": true,
+    "query_timing": "precomputed_embedding_search_only",
+    "recall_definition": "unique_expected_source_ids_retrieved_divided_by_expected_sources",
+    "repeats": 10,
+    "schema_version": 1,
+    "seed": 6102,
+    "semantic_breakpoint_percentile": 95,
+    "semantic_buffer_size": 1,
+    "sentence_window_size": 3,
+    "threads": 1,
+    "token_chunk_size": 192,
+    "token_overlap": 32,
+    "warmup_searches": 1
+  },
+  "consumed_characters": 12000,
+  "designation": "warmup",
+  "environment": {
+    "cpu": "unavailable",
+    "dependencies": {
+      "Deprecated": "1.3.1",
+      "Jinja2": "3.1.6",
+      "MarkupSafe": "3.0.3",
+      "PyYAML": "6.0.3",
+      "Pygments": "2.21.0",
+      "SQLAlchemy": "2.0.54",
+      "aiohappyeyeballs": "2.7.1",
+      "aiohttp": "3.14.3",
+      "aiosignal": "1.4.0",
+      "aiosqlite": "0.22.1",
+      "annotated-doc": "0.0.5",
+      "annotated-types": "0.8.0",
+      "anyio": "4.15.1",
+      "attrs": "26.1.0",
+      "banks": "2.5.1",
+      "certifi": "2026.7.22",
+      "charset-normalizer": "3.5.1",
+      "click": "8.5.0",
+      "cloudpickle": "3.1.2",
+      "colorama": "0.4.6",
+      "dataclasses-json": "0.6.7",
+      "defusedxml": "0.7.1",
+      "dirtyjson": "1.0.8",
+      "distro": "1.9.0",
+      "faiss-cpu": "1.15.1",
+      "filelock": "4.0.1",
+      "filetype": "1.2.0",
+      "frozenlist": "1.8.0",
+      "fsspec": "2026.9.0",
+      "greenlet": "3.5.6",
+      "griffe": "2.3.0",
+      "griffecli": "2.3.0",
+      "griffelib": "2.3.0",
+      "h11": "0.16.0",
+      "hf-xet": "1.6.0",
+      "httpcore": "1.0.9",
+      "httpx": "0.28.1",
+      "huggingface_hub": "1.32.0",
+      "idna": "3.20",
+      "iniconfig": "2.3.0",
+      "jiter": "0.17.0",
+      "joblib": "1.6.0",
+      "llama-index": "0.14.24",
+      "llama-index-core": "0.14.24",
+      "llama-index-embeddings-huggingface": "0.8.0",
+      "llama-index-embeddings-openai": "0.6.0",
+      "llama-index-instrumentation": "0.6.0",
+      "llama-index-llms-openai": "0.7.10",
+      "llama-index-workflows": "2.24.0",
+      "markdown-it-py": "4.2.0",
+      "marshmallow": "3.26.2",
+      "mdurl": "0.1.2",
+      "mpmath": "1.3.0",
+      "multidict": "6.9.0",
+      "mypy_extensions": "1.1.0",
+      "narwhals": "2.26.0",
+      "nest-asyncio": "1.6.0",
+      "networkx": "3.6.1",
+      "nltk": "3.10.3",
+      "numpy": "2.5.3",
+      "openai": "2.54.0",
+      "packaging": "26.3",
+      "pandas": "3.0.6",
+      "pillow": "12.3.0",
+      "platformdirs": "4.11.11",
+      "pluggy": "1.6.0",
+      "propcache": "0.5.4",
+      "pydantic": "2.13.5",
+      "pydantic_core": "2.46.5",
+      "pytest": "9.1.1",
+      "python-dateutil": "2.9.0.post0",
+      "regex": "2026.9.10",
+      "requests": "2.34.2",
+      "rich": "15.0.0",
+      "safetensors": "0.8.0",
+      "scikit-learn": "1.9.1",
+      "scipy": "1.18.1",
+      "sentence-transformers": "6.1.0",
+      "setuptools": "84.0.0",
+      "shellingham": "1.5.4",
+      "six": "1.17.0",
+      "sniffio": "1.3.1",
+      "sympy": "1.14.0",
+      "tenacity": "9.1.4",
+      "threadpoolctl": "3.7.0",
+      "tiktoken": "0.14.0",
+      "tinytag": "2.3.2",
+      "tokenizers": "0.23.2",
+      "torch": "2.14.0",
+      "tqdm": "4.70.1",
+      "transformers": "5.17.0",
+      "typer": "0.27.2",
+      "typing-inspect": "0.9.0",
+      "typing-inspection": "0.4.4",
+      "typing_extensions": "4.16.0",
+      "urllib3": "2.8.0",
+      "wrapt": "2.4.1",
+      "yarl": "1.25.1"
+    },
+    "logical_cpus": "unavailable",
+    "machine": "arm64",
+    "memory_bytes": "unavailable",
+    "platform": "macOS-15.7.4-arm64-arm-64bit",
+    "python": "3.12.14"
+  },
+  "finished_at": "2026-09-20T08:31:29.405533+00:00",
+  "run_id": "shakespeare-committed",
+  "schema_version": 1,
+  "source_sha256": "86c4e6aa9db7c042ec79f339dcb96d42b0075e16b8fc2e86bf0ca57e2dc565ed",
+  "source_url": "https://raw.githubusercontent.com/karpathy/char-rnn/master/data/tinyshakespeare/input.txt",
+  "started_at": "2026-09-20T08:31:21.284161+00:00",
+  "status": "complete",
+  "techniques": {
+    "semantic": {
+      "stats": {
+        "average_character_length": 1500.0,
+        "average_context_character_length": 1500.0,
+        "average_context_token_length": 383.25,
+        "average_token_length": 383.25,
+        "chunk_count": 8,
+        "indexed_truncation_count": 5,
+        "indexed_truncation_fraction": 0.625,
+        "max_seq_length": 256,
+        "node_lengths": [
+          {
+            "character_length": 2273,
+            "context_character_length": 2273,
+            "context_token_length": 559,
+            "node_id": "semantic:89c47b21fc294f82:000000",
+            "source_id": "tinyshakespeare",
+            "token_length": 559,
+            "truncated": true
+          },
+          {
+            "character_length": 2938,
+            "context_character_length": 2938,
+            "context_token_length": 734,
+            "node_id": "semantic:89c47b21fc294f82:000001",
+            "source_id": "tinyshakespeare",
+            "token_length": 734,
+            "truncated": true
+          },
+          {
+            "character_length": 1292,
+            "context_character_length": 1292,
+            "context_token_length": 342,
+            "node_id": "semantic:89c47b21fc294f82:000002",
+            "source_id": "tinyshakespeare",
+            "token_length": 342,
+            "truncated": true
+          },
+          {
+            "character_length": 800,
+            "context_character_length": 800,
+            "context_token_length": 197,
+            "node_id": "semantic:89c47b21fc294f82:000003",
+            "source_id": "tinyshakespeare",
+            "token_length": 197,
+            "truncated": false
+          },
+          {
+            "character_length": 873,
+            "context_character_length": 873,
+            "context_token_length": 217,
+            "node_id": "semantic:89c47b21fc294f82:000004",
+            "source_id": "tinyshakespeare",
+            "token_length": 217,
+            "truncated": false
+          },
+          {
+            "character_length": 421,
+            "context_character_length": 421,
+            "context_token_length": 107,
+            "node_id": "semantic:89c47b21fc294f82:000005",
+            "source_id": "tinyshakespeare",
+            "token_length": 107,
+            "truncated": false
+          },
+          {
+            "character_length": 1522,
+            "context_character_length": 1522,
+            "context_token_length": 385,
+            "node_id": "semantic:89c47b21fc294f82:000006",
+            "source_id": "tinyshakespeare",
+            "token_length": 385,
+            "truncated": true
+          },
+          {
+            "character_length": 1881,
+            "context_character_length": 1881,
+            "context_token_length": 525,
+            "node_id": "semantic:89c47b21fc294f82:000007",
+            "source_id": "tinyshakespeare",
+            "token_length": 525,
+            "truncated": true
+          }
+        ],
+        "semantic_buffer_count": 137,
+        "semantic_buffer_truncation_count": 0,
+        "semantic_buffer_truncation_fraction": 0.0,
+        "semantic_buffers": [
+          {
+            "character_length": 82,
+            "sentence_index": 0,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "2830e0ded7f39fcbddd4a7ab75afa9f9bd5dd10c75239e06cbf625eb21315617",
+            "token_length": 21,
+            "truncated": false
+          },
+          {
+            "character_length": 149,
+            "sentence_index": 1,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "962c0d0a0c8b2ef0190ff1ca6f084a7ad874ac73c5ef8a145bde931503925c17",
+            "token_length": 37,
+            "truncated": false
+          },
+          {
+            "character_length": 102,
+            "sentence_index": 2,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "f590fc11cc7b223f03b1a52be44ddbce1349f047d857a1beed37a9ed1868b78d",
+            "token_length": 28,
+            "truncated": false
+          },
+          {
+            "character_length": 93,
+            "sentence_index": 3,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "4ea754503b8ce5e863256c2bdcfc29b611015159c8c40afb15b84f415f1d8b06",
+            "token_length": 24,
+            "truncated": false
+          },
+          {
+            "character_length": 102,
+            "sentence_index": 4,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "5788b86385260c96e9d9e920bc7e09c88dde2e651f5e4330fce80c18a392298f",
+            "token_length": 26,
+            "truncated": false
+          },
+          {
+            "character_length": 115,
+            "sentence_index": 5,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "18e2f4c2b907abe68d5b98e20c7d5a1616a4903d5f216ffc5d42c80c577ae56b",
+            "token_length": 34,
+            "truncated": false
+          },
+          {
+            "character_length": 174,
+            "sentence_index": 6,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "b0a1baa21fb05965bccdbe18ca3a83ccab2e1589704b1dd2dc4376eb6058a636",
+            "token_length": 51,
+            "truncated": false
+          },
+          {
+            "character_length": 115,
+            "sentence_index": 7,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "94d4f175e3db7485568d93a131aa888701e027edf6be37b90ac5b25dda152756",
+            "token_length": 39,
+            "truncated": false
+          },
+          {
+            "character_length": 143,
+            "sentence_index": 8,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "22f90be0e6f59cb83dca060a1152177715c5b6c480702f318d2592b51981bb4c",
+            "token_length": 45,
+            "truncated": false
+          },
+          {
+            "character_length": 115,
+            "sentence_index": 9,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "b570f9f4aeb573f7a964d26c1f0ad3885b9f0da3d3d48633eefa798bed37bc5c",
+            "token_length": 35,
+            "truncated": false
+          },
+          {
+            "character_length": 166,
+            "sentence_index": 10,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "614645b5270c97238ed0b092e77b072d8770feca3f3a56122e36b70c116a9186",
+            "token_length": 43,
+            "truncated": false
+          },
+          {
+            "character_length": 578,
+            "sentence_index": 11,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "cede766a3c128e55fd55abd6c267213d5ccd13cc1c964ab4131385f4488bd2de",
+            "token_length": 136,
+            "truncated": false
+          },
+          {
+            "character_length": 605,
+            "sentence_index": 12,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "e854e51e1a2f5c7663fdd92572fc951256425c9a79ba4be908e591685a5ebc44",
+            "token_length": 140,
+            "truncated": false
+          },
+          {
+            "character_length": 597,
+            "sentence_index": 13,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "27f4a9fa4ef9ba451e75223259672696f7bb8b1d532f128718aa219f1a937291",
+            "token_length": 144,
+            "truncated": false
+          },
+          {
+            "character_length": 202,
+            "sentence_index": 14,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "cdead71c022130d462cc1ecb19c70271f6e37d8798ece2fe1e06ace8bdc083e4",
+            "token_length": 47,
+            "truncated": false
+          },
+          {
+            "character_length": 254,
+            "sentence_index": 15,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "aab3c2e0438dad3dfcba62cfca8683240ed65eab7458308ea2b982c25428c034",
+            "token_length": 60,
+            "truncated": false
+          },
+          {
+            "character_length": 243,
+            "sentence_index": 16,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "43ce17788b3f419ee50a66bc455c0f3deb738db68db080ba1d43ed00407c26ac",
+            "token_length": 53,
+            "truncated": false
+          },
+          {
+            "character_length": 432,
+            "sentence_index": 17,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "f18f1be4cd361a24a9fe318b5e2b6ac2043c3606a7cdb79f1f3695c9977ddc20",
+            "token_length": 102,
+            "truncated": false
+          },
+          {
+            "character_length": 389,
+            "sentence_index": 18,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "f8f187e461038c0019ba4565a729f78fa349c162fda4f0595587c09156b80402",
+            "token_length": 94,
+            "truncated": false
+          },
+          {
+            "character_length": 380,
+            "sentence_index": 19,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "c9d1ede570e0f47181f30244c8f3296240e4018cde83579c8054455964cd2f2a",
+            "token_length": 95,
+            "truncated": false
+          },
+          {
+            "character_length": 238,
+            "sentence_index": 20,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "91692fc309509edb626c3e4ee437522f34f29ee9a040a93b5d24210037425835",
+            "token_length": 61,
+            "truncated": false
+          },
+          {
+            "character_length": 183,
+            "sentence_index": 21,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "6d1aab714deb5b8bfd8a9aca10e242820e5c0777fe97fdcb40b67a89e1a043e5",
+            "token_length": 48,
+            "truncated": false
+          },
+          {
+            "character_length": 206,
+            "sentence_index": 22,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "45b7173e473cb1eecac179ca3dbd49d8f102dd18d7585482d63050151b7dc30c",
+            "token_length": 53,
+            "truncated": false
+          },
+          {
+            "character_length": 103,
+            "sentence_index": 23,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "7bfa2f3011b348633eb7d971fc8c3706f55169aeb0752437df622f3edf295e29",
+            "token_length": 28,
+            "truncated": false
+          },
+          {
+            "character_length": 98,
+            "sentence_index": 24,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "5be2751a0eacb2dee58aeafbe84a15d986049812dc091e2d616614f450d0566d",
+            "token_length": 29,
+            "truncated": false
+          },
+          {
+            "character_length": 56,
+            "sentence_index": 25,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "fbdd1e3ec78ff47720776b5361722939093826ff7ab4b363e149d88720e4112d",
+            "token_length": 17,
+            "truncated": false
+          },
+          {
+            "character_length": 56,
+            "sentence_index": 26,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "90ad7e7ea8a19feca82f0ee82c829476c1ddcf4efa58be69491c2cdbb7add539",
+            "token_length": 17,
+            "truncated": false
+          },
+          {
+            "character_length": 119,
+            "sentence_index": 27,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "ccb476a16cff7122fa9c222aa5bc3ab2751b7bb04942eda1ebc2e7b93ca804aa",
+            "token_length": 31,
+            "truncated": false
+          },
+          {
+            "character_length": 166,
+            "sentence_index": 28,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "189235ef2796f7533222a774064f01a9c4dac5418ecd8b5b74f8a9e6ed5c96ce",
+            "token_length": 43,
+            "truncated": false
+          },
+          {
+            "character_length": 196,
+            "sentence_index": 29,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "999d5c239d718007e119ad962730d1cbd3212c6b0d8372c8c2f52ec281903f3a",
+            "token_length": 55,
+            "truncated": false
+          },
+          {
+            "character_length": 149,
+            "sentence_index": 30,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "f2ad509d6f3faac79b2deeb0ada0a875b5525245c2219cffd7694badf37340e0",
+            "token_length": 43,
+            "truncated": false
+          },
+          {
+            "character_length": 93,
+            "sentence_index": 31,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "07363d2127915efbc052ac7a9db446691a6186f550875b36ab260e2fbd7deef5",
+            "token_length": 29,
+            "truncated": false
+          },
+          {
+            "character_length": 66,
+            "sentence_index": 32,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "a3eb6a1796c327821d2de8aac56036d433a447c9c5e82b43a082102d3bd57c75",
+            "token_length": 19,
+            "truncated": false
+          },
+          {
+            "character_length": 184,
+            "sentence_index": 33,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "55224a22996cc9ef54e9cb079eab65ad3f840006b2abd87cc2c14b8ed88c24ef",
+            "token_length": 48,
+            "truncated": false
+          },
+          {
+            "character_length": 257,
+            "sentence_index": 34,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "c99128ae2589214ceb3c8a93839a9469898c17958c52df77febaf7cbf24bbb28",
+            "token_length": 63,
+            "truncated": false
+          },
+          {
+            "character_length": 329,
+            "sentence_index": 35,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "6d20c1b00149bdf53b77969ca876069111408786d0f0bbb45ac1b4492b14e895",
+            "token_length": 78,
+            "truncated": false
+          },
+          {
+            "character_length": 232,
+            "sentence_index": 36,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "29ccb8b2fca003d70fc88894f5f77b14698c292052c104f8aeada09ce95a16da",
+            "token_length": 54,
+            "truncated": false
+          },
+          {
+            "character_length": 227,
+            "sentence_index": 37,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "93a70480e256bcf33d37272e93c9cbe36f39973a14ac0c4566b93cff005f2a08",
+            "token_length": 56,
+            "truncated": false
+          },
+          {
+            "character_length": 410,
+            "sentence_index": 38,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "53e6caa2b76681f34eb8c6554988146e999070c7b02a9e3521f807c67b50978a",
+            "token_length": 97,
+            "truncated": false
+          },
+          {
+            "character_length": 455,
+            "sentence_index": 39,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "70eba51b4c1e8d9b6326ac36f4e22de44d15ada6b8031e9436794d8aa4f2ff87",
+            "token_length": 112,
+            "truncated": false
+          },
+          {
+            "character_length": 550,
+            "sentence_index": 40,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "3af184ae404ce23df6b56511272be1da785aa2d119b80e4653b7a32a3f6317ad",
+            "token_length": 136,
+            "truncated": false
+          },
+          {
+            "character_length": 303,
+            "sentence_index": 41,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "51e219020dcb98d1d2f6919723e36b723c23c5a25106a91a13f41e982fa5dd99",
+            "token_length": 81,
+            "truncated": false
+          },
+          {
+            "character_length": 217,
+            "sentence_index": 42,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "ebd98197653cb41fa477fbf8904af53d1c14644dcf3dd170d38128e0eedeed78",
+            "token_length": 57,
+            "truncated": false
+          },
+          {
+            "character_length": 316,
+            "sentence_index": 43,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "fa16505d012b5cd5e7f599f6b84fc9da00d55f21e9c022443162d4b72df5c698",
+            "token_length": 78,
+            "truncated": false
+          },
+          {
+            "character_length": 366,
+            "sentence_index": 44,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "84fc81796f788eff80ace64a218a266cc18da4d78b895c3fbf81cdb7395f3e00",
+            "token_length": 93,
+            "truncated": false
+          },
+          {
+            "character_length": 441,
+            "sentence_index": 45,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "02d96784b5fe668269c81012fc825ff10ba4a0a9d6181de30e9210d4628f88bb",
+            "token_length": 109,
+            "truncated": false
+          },
+          {
+            "character_length": 304,
+            "sentence_index": 46,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "af089c942dd7e2076e1b4223e52c18a60cad7b388babc96072389f99d988bcee",
+            "token_length": 79,
+            "truncated": false
+          },
+          {
+            "character_length": 359,
+            "sentence_index": 47,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "3f79fd4fe6c0630c1ad67c584cbd1c516e8c8b80e8807dae90bba8d3f64157d2",
+            "token_length": 95,
+            "truncated": false
+          },
+          {
+            "character_length": 695,
+            "sentence_index": 48,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "23d31a69f890b72d8cef22fdef261d6a306f949ea7a756262cb667cd8b23b1f5",
+            "token_length": 176,
+            "truncated": false
+          },
+          {
+            "character_length": 635,
+            "sentence_index": 49,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "f50443900eb8ab4a8276a3507808109a840c26aa11c36c71ff85036ce9bde909",
+            "token_length": 161,
+            "truncated": false
+          },
+          {
+            "character_length": 535,
+            "sentence_index": 50,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "1d5f40d41b5297c84d93cbccdb10b13f23efca5392f7fc8601b0984fd69cba30",
+            "token_length": 134,
+            "truncated": false
+          },
+          {
+            "character_length": 418,
+            "sentence_index": 51,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "6a23ed5dbe5043f6e516657e01989fec25798e95631991bc4a1a9be8d754fb88",
+            "token_length": 112,
+            "truncated": false
+          },
+          {
+            "character_length": 377,
+            "sentence_index": 52,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "15e433f64a84b1c0c57d7ad7c719c037df0e89ff8812abb7efbf7c3ceef93796",
+            "token_length": 101,
+            "truncated": false
+          },
+          {
+            "character_length": 350,
+            "sentence_index": 53,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "b67cf02bf676ecb6f652879b0ce3017e17d226a0fd2dfc8441c88075e575d9b3",
+            "token_length": 92,
+            "truncated": false
+          },
+          {
+            "character_length": 173,
+            "sentence_index": 54,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "99ac05e7c9f18ef09a96a4e85e95639c9a01c7e1e0b6b96e6e5c6b150a717a8e",
+            "token_length": 47,
+            "truncated": false
+          },
+          {
+            "character_length": 231,
+            "sentence_index": 55,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "c722d78ad9b4782bac79c6ace0de82308985e151c9e18b48422f3ed9792c3aa5",
+            "token_length": 63,
+            "truncated": false
+          },
+          {
+            "character_length": 255,
+            "sentence_index": 56,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "8e28d139ad653cba4a90de87edde8213b3670dbf4520761a89ed7537ae8037e7",
+            "token_length": 69,
+            "truncated": false
+          },
+          {
+            "character_length": 135,
+            "sentence_index": 57,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "b86ca1f6fcb485a6bfae57f4ed0af429a48d38d597a4239ddc4c0c796dab6721",
+            "token_length": 38,
+            "truncated": false
+          },
+          {
+            "character_length": 53,
+            "sentence_index": 58,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "dfd17081893696013106615ec6cc1794e9460578377f3b1a205bbe1bd3f6ebfb",
+            "token_length": 16,
+            "truncated": false
+          },
+          {
+            "character_length": 143,
+            "sentence_index": 59,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "3226f1883d7cb573e3ec19b3aa03b836f4d2122b86fe0fc862344664bf9e915e",
+            "token_length": 44,
+            "truncated": false
+          },
+          {
+            "character_length": 218,
+            "sentence_index": 60,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "1089a93727b3068957f7a20f8a02acab6f22c003a887cf288adc36856cb85611",
+            "token_length": 59,
+            "truncated": false
+          },
+          {
+            "character_length": 334,
+            "sentence_index": 61,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "270728be11206447c84e45ce7d54bcc995202b48cd4a6c206b757dcbf4a4e926",
+            "token_length": 94,
+            "truncated": false
+          },
+          {
+            "character_length": 251,
+            "sentence_index": 62,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "90511037785f2c407f8b1fbd9b79b380d56ab3bfc8dcfc48f115b62d533747d6",
+            "token_length": 68,
+            "truncated": false
+          },
+          {
+            "character_length": 875,
+            "sentence_index": 63,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "1bf43bb4366e5c03a2639f2e6fc844dee881f9c86447d316489962cca0e6308f",
+            "token_length": 231,
+            "truncated": false
+          },
+          {
+            "character_length": 926,
+            "sentence_index": 64,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "a17321009ac9641ff731a3482e0f19363758a1ee9bfb93839214cfbf48ff9cdf",
+            "token_length": 240,
+            "truncated": false
+          },
+          {
+            "character_length": 909,
+            "sentence_index": 65,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "4a0062473ce82e092764a0bded70b786c966957d3a982f0be54ac20ed0f8b950",
+            "token_length": 237,
+            "truncated": false
+          },
+          {
+            "character_length": 253,
+            "sentence_index": 66,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "3b2d3f04a55ce474c7c1efedb88cd9ef9c39864004bdcd1a0ab04960b481e697",
+            "token_length": 69,
+            "truncated": false
+          },
+          {
+            "character_length": 376,
+            "sentence_index": 67,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "1e675c28152f730b0ae07d27335244346eae071df57f0f9b5ebee9419a8619fb",
+            "token_length": 89,
+            "truncated": false
+          },
+          {
+            "character_length": 413,
+            "sentence_index": 68,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "527365af82521331f8daf09ccb9c675282a8c9a714eb778c1b24834ac02521a5",
+            "token_length": 96,
+            "truncated": false
+          },
+          {
+            "character_length": 391,
+            "sentence_index": 69,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "80f930ef1c82d28006735790ea35e07981627f7d164e8037c4ab843a81c650f6",
+            "token_length": 91,
+            "truncated": false
+          },
+          {
+            "character_length": 109,
+            "sentence_index": 70,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "2ded896b1f85743785d969afb31ef6e421ff8ae1cf665f6c4f4b143f1719e4c8",
+            "token_length": 29,
+            "truncated": false
+          },
+          {
+            "character_length": 244,
+            "sentence_index": 71,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "e569f76e0deec1b3c353c81599cb1f76b33e9cbf8dbebdfcac0516095d2ae1e1",
+            "token_length": 68,
+            "truncated": false
+          },
+          {
+            "character_length": 333,
+            "sentence_index": 72,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "60865bced274e6acf4c5eaed3d8e60167f3ccbaca82bc9e3a68baf8da4a0234a",
+            "token_length": 89,
+            "truncated": false
+          },
+          {
+            "character_length": 335,
+            "sentence_index": 73,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "86eba30e6715475669ae4bfed119519ffa7c087cc8b7dc8f6f19a59325ae4113",
+            "token_length": 90,
+            "truncated": false
+          },
+          {
+            "character_length": 160,
+            "sentence_index": 74,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "ea56c1d06ff01e5917a80fc864106ed9f0dd506c08a5d929af7200399bb3b656",
+            "token_length": 42,
+            "truncated": false
+          },
+          {
+            "character_length": 151,
+            "sentence_index": 75,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "dfe8d529245183e3f18b53130a6fbba122d40e1605fd41e85c47827e5c909516",
+            "token_length": 42,
+            "truncated": false
+          },
+          {
+            "character_length": 174,
+            "sentence_index": 76,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "86447345f027b209635447a984592ac401570177eef0c9c0e53c29e695b15658",
+            "token_length": 46,
+            "truncated": false
+          },
+          {
+            "character_length": 235,
+            "sentence_index": 77,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "dddaa785e12af691b5a4e0440bbce9fcc62b85dda6c44528758efa04b224e890",
+            "token_length": 60,
+            "truncated": false
+          },
+          {
+            "character_length": 183,
+            "sentence_index": 78,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "afc0238c2df1cc7f7d00b94150f5fca6de28fc170a45748e9587d59d63953a10",
+            "token_length": 47,
+            "truncated": false
+          },
+          {
+            "character_length": 188,
+            "sentence_index": 79,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "e3c167aa5654346264e3cb0d2d6a58397b81954555cd0c37b7798b7c2904e978",
+            "token_length": 51,
+            "truncated": false
+          },
+          {
+            "character_length": 288,
+            "sentence_index": 80,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "299135f9010137908bb4e213ff64c08fc5d505a0d470d4abeb6398f63089a3a6",
+            "token_length": 80,
+            "truncated": false
+          },
+          {
+            "character_length": 319,
+            "sentence_index": 81,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "dd00cefc9d4e94ab5297929f075eb64e63d5e67d316e766737b407e4f99ed94a",
+            "token_length": 84,
+            "truncated": false
+          },
+          {
+            "character_length": 412,
+            "sentence_index": 82,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "0978f1380147b4e19417cd888d69bea3711f819a328bab4b6f6b7a035bd71cba",
+            "token_length": 100,
+            "truncated": false
+          },
+          {
+            "character_length": 324,
+            "sentence_index": 83,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "e36f36b62c0bf57705d9f47aa017f8dbb7ad0d05506c12d912c82c3d55a01e59",
+            "token_length": 73,
+            "truncated": false
+          },
+          {
+            "character_length": 242,
+            "sentence_index": 84,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "9d894dfb45f722b4d83b8a612412af1b1610333a4792969eef5725b129ebaa5f",
+            "token_length": 56,
+            "truncated": false
+          },
+          {
+            "character_length": 109,
+            "sentence_index": 85,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "9b7f3aed3b21593d1bbe8e742cb4c668f946e3f5c4bd6103d0de73126eb4879b",
+            "token_length": 29,
+            "truncated": false
+          },
+          {
+            "character_length": 134,
+            "sentence_index": 86,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "0c5a304a58e296285678a1844f56b070a4761015e2bbe50c1486cd93e687dc4c",
+            "token_length": 34,
+            "truncated": false
+          },
+          {
+            "character_length": 295,
+            "sentence_index": 87,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "662890ef9c443cd781c6390a241b95688ddb48fccf76d1a3475c89892b0aad4c",
+            "token_length": 71,
+            "truncated": false
+          },
+          {
+            "character_length": 308,
+            "sentence_index": 88,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "567e82a5510beef96037e6e93ecc28b52a23a0686b05598176687d8e2d668faa",
+            "token_length": 74,
+            "truncated": false
+          },
+          {
+            "character_length": 277,
+            "sentence_index": 89,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "7887e22790cbca284a4a6928732ec13158edbbd3d254f23912adce109a8bd6d5",
+            "token_length": 71,
+            "truncated": false
+          },
+          {
+            "character_length": 126,
+            "sentence_index": 90,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "b8db32f2bfe713fd469965a7206d3fb5fd2cdb67579f15c60ed9a90b42db1658",
+            "token_length": 38,
+            "truncated": false
+          },
+          {
+            "character_length": 113,
+            "sentence_index": 91,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "ddd3bf9e4a8e2ea7b67ed55b59d6aaf0208842c87dc58b23539b22fb270e711c",
+            "token_length": 35,
+            "truncated": false
+          },
+          {
+            "character_length": 298,
+            "sentence_index": 92,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "e1333c5e2da742ed54256d1c6fdcb63d7a38def458c06552905a70ffa0582392",
+            "token_length": 77,
+            "truncated": false
+          },
+          {
+            "character_length": 310,
+            "sentence_index": 93,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "37ac3c13cfba02a9ebe56c8a13a20d4a9a2e66f5919b0799c73b19ab4d7e9240",
+            "token_length": 78,
+            "truncated": false
+          },
+          {
+            "character_length": 462,
+            "sentence_index": 94,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "81c7b0f534bce1dc7166c8f346789994cacff1c4c451ab27dd24493d4cdedeea",
+            "token_length": 114,
+            "truncated": false
+          },
+          {
+            "character_length": 322,
+            "sentence_index": 95,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "c0cd6bb138b405e033fa87de043c6decc7840eb110cf7ceb897d319d0fa0fa4a",
+            "token_length": 76,
+            "truncated": false
+          },
+          {
+            "character_length": 339,
+            "sentence_index": 96,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "9a34da9a9790d5b28490ce84a846aee39936b4e67dd02c4b92b3873923becf76",
+            "token_length": 82,
+            "truncated": false
+          },
+          {
+            "character_length": 216,
+            "sentence_index": 97,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "3a2b6e723b80e6f18d171356ddf336dfe467ef52a756e4e5b8b30bf845f5b572",
+            "token_length": 54,
+            "truncated": false
+          },
+          {
+            "character_length": 555,
+            "sentence_index": 98,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "6ae00873bef0f213e0c8d563d2dcb283def84a22489e735928615860888d71c0",
+            "token_length": 139,
+            "truncated": false
+          },
+          {
+            "character_length": 540,
+            "sentence_index": 99,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "85d81f77ba094e8581bf58be6989d88f23e4b0b135bbbd784b3e47d1d9f9c2c5",
+            "token_length": 134,
+            "truncated": false
+          },
+          {
+            "character_length": 641,
+            "sentence_index": 100,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "f91adfdcb3674ab554914baf42bd4cab9543afd1b5de4c372c91c2180ae9e59e",
+            "token_length": 167,
+            "truncated": false
+          },
+          {
+            "character_length": 338,
+            "sentence_index": 101,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "f091a1cbfc13b7013514e03b6384def992f1eefbccd3a52830bd18d9d78b87fa",
+            "token_length": 98,
+            "truncated": false
+          },
+          {
+            "character_length": 333,
+            "sentence_index": 102,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "f05069eb36d051ec9319ea8cc90c26cf6b31f8e628068544b7dda8ad40a0831f",
+            "token_length": 97,
+            "truncated": false
+          },
+          {
+            "character_length": 236,
+            "sentence_index": 103,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "0c1251cce2ce077b777bff36aaba38ff2d0ec323442761c3f87df5ef74e3e12d",
+            "token_length": 65,
+            "truncated": false
+          },
+          {
+            "character_length": 106,
+            "sentence_index": 104,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "81869cacc7effb7b2ac49ca42bc68c68fa7b2a57f01f9a61a6780f417641f323",
+            "token_length": 32,
+            "truncated": false
+          },
+          {
+            "character_length": 113,
+            "sentence_index": 105,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "48226e0fe79239acbbabb5f71c315b17c8ae10c8568c5bc3b76a19b07818c227",
+            "token_length": 35,
+            "truncated": false
+          },
+          {
+            "character_length": 125,
+            "sentence_index": 106,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "982971a30da356cfcc3377edbc10267b7df6b296e48ed3590bf82f86ca36935f",
+            "token_length": 38,
+            "truncated": false
+          },
+          {
+            "character_length": 171,
+            "sentence_index": 107,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "3fd7162116d86477b26829840fe2f5d9eec4fcadb9ffea906e14e2ab22394e97",
+            "token_length": 53,
+            "truncated": false
+          },
+          {
+            "character_length": 159,
+            "sentence_index": 108,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "565cd2acf8713232874b86d504e37a4ae84bfa45d05b8f23891aefce56b19b4e",
+            "token_length": 48,
+            "truncated": false
+          },
+          {
+            "character_length": 194,
+            "sentence_index": 109,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "b36f88caf9f6cd03cc0fd6f0788046ec07af317265aedfcfd1cd5b45941f5186",
+            "token_length": 56,
+            "truncated": false
+          },
+          {
+            "character_length": 184,
+            "sentence_index": 110,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "a7c9787b382879271a0ff83f53585341c0ef3197c621093d17a435571e59838d",
+            "token_length": 53,
+            "truncated": false
+          },
+          {
+            "character_length": 254,
+            "sentence_index": 111,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "800758413d8f2dbba21a527b6aec3dd6ec6056ff94b685c5b7d34689d9edcec4",
+            "token_length": 72,
+            "truncated": false
+          },
+          {
+            "character_length": 201,
+            "sentence_index": 112,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "c7e18e6c0ca9d58b31f65e7bfe5899dffe9f9e7b82385d52686bc9f11f5abe27",
+            "token_length": 58,
+            "truncated": false
+          },
+          {
+            "character_length": 187,
+            "sentence_index": 113,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "9445411a42f1880fc8c3817da40ae6d766febbb23ffd1288d8e40fba64161070",
+            "token_length": 51,
+            "truncated": false
+          },
+          {
+            "character_length": 191,
+            "sentence_index": 114,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "3b9750f38c24396a6af24e334cb8190780dfeb25be8ab1acfeffd7c493fb49af",
+            "token_length": 53,
+            "truncated": false
+          },
+          {
+            "character_length": 228,
+            "sentence_index": 115,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "ae7a470ac913a482419be8144155a6d70ccc498ef13c82aa3d4ab9c783a04627",
+            "token_length": 62,
+            "truncated": false
+          },
+          {
+            "character_length": 209,
+            "sentence_index": 116,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "9c63018d2aa1a24f31c8c2bd9be0daf4171f44ac838a000586024767cf0fba13",
+            "token_length": 57,
+            "truncated": false
+          },
+          {
+            "character_length": 152,
+            "sentence_index": 117,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "c53f085406560849590066293b287989a50347d914824d32fdb81125310aa6b9",
+            "token_length": 43,
+            "truncated": false
+          },
+          {
+            "character_length": 145,
+            "sentence_index": 118,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "d948d86d3c97c73560ba684b671a1dab2de80a04de27e3faaeabf2e66a2278e6",
+            "token_length": 44,
+            "truncated": false
+          },
+          {
+            "character_length": 129,
+            "sentence_index": 119,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "ef5f00f4cf6cccd509501736dbbc8af6449fdfb95320fa362acc45517f23c834",
+            "token_length": 40,
+            "truncated": false
+          },
+          {
+            "character_length": 104,
+            "sentence_index": 120,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "bb9d62a20543eb16dff091be4875c59321baceb2bbe448de80dc078ec9a1e6d2",
+            "token_length": 32,
+            "truncated": false
+          },
+          {
+            "character_length": 145,
+            "sentence_index": 121,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "533e10d478e786c392eef479fa3e2a28d67e6eadc654a75948b776a81adc9b67",
+            "token_length": 45,
+            "truncated": false
+          },
+          {
+            "character_length": 148,
+            "sentence_index": 122,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "6de075c7bf4d8d375196b8c33c3aaf7f0ed6f8d285003bf0164fee1974626b66",
+            "token_length": 49,
+            "truncated": false
+          },
+          {
+            "character_length": 225,
+            "sentence_index": 123,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "35fa599aebb51428a5ec7f2e1f84fc95b472a34ed82ffb01c4aa1fe8935f651c",
+            "token_length": 64,
+            "truncated": false
+          },
+          {
+            "character_length": 151,
+            "sentence_index": 124,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "747608cdc869c73d1e2642ad08319dc2236c56b29c2d3254c1dd6c3609d4957a",
+            "token_length": 42,
+            "truncated": false
+          },
+          {
+            "character_length": 248,
+            "sentence_index": 125,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "ac762388d66e100cf39ecdd8c2e8dac9caa88f3ca7cfa9993784a8c787eaf85f",
+            "token_length": 65,
+            "truncated": false
+          },
+          {
+            "character_length": 221,
+            "sentence_index": 126,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "3951ae252c25978748a5217b2322896b2dab9b0fb4888333dc6a8ee7056aeef2",
+            "token_length": 62,
+            "truncated": false
+          },
+          {
+            "character_length": 240,
+            "sentence_index": 127,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "a14268ef4f4762d48e4600625a38b7a9db0909be7508b6c77472dad0b7041dcf",
+            "token_length": 67,
+            "truncated": false
+          },
+          {
+            "character_length": 144,
+            "sentence_index": 128,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "a823bbfb605523ee20cf7e1eb678e4894bca9f9832af5a498b5cda3eab5d0de2",
+            "token_length": 42,
+            "truncated": false
+          },
+          {
+            "character_length": 175,
+            "sentence_index": 129,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "a695cce5dc9bca28532e303a165ac039c13f11e35caf9093b7b2805423adc264",
+            "token_length": 53,
+            "truncated": false
+          },
+          {
+            "character_length": 137,
+            "sentence_index": 130,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "47668a19993a18a4d3c1a2452d0b2394b0df537733fa554ca3ea423f6aca7e0c",
+            "token_length": 44,
+            "truncated": false
+          },
+          {
+            "character_length": 128,
+            "sentence_index": 131,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "fc412e918927101fa1cf324bdbce63985445521235b267bf4a41a05cf0bcf151",
+            "token_length": 41,
+            "truncated": false
+          },
+          {
+            "character_length": 90,
+            "sentence_index": 132,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "f3c73387df8ca7510aea8fff1823d59a8d764946fa1ca6a64433d6199d0f34ff",
+            "token_length": 29,
+            "truncated": false
+          },
+          {
+            "character_length": 111,
+            "sentence_index": 133,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "003c99d3b4bd113d4827e499fa92487e10b0288046e671f3fdde89f8e9bbec94",
+            "token_length": 34,
+            "truncated": false
+          },
+          {
+            "character_length": 172,
+            "sentence_index": 134,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "2f0a8a8a461027923bc82329d9d84f606b71315b2ba4ff02dbc47392b9f1424d",
+            "token_length": 49,
+            "truncated": false
+          },
+          {
+            "character_length": 197,
+            "sentence_index": 135,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "b2a9004402156fd60b6d1bfbbc0232c70e2faf3e66b41095efe94574243b9ea6",
+            "token_length": 54,
+            "truncated": false
+          },
+          {
+            "character_length": 161,
+            "sentence_index": 136,
+            "source_id": "tinyshakespeare",
+            "text_sha256": "31a19b73ffb3de02e4628a7488bce4fcd8608b481754c4a06080f4769d227834",
+            "token_length": 43,
+            "truncated": false
+          }
+        ],
+        "technique": "semantic",
+        "token_lengths_include_special_tokens": true
+      }
+    },
+    "sentence_window": {
+      "stats": {
+        "average_character_length": 87.5912408759124,
+        "average_context_character_length": 613.6934306569343,
+        "average_context_token_length": 156.5182481751825,
+        "average_token_length": 24.26277372262774,
+        "chunk_count": 137,
+        "indexed_truncation_count": 0,
+        "indexed_truncation_fraction": 0.0,
+        "max_seq_length": 256,
+        "node_lengths": [
+          {
+            "character_length": 62,
+            "context_character_length": 167,
+            "context_token_length": 41,
+            "node_id": "sentence_window:89c47b21fc294f82:000000",
+            "source_id": "tinyshakespeare",
+            "token_length": 15,
+            "truncated": false
+          },
+          {
+            "character_length": 20,
+            "context_character_length": 179,
+            "context_token_length": 43,
+            "node_id": "sentence_window:89c47b21fc294f82:000001",
+            "source_id": "tinyshakespeare",
+            "token_length": 8,
+            "truncated": false
+          },
+          {
+            "character_length": 67,
+            "context_character_length": 256,
+            "context_token_length": 61,
+            "node_id": "sentence_window:89c47b21fc294f82:000002",
+            "source_id": "tinyshakespeare",
+            "token_length": 18,
+            "truncated": false
+          },
+          {
+            "character_length": 15,
+            "context_character_length": 285,
+            "context_token_length": 73,
+            "node_id": "sentence_window:89c47b21fc294f82:000003",
+            "source_id": "tinyshakespeare",
+            "token_length": 6,
+            "truncated": false
+          },
+          {
+            "character_length": 11,
+            "context_character_length": 293,
+            "context_token_length": 79,
+            "node_id": "sentence_window:89c47b21fc294f82:000004",
+            "source_id": "tinyshakespeare",
+            "token_length": 4,
+            "truncated": false
+          },
+          {
+            "character_length": 76,
+            "context_character_length": 290,
+            "context_token_length": 79,
+            "node_id": "sentence_window:89c47b21fc294f82:000005",
+            "source_id": "tinyshakespeare",
+            "token_length": 20,
+            "truncated": false
+          },
+          {
+            "character_length": 28,
+            "context_character_length": 279,
+            "context_token_length": 81,
+            "node_id": "sentence_window:89c47b21fc294f82:000006",
+            "source_id": "tinyshakespeare",
+            "token_length": 14,
+            "truncated": false
+          },
+          {
+            "character_length": 70,
+            "context_character_length": 306,
+            "context_token_length": 86,
+            "node_id": "sentence_window:89c47b21fc294f82:000007",
+            "source_id": "tinyshakespeare",
+            "token_length": 21,
+            "truncated": false
+          },
+          {
+            "character_length": 17,
+            "context_character_length": 363,
+            "context_token_length": 98,
+            "node_id": "sentence_window:89c47b21fc294f82:000008",
+            "source_id": "tinyshakespeare",
+            "token_length": 8,
+            "truncated": false
+          },
+          {
+            "character_length": 56,
+            "context_character_length": 755,
+            "context_token_length": 191,
+            "node_id": "sentence_window:89c47b21fc294f82:000009",
+            "source_id": "tinyshakespeare",
+            "token_length": 20,
+            "truncated": false
+          },
+          {
+            "character_length": 42,
+            "context_character_length": 796,
+            "context_token_length": 192,
+            "node_id": "sentence_window:89c47b21fc294f82:000010",
+            "source_id": "tinyshakespeare",
+            "token_length": 11,
+            "truncated": false
+          },
+          {
+            "character_length": 68,
+            "context_character_length": 786,
+            "context_token_length": 191,
+            "node_id": "sentence_window:89c47b21fc294f82:000011",
+            "source_id": "tinyshakespeare",
+            "token_length": 16,
+            "truncated": false
+          },
+          {
+            "character_length": 468,
+            "context_character_length": 842,
+            "context_token_length": 199,
+            "node_id": "sentence_window:89c47b21fc294f82:000012",
+            "source_id": "tinyshakespeare",
+            "token_length": 113,
+            "truncated": false
+          },
+          {
+            "character_length": 69,
+            "context_character_length": 907,
+            "context_token_length": 207,
+            "node_id": "sentence_window:89c47b21fc294f82:000013",
+            "source_id": "tinyshakespeare",
+            "token_length": 15,
+            "truncated": false
+          },
+          {
+            "character_length": 60,
+            "context_character_length": 914,
+            "context_token_length": 209,
+            "node_id": "sentence_window:89c47b21fc294f82:000014",
+            "source_id": "tinyshakespeare",
+            "token_length": 20,
+            "truncated": false
+          },
+          {
+            "character_length": 73,
+            "context_character_length": 1108,
+            "context_token_length": 258,
+            "node_id": "sentence_window:89c47b21fc294f82:000015",
+            "source_id": "tinyshakespeare",
+            "token_length": 16,
+            "truncated": false
+          },
+          {
+            "character_length": 121,
+            "context_character_length": 718,
+            "context_token_length": 165,
+            "node_id": "sentence_window:89c47b21fc294f82:000016",
+            "source_id": "tinyshakespeare",
+            "token_length": 28,
+            "truncated": false
+          },
+          {
+            "character_length": 49,
+            "context_character_length": 689,
+            "context_token_length": 164,
+            "node_id": "sentence_window:89c47b21fc294f82:000017",
+            "source_id": "tinyshakespeare",
+            "token_length": 13,
+            "truncated": false
+          },
+          {
+            "character_length": 262,
+            "context_character_length": 749,
+            "context_token_length": 175,
+            "node_id": "sentence_window:89c47b21fc294f82:000018",
+            "source_id": "tinyshakespeare",
+            "token_length": 65,
+            "truncated": false
+          },
+          {
+            "character_length": 78,
+            "context_character_length": 699,
+            "context_token_length": 166,
+            "node_id": "sentence_window:89c47b21fc294f82:000019",
+            "source_id": "tinyshakespeare",
+            "token_length": 20,
+            "truncated": false
+          },
+          {
+            "character_length": 40,
+            "context_character_length": 641,
+            "context_token_length": 157,
+            "node_id": "sentence_window:89c47b21fc294f82:000020",
+            "source_id": "tinyshakespeare",
+            "token_length": 14,
+            "truncated": false
+          },
+          {
+            "character_length": 120,
+            "context_character_length": 609,
+            "context_token_length": 150,
+            "node_id": "sentence_window:89c47b21fc294f82:000021",
+            "source_id": "tinyshakespeare",
+            "token_length": 31,
+            "truncated": false
+          },
+          {
+            "character_length": 23,
+            "context_character_length": 365,
+            "context_token_length": 93,
+            "node_id": "sentence_window:89c47b21fc294f82:000022",
+            "source_id": "tinyshakespeare",
+            "token_length": 7,
+            "truncated": false
+          },
+          {
+            "character_length": 63,
+            "context_character_length": 308,
+            "context_token_length": 80,
+            "node_id": "sentence_window:89c47b21fc294f82:000023",
+            "source_id": "tinyshakespeare",
+            "token_length": 19,
+            "truncated": false
+          },
+          {
+            "character_length": 17,
+            "context_character_length": 285,
+            "context_token_length": 72,
+            "node_id": "sentence_window:89c47b21fc294f82:000024",
+            "source_id": "tinyshakespeare",
+            "token_length": 6,
+            "truncated": false
+          },
+          {
+            "character_length": 18,
+            "context_character_length": 246,
+            "context_token_length": 63,
+            "node_id": "sentence_window:89c47b21fc294f82:000025",
+            "source_id": "tinyshakespeare",
+            "token_length": 8,
+            "truncated": false
+          },
+          {
+            "character_length": 21,
+            "context_character_length": 291,
+            "context_token_length": 75,
+            "node_id": "sentence_window:89c47b21fc294f82:000026",
+            "source_id": "tinyshakespeare",
+            "token_length": 7,
+            "truncated": false
+          },
+          {
+            "character_length": 17,
+            "context_character_length": 275,
+            "context_token_length": 74,
+            "node_id": "sentence_window:89c47b21fc294f82:000027",
+            "source_id": "tinyshakespeare",
+            "token_length": 6,
+            "truncated": false
+          },
+          {
+            "character_length": 81,
+            "context_character_length": 292,
+            "context_token_length": 78,
+            "node_id": "sentence_window:89c47b21fc294f82:000028",
+            "source_id": "tinyshakespeare",
+            "token_length": 22,
+            "truncated": false
+          },
+          {
+            "character_length": 68,
+            "context_character_length": 286,
+            "context_token_length": 75,
+            "node_id": "sentence_window:89c47b21fc294f82:000029",
+            "source_id": "tinyshakespeare",
+            "token_length": 19,
+            "truncated": false
+          },
+          {
+            "character_length": 47,
+            "context_character_length": 285,
+            "context_token_length": 76,
+            "node_id": "sentence_window:89c47b21fc294f82:000030",
+            "source_id": "tinyshakespeare",
+            "token_length": 18,
+            "truncated": false
+          },
+          {
+            "character_length": 34,
+            "context_character_length": 420,
+            "context_token_length": 109,
+            "node_id": "sentence_window:89c47b21fc294f82:000031",
+            "source_id": "tinyshakespeare",
+            "token_length": 10,
+            "truncated": false
+          },
+          {
+            "character_length": 12,
+            "context_character_length": 424,
+            "context_token_length": 107,
+            "node_id": "sentence_window:89c47b21fc294f82:000032",
+            "source_id": "tinyshakespeare",
+            "token_length": 5,
+            "truncated": false
+          },
+          {
+            "character_length": 20,
+            "context_character_length": 448,
+            "context_token_length": 111,
+            "node_id": "sentence_window:89c47b21fc294f82:000033",
+            "source_id": "tinyshakespeare",
+            "token_length": 8,
+            "truncated": false
+          },
+          {
+            "character_length": 152,
+            "context_character_length": 456,
+            "context_token_length": 108,
+            "node_id": "sentence_window:89c47b21fc294f82:000034",
+            "source_id": "tinyshakespeare",
+            "token_length": 39,
+            "truncated": false
+          },
+          {
+            "character_length": 85,
+            "context_character_length": 502,
+            "context_token_length": 120,
+            "node_id": "sentence_window:89c47b21fc294f82:000035",
+            "source_id": "tinyshakespeare",
+            "token_length": 20,
+            "truncated": false
+          },
+          {
+            "character_length": 92,
+            "context_character_length": 765,
+            "context_token_length": 179,
+            "node_id": "sentence_window:89c47b21fc294f82:000036",
+            "source_id": "tinyshakespeare",
+            "token_length": 23,
+            "truncated": false
+          },
+          {
+            "character_length": 55,
+            "context_character_length": 845,
+            "context_token_length": 201,
+            "node_id": "sentence_window:89c47b21fc294f82:000037",
+            "source_id": "tinyshakespeare",
+            "token_length": 15,
+            "truncated": false
+          },
+          {
+            "character_length": 80,
+            "context_character_length": 868,
+            "context_token_length": 208,
+            "node_id": "sentence_window:89c47b21fc294f82:000038",
+            "source_id": "tinyshakespeare",
+            "token_length": 22,
+            "truncated": false
+          },
+          {
+            "character_length": 275,
+            "context_character_length": 811,
+            "context_token_length": 197,
+            "node_id": "sentence_window:89c47b21fc294f82:000039",
+            "source_id": "tinyshakespeare",
+            "token_length": 64,
+            "truncated": false
+          },
+          {
+            "character_length": 100,
+            "context_character_length": 733,
+            "context_token_length": 180,
+            "node_id": "sentence_window:89c47b21fc294f82:000040",
+            "source_id": "tinyshakespeare",
+            "token_length": 30,
+            "truncated": false
+          },
+          {
+            "character_length": 175,
+            "context_character_length": 952,
+            "context_token_length": 232,
+            "node_id": "sentence_window:89c47b21fc294f82:000041",
+            "source_id": "tinyshakespeare",
+            "token_length": 46,
+            "truncated": false
+          },
+          {
+            "character_length": 28,
+            "context_character_length": 950,
+            "context_token_length": 234,
+            "node_id": "sentence_window:89c47b21fc294f82:000042",
+            "source_id": "tinyshakespeare",
+            "token_length": 9,
+            "truncated": false
+          },
+          {
+            "character_length": 14,
+            "context_character_length": 764,
+            "context_token_length": 192,
+            "node_id": "sentence_window:89c47b21fc294f82:000043",
+            "source_id": "tinyshakespeare",
+            "token_length": 6,
+            "truncated": false
+          },
+          {
+            "character_length": 274,
+            "context_character_length": 801,
+            "context_token_length": 199,
+            "node_id": "sentence_window:89c47b21fc294f82:000044",
+            "source_id": "tinyshakespeare",
+            "token_length": 67,
+            "truncated": false
+          },
+          {
+            "character_length": 78,
+            "context_character_length": 759,
+            "context_token_length": 193,
+            "node_id": "sentence_window:89c47b21fc294f82:000045",
+            "source_id": "tinyshakespeare",
+            "token_length": 24,
+            "truncated": false
+          },
+          {
+            "character_length": 89,
+            "context_character_length": 1156,
+            "context_token_length": 287,
+            "node_id": "sentence_window:89c47b21fc294f82:000046",
+            "source_id": "tinyshakespeare",
+            "token_length": 22,
+            "truncated": false
+          },
+          {
+            "character_length": 137,
+            "context_character_length": 1219,
+            "context_token_length": 303,
+            "node_id": "sentence_window:89c47b21fc294f82:000047",
+            "source_id": "tinyshakespeare",
+            "token_length": 37,
+            "truncated": false
+          },
+          {
+            "character_length": 133,
+            "context_character_length": 978,
+            "context_token_length": 249,
+            "node_id": "sentence_window:89c47b21fc294f82:000048",
+            "source_id": "tinyshakespeare",
+            "token_length": 40,
+            "truncated": false
+          },
+          {
+            "character_length": 425,
+            "context_character_length": 1208,
+            "context_token_length": 306,
+            "node_id": "sentence_window:89c47b21fc294f82:000049",
+            "source_id": "tinyshakespeare",
+            "token_length": 103,
+            "truncated": false
+          },
+          {
+            "character_length": 77,
+            "context_character_length": 1155,
+            "context_token_length": 295,
+            "node_id": "sentence_window:89c47b21fc294f82:000050",
+            "source_id": "tinyshakespeare",
+            "token_length": 22,
+            "truncated": false
+          },
+          {
+            "character_length": 33,
+            "context_character_length": 1024,
+            "context_token_length": 262,
+            "node_id": "sentence_window:89c47b21fc294f82:000051",
+            "source_id": "tinyshakespeare",
+            "token_length": 13,
+            "truncated": false
+          },
+          {
+            "character_length": 308,
+            "context_character_length": 1022,
+            "context_token_length": 258,
+            "node_id": "sentence_window:89c47b21fc294f82:000052",
+            "source_id": "tinyshakespeare",
+            "token_length": 81,
+            "truncated": false
+          },
+          {
+            "character_length": 36,
+            "context_character_length": 691,
+            "context_token_length": 182,
+            "node_id": "sentence_window:89c47b21fc294f82:000053",
+            "source_id": "tinyshakespeare",
+            "token_length": 11,
+            "truncated": false
+          },
+          {
+            "character_length": 6,
+            "context_character_length": 644,
+            "context_token_length": 170,
+            "node_id": "sentence_window:89c47b21fc294f82:000054",
+            "source_id": "tinyshakespeare",
+            "token_length": 4,
+            "truncated": false
+          },
+          {
+            "character_length": 131,
+            "context_character_length": 622,
+            "context_token_length": 162,
+            "node_id": "sentence_window:89c47b21fc294f82:000055",
+            "source_id": "tinyshakespeare",
+            "token_length": 36,
+            "truncated": false
+          },
+          {
+            "character_length": 94,
+            "context_character_length": 326,
+            "context_token_length": 86,
+            "node_id": "sentence_window:89c47b21fc294f82:000056",
+            "source_id": "tinyshakespeare",
+            "token_length": 27,
+            "truncated": false
+          },
+          {
+            "character_length": 30,
+            "context_character_length": 410,
+            "context_token_length": 113,
+            "node_id": "sentence_window:89c47b21fc294f82:000057",
+            "source_id": "tinyshakespeare",
+            "token_length": 10,
+            "truncated": false
+          },
+          {
+            "character_length": 11,
+            "context_character_length": 490,
+            "context_token_length": 129,
+            "node_id": "sentence_window:89c47b21fc294f82:000058",
+            "source_id": "tinyshakespeare",
+            "token_length": 5,
+            "truncated": false
+          },
+          {
+            "character_length": 12,
+            "context_character_length": 487,
+            "context_token_length": 133,
+            "node_id": "sentence_window:89c47b21fc294f82:000059",
+            "source_id": "tinyshakespeare",
+            "token_length": 5,
+            "truncated": false
+          },
+          {
+            "character_length": 120,
+            "context_character_length": 430,
+            "context_token_length": 118,
+            "node_id": "sentence_window:89c47b21fc294f82:000060",
+            "source_id": "tinyshakespeare",
+            "token_length": 38,
+            "truncated": false
+          },
+          {
+            "character_length": 86,
+            "context_character_length": 1110,
+            "context_token_length": 291,
+            "node_id": "sentence_window:89c47b21fc294f82:000061",
+            "source_id": "tinyshakespeare",
+            "token_length": 20,
+            "truncated": false
+          },
+          {
+            "character_length": 128,
+            "context_character_length": 1278,
+            "context_token_length": 335,
+            "node_id": "sentence_window:89c47b21fc294f82:000062",
+            "source_id": "tinyshakespeare",
+            "token_length": 40,
+            "truncated": false
+          },
+          {
+            "character_length": 37,
+            "context_character_length": 1286,
+            "context_token_length": 339,
+            "node_id": "sentence_window:89c47b21fc294f82:000063",
+            "source_id": "tinyshakespeare",
+            "token_length": 12,
+            "truncated": false
+          },
+          {
+            "character_length": 710,
+            "context_character_length": 1220,
+            "context_token_length": 316,
+            "node_id": "sentence_window:89c47b21fc294f82:000064",
+            "source_id": "tinyshakespeare",
+            "token_length": 183,
+            "truncated": false
+          },
+          {
+            "character_length": 179,
+            "context_character_length": 1436,
+            "context_token_length": 365,
+            "node_id": "sentence_window:89c47b21fc294f82:000065",
+            "source_id": "tinyshakespeare",
+            "token_length": 49,
+            "truncated": false
+          },
+          {
+            "character_length": 20,
+            "context_character_length": 1365,
+            "context_token_length": 341,
+            "node_id": "sentence_window:89c47b21fc294f82:000066",
+            "source_id": "tinyshakespeare",
+            "token_length": 9,
+            "truncated": false
+          },
+          {
+            "character_length": 54,
+            "context_character_length": 1360,
+            "context_token_length": 339,
+            "node_id": "sentence_window:89c47b21fc294f82:000067",
+            "source_id": "tinyshakespeare",
+            "token_length": 15,
+            "truncated": false
+          },
+          {
+            "character_length": 302,
+            "context_character_length": 670,
+            "context_token_length": 163,
+            "node_id": "sentence_window:89c47b21fc294f82:000068",
+            "source_id": "tinyshakespeare",
+            "token_length": 69,
+            "truncated": false
+          },
+          {
+            "character_length": 57,
+            "context_character_length": 683,
+            "context_token_length": 169,
+            "node_id": "sentence_window:89c47b21fc294f82:000069",
+            "source_id": "tinyshakespeare",
+            "token_length": 16,
+            "truncated": false
+          },
+          {
+            "character_length": 32,
+            "context_character_length": 784,
+            "context_token_length": 191,
+            "node_id": "sentence_window:89c47b21fc294f82:000070",
+            "source_id": "tinyshakespeare",
+            "token_length": 10,
+            "truncated": false
+          },
+          {
+            "character_length": 20,
+            "context_character_length": 752,
+            "context_token_length": 184,
+            "node_id": "sentence_window:89c47b21fc294f82:000071",
+            "source_id": "tinyshakespeare",
+            "token_length": 7,
+            "truncated": false
+          },
+          {
+            "character_length": 192,
+            "context_character_length": 467,
+            "context_token_length": 122,
+            "node_id": "sentence_window:89c47b21fc294f82:000072",
+            "source_id": "tinyshakespeare",
+            "token_length": 55,
+            "truncated": false
+          },
+          {
+            "character_length": 121,
+            "context_character_length": 522,
+            "context_token_length": 137,
+            "node_id": "sentence_window:89c47b21fc294f82:000073",
+            "source_id": "tinyshakespeare",
+            "token_length": 31,
+            "truncated": false
+          },
+          {
+            "character_length": 22,
+            "context_character_length": 535,
+            "context_token_length": 139,
+            "node_id": "sentence_window:89c47b21fc294f82:000074",
+            "source_id": "tinyshakespeare",
+            "token_length": 8,
+            "truncated": false
+          },
+          {
+            "character_length": 17,
+            "context_character_length": 593,
+            "context_token_length": 153,
+            "node_id": "sentence_window:89c47b21fc294f82:000075",
+            "source_id": "tinyshakespeare",
+            "token_length": 7,
+            "truncated": false
+          },
+          {
+            "character_length": 112,
+            "context_character_length": 461,
+            "context_token_length": 116,
+            "node_id": "sentence_window:89c47b21fc294f82:000076",
+            "source_id": "tinyshakespeare",
+            "token_length": 31,
+            "truncated": false
+          },
+          {
+            "character_length": 45,
+            "context_character_length": 390,
+            "context_token_length": 101,
+            "node_id": "sentence_window:89c47b21fc294f82:000077",
+            "source_id": "tinyshakespeare",
+            "token_length": 12,
+            "truncated": false
+          },
+          {
+            "character_length": 78,
+            "context_character_length": 546,
+            "context_token_length": 143,
+            "node_id": "sentence_window:89c47b21fc294f82:000078",
+            "source_id": "tinyshakespeare",
+            "token_length": 21,
+            "truncated": false
+          },
+          {
+            "character_length": 60,
+            "context_character_length": 620,
+            "context_token_length": 158,
+            "node_id": "sentence_window:89c47b21fc294f82:000079",
+            "source_id": "tinyshakespeare",
+            "token_length": 18,
+            "truncated": false
+          },
+          {
+            "character_length": 50,
+            "context_character_length": 651,
+            "context_token_length": 159,
+            "node_id": "sentence_window:89c47b21fc294f82:000080",
+            "source_id": "tinyshakespeare",
+            "token_length": 16,
+            "truncated": false
+          },
+          {
+            "character_length": 178,
+            "context_character_length": 696,
+            "context_token_length": 170,
+            "node_id": "sentence_window:89c47b21fc294f82:000081",
+            "source_id": "tinyshakespeare",
+            "token_length": 50,
+            "truncated": false
+          },
+          {
+            "character_length": 91,
+            "context_character_length": 627,
+            "context_token_length": 154,
+            "node_id": "sentence_window:89c47b21fc294f82:000082",
+            "source_id": "tinyshakespeare",
+            "token_length": 22,
+            "truncated": false
+          },
+          {
+            "character_length": 143,
+            "context_character_length": 577,
+            "context_token_length": 141,
+            "node_id": "sentence_window:89c47b21fc294f82:000083",
+            "source_id": "tinyshakespeare",
+            "token_length": 32,
+            "truncated": false
+          },
+          {
+            "character_length": 90,
+            "context_character_length": 642,
+            "context_token_length": 153,
+            "node_id": "sentence_window:89c47b21fc294f82:000084",
+            "source_id": "tinyshakespeare",
+            "token_length": 23,
+            "truncated": false
+          },
+          {
+            "character_length": 9,
+            "context_character_length": 634,
+            "context_token_length": 145,
+            "node_id": "sentence_window:89c47b21fc294f82:000085",
+            "source_id": "tinyshakespeare",
+            "token_length": 5,
+            "truncated": false
+          },
+          {
+            "character_length": 10,
+            "context_character_length": 566,
+            "context_token_length": 131,
+            "node_id": "sentence_window:89c47b21fc294f82:000086",
+            "source_id": "tinyshakespeare",
+            "token_length": 5,
+            "truncated": false
+          },
+          {
+            "character_length": 115,
+            "context_character_length": 507,
+            "context_token_length": 124,
+            "node_id": "sentence_window:89c47b21fc294f82:000087",
+            "source_id": "tinyshakespeare",
+            "token_length": 28,
+            "truncated": false
+          },
+          {
+            "character_length": 170,
+            "context_character_length": 436,
+            "context_token_length": 110,
+            "node_id": "sentence_window:89c47b21fc294f82:000088",
+            "source_id": "tinyshakespeare",
+            "token_length": 42,
+            "truncated": false
+          },
+          {
+            "character_length": 23,
+            "context_character_length": 437,
+            "context_token_length": 110,
+            "node_id": "sentence_window:89c47b21fc294f82:000089",
+            "source_id": "tinyshakespeare",
+            "token_length": 8,
+            "truncated": false
+          },
+          {
+            "character_length": 84,
+            "context_character_length": 696,
+            "context_token_length": 172,
+            "node_id": "sentence_window:89c47b21fc294f82:000090",
+            "source_id": "tinyshakespeare",
+            "token_length": 25,
+            "truncated": false
+          },
+          {
+            "character_length": 19,
+            "context_character_length": 612,
+            "context_token_length": 154,
+            "node_id": "sentence_window:89c47b21fc294f82:000091",
+            "source_id": "tinyshakespeare",
+            "token_length": 9,
+            "truncated": false
+          },
+          {
+            "character_length": 10,
+            "context_character_length": 604,
+            "context_token_length": 153,
+            "node_id": "sentence_window:89c47b21fc294f82:000092",
+            "source_id": "tinyshakespeare",
+            "token_length": 5,
+            "truncated": false
+          },
+          {
+            "character_length": 269,
+            "context_character_length": 710,
+            "context_token_length": 174,
+            "node_id": "sentence_window:89c47b21fc294f82:000093",
+            "source_id": "tinyshakespeare",
+            "token_length": 67,
+            "truncated": false
+          },
+          {
+            "character_length": 31,
+            "context_character_length": 674,
+            "context_token_length": 165,
+            "node_id": "sentence_window:89c47b21fc294f82:000094",
+            "source_id": "tinyshakespeare",
+            "token_length": 10,
+            "truncated": false
+          },
+          {
+            "character_length": 162,
+            "context_character_length": 694,
+            "context_token_length": 169,
+            "node_id": "sentence_window:89c47b21fc294f82:000095",
+            "source_id": "tinyshakespeare",
+            "token_length": 41,
+            "truncated": false
+          },
+          {
+            "character_length": 129,
+            "context_character_length": 1152,
+            "context_token_length": 278,
+            "node_id": "sentence_window:89c47b21fc294f82:000096",
+            "source_id": "tinyshakespeare",
+            "token_length": 29,
+            "truncated": false
+          },
+          {
+            "character_length": 48,
+            "context_character_length": 916,
+            "context_token_length": 222,
+            "node_id": "sentence_window:89c47b21fc294f82:000097",
+            "source_id": "tinyshakespeare",
+            "token_length": 16,
+            "truncated": false
+          },
+          {
+            "character_length": 39,
+            "context_character_length": 1025,
+            "context_token_length": 258,
+            "node_id": "sentence_window:89c47b21fc294f82:000098",
+            "source_id": "tinyshakespeare",
+            "token_length": 13,
+            "truncated": false
+          },
+          {
+            "character_length": 468,
+            "context_character_length": 1028,
+            "context_token_length": 262,
+            "node_id": "sentence_window:89c47b21fc294f82:000099",
+            "source_id": "tinyshakespeare",
+            "token_length": 114,
+            "truncated": false
+          },
+          {
+            "character_length": 33,
+            "context_character_length": 927,
+            "context_token_length": 243,
+            "node_id": "sentence_window:89c47b21fc294f82:000100",
+            "source_id": "tinyshakespeare",
+            "token_length": 11,
+            "truncated": false
+          },
+          {
+            "character_length": 140,
+            "context_character_length": 922,
+            "context_token_length": 241,
+            "node_id": "sentence_window:89c47b21fc294f82:000101",
+            "source_id": "tinyshakespeare",
+            "token_length": 46,
+            "truncated": false
+          },
+          {
+            "character_length": 165,
+            "context_character_length": 918,
+            "context_token_length": 240,
+            "node_id": "sentence_window:89c47b21fc294f82:000102",
+            "source_id": "tinyshakespeare",
+            "token_length": 45,
+            "truncated": false
+          },
+          {
+            "character_length": 28,
+            "context_character_length": 485,
+            "context_token_length": 139,
+            "node_id": "sentence_window:89c47b21fc294f82:000103",
+            "source_id": "tinyshakespeare",
+            "token_length": 10,
+            "truncated": false
+          },
+          {
+            "character_length": 43,
+            "context_character_length": 507,
+            "context_token_length": 145,
+            "node_id": "sentence_window:89c47b21fc294f82:000104",
+            "source_id": "tinyshakespeare",
+            "token_length": 14,
+            "truncated": false
+          },
+          {
+            "character_length": 35,
+            "context_character_length": 448,
+            "context_token_length": 126,
+            "node_id": "sentence_window:89c47b21fc294f82:000105",
+            "source_id": "tinyshakespeare",
+            "token_length": 12,
+            "truncated": false
+          },
+          {
+            "character_length": 35,
+            "context_character_length": 306,
+            "context_token_length": 89,
+            "node_id": "sentence_window:89c47b21fc294f82:000106",
+            "source_id": "tinyshakespeare",
+            "token_length": 13,
+            "truncated": false
+          },
+          {
+            "character_length": 55,
+            "context_character_length": 368,
+            "context_token_length": 104,
+            "node_id": "sentence_window:89c47b21fc294f82:000107",
+            "source_id": "tinyshakespeare",
+            "token_length": 17,
+            "truncated": false
+          },
+          {
+            "character_length": 81,
+            "context_character_length": 396,
+            "context_token_length": 114,
+            "node_id": "sentence_window:89c47b21fc294f82:000108",
+            "source_id": "tinyshakespeare",
+            "token_length": 27,
+            "truncated": false
+          },
+          {
+            "character_length": 23,
+            "context_character_length": 454,
+            "context_token_length": 129,
+            "node_id": "sentence_window:89c47b21fc294f82:000109",
+            "source_id": "tinyshakespeare",
+            "token_length": 8,
+            "truncated": false
+          },
+          {
+            "character_length": 90,
+            "context_character_length": 456,
+            "context_token_length": 127,
+            "node_id": "sentence_window:89c47b21fc294f82:000110",
+            "source_id": "tinyshakespeare",
+            "token_length": 25,
+            "truncated": false
+          },
+          {
+            "character_length": 71,
+            "context_character_length": 458,
+            "context_token_length": 127,
+            "node_id": "sentence_window:89c47b21fc294f82:000111",
+            "source_id": "tinyshakespeare",
+            "token_length": 24,
+            "truncated": false
+          },
+          {
+            "character_length": 93,
+            "context_character_length": 474,
+            "context_token_length": 129,
+            "node_id": "sentence_window:89c47b21fc294f82:000112",
+            "source_id": "tinyshakespeare",
+            "token_length": 27,
+            "truncated": false
+          },
+          {
+            "character_length": 37,
+            "context_character_length": 525,
+            "context_token_length": 141,
+            "node_id": "sentence_window:89c47b21fc294f82:000113",
+            "source_id": "tinyshakespeare",
+            "token_length": 11,
+            "truncated": false
+          },
+          {
+            "character_length": 57,
+            "context_character_length": 473,
+            "context_token_length": 128,
+            "node_id": "sentence_window:89c47b21fc294f82:000114",
+            "source_id": "tinyshakespeare",
+            "token_length": 17,
+            "truncated": false
+          },
+          {
+            "character_length": 97,
+            "context_character_length": 442,
+            "context_token_length": 119,
+            "node_id": "sentence_window:89c47b21fc294f82:000115",
+            "source_id": "tinyshakespeare",
+            "token_length": 29,
+            "truncated": false
+          },
+          {
+            "character_length": 74,
+            "context_character_length": 416,
+            "context_token_length": 113,
+            "node_id": "sentence_window:89c47b21fc294f82:000116",
+            "source_id": "tinyshakespeare",
+            "token_length": 20,
+            "truncated": false
+          },
+          {
+            "character_length": 38,
+            "context_character_length": 401,
+            "context_token_length": 110,
+            "node_id": "sentence_window:89c47b21fc294f82:000117",
+            "source_id": "tinyshakespeare",
+            "token_length": 12,
+            "truncated": false
+          },
+          {
+            "character_length": 40,
+            "context_character_length": 359,
+            "context_token_length": 100,
+            "node_id": "sentence_window:89c47b21fc294f82:000118",
+            "source_id": "tinyshakespeare",
+            "token_length": 15,
+            "truncated": false
+          },
+          {
+            "character_length": 67,
+            "context_character_length": 370,
+            "context_token_length": 105,
+            "node_id": "sentence_window:89c47b21fc294f82:000119",
+            "source_id": "tinyshakespeare",
+            "token_length": 21,
+            "truncated": false
+          },
+          {
+            "character_length": 22,
+            "context_character_length": 321,
+            "context_token_length": 97,
+            "node_id": "sentence_window:89c47b21fc294f82:000120",
+            "source_id": "tinyshakespeare",
+            "token_length": 8,
+            "truncated": false
+          },
+          {
+            "character_length": 15,
+            "context_character_length": 375,
+            "context_token_length": 107,
+            "node_id": "sentence_window:89c47b21fc294f82:000121",
+            "source_id": "tinyshakespeare",
+            "token_length": 7,
+            "truncated": false
+          },
+          {
+            "character_length": 108,
+            "context_character_length": 369,
+            "context_token_length": 104,
+            "node_id": "sentence_window:89c47b21fc294f82:000122",
+            "source_id": "tinyshakespeare",
+            "token_length": 34,
+            "truncated": false
+          },
+          {
+            "character_length": 25,
+            "context_character_length": 424,
+            "context_token_length": 118,
+            "node_id": "sentence_window:89c47b21fc294f82:000123",
+            "source_id": "tinyshakespeare",
+            "token_length": 12,
+            "truncated": false
+          },
+          {
+            "character_length": 92,
+            "context_character_length": 467,
+            "context_token_length": 129,
+            "node_id": "sentence_window:89c47b21fc294f82:000124",
+            "source_id": "tinyshakespeare",
+            "token_length": 22,
+            "truncated": false
+          },
+          {
+            "character_length": 34,
+            "context_character_length": 505,
+            "context_token_length": 139,
+            "node_id": "sentence_window:89c47b21fc294f82:000125",
+            "source_id": "tinyshakespeare",
+            "token_length": 12,
+            "truncated": false
+          },
+          {
+            "character_length": 122,
+            "context_character_length": 423,
+            "context_token_length": 115,
+            "node_id": "sentence_window:89c47b21fc294f82:000126",
+            "source_id": "tinyshakespeare",
+            "token_length": 35,
+            "truncated": false
+          },
+          {
+            "character_length": 65,
+            "context_character_length": 494,
+            "context_token_length": 133,
+            "node_id": "sentence_window:89c47b21fc294f82:000127",
+            "source_id": "tinyshakespeare",
+            "token_length": 19,
+            "truncated": false
+          },
+          {
+            "character_length": 53,
+            "context_character_length": 417,
+            "context_token_length": 119,
+            "node_id": "sentence_window:89c47b21fc294f82:000128",
+            "source_id": "tinyshakespeare",
+            "token_length": 17,
+            "truncated": false
+          },
+          {
+            "character_length": 26,
+            "context_character_length": 400,
+            "context_token_length": 114,
+            "node_id": "sentence_window:89c47b21fc294f82:000129",
+            "source_id": "tinyshakespeare",
+            "token_length": 10,
+            "truncated": false
+          },
+          {
+            "character_length": 96,
+            "context_character_length": 336,
+            "context_token_length": 97,
+            "node_id": "sentence_window:89c47b21fc294f82:000130",
+            "source_id": "tinyshakespeare",
+            "token_length": 30,
+            "truncated": false
+          },
+          {
+            "character_length": 15,
+            "context_character_length": 307,
+            "context_token_length": 91,
+            "node_id": "sentence_window:89c47b21fc294f82:000131",
+            "source_id": "tinyshakespeare",
+            "token_length": 8,
+            "truncated": false
+          },
+          {
+            "character_length": 17,
+            "context_character_length": 332,
+            "context_token_length": 96,
+            "node_id": "sentence_window:89c47b21fc294f82:000132",
+            "source_id": "tinyshakespeare",
+            "token_length": 7,
+            "truncated": false
+          },
+          {
+            "character_length": 58,
+            "context_character_length": 389,
+            "context_token_length": 109,
+            "node_id": "sentence_window:89c47b21fc294f82:000133",
+            "source_id": "tinyshakespeare",
+            "token_length": 18,
+            "truncated": false
+          },
+          {
+            "character_length": 36,
+            "context_character_length": 292,
+            "context_token_length": 81,
+            "node_id": "sentence_window:89c47b21fc294f82:000134",
+            "source_id": "tinyshakespeare",
+            "token_length": 13,
+            "truncated": false
+          },
+          {
+            "character_length": 78,
+            "context_character_length": 276,
+            "context_token_length": 75,
+            "node_id": "sentence_window:89c47b21fc294f82:000135",
+            "source_id": "tinyshakespeare",
+            "token_length": 22,
+            "truncated": false
+          },
+          {
+            "character_length": 83,
+            "context_character_length": 258,
+            "context_token_length": 70,
+            "node_id": "sentence_window:89c47b21fc294f82:000136",
+            "source_id": "tinyshakespeare",
+            "token_length": 23,
+            "truncated": false
+          }
+        ],
+        "semantic_buffer_count": 0,
+        "semantic_buffer_truncation_count": 0,
+        "semantic_buffer_truncation_fraction": 0.0,
+        "semantic_buffers": [],
+        "technique": "sentence_window",
+        "token_lengths_include_special_tokens": true
+      }
+    },
+    "token": {
+      "stats": {
+        "average_character_length": 745.6315789473684,
+        "average_context_character_length": 745.6315789473684,
+        "average_context_token_length": 192.52631578947367,
+        "average_token_length": 192.52631578947367,
+        "chunk_count": 19,
+        "indexed_truncation_count": 0,
+        "indexed_truncation_fraction": 0.0,
+        "max_seq_length": 256,
+        "node_lengths": [
+          {
+            "character_length": 761,
+            "context_character_length": 761,
+            "context_token_length": 194,
+            "node_id": "token:89c47b21fc294f82:000000",
+            "source_id": "tinyshakespeare",
+            "token_length": 194,
+            "truncated": false
+          },
+          {
+            "character_length": 823,
+            "context_character_length": 823,
+            "context_token_length": 194,
+            "node_id": "token:89c47b21fc294f82:000001",
+            "source_id": "tinyshakespeare",
+            "token_length": 194,
+            "truncated": false
+          },
+          {
+            "character_length": 772,
+            "context_character_length": 772,
+            "context_token_length": 193,
+            "node_id": "token:89c47b21fc294f82:000002",
+            "source_id": "tinyshakespeare",
+            "token_length": 193,
+            "truncated": false
+          },
+          {
+            "character_length": 779,
+            "context_character_length": 779,
+            "context_token_length": 194,
+            "node_id": "token:89c47b21fc294f82:000003",
+            "source_id": "tinyshakespeare",
+            "token_length": 194,
+            "truncated": false
+          },
+          {
+            "character_length": 768,
+            "context_character_length": 768,
+            "context_token_length": 194,
+            "node_id": "token:89c47b21fc294f82:000004",
+            "source_id": "tinyshakespeare",
+            "token_length": 194,
+            "truncated": false
+          },
+          {
+            "character_length": 755,
+            "context_character_length": 755,
+            "context_token_length": 194,
+            "node_id": "token:89c47b21fc294f82:000005",
+            "source_id": "tinyshakespeare",
+            "token_length": 194,
+            "truncated": false
+          },
+          {
+            "character_length": 738,
+            "context_character_length": 738,
+            "context_token_length": 194,
+            "node_id": "token:89c47b21fc294f82:000006",
+            "source_id": "tinyshakespeare",
+            "token_length": 194,
+            "truncated": false
+          },
+          {
+            "character_length": 728,
+            "context_character_length": 728,
+            "context_token_length": 193,
+            "node_id": "token:89c47b21fc294f82:000007",
+            "source_id": "tinyshakespeare",
+            "token_length": 193,
+            "truncated": false
+          },
+          {
+            "character_length": 721,
+            "context_character_length": 721,
+            "context_token_length": 194,
+            "node_id": "token:89c47b21fc294f82:000008",
+            "source_id": "tinyshakespeare",
+            "token_length": 194,
+            "truncated": false
+          },
+          {
+            "character_length": 747,
+            "context_character_length": 747,
+            "context_token_length": 194,
+            "node_id": "token:89c47b21fc294f82:000009",
+            "source_id": "tinyshakespeare",
+            "token_length": 194,
+            "truncated": false
+          },
+          {
+            "character_length": 780,
+            "context_character_length": 780,
+            "context_token_length": 194,
+            "node_id": "token:89c47b21fc294f82:000010",
+            "source_id": "tinyshakespeare",
+            "token_length": 194,
+            "truncated": false
+          },
+          {
+            "character_length": 744,
+            "context_character_length": 744,
+            "context_token_length": 194,
+            "node_id": "token:89c47b21fc294f82:000011",
+            "source_id": "tinyshakespeare",
+            "token_length": 194,
+            "truncated": false
+          },
+          {
+            "character_length": 789,
+            "context_character_length": 789,
+            "context_token_length": 190,
+            "node_id": "token:89c47b21fc294f82:000012",
+            "source_id": "tinyshakespeare",
+            "token_length": 190,
+            "truncated": false
+          },
+          {
+            "character_length": 774,
+            "context_character_length": 774,
+            "context_token_length": 194,
+            "node_id": "token:89c47b21fc294f82:000013",
+            "source_id": "tinyshakespeare",
+            "token_length": 194,
+            "truncated": false
+          },
+          {
+            "character_length": 793,
+            "context_character_length": 793,
+            "context_token_length": 192,
+            "node_id": "token:89c47b21fc294f82:000014",
+            "source_id": "tinyshakespeare",
+            "token_length": 192,
+            "truncated": false
+          },
+          {
+            "character_length": 682,
+            "context_character_length": 682,
+            "context_token_length": 194,
+            "node_id": "token:89c47b21fc294f82:000015",
+            "source_id": "tinyshakespeare",
+            "token_length": 194,
+            "truncated": false
+          },
+          {
+            "character_length": 699,
+            "context_character_length": 699,
+            "context_token_length": 194,
+            "node_id": "token:89c47b21fc294f82:000016",
+            "source_id": "tinyshakespeare",
+            "token_length": 194,
+            "truncated": false
+          },
+          {
+            "character_length": 695,
+            "context_character_length": 695,
+            "context_token_length": 194,
+            "node_id": "token:89c47b21fc294f82:000017",
+            "source_id": "tinyshakespeare",
+            "token_length": 194,
+            "truncated": false
+          },
+          {
+            "character_length": 619,
+            "context_character_length": 619,
+            "context_token_length": 174,
+            "node_id": "token:89c47b21fc294f82:000018",
+            "source_id": "tinyshakespeare",
+            "token_length": 174,
+            "truncated": false
+          }
+        ],
+        "semantic_buffer_count": 0,
+        "semantic_buffer_truncation_count": 0,
+        "semantic_buffer_truncation_fraction": 0.0,
+        "semantic_buffers": [],
+        "technique": "token",
+        "token_lengths_include_special_tokens": true
+      }
+    }
+  },
+  "working_tree_dirty": true
+}

@@ -1,0 +1,418 @@
+{
+  "created_at": "2026-09-20T08:28:29.957933+00:00",
+  "method": "Case-insensitive full-corpus lexical checks and direct source reading, no vector retrieval or model calls. Counts are matching lines, not answer support labels.",
+  "questions": {
+    "Q1": {
+      "pattern": "reject|denial|appeal|hearing|14 days|fourteen",
+      "source_results": {
+        "HUD_SELECTION": {
+          "matching_lines": 63,
+          "locations": [
+            15,
+            33,
+            79,
+            83,
+            99,
+            127,
+            161,
+            373,
+            425,
+            467,
+            483,
+            489,
+            495,
+            553,
+            557,
+            559,
+            561,
+            563,
+            565,
+            577,
+            585,
+            587,
+            589,
+            591,
+            593,
+            595,
+            597,
+            599,
+            853,
+            893,
+            931,
+            933,
+            971,
+            995,
+            1059,
+            1071,
+            1317,
+            1329,
+            1413,
+            1445,
+            1447,
+            1471,
+            1473,
+            1493,
+            1499,
+            1507,
+            1509,
+            1513,
+            1519,
+            1521,
+            1523,
+            1525,
+            1527,
+            1529,
+            1531,
+            1533,
+            1535,
+            1537,
+            1539,
+            1541,
+            1553,
+            1557,
+            1559
+          ]
+        },
+        "HUD_INCOME": {
+          "matching_lines": 4,
+          "locations": [
+            899,
+            991,
+            1061,
+            1231
+          ]
+        },
+        "EPA_LEAD": {
+          "matching_lines": 2,
+          "locations": [
+            49,
+            99
+          ]
+        },
+        "HUD_FAIR": {
+          "matching_lines": 8,
+          "locations": [
+            29,
+            73,
+            77,
+            103,
+            105,
+            115,
+            121,
+            125
+          ]
+        }
+      },
+      "conclusion": "Searched every counted document for rejection, denial, appeal, hearing, 14 days and fourteen, then read the matching contexts. Only HUD_SELECTION contains the applicant rejection-meeting 14-day rule. HUD_FAIR discusses discrimination hearings, and HUD_INCOME mentions rejection without this deadline."
+    },
+    "Q2": {
+      "pattern": "dependent|\\$480|deduct|adjusted income",
+      "source_results": {
+        "HUD_SELECTION": {
+          "matching_lines": 3,
+          "locations": [
+            579,
+            995,
+            1009
+          ]
+        },
+        "HUD_INCOME": {
+          "matching_lines": 108,
+          "locations": [
+            5,
+            7,
+            9,
+            15,
+            23,
+            43,
+            161,
+            167,
+            169,
+            171,
+            181,
+            185,
+            187,
+            189,
+            197,
+            207,
+            211,
+            217,
+            219,
+            233,
+            243,
+            273,
+            279,
+            321,
+            423,
+            427,
+            429,
+            775,
+            781,
+            783,
+            787,
+            789,
+            791,
+            793,
+            795,
+            797,
+            799,
+            801,
+            803,
+            805,
+            809,
+            811,
+            813,
+            821,
+            823,
+            825,
+            827,
+            831,
+            833,
+            835,
+            843,
+            849,
+            851,
+            855,
+            857,
+            859,
+            861,
+            863,
+            865,
+            869,
+            871,
+            877,
+            881,
+            897,
+            901,
+            905,
+            909,
+            917,
+            919,
+            921,
+            923,
+            925,
+            931,
+            933,
+            935,
+            953,
+            961,
+            973,
+            975,
+            977,
+            1001,
+            1003,
+            1005,
+            1009,
+            1011,
+            1013,
+            1017,
+            1019,
+            1021,
+            1023,
+            1043,
+            1047,
+            1067,
+            1069,
+            1085,
+            1111,
+            1149,
+            1231,
+            1389,
+            1393,
+            1499,
+            1501,
+            1503,
+            1525,
+            1541,
+            1627,
+            1665,
+            1687
+          ]
+        },
+        "EPA_LEAD": {
+          "matching_lines": 0,
+          "locations": []
+        },
+        "HUD_FAIR": {
+          "matching_lines": 0,
+          "locations": []
+        }
+      },
+      "conclusion": "Searched every counted document for dependent, $480, deduct and adjusted income, then inspected matching contexts. Only HUD_INCOME contains the dependent deduction and amount. HUD_SELECTION has unrelated uses of dependent/independent; the EPA and fair-housing booklet have none."
+    },
+    "Q3": {
+      "pattern": "boil|cold water|drinking water|plumbing",
+      "source_results": {
+        "HUD_SELECTION": {
+          "matching_lines": 0,
+          "locations": []
+        },
+        "HUD_INCOME": {
+          "matching_lines": 0,
+          "locations": []
+        },
+        "EPA_LEAD": {
+          "matching_lines": 1,
+          "locations": [
+            127
+          ]
+        },
+        "HUD_FAIR": {
+          "matching_lines": 0,
+          "locations": []
+        }
+      },
+      "conclusion": "Searched every counted document for boil, cold water, drinking water and plumbing. All matches occur in EPA_LEAD. Read its drinking-water section and inspected the corresponding PDF page. No other counted document contains either requested fact."
+    },
+    "Q4": {
+      "pattern": "complaint|one year|365|12 months",
+      "source_results": {
+        "HUD_SELECTION": {
+          "matching_lines": 3,
+          "locations": [
+            525,
+            905,
+            1355
+          ]
+        },
+        "HUD_INCOME": {
+          "matching_lines": 14,
+          "locations": [
+            71,
+            113,
+            283,
+            349,
+            427,
+            495,
+            927,
+            929,
+            959,
+            971,
+            975,
+            1199,
+            1501,
+            1503
+          ]
+        },
+        "EPA_LEAD": {
+          "matching_lines": 1,
+          "locations": [
+            59
+          ]
+        },
+        "HUD_FAIR": {
+          "matching_lines": 18,
+          "locations": [
+            65,
+            71,
+            73,
+            79,
+            81,
+            83,
+            85,
+            87,
+            89,
+            93,
+            97,
+            99,
+            101,
+            109,
+            113,
+            115,
+            119,
+            121
+          ]
+        }
+      },
+      "conclusion": "Searched every counted document for complaint, one year, 365 and 12 months, then read matching contexts. Only HUD_FAIR states the one-year HUD discrimination complaint deadline. HUD_SELECTION refers complaints to HUD but gives no filing deadline; its one-year example is a waiting-list duration. HUD_INCOME and EPA_LEAD use year/month figures for unrelated subjects."
+    },
+    "Q5": {
+      "pattern": "extremely low|income.target|40%|forty",
+      "source_results": {
+        "HUD_SELECTION": {
+          "matching_lines": 63,
+          "locations": [
+            33,
+            49,
+            53,
+            99,
+            123,
+            209,
+            213,
+            215,
+            217,
+            219,
+            221,
+            223,
+            225,
+            227,
+            233,
+            235,
+            239,
+            241,
+            243,
+            245,
+            357,
+            671,
+            849,
+            875,
+            877,
+            879,
+            883,
+            953,
+            999,
+            1089,
+            1165,
+            1167,
+            1169,
+            1175,
+            1177,
+            1179,
+            1183,
+            1185,
+            1187,
+            1189,
+            1191,
+            1193,
+            1195,
+            1197,
+            1199,
+            1201,
+            1203,
+            1205,
+            1207,
+            1209,
+            1219,
+            1221,
+            1225,
+            1227,
+            1229,
+            1231,
+            1241,
+            1243,
+            1245,
+            1247,
+            1249,
+            1251,
+            1267
+          ]
+        },
+        "HUD_INCOME": {
+          "matching_lines": 1,
+          "locations": [
+            43
+          ]
+        },
+        "EPA_LEAD": {
+          "matching_lines": 0,
+          "locations": []
+        },
+        "HUD_FAIR": {
+          "matching_lines": 0,
+          "locations": []
+        }
+      },
+      "conclusion": "Searched every counted document for extremely low, income.target, 40% and forty and read the matching contexts. Only HUD_SELECTION contains the 40% income-targeting rule. HUD_INCOME lists extremely low-income family as a key term without the rule; the two other documents have no matching discussion."
+    }
+  }
+}

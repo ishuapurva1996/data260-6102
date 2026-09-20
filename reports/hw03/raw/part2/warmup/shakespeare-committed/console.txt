@@ -1,0 +1,44 @@
+2026-09-20T08:31:21.834910+00:00 COMMAND: /Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/part2-retrieval/.venv-retrieval/bin/python code/retrieval_compare.py warmup --run-id shakespeare-committed
+Code revision: cc0a57bae6e19778021643bffebf5c66d5e7c0a3; freeze: ungraded warm-up
+LLM is explicitly disabled. Using MockLLM.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 6599.65it/s]
+
+2026-09-20T08:31:25.445402+00:00 BUILD token
+LLM is explicitly disabled. Using MockLLM.
+Index ready: 19 chunks; stats: {"technique": "token", "chunk_count": 19, "average_character_length": 745.6315789473684, "average_token_length": 192.52631578947367, "average_context_character_length": 745.6315789473684, "average_context_token_length": 192.52631578947367, "max_seq_length": 256, "token_lengths_include_special_tokens": true, "indexed_truncation_count": 0, "indexed_truncation_fraction": 0.0, "semantic_buffer_count": 0, "semantic_buffer_truncation_count": 0, "semantic_buffer_truncation_fraction": 0.0}
+
+token | W1 | Why are the citizens angry about grain?
+Query dimension: 384; first 8: [0.05412139371037483, 0.028430456295609474, 0.125508114695549, 0.05227244272828102, 0.07493001222610474, -0.0491938516497612, 0.057641297578811646, -0.034301336854696274]
+Vector shapes: query=[384], documents=[3, 384]
+rank | store_score | cosine_sim | chunk_len | preview
+1 | 0.317765 | 0.317765 | 774 | the city You cry against the noble senate, who, Under the gods, keep you in awe, which else Would feed on one another? What's their seeking? MENENIUS: For corn
+2 | 0.298156 | 0.298156 | 747 | the general food at first, Which you do live upon; and fit it is, Because I am the store-house and the shop Of the whole body: but, if you do remember, I send i
+3 | 0.292431 | 0.292431 | 793 | quarry With thousands of these quarter'd slaves, as high As I could pick my lance. MENENIUS: Nay, these are almost thoroughly persuaded; For though abundantly
+Search-only durations (ms): [0.4516, 0.43, 0.4271, 0.4183, 0.4157, 0.4115, 0.4126, 0.4108, 0.4149, 0.4045]
+
+2026-09-20T08:31:26.056269+00:00 BUILD semantic
+LLM is explicitly disabled. Using MockLLM.
+Index ready: 8 chunks; stats: {"technique": "semantic", "chunk_count": 8, "average_character_length": 1500.0, "average_token_length": 383.25, "average_context_character_length": 1500.0, "average_context_token_length": 383.25, "max_seq_length": 256, "token_lengths_include_special_tokens": true, "indexed_truncation_count": 5, "indexed_truncation_fraction": 0.625, "semantic_buffer_count": 137, "semantic_buffer_truncation_count": 0, "semantic_buffer_truncation_fraction": 0.0}
+
+semantic | W1 | Why are the citizens angry about grain?
+Query dimension: 384; first 8: [0.05412139371037483, 0.028430456295609474, 0.125508114695549, 0.05227244272828102, 0.07493001222610474, -0.0491938516497612, 0.057641297578811646, -0.034301336854696274]
+Vector shapes: query=[384], documents=[3, 384]
+rank | store_score | cosine_sim | chunk_len | preview
+1 | 0.284068 | 0.284068 | 1522 | They say! They'll sit by the fire, and presume to know What's done i' the Capitol; who's like to rise, Who thrives and who declines; side factions and give out
+2 | 0.255871 | 0.255871 | 2273 | First Citizen: Before we proceed any further, hear me speak. All: Speak, speak. First Citizen: You are all resolved rather to die than to famish? All: Resolv
+3 | 0.200459 | 0.200459 | 421 | Trust Ye? With every minute you do change a mind, And call him noble that was now your hate, Him vile that was your garland. What's the matter, That in these se
+Search-only durations (ms): [0.3361, 0.3279, 0.3235, 0.3218, 0.3298, 0.3273, 0.3267, 0.32, 0.3178, 0.3316]
+
+2026-09-20T08:31:28.235196+00:00 BUILD sentence_window
+LLM is explicitly disabled. Using MockLLM.
+Index ready: 137 chunks; stats: {"technique": "sentence_window", "chunk_count": 137, "average_character_length": 87.5912408759124, "average_token_length": 24.26277372262774, "average_context_character_length": 613.6934306569343, "average_context_token_length": 156.5182481751825, "max_seq_length": 256, "token_lengths_include_special_tokens": true, "indexed_truncation_count": 0, "indexed_truncation_fraction": 0.0, "semantic_buffer_count": 0, "semantic_buffer_truncation_count": 0, "semantic_buffer_truncation_fraction": 0.0}
+
+sentence_window | W1 | Why are the citizens angry about grain?
+Query dimension: 384; first 8: [0.05412139371037483, 0.028430456295609474, 0.125508114695549, 0.05227244272828102, 0.07493001222610474, -0.0491938516497612, 0.057641297578811646, -0.034301336854696274]
+Vector shapes: query=[384], documents=[3, 384]
+rank | store_score | cosine_sim | chunk_len | preview
+1 | 0.605802 | 0.605802 | 31 | They say there's grain enough!
+2 | 0.402853 | 0.402853 | 70 | First Citizen: Let us kill him, and we'll have corn at our own price.
+3 | 0.402484 | 0.402484 | 468 | They said they were an-hungry; sigh'd forth proverbs, That hunger broke stone walls, that dogs must eat, That meat was made for mouths, that the gods sent not C
+Search-only durations (ms): [1.4925, 1.3257, 1.4659, 1.478, 1.3233, 1.2979, 1.2956, 1.2706, 1.2671, 1.2867]
+2026-09-20T08:31:29.407118+00:00 END status=complete

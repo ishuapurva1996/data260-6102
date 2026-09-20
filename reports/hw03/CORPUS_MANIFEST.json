@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "domain": "Rental Housing Listings",
+  "source_count": 4,
+  "sources": [
+    {
+      "source_id": "HUD_SELECTION",
+      "title": "HUD Handbook 4350.3 REV-1, Chapter 4: Waiting List and Tenant Selection",
+      "url": "https://www.hud.gov/sites/documents/43503c4hsgh.pdf",
+      "accessed_at": "2026-09-20T08:24:34.666769Z",
+      "version": "Archived 2013 PDF; pages contain 2007, 2009 and 2013 revision dates",
+      "path": "reports/hw03/corpus/text/hud_tenant_selection.txt",
+      "bytes": 145418,
+      "sha256": "970dfc1f3a5587184b737e1019bea26eaacc42d84ff12e05a387b8c34c2d3fa1",
+      "original_path": "reports/hw03/corpus/originals/hud_tenant_selection.pdf",
+      "original_bytes": 478205,
+      "original_sha256": "103c44a4e41f855a6d1bed1b976749e77dbb0d53ebeb4fc3db119c76a015f3ef",
+      "extraction_notes": "PDF pages 1–67; repeated headers/footers removed; one repeated substantive paragraph removed. Poppler pdftotext 26.04.0 -layout; NFKC normalization, line wrapping joined, PDF bullets normalized. Tables remain flattened in reading order; originals are authoritative for table layout.",
+      "rights": "Official HUD federal publication; HUD public-domain policy covers written materials created for its website. No third-party copyright notice identified in the counted text. US public domain."
+    },
+    {
+      "source_id": "HUD_INCOME",
+      "title": "HUD Handbook 4350.3 REV-1, Chapter 5: Determining Income and Calculating Rent",
+      "url": "https://www.hud.gov/sites/documents/43503c5hsgh.pdf",
+      "accessed_at": "2026-09-20T08:24:45.453746Z",
+      "version": "Archived 2013 PDF; pages contain 2007, 2009 and 2013 revision dates",
+      "path": "reports/hw03/corpus/text/hud_income_rent.txt",
+      "bytes": 160419,
+      "sha256": "2efa6b7ef8ad15a2336b38929741b87e97ea25a996e8fed585e3cc3628612f5b",
+      "original_path": "reports/hw03/corpus/originals/hud_income_rent.pdf",
+      "original_bytes": 593676,
+      "original_sha256": "99ad54fc26c25eb56e436ec7c0a26c4a588190acc6262c823d67df209dde96fb",
+      "extraction_notes": "PDF pages 1–81; repeated headers/footers removed; one repeated substantive paragraph removed. Poppler pdftotext 26.04.0 -layout; NFKC normalization, line wrapping joined, PDF bullets normalized. Tables remain flattened in reading order; originals are authoritative for table layout.",
+      "rights": "Official HUD federal publication; HUD public-domain policy covers written materials created for its website. No third-party copyright notice identified in the counted text. US public domain."
+    },
+    {
+      "source_id": "EPA_LEAD",
+      "title": "Protect Your Family From Lead in Your Home",
+      "url": "https://www.epa.gov/system/files/documents/2026-02/protectyourfamily_pamphlet_2026_3.pdf",
+      "accessed_at": "2026-09-20T08:24:44.727609Z",
+      "version": "January 2026; federal authors EPA, CPSC and HUD",
+      "path": "reports/hw03/corpus/text/epa_lead_2026.txt",
+      "bytes": 21608,
+      "sha256": "3830114fcc78a08e1624b394b68b1a6ae42b3376e9b9a8d41707db68e50d4cad",
+      "original_path": "reports/hw03/corpus/originals/epa_lead_2026.pdf",
+      "original_bytes": 1403637,
+      "original_sha256": "a094896c4c29df8f5b7f064bef8108346f476d3fcbbca8ae950d8e9629fb0ef8",
+      "extraction_notes": "PDF pages 2–16 only; cover, contact directories and repeated back-cover summary excluded; isolated page numbers removed. Poppler pdftotext 26.04.0 -layout; NFKC normalization, line wrapping joined, PDF bullets normalized. Tables remain flattened in reading order; originals are authoritative for table layout.",
+      "rights": "Official joint EPA/CPSC/HUD federal educational text. EPA permits noncommercial scientific and educational distribution; no third-party copyright notice identified in the counted text. Original PDF retained for educational audit; no claim is made about unrestricted commercial reuse of its photographs."
+    },
+    {
+      "source_id": "HUD_FAIR",
+      "title": "Fair Housing: Equal Opportunity for All",
+      "url": "https://www.hud.gov/sites/documents/fheo_booklet_eng.pdf",
+      "accessed_at": "2026-09-20T08:24:50.950871Z",
+      "version": "Archived booklet; PDF metadata creation/modification June 6, 2011; publication date not asserted",
+      "path": "reports/hw03/corpus/text/hud_fair_housing.txt",
+      "bytes": 18414,
+      "sha256": "c47c156c57eaaf0b84fb278f5096053548b90ff0cad5ff426c64190b51be7f5e",
+      "original_path": "reports/hw03/corpus/originals/hud_fair_housing.pdf",
+      "original_bytes": 5468378,
+      "original_sha256": "03467e13022a3a2b3a0c99b2def6b419949bc93cbdca0d5f3e91077168c16fd2",
+      "extraction_notes": "PDF pages 5–10 and 14–19 only; cover, contents, introduction, blank notes and regional contact directory excluded; partial directory text on pages 10 and 14 removed; repeated heading/footer removed. Poppler pdftotext 26.04.0 -layout; NFKC normalization, line wrapping joined, PDF bullets normalized. Tables remain flattened in reading order; originals are authoritative for table layout.",
+      "rights": "Official HUD federal publication; HUD public-domain policy covers written materials created for its website. No third-party copyright notice identified in the counted text. US public domain."
+    }
+  ],
+  "total_text_bytes": 345859,
+  "hard_minimum_bytes": 204800,
+  "target_bytes": 250000,
+  "extraction_script": "reports/hw03/corpus/extract_corpus.py",
+  "page_map": "reports/hw03/corpus/page_map.json",
+  "corpus_scope": "Only sources[].path text files are indexed. PDFs, previews, scripts and audit metadata are excluded."
+}

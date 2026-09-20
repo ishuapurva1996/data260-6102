@@ -1,0 +1,65 @@
+# Gold questions authored from source reading before graded retrieval.
+questions:
+  - id: "Q1"
+    designation: "baseline"
+    question: "A HUD-assisted rental applicant receives a rejection notice. Within how many days may the applicant request a meeting with the owner to dispute the rejection?"
+    expected_answer: "Within 14 days. The archived handbook gives the applicant the right to respond in writing or request a meeting within 14 days to dispute the rejection."
+    expected_source_ids: ["HUD_SELECTION"]
+    expected_source_files: ["reports/hw03/corpus/text/hud_tenant_selection.txt"]
+    evidence:
+      - source_id: "HUD_SELECTION"
+        quote: "The applicant’s right to respond to the owner in writing or request a meeting within 14 days to dispute the rejection."
+        location: "HUD Handbook 4350.3 REV-1, paragraph 4-9.C.2.b; printed page 4-28; PDF page 28."
+    single_source: true
+    single_source_verification: "Searched every counted document for rejection, denial, appeal, hearing, 14 days and fourteen, then read the matching contexts. Only HUD_SELECTION contains the applicant rejection-meeting 14-day rule. HUD_FAIR discusses discrimination hearings, and HUD_INCOME mentions rejection without this deadline."
+  - id: "Q2"
+    designation: "baseline"
+    question: "In the archived HUD Handbook’s rent calculation, how much is deducted from annual income for each eligible dependent?"
+    expected_answer: "The archived handbook specifies a $480 deduction from annual income for each eligible dependent. This is the amount stated in the frozen historical source, not a claim about current program rules."
+    expected_source_ids: ["HUD_INCOME"]
+    expected_source_files: ["reports/hw03/corpus/text/hud_income_rent.txt"]
+    evidence:
+      - source_id: "HUD_INCOME"
+        quote: "There are five possible deductions that may be subtracted from annual income based on allowable family expenses and family characteristics."
+        location: "Paragraph 5-9.A; printed page 5-41; PDF page 41."
+      - source_id: "HUD_INCOME"
+        quote: "A family receives a deduction of $480 for each family member *(except foster children and foster adults)* who is:"
+        location: "Paragraph 5-10.A.1; printed page 5-41; PDF page 41; eligibility continues below the quoted sentence."
+    single_source: true
+    single_source_verification: "Searched every counted document for dependent, $480, deduct and adjusted income, then inspected matching contexts. Only HUD_INCOME contains the dependent deduction and amount. HUD_SELECTION has unrelated uses of dependent/independent; the EPA and fair-housing booklet have none."
+  - id: "Q3"
+    designation: "baseline"
+    question: "A renter is worried about lead in tap water. Does boiling the water remove lead, and should drinking, cooking and baby formula use hot or cold water?"
+    expected_answer: "Boiling water does not remove lead. The EPA pamphlet says to use only cold water for drinking, cooking and making baby formula."
+    expected_source_ids: ["EPA_LEAD"]
+    expected_source_files: ["reports/hw03/corpus/text/epa_lead_2026.txt"]
+    evidence:
+      - source_id: "EPA_LEAD"
+        quote: "Use only cold water for drinking, cooking and making baby formula. Boiling water does not remove lead from water."
+        location: "Other Sources of Lead / Lead in Drinking Water; printed page 13; PDF page 15."
+    single_source: true
+    single_source_verification: "Searched every counted document for boil, cold water, drinking water and plumbing. All matches occur in EPA_LEAD. Read its drinking-water section and inspected the corresponding PDF page. No other counted document contains either requested fact."
+  - id: "Q4"
+    designation: "baseline"
+    question: "A rental applicant believes housing discrimination occurred. What time limit does HUD’s Fair Housing booklet give for filing a complaint with HUD?"
+    expected_answer: "One year after the alleged discrimination occurred or ended; the booklet recommends filing as soon as possible."
+    expected_source_ids: ["HUD_FAIR"]
+    expected_source_files: ["reports/hw03/corpus/text/hud_fair_housing.txt"]
+    evidence:
+      - source_id: "HUD_FAIR"
+        quote: "You have one year after the alleged discrimination occurred or ended to file a complaint with HUD, but you should file it as soon as possible."
+        location: "If You Think Your Rights Have Been Violated; printed page 6; PDF page 10."
+    single_source: true
+    single_source_verification: "Searched every counted document for complaint, one year, 365 and 12 months, then read matching contexts. Only HUD_FAIR states the one-year HUD discrimination complaint deadline. HUD_SELECTION refers complaints to HUD but gives no filing deadline; its one-year example is a waiting-list duration. HUD_INCOME and EPA_LEAD use year/month figures for unrelated subjects."
+  - id: "Q5"
+    designation: "baseline"
+    question: "For project-based Section 8 rental housing, what minimum percentage of assisted units that become available during a project fiscal year must be leased to extremely low-income families?"
+    expected_answer: "At least 40% of the assisted dwelling units that become available for occupancy in the project fiscal year, according to the archived handbook."
+    expected_source_ids: ["HUD_SELECTION"]
+    expected_source_files: ["reports/hw03/corpus/text/hud_tenant_selection.txt"]
+    evidence:
+      - source_id: "HUD_SELECTION"
+        quote: "For each project assisted under a contract for project-based Section 8 assistance, the owner must lease not less than 40% of the dwelling units (assisted under the contract) that become available for occupancy in any project fiscal year to extremely low-income families."
+        location: "Paragraph 4-5.A, Income-Targeting; printed page 4-10; PDF page 10."
+    single_source: true
+    single_source_verification: "Searched every counted document for extremely low, income.target, 40% and forty and read the matching contexts. Only HUD_SELECTION contains the 40% income-targeting rule. HUD_INCOME lists extremely low-income family as a key term without the rule; the two other documents have no matching discussion."

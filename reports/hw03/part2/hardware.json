@@ -1,0 +1,9 @@
+{
+  "captured_at": "2026-09-20T08:35:35.940664+00:00",
+  "command": "/usr/sbin/sysctl -n machdep.cpu.brand_string hw.memsize hw.logicalcpu",
+  "cpu": "Apple M4",
+  "logical_cpus": 10,
+  "memory_bytes": 25769803776,
+  "note": "Read-only hardware probe after the campaign. The sandbox denied sysctl during the run, so run.json retains unavailable values; this supplemental probe used approval escalation on the same host.",
+  "stdout": "Apple M4\n25769803776\n10\n"
+}

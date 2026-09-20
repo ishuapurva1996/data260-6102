@@ -1,0 +1,824 @@
+[
+  {
+    "context_text": "First Citizen:\nBefore we proceed any further, hear me speak.\n\n All:\nSpeak, speak.\n\n First Citizen:\nYou are all resolved rather to die than to famish?\n\n All:\nResolved. ",
+    "indexed_text": "First Citizen:\nBefore we proceed any further, hear me speak.\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000000",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "First Citizen:\nBefore we proceed any further, hear me speak.\n\n All:\nSpeak, speak.\n\n First Citizen:\nYou are all resolved rather to die than to famish?\n\n All:\nResolved.  resolved.\n\n",
+    "indexed_text": "All:\nSpeak, speak.\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000001",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "First Citizen:\nBefore we proceed any further, hear me speak.\n\n All:\nSpeak, speak.\n\n First Citizen:\nYou are all resolved rather to die than to famish?\n\n All:\nResolved.  resolved.\n\n First Citizen:\nFirst, you know Caius Marcius is chief enemy to the people.\n\n",
+    "indexed_text": "First Citizen:\nYou are all resolved rather to die than to famish?\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000002",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "First Citizen:\nBefore we proceed any further, hear me speak.\n\n All:\nSpeak, speak.\n\n First Citizen:\nYou are all resolved rather to die than to famish?\n\n All:\nResolved.  resolved.\n\n First Citizen:\nFirst, you know Caius Marcius is chief enemy to the people.\n\n All:\nWe know't, we know't.\n\n",
+    "indexed_text": "All:\nResolved. ",
+    "node_id": "sentence_window:89c47b21fc294f82:000003",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "All:\nSpeak, speak.\n\n First Citizen:\nYou are all resolved rather to die than to famish?\n\n All:\nResolved.  resolved.\n\n First Citizen:\nFirst, you know Caius Marcius is chief enemy to the people.\n\n All:\nWe know't, we know't.\n\n First Citizen:\nLet us kill him, and we'll have corn at our own price.\n",
+    "indexed_text": "resolved.\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000004",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "First Citizen:\nYou are all resolved rather to die than to famish?\n\n All:\nResolved.  resolved.\n\n First Citizen:\nFirst, you know Caius Marcius is chief enemy to the people.\n\n All:\nWe know't, we know't.\n\n First Citizen:\nLet us kill him, and we'll have corn at our own price.\n Is't a verdict?\n\n",
+    "indexed_text": "First Citizen:\nFirst, you know Caius Marcius is chief enemy to the people.\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000005",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "All:\nResolved.  resolved.\n\n First Citizen:\nFirst, you know Caius Marcius is chief enemy to the people.\n\n All:\nWe know't, we know't.\n\n First Citizen:\nLet us kill him, and we'll have corn at our own price.\n Is't a verdict?\n\n All:\nNo more talking on't; let it be done: away, away!\n\n",
+    "indexed_text": "All:\nWe know't, we know't.\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000006",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "resolved.\n\n First Citizen:\nFirst, you know Caius Marcius is chief enemy to the people.\n\n All:\nWe know't, we know't.\n\n First Citizen:\nLet us kill him, and we'll have corn at our own price.\n Is't a verdict?\n\n All:\nNo more talking on't; let it be done: away, away!\n\n Second Citizen:\nOne word, good citizens.\n\n",
+    "indexed_text": "First Citizen:\nLet us kill him, and we'll have corn at our own price.\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000007",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "First Citizen:\nFirst, you know Caius Marcius is chief enemy to the people.\n\n All:\nWe know't, we know't.\n\n First Citizen:\nLet us kill him, and we'll have corn at our own price.\n Is't a verdict?\n\n All:\nNo more talking on't; let it be done: away, away!\n\n Second Citizen:\nOne word, good citizens.\n\n First Citizen:\nWe are accounted poor citizens, the patricians good.\n",
+    "indexed_text": "Is't a verdict?\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000008",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "All:\nWe know't, we know't.\n\n First Citizen:\nLet us kill him, and we'll have corn at our own price.\n Is't a verdict?\n\n All:\nNo more talking on't; let it be done: away, away!\n\n Second Citizen:\nOne word, good citizens.\n\n First Citizen:\nWe are accounted poor citizens, the patricians good.\n What authority surfeits on would relieve us: if they\nwould yield us but the superfluity, while it were\nwholesome, we might guess they relieved us humanely;\nbut they think we are too dear: the leanness that\nafflicts us, the object of our misery, is as an\ninventory to particularise their abundance; our\nsufferance is a gain to them Let us revenge this with\nour pikes, ere we become rakes: for the gods know I\nspeak this in hunger for bread, not in thirst for revenge.\n\n",
+    "indexed_text": "All:\nNo more talking on't; let it be done: away, away!\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000009",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "First Citizen:\nLet us kill him, and we'll have corn at our own price.\n Is't a verdict?\n\n All:\nNo more talking on't; let it be done: away, away!\n\n Second Citizen:\nOne word, good citizens.\n\n First Citizen:\nWe are accounted poor citizens, the patricians good.\n What authority surfeits on would relieve us: if they\nwould yield us but the superfluity, while it were\nwholesome, we might guess they relieved us humanely;\nbut they think we are too dear: the leanness that\nafflicts us, the object of our misery, is as an\ninventory to particularise their abundance; our\nsufferance is a gain to them Let us revenge this with\nour pikes, ere we become rakes: for the gods know I\nspeak this in hunger for bread, not in thirst for revenge.\n\n Second Citizen:\nWould you proceed especially against Caius Marcius?\n\n",
+    "indexed_text": "Second Citizen:\nOne word, good citizens.\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000010",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "Is't a verdict?\n\n All:\nNo more talking on't; let it be done: away, away!\n\n Second Citizen:\nOne word, good citizens.\n\n First Citizen:\nWe are accounted poor citizens, the patricians good.\n What authority surfeits on would relieve us: if they\nwould yield us but the superfluity, while it were\nwholesome, we might guess they relieved us humanely;\nbut they think we are too dear: the leanness that\nafflicts us, the object of our misery, is as an\ninventory to particularise their abundance; our\nsufferance is a gain to them Let us revenge this with\nour pikes, ere we become rakes: for the gods know I\nspeak this in hunger for bread, not in thirst for revenge.\n\n Second Citizen:\nWould you proceed especially against Caius Marcius?\n\n All:\nAgainst him first: he's a very dog to the commonalty.\n\n",
+    "indexed_text": "First Citizen:\nWe are accounted poor citizens, the patricians good.\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000011",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "All:\nNo more talking on't; let it be done: away, away!\n\n Second Citizen:\nOne word, good citizens.\n\n First Citizen:\nWe are accounted poor citizens, the patricians good.\n What authority surfeits on would relieve us: if they\nwould yield us but the superfluity, while it were\nwholesome, we might guess they relieved us humanely;\nbut they think we are too dear: the leanness that\nafflicts us, the object of our misery, is as an\ninventory to particularise their abundance; our\nsufferance is a gain to them Let us revenge this with\nour pikes, ere we become rakes: for the gods know I\nspeak this in hunger for bread, not in thirst for revenge.\n\n Second Citizen:\nWould you proceed especially against Caius Marcius?\n\n All:\nAgainst him first: he's a very dog to the commonalty.\n\n Second Citizen:\nConsider you what services he has done for his country?\n\n",
+    "indexed_text": "What authority surfeits on would relieve us: if they\nwould yield us but the superfluity, while it were\nwholesome, we might guess they relieved us humanely;\nbut they think we are too dear: the leanness that\nafflicts us, the object of our misery, is as an\ninventory to particularise their abundance; our\nsufferance is a gain to them Let us revenge this with\nour pikes, ere we become rakes: for the gods know I\nspeak this in hunger for bread, not in thirst for revenge.\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000012",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "Second Citizen:\nOne word, good citizens.\n\n First Citizen:\nWe are accounted poor citizens, the patricians good.\n What authority surfeits on would relieve us: if they\nwould yield us but the superfluity, while it were\nwholesome, we might guess they relieved us humanely;\nbut they think we are too dear: the leanness that\nafflicts us, the object of our misery, is as an\ninventory to particularise their abundance; our\nsufferance is a gain to them Let us revenge this with\nour pikes, ere we become rakes: for the gods know I\nspeak this in hunger for bread, not in thirst for revenge.\n\n Second Citizen:\nWould you proceed especially against Caius Marcius?\n\n All:\nAgainst him first: he's a very dog to the commonalty.\n\n Second Citizen:\nConsider you what services he has done for his country?\n\n First Citizen:\nVery well; and could be content to give him good\nreport fort, but that he pays himself with being proud.\n\n",
+    "indexed_text": "Second Citizen:\nWould you proceed especially against Caius Marcius?\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000013",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "First Citizen:\nWe are accounted poor citizens, the patricians good.\n What authority surfeits on would relieve us: if they\nwould yield us but the superfluity, while it were\nwholesome, we might guess they relieved us humanely;\nbut they think we are too dear: the leanness that\nafflicts us, the object of our misery, is as an\ninventory to particularise their abundance; our\nsufferance is a gain to them Let us revenge this with\nour pikes, ere we become rakes: for the gods know I\nspeak this in hunger for bread, not in thirst for revenge.\n\n Second Citizen:\nWould you proceed especially against Caius Marcius?\n\n All:\nAgainst him first: he's a very dog to the commonalty.\n\n Second Citizen:\nConsider you what services he has done for his country?\n\n First Citizen:\nVery well; and could be content to give him good\nreport fort, but that he pays himself with being proud.\n\n Second Citizen:\nNay, but speak not maliciously.\n\n",
+    "indexed_text": "All:\nAgainst him first: he's a very dog to the commonalty.\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000014",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "What authority surfeits on would relieve us: if they\nwould yield us but the superfluity, while it were\nwholesome, we might guess they relieved us humanely;\nbut they think we are too dear: the leanness that\nafflicts us, the object of our misery, is as an\ninventory to particularise their abundance; our\nsufferance is a gain to them Let us revenge this with\nour pikes, ere we become rakes: for the gods know I\nspeak this in hunger for bread, not in thirst for revenge.\n\n Second Citizen:\nWould you proceed especially against Caius Marcius?\n\n All:\nAgainst him first: he's a very dog to the commonalty.\n\n Second Citizen:\nConsider you what services he has done for his country?\n\n First Citizen:\nVery well; and could be content to give him good\nreport fort, but that he pays himself with being proud.\n\n Second Citizen:\nNay, but speak not maliciously.\n\n First Citizen:\nI say unto you, what he hath done famously, he did\nit to that end: though soft-conscienced men can be\ncontent to say it was for his country he did it to\nplease his mother and to be partly proud; which he\nis, even till the altitude of his virtue.\n\n",
+    "indexed_text": "Second Citizen:\nConsider you what services he has done for his country?\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000015",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "Second Citizen:\nWould you proceed especially against Caius Marcius?\n\n All:\nAgainst him first: he's a very dog to the commonalty.\n\n Second Citizen:\nConsider you what services he has done for his country?\n\n First Citizen:\nVery well; and could be content to give him good\nreport fort, but that he pays himself with being proud.\n\n Second Citizen:\nNay, but speak not maliciously.\n\n First Citizen:\nI say unto you, what he hath done famously, he did\nit to that end: though soft-conscienced men can be\ncontent to say it was for his country he did it to\nplease his mother and to be partly proud; which he\nis, even till the altitude of his virtue.\n\n Second Citizen:\nWhat he cannot help in his nature, you account a\nvice in him. ",
+    "indexed_text": "First Citizen:\nVery well; and could be content to give him good\nreport fort, but that he pays himself with being proud.\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000016",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "All:\nAgainst him first: he's a very dog to the commonalty.\n\n Second Citizen:\nConsider you what services he has done for his country?\n\n First Citizen:\nVery well; and could be content to give him good\nreport fort, but that he pays himself with being proud.\n\n Second Citizen:\nNay, but speak not maliciously.\n\n First Citizen:\nI say unto you, what he hath done famously, he did\nit to that end: though soft-conscienced men can be\ncontent to say it was for his country he did it to\nplease his mother and to be partly proud; which he\nis, even till the altitude of his virtue.\n\n Second Citizen:\nWhat he cannot help in his nature, you account a\nvice in him.  You must in no way say he is covetous.\n\n",
+    "indexed_text": "Second Citizen:\nNay, but speak not maliciously.\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000017",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "Second Citizen:\nConsider you what services he has done for his country?\n\n First Citizen:\nVery well; and could be content to give him good\nreport fort, but that he pays himself with being proud.\n\n Second Citizen:\nNay, but speak not maliciously.\n\n First Citizen:\nI say unto you, what he hath done famously, he did\nit to that end: though soft-conscienced men can be\ncontent to say it was for his country he did it to\nplease his mother and to be partly proud; which he\nis, even till the altitude of his virtue.\n\n Second Citizen:\nWhat he cannot help in his nature, you account a\nvice in him.  You must in no way say he is covetous.\n\n First Citizen:\nIf I must not, I need not be barren of accusations;\nhe hath faults, with surplus, to tire in repetition.\n",
+    "indexed_text": "First Citizen:\nI say unto you, what he hath done famously, he did\nit to that end: though soft-conscienced men can be\ncontent to say it was for his country he did it to\nplease his mother and to be partly proud; which he\nis, even till the altitude of his virtue.\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000018",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "First Citizen:\nVery well; and could be content to give him good\nreport fort, but that he pays himself with being proud.\n\n Second Citizen:\nNay, but speak not maliciously.\n\n First Citizen:\nI say unto you, what he hath done famously, he did\nit to that end: though soft-conscienced men can be\ncontent to say it was for his country he did it to\nplease his mother and to be partly proud; which he\nis, even till the altitude of his virtue.\n\n Second Citizen:\nWhat he cannot help in his nature, you account a\nvice in him.  You must in no way say he is covetous.\n\n First Citizen:\nIf I must not, I need not be barren of accusations;\nhe hath faults, with surplus, to tire in repetition.\n What shouts are these? ",
+    "indexed_text": "Second Citizen:\nWhat he cannot help in his nature, you account a\nvice in him. ",
+    "node_id": "sentence_window:89c47b21fc294f82:000019",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "Second Citizen:\nNay, but speak not maliciously.\n\n First Citizen:\nI say unto you, what he hath done famously, he did\nit to that end: though soft-conscienced men can be\ncontent to say it was for his country he did it to\nplease his mother and to be partly proud; which he\nis, even till the altitude of his virtue.\n\n Second Citizen:\nWhat he cannot help in his nature, you account a\nvice in him.  You must in no way say he is covetous.\n\n First Citizen:\nIf I must not, I need not be barren of accusations;\nhe hath faults, with surplus, to tire in repetition.\n What shouts are these?  The other side o' the city\nis risen: why stay we prating here? ",
+    "indexed_text": "You must in no way say he is covetous.\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000020",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "First Citizen:\nI say unto you, what he hath done famously, he did\nit to that end: though soft-conscienced men can be\ncontent to say it was for his country he did it to\nplease his mother and to be partly proud; which he\nis, even till the altitude of his virtue.\n\n Second Citizen:\nWhat he cannot help in his nature, you account a\nvice in him.  You must in no way say he is covetous.\n\n First Citizen:\nIf I must not, I need not be barren of accusations;\nhe hath faults, with surplus, to tire in repetition.\n What shouts are these?  The other side o' the city\nis risen: why stay we prating here?  to the Capitol!\n\n",
+    "indexed_text": "First Citizen:\nIf I must not, I need not be barren of accusations;\nhe hath faults, with surplus, to tire in repetition.\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000021",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "Second Citizen:\nWhat he cannot help in his nature, you account a\nvice in him.  You must in no way say he is covetous.\n\n First Citizen:\nIf I must not, I need not be barren of accusations;\nhe hath faults, with surplus, to tire in repetition.\n What shouts are these?  The other side o' the city\nis risen: why stay we prating here?  to the Capitol!\n\n All:\nCome, come.\n\n",
+    "indexed_text": "What shouts are these? ",
+    "node_id": "sentence_window:89c47b21fc294f82:000022",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "You must in no way say he is covetous.\n\n First Citizen:\nIf I must not, I need not be barren of accusations;\nhe hath faults, with surplus, to tire in repetition.\n What shouts are these?  The other side o' the city\nis risen: why stay we prating here?  to the Capitol!\n\n All:\nCome, come.\n\n First Citizen:\nSoft! ",
+    "indexed_text": "The other side o' the city\nis risen: why stay we prating here? ",
+    "node_id": "sentence_window:89c47b21fc294f82:000023",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "First Citizen:\nIf I must not, I need not be barren of accusations;\nhe hath faults, with surplus, to tire in repetition.\n What shouts are these?  The other side o' the city\nis risen: why stay we prating here?  to the Capitol!\n\n All:\nCome, come.\n\n First Citizen:\nSoft!  who comes here?\n\n",
+    "indexed_text": "to the Capitol!\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000024",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "What shouts are these?  The other side o' the city\nis risen: why stay we prating here?  to the Capitol!\n\n All:\nCome, come.\n\n First Citizen:\nSoft!  who comes here?\n\n Second Citizen:\nWorthy Menenius Agrippa; one that hath always loved\nthe people.\n\n",
+    "indexed_text": "All:\nCome, come.\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000025",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "The other side o' the city\nis risen: why stay we prating here?  to the Capitol!\n\n All:\nCome, come.\n\n First Citizen:\nSoft!  who comes here?\n\n Second Citizen:\nWorthy Menenius Agrippa; one that hath always loved\nthe people.\n\n First Citizen:\nHe's one honest enough: would all the rest were so!\n\n",
+    "indexed_text": "First Citizen:\nSoft! ",
+    "node_id": "sentence_window:89c47b21fc294f82:000026",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "to the Capitol!\n\n All:\nCome, come.\n\n First Citizen:\nSoft!  who comes here?\n\n Second Citizen:\nWorthy Menenius Agrippa; one that hath always loved\nthe people.\n\n First Citizen:\nHe's one honest enough: would all the rest were so!\n\n MENENIUS:\nWhat work's, my countrymen, in hand? ",
+    "indexed_text": "who comes here?\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000027",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "All:\nCome, come.\n\n First Citizen:\nSoft!  who comes here?\n\n Second Citizen:\nWorthy Menenius Agrippa; one that hath always loved\nthe people.\n\n First Citizen:\nHe's one honest enough: would all the rest were so!\n\n MENENIUS:\nWhat work's, my countrymen, in hand?  where go you\nWith bats and clubs? ",
+    "indexed_text": "Second Citizen:\nWorthy Menenius Agrippa; one that hath always loved\nthe people.\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000028",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "First Citizen:\nSoft!  who comes here?\n\n Second Citizen:\nWorthy Menenius Agrippa; one that hath always loved\nthe people.\n\n First Citizen:\nHe's one honest enough: would all the rest were so!\n\n MENENIUS:\nWhat work's, my countrymen, in hand?  where go you\nWith bats and clubs?  The matter? ",
+    "indexed_text": "First Citizen:\nHe's one honest enough: would all the rest were so!\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000029",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "who comes here?\n\n Second Citizen:\nWorthy Menenius Agrippa; one that hath always loved\nthe people.\n\n First Citizen:\nHe's one honest enough: would all the rest were so!\n\n MENENIUS:\nWhat work's, my countrymen, in hand?  where go you\nWith bats and clubs?  The matter?  speak, I pray you.\n\n",
+    "indexed_text": "MENENIUS:\nWhat work's, my countrymen, in hand? ",
+    "node_id": "sentence_window:89c47b21fc294f82:000030",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "Second Citizen:\nWorthy Menenius Agrippa; one that hath always loved\nthe people.\n\n First Citizen:\nHe's one honest enough: would all the rest were so!\n\n MENENIUS:\nWhat work's, my countrymen, in hand?  where go you\nWith bats and clubs?  The matter?  speak, I pray you.\n\n First Citizen:\nOur business is not unknown to the senate; they have\nhad inkling this fortnight what we intend to do,\nwhich now we'll show 'em in deeds. ",
+    "indexed_text": "where go you\nWith bats and clubs? ",
+    "node_id": "sentence_window:89c47b21fc294f82:000031",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "First Citizen:\nHe's one honest enough: would all the rest were so!\n\n MENENIUS:\nWhat work's, my countrymen, in hand?  where go you\nWith bats and clubs?  The matter?  speak, I pray you.\n\n First Citizen:\nOur business is not unknown to the senate; they have\nhad inkling this fortnight what we intend to do,\nwhich now we'll show 'em in deeds.  They say poor\nsuitors have strong breaths: they shall know we\nhave strong arms too.\n\n",
+    "indexed_text": "The matter? ",
+    "node_id": "sentence_window:89c47b21fc294f82:000032",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "MENENIUS:\nWhat work's, my countrymen, in hand?  where go you\nWith bats and clubs?  The matter?  speak, I pray you.\n\n First Citizen:\nOur business is not unknown to the senate; they have\nhad inkling this fortnight what we intend to do,\nwhich now we'll show 'em in deeds.  They say poor\nsuitors have strong breaths: they shall know we\nhave strong arms too.\n\n MENENIUS:\nWhy, masters, my good friends, mine honest neighbours,\nWill you undo yourselves?\n\n",
+    "indexed_text": "speak, I pray you.\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000033",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "where go you\nWith bats and clubs?  The matter?  speak, I pray you.\n\n First Citizen:\nOur business is not unknown to the senate; they have\nhad inkling this fortnight what we intend to do,\nwhich now we'll show 'em in deeds.  They say poor\nsuitors have strong breaths: they shall know we\nhave strong arms too.\n\n MENENIUS:\nWhy, masters, my good friends, mine honest neighbours,\nWill you undo yourselves?\n\n First Citizen:\nWe cannot, sir, we are undone already.\n\n",
+    "indexed_text": "First Citizen:\nOur business is not unknown to the senate; they have\nhad inkling this fortnight what we intend to do,\nwhich now we'll show 'em in deeds. ",
+    "node_id": "sentence_window:89c47b21fc294f82:000034",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "The matter?  speak, I pray you.\n\n First Citizen:\nOur business is not unknown to the senate; they have\nhad inkling this fortnight what we intend to do,\nwhich now we'll show 'em in deeds.  They say poor\nsuitors have strong breaths: they shall know we\nhave strong arms too.\n\n MENENIUS:\nWhy, masters, my good friends, mine honest neighbours,\nWill you undo yourselves?\n\n First Citizen:\nWe cannot, sir, we are undone already.\n\n MENENIUS:\nI tell you, friends, most charitable care\nHave the patricians of you. ",
+    "indexed_text": "They say poor\nsuitors have strong breaths: they shall know we\nhave strong arms too.\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000035",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "speak, I pray you.\n\n First Citizen:\nOur business is not unknown to the senate; they have\nhad inkling this fortnight what we intend to do,\nwhich now we'll show 'em in deeds.  They say poor\nsuitors have strong breaths: they shall know we\nhave strong arms too.\n\n MENENIUS:\nWhy, masters, my good friends, mine honest neighbours,\nWill you undo yourselves?\n\n First Citizen:\nWe cannot, sir, we are undone already.\n\n MENENIUS:\nI tell you, friends, most charitable care\nHave the patricians of you.  For your wants,\nYour suffering in this dearth, you may as well\nStrike at the heaven with your staves as lift them\nAgainst the Roman state, whose course will on\nThe way it takes, cracking ten thousand curbs\nOf more strong link asunder than can ever\nAppear in your impediment. ",
+    "indexed_text": "MENENIUS:\nWhy, masters, my good friends, mine honest neighbours,\nWill you undo yourselves?\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000036",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "First Citizen:\nOur business is not unknown to the senate; they have\nhad inkling this fortnight what we intend to do,\nwhich now we'll show 'em in deeds.  They say poor\nsuitors have strong breaths: they shall know we\nhave strong arms too.\n\n MENENIUS:\nWhy, masters, my good friends, mine honest neighbours,\nWill you undo yourselves?\n\n First Citizen:\nWe cannot, sir, we are undone already.\n\n MENENIUS:\nI tell you, friends, most charitable care\nHave the patricians of you.  For your wants,\nYour suffering in this dearth, you may as well\nStrike at the heaven with your staves as lift them\nAgainst the Roman state, whose course will on\nThe way it takes, cracking ten thousand curbs\nOf more strong link asunder than can ever\nAppear in your impediment.  For the dearth,\nThe gods, not the patricians, make it, and\nYour knees to them, not arms, must help. ",
+    "indexed_text": "First Citizen:\nWe cannot, sir, we are undone already.\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000037",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "They say poor\nsuitors have strong breaths: they shall know we\nhave strong arms too.\n\n MENENIUS:\nWhy, masters, my good friends, mine honest neighbours,\nWill you undo yourselves?\n\n First Citizen:\nWe cannot, sir, we are undone already.\n\n MENENIUS:\nI tell you, friends, most charitable care\nHave the patricians of you.  For your wants,\nYour suffering in this dearth, you may as well\nStrike at the heaven with your staves as lift them\nAgainst the Roman state, whose course will on\nThe way it takes, cracking ten thousand curbs\nOf more strong link asunder than can ever\nAppear in your impediment.  For the dearth,\nThe gods, not the patricians, make it, and\nYour knees to them, not arms, must help.  Alack,\nYou are transported by calamity\nThither where more attends you, and you slander\nThe helms o' the state, who care for you like fathers,\nWhen you curse them as enemies.\n\n",
+    "indexed_text": "MENENIUS:\nI tell you, friends, most charitable care\nHave the patricians of you. ",
+    "node_id": "sentence_window:89c47b21fc294f82:000038",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "MENENIUS:\nWhy, masters, my good friends, mine honest neighbours,\nWill you undo yourselves?\n\n First Citizen:\nWe cannot, sir, we are undone already.\n\n MENENIUS:\nI tell you, friends, most charitable care\nHave the patricians of you.  For your wants,\nYour suffering in this dearth, you may as well\nStrike at the heaven with your staves as lift them\nAgainst the Roman state, whose course will on\nThe way it takes, cracking ten thousand curbs\nOf more strong link asunder than can ever\nAppear in your impediment.  For the dearth,\nThe gods, not the patricians, make it, and\nYour knees to them, not arms, must help.  Alack,\nYou are transported by calamity\nThither where more attends you, and you slander\nThe helms o' the state, who care for you like fathers,\nWhen you curse them as enemies.\n\n First Citizen:\nCare for us! ",
+    "indexed_text": "For your wants,\nYour suffering in this dearth, you may as well\nStrike at the heaven with your staves as lift them\nAgainst the Roman state, whose course will on\nThe way it takes, cracking ten thousand curbs\nOf more strong link asunder than can ever\nAppear in your impediment. ",
+    "node_id": "sentence_window:89c47b21fc294f82:000039",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "First Citizen:\nWe cannot, sir, we are undone already.\n\n MENENIUS:\nI tell you, friends, most charitable care\nHave the patricians of you.  For your wants,\nYour suffering in this dearth, you may as well\nStrike at the heaven with your staves as lift them\nAgainst the Roman state, whose course will on\nThe way it takes, cracking ten thousand curbs\nOf more strong link asunder than can ever\nAppear in your impediment.  For the dearth,\nThe gods, not the patricians, make it, and\nYour knees to them, not arms, must help.  Alack,\nYou are transported by calamity\nThither where more attends you, and you slander\nThe helms o' the state, who care for you like fathers,\nWhen you curse them as enemies.\n\n First Citizen:\nCare for us!  True, indeed! ",
+    "indexed_text": "For the dearth,\nThe gods, not the patricians, make it, and\nYour knees to them, not arms, must help. ",
+    "node_id": "sentence_window:89c47b21fc294f82:000040",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "MENENIUS:\nI tell you, friends, most charitable care\nHave the patricians of you.  For your wants,\nYour suffering in this dearth, you may as well\nStrike at the heaven with your staves as lift them\nAgainst the Roman state, whose course will on\nThe way it takes, cracking ten thousand curbs\nOf more strong link asunder than can ever\nAppear in your impediment.  For the dearth,\nThe gods, not the patricians, make it, and\nYour knees to them, not arms, must help.  Alack,\nYou are transported by calamity\nThither where more attends you, and you slander\nThe helms o' the state, who care for you like fathers,\nWhen you curse them as enemies.\n\n First Citizen:\nCare for us!  True, indeed!  They ne'er cared for us\nyet: suffer us to famish, and their store-houses\ncrammed with grain; make edicts for usury, to\nsupport usurers; repeal daily any wholesome act\nestablished against the rich, and provide more\npiercing statutes daily, to chain up and restrain\nthe poor. ",
+    "indexed_text": "Alack,\nYou are transported by calamity\nThither where more attends you, and you slander\nThe helms o' the state, who care for you like fathers,\nWhen you curse them as enemies.\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000041",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "For your wants,\nYour suffering in this dearth, you may as well\nStrike at the heaven with your staves as lift them\nAgainst the Roman state, whose course will on\nThe way it takes, cracking ten thousand curbs\nOf more strong link asunder than can ever\nAppear in your impediment.  For the dearth,\nThe gods, not the patricians, make it, and\nYour knees to them, not arms, must help.  Alack,\nYou are transported by calamity\nThither where more attends you, and you slander\nThe helms o' the state, who care for you like fathers,\nWhen you curse them as enemies.\n\n First Citizen:\nCare for us!  True, indeed!  They ne'er cared for us\nyet: suffer us to famish, and their store-houses\ncrammed with grain; make edicts for usury, to\nsupport usurers; repeal daily any wholesome act\nestablished against the rich, and provide more\npiercing statutes daily, to chain up and restrain\nthe poor.  If the wars eat us not up, they will; and\nthere's all the love they bear us.\n\n",
+    "indexed_text": "First Citizen:\nCare for us! ",
+    "node_id": "sentence_window:89c47b21fc294f82:000042",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "For the dearth,\nThe gods, not the patricians, make it, and\nYour knees to them, not arms, must help.  Alack,\nYou are transported by calamity\nThither where more attends you, and you slander\nThe helms o' the state, who care for you like fathers,\nWhen you curse them as enemies.\n\n First Citizen:\nCare for us!  True, indeed!  They ne'er cared for us\nyet: suffer us to famish, and their store-houses\ncrammed with grain; make edicts for usury, to\nsupport usurers; repeal daily any wholesome act\nestablished against the rich, and provide more\npiercing statutes daily, to chain up and restrain\nthe poor.  If the wars eat us not up, they will; and\nthere's all the love they bear us.\n\n MENENIUS:\nEither you must\nConfess yourselves wondrous malicious,\nOr be accused of folly. ",
+    "indexed_text": "True, indeed! ",
+    "node_id": "sentence_window:89c47b21fc294f82:000043",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "Alack,\nYou are transported by calamity\nThither where more attends you, and you slander\nThe helms o' the state, who care for you like fathers,\nWhen you curse them as enemies.\n\n First Citizen:\nCare for us!  True, indeed!  They ne'er cared for us\nyet: suffer us to famish, and their store-houses\ncrammed with grain; make edicts for usury, to\nsupport usurers; repeal daily any wholesome act\nestablished against the rich, and provide more\npiercing statutes daily, to chain up and restrain\nthe poor.  If the wars eat us not up, they will; and\nthere's all the love they bear us.\n\n MENENIUS:\nEither you must\nConfess yourselves wondrous malicious,\nOr be accused of folly.  I shall tell you\nA pretty tale: it may be you have heard it;\nBut, since it serves my purpose, I will venture\nTo stale 't a little more.\n\n",
+    "indexed_text": "They ne'er cared for us\nyet: suffer us to famish, and their store-houses\ncrammed with grain; make edicts for usury, to\nsupport usurers; repeal daily any wholesome act\nestablished against the rich, and provide more\npiercing statutes daily, to chain up and restrain\nthe poor. ",
+    "node_id": "sentence_window:89c47b21fc294f82:000044",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "First Citizen:\nCare for us!  True, indeed!  They ne'er cared for us\nyet: suffer us to famish, and their store-houses\ncrammed with grain; make edicts for usury, to\nsupport usurers; repeal daily any wholesome act\nestablished against the rich, and provide more\npiercing statutes daily, to chain up and restrain\nthe poor.  If the wars eat us not up, they will; and\nthere's all the love they bear us.\n\n MENENIUS:\nEither you must\nConfess yourselves wondrous malicious,\nOr be accused of folly.  I shall tell you\nA pretty tale: it may be you have heard it;\nBut, since it serves my purpose, I will venture\nTo stale 't a little more.\n\n First Citizen:\nWell, I'll hear it, sir: yet you must not think to\nfob off our disgrace with a tale: but, an 't please\nyou, deliver.\n\n",
+    "indexed_text": "If the wars eat us not up, they will; and\nthere's all the love they bear us.\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000045",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "True, indeed!  They ne'er cared for us\nyet: suffer us to famish, and their store-houses\ncrammed with grain; make edicts for usury, to\nsupport usurers; repeal daily any wholesome act\nestablished against the rich, and provide more\npiercing statutes daily, to chain up and restrain\nthe poor.  If the wars eat us not up, they will; and\nthere's all the love they bear us.\n\n MENENIUS:\nEither you must\nConfess yourselves wondrous malicious,\nOr be accused of folly.  I shall tell you\nA pretty tale: it may be you have heard it;\nBut, since it serves my purpose, I will venture\nTo stale 't a little more.\n\n First Citizen:\nWell, I'll hear it, sir: yet you must not think to\nfob off our disgrace with a tale: but, an 't please\nyou, deliver.\n\n MENENIUS:\nThere was a time when all the body's members\nRebell'd against the belly, thus accused it:\nThat only like a gulf it did remain\nI' the midst o' the body, idle and unactive,\nStill cupboarding the viand, never bearing\nLike labour with the rest, where the other instruments\nDid see and hear, devise, instruct, walk, feel,\nAnd, mutually participate, did minister\nUnto the appetite and affection common\nOf the whole body. ",
+    "indexed_text": "MENENIUS:\nEither you must\nConfess yourselves wondrous malicious,\nOr be accused of folly. ",
+    "node_id": "sentence_window:89c47b21fc294f82:000046",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "They ne'er cared for us\nyet: suffer us to famish, and their store-houses\ncrammed with grain; make edicts for usury, to\nsupport usurers; repeal daily any wholesome act\nestablished against the rich, and provide more\npiercing statutes daily, to chain up and restrain\nthe poor.  If the wars eat us not up, they will; and\nthere's all the love they bear us.\n\n MENENIUS:\nEither you must\nConfess yourselves wondrous malicious,\nOr be accused of folly.  I shall tell you\nA pretty tale: it may be you have heard it;\nBut, since it serves my purpose, I will venture\nTo stale 't a little more.\n\n First Citizen:\nWell, I'll hear it, sir: yet you must not think to\nfob off our disgrace with a tale: but, an 't please\nyou, deliver.\n\n MENENIUS:\nThere was a time when all the body's members\nRebell'd against the belly, thus accused it:\nThat only like a gulf it did remain\nI' the midst o' the body, idle and unactive,\nStill cupboarding the viand, never bearing\nLike labour with the rest, where the other instruments\nDid see and hear, devise, instruct, walk, feel,\nAnd, mutually participate, did minister\nUnto the appetite and affection common\nOf the whole body.  The belly answer'd--\n\nFirst Citizen:\nWell, sir, what answer made the belly?\n\n",
+    "indexed_text": "I shall tell you\nA pretty tale: it may be you have heard it;\nBut, since it serves my purpose, I will venture\nTo stale 't a little more.\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000047",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "If the wars eat us not up, they will; and\nthere's all the love they bear us.\n\n MENENIUS:\nEither you must\nConfess yourselves wondrous malicious,\nOr be accused of folly.  I shall tell you\nA pretty tale: it may be you have heard it;\nBut, since it serves my purpose, I will venture\nTo stale 't a little more.\n\n First Citizen:\nWell, I'll hear it, sir: yet you must not think to\nfob off our disgrace with a tale: but, an 't please\nyou, deliver.\n\n MENENIUS:\nThere was a time when all the body's members\nRebell'd against the belly, thus accused it:\nThat only like a gulf it did remain\nI' the midst o' the body, idle and unactive,\nStill cupboarding the viand, never bearing\nLike labour with the rest, where the other instruments\nDid see and hear, devise, instruct, walk, feel,\nAnd, mutually participate, did minister\nUnto the appetite and affection common\nOf the whole body.  The belly answer'd--\n\nFirst Citizen:\nWell, sir, what answer made the belly?\n\n MENENIUS:\nSir, I shall tell you. ",
+    "indexed_text": "First Citizen:\nWell, I'll hear it, sir: yet you must not think to\nfob off our disgrace with a tale: but, an 't please\nyou, deliver.\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000048",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "MENENIUS:\nEither you must\nConfess yourselves wondrous malicious,\nOr be accused of folly.  I shall tell you\nA pretty tale: it may be you have heard it;\nBut, since it serves my purpose, I will venture\nTo stale 't a little more.\n\n First Citizen:\nWell, I'll hear it, sir: yet you must not think to\nfob off our disgrace with a tale: but, an 't please\nyou, deliver.\n\n MENENIUS:\nThere was a time when all the body's members\nRebell'd against the belly, thus accused it:\nThat only like a gulf it did remain\nI' the midst o' the body, idle and unactive,\nStill cupboarding the viand, never bearing\nLike labour with the rest, where the other instruments\nDid see and hear, devise, instruct, walk, feel,\nAnd, mutually participate, did minister\nUnto the appetite and affection common\nOf the whole body.  The belly answer'd--\n\nFirst Citizen:\nWell, sir, what answer made the belly?\n\n MENENIUS:\nSir, I shall tell you.  With a kind of smile,\nWhich ne'er came from the lungs, but even thus--\nFor, look you, I may make the belly smile\nAs well as speak--it tauntingly replied\nTo the discontented members, the mutinous parts\nThat envied his receipt; even so most fitly\nAs you malign our senators for that\nThey are not such as you.\n\n",
+    "indexed_text": "MENENIUS:\nThere was a time when all the body's members\nRebell'd against the belly, thus accused it:\nThat only like a gulf it did remain\nI' the midst o' the body, idle and unactive,\nStill cupboarding the viand, never bearing\nLike labour with the rest, where the other instruments\nDid see and hear, devise, instruct, walk, feel,\nAnd, mutually participate, did minister\nUnto the appetite and affection common\nOf the whole body. ",
+    "node_id": "sentence_window:89c47b21fc294f82:000049",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "I shall tell you\nA pretty tale: it may be you have heard it;\nBut, since it serves my purpose, I will venture\nTo stale 't a little more.\n\n First Citizen:\nWell, I'll hear it, sir: yet you must not think to\nfob off our disgrace with a tale: but, an 't please\nyou, deliver.\n\n MENENIUS:\nThere was a time when all the body's members\nRebell'd against the belly, thus accused it:\nThat only like a gulf it did remain\nI' the midst o' the body, idle and unactive,\nStill cupboarding the viand, never bearing\nLike labour with the rest, where the other instruments\nDid see and hear, devise, instruct, walk, feel,\nAnd, mutually participate, did minister\nUnto the appetite and affection common\nOf the whole body.  The belly answer'd--\n\nFirst Citizen:\nWell, sir, what answer made the belly?\n\n MENENIUS:\nSir, I shall tell you.  With a kind of smile,\nWhich ne'er came from the lungs, but even thus--\nFor, look you, I may make the belly smile\nAs well as speak--it tauntingly replied\nTo the discontented members, the mutinous parts\nThat envied his receipt; even so most fitly\nAs you malign our senators for that\nThey are not such as you.\n\n First Citizen:\nYour belly's answer? ",
+    "indexed_text": "The belly answer'd--\n\nFirst Citizen:\nWell, sir, what answer made the belly?\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000050",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "First Citizen:\nWell, I'll hear it, sir: yet you must not think to\nfob off our disgrace with a tale: but, an 't please\nyou, deliver.\n\n MENENIUS:\nThere was a time when all the body's members\nRebell'd against the belly, thus accused it:\nThat only like a gulf it did remain\nI' the midst o' the body, idle and unactive,\nStill cupboarding the viand, never bearing\nLike labour with the rest, where the other instruments\nDid see and hear, devise, instruct, walk, feel,\nAnd, mutually participate, did minister\nUnto the appetite and affection common\nOf the whole body.  The belly answer'd--\n\nFirst Citizen:\nWell, sir, what answer made the belly?\n\n MENENIUS:\nSir, I shall tell you.  With a kind of smile,\nWhich ne'er came from the lungs, but even thus--\nFor, look you, I may make the belly smile\nAs well as speak--it tauntingly replied\nTo the discontented members, the mutinous parts\nThat envied his receipt; even so most fitly\nAs you malign our senators for that\nThey are not such as you.\n\n First Citizen:\nYour belly's answer?  What!\n",
+    "indexed_text": "MENENIUS:\nSir, I shall tell you. ",
+    "node_id": "sentence_window:89c47b21fc294f82:000051",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "MENENIUS:\nThere was a time when all the body's members\nRebell'd against the belly, thus accused it:\nThat only like a gulf it did remain\nI' the midst o' the body, idle and unactive,\nStill cupboarding the viand, never bearing\nLike labour with the rest, where the other instruments\nDid see and hear, devise, instruct, walk, feel,\nAnd, mutually participate, did minister\nUnto the appetite and affection common\nOf the whole body.  The belly answer'd--\n\nFirst Citizen:\nWell, sir, what answer made the belly?\n\n MENENIUS:\nSir, I shall tell you.  With a kind of smile,\nWhich ne'er came from the lungs, but even thus--\nFor, look you, I may make the belly smile\nAs well as speak--it tauntingly replied\nTo the discontented members, the mutinous parts\nThat envied his receipt; even so most fitly\nAs you malign our senators for that\nThey are not such as you.\n\n First Citizen:\nYour belly's answer?  What!\n The kingly-crowned head, the vigilant eye,\nThe counsellor heart, the arm our soldier,\nOur steed the leg, the tongue our trumpeter.\n",
+    "indexed_text": "With a kind of smile,\nWhich ne'er came from the lungs, but even thus--\nFor, look you, I may make the belly smile\nAs well as speak--it tauntingly replied\nTo the discontented members, the mutinous parts\nThat envied his receipt; even so most fitly\nAs you malign our senators for that\nThey are not such as you.\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000052",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "The belly answer'd--\n\nFirst Citizen:\nWell, sir, what answer made the belly?\n\n MENENIUS:\nSir, I shall tell you.  With a kind of smile,\nWhich ne'er came from the lungs, but even thus--\nFor, look you, I may make the belly smile\nAs well as speak--it tauntingly replied\nTo the discontented members, the mutinous parts\nThat envied his receipt; even so most fitly\nAs you malign our senators for that\nThey are not such as you.\n\n First Citizen:\nYour belly's answer?  What!\n The kingly-crowned head, the vigilant eye,\nThe counsellor heart, the arm our soldier,\nOur steed the leg, the tongue our trumpeter.\n With other muniments and petty helps\nIn this our fabric, if that they--\n\nMENENIUS:\nWhat then?\n",
+    "indexed_text": "First Citizen:\nYour belly's answer? ",
+    "node_id": "sentence_window:89c47b21fc294f82:000053",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "MENENIUS:\nSir, I shall tell you.  With a kind of smile,\nWhich ne'er came from the lungs, but even thus--\nFor, look you, I may make the belly smile\nAs well as speak--it tauntingly replied\nTo the discontented members, the mutinous parts\nThat envied his receipt; even so most fitly\nAs you malign our senators for that\nThey are not such as you.\n\n First Citizen:\nYour belly's answer?  What!\n The kingly-crowned head, the vigilant eye,\nThe counsellor heart, the arm our soldier,\nOur steed the leg, the tongue our trumpeter.\n With other muniments and petty helps\nIn this our fabric, if that they--\n\nMENENIUS:\nWhat then?\n 'Fore me, this fellow speaks! ",
+    "indexed_text": "What!\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000054",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "With a kind of smile,\nWhich ne'er came from the lungs, but even thus--\nFor, look you, I may make the belly smile\nAs well as speak--it tauntingly replied\nTo the discontented members, the mutinous parts\nThat envied his receipt; even so most fitly\nAs you malign our senators for that\nThey are not such as you.\n\n First Citizen:\nYour belly's answer?  What!\n The kingly-crowned head, the vigilant eye,\nThe counsellor heart, the arm our soldier,\nOur steed the leg, the tongue our trumpeter.\n With other muniments and petty helps\nIn this our fabric, if that they--\n\nMENENIUS:\nWhat then?\n 'Fore me, this fellow speaks!  What then? ",
+    "indexed_text": "The kingly-crowned head, the vigilant eye,\nThe counsellor heart, the arm our soldier,\nOur steed the leg, the tongue our trumpeter.\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000055",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "First Citizen:\nYour belly's answer?  What!\n The kingly-crowned head, the vigilant eye,\nThe counsellor heart, the arm our soldier,\nOur steed the leg, the tongue our trumpeter.\n With other muniments and petty helps\nIn this our fabric, if that they--\n\nMENENIUS:\nWhat then?\n 'Fore me, this fellow speaks!  What then?  what then?\n\n",
+    "indexed_text": "With other muniments and petty helps\nIn this our fabric, if that they--\n\nMENENIUS:\nWhat then?\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000056",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "What!\n The kingly-crowned head, the vigilant eye,\nThe counsellor heart, the arm our soldier,\nOur steed the leg, the tongue our trumpeter.\n With other muniments and petty helps\nIn this our fabric, if that they--\n\nMENENIUS:\nWhat then?\n 'Fore me, this fellow speaks!  What then?  what then?\n\n First Citizen:\nShould by the cormorant belly be restrain'd,\nWho is the sink o' the body,--\n\nMENENIUS:\nWell, what then?\n\n",
+    "indexed_text": "'Fore me, this fellow speaks! ",
+    "node_id": "sentence_window:89c47b21fc294f82:000057",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "The kingly-crowned head, the vigilant eye,\nThe counsellor heart, the arm our soldier,\nOur steed the leg, the tongue our trumpeter.\n With other muniments and petty helps\nIn this our fabric, if that they--\n\nMENENIUS:\nWhat then?\n 'Fore me, this fellow speaks!  What then?  what then?\n\n First Citizen:\nShould by the cormorant belly be restrain'd,\nWho is the sink o' the body,--\n\nMENENIUS:\nWell, what then?\n\n First Citizen:\nThe former agents, if they did complain,\nWhat could the belly answer?\n\n",
+    "indexed_text": "What then? ",
+    "node_id": "sentence_window:89c47b21fc294f82:000058",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "With other muniments and petty helps\nIn this our fabric, if that they--\n\nMENENIUS:\nWhat then?\n 'Fore me, this fellow speaks!  What then?  what then?\n\n First Citizen:\nShould by the cormorant belly be restrain'd,\nWho is the sink o' the body,--\n\nMENENIUS:\nWell, what then?\n\n First Citizen:\nThe former agents, if they did complain,\nWhat could the belly answer?\n\n MENENIUS:\nI will tell you\nIf you'll bestow a small--of what you have little--\nPatience awhile, you'll hear the belly's answer.\n\n",
+    "indexed_text": "what then?\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000059",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "'Fore me, this fellow speaks!  What then?  what then?\n\n First Citizen:\nShould by the cormorant belly be restrain'd,\nWho is the sink o' the body,--\n\nMENENIUS:\nWell, what then?\n\n First Citizen:\nThe former agents, if they did complain,\nWhat could the belly answer?\n\n MENENIUS:\nI will tell you\nIf you'll bestow a small--of what you have little--\nPatience awhile, you'll hear the belly's answer.\n\n First Citizen:\nYe're long about it.\n\n",
+    "indexed_text": "First Citizen:\nShould by the cormorant belly be restrain'd,\nWho is the sink o' the body,--\n\nMENENIUS:\nWell, what then?\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000060",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "What then?  what then?\n\n First Citizen:\nShould by the cormorant belly be restrain'd,\nWho is the sink o' the body,--\n\nMENENIUS:\nWell, what then?\n\n First Citizen:\nThe former agents, if they did complain,\nWhat could the belly answer?\n\n MENENIUS:\nI will tell you\nIf you'll bestow a small--of what you have little--\nPatience awhile, you'll hear the belly's answer.\n\n First Citizen:\nYe're long about it.\n\n MENENIUS:\nNote me this, good friend;\nYour most grave belly was deliberate,\nNot rash like his accusers, and thus answer'd:\n'True is it, my incorporate friends,' quoth he,\n'That I receive the general food at first,\nWhich you do live upon; and fit it is,\nBecause I am the store-house and the shop\nOf the whole body: but, if you do remember,\nI send it through the rivers of your blood,\nEven to the court, the heart, to the seat o' the brain;\nAnd, through the cranks and offices of man,\nThe strongest nerves and small inferior veins\nFrom me receive that natural competency\nWhereby they live: and though that all at once,\nYou, my good friends,'--this says the belly, mark me,--\n\nFirst Citizen:\nAy, sir; well, well.\n\n",
+    "indexed_text": "First Citizen:\nThe former agents, if they did complain,\nWhat could the belly answer?\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000061",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "what then?\n\n First Citizen:\nShould by the cormorant belly be restrain'd,\nWho is the sink o' the body,--\n\nMENENIUS:\nWell, what then?\n\n First Citizen:\nThe former agents, if they did complain,\nWhat could the belly answer?\n\n MENENIUS:\nI will tell you\nIf you'll bestow a small--of what you have little--\nPatience awhile, you'll hear the belly's answer.\n\n First Citizen:\nYe're long about it.\n\n MENENIUS:\nNote me this, good friend;\nYour most grave belly was deliberate,\nNot rash like his accusers, and thus answer'd:\n'True is it, my incorporate friends,' quoth he,\n'That I receive the general food at first,\nWhich you do live upon; and fit it is,\nBecause I am the store-house and the shop\nOf the whole body: but, if you do remember,\nI send it through the rivers of your blood,\nEven to the court, the heart, to the seat o' the brain;\nAnd, through the cranks and offices of man,\nThe strongest nerves and small inferior veins\nFrom me receive that natural competency\nWhereby they live: and though that all at once,\nYou, my good friends,'--this says the belly, mark me,--\n\nFirst Citizen:\nAy, sir; well, well.\n\n MENENIUS:\n'Though all at once cannot\nSee what I do deliver out to each,\nYet I can make my audit up, that all\nFrom me do back receive the flour of all,\nAnd leave me but the bran.' ",
+    "indexed_text": "MENENIUS:\nI will tell you\nIf you'll bestow a small--of what you have little--\nPatience awhile, you'll hear the belly's answer.\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000062",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "First Citizen:\nShould by the cormorant belly be restrain'd,\nWho is the sink o' the body,--\n\nMENENIUS:\nWell, what then?\n\n First Citizen:\nThe former agents, if they did complain,\nWhat could the belly answer?\n\n MENENIUS:\nI will tell you\nIf you'll bestow a small--of what you have little--\nPatience awhile, you'll hear the belly's answer.\n\n First Citizen:\nYe're long about it.\n\n MENENIUS:\nNote me this, good friend;\nYour most grave belly was deliberate,\nNot rash like his accusers, and thus answer'd:\n'True is it, my incorporate friends,' quoth he,\n'That I receive the general food at first,\nWhich you do live upon; and fit it is,\nBecause I am the store-house and the shop\nOf the whole body: but, if you do remember,\nI send it through the rivers of your blood,\nEven to the court, the heart, to the seat o' the brain;\nAnd, through the cranks and offices of man,\nThe strongest nerves and small inferior veins\nFrom me receive that natural competency\nWhereby they live: and though that all at once,\nYou, my good friends,'--this says the belly, mark me,--\n\nFirst Citizen:\nAy, sir; well, well.\n\n MENENIUS:\n'Though all at once cannot\nSee what I do deliver out to each,\nYet I can make my audit up, that all\nFrom me do back receive the flour of all,\nAnd leave me but the bran.'  What say you to't?\n\n",
+    "indexed_text": "First Citizen:\nYe're long about it.\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000063",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "First Citizen:\nThe former agents, if they did complain,\nWhat could the belly answer?\n\n MENENIUS:\nI will tell you\nIf you'll bestow a small--of what you have little--\nPatience awhile, you'll hear the belly's answer.\n\n First Citizen:\nYe're long about it.\n\n MENENIUS:\nNote me this, good friend;\nYour most grave belly was deliberate,\nNot rash like his accusers, and thus answer'd:\n'True is it, my incorporate friends,' quoth he,\n'That I receive the general food at first,\nWhich you do live upon; and fit it is,\nBecause I am the store-house and the shop\nOf the whole body: but, if you do remember,\nI send it through the rivers of your blood,\nEven to the court, the heart, to the seat o' the brain;\nAnd, through the cranks and offices of man,\nThe strongest nerves and small inferior veins\nFrom me receive that natural competency\nWhereby they live: and though that all at once,\nYou, my good friends,'--this says the belly, mark me,--\n\nFirst Citizen:\nAy, sir; well, well.\n\n MENENIUS:\n'Though all at once cannot\nSee what I do deliver out to each,\nYet I can make my audit up, that all\nFrom me do back receive the flour of all,\nAnd leave me but the bran.'  What say you to't?\n\n First Citizen:\nIt was an answer: how apply you this?\n\n",
+    "indexed_text": "MENENIUS:\nNote me this, good friend;\nYour most grave belly was deliberate,\nNot rash like his accusers, and thus answer'd:\n'True is it, my incorporate friends,' quoth he,\n'That I receive the general food at first,\nWhich you do live upon; and fit it is,\nBecause I am the store-house and the shop\nOf the whole body: but, if you do remember,\nI send it through the rivers of your blood,\nEven to the court, the heart, to the seat o' the brain;\nAnd, through the cranks and offices of man,\nThe strongest nerves and small inferior veins\nFrom me receive that natural competency\nWhereby they live: and though that all at once,\nYou, my good friends,'--this says the belly, mark me,--\n\nFirst Citizen:\nAy, sir; well, well.\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000064",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "MENENIUS:\nI will tell you\nIf you'll bestow a small--of what you have little--\nPatience awhile, you'll hear the belly's answer.\n\n First Citizen:\nYe're long about it.\n\n MENENIUS:\nNote me this, good friend;\nYour most grave belly was deliberate,\nNot rash like his accusers, and thus answer'd:\n'True is it, my incorporate friends,' quoth he,\n'That I receive the general food at first,\nWhich you do live upon; and fit it is,\nBecause I am the store-house and the shop\nOf the whole body: but, if you do remember,\nI send it through the rivers of your blood,\nEven to the court, the heart, to the seat o' the brain;\nAnd, through the cranks and offices of man,\nThe strongest nerves and small inferior veins\nFrom me receive that natural competency\nWhereby they live: and though that all at once,\nYou, my good friends,'--this says the belly, mark me,--\n\nFirst Citizen:\nAy, sir; well, well.\n\n MENENIUS:\n'Though all at once cannot\nSee what I do deliver out to each,\nYet I can make my audit up, that all\nFrom me do back receive the flour of all,\nAnd leave me but the bran.'  What say you to't?\n\n First Citizen:\nIt was an answer: how apply you this?\n\n MENENIUS:\nThe senators of Rome are this good belly,\nAnd you the mutinous members; for examine\nTheir counsels and their cares, digest things rightly\nTouching the weal o' the common, you shall find\nNo public benefit which you receive\nBut it proceeds or comes from them to you\nAnd no way from yourselves. ",
+    "indexed_text": "MENENIUS:\n'Though all at once cannot\nSee what I do deliver out to each,\nYet I can make my audit up, that all\nFrom me do back receive the flour of all,\nAnd leave me but the bran.' ",
+    "node_id": "sentence_window:89c47b21fc294f82:000065",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "First Citizen:\nYe're long about it.\n\n MENENIUS:\nNote me this, good friend;\nYour most grave belly was deliberate,\nNot rash like his accusers, and thus answer'd:\n'True is it, my incorporate friends,' quoth he,\n'That I receive the general food at first,\nWhich you do live upon; and fit it is,\nBecause I am the store-house and the shop\nOf the whole body: but, if you do remember,\nI send it through the rivers of your blood,\nEven to the court, the heart, to the seat o' the brain;\nAnd, through the cranks and offices of man,\nThe strongest nerves and small inferior veins\nFrom me receive that natural competency\nWhereby they live: and though that all at once,\nYou, my good friends,'--this says the belly, mark me,--\n\nFirst Citizen:\nAy, sir; well, well.\n\n MENENIUS:\n'Though all at once cannot\nSee what I do deliver out to each,\nYet I can make my audit up, that all\nFrom me do back receive the flour of all,\nAnd leave me but the bran.'  What say you to't?\n\n First Citizen:\nIt was an answer: how apply you this?\n\n MENENIUS:\nThe senators of Rome are this good belly,\nAnd you the mutinous members; for examine\nTheir counsels and their cares, digest things rightly\nTouching the weal o' the common, you shall find\nNo public benefit which you receive\nBut it proceeds or comes from them to you\nAnd no way from yourselves.  What do you think,\nYou, the great toe of this assembly?\n\n",
+    "indexed_text": "What say you to't?\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000066",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "MENENIUS:\nNote me this, good friend;\nYour most grave belly was deliberate,\nNot rash like his accusers, and thus answer'd:\n'True is it, my incorporate friends,' quoth he,\n'That I receive the general food at first,\nWhich you do live upon; and fit it is,\nBecause I am the store-house and the shop\nOf the whole body: but, if you do remember,\nI send it through the rivers of your blood,\nEven to the court, the heart, to the seat o' the brain;\nAnd, through the cranks and offices of man,\nThe strongest nerves and small inferior veins\nFrom me receive that natural competency\nWhereby they live: and though that all at once,\nYou, my good friends,'--this says the belly, mark me,--\n\nFirst Citizen:\nAy, sir; well, well.\n\n MENENIUS:\n'Though all at once cannot\nSee what I do deliver out to each,\nYet I can make my audit up, that all\nFrom me do back receive the flour of all,\nAnd leave me but the bran.'  What say you to't?\n\n First Citizen:\nIt was an answer: how apply you this?\n\n MENENIUS:\nThe senators of Rome are this good belly,\nAnd you the mutinous members; for examine\nTheir counsels and their cares, digest things rightly\nTouching the weal o' the common, you shall find\nNo public benefit which you receive\nBut it proceeds or comes from them to you\nAnd no way from yourselves.  What do you think,\nYou, the great toe of this assembly?\n\n First Citizen:\nI the great toe! ",
+    "indexed_text": "First Citizen:\nIt was an answer: how apply you this?\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000067",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "MENENIUS:\n'Though all at once cannot\nSee what I do deliver out to each,\nYet I can make my audit up, that all\nFrom me do back receive the flour of all,\nAnd leave me but the bran.'  What say you to't?\n\n First Citizen:\nIt was an answer: how apply you this?\n\n MENENIUS:\nThe senators of Rome are this good belly,\nAnd you the mutinous members; for examine\nTheir counsels and their cares, digest things rightly\nTouching the weal o' the common, you shall find\nNo public benefit which you receive\nBut it proceeds or comes from them to you\nAnd no way from yourselves.  What do you think,\nYou, the great toe of this assembly?\n\n First Citizen:\nI the great toe!  why the great toe?\n\n",
+    "indexed_text": "MENENIUS:\nThe senators of Rome are this good belly,\nAnd you the mutinous members; for examine\nTheir counsels and their cares, digest things rightly\nTouching the weal o' the common, you shall find\nNo public benefit which you receive\nBut it proceeds or comes from them to you\nAnd no way from yourselves. ",
+    "node_id": "sentence_window:89c47b21fc294f82:000068",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "What say you to't?\n\n First Citizen:\nIt was an answer: how apply you this?\n\n MENENIUS:\nThe senators of Rome are this good belly,\nAnd you the mutinous members; for examine\nTheir counsels and their cares, digest things rightly\nTouching the weal o' the common, you shall find\nNo public benefit which you receive\nBut it proceeds or comes from them to you\nAnd no way from yourselves.  What do you think,\nYou, the great toe of this assembly?\n\n First Citizen:\nI the great toe!  why the great toe?\n\n MENENIUS:\nFor that, being one o' the lowest, basest, poorest,\nOf this most wise rebellion, thou go'st foremost:\nThou rascal, that art worst in blood to run,\nLead'st first to win some vantage.\n",
+    "indexed_text": "What do you think,\nYou, the great toe of this assembly?\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000069",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "First Citizen:\nIt was an answer: how apply you this?\n\n MENENIUS:\nThe senators of Rome are this good belly,\nAnd you the mutinous members; for examine\nTheir counsels and their cares, digest things rightly\nTouching the weal o' the common, you shall find\nNo public benefit which you receive\nBut it proceeds or comes from them to you\nAnd no way from yourselves.  What do you think,\nYou, the great toe of this assembly?\n\n First Citizen:\nI the great toe!  why the great toe?\n\n MENENIUS:\nFor that, being one o' the lowest, basest, poorest,\nOf this most wise rebellion, thou go'st foremost:\nThou rascal, that art worst in blood to run,\nLead'st first to win some vantage.\n But make you ready your stiff bats and clubs:\nRome and her rats are at the point of battle;\nThe one side must have bale.\n",
+    "indexed_text": "First Citizen:\nI the great toe! ",
+    "node_id": "sentence_window:89c47b21fc294f82:000070",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "MENENIUS:\nThe senators of Rome are this good belly,\nAnd you the mutinous members; for examine\nTheir counsels and their cares, digest things rightly\nTouching the weal o' the common, you shall find\nNo public benefit which you receive\nBut it proceeds or comes from them to you\nAnd no way from yourselves.  What do you think,\nYou, the great toe of this assembly?\n\n First Citizen:\nI the great toe!  why the great toe?\n\n MENENIUS:\nFor that, being one o' the lowest, basest, poorest,\nOf this most wise rebellion, thou go'st foremost:\nThou rascal, that art worst in blood to run,\nLead'st first to win some vantage.\n But make you ready your stiff bats and clubs:\nRome and her rats are at the point of battle;\nThe one side must have bale.\n Hail, noble Marcius!\n\n",
+    "indexed_text": "why the great toe?\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000071",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "What do you think,\nYou, the great toe of this assembly?\n\n First Citizen:\nI the great toe!  why the great toe?\n\n MENENIUS:\nFor that, being one o' the lowest, basest, poorest,\nOf this most wise rebellion, thou go'st foremost:\nThou rascal, that art worst in blood to run,\nLead'st first to win some vantage.\n But make you ready your stiff bats and clubs:\nRome and her rats are at the point of battle;\nThe one side must have bale.\n Hail, noble Marcius!\n\n MARCIUS:\nThanks. ",
+    "indexed_text": "MENENIUS:\nFor that, being one o' the lowest, basest, poorest,\nOf this most wise rebellion, thou go'st foremost:\nThou rascal, that art worst in blood to run,\nLead'st first to win some vantage.\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000072",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "First Citizen:\nI the great toe!  why the great toe?\n\n MENENIUS:\nFor that, being one o' the lowest, basest, poorest,\nOf this most wise rebellion, thou go'st foremost:\nThou rascal, that art worst in blood to run,\nLead'st first to win some vantage.\n But make you ready your stiff bats and clubs:\nRome and her rats are at the point of battle;\nThe one side must have bale.\n Hail, noble Marcius!\n\n MARCIUS:\nThanks.  What's the matter, you dissentious rogues,\nThat, rubbing the poor itch of your opinion,\nMake yourselves scabs?\n\n",
+    "indexed_text": "But make you ready your stiff bats and clubs:\nRome and her rats are at the point of battle;\nThe one side must have bale.\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000073",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "why the great toe?\n\n MENENIUS:\nFor that, being one o' the lowest, basest, poorest,\nOf this most wise rebellion, thou go'st foremost:\nThou rascal, that art worst in blood to run,\nLead'st first to win some vantage.\n But make you ready your stiff bats and clubs:\nRome and her rats are at the point of battle;\nThe one side must have bale.\n Hail, noble Marcius!\n\n MARCIUS:\nThanks.  What's the matter, you dissentious rogues,\nThat, rubbing the poor itch of your opinion,\nMake yourselves scabs?\n\n First Citizen:\nWe have ever your good word.\n\n",
+    "indexed_text": "Hail, noble Marcius!\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000074",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "MENENIUS:\nFor that, being one o' the lowest, basest, poorest,\nOf this most wise rebellion, thou go'st foremost:\nThou rascal, that art worst in blood to run,\nLead'st first to win some vantage.\n But make you ready your stiff bats and clubs:\nRome and her rats are at the point of battle;\nThe one side must have bale.\n Hail, noble Marcius!\n\n MARCIUS:\nThanks.  What's the matter, you dissentious rogues,\nThat, rubbing the poor itch of your opinion,\nMake yourselves scabs?\n\n First Citizen:\nWe have ever your good word.\n\n MARCIUS:\nHe that will give good words to thee will flatter\nBeneath abhorring. ",
+    "indexed_text": "MARCIUS:\nThanks. ",
+    "node_id": "sentence_window:89c47b21fc294f82:000075",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "But make you ready your stiff bats and clubs:\nRome and her rats are at the point of battle;\nThe one side must have bale.\n Hail, noble Marcius!\n\n MARCIUS:\nThanks.  What's the matter, you dissentious rogues,\nThat, rubbing the poor itch of your opinion,\nMake yourselves scabs?\n\n First Citizen:\nWe have ever your good word.\n\n MARCIUS:\nHe that will give good words to thee will flatter\nBeneath abhorring.  What would you have, you curs,\nThat like nor peace nor war? ",
+    "indexed_text": "What's the matter, you dissentious rogues,\nThat, rubbing the poor itch of your opinion,\nMake yourselves scabs?\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000076",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "Hail, noble Marcius!\n\n MARCIUS:\nThanks.  What's the matter, you dissentious rogues,\nThat, rubbing the poor itch of your opinion,\nMake yourselves scabs?\n\n First Citizen:\nWe have ever your good word.\n\n MARCIUS:\nHe that will give good words to thee will flatter\nBeneath abhorring.  What would you have, you curs,\nThat like nor peace nor war?  the one affrights you,\nThe other makes you proud. ",
+    "indexed_text": "First Citizen:\nWe have ever your good word.\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000077",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "MARCIUS:\nThanks.  What's the matter, you dissentious rogues,\nThat, rubbing the poor itch of your opinion,\nMake yourselves scabs?\n\n First Citizen:\nWe have ever your good word.\n\n MARCIUS:\nHe that will give good words to thee will flatter\nBeneath abhorring.  What would you have, you curs,\nThat like nor peace nor war?  the one affrights you,\nThe other makes you proud.  He that trusts to you,\nWhere he should find you lions, finds you hares;\nWhere foxes, geese: you are no surer, no,\nThan is the coal of fire upon the ice,\nOr hailstone in the sun. ",
+    "indexed_text": "MARCIUS:\nHe that will give good words to thee will flatter\nBeneath abhorring. ",
+    "node_id": "sentence_window:89c47b21fc294f82:000078",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "What's the matter, you dissentious rogues,\nThat, rubbing the poor itch of your opinion,\nMake yourselves scabs?\n\n First Citizen:\nWe have ever your good word.\n\n MARCIUS:\nHe that will give good words to thee will flatter\nBeneath abhorring.  What would you have, you curs,\nThat like nor peace nor war?  the one affrights you,\nThe other makes you proud.  He that trusts to you,\nWhere he should find you lions, finds you hares;\nWhere foxes, geese: you are no surer, no,\nThan is the coal of fire upon the ice,\nOr hailstone in the sun.  Your virtue is\nTo make him worthy whose offence subdues him\nAnd curse that justice did it.\n",
+    "indexed_text": "What would you have, you curs,\nThat like nor peace nor war? ",
+    "node_id": "sentence_window:89c47b21fc294f82:000079",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "First Citizen:\nWe have ever your good word.\n\n MARCIUS:\nHe that will give good words to thee will flatter\nBeneath abhorring.  What would you have, you curs,\nThat like nor peace nor war?  the one affrights you,\nThe other makes you proud.  He that trusts to you,\nWhere he should find you lions, finds you hares;\nWhere foxes, geese: you are no surer, no,\nThan is the coal of fire upon the ice,\nOr hailstone in the sun.  Your virtue is\nTo make him worthy whose offence subdues him\nAnd curse that justice did it.\n Who deserves greatness\nDeserves your hate; and your affections are\nA sick man's appetite, who desires most that\nWhich would increase his evil. ",
+    "indexed_text": "the one affrights you,\nThe other makes you proud. ",
+    "node_id": "sentence_window:89c47b21fc294f82:000080",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "MARCIUS:\nHe that will give good words to thee will flatter\nBeneath abhorring.  What would you have, you curs,\nThat like nor peace nor war?  the one affrights you,\nThe other makes you proud.  He that trusts to you,\nWhere he should find you lions, finds you hares;\nWhere foxes, geese: you are no surer, no,\nThan is the coal of fire upon the ice,\nOr hailstone in the sun.  Your virtue is\nTo make him worthy whose offence subdues him\nAnd curse that justice did it.\n Who deserves greatness\nDeserves your hate; and your affections are\nA sick man's appetite, who desires most that\nWhich would increase his evil.  He that depends\nUpon your favours swims with fins of lead\nAnd hews down oaks with rushes. ",
+    "indexed_text": "He that trusts to you,\nWhere he should find you lions, finds you hares;\nWhere foxes, geese: you are no surer, no,\nThan is the coal of fire upon the ice,\nOr hailstone in the sun. ",
+    "node_id": "sentence_window:89c47b21fc294f82:000081",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "What would you have, you curs,\nThat like nor peace nor war?  the one affrights you,\nThe other makes you proud.  He that trusts to you,\nWhere he should find you lions, finds you hares;\nWhere foxes, geese: you are no surer, no,\nThan is the coal of fire upon the ice,\nOr hailstone in the sun.  Your virtue is\nTo make him worthy whose offence subdues him\nAnd curse that justice did it.\n Who deserves greatness\nDeserves your hate; and your affections are\nA sick man's appetite, who desires most that\nWhich would increase his evil.  He that depends\nUpon your favours swims with fins of lead\nAnd hews down oaks with rushes.  Hang ye! ",
+    "indexed_text": "Your virtue is\nTo make him worthy whose offence subdues him\nAnd curse that justice did it.\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000082",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "the one affrights you,\nThe other makes you proud.  He that trusts to you,\nWhere he should find you lions, finds you hares;\nWhere foxes, geese: you are no surer, no,\nThan is the coal of fire upon the ice,\nOr hailstone in the sun.  Your virtue is\nTo make him worthy whose offence subdues him\nAnd curse that justice did it.\n Who deserves greatness\nDeserves your hate; and your affections are\nA sick man's appetite, who desires most that\nWhich would increase his evil.  He that depends\nUpon your favours swims with fins of lead\nAnd hews down oaks with rushes.  Hang ye!  Trust Ye?\n",
+    "indexed_text": "Who deserves greatness\nDeserves your hate; and your affections are\nA sick man's appetite, who desires most that\nWhich would increase his evil. ",
+    "node_id": "sentence_window:89c47b21fc294f82:000083",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "He that trusts to you,\nWhere he should find you lions, finds you hares;\nWhere foxes, geese: you are no surer, no,\nThan is the coal of fire upon the ice,\nOr hailstone in the sun.  Your virtue is\nTo make him worthy whose offence subdues him\nAnd curse that justice did it.\n Who deserves greatness\nDeserves your hate; and your affections are\nA sick man's appetite, who desires most that\nWhich would increase his evil.  He that depends\nUpon your favours swims with fins of lead\nAnd hews down oaks with rushes.  Hang ye!  Trust Ye?\n With every minute you do change a mind,\nAnd call him noble that was now your hate,\nHim vile that was your garland. ",
+    "indexed_text": "He that depends\nUpon your favours swims with fins of lead\nAnd hews down oaks with rushes. ",
+    "node_id": "sentence_window:89c47b21fc294f82:000084",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "Your virtue is\nTo make him worthy whose offence subdues him\nAnd curse that justice did it.\n Who deserves greatness\nDeserves your hate; and your affections are\nA sick man's appetite, who desires most that\nWhich would increase his evil.  He that depends\nUpon your favours swims with fins of lead\nAnd hews down oaks with rushes.  Hang ye!  Trust Ye?\n With every minute you do change a mind,\nAnd call him noble that was now your hate,\nHim vile that was your garland.  What's the matter,\nThat in these several places of the city\nYou cry against the noble senate, who,\nUnder the gods, keep you in awe, which else\nWould feed on one another? ",
+    "indexed_text": "Hang ye! ",
+    "node_id": "sentence_window:89c47b21fc294f82:000085",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "Who deserves greatness\nDeserves your hate; and your affections are\nA sick man's appetite, who desires most that\nWhich would increase his evil.  He that depends\nUpon your favours swims with fins of lead\nAnd hews down oaks with rushes.  Hang ye!  Trust Ye?\n With every minute you do change a mind,\nAnd call him noble that was now your hate,\nHim vile that was your garland.  What's the matter,\nThat in these several places of the city\nYou cry against the noble senate, who,\nUnder the gods, keep you in awe, which else\nWould feed on one another?  What's their seeking?\n\n",
+    "indexed_text": "Trust Ye?\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000086",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "He that depends\nUpon your favours swims with fins of lead\nAnd hews down oaks with rushes.  Hang ye!  Trust Ye?\n With every minute you do change a mind,\nAnd call him noble that was now your hate,\nHim vile that was your garland.  What's the matter,\nThat in these several places of the city\nYou cry against the noble senate, who,\nUnder the gods, keep you in awe, which else\nWould feed on one another?  What's their seeking?\n\n MENENIUS:\nFor corn at their own rates; whereof, they say,\nThe city is well stored.\n\n",
+    "indexed_text": "With every minute you do change a mind,\nAnd call him noble that was now your hate,\nHim vile that was your garland. ",
+    "node_id": "sentence_window:89c47b21fc294f82:000087",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "Hang ye!  Trust Ye?\n With every minute you do change a mind,\nAnd call him noble that was now your hate,\nHim vile that was your garland.  What's the matter,\nThat in these several places of the city\nYou cry against the noble senate, who,\nUnder the gods, keep you in awe, which else\nWould feed on one another?  What's their seeking?\n\n MENENIUS:\nFor corn at their own rates; whereof, they say,\nThe city is well stored.\n\n MARCIUS:\nHang 'em! ",
+    "indexed_text": "What's the matter,\nThat in these several places of the city\nYou cry against the noble senate, who,\nUnder the gods, keep you in awe, which else\nWould feed on one another? ",
+    "node_id": "sentence_window:89c47b21fc294f82:000088",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "Trust Ye?\n With every minute you do change a mind,\nAnd call him noble that was now your hate,\nHim vile that was your garland.  What's the matter,\nThat in these several places of the city\nYou cry against the noble senate, who,\nUnder the gods, keep you in awe, which else\nWould feed on one another?  What's their seeking?\n\n MENENIUS:\nFor corn at their own rates; whereof, they say,\nThe city is well stored.\n\n MARCIUS:\nHang 'em!  They say!\n",
+    "indexed_text": "What's their seeking?\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000089",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "With every minute you do change a mind,\nAnd call him noble that was now your hate,\nHim vile that was your garland.  What's the matter,\nThat in these several places of the city\nYou cry against the noble senate, who,\nUnder the gods, keep you in awe, which else\nWould feed on one another?  What's their seeking?\n\n MENENIUS:\nFor corn at their own rates; whereof, they say,\nThe city is well stored.\n\n MARCIUS:\nHang 'em!  They say!\n They'll sit by the fire, and presume to know\nWhat's done i' the Capitol; who's like to rise,\nWho thrives and who declines; side factions\nand give out\nConjectural marriages; making parties strong\nAnd feebling such as stand not in their liking\nBelow their cobbled shoes. ",
+    "indexed_text": "MENENIUS:\nFor corn at their own rates; whereof, they say,\nThe city is well stored.\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000090",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "What's the matter,\nThat in these several places of the city\nYou cry against the noble senate, who,\nUnder the gods, keep you in awe, which else\nWould feed on one another?  What's their seeking?\n\n MENENIUS:\nFor corn at their own rates; whereof, they say,\nThe city is well stored.\n\n MARCIUS:\nHang 'em!  They say!\n They'll sit by the fire, and presume to know\nWhat's done i' the Capitol; who's like to rise,\nWho thrives and who declines; side factions\nand give out\nConjectural marriages; making parties strong\nAnd feebling such as stand not in their liking\nBelow their cobbled shoes.  They say there's\ngrain enough!\n",
+    "indexed_text": "MARCIUS:\nHang 'em! ",
+    "node_id": "sentence_window:89c47b21fc294f82:000091",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "What's their seeking?\n\n MENENIUS:\nFor corn at their own rates; whereof, they say,\nThe city is well stored.\n\n MARCIUS:\nHang 'em!  They say!\n They'll sit by the fire, and presume to know\nWhat's done i' the Capitol; who's like to rise,\nWho thrives and who declines; side factions\nand give out\nConjectural marriages; making parties strong\nAnd feebling such as stand not in their liking\nBelow their cobbled shoes.  They say there's\ngrain enough!\n Would the nobility lay aside their ruth,\nAnd let me use my sword, I'll make a quarry\nWith thousands of these quarter'd slaves, as high\nAs I could pick my lance.\n\n",
+    "indexed_text": "They say!\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000092",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "MENENIUS:\nFor corn at their own rates; whereof, they say,\nThe city is well stored.\n\n MARCIUS:\nHang 'em!  They say!\n They'll sit by the fire, and presume to know\nWhat's done i' the Capitol; who's like to rise,\nWho thrives and who declines; side factions\nand give out\nConjectural marriages; making parties strong\nAnd feebling such as stand not in their liking\nBelow their cobbled shoes.  They say there's\ngrain enough!\n Would the nobility lay aside their ruth,\nAnd let me use my sword, I'll make a quarry\nWith thousands of these quarter'd slaves, as high\nAs I could pick my lance.\n\n MENENIUS:\nNay, these are almost thoroughly persuaded;\nFor though abundantly they lack discretion,\nYet are they passing cowardly. ",
+    "indexed_text": "They'll sit by the fire, and presume to know\nWhat's done i' the Capitol; who's like to rise,\nWho thrives and who declines; side factions\nand give out\nConjectural marriages; making parties strong\nAnd feebling such as stand not in their liking\nBelow their cobbled shoes. ",
+    "node_id": "sentence_window:89c47b21fc294f82:000093",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "MARCIUS:\nHang 'em!  They say!\n They'll sit by the fire, and presume to know\nWhat's done i' the Capitol; who's like to rise,\nWho thrives and who declines; side factions\nand give out\nConjectural marriages; making parties strong\nAnd feebling such as stand not in their liking\nBelow their cobbled shoes.  They say there's\ngrain enough!\n Would the nobility lay aside their ruth,\nAnd let me use my sword, I'll make a quarry\nWith thousands of these quarter'd slaves, as high\nAs I could pick my lance.\n\n MENENIUS:\nNay, these are almost thoroughly persuaded;\nFor though abundantly they lack discretion,\nYet are they passing cowardly.  But, I beseech you,\nWhat says the other troop?\n\n",
+    "indexed_text": "They say there's\ngrain enough!\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000094",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "They say!\n They'll sit by the fire, and presume to know\nWhat's done i' the Capitol; who's like to rise,\nWho thrives and who declines; side factions\nand give out\nConjectural marriages; making parties strong\nAnd feebling such as stand not in their liking\nBelow their cobbled shoes.  They say there's\ngrain enough!\n Would the nobility lay aside their ruth,\nAnd let me use my sword, I'll make a quarry\nWith thousands of these quarter'd slaves, as high\nAs I could pick my lance.\n\n MENENIUS:\nNay, these are almost thoroughly persuaded;\nFor though abundantly they lack discretion,\nYet are they passing cowardly.  But, I beseech you,\nWhat says the other troop?\n\n MARCIUS:\nThey are dissolved: hang 'em!\n",
+    "indexed_text": "Would the nobility lay aside their ruth,\nAnd let me use my sword, I'll make a quarry\nWith thousands of these quarter'd slaves, as high\nAs I could pick my lance.\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000095",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "They'll sit by the fire, and presume to know\nWhat's done i' the Capitol; who's like to rise,\nWho thrives and who declines; side factions\nand give out\nConjectural marriages; making parties strong\nAnd feebling such as stand not in their liking\nBelow their cobbled shoes.  They say there's\ngrain enough!\n Would the nobility lay aside their ruth,\nAnd let me use my sword, I'll make a quarry\nWith thousands of these quarter'd slaves, as high\nAs I could pick my lance.\n\n MENENIUS:\nNay, these are almost thoroughly persuaded;\nFor though abundantly they lack discretion,\nYet are they passing cowardly.  But, I beseech you,\nWhat says the other troop?\n\n MARCIUS:\nThey are dissolved: hang 'em!\n They said they were an-hungry; sigh'd forth proverbs,\nThat hunger broke stone walls, that dogs must eat,\nThat meat was made for mouths, that the gods sent not\nCorn for the rich men only: with these shreds\nThey vented their complainings; which being answer'd,\nAnd a petition granted them, a strange one--\nTo break the heart of generosity,\nAnd make bold power look pale--they threw their caps\nAs they would hang them on the horns o' the moon,\nShouting their emulation.\n\n",
+    "indexed_text": "MENENIUS:\nNay, these are almost thoroughly persuaded;\nFor though abundantly they lack discretion,\nYet are they passing cowardly. ",
+    "node_id": "sentence_window:89c47b21fc294f82:000096",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "They say there's\ngrain enough!\n Would the nobility lay aside their ruth,\nAnd let me use my sword, I'll make a quarry\nWith thousands of these quarter'd slaves, as high\nAs I could pick my lance.\n\n MENENIUS:\nNay, these are almost thoroughly persuaded;\nFor though abundantly they lack discretion,\nYet are they passing cowardly.  But, I beseech you,\nWhat says the other troop?\n\n MARCIUS:\nThey are dissolved: hang 'em!\n They said they were an-hungry; sigh'd forth proverbs,\nThat hunger broke stone walls, that dogs must eat,\nThat meat was made for mouths, that the gods sent not\nCorn for the rich men only: with these shreds\nThey vented their complainings; which being answer'd,\nAnd a petition granted them, a strange one--\nTo break the heart of generosity,\nAnd make bold power look pale--they threw their caps\nAs they would hang them on the horns o' the moon,\nShouting their emulation.\n\n MENENIUS:\nWhat is granted them?\n\n",
+    "indexed_text": "But, I beseech you,\nWhat says the other troop?\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000097",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "Would the nobility lay aside their ruth,\nAnd let me use my sword, I'll make a quarry\nWith thousands of these quarter'd slaves, as high\nAs I could pick my lance.\n\n MENENIUS:\nNay, these are almost thoroughly persuaded;\nFor though abundantly they lack discretion,\nYet are they passing cowardly.  But, I beseech you,\nWhat says the other troop?\n\n MARCIUS:\nThey are dissolved: hang 'em!\n They said they were an-hungry; sigh'd forth proverbs,\nThat hunger broke stone walls, that dogs must eat,\nThat meat was made for mouths, that the gods sent not\nCorn for the rich men only: with these shreds\nThey vented their complainings; which being answer'd,\nAnd a petition granted them, a strange one--\nTo break the heart of generosity,\nAnd make bold power look pale--they threw their caps\nAs they would hang them on the horns o' the moon,\nShouting their emulation.\n\n MENENIUS:\nWhat is granted them?\n\n MARCIUS:\nFive tribunes to defend their vulgar wisdoms,\nOf their own choice: one's Junius Brutus,\nSicinius Velutus, and I know not--'Sdeath!\n",
+    "indexed_text": "MARCIUS:\nThey are dissolved: hang 'em!\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000098",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "MENENIUS:\nNay, these are almost thoroughly persuaded;\nFor though abundantly they lack discretion,\nYet are they passing cowardly.  But, I beseech you,\nWhat says the other troop?\n\n MARCIUS:\nThey are dissolved: hang 'em!\n They said they were an-hungry; sigh'd forth proverbs,\nThat hunger broke stone walls, that dogs must eat,\nThat meat was made for mouths, that the gods sent not\nCorn for the rich men only: with these shreds\nThey vented their complainings; which being answer'd,\nAnd a petition granted them, a strange one--\nTo break the heart of generosity,\nAnd make bold power look pale--they threw their caps\nAs they would hang them on the horns o' the moon,\nShouting their emulation.\n\n MENENIUS:\nWhat is granted them?\n\n MARCIUS:\nFive tribunes to defend their vulgar wisdoms,\nOf their own choice: one's Junius Brutus,\nSicinius Velutus, and I know not--'Sdeath!\n The rabble should have first unroof'd the city,\nEre so prevail'd with me: it will in time\nWin upon power and throw forth greater themes\nFor insurrection's arguing.\n\n",
+    "indexed_text": "They said they were an-hungry; sigh'd forth proverbs,\nThat hunger broke stone walls, that dogs must eat,\nThat meat was made for mouths, that the gods sent not\nCorn for the rich men only: with these shreds\nThey vented their complainings; which being answer'd,\nAnd a petition granted them, a strange one--\nTo break the heart of generosity,\nAnd make bold power look pale--they threw their caps\nAs they would hang them on the horns o' the moon,\nShouting their emulation.\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000099",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "But, I beseech you,\nWhat says the other troop?\n\n MARCIUS:\nThey are dissolved: hang 'em!\n They said they were an-hungry; sigh'd forth proverbs,\nThat hunger broke stone walls, that dogs must eat,\nThat meat was made for mouths, that the gods sent not\nCorn for the rich men only: with these shreds\nThey vented their complainings; which being answer'd,\nAnd a petition granted them, a strange one--\nTo break the heart of generosity,\nAnd make bold power look pale--they threw their caps\nAs they would hang them on the horns o' the moon,\nShouting their emulation.\n\n MENENIUS:\nWhat is granted them?\n\n MARCIUS:\nFive tribunes to defend their vulgar wisdoms,\nOf their own choice: one's Junius Brutus,\nSicinius Velutus, and I know not--'Sdeath!\n The rabble should have first unroof'd the city,\nEre so prevail'd with me: it will in time\nWin upon power and throw forth greater themes\nFor insurrection's arguing.\n\n MENENIUS:\nThis is strange.\n\n",
+    "indexed_text": "MENENIUS:\nWhat is granted them?\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000100",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "MARCIUS:\nThey are dissolved: hang 'em!\n They said they were an-hungry; sigh'd forth proverbs,\nThat hunger broke stone walls, that dogs must eat,\nThat meat was made for mouths, that the gods sent not\nCorn for the rich men only: with these shreds\nThey vented their complainings; which being answer'd,\nAnd a petition granted them, a strange one--\nTo break the heart of generosity,\nAnd make bold power look pale--they threw their caps\nAs they would hang them on the horns o' the moon,\nShouting their emulation.\n\n MENENIUS:\nWhat is granted them?\n\n MARCIUS:\nFive tribunes to defend their vulgar wisdoms,\nOf their own choice: one's Junius Brutus,\nSicinius Velutus, and I know not--'Sdeath!\n The rabble should have first unroof'd the city,\nEre so prevail'd with me: it will in time\nWin upon power and throw forth greater themes\nFor insurrection's arguing.\n\n MENENIUS:\nThis is strange.\n\n MARCIUS:\nGo, get you home, you fragments!\n\n",
+    "indexed_text": "MARCIUS:\nFive tribunes to defend their vulgar wisdoms,\nOf their own choice: one's Junius Brutus,\nSicinius Velutus, and I know not--'Sdeath!\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000101",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "They said they were an-hungry; sigh'd forth proverbs,\nThat hunger broke stone walls, that dogs must eat,\nThat meat was made for mouths, that the gods sent not\nCorn for the rich men only: with these shreds\nThey vented their complainings; which being answer'd,\nAnd a petition granted them, a strange one--\nTo break the heart of generosity,\nAnd make bold power look pale--they threw their caps\nAs they would hang them on the horns o' the moon,\nShouting their emulation.\n\n MENENIUS:\nWhat is granted them?\n\n MARCIUS:\nFive tribunes to defend their vulgar wisdoms,\nOf their own choice: one's Junius Brutus,\nSicinius Velutus, and I know not--'Sdeath!\n The rabble should have first unroof'd the city,\nEre so prevail'd with me: it will in time\nWin upon power and throw forth greater themes\nFor insurrection's arguing.\n\n MENENIUS:\nThis is strange.\n\n MARCIUS:\nGo, get you home, you fragments!\n\n Messenger:\nWhere's Caius Marcius?\n\n",
+    "indexed_text": "The rabble should have first unroof'd the city,\nEre so prevail'd with me: it will in time\nWin upon power and throw forth greater themes\nFor insurrection's arguing.\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000102",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "MENENIUS:\nWhat is granted them?\n\n MARCIUS:\nFive tribunes to defend their vulgar wisdoms,\nOf their own choice: one's Junius Brutus,\nSicinius Velutus, and I know not--'Sdeath!\n The rabble should have first unroof'd the city,\nEre so prevail'd with me: it will in time\nWin upon power and throw forth greater themes\nFor insurrection's arguing.\n\n MENENIUS:\nThis is strange.\n\n MARCIUS:\nGo, get you home, you fragments!\n\n Messenger:\nWhere's Caius Marcius?\n\n MARCIUS:\nHere: what's the matter?\n\n",
+    "indexed_text": "MENENIUS:\nThis is strange.\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000103",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "MARCIUS:\nFive tribunes to defend their vulgar wisdoms,\nOf their own choice: one's Junius Brutus,\nSicinius Velutus, and I know not--'Sdeath!\n The rabble should have first unroof'd the city,\nEre so prevail'd with me: it will in time\nWin upon power and throw forth greater themes\nFor insurrection's arguing.\n\n MENENIUS:\nThis is strange.\n\n MARCIUS:\nGo, get you home, you fragments!\n\n Messenger:\nWhere's Caius Marcius?\n\n MARCIUS:\nHere: what's the matter?\n\n Messenger:\nThe news is, sir, the Volsces are in arms.\n\n",
+    "indexed_text": "MARCIUS:\nGo, get you home, you fragments!\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000104",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "The rabble should have first unroof'd the city,\nEre so prevail'd with me: it will in time\nWin upon power and throw forth greater themes\nFor insurrection's arguing.\n\n MENENIUS:\nThis is strange.\n\n MARCIUS:\nGo, get you home, you fragments!\n\n Messenger:\nWhere's Caius Marcius?\n\n MARCIUS:\nHere: what's the matter?\n\n Messenger:\nThe news is, sir, the Volsces are in arms.\n\n MARCIUS:\nI am glad on 't: then we shall ha' means to vent\nOur musty superfluity. ",
+    "indexed_text": "Messenger:\nWhere's Caius Marcius?\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000105",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "MENENIUS:\nThis is strange.\n\n MARCIUS:\nGo, get you home, you fragments!\n\n Messenger:\nWhere's Caius Marcius?\n\n MARCIUS:\nHere: what's the matter?\n\n Messenger:\nThe news is, sir, the Volsces are in arms.\n\n MARCIUS:\nI am glad on 't: then we shall ha' means to vent\nOur musty superfluity.  See, our best elders.\n\n",
+    "indexed_text": "MARCIUS:\nHere: what's the matter?\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000106",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "MARCIUS:\nGo, get you home, you fragments!\n\n Messenger:\nWhere's Caius Marcius?\n\n MARCIUS:\nHere: what's the matter?\n\n Messenger:\nThe news is, sir, the Volsces are in arms.\n\n MARCIUS:\nI am glad on 't: then we shall ha' means to vent\nOur musty superfluity.  See, our best elders.\n\n First Senator:\nMarcius, 'tis true that you have lately told us;\nThe Volsces are in arms.\n\n",
+    "indexed_text": "Messenger:\nThe news is, sir, the Volsces are in arms.\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000107",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "Messenger:\nWhere's Caius Marcius?\n\n MARCIUS:\nHere: what's the matter?\n\n Messenger:\nThe news is, sir, the Volsces are in arms.\n\n MARCIUS:\nI am glad on 't: then we shall ha' means to vent\nOur musty superfluity.  See, our best elders.\n\n First Senator:\nMarcius, 'tis true that you have lately told us;\nThe Volsces are in arms.\n\n MARCIUS:\nThey have a leader,\nTullus Aufidius, that will put you to 't.\n",
+    "indexed_text": "MARCIUS:\nI am glad on 't: then we shall ha' means to vent\nOur musty superfluity. ",
+    "node_id": "sentence_window:89c47b21fc294f82:000108",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "MARCIUS:\nHere: what's the matter?\n\n Messenger:\nThe news is, sir, the Volsces are in arms.\n\n MARCIUS:\nI am glad on 't: then we shall ha' means to vent\nOur musty superfluity.  See, our best elders.\n\n First Senator:\nMarcius, 'tis true that you have lately told us;\nThe Volsces are in arms.\n\n MARCIUS:\nThey have a leader,\nTullus Aufidius, that will put you to 't.\n I sin in envying his nobility,\nAnd were I any thing but what I am,\nI would wish me only he.\n\n",
+    "indexed_text": "See, our best elders.\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000109",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "Messenger:\nThe news is, sir, the Volsces are in arms.\n\n MARCIUS:\nI am glad on 't: then we shall ha' means to vent\nOur musty superfluity.  See, our best elders.\n\n First Senator:\nMarcius, 'tis true that you have lately told us;\nThe Volsces are in arms.\n\n MARCIUS:\nThey have a leader,\nTullus Aufidius, that will put you to 't.\n I sin in envying his nobility,\nAnd were I any thing but what I am,\nI would wish me only he.\n\n COMINIUS:\nYou have fought together.\n\n",
+    "indexed_text": "First Senator:\nMarcius, 'tis true that you have lately told us;\nThe Volsces are in arms.\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000110",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "MARCIUS:\nI am glad on 't: then we shall ha' means to vent\nOur musty superfluity.  See, our best elders.\n\n First Senator:\nMarcius, 'tis true that you have lately told us;\nThe Volsces are in arms.\n\n MARCIUS:\nThey have a leader,\nTullus Aufidius, that will put you to 't.\n I sin in envying his nobility,\nAnd were I any thing but what I am,\nI would wish me only he.\n\n COMINIUS:\nYou have fought together.\n\n MARCIUS:\nWere half to half the world by the ears and he.\n",
+    "indexed_text": "MARCIUS:\nThey have a leader,\nTullus Aufidius, that will put you to 't.\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000111",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "See, our best elders.\n\n First Senator:\nMarcius, 'tis true that you have lately told us;\nThe Volsces are in arms.\n\n MARCIUS:\nThey have a leader,\nTullus Aufidius, that will put you to 't.\n I sin in envying his nobility,\nAnd were I any thing but what I am,\nI would wish me only he.\n\n COMINIUS:\nYou have fought together.\n\n MARCIUS:\nWere half to half the world by the ears and he.\n Upon my party, I'ld revolt to make\nOnly my wars with him: he is a lion\nThat I am proud to hunt.\n\n",
+    "indexed_text": "I sin in envying his nobility,\nAnd were I any thing but what I am,\nI would wish me only he.\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000112",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "First Senator:\nMarcius, 'tis true that you have lately told us;\nThe Volsces are in arms.\n\n MARCIUS:\nThey have a leader,\nTullus Aufidius, that will put you to 't.\n I sin in envying his nobility,\nAnd were I any thing but what I am,\nI would wish me only he.\n\n COMINIUS:\nYou have fought together.\n\n MARCIUS:\nWere half to half the world by the ears and he.\n Upon my party, I'ld revolt to make\nOnly my wars with him: he is a lion\nThat I am proud to hunt.\n\n First Senator:\nThen, worthy Marcius,\nAttend upon Cominius to these wars.\n\n",
+    "indexed_text": "COMINIUS:\nYou have fought together.\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000113",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "MARCIUS:\nThey have a leader,\nTullus Aufidius, that will put you to 't.\n I sin in envying his nobility,\nAnd were I any thing but what I am,\nI would wish me only he.\n\n COMINIUS:\nYou have fought together.\n\n MARCIUS:\nWere half to half the world by the ears and he.\n Upon my party, I'ld revolt to make\nOnly my wars with him: he is a lion\nThat I am proud to hunt.\n\n First Senator:\nThen, worthy Marcius,\nAttend upon Cominius to these wars.\n\n COMINIUS:\nIt is your former promise.\n\n",
+    "indexed_text": "MARCIUS:\nWere half to half the world by the ears and he.\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000114",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "I sin in envying his nobility,\nAnd were I any thing but what I am,\nI would wish me only he.\n\n COMINIUS:\nYou have fought together.\n\n MARCIUS:\nWere half to half the world by the ears and he.\n Upon my party, I'ld revolt to make\nOnly my wars with him: he is a lion\nThat I am proud to hunt.\n\n First Senator:\nThen, worthy Marcius,\nAttend upon Cominius to these wars.\n\n COMINIUS:\nIt is your former promise.\n\n MARCIUS:\nSir, it is;\nAnd I am constant. ",
+    "indexed_text": "Upon my party, I'ld revolt to make\nOnly my wars with him: he is a lion\nThat I am proud to hunt.\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000115",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "COMINIUS:\nYou have fought together.\n\n MARCIUS:\nWere half to half the world by the ears and he.\n Upon my party, I'ld revolt to make\nOnly my wars with him: he is a lion\nThat I am proud to hunt.\n\n First Senator:\nThen, worthy Marcius,\nAttend upon Cominius to these wars.\n\n COMINIUS:\nIt is your former promise.\n\n MARCIUS:\nSir, it is;\nAnd I am constant.  Titus Lartius, thou\nShalt see me once more strike at Tullus' face.\n",
+    "indexed_text": "First Senator:\nThen, worthy Marcius,\nAttend upon Cominius to these wars.\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000116",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "MARCIUS:\nWere half to half the world by the ears and he.\n Upon my party, I'ld revolt to make\nOnly my wars with him: he is a lion\nThat I am proud to hunt.\n\n First Senator:\nThen, worthy Marcius,\nAttend upon Cominius to these wars.\n\n COMINIUS:\nIt is your former promise.\n\n MARCIUS:\nSir, it is;\nAnd I am constant.  Titus Lartius, thou\nShalt see me once more strike at Tullus' face.\n What, art thou stiff? ",
+    "indexed_text": "COMINIUS:\nIt is your former promise.\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000117",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "Upon my party, I'ld revolt to make\nOnly my wars with him: he is a lion\nThat I am proud to hunt.\n\n First Senator:\nThen, worthy Marcius,\nAttend upon Cominius to these wars.\n\n COMINIUS:\nIt is your former promise.\n\n MARCIUS:\nSir, it is;\nAnd I am constant.  Titus Lartius, thou\nShalt see me once more strike at Tullus' face.\n What, art thou stiff?  stand'st out?\n\n",
+    "indexed_text": "MARCIUS:\nSir, it is;\nAnd I am constant. ",
+    "node_id": "sentence_window:89c47b21fc294f82:000118",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "First Senator:\nThen, worthy Marcius,\nAttend upon Cominius to these wars.\n\n COMINIUS:\nIt is your former promise.\n\n MARCIUS:\nSir, it is;\nAnd I am constant.  Titus Lartius, thou\nShalt see me once more strike at Tullus' face.\n What, art thou stiff?  stand'st out?\n\n TITUS:\nNo, Caius Marcius;\nI'll lean upon one crutch and fight with t'other,\nEre stay behind this business.\n\n",
+    "indexed_text": "Titus Lartius, thou\nShalt see me once more strike at Tullus' face.\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000119",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "COMINIUS:\nIt is your former promise.\n\n MARCIUS:\nSir, it is;\nAnd I am constant.  Titus Lartius, thou\nShalt see me once more strike at Tullus' face.\n What, art thou stiff?  stand'st out?\n\n TITUS:\nNo, Caius Marcius;\nI'll lean upon one crutch and fight with t'other,\nEre stay behind this business.\n\n MENENIUS:\nO, true-bred!\n\n",
+    "indexed_text": "What, art thou stiff? ",
+    "node_id": "sentence_window:89c47b21fc294f82:000120",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "MARCIUS:\nSir, it is;\nAnd I am constant.  Titus Lartius, thou\nShalt see me once more strike at Tullus' face.\n What, art thou stiff?  stand'st out?\n\n TITUS:\nNo, Caius Marcius;\nI'll lean upon one crutch and fight with t'other,\nEre stay behind this business.\n\n MENENIUS:\nO, true-bred!\n\n First Senator:\nYour company to the Capitol; where, I know,\nOur greatest friends attend us.\n\n",
+    "indexed_text": "stand'st out?\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000121",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "Titus Lartius, thou\nShalt see me once more strike at Tullus' face.\n What, art thou stiff?  stand'st out?\n\n TITUS:\nNo, Caius Marcius;\nI'll lean upon one crutch and fight with t'other,\nEre stay behind this business.\n\n MENENIUS:\nO, true-bred!\n\n First Senator:\nYour company to the Capitol; where, I know,\nOur greatest friends attend us.\n\n TITUS:\n\nCOMINIUS:\nNoble Marcius!\n\n",
+    "indexed_text": "TITUS:\nNo, Caius Marcius;\nI'll lean upon one crutch and fight with t'other,\nEre stay behind this business.\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000122",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "What, art thou stiff?  stand'st out?\n\n TITUS:\nNo, Caius Marcius;\nI'll lean upon one crutch and fight with t'other,\nEre stay behind this business.\n\n MENENIUS:\nO, true-bred!\n\n First Senator:\nYour company to the Capitol; where, I know,\nOur greatest friends attend us.\n\n TITUS:\n\nCOMINIUS:\nNoble Marcius!\n\n First Senator:\n\nMARCIUS:\nNay, let them follow:\nThe Volsces have much corn; take these rats thither\nTo gnaw their garners. ",
+    "indexed_text": "MENENIUS:\nO, true-bred!\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000123",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "stand'st out?\n\n TITUS:\nNo, Caius Marcius;\nI'll lean upon one crutch and fight with t'other,\nEre stay behind this business.\n\n MENENIUS:\nO, true-bred!\n\n First Senator:\nYour company to the Capitol; where, I know,\nOur greatest friends attend us.\n\n TITUS:\n\nCOMINIUS:\nNoble Marcius!\n\n First Senator:\n\nMARCIUS:\nNay, let them follow:\nThe Volsces have much corn; take these rats thither\nTo gnaw their garners.  Worshipful mutiners,\nYour valour puts well forth: pray, follow.\n\n",
+    "indexed_text": "First Senator:\nYour company to the Capitol; where, I know,\nOur greatest friends attend us.\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000124",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "TITUS:\nNo, Caius Marcius;\nI'll lean upon one crutch and fight with t'other,\nEre stay behind this business.\n\n MENENIUS:\nO, true-bred!\n\n First Senator:\nYour company to the Capitol; where, I know,\nOur greatest friends attend us.\n\n TITUS:\n\nCOMINIUS:\nNoble Marcius!\n\n First Senator:\n\nMARCIUS:\nNay, let them follow:\nThe Volsces have much corn; take these rats thither\nTo gnaw their garners.  Worshipful mutiners,\nYour valour puts well forth: pray, follow.\n\n SICINIUS:\nWas ever man so proud as is this Marcius?\n\n",
+    "indexed_text": "TITUS:\n\nCOMINIUS:\nNoble Marcius!\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000125",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "MENENIUS:\nO, true-bred!\n\n First Senator:\nYour company to the Capitol; where, I know,\nOur greatest friends attend us.\n\n TITUS:\n\nCOMINIUS:\nNoble Marcius!\n\n First Senator:\n\nMARCIUS:\nNay, let them follow:\nThe Volsces have much corn; take these rats thither\nTo gnaw their garners.  Worshipful mutiners,\nYour valour puts well forth: pray, follow.\n\n SICINIUS:\nWas ever man so proud as is this Marcius?\n\n BRUTUS:\nHe has no equal.\n\n",
+    "indexed_text": "First Senator:\n\nMARCIUS:\nNay, let them follow:\nThe Volsces have much corn; take these rats thither\nTo gnaw their garners. ",
+    "node_id": "sentence_window:89c47b21fc294f82:000126",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "First Senator:\nYour company to the Capitol; where, I know,\nOur greatest friends attend us.\n\n TITUS:\n\nCOMINIUS:\nNoble Marcius!\n\n First Senator:\n\nMARCIUS:\nNay, let them follow:\nThe Volsces have much corn; take these rats thither\nTo gnaw their garners.  Worshipful mutiners,\nYour valour puts well forth: pray, follow.\n\n SICINIUS:\nWas ever man so proud as is this Marcius?\n\n BRUTUS:\nHe has no equal.\n\n SICINIUS:\nWhen we were chosen tribunes for the people,--\n\nBRUTUS:\nMark'd you his lip and eyes?\n\n",
+    "indexed_text": "Worshipful mutiners,\nYour valour puts well forth: pray, follow.\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000127",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "TITUS:\n\nCOMINIUS:\nNoble Marcius!\n\n First Senator:\n\nMARCIUS:\nNay, let them follow:\nThe Volsces have much corn; take these rats thither\nTo gnaw their garners.  Worshipful mutiners,\nYour valour puts well forth: pray, follow.\n\n SICINIUS:\nWas ever man so proud as is this Marcius?\n\n BRUTUS:\nHe has no equal.\n\n SICINIUS:\nWhen we were chosen tribunes for the people,--\n\nBRUTUS:\nMark'd you his lip and eyes?\n\n SICINIUS:\nNay. ",
+    "indexed_text": "SICINIUS:\nWas ever man so proud as is this Marcius?\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000128",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "First Senator:\n\nMARCIUS:\nNay, let them follow:\nThe Volsces have much corn; take these rats thither\nTo gnaw their garners.  Worshipful mutiners,\nYour valour puts well forth: pray, follow.\n\n SICINIUS:\nWas ever man so proud as is this Marcius?\n\n BRUTUS:\nHe has no equal.\n\n SICINIUS:\nWhen we were chosen tribunes for the people,--\n\nBRUTUS:\nMark'd you his lip and eyes?\n\n SICINIUS:\nNay.  but his taunts.\n\n",
+    "indexed_text": "BRUTUS:\nHe has no equal.\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000129",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "Worshipful mutiners,\nYour valour puts well forth: pray, follow.\n\n SICINIUS:\nWas ever man so proud as is this Marcius?\n\n BRUTUS:\nHe has no equal.\n\n SICINIUS:\nWhen we were chosen tribunes for the people,--\n\nBRUTUS:\nMark'd you his lip and eyes?\n\n SICINIUS:\nNay.  but his taunts.\n\n BRUTUS:\nBeing moved, he will not spare to gird the gods.\n\n",
+    "indexed_text": "SICINIUS:\nWhen we were chosen tribunes for the people,--\n\nBRUTUS:\nMark'd you his lip and eyes?\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000130",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "SICINIUS:\nWas ever man so proud as is this Marcius?\n\n BRUTUS:\nHe has no equal.\n\n SICINIUS:\nWhen we were chosen tribunes for the people,--\n\nBRUTUS:\nMark'd you his lip and eyes?\n\n SICINIUS:\nNay.  but his taunts.\n\n BRUTUS:\nBeing moved, he will not spare to gird the gods.\n\n SICINIUS:\nBe-mock the modest moon.\n\n",
+    "indexed_text": "SICINIUS:\nNay. ",
+    "node_id": "sentence_window:89c47b21fc294f82:000131",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "BRUTUS:\nHe has no equal.\n\n SICINIUS:\nWhen we were chosen tribunes for the people,--\n\nBRUTUS:\nMark'd you his lip and eyes?\n\n SICINIUS:\nNay.  but his taunts.\n\n BRUTUS:\nBeing moved, he will not spare to gird the gods.\n\n SICINIUS:\nBe-mock the modest moon.\n\n BRUTUS:\nThe present wars devour him: he is grown\nToo proud to be so valiant.\n\n",
+    "indexed_text": "but his taunts.\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000132",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "SICINIUS:\nWhen we were chosen tribunes for the people,--\n\nBRUTUS:\nMark'd you his lip and eyes?\n\n SICINIUS:\nNay.  but his taunts.\n\n BRUTUS:\nBeing moved, he will not spare to gird the gods.\n\n SICINIUS:\nBe-mock the modest moon.\n\n BRUTUS:\nThe present wars devour him: he is grown\nToo proud to be so valiant.\n\n SICINIUS:\nSuch a nature,\nTickled with good success, disdains the shadow\nWhich he tr",
+    "indexed_text": "BRUTUS:\nBeing moved, he will not spare to gird the gods.\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000133",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "SICINIUS:\nNay.  but his taunts.\n\n BRUTUS:\nBeing moved, he will not spare to gird the gods.\n\n SICINIUS:\nBe-mock the modest moon.\n\n BRUTUS:\nThe present wars devour him: he is grown\nToo proud to be so valiant.\n\n SICINIUS:\nSuch a nature,\nTickled with good success, disdains the shadow\nWhich he tr",
+    "indexed_text": "SICINIUS:\nBe-mock the modest moon.\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000134",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "but his taunts.\n\n BRUTUS:\nBeing moved, he will not spare to gird the gods.\n\n SICINIUS:\nBe-mock the modest moon.\n\n BRUTUS:\nThe present wars devour him: he is grown\nToo proud to be so valiant.\n\n SICINIUS:\nSuch a nature,\nTickled with good success, disdains the shadow\nWhich he tr",
+    "indexed_text": "BRUTUS:\nThe present wars devour him: he is grown\nToo proud to be so valiant.\n\n",
+    "node_id": "sentence_window:89c47b21fc294f82:000135",
+    "source_id": "tinyshakespeare"
+  },
+  {
+    "context_text": "BRUTUS:\nBeing moved, he will not spare to gird the gods.\n\n SICINIUS:\nBe-mock the modest moon.\n\n BRUTUS:\nThe present wars devour him: he is grown\nToo proud to be so valiant.\n\n SICINIUS:\nSuch a nature,\nTickled with good success, disdains the shadow\nWhich he tr",
+    "indexed_text": "SICINIUS:\nSuch a nature,\nTickled with good success, disdains the shadow\nWhich he tr",
+    "node_id": "sentence_window:89c47b21fc294f82:000136",
+    "source_id": "tinyshakespeare"
+  }
+]
