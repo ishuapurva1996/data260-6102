@@ -4,17 +4,39 @@ Records live in one process: refreshing the browser retains them, while restarti
 the server restores the two seeds. Run one Uvicorn worker for this assignment.
 """
 
+from collections.abc import Callable
+import importlib.util
+import os
 from pathlib import Path
+import secrets
+from time import monotonic
 from typing import Literal
 
 from fastapi import FastAPI, HTTPException, Response, status
-from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, ConfigDict, EmailStr, Field, StrictBool, field_validator
+from starlette.middleware.sessions import SessionMiddleware
 
 
 PORT_BASE = 8702
-STATIC_DIRECTORY = Path(__file__).resolve().parent / "static"
+APP_DIRECTORY = Path(__file__).resolve().parent
+STATIC_DIRECTORY = APP_DIRECTORY / "static"
+
+
+def _load_local_module(name: str, relative_path: str):
+    """Support direct launch, app-dir, Docker, and arbitrary-name test imports.
+
+    Loading from this file's directory avoids both the stdlib `code` module and
+    changing the process-wide import search path for other apps or worktrees.
+    """
+    spec = importlib.util.spec_from_file_location(name, APP_DIRECTORY / relative_path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+auth = _load_local_module("rental_auth_routes", "routers/auth.py")
+SessionStore = _load_local_module("rental_session_store", "session_store.py").SessionStore
 
 
 class RentalUpdate(BaseModel):
@@ -72,9 +94,26 @@ def seed_rentals() -> list[Rental]:
     ]
 
 
-def create_app(initial_rentals: list[Rental | dict] | None = None) -> FastAPI:
+def create_app(
+    initial_rentals: list[Rental | dict] | None = None,
+    *,
+    secret_key: str | None = None,
+    idle_timeout: float | None = None,
+    clock: Callable[[], float] = monotonic,
+) -> FastAPI:
     """Build an independent app, optionally with a test's own initial records."""
-    app = FastAPI(title="Rental Housing Listings", version="2.0.0")
+    app = FastAPI(title="Rental Housing Listings", version="3.0.0")
+    timeout = float(os.environ.get("IDLE_TIMEOUT_SECONDS", "300")) if idle_timeout is None else idle_timeout
+    app.state.session_store = SessionStore(idle_timeout=timeout, clock=clock)
+    app.add_middleware(
+        SessionMiddleware,
+        secret_key=secret_key or os.environ.get("SECRET_KEY") or secrets.token_urlsafe(32),
+        session_cookie="session",
+        max_age=3600,
+        same_site="lax",
+        https_only=True,
+    )
+    app.include_router(auth.router)
     rentals = (
         seed_rentals()
         if initial_rentals is None
@@ -90,10 +129,6 @@ def create_app(initial_rentals: list[Rental | dict] | None = None) -> FastAPI:
     def delete_record(rental_id: int) -> Response:
         del rentals[rental_index(rental_id)]
         return Response(status_code=status.HTTP_204_NO_CONTENT)
-
-    @app.get("/", response_class=FileResponse)
-    async def home():
-        return FileResponse(STATIC_DIRECTORY / "index.html", headers={"Cache-Control": "no-store"})
 
     @app.get("/api/rentals", response_model=list[Rental])
     async def list_rentals(response: Response, q: str | None = None):

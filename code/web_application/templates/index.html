@@ -1,25 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
+{% block content %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rental Housing Listings</title>
-    <link rel="stylesheet" href="/static/styles.css">
-    <link rel="icon" href="data:,">
-</head>
-
-<body>
-    <main class="page-shell">
         <h1>Rental Housing Listings</h1>
-        <p class="page-intro">Create and manage rental housing listings.</p>
+        <p class="page-intro">Welcome. Create and manage rental housing listings.</p>
+        <section class="card auth-summary mt-4" aria-label="Account">
+          <div class="card-body">
+            {% if user %}
+            <p>You are logged in as <strong>{{ user }}</strong>.</p>
+            <a class="btn btn-success" href="/dashboard">Go to dashboard</a>
+            <a class="btn btn-outline-danger" href="/logout">Logout</a>
+            {% else %}
+            <p>Log in to visit your protected dashboard.</p>
+            <a class="btn btn-success" href="/login">Login</a>
+            {% endif %}
+          </div>
+        </section>
 
         <form id="rentalForm" novalidate>
             <h2>Create a listing</h2>
             <div class="form-field">
                 <label for="listingTitle">Listing Title <span aria-hidden="true">*</span></label>
                 <input type="text" id="listingTitle" name="listingTitle" placeholder="e.g., Zia Apartment"
-                    autocomplete="off" required autofocus>
+                    autocomplete="off" required>
             </div>
 
             <div class="form-field">
@@ -101,9 +103,6 @@
                 <ul id="rentalList" aria-live="polite" hidden></ul>
             </div>
         </section>
-    </main>
 
-    <script src="/static/app.js"></script>
-</body>
-
-</html>
+{% endblock %}
+{% block scripts %}<script src="/static/app.js"></script>{% endblock %}

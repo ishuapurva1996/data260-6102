@@ -330,3 +330,17 @@ button:disabled:hover,
         font-size: 26px;
     }
 }
+
+.nav-inner { max-width: 1080px; gap: 8px; }
+.navbar-brand { white-space: normal; font-size: 1.15rem; }
+.auth-card { max-width: 540px; margin-left: auto; margin-right: auto; }
+.auth-form { padding: 0; margin: 0; box-shadow: none; }
+.auth-form button { margin: 24px 0; }
+.auth-form input { min-height: 44px; }
+.auth-summary p:last-child { margin-bottom: 0; }
+body { padding-top: 0; }
+nav.navbar { margin-left: -24px; margin-right: -24px; padding: 14px 24px; }
+@media (max-width: 600px) {
+  nav.navbar { margin-left: -16px; margin-right: -16px; padding: 12px 16px; }
+  .navbar-nav { font-size: 0.95rem; }
+}

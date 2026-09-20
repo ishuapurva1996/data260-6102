@@ -1,20 +1,20 @@
-# Rental Housing Listings — HW2 Parts 1 and 2
+# Rental Housing Listings — shared web app with HW3 authentication
 
-The shared app combines the responsive Part 1 form/list with the Part 2 FastAPI backend at **http://127.0.0.1:8702/**. The original HW1 submission remains available at the `hw1` Git tag.
+The shared app keeps the rental form/list and FastAPI CRUD API, and adds a login, protected dashboard, and logout. HW1 and HW2 report artifacts remain historical evidence. The authentication demonstration requires HTTPS because its session cookie is Secure.
 
 ## Start locally
 
 Use Python 3.12. First-time setup, from the repository root:
 
 ```bash
-cd "/Users/pragyaapurva/Documents/SJSU/DATA 260/data260-6102"
+cd /path/to/your/checkout
 python3.12 -m venv .venv-web
 source .venv-web/bin/activate
 python -m pip install -r requirements.txt
-python code/web_application/main.py
+python scripts/run_hw03_web.py
 ```
 
-For later sessions, run the same `cd`, activate `.venv-web`, and run `python code/web_application/main.py`; do not recreate the environment. Open [the application](http://127.0.0.1:8702/) or [interactive API documentation](http://127.0.0.1:8702/docs). Keep Terminal running; press `Control-C` to stop. Use FastAPI: a static `http.server` cannot provide these API endpoints.
+For later sessions, run the same `cd`, activate `.venv-web`, and run `python scripts/run_hw03_web.py`; do not recreate the environment. Open [the application](https://127.0.0.1:8702/) or [interactive API documentation](https://127.0.0.1:8702/docs). Keep Terminal running; press `Control-C` to stop. Use FastAPI: a static `http.server` cannot provide these API endpoints.
 
 The web app uses its own `.venv-web` and root `requirements.txt`. Follow the separate setup instructions in the root README for agent workflows; do not replace their environment or dependencies with the web requirements.
 
@@ -23,8 +23,20 @@ The web app uses its own `.venv-web` and root `requirements.txt`. Follow the sep
 - Each server start seeds ID 1, **Sunny Downtown Apartment**, and ID 2, **Spacious Garden House**.
 - Reloading or opening another browser tab retains the current server records.
 - Restarting the process resets the store to those seeds. There is no database or disk persistence.
-- Use one worker/process. Only one server or container can bind local port 8702 at a time.
+- Use one worker/process. Only one server can bind a given local address and port at a time. The recorded HW3 run uses IPv6 loopback `[::1]:8702` because the shared checkout already occupies `127.0.0.1:8702`; use `--host ::1` and open `https://[::1]:8702/` to reproduce that isolation.
 - New IDs equal the current maximum plus one, or 1 when the store is empty. A deleted highest ID can therefore be reused.
+
+## Authentication
+
+Use the teaching account **admin / password**. These are public demo credentials, not a production account store. Invalid credentials show a Bootstrap alert. Successful login redirects to `/dashboard`, which displays the username. `/logout` revokes the server session and redirects to `/`.
+
+A signed cookie carries only `user` and a random `sid`, never the password. It has `HttpOnly`, `Secure`, and `SameSite=lax`. The app also checks a process-local registry before accepting a cookie. Copied cookies cannot regain access after logout, replacement login, idle expiry, or server restart. The idle limit is 300 seconds; the cookie age limit is 3600 seconds. Visiting `/`, `/login`, or `/dashboard` renews an active session. Static assets and rental API traffic do not. The rental API stays public as required by this homework.
+
+Set `SECRET_KEY` through your environment for a chosen signing key; otherwise the app uses a random per-process value. Use one worker because both rentals and sessions are in memory. This demonstration does not implement registration, a credential database, or multiworker persistence.
+
+The HTTPS launcher creates a self-signed certificate with localhost, 127.0.0.1, and ::1 SANs under ignored `tmp/https/`. It does not install a trusted certificate or change system trust. A manual browser will display a development-certificate warning; automated tests explicitly accept that certificate only in dedicated test contexts. Never commit the private key.
+
+Bootstrap 5.3.2 is vendored at `static/bootstrap.min.css` from the tutor's pinned jsDelivr URL; its MIT license notice is retained. The homepage is rendered once from `templates/index.html`; the obsolete static homepage was removed.
 
 ## Use the app
 
@@ -78,7 +90,7 @@ Example update body:
 After installing the Python requirements, from the repository root:
 
 ```bash
-.venv-web/bin/python -m pytest tests/test_api.py
+.venv-web/bin/python -m pytest tests/test_api.py tests/test_hw03_auth.py
 ```
 
 For browser checks, install Node.js 20 or newer and then run:
@@ -86,7 +98,9 @@ For browser checks, install Node.js 20 or newer and then run:
 ```bash
 npm install
 npm exec playwright install chromium
-npm run test:browser
+node tests/browser_part2.cjs
+.venv-web/bin/python scripts/run_hw03_web.py --prepare-cert
+node tests/browser_hw03_auth.cjs
 ```
 
 The suite starts and stops its own FastAPI server on an available local port with a separate in-memory store. It does not clear the app running on 8702. It defaults to `.venv-web/bin/python`; set `PYTHON` if using another interpreter with the same web dependencies.
@@ -99,19 +113,19 @@ PART2_SCREENSHOT_DIR="../HW2/agent_outputs/part2-browser-checks" npm run test:br
 
 Automated screenshots support verification; the manual guides explain how to capture the 375px toolbar, relevant code, and assignment evidence. The root README describes retained HW1 verification.
 
-## Screenshot evidence
+## Historical HW2 screenshot guides
 
 Manual guides remain outside Git at these locations, relative to the repository root:
 
 - Part 1: `../HW2/agent_outputs/SCREENSHOT_EVIDENCE_PLAN.md`
 - Part 2: `../HW2/agent_outputs/PART2_SCREENSHOT_EVIDENCE_PLAN.md`
 
-Save final screenshots under `reports/hw02/raw/`. In the report, put each relevant code excerpt immediately above its corresponding output screenshot. The guides describe future collection, not completed student evidence.
+For HW3, save evidence only under `reports/hw03/screenshots/part1/` and `reports/hw03/raw/part1/`. Historical HW2 screenshots are unchanged. In the report, put each relevant code excerpt immediately above its corresponding output screenshot. The guides describe future collection, not completed student evidence.
 
 Two controlled create-form modes support screenshots:
 
-- [Loading demo](http://127.0.0.1:8702/?slowSave=true): waits eight seconds before the real POST. Capture the loading message and disabled controls during the delay. Success navigates to `/`, removing the parameter.
-- [Error demo](http://127.0.0.1:8702/?simulateError=true): waits two seconds and produces an error before sending any create request. Data is unchanged and input preserved. Label this a controlled UI failure; it does not demonstrate an actual backend outage.
+- [Loading demo](https://127.0.0.1:8702/?slowSave=true): waits eight seconds before the real POST. Capture the loading message and disabled controls during the delay. Success navigates to `/`, removing the parameter.
+- [Error demo](https://127.0.0.1:8702/?simulateError=true): waits two seconds and produces an error before sending any create request. Data is unchanged and input preserved. Label this a controlled UI failure; it does not demonstrate an actual backend outage.
 
 Ordinary create requests have no artificial delay.
 
@@ -121,7 +135,13 @@ Build from the repository root so Docker can copy the root requirements file:
 
 ```bash
 docker build -f code/Dockerfile -t rental-housing-app .
-docker run --rm -p 127.0.0.1:8702:8702 rental-housing-app
+python scripts/run_hw03_web.py --prepare-cert
+docker run --rm -p 127.0.0.1:8702:8702 \
+  -v "$PWD/tmp/https:/certs:ro" rental-housing-app \
+  python -m uvicorn main:app --host 0.0.0.0 --port 8702 --workers 1 \
+  --ssl-certfile /certs/cert.pem --ssl-keyfile /certs/key.pem
 ```
 
 Stop the Python server first if it is using 8702. Open the same local app URL. The container uses one worker; stopping and recreating it restores seed records. This runs locally and does not deploy to a cloud service.
+
+Part 1 evidence and self-check instructions: [reproducible run](../../reports/hw03/part1/REPRODUCIBLE_RUN_INSTRUCTIONS.md). The historical `scripts/verify_hw02.py` compares static homepage bytes and is intentionally not the HW3 verifier.

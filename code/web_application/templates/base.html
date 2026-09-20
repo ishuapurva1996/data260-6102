@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Rental Housing Listings{% endblock %}</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/static/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <nav class="navbar navbar-dark bg-dark mb-4" aria-label="Main navigation">
+    <div class="container-fluid nav-inner">
+      <a class="navbar-brand" href="/">Rental Housing Listings</a>
+      <div class="navbar-nav flex-row flex-wrap gap-3">
+        <a class="nav-link" href="/">Home</a>
+        {% if user %}
+        <a class="nav-link" href="/dashboard">Dashboard</a>
+        <a class="nav-link" href="/logout">Logout</a>
+        {% else %}
+        <a class="nav-link" href="/login">Login</a>
+        {% endif %}
+      </div>
+    </div>
+  </nav>
+  <main class="page-shell">{% block content %}{% endblock %}</main>
+  <footer class="page-shell text-center text-secondary py-4 small">Rental Housing Listings · DATA 260 · s6102</footer>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

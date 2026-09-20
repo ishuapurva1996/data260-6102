@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Login | Rental Housing Listings{% endblock %}
+{% block content %}
+<h1>Login</h1>
+<p class="page-intro">Access your Rental Housing Listings dashboard.</p>
+<div class="card auth-card shadow-sm mt-4">
+  <div class="card-body p-4">
+    {% if error %}<div class="alert alert-danger" role="alert">{{ error }}</div>{% endif %}
+    <form class="auth-form" method="post" action="/login">
+      <div class="mb-3">
+        <label class="form-label" for="username">Username</label>
+        <input class="form-control" id="username" name="username" autocomplete="username" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="password">Password</label>
+        <input class="form-control" type="password" id="password" name="password" autocomplete="current-password" required>
+      </div>
+      <button class="btn btn-success w-100" type="submit">Login</button>
+    </form>
+    <a href="/">Back to listings</a>
+  </div>
+</div>
+{% endblock %}
