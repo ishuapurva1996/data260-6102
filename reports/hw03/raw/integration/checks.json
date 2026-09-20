@@ -1,0 +1,141 @@
+{
+  "status": "pass",
+  "tested_code_commit": "96b04abc04bb4cde131958ba38f37116336a4442",
+  "checks": [
+    {
+      "name": "prepare-local-certificate",
+      "command": [
+        ".venv-web/bin/python",
+        "scripts/run_hw03_web.py",
+        "--prepare-cert"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-09-20T09:32:34.683227+00:00",
+      "finished_at": "2026-09-20T09:32:34.716928+00:00",
+      "log": "reports/hw03/raw/integration/prepare-local-certificate.txt"
+    },
+    {
+      "name": "web-and-integration-tests",
+      "command": [
+        ".venv-web/bin/python",
+        "-m",
+        "pytest",
+        "tests/test_api.py",
+        "tests/test_hw03_auth.py",
+        "tests/test_hw03_integration.py",
+        "-q"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-09-20T09:32:34.717438+00:00",
+      "finished_at": "2026-09-20T09:32:35.556038+00:00",
+      "log": "reports/hw03/raw/integration/web-and-integration-tests.txt"
+    },
+    {
+      "name": "rental-browser-regression",
+      "command": [
+        "/Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "tests/browser_part2.cjs"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-09-20T09:32:35.556521+00:00",
+      "finished_at": "2026-09-20T09:33:15.390847+00:00",
+      "log": "reports/hw03/raw/integration/rental-browser-regression.txt"
+    },
+    {
+      "name": "https-auth-browser",
+      "command": [
+        "/Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "tests/browser_hw03_auth.cjs"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-09-20T09:33:15.392139+00:00",
+      "finished_at": "2026-09-20T09:33:21.114302+00:00",
+      "log": "reports/hw03/raw/integration/https-auth-browser.txt"
+    },
+    {
+      "name": "part1-verification",
+      "command": [
+        ".venv-web/bin/python",
+        "scripts/verify_hw03_part1.py",
+        "--output",
+        "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/integration/reports/hw03/raw/integration/part1-integrated-verification.json"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-09-20T09:33:21.114798+00:00",
+      "finished_at": "2026-09-20T09:33:22.052329+00:00",
+      "log": "reports/hw03/raw/integration/part1-verification.txt"
+    },
+    {
+      "name": "retrieval-tests",
+      "command": [
+        ".venv-retrieval/bin/python",
+        "-m",
+        "pytest",
+        "tests/retrieval",
+        "-q"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-09-20T09:33:22.052993+00:00",
+      "finished_at": "2026-09-20T09:33:24.918039+00:00",
+      "log": "reports/hw03/raw/integration/retrieval-tests.txt"
+    },
+    {
+      "name": "retrieval-inputs",
+      "command": [
+        ".venv-retrieval/bin/python",
+        "code/retrieval_compare.py",
+        "check-inputs"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-09-20T09:33:24.918482+00:00",
+      "finished_at": "2026-09-20T09:33:25.001668+00:00",
+      "log": "reports/hw03/raw/integration/retrieval-inputs.txt"
+    },
+    {
+      "name": "retrieval-summary",
+      "command": [
+        ".venv-retrieval/bin/python",
+        "code/retrieval_summarize.py",
+        "--run-dir",
+        "reports/hw03/raw/part2/baseline-20260920",
+        "--check"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-09-20T09:33:25.002071+00:00",
+      "finished_at": "2026-09-20T09:33:25.039053+00:00",
+      "log": "reports/hw03/raw/integration/retrieval-summary.txt"
+    },
+    {
+      "name": "retrieval-corruption",
+      "command": [
+        ".venv-retrieval/bin/python",
+        "reports/hw03/part2/check_evidence_corruption.py",
+        "--output",
+        "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/integration/reports/hw03/raw/integration/corruption-checks.json"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-09-20T09:33:25.039408+00:00",
+      "finished_at": "2026-09-20T09:33:32.972939+00:00",
+      "log": "reports/hw03/raw/integration/retrieval-corruption.txt"
+    },
+    {
+      "name": "part2-verification-and-local-model",
+      "command": [
+        ".venv-retrieval/bin/python",
+        "scripts/verify_hw03_part2.py",
+        "--run-dir",
+        "reports/hw03/raw/part2/baseline-20260920",
+        "--require-report",
+        "--smoke",
+        "--output",
+        "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/integration/reports/hw03/raw/integration/part2-integrated-verification.json"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-09-20T09:33:32.973416+00:00",
+      "finished_at": "2026-09-20T09:33:38.990140+00:00",
+      "log": "reports/hw03/raw/integration/part2-verification-and-local-model.txt"
+    }
+  ],
+  "environment_note": "Existing matching isolated web/retrieval environments reused through ignored local symlinks; no fresh dependency install.",
+  "scope": "Integrated checks; the original retrieval baseline is retained without rerunning measured searches."
+}

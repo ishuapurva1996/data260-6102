@@ -72,7 +72,21 @@ A passing result requires successful subprocess exits, passing part payloads, co
 
 ## Assemble and check the report
 
-The report build script uses the source sections, screenshots, AI-use answers, and measured results to produce `report.pdf` plus `report-build.json`. Use the build command recorded by the script's help and the integration run log. The manifest records the tested-code commit, PDF hash, source hashes and page count. Rendering dependencies may live in a separate report environment or the bundled document runtime.
+The report build script uses the source sections, screenshots, AI-use answers, and measured results to produce `report.pdf`, a generated Markdown reference (`report.md`), and `report-build.json`. The builder and generated report package remain uncommitted during disclosure review. Edit the narrative in `scripts/build_hw03_report.py` or its input files and regenerate; editing the generated Markdown alone does not change the PDF.
+
+```bash
+python3.12 -m venv .venv-report
+.venv-report/bin/python -m pip install -r requirements-report.txt
+.venv-report/bin/python scripts/build_hw03_report.py \
+  --code-ref 96b04abc04bb4cde131958ba38f37116336a4442 \
+  --upload-copy ../../Apurva_HW3.pdf
+```
+
+The optional upload destination may be any chosen path outside the repository; the current working copy uses the assignment's `HW3/Apurva_HW3.pdf` location. The recorded build used the bundled document runtime with the same pinned packages. Installation needs network; assembly itself uses only saved local inputs. The code reference above matches the completed integration checks in `raw/integration/checks.json`. If runtime source changes, commit and rerun affected checks, then use the resulting verified reference instead of silently relabeling old evidence. Later documentation and verifier-only commits do not change the runtime that produced these checks.
+
+The manifest records the tested-code commit, PDF and Markdown hashes, consumed source hashes and page count. It requires successful integration receipts before generating the report. Final visual review is a separate step.
+
+The saved report figures can be reused. If deliberately refreshing their presentation, run `node scripts/capture_hw03_report_evidence.mjs` for browser views of the original retrieval output, and `node scripts/capture_hw03_auth_report.cjs` for three new mobile viewport captures plus saved-header/directory viewers. The latter starts and stops its own local HTTPS server and refuses an occupied `::1:8702`; it does not alter or replace the original 27-check browser evidence. Both scripts save input hashes and screenshot receipts under `raw/integration/`. Regenerate the report after any figure changes.
 
 After building and visually checking every page:
 

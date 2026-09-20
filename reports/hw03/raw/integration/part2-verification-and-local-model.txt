@@ -1,0 +1,208 @@
+2026-09-20T09:33:32.973416+00:00 COMMAND [".venv-retrieval/bin/python", "scripts/verify_hw03_part2.py", "--run-dir", "reports/hw03/raw/part2/baseline-20260920", "--require-report", "--smoke", "--output", "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/integration/reports/hw03/raw/integration/part2-integrated-verification.json"]
+LLM is explicitly disabled. Using MockLLM.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 8931.62it/s]
+{
+  "status": "pass",
+  "verified_at": "2026-09-20T09:33:33.847387+00:00",
+  "run_id": "baseline-20260920",
+  "verifier_commit": "96b04abc04bb4cde131958ba38f37116336a4442",
+  "code_commit": "cc0a57bae6e19778021643bffebf5c66d5e7c0a3",
+  "freeze_commit": "08bd6e0495ce03281aa8fab7f70ac0b51e1c1442",
+  "baseline_combinations": 15,
+  "vector_checks": 45,
+  "corpus_text_bytes": 345859,
+  "source_count": 4,
+  "high_score_failures": [
+    {
+      "question_id": "Q1",
+      "question": "A HUD-assisted rental applicant receives a rejection notice. Within how many days may the applicant request a meeting with the owner to dispute the rejection?",
+      "technique": "semantic",
+      "designation": "baseline",
+      "node_id": "semantic:f58b648d83a6c2ff:000060",
+      "source_id": "HUD_INCOME",
+      "rank": 1,
+      "store_rank": 1,
+      "cosine": 0.5589947879637234,
+      "retrieved_text": "408 (a) (6), (7) and (8)\n\n5-16 Effective Term of Verifications\n\nVerifications and consent forms must be used within a reasonable time. HUD has set specific limits on the duration of verification consents. In addition, verified information must be used in a timely manner since family circumstances are subject to change. HUD places several other limits on the information that may be requested and when and how it may be used.\n\nA. Duration of Verification Authorization\n\nOwner-created verification forms and the forms HUD-9887 and *HUD-9887-A* expire 15 months after they are signed. Owners must ensure that the forms HUD-9887 and *HUD-9887-A* have not expired when processing verifications. However, there are differences between the duration of form HUD-9887 and that of the individual verification forms.\n\n1. The form HUD-9887-A and individual verification forms can be used during the 120 days before the certification period. During the certification period, however, these forms may be used only in cases\n\nwhere the owner receives information indicating that the information the tenant has provided may be incorrect. Other uses are prohibited.\n\n2. Owners may verify anticipated income using individual verification forms to gather prospective information when necessary (e.g., verifying seasonal employment). Historical information that owners may request using individual verification forms is restricted as follows:\n\na. Information requested by individual verification forms is restricted to data that is no more than 12 months old.\n\nb. However, if the owner receives inconsistent information and has reason to believe that the information the applicant or tenant has supplied is incorrect, the owner may obtain information from any time in the last five years when the individual was receiving assistance, as provided by the form HUD-9887-A.\n\n3. The form HUD-9887 may be used at any time during the entire 15 month period. The information covered by the form HUD-9887 is restricted as follows:\n\na. State Wage Information Collection Agency (SWICA) Information received from SWICA is limited to wages and unemployment compensation the applicant or tenant received during the last five years she/he received housing assistance.\n\nb. ",
+      "context_text": "408 (a) (6), (7) and (8)\n\n5-16 Effective Term of Verifications\n\nVerifications and consent forms must be used within a reasonable time. HUD has set specific limits on the duration of verification consents. In addition, verified information must be used in a timely manner since family circumstances are subject to change. HUD places several other limits on the information that may be requested and when and how it may be used.\n\nA. Duration of Verification Authorization\n\nOwner-created verification forms and the forms HUD-9887 and *HUD-9887-A* expire 15 months after they are signed. Owners must ensure that the forms HUD-9887 and *HUD-9887-A* have not expired when processing verifications. However, there are differences between the duration of form HUD-9887 and that of the individual verification forms.\n\n1. The form HUD-9887-A and individual verification forms can be used during the 120 days before the certification period. During the certification period, however, these forms may be used only in cases\n\nwhere the owner receives information indicating that the information the tenant has provided may be incorrect. Other uses are prohibited.\n\n2. Owners may verify anticipated income using individual verification forms to gather prospective information when necessary (e.g., verifying seasonal employment). Historical information that owners may request using individual verification forms is restricted as follows:\n\na. Information requested by individual verification forms is restricted to data that is no more than 12 months old.\n\nb. However, if the owner receives inconsistent information and has reason to believe that the information the applicant or tenant has supplied is incorrect, the owner may obtain information from any time in the last five years when the individual was receiving assistance, as provided by the form HUD-9887-A.\n\n3. The form HUD-9887 may be used at any time during the entire 15 month period. The information covered by the form HUD-9887 is restricted as follows:\n\na. State Wage Information Collection Agency (SWICA) Information received from SWICA is limited to wages and unemployment compensation the applicant or tenant received during the last five years she/he received housing assistance.\n\nb. ",
+      "evidence": "Central exact quote: \u201cOwner-created verification forms and the forms HUD-9887 and *HUD-9887-A* expire 15 months after they are signed.\u201d Context exact quote: \u201cOwner-created verification forms and the forms HUD-9887 and *HUD-9887-A* expire 15 months after they are signed.\u201d",
+      "rationale": "This passage gives validity periods for verification forms and limits on historical income information. It does not give a rejected applicant\u2019s 14-day meeting-request period in either text."
+    },
+    {
+      "question_id": "Q1",
+      "question": "A HUD-assisted rental applicant receives a rejection notice. Within how many days may the applicant request a meeting with the owner to dispute the rejection?",
+      "technique": "token",
+      "designation": "baseline",
+      "node_id": "token:e8dcdb0274d129da:000012",
+      "source_id": "HUD_FAIR",
+      "rank": 1,
+      "store_rank": 1,
+      "cosine": 0.6075296390782083,
+      "retrieved_text": "time to submit a written answer to the complaint. \u2022 Investigate your complaint, and determine whether or not there is reasonable cause to believe that the respondent violated the Fair Housing Act. \u2022 Notify you and the respondent if HUD cannot complete its investigation within 100 days of filing your complaint, and provide reason for the delay.\n\nFair Housing Act Conciliation: During the complaint investigation, HUD is required to offer you and the respondent the opportunity to voluntarily resolve your complaint with a Conciliation Agreement.\n\nA Conciliation Agreement provides individual relief to you, and protects the public interest by deterring future discrimination by the respondent. Once you and the respondent sign a Conciliation Agreement, and HUD approves the Agreement, HUD will cease investigating your complaint. If you believe that the respondent has violated breached your Conciliation Agreement, you should promptly notify the HUD Office that investigated your",
+      "context_text": "time to submit a written answer to the complaint. \u2022 Investigate your complaint, and determine whether or not there is reasonable cause to believe that the respondent violated the Fair Housing Act. \u2022 Notify you and the respondent if HUD cannot complete its investigation within 100 days of filing your complaint, and provide reason for the delay.\n\nFair Housing Act Conciliation: During the complaint investigation, HUD is required to offer you and the respondent the opportunity to voluntarily resolve your complaint with a Conciliation Agreement.\n\nA Conciliation Agreement provides individual relief to you, and protects the public interest by deterring future discrimination by the respondent. Once you and the respondent sign a Conciliation Agreement, and HUD approves the Agreement, HUD will cease investigating your complaint. If you believe that the respondent has violated breached your Conciliation Agreement, you should promptly notify the HUD Office that investigated your",
+      "evidence": "Central exact quote: \u201cNotify you and the respondent if HUD cannot complete its investigation within 100 days of filing your complaint\u201d Context exact quote: \u201cNotify you and the respondent if HUD cannot complete its investigation within 100 days of filing your complaint\u201d",
+      "rationale": "The passage concerns HUD complaint investigation and conciliation. The 100 days concerns investigation progress, not a rental applicant\u2019s time to request a rejection meeting. Neither text provides the 14-day request deadline."
+    },
+    {
+      "question_id": "Q2",
+      "question": "In the archived HUD Handbook\u2019s rent calculation, how much is deducted from annual income for each eligible dependent?",
+      "technique": "semantic",
+      "designation": "baseline",
+      "node_id": "semantic:f58b648d83a6c2ff:000000",
+      "source_id": "HUD_INCOME",
+      "rank": 1,
+      "store_rank": 1,
+      "cosine": 0.7438084276925587,
+      "retrieved_text": "CHAPTER 5. DETERMINING INCOME AND CALCULATING RENT\n\n5-1 Introduction\n\nA. Owners must determine the amount of a family\u2019s income before the family is allowed to move into assisted housing and at least annually thereafter. The amount of assistance paid on behalf of the family is calculated using the family\u2019s annual income less allowable deductions. HUD program regulations specify the types and amounts of income and deductions to be included in the calculation of annual and adjusted income.\n\nB. Although the definitions of annual and adjusted income used for the programs covered in this handbook have some similarities with rules used by the U.S. Internal Revenue Service (IRS), the tax rules are different from the HUD program rules.\n\nC. The most frequent errors encountered in reviews of annual and adjusted income determinations in tenant files fall in three categories:\n\n1. Applicants and tenants failing to fully disclose income information;\n\n2. Errors in identifying required income exclusions; and\n\n3. Incorrect calculations of deductions, often the result of failure to obtain third-party verification.\n\nCareful interviewing and thorough verification can minimize the occurrence of these errors.\n\nD. Chapter 5 is organized as follows:\n\n\u2022 Section 1: Determining Annual Income discusses the requirements regarding annual income and the procedure for calculating a family\u2019s annual income when determining eligibility. This section also includes guidance on determining income from assets.\n\n\u2022 Section 2: Determining Adjusted Income describes the procedures and requirements for determining adjusted income based on allowable deductions.\n\n\u2022 Section 3: Verification presents the requirements for verifying information provided by applicants and tenants related to their eligibility.\n\n\u2022 Section 4: Calculating Tenant Rent discusses the methods for calculating the tenant\u2019s portion of rent under the different programs covered by this handbook.\n\n5-2 Key Terms\n\nA. There are a number of technical terms used in this chapter that have very specific definitions established by federal statute or regulations, or by HUD. ",
+      "context_text": "CHAPTER 5. DETERMINING INCOME AND CALCULATING RENT\n\n5-1 Introduction\n\nA. Owners must determine the amount of a family\u2019s income before the family is allowed to move into assisted housing and at least annually thereafter. The amount of assistance paid on behalf of the family is calculated using the family\u2019s annual income less allowable deductions. HUD program regulations specify the types and amounts of income and deductions to be included in the calculation of annual and adjusted income.\n\nB. Although the definitions of annual and adjusted income used for the programs covered in this handbook have some similarities with rules used by the U.S. Internal Revenue Service (IRS), the tax rules are different from the HUD program rules.\n\nC. The most frequent errors encountered in reviews of annual and adjusted income determinations in tenant files fall in three categories:\n\n1. Applicants and tenants failing to fully disclose income information;\n\n2. Errors in identifying required income exclusions; and\n\n3. Incorrect calculations of deductions, often the result of failure to obtain third-party verification.\n\nCareful interviewing and thorough verification can minimize the occurrence of these errors.\n\nD. Chapter 5 is organized as follows:\n\n\u2022 Section 1: Determining Annual Income discusses the requirements regarding annual income and the procedure for calculating a family\u2019s annual income when determining eligibility. This section also includes guidance on determining income from assets.\n\n\u2022 Section 2: Determining Adjusted Income describes the procedures and requirements for determining adjusted income based on allowable deductions.\n\n\u2022 Section 3: Verification presents the requirements for verifying information provided by applicants and tenants related to their eligibility.\n\n\u2022 Section 4: Calculating Tenant Rent discusses the methods for calculating the tenant\u2019s portion of rent under the different programs covered by this handbook.\n\n5-2 Key Terms\n\nA. There are a number of technical terms used in this chapter that have very specific definitions established by federal statute or regulations, or by HUD. ",
+      "evidence": "Central exact quote: \u201cSection 2: Determining Adjusted Income describes the procedures and requirements for determining adjusted income based on allowable deductions.\u201d Context exact quote: \u201cSection 2: Determining Adjusted Income describes the procedures and requirements for determining adjusted income based on allowable deductions.\u201d",
+      "rationale": "This introductory overview identifies a section about deductions but does not state the deduction per dependent or $480 amount. A section pointer is not the requested answer in either text."
+    },
+    {
+      "question_id": "Q2",
+      "question": "In the archived HUD Handbook\u2019s rent calculation, how much is deducted from annual income for each eligible dependent?",
+      "technique": "sentence_window",
+      "designation": "baseline",
+      "node_id": "sentence_window:f58b648d83a6c2ff:001332",
+      "source_id": "HUD_INCOME",
+      "rank": 1,
+      "store_rank": 1,
+      "cosine": 0.7175048332426072,
+      "retrieved_text": "Tenant Rent Formulas\n\nhttp://portal.hud.gov/hudportal/documents/huddoc?id=DOC_35705.pdf\n",
+      "context_text": "5-7.  HUD Fact Sheet \u2013 Verification of Information Provided by Applicants and Tenants of Assisted Housing\n\nSee 5-5 above.\n\n 5-8.  Tenant Rent Formulas\n\nhttp://portal.hud.gov/hudportal/documents/huddoc?id=DOC_35705.pdf\n",
+      "evidence": "Central exact quote: \u201cTenant Rent Formulas\u201d Context exact quote: \u201cTenant Rent Formulas\u201d",
+      "rationale": "The central text is a title and a URL. The window adds other fact-sheet references, but neither contains the $480 dependent-deduction rule. Following the external link would introduce evidence outside this retrieved text."
+    },
+    {
+      "question_id": "Q2",
+      "question": "In the archived HUD Handbook\u2019s rent calculation, how much is deducted from annual income for each eligible dependent?",
+      "technique": "token",
+      "designation": "baseline",
+      "node_id": "token:f58b648d83a6c2ff:000000",
+      "source_id": "HUD_INCOME",
+      "rank": 1,
+      "store_rank": 1,
+      "cosine": 0.7510996281013915,
+      "retrieved_text": "CHAPTER 5. DETERMINING INCOME AND CALCULATING RENT\n\n5-1 Introduction\n\nA. Owners must determine the amount of a family\u2019s income before the family is allowed to move into assisted housing and at least annually thereafter. The amount of assistance paid on behalf of the family is calculated using the family\u2019s annual income less allowable deductions. HUD program regulations specify the types and amounts of income and deductions to be included in the calculation of annual and adjusted income.\n\nB. Although the definitions of annual and adjusted income used for the programs covered in this handbook have some similarities with rules used by the U.S. Internal Revenue Service (IRS), the tax rules are different from the HUD program rules.\n\nC. The most frequent errors encountered in reviews of annual and adjusted income determinations in tenant files fall in three categories:\n\n1. Applicants and tenants failing to fully disclose income information;\n\n2. Errors in identifying required income exclusions; and\n\n3.",
+      "context_text": "CHAPTER 5. DETERMINING INCOME AND CALCULATING RENT\n\n5-1 Introduction\n\nA. Owners must determine the amount of a family\u2019s income before the family is allowed to move into assisted housing and at least annually thereafter. The amount of assistance paid on behalf of the family is calculated using the family\u2019s annual income less allowable deductions. HUD program regulations specify the types and amounts of income and deductions to be included in the calculation of annual and adjusted income.\n\nB. Although the definitions of annual and adjusted income used for the programs covered in this handbook have some similarities with rules used by the U.S. Internal Revenue Service (IRS), the tax rules are different from the HUD program rules.\n\nC. The most frequent errors encountered in reviews of annual and adjusted income determinations in tenant files fall in three categories:\n\n1. Applicants and tenants failing to fully disclose income information;\n\n2. Errors in identifying required income exclusions; and\n\n3.",
+      "evidence": "Central exact quote: \u201cThe amount of assistance paid on behalf of the family is calculated using the family\u2019s annual income less allowable deductions.\u201d Context exact quote: \u201cThe amount of assistance paid on behalf of the family is calculated using the family\u2019s annual income less allowable deductions.\u201d",
+      "rationale": "The text explains that deductions affect annual income and assistance, but it never specifies a dependent deduction or its $480 amount. Both texts are therefore related but insufficient."
+    },
+    {
+      "question_id": "Q4",
+      "question": "A rental applicant believes housing discrimination occurred. What time limit does HUD\u2019s Fair Housing booklet give for filing a complaint with HUD?",
+      "technique": "semantic",
+      "designation": "baseline",
+      "node_id": "semantic:e8dcdb0274d129da:000005",
+      "source_id": "HUD_FAIR",
+      "rank": 1,
+      "store_rank": 1,
+      "cosine": 0.6646300976352744,
+      "retrieved_text": "\u2022 Pay punitive damages to you.\n\nDetermination of No Reasonable Cause and Dismissal: If HUD finds that there is no reasonable cause to believe that the respondent(s) violated the Act, HUD will dismiss your complaint with a Determination of No Reasonable Cause. HUD will notify you and the respondent(s) of the dismissal by mail, and you may request a copy of the Final Investigative Report.\n\nReconsiderations of No Reasonable Cause Determinations: The Fair Housing Act provides no formal appeal process for complaints dismissed by HUD. However, if your complaint is dismissed with a Determination of No Reasonable Cause, you may submit a written request for a reconsideration review to: Director, FHEO Office of Enforcement, U.S. Department of Housing and Urban Development, 451 7th Street, SW, Room 5206, Washington, DC 20410-2000.\n\nIn Addition\n\nYou May File a Private Lawsuit: You may file a private civil lawsuit without first filing a complaint with HUD. You must file your lawsuit within two (2) years of the most recent date of alleged discriminatory action.\n\nIf you do file a complaint with HUD and even if HUD dismisses your complaint, the Fair Housing Act gives you the right to file a private civil lawsuit against the respondent(s) in Federal District Court. The time during which HUD was processing your complaint is not counted in the 2-year filing period. You must file your lawsuit at your own expense; however, if you cannot afford an attorney, the Court may appoint one for you. Even if HUD is still processing your complaint, you may file a private civil lawsuit against the respondent, unless (1) you have already signed a HUD Conciliation Agreement to resolve your HUD complaint; or (2) a HUD Administrative Law Judge has commenced an Administrative Hearing for your complaint.\n\nOther Tools to Combat Housing Discrimination:\n\n\u2022 If there is noncompliance with the order of an Administrative Law Judge, HUD may seek temporary relief, enforcement of the order or a restraining order in a United States Court of Appeals. \u2022 The Attorney General may file a suit in Federal District Court if there is reasonable cause to believe a pattern or practice of housing discrimination is occurring.\n",
+      "context_text": "\u2022 Pay punitive damages to you.\n\nDetermination of No Reasonable Cause and Dismissal: If HUD finds that there is no reasonable cause to believe that the respondent(s) violated the Act, HUD will dismiss your complaint with a Determination of No Reasonable Cause. HUD will notify you and the respondent(s) of the dismissal by mail, and you may request a copy of the Final Investigative Report.\n\nReconsiderations of No Reasonable Cause Determinations: The Fair Housing Act provides no formal appeal process for complaints dismissed by HUD. However, if your complaint is dismissed with a Determination of No Reasonable Cause, you may submit a written request for a reconsideration review to: Director, FHEO Office of Enforcement, U.S. Department of Housing and Urban Development, 451 7th Street, SW, Room 5206, Washington, DC 20410-2000.\n\nIn Addition\n\nYou May File a Private Lawsuit: You may file a private civil lawsuit without first filing a complaint with HUD. You must file your lawsuit within two (2) years of the most recent date of alleged discriminatory action.\n\nIf you do file a complaint with HUD and even if HUD dismisses your complaint, the Fair Housing Act gives you the right to file a private civil lawsuit against the respondent(s) in Federal District Court. The time during which HUD was processing your complaint is not counted in the 2-year filing period. You must file your lawsuit at your own expense; however, if you cannot afford an attorney, the Court may appoint one for you. Even if HUD is still processing your complaint, you may file a private civil lawsuit against the respondent, unless (1) you have already signed a HUD Conciliation Agreement to resolve your HUD complaint; or (2) a HUD Administrative Law Judge has commenced an Administrative Hearing for your complaint.\n\nOther Tools to Combat Housing Discrimination:\n\n\u2022 If there is noncompliance with the order of an Administrative Law Judge, HUD may seek temporary relief, enforcement of the order or a restraining order in a United States Court of Appeals. \u2022 The Attorney General may file a suit in Federal District Court if there is reasonable cause to believe a pattern or practice of housing discrimination is occurring.\n",
+      "evidence": "Central exact quote: \u201cYou must file your lawsuit within two (2) years of the most recent date of alleged discriminatory action.\u201d Context exact quote: \u201cYou must file your lawsuit within two (2) years of the most recent date of alleged discriminatory action.\u201d",
+      "rationale": "The full passage covers dismissal, reconsideration, private civil lawsuits and enforcement. It gives the private-lawsuit deadline but never states the one-year HUD-complaint deadline; same-topic retrieval is insufficient."
+    },
+    {
+      "question_id": "Q4",
+      "question": "A rental applicant believes housing discrimination occurred. What time limit does HUD\u2019s Fair Housing booklet give for filing a complaint with HUD?",
+      "technique": "token",
+      "designation": "baseline",
+      "node_id": "token:e8dcdb0274d129da:000021",
+      "source_id": "HUD_FAIR",
+      "rank": 1,
+      "store_rank": 1,
+      "cosine": 0.7208612331309348,
+      "retrieved_text": "provides no formal appeal process for complaints dismissed by HUD. However, if your complaint is dismissed with a Determination of No Reasonable Cause, you may submit a written request for a reconsideration review to: Director, FHEO Office of Enforcement, U.S. Department of Housing and Urban Development, 451 7th Street, SW, Room 5206, Washington, DC 20410-2000.\n\nIn Addition\n\nYou May File a Private Lawsuit: You may file a private civil lawsuit without first filing a complaint with HUD. You must file your lawsuit within two (2) years of the most recent date of alleged discriminatory action.\n\nIf you do file a complaint with HUD and even if HUD dismisses your complaint, the Fair Housing Act gives you the right to file a private civil lawsuit against the respondent(s) in Federal District Court. The time during which HUD was processing your complaint is not counted in the 2-year filing",
+      "context_text": "provides no formal appeal process for complaints dismissed by HUD. However, if your complaint is dismissed with a Determination of No Reasonable Cause, you may submit a written request for a reconsideration review to: Director, FHEO Office of Enforcement, U.S. Department of Housing and Urban Development, 451 7th Street, SW, Room 5206, Washington, DC 20410-2000.\n\nIn Addition\n\nYou May File a Private Lawsuit: You may file a private civil lawsuit without first filing a complaint with HUD. You must file your lawsuit within two (2) years of the most recent date of alleged discriminatory action.\n\nIf you do file a complaint with HUD and even if HUD dismisses your complaint, the Fair Housing Act gives you the right to file a private civil lawsuit against the respondent(s) in Federal District Court. The time during which HUD was processing your complaint is not counted in the 2-year filing",
+      "evidence": "Central exact quote: \u201cYou must file your lawsuit within two (2) years of the most recent date of alleged discriminatory action.\u201d Context exact quote: \u201cYou must file your lawsuit within two (2) years of the most recent date of alleged discriminatory action.\u201d",
+      "rationale": "The passage gives a two-year deadline for a private civil lawsuit, a different procedure from filing a complaint with HUD. Neither text states the one-year HUD-complaint deadline or its occurred-or-ended trigger."
+    },
+    {
+      "question_id": "Q5",
+      "question": "For project-based Section 8 rental housing, what minimum percentage of assisted units that become available during a project fiscal year must be leased to extremely low-income families?",
+      "technique": "semantic",
+      "designation": "baseline",
+      "node_id": "semantic:d1f9239a9a35969b:000023",
+      "source_id": "HUD_SELECTION",
+      "rank": 1,
+      "store_rank": 1,
+      "cosine": 0.5672293803075037,
+      "retrieved_text": "Minimum Income Requirement. Section 236 and Section 221(d)(3) BMIR applicants who receive no other form of assistance, such as Section 8, may be screened for the ability to pay the Section 236 basic rent or the BMIR rent. Owners may establish a reasonable minimum income requirement to assess the applicant\u2019s ability to pay the rent. In the Section 8, RAP, and Rent Supplement programs, owners may not establish a minimum income requirement for applicants. (See paragraph 4-8.A.)\n\n",
+      "context_text": "Minimum Income Requirement. Section 236 and Section 221(d)(3) BMIR applicants who receive no other form of assistance, such as Section 8, may be screened for the ability to pay the Section 236 basic rent or the BMIR rent. Owners may establish a reasonable minimum income requirement to assess the applicant\u2019s ability to pay the rent. In the Section 8, RAP, and Rent Supplement programs, owners may not establish a minimum income requirement for applicants. (See paragraph 4-8.A.)\n\n",
+      "evidence": "Central exact quote: \u201cIn the Section 8, RAP, and Rent Supplement programs, owners may not establish a minimum income requirement for applicants.\u201d Context exact quote: \u201cIn the Section 8, RAP, and Rent Supplement programs, owners may not establish a minimum income requirement for applicants.\u201d",
+      "rationale": "This concerns whether an owner may require an applicant to have a minimum income. It does not give the percentage of available assisted units reserved through income targeting, so both texts lack the 40% rule."
+    },
+    {
+      "question_id": "Q5",
+      "question": "For project-based Section 8 rental housing, what minimum percentage of assisted units that become available during a project fiscal year must be leased to extremely low-income families?",
+      "technique": "token",
+      "designation": "baseline",
+      "node_id": "token:d1f9239a9a35969b:000004",
+      "source_id": "HUD_SELECTION",
+      "rank": 1,
+      "store_rank": 1,
+      "cosine": 0.6671903612738523,
+      "retrieved_text": "891.410, 891.610, 891.750 (Selection and admission of tenants)\n\nB. Income-Targeting\n\nThese regulations are applicable only to the Section 8 project-based program except where otherwise noted.\n\n1. 24 CFR 5.653 Admission \u2013 Income-eligibility and income-targeting\n\n2. 24 CFR 5.601, 5.603 (Occupancy Requirements for Section 8 Project-Based Assistance)\n\nC. Preferences\n\n1. 24 CFR 5.655, 880.602, 881.601, 883.701, 884.214, 886.132, 886.321, 891.230, 891.750 (Owner preferences/requirements in selection for a project or unit)\n\n2. 24 CFR 236.715 Determination of Eligibility\n\n3. 24 CFR 880.612a, 881.601, 883.701,",
+      "context_text": "891.410, 891.610, 891.750 (Selection and admission of tenants)\n\nB. Income-Targeting\n\nThese regulations are applicable only to the Section 8 project-based program except where otherwise noted.\n\n1. 24 CFR 5.653 Admission \u2013 Income-eligibility and income-targeting\n\n2. 24 CFR 5.601, 5.603 (Occupancy Requirements for Section 8 Project-Based Assistance)\n\nC. Preferences\n\n1. 24 CFR 5.655, 880.602, 881.601, 883.701, 884.214, 886.132, 886.321, 891.230, 891.750 (Owner preferences/requirements in selection for a project or unit)\n\n2. 24 CFR 236.715 Determination of Eligibility\n\n3. 24 CFR 880.612a, 881.601, 883.701,",
+      "evidence": "Central exact quote: \u201cThese regulations are applicable only to the Section 8 project-based program except where otherwise noted.\u201d Context exact quote: \u201cThese regulations are applicable only to the Section 8 project-based program except where otherwise noted.\u201d",
+      "rationale": "The text lists regulatory references for income targeting and preferences. It does not give the minimum 40% share of assisted units becoming available during a project fiscal year."
+    }
+  ],
+  "requirements": {
+    "R1": {
+      "status": "pass",
+      "evidence": "experiment_config.yaml; isolated root-level CLI"
+    },
+    "R2": {
+      "status": "pass",
+      "evidence": "CORPUS_MANIFEST.json and local source snapshot checks"
+    },
+    "R3": {
+      "status": "pass",
+      "evidence": "questions.yaml; freeze commit ancestor; quote and input hashes validated"
+    },
+    "R4": {
+      "status": "pass",
+      "evidence": "run.json and three node inventories; warm-up/smoke log"
+    },
+    "R5": {
+      "status": "pass",
+      "evidence": "console.txt; records.json; independent vector checks"
+    },
+    "R6": {
+      "status": "pass",
+      "evidence": "records.json; search samples; retrieval_summarize.py"
+    },
+    "R7": {
+      "status": "pass",
+      "evidence": "summary.json and METRICS.md regenerated offline"
+    },
+    "R8": {
+      "status": "pass",
+      "evidence": "high_score_failures and manual annotations"
+    },
+    "R9": {
+      "status": "pass",
+      "evidence": "run.json environment/config/code provenance; screenshot evidence"
+    },
+    "R10": {
+      "status": "pass",
+      "evidence": "part2/REPORT_SECTION.md and AI_USE.md"
+    },
+    "R11": {
+      "status": "pass",
+      "evidence": "owned paths only; inputs/env/cache excluded from code; integration notes"
+    }
+  },
+  "scope": "Part 2 only; no combined PDF/tag/publish",
+  "report_evidence_checked": true,
+  "real_model_smoke": {
+    "shape": [
+      1,
+      384
+    ]
+  }
+}
+
+2026-09-20T09:33:38.990140+00:00 EXIT 0

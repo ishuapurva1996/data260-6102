@@ -1,0 +1,274 @@
+{
+  "cases": [
+    {
+      "case": "missing_baseline_record",
+      "changed_files": [
+        "records.json"
+      ],
+      "exception_message": "Missing or duplicate baseline combination",
+      "exception_type": "ValueError",
+      "expected_exception_message": "Missing or duplicate baseline combination",
+      "expected_exception_type": "ValueError",
+      "finished_at": "2026-09-20T09:33:26.788367+00:00",
+      "mutation": {
+        "removed": [
+          "Q5",
+          "sentence_window"
+        ]
+      },
+      "rejected": true,
+      "started_at": "2026-09-20T09:33:25.933672+00:00",
+      "status": "pass"
+    },
+    {
+      "case": "missing_annotation",
+      "changed_files": [
+        "annotations.json"
+      ],
+      "exception_message": "('Q1', 'token', 'token:e8dcdb0274d129da:000012')",
+      "exception_type": "KeyError",
+      "expected_exception_message": null,
+      "expected_exception_type": "KeyError",
+      "finished_at": "2026-09-20T09:33:27.670031+00:00",
+      "mutation": {
+        "removed": [
+          "Q1",
+          "token",
+          "token:e8dcdb0274d129da:000012"
+        ]
+      },
+      "rejected": true,
+      "started_at": "2026-09-20T09:33:26.796166+00:00",
+      "status": "pass"
+    },
+    {
+      "case": "changed_saved_vector",
+      "changed_files": [
+        "token_Q1_vectors.json"
+      ],
+      "exception_message": "Saved cosine or rank differs from independently recomputed vectors",
+      "exception_type": "ValueError",
+      "expected_exception_message": "Saved cosine or rank differs from independently recomputed vectors",
+      "expected_exception_type": "ValueError",
+      "finished_at": "2026-09-20T09:33:28.488581+00:00",
+      "mutation": {
+        "change": "Negate first document vector; preserve unit norm and dimensions; leave saved cosine unchanged.",
+        "file": "token_Q1_vectors.json"
+      },
+      "rejected": true,
+      "started_at": "2026-09-20T09:33:27.677318+00:00",
+      "status": "pass"
+    },
+    {
+      "case": "changed_summary",
+      "changed_files": [
+        "summary.json"
+      ],
+      "exception_message": "Saved summary differs from raw regeneration",
+      "exception_type": "ValueError",
+      "expected_exception_message": "Saved summary differs from raw regeneration",
+      "expected_exception_type": "ValueError",
+      "finished_at": "2026-09-20T09:33:29.376175+00:00",
+      "mutation": {
+        "change": "Increment summary.baseline.question_count by one."
+      },
+      "rejected": true,
+      "started_at": "2026-09-20T09:33:28.494026+00:00",
+      "status": "pass"
+    },
+    {
+      "case": "changed_run_config",
+      "changed_files": [
+        "run.json"
+      ],
+      "exception_message": "Run config differs from frozen config",
+      "exception_type": "ValueError",
+      "expected_exception_message": "Run config differs from frozen config",
+      "expected_exception_type": "ValueError",
+      "finished_at": "2026-09-20T09:33:29.433250+00:00",
+      "mutation": {
+        "change": "Increment run.config.k by one; frozen experiment config unchanged."
+      },
+      "rejected": true,
+      "started_at": "2026-09-20T09:33:29.384962+00:00",
+      "status": "pass"
+    },
+    {
+      "case": "changed_question_across_three_techniques",
+      "changed_files": [
+        "records.json"
+      ],
+      "exception_message": "Record query/gold sources differ from frozen question",
+      "exception_type": "ValueError",
+      "expected_exception_message": "Record query/gold sources differ from frozen question",
+      "expected_exception_type": "ValueError",
+      "finished_at": "2026-09-20T09:33:29.461461+00:00",
+      "mutation": {
+        "change": "Mutate the same field consistently across techniques; frozen questions remain unchanged.",
+        "question_id": "Q1",
+        "techniques": [
+          "token",
+          "semantic",
+          "sentence_window"
+        ]
+      },
+      "rejected": true,
+      "started_at": "2026-09-20T09:33:29.437842+00:00",
+      "status": "pass"
+    },
+    {
+      "case": "changed_gold_across_three_techniques",
+      "changed_files": [
+        "records.json"
+      ],
+      "exception_message": "Record query/gold sources differ from frozen question",
+      "exception_type": "ValueError",
+      "expected_exception_message": "Record query/gold sources differ from frozen question",
+      "expected_exception_type": "ValueError",
+      "finished_at": "2026-09-20T09:33:29.490557+00:00",
+      "mutation": {
+        "change": "Mutate the same field consistently across techniques; frozen questions remain unchanged.",
+        "question_id": "Q1",
+        "techniques": [
+          "token",
+          "semantic",
+          "sentence_window"
+        ]
+      },
+      "rejected": true,
+      "started_at": "2026-09-20T09:33:29.467787+00:00",
+      "status": "pass"
+    },
+    {
+      "case": "empty_code_hash_inventory",
+      "changed_files": [
+        "run.json"
+      ],
+      "exception_message": "Recorded code hash inventory is incomplete",
+      "exception_type": "ValueError",
+      "expected_exception_message": "Recorded code hash inventory is incomplete",
+      "expected_exception_type": "ValueError",
+      "finished_at": "2026-09-20T09:33:30.085476+00:00",
+      "mutation": {
+        "change": "Replace run.code_hashes with an empty object."
+      },
+      "rejected": true,
+      "started_at": "2026-09-20T09:33:29.495793+00:00",
+      "status": "pass"
+    },
+    {
+      "case": "changed_chunk_count_with_regenerated_summary",
+      "changed_files": [
+        "run.json",
+        "summary.json"
+      ],
+      "exception_message": "Chunk count differs from saved nodes",
+      "exception_type": "ValueError",
+      "expected_exception_message": "Chunk count differs from saved nodes",
+      "expected_exception_type": "ValueError",
+      "finished_at": "2026-09-20T09:33:31.064157+00:00",
+      "mutation": {
+        "METRICS_md_modified": false,
+        "change": "Increment token chunk_count by one; regenerate summary from altered run.",
+        "summary_regenerated": true
+      },
+      "rejected": true,
+      "started_at": "2026-09-20T09:33:30.094798+00:00",
+      "status": "pass"
+    },
+    {
+      "case": "changed_character_average_with_regenerated_summary",
+      "changed_files": [
+        "run.json",
+        "summary.json"
+      ],
+      "exception_message": "Node average length mismatch",
+      "exception_type": "ValueError",
+      "expected_exception_message": "Node average length mismatch",
+      "expected_exception_type": "ValueError",
+      "finished_at": "2026-09-20T09:33:32.023789+00:00",
+      "mutation": {
+        "METRICS_md_modified": false,
+        "change": "Increase token average_character_length by ten; regenerate summary from altered run.",
+        "summary_regenerated": true
+      },
+      "rejected": true,
+      "started_at": "2026-09-20T09:33:31.069945+00:00",
+      "status": "pass"
+    },
+    {
+      "case": "changed_character_audit_with_regenerated_summary",
+      "changed_files": [
+        "run.json",
+        "summary.json"
+      ],
+      "exception_message": "Node character/source audit mismatch",
+      "exception_type": "ValueError",
+      "expected_exception_message": "Node character/source audit mismatch",
+      "expected_exception_type": "ValueError",
+      "finished_at": "2026-09-20T09:33:32.925925+00:00",
+      "mutation": {
+        "METRICS_md_modified": false,
+        "change": "Increment first token node's audited character length; recompute its mean and regenerate summary. Saved node text unchanged.",
+        "summary_regenerated": true
+      },
+      "rejected": true,
+      "started_at": "2026-09-20T09:33:32.029888+00:00",
+      "status": "pass"
+    }
+  ],
+  "check_script_sha256": "6b258854e22a5be14d3c138e12ae9d78ea437e8d94f6498ac1e67995378189f3",
+  "command": ".venv-retrieval/bin/python reports/hw03/part2/check_evidence_corruption.py",
+  "expected_rejection_count": 11,
+  "finished_at": "2026-09-20T09:33:32.944642+00:00",
+  "git_head": "96b04abc04bb4cde131958ba38f37116336a4442",
+  "input_METRICS_md_sha256": "5cf40aa830fffe77dbc8ae4e5a9903f81bec26d1f1ea97561c4c6e5f5396e443",
+  "input_run_files_sha256": {
+    "annotations.json": "f0106aca9b55474f045f59629a4c54ac2007f8db54320c8f0ea7f7b5e9bc07a6",
+    "console.txt": "6d382b7b974cdc65ffe46a505eb0f5eef514992b2242c184dee9d4cac29816f5",
+    "records.json": "8bd0a5ab188739e61afed8fd7dac6a48e61494ba86ccf01984b70d56ccff8564",
+    "run.json": "a683be440573206cbd96650a3ff75642ac10b557a09a9efd8497d93480fa8ea5",
+    "semantic_Q1_vectors.json": "5c44df5c7f9cda4858a0b604471a80cb132a549c8f98a91fbb7c719e1da8e068",
+    "semantic_Q2_vectors.json": "450c13472254b767949519682fa992faf98fc64ecf23593174bceed1bb181f16",
+    "semantic_Q3_vectors.json": "4c2efd853f5fd9af601ead89e03cf3db699c458907e5ae192cd6545b37df8780",
+    "semantic_Q4_vectors.json": "af6acd6913c02ab3044fa5462844a580e80ea738c92ce2698c2f645d7f5f8704",
+    "semantic_Q5_vectors.json": "44cd1616b0cb98c82e7637f98fd008d996d33c223640a5ece95d52653e573f5d",
+    "semantic_nodes.json": "a2265937d6578b2c03496890b8c41a809af04743de1c035ac0d853bd04fe7c8a",
+    "sentence_window_Q1_vectors.json": "64ad395f3cb49a563db0cce4648c3e4a794ae05e7e67c6461747e1c70088bbb4",
+    "sentence_window_Q2_vectors.json": "f32a728763a8b0d9f42ce15eb8a7202b72158d01e3984d30da9368f8bd6f1b2c",
+    "sentence_window_Q3_vectors.json": "6234e6105bd7d79bfb4f8a6603daddeb767cf14ff860a016ae3a89a16ed50ac0",
+    "sentence_window_Q4_vectors.json": "e4f0cee0bdf745af9f804184e3d274b06499f594653e87ef733398d4b9245fc9",
+    "sentence_window_Q5_vectors.json": "2633d27fcec8d0290bf6d064775d53cffa8862ba2a2da20c10234cfbc30e6d54",
+    "sentence_window_nodes.json": "4d00accd581a412471ad67304b96df245fb65fc2e7c6ace3f7887d1a01b0fb78",
+    "summary.json": "1a79d4520c406043b08da93caef86bb76092306c4cfd82bd967319ed457c3462",
+    "token_Q1_vectors.json": "a2f89dd73707f465a1d0500664cb91cde9fd81aafb064c401781df3885dad280",
+    "token_Q2_vectors.json": "b5bce0a8808889f5fb9d449dbf191f73f704b3d483a09d7e9b077f80d6d771fd",
+    "token_Q3_vectors.json": "6e5974d4ffb8371359bee949485d18691c15b12b17132eeabb8c2f875078a0ce",
+    "token_Q4_vectors.json": "e7eb9f8e909948a813b5176d13f05eb4b22ea62413145b425b790aeaa81598ec",
+    "token_Q5_vectors.json": "8ec7bf283cc3a65b0856aaa7ebc0882d37e1914160b3e2af26fb0d6c00bb5e98",
+    "token_nodes.json": "9b76d3d8ac9b6fd520775b82ea02187779221988c296ad30f65c045c233a1f6d"
+  },
+  "input_run_json_sha256": "a683be440573206cbd96650a3ff75642ac10b557a09a9efd8497d93480fa8ea5",
+  "negative_case_count": 11,
+  "original_METRICS_md_unchanged": true,
+  "original_run_files_unchanged": true,
+  "python_executable": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/integration/.venv-retrieval/bin/python",
+  "python_version": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+  "root": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/integration",
+  "schema_version": 1,
+  "scope": "Offline artifact consistency and provenance checks. No model, retrieval, network, Git writes, or modifications to source evidence. Each case starts from an independent temporary copy. These checks do not establish semantic truth of manual answer-support labels.",
+  "source_run_directory": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/integration/reports/hw03/raw/part2/baseline-20260920",
+  "started_at": "2026-09-20T09:33:25.098890+00:00",
+  "status": "pass",
+  "unmodified_copy_control": {
+    "baseline_combinations": 15,
+    "code_commit": "cc0a57bae6e19778021643bffebf5c66d5e7c0a3",
+    "freeze_commit": "08bd6e0495ce03281aa8fab7f70ac0b51e1c1442",
+    "run_id": "baseline-20260920",
+    "status": "pass",
+    "vector_checks": 45,
+    "verified_at": "2026-09-20T09:33:25.911021+00:00",
+    "verifier_commit": "96b04abc04bb4cde131958ba38f37116336a4442"
+  },
+  "verifier_sha256": "df123c80091aa7b60b8c6cae62fd3e90ac330a06dadd969f0ac3e16511dfcedd"
+}

@@ -1,0 +1,5 @@
+2026-09-20T09:33:22.052993+00:00 COMMAND [".venv-retrieval/bin/python", "-m", "pytest", "tests/retrieval", "-q"]
+.....................................                   [100%]
+37 passed, 17 subtests passed in 2.38s
+
+2026-09-20T09:33:24.918039+00:00 EXIT 0

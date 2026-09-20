@@ -1,0 +1,5 @@
+2026-09-20T09:38:52.625566+00:00 COMMAND [".venv-web/bin/python", "-m", "pytest", "tests/test_hw03_integration.py", "-q"]
+........                                                                 [100%]
+8 passed in 0.09s
+
+2026-09-20T09:38:52.893753+00:00 EXIT 0

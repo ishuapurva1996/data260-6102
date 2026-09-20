@@ -1,19 +1,19 @@
-INFO:     Started server process [78389]
+INFO:     Started server process [84193]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
 INFO:     Uvicorn running on https://[::1]:8702 (Press CTRL+C to quit)
-INFO:     ::1:55806 - "GET /login HTTP/1.1" 200 OK
-INFO:     ::1:55806 - "GET /static/bootstrap.min.css HTTP/1.1" 200 OK
-INFO:     ::1:55808 - "GET /static/styles.css HTTP/1.1" 200 OK
-INFO:     ::1:55806 - "POST /login HTTP/1.1" 303 See Other
-INFO:     ::1:55806 - "GET /dashboard HTTP/1.1" 200 OK
-INFO:     ::1:55822 - "GET /dashboard HTTP/1.1" 303 See Other
-INFO:     ::1:55822 - "GET /login HTTP/1.1" 200 OK
-INFO:     ::1:55822 - "GET /static/bootstrap.min.css HTTP/1.1" 200 OK
-INFO:     ::1:55824 - "GET /static/styles.css HTTP/1.1" 200 OK
-INFO:     ::1:55806 - "GET /dashboard HTTP/1.1" 303 See Other
-INFO:     ::1:55806 - "GET /login HTTP/1.1" 200 OK
+INFO:     ::1:57287 - "GET /login HTTP/1.1" 200 OK
+INFO:     ::1:57289 - "GET /static/styles.css HTTP/1.1" 200 OK
+INFO:     ::1:57287 - "GET /static/bootstrap.min.css HTTP/1.1" 200 OK
+INFO:     ::1:57287 - "POST /login HTTP/1.1" 303 See Other
+INFO:     ::1:57287 - "GET /dashboard HTTP/1.1" 200 OK
+INFO:     ::1:57292 - "GET /dashboard HTTP/1.1" 303 See Other
+INFO:     ::1:57292 - "GET /login HTTP/1.1" 200 OK
+INFO:     ::1:57292 - "GET /static/bootstrap.min.css HTTP/1.1" 200 OK
+INFO:     ::1:57294 - "GET /static/styles.css HTTP/1.1" 200 OK
+INFO:     ::1:57287 - "GET /dashboard HTTP/1.1" 303 See Other
+INFO:     ::1:57287 - "GET /login HTTP/1.1" 200 OK
 INFO:     Shutting down
 INFO:     Waiting for application shutdown.
 INFO:     Application shutdown complete.
-INFO:     Finished server process [78389]
+INFO:     Finished server process [84193]

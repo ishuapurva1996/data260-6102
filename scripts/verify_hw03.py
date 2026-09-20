@@ -10,7 +10,6 @@ import hashlib
 import json
 from pathlib import Path
 import subprocess
-import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -71,6 +70,8 @@ def check_report_manifest(root, check_ancestor):
         manifest = json.loads((directory / 'report-build.json').read_text())
         if manifest['pdf_sha256'] != sha256(pdf):
             raise ValueError('PDF differs from build manifest')
+        if manifest['markdown_sha256'] != sha256(directory / 'report.md'):
+            raise ValueError('Generated Markdown differs from build manifest')
         if type(manifest['page_count']) is not int or manifest['page_count'] <= 0:
             raise ValueError('Build manifest page count must be positive')
         sources = manifest['source_sha256']
@@ -84,7 +85,8 @@ def check_report_manifest(root, check_ancestor):
                 raise ValueError(f'Report source changed since build: {name}')
         if not check_ancestor(manifest['tested_code_commit']):
             raise ValueError('Report tested-code commit is not an ancestor of HEAD')
-        return True, {'pdf_sha256': manifest['pdf_sha256'], 'page_count_reported_by_builder': manifest['page_count'],
+        return True, {'pdf_sha256': manifest['pdf_sha256'], 'markdown_sha256': manifest['markdown_sha256'],
+                      'page_count_reported_by_builder': manifest['page_count'],
                       'source_count': len(sources), 'tested_code_commit': manifest['tested_code_commit'],
                       'visual_qa': 'not performed by this verifier'}
     except (OSError, ValueError, KeyError, TypeError) as exc:

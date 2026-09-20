@@ -1,0 +1,4 @@
+2026-09-20T09:33:24.918482+00:00 COMMAND [".venv-retrieval/bin/python", "code/retrieval_compare.py", "check-inputs"]
+Validated 4 sources, 345859 bytes, 5 questions.
+
+2026-09-20T09:33:25.001668+00:00 EXIT 0

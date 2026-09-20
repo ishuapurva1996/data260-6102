@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "started_at": "2026-09-20T08:51:17.847Z",
+  "started_at": "2026-09-20T09:33:15.551Z",
   "status": "pass",
   "command": "node tests/browser_hw03_auth.cjs",
-  "cwd": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/part1-auth",
+  "cwd": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/integration",
   "configuration": {
     "base_url": "https://[::1]:8702",
     "host": "::1",
@@ -26,32 +26,32 @@
   "checks": [
     {
       "name": "Collect runtime and tested-source provenance",
-      "started_at": "2026-09-20T08:51:17.850Z",
+      "started_at": "2026-09-20T09:33:15.554Z",
       "status": "pass",
       "details": {
-        "tested_head": "015c8224ea9a0aa265385931c1fb81ecba409313",
+        "tested_head": "96b04abc04bb4cde131958ba38f37116336a4442",
         "hashed_source_files": 21
       },
-      "finished_at": "2026-09-20T08:51:17.940Z"
+      "finished_at": "2026-09-20T09:33:15.648Z"
     },
     {
       "name": "Port is available before 300s server phase",
-      "started_at": "2026-09-20T08:51:17.940Z",
+      "started_at": "2026-09-20T09:33:15.648Z",
       "status": "pass",
       "details": {
         "host": "::1",
         "port": 8702,
         "result": "Bind succeeded, then probe socket closed; no HTTP request sent."
       },
-      "finished_at": "2026-09-20T08:51:17.944Z"
+      "finished_at": "2026-09-20T09:33:15.652Z"
     },
     {
       "name": "desktop: anonymous home and preserved rental controls",
-      "started_at": "2026-09-20T08:51:18.642Z",
+      "started_at": "2026-09-20T09:33:16.111Z",
       "status": "pass",
       "details": {
         "file": "reports/hw03/screenshots/part1/desktop-home.png",
-        "captured_at": "2026-09-20T08:51:18.826Z",
+        "captured_at": "2026-09-20T09:33:16.249Z",
         "actual_url": "https://[::1]:8702/",
         "viewport": {
           "width": 1280,
@@ -63,7 +63,7 @@
           "body_width": 1280
         }
       },
-      "finished_at": "2026-09-20T08:51:18.826Z",
+      "finished_at": "2026-09-20T09:33:16.249Z",
       "actual_url": "https://[::1]:8702/",
       "viewport": {
         "width": 1280,
@@ -72,11 +72,11 @@
     },
     {
       "name": "desktop: login form",
-      "started_at": "2026-09-20T08:51:18.826Z",
+      "started_at": "2026-09-20T09:33:16.249Z",
       "status": "pass",
       "details": {
         "file": "reports/hw03/screenshots/part1/desktop-login.png",
-        "captured_at": "2026-09-20T08:51:18.913Z",
+        "captured_at": "2026-09-20T09:33:16.338Z",
         "actual_url": "https://[::1]:8702/login",
         "viewport": {
           "width": 1280,
@@ -88,7 +88,7 @@
           "body_width": 1280
         }
       },
-      "finished_at": "2026-09-20T08:51:18.913Z",
+      "finished_at": "2026-09-20T09:33:16.338Z",
       "actual_url": "https://[::1]:8702/login",
       "viewport": {
         "width": 1280,
@@ -97,10 +97,10 @@
     },
     {
       "name": "desktop: anonymous dashboard is denied",
-      "started_at": "2026-09-20T08:51:18.913Z",
+      "started_at": "2026-09-20T09:33:16.338Z",
       "status": "pass",
       "details": {
-        "captured_at": "2026-09-20T08:51:18.922Z",
+        "captured_at": "2026-09-20T09:33:16.346Z",
         "method": "GET",
         "url": "https://[::1]:8702/dashboard",
         "status": 303,
@@ -111,7 +111,7 @@
           },
           {
             "name": "date",
-            "value": "Sun, 20 Sep 2026 08:51:18 GMT"
+            "value": "Sun, 20 Sep 2026 09:33:15 GMT"
           },
           {
             "name": "location",
@@ -123,7 +123,7 @@
           }
         ]
       },
-      "finished_at": "2026-09-20T08:51:18.922Z",
+      "finished_at": "2026-09-20T09:33:16.346Z",
       "actual_url": "https://[::1]:8702/login",
       "viewport": {
         "width": 1280,
@@ -132,13 +132,13 @@
     },
     {
       "name": "desktop: invalid login shows the Bootstrap alert",
-      "started_at": "2026-09-20T08:51:18.922Z",
+      "started_at": "2026-09-20T09:33:16.346Z",
       "status": "pass",
       "details": {
         "response_status": 401,
         "screenshot": {
           "file": "reports/hw03/screenshots/part1/desktop-invalid-login.png",
-          "captured_at": "2026-09-20T08:51:19.047Z",
+          "captured_at": "2026-09-20T09:33:16.472Z",
           "actual_url": "https://[::1]:8702/login",
           "viewport": {
             "width": 1280,
@@ -151,7 +151,7 @@
           }
         }
       },
-      "finished_at": "2026-09-20T08:51:19.047Z",
+      "finished_at": "2026-09-20T09:33:16.472Z",
       "actual_url": "https://[::1]:8702/login",
       "viewport": {
         "width": 1280,
@@ -160,11 +160,11 @@
     },
     {
       "name": "desktop: valid HTTPS login and secure cookie attributes",
-      "started_at": "2026-09-20T08:51:19.047Z",
+      "started_at": "2026-09-20T09:33:16.472Z",
       "status": "pass",
       "details": {
         "response": {
-          "captured_at": "2026-09-20T08:51:19.123Z",
+          "captured_at": "2026-09-20T09:33:16.547Z",
           "method": "POST",
           "url": "https://[::1]:8702/login",
           "status": 303,
@@ -175,7 +175,7 @@
             },
             {
               "name": "date",
-              "value": "Sun, 20 Sep 2026 08:51:18 GMT"
+              "value": "Sun, 20 Sep 2026 09:33:15 GMT"
             },
             {
               "name": "location",
@@ -195,7 +195,7 @@
         "dashboard_request_sent_session_cookie": true,
         "screenshot": {
           "file": "reports/hw03/screenshots/part1/desktop-dashboard.png",
-          "captured_at": "2026-09-20T08:51:19.148Z",
+          "captured_at": "2026-09-20T09:33:16.573Z",
           "actual_url": "https://[::1]:8702/dashboard",
           "viewport": {
             "width": 1280,
@@ -208,7 +208,7 @@
           }
         }
       },
-      "finished_at": "2026-09-20T08:51:19.148Z",
+      "finished_at": "2026-09-20T09:33:16.573Z",
       "actual_url": "https://[::1]:8702/dashboard",
       "viewport": {
         "width": 1280,
@@ -217,11 +217,11 @@
     },
     {
       "name": "desktop: authenticated homepage navigation",
-      "started_at": "2026-09-20T08:51:19.148Z",
+      "started_at": "2026-09-20T09:33:16.573Z",
       "status": "pass",
       "details": {
         "file": "reports/hw03/screenshots/part1/desktop-authenticated-home.png",
-        "captured_at": "2026-09-20T08:51:19.239Z",
+        "captured_at": "2026-09-20T09:33:16.644Z",
         "actual_url": "https://[::1]:8702/",
         "viewport": {
           "width": 1280,
@@ -233,7 +233,7 @@
           "body_width": 1280
         }
       },
-      "finished_at": "2026-09-20T08:51:19.239Z",
+      "finished_at": "2026-09-20T09:33:16.644Z",
       "actual_url": "https://[::1]:8702/",
       "viewport": {
         "width": 1280,
@@ -242,11 +242,11 @@
     },
     {
       "name": "desktop: logout redirects to the anonymous homepage",
-      "started_at": "2026-09-20T08:51:19.239Z",
+      "started_at": "2026-09-20T09:33:16.644Z",
       "status": "pass",
       "details": {
         "redirect": {
-          "captured_at": "2026-09-20T08:51:19.296Z",
+          "captured_at": "2026-09-20T09:33:16.705Z",
           "method": "GET",
           "url": "https://[::1]:8702/logout",
           "status": 303,
@@ -257,7 +257,7 @@
             },
             {
               "name": "date",
-              "value": "Sun, 20 Sep 2026 08:51:19 GMT"
+              "value": "Sun, 20 Sep 2026 09:33:15 GMT"
             },
             {
               "name": "location",
@@ -275,7 +275,7 @@
         },
         "screenshot": {
           "file": "reports/hw03/screenshots/part1/desktop-post-logout.png",
-          "captured_at": "2026-09-20T08:51:19.351Z",
+          "captured_at": "2026-09-20T09:33:16.761Z",
           "actual_url": "https://[::1]:8702/",
           "viewport": {
             "width": 1280,
@@ -288,7 +288,7 @@
           }
         }
       },
-      "finished_at": "2026-09-20T08:51:19.351Z",
+      "finished_at": "2026-09-20T09:33:16.761Z",
       "actual_url": "https://[::1]:8702/",
       "viewport": {
         "width": 1280,
@@ -297,14 +297,14 @@
     },
     {
       "name": "desktop: copied cookie cannot regain access after logout",
-      "started_at": "2026-09-20T08:51:19.351Z",
+      "started_at": "2026-09-20T09:33:16.761Z",
       "status": "pass",
       "details": {
         "fresh_browser_context": true,
         "copied_cookie_actually_sent": true,
         "final_url": "https://[::1]:8702/login",
         "dashboard_response": {
-          "captured_at": "2026-09-20T08:51:19.389Z",
+          "captured_at": "2026-09-20T09:33:16.798Z",
           "method": "GET",
           "url": "https://[::1]:8702/dashboard",
           "status": 303,
@@ -315,7 +315,7 @@
             },
             {
               "name": "date",
-              "value": "Sun, 20 Sep 2026 08:51:19 GMT"
+              "value": "Sun, 20 Sep 2026 09:33:15 GMT"
             },
             {
               "name": "location",
@@ -332,16 +332,16 @@
           ]
         }
       },
-      "finished_at": "2026-09-20T08:51:19.431Z"
+      "finished_at": "2026-09-20T09:33:16.841Z"
     },
     {
       "name": "desktop: browser JavaScript has no uncaught errors",
-      "started_at": "2026-09-20T08:51:19.431Z",
+      "started_at": "2026-09-20T09:33:16.841Z",
       "status": "pass",
       "details": {
         "uncaught_errors": []
       },
-      "finished_at": "2026-09-20T08:51:19.431Z",
+      "finished_at": "2026-09-20T09:33:16.841Z",
       "actual_url": "https://[::1]:8702/",
       "viewport": {
         "width": 1280,
@@ -350,11 +350,11 @@
     },
     {
       "name": "mobile: anonymous home and preserved rental controls",
-      "started_at": "2026-09-20T08:51:19.459Z",
+      "started_at": "2026-09-20T09:33:16.874Z",
       "status": "pass",
       "details": {
         "file": "reports/hw03/screenshots/part1/mobile-home.png",
-        "captured_at": "2026-09-20T08:51:19.538Z",
+        "captured_at": "2026-09-20T09:33:16.964Z",
         "actual_url": "https://[::1]:8702/",
         "viewport": {
           "width": 375,
@@ -366,7 +366,7 @@
           "body_width": 375
         }
       },
-      "finished_at": "2026-09-20T08:51:19.538Z",
+      "finished_at": "2026-09-20T09:33:16.964Z",
       "actual_url": "https://[::1]:8702/",
       "viewport": {
         "width": 375,
@@ -375,11 +375,11 @@
     },
     {
       "name": "mobile: login form",
-      "started_at": "2026-09-20T08:51:19.538Z",
+      "started_at": "2026-09-20T09:33:16.964Z",
       "status": "pass",
       "details": {
         "file": "reports/hw03/screenshots/part1/mobile-login.png",
-        "captured_at": "2026-09-20T08:51:19.608Z",
+        "captured_at": "2026-09-20T09:33:17.034Z",
         "actual_url": "https://[::1]:8702/login",
         "viewport": {
           "width": 375,
@@ -391,7 +391,7 @@
           "body_width": 375
         }
       },
-      "finished_at": "2026-09-20T08:51:19.608Z",
+      "finished_at": "2026-09-20T09:33:17.034Z",
       "actual_url": "https://[::1]:8702/login",
       "viewport": {
         "width": 375,
@@ -400,10 +400,10 @@
     },
     {
       "name": "mobile: anonymous dashboard is denied",
-      "started_at": "2026-09-20T08:51:19.608Z",
+      "started_at": "2026-09-20T09:33:17.034Z",
       "status": "pass",
       "details": {
-        "captured_at": "2026-09-20T08:51:19.615Z",
+        "captured_at": "2026-09-20T09:33:17.040Z",
         "method": "GET",
         "url": "https://[::1]:8702/dashboard",
         "status": 303,
@@ -414,7 +414,7 @@
           },
           {
             "name": "date",
-            "value": "Sun, 20 Sep 2026 08:51:19 GMT"
+            "value": "Sun, 20 Sep 2026 09:33:16 GMT"
           },
           {
             "name": "location",
@@ -426,7 +426,7 @@
           }
         ]
       },
-      "finished_at": "2026-09-20T08:51:19.615Z",
+      "finished_at": "2026-09-20T09:33:17.040Z",
       "actual_url": "https://[::1]:8702/login",
       "viewport": {
         "width": 375,
@@ -435,13 +435,13 @@
     },
     {
       "name": "mobile: invalid login shows the Bootstrap alert",
-      "started_at": "2026-09-20T08:51:19.615Z",
+      "started_at": "2026-09-20T09:33:17.040Z",
       "status": "pass",
       "details": {
         "response_status": 401,
         "screenshot": {
           "file": "reports/hw03/screenshots/part1/mobile-invalid-login.png",
-          "captured_at": "2026-09-20T08:51:19.741Z",
+          "captured_at": "2026-09-20T09:33:17.151Z",
           "actual_url": "https://[::1]:8702/login",
           "viewport": {
             "width": 375,
@@ -454,7 +454,7 @@
           }
         }
       },
-      "finished_at": "2026-09-20T08:51:19.741Z",
+      "finished_at": "2026-09-20T09:33:17.151Z",
       "actual_url": "https://[::1]:8702/login",
       "viewport": {
         "width": 375,
@@ -463,11 +463,11 @@
     },
     {
       "name": "mobile: valid HTTPS login and secure cookie attributes",
-      "started_at": "2026-09-20T08:51:19.741Z",
+      "started_at": "2026-09-20T09:33:17.151Z",
       "status": "pass",
       "details": {
         "response": {
-          "captured_at": "2026-09-20T08:51:19.818Z",
+          "captured_at": "2026-09-20T09:33:17.228Z",
           "method": "POST",
           "url": "https://[::1]:8702/login",
           "status": 303,
@@ -478,7 +478,7 @@
             },
             {
               "name": "date",
-              "value": "Sun, 20 Sep 2026 08:51:19 GMT"
+              "value": "Sun, 20 Sep 2026 09:33:16 GMT"
             },
             {
               "name": "location",
@@ -498,7 +498,7 @@
         "dashboard_request_sent_session_cookie": true,
         "screenshot": {
           "file": "reports/hw03/screenshots/part1/mobile-dashboard.png",
-          "captured_at": "2026-09-20T08:51:19.842Z",
+          "captured_at": "2026-09-20T09:33:17.251Z",
           "actual_url": "https://[::1]:8702/dashboard",
           "viewport": {
             "width": 375,
@@ -511,7 +511,7 @@
           }
         }
       },
-      "finished_at": "2026-09-20T08:51:19.842Z",
+      "finished_at": "2026-09-20T09:33:17.251Z",
       "actual_url": "https://[::1]:8702/dashboard",
       "viewport": {
         "width": 375,
@@ -520,11 +520,11 @@
     },
     {
       "name": "mobile: authenticated homepage navigation",
-      "started_at": "2026-09-20T08:51:19.842Z",
+      "started_at": "2026-09-20T09:33:17.251Z",
       "status": "pass",
       "details": {
         "file": "reports/hw03/screenshots/part1/mobile-authenticated-home.png",
-        "captured_at": "2026-09-20T08:51:19.906Z",
+        "captured_at": "2026-09-20T09:33:17.314Z",
         "actual_url": "https://[::1]:8702/",
         "viewport": {
           "width": 375,
@@ -536,7 +536,7 @@
           "body_width": 375
         }
       },
-      "finished_at": "2026-09-20T08:51:19.906Z",
+      "finished_at": "2026-09-20T09:33:17.314Z",
       "actual_url": "https://[::1]:8702/",
       "viewport": {
         "width": 375,
@@ -545,11 +545,11 @@
     },
     {
       "name": "mobile: logout redirects to the anonymous homepage",
-      "started_at": "2026-09-20T08:51:19.906Z",
+      "started_at": "2026-09-20T09:33:17.314Z",
       "status": "pass",
       "details": {
         "redirect": {
-          "captured_at": "2026-09-20T08:51:19.963Z",
+          "captured_at": "2026-09-20T09:33:17.371Z",
           "method": "GET",
           "url": "https://[::1]:8702/logout",
           "status": 303,
@@ -560,7 +560,7 @@
             },
             {
               "name": "date",
-              "value": "Sun, 20 Sep 2026 08:51:19 GMT"
+              "value": "Sun, 20 Sep 2026 09:33:16 GMT"
             },
             {
               "name": "location",
@@ -578,7 +578,7 @@
         },
         "screenshot": {
           "file": "reports/hw03/screenshots/part1/mobile-post-logout.png",
-          "captured_at": "2026-09-20T08:51:20.005Z",
+          "captured_at": "2026-09-20T09:33:17.414Z",
           "actual_url": "https://[::1]:8702/",
           "viewport": {
             "width": 375,
@@ -591,7 +591,7 @@
           }
         }
       },
-      "finished_at": "2026-09-20T08:51:20.005Z",
+      "finished_at": "2026-09-20T09:33:17.414Z",
       "actual_url": "https://[::1]:8702/",
       "viewport": {
         "width": 375,
@@ -600,14 +600,14 @@
     },
     {
       "name": "mobile: copied cookie cannot regain access after logout",
-      "started_at": "2026-09-20T08:51:20.005Z",
+      "started_at": "2026-09-20T09:33:17.414Z",
       "status": "pass",
       "details": {
         "fresh_browser_context": true,
         "copied_cookie_actually_sent": true,
         "final_url": "https://[::1]:8702/login",
         "dashboard_response": {
-          "captured_at": "2026-09-20T08:51:20.043Z",
+          "captured_at": "2026-09-20T09:33:17.450Z",
           "method": "GET",
           "url": "https://[::1]:8702/dashboard",
           "status": 303,
@@ -618,7 +618,7 @@
             },
             {
               "name": "date",
-              "value": "Sun, 20 Sep 2026 08:51:19 GMT"
+              "value": "Sun, 20 Sep 2026 09:33:16 GMT"
             },
             {
               "name": "location",
@@ -635,16 +635,16 @@
           ]
         }
       },
-      "finished_at": "2026-09-20T08:51:20.077Z"
+      "finished_at": "2026-09-20T09:33:17.486Z"
     },
     {
       "name": "mobile: browser JavaScript has no uncaught errors",
-      "started_at": "2026-09-20T08:51:20.077Z",
+      "started_at": "2026-09-20T09:33:17.486Z",
       "status": "pass",
       "details": {
         "uncaught_errors": []
       },
-      "finished_at": "2026-09-20T08:51:20.077Z",
+      "finished_at": "2026-09-20T09:33:17.486Z",
       "actual_url": "https://[::1]:8702/",
       "viewport": {
         "width": 375,
@@ -653,24 +653,24 @@
     },
     {
       "name": "Port is available before 2s server phase",
-      "started_at": "2026-09-20T08:51:20.281Z",
+      "started_at": "2026-09-20T09:33:17.791Z",
       "status": "pass",
       "details": {
         "host": "::1",
         "port": 8702,
         "result": "Bind succeeded, then probe socket closed; no HTTP request sent."
       },
-      "finished_at": "2026-09-20T08:51:20.281Z"
+      "finished_at": "2026-09-20T09:33:17.791Z"
     },
     {
       "name": "Live expiry: login under the explicit 2-second demonstration timeout",
-      "started_at": "2026-09-20T08:51:20.508Z",
+      "started_at": "2026-09-20T09:33:18.020Z",
       "status": "pass",
       "details": {
         "timeout_seconds": 2,
         "screenshot": {
           "file": "reports/hw03/screenshots/part1/idle-before-expiry.png",
-          "captured_at": "2026-09-20T08:51:20.665Z",
+          "captured_at": "2026-09-20T09:33:18.173Z",
           "actual_url": "https://[::1]:8702/dashboard",
           "viewport": {
             "width": 1280,
@@ -683,7 +683,7 @@
           }
         }
       },
-      "finished_at": "2026-09-20T08:51:20.665Z",
+      "finished_at": "2026-09-20T09:33:18.173Z",
       "actual_url": "https://[::1]:8702/dashboard",
       "viewport": {
         "width": 1280,
@@ -692,14 +692,14 @@
     },
     {
       "name": "Live expiry: copied cookie is denied in a fresh context after idle time",
-      "started_at": "2026-09-20T08:51:22.965Z",
+      "started_at": "2026-09-20T09:33:20.475Z",
       "status": "pass",
       "details": {
         "fresh_browser_context": true,
         "copied_cookie_actually_sent": true,
         "final_url": "https://[::1]:8702/login",
         "dashboard_response": {
-          "captured_at": "2026-09-20T08:51:23.004Z",
+          "captured_at": "2026-09-20T09:33:20.541Z",
           "method": "GET",
           "url": "https://[::1]:8702/dashboard",
           "status": 303,
@@ -710,7 +710,7 @@
             },
             {
               "name": "date",
-              "value": "Sun, 20 Sep 2026 08:51:22 GMT"
+              "value": "Sun, 20 Sep 2026 09:33:19 GMT"
             },
             {
               "name": "location",
@@ -727,15 +727,15 @@
           ]
         }
       },
-      "finished_at": "2026-09-20T08:51:23.032Z"
+      "finished_at": "2026-09-20T09:33:20.574Z"
     },
     {
       "name": "Live expiry: original browser session is denied on revisit",
-      "started_at": "2026-09-20T08:51:23.032Z",
+      "started_at": "2026-09-20T09:33:20.574Z",
       "status": "pass",
       "details": {
         "redirect": {
-          "captured_at": "2026-09-20T08:51:23.041Z",
+          "captured_at": "2026-09-20T09:33:20.581Z",
           "method": "GET",
           "url": "https://[::1]:8702/dashboard",
           "status": 303,
@@ -746,7 +746,7 @@
             },
             {
               "name": "date",
-              "value": "Sun, 20 Sep 2026 08:51:22 GMT"
+              "value": "Sun, 20 Sep 2026 09:33:19 GMT"
             },
             {
               "name": "location",
@@ -764,7 +764,7 @@
         },
         "screenshot": {
           "file": "reports/hw03/screenshots/part1/idle-expired-login.png",
-          "captured_at": "2026-09-20T08:51:23.063Z",
+          "captured_at": "2026-09-20T09:33:20.605Z",
           "actual_url": "https://[::1]:8702/login",
           "viewport": {
             "width": 1280,
@@ -777,7 +777,7 @@
           }
         }
       },
-      "finished_at": "2026-09-20T08:51:23.063Z",
+      "finished_at": "2026-09-20T09:33:20.605Z",
       "actual_url": "https://[::1]:8702/login",
       "viewport": {
         "width": 1280,
@@ -786,14 +786,14 @@
     },
     {
       "name": "Capture sanitized real HTTP header evidence viewer",
-      "started_at": "2026-09-20T08:51:23.267Z",
+      "started_at": "2026-09-20T09:33:20.910Z",
       "status": "pass",
       "details": {
         "viewer_file": "reports/hw03/raw/part1/cookie-header.html",
         "screenshot": {
           "file": "reports/hw03/screenshots/part1/cookie-header.png",
-          "captured_at": "2026-09-20T08:51:23.334Z",
-          "actual_url": "file:///Users/pragyaapurva/Documents/SJSU/DATA%20260/HW3/worktrees/part1-auth/reports/hw03/raw/part1/cookie-header.html",
+          "captured_at": "2026-09-20T09:33:20.994Z",
+          "actual_url": "file:///Users/pragyaapurva/Documents/SJSU/DATA%20260/HW3/worktrees/integration/reports/hw03/raw/part1/cookie-header.html",
           "viewport": {
             "width": 1280,
             "height": 900
@@ -805,18 +805,18 @@
           }
         }
       },
-      "finished_at": "2026-09-20T08:51:23.335Z"
+      "finished_at": "2026-09-20T09:33:20.998Z"
     },
     {
       "name": "Capture actual templates directory listing evidence viewer",
-      "started_at": "2026-09-20T08:51:23.335Z",
+      "started_at": "2026-09-20T09:33:20.998Z",
       "status": "pass",
       "details": {
         "viewer_file": "reports/hw03/raw/part1/templates-directory.html",
         "screenshot": {
           "file": "reports/hw03/screenshots/part1/templates-directory.png",
-          "captured_at": "2026-09-20T08:51:23.399Z",
-          "actual_url": "file:///Users/pragyaapurva/Documents/SJSU/DATA%20260/HW3/worktrees/part1-auth/reports/hw03/raw/part1/templates-directory.html",
+          "captured_at": "2026-09-20T09:33:21.074Z",
+          "actual_url": "file:///Users/pragyaapurva/Documents/SJSU/DATA%20260/HW3/worktrees/integration/reports/hw03/raw/part1/templates-directory.html",
           "viewport": {
             "width": 1280,
             "height": 900
@@ -828,22 +828,22 @@
           }
         }
       },
-      "finished_at": "2026-09-20T08:51:23.401Z"
+      "finished_at": "2026-09-20T09:33:21.075Z"
     },
     {
       "name": "Source revision and hashes remain unchanged throughout browser evidence collection",
-      "started_at": "2026-09-20T08:51:23.401Z",
+      "started_at": "2026-09-20T09:33:21.075Z",
       "status": "pass",
       "details": {
         "unchanged": true
       },
-      "finished_at": "2026-09-20T08:51:23.415Z"
+      "finished_at": "2026-09-20T09:33:21.089Z"
     }
   ],
   "screenshots": [
     {
       "file": "reports/hw03/screenshots/part1/desktop-home.png",
-      "captured_at": "2026-09-20T08:51:18.826Z",
+      "captured_at": "2026-09-20T09:33:16.249Z",
       "actual_url": "https://[::1]:8702/",
       "viewport": {
         "width": 1280,
@@ -857,7 +857,7 @@
     },
     {
       "file": "reports/hw03/screenshots/part1/desktop-login.png",
-      "captured_at": "2026-09-20T08:51:18.913Z",
+      "captured_at": "2026-09-20T09:33:16.338Z",
       "actual_url": "https://[::1]:8702/login",
       "viewport": {
         "width": 1280,
@@ -871,7 +871,7 @@
     },
     {
       "file": "reports/hw03/screenshots/part1/desktop-invalid-login.png",
-      "captured_at": "2026-09-20T08:51:19.047Z",
+      "captured_at": "2026-09-20T09:33:16.472Z",
       "actual_url": "https://[::1]:8702/login",
       "viewport": {
         "width": 1280,
@@ -885,7 +885,7 @@
     },
     {
       "file": "reports/hw03/screenshots/part1/desktop-dashboard.png",
-      "captured_at": "2026-09-20T08:51:19.148Z",
+      "captured_at": "2026-09-20T09:33:16.573Z",
       "actual_url": "https://[::1]:8702/dashboard",
       "viewport": {
         "width": 1280,
@@ -899,7 +899,7 @@
     },
     {
       "file": "reports/hw03/screenshots/part1/desktop-authenticated-home.png",
-      "captured_at": "2026-09-20T08:51:19.239Z",
+      "captured_at": "2026-09-20T09:33:16.644Z",
       "actual_url": "https://[::1]:8702/",
       "viewport": {
         "width": 1280,
@@ -913,7 +913,7 @@
     },
     {
       "file": "reports/hw03/screenshots/part1/desktop-post-logout.png",
-      "captured_at": "2026-09-20T08:51:19.351Z",
+      "captured_at": "2026-09-20T09:33:16.761Z",
       "actual_url": "https://[::1]:8702/",
       "viewport": {
         "width": 1280,
@@ -927,7 +927,7 @@
     },
     {
       "file": "reports/hw03/screenshots/part1/desktop-logout-replay-denied.png",
-      "captured_at": "2026-09-20T08:51:19.429Z",
+      "captured_at": "2026-09-20T09:33:16.839Z",
       "actual_url": "https://[::1]:8702/login",
       "viewport": {
         "width": 1280,
@@ -941,7 +941,7 @@
     },
     {
       "file": "reports/hw03/screenshots/part1/mobile-home.png",
-      "captured_at": "2026-09-20T08:51:19.538Z",
+      "captured_at": "2026-09-20T09:33:16.964Z",
       "actual_url": "https://[::1]:8702/",
       "viewport": {
         "width": 375,
@@ -955,7 +955,7 @@
     },
     {
       "file": "reports/hw03/screenshots/part1/mobile-login.png",
-      "captured_at": "2026-09-20T08:51:19.608Z",
+      "captured_at": "2026-09-20T09:33:17.034Z",
       "actual_url": "https://[::1]:8702/login",
       "viewport": {
         "width": 375,
@@ -969,7 +969,7 @@
     },
     {
       "file": "reports/hw03/screenshots/part1/mobile-invalid-login.png",
-      "captured_at": "2026-09-20T08:51:19.741Z",
+      "captured_at": "2026-09-20T09:33:17.151Z",
       "actual_url": "https://[::1]:8702/login",
       "viewport": {
         "width": 375,
@@ -983,7 +983,7 @@
     },
     {
       "file": "reports/hw03/screenshots/part1/mobile-dashboard.png",
-      "captured_at": "2026-09-20T08:51:19.842Z",
+      "captured_at": "2026-09-20T09:33:17.251Z",
       "actual_url": "https://[::1]:8702/dashboard",
       "viewport": {
         "width": 375,
@@ -997,7 +997,7 @@
     },
     {
       "file": "reports/hw03/screenshots/part1/mobile-authenticated-home.png",
-      "captured_at": "2026-09-20T08:51:19.906Z",
+      "captured_at": "2026-09-20T09:33:17.314Z",
       "actual_url": "https://[::1]:8702/",
       "viewport": {
         "width": 375,
@@ -1011,7 +1011,7 @@
     },
     {
       "file": "reports/hw03/screenshots/part1/mobile-post-logout.png",
-      "captured_at": "2026-09-20T08:51:20.005Z",
+      "captured_at": "2026-09-20T09:33:17.414Z",
       "actual_url": "https://[::1]:8702/",
       "viewport": {
         "width": 375,
@@ -1025,7 +1025,7 @@
     },
     {
       "file": "reports/hw03/screenshots/part1/mobile-logout-replay-denied.png",
-      "captured_at": "2026-09-20T08:51:20.076Z",
+      "captured_at": "2026-09-20T09:33:17.484Z",
       "actual_url": "https://[::1]:8702/login",
       "viewport": {
         "width": 375,
@@ -1039,7 +1039,7 @@
     },
     {
       "file": "reports/hw03/screenshots/part1/idle-before-expiry.png",
-      "captured_at": "2026-09-20T08:51:20.665Z",
+      "captured_at": "2026-09-20T09:33:18.173Z",
       "actual_url": "https://[::1]:8702/dashboard",
       "viewport": {
         "width": 1280,
@@ -1053,7 +1053,7 @@
     },
     {
       "file": "reports/hw03/screenshots/part1/idle-replay-denied.png",
-      "captured_at": "2026-09-20T08:51:23.031Z",
+      "captured_at": "2026-09-20T09:33:20.573Z",
       "actual_url": "https://[::1]:8702/login",
       "viewport": {
         "width": 1280,
@@ -1067,7 +1067,7 @@
     },
     {
       "file": "reports/hw03/screenshots/part1/idle-expired-login.png",
-      "captured_at": "2026-09-20T08:51:23.063Z",
+      "captured_at": "2026-09-20T09:33:20.605Z",
       "actual_url": "https://[::1]:8702/login",
       "viewport": {
         "width": 1280,
@@ -1081,8 +1081,8 @@
     },
     {
       "file": "reports/hw03/screenshots/part1/cookie-header.png",
-      "captured_at": "2026-09-20T08:51:23.334Z",
-      "actual_url": "file:///Users/pragyaapurva/Documents/SJSU/DATA%20260/HW3/worktrees/part1-auth/reports/hw03/raw/part1/cookie-header.html",
+      "captured_at": "2026-09-20T09:33:20.994Z",
+      "actual_url": "file:///Users/pragyaapurva/Documents/SJSU/DATA%20260/HW3/worktrees/integration/reports/hw03/raw/part1/cookie-header.html",
       "viewport": {
         "width": 1280,
         "height": 900
@@ -1095,8 +1095,8 @@
     },
     {
       "file": "reports/hw03/screenshots/part1/templates-directory.png",
-      "captured_at": "2026-09-20T08:51:23.399Z",
-      "actual_url": "file:///Users/pragyaapurva/Documents/SJSU/DATA%20260/HW3/worktrees/part1-auth/reports/hw03/raw/part1/templates-directory.html",
+      "captured_at": "2026-09-20T09:33:21.074Z",
+      "actual_url": "file:///Users/pragyaapurva/Documents/SJSU/DATA%20260/HW3/worktrees/integration/reports/hw03/raw/part1/templates-directory.html",
       "viewport": {
         "width": 1280,
         "height": 900
@@ -1110,15 +1110,15 @@
   ],
   "server_phases": [
     {
-      "started_at": "2026-09-20T08:51:17.944Z",
+      "started_at": "2026-09-20T09:33:15.652Z",
       "idle_timeout_seconds": 300,
-      "executable": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/part1-auth/.venv-web/bin/python",
+      "executable": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/integration/.venv-web/bin/python",
       "arguments": [
         "-m",
         "uvicorn",
         "main:app",
         "--app-dir",
-        "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/part1-auth/code/web_application",
+        "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/integration/code/web_application",
         "--host",
         "::1",
         "--port",
@@ -1126,31 +1126,31 @@
         "--workers",
         "1",
         "--ssl-certfile",
-        "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/part1-auth/tmp/https/cert.pem",
+        "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/integration/tmp/https/cert.pem",
         "--ssl-keyfile",
-        "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/part1-auth/tmp/https/key.pem"
+        "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/integration/tmp/https/key.pem"
       ],
       "environment_overrides": {
         "IDLE_TIMEOUT_SECONDS": "300",
         "SECRET_KEY": "[RANDOM PER-PROCESS VALUE, NOT SAVED]"
       },
-      "pid": 78374,
-      "ready_at": "2026-09-20T08:51:18.248Z",
-      "finished_at": "2026-09-20T08:51:20.280Z",
+      "pid": 84183,
+      "ready_at": "2026-09-20T09:33:15.957Z",
+      "finished_at": "2026-09-20T09:33:17.790Z",
       "exit_code": 0,
       "signal": null,
       "log_file": "reports/hw03/raw/part1/https-server-300s.log"
     },
     {
-      "started_at": "2026-09-20T08:51:20.281Z",
+      "started_at": "2026-09-20T09:33:17.791Z",
       "idle_timeout_seconds": 2,
-      "executable": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/part1-auth/.venv-web/bin/python",
+      "executable": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/integration/.venv-web/bin/python",
       "arguments": [
         "-m",
         "uvicorn",
         "main:app",
         "--app-dir",
-        "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/part1-auth/code/web_application",
+        "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/integration/code/web_application",
         "--host",
         "::1",
         "--port",
@@ -1158,23 +1158,23 @@
         "--workers",
         "1",
         "--ssl-certfile",
-        "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/part1-auth/tmp/https/cert.pem",
+        "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/integration/tmp/https/cert.pem",
         "--ssl-keyfile",
-        "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/part1-auth/tmp/https/key.pem"
+        "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/integration/tmp/https/key.pem"
       ],
       "environment_overrides": {
         "IDLE_TIMEOUT_SECONDS": "2",
         "SECRET_KEY": "[RANDOM PER-PROCESS VALUE, NOT SAVED]"
       },
-      "pid": 78389,
-      "ready_at": "2026-09-20T08:51:20.484Z",
-      "finished_at": "2026-09-20T08:51:23.267Z",
+      "pid": 84193,
+      "ready_at": "2026-09-20T09:33:17.994Z",
+      "finished_at": "2026-09-20T09:33:20.909Z",
       "exit_code": 0,
       "signal": null,
       "log_file": "reports/hw03/raw/part1/https-server-2s.log"
     }
   ],
-  "tested_head": "015c8224ea9a0aa265385931c1fb81ecba409313",
+  "tested_head": "96b04abc04bb4cde131958ba38f37116336a4442",
   "source_sha256": {
     "code/web_application/README.md": "06854cd91185863474729b28e11dae1a417f57d3f78ed60d4782518214cb8958",
     "code/web_application/main.py": "0b0170afd609d9cfe94b41463838e0e6bb15621ce563acbc386c302d7bc8d74f",
@@ -1225,11 +1225,11 @@
     "chromium": "151.0.7922.34"
   },
   "live_expiry_wait": {
-    "started_at": "2026-09-20T08:51:20.665Z",
-    "elapsed_ms": 2300,
+    "started_at": "2026-09-20T09:33:18.173Z",
+    "elapsed_ms": 2302,
     "requests_during_wait": 0
   },
-  "finished_at": "2026-09-20T08:51:23.428Z",
+  "finished_at": "2026-09-20T09:33:21.105Z",
   "pass_count": 27,
   "fail_count": 0
 }

@@ -1,0 +1,67 @@
+{
+  "captured_at": "2026-09-20T09:26:27.875Z",
+  "browser_version": "151.0.7922.34",
+  "source_run": "baseline-20260920",
+  "viewport": {
+    "width": 1000,
+    "height": 600
+  },
+  "source_files": {
+    "reports/hw03/raw/part2/baseline-20260920/run.json": "a683be440573206cbd96650a3ff75642ac10b557a09a9efd8497d93480fa8ea5",
+    "reports/hw03/raw/part2/baseline-20260920/summary.json": "1a79d4520c406043b08da93caef86bb76092306c4cfd82bd967319ed457c3462",
+    "reports/hw03/raw/part2/baseline-20260920/console.txt": "6d382b7b974cdc65ffe46a505eb0f5eef514992b2242c184dee9d4cac29816f5",
+    "reports/hw03/raw/part2/baseline-20260920/records.json": "8bd0a5ab188739e61afed8fd7dac6a48e61494ba86ccf01984b70d56ccff8564"
+  },
+  "images": [
+    {
+      "name": "token",
+      "width": 1000,
+      "height": 734,
+      "overflow": false,
+      "source": "reports/hw03/raw/integration/evidence_view/token.html",
+      "source_sha256": "edc65e645bf8eaccdefcdacdc15503c5f85d14de597a404d0331a51be041b7f3",
+      "screenshot": "reports/hw03/screenshots/integration/token.png",
+      "screenshot_sha256": "f33cf2b63c089e03a35d45e30a2450fcd156652630c276b7d252b0c9d6bb4a21"
+    },
+    {
+      "name": "semantic",
+      "width": 1000,
+      "height": 734,
+      "overflow": false,
+      "source": "reports/hw03/raw/integration/evidence_view/semantic.html",
+      "source_sha256": "c32a9fda56a3fa936842fc466412aabfe82eca0cf32b25644f3e1ac75df4544f",
+      "screenshot": "reports/hw03/screenshots/integration/semantic.png",
+      "screenshot_sha256": "d5ade2a28118b0cbd2d4b851cf9de8ce2f4ebf06941d94d89ba20254b5a9a831"
+    },
+    {
+      "name": "sentence_window",
+      "width": 1000,
+      "height": 734,
+      "overflow": false,
+      "source": "reports/hw03/raw/integration/evidence_view/sentence_window.html",
+      "source_sha256": "fc24ead3d3ce97d15aa03b69014c9857e7f8b12d62d80d9f1e849fb6818744b1",
+      "screenshot": "reports/hw03/screenshots/integration/sentence_window.png",
+      "screenshot_sha256": "2ff157858ee0103417765753feb8b93eb97ea62e4a596259fc1c8f121850f155"
+    },
+    {
+      "name": "metrics",
+      "width": 1000,
+      "height": 671,
+      "overflow": false,
+      "source": "reports/hw03/raw/integration/evidence_view/metrics.html",
+      "source_sha256": "6dda17360d74b68fe69fefcb9559a1f82351b317936cdeadb1d7b25c2347c802",
+      "screenshot": "reports/hw03/screenshots/integration/metrics.png",
+      "screenshot_sha256": "e27f3259a5d37e44a4e702a7c186aa7e6950979e97b5b672cd6a59c954a62b67"
+    },
+    {
+      "name": "failure",
+      "width": 1000,
+      "height": 1199,
+      "overflow": false,
+      "source": "reports/hw03/raw/integration/evidence_view/failure.html",
+      "source_sha256": "e9e3dd56fa502471db0e1f87919294c659196aad9e552c9e53b1a017d00c2f32",
+      "screenshot": "reports/hw03/screenshots/integration/failure.png",
+      "screenshot_sha256": "030dd8fd5375ea744c0ab9895f472dc925df6e48c86a19be1d2e1d541a4eb918"
+    }
+  ]
+}

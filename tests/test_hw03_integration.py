@@ -58,10 +58,13 @@ class AggregateVerifierTests(unittest.TestCase):
             report.mkdir(parents=True)
             pdf = report / 'report.pdf'
             pdf.write_bytes(b'%PDF-1.4\nreview\n%%EOF\n')
+            markdown = report / 'report.md'
+            markdown.write_text('generated narrative')
             source = root / 'report-source.md'
             source.write_text('original report source')
             manifest = {
                 'pdf_sha256': verifier.sha256(pdf),
+                'markdown_sha256': verifier.sha256(markdown),
                 'source_sha256': {'report-source.md': verifier.sha256(source)},
                 'page_count': 1, 'tested_code_commit': 'a' * 40,
             }
@@ -77,6 +80,32 @@ class AggregateVerifierTests(unittest.TestCase):
             valid, _ = verifier.check_report_manifest(root, check_ancestor=lambda commit: True)
             self.assertFalse(valid)
 
+    def test_report_manifest_rejects_changed_or_missing_markdown(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            report = root / 'reports/hw03'
+            report.mkdir(parents=True)
+            pdf = report / 'report.pdf'
+            pdf.write_bytes(b'%PDF-1.4\n%%EOF\n')
+            markdown = report / 'report.md'
+            markdown.write_text('generated narrative')
+            source = root / 'source.txt'
+            source.write_text('original source')
+            (report / 'report-build.json').write_text(json.dumps({
+                'pdf_sha256': verifier.sha256(pdf),
+                'markdown_sha256': verifier.sha256(markdown),
+                'source_sha256': {'source.txt': verifier.sha256(source)},
+                'page_count': 1, 'tested_code_commit': 'a' * 40,
+            }))
+            valid, _ = verifier.check_report_manifest(root, check_ancestor=lambda commit: True)
+            self.assertTrue(valid)
+            markdown.write_text('text that no longer matches the PDF')
+            valid, _ = verifier.check_report_manifest(root, check_ancestor=lambda commit: True)
+            self.assertFalse(valid)
+            markdown.unlink()
+            valid, _ = verifier.check_report_manifest(root, check_ancestor=lambda commit: True)
+            self.assertFalse(valid)
+
     def test_report_manifest_rejects_unrelated_code_revision(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
@@ -84,10 +113,13 @@ class AggregateVerifierTests(unittest.TestCase):
             report.mkdir(parents=True)
             pdf = report / 'report.pdf'
             pdf.write_bytes(b'%PDF-1.4\n%%EOF\n')
+            markdown = report / 'report.md'
+            markdown.write_text('generated narrative')
             source = root / 'source.md'
             source.write_text('report')
             (report / 'report-build.json').write_text(json.dumps({
-                'pdf_sha256': verifier.sha256(pdf), 'source_sha256': {'source.md': verifier.sha256(source)},
+                'pdf_sha256': verifier.sha256(pdf), 'markdown_sha256': verifier.sha256(markdown),
+                'source_sha256': {'source.md': verifier.sha256(source)},
                 'page_count': 1, 'tested_code_commit': 'b' * 40,
             }))
             valid, _ = verifier.check_report_manifest(root, check_ancestor=lambda commit: False)

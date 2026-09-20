@@ -1,0 +1,79 @@
+{
+  "started_at": "2026-09-20T09:39:35.936Z",
+  "status": "pass",
+  "purpose": "Actual mobile viewport captures plus browser views of saved redacted headers and directory evidence.",
+  "tested_runtime_commit": "96b04abc04bb4cde131958ba38f37116336a4442",
+  "capture_checkout": "96b04abc04bb4cde131958ba38f37116336a4442",
+  "source_sha256": {
+    "reports/hw03/raw/part1/browser-evidence.json": "4e276823a6786cfa80e5cf23a101300e429b38ac83100ec39e890c25eceac29d",
+    "scripts/capture_hw03_auth_report.cjs": "f7c392e3f87c680449f94ad8753c8540ebf38bb9860f0476d40a4e0959ba1d7d",
+    "reports/hw03/raw/part1/desktop-login-response-headers.txt": "3accfe803fa86d237c03089458be3202a60b2899f52dfa1ccabfbd4751b11a6f",
+    "reports/hw03/raw/integration/evidence_view/auth-cookie-header.html": "a3530684e1c39dfdf37fa6a15759fcd7f591f780606b343d9852934b14a26cd1",
+    "reports/hw03/raw/part1/templates-directory.json": "64cb7047b88190ebf68648e945a768c48a48af4272a566572d22f0a8409f16c0",
+    "reports/hw03/raw/integration/evidence_view/auth-templates-directory.html": "1c3365c307adb6163796052d23aff4057e533ece7678a8dca062838314cbff38"
+  },
+  "images": [
+    {
+      "name": "auth-home",
+      "kind": "actual application viewport",
+      "captured_at": "2026-09-20T09:39:36.505Z",
+      "url": "https://[::1]:8702/",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "screenshot": "reports/hw03/screenshots/integration/auth-home.png",
+      "sha256": "9ffc895b15d57384f8cf9b4f7c434f6874859d99c56e402d85548a71bcba8801"
+    },
+    {
+      "name": "auth-authenticated-home",
+      "kind": "actual application viewport",
+      "captured_at": "2026-09-20T09:39:36.685Z",
+      "url": "https://[::1]:8702/",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "screenshot": "reports/hw03/screenshots/integration/auth-authenticated-home.png",
+      "sha256": "7e508dd0b8fbccb42d4b327da67690e6b76e64bce79054d773889e52c440601e"
+    },
+    {
+      "name": "auth-post-logout",
+      "kind": "actual application viewport after logout redirect",
+      "captured_at": "2026-09-20T09:39:36.719Z",
+      "url": "https://[::1]:8702/",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "screenshot": "reports/hw03/screenshots/integration/auth-post-logout.png",
+      "sha256": "50be847f2b68d99faee1378b5b712bc2d065d57d11e66bb9bd83918b28114393"
+    },
+    {
+      "name": "auth-cookie-header",
+      "kind": "browser view of saved evidence",
+      "captured_at": "2026-09-20T09:39:36.774Z",
+      "url": "file:///Users/pragyaapurva/Documents/SJSU/DATA%20260/HW3/worktrees/integration/reports/hw03/raw/integration/evidence_view/auth-cookie-header.html",
+      "viewport": {
+        "width": 1000,
+        "height": 650
+      },
+      "screenshot": "reports/hw03/screenshots/integration/auth-cookie-header.png",
+      "sha256": "aebc63c045f7a5522dace0d8200839be781cdf50e25fbd723d4ea51aa8c1b34f"
+    },
+    {
+      "name": "auth-templates-directory",
+      "kind": "browser view of saved evidence",
+      "captured_at": "2026-09-20T09:39:36.804Z",
+      "url": "file:///Users/pragyaapurva/Documents/SJSU/DATA%20260/HW3/worktrees/integration/reports/hw03/raw/integration/evidence_view/auth-templates-directory.html",
+      "viewport": {
+        "width": 1000,
+        "height": 500
+      },
+      "screenshot": "reports/hw03/screenshots/integration/auth-templates-directory.png",
+      "sha256": "7dedbcdbb7e2063e02a72eb1ad3b22c1b0e53bb5b3467f0dc625ea8caa1e017d"
+    }
+  ],
+  "browser_version": "151.0.7922.34",
+  "finished_at": "2026-09-20T09:39:37.124Z"
+}

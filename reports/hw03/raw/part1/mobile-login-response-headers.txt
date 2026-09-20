@@ -1,9 +1,9 @@
 Sanitized captured HTTP response headers (not a reconstructed server response)
-Captured: 2026-09-20T08:51:19.818Z
+Captured: 2026-09-20T09:33:17.228Z
 POST https://[::1]:8702/login
 HTTP status: 303
 cache-control: no-store
-date: Sun, 20 Sep 2026 08:51:19 GMT
+date: Sun, 20 Sep 2026 09:33:16 GMT
 location: /dashboard
 server: uvicorn
 set-cookie: session=[REDACTED]; path=/; Max-Age=3600; httponly; samesite=lax; secure

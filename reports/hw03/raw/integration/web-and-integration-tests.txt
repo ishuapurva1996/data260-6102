@@ -1,5 +1,6 @@
-........................................................................ [ 85%]
-............                                                             [100%]
+2026-09-20T09:32:34.717438+00:00 COMMAND [".venv-web/bin/python", "-m", "pytest", "tests/test_api.py", "tests/test_hw03_auth.py", "tests/test_hw03_integration.py", "-q"]
+........................................................................ [ 79%]
+...................                                                      [100%]
 =============================== warnings summary ===============================
 .venv-web/lib/python3.12/site-packages/starlette/formparsers.py:10
   /Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/integration/.venv-web/lib/python3.12/site-packages/starlette/formparsers.py:10: PendingDeprecationWarning: Please use `import python_multipart` instead.
@@ -15,5 +16,6 @@ tests/test_hw03_auth.py: 51 warnings
     warnings.warn(message, DeprecationWarning)
 
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
-- generated xml file: /Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/integration/tmp/hw03-part1-pytest.xml -
-84 passed, 89 warnings in 0.48s
+91 passed, 89 warnings in 0.64s
+
+2026-09-20T09:32:35.556038+00:00 EXIT 0

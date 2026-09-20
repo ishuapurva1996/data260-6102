@@ -1,0 +1,12 @@
+2026-09-20T09:33:25.039408+00:00 COMMAND [".venv-retrieval/bin/python", "reports/hw03/part2/check_evidence_corruption.py", "--output", "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/integration/reports/hw03/raw/integration/corruption-checks.json"]
+{
+  "status": "pass",
+  "control": "pass",
+  "negative_case_count": 11,
+  "expected_rejection_count": 11,
+  "original_run_files_unchanged": true,
+  "original_METRICS_md_unchanged": true,
+  "output": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/integration/reports/hw03/raw/integration/corruption-checks.json"
+}
+
+2026-09-20T09:33:32.972939+00:00 EXIT 0
