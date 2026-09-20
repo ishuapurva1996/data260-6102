@@ -4,15 +4,44 @@ This repository uses SID4 `6102`, port `8702`, prefix `s6102`, seed `6102`, veri
 
 Repository: [github.com/ishuapurva1996/data260-6102](https://github.com/ishuapurva1996/data260-6102)
 
-## Repository structure
+## HW3 — local review package
 
-Application code lives in shared root-level `code/` and `src/` folders. Assignment reports and evidence live under `reports/hw01/` and `reports/hw02/`. Run the commands below from the Git repository root unless stated otherwise:
+HW3 extends this same repository with cookie-based login/logout and a local retrieval comparison. The combined work is prepared on `codex/hw3-integration` for student review; publication, final Git tags, collaborator checks, and course upload remain pending.
+
+- [Combined report](reports/hw03/report.pdf), [AI-use disclosure](reports/hw03/AI_USE.md), and [submission checklist](reports/hw03/SUBMISSION_CHECKLIST.md)
+- [Exact setup, run and verification commands](reports/hw03/REPRODUCIBLE_RUN_INSTRUCTIONS.md)
+- [Integrated verification](reports/hw03/verification.json) and [run log](reports/hw03/RUN_LOG.txt)
+- [Part 1 authentication explanation](reports/hw03/part1/REPORT_SECTION.md) and [web application guide](code/web_application/README.md)
+- [Part 2 retrieval explanation](reports/hw03/part2/REPORT_SECTION.md), [measured results](reports/hw03/METRICS.md), [sources](reports/hw03/SOURCES.md), and [frozen questions](reports/hw03/questions.yaml)
+
+Use separate Python 3.12 environments: `.venv-web` for `requirements.txt` and `.venv-retrieval` for `requirements-retrieval.txt`. Once installed, start the HW3 application with:
 
 ```bash
-cd "/Users/pragyaapurva/Documents/SJSU/DATA 260/data260-6102"
+.venv-web/bin/python scripts/run_hw03_web.py --prepare-cert
+.venv-web/bin/python scripts/run_hw03_web.py --host ::1 --port 8702
 ```
 
-The active web application includes the HW2 Part 1 interface and Part 2 FastAPI backend. The `hw1` Git tag preserves the exact original HW1 source and submission. Historical reports, logs, and recorded results retain their original contents.
+Open `https://[::1]:8702/` and use the public demonstration credentials `admin` / `password`. The self-signed local certificate causes a browser warning. The secure session cookie requires HTTPS. Stop only the process you started before running the auth browser suite. The normal idle limit is 300 seconds; the evidence suite also uses a separate 2-second demonstration process.
+
+Check the saved retrieval experiment without repeating its measurements:
+
+```bash
+.venv-retrieval/bin/python code/retrieval_summarize.py \
+  --run-dir reports/hw03/raw/part2/baseline-20260920 --check
+python3 scripts/verify_hw03.py --require-report
+```
+
+The aggregate verifier invokes the two part verifiers using their separate environments. It checks current source provenance and report build hashes, records actual subprocess outcomes in a new `raw/integration/` directory, and leaves publication status pending. It does not replace the separate browser, full retrieval-test, or PDF visual checks documented in the run instructions. Its Part 1 subprocess reruns the 84 web/API tests and refreshes `raw/part1/self-check-pytest.txt`.
+
+## Repository structure
+
+Application code lives in shared root-level `code/` and `src/` folders. Assignment reports and evidence live under `reports/hw01/`, `reports/hw02/`, and `reports/hw03/`. Run the commands below from the Git repository root unless stated otherwise:
+
+```bash
+cd "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/integration"
+```
+
+The active web application includes the HW2 rental interface/API and the HW3 Jinja pages, authentication router, and session registry. The `hw1` Git tag preserves the exact original HW1 source and submission. Historical reports, logs, and recorded results retain their original contents.
 
 ```text
 data260-6102/
@@ -20,17 +49,20 @@ data260-6102/
 │   ├── web_application/
 │   │   ├── main.py
 │   │   ├── README.md
+│   │   ├── routers/auth.py
+│   │   ├── session_store.py
+│   │   ├── templates/
 │   │   └── static/
-│   │       ├── index.html
-│   │       ├── styles.css
-│   │       └── app.js
+│   ├── retrieval_compare.py
+│   ├── retrieval_summarize.py
 │   ├── agents_demo.py
 │   ├── agents_graph.py
 │   ├── hw1_client.py
 │   └── Dockerfile
 ├── src/
 │   ├── model_client.py
-│   └── agent_graph/
+│   ├── agent_graph/
+│   └── retrieval/
 ├── reports/
 │   ├── hw01/
 │   │   ├── raw/
@@ -40,10 +72,17 @@ data260-6102/
 │   │   ├── report.pdf
 │   │   ├── verification.json
 │   │   └── REPRODUCIBLE_RUN_INSTRUCTIONS.md
-│   └── hw02/
-│       ├── README.md
-│       ├── PART3_IMPLEMENTATION.md
-│       └── verification_part3.json
+│   ├── hw02/
+│   │   ├── README.md
+│   │   ├── PART3_IMPLEMENTATION.md
+│   │   └── verification_part3.json
+│   └── hw03/
+│       ├── report.pdf
+│       ├── raw/
+│       ├── screenshots/
+│       ├── corpus/
+│       ├── part1/
+│       └── part2/
 ├── docs/
 │   └── agent_graph.md
 ├── scripts/
@@ -52,6 +91,7 @@ data260-6102/
 ├── DOMAIN_SCHEMA.md
 ├── requirements.txt
 ├── requirements-agents.txt
+├── requirements-retrieval.txt
 ├── package.json
 ├── tests/
 │   ├── test_api.py
@@ -60,11 +100,11 @@ data260-6102/
 └── README.md
 ```
 
-Course instructions, lecturer practice scripts, implementation plans, and agent working notes remain outside this repository in the sibling `HW1 assignment instructions/` and `HW2/agent_outputs/` folders. HW2 extends the shared application; there are no separate HW1/HW2 application copies.
+Course instructions, lecturer practice scripts, implementation plans, and agent working notes remain outside this repository in the sibling homework folders, including `HW3/agent_outputs/`. The assignment PDF and tutor files remain outside Git. Public corpus snapshots and raw retrieval results stay in `reports/hw03/` as required assignment evidence. There are no separate HW1/HW2/HW3 application copies.
 
-## Current HW2 progress
+## Retained HW2 functionality and workflows
 
-The shared application provides create, per-listing editing, highest-ID deletion, per-row deletion, and title/address search through FastAPI. It retains the 375px layout and visible loading, empty, and error states. Use a separate web environment so its dependencies stay independent of the Part 3 agent environment:
+The commands in this section retain the earlier rental-only HTTP workflow. Use the HTTPS setup above for HW3 authentication. The shared application provides create, per-listing editing, highest-ID deletion, per-row deletion, and title/address search through FastAPI. It retains the 375px layout and visible loading, empty, and error states. Use a separate web environment so its dependencies stay independent of the Part 3 agent environment:
 
 ```bash
 python3.12 -m venv .venv-web
@@ -90,7 +130,7 @@ python code/agents_graph.py --input-json reports/hw02/cases/part3_listing.json -
 
 If `.venv-agents` is already prepared, run `.venv-agents/bin/python code/agents_graph.py --input-json reports/hw02/cases/part3_listing.json`.
 
-See the [Part 3 usage and architecture guide](docs/agent_graph.md) for turn counting, response validation, controlled Reviewer mode, and test commands. The [implementation results](reports/hw02/PART3_IMPLEMENTATION.md) link the recorded tests, real-model runs, and screenshots. The [combined HW2 report](reports/hw02/report.pdf) includes Parts 1-4. The `hw2-code` tag identifies verified runtime source; `hw2` preserves the original submission package, and `hw2-report-v3` preserves a prior report snapshot with clean output screenshots and closing GitHub links. The current `codex/fix-hw1-form` branch contains the latest PDF, synchronized with the revised AI-use disclosure. Follow the [submission checklist](reports/hw02/SUBMISSION_CHECKLIST.md) before submitting online.
+See the [Part 3 usage and architecture guide](docs/agent_graph.md) for turn counting, response validation, controlled Reviewer mode, and test commands. The [implementation results](reports/hw02/PART3_IMPLEMENTATION.md) link the recorded tests, real-model runs, and screenshots. The [combined HW2 report](reports/hw02/report.pdf) includes Parts 1-4. The `hw2-code` tag identifies verified runtime source; `hw2` preserves the original submission package, and `hw2-report-v3` preserves a prior report snapshot with clean output screenshots and closing GitHub links. The historical `codex/fix-hw1-form` branch contains the HW2 PDF synchronized with its revised AI-use disclosure. Follow the [submission checklist](reports/hw02/SUBMISSION_CHECKLIST.md) before submitting online.
 
 ## Reproducing the original HW1 submission
 
@@ -100,7 +140,7 @@ The tag `hw1` resolves to commit `6f7d27d4063c4483386803bfdd80d2e617c907be`. To 
 git worktree add --detach ../data260-6102-hw1-reproduction refs/tags/hw1
 ```
 
-Follow that worktree's README for exact original behavior. The commands below describe the shared checkout and its retained HW1 agent workflows. The current web app has since been improved for HW2.
+Follow that worktree's README for exact original behavior. The commands below describe the shared checkout and its retained HW1 agent workflows. The current web app has since been extended for HW2 and HW3.
 
 ## Homework 1 files
 
