@@ -1,0 +1,1709 @@
+CHAPTER 5. DETERMINING INCOME AND CALCULATING RENT
+
+5-1 Introduction
+
+A. Owners must determine the amount of a family’s income before the family is allowed to move into assisted housing and at least annually thereafter. The amount of assistance paid on behalf of the family is calculated using the family’s annual income less allowable deductions. HUD program regulations specify the types and amounts of income and deductions to be included in the calculation of annual and adjusted income.
+
+B. Although the definitions of annual and adjusted income used for the programs covered in this handbook have some similarities with rules used by the U.S. Internal Revenue Service (IRS), the tax rules are different from the HUD program rules.
+
+C. The most frequent errors encountered in reviews of annual and adjusted income determinations in tenant files fall in three categories:
+
+1. Applicants and tenants failing to fully disclose income information;
+
+2. Errors in identifying required income exclusions; and
+
+3. Incorrect calculations of deductions, often the result of failure to obtain third-party verification.
+
+Careful interviewing and thorough verification can minimize the occurrence of these errors.
+
+D. Chapter 5 is organized as follows:
+
+• Section 1: Determining Annual Income discusses the requirements regarding annual income and the procedure for calculating a family’s annual income when determining eligibility. This section also includes guidance on determining income from assets.
+
+• Section 2: Determining Adjusted Income describes the procedures and requirements for determining adjusted income based on allowable deductions.
+
+• Section 3: Verification presents the requirements for verifying information provided by applicants and tenants related to their eligibility.
+
+• Section 4: Calculating Tenant Rent discusses the methods for calculating the tenant’s portion of rent under the different programs covered by this handbook.
+
+5-2 Key Terms
+
+A. There are a number of technical terms used in this chapter that have very specific definitions established by federal statute or regulations, or by HUD. These terms are listed in Figure 5-1 and their definitions can be found in the Glossary to this handbook. It is important to be familiar with these definitions when reading this chapter.
+
+B. The terms “disability” and “persons with disabilities” are used in two contexts – for civil rights protections, and for program eligibility purposes. Each use has specific definitions.
+
+1. When used in context of protection from discrimination or improving the accessibility of housing, the civil rights-related definitions apply.
+
+2. When used in the context of eligibility under multifamily subsidized housing programs, the program eligibility definitions apply.
+
+NOTE: See the Glossary for specific definitions and paragraph 2-23 for an explanation of this difference.
+
+Figure 5-1: Key Terms
+
+• Adjusted income • Live-in aide • Annual income • Low-income family • Assets • Market rent • Assistance payment • Minimum rent • Assisted rent • Operating rent • Assisted tenant • Project Assistance Contract (PAC) • Basic rent • PRAC Operating Rent • Co-head of household • Project Rental Assistance Contract (PRAC) • Contract rent • Project assistance payment • Dependent • Project rental assistance payment • *Enterprise Income Verification (EIV)* • Tenant rent • Extremely low-income family • Total tenant payment • Foster adult • Unearned income • Foster children • Utility allowance • Full-time student • Utility reimbursement • Gross rent • Very low-income family • Hardship exemption • Welfare assistance • Head of household • Welfare rent • Housing assistance payment (HAP) • Income limit
+
+Section 1: Determining Annual Income
+
+5-3 Key Regulations
+
+This paragraph identifies the key regulatory citation pertaining to Section 1: Determining Annual Income. The citation and its title are listed below.
+
+• *24 CFR 5.233 Mandated Use of HUD’s Enterprise Income Verification (EIV) System*
+
+• 24 CFR 5.609 Annual Income
+
+5-4 Key Requirements
+
+A. Annual income is the amount of income that is used to determine a family’s eligibility for assistance. Annual income is defined as follows:
+
+1. All amounts, monetary or not, that go to or are received on behalf of the family head, spouse or co-head (even if the family member is temporarily absent), or any other family member; or
+
+2. All amounts anticipated to be received from a source outside the family during the 12-month period following admission or annual recertification effective date.
+
+B. Annual income includes all amounts that are not specifically excluded by regulation. Exhibit 5-1, Income Inclusions and Exclusions, provides a list of income inclusions and exclusions published in the regulations and Federal Register notices.
+
+C. Annual income includes amounts derived (during the 12-month period) from assets to which any member of the family has access.
+
+5-5 Methods for Projecting and Calculating Annual Income
+
+A. The requirements for determining whether a family is eligible for assistance, and the amount of rent the family will pay, require the owner to project or estimate the annual income that the family expects to receive. There are several ways to make this projection. The following are acceptable methods for calculating the annual income anticipated for the coming year:
+
+1. Generally the owner must use current circumstances to anticipate income. The owner calculates projected annual income by annualizing current income. Income that may not last for a full 12 months (e.g., unemployment compensation) should be calculated assuming current circumstances will last a full 12 months. If changes occur later in the year, an interim recertification can be conducted to change the family’s rent.
+
+2. If information is available on changes expected to occur during the year, use that information to determine the total anticipated income from all known sources during the year.
+
+3. *Using EIV:
+
+(a) The owner must not use the quarterly wage income reported on the EIV Income Report for calculating the tenant’s annual income from employment. The owner must confirm with the tenant that the information in EIV is correct. If the tenant agrees that the employment information reported in EIV is correct, the owner must:
+
+(1) Use the Income Report as third party verification of the tenant’s employment; and
+
+(2) Use tenant provided documents for calculating the tenant’s annual income, e.g. 4-6 current, consecutive check stubs.
+
+Example 1: EIV shows that John is working at Jack’s Restaurant and John agrees that he is working there. John has brought in his four most current, consecutive check stubs. The owner must use the EIV Income Report as third party verification that John is employed at Jack’s Restaurant and use the gross pay shown on the check stubs provided by the tenant for determining John’s annual income. John is paid weekly.
+
+Check stubs – gross pay 1) $120; 2) $145; 3) $125; 4) $130 – total gross pay = $520
+
+$520 / 4 = $130 average gross pay per week
+
+$130 x 52 weeks = $6,760 gross annual income
+
+Example 2: EIV shows Sally works at Beauty World and Sally agrees that she is working there. Sally has brought in a payroll summary report prepared by her employer which shows that Sally works 30 hours per week and earns $12.50 per hour. The owner must use the EIV Income Report as third party verification that Sally is employed at Beauty World and use the payroll summary report prepared by Beauty World for determining Sally’s annual income.
+
+30 hours x 52 weeks = 1,560 hours per year
+
+$12.50 per hour x 1,560 hours = $19,500 gross annual income
+
+b. The owner must not use the quarterly unemployment compensation benefits reported on the EIV Income Report for calculating the tenant’s annual income from unemployment. The owner must confirm with the tenant that the unemployment information in EIV is correct. If the tenant agrees that he/she is receiving unemployment compensation benefits as reported in EIV, the owner must:
+
+(1) Use the Income Report as third party verification that the tenant is receiving unemployment; and
+
+(2) Use tenant provided documents for calculating annual income, e.g. unemployment monetary benefit notice.
+
+Example: Peter has brought in the unemployment benefit notice he received showing he is being paid weekly unemployment benefits of $175. The owner will use the EIV Income Report as third party verification that Peter is receiving unemployment benefits and the unemployment benefit notice for determining Peter’s annual income.
+
+$175 per week x 52 weeks = $9,100.00 gross annual income
+
+NOTE: If Peter’s unemployment is terminated during the annual recertification period, Peter should report this to the owner along with documentation supporting the date of termination of the benefits. The owner will then prepare an interim recertification removing the unemployment income. If Peter is unable to provide documentation verifying termination of unemployment compensation benefits, the owner must verify the termination directly with the state workforce agency (SWA) source.
+
+c. If the tenant agrees with the social security benefit information on the EIV Income Report, the owner must use the EIV Income Report as third party verification, receiving social security benefits and also for calculating the tenant’s annual income.
+
+Example: The Income Report shows that Joe Smith is receiving gross social security benefits of $980.40 per month. Joe agrees that this is the amount he is receiving. The owner will use the Income Report as third-party verification that Joe is receiving social security benefits and for calculating Joe’s annual income.
+
+$980.40 x 12 months = $11,764.80 (rounded to $11,765) gross annual income.
+
+d. If the tenant disputes the employment and income information in EIV, the owner must obtain third party verification from the source.*
+
+B. Once all sources of income are known and verified, owners must convert reported income to an annual figure. Convert periodic wages to annual income by multiplying:
+
+1. Hourly wages by the number of hours worked per year (2,080 hours for full-time employment with a 40-hour week and no overtime);
+
+2. Weekly wages by 52;
+
+3. Bi-weekly wages (paid every other week) by 26;
+
+4. Semi-monthly wages (paid twice each month) by 24; and
+
+5. Monthly wages by 12.
+
+To annualize other than full-time income, multiply the wages by the actual number of hours or weeks the person is expected to work.
+
+Example – Anticipated Increase in Hourly Rate February 1 Certification effective date $7.50/hour Current hourly rate $8.00/hour New rate to be effective March 15
+
+(40 hours per week x 52 weeks = 2,080 hours per year)
+
+February 1 through March 15 = 6 weeks 6 weeks x 40 hours = 240 hours 2,080 hours minus 240 hours = 1,840 hours
+
+(check: 240 hours + 1,840 hours = 2,080 hours)
+
+Annual Income is calculated as follows: 240 hours x $7.50 = $1,800 $1,840 hours x $8.00 = $14,720 Annual Income $16,520
+
+(See Appendix 8 for an explanation of the correct approach to rounding numbers.)
+
+C. Some circumstances present more than the usual challenges to estimating anticipated income. Examples of challenging situations include a family that has sporadic work or seasonal income or a tenant who is self-employed. In all instances, owners are expected to make a reasonable judgment as to the most reliable approach to estimating what the tenant will receive during the year. In many of these challenging situations, midyear or interim recertifications may be
+
+required to reflect changing circumstances. Some examples of approaches to more complex situations are provided below.
+
+Examples – Irregular Employment Income
+
+Seasonal work. Clyde Kunkel is a roofer. He works from April through September. He does not work in rain or windstorms. His employer is able to provide information showing the total number of regular and overtime hours Clyde worked during the past three years. To calculate Clyde’s anticipated income, use the average number of regular hours over the past three years times his current regular pay rate, and the average overtime hours times his current overtime rate.
+
+Sporadic work. Justine Cowan is not always well enough to work full-time. When she is well, she works as a typist with a temporary agency. Last year was a good year and she worked a total of nearly six months. This year, however, she has more medical problems and does not know when or how much she will be able to work. Because she is not working at the time of her recertification, it will be best to exclude her employment income and remind her that she must return for an interim recertification when she resumes work.
+
+Examples – Irregular Employment Income
+
+Sporadic work. Sam Daniels receives social security disability. He reports that he works as a handyman periodically. He cannot remember when or how often he worked last year: he says it was a couple of times. Sam’s earnings appear to fit into the category of nonrecurring, sporadic income that is not included in annual income. Tell Sam that his earnings are not being included in annual income this year, but he must report to the owner any regular work or steady jobs he takes.
+
+Self-employment income. Mary James sells beauty products door-to-door on consignment. She makes most of her money in the months prior to Christmas but has some income throughout the year. She has no formal records of her income other than a copy of the IRS Form 1040 she files each year. With no other information available, the owner will use the income reflected on Mary’s copy of her form 1040 as her annual income.
+
+5-6 Calculating Income—Elements of Annual Income
+
+A. Income of Adults and Dependents
+
+1. Figure 5-2 summarizes whose income is counted.
+
+2. Adults. Count the annual income of the head, spouse or co-head, and other adult members of the family. In addition, persons under the age of 18 who have entered into a lease under state law are treated as adults, and their annual income must also be counted. These persons will be either the head, spouse, or co-head; they are sometimes referred to as emancipated minors.
+
+NOTE: If an emancipated minor is residing with a family as a member other than the head, spouse, or co-head, the individual would be considered a dependent and his or her income handled in accordance with subparagraph 3 below.
+
+3. Dependents. A dependent is a family member who is under 18 years of age, is disabled, or is a full-time student
+
+The head of the family, spouse, co-head, foster child, or live-in aide are never dependents. Some income received on behalf of family dependents is counted and some is not.
+
+a. Earned income of minors (family members under 18) is not counted.
+
+b. Benefits or other unearned income of minors is counted.
+
+Figure 5-2: Whose Income is Counted?
+
+Employment Other Income Income (including income Members from assets)
+
+Head Yes Yes Spouse Yes Yes Co-head Yes Yes Other adult (including foster adult) Yes Yes Dependents -Child under 18 No Yes Full-time student over 18 See Note Yes Foster child under 18 No Yes
+
+Nonmembers Live-in aide No No
+
+NOTE: The earned income of a full-time student 18 years old or older who is a dependent is excluded to the extent that it exceeds $480.
+
+c. When more than one family shares custody of a child, and both families live in assisted housing, only one family at a time can claim the dependent deduction. The family that counts the dependent deduction also counts the unearned income of the child. The other family claims neither the dependent deduction nor the unearned income of the child.
+
+d. For full-time students, who are 18 years of age or older *and* are dependents, a small amount of their earned income will be counted. Count only earned income up to a maximum of $480 per year for full-time students, age 18 or older, who are not the head of the family; spouse or co-head.*If the earned income is less than $480 annually, count all of the income. If the earned income exceeds $480 annually,* count $480 and exclude the amount that exceeds $480.
+
+e. The income of full-time students 18 years of age or older who are members of the household but away at school is counted the same as the income for other full-time students. The income of minors who are members of the household but away at school is counted as the income for other minors.
+
+f. All income of a full-time student, 18 years of age or older, is counted if that person is the head of the family, spouse, or co-head.
+
+g. Payments received by the family for the care of foster children or foster adults are not counted. This rule applies only to payments made through the official foster care relationships with local welfare agencies.
+
+h. Adoption assistance payments in excess of $480 are not counted.
+
+B. Income of Temporarily Absent Family Members
+
+1. Owners must count all income of family members approved to reside in the unit, even if some members are temporarily absent.
+
+2. If the owner determines that an absent person is no longer a family member, the individual must be removed from the lease and the HUD-50059.
+
+3. A temporarily absent individual on active military duty must be removed from the family, and his or her income must not be counted unless that person is the head of the family, spouse, or co-head.
+
+a. However, if the spouse or a dependent of the person on active military duty resides in the unit, that person’s income must be counted in full, even if the military member is not the head, or spouse of the head of the family.
+
+b. The income of the head, spouse, or co-head will be counted even if that person is temporarily absent for active military duty.
+
+Examples – Income of Temporarily Absent Family Members • John Chouse works as an accountant. However, he suffers from a disability that periodically requires lengthy stays at a rehabilitation center. When he is confined to the rehabilitation center, he receives disability payments equaling 80% of his usual income. During the time he is not in the unit, he will continue to be considered a family member. The owner will conduct an interim recertification. Even though he is not currently in the unit, his total disability income will be counted as part of the family’s annual income. • Mirna Martinez accepts temporary employment in another location and needs a portion of her income to cover living expenses in the new location. The full amount of the income must be included in annual income. • Charlotte Paul is on active military duty. Her permanent residence is her parents' assisted unit where her husband and children live. Charlotte is not currently exposed to hostile fire. Therefore, because her spouse and children are in the assisted unit, her military pay must be included in annual income. (If her dependents or spouse were not in the unit, she would not be considered a family member and her income would not be included in annual income.)
+
+C. Deployment of Military Personnel to Active Duty
+
+Owners are encouraged to be as lenient as responsibly possible to support affected households in situations where persons are called to active duty in the Armed Forces. Specific actions that owners should undertake to support military households include, but are not limited to:
+
+1. Allow a guardian to move into the assisted unit on a temporary basis to provide care for any dependents the military person leaves in the unit. Income of the guardian temporarily living in the unit for this purpose is not counted as income.
+
+2. Allow a tenant living in an assisted unit to provide care for any dependents of persons called to active duty in the Armed Forces on a temporary basis, as long as the head and/or co-head of household continues to serve in active duty. Income of the child (e.g., SSI benefits, military benefits) is not counted as income of the person providing the care.
+
+3. Exclude from annual income special pay received by a household member serving in the Armed Services who is exposed to hostile fire (see Exhibit 5-1).
+
+4. Give consideration for any case involving delayed payment of tenant rent. Determine whether it is appropriate to accept a late payment.
+
+5. Allow the assistance payment and the lease to remain in effect for a reasonable period of time (depending on the length of deployment)
+
+beyond that required by the Soldiers’ and Sailors’ Civil Relief Act of 1940, 50 U.S.C. §§ 501-591, even though the adult members of the military family are temporarily absent from the assisted unit.
+
+D. Income of Permanently Confined Family Members
+
+1. An individual permanently confined to a nursing home or hospital may not be named as family head, spouse, or co-head but may continue as a family member at the family’s discretion. The family’s decision on whether or not to include the permanently confined family member as a family member determines if that person’s income will be counted.
+
+a. Include the individual as a family member and the income and allowable deductions related to the medical care of the permanently confined individual are counted; or
+
+b. Exclude the individual as a family member and the income and allowances based on the medical care of the permanently confined individual are not counted.
+
+If the family elects to include the permanently confined member, the individual is listed on the HUD-50059 as an adult who is not the head, spouse, or co-head, even when the permanently confined family member is married to the person who is or will become the head of the family. The owner should consider extenuating circumstances that may prevent the confined member from being able to sign the HUD-50059. If the owner determines the confined member is unable to sign the HUD-50059,he owner must document the file why the signature was not obtained. If the family elects not to include the permanently confined member, the individual would not be listed on the HUD-50059.
+
+E. Educational Scholarships or Grants
+
+All forms of student financial assistance (grants, scholarships, educational entitlements, work study programs, and financial aid packages) are excluded from annual income except for students receiving Section 8 assistance. This is true whether the assistance is paid to the student or directly to the educational institution
+
+For students receiving Section 8 assistance, all financial assistance a student receives (1) under the Higher Education Act of 1965, (2) from private sources, or (3) from an institution of higher education that is in excess of amounts received for tuition is included in annual income except if the student is over the age of 23 with dependent children or the student is living with his or her parents who are receiving Section 8 assistance. See Paragraph 3-13 for further information on eligibility of students to receive Section 8 assistance and the Glossary for the definition of Student Financial Assistance.
+
+F. Alimony or Child Support
+
+Owners must count alimony or child support amounts awarded by the court unless the applicant certifies that payments are not being made and that he or she has taken all reasonable legal actions to collect amounts due, including filing with the appropriate courts or agencies responsible for enforcing payment.
+
+1. The owner may accept printouts from the court or agency responsible for enforcing support payments, or other evidence indicating the frequency and amount of support payments actually received.
+
+2. Child support paid to the custodial parent through a State child support enforcement or welfare agency may be included in the family’s monthly welfare check and may be designated in different ways. In some states these payments are not identified as separate from the welfare grant. In these states, it is important to determine which portion is child support and not to count it twice. In other states, the payment may be listed as child support or as “pass-through” payments. These amounts must be counted as annual income.
+
+3. When no documentation of child support, divorce, or separation is available, either because there was no marriage or for another reason, the owner may require the family to sign a certification stating the amount of child support received.
+
+G. Regular Cash Contributions and Gifts
+
+1. Owners must count as income any regular contributions and gifts from persons not living in the unit. These sources may include rent and utility payments paid on behalf of the family, and other cash or noncash contributions provided on a regular basis.
+
+Examples – Regular Cash Contributions • The father of a young single parent pays her monthly utility bills. On average he provides $100 each month. The $100 per month must be included in the family’s annual income.
+
+• The daughter of an elderly tenant pays her mother’s $175 share of rent each month. The $175 value must be included in the tenant’s annual income.
+
+2. Groceries and/or contributions paid directly to the childcare provider by persons not living in the unit are excluded from annual income.
+
+3. Temporary, nonrecurring, or sporadic income (including gifts) is not counted.
+
+H. Income from a Business
+
+When calculating annual income, owners must include the net income from operation of a business or profession including self-employment income. Net income is gross income less business expenses, interest on loans, and depreciation computed on a straight-line basis.
+
+1. In addition to net income, owners must count any salaries or other amounts distributed to family members from the business, and cash or assets withdrawn by family members, except when the withdrawal is a reimbursement of cash or assets invested in the business.
+
+2. When calculating net income, owners must not deduct principal payments on loans, interest on loans for business expansion or capital improvements, other expenses for business expansion, or outlays for capital improvements.
+
+3. If the net income from a business is negative, it must be counted as zero income. A negative amount must not be used to offset other family income.
+
+I. Periodic Social Security Payments
+
+Count the gross amount, before deductions for Medicare, etc., of periodic Social Security payments. Include payments received by adults on behalf of individuals under the age of 18 or by individuals under the age of 18 for their own support. *See Section J below regarding adjustments for overpayment of benefits and Section O for calculating the income for tenants in ICF/MR or ICF/DD projects and assisted living units in elderly projects.*
+
+*Example: Mary’s gross social security benefit is $700 per month. The owner calculates annual income by annualizing the gross monthly social security benefit amount.
+
+$700 per month x 12 months = $8,400 gross annual income.*
+
+J. Adjustments for Prior Overpayment of Benefits
+
+If an agency is reducing a family's benefits to adjust for a prior overpayment (e.g., social security, SSI, TANF, or unemployment benefits), count the amount that is actually provided after the adjustment.
+
+Example – Adjustment for Prior Overpayment of Benefits Lee Park’s social security payment of $250 per month is being reduced by $25 per month for a period of six months to make up for a prior overpayment. Count his social security income as $225 per month for the next six months and as $250 per month for the remaining six months.
+
+K. Public Assistance Income in As-Paid Localities
+
+1. Special calculations of public assistance income are required for “as-paid” state, county, or local public assistance programs. An “as-paid” system is one:
+
+a. In which the family receives an amount from a public agency specifically for shelter and utilities; and
+
+b. In which the amount is adjusted based upon the actual amount the family pays for shelter and utilities.
+
+2. The public assistance amount specifically designated for rent and utilities is called the “welfare rent.”
+
+3. To determine annual income for public assistance recipients in “as-paid” localities, include the following:
+
+a. The amount of the family’s grant for other than shelter and utilities; and
+
+b. The maximum amount the welfare department can pay for shelter and utilities for a family of that size (i.e., the welfare rent). This may be different from the amount the family is actually receiving.
+
+4. Each as-paid locality works somewhat differently, and many are subject to court-ordered modifications to the basic policy. Owners should discuss how the rules are applied with the HUD Field Office.
+
+Example – Welfare Income in “As Paid” Localities At application, a family’s welfare grant is $300, which includes $125 for basic needs and $175 for shelter and utilities (based upon where the family is now living). However, the maximum the welfare agency could allow for shelter and utilities for this size family is $190.
+
+Count the following as income:
+
+$125 Amount family receives for basic needs
+
+$190 Maximum for shelter and utilities
+
+$315 Monthly public assistance income
+
+L. Periodic Payments from Long-Term Care Insurance, Pensions, Annuities, and Disability or Death Benefits
+
+1. The full amount of periodic payments from annuities, insurance policies, retirement funds, pensions, and disability or death benefits is included in annual income. (See subparagraph O below for information on the withdrawal of cash or assets from an investment.) Payments such as Black Lung Sick Benefits, Veterans Disability, and Dependent Indemnity Compensation for the Widow of a Killed in Action Serviceman are examples of such periodic payments.
+
+2. Withdrawals from retirement savings accounts such as Individual Retirement Accounts and 401K accounts that are not periodic payments do not fall in this category and are not counted in annual income (see paragraph 5.6.L.3).
+
+Example – Withdrawals from IRAs or 401K Accounts Isaac Freeman retired recently. He has an IRA account but is not receiving periodic payments from it because his pension is adequate for his routine expenses. However, he has withdrawn $2,000 for a trip with his children. The withdrawal is not a periodic payment and is not counted as income.
+
+3. If the tenant is receiving long-term care insurance payments, any payments in excess of $180 per day must be counted toward the gross annual income. (NOTE: Payment of long-term care insurance premiums are an eligible medical expense – see paragraph 5-10 D.8.k.)
+
+4. Federal Government/Uniformed Services pension funds paid to a former spouse.
+
+Federal Government/Uniformed Services pension funds paid directly to an applicant’s/tenant’s former spouse pursuant to the terms of a court decree of divorce, annulment, or legal separation are not counted as annual income. The state court has, in the settlement of the parties’ marital assets, determined the extent to which each party shares in the ownership of the pension. That portion of the pension that is ordered by the court (and authorized by the Office of Personnel Management (OPM), to be paid to the applicant’s/tenant’s former spouse is no longer an asset of the applicant/tenant and therefore is not counted as income. However, any pension funds authorized by OPM, pursuant to a court order to be paid to the former spouse of a Federal government employee, is counted as income for a tenant/applicant receiving such funds.
+
+Example: Joan Carson is a retired Federal government employee receiving a retirement pension. She is also the recipient of Section 8 housing assistance and involved in a divorce proceeding. In settling the assets of the marriage between Mrs. Carson and her former husband, the court ordered that one half of her pension be paid directly to her former husband in the amount of $20,000. The court provided OPM with clear, specific and express instructions acceptable for OPM to process the payment to Mrs. Carson’s former husband. OPM authorized the payment of pension benefits to Mrs. Carson’s former husband in the amount of $20,000. The $20,000 represents an asset disposed of as a result of a court decree. At the interim reexamination of her income, Mrs. Carson indicated a change in her income due to the court ordered payment of pension benefits to her former husband. The PHA requested that Mrs. Carson provide a copy of her statement from OPM evidencing the payment of pension benefits to her (her statement reflected the line item payment to her former husband due to the court order). That portion of the pension paid to her former husband no longer belongs to Mrs. Carson and is not counted as income.
+
+The OPM is responsible for handling court orders (any judgments or property settlements issued by or approved by any court of any state, the District of Columbia, the Commonwealth of Puerto Rico, Guam, The Northern Mariana Islands, or the Virgin Islands in connection with the divorce, annulment of marriage, or legal separation of a Federal government employee or retiree) affecting current and retired Federal government employees. See 5 C.F.R. § 838.103. OPM must comply with court orders, decrees, or court-approved property settlement agreements in connection with divorces, annulments of marriage, or legal separations of employees that award a portion of the former Federal government employee’s retirement benefits. Id. at § 838.101(a)(1). State courts ordering a judgment or property settlement in connection with divorce, annulment of marriage, or legal separation have the responsibility of issuing clear, specific, and express instructions to OPM with regards to providing benefits to former spouses. Id. at § 838.122. In response to instructions from state courts, OPM will authorize payments to the former spouses. Id. at § 838.121. Once the payments have been authorized by OPM, the reduced pension amount paid to the retired
+
+Federal employee (the tenant/applicant) will be reflected in the tenant’s/applicant’s statement from OPM. Former spouses of Federal government employees receiving court ordered pension benefits are provided a Form-1099 reflecting pension benefits received from the retired Federal government employee. In verifying the income of tenants/applicants, owners should require that tenants/applicants provide any copies of statements from OPM verifying pension benefits (including any reductions pursuant to a court order, decree or court-approved property settlement agreement), and any evidence of survivor benefits, pensions or annuities received from retired Federal government employees including, but not limited to, a Form-1099. (See Paragraph 5-7.G.5 for more information on the treatment of income from Federal government pensions.)
+
+5. Other State, local government, social security or private pensions paid to a former spouse.
+
+Other state, local government, social security or private pension funds paid directly to an applicant’s/tenant’s former spouse pursuant to the terms of a court decree of divorce, annulment, or legal separation are also not counted as annual income and should be handled in the same manner as 4, above. The decree and copies of statements should be obtained in order to verify the net amount of the pension that should be applied in order to determine eligibility and calculate rent.
+
+M. Income from Training Programs
+
+1. Amounts received under HUD-funded training programs are excluded from annual income.
+
+2. Incremental earnings and benefits received by any family member due to participation in qualifying state or local employment training programs are excluded. Income from training programs not affiliated with a local government, and income from the training of a family member resident to serve on the management staff, is also excluded.
+
+a. Excluded income must be received under employment training programs with clearly defined goals and objectives and for a specific, limited time period. The initial enrollment must not exceed one year, although income earned during extensions for additional specific time periods may also be eligible for exclusion
+
+b. Training income may be excluded only for the period during which the family member participates in the employment training program.
+
+c. Exclusions include stipends, wages, transportation or child care payments, or reimbursements.
+
+d. Income received as compensation for employment is excluded only if the employment is a component of a job training program.
+
+Once training is completed, the employment income becomes income that is counted.
+
+e. Amounts received during the training period from sources that are unrelated to the job training program, such as welfare benefits, social security payments, or other employment, are not excluded.
+
+2. Owners may ask to use project funds or funds from the Residual Receipts account to underwrite all or a portion of the cost of developing, maintaining, and managing a job training program for project residents if funds are available.
+
+a. The Field Office will make the determination if the job training program may be approved, and if project funds are sufficient to fund the job training program and maintain the physical and financial integrity of the project. Job training programs may be either on-site at the project or off-site. For example, job training programs that have partnerships with local colleges, community based organizations, or local business, may have in-house job training programs designed for project residents.
+
+b. Funds that an owner may choose to use to underwrite a job training program may include Section 8 funds, Community Development Block Grant funds, or housing authority funds. These funds may be used to cover the costs of various components of a job training program, including course materials, computer software, computer hardware, or personnel costs. Also, contractors and subcontractors, in connection with work performed under a Flexible Subsidy contract, may elect to hire project residents to perform certain skills required under the contract. If the employment of the project residents was pursuant to an apprenticeship program, this could constitute a training program using HUD funds, and income received by the tenants in the apprenticeship program will qualify as an exclusion from income.
+
+N. Resident Services Stipends
+
+Resident services stipends are generally modest amounts of money received by residents for performing services such as hall monitoring, fire patrol, lawn maintenance, and resident management.
+
+1. If the resident stipend exceeds $200 per month, owners must include the entire amount in annual income.
+
+2. If the resident stipend is $200 or less per month, owners must exclude the resident services stipend from annual income.
+
+O. Income Received by a Resident of an Intermediate Care Facility for the Mentally Retarded or for the Developmentally Disabled (ICF/MR or ICF/DD) and Assisted Living Units in Elderly Projects
+
+1. An intermediate care facility is a group home for mentally retarded or developmentally disabled individuals (ICF/MR or ICF/DD). The term “intermediate care facility” is one used by state mental health departments for group homes serving these residents.
+
+2. Assisted living units are units in projects developed for elderly residents with project-based assistance that have been converted to assisted living units.
+
+3. The local agency responsible for Medicaid provides funds directly to group home operators and assisted living providers for services.
+
+4. Annual income at an ICF/MR, ICF/DD, or assisted living unit must include:
+
+a. The SSI payment a tenant receives or the facility receives on behalf of the tenant; plus
+
+b. All other income the tenant receives from sources other than SSI that are not excluded from income by HUD regulations (see Exhibit 5-1). Examples of other sources of income include wages, pensions, income from sheltered workshops, income from a trust, or other interest income.
+
+c. The personal allowance of an individual residing in an ICF/MR or ICF/DD is not included in annual income. If the owner is unable to determine the actual amount of the personal allowance, use $30.
+
+5. Annual income does not include the enhanced benefit portion of the SSI that is provided to pay for services. In some instances, a resident’s SSI income may be reduced between annual recertifications if the resident’s earnings exceed a specified amount. If this happens, the resident may request an interim recertification.
+
+P. Withdrawal of Cash or Assets from an Investment
+
+The withdrawal of cash or assets from an investment received as periodic payments should be counted as income. Lump sum receipts from pension and retirement funds are counted as assets. If benefits are received through periodic payments, do not count any remaining amounts in the account as an asset. See Paragraph 5-7 for guidance on calculating income from an asset.
+
+Q. Lump Sum Payments Counted as Income
+
+1. Generally, lump sum amounts received by a family, such as inheritances, insurance settlements, or proceeds from sale of property are considered assets, not income.
+
+2. When social security or SSI benefit income is paid in a lump sum as a result of deferred periodic payments, that amount is excluded from annual income.
+
+3. *For Section 8 tenants only, any deferred Department of Veterans Affairs (VA) disability benefits that are received in a lump sum or in prospective monthly amounts are excluded from annual income.*
+
+4. Settlement payments from claim disputes over welfare, unemployment, or similar benefits may be counted as assets, but lump sum payments caused by delays in processing periodic payments for unemployment or welfare assistance are included as income.
+
+How lump sum payments for delayed start of benefits are counted depends upon the following:
+
+a. When the family reports the change;
+
+b. When an interim re-examination is conducted; and
+
+c. Whether the family’s income increases or decreases as a result.
+
+A lump sum payment resulting from delayed benefit income may be treated in either of the two ways illustrated in the example shown in Figure 5-3.
+
+5. Lottery winnings paid in one payment are treated as assets. Lottery winnings paid in periodic payments must be counted as income.
+
+Figure 5-3: Treatment of Delayed Benefit Payments Received in a Lump Sum
+
+Family member loses his/her job on October 19 and applies for unemployment benefits. The family receives a lump sum payment of $700 in December to cover the period from 10/20 to 12/5 and begins to receive $100 a week effective 12/6.
+
+Option A: The owner processes one interim re-examination immediately effective 11/1 and a second interim after unemployment benefits are known. 10/1 11/1 12/1 1/1 2/1 Monthly gross income 800 *0 *0 492** 492** Monthly allowances (three minors x 480 / 12 120 - - 120 120 months) Monthly adjusted income 680 0 0 372 372 Total tenant payment (TTP) 204 25 25 25*** 112***
+
+* The family’s income is calculated at $0/month beginning November 1, continuing until benefits actually begin and new income is calculated. TTP is set at the minimum rent. ** Family’s actual income for 1/1 is $100/week x 52 weeks = $5,200 / 12 = $433. However, because the family’s TTP was calculated at zero income for the months of November and December (the period eventually covered by the $700 lump sum payment), the annual income to be used in calculating monthly gross income should be as follows: $100/week benefit x 52 weeks = $5,200 + $700 lump sum payment = $5,900 annual gross income/ 12 = $492. *** Increased rent does not start until 2/1 in order to give the family notice of rent increase.
+
+Option B: The owner processes one interim re-examination after unemployment benefits are known. 10/1 11/1 12/1 1/1 2/1 Monthly gross income 800 0/800* 0/800* 433* 433* Monthly allowances (three minors x 480 / 12 Months) 120 120 120 120 120 Monthly adjusted income 680 0/680 0/680 313 313 Total tenant payment 204 204* 204* 94 94 Recalculated TTP - 94*** 94* 94 94 Rent credit (204 – 94=) - 110 110 - -
+
+* Family’s actual income for 11/1 and 12/1 is zero, but because the owner does not process an interim re-examination, the family’s TTP continues to be calculated using $800 as monthly gross income. Beginning 1/1, monthly gross income is known to be $100/week, or $433/month. ** The lump sum payment is taken into account by making the recertification retroactive to 11/1. Annual income is calculated as $5,200 / 12 = $433 monthly gross income. *** TTP for November and December recalculated as $433 monthly gross income and $313 monthly adjusted income x .30 = 94 with credit or refund to family of $110/month for each of these two months for difference between TTP paid of $204 and recalculated TTP of $94.
+
+R. Exclusions from Income
+
+1. Regulations for the multifamily subsidized housing programs covered by this handbook specifically exclude certain types of income from annual income. However, many of the items listed as exclusions from annual income under HUD requirements are items that the IRS includes as taxable income. Therefore, it is important for owners to focus specifically on the HUD program requirements regarding annual income.
+
+2. Among the items that are excluded from annual income is the value of food provided through:
+
+a. The Meals on Wheels program, food stamps, or other programs that provide food for the needy;
+
+b. Groceries provided by persons not living in the household; and
+
+c. Amounts received under the School Lunch Act and the Child Nutrition Act of 1966, including reduced lunches and food under the Special Supplemental Food Program for Women, Infants and Children (WIC).
+
+Examples – Income Exclusions
+
+• The Value of Food Provided through the Meals on Wheels Program or Other Programs Providing Food for the Needy. Jack Love receives a hot lunch each day during the week in the community room and an evening meal in his apartment. One meal is provided through the Meals on Wheels program. A local church provides the other. The value of the meals he receives is not counted as income. • Groceries provided by persons not living in the household. Carrie Sue Colby’s mother purchases and delivers groceries each week for Carrie Sue and her two year old. The value of these groceries is not counted as income despite the fact that these are a regular contribution or gift. • Amounts Received Under WIC or the School Lunch Act. Lydia Jeffries’ two children receive a free breakfast and reduced priced lunches at school every day through the Special Supplemental Food Program for Women, Infants and Children (WIC). The value of this food is not counted as income.
+
+3. Some additional examples of income that are excluded from the calculation of annual income follow.
+
+Examples – Income Exclusions • Resident service stipends. Rich Fuller receives $50 a month for distributing flyers for management. This amount is excluded from annual income.
+
+• Deferred periodic payments of social security benefits. Germain Johnson received $32,000 in deferred social security benefits following a lengthy eligibility dispute. This delayed payment of social security benefits is treated as an asset, not as income.
+
+• Income from training programs. Jennifer Jones is participating in a qualified state-supported employment training program every afternoon to learn improved computer skills. Each morning, she continues her regular job as a typist. The $250 a week she receives as a part-time typist is included in annual income. The $150 a week she receives for participation in the training program is excluded in annual income.
+
+• Earned Income Tax Credit refund payments. Mary Frances Jackson is eligible for an earned income tax credit. She receives payments from her employer each quarter because of the tax credit. These payments are excluded in annual income.
+
+5-7 Calculating Income from Assets
+
+Annual income includes amounts derived from assets to which family members have access.
+
+A. What is Considered an Asset?
+
+1. Assets are items of value that may be turned into cash. A savings account is a cash asset. The bank pays interest on the asset. The interest is the income from that asset.
+
+2. Some tenants have assets that are not earning interest. A quantity of money under a mattress is an asset: it is a thing of value that could be used to the benefit of the tenant, but under the mattress it is not producing income.
+
+3. Some belongings of value are not considered assets. Necessary personal property is not counted as an asset. Exhibit 5-2 summarizes the items that are considered assets and those that are not.
+
+B. Determining Income from Assets
+
+Note: For families receiving only BMIR assistance, it is not necessary to determine whether family assets exceed $5,000. The rule for imputing income from assets does not apply to the BMIR program.
+
+1. The calculation to determine the amount of income from assets to include in annual income considers both of the following:
+
+a. The total cash value of the family’s assets; and
+
+b. The amount of income those assets are earning or could earn.
+
+2. The rule for calculating income from assets differs depending on whether the total cash value of family assets is $5,000 or less, or is more than $5,000.
+
+C. Determining the Total Cash Value of Family Assets
+
+1. To comply with the rule for determining the amount of income from assets, it is necessary to first determine whether the total “cash value” of family assets exceeds $5,000.
+
+a. The “cash value” of an asset is the market value less reasonable expenses that would be incurred in selling or converting the asset to cash, such as the following:
+
+(1) Penalties for premature withdrawal;
+
+(2) Broker and legal fees; and
+
+(3) Settlement costs for real estate transactions.
+
+The cash value is the amount the family could actually receive in cash, if the family converted an asset to cash.
+
+Example – Calculating the Cash Value of an Asset A family has a certificate of deposit (CD) in the amount of $5,000 paying interest at 4%. The penalty for early withdrawal is three months of interest. $5,000 x 0.04 = $200 in annual income $200/12 months = $16.67 interest per month $16.67 x 3 months = $50.01 $5,000 - $50 = $4,950 cash value of CD
+
+b. It is essential to note that a family is not required to convert an asset to cash. Determining the cash value of the asset is done simply as a calculation by the owner because it is a required step when determining income from assets under program requirements.
+
+D. Assets Owned Jointly
+
+1. If assets are owned by more than one person, prorate the assets according to the percentage of ownership. If no percentage is specified or provided by a state or local law, prorate the assets evenly among all owners.
+
+2. If an asset is not effectively owned by an individual, do not count it as an asset. An asset is not effectively owned when the asset is held in an individual’s name, but (a) the asset and any income it earns accrue to the benefit of someone else who is not a member of the family, and (b) that other person is responsible for income taxes incurred on income generated by the assets.
+
+3. Determining which individuals have ownership of an asset requires collecting as much information as is available and making the best judgment possible based on that information.
+
+Example – Determining the Cash Value of an Asset The “cash value” of an asset is the amount a family would receive if the family turned a noncash asset into cash. The cash value is the market value—or the amount another person would pay to acquire the asset—less the cost to turn the asset into cash. If a family owns real estate, it may be necessary to consider the family’s equity in the property as well as the expense to sell the property. To determine the family’s equity, subtract amounts owed on the property from its market value: Market value - Mortgage amount owed Equity in the property
+
+Calculate the cash value by subtracting the expense of selling the property: Equity - Expense of selling Cash Value Juanita Player owns a rental house. The market value is $100,000. She owes $60,000. The cost to dispose of this house would be $8,000. The owner would determine the cash value as follows: Market Value $100,000 Mortgage amount - $60,000 40,000 Cost of disposing of the asset (real estate commission, and other costs of sale) - $8,000 Cash Value $32,000
+
+a. In some instances, but not all, knowing whose social security number is connected with the asset may help in identifying ownership. Owners should be aware that there are many situations in which a social security number connected with an asset does not indicate ownership and other situations where there is ownership without connection to a social security number.
+
+b. Determining who has contributed to an asset or who is paying taxes on the asset may assist in identifying ownership.
+
+Examples – Jointly Owned Assets • Helen Wright is an assisted-housing tenant. She and her daughter, Elsie Duncan, have a joint savings account. Mother and daughter both contribute to the account. They have used the account for trips together and to cover emergency needs for either of them. Assume in this example that state law does not specify ownership. Even though either Helen Wright or Elsie Duncan could withdraw the entire asset for her own use, count Helen's ownership as 50% of the account. • Jean Boucher’s name is on her mother’s savings account to ensure that she can access the funds for her mother’s care. The account is not effectively owned by Jean and should not be counted as her asset.
+
+E. Calculating Income from Assets When Assets Total $5,000 or Less
+
+If the total cash value of all the family’s assets is $5,000 or less, the actual income the family receives from assets is the amount that is included in annual income as income from assets.
+
+F. Calculating Income from Assets When Assets Exceed $5,000
+
+1. When net family assets are more than $5,000, annual income includes the greater of the following:
+
+a. Actual income from assets; or
+
+b. A percentage of the value of family assets based upon the current passbook savings rate as established by HUD. This is called imputed income from assets. The passbook rate is currently set at 2%.
+
+2. To begin this calculation, first add the cash value of all assets. Multiply the total cash value of all assets by .02. The product is the “imputed income” from assets. Then, add the actual income from all assets. The greater of the imputed income from assets or the actual income from assets is included in the calculation of annual income.
+
+Example – Use Actual Income from Assets When Total Net Family Assets are $5,000 or Less Type of Asset Cash Value Actual Yearly Income
+
+Certificate of Deposit $950 $40 $1,000 withdrawal fee $50 interest @ 4%
+
+Savings Account $500 $13 $500 interest @ 2.5%
+
+Stock $300 $0 $300 Not paying dividends $1,750 $53 Total
+
+The total cash value of the family’s assets is $1,750. Therefore, the amount that is added to annual income as income from assets is the actual income earned or $53.
+
+Example – Imputed Income from Assets “Imputed” means “attributed” or “assigned.” Imputing income from assets is “assigning” an amount of income solely for the sake of the annual income calculation. The imputed income is not real income.
+
+For example, money under a mattress is not earning income. If the money were put in a savings account it would earn interest. Imputed income from such an asset is the interest the money would earn if it were put in a savings account.
+
+A family with cash under a mattress is not required to put the cash in a savings account; but when the owner is calculating income for a family with more than $5,000 in assets, the owner must assign an amount that cash would earn if it were in a savings account.
+
+Example – Determining Income from Assets When Net Family Assets Exceed $5,000
+
+Type of Asset Cash Value Actual Yearly Income
+
+Checking Account (non- $455 $0 interest bearing) Savings Account $6,000 $150 (interest at 2.5%) Stocks (not paying $3,000 $0 dividends this year) Total $9,455 $150
+
+Total cash value of assets is greater than $5,000. Therefore, it is necessary to compare the actual income from assets to the imputed income from assets. The total cash value of assets ($9,455) is multiplied by 2% to determine the imputed income from assets. .02 x $9,455 = $189 $189 is greater than the actual income from assets ($150). In this case, therefore, the owner will add $189 to the annual income calculation as income from assets.
+
+G. Calculating Income from Assets - Specific Types of Assets
+
+1. Trusts.
+
+a. Explanation of trusts.
+
+(1) A trust is a legal arrangement generally regulated by state law in which one party (the creator or grantor) transfers property to a second party (the trustee) who holds the property for the benefit of one or more third parties (the beneficiaries). A trust can contain cash or other liquid assets or real or personal property that could be turned into cash. Generally, the assets are invested for the benefit of the beneficiaries.
+
+(2) Trusts may be revocable or nonrevocable. A revocable trust is a trust that the creator of the trust may amend or end (revoke). When there is a revocable trust, the creator has access to the funds in the trust account. When the creator sets up a nonrevocable trust, the creator has no access to the funds in the account.
+
+(3) The beneficiary frequently will be unable to touch any of the trust funds until a specified date or event (e.g., the
+
+beneficiary’s 21st birthday or the grantor’s death). In some instances, the beneficiary may receive the regular investment income from the trust but not be able to withdraw any of the principal.
+
+(4) The beneficiary and the grantor may be members of the same family. A parent or grandparent may have placed funds in trust to a child. If the trust is revocable, the funds may be accessible to the parent or grandparent but not to the child.
+
+b. How to treat trusts.
+
+(1) The basis for determining how to treat trusts relies on information about who has access to either the principal in the account or the income from the account.
+
+(2) Revocable trusts. If any member of the tenant family has the right to withdraw the funds in the account, the trust is considered to be an asset and is treated as any other asset. The cash value of the trust (the amount the family member would receive if he or she withdrew all that could be withdrawn) is added to total net assets. The actual income received is added to actual income from assets.
+
+Example – A Trust Accessible to Family Members Assez Charaf lives alone. He has placed $20,000 in trust to his grandson to be available to the grandson upon the death of Assez. The trust is revocable, that is, Assez has control of the principal and interest in the account and can amend the trust or remove the funds at any time. In calculating Assez’s income, the owner will add the $20,000 to Assez’s net family assets and the actual income received on the trust to actual income from assets.
+
+(3) Nonrevocable trusts. If no family member has access to either the principal or income of the trust at the current time, the trust is not included in the calculation of income from assets or in annual income.
+
+If only the income (and none of the principal) from the trust is currently available to a family member, the income is counted in annual income, but the trust is not included in the calculation of income from assets.
+
+(4) Nonrevocable trust as an asset disposed of for less than fair market value. If a tenant sets up a nonrevocable trust for the benefit of another person while residing in assisted
+
+housing, the trust is considered an asset disposed of for less than fair market value (see subparagraph G.6 below).
+
+ If the trust has been set up so income from the trust is regularly reinvested in the trust and is not paid back to the creator, the trust is calculated as any other asset disposed of for less than fair market value for two years and not taken into consideration thereafter.
+
+Example – Nonrevocable Trust As an Asset Disposed of for Less Than Fair Market Value Sarah Gordy placed $100,000 in a nonrevocable trust for her grandson. Last year, the trust produced $8,000, which was reinvested into the trust.
+
+The trust is treated as an asset disposed of for less than fair market value for two years. (See paragraph 5.7 G.6.) No actual income from the trust is included in Sarah’s annual income, but the value of the asset when it was given away, $100,000, is included in net family assets for two years from the date the trust was established.
+
+ Nonrevocable trust distributing income. When a tenant places an asset in a nonrevocable trust but continues to receive income from the trust, the income is added to annual income and the trust is counted as an asset disposed of for less than market value for two years. Following the two-year period, the owner will count only the actual income distributed from the trust to the tenant.
+
+Example – Nonrevocable Trust Distributing Income to the Creator/Tenant Reggie Bouchard has established a nonrevocable trust in the amount of $35,000 that no one in the tenant family controls. Income from the trust is paid to Reggie. Last year, he received $3,500.
+
+The owner will count Reggie’s actual anticipated income from the trust in next year’s annual income.
+
+Because the asset was disposed of for less than fair market value (see paragraph 5.7 G.6), the value of the asset given away, $35,000, is counted as an asset disposed of for less than fair market value for two years.
+
+(5) Payment of principal from a trust. The beneficiary of a trust may receive funds from the trust in different ways. A beneficiary may receive the full value of a trust at one time. In that instance the funds would be considered a lump sum receipt and would be treated as an asset. A trust set up to provide support for a person with disabilities may pay only income from the trust on a periodic basis. Occasionally, however, a beneficiary may be given a portion of the trust principal on a periodic basis. When the principal is paid out on a periodic basis, those payments are considered regular income or gifts and are counted in annual income.
+
+Example – Payment of Principal Amounts from a Trust Jared Leland receives funds from a nonrevocable trust established by his parents for his support. Last year he received $18,000 from the trust. The attorney managing the trust reported that $3,500 of the funds distributed was interest income and $14,500 was from principal. Jared receives a payment of $1,500 each month (an amount that includes both principal and interest from the trust).
+
+The owner will count the entire $18,000 Jared received as annual income.
+
+c. Special needs trusts.
+
+A special needs trust is a trust that may be created under some state laws, often by family members for disabled persons who are not able to make financial decisions for themselves. Generally, the assets within the trust are not accessible to the beneficiary.
+
+(1) If the beneficiary does not have access to income from the trust, then it is not counted as part of income.
+
+(2) If income from the trust is paid to the beneficiary regularly, those payments are counted as income.
+
+Example – Special Needs Trust Daryl Rockland is a 55-year-old person with disabilities, living with his elderly parents. The parents have established a special-needs trust to provide income for their son after they are gone. The trust is not revocable; neither the parents nor the son currently have access to the principal or interest. In calculating the income of the Rocklands, the owner will disregard the trust.
+
+2. Annuities.
+
+a. Annuity facts and terms.
+
+(1) An annuity is a contract sold by an insurance company designed to provide payments, usually to a retired person, at specified intervals. Fixed annuities guarantee a certain payment amount, while variable annuities do not, but have the potential for greater returns.
+
+ A hybrid annuity (also called a combination annuity) combines the features of a fixed annuity and a variable annuity.
+
+ A deferred annuity is an annuity that delays income payments until the holder chooses to receive them. An immediate annuity is one that begins payments immediately upon purchase.
+
+ A life annuity continues to pay out as long as the owner is alive. A single-life annuity provides income benefits for only one person. A joint life annuity is issued on two individuals, and payments continue in whole or in part as long as either individual is alive.
+
+(2) Generally, a person who holds an annuity from which he or she is not yet receiving payments will also be earning income. In most instances, a fixed annuity will be earning interest at a specified fixed rate similar to interest earned by a CD. A variable annuity will earn (or lose) based on market fluctuations, as in a mutual fund.
+
+(3) Most annuities charge surrender or withdrawal fees. In addition, early withdrawal usually results in tax penalties.
+
+(4) Depending on the type of annuity and the current status of the annuity, the owner will need to ask different questions of the verification source, which will normally be the applicant or tenant’s insurance broker.
+
+b. Income after the holder begins receiving payments.
+
+(1) When verifying an annuity, owners should ask the verification source whether the holder of the annuity has the right to withdraw the balance of the annuity. For annuities without this right, the annuity is not treated as an asset.
+
+(2) Generally, when the holder has begun receiving annuity payments, the holder can no longer convert it to a lump sum of cash. In this situation, the holder will receive regular payments from the annuity that will be treated as regular income, and no calculations of income from assets will be made.
+
+c. Calculations when an annuity is considered an asset.
+
+(1) When an applicant or tenant has the option of withdrawing the balance in an annuity, the annuity will be treated like any other asset. It will be necessary to determine the cash value of the annuity in addition to determining the actual income earned.
+
+(2) In most instances, an annuity from which payments have not yet been made is earning income on the balance in the annuity. A fixed annuity will earn income at a fixed rate in the same manner that a CD earns income. A variable annuity will earn (or lose) based on current market conditions, as with a mutual fund.
+
+(3) The owner will need to verify with the insurance agent or other appropriate source:
+
+ The right of the holder to withdraw the balance (even if penalties are involved).
+
+ The basis on which the annuity may be expected to grow during the coming year.
+
+ The surrender or early withdrawal penalty fee.
+
+ The tax rate and the tax penalty that would apply if the family withdrew the annuity.
+
+(4) The cash value will be the full value of the annuity, less the surrender (or withdrawal) penalty, and less any taxes and tax penalties that would be due.
+
+(5) The actual income is the balance in the annuity times the percentage (either fixed or variable) at which the annuity is expected to grow over the coming year. (This money will be reinvested into the annuity, but it is still considered actual income.)
+
+(6) The imputed income from the asset is calculated only after the cash value of all family assets has been determined.
+
+Imputed income from assets is calculated on the total cash value of all family assets.
+
+3. Lump sum receipts counted as assets.
+
+a. Commonly, when a family receives a large amount of money, a lump sum payment, the family will put the money in a checking or savings account, or will purchase stocks or bonds or a CD. Owners must count lump sum payments received by a tenant as assets. Examples of lump sum payments include the following:
+
+(1) Inheritances;
+
+(2) Capital gains;
+
+(3) Lottery winnings paid in one payment;
+
+(4) Cash from the sale of assets;
+
+(5) Insurance settlements (including health and accident insurance, workers compensation, and personal and property losses); and
+
+(6) Any other amounts that are received in one-time lump sum payments.
+
+Example – Calculating the Cash Value of an Annuity Rodrigo Ramirez, site manager at Fernwood Forrest, has interviewed Barbara Barstow, an applicant who reports holding an annuity from which she will not receive payments for another 15 years when she turns 65. The applicant could not provide any more detail on the annuity but did report the name, address, and phone number of her insurance agent.
+
+Rodrigo called the insurance agent and faxed a copy of the applicant’s approval for release of information. As a result, Rodrigo learned that the annuity is a fixed annuity, with a current value of $20,400 earning interest at an annual rate of 4.5%. The applicant could withdraw the current balance in the account but would pay a surrender penalty of $3,000. If the annuity is withdrawn, then the applicant will owe $1,200 in tax penalties.
+
+In this example, the important information for calculating cash value is the current value, $20,400; the surrender fee, $3,000; and the tax penalties, $1,200. If the applicant withdrew the cash from the annuity, after paying the surrender fee and tax penalty, then the amount of cash received would be $16,200.
+
+The cash value, $16,200, is recorded as an asset.
+
+Rodrigo will also calculate the actual anticipated income on this asset: $20,400 x .045 = $918.
+
+b. A lump sum payment is counted as an asset only as long as the family continues to possess it. If the family uses the money for something that is not an asset—a car or a vacation or education— the lump sum must not be counted.
+
+c. It is possible that a lump sum or an asset purchased with a lump sum payment may result in enough income to require the family to report the increased income before the next regularly scheduled annual recertification. But this requirement to report an increase in income before the next annual recertification would not apply if the income from the asset was not measurable by the tenant (e.g., gems, stamp collection).
+
+Examples – Lump Sum Additions to Family Assets (One-Time Payment) • JoAnne Wettig won $500 in the lottery and received it in one payment. Do not count the $500 as income. At JoAnne’s next annual recertification, she will report all of her assets.
+
+• Mia LaRue, a tenant in a Section 8 property, won $75,000 in one payment in the lottery. She buys a car with some of the money, and puts the remaining amount of $24,000 in the bank. Mia receives her first bank statement and notices that the income on this asset is $205 per month. She must report this increase in income because the family has experienced a cumulative increase in income of more than $200 per month. (See paragraph 7-10 A.4 on rules for reporting interim increases in income.) The owner must perform an interim recertification and count the greater of the actual or imputed income on this asset (since the net family assets are greater than $5,000).
+
+4. Balances held in retirement accounts.
+
+a. Balances held in retirement accounts are counted as assets if the money is accessible to the family member. For individuals still employed, accessible amounts are counted even if withdrawal would result in a penalty. However, amounts that would be accessible only if the person retired are not counted.
+
+b. IRA, Keogh, and similar retirement savings accounts are counted as assets, even though withdrawal would result in a penalty, *unless benefits are being received through periodic payments.*
+
+c. Include contributions to company retirement/pension funds:
+
+(1) While an individual is employed, count only amounts the family can withdraw without retiring or terminating employment.
+
+(2) After retiring or terminating employment, count as an asset any amount the employee elects to receive as a lump sum.
+
+d. Include in annual income any retirement benefits received through periodic payments. *Do not count any remaining amounts in the account as an asset.*
+
+Examples – Balances Held in an IRA or 401K Retirement Account • Jed Dozier’s 401K account balance is $35,000. He is able to terminate his participation in the retirement plan without quitting his job, but if he did so he would lose a part of his employer’s contribution and would pay a penalty fee. The total cash he could withdraw, $18,000, is the amount that is counted as an asset.
+
+5. Federal Government/Uniformed Services Pensions
+
+In instances where the applicant/tenant is a retired Federal Government/Uniformed Services employee receiving a pension that is determined by a state court in a divorce, annulment of marriage, or legal separation proceeding to be a marital asset and the court provides OPM with the appropriate instructions to authorize OPM to provide payment of a portion of the retiree’s pension to a former spouse, that portion to be paid directly to the former spouse is not counted as income for the applicant/tenant. However, where the tenant/applicant is the former spouse of a retired Federal Government/Uniformed Services employee, any amounts received pursuant to a court ordered settlement in connection with a divorce, annulment of marriage, or legal separation are reflected on a Form-1099 and is counted as income for the applicant/tenant. (See Paragraph 5-6.K.4 for more information on Federal Government/Uniformed Services pension funds paid to a former spouse.)
+
+6. Other state, local government, social security or private pensions.
+
+Other state, local government, social security or private pensions where pensions are reduced due to a court ordered settlement in connection with a divorce, annulment of marriage, or legal separation and paid directly to the former spouse are not counted as income for the applicant/tenant and should be handled in the same manner as 5, above.
+
+7. Mortgage or deed of trust.
+
+a. Occasionally, when an individual sells a piece of real estate, the seller may loan money to the purchaser through a mortgage or deed of trust. This may be referred to as a “contract sale.”
+
+b. A mortgage or deed of trust held by a family member is included as an asset. Payments on this type of asset are often received as one combined payment that includes interest and principal. The value of the asset is the unpaid principal as of the effective date of the certification. Each year this balance will decline as more principal is paid off. The interest portion of the payment is counted as actual income from an asset.
+
+8. Assets disposed of for less than fair market value. Applicants and tenants must declare whether an asset has been disposed of for less than fair market value at each certification and recertification. Owners must count assets disposed of for less than fair market value during the two years preceding certification or recertification. The amount counted as an asset is the difference between the cash value and the amount actually received. (This provision does not apply to families receiving only BMIR assistance.)
+
+a. Any asset that is disposed of for less than its full value is counted, including cash gifts as well as property. To determine the amount that has been given away, owners must compare the cash value of the asset to any amount received in compensation.
+
+b. However, the rule applies only when the fair market value of all assets given away during the past two years exceeds the gross amount received by more than $1,000.
+
+Examples – Assets of More or Less Than $1,000 Disposed of for Less Than Fair Market Value • During the past two years, Alexis Turner donated $300 to the local food bank, $150 to a camp program, and $200 to her church. The total amount she disposed of for less than fair market value is $650. Since the total is less than $1,000, the donations are not treated as assets disposed of for less than fair market value. • Jackson Jones gave each of his three children $500. Because the total exceeds $1,000, the gifts are treated as assets disposed of for less than fair market value.
+
+c. When the two-year period expires, the income assigned to the disposed asset also expires. If the two-year period ends in the middle of a recertification year, the tenant may request an interim recertification to remove the disposed asset(s). However, if the owner elects to only include the income for a partial remaining year as shown in the example below, an interim recertification should not be conducted.
+
+Example – Asset Disposed of for Less Than Fair Market Value Margot Lundberg’s recertification will be effective January 1. On that date, it will be 18 months since she sold her house to her daughter for $60,000 less than its value. The owner will count income on the $60,000 for only six months. (After six months, the two-year limit on assets disposed of for less than fair market value will have expired.)
+
+d. Assets disposed of for less than fair market value as a result of foreclosure, bankruptcy, divorces, or separation, are not counted.
+
+e. Assets placed in nonrevocable trusts are considered as assets disposed of for less than fair market value except when the assets placed in trust were received through settlements or judgments.
+
+f. Applicants and tenants must sign a self-verification form at their initial certification and each annual recertification identifying all assets that have been disposed of for less than fair market value or certifying that no assets have been disposed of for less than fair market value.
+
+g. Owners need to verify the tenant self certification only if the information does not appear to agree with other information reported by the tenant/applicant.
+
+Examples – Asset Disposed of for Less Than Market Value (1) An applicant “sold” her home to her daughter for $10,000. The home was valued at $89,000 and had no loans secured against it. Broker fees and settlement costs are estimated at $1,800.
+
+$89,000 Market value
+
+- 1,800 Fees
+
+$87,200 Cash value
+
+- 10,000 Sales price to daughter
+
+$77,200 Asset disposed of for less than fair market value
+
+In this example, the asset disposed of for less than fair market value is $77,200. That amount is counted as the resident’s asset for two years from the date the sale took place.
+
+(The $10,000 received from the daughter may currently be in a savings account or other asset or may have been spent. The $10,000 will be counted as an asset if the applicant has not spent the money.)
+
+(2) A resident contributed $10,000 to her grandson’s college tuition and gave her two granddaughters $4,000 each to save for college.
+
+$10,000 College tuition gift
+
++ 8,000 Gift to granddaughters
+
+$18,000 Asset disposed of for less than fair market value
+
+The $18,000 disposed of for less than fair market value is counted as the tenant’s asset for two years from the date each asset was given away.
+
+Section 2: Determining Adjusted Income
+
+Section 2 does not apply to families applying for or occupying 221(d)(3) BMIR units without additional subsidy.
+
+5-8 Key Regulations
+
+This paragraph identifies the key regulatory citation pertaining to Section 2: Determining Adjusted Income. The citation and its topic are listed below.
+
+• 24 CFR 5.611 Adjusted Income
+
+Section 2:
+
+5-9 Key Requirements for Determining Adjusted Income
+
+A. There are five possible deductions that may be subtracted from annual income based on allowable family expenses and family characteristics. The remainder, after these deductions are subtracted, is called adjusted income. Adjusted income is generally the amount upon which rent is based. See Section 4 of this chapter for information about specific rent calculation methods. This section focuses on the calculation of annual adjusted income. Before rent is calculated, annual adjusted income is converted to monthly adjusted income.
+
+B. Of the five possible deductions, three are available to any assisted family, and two are permitted only for elderly or disabled families.
+
+1. The three types of deductions available to any assisted family are:
+
+a. A deduction for dependents;
+
+b. A child care deduction; and
+
+c. A disability assistance deduction.
+
+2. The two types of deductions permitted only for families in which the head, spouse, or co-head is elderly or disabled are:
+
+a. An elderly/disabled family deduction; and
+
+b. A deduction for unreimbursed medical expenses.
+
+NOTE: A family may not designate a family member as head or co-head solely to become eligible for these additional benefits. The remaining member of a family listed in paragraph 5-9 B.2 who is not 62 or older or a person with disabilities is not eligible for these allowances.
+
+5-10 Calculating Adjusted Income
+
+A. Dependent Deduction
+
+1. A family receives a deduction of $480 for each family member *(except foster children and foster adults)* who is:
+
+a. Under 18 years of age;
+
+b. A person with disabilities; or
+
+c. A full-time student of any age.
+
+*It is not necessary for a member of the family to have legal custody of a dependent in order to receive the dependent deduction.*
+
+2. Some family members may never qualify as dependents regardless of age, disability, or student status.
+
+a. The head of the family, the spouse, and the co-head may never qualify as dependents.
+
+b. A foster child, *foster adult*, an unborn child, a child who has not yet joined the family or a live-in aide may never be counted as a dependent.
+
+3. A full-time student is one who is carrying a full-time subject load at an institution with a degree or certificate program. A full-time load is defined by the institution where the student is enrolled.
+
+4. When more than one family shares custody of a child and both live in assisted housing, only one family at a time can claim the dependent deduction for that child. The family with primary custody or with custody at the time of the initial certification or annual recertification receives the deduction. If there is a dispute about which family should claim the dependent deduction, the owner should refer to available documents such as copies of court orders or an IRS return showing which family has claimed the child for income tax purposes.
+
+B. Child Care Deduction
+
+1. Anticipated expenses for the care of children under age 13 (including foster children) may be deducted from annual income if all of the following are true:
+
+a. The care is necessary to enable a family member to work, seek employment, or further his/her education (academic or vocational).
+
+b. The family has determined there is no adult family member capable of providing care during the hours care is needed.
+
+c. The expenses are not paid to a family member living in the unit.
+
+d. The amount deducted reflects reasonable charges for child care.
+
+e. The expense is not reimbursed by an agency or individual outside the family.
+
+f. Child care expenses incurred to permit a family member to work must not exceed the amount earned by the family member made available to work during the hours for which child care is paid.
+
+2. When child care enables a family member to work or go to school, the rule limiting the deduction to the amount earned by the family member made available to work applies only to child care expenses incurred while the individual is at work. While that family member is at school or looking for work, the expense for child care is not limited.
+
+Example – Child Care Deduction Separate Expenses for Time at Work and Time at School Bernice and Ernest have two children. Both parents work, but Bernice works only part-time and goes to school half time. She pays $4.00 an hour for eight hours of child care a day. For four of those hours, she is at work; for four of them she attends school. She receives no reimbursement for her child care expense.
+
+Her annual expense for child care during the hours she works is $4,000. Her annual expense for the hours she is at school is also $4,000. She earns $6,000 a year. Ernest earns $18,000.
+
+The rule requires that Bernice’s child care expense while she is working not exceed the amount she is earning while at work. In this case, that is not a problem. Bernice earns $6,000 during the time she is paying $4,000. Therefore, her deduction for the hours while she is working is $4,000.
+
+Bernice’s expense while she is at school is not compared to her earnings. Her expense during those hours is $4,000, and her deduction for those hours will also be $4,000.
+
+Bernice’s total child care deduction is $8,000 ($4,000 + $4,000). The total deduction exceeds the amount of Bernice’s total earnings, but the amount she pays during the hours she works does not exceed her earnings.
+
+If Bernice’s child care costs for the hours while she works were greater than her earnings, she would not be able to deduct all of her child care costs.
+
+Bernice is paying a total of $8,000 in child care expenses. Of that expense, payments of $4,000 cover the hours while she is in school; payments of $4,000 cover the hours she works. If Bernice were earning $3,500, her total child care deduction for the hours she works would be capped at the amount of money she earns. In this case, the total deduction would be $7,500 ($4,000 for expenses while she is in school plus $3,500 of the amount she pays while she is working.)
+
+3. Child care attributable to the work of a full-time student (except for head, spouse, co-head) is limited to not more than $480, since the employment income of full-time students in excess of $480 is not counted in the annual income calculation. Child care payments on behalf of a minor who is not living in the applicant’s household cannot be deducted.
+
+4. Child care expenses incurred by two assisted households with split custody can be split between the two households when the custody and expense is documented for each household and the documentation demonstrates that the total expense claimed by the two households does not exceed the cost for the actual time the child spends in care.
+
+C. Deduction for Disability Assistance Expense
+
+1. Families are entitled to a deduction for unreimbursed, anticipated costs for attendant care and “auxiliary apparatus” for each family member who is a person with disabilities, to the extent these expenses are reasonable and necessary to enable any family member 18 years of age or older who may or may not be the member who is a person with disabilities to be employed.
+
+Examples – Eligible Disability Assistance Expenses The payments made on a motorized wheelchair for the 42-year-old son of the head of the family enable the son to leave the house and go to work each day on his own. Prior to the purchase of the motorized wheelchair, the son was unable to make the commute to work. These payments are an eligible disability assistance expense.
+
+Payments to a care attendant to stay with a disabled 16-year-old child allow the child’s mother to go to work every day. These payments are an eligible disability assistance expense.
+
+2. This deduction is equal to the amount by which the cost of the care attendant or auxiliary apparatus exceeds 3% of the family’s annual income. However, the deduction may not exceed the earned income received by the family member or members who are enabled to work by the attendant care or auxiliary apparatus.
+
+3. If the disability assistance enables more than one person to be employed, the owner must consider the combined incomes of those persons. For example, if an auxiliary apparatus enables a person with a disability to be employed and frees another person to be employed, the allowance cannot exceed the combined incomes of those two people.
+
+Example – Calculating a Deduction for Disability Assistance Expenses Head’s earned income $14,500 Spouse’s earned income +$12,700 Total income $27,200
+
+Care expenses for disabled 15-year-old $3,850
+
+Calculation: $3,850 (3% of annual income) - $816 Allowable disability assistance expenses $3,034
+
+(NOTE: $3,034 is not greater than amount earned by spouse, who is enabled to work.)
+
+4. Auxiliary apparatus includes items such as wheelchairs, ramps, adaptations to vehicles, or special equipment to enable a sight-impaired person to read or type, but only if these items are directly related to permitting the disabled person or other family member to work.
+
+a. Include payments on a specially-equipped van to the extent they exceed the payments that would be required on a car purchased for transportation of a person who does not have a disability.
+
+b. The cost of maintenance and upkeep of an auxiliary apparatus is considered a disability assistance expense (e.g., the veterinarian costs and food costs of a service animal; the cost of maintaining the equipment that is added to a car, but not the cost of maintaining the car).
+
+c. If the apparatus is not used exclusively by the person with a disability, the owner must prorate the total cost and allow a specific amount for disability assistance.
+
+5. In addition to anticipated, ongoing expenses, one-time nonrecurring expenses of a current resident for auxiliary apparatus may be included in the calculation of the disability assistance expense deduction after the expense is incurred. These expenses may be added to the family’s total disability assistance expense either at the time the expense occurs through an interim recertification or in the rent calculation during the following annual recertification.
+
+6. Attendant care includes but is not limited to reasonable expenses for home medical care, nursing services, housekeeping and errand services, interpreters for hearing-impaired, and readers for persons with visual disabilities.
+
+Example – Calculating a Deduction When Disability Assistance Expenses Exceed Related Earnings Kenisha Prior, an individual with disabilities, lives with her mother Grace Prior. Her mother works full time. Kenisha works part time at the library. She requires a motorized wheelchair and special transportation to get to her job. Grace Prior‘s Income $24,000 Kenisha Prior’s Income + 5,000 Total income $29,000
+
+Disability Assistance Expense $8,000 (3% of annual income) - $870 $7,130
+
+The $7,130 exceeds the amount Kenisha earns. The disability assistance deduction, therefore, is limited to the amount earned by the person made available to work or, in this case, $5,000.
+
+7. When the same provider takes care of children and a disabled person over age 12, the owner must prorate the total cost and allocate a specific cost to attendant care. The sum of both child care and disability assistance expenses cannot exceed the employment income of the family member enabled to work.
+
+Example – Calculating Child Care and Disability Assistance Deductions Head’s earned income $8,300 Spouse’s earned income + $6,700 Total income $15,000
+
+The family has two children: a 10-year-old son and a 15-year-old son who is disabled. One care provider, who charges $120 per week, cares for both sons. The care provider reports that the cost for caring for the 10-year-old is $50 a week and the cost of care for the child with disabilities is $70 a week. Child care expense $50 x 52 = $2,600
+
+Total disability assistance expense $70 x 52 = $3,640
+
+Total disability assistance expense ($3,640) less 3% of annual income ($450) = $3,190
+
+Child care deduction $2,600 Disability assistance deduction +$3,190 Total deductions $5,790
+
+Total deductions when compared to earnings must not exceed employment earnings of $6,700.
+
+D. Medical Expense Deduction
+
+1. The medical expense deduction is permitted only for families in which the head, spouse, or co-head is at least 62 years old or is a person with disabilities (elderly or disabled families).
+
+2. If the family is eligible for a medical expense deduction, owners must include the unreimbursed medical expenses of all family members, including the expenses of nonelderly adults or children living in the family.
+
+3. Medical expenses include all expenses the family anticipates to incur during the 12 months following certification/recertification that are not reimbursed by an outside source, such as insurance.
+
+4. The owner may use the ongoing expenses the family paid in the 12 months preceding the certification/recertification to estimate anticipated medical expenses.
+
+5. The medical expense deduction is that portion of total medical expenses that exceeds 3% of annual income.
+
+Example – Calculating the Medical Expense Deduction Age of head 64 Annual income $12,000 Age of spouse 58 Total medical expenses $1,500 Sample Calculation Annual income $12,000 x .03 3% of annual income $ 360 Total medical expenses $1,500 - $360 Allowable medical expenses $ 1,140
+
+6. In addition to anticipated expenses, past one-time nonrecurring medical expenses that have been paid in full may be included in the calculation of the medical expense deduction for current tenants at an initial, interim or annual recertification. Past one-time nonrecurring medical expenses that have been paid in full are not applicable when calculating anticipated medical expenses at move-in. If the tenant is under a payment plan, the expense would be counted as anticipated
+
+a. There are two options for addressing one-time medical expenses. These expenses may be added to the family’s total medical expenses either: (1) at the time the expense occurs, through an interim recertification, or (2) at the upcoming annual recertification
+
+NOTE: If the one-time expense is added at an interim recertification, it cannot be added to expenses at the annual recertification.
+
+b. The following example illustrates the two options. Tenants may use either option.
+
+The following example illustrates the two options. Tenants may use either option. Example – One-Time, Nonrecurring Medical Expenses
+
+Maria and Gustav Crumpler had a total of $2,932 in medical expenses last year (Year 1). Of this amount, $932 covered Gustav’s gall bladder surgery; $2,000 was for routine costs that are expected to re-occur in the coming year. The entire amount may be included in the Crumpler’s medical costs for the coming year (Year 2) despite the fact that the gall bladder surgery is a past event that is not likely to re-occur.
+
+If, during the coming year (Year 2), the Crumplers experience additional one-time medical costs not anticipated at the annual recertification, they may request an interim recertification or wait for their next annual recertification (during Year 3) and ask for the unanticipated expenses to be included in the medical expense calculation for the following year.
+
+The owner may wish to explain to residents that including past one-time medical expenses in an annual recertification rather than in an interim recertification will result in a rent reduction for a larger number of months.
+
+For example, let us assume Maria has unanticipated dental surgery during Year 2 at a cost of $3,550 six months after the annual recertification. The Crumpler’s current TTP is $560; their annual income is $25,000.
+
+Annual income $25,000 Less elderly household deduction - $400 Less allowable medical deduction ($2,932 less 3% of $25,000) - $2,182 Adjusted annual income $22,418
+
+Adjusted monthly income $1,868
+
+TTP $560
+
+If the Crumplers request an interim recertification, the $3,550 additional cost will lower their rent for 6 months; if they wait for their annual recertification, the cost of the dental surgery will affect their rent for 12 months.
+
+Annual income $25,000 Less elderly household deduction - $400 Less allowable medical deduction ($6,482 less 3% of $25,000) - $5,732 Adjusted annual income $18,868
+
+Adjusted monthly income $1,572
+
+TTP $472
+
+At the Crumplers’ current annual income, the large dental bill reduces rent by $88.
+
+OPTION #1: If the Year 2 rent is adjusted through an interim recertification, the Crumplers will save 6 months times $88 or $528.
+
+OPTION #2: If the Crumplers wait until their annual recertification, the large bill will affect their rent for the 12 months of Year 3, and they will save twice as much, or $1,056.
+
+7. When a family is making regular payments over time on a bill for a past one-time medical expense, those payments are included in anticipated medical expenses. However, if a family has received a deduction for the full amount of a medical bill it is paying over time, the family cannot continue to count that bill even if the bill has not yet been paid.
+
+Example – Medical Expense Paid over a Period of Time Ursula and Sebastian Grant did not have insurance to cover Sebastian’s operation four years ago. They have been paying $105 a month toward the $5,040 debt. Each year that amount ($105 x 12 months or $1,260) has been included in their total medical expenses. A review of their file indicates that a total of $5,040 has been added to total medical expenses over the four-year period. However, the Grants bring a current invoice to their annual recertification interview. Over the four-year period they have missed five payments and still owe $525. Although they still owe this amount, the bill cannot be included in their current medical expenses because the expense has already been deducted.
+
+8. Not all elderly or disabled applicants or participants are aware that their unreimbursed expenses for medical care are included in the calculation of adjusted income for elderly or disabled families. For that reason, it is important for owners to ask enough questions to obtain complete information about allowable medical expenses. The following list highlights some of the most common expenses that may be deducted. A list of examples of eligible medical expenses may be found in Exhibit 5-3.
+
+a. Services of doctors and health care professionals;
+
+b. Services of health care facilities;
+
+c. Medical insurance premiums or costs of an HMO;
+
+d. Prescription/nonprescription medicines that have been prescribed by a physician;
+
+e. Transportation to treatment;
+
+f. Dental expenses;
+
+g. Eyeglasses, hearing aids, batteries;
+
+h. Live-in or periodic medical assistance such as nursing services, or costs for an assistance animal and its upkeep;
+
+i. Monthly payments on accumulated medical bills;
+
+j. Medical care of a permanently institutionalized family member if his or her income is included in annual income; and
+
+k. Long-term care insurance premiums. The family member paying a long-term care insurance premium must sign a certification (see Sample Certification for Qualified Long-Term Care Insurance Expenses in Exhibit 5-4) that states the insurance is guaranteed renewable, does not provide a cash surrender value, will not cover expenses covered under Medicare, and restricts the use of refunds. The certification must be maintained in the family’s occupancy file. (Paragraph 5-6 L.3 describes situations in which long-term care insurance payments must be included in annual income.)
+
+9. Special calculation for families eligible for disability assistance and medical expense deductions. If an elderly family has both unreimbursed medical expenses and disability assistance expenses, a special calculation is required to ensure that the family’s 3% of income expenditure is applied only one time. Because the deduction for disability assistance expenses is limited by the amount earned by the person enabled to work, the disability deduction must be calculated before the medical deduction is calculated.
+
+a. When a family has unreimbursed disability assistance expenses that are less than 3% of annual income, the family will receive no deduction for disability assistance expense. However, the deduction for medical expenses will be equal to the amount by which the sum of both disability and medical expenses exceeds 3% of annual income.
+
+b. If the disability assistance expense exceeds the amount earned by the person who was enabled to work, the deduction for disability assistance will be capped at the amount earned by that individual. When the family is also eligible for a medical expense deduction, however, the 3% may have been exhausted in the first calculation, and it then will not be applied to medical expenses.
+
+c. When a family has both disability assistance expenses and medical expenses, it is important to review the collected expenses to be sure no expense has been inadvertently included in both categories.
+
+E. Elderly Family Deduction
+
+An elderly or disabled family is any family in which the head, spouse, or co-head (or the sole member) is at least 62 years of age or a person with disabilities. Each elderly or disabled family receives a $400 family deduction. Because this is a “family deduction” each family receives only one deduction, even if both the head and spouse are elderly or disabled.
+
+Example – Special Calculation for Families Who Are Eligible for Disability Assistance and Medical Expense Deductions The following is basic information on the family:
+
+Head (retired/disabled)—SS/pension income $16,000 Spouse (employed)—employment income + $4,000 Total Annual Income $20,000 Total disability assistance expenses $500 Total medical expenses $1,000
+
+Step 1: Determine if the disability assistance expenses exceed 3% of the family’s total annual income. Total disability assistance expenses $500 Minus 3% of total annual income -$600 ($100) No portion of the disability expenses exceeds 3% of the annual income; therefore, the disability assistance deduction is $0. Step 2: Calculate if the medical expenses exceed the balance of 3% of the family’s total annual income. Total medical expenses $1,000 Minus the balance of 3% of total annual income - $100 Allowable medical expenses deduction $900
+
+F. No Deduction for Alimony or Child Support Paid to a Person outside the Assisted Family
+
+There is no deduction for an amount paid to a person outside the assisted family for alimony or child support. Even if the amount is garnished from the wages of a family member, it must be included in annual income.
+
+Example – Child Support Garnished from Wages George Graevette pays $150 per month in child support. It is garnished from his monthly wages of $950. After the child support is deducted from his salary, he receives $800. The owner must count $950 as George’s monthly income.
+
+Section 3: Verification
+
+5-11 Key Regulations
+
+This paragraph identifies key regulatory citations pertaining to Section 3: Verification. The citations and their titles (or topics) are listed below.
+
+A. 24 CFR part 5, subpart B – Disclosure and Verification of Social Security Numbers and Employer Identification Numbers; Procedures for Obtaining Income Information
+
+B. *24 CFR 5.233 Mandated Use of HUD’s Enterprise Income Verification (EIV) System*
+
+C. 24 CFR 5.659 Family Information and Verification
+
+D. 24 CFR 8.24, 8.32, 100.204 (Reasonable accommodation)
+
+5-12 Verification Requirements
+
+A. Key Requirements
+
+1. Owners must verify all income, assets, expenses, deductions, family characteristics, and circumstances that affect family eligibility or level of assistance.
+
+2. *Owners must use the EIV Income Report for third party verification of a tenant’s employment and income at the time of recertification (annual and interim) and to assist in reducing administrative and subsidy payment errors.*
+
+3. Applicants and adult family members must sign consent forms to authorize the owner to collect information to verify eligibility, income, assets, expenses, and deductions. Applicants and tenants who do not sign required consent forms will not receive assistance.
+
+4. *Household members must disclose and provide verification of their complete and accurate SSN except for those individuals who do not contend eligible immigration status, and tenants age 62 or older as of January 31, 2010, whose initial determination of eligibility was begun before January 31, 2010. See Paragraphs 3-9 and 3-31 for SSN disclosure and verification requirements.*
+
+5. The owner must handle any information obtained to verify eligibility or income in accordance with the Privacy Act.
+
+Figure 5-4: Privacy Act Notice
+
+The Department of Housing and Urban Development (HUD) is authorized to collect this information by the U.S. Housing Act of 1937 (42 U.S.C. 1437 et. seq.), by Title VI of the Civil Rights Act of 1964 (42 U.S.C. 2000d), and by the Fair Housing Act (42 U.S.C. 3601-19). The Housing and Community Development Act of 1987 (42 U.S.C. 3543) requires applicants and participants to submit the social security number of each household member.
+
+Purpose: Your income and other information are being collected by HUD to determine your eligibility, the appropriate bedroom size, and the amount your family will pay toward rent and utilities.
+
+Other Uses: HUD uses your family income and other information to assist in managing and monitoring HUD-assisted housing programs, to protect the Government’s financial interest, and to verify the accuracy of the information you provide. This information may be released to appropriate federal, state, and local agencies, when relevant, and to civil, criminal, or regulatory investigators and prosecutors. However, the information will not be otherwise disclosed or released outside of HUD, except as permitted or required by law.
+
+Penalty: You must provide all of the information requested by the owner, including all social security numbers you, and all other household members, have and use. Giving the social security numbers of all household members is mandatory, and not providing the social security numbers will affect your eligibility. Failure to provide any of the requested information may result in a delay or rejection of your eligibility approval.
+
+B. Timeframe for Conducting Verifications
+
+Owners conduct verifications at the following three times.
+
+1. Owners must verify income, assets, expenses, and deductions and all eligibility requirements prior to move-in.
+
+2. Owners must verify each family’s income, assets, expenses, and deductions as part of the annual recertification process. Refer to Chapter 7, Section 1 for information on annual recertifications.
+
+3. Owners must verify changes in income, allowances, or family characteristics reported between annual recertifications. Refer to Chapter 7, Section 2 for information on interim recertifications.
+
+5-13 Acceptable Verification Methods
+
+A. Methods of Verification
+
+Owners must use verification methods that are acceptable to HUD. The owner is responsible for determining if the verification documentation is adequate and credible. *Acceptable methods of verification, in order of acceptability: 1) upfront-income verification (UIV) with use of EIV being mandatory and use of non-EIV UIV being optional; 2) third-party verification from source (written), 3) third-party verification from source (oral), and 4) family certification.* If third-party verification is not available, owners must document the tenant file to explain why third-party verification was not available. Appendix 3 provides a detailed list of acceptable forms of verification by type of information.
+
+B. Third-Party Verification
+
+1. *The following describes the types of third-party verification in order of acceptability
+
+a. Upfront-income verification (UIV)
+
+UIV is verification of income before or during a certification and/or recertification, through an independent source that systematically and uniformly maintains income information in a computerized form.
+
+(1) Using HUD’s EIV system for tenants (not available for applicants). (Mandatory)
+
+It is mandatory that owners use the EIV system as the third-party source to verify employment and income information of tenants during recertification (annual and interim) of family composition and income.
+
+(2) UIV using non-EIV system (Optional)
+
+(a) Owners may use other non-HUD UIV tools such as The Work Number and other state government databases, if available, to verify income:
+
+(1) Of applicants;
+
+(2) When no employment or income is available in EIV; or
+
+(3) For other types of income received by the family.
+
+b. Third-party verification from source (written)
+
+(1) An original or authentic document generated by a third party source that is dated within 120 days from the date of receipt by the owner. Such documentation may be in possession of the tenant (or applicant), and commonly referred to as tenant-provided documents. These documents are considered third-party verification because they originated from a third-party source.
+
+Examples of tenant-provided documentation that may be used includes, but is not limited to: pay stubs, payroll summary report, employer notice/letter of hire/termination, SSA benefit letter, bank statements, child support payment stubs, welfare benefit letters and/or printouts, and unemployment monetary benefit notices.
+
+Owners must consider the following when using tenant-provided documentation:
+
+(a) Is the document current? Documentation of public assistance may be inaccurate if it is not recent and does not show any changes in the family’s benefits or work and training activities.
+
+(b) Is the documentation complete? Owners may not accept pay stubs to document employment income unless the applicant or tenant provides the most recent four to six, consecutive pay stubs to illustrate variations in hours worked. Actual paychecks or copies of paychecks should never be used to document income because deductions are not shown on the paycheck.
+
+(c) Is the document an unaltered original? The greatest shortcoming of tenant-provided documents as a verification source is their susceptibility to undetectable change through the use of high-quality copying equipment. Documents with original signatures are the most reliable. Photocopied documents generally cannot be assumed to be reliable.
+
+(2) Written documentation sent directly by the third-party source by mail or electronically by fax, email or internet.
+
+Note: See Paragraph 9-10 for situations when this method of verification must be used prior to verifying through (1) above.*
+
+(For information about electronic documentation, see subparagraph B.2 below.)
+
+c. *Third-party verification from source (oral).*
+
+When verifying information over the telephone, it is important to be certain that the person on the telephone is the party he or she claims to be. Generally, it is best to telephone the verification source rather than to accept verification from a source calling the property management office. Oral verification must be documented in the file, as described in paragraph 5-18.C.
+
+d. *Family Certification.
+
+An owner may accept a tenant’s notarized statement or signed affidavit regarding the veracity of information submitted only if the information cannot be verified by another acceptable verification method. In these instances, the owner must document the file why third-party verification was not available. (See Paragraph 5-18.E for documentation requirements when third-party verification is not available.). The owner may witness the tenant signature(s) in lieu of a notarized statement or affidavit.*
+
+2. *The following describes use of electronic information when used as third-party verification.*
+
+*Electronic Verification.* The owner may obtain accurate third-party written verification by facsimile, email, or Internet, if adequate effort is made to ensure that the sender is a valid third-party source.
+
+a. Facsimile. Information sent by fax is most reliable if the owner and the verification source agree to use this method in advance during a telephone conversation. The fax should include the company name and fax number of the verification source.
+
+b. Email. Similar to faxed information, information verified by email is more reliable when preceded by a telephone conversation and/or when the email address includes the name of an appropriate individual and firm.
+
+c. Internet. Information verified on the Internet is considered third party verification if the owner is able to view web-based information from a reputable source on the computer screen. Use of a printout from the Internet may also be adequate verification in many instances. Refer to subparagraph C. Review of Documents below.
+
+Example – Verification by Internet Printout Jose Perez maintains a portfolio of stocks and bonds through an Internet-based stockbroker. The broker only provides electronic account statements and will not respond to a written verification request. The owner may accept a printout of Jose’s most recent statement if it includes the relevant information required for third-party verification and an Internet address and header or footer that identifies the company issuing the statement. If the owner has reason to question the authenticity of a document, the owner may require Jose to access the electronic file via the Internet in the owner’s office, without providing the owner with username or password information.
+
+5-14 Identifying Appropriate Verification Sources
+
+An owner must only collect information that is necessary to determine the applicant’s or tenant’s eligibility for assistance or level of assistance. Appendix 3 provides a list of acceptable forms of third-party verification.
+
+5-15 Required Verification and Consent Forms
+
+A. Consent and Verification Forms
+
+Adult members of assisted families must authorize owners to request independent verification of data required for program participation. To provide owners with this authorization, adult family members must sign two HUD-required consent forms plus the owner’s specialized verification forms. Owners must create their own verification forms to request information from employers, child care providers, and others. Families sign these and the two HUD consent forms at the time of move-in certification and annual recertification. All adults in each assisted family must sign the required consent forms or the family must be denied assistance. Owners must give the family a copy of each form the family signed.
+
+B. HUD-Required Consent and Release Forms
+
+Applicants and tenants must sign two HUD-required consent forms.
+
+1. Form HUD-9887, Notice and Consent to the Release of Information to HUD and to a PHA. Each adult member must sign the form regardless of whether he or she has income. Each family member who is at least 18 years of age and the head, spouse or co-head, regardless of age, must sign this form at move-in, initial and at each annual recertification. The form must also be signed when a new adult member joins the household. The form is valid for 15 months from the date of signature. The consent allows HUD or a public housing agency to verify information with the Internal Revenue Service *(IRS), the Social Security Administration (SSA), the Department of Health and Human Services (HHS’) National Directory of New Hires (NDNH), and with state agencies that maintain wage and unemployment claim information (SWICAs).* Owners must
+
+keep the original signed form in the tenant’s file and provide a copy to the family. Exhibit 5-5 contains a copy of form HUD-9887.
+
+2. Form HUD-9887-A, Applicant’s/Tenant’s Consent to the Release of Information – Verification by Owners of Information Supplied by Individuals Who Apply for Housing Assistance. Owners and the head of household, spouse, co-head, *regardless of age,* and each family member who is at least 18 years of age must sign a HUD-9887-A form at move-in and at each annual recertification. Each adult member must sign a form regardless of whether he or she has income. The consent allows owners to request and receive information from third-party sources about the applicant or tenant. Owners keep the original form in the tenant’s file and provide a copy to the family. Exhibit 5-6 contains a copy of form HUD-9887-A.
+
+C. Information to Tenants
+
+Owners must provide applicants and tenants with the HUD Fact Sheet, a copy of the Resident Rights and Responsibilities brochure, *and a copy of the EIV & You brochure.*
+
+1. HUD-9887 Fact Sheet. When applicants and tenants sign form HUD-9887 and form *HUD-9887-A*, owners must provide each family with a copy of the *HUD-9887/A* Fact Sheet. This Fact Sheet describes the verification requirements for applicants and tenants and the tenant protections that are part of the verification process. Exhibit 5-7 contains a copy of the *HUD-9887/A* Fact Sheet.
+
+2. Resident Rights and Responsibilities Brochure. Owners must provide applicants and tenants with a copy of the Resident Rights and Responsibilities brochure at move-in and annually at recertification. *See Chapter 1, paragraph 1-7.B for information on obtaining copies of the brochure.*
+
+3. *EIV & You Brochure. Owners must provide applicants and tenants with a copy of the EIV & You brochure at move-in and annually at recertification. See Chapter 1, paragraph 1-7.B for information on obtaining copies of the brochure.*
+
+D. Owner-Created Verification Forms
+
+1. Owners must create verification forms for specific verification needs and must include the language required by HUD as shown in Figure 5-5. Appendix 6 contains instructions, a sample verification consent, and guidance about the types of information to request when verifying income and eligibility.
+
+2. It is important that the applicant or tenant know whom owners will ask to provide information and to whom the completed form will be returned. Therefore, verification forms must clearly state in a prominent location that the applicant or tenant may not sign the consent if the form does not
+
+clearly indicate who will provide the requested information and who will receive the information. When sending a request for verification to a third party, owners send the verification form with the applicant’s or tenant’s original signature to the third-party source. Owners must retain a copy of the verification form and provide a copy to the applicant or tenant upon request.
+
+Figure 5-5: Language Required on all Consent Forms
+
+The following statement must appear on all consent forms developed by owners:
+
+“Title 18, Section 1001 of the U.S. Code states that a person is guilty of a felony for knowingly and willingly making false or fraudulent statements to any department of the United States Government. HUD and any owner (or any employee of HUD or the owner) may be subject to penalties for unauthorized disclosures or improper use of information collected based on the consent form. Use of the information collected based on this verification form is restricted to the purposes cited above. Any person who knowingly or willingly requests, obtains or discloses any information under false pretenses concerning an applicant or participant may be subject to a misdemeanor and fined not more than $5,000. Any applicant or participant affected by negligent disclosure of information may bring civil action for damages, and seek other relief, as may be appropriate, against the officer or employee of HUD or the owner responsible for the unauthorized disclosure or improper use. Penalty provisions for misusing the social security number are contained in the Social Security Act at 208 (a) (6), (7) and (8). Violation of these provisions are cited as violations of 42 U.S.C. 408 (a) (6), (7) and (8)
+
+5-16 Effective Term of Verifications
+
+Verifications and consent forms must be used within a reasonable time. HUD has set specific limits on the duration of verification consents. In addition, verified information must be used in a timely manner since family circumstances are subject to change. HUD places several other limits on the information that may be requested and when and how it may be used.
+
+A. Duration of Verification Authorization
+
+Owner-created verification forms and the forms HUD-9887 and *HUD-9887-A* expire 15 months after they are signed. Owners must ensure that the forms HUD-9887 and *HUD-9887-A* have not expired when processing verifications. However, there are differences between the duration of form HUD-9887 and that of the individual verification forms.
+
+1. The form HUD-9887-A and individual verification forms can be used during the 120 days before the certification period. During the certification period, however, these forms may be used only in cases
+
+where the owner receives information indicating that the information the tenant has provided may be incorrect. Other uses are prohibited.
+
+2. Owners may verify anticipated income using individual verification forms to gather prospective information when necessary (e.g., verifying seasonal employment). Historical information that owners may request using individual verification forms is restricted as follows:
+
+a. Information requested by individual verification forms is restricted to data that is no more than 12 months old.
+
+b. However, if the owner receives inconsistent information and has reason to believe that the information the applicant or tenant has supplied is incorrect, the owner may obtain information from any time in the last five years when the individual was receiving assistance, as provided by the form HUD-9887-A.
+
+3. The form HUD-9887 may be used at any time during the entire 15 month period. The information covered by the form HUD-9887 is restricted as follows:
+
+a. State Wage Information Collection Agency (SWICA) Information received from SWICA is limited to wages and unemployment compensation the applicant or tenant received during the last five years she/he received housing assistance.
+
+b. *NDNH. Information received from HHS’ NDNH is limited to wages and unemployment compensation received during period(s) within the last five years when the tenant has received assisted housing benefits.*
+
+c. Internal Revenue Service and Social Security Administration. form HUD-9887 authorizes release by IRS and SSA of data from only the current income tax return and IRS W-2 form.
+
+If the IRS, *NDNH* or SSA matches reveal that the tenant may have supplied inconsistent information, HUD may request that the tenant consent to the owner acquiring information on the last five years during the periods in which the tenant was receiving assistance.
+
+B. Effective Term of Verifications
+
+1. Verifications are valid for 120 days from the date of receipt by the owner, *not the effective date of the 50059.*
+
+2. If verifications are more than 120 days old *from the date of receipt by the owner*, the owner must obtain new verifications.
+
+3. Time limits do not apply to information that does not need to be reverified, such as:
+
+a. Age;
+
+b. Disability status;
+
+c. Family membership; or
+
+d. Citizenship status.
+
+5-17 Inconsistent Information Obtained Through Verifications
+
+*An owner may not take any action to suspend, terminate, reduce or make a final denial of any benefits based on inconsistent information received during the verification process or when the tenant disputes information obtained until the owner has independently investigated the information.* The owner *must* follow procedures for addressing errors and fraud and for terminating assistance in accordance with Chapter 8.
+
+5-18 Documenting Verifications
+
+A. Key Requirement
+
+Owners must include verification documentation in the tenant file.
+
+B. Documenting Third-Party Verification
+
+*All third-party verification documentation must be put in the tenant file, e.g., EIV Income Reports or verifications received from sources via mail, etc.*
+
+C. Documenting Telephone Verification
+
+When verifying information by phone, the owner must record and include in the tenant’s file the following information:
+
+1. Third-party’s name, position, and contact information;
+
+2. Information reported by the third party;
+
+3. Name of the person who conducted the telephone interview; and
+
+4. Date and time of the telephone call.
+
+D. Recording Inspection of Original Documents
+
+Original documents should be photocopied, and the photocopy placed in the tenant file. *Originals of tenant-provided documents are to be returned to the tenant.* If the original document cannot be copied, a clear note to the file must describe the type of document, the information contained in the document, the name of the person who reviewed the document, and the date of that review.
+
+.
+
+E. Documenting Why Third-Party Verification Is Not Available
+
+When third-party verification is not available, owners must document in the file efforts made to obtain the required verification and the reason the verification was not obtained. The owner must include the following documents in the applicant’s or tenant’s file:
+
+1. A written note to the file explaining why third-party verification is not possible; or
+
+2. A copy of the date-stamped original request that was sent to the third party;
+
+3. Written notes or documentation indicating follow-up efforts to reach the third party to obtain verification; and
+
+4. A written note to the file indicating that the request has been outstanding without a response from the third party.
+
+F. Reasonable Accommodation
+
+If an applicant or tenant cannot read or sign a consent form because of a disability, the owner must provide a reasonable accommodation. See Chapter 2, Section 3, Subsection 4 for a description of the requirements regarding reasonable accommodations.
+
+Examples – Reasonable Accommodation • Provide forms in large print.
+
+• Provide readers for persons with visual disabilities.
+
+• Allow the use of a designated signatory.
+
+• Visit the person’s home if the applicant or tenant cannot travel to the office to complete the forms.
+
+5-19 Confidentiality of Applicant and Tenant Information
+
+A. Federal law limits the information owners can collect about an applicant or tenant to only information that is necessary to determine eligibility and level of assistance.
+
+B. Federal privacy requirements also establish the responsibility of owners and their employees to use information provided by applicants and tenants only for specified program purposes and to prevent the use or disclosure of this information for other purposes.
+
+1. To help ensure the privacy of applicant and tenant information, owners and their employees are subject to penalties for unauthorized disclosure
+
+of applicant/tenant information. In addition, applicants and tenants may initiate civil action against an owner for unauthorized disclosure or improper use of the information they provided. Language on the HUD-required consent forms, the verification forms developed by owners, and the HUD-50059 clearly describes owners’ responsibility regarding the privacy of this information and the possible penalties.
+
+2. HUD encourages owners to develop their own procedures and internal controls to prevent the improper use or unauthorized disclosure of information about applicants and tenants. Adequate procedures and controls protect not only applicants and tenants, but also owners.
+
+C. Owners must also comply with state privacy laws concerning the information they receive from third-party sources about applicants and tenants. These laws generally require confidentiality and restrict the uses of this information.
+
+5-20 *Security of EIV Data
+
+The data in EIV contains personal information on individual tenants that is covered by the Privacy Act. The information in EIV may only be used for limited official purposes.
+
+A. Owners, in connection with the administration of their project, may only use the employment and income information in EIV at the time of recertification, or at other times as addressed in their policies and procedures.
+
+B. Owners cannot share the EIV income information with governmental entities not involved in the recertification process used for HUD’s assisted housing programs, e.g., the LIHTC program and RHS Section 515 program.
+
+See Chapter 9, Enterprise Income Verification (EIV), for additional information on official use of EIV information.*
+
+5-21 Refusal to Sign Consent Forms
+
+A. If an applicant refuses to sign forms HUD-9887 or *HUD-9887-A* or the owner’s verification forms, the owner must deny assistance.
+
+B. If a tenant *or any member of the tenant’s family* refuses to sign the required verification and consent forms, the owner must terminate *the household’s* assistance. If the owner intends to terminate assistance for this reason, the owner must follow procedures established in the lease that require the tenant to pay the HUD-approved market rent for the unit. In a Section 202 PRAC or Section 811 PRAC project, the tenant may be evicted if the tenant *or any member of the tenant’s family* refuses to sign the required verification and consent forms.
+
+C. If a tenant is unable to sign the forms on time due to extenuating circumstances, the owner must document the reasons for the delay in the tenant file and indicate how and when the tenant will provide the proper signature.
+
+Examples – Tenant Failure to Sign Consent Forms Due to Extenuating Circumstances • Jonas and Joycelyn Hardwick were to have forms HUD-9887 and *HUD-9887-A* signed by their adult son. However, he was in an automobile accident and has been in a coma. • Lydia Bailey’s husband has been temporarily assigned to overseas duty as part of a missionary hunger-relief program. She has signed consent forms, and the forms have been mailed to him but have not been returned. She reports that mail has recently been taking five or six weeks.
+
+5-22 Interim Recertifications
+
+When processing an interim recertification, the owner must ask the tenant to identify all changes in income, expenses, or family composition since the last recertification. Owners only need verify those items that have changed. For example, if the head of household was laid off from his or her job and asks the owner to prepare an interim recertification, the owner does not need to reverify the spouse’s employment income unless that has also changed. When the tenant signs the certification she or he certifies that the information on the report is accurate and current. Additional information about the procedures for conducting interim recertifications is discussed in Chapter 7, Section 2.
+
+5-23 Record-Keeping Procedures
+
+A. Owners must keep the following documents in the tenant’s file at the project site:
+
+1. All original, signed forms HUD-9887 and HUD-9887-A;
+
+2. A copy of signed individual consent forms;
+
+3. *A copy of the EIV Income Report, regardless of whether or not any income is reported for the household, along with the HUD-50059 and any other documentation obtained supporting income and rent determinations; and
+
+4. Third-party verifications received from third-party sources.*
+
+B. Owners must maintain documentation of all verification efforts throughout the term of each tenancy and for at least three years after the tenant moves out
+
+C. The tenant’s file should be available for review by the tenant upon request or by a third party who provides signed authorization for access from the tenant.
+
+*NOTE: The Federal Privacy Act (5 USC 552a, as amended) prohibits the disclosure of an individual’s information to another person without the written
+
+consent of such individual. As such, the EIV data of an adult household member may not be shared (or a copy provided or displayed) with another adult household member, unless the individual has provided written consent to disclose such information. See Chapter 9, paragraph 9-18 for more information on disclosing EIV data to another individual or entity.*
+
+D. Owners must maintain applicant and tenant information in a way to ensure confidentiality. Any applicant or tenant affected by negligent disclosure or improper use of information may bring civil action for damages and seek other relief, as appropriate, against the employee. Forms HUD-9887 and *HUD-9887-A* describe the penalties for the improper use of consent forms.
+
+E. Owners must dispose of tenant files and records in a manner that will prevent any unauthorized access to personal information, e.g., burn, pulverize, shred, etc.
+
+Section 4: Calculating Tenant Rent
+
+5-24 Key Regulations
+
+This paragraph identifies key regulatory citations pertaining to Section 4: Calculating Tenant Rent. The citations and their titles or (topics) are listed below.
+
+A. 24 CFR 5.628 Total Tenant Payment
+
+B. 24 CFR 5.630 Minimum Rent
+
+C. 24 CFR 236.735 Rental Assistance Payments and Rental Charges
+
+D. 24 CFR 891.105, 891.410, 891.520, 891.640, 891.655, 891.705 (Project rental assistance payment, project assistance payment, tenant rent, total tenant payment, and rent for unassisted units)
+
+E. 24 CFR 5.661 Section 8 project-based assistance programs: Approval for police or other security personnel to live in project
+
+5-25 Calculating the Tenant Contribution for Section 8, PAC, PRAC, RAP, and Rent Supplement Properties
+
+A. Total Tenant Payment (TTP)
+
+The Total Tenant Payment (TTP) is the amount a tenant is expected to contribute for rent and utilities. TTP for Section 8, PAC, PRAC, RAP, and Rent Supplement properties is based on the family’s income. The formulas for calculating TTP are shown in Figure 5-6. Exhibit 5-8 also shows the formulas for calculating tenant contributions for all assisted-housing programs.
+
+B. Unit Rent
+
+1. The contract rent (basic rent in the Section 236 program) represents the amount of rent an owner is entitled to collect to operate and maintain the property. It is HUD-approved. For Section 202 and 811 PRACS, the contract rent is the operating rent *(gross rent)* minus the utility allowance.
+
+2. Projects in which the tenant pays all or some utilities have HUD-approved utility allowances that reflect an estimated average amount tenants will pay for utilities assuming normal consumption.
+
+C. Timeframe for Calculating Rent
+
+Owners calculate rent at three points in time.
+
+1. Owners must calculate rent prior to occupancy by an applicant.
+
+2. Owners must calculate rent as part of an annual recertification. Refer to Chapter 7, Section 1 for information on annual recertification of income.
+
+3. When assistance is provided through Section 8, PAC, PRAC, RAP, or Rent Supplement, owners must recalculate rent if a tenant reports a change in income, allowances, or family composition. Refer to Chapter 7, Section 2 for information on interim recertifications of income.
+
+Figure 5-6: Total Tenant Payment Formulas
+
+Section 8, PAC, PRAC, and RAP
+
+• TTP is the greater of the following:  30% of monthly adjusted income;  10% of monthly gross income;  Welfare rent (welfare recipients in as-paid localities only); or  The $25 minimum rent (Section 8 only). • Section 8, RAP, and PAC programs may admit an applicant only if the TTP is less than the gross rent. • In PRAC properties, the TTP may exceed the PRAC operating rent.
+
+Rent Supplement
+
+• TTP is the greater of the following:  30% of monthly adjusted income; or  30% of gross rent. • At move-in or initial certification, the amount of Rent Supplement assistance may be no less than 10% of the gross rent or the tenant is not eligible.
+
+5-26 Procedures for Determining Tenant Contribution for Section 8, PAC, PRAC, RAP, and Rent Supplement Properties
+
+A. Tenant Rent
+
+Tenant rent is the portion of the TTP the tenant pays each month to the owner for rent. Tenant rent is calculated by subtracting the utility allowance from the TTP.
+
+It is possible for tenant rent to be $0 if the utility allowance is greater than the TTP.
+
+Example – Calculating Tenant Rent TTP: $225 Utility allowance: -$ 75 Tenant rent: $150
+
+B. Assistance Payments
+
+The assistance payment is the amount the owner bills HUD every month on behalf of the tenant. The assistance payment covers the difference between the TTP and the gross rent. It is the subsidy that HUD pays to the owner.
+
+1. Housing Assistance Payment (HAP) is the assistance payment made by HUD to owners with units receiving assistance from the Section 8 program.
+
+Example – Calculating HAP Gross rent $564 TTP - $175 HAP $389
+
+2. Rental Assistance Payment (RAP) is the assistance payment made by HUD to owners for units receiving assistance through the RAP program.
+
+3. Rent Supplement payment is the assistance payment made by HUD to owners for units receiving assistance through the Rent Supplement program.
+
+4. Project Assistance Payment (PAC) is the assistance payment made by HUD for assisted units in a Section 202 project for nonelderly disabled families and individuals (also referred to as Project Assistance Contract [PAC] projects).
+
+5. Project Rental Assistance Payment (PRAC) is the assistance payment made by HUD for assisted units in Section 202 or Section 811 properties with a Project Rental Assistance Contract (PRAC).
+
+C. Utility Reimbursement
+
+When the TTP is less than the utility allowance, the tenant receives a utility reimbursement to assist in meeting utility costs. The tenant will pay no tenant rent. The utility reimbursement is calculated by subtracting the TTP from the utility allowance.
+
+D. Section 8 Minimum Rent
+
+Tenants in properties subsidized through the Section 8 program must pay a minimum TTP of $25.
+
+NOTE: Minimum rent does not apply to Section 202 PAC, Section 202 PRAC, Section 811 PRAC, RAP, Rent Supplement, Section 221(d)(3) BMIR or Section 236 programs.
+
+1. The minimum rent is used when 30% of adjusted monthly income and 10% of gross monthly income, and the welfare rent where applicable, are all below $25.
+
+2. The minimum rent includes the tenant’s contribution for rent and utilities. In any property in which the utility allowance is greater than $25, the full TTP is applied toward the utility allowance. The tenant will receive a utility reimbursement in the amount by which the utility allowance exceeds $25.
+
+Example – Utility Reimbursement for a Tenant Paying Minimum Rent The Nguyen family qualifies for the minimum total tenant payment of $25. The family pays its own utility bills. The utility allowance for the unit is $75 a month. The owner sends the Nguyen family a check each month for $50 ($75-$25) as a utility reimbursement. The Nguyen family does not pay any tenant rent to the owner.
+
+3. Financial hardship exemptions.
+
+a. Owners must waive the minimum rent for any family unable to pay due to a long-term financial hardship, including the following:
+
+ The family has lost federal, state, or local government assistance or is waiting for an eligibility determination.
+
+ The family would be evicted if the minimum rent requirement was imposed.
+
+ The family income has decreased due to a change in circumstances, including but not limited to loss of employment.
+
+ A death in the family has occurred.
+
+ Other applicable situations, as determined by HUD, have occurred.
+
+b. Implementing an exemption request. When a tenant requests a financial hardship exemption, the owner must waive the minimum $25 rent charge beginning the month immediately following the tenant’s request and implement the TTP calculated at the higher of 30% of adjusted monthly income or 10% of gross monthly income (or the welfare rent). The TTP will not drop to zero unless those calculations all result in zero.
+
+(1) The owner may request reasonable documentation of the hardship in order to determine whether there is a hardship and whether it is temporary or long term in nature. The owner should make a determination within one week of receiving the documentation.
+
+(2) If the owner determines there is no hardship as covered by the statute, the owner must immediately reinstate the minimum rent requirements. The tenant is responsible for paying any minimum rent that was not paid from the date rent was suspended. The owner may not evict the tenant for nonpayment of rent during the time in which the owner was making the determination. The owner and tenant should reach a reasonable repayment agreement for any back payment of rent.
+
+(3) If the owner determines that the hardship is temporary, the owner may not impose the minimum rent requirement until 90 days after the date of the suspension. At the end of the 90-day period, the tenant is responsible for paying the minimum rent, retroactive to the initial date of the suspension. The owner may not evict the tenant for nonpayment of rent during the time in which the owner was making the determination or during the 90-day suspension period. The owner and tenant should reach a reasonable repayment agreement for any back payment of rent.
+
+Example – Temporary Hardship Schedule Due to the death of his wife, Yung Kim took a six-week leave of absence from his part-time job. He requests a financial hardship exception. The owner, Oak Knoll Management, reviews his request and determines that the hardship is not long term. Yung Kim and Oak Knoll Management implement the following schedule: • Current TTP $25 • Hardship request received July 15 • Owner grants temporary hardship July 20 • August TTP $0 • September TTP $0 • October TTP $0 • 90-day period ends October 15 Total balance due 3 x $25 $75 • Tenant agrees to pay $10 extra per month for seven months and $5 extra on the eighth month. • Monthly payment for seven months November – May TTP $25 + $10 $35 • June TTP $25 + $5 $30 • July TTP $25
+
+(4) If the hardship is determined to be long term, the owner must exempt the tenant from the minimum rent requirement from the date the owner granted the suspension. The suspension may be effective until such time that the hardship no longer exists. However, the owner must recertify the tenant every 90 days while the suspension lasts to verify that circumstances have not changed. The length of the hardship exemption may vary from one family to another depending on the circumstances of each family. The owner must process an interim recertification to implement a long-term exemption. Owners must maintain documentation on all requests and determinations regarding hardship exemptions.
+
+E. Welfare Rent
+
+1. The term “welfare rent” applies only in states that have “as-paid” public benefit programs. A welfare program is considered “as-paid” if the welfare agency does the following:
+
+a. Designates a specific amount for shelter and utilities; and
+
+b. Adjusts that amount based upon the actual amount the family pays for shelter and utilities.
+
+2. The maximum amount that may be specifically designated for rent and utilities is called the “welfare rent.” See below for an example.
+
+Example – Calculating Welfare Rent Published maximum for shelter and utilities: $200 Amount of welfare assistance for other needs: $220 Other income: $100
+
+Monthly income = $520 “Welfare rent”= $200
+
+5-27 Calculating Assistance Payments for Authorized Police/Security Personnel
+
+A. The amount of the monthly assistance payment to the owner is equal to the contract rent minus the monthly amount paid by the police officer or security personnel. HUD will not increase the assistance payment due to nonpayment of rent by the police officer or security personnel.
+
+NOTE: The owner is not entitled to vacancy payments for the period following occupancy by a police officer or security personnel.
+
+B. For police/security personnel whose income exceeds the income limit for the property, the rent is set by the owner.
+
+1. The determination of the rent amount in such circumstances should take into consideration the income of the officer, the location of the property, and rents for comparable unassisted units in the area.
+
+2. Owners should establish a rent that is attractive to the officer, but not less than what the officer would pay as an eligible Section 8 tenant.
+
+3. Owners are expected to use a consistent methodology for each property when establishing the rents for officers in these circumstances.
+
+5-28 Calculating Tenant Contribution for “Double Occupancy” in Group Homes
+
+A. Double Occupancy
+
+Some group homes for disabled residents provide units that may be shared by unrelated single tenants. The calculations for tenant contribution and for the assistance payment vary depending on whether the project is a Section 202/8 or a Section 811.
+
+B. Total Tenant Payment
+
+In both Section 202/8 and Section 811 group homes, each tenant in a double occupancy room is treated as a separate family in the calculation of TTP. Each resident is entitled to any deductions he or she would receive if occupying a single room, including the $400 elderly/disabled family deduction.
+
+Example – TTP Calculation for Double Occupancy Resident A: Annual income $5,200 Elderly family deduction - $400 Medical expense deduction - $900 Annual adjusted income $3,900 Monthly adjusted income $325 ($3,900/12 months) 30% of monthly adjusted income $98 10% of monthly gross income $43 Minimum rent $25 TTP for Resident A = $98
+
+Resident B: Annual income $3,600 Elderly family deduction - $400 Medical expense deduction - $2,480 Annual adjusted income $720 Monthly adjusted income $60 ($720/12 months) 30% of monthly adjusted income $18 10% of monthly gross income $30 Minimum rent $25 TTP for Resident B = $30
+
+C. Contract Rent and Assistance Payment in Section 202/8 Group Homes
+
+1. In Section 202/8 group homes, the contract rent for a room shared by two occupants is split between the two tenants.
+
+2. The assistance payment for the Section 202/8 double occupancy room is calculated separately for each tenant based on half of the contract rent for the unit.
+
+Example – Assistance Payment, Section 202/8 Double Occupancy Contract rent for the unit $800
+
+Half of the contract rent for the unit $400
+
+TTP for Tenant A = $98
+
+Assistance payment for Tenant A is $400 less $98 = $302
+
+TTP for Tenant B = $30
+
+Assistance payment for Tenant B is $400 less $30 = $370
+
+3. If the tenant rent for either tenant exceeds half of the contract rent, that tenant’s rent will be capped at half of the contract rent. In the Section 202/8 double occupancy room, half of the contract rent is the maximum rent one occupant can pay.
+
+Example – Section 202/8 Double Occupancy Tenant A has an increase in income changing the monthly adjusted income to $1,500. 30% of $1,500 equals $450. Tenant A is no longer eligible for assistance. Tenant A’s rent is capped at $400, which represents the maximum Tenant A will pay. Gross rent for unit $800
+
+Half the contract rent for the unit $400
+
+TTP for Tenant A $450
+
+Assistance Payment for Tenant A -0-
+
+Rent Tenant A will pay $400
+
+4. Owner’s rent-calculation software must reflect the split-unit rent and contain unit numbers that provide a distinction between tenants (e.g., unit 101A, 101B).
+
+D. Operating Cost and Assistance Payment in Section 811 Group Homes
+
+1. In a Section 811 group home, the operating cost for a room shared by two occupants is split between the two tenants. 2. The assistance payment for the Section 811 double occupancy room is calculated separately for each tenant based on half of the operating cost for the unit.
+
+3. In a Section 811 property, each tenant is certified separately and pays the greater of 30% of monthly adjusted income, 10% of monthly annual income, or the welfare rent. 4. In the Section 811 double occupancy unit, both occupants will pay the calculated TTP amount even if it exceeds their portion of the operating cost for the unit.
+
+Example – Calculating the Assistance Payment for a Double Occupancy Unit in a Section 811 Group Home
+
+Operating cost for unit $310
+
+Half of the operating cost for the unit $155
+
+TTP Tenant A = $160
+
+Assistance Payment for Tenant A $(5)
+
+TTP Tenant B = $75
+
+Assistance Payment for Tenant B $80
+
+Although the Assistance Payment for Tenant A is zero, the voucher must indicate that $5 over the operating cost was collected for rent. This is indicated by bracketing the ($5.)
+
+5. Owner’s rent-calculation software must reflect the split-unit operating cost and contain unit numbers that provide a distinction between tenants (e.g., unit 101A, 101B).
+
+Example – Section 811 Total Tenant Payments Operating cost for the unit $310
+
+One half of operating cost $155
+
+TTP Tenant A = $330
+
+Assistance Payment for Tenant A ($175)
+
+TTP Tenant B = $240
+
+Assistance payment for Tenant B ($85)
+
+E. Calculating Rent at Change in Occupancy
+
+1. If there is a change in the number of individuals occupying the double occupancy unit, the assistance payment for the whole unit may change.
+
+2. In a Section 202/8 or a Section 811 PRAC double-occupancy room, the rent and assistance payments are calculated as if each tenant occupied a separate unit each with a rent equaling half of the contract rent or operating cost for the unit. If one resident moves out, the TTP and assistance payment calculations for the remaining resident remain the same. The other half of the unit is treated like a vacant unit: there is no assistance payment but the owner may be eligible for vacancy loss claims for the vacated half of the unit.
+
+Example – Section 202/8 Calculation at a Change in Occupancy Contract Rent $800 Half of the contract rent $400 Tenant A Tenant Rent $98 Tenant B Tenant Rent $30
+
+Tenant A moves out.
+
+Assistance Payment for Tenant B is calculated using half of the contract rent = $400 less the Tenant Rent for Tenant B $30 = $370 housing assistance payment.
+
+There is no HAP payment for the half of the unit vacated by Tenant A. It is vacant. But, the owner may request a vacancy loss payment if appropriate.
+
+Example – Section 811 Calculation at a Change in Occupancy Operating Cost $310 Half of the operating cost $155 Tenant A Tenant Rent $160 Tenant B Tenant Rent $75
+
+Tenant A moves out.
+
+Assistance Payment for Tenant B is calculated using half of the operating cost = $155 less the Tenant Rent for Tenant B $75 = $80 housing assistance payment.
+
+There is no Assistance Payment for the half of the unit vacated by Tenant A. It is vacant. Even though Tenant A was paying more than half of the operating cost for the unit at move-out, the owner may request a vacancy loss payment if all other vacancy claim requirements have been met.
+
+5-29 Calculating Tenant Contribution for Section 236 and Section 221(d)(3) Below Market Interest Rate (BMIR)
+
+A. Tenant’s Rent Contribution
+
+The tenant’s contribution to rent in the Section 236 and Section 221(d)(3) BMIR programs is based on the cost to operate the property and the income of the family. Figure 5-7 presents the rules for determining the tenant rent in these two programs.
+
+1. Section 236 property. Every Section 236 property has a HUD-approved basic rent and market rent. Basic rent is the minimum rent all Section 236 tenants must pay. It represents the cost to operate the property after HUD has provided mortgage assistance to reduce the mortgage interest expense. The market rent represents the amount of rent the owner would have to charge, if the mortgage were not subsidized. Tenants pay a percentage of their income towards rent, but never pay less than the basic rent or more than the market rent for the property.
+
+When a tenant pays more than basic rent, the difference between the tenant’s rent and basic rent is called “excess income.” Excess income is an amount that exceeds what the owner needs to operate the property and is subject to specific requirements. Refer to HUD Handbook 4350.1, Multifamily Asset Management and Project Servicing, and other current HUD notices for guidance on handling excess income. Although a tenant may pay more than basic rent, no tenant in a Section 236 property will pay more than the market rent for the property.
+
+Example – Calculating Excess Income Rent for Tenant A (30% of Tenant A’s income): $350 Basic rent -$300 Excess Income $50
+
+2. Section 221(d)(3) BMIR property. There is no rent calculation for tenants in a Section 221(d)(3) BMIR property. HUD approves a BMIR rent that all of the tenants must pay. The federal assistance in the BMIR property is provided through a below market interest rate for the mortgage loan. Applicants must meet income eligibility standards to be admitted to a BMIR property. After move-in, if a tenant’s annual income goes above 110% of the BMIR income limit, the tenant must pay 110% the BMIR rent.
+
+3. BMIR cooperative. If a BMIR cooperative member’s annual income exceeds 110% of the BMIR income limit at the time of recertification, the cooperative must levy a surcharge to the member. See the definition of market rent in the Glossary for an explanation of the market carrying charge for over-income cooperative members.
+
+B. Timeframe for Calculating Rent
+
+Owners calculate rent at three points in time.
+
+1. Owners must calculate rent prior to occupancy by an applicant.
+
+3. Owners of Section 236 properties must calculate rent if a tenant reports a change in income, allowances, or family composition. Refer to Chapter 7, Section 2 for information on interim recertifications of income.
+
+Figure 5-7: Tenant Contributions for the Section 236 and Section 221(d)(3) BMIR
+
+Section 236
+
+Section 236 without Utility Section 236 with Utility Allowance Allowance
+
+• Tenant rent is the greater of: • Tenant rent is the greater of:
+
+ 30% of monthly adjusted  30% of monthly adjusted income; or income less the utility allowance; or  Section 236 basic rent.  25% of monthly adjusted • Tenant rent may not be more than income; or the Section 236 market rent.  Basic rent.
+
+• Tenant rent may not be more than the Section 236 market rent.
+
+Section 221(d)(3) BMIR
+
+• At initial certification, the tenant pays the BMIR rent.
+
+• At recertification, the tenant’s annual income is compared to the BMIR income limits. If the tenant’s annual income is:
+
+ Less than or equal to 110% of the BMIR income limit, the tenant pays the BMIR rent;
+
+ Greater than 110% of the BMIR income limit, the tenant pays 110% of the BMIR rent.
+
+5-30 Determining Tenant Contribution at Properties with Multiple Forms of Subsidy
+
+A. At many multifamily properties different kinds of subsidies have been combined. For many years, tenant-based Section 8 subsidies have been added to properties built with Section 202 loans or financed with Section 236 and Section 221(d)(3) mortgage subsidies. Recently, the Low Income Housing Tax Credit program has been combined with a wide range of programs, from Section 202 projects with Section 8 already in place (Section 202/8) to housing choice voucher assistance.
+
+B. Although each of the programs combined within one property may have a different formula for determining tenant payments, it is generally possible to determine the correct rent for a family by identifying the available program for which that family is eligible that will provide the best option—or the lowest rent— for the tenant. The one exception to this can be at the recertification of a Section 8 or Rent Supplement family in a property with Low Income Housing Tax Credits. If the family’s income has increased since move-in to a point that the assisted rent exceeds the Low Income Housing Tax Credit rent, that family will have to make a choice between the lower tax credit rent and the security of continuing on the rental assistance program.
+
+C. The tenant rent at properties assisted under more than one program is generally the lowest rent available for which the tenant is eligible.
+
+1. Section 202/Section 8. In a Section 202 property with Section 8 tenant-based assistance, a tenant eligible for Section 8 will pay the tenant rent based on the Section 8 rent formula. If that tenant’s income increases to the point that its TTP equals or exceeds the Section 8 contract rent, the family would no longer be eligible for the tenant based assistance.
+
+2. Section 236/Section 8. A family with a Section 8 subsidy in a Section 236 property will pay the Section 8 tenant rent unless, at recertification, the family’s TTP equals or exceeds the Section 8 contract rent. Thereafter, the family will pay the tenant rent based on the Section 236 rent formula. A family living in a Section 236 property receiving Rent Supplement assistance would also stop receiving Rent Supplement assistance at the point the family’s TTP increased to the level of the rent supplement contract rent. Thereafter the family will pay the tenant rent based on the Section 236 rent formula.
+
+3. Section 221(d)(3) BMIR with Section 8. A family receiving Section 8 assistance at a BMIR project would continue to pay the tenant rent based on the Section 8 rent formula until the TTP equaled or exceeded the BMIR rent. Thereafter, the family would pay rent based on the BMIR rent formula.
+
+D. In some instances, a tenant will not be eligible for the program offering the lowest rent, or a subsidy under that program will not be available for every unit or every tenant.
+
+Sometimes, Section 8 subsidies are not available for the unit size the family needs, and the family must wait for a subsidy for the appropriate unit size. The owner’s contract with HUD for the Section 8 assistance allocates Section 8 funding by unit size, and the owner is required to subsidize families based on the unit sizes allocated. If the owner was allocated 10 two-bedroom subsidies and has assigned those subsidies to 10 two-bedroom families, the owner cannot use an available three-bedroom subsidy to assist an 11th two-bedroom family. If the owner has determined that the bedroom distribution in its contract does not match the need in the project, the owner can ask HUD for a contract amendment to revise the unit size designations of the subsidy awarded.
+
+E. In some instances, a family will not be eligible for a lower rent program available at the property.
+
+For example, a family in a BMIR project with Section 8 may be financially stretched when paying the BMIR rent but may not be income-eligible for the lower-rent Section 8 program.
+
+5-31 Procedures for Calculating Rent
+
+A. Owners must calculate tenant rent payments electronically using on-site software or a service provider. Data used to determine the rent are based on information certified as accurate by the family and independently verified.
+
+B. The owner’s computer software calculates rent based on the appropriate formulas for the tenant’s unit and produces a printed copy of the HUD-50059 to be signed by the tenant and the owner. The owner must produce a printed report in an easily read and understood format that contains all of the information used to calculate the tenant’s rent.
+
+C. The tenant and the owner sign a copy of the report containing a statement certifying the accuracy of the information. The certification statements are provided on the form HUD-50059 in Appendix 7-B.
+
+D. The owner must give a copy of the printed HUD-50059 with the required signatures to the tenant and place another copy in the tenant file.
+
+E. The HUD-50059 is then transmitted electronically to TRACS either directly or through the Contract Administrator.
+
+F. In all cases, the computer generated HUD-50059 must include the required tenant signatures and owner signatures prior to submitting the data to the Contract Administrator or HUD. The owner may consider extenuating circumstances when an adult family member is not available to sign the HUD-50059, for example, an adult serving in the military, students away at college, adults who are hospitalized for an extended period of time, or a family member who is permanently confined to a nursing home or hospital. The owner must document the file why the signature(s) was not obtained and, if applicable, when the signature(s) will be obtained.
+
+Chapter 5 Exhibits
+
+5-1. Income Inclusions and Exclusions
+
+http://portal.hud.gov/hudportal/documents/huddoc?id=DOC_35699.pdf
+
+5-2. Assets
+
+http://portal.hud.gov/hudportal/documents/huddoc?id=DOC_35701.pdf
+
+5-3. Examples of Medical Expenses That Are Deductible and Nondeductible
+
+http://portal.hud.gov/hudportal/documents/huddoc?id=43503e5-3HSGH.pdf
+
+5-4. Sample Certification for Qualified Long-Term Care Insurance Expenses
+
+http://portal.hud.gov/hudportal/documents/huddoc?id=90101.pdf
+
+5-5. Form HUD-9887, Notice and Consent for the Release of Information to HUD and to a PHA
+
+http://portal.hud.gov/hudportal/documents/huddoc?id=9887.pdf
+
+5-6. Form HUD-9887-A, Applicant’s/Tenant’s Consent to the Release of Information – Verification by Owners of Information Supplied by Individuals Who Apply for Housing Assistance
+
+See 5-5 above.
+
+5-7. HUD Fact Sheet – Verification of Information Provided by Applicants and Tenants of Assisted Housing
+
+See 5-5 above.
+
+5-8. Tenant Rent Formulas
+
+http://portal.hud.gov/hudportal/documents/huddoc?id=DOC_35705.pdf
