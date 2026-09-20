@@ -1,0 +1,993 @@
+{
+  "schema_version": 1,
+  "part": 1,
+  "status": "pass",
+  "started_at": "2026-09-20T09:40:49.517193+00:00",
+  "finished_at": "2026-09-20T09:40:50.526883+00:00",
+  "configuration": {
+    "SID4": "6102",
+    "PORT_BASE": 8702,
+    "PREFIX": "s6102",
+    "SEED": 6102,
+    "VERIFY_SEED": 266102,
+    "DOMAIN_ID": 6,
+    "domain": "Rental Housing Listings",
+    "idle_timeout_seconds": 300,
+    "cookie_max_age_seconds": 3600
+  },
+  "tested_code_commit": "96b04abc04bb4cde131958ba38f37116336a4442",
+  "verification_checkout_commit": "312a4453533af9bc4f0bab0293601413f94272d7",
+  "pytest_command": [
+    "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/integration/.venv-web/bin/python",
+    "-m",
+    "pytest",
+    "tests/test_api.py",
+    "tests/test_hw03_auth.py",
+    "-q",
+    "--junitxml=/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/integration/tmp/hw03-part1-pytest.xml"
+  ],
+  "checks": [
+    {
+      "name": "pytest_exit_status",
+      "passed": true,
+      "details": "exit=0"
+    },
+    {
+      "name": "pytest_collected_tests",
+      "passed": true,
+      "details": "84 tests"
+    },
+    {
+      "name": "pytest:test_seed_collection_is_valid_and_not_cached",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_home_and_assets_work_from_another_directory",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_create_assigns_id_and_survives_home_reload",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_create_trims_text_and_accepts_26_character_description",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_invalid_create_does_not_mutate_store[listingTitle- \\t\\n ]",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_invalid_create_does_not_mutate_store[propertyAddress- \\t ]",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_invalid_create_does_not_mutate_store[submitterEmail-not-an-email]",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_invalid_create_does_not_mutate_store[description- xxxxxxxxxxxxxxxxxxxxxxxxx ]",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_invalid_create_does_not_mutate_store[propertyType-castle]",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_invalid_create_does_not_mutate_store[termsAccepted-False]",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_invalid_create_does_not_mutate_store[termsAccepted-1]",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_invalid_create_does_not_mutate_store[termsAccepted-true]",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_create_rejects_client_assigned_id",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_malformed_json_returns_validation_error_without_mutation",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_create_uses_current_maximum_and_starts_at_one_when_empty",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_update_selected_id_changes_only_title_and_address[1]",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_update_selected_id_changes_only_title_and_address[2]",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_invalid_update_keeps_existing_record[changes0]",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_invalid_update_keeps_existing_record[changes1]",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_invalid_update_keeps_existing_record[changes2]",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_invalid_update_keeps_existing_record[changes3]",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_unknown_update_returns_404_without_mutation",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_highest_deletion_uses_global_max_not_order_or_search",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_chosen_deletion_removes_only_requested_id",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_missing_delete_returns_404_without_mutation",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_empty_store_highest_delete_is_404_not_path_validation_error",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_blank_search_returns_all_records[None]",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_blank_search_returns_all_records[]",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_blank_search_returns_all_records[ \\t\\n ]",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_search_matches_title_or_address_case_insensitively[  strasse  -expected_ids0]",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_search_matches_title_or_address_case_insensitively[mArKeT-expected_ids1]",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_search_matches_title_or_address_case_insensitively[garden-expected_ids2]",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_search_matches_title_or_address_case_insensitively[no-such-rental-expected_ids3]",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_search_matches_title_or_address_case_insensitively[owner@example.com-expected_ids4]",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_openapi_separates_client_fields_from_server_id",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_anonymous_home_retains_rental_controls_and_login",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_valid_login_cookie_attributes_and_authenticated_navigation",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_auth_openapi_matches_actual_status_and_content_type[post-/login-False-data0-303-]",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_auth_openapi_matches_actual_status_and_content_type[post-/login-False-data1-401-text/html]",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_auth_openapi_matches_actual_status_and_content_type[get-/dashboard-False-None-303-]",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_auth_openapi_matches_actual_status_and_content_type[get-/dashboard-True-None-200-text/html]",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_auth_openapi_matches_actual_status_and_content_type[get-/logout-True-None-303-]",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_invalid_login_shows_alert_without_authentication[admin-wrong]",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_invalid_login_shows_alert_without_authentication[other-password]",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_invalid_login_shows_alert_without_authentication[-]",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_invalid_login_revokes_existing_session",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_logout_redirects_home_and_replay_of_copied_cookie_is_denied",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_expired_cookie_replay_is_denied_before_cookie_lifetime",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_exact_idle_boundary_is_rejected_before_refresh",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_activity_just_before_boundary_renews_session",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_authenticated_auth_page_access_refreshes_idle_time[/]",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_authenticated_auth_page_access_refreshes_idle_time[/login]",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_authenticated_auth_page_access_refreshes_idle_time[/dashboard]",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_background_api_and_static_requests_do_not_refresh_idle_time[/api/rentals]",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_background_api_and_static_requests_do_not_refresh_idle_time[/static/app.js]",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_background_api_and_static_requests_do_not_refresh_idle_time[/static/styles.css]",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_login_rotates_identifier_and_revokes_replaced_cookie",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_signed_unknown_or_malformed_session_data_never_authenticates[payload0]",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_signed_unknown_or_malformed_session_data_never_authenticates[payload1]",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_signed_unknown_or_malformed_session_data_never_authenticates[payload2]",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_signed_unknown_or_malformed_session_data_never_authenticates[payload3]",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_signed_unknown_or_malformed_session_data_never_authenticates[payload4]",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_signed_unknown_or_malformed_session_data_never_authenticates[payload5]",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_signed_unknown_or_malformed_session_data_never_authenticates[None]",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_signed_unknown_or_malformed_session_data_never_authenticates[not-a-session-map]",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_signed_unknown_or_malformed_session_data_never_authenticates[7]",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_registry_username_must_match_signed_username",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_malformed_cookie_never_authenticates[garbage]",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_malformed_cookie_never_authenticates[not.valid.signature]",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_malformed_cookie_never_authenticates[]",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_malformed_cookie_never_authenticates[e30=.invalid.invalid]",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_tampered_signature_never_authenticates",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_new_app_instances_and_restart_do_not_accept_old_sessions",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_auth_access_cleans_up_other_expired_sessions",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_routes_and_templates_work_with_arbitrary_import_and_other_cwd",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_environment_timeout_and_signing_secret",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_timeout_must_be_positive_and_finite[0]",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_timeout_must_be_positive_and_finite[-1]",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_timeout_must_be_positive_and_finite[inf]",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_timeout_must_be_positive_and_finite[nan]",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_verifier_does_not_trust_overall_browser_pass_with_failed_check",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_verifier_reports_missing_screenshot",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_verifier_exits_nonzero_when_auth_tests_fail",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "pytest:test_verifier_uses_actual_replay_evidence_not_display_label",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "browser_run_passed",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "browser_individual_checks_passed",
+      "passed": true,
+      "details": "27 recorded browser checks"
+    },
+    {
+      "name": "browser_covers_logout",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "browser_covers_idle",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "browser_covers_cookie",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "browser_covers_desktop",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "browser_covers_mobile",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "browser_covers_replay",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "source_manifest_complete",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "source_matches:code/web_application/README.md",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "source_matches:code/web_application/main.py",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "source_matches:code/web_application/routers/__init__.py",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "source_matches:code/web_application/routers/auth.py",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "source_matches:code/web_application/session_store.py",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "source_matches:code/web_application/static/app.js",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "source_matches:code/web_application/static/bootstrap.LICENSE.txt",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "source_matches:code/web_application/static/bootstrap.min.css",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "source_matches:code/web_application/static/styles.css",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "source_matches:code/web_application/templates/base.html",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "source_matches:code/web_application/templates/dashboard.html",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "source_matches:code/web_application/templates/index.html",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "source_matches:code/web_application/templates/login.html",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "source_matches:package.json",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "source_matches:requirements.txt",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "source_matches:scripts/run_hw03_web.py",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "source_matches:scripts/verify_hw03_part1.py",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "source_matches:tests/browser_hw03_auth.cjs",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "source_matches:tests/browser_part2.cjs",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "source_matches:tests/test_api.py",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "source_matches:tests/test_hw03_auth.py",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "screenshot_recorded:home",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "screenshot_recorded:login",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "screenshot_recorded:dashboard",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "screenshot_recorded:invalid-login",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "screenshot_recorded:post-logout",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "screenshot_recorded:idle-replay-denied",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "screenshot_recorded:cookie-header",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "screenshot_recorded:templates-directory",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "screenshot_exists:reports/hw03/screenshots/part1/desktop-home.png",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "no_overflow:reports/hw03/screenshots/part1/desktop-home.png",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "screenshot_exists:reports/hw03/screenshots/part1/desktop-login.png",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "no_overflow:reports/hw03/screenshots/part1/desktop-login.png",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "screenshot_exists:reports/hw03/screenshots/part1/desktop-invalid-login.png",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "no_overflow:reports/hw03/screenshots/part1/desktop-invalid-login.png",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "screenshot_exists:reports/hw03/screenshots/part1/desktop-dashboard.png",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "no_overflow:reports/hw03/screenshots/part1/desktop-dashboard.png",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "screenshot_exists:reports/hw03/screenshots/part1/desktop-authenticated-home.png",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "no_overflow:reports/hw03/screenshots/part1/desktop-authenticated-home.png",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "screenshot_exists:reports/hw03/screenshots/part1/desktop-post-logout.png",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "no_overflow:reports/hw03/screenshots/part1/desktop-post-logout.png",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "screenshot_exists:reports/hw03/screenshots/part1/desktop-logout-replay-denied.png",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "no_overflow:reports/hw03/screenshots/part1/desktop-logout-replay-denied.png",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "screenshot_exists:reports/hw03/screenshots/part1/mobile-home.png",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "no_overflow:reports/hw03/screenshots/part1/mobile-home.png",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "screenshot_exists:reports/hw03/screenshots/part1/mobile-login.png",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "no_overflow:reports/hw03/screenshots/part1/mobile-login.png",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "screenshot_exists:reports/hw03/screenshots/part1/mobile-invalid-login.png",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "no_overflow:reports/hw03/screenshots/part1/mobile-invalid-login.png",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "screenshot_exists:reports/hw03/screenshots/part1/mobile-dashboard.png",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "no_overflow:reports/hw03/screenshots/part1/mobile-dashboard.png",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "screenshot_exists:reports/hw03/screenshots/part1/mobile-authenticated-home.png",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "no_overflow:reports/hw03/screenshots/part1/mobile-authenticated-home.png",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "screenshot_exists:reports/hw03/screenshots/part1/mobile-post-logout.png",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "no_overflow:reports/hw03/screenshots/part1/mobile-post-logout.png",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "screenshot_exists:reports/hw03/screenshots/part1/mobile-logout-replay-denied.png",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "no_overflow:reports/hw03/screenshots/part1/mobile-logout-replay-denied.png",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "screenshot_exists:reports/hw03/screenshots/part1/idle-before-expiry.png",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "no_overflow:reports/hw03/screenshots/part1/idle-before-expiry.png",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "screenshot_exists:reports/hw03/screenshots/part1/idle-replay-denied.png",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "no_overflow:reports/hw03/screenshots/part1/idle-replay-denied.png",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "screenshot_exists:reports/hw03/screenshots/part1/idle-expired-login.png",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "no_overflow:reports/hw03/screenshots/part1/idle-expired-login.png",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "screenshot_exists:reports/hw03/screenshots/part1/cookie-header.png",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "no_overflow:reports/hw03/screenshots/part1/cookie-header.png",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "screenshot_exists:reports/hw03/screenshots/part1/templates-directory.png",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "no_overflow:reports/hw03/screenshots/part1/templates-directory.png",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "https_cookie_flags",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "live_cookie_redacted",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "tested_code_commit_exists",
+      "passed": true,
+      "details": "96b04abc04bb4cde131958ba38f37116336a4442"
+    },
+    {
+      "name": "captured_commit_matches:code/web_application/README.md",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "captured_commit_matches:code/web_application/main.py",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "captured_commit_matches:code/web_application/routers/__init__.py",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "captured_commit_matches:code/web_application/routers/auth.py",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "captured_commit_matches:code/web_application/session_store.py",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "captured_commit_matches:code/web_application/static/app.js",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "captured_commit_matches:code/web_application/static/bootstrap.LICENSE.txt",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "captured_commit_matches:code/web_application/static/bootstrap.min.css",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "captured_commit_matches:code/web_application/static/styles.css",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "captured_commit_matches:code/web_application/templates/base.html",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "captured_commit_matches:code/web_application/templates/dashboard.html",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "captured_commit_matches:code/web_application/templates/index.html",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "captured_commit_matches:code/web_application/templates/login.html",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "captured_commit_matches:package.json",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "captured_commit_matches:requirements.txt",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "captured_commit_matches:scripts/run_hw03_web.py",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "captured_commit_matches:scripts/verify_hw03_part1.py",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "captured_commit_matches:tests/browser_hw03_auth.cjs",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "captured_commit_matches:tests/browser_part2.cjs",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "captured_commit_matches:tests/test_api.py",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "captured_commit_matches:tests/test_hw03_auth.py",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "report_material:REPORT_SECTION.md",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "report_material:AI_USE.md",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "report_material:REPRODUCIBLE_RUN_INSTRUCTIONS.md",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "report_material:INTEGRATION_NOTES.md",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "report_material:RUN_LOG.txt",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "report_includes_current_auth_source_at_bottom",
+      "passed": true,
+      "details": ""
+    }
+  ],
+  "browser_evidence": "reports/hw03/raw/part1/browser-evidence.json",
+  "scope": "HW3 Part 1 only; Part 2 and combined submission are not verified here."
+}

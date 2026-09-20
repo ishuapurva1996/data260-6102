@@ -16,4 +16,4 @@ tests/test_hw03_auth.py: 51 warnings
 
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
 - generated xml file: /Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/integration/tmp/hw03-part1-pytest.xml -
-84 passed, 89 warnings in 0.48s
+84 passed, 89 warnings in 0.54s
