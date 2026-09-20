@@ -1,0 +1,15 @@
+<!doctype html><meta charset="utf-8"><title>High similarity without the requested answer</title><style>*{box-sizing:border-box}body{margin:0;background:#f5f6f8;color:#162332;font:18px/1.5 system-ui,sans-serif;padding:38px 48px}h1{margin:0 0 5px;font-size:29px}h2{font-size:20px;margin:24px 0 10px}.subtitle{color:#526270;font-size:15px;margin-bottom:20px}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:white;border:1px solid #ccd4dc;border-radius:8px;padding:20px;font:15px/1.5 ui-monospace,Menlo,monospace;margin:8px 0}table{border-collapse:collapse;width:100%;background:white;font-size:16px}th,td{padding:11px;border:1px solid #ccd4dc;text-align:left}th{background:#e9eff4}.note{background:#e7effa;padding:14px 18px;border-left:4px solid #27679d}.gold{background:#e6f1eb}.failure{background:#fff0e7}footer{font-size:13px;color:#526270;margin-top:20px}</style><h1>High similarity without the requested answer</h1><div class="subtitle">HW3 Part 2 · Run baseline-20260920 · 2026-09-20T08:31:30.149864+00:00<br>Code cc0a57bae6e1 · Input freeze 08bd6e0495ce · Local CPU MiniLM</div><h2>Frozen question Q2</h2><p>In the archived HUD Handbook’s rent calculation, how much is deducted from annual income for each eligible dependent?</p><p class="gold note">Expected answer in the archived source: $480 for each eligible dependent.</p><h2>Actual rank-1 retrieved text · token method</h2><pre>CHAPTER 5. DETERMINING INCOME AND CALCULATING RENT
+
+5-1 Introduction
+
+A. Owners must determine the amount of a family’s income before the family is allowed to move into assisted housing and at least annually thereafter. The amount of assistance paid on behalf of the family is calculated using the family’s annual income less allowable deductions. HUD program regulations specify the types and amounts of income and deductions to be included in the calculation of annual and adjusted income.
+
+B. Although the definitions of annual and adjusted income used for the programs covered in this handbook have some similarities with rules used by the U.S. Internal Revenue Service (IRS), the tax rules are different from the HUD program rules.
+
+C. The most frequent errors encountered in reviews of annual and adjusted income determinations in tenant files fall in three categories:
+
+1. Applicants and tenants failing to fully disclose income information;
+
+2. Errors in identifying required income exclusions; and
+
+3.</pre><p class="failure note">Store score: 0.751100 · Explicit cosine: 0.751100 · Source: HUD_INCOME<br>Manual review: the introduction discusses annual income, deductions and rent calculation, but never gives $480. Central and available-context support are both false.</p><h2>Why this is a high-score failure</h2><p>The query and passage share the terms HUD, income, deductions, and rent calculation. The required numerical amount is absent. Related meaning can score highly without answering the question.</p><footer>Browser view of saved experiment evidence. Source: reports/hw03/raw/part2/baseline-20260920/ · No generated answer.</footer>

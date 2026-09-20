@@ -1,0 +1,452 @@
+[
+  {
+    "designation": "warmup",
+    "diagnostics": [],
+    "document_vector_shape": [
+      3,
+      384
+    ],
+    "expected_source_ids": [
+      "tinyshakespeare"
+    ],
+    "hits": [
+      {
+        "character_length": 774,
+        "context_character_length": 774,
+        "context_text": "the city\nYou cry against the noble senate, who,\nUnder the gods, keep you in awe, which else\nWould feed on one another? What's their seeking?\n\nMENENIUS:\nFor corn at their own rates; whereof, they say,\nThe city is well stored.\n\nMARCIUS:\nHang 'em! They say!\nThey'll sit by the fire, and presume to know\nWhat's done i' the Capitol; who's like to rise,\nWho thrives and who declines; side factions\nand give out\nConjectural marriages; making parties strong\nAnd feebling such as stand not in their liking\nBelow their cobbled shoes. They say there's\ngrain enough!\nWould the nobility lay aside their ruth,\nAnd let me use my sword, I'll make a quarry\nWith thousands of these quarter'd slaves, as high\nAs I could pick my lance.\n\nMENENIUS:\nNay, these are almost thoroughly persuaded;\nFor",
+        "context_token_length": 194,
+        "cosine": 0.3177648090646886,
+        "document_embedding_first8": [
+          -0.015355799347162247,
+          0.10046656429767609,
+          -0.0453009195625782,
+          -0.016254207119345665,
+          -0.03128691762685776,
+          -0.05215512961149216,
+          -0.012590259313583374,
+          -0.042502935975790024
+        ],
+        "document_vector_shape": [
+          384
+        ],
+        "embedded_token_length": 194,
+        "embedding_text": "the city\nYou cry against the noble senate, who,\nUnder the gods, keep you in awe, which else\nWould feed on one another? What's their seeking?\n\nMENENIUS:\nFor corn at their own rates; whereof, they say,\nThe city is well stored.\n\nMARCIUS:\nHang 'em! They say!\nThey'll sit by the fire, and presume to know\nWhat's done i' the Capitol; who's like to rise,\nWho thrives and who declines; side factions\nand give out\nConjectural marriages; making parties strong\nAnd feebling such as stand not in their liking\nBelow their cobbled shoes. They say there's\ngrain enough!\nWould the nobility lay aside their ruth,\nAnd let me use my sword, I'll make a quarry\nWith thousands of these quarter'd slaves, as high\nAs I could pick my lance.\n\nMENENIUS:\nNay, these are almost thoroughly persuaded;\nFor",
+        "max_seq_length": 256,
+        "node_id": "token:89c47b21fc294f82:000013",
+        "preview": "the city\nYou cry against the noble senate, who,\nUnder the gods, keep you in awe, which else\nWould feed on one another? What's their seeking?\n\nMENENIUS:\nFor corn",
+        "rank": 1,
+        "retrieved_text": "the city\nYou cry against the noble senate, who,\nUnder the gods, keep you in awe, which else\nWould feed on one another? What's their seeking?\n\nMENENIUS:\nFor corn at their own rates; whereof, they say,\nThe city is well stored.\n\nMARCIUS:\nHang 'em! They say!\nThey'll sit by the fire, and presume to know\nWhat's done i' the Capitol; who's like to rise,\nWho thrives and who declines; side factions\nand give out\nConjectural marriages; making parties strong\nAnd feebling such as stand not in their liking\nBelow their cobbled shoes. They say there's\ngrain enough!\nWould the nobility lay aside their ruth,\nAnd let me use my sword, I'll make a quarry\nWith thousands of these quarter'd slaves, as high\nAs I could pick my lance.\n\nMENENIUS:\nNay, these are almost thoroughly persuaded;\nFor",
+        "source_id": "tinyshakespeare",
+        "store_rank": 1,
+        "store_score": 0.3177648090646886,
+        "token_length": 194,
+        "truncated": false
+      },
+      {
+        "character_length": 747,
+        "context_character_length": 747,
+        "context_text": "the general food at first,\nWhich you do live upon; and fit it is,\nBecause I am the store-house and the shop\nOf the whole body: but, if you do remember,\nI send it through the rivers of your blood,\nEven to the court, the heart, to the seat o' the brain;\nAnd, through the cranks and offices of man,\nThe strongest nerves and small inferior veins\nFrom me receive that natural competency\nWhereby they live: and though that all at once,\nYou, my good friends,'--this says the belly, mark me,--\n\nFirst Citizen:\nAy, sir; well, well.\n\nMENENIUS:\n'Though all at once cannot\nSee what I do deliver out to each,\nYet I can make my audit up, that all\nFrom me do back receive the flour of all,\nAnd leave me but the bran.' What say you to't?\n\nFirst Citizen:\nIt was an",
+        "context_token_length": 194,
+        "cosine": 0.2981560033669378,
+        "document_embedding_first8": [
+          0.014205815270543098,
+          0.06689947843551636,
+          -0.03362644091248512,
+          0.03558224067091942,
+          -0.03807487711310387,
+          -0.0619099922478199,
+          0.12048238515853882,
+          -0.05167701095342636
+        ],
+        "document_vector_shape": [
+          384
+        ],
+        "embedded_token_length": 194,
+        "embedding_text": "the general food at first,\nWhich you do live upon; and fit it is,\nBecause I am the store-house and the shop\nOf the whole body: but, if you do remember,\nI send it through the rivers of your blood,\nEven to the court, the heart, to the seat o' the brain;\nAnd, through the cranks and offices of man,\nThe strongest nerves and small inferior veins\nFrom me receive that natural competency\nWhereby they live: and though that all at once,\nYou, my good friends,'--this says the belly, mark me,--\n\nFirst Citizen:\nAy, sir; well, well.\n\nMENENIUS:\n'Though all at once cannot\nSee what I do deliver out to each,\nYet I can make my audit up, that all\nFrom me do back receive the flour of all,\nAnd leave me but the bran.' What say you to't?\n\nFirst Citizen:\nIt was an",
+        "max_seq_length": 256,
+        "node_id": "token:89c47b21fc294f82:000009",
+        "preview": "the general food at first,\nWhich you do live upon; and fit it is,\nBecause I am the store-house and the shop\nOf the whole body: but, if you do remember,\nI send i",
+        "rank": 2,
+        "retrieved_text": "the general food at first,\nWhich you do live upon; and fit it is,\nBecause I am the store-house and the shop\nOf the whole body: but, if you do remember,\nI send it through the rivers of your blood,\nEven to the court, the heart, to the seat o' the brain;\nAnd, through the cranks and offices of man,\nThe strongest nerves and small inferior veins\nFrom me receive that natural competency\nWhereby they live: and though that all at once,\nYou, my good friends,'--this says the belly, mark me,--\n\nFirst Citizen:\nAy, sir; well, well.\n\nMENENIUS:\n'Though all at once cannot\nSee what I do deliver out to each,\nYet I can make my audit up, that all\nFrom me do back receive the flour of all,\nAnd leave me but the bran.' What say you to't?\n\nFirst Citizen:\nIt was an",
+        "source_id": "tinyshakespeare",
+        "store_rank": 2,
+        "store_score": 0.2981560033669378,
+        "token_length": 194,
+        "truncated": false
+      },
+      {
+        "character_length": 793,
+        "context_character_length": 793,
+        "context_text": "quarry\nWith thousands of these quarter'd slaves, as high\nAs I could pick my lance.\n\nMENENIUS:\nNay, these are almost thoroughly persuaded;\nFor though abundantly they lack discretion,\nYet are they passing cowardly. But, I beseech you,\nWhat says the other troop?\n\nMARCIUS:\nThey are dissolved: hang 'em!\nThey said they were an-hungry; sigh'd forth proverbs,\nThat hunger broke stone walls, that dogs must eat,\nThat meat was made for mouths, that the gods sent not\nCorn for the rich men only: with these shreds\nThey vented their complainings; which being answer'd,\nAnd a petition granted them, a strange one--\nTo break the heart of generosity,\nAnd make bold power look pale--they threw their caps\nAs they would hang them on the horns o' the moon,\nShouting their emulation.\n\nMENENIUS:\nWhat is granted",
+        "context_token_length": 192,
+        "cosine": 0.2924312404811755,
+        "document_embedding_first8": [
+          -0.006112679839134216,
+          0.10222688317298889,
+          -0.020916592329740524,
+          -0.01729837991297245,
+          -0.04090787097811699,
+          -0.05098961293697357,
+          0.04884743690490723,
+          -0.05273018777370453
+        ],
+        "document_vector_shape": [
+          384
+        ],
+        "embedded_token_length": 192,
+        "embedding_text": "quarry\nWith thousands of these quarter'd slaves, as high\nAs I could pick my lance.\n\nMENENIUS:\nNay, these are almost thoroughly persuaded;\nFor though abundantly they lack discretion,\nYet are they passing cowardly. But, I beseech you,\nWhat says the other troop?\n\nMARCIUS:\nThey are dissolved: hang 'em!\nThey said they were an-hungry; sigh'd forth proverbs,\nThat hunger broke stone walls, that dogs must eat,\nThat meat was made for mouths, that the gods sent not\nCorn for the rich men only: with these shreds\nThey vented their complainings; which being answer'd,\nAnd a petition granted them, a strange one--\nTo break the heart of generosity,\nAnd make bold power look pale--they threw their caps\nAs they would hang them on the horns o' the moon,\nShouting their emulation.\n\nMENENIUS:\nWhat is granted",
+        "max_seq_length": 256,
+        "node_id": "token:89c47b21fc294f82:000014",
+        "preview": "quarry\nWith thousands of these quarter'd slaves, as high\nAs I could pick my lance.\n\nMENENIUS:\nNay, these are almost thoroughly persuaded;\nFor though abundantly ",
+        "rank": 3,
+        "retrieved_text": "quarry\nWith thousands of these quarter'd slaves, as high\nAs I could pick my lance.\n\nMENENIUS:\nNay, these are almost thoroughly persuaded;\nFor though abundantly they lack discretion,\nYet are they passing cowardly. But, I beseech you,\nWhat says the other troop?\n\nMARCIUS:\nThey are dissolved: hang 'em!\nThey said they were an-hungry; sigh'd forth proverbs,\nThat hunger broke stone walls, that dogs must eat,\nThat meat was made for mouths, that the gods sent not\nCorn for the rich men only: with these shreds\nThey vented their complainings; which being answer'd,\nAnd a petition granted them, a strange one--\nTo break the heart of generosity,\nAnd make bold power look pale--they threw their caps\nAs they would hang them on the horns o' the moon,\nShouting their emulation.\n\nMENENIUS:\nWhat is granted",
+        "source_id": "tinyshakespeare",
+        "store_rank": 3,
+        "store_score": 0.29243124048117547,
+        "token_length": 192,
+        "truncated": false
+      }
+    ],
+    "max_seq_length": 256,
+    "mean_search_seconds": 0.0004197000991553068,
+    "query_character_length": 39,
+    "query_embedding_dimension": 384,
+    "query_embedding_first8": [
+      0.05412139371037483,
+      0.028430456295609474,
+      0.125508114695549,
+      0.05227244272828102,
+      0.07493001222610474,
+      -0.0491938516497612,
+      0.057641297578811646,
+      -0.034301336854696274
+    ],
+    "query_token_length": 10,
+    "query_truncated": false,
+    "query_vector_shape": [
+      384
+    ],
+    "question": "Why are the citizens angry about grain?",
+    "question_id": "W1",
+    "recorded_at": "2026-09-20T08:31:26.054841+00:00",
+    "requested_k": 3,
+    "returned_k": 3,
+    "search_seconds": [
+      0.0004516249755397439,
+      0.0004300420405343175,
+      0.0004271250218153,
+      0.0004183329874649644,
+      0.00041566696017980576,
+      0.000411542016081512,
+      0.0004125830018892884,
+      0.00041075004264712334,
+      0.0004148749867454171,
+      0.0004044589586555958
+    ],
+    "technique": "token",
+    "timing_scope": "retriever.retrieve with precomputed query embedding; excludes embedding and index creation",
+    "token_lengths_include_special_tokens": true,
+    "unmeasured_warmup_searches": 1,
+    "vectors_file": "token_W1_vectors.json"
+  },
+  {
+    "designation": "warmup",
+    "diagnostics": [],
+    "document_vector_shape": [
+      3,
+      384
+    ],
+    "expected_source_ids": [
+      "tinyshakespeare"
+    ],
+    "hits": [
+      {
+        "character_length": 1522,
+        "context_character_length": 1522,
+        "context_text": "They say!\nThey'll sit by the fire, and presume to know\nWhat's done i' the Capitol; who's like to rise,\nWho thrives and who declines; side factions\nand give out\nConjectural marriages; making parties strong\nAnd feebling such as stand not in their liking\nBelow their cobbled shoes. They say there's\ngrain enough!\nWould the nobility lay aside their ruth,\nAnd let me use my sword, I'll make a quarry\nWith thousands of these quarter'd slaves, as high\nAs I could pick my lance.\n\nMENENIUS:\nNay, these are almost thoroughly persuaded;\nFor though abundantly they lack discretion,\nYet are they passing cowardly. But, I beseech you,\nWhat says the other troop?\n\nMARCIUS:\nThey are dissolved: hang 'em!\nThey said they were an-hungry; sigh'd forth proverbs,\nThat hunger broke stone walls, that dogs must eat,\nThat meat was made for mouths, that the gods sent not\nCorn for the rich men only: with these shreds\nThey vented their complainings; which being answer'd,\nAnd a petition granted them, a strange one--\nTo break the heart of generosity,\nAnd make bold power look pale--they threw their caps\nAs they would hang them on the horns o' the moon,\nShouting their emulation.\n\nMENENIUS:\nWhat is granted them?\n\nMARCIUS:\nFive tribunes to defend their vulgar wisdoms,\nOf their own choice: one's Junius Brutus,\nSicinius Velutus, and I know not--'Sdeath!\nThe rabble should have first unroof'd the city,\nEre so prevail'd with me: it will in time\nWin upon power and throw forth greater themes\nFor insurrection's arguing.\n\nMENENIUS:\nThis is strange.\n\n",
+        "context_token_length": 385,
+        "cosine": 0.2840676041583341,
+        "document_embedding_first8": [
+          -0.04700259864330292,
+          0.0652613714337349,
+          -0.01562686637043953,
+          -0.007284688763320446,
+          -0.016760943457484245,
+          -0.0021542697213590145,
+          -0.004387394525110722,
+          -0.0514029897749424
+        ],
+        "document_vector_shape": [
+          384
+        ],
+        "embedded_token_length": 256,
+        "embedding_text": "They say!\nThey'll sit by the fire, and presume to know\nWhat's done i' the Capitol; who's like to rise,\nWho thrives and who declines; side factions\nand give out\nConjectural marriages; making parties strong\nAnd feebling such as stand not in their liking\nBelow their cobbled shoes. They say there's\ngrain enough!\nWould the nobility lay aside their ruth,\nAnd let me use my sword, I'll make a quarry\nWith thousands of these quarter'd slaves, as high\nAs I could pick my lance.\n\nMENENIUS:\nNay, these are almost thoroughly persuaded;\nFor though abundantly they lack discretion,\nYet are they passing cowardly. But, I beseech you,\nWhat says the other troop?\n\nMARCIUS:\nThey are dissolved: hang 'em!\nThey said they were an-hungry; sigh'd forth proverbs,\nThat hunger broke stone walls, that dogs must eat,\nThat meat was made for mouths, that the gods sent not\nCorn for the rich men only: with these shreds\nThey vented their complainings; which being answer'd,\nAnd a petition granted them, a strange one--\nTo break the heart of generosity,\nAnd make bold power look pale--they threw their caps\nAs they would hang them on the horns o' the moon,\nShouting their emulation.\n\nMENENIUS:\nWhat is granted them?\n\nMARCIUS:\nFive tribunes to defend their vulgar wisdoms,\nOf their own choice: one's Junius Brutus,\nSicinius Velutus, and I know not--'Sdeath!\nThe rabble should have first unroof'd the city,\nEre so prevail'd with me: it will in time\nWin upon power and throw forth greater themes\nFor insurrection's arguing.\n\nMENENIUS:\nThis is strange.\n\n",
+        "max_seq_length": 256,
+        "node_id": "semantic:89c47b21fc294f82:000006",
+        "preview": "They say!\nThey'll sit by the fire, and presume to know\nWhat's done i' the Capitol; who's like to rise,\nWho thrives and who declines; side factions\nand give out\n",
+        "rank": 1,
+        "retrieved_text": "They say!\nThey'll sit by the fire, and presume to know\nWhat's done i' the Capitol; who's like to rise,\nWho thrives and who declines; side factions\nand give out\nConjectural marriages; making parties strong\nAnd feebling such as stand not in their liking\nBelow their cobbled shoes. They say there's\ngrain enough!\nWould the nobility lay aside their ruth,\nAnd let me use my sword, I'll make a quarry\nWith thousands of these quarter'd slaves, as high\nAs I could pick my lance.\n\nMENENIUS:\nNay, these are almost thoroughly persuaded;\nFor though abundantly they lack discretion,\nYet are they passing cowardly. But, I beseech you,\nWhat says the other troop?\n\nMARCIUS:\nThey are dissolved: hang 'em!\nThey said they were an-hungry; sigh'd forth proverbs,\nThat hunger broke stone walls, that dogs must eat,\nThat meat was made for mouths, that the gods sent not\nCorn for the rich men only: with these shreds\nThey vented their complainings; which being answer'd,\nAnd a petition granted them, a strange one--\nTo break the heart of generosity,\nAnd make bold power look pale--they threw their caps\nAs they would hang them on the horns o' the moon,\nShouting their emulation.\n\nMENENIUS:\nWhat is granted them?\n\nMARCIUS:\nFive tribunes to defend their vulgar wisdoms,\nOf their own choice: one's Junius Brutus,\nSicinius Velutus, and I know not--'Sdeath!\nThe rabble should have first unroof'd the city,\nEre so prevail'd with me: it will in time\nWin upon power and throw forth greater themes\nFor insurrection's arguing.\n\nMENENIUS:\nThis is strange.\n\n",
+        "source_id": "tinyshakespeare",
+        "store_rank": 1,
+        "store_score": 0.2840676041583341,
+        "token_length": 385,
+        "truncated": true
+      },
+      {
+        "character_length": 2273,
+        "context_character_length": 2273,
+        "context_text": "First Citizen:\nBefore we proceed any further, hear me speak.\n\nAll:\nSpeak, speak.\n\nFirst Citizen:\nYou are all resolved rather to die than to famish?\n\nAll:\nResolved. resolved.\n\nFirst Citizen:\nFirst, you know Caius Marcius is chief enemy to the people.\n\nAll:\nWe know't, we know't.\n\nFirst Citizen:\nLet us kill him, and we'll have corn at our own price.\nIs't a verdict?\n\nAll:\nNo more talking on't; let it be done: away, away!\n\nSecond Citizen:\nOne word, good citizens.\n\nFirst Citizen:\nWe are accounted poor citizens, the patricians good.\nWhat authority surfeits on would relieve us: if they\nwould yield us but the superfluity, while it were\nwholesome, we might guess they relieved us humanely;\nbut they think we are too dear: the leanness that\nafflicts us, the object of our misery, is as an\ninventory to particularise their abundance; our\nsufferance is a gain to them Let us revenge this with\nour pikes, ere we become rakes: for the gods know I\nspeak this in hunger for bread, not in thirst for revenge.\n\nSecond Citizen:\nWould you proceed especially against Caius Marcius?\n\nAll:\nAgainst him first: he's a very dog to the commonalty.\n\nSecond Citizen:\nConsider you what services he has done for his country?\n\nFirst Citizen:\nVery well; and could be content to give him good\nreport fort, but that he pays himself with being proud.\n\nSecond Citizen:\nNay, but speak not maliciously.\n\nFirst Citizen:\nI say unto you, what he hath done famously, he did\nit to that end: though soft-conscienced men can be\ncontent to say it was for his country he did it to\nplease his mother and to be partly proud; which he\nis, even till the altitude of his virtue.\n\nSecond Citizen:\nWhat he cannot help in his nature, you account a\nvice in him. You must in no way say he is covetous.\n\nFirst Citizen:\nIf I must not, I need not be barren of accusations;\nhe hath faults, with surplus, to tire in repetition.\nWhat shouts are these? The other side o' the city\nis risen: why stay we prating here? to the Capitol!\n\nAll:\nCome, come.\n\nFirst Citizen:\nSoft! who comes here?\n\nSecond Citizen:\nWorthy Menenius Agrippa; one that hath always loved\nthe people.\n\nFirst Citizen:\nHe's one honest enough: would all the rest were so!\n\nMENENIUS:\nWhat work's, my countrymen, in hand? where go you\nWith bats and clubs? The matter? ",
+        "context_token_length": 559,
+        "cosine": 0.25587074824653305,
+        "document_embedding_first8": [
+          -0.01737276092171669,
+          0.01008868683129549,
+          -0.018901100382208824,
+          -0.06399840861558914,
+          -0.019494671374559402,
+          -0.06052066385746002,
+          0.053796518594026566,
+          0.006367344409227371
+        ],
+        "document_vector_shape": [
+          384
+        ],
+        "embedded_token_length": 256,
+        "embedding_text": "First Citizen:\nBefore we proceed any further, hear me speak.\n\nAll:\nSpeak, speak.\n\nFirst Citizen:\nYou are all resolved rather to die than to famish?\n\nAll:\nResolved. resolved.\n\nFirst Citizen:\nFirst, you know Caius Marcius is chief enemy to the people.\n\nAll:\nWe know't, we know't.\n\nFirst Citizen:\nLet us kill him, and we'll have corn at our own price.\nIs't a verdict?\n\nAll:\nNo more talking on't; let it be done: away, away!\n\nSecond Citizen:\nOne word, good citizens.\n\nFirst Citizen:\nWe are accounted poor citizens, the patricians good.\nWhat authority surfeits on would relieve us: if they\nwould yield us but the superfluity, while it were\nwholesome, we might guess they relieved us humanely;\nbut they think we are too dear: the leanness that\nafflicts us, the object of our misery, is as an\ninventory to particularise their abundance; our\nsufferance is a gain to them Let us revenge this with\nour pikes, ere we become rakes: for the gods know I\nspeak this in hunger for bread, not in thirst for revenge.\n\nSecond Citizen:\nWould you proceed especially against Caius Marcius?\n\nAll:\nAgainst him first: he's a very dog to the commonalty.\n\nSecond Citizen:\nConsider you what services he has done for his country?\n\nFirst Citizen:\nVery well; and could be content to give him good\nreport fort, but that he pays himself with being proud.\n\nSecond Citizen:\nNay, but speak not maliciously.\n\nFirst Citizen:\nI say unto you, what he hath done famously, he did\nit to that end: though soft-conscienced men can be\ncontent to say it was for his country he did it to\nplease his mother and to be partly proud; which he\nis, even till the altitude of his virtue.\n\nSecond Citizen:\nWhat he cannot help in his nature, you account a\nvice in him. You must in no way say he is covetous.\n\nFirst Citizen:\nIf I must not, I need not be barren of accusations;\nhe hath faults, with surplus, to tire in repetition.\nWhat shouts are these? The other side o' the city\nis risen: why stay we prating here? to the Capitol!\n\nAll:\nCome, come.\n\nFirst Citizen:\nSoft! who comes here?\n\nSecond Citizen:\nWorthy Menenius Agrippa; one that hath always loved\nthe people.\n\nFirst Citizen:\nHe's one honest enough: would all the rest were so!\n\nMENENIUS:\nWhat work's, my countrymen, in hand? where go you\nWith bats and clubs? The matter? ",
+        "max_seq_length": 256,
+        "node_id": "semantic:89c47b21fc294f82:000000",
+        "preview": "First Citizen:\nBefore we proceed any further, hear me speak.\n\nAll:\nSpeak, speak.\n\nFirst Citizen:\nYou are all resolved rather to die than to famish?\n\nAll:\nResolv",
+        "rank": 2,
+        "retrieved_text": "First Citizen:\nBefore we proceed any further, hear me speak.\n\nAll:\nSpeak, speak.\n\nFirst Citizen:\nYou are all resolved rather to die than to famish?\n\nAll:\nResolved. resolved.\n\nFirst Citizen:\nFirst, you know Caius Marcius is chief enemy to the people.\n\nAll:\nWe know't, we know't.\n\nFirst Citizen:\nLet us kill him, and we'll have corn at our own price.\nIs't a verdict?\n\nAll:\nNo more talking on't; let it be done: away, away!\n\nSecond Citizen:\nOne word, good citizens.\n\nFirst Citizen:\nWe are accounted poor citizens, the patricians good.\nWhat authority surfeits on would relieve us: if they\nwould yield us but the superfluity, while it were\nwholesome, we might guess they relieved us humanely;\nbut they think we are too dear: the leanness that\nafflicts us, the object of our misery, is as an\ninventory to particularise their abundance; our\nsufferance is a gain to them Let us revenge this with\nour pikes, ere we become rakes: for the gods know I\nspeak this in hunger for bread, not in thirst for revenge.\n\nSecond Citizen:\nWould you proceed especially against Caius Marcius?\n\nAll:\nAgainst him first: he's a very dog to the commonalty.\n\nSecond Citizen:\nConsider you what services he has done for his country?\n\nFirst Citizen:\nVery well; and could be content to give him good\nreport fort, but that he pays himself with being proud.\n\nSecond Citizen:\nNay, but speak not maliciously.\n\nFirst Citizen:\nI say unto you, what he hath done famously, he did\nit to that end: though soft-conscienced men can be\ncontent to say it was for his country he did it to\nplease his mother and to be partly proud; which he\nis, even till the altitude of his virtue.\n\nSecond Citizen:\nWhat he cannot help in his nature, you account a\nvice in him. You must in no way say he is covetous.\n\nFirst Citizen:\nIf I must not, I need not be barren of accusations;\nhe hath faults, with surplus, to tire in repetition.\nWhat shouts are these? The other side o' the city\nis risen: why stay we prating here? to the Capitol!\n\nAll:\nCome, come.\n\nFirst Citizen:\nSoft! who comes here?\n\nSecond Citizen:\nWorthy Menenius Agrippa; one that hath always loved\nthe people.\n\nFirst Citizen:\nHe's one honest enough: would all the rest were so!\n\nMENENIUS:\nWhat work's, my countrymen, in hand? where go you\nWith bats and clubs? The matter? ",
+        "source_id": "tinyshakespeare",
+        "store_rank": 2,
+        "store_score": 0.25587074824653305,
+        "token_length": 559,
+        "truncated": true
+      },
+      {
+        "character_length": 421,
+        "context_character_length": 421,
+        "context_text": "Trust Ye?\nWith every minute you do change a mind,\nAnd call him noble that was now your hate,\nHim vile that was your garland. What's the matter,\nThat in these several places of the city\nYou cry against the noble senate, who,\nUnder the gods, keep you in awe, which else\nWould feed on one another? What's their seeking?\n\nMENENIUS:\nFor corn at their own rates; whereof, they say,\nThe city is well stored.\n\nMARCIUS:\nHang 'em! ",
+        "context_token_length": 107,
+        "cosine": 0.20045940317477767,
+        "document_embedding_first8": [
+          0.05680553987622261,
+          0.07523386180400848,
+          -0.029768483713269234,
+          0.011135373264551163,
+          -0.03217364475131035,
+          -0.054489362984895706,
+          0.03164055570960045,
+          -0.07109525054693222
+        ],
+        "document_vector_shape": [
+          384
+        ],
+        "embedded_token_length": 107,
+        "embedding_text": "Trust Ye?\nWith every minute you do change a mind,\nAnd call him noble that was now your hate,\nHim vile that was your garland. What's the matter,\nThat in these several places of the city\nYou cry against the noble senate, who,\nUnder the gods, keep you in awe, which else\nWould feed on one another? What's their seeking?\n\nMENENIUS:\nFor corn at their own rates; whereof, they say,\nThe city is well stored.\n\nMARCIUS:\nHang 'em! ",
+        "max_seq_length": 256,
+        "node_id": "semantic:89c47b21fc294f82:000005",
+        "preview": "Trust Ye?\nWith every minute you do change a mind,\nAnd call him noble that was now your hate,\nHim vile that was your garland. What's the matter,\nThat in these se",
+        "rank": 3,
+        "retrieved_text": "Trust Ye?\nWith every minute you do change a mind,\nAnd call him noble that was now your hate,\nHim vile that was your garland. What's the matter,\nThat in these several places of the city\nYou cry against the noble senate, who,\nUnder the gods, keep you in awe, which else\nWould feed on one another? What's their seeking?\n\nMENENIUS:\nFor corn at their own rates; whereof, they say,\nThe city is well stored.\n\nMARCIUS:\nHang 'em! ",
+        "source_id": "tinyshakespeare",
+        "store_rank": 3,
+        "store_score": 0.2004594031747777,
+        "token_length": 107,
+        "truncated": false
+      }
+    ],
+    "max_seq_length": 256,
+    "mean_search_seconds": 0.00032624570885673163,
+    "query_character_length": 39,
+    "query_embedding_dimension": 384,
+    "query_embedding_first8": [
+      0.05412139371037483,
+      0.028430456295609474,
+      0.125508114695549,
+      0.05227244272828102,
+      0.07493001222610474,
+      -0.0491938516497612,
+      0.057641297578811646,
+      -0.034301336854696274
+    ],
+    "query_token_length": 10,
+    "query_truncated": false,
+    "query_vector_shape": [
+      384
+    ],
+    "question": "Why are the citizens angry about grain?",
+    "question_id": "W1",
+    "recorded_at": "2026-09-20T08:31:28.232877+00:00",
+    "requested_k": 3,
+    "returned_k": 3,
+    "search_seconds": [
+      0.00033608300145715475,
+      0.00032787490636110306,
+      0.00032354204449802637,
+      0.00032179104164242744,
+      0.0003297909861430526,
+      0.0003273329930379987,
+      0.0003266670973971486,
+      0.00031999999191612005,
+      0.0003177500329911709,
+      0.0003316249931231141
+    ],
+    "technique": "semantic",
+    "timing_scope": "retriever.retrieve with precomputed query embedding; excludes embedding and index creation",
+    "token_lengths_include_special_tokens": true,
+    "unmeasured_warmup_searches": 1,
+    "vectors_file": "semantic_W1_vectors.json"
+  },
+  {
+    "designation": "warmup",
+    "diagnostics": [],
+    "document_vector_shape": [
+      3,
+      384
+    ],
+    "expected_source_ids": [
+      "tinyshakespeare"
+    ],
+    "hits": [
+      {
+        "character_length": 31,
+        "context_character_length": 674,
+        "context_text": "MARCIUS:\nHang 'em!  They say!\n They'll sit by the fire, and presume to know\nWhat's done i' the Capitol; who's like to rise,\nWho thrives and who declines; side factions\nand give out\nConjectural marriages; making parties strong\nAnd feebling such as stand not in their liking\nBelow their cobbled shoes.  They say there's\ngrain enough!\n Would the nobility lay aside their ruth,\nAnd let me use my sword, I'll make a quarry\nWith thousands of these quarter'd slaves, as high\nAs I could pick my lance.\n\n MENENIUS:\nNay, these are almost thoroughly persuaded;\nFor though abundantly they lack discretion,\nYet are they passing cowardly.  But, I beseech you,\nWhat says the other troop?\n\n",
+        "context_token_length": 165,
+        "cosine": 0.6058021020809963,
+        "document_embedding_first8": [
+          -0.006422459147870541,
+          -0.016646983101963997,
+          0.09185770899057388,
+          0.06020093709230423,
+          0.00750994635745883,
+          -0.09589781612157822,
+          0.052586525678634644,
+          -0.07387945801019669
+        ],
+        "document_vector_shape": [
+          384
+        ],
+        "embedded_token_length": 10,
+        "embedding_text": "They say there's\ngrain enough!\n",
+        "max_seq_length": 256,
+        "node_id": "sentence_window:89c47b21fc294f82:000094",
+        "preview": "They say there's\ngrain enough!\n",
+        "rank": 1,
+        "retrieved_text": "They say there's\ngrain enough!\n",
+        "source_id": "tinyshakespeare",
+        "store_rank": 1,
+        "store_score": 0.6058021020809964,
+        "token_length": 10,
+        "truncated": false
+      },
+      {
+        "character_length": 70,
+        "context_character_length": 306,
+        "context_text": "resolved.\n\n First Citizen:\nFirst, you know Caius Marcius is chief enemy to the people.\n\n All:\nWe know't, we know't.\n\n First Citizen:\nLet us kill him, and we'll have corn at our own price.\n Is't a verdict?\n\n All:\nNo more talking on't; let it be done: away, away!\n\n Second Citizen:\nOne word, good citizens.\n\n",
+        "context_token_length": 86,
+        "cosine": 0.40285317750919275,
+        "document_embedding_first8": [
+          0.005558987148106098,
+          0.032853782176971436,
+          -0.048469021916389465,
+          -0.05968596786260605,
+          0.019431933760643005,
+          -0.061057738959789276,
+          0.061124369502067566,
+          -0.024942629039287567
+        ],
+        "document_vector_shape": [
+          384
+        ],
+        "embedded_token_length": 21,
+        "embedding_text": "First Citizen:\nLet us kill him, and we'll have corn at our own price.\n",
+        "max_seq_length": 256,
+        "node_id": "sentence_window:89c47b21fc294f82:000007",
+        "preview": "First Citizen:\nLet us kill him, and we'll have corn at our own price.\n",
+        "rank": 2,
+        "retrieved_text": "First Citizen:\nLet us kill him, and we'll have corn at our own price.\n",
+        "source_id": "tinyshakespeare",
+        "store_rank": 2,
+        "store_score": 0.4028531775091927,
+        "token_length": 21,
+        "truncated": false
+      },
+      {
+        "character_length": 468,
+        "context_character_length": 1028,
+        "context_text": "MENENIUS:\nNay, these are almost thoroughly persuaded;\nFor though abundantly they lack discretion,\nYet are they passing cowardly.  But, I beseech you,\nWhat says the other troop?\n\n MARCIUS:\nThey are dissolved: hang 'em!\n They said they were an-hungry; sigh'd forth proverbs,\nThat hunger broke stone walls, that dogs must eat,\nThat meat was made for mouths, that the gods sent not\nCorn for the rich men only: with these shreds\nThey vented their complainings; which being answer'd,\nAnd a petition granted them, a strange one--\nTo break the heart of generosity,\nAnd make bold power look pale--they threw their caps\nAs they would hang them on the horns o' the moon,\nShouting their emulation.\n\n MENENIUS:\nWhat is granted them?\n\n MARCIUS:\nFive tribunes to defend their vulgar wisdoms,\nOf their own choice: one's Junius Brutus,\nSicinius Velutus, and I know not--'Sdeath!\n The rabble should have first unroof'd the city,\nEre so prevail'd with me: it will in time\nWin upon power and throw forth greater themes\nFor insurrection's arguing.\n\n",
+        "context_token_length": 262,
+        "cosine": 0.40248446407317284,
+        "document_embedding_first8": [
+          0.0039044844452291727,
+          0.1038513332605362,
+          0.07841146737337112,
+          0.03393569961190224,
+          -0.00230025895871222,
+          -0.04316522553563118,
+          0.07183921337127686,
+          -0.04051041975617409
+        ],
+        "document_vector_shape": [
+          384
+        ],
+        "embedded_token_length": 114,
+        "embedding_text": "They said they were an-hungry; sigh'd forth proverbs,\nThat hunger broke stone walls, that dogs must eat,\nThat meat was made for mouths, that the gods sent not\nCorn for the rich men only: with these shreds\nThey vented their complainings; which being answer'd,\nAnd a petition granted them, a strange one--\nTo break the heart of generosity,\nAnd make bold power look pale--they threw their caps\nAs they would hang them on the horns o' the moon,\nShouting their emulation.\n\n",
+        "max_seq_length": 256,
+        "node_id": "sentence_window:89c47b21fc294f82:000099",
+        "preview": "They said they were an-hungry; sigh'd forth proverbs,\nThat hunger broke stone walls, that dogs must eat,\nThat meat was made for mouths, that the gods sent not\nC",
+        "rank": 3,
+        "retrieved_text": "They said they were an-hungry; sigh'd forth proverbs,\nThat hunger broke stone walls, that dogs must eat,\nThat meat was made for mouths, that the gods sent not\nCorn for the rich men only: with these shreds\nThey vented their complainings; which being answer'd,\nAnd a petition granted them, a strange one--\nTo break the heart of generosity,\nAnd make bold power look pale--they threw their caps\nAs they would hang them on the horns o' the moon,\nShouting their emulation.\n\n",
+        "source_id": "tinyshakespeare",
+        "store_rank": 3,
+        "store_score": 0.40248446407317284,
+        "token_length": 114,
+        "truncated": false
+      }
+    ],
+    "max_seq_length": 256,
+    "mean_search_seconds": 0.0013503247871994972,
+    "query_character_length": 39,
+    "query_embedding_dimension": 384,
+    "query_embedding_first8": [
+      0.05412139371037483,
+      0.028430456295609474,
+      0.125508114695549,
+      0.05227244272828102,
+      0.07493001222610474,
+      -0.0491938516497612,
+      0.057641297578811646,
+      -0.034301336854696274
+    ],
+    "query_token_length": 10,
+    "query_truncated": false,
+    "query_vector_shape": [
+      384
+    ],
+    "question": "Why are the citizens angry about grain?",
+    "question_id": "W1",
+    "recorded_at": "2026-09-20T08:31:29.402262+00:00",
+    "requested_k": 3,
+    "returned_k": 3,
+    "search_seconds": [
+      0.0014924579299986362,
+      0.0013257079990580678,
+      0.001465916051529348,
+      0.0014780000783503056,
+      0.001323250005953014,
+      0.00129791593644768,
+      0.0012955829733982682,
+      0.0012706249253824353,
+      0.0012671250151470304,
+      0.001286666956730187
+    ],
+    "technique": "sentence_window",
+    "timing_scope": "retriever.retrieve with precomputed query embedding; excludes embedding and index creation",
+    "token_lengths_include_special_tokens": true,
+    "unmeasured_warmup_searches": 1,
+    "vectors_file": "sentence_window_W1_vectors.json"
+  }
+]

@@ -1,0 +1,76 @@
+{
+  "captured_at": "2026-09-20T08:37:45.660Z",
+  "browser_version": "153.0.8010.48",
+  "viewport": {
+    "width": 1500,
+    "height": 1100
+  },
+  "device_scale_factor": 1,
+  "images": [
+    {
+      "name": "token",
+      "title": "Token retrieval",
+      "dimensions": {
+        "width": 1500,
+        "height": 1100
+      },
+      "overflow": false,
+      "source": "reports/hw03/part2/evidence_view/token.html",
+      "source_sha256": "8233e6106c3b42b6f882f416d8db1ca08bc5ef51cb34e6c6455328eb12fbc8e6",
+      "screenshot": "reports/hw03/screenshots/part2/token.png",
+      "screenshot_sha256": "f688b176d704186101ca6a87e4bdc03b48a361d8e96a0bbb8a4c6c2580d93b4d"
+    },
+    {
+      "name": "semantic",
+      "title": "Semantic retrieval",
+      "dimensions": {
+        "width": 1500,
+        "height": 1100
+      },
+      "overflow": false,
+      "source": "reports/hw03/part2/evidence_view/semantic.html",
+      "source_sha256": "f9d6e6c69b3571e3ad0e7be6618b874d6e8329e9ccb3368a37cd45f84ca8e73d",
+      "screenshot": "reports/hw03/screenshots/part2/semantic.png",
+      "screenshot_sha256": "bed9a8f7a57b15e6170a2b88150e51f5fae4bf1ece2fbfed6efba955af328cda"
+    },
+    {
+      "name": "sentence_window",
+      "title": "Sentence Window retrieval",
+      "dimensions": {
+        "width": 1500,
+        "height": 1100
+      },
+      "overflow": false,
+      "source": "reports/hw03/part2/evidence_view/sentence_window.html",
+      "source_sha256": "492cae32c4daafbf9bd22f9c669ae5c5a90984bffd9f0fb5fc82719b5d1e6b27",
+      "screenshot": "reports/hw03/screenshots/part2/sentence_window.png",
+      "screenshot_sha256": "29f5319055b0e69589fe2f11c38e2a1a9f9f16c2f08eddd2fe3b930f655513a7"
+    },
+    {
+      "name": "metrics",
+      "title": "Retrieval comparison · saved metrics",
+      "dimensions": {
+        "width": 1500,
+        "height": 1100
+      },
+      "overflow": false,
+      "source": "reports/hw03/part2/evidence_view/metrics.html",
+      "source_sha256": "b9e58517e25e41600e40d36cf323331c5d03d307a8ee90426fcac91bf1051ce7",
+      "screenshot": "reports/hw03/screenshots/part2/metrics.png",
+      "screenshot_sha256": "f07baca657fc1039a5b4823d5f876905886ddc4e8450aee630db9c545c241dc1"
+    },
+    {
+      "name": "failure",
+      "title": "High similarity without the requested answer",
+      "dimensions": {
+        "width": 1500,
+        "height": 1118
+      },
+      "overflow": false,
+      "source": "reports/hw03/part2/evidence_view/failure.html",
+      "source_sha256": "01a36dc3dff6b34421236c95c86c22871dc18e774b2a21e23fbb889eca9d3504",
+      "screenshot": "reports/hw03/screenshots/part2/failure.png",
+      "screenshot_sha256": "524d9d48cca77da5320dc30b8371b5e2e1fef462aeb43a637fe7e6d733fa94de"
+    }
+  ]
+}
