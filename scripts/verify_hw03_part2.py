@@ -121,6 +121,9 @@ def verify_run(run_dir,root=ROOT,require_report=False):
             if hit['character_length']!=len(hit['retrieved_text']): raise ValueError('Chunk length mismatch')
             label=labels[(record['question_id'],record['technique'],hit['node_id'])]
             if not label.get('reviewer'): raise ValueError('Annotation reviewer attribution missing')
+            for field,text_field in [('central_evidence','retrieved_text'),('context_evidence','context_text')]:
+                if not label.get(field) or label[field] not in hit[text_field]:
+                    raise ValueError('Annotation evidence quote absent from actual returned text')
     summary=summarize(run,records,annotations)
     if summary!=read('summary.json'): raise ValueError('Saved summary differs from raw regeneration')
     if markdown_summary(summary)!=(root/'reports/hw03/METRICS.md').read_text():
@@ -129,6 +132,14 @@ def verify_run(run_dir,root=ROOT,require_report=False):
     if require_report:
         for name in ('REPORT_SECTION.md','AI_USE.md','RUN_LOG.txt','REPRODUCIBLE_RUN_INSTRUCTIONS.md','INTEGRATION_NOTES.md'):
             if not (root/'reports/hw03/part2'/name).is_file(): raise ValueError(f'Report evidence missing: {name}')
+        capture=json.loads((root/'reports/hw03/part2/screenshot_capture.json').read_text())
+        expected_screens={'token','semantic','sentence_window','metrics','failure'}
+        if {entry['name'] for entry in capture['images']}!=expected_screens:
+            raise ValueError('Screenshot capture inventory incomplete')
+        for entry in capture['images']:
+            if sha256(root/entry['source'])!=entry['source_sha256'] or sha256(root/entry['screenshot'])!=entry['screenshot_sha256']:
+                raise ValueError('Screenshot/HTML differs from captured evidence hash')
+            if entry['overflow']: raise ValueError('Screenshot page has horizontal overflow')
         for name in ('token.png','semantic.png','sentence_window.png','metrics.png','failure.png'):
             if not (root/'reports/hw03/screenshots/part2'/name).is_file(): raise ValueError(f'Screenshot missing: {name}')
     return {'status':'pass','verified_at':utc_now(),'run_id':run['run_id'],
