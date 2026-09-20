@@ -1,0 +1,1235 @@
+{
+  "schema_version": 1,
+  "started_at": "2026-09-20T08:51:17.847Z",
+  "status": "pass",
+  "command": "node tests/browser_hw03_auth.cjs",
+  "cwd": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/part1-auth",
+  "configuration": {
+    "base_url": "https://[::1]:8702",
+    "host": "::1",
+    "port": 8702,
+    "SID4": "6102",
+    "PORT_BASE": 8702,
+    "PREFIX": "s6102",
+    "SEED": 6102,
+    "VERIFY_SEED": 266102,
+    "DOMAIN_ID": 6,
+    "domain": "Rental Housing Listings",
+    "normal_idle_timeout_seconds": 300,
+    "demonstration_idle_timeout_seconds": 2,
+    "certificate": "tmp/https/cert.pem",
+    "private_key": "tmp/https/key.pem",
+    "certificate_exception": "All automated browser contexts set ignoreHTTPSErrors: true for the local self-signed certificate; the OS trust store is unchanged.",
+    "cookie_value_handling": "Live values remain in process memory only. The entire cookie value is redacted in saved response headers.",
+    "timeout_restoration": "The 2-second timeout was set only in the second owned child process environment. Both child servers were stopped; the application default remains 300 seconds."
+  },
+  "checks": [
+    {
+      "name": "Collect runtime and tested-source provenance",
+      "started_at": "2026-09-20T08:51:17.850Z",
+      "status": "pass",
+      "details": {
+        "tested_head": "015c8224ea9a0aa265385931c1fb81ecba409313",
+        "hashed_source_files": 21
+      },
+      "finished_at": "2026-09-20T08:51:17.940Z"
+    },
+    {
+      "name": "Port is available before 300s server phase",
+      "started_at": "2026-09-20T08:51:17.940Z",
+      "status": "pass",
+      "details": {
+        "host": "::1",
+        "port": 8702,
+        "result": "Bind succeeded, then probe socket closed; no HTTP request sent."
+      },
+      "finished_at": "2026-09-20T08:51:17.944Z"
+    },
+    {
+      "name": "desktop: anonymous home and preserved rental controls",
+      "started_at": "2026-09-20T08:51:18.642Z",
+      "status": "pass",
+      "details": {
+        "file": "reports/hw03/screenshots/part1/desktop-home.png",
+        "captured_at": "2026-09-20T08:51:18.826Z",
+        "actual_url": "https://[::1]:8702/",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "dimensions": {
+          "viewport_width": 1280,
+          "document_width": 1280,
+          "body_width": 1280
+        }
+      },
+      "finished_at": "2026-09-20T08:51:18.826Z",
+      "actual_url": "https://[::1]:8702/",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop: login form",
+      "started_at": "2026-09-20T08:51:18.826Z",
+      "status": "pass",
+      "details": {
+        "file": "reports/hw03/screenshots/part1/desktop-login.png",
+        "captured_at": "2026-09-20T08:51:18.913Z",
+        "actual_url": "https://[::1]:8702/login",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "dimensions": {
+          "viewport_width": 1280,
+          "document_width": 1280,
+          "body_width": 1280
+        }
+      },
+      "finished_at": "2026-09-20T08:51:18.913Z",
+      "actual_url": "https://[::1]:8702/login",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop: anonymous dashboard is denied",
+      "started_at": "2026-09-20T08:51:18.913Z",
+      "status": "pass",
+      "details": {
+        "captured_at": "2026-09-20T08:51:18.922Z",
+        "method": "GET",
+        "url": "https://[::1]:8702/dashboard",
+        "status": 303,
+        "headers": [
+          {
+            "name": "cache-control",
+            "value": "no-store"
+          },
+          {
+            "name": "date",
+            "value": "Sun, 20 Sep 2026 08:51:18 GMT"
+          },
+          {
+            "name": "location",
+            "value": "/login"
+          },
+          {
+            "name": "server",
+            "value": "uvicorn"
+          }
+        ]
+      },
+      "finished_at": "2026-09-20T08:51:18.922Z",
+      "actual_url": "https://[::1]:8702/login",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop: invalid login shows the Bootstrap alert",
+      "started_at": "2026-09-20T08:51:18.922Z",
+      "status": "pass",
+      "details": {
+        "response_status": 401,
+        "screenshot": {
+          "file": "reports/hw03/screenshots/part1/desktop-invalid-login.png",
+          "captured_at": "2026-09-20T08:51:19.047Z",
+          "actual_url": "https://[::1]:8702/login",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "dimensions": {
+            "viewport_width": 1280,
+            "document_width": 1280,
+            "body_width": 1280
+          }
+        }
+      },
+      "finished_at": "2026-09-20T08:51:19.047Z",
+      "actual_url": "https://[::1]:8702/login",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop: valid HTTPS login and secure cookie attributes",
+      "started_at": "2026-09-20T08:51:19.047Z",
+      "status": "pass",
+      "details": {
+        "response": {
+          "captured_at": "2026-09-20T08:51:19.123Z",
+          "method": "POST",
+          "url": "https://[::1]:8702/login",
+          "status": 303,
+          "headers": [
+            {
+              "name": "cache-control",
+              "value": "no-store"
+            },
+            {
+              "name": "date",
+              "value": "Sun, 20 Sep 2026 08:51:18 GMT"
+            },
+            {
+              "name": "location",
+              "value": "/dashboard"
+            },
+            {
+              "name": "server",
+              "value": "uvicorn"
+            },
+            {
+              "name": "set-cookie",
+              "value": "session=[REDACTED]; path=/; Max-Age=3600; httponly; samesite=lax; secure"
+            }
+          ]
+        },
+        "header_file": "reports/hw03/raw/part1/desktop-login-response-headers.txt",
+        "dashboard_request_sent_session_cookie": true,
+        "screenshot": {
+          "file": "reports/hw03/screenshots/part1/desktop-dashboard.png",
+          "captured_at": "2026-09-20T08:51:19.148Z",
+          "actual_url": "https://[::1]:8702/dashboard",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "dimensions": {
+            "viewport_width": 1280,
+            "document_width": 1280,
+            "body_width": 1280
+          }
+        }
+      },
+      "finished_at": "2026-09-20T08:51:19.148Z",
+      "actual_url": "https://[::1]:8702/dashboard",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop: authenticated homepage navigation",
+      "started_at": "2026-09-20T08:51:19.148Z",
+      "status": "pass",
+      "details": {
+        "file": "reports/hw03/screenshots/part1/desktop-authenticated-home.png",
+        "captured_at": "2026-09-20T08:51:19.239Z",
+        "actual_url": "https://[::1]:8702/",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "dimensions": {
+          "viewport_width": 1280,
+          "document_width": 1280,
+          "body_width": 1280
+        }
+      },
+      "finished_at": "2026-09-20T08:51:19.239Z",
+      "actual_url": "https://[::1]:8702/",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop: logout redirects to the anonymous homepage",
+      "started_at": "2026-09-20T08:51:19.239Z",
+      "status": "pass",
+      "details": {
+        "redirect": {
+          "captured_at": "2026-09-20T08:51:19.296Z",
+          "method": "GET",
+          "url": "https://[::1]:8702/logout",
+          "status": 303,
+          "headers": [
+            {
+              "name": "cache-control",
+              "value": "no-store"
+            },
+            {
+              "name": "date",
+              "value": "Sun, 20 Sep 2026 08:51:19 GMT"
+            },
+            {
+              "name": "location",
+              "value": "/"
+            },
+            {
+              "name": "server",
+              "value": "uvicorn"
+            },
+            {
+              "name": "set-cookie",
+              "value": "session=[REDACTED]; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT; httponly; samesite=lax; secure"
+            }
+          ]
+        },
+        "screenshot": {
+          "file": "reports/hw03/screenshots/part1/desktop-post-logout.png",
+          "captured_at": "2026-09-20T08:51:19.351Z",
+          "actual_url": "https://[::1]:8702/",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "dimensions": {
+            "viewport_width": 1280,
+            "document_width": 1280,
+            "body_width": 1280
+          }
+        }
+      },
+      "finished_at": "2026-09-20T08:51:19.351Z",
+      "actual_url": "https://[::1]:8702/",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop: copied cookie cannot regain access after logout",
+      "started_at": "2026-09-20T08:51:19.351Z",
+      "status": "pass",
+      "details": {
+        "fresh_browser_context": true,
+        "copied_cookie_actually_sent": true,
+        "final_url": "https://[::1]:8702/login",
+        "dashboard_response": {
+          "captured_at": "2026-09-20T08:51:19.389Z",
+          "method": "GET",
+          "url": "https://[::1]:8702/dashboard",
+          "status": 303,
+          "headers": [
+            {
+              "name": "cache-control",
+              "value": "no-store"
+            },
+            {
+              "name": "date",
+              "value": "Sun, 20 Sep 2026 08:51:19 GMT"
+            },
+            {
+              "name": "location",
+              "value": "/login"
+            },
+            {
+              "name": "server",
+              "value": "uvicorn"
+            },
+            {
+              "name": "set-cookie",
+              "value": "session=[REDACTED]; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT; httponly; samesite=lax; secure"
+            }
+          ]
+        }
+      },
+      "finished_at": "2026-09-20T08:51:19.431Z"
+    },
+    {
+      "name": "desktop: browser JavaScript has no uncaught errors",
+      "started_at": "2026-09-20T08:51:19.431Z",
+      "status": "pass",
+      "details": {
+        "uncaught_errors": []
+      },
+      "finished_at": "2026-09-20T08:51:19.431Z",
+      "actual_url": "https://[::1]:8702/",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "name": "mobile: anonymous home and preserved rental controls",
+      "started_at": "2026-09-20T08:51:19.459Z",
+      "status": "pass",
+      "details": {
+        "file": "reports/hw03/screenshots/part1/mobile-home.png",
+        "captured_at": "2026-09-20T08:51:19.538Z",
+        "actual_url": "https://[::1]:8702/",
+        "viewport": {
+          "width": 375,
+          "height": 812
+        },
+        "dimensions": {
+          "viewport_width": 375,
+          "document_width": 375,
+          "body_width": 375
+        }
+      },
+      "finished_at": "2026-09-20T08:51:19.538Z",
+      "actual_url": "https://[::1]:8702/",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      }
+    },
+    {
+      "name": "mobile: login form",
+      "started_at": "2026-09-20T08:51:19.538Z",
+      "status": "pass",
+      "details": {
+        "file": "reports/hw03/screenshots/part1/mobile-login.png",
+        "captured_at": "2026-09-20T08:51:19.608Z",
+        "actual_url": "https://[::1]:8702/login",
+        "viewport": {
+          "width": 375,
+          "height": 812
+        },
+        "dimensions": {
+          "viewport_width": 375,
+          "document_width": 375,
+          "body_width": 375
+        }
+      },
+      "finished_at": "2026-09-20T08:51:19.608Z",
+      "actual_url": "https://[::1]:8702/login",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      }
+    },
+    {
+      "name": "mobile: anonymous dashboard is denied",
+      "started_at": "2026-09-20T08:51:19.608Z",
+      "status": "pass",
+      "details": {
+        "captured_at": "2026-09-20T08:51:19.615Z",
+        "method": "GET",
+        "url": "https://[::1]:8702/dashboard",
+        "status": 303,
+        "headers": [
+          {
+            "name": "cache-control",
+            "value": "no-store"
+          },
+          {
+            "name": "date",
+            "value": "Sun, 20 Sep 2026 08:51:19 GMT"
+          },
+          {
+            "name": "location",
+            "value": "/login"
+          },
+          {
+            "name": "server",
+            "value": "uvicorn"
+          }
+        ]
+      },
+      "finished_at": "2026-09-20T08:51:19.615Z",
+      "actual_url": "https://[::1]:8702/login",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      }
+    },
+    {
+      "name": "mobile: invalid login shows the Bootstrap alert",
+      "started_at": "2026-09-20T08:51:19.615Z",
+      "status": "pass",
+      "details": {
+        "response_status": 401,
+        "screenshot": {
+          "file": "reports/hw03/screenshots/part1/mobile-invalid-login.png",
+          "captured_at": "2026-09-20T08:51:19.741Z",
+          "actual_url": "https://[::1]:8702/login",
+          "viewport": {
+            "width": 375,
+            "height": 812
+          },
+          "dimensions": {
+            "viewport_width": 375,
+            "document_width": 375,
+            "body_width": 375
+          }
+        }
+      },
+      "finished_at": "2026-09-20T08:51:19.741Z",
+      "actual_url": "https://[::1]:8702/login",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      }
+    },
+    {
+      "name": "mobile: valid HTTPS login and secure cookie attributes",
+      "started_at": "2026-09-20T08:51:19.741Z",
+      "status": "pass",
+      "details": {
+        "response": {
+          "captured_at": "2026-09-20T08:51:19.818Z",
+          "method": "POST",
+          "url": "https://[::1]:8702/login",
+          "status": 303,
+          "headers": [
+            {
+              "name": "cache-control",
+              "value": "no-store"
+            },
+            {
+              "name": "date",
+              "value": "Sun, 20 Sep 2026 08:51:19 GMT"
+            },
+            {
+              "name": "location",
+              "value": "/dashboard"
+            },
+            {
+              "name": "server",
+              "value": "uvicorn"
+            },
+            {
+              "name": "set-cookie",
+              "value": "session=[REDACTED]; path=/; Max-Age=3600; httponly; samesite=lax; secure"
+            }
+          ]
+        },
+        "header_file": "reports/hw03/raw/part1/mobile-login-response-headers.txt",
+        "dashboard_request_sent_session_cookie": true,
+        "screenshot": {
+          "file": "reports/hw03/screenshots/part1/mobile-dashboard.png",
+          "captured_at": "2026-09-20T08:51:19.842Z",
+          "actual_url": "https://[::1]:8702/dashboard",
+          "viewport": {
+            "width": 375,
+            "height": 812
+          },
+          "dimensions": {
+            "viewport_width": 375,
+            "document_width": 375,
+            "body_width": 375
+          }
+        }
+      },
+      "finished_at": "2026-09-20T08:51:19.842Z",
+      "actual_url": "https://[::1]:8702/dashboard",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      }
+    },
+    {
+      "name": "mobile: authenticated homepage navigation",
+      "started_at": "2026-09-20T08:51:19.842Z",
+      "status": "pass",
+      "details": {
+        "file": "reports/hw03/screenshots/part1/mobile-authenticated-home.png",
+        "captured_at": "2026-09-20T08:51:19.906Z",
+        "actual_url": "https://[::1]:8702/",
+        "viewport": {
+          "width": 375,
+          "height": 812
+        },
+        "dimensions": {
+          "viewport_width": 375,
+          "document_width": 375,
+          "body_width": 375
+        }
+      },
+      "finished_at": "2026-09-20T08:51:19.906Z",
+      "actual_url": "https://[::1]:8702/",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      }
+    },
+    {
+      "name": "mobile: logout redirects to the anonymous homepage",
+      "started_at": "2026-09-20T08:51:19.906Z",
+      "status": "pass",
+      "details": {
+        "redirect": {
+          "captured_at": "2026-09-20T08:51:19.963Z",
+          "method": "GET",
+          "url": "https://[::1]:8702/logout",
+          "status": 303,
+          "headers": [
+            {
+              "name": "cache-control",
+              "value": "no-store"
+            },
+            {
+              "name": "date",
+              "value": "Sun, 20 Sep 2026 08:51:19 GMT"
+            },
+            {
+              "name": "location",
+              "value": "/"
+            },
+            {
+              "name": "server",
+              "value": "uvicorn"
+            },
+            {
+              "name": "set-cookie",
+              "value": "session=[REDACTED]; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT; httponly; samesite=lax; secure"
+            }
+          ]
+        },
+        "screenshot": {
+          "file": "reports/hw03/screenshots/part1/mobile-post-logout.png",
+          "captured_at": "2026-09-20T08:51:20.005Z",
+          "actual_url": "https://[::1]:8702/",
+          "viewport": {
+            "width": 375,
+            "height": 812
+          },
+          "dimensions": {
+            "viewport_width": 375,
+            "document_width": 375,
+            "body_width": 375
+          }
+        }
+      },
+      "finished_at": "2026-09-20T08:51:20.005Z",
+      "actual_url": "https://[::1]:8702/",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      }
+    },
+    {
+      "name": "mobile: copied cookie cannot regain access after logout",
+      "started_at": "2026-09-20T08:51:20.005Z",
+      "status": "pass",
+      "details": {
+        "fresh_browser_context": true,
+        "copied_cookie_actually_sent": true,
+        "final_url": "https://[::1]:8702/login",
+        "dashboard_response": {
+          "captured_at": "2026-09-20T08:51:20.043Z",
+          "method": "GET",
+          "url": "https://[::1]:8702/dashboard",
+          "status": 303,
+          "headers": [
+            {
+              "name": "cache-control",
+              "value": "no-store"
+            },
+            {
+              "name": "date",
+              "value": "Sun, 20 Sep 2026 08:51:19 GMT"
+            },
+            {
+              "name": "location",
+              "value": "/login"
+            },
+            {
+              "name": "server",
+              "value": "uvicorn"
+            },
+            {
+              "name": "set-cookie",
+              "value": "session=[REDACTED]; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT; httponly; samesite=lax; secure"
+            }
+          ]
+        }
+      },
+      "finished_at": "2026-09-20T08:51:20.077Z"
+    },
+    {
+      "name": "mobile: browser JavaScript has no uncaught errors",
+      "started_at": "2026-09-20T08:51:20.077Z",
+      "status": "pass",
+      "details": {
+        "uncaught_errors": []
+      },
+      "finished_at": "2026-09-20T08:51:20.077Z",
+      "actual_url": "https://[::1]:8702/",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      }
+    },
+    {
+      "name": "Port is available before 2s server phase",
+      "started_at": "2026-09-20T08:51:20.281Z",
+      "status": "pass",
+      "details": {
+        "host": "::1",
+        "port": 8702,
+        "result": "Bind succeeded, then probe socket closed; no HTTP request sent."
+      },
+      "finished_at": "2026-09-20T08:51:20.281Z"
+    },
+    {
+      "name": "Live expiry: login under the explicit 2-second demonstration timeout",
+      "started_at": "2026-09-20T08:51:20.508Z",
+      "status": "pass",
+      "details": {
+        "timeout_seconds": 2,
+        "screenshot": {
+          "file": "reports/hw03/screenshots/part1/idle-before-expiry.png",
+          "captured_at": "2026-09-20T08:51:20.665Z",
+          "actual_url": "https://[::1]:8702/dashboard",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "dimensions": {
+            "viewport_width": 1280,
+            "document_width": 1280,
+            "body_width": 1280
+          }
+        }
+      },
+      "finished_at": "2026-09-20T08:51:20.665Z",
+      "actual_url": "https://[::1]:8702/dashboard",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "name": "Live expiry: copied cookie is denied in a fresh context after idle time",
+      "started_at": "2026-09-20T08:51:22.965Z",
+      "status": "pass",
+      "details": {
+        "fresh_browser_context": true,
+        "copied_cookie_actually_sent": true,
+        "final_url": "https://[::1]:8702/login",
+        "dashboard_response": {
+          "captured_at": "2026-09-20T08:51:23.004Z",
+          "method": "GET",
+          "url": "https://[::1]:8702/dashboard",
+          "status": 303,
+          "headers": [
+            {
+              "name": "cache-control",
+              "value": "no-store"
+            },
+            {
+              "name": "date",
+              "value": "Sun, 20 Sep 2026 08:51:22 GMT"
+            },
+            {
+              "name": "location",
+              "value": "/login"
+            },
+            {
+              "name": "server",
+              "value": "uvicorn"
+            },
+            {
+              "name": "set-cookie",
+              "value": "session=[REDACTED]; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT; httponly; samesite=lax; secure"
+            }
+          ]
+        }
+      },
+      "finished_at": "2026-09-20T08:51:23.032Z"
+    },
+    {
+      "name": "Live expiry: original browser session is denied on revisit",
+      "started_at": "2026-09-20T08:51:23.032Z",
+      "status": "pass",
+      "details": {
+        "redirect": {
+          "captured_at": "2026-09-20T08:51:23.041Z",
+          "method": "GET",
+          "url": "https://[::1]:8702/dashboard",
+          "status": 303,
+          "headers": [
+            {
+              "name": "cache-control",
+              "value": "no-store"
+            },
+            {
+              "name": "date",
+              "value": "Sun, 20 Sep 2026 08:51:22 GMT"
+            },
+            {
+              "name": "location",
+              "value": "/login"
+            },
+            {
+              "name": "server",
+              "value": "uvicorn"
+            },
+            {
+              "name": "set-cookie",
+              "value": "session=[REDACTED]; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT; httponly; samesite=lax; secure"
+            }
+          ]
+        },
+        "screenshot": {
+          "file": "reports/hw03/screenshots/part1/idle-expired-login.png",
+          "captured_at": "2026-09-20T08:51:23.063Z",
+          "actual_url": "https://[::1]:8702/login",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "dimensions": {
+            "viewport_width": 1280,
+            "document_width": 1280,
+            "body_width": 1280
+          }
+        }
+      },
+      "finished_at": "2026-09-20T08:51:23.063Z",
+      "actual_url": "https://[::1]:8702/login",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "name": "Capture sanitized real HTTP header evidence viewer",
+      "started_at": "2026-09-20T08:51:23.267Z",
+      "status": "pass",
+      "details": {
+        "viewer_file": "reports/hw03/raw/part1/cookie-header.html",
+        "screenshot": {
+          "file": "reports/hw03/screenshots/part1/cookie-header.png",
+          "captured_at": "2026-09-20T08:51:23.334Z",
+          "actual_url": "file:///Users/pragyaapurva/Documents/SJSU/DATA%20260/HW3/worktrees/part1-auth/reports/hw03/raw/part1/cookie-header.html",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "dimensions": {
+            "viewport_width": 1280,
+            "document_width": 1280,
+            "body_width": 1280
+          }
+        }
+      },
+      "finished_at": "2026-09-20T08:51:23.335Z"
+    },
+    {
+      "name": "Capture actual templates directory listing evidence viewer",
+      "started_at": "2026-09-20T08:51:23.335Z",
+      "status": "pass",
+      "details": {
+        "viewer_file": "reports/hw03/raw/part1/templates-directory.html",
+        "screenshot": {
+          "file": "reports/hw03/screenshots/part1/templates-directory.png",
+          "captured_at": "2026-09-20T08:51:23.399Z",
+          "actual_url": "file:///Users/pragyaapurva/Documents/SJSU/DATA%20260/HW3/worktrees/part1-auth/reports/hw03/raw/part1/templates-directory.html",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "dimensions": {
+            "viewport_width": 1280,
+            "document_width": 1280,
+            "body_width": 1280
+          }
+        }
+      },
+      "finished_at": "2026-09-20T08:51:23.401Z"
+    },
+    {
+      "name": "Source revision and hashes remain unchanged throughout browser evidence collection",
+      "started_at": "2026-09-20T08:51:23.401Z",
+      "status": "pass",
+      "details": {
+        "unchanged": true
+      },
+      "finished_at": "2026-09-20T08:51:23.415Z"
+    }
+  ],
+  "screenshots": [
+    {
+      "file": "reports/hw03/screenshots/part1/desktop-home.png",
+      "captured_at": "2026-09-20T08:51:18.826Z",
+      "actual_url": "https://[::1]:8702/",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "dimensions": {
+        "viewport_width": 1280,
+        "document_width": 1280,
+        "body_width": 1280
+      }
+    },
+    {
+      "file": "reports/hw03/screenshots/part1/desktop-login.png",
+      "captured_at": "2026-09-20T08:51:18.913Z",
+      "actual_url": "https://[::1]:8702/login",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "dimensions": {
+        "viewport_width": 1280,
+        "document_width": 1280,
+        "body_width": 1280
+      }
+    },
+    {
+      "file": "reports/hw03/screenshots/part1/desktop-invalid-login.png",
+      "captured_at": "2026-09-20T08:51:19.047Z",
+      "actual_url": "https://[::1]:8702/login",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "dimensions": {
+        "viewport_width": 1280,
+        "document_width": 1280,
+        "body_width": 1280
+      }
+    },
+    {
+      "file": "reports/hw03/screenshots/part1/desktop-dashboard.png",
+      "captured_at": "2026-09-20T08:51:19.148Z",
+      "actual_url": "https://[::1]:8702/dashboard",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "dimensions": {
+        "viewport_width": 1280,
+        "document_width": 1280,
+        "body_width": 1280
+      }
+    },
+    {
+      "file": "reports/hw03/screenshots/part1/desktop-authenticated-home.png",
+      "captured_at": "2026-09-20T08:51:19.239Z",
+      "actual_url": "https://[::1]:8702/",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "dimensions": {
+        "viewport_width": 1280,
+        "document_width": 1280,
+        "body_width": 1280
+      }
+    },
+    {
+      "file": "reports/hw03/screenshots/part1/desktop-post-logout.png",
+      "captured_at": "2026-09-20T08:51:19.351Z",
+      "actual_url": "https://[::1]:8702/",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "dimensions": {
+        "viewport_width": 1280,
+        "document_width": 1280,
+        "body_width": 1280
+      }
+    },
+    {
+      "file": "reports/hw03/screenshots/part1/desktop-logout-replay-denied.png",
+      "captured_at": "2026-09-20T08:51:19.429Z",
+      "actual_url": "https://[::1]:8702/login",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "dimensions": {
+        "viewport_width": 1280,
+        "document_width": 1280,
+        "body_width": 1280
+      }
+    },
+    {
+      "file": "reports/hw03/screenshots/part1/mobile-home.png",
+      "captured_at": "2026-09-20T08:51:19.538Z",
+      "actual_url": "https://[::1]:8702/",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "dimensions": {
+        "viewport_width": 375,
+        "document_width": 375,
+        "body_width": 375
+      }
+    },
+    {
+      "file": "reports/hw03/screenshots/part1/mobile-login.png",
+      "captured_at": "2026-09-20T08:51:19.608Z",
+      "actual_url": "https://[::1]:8702/login",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "dimensions": {
+        "viewport_width": 375,
+        "document_width": 375,
+        "body_width": 375
+      }
+    },
+    {
+      "file": "reports/hw03/screenshots/part1/mobile-invalid-login.png",
+      "captured_at": "2026-09-20T08:51:19.741Z",
+      "actual_url": "https://[::1]:8702/login",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "dimensions": {
+        "viewport_width": 375,
+        "document_width": 375,
+        "body_width": 375
+      }
+    },
+    {
+      "file": "reports/hw03/screenshots/part1/mobile-dashboard.png",
+      "captured_at": "2026-09-20T08:51:19.842Z",
+      "actual_url": "https://[::1]:8702/dashboard",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "dimensions": {
+        "viewport_width": 375,
+        "document_width": 375,
+        "body_width": 375
+      }
+    },
+    {
+      "file": "reports/hw03/screenshots/part1/mobile-authenticated-home.png",
+      "captured_at": "2026-09-20T08:51:19.906Z",
+      "actual_url": "https://[::1]:8702/",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "dimensions": {
+        "viewport_width": 375,
+        "document_width": 375,
+        "body_width": 375
+      }
+    },
+    {
+      "file": "reports/hw03/screenshots/part1/mobile-post-logout.png",
+      "captured_at": "2026-09-20T08:51:20.005Z",
+      "actual_url": "https://[::1]:8702/",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "dimensions": {
+        "viewport_width": 375,
+        "document_width": 375,
+        "body_width": 375
+      }
+    },
+    {
+      "file": "reports/hw03/screenshots/part1/mobile-logout-replay-denied.png",
+      "captured_at": "2026-09-20T08:51:20.076Z",
+      "actual_url": "https://[::1]:8702/login",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "dimensions": {
+        "viewport_width": 375,
+        "document_width": 375,
+        "body_width": 375
+      }
+    },
+    {
+      "file": "reports/hw03/screenshots/part1/idle-before-expiry.png",
+      "captured_at": "2026-09-20T08:51:20.665Z",
+      "actual_url": "https://[::1]:8702/dashboard",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "dimensions": {
+        "viewport_width": 1280,
+        "document_width": 1280,
+        "body_width": 1280
+      }
+    },
+    {
+      "file": "reports/hw03/screenshots/part1/idle-replay-denied.png",
+      "captured_at": "2026-09-20T08:51:23.031Z",
+      "actual_url": "https://[::1]:8702/login",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "dimensions": {
+        "viewport_width": 1280,
+        "document_width": 1280,
+        "body_width": 1280
+      }
+    },
+    {
+      "file": "reports/hw03/screenshots/part1/idle-expired-login.png",
+      "captured_at": "2026-09-20T08:51:23.063Z",
+      "actual_url": "https://[::1]:8702/login",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "dimensions": {
+        "viewport_width": 1280,
+        "document_width": 1280,
+        "body_width": 1280
+      }
+    },
+    {
+      "file": "reports/hw03/screenshots/part1/cookie-header.png",
+      "captured_at": "2026-09-20T08:51:23.334Z",
+      "actual_url": "file:///Users/pragyaapurva/Documents/SJSU/DATA%20260/HW3/worktrees/part1-auth/reports/hw03/raw/part1/cookie-header.html",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "dimensions": {
+        "viewport_width": 1280,
+        "document_width": 1280,
+        "body_width": 1280
+      }
+    },
+    {
+      "file": "reports/hw03/screenshots/part1/templates-directory.png",
+      "captured_at": "2026-09-20T08:51:23.399Z",
+      "actual_url": "file:///Users/pragyaapurva/Documents/SJSU/DATA%20260/HW3/worktrees/part1-auth/reports/hw03/raw/part1/templates-directory.html",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "dimensions": {
+        "viewport_width": 1280,
+        "document_width": 1280,
+        "body_width": 1280
+      }
+    }
+  ],
+  "server_phases": [
+    {
+      "started_at": "2026-09-20T08:51:17.944Z",
+      "idle_timeout_seconds": 300,
+      "executable": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/part1-auth/.venv-web/bin/python",
+      "arguments": [
+        "-m",
+        "uvicorn",
+        "main:app",
+        "--app-dir",
+        "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/part1-auth/code/web_application",
+        "--host",
+        "::1",
+        "--port",
+        "8702",
+        "--workers",
+        "1",
+        "--ssl-certfile",
+        "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/part1-auth/tmp/https/cert.pem",
+        "--ssl-keyfile",
+        "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/part1-auth/tmp/https/key.pem"
+      ],
+      "environment_overrides": {
+        "IDLE_TIMEOUT_SECONDS": "300",
+        "SECRET_KEY": "[RANDOM PER-PROCESS VALUE, NOT SAVED]"
+      },
+      "pid": 78374,
+      "ready_at": "2026-09-20T08:51:18.248Z",
+      "finished_at": "2026-09-20T08:51:20.280Z",
+      "exit_code": 0,
+      "signal": null,
+      "log_file": "reports/hw03/raw/part1/https-server-300s.log"
+    },
+    {
+      "started_at": "2026-09-20T08:51:20.281Z",
+      "idle_timeout_seconds": 2,
+      "executable": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/part1-auth/.venv-web/bin/python",
+      "arguments": [
+        "-m",
+        "uvicorn",
+        "main:app",
+        "--app-dir",
+        "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/part1-auth/code/web_application",
+        "--host",
+        "::1",
+        "--port",
+        "8702",
+        "--workers",
+        "1",
+        "--ssl-certfile",
+        "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/part1-auth/tmp/https/cert.pem",
+        "--ssl-keyfile",
+        "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/part1-auth/tmp/https/key.pem"
+      ],
+      "environment_overrides": {
+        "IDLE_TIMEOUT_SECONDS": "2",
+        "SECRET_KEY": "[RANDOM PER-PROCESS VALUE, NOT SAVED]"
+      },
+      "pid": 78389,
+      "ready_at": "2026-09-20T08:51:20.484Z",
+      "finished_at": "2026-09-20T08:51:23.267Z",
+      "exit_code": 0,
+      "signal": null,
+      "log_file": "reports/hw03/raw/part1/https-server-2s.log"
+    }
+  ],
+  "tested_head": "015c8224ea9a0aa265385931c1fb81ecba409313",
+  "source_sha256": {
+    "code/web_application/README.md": "06854cd91185863474729b28e11dae1a417f57d3f78ed60d4782518214cb8958",
+    "code/web_application/main.py": "0b0170afd609d9cfe94b41463838e0e6bb15621ce563acbc386c302d7bc8d74f",
+    "code/web_application/routers/__init__.py": "e940586d67bb15ff7ea19688e0c562dc2232bfcc48fc7db009ed383b06c5f672",
+    "code/web_application/routers/auth.py": "84c8a889bbe4eecd5dd8667906260d4baf84ecab8d3af7897239f692508b0345",
+    "code/web_application/session_store.py": "e404885977d088c1c21f39c1216e23b2be38df193857bb861d2b17c5e61966e2",
+    "code/web_application/static/app.js": "eda37f2102208b8ad74c3157699b7558c6b324d515f7648ad9915ed3173d04aa",
+    "code/web_application/static/bootstrap.LICENSE.txt": "3d0b0c88216e4752b9afd3d24e36faaf27873b5a45a61458bb3c83e794c26832",
+    "code/web_application/static/bootstrap.min.css": "3017df4a76db5f01c2b99b603d88b03106df13bcfe18e67b7c13c2341d3a67df",
+    "code/web_application/static/styles.css": "8a7a5f932739672ea6bbcc8013e6c0096f4eaa92c630f79273cba89e2f2437f5",
+    "code/web_application/templates/base.html": "2275d263e6a20c528d14c1eaa343d71e7505458d4941f4cd92bbd7a9cdcbf757",
+    "code/web_application/templates/dashboard.html": "f1d556cebc976752bbffaa595c58f75f88a71b79ef6f183a9cb83b183c4180a9",
+    "code/web_application/templates/index.html": "036d66065f80809d8f3edfd9ee77502635811d948c01f191d63237cf267baa80",
+    "code/web_application/templates/login.html": "a8a745b06695762d4f9fc75792c47d02efdb62cbd1ab86bfbd7a7838ce1ae353",
+    "package.json": "c46f0187bd38371e2cf2a007a6fb03634db19268bded5b9ecc5d0288a1eb2b14",
+    "requirements.txt": "f5e0a0e8a13d6074c6ece7697a76fc5f0ed2440f814eaded45b954313d28b2f9",
+    "scripts/run_hw03_web.py": "144906135c9ff8ab52caf04539fdd42b06413cce11c483537a218900c2e7bcd6",
+    "scripts/verify_hw03_part1.py": "2265781d43ac0231849b9b4a383e7c2edfa8828deb0ec16467c2d2df09ca6762",
+    "tests/browser_hw03_auth.cjs": "d39715a7209d87a77f09f960abf29961540d7630d944e88a99a451b53cd23a34",
+    "tests/browser_part2.cjs": "49d7206af9a76aa526927b1cb5cd91ef9c764d749efa1e1fd55da1998287f153",
+    "tests/test_api.py": "c9833da43b0339618edd541bdfd92e3b72477d2107473d6e126fe348d1907abd",
+    "tests/test_hw03_auth.py": "c22c16647003415b114373ebab97c9267e6adfd539c77197c1389f363aff685c"
+  },
+  "source_worktree_status": "",
+  "runtime": {
+    "node": "v24.19.0",
+    "playwright": "1.62.1",
+    "python_packages": {
+      "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+      "packages": {
+        "fastapi": "0.109.0",
+        "starlette": "0.35.1",
+        "uvicorn": "0.27.0",
+        "jinja2": "3.1.6",
+        "python-multipart": "0.0.20",
+        "itsdangerous": "2.2.0",
+        "httpx": "0.27.2"
+      }
+    },
+    "system": {
+      "platform": "darwin",
+      "release": "24.6.0",
+      "architecture": "arm64",
+      "cpu": "Apple M4",
+      "logical_cpus": 10,
+      "memory_bytes": 25769803776
+    },
+    "chromium": "151.0.7922.34"
+  },
+  "live_expiry_wait": {
+    "started_at": "2026-09-20T08:51:20.665Z",
+    "elapsed_ms": 2300,
+    "requests_during_wait": 0
+  },
+  "finished_at": "2026-09-20T08:51:23.428Z",
+  "pass_count": 27,
+  "fail_count": 0
+}

@@ -1,0 +1,27 @@
+{
+  "captured_at": "2026-09-20T08:51:23.335Z",
+  "directory": "code/web_application/templates",
+  "method": "Node fs.readdir + fs.stat",
+  "entries": [
+    {
+      "name": "base.html",
+      "type": "file",
+      "bytes": 1159
+    },
+    {
+      "name": "dashboard.html",
+      "type": "file",
+      "bytes": 809
+    },
+    {
+      "name": "index.html",
+      "type": "file",
+      "bytes": 6021
+    },
+    {
+      "name": "login.html",
+      "type": "file",
+      "bytes": 1007
+    }
+  ]
+}

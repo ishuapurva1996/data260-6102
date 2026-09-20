@@ -1,0 +1,8 @@
+Simplification review of Part 1 application code (2026-09-20 UTC)
+Read-only reuse, quality and efficiency reviewers completed.
+Applied: removed one historical CSS comment; collapsed duplicated identical fresh-app/restart assertions.
+Rejected: removing dict guards on request.session. Starlette 0.35.1 accepts signed JSON without shape validation; tests cover signed arrays/null/strings/numbers and prove guards are required.
+Skipped as low value for this scoped teaching app: merging revoke/create solely to avoid a second short registry sweep; replacing cleanup scans with an expiry heap; caching TLS file stats instead of preserving explicit incomplete-pair checks. These increase state/abstraction or change failure timing without a measured need.
+No reuse changes were needed. The single-worker session registry, idle boundary checks, and path-based import compatibility were preserved.
+Applied counts: reuse=0, quality=2, efficiency=0. Skipped findings=4 (one incorrect safety-check removal, three low-value efficiency suggestions).
+No dedicated Python typecheck or lint configuration exists for this web scope. git diff --check, Python compile checks, Node syntax validation and scoped test suites are the applicable verification.

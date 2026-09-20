@@ -1,0 +1,14 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Login cookie: sanitized captured HTTP headers</title>
+  <style>body{font:17px/1.55 system-ui,sans-serif;margin:0;padding:42px;color:#172633;background:#f5f8fa}main{max-width:1120px;margin:auto}h1{font-size:29px;margin:0 0 12px}p{color:#435563}pre{font:16px/1.6 ui-monospace,monospace;background:white;border:1px solid #ccd6df;border-radius:8px;padding:25px;white-space:pre-wrap;overflow-wrap:anywhere}footer{color:#435563;font-size:14px}</style>
+  <main><h1>Login cookie: sanitized captured HTTP headers</h1><p>These headers were captured from the real HTTPS login response. Only the entire cookie value is redacted. This is an evidence viewer, not a browser developer-tools screenshot.</p><pre>Sanitized captured HTTP response headers (not a reconstructed server response)
+Captured: 2026-09-20T08:51:19.123Z
+POST https://[::1]:8702/login
+HTTP status: 303
+cache-control: no-store
+date: Sun, 20 Sep 2026 08:51:18 GMT
+location: /dashboard
+server: uvicorn
+set-cookie: session=[REDACTED]; path=/; Max-Age=3600; httponly; samesite=lax; secure
+
+Redaction: the entire session cookie value is replaced; attributes are preserved.
+</pre><footer>HW3 Part 1 · Generated evidence viewer · 2026-09-20T08:51:23.267Z</footer></main></html>

@@ -1,0 +1,7 @@
+Started UTC: 2026-09-20T08:50:23.191792+00:00
+Command: /Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node reports/hw03/raw/part1/cookie-helper-regression.cjs
+PASS: actual helper accepts the login-issued request cookie when the later jar cookie differs.
+PASS: actual helper retains the renewed jar cookie for replay and rejects an unrelated sent cookie.
+
+Exit code: 0
+Ended UTC: 2026-09-20T08:50:23.359736+00:00

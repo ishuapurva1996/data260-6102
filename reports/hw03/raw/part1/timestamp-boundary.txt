@@ -1,0 +1,6 @@
+Started UTC: 2026-09-20T08:48:03.175449+00:00
+Command: sh /tmp/compound-engineering-501/ce-code-review/20260920-013137-17f40697/timestamp-boundary-proof.sh
+{"login_status": 303, "dashboard_status": 200, "dashboard_sent_issued_cookie": true, "browser_test_comparison": false, "session_payload_unchanged": true}
+
+Exit code: 0
+Ended UTC: 2026-09-20T08:48:03.410885+00:00

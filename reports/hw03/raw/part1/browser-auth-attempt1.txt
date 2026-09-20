@@ -1,0 +1,13 @@
+Started UTC: 2026-09-20T08:29:44.023774+00:00
+Command: /Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node tests/browser_hw03_auth.cjs
+Error: ENOENT: no such file or directory, stat '/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/part1-auth/package-lock.json'
+    at async Object.stat (node:internal/fs/promises:1095:18)
+    at async walk (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/part1-auth/tests/browser_hw03_auth.cjs:63:18)
+    at async sourceHashes (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/part1-auth/tests/browser_hw03_auth.cjs:70:36)
+    at async /Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/part1-auth/tests/browser_hw03_auth.cjs:411:32
+    at async check (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/part1-auth/tests/browser_hw03_auth.cjs:82:22)
+    at async main (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/part1-auth/tests/browser_hw03_auth.cjs:406:5)
+FAIL: 0 checks passed; 0 screenshots saved.
+
+Exit code: 1
+Ended UTC: 2026-09-20T08:29:44.305476+00:00

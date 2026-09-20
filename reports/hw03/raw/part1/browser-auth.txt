@@ -1,0 +1,33 @@
+Started UTC: 2026-09-20T08:51:17.596556+00:00
+Command: /Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node tests/browser_hw03_auth.cjs
+PASS Collect runtime and tested-source provenance
+PASS Port is available before 300s server phase
+PASS desktop: anonymous home and preserved rental controls
+PASS desktop: login form
+PASS desktop: anonymous dashboard is denied
+PASS desktop: invalid login shows the Bootstrap alert
+PASS desktop: valid HTTPS login and secure cookie attributes
+PASS desktop: authenticated homepage navigation
+PASS desktop: logout redirects to the anonymous homepage
+PASS desktop: copied cookie cannot regain access after logout
+PASS desktop: browser JavaScript has no uncaught errors
+PASS mobile: anonymous home and preserved rental controls
+PASS mobile: login form
+PASS mobile: anonymous dashboard is denied
+PASS mobile: invalid login shows the Bootstrap alert
+PASS mobile: valid HTTPS login and secure cookie attributes
+PASS mobile: authenticated homepage navigation
+PASS mobile: logout redirects to the anonymous homepage
+PASS mobile: copied cookie cannot regain access after logout
+PASS mobile: browser JavaScript has no uncaught errors
+PASS Port is available before 2s server phase
+PASS Live expiry: login under the explicit 2-second demonstration timeout
+PASS Live expiry: copied cookie is denied in a fresh context after idle time
+PASS Live expiry: original browser session is denied on revisit
+PASS Capture sanitized real HTTP header evidence viewer
+PASS Capture actual templates directory listing evidence viewer
+PASS Source revision and hashes remain unchanged throughout browser evidence collection
+PASS: 27 checks passed; 19 screenshots saved.
+
+Exit code: 0
+Ended UTC: 2026-09-20T08:51:23.437028+00:00

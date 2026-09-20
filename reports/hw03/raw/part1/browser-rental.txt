@@ -1,0 +1,29 @@
+Started UTC: 2026-09-20T08:51:17.874525+00:00
+Command: /Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node tests/browser_part2.cjs
+PASS seeded list and usable 375px layout
+PASS create uses the API and survives reload
+PASS Edit prefills ID 1 and updates only its title and address
+PASS Edit prefills ID 2 and updates only its title and address
+PASS Cancel discards a draft without a request and restores focus
+PASS Cancel focuses search during a pending or failed list refresh
+PASS same-record Edit preserves drafts and changing targets confirms discard
+PASS search may hide the edited row without changing its draft or target
+PASS a failed update preserves the selected record and draft for retry
+PASS a deleted selected record reports 404, retains the draft, and permits Cancel
+PASS pending update disables competing actions and sends only one PUT
+PASS search matches either field, ignores case, and clears
+PASS highest-ID deletion is global when search hides the highest record
+PASS row deletion can be cancelled, accepts 204, and ID 2 remains editable without ID 1
+PASS loading locks editing and duplicate submissions create only one record
+PASS simulated create error keeps input and makes no backend changes
+PASS real network failure retains the form and allows retry
+PASS initial list failure offers a working retry
+PASS FastAPI validation arrays display readable messages
+PASS a delayed search cannot overwrite a later Clear action
+PASS user markup is literal text and long content fits mobile
+PASS desktop list and forms remain usable
+
+22 browser checks passed; 0 failed.
+
+Exit code: 0
+Ended UTC: 2026-09-20T08:51:58.202621+00:00

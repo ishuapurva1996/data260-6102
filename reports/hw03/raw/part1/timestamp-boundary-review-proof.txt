@@ -1,0 +1,6 @@
+Independent validator reproduction on current staged tree based at3d5f99635c5b7129a2db7da23e075de48df94cb0.
+Runtime: Python3.12.14, Starlette0.35.1, itsdangerous2.2.0.
+Command: sh /tmp/compound-engineering-501/ce-code-review/20260920-013137-17f40697/timestamp-boundary-proof.sh
+Observed:
+{"login_status":303,"dashboard_status":200,"dashboard_sent_issued_cookie":true,"browser_test_comparison":false,"session_payload_unchanged":true}
+The command emits no cookie values and changes only a private in-process test app. It demonstrates the old post-dashboard jar comparison is wrong and that comparing the preceding request to the POST/login response cookie remains correct after a timestamp boundary. The old jar comparison should still be false after fixing the browser harness.

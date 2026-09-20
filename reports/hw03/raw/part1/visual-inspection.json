@@ -1,0 +1,33 @@
+{
+  "inspected_at": "2026-09-20T08:52:06.355062+00:00",
+  "reviewer": "Codex visual inspection",
+  "status": "pass",
+  "observations": "All 19 screenshots were visually inspected in the preliminary capture. Final capture retains 17 byte-identical images. The two updated evidence viewers were opened and visually inspected again: readable, accurate labels, no clipping or overlap. Full-page home captures retain rental controls and are tall by design.",
+  "prior_full_inspection_at": "2026-09-20T08:32:40.542679+00:00",
+  "final_capture_reinspected_files": [
+    "reports/hw03/screenshots/part1/cookie-header.png",
+    "reports/hw03/screenshots/part1/templates-directory.png"
+  ],
+  "byte_identical_to_inspected_images": 17,
+  "files": {
+    "reports/hw03/screenshots/part1/cookie-header.png": "ebf90fb2e454d496e68d72ece55bcdcb08402d6cec886ad86ccd7436a097ca29",
+    "reports/hw03/screenshots/part1/desktop-authenticated-home.png": "200f488cf697d2c05e916a134d16d06d88c28d8dc0c88454b0975163e708e46c",
+    "reports/hw03/screenshots/part1/desktop-dashboard.png": "d0efea78cbf6c4a3c5fb7a8b676c6b1ba7250684e0b8a2c77ff5ae0291f2b1be",
+    "reports/hw03/screenshots/part1/desktop-home.png": "65e0180dfc9185b2f2e9cdb1a5ed0a682e01c9be1fb32fa7e1160f0a8380b643",
+    "reports/hw03/screenshots/part1/desktop-invalid-login.png": "18fea7ce011a3ff1f27d348f88fc8f43221507d619d13c1e8979e01b58148102",
+    "reports/hw03/screenshots/part1/desktop-login.png": "64bc079dc5968f2e26b5789c95f1c9f16036098cab138e29f9e21a30cd189530",
+    "reports/hw03/screenshots/part1/desktop-logout-replay-denied.png": "64bc079dc5968f2e26b5789c95f1c9f16036098cab138e29f9e21a30cd189530",
+    "reports/hw03/screenshots/part1/desktop-post-logout.png": "65e0180dfc9185b2f2e9cdb1a5ed0a682e01c9be1fb32fa7e1160f0a8380b643",
+    "reports/hw03/screenshots/part1/idle-before-expiry.png": "28b01158f399666acfc0d7005447063ad93959270533d887bb6ea70ff0606d09",
+    "reports/hw03/screenshots/part1/idle-expired-login.png": "64bc079dc5968f2e26b5789c95f1c9f16036098cab138e29f9e21a30cd189530",
+    "reports/hw03/screenshots/part1/idle-replay-denied.png": "64bc079dc5968f2e26b5789c95f1c9f16036098cab138e29f9e21a30cd189530",
+    "reports/hw03/screenshots/part1/mobile-authenticated-home.png": "b488492fad23378f78ef82ff154ab34341f50da3dee0da5f21a26e5375ca666e",
+    "reports/hw03/screenshots/part1/mobile-dashboard.png": "6c0cb4a6d0d22765263f1283085665f03fbc1bd12fdfc191734aa67e989c5526",
+    "reports/hw03/screenshots/part1/mobile-home.png": "445e55ad49a5dc0def0093641ead95a3035fcea26ba1393cd20c4869911884fb",
+    "reports/hw03/screenshots/part1/mobile-invalid-login.png": "fd04177c7a40fcb15b54d7ba30650e19023febc4e0400cd6f60c05cb03935d18",
+    "reports/hw03/screenshots/part1/mobile-login.png": "445a0af996944a1b1c07b21b803c9d84fdfcd1a7d8364f8dea5bfe611685e6c3",
+    "reports/hw03/screenshots/part1/mobile-logout-replay-denied.png": "445a0af996944a1b1c07b21b803c9d84fdfcd1a7d8364f8dea5bfe611685e6c3",
+    "reports/hw03/screenshots/part1/mobile-post-logout.png": "445e55ad49a5dc0def0093641ead95a3035fcea26ba1393cd20c4869911884fb",
+    "reports/hw03/screenshots/part1/templates-directory.png": "92d1ee348ac37716e56f3fd9497f157fbc20a06521dcc5f0b8b0c0d6b106b5b8"
+  }
+}

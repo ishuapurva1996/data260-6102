@@ -1,0 +1,31 @@
+{
+  "audited_at": "2026-09-20T08:52:31.577851+00:00",
+  "code_commit": "015c8224ea9a0aa265385931c1fb81ecba409313",
+  "code_paths_within_part1_ownership": true,
+  "changed_code_paths": [
+    "code/web_application/README.md",
+    "code/web_application/main.py",
+    "code/web_application/routers/__init__.py",
+    "code/web_application/routers/auth.py",
+    "code/web_application/session_store.py",
+    "code/web_application/static/bootstrap.LICENSE.txt",
+    "code/web_application/static/bootstrap.min.css",
+    "code/web_application/static/styles.css",
+    "code/web_application/templates/base.html",
+    "code/web_application/templates/dashboard.html",
+    "code/web_application/templates/index.html",
+    "code/web_application/templates/login.html",
+    "requirements.txt",
+    "scripts/run_hw03_web.py",
+    "scripts/verify_hw03_part1.py",
+    "tests/browser_hw03_auth.cjs",
+    "tests/test_hw03_auth.py"
+  ],
+  "evidence_file_count_before_this_receipt": 55,
+  "no_private_key_or_unredacted_session_cookie_pattern_found": true,
+  "verified_check_count": 192,
+  "shared_checkout_clean_at_common_base": true,
+  "final_hw3_tag_absent": true,
+  "excluded": "Part 2, aggregate report paths, root README/.gitignore/package files, environments, TLS private keys, assignment/tutor inputs and plans.",
+  "manual_visual_acceptance": "See visual-inspection.json: all 19 delivered images accepted."
+}

@@ -1,0 +1,7 @@
+Started UTC: 2026-09-20T08:41:36.322252+00:00
+Command: lsof -nP -iTCP:8702 -sTCP:LISTEN
+COMMAND     PID         USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
+python3.1 50746 pragyaapurva   10u  IPv4 0xa6eca1bbab5d807d      0t0  TCP 127.0.0.1:8702 (LISTEN)
+
+Exit code: 0
+Ended UTC: 2026-09-20T08:41:36.368502+00:00

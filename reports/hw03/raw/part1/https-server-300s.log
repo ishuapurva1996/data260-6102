@@ -1,0 +1,50 @@
+INFO:     Started server process [78374]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on https://[::1]:8702 (Press CTRL+C to quit)
+INFO:     ::1:55783 - "GET / HTTP/1.1" 200 OK
+INFO:     ::1:55783 - "GET /static/bootstrap.min.css HTTP/1.1" 200 OK
+INFO:     ::1:55787 - "GET /static/app.js HTTP/1.1" 200 OK
+INFO:     ::1:55786 - "GET /static/styles.css HTTP/1.1" 200 OK
+INFO:     ::1:55783 - "GET /api/rentals HTTP/1.1" 200 OK
+INFO:     ::1:55783 - "GET /login HTTP/1.1" 200 OK
+INFO:     ::1:55783 - "GET /dashboard HTTP/1.1" 303 See Other
+INFO:     ::1:55783 - "GET /login HTTP/1.1" 200 OK
+INFO:     ::1:55783 - "POST /login HTTP/1.1" 401 Unauthorized
+INFO:     ::1:55783 - "GET /login HTTP/1.1" 200 OK
+INFO:     ::1:55783 - "POST /login HTTP/1.1" 303 See Other
+INFO:     ::1:55783 - "GET /dashboard HTTP/1.1" 200 OK
+INFO:     ::1:55783 - "GET / HTTP/1.1" 200 OK
+INFO:     ::1:55783 - "GET /api/rentals HTTP/1.1" 200 OK
+INFO:     ::1:55783 - "GET /logout HTTP/1.1" 303 See Other
+INFO:     ::1:55783 - "GET / HTTP/1.1" 200 OK
+INFO:     ::1:55783 - "GET /api/rentals HTTP/1.1" 200 OK
+INFO:     ::1:55792 - "GET /dashboard HTTP/1.1" 303 See Other
+INFO:     ::1:55792 - "GET /login HTTP/1.1" 200 OK
+INFO:     ::1:55792 - "GET /static/bootstrap.min.css HTTP/1.1" 200 OK
+INFO:     ::1:55794 - "GET /static/styles.css HTTP/1.1" 200 OK
+INFO:     ::1:55796 - "GET / HTTP/1.1" 200 OK
+INFO:     ::1:55796 - "GET /static/bootstrap.min.css HTTP/1.1" 200 OK
+INFO:     ::1:55799 - "GET /static/styles.css HTTP/1.1" 200 OK
+INFO:     ::1:55800 - "GET /static/app.js HTTP/1.1" 200 OK
+INFO:     ::1:55796 - "GET /api/rentals HTTP/1.1" 200 OK
+INFO:     ::1:55796 - "GET /login HTTP/1.1" 200 OK
+INFO:     ::1:55796 - "GET /dashboard HTTP/1.1" 303 See Other
+INFO:     ::1:55796 - "GET /login HTTP/1.1" 200 OK
+INFO:     ::1:55796 - "POST /login HTTP/1.1" 401 Unauthorized
+INFO:     ::1:55796 - "GET /login HTTP/1.1" 200 OK
+INFO:     ::1:55796 - "POST /login HTTP/1.1" 303 See Other
+INFO:     ::1:55796 - "GET /dashboard HTTP/1.1" 200 OK
+INFO:     ::1:55796 - "GET / HTTP/1.1" 200 OK
+INFO:     ::1:55796 - "GET /api/rentals HTTP/1.1" 200 OK
+INFO:     ::1:55796 - "GET /logout HTTP/1.1" 303 See Other
+INFO:     ::1:55796 - "GET / HTTP/1.1" 200 OK
+INFO:     ::1:55796 - "GET /api/rentals HTTP/1.1" 200 OK
+INFO:     ::1:55802 - "GET /dashboard HTTP/1.1" 303 See Other
+INFO:     ::1:55802 - "GET /login HTTP/1.1" 200 OK
+INFO:     ::1:55802 - "GET /static/bootstrap.min.css HTTP/1.1" 200 OK
+INFO:     ::1:55804 - "GET /static/styles.css HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [78374]
