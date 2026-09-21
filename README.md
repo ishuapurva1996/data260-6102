@@ -4,11 +4,12 @@ This repository uses SID4 `6102`, port `8702`, prefix `s6102`, seed `6102`, veri
 
 Repository: [github.com/ishuapurva1996/data260-6102](https://github.com/ishuapurva1996/data260-6102)
 
-## HW3 — local review package
+## HW3 — approved submission package
 
-HW3 extends this same repository with cookie-based login/logout and a local retrieval comparison. The combined work is prepared on `codex/hw3-integration` for student review; publication, final Git tags, collaborator checks, and course upload remain pending.
+HW3 extends this same repository with cookie-based login/logout and a local retrieval comparison. The student has approved the combined code, report, and evidence for final commits, tagging, and GitHub publication. The integration branch is `codex/hw3-integration`. The verified implementation is commit `96b04abc04bb4cde131958ba38f37116336a4442`, selected for the `hw3-code` tag; the `hw3` tag will identify the complete submission package. Publication and collaborator-access checks are tracked separately in the submission checklist.
 
-- [Combined report](reports/hw03/report.pdf), [AI-use disclosure](reports/hw03/AI_USE.md), and [submission checklist](reports/hw03/SUBMISSION_CHECKLIST.md)
+- [Combined report](reports/hw03/report.pdf), [GitHub report location](https://github.com/ishuapurva1996/data260-6102/blob/main/reports/hw03/report.pdf), [AI-use disclosure](reports/hw03/AI_USE.md), and [submission checklist](reports/hw03/SUBMISSION_CHECKLIST.md)
+- Publication targets: [complete submission — hw3](https://github.com/ishuapurva1996/data260-6102/tree/hw3) and [verified code — hw3-code](https://github.com/ishuapurva1996/data260-6102/tree/hw3-code). Confirm these links after the approved push.
 - [Exact setup, run and verification commands](reports/hw03/REPRODUCIBLE_RUN_INSTRUCTIONS.md)
 - [Integrated verification](reports/hw03/verification.json) and [run log](reports/hw03/RUN_LOG.txt)
 - [Part 1 authentication explanation](reports/hw03/part1/REPORT_SECTION.md) and [web application guide](code/web_application/README.md)
@@ -31,7 +32,7 @@ Check the saved retrieval experiment without repeating its measurements:
 python3 scripts/verify_hw03.py --require-report
 ```
 
-The aggregate verifier invokes the two part verifiers using their separate environments. It checks current source provenance and report build hashes, records actual subprocess outcomes in a new `raw/integration/` directory, and leaves publication status pending. It does not replace the separate browser, full retrieval-test, or PDF visual checks documented in the run instructions. Its Part 1 subprocess reruns the 84 web/API tests and refreshes `raw/part1/self-check-pytest.txt`.
+The aggregate verifier invokes the two part verifiers using their separate environments. It checks current source provenance and report build hashes, records actual subprocess outcomes in a new `raw/integration/` directory, and keeps local verification separate from publication and collaborator-access checks. It does not replace the separate browser, full retrieval-test, or PDF visual checks documented in the run instructions. Its Part 1 subprocess reruns the 84 web/API tests and refreshes `raw/part1/self-check-pytest.txt`.
 
 ## Repository structure
 

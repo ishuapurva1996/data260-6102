@@ -1,5 +1,5 @@
 {
-  "captured_at": "2026-09-20T09:26:27.875Z",
+  "captured_at": "2026-09-21T06:41:18.792Z",
   "browser_version": "151.0.7922.34",
   "source_run": "baseline-20260920",
   "viewport": {
@@ -16,52 +16,52 @@
     {
       "name": "token",
       "width": 1000,
-      "height": 734,
+      "height": 666,
       "overflow": false,
       "source": "reports/hw03/raw/integration/evidence_view/token.html",
-      "source_sha256": "edc65e645bf8eaccdefcdacdc15503c5f85d14de597a404d0331a51be041b7f3",
+      "source_sha256": "c734761bfb3ab5eab44f5a5a41fc6dfbdb7d4f4866a0ff0ca4acbd74febb5260",
       "screenshot": "reports/hw03/screenshots/integration/token.png",
-      "screenshot_sha256": "f33cf2b63c089e03a35d45e30a2450fcd156652630c276b7d252b0c9d6bb4a21"
+      "screenshot_sha256": "27a1002f158b3db450e480c337882399dd03ac7cbd9974ff1cb54b5776792125"
     },
     {
       "name": "semantic",
       "width": 1000,
-      "height": 734,
+      "height": 666,
       "overflow": false,
       "source": "reports/hw03/raw/integration/evidence_view/semantic.html",
-      "source_sha256": "c32a9fda56a3fa936842fc466412aabfe82eca0cf32b25644f3e1ac75df4544f",
+      "source_sha256": "b08408dd4e5b7ab2f066e2121084da5485ff0f8b9aa5b704a40432f593a80dfa",
       "screenshot": "reports/hw03/screenshots/integration/semantic.png",
-      "screenshot_sha256": "d5ade2a28118b0cbd2d4b851cf9de8ce2f4ebf06941d94d89ba20254b5a9a831"
+      "screenshot_sha256": "f49e06f9666702dfb11a89d35401e114098ddc2173e49cf5f6e7c3778b006876"
     },
     {
       "name": "sentence_window",
       "width": 1000,
-      "height": 734,
+      "height": 666,
       "overflow": false,
       "source": "reports/hw03/raw/integration/evidence_view/sentence_window.html",
-      "source_sha256": "fc24ead3d3ce97d15aa03b69014c9857e7f8b12d62d80d9f1e849fb6818744b1",
+      "source_sha256": "03ad69b0b2a2afac987238c6a4ff4c89e38f47829c4e9fc7b85a48be521c8759",
       "screenshot": "reports/hw03/screenshots/integration/sentence_window.png",
-      "screenshot_sha256": "2ff157858ee0103417765753feb8b93eb97ea62e4a596259fc1c8f121850f155"
+      "screenshot_sha256": "218fcb8879f19600fd34613dabbe01a4832bf2281872c5a90528575a51fa38db"
     },
     {
       "name": "metrics",
       "width": 1000,
-      "height": 671,
+      "height": 603,
       "overflow": false,
       "source": "reports/hw03/raw/integration/evidence_view/metrics.html",
-      "source_sha256": "6dda17360d74b68fe69fefcb9559a1f82351b317936cdeadb1d7b25c2347c802",
+      "source_sha256": "706ab8ecff1fa61a000d19c1ebf5e4716999645de953ef3a82129e27a313c874",
       "screenshot": "reports/hw03/screenshots/integration/metrics.png",
-      "screenshot_sha256": "e27f3259a5d37e44a4e702a7c186aa7e6950979e97b5b672cd6a59c954a62b67"
+      "screenshot_sha256": "d241b6ac84583caa8f7ccbc49cd785eb9f493a0660edbedfb294280721068983"
     },
     {
       "name": "failure",
       "width": 1000,
-      "height": 1199,
+      "height": 1131,
       "overflow": false,
       "source": "reports/hw03/raw/integration/evidence_view/failure.html",
-      "source_sha256": "e9e3dd56fa502471db0e1f87919294c659196aad9e552c9e53b1a017d00c2f32",
+      "source_sha256": "91d577857388557f8cdce50b74215608fc96240b6920e40d5b36c9f65921db80",
       "screenshot": "reports/hw03/screenshots/integration/failure.png",
-      "screenshot_sha256": "030dd8fd5375ea744c0ab9895f472dc925df6e48c86a19be1d2e1d541a4eb918"
+      "screenshot_sha256": "b002a300fa42dfc4217336b6586290b2cb3276390e27231740f9330d476146c7"
     }
   ]
 }

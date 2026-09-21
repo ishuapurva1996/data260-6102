@@ -175,9 +175,9 @@ def main(argv=None):
               'started_at': started, 'finished_at': utc_now(), 'provenance': provenance,
               'parts': parts, 'checks': checks, 'report_package_checked': args.require_report,
               'scope': 'Local integrated evidence verification; fresh browser/full retrieval tests and PDF visual QA are recorded separately.',
-              'submission': {'review': 'pending_student_review', 'tags': 'intentionally_pending',
-                             'github_publication': 'intentionally_pending', 'collaborator_access': 'not_checked',
-                             'course_upload': 'not_performed'}}
+              'submission': {'review': 'not_checked_by_this_verifier', 'tags': 'not_checked_by_this_verifier',
+                             'github_publication': 'not_checked_by_this_verifier', 'collaborator_access': 'not_checked',
+                             'course_upload': 'not_checked'}}
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(result, indent=2) + '\n')
     print(f'HW3 integrated verification: {status}')

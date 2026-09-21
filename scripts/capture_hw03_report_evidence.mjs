@@ -24,7 +24,7 @@ const css = `*{box-sizing:border-box}body{margin:0;padding:24px;background:#fff;
 fs.mkdirSync(htmlDir, {recursive: true});
 fs.mkdirSync(shots, {recursive: true});
 function writePage(name, title, body) {
-  const doc = `<!doctype html><html><head><meta charset="utf-8"><title>${escape(title)}</title><style>${css}</style></head><body><h1>${escape(title)}</h1><div class="meta">Actual saved output | ${escape(run.run_id)} | ${escape(run.started_at)}<br>Retrieval code ${run.code_commit.slice(0,12)} | Input freeze ${run.freeze_commit.slice(0,12)}</div>${body}<footer>Browser view of saved experiment evidence. Layout reflowed for the report; retrieval values unchanged. No generated answer.</footer></body></html>`;
+  const doc = `<!doctype html><html><head><meta charset="utf-8"><title>${escape(title)}</title><style>${css}</style></head><body><h1>${escape(title)}</h1>${body}</body></html>`;
   fs.writeFileSync(path.join(htmlDir, name + '.html'), doc);
 }
 for (const technique of ['token', 'semantic', 'sentence_window']) {

@@ -1,8 +1,10 @@
 # Reproduce and verify the integrated HW3 submission
 
-Run commands from this Git repository's root. The local review checkout is `/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/integration`. Python 3.12 is recommended; the recorded runtime was 3.12.14 on macOS arm64. Part 1 and Part 2 have separate environments. No API key, hosted model, or paid service is needed.
+Run commands from this Git repository's root. The integration checkout is `/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/integration`. Python 3.12 is recommended; the recorded runtime was 3.12.14 on macOS arm64. Part 1 and Part 2 have separate environments. No API key, hosted model, or paid service is needed.
 
-The report identifies the tested local code commit. Final tags, GitHub publication, collaborator access confirmation, and course upload are deliberately pending student review. Inspect `verification.json` and `RUN_LOG.txt` for what was actually run; a command listed here is not itself execution evidence.
+The student has approved the combined submission for final commits, tagging, and GitHub publication. The report identifies tested code commit `96b04abc04bb4cde131958ba38f37116336a4442`, selected for `hw3-code`. The required `hw3` tag will identify the complete code/report/evidence package. Inspect `verification.json` and `RUN_LOG.txt` for actual local checks, and the [submission checklist](SUBMISSION_CHECKLIST.md) for publication, collaborator access, and course-upload completion; listing a command or link is not evidence that it succeeded.
+
+Publication targets: [report on main](https://github.com/ishuapurva1996/data260-6102/blob/main/reports/hw03/report.pdf), [complete submission at hw3](https://github.com/ishuapurva1996/data260-6102/tree/hw3), and [tested code at hw3-code](https://github.com/ishuapurva1996/data260-6102/tree/hw3-code). Verify these destinations after pushing.
 
 ## Prepare environments
 
@@ -72,17 +74,18 @@ A passing result requires successful subprocess exits, passing part payloads, co
 
 ## Assemble and check the report
 
-The report build script uses the source sections, screenshots, AI-use answers, and measured results to produce `report.pdf`, a generated Markdown reference (`report.md`), and `report-build.json`. The builder and generated report package remain uncommitted during disclosure review. Edit the narrative in `scripts/build_hw03_report.py` or its input files and regenerate; editing the generated Markdown alone does not change the PDF.
+The report build script uses the source sections, screenshots, AI-use answers, and measured results to produce `report.pdf`, a generated Markdown reference (`report.md`), and `report-build.json`. Edit the narrative in `scripts/build_hw03_report.py` or its input files and regenerate; editing the generated Markdown alone does not change the PDF.
 
 ```bash
 python3.12 -m venv .venv-report
 .venv-report/bin/python -m pip install -r requirements-report.txt
 .venv-report/bin/python scripts/build_hw03_report.py \
   --code-ref 96b04abc04bb4cde131958ba38f37116336a4442 \
+  --code-tag hw3-code \
   --upload-copy ../../Apurva_HW3.pdf
 ```
 
-The optional upload destination may be any chosen path outside the repository; the current working copy uses the assignment's `HW3/Apurva_HW3.pdf` location. The recorded build used the bundled document runtime with the same pinned packages. Installation needs network; assembly itself uses only saved local inputs. The code reference above matches the completed integration checks in `raw/integration/checks.json`. If runtime source changes, commit and rerun affected checks, then use the resulting verified reference instead of silently relabeling old evidence. Later documentation and verifier-only commits do not change the runtime that produced these checks.
+The optional upload destination may be any chosen path outside the repository; the current working copy uses the assignment's `HW3/Apurva_HW3.pdf` location. The recorded build used the bundled document runtime with the same pinned packages. Installation needs network; assembly itself uses only saved local inputs. The code reference above matches the completed integration checks in `raw/integration/checks.json`; create and verify its `hw3-code` tag before the final build. If runtime source changes, commit and rerun affected checks, then use the resulting verified reference instead of silently relabeling old evidence. Later documentation and verifier-only commits do not change the runtime that produced these checks.
 
 The manifest records the tested-code commit, PDF and Markdown hashes, consumed source hashes and page count. It requires successful integration receipts before generating the report. Final visual review is a separate step.
 
@@ -96,4 +99,4 @@ python3 scripts/verify_hw03.py --require-report --smoke
 
 `--require-report` checks the required shared files, PDF file markers, manifest hashes and tested-code ancestry. It does **not** claim to render the PDF or judge visual quality. Keep the actual page inspection result separately in the integration log/evidence. Build inputs should not include a subsequently rewritten aggregate `verification.json`, which would create a freshness cycle.
 
-The submission PDF inside Git is `reports/hw03/report.pdf`. The external upload copy is `Apurva_HW3.pdf`; compare its SHA-256 with the repository copy after every report revision. Local commits save review checkpoints. Do not push, create final tags, or submit until the student approves the package.
+The submission PDF inside Git is `reports/hw03/report.pdf`. The external upload copy is `Apurva_HW3.pdf`; compare its SHA-256 with the repository copy after every report revision. The student has approved final commits, Git tags and GitHub publication. Commit the complete package, publish the approved branch and tags, then verify the remote report and tag links plus collaborator access. Course-portal upload is a separate completion step; confirm the uploaded filename and successful submission receipt.

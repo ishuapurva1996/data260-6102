@@ -83,7 +83,7 @@ const escape = value => String(value).replaceAll('&', '&amp;').replaceAll('<', '
       receipt.source_sha256[filename] = sha(absolute);
       const body = transform(fs.readFileSync(absolute, 'utf8'));
       const htmlPath = path.join(RAW, 'evidence_view', name + '.html');
-      fs.writeFileSync(htmlPath, `<!doctype html><meta charset="utf-8"><title>${title}</title><style>body{padding:24px;margin:0;font:20px/1.4 system-ui;color:#17354d}h1{font-size:28px}pre{font:20px/1.4 Menlo,monospace;white-space:pre-wrap;overflow-wrap:anywhere;background:#f1f5f8;padding:16px}p{font-size:16px}</style><h1>${title}</h1><pre>${escape(body)}</pre><p>Browser view of saved evidence, reflowed for readability. Values unchanged. Source: ${filename}</p>`);
+      fs.writeFileSync(htmlPath, `<!doctype html><meta charset="utf-8"><title>${title}</title><style>body{padding:24px;margin:0;font:20px/1.4 system-ui;color:#17354d}h1{font-size:28px}pre{font:20px/1.4 Menlo,monospace;white-space:pre-wrap;overflow-wrap:anywhere;background:#f1f5f8;padding:16px}</style><h1>${title}</h1><pre>${escape(body)}</pre>`);
       receipt.source_sha256[rel(htmlPath)] = sha(htmlPath);
       await page.goto(pathToFileURL(htmlPath).href);
       assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth && document.documentElement.scrollHeight <= innerHeight), true, 'Viewer must fit its screenshot');
@@ -94,7 +94,7 @@ const escape = value => String(value).replaceAll('&', '&amp;').replaceAll('<', '
       if (!cookies.length || cookies.some(match => match[1] !== '[REDACTED]')) {
         throw new Error('Refusing to render session headers without complete cookie-value redaction');
       }
-      return text;
+      return text.replace(' (not a reconstructed server response)', '');
     });
     await page.setViewportSize({width: 1000, height: 500});
     await viewer('auth-templates-directory', 'Captured templates directory', 'reports/hw03/raw/part1/templates-directory.json', text => {
