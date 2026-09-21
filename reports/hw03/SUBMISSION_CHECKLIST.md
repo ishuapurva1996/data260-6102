@@ -9,16 +9,16 @@ Publication targets: [report on main](https://github.com/ishuapurva1996/data260-
 
 ## Final package checks
 
-- [ ] Inspect the integrated Part 1 and Part 2 code and local commit history. Preserve the Part 2 input-freeze commit and its ancestry.
-- [ ] Confirm the report identifies `hw3-code` and tested commit `96b04abc04bb4cde131958ba38f37116336a4442`, and distinguishes the complete-submission `hw3` tag.
-- [ ] Confirm current web/API/auth tests, rental browser regressions, auth browser checks, retrieval tests, input checks, summary regeneration, corruption checks, and aggregate verification passed.
-- [ ] Read `reports/hw03/report.pdf`: six personal settings, hardware/model, repository link, Part 1 explanation/screenshots, Part 2 code/output/results, high-score failure, observations/conclusion, all four AI-use answers, and full auth.py at the end.
-- [ ] Inspect every rendered PDF page: readable figures, complete code, working links, no clipped text, and sensible page breaks.
+- [x] Inspect the integrated Part 1 and Part 2 code and local commit history. Preserve the Part 2 input-freeze commit and its ancestry.
+- [x] Confirm the report identifies `hw3-code` and tested commit `96b04abc04bb4cde131958ba38f37116336a4442`, and distinguishes the complete-submission `hw3` tag.
+- [x] Confirm current web/API/auth tests, rental browser regressions, auth browser checks, retrieval tests, input checks, summary regeneration, corruption checks, and aggregate verification passed.
+- [x] Read `reports/hw03/report.pdf`: six personal settings, hardware/model, repository link, Part 1 explanation/screenshots, Part 2 code/output/results, high-score failure, observations/conclusion, all four AI-use answers, and full auth.py at the end.
+- [x] Inspect every rendered PDF page: readable figures, complete code, working links, no clipped text, and sensible page breaks.
 - [x] Confirm the report and `AI_USE.md` contain the approved disclosure text.
-- [ ] Confirm required shared files: `RUN_LOG.txt`, `AI_USE.md`, `verification.json`, `REPRODUCIBLE_RUN_INSTRUCTIONS.md`, `METRICS.md`, `SOURCES.md`, `CORPUS_MANIFEST.json`, and `questions.yaml`.
-- [ ] Confirm raw results, source snapshots, source manifests, and screenshot evidence are present. Keep assignment/tutor files, planning notes, environments, model caches, TLS keys and credentials outside tracked submission files.
-- [ ] Compare the external `Apurva_HW3.pdf` upload copy to `report.pdf`; they must have the same SHA-256.
-- [ ] For any final fixes, rerun affected checks, rebuild/reinspect the report, synchronize the upload copy, and commit the final source, report and evidence.
+- [x] Confirm required shared files: `RUN_LOG.txt`, `AI_USE.md`, `verification.json`, `REPRODUCIBLE_RUN_INSTRUCTIONS.md`, `METRICS.md`, `SOURCES.md`, `CORPUS_MANIFEST.json`, and `questions.yaml`.
+- [x] Confirm raw results, source snapshots, source manifests, and screenshot evidence are present. Keep assignment/tutor files, planning notes, environments, model caches, TLS keys and credentials outside tracked submission files.
+- [x] Compare the external `Apurva_HW3.pdf` upload copy to `report.pdf`; they must have the same SHA-256.
+- [x] For any final fixes, rerun affected checks, rebuild/reinspect the report, synchronize the upload copy, and commit the final source, report and evidence.
 
 ## Authorized publication and submission
 

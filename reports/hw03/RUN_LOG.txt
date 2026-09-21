@@ -1155,3 +1155,17 @@ part1: pass (exit 0)
 part2: pass (exit 0)
 Tags, publishing, collaborator access and course upload are not verified.
 The combined verification JSON and report package remain uncommitted drafts; individual part receipts below this directory retain exact output.
+
+
+HW3 approved submission verification
+Started UTC: 2026-09-21T07:18:12.156023+00:00
+Finished UTC: 2026-09-21T07:18:20.628537+00:00
+Code/report package commit: 25665d97e5cd341925182f442f5ce73e99799ed2
+Command: python scripts/verify_hw03.py --require-report --smoke
+Result: pass; Part 1 pass; Part 2 pass, including cached-model smoke check.
+Detailed receipt: reports/hw03/verification.json
+Part receipts: reports/hw03/raw/integration/20260921T071812156107Z
+Final PDF SHA-256: 4fad31c20577929d4bb7baa7440da4db5a06ea09d19687811dc3a8637ceb5bc0
+Rendered review: all 25 pages checked across revisions; final change only page 1, visually checked.
+hw3-code resolves to 96b04abc04bb4cde131958ba38f37116336a4442.
+GitHub Manage access: Sbnikitha and supriyaselvanganesan both confirmed as Collaborator; raw/integration/github-access.json.

@@ -49,12 +49,15 @@
   "checks": {
     "output_copies_identical": true,
     "no_draft_instruction_or_placeholder_text": true,
-    "aggregate_verification": "awaiting_final_committed_source_check",
+    "aggregate_verification": "pass",
     "four_ai_use_answers": true,
     "embedded_process_footers_removed": true,
     "repeated_baseline_run_header_removed": true,
-    "repeated_commit_header_removed": true
+    "repeated_commit_header_removed": true,
+    "aggregate_verification_receipt": "reports/hw03/verification.json",
+    "cached_model_smoke": "pass",
+    "code_tag_matches_tested_commit": true
   },
   "ai_disclosure_approval": "approved_by_user_2026-09-21",
-  "publication": "authorized_by_user_pending_remote_verification"
+  "publication": "GitHub verification occurs after committing this local review record."
 }

@@ -1,0 +1,178 @@
+{
+  "schema_version": 1,
+  "assignment": "HW3",
+  "status": "pass",
+  "started_at": "2026-09-21T07:18:12.156023+00:00",
+  "finished_at": "2026-09-21T07:18:20.628537+00:00",
+  "provenance": {
+    "checkout_commit": "25665d97e5cd341925182f442f5ce73e99799ed2",
+    "branch": "codex/hw3-integration",
+    "working_tree_status": "M reports/hw03/raw/part1/self-check-pytest.txt\n?? reports/hw03/raw/integration/20260921T064912554232Z/\n?? reports/hw03/raw/integration/20260921T071812156107Z/\n?? reports/hw03/verification.json",
+    "source_sha256": {
+      "code/retrieval_compare.py": "083c90e66900a7ebb832b14646f826d8d8b7482eda99f5c4509f6b683706e68f",
+      "code/retrieval_summarize.py": "aaf3561679bb6b2706effbe01afde1215620b1ac3be0d2367aaf3d74858dd5a8",
+      "code/web_application/README.md": "06854cd91185863474729b28e11dae1a417f57d3f78ed60d4782518214cb8958",
+      "code/web_application/main.py": "0b0170afd609d9cfe94b41463838e0e6bb15621ce563acbc386c302d7bc8d74f",
+      "code/web_application/routers/__init__.py": "e940586d67bb15ff7ea19688e0c562dc2232bfcc48fc7db009ed383b06c5f672",
+      "code/web_application/routers/auth.py": "84c8a889bbe4eecd5dd8667906260d4baf84ecab8d3af7897239f692508b0345",
+      "code/web_application/session_store.py": "e404885977d088c1c21f39c1216e23b2be38df193857bb861d2b17c5e61966e2",
+      "code/web_application/static/app.js": "eda37f2102208b8ad74c3157699b7558c6b324d515f7648ad9915ed3173d04aa",
+      "code/web_application/static/bootstrap.LICENSE.txt": "3d0b0c88216e4752b9afd3d24e36faaf27873b5a45a61458bb3c83e794c26832",
+      "code/web_application/static/bootstrap.min.css": "3017df4a76db5f01c2b99b603d88b03106df13bcfe18e67b7c13c2341d3a67df",
+      "code/web_application/static/styles.css": "8a7a5f932739672ea6bbcc8013e6c0096f4eaa92c630f79273cba89e2f2437f5",
+      "code/web_application/templates/base.html": "2275d263e6a20c528d14c1eaa343d71e7505458d4941f4cd92bbd7a9cdcbf757",
+      "code/web_application/templates/dashboard.html": "f1d556cebc976752bbffaa595c58f75f88a71b79ef6f183a9cb83b183c4180a9",
+      "code/web_application/templates/index.html": "036d66065f80809d8f3edfd9ee77502635811d948c01f191d63237cf267baa80",
+      "code/web_application/templates/login.html": "a8a745b06695762d4f9fc75792c47d02efdb62cbd1ab86bfbd7a7838ce1ae353",
+      "package.json": "c46f0187bd38371e2cf2a007a6fb03634db19268bded5b9ecc5d0288a1eb2b14",
+      "requirements-retrieval.txt": "e1eca779bc1d7b70ce2cfe3a1f8801eda6ef22211e49ab31bc15c7757b6ae2b2",
+      "requirements.txt": "f5e0a0e8a13d6074c6ece7697a76fc5f0ed2440f814eaded45b954313d28b2f9",
+      "scripts/run_hw03_web.py": "144906135c9ff8ab52caf04539fdd42b06413cce11c483537a218900c2e7bcd6",
+      "scripts/verify_hw03.py": "695df90653ed178bc6fea2f9ea43eae9c54c27d0b0dab188b81371fcdc2f9f5d",
+      "scripts/verify_hw03_part1.py": "2265781d43ac0231849b9b4a383e7c2edfa8828deb0ec16467c2d2df09ca6762",
+      "scripts/verify_hw03_part2.py": "df123c80091aa7b60b8c6cae62fd3e90ac330a06dadd969f0ac3e16511dfcedd",
+      "src/retrieval/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "src/retrieval/artifacts.py": "6eaba819601eec28141b6a6f0a8d3a46656a7e1a9e00c2107888cf10b802eabe",
+      "src/retrieval/chunking.py": "49ea05a9ade6ec956a56cfb7f7c4516893d76d94b4bcc411110ae1b333842394",
+      "src/retrieval/config.py": "86f19d00ccaf22fd00bd115239df56abeac679354aa1c684c3d78d8f4f1322ea",
+      "src/retrieval/corpus.py": "d91e7b9ea009846ea2c5968068f87df60c670912ee2b0fe87bc4bfcc99fdf6ff",
+      "src/retrieval/embedding.py": "ee8e7243c9327cb424f3830ea863a27073e8b0695cba2c98f8457df6b9cee23e",
+      "src/retrieval/evaluation.py": "a93f0aa4d8087db4eb5e4bd5bf12ea21014f5bfb9142abb15b3e58acc7775f58",
+      "src/retrieval/indexing.py": "ff4211b2e87262095f55923d891265603073b43865628c6ca39affd2fdea4795",
+      "src/retrieval/metrics.py": "2a75b26793114f2059986669bfb8ed0bcaa1ef4b979b4174f4cc83b6b5d287a9",
+      "tests/browser_hw03_auth.cjs": "d39715a7209d87a77f09f960abf29961540d7630d944e88a99a451b53cd23a34",
+      "tests/browser_part2.cjs": "49d7206af9a76aa526927b1cb5cd91ef9c764d749efa1e1fd55da1998287f153",
+      "tests/retrieval/test_chunking.py": "d1d4d4898d8ddde1da89517ddc78e767ed97a08dacb40381320db6a1926dd9dd",
+      "tests/retrieval/test_corpus_and_questions.py": "524a1256266866f92d2825ff78e5c7fcee9a787c7b56c50bdfe89bcd0683f273",
+      "tests/retrieval/test_embedding_contract.py": "5f06f6fac36f07ccc1a33f51008503447a0803d87812be61210480b80328d604",
+      "tests/retrieval/test_metrics.py": "64c6284fabbe5186ef09519044f876c53fdf078eb89e89ebbec85658f633eba8",
+      "tests/retrieval/test_retrieval_records.py": "29f47b18d605233e4dc145b28bf6064252de2ce130d81cbe32d1fb49a8a8a356",
+      "tests/retrieval/test_verification.py": "68030270bc6a4193fdfd03ff217bcdd55f8ae96bd792e761f496b0c32342141a",
+      "tests/test_api.py": "c9833da43b0339618edd541bdfd92e3b72477d2107473d6e126fe348d1907abd",
+      "tests/test_hw03_auth.py": "c22c16647003415b114373ebab97c9267e6adfd539c77197c1389f363aff685c",
+      "tests/test_hw03_integration.py": "1c67ec926e6f8ab787c5cb1fa0239a5abfebbdb572d9706ad51efda2317b8e30"
+    },
+    "retrieval_measured_code_commit": "cc0a57bae6e19778021643bffebf5c66d5e7c0a3",
+    "retrieval_input_freeze_commit": "08bd6e0495ce03281aa8fab7f70ac0b51e1c1442"
+  },
+  "parts": [
+    {
+      "name": "part1",
+      "command": [
+        "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/integration/.venv-web/bin/python",
+        "scripts/verify_hw03_part1.py",
+        "--output",
+        "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/integration/reports/hw03/raw/integration/20260921T071812156107Z/part1.json"
+      ],
+      "started_at": "2026-09-21T07:18:12.156473+00:00",
+      "output": "reports/hw03/raw/integration/20260921T071812156107Z/part1.json",
+      "log": "reports/hw03/raw/integration/20260921T071812156107Z/part1.txt",
+      "exit_code": 0,
+      "reported_status": "pass",
+      "status": "pass",
+      "output_sha256": "36c4d965caeb6ec7123137f2b261b20d976ac4434085bf383354a219f685423b",
+      "finished_at": "2026-09-21T07:18:13.126070+00:00",
+      "log_sha256": "afb62c883912fffdab58e978d54050d2ea65c212d55ac9f3cf5c98661bdb6604"
+    },
+    {
+      "name": "part2",
+      "command": [
+        "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/integration/.venv-retrieval/bin/python",
+        "scripts/verify_hw03_part2.py",
+        "--run-dir",
+        "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/integration/reports/hw03/raw/part2/baseline-20260920",
+        "--require-report",
+        "--smoke",
+        "--output",
+        "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/integration/reports/hw03/raw/integration/20260921T071812156107Z/part2.json"
+      ],
+      "started_at": "2026-09-21T07:18:13.126138+00:00",
+      "output": "reports/hw03/raw/integration/20260921T071812156107Z/part2.json",
+      "log": "reports/hw03/raw/integration/20260921T071812156107Z/part2.txt",
+      "exit_code": 0,
+      "reported_status": "pass",
+      "status": "pass",
+      "output_sha256": "f80d0af4aa2c200b2c8ef18dd479eff2d55e1122098837473c5b0039468003ef",
+      "finished_at": "2026-09-21T07:18:20.015413+00:00",
+      "log_sha256": "1b6dbf699c3e624e999f2a511454b76de34f72c0408cc44a5929fbde85dc58fd"
+    }
+  ],
+  "checks": [
+    {
+      "name": "current_code_is_committed",
+      "passed": true,
+      "details": "42 source/test/dependency files match HEAD"
+    },
+    {
+      "name": "retrieval_runtime_matches_measured_baseline",
+      "passed": true,
+      "details": "12 files match"
+    },
+    {
+      "name": "retrieval_history_preserved",
+      "passed": true,
+      "details": "Input freeze and measured-code commits must both be ancestors of HEAD"
+    },
+    {
+      "name": "shared_evidence:RUN_LOG.txt",
+      "passed": true,
+      "details": "RUN_LOG.txt"
+    },
+    {
+      "name": "shared_evidence:AI_USE.md",
+      "passed": true,
+      "details": "AI_USE.md"
+    },
+    {
+      "name": "shared_evidence:REPRODUCIBLE_RUN_INSTRUCTIONS.md",
+      "passed": true,
+      "details": "REPRODUCIBLE_RUN_INSTRUCTIONS.md"
+    },
+    {
+      "name": "shared_evidence:SUBMISSION_CHECKLIST.md",
+      "passed": true,
+      "details": "SUBMISSION_CHECKLIST.md"
+    },
+    {
+      "name": "shared_evidence:METRICS.md",
+      "passed": true,
+      "details": "METRICS.md"
+    },
+    {
+      "name": "shared_evidence:SOURCES.md",
+      "passed": true,
+      "details": "SOURCES.md"
+    },
+    {
+      "name": "shared_evidence:CORPUS_MANIFEST.json",
+      "passed": true,
+      "details": "CORPUS_MANIFEST.json"
+    },
+    {
+      "name": "shared_evidence:questions.yaml",
+      "passed": true,
+      "details": "questions.yaml"
+    },
+    {
+      "name": "report_build_identity",
+      "passed": true,
+      "details": {
+        "pdf_sha256": "4fad31c20577929d4bb7baa7440da4db5a06ea09d19687811dc3a8637ceb5bc0",
+        "markdown_sha256": "3aaeda4df4f68054d5f6ab65b732d5b8e28df9d28185a3376ec2b3298df8822e",
+        "page_count_reported_by_builder": 25,
+        "source_count": 47,
+        "tested_code_commit": "96b04abc04bb4cde131958ba38f37116336a4442",
+        "visual_qa": "not performed by this verifier"
+      }
+    }
+  ],
+  "report_package_checked": true,
+  "scope": "Local integrated evidence verification; fresh browser/full retrieval tests and PDF visual QA are recorded separately.",
+  "submission": {
+    "review": "not_checked_by_this_verifier",
+    "tags": "not_checked_by_this_verifier",
+    "github_publication": "not_checked_by_this_verifier",
+    "collaborator_access": "not_checked",
+    "course_upload": "not_checked"
+  }
+}
