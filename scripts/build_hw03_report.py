@@ -31,7 +31,9 @@ from reportlab.platypus import (
 
 ROOT = Path(__file__).resolve().parents[1]
 REPORT = ROOT / "reports/hw03"
-BASELINE = "reports/hw03/raw/part2/baseline-20260920"
+BASELINE = "reports/hw03/raw/part2/manual-screenshots-20260921"
+MANUAL_SHOTS = "reports/hw03/screenshots/manual/"
+MANUAL_CAPTURE = "reports/hw03/raw/manual-captures/capture-manifest.json"
 AUTH = "code/web_application/routers/auth.py"
 WEB = "code/web_application/"
 REPO_URL = "https://github.com/ishuapurva1996/data260-6102"
@@ -160,8 +162,14 @@ def selected_lines(inputs, path, markers):
 
 
 def part2_picture(name):
-    preferred = f"reports/hw03/screenshots/integration/{name}.png"
-    return preferred if (ROOT / preferred).exists() else f"reports/hw03/screenshots/part2/{name}.png"
+    names = {
+        "token": "11-token-output.png",
+        "semantic": "12-semantic-output.png",
+        "sentence_window": "13-sentence-window-output.png",
+        "metrics": "14-comparison-table.png",
+        "failure": "15-high-score-failure.png",
+    }
+    return MANUAL_SHOTS + names[name]
 
 
 def fmt(value, places=4):
@@ -175,6 +183,19 @@ def build_pages(inputs, commit, code_tag=None):
     browser = inputs.json("reports/hw03/raw/part1/browser-evidence.json")
     hardware = inputs.json("reports/hw03/part2/hardware.json")
     checks = inputs.json("reports/hw03/raw/integration/checks.json")
+    captures = inputs.json(MANUAL_CAPTURE)
+    if captures["retrieval_run"] != BASELINE:
+        raise ValueError("Manual screenshots must identify the report's retrieval run")
+    for capture in captures["images"].values():
+        if hashlib.sha256(inputs.bytes(capture["path"])).hexdigest() != capture["sha256"]:
+            raise ValueError(f"Manual screenshot changed: {capture['path']}")
+    for source, expected in captures["retrieval_source_sha256"].items():
+        if hashlib.sha256(inputs.bytes(source)).hexdigest() != expected:
+            raise ValueError(f"Captured retrieval source changed: {source}")
+    for script in captures["support_scripts"].values():
+        for variant in ("original", "portable"):
+            if hashlib.sha256(inputs.bytes(script[variant + "_path"])).hexdigest() != script[variant + "_sha256"]:
+                raise ValueError("Screenshot helper changed since capture import")
     access = inputs.json("reports/hw03/raw/integration/github-access.json") if code_tag else None
     if access and access.get("collaborators") != {"Sbnikitha": "Collaborator", "supriyaselvanganesan": "Collaborator"}:
         raise ValueError("Expected confirmed GitHub collaborator access for the final report")
@@ -192,22 +213,14 @@ def build_pages(inputs, commit, code_tag=None):
         "reports/hw03/part2/ANSWER_SUPPORT_REVIEW.md", "reports/hw03/part2/GOLD_EVIDENCE_AUDIT.md",
         f"{BASELINE}/records.json", f"{BASELINE}/annotations.json", f"{BASELINE}/console.txt",
         "requirements-retrieval.txt", "requirements-report.txt", "scripts/build_hw03_report.py",
-        "reports/hw03/raw/integration/report-screenshot-capture.json",
-        "reports/hw03/raw/integration/auth-report-capture.json",
     ]:
         inputs.path(source)
     config = run["config"]
     method_stats = summary["baseline"]["techniques"]
-    shot = "reports/hw03/screenshots/part1/"
-    report_shot = "reports/hw03/screenshots/integration/"
-    header_path = "reports/hw03/raw/part1/desktop-login-response-headers.txt"
-    cookie_lines = [line for line in inputs.text(header_path).splitlines()
-                    if line.lower().startswith("set-cookie:")]
-    if len(cookie_lines) != 1 or "session=[REDACTED]" not in cookie_lines[0]:
-        raise ValueError("Expected exactly one fully redacted saved session Set-Cookie header")
+    shot = MANUAL_SHOTS
     pages = []
     pages.append(page("Homework 3 | Rental Housing Listings",
-        para("Pragya Apurva | DATA 260 | September 20, 2026"),
+        para("Pragya Apurva | DATA 260 | September 21, 2026"),
         table([
             ["Personal configuration", "Value", "Calculation / meaning"],
             ["SID4", "6102", "Last four student-ID digits"],
@@ -238,53 +251,64 @@ def build_pages(inputs, commit, code_tag=None):
         ], [125, WIDTH - 125]),
         excerpt(inputs, WEB + "main.py", "app.add_middleware(", "app.include_router(auth.router)"),
         para("The routes are in routers/auth.py. This single-worker teaching app uses public demo credentials and keeps sessions in memory. A restart clears them. The existing rental API remains unchanged and does not require login."),
+        figure(shot + "00-server-startup.png", "HTTPS application startup on port 8702.", max_height=125),
     ))
     pages.append(page("Part 1 | Home page",
         para("The homepage retains the rental controls and changes its navigation when a user signs in."),
         function(inputs, AUTH, "home"),
-        figure([report_shot + "auth-home.png", report_shot + "auth-authenticated-home.png"],
-               "Home before login (left) and after login (right), shown at 375 x 812 pixels.", max_height=446),
+        figure(shot + "01-home.png", "Homepage before login.", max_height=490),
     ))
-    pages.append(page("Part 1 | Login form and error message",
+    pages.append(page("Part 1 | Home after login",
+        para("After login, the homepage displays the username and links to the dashboard and logout."),
+        function(inputs, AUTH, "home"),
+        figure(shot + "05-home-logged-in.png", "Homepage with an active admin session.", max_height=490),
+    ))
+    pages.append(page("Part 1 | Login form",
+        para("The login page uses a Bootstrap card with labeled username and password fields."),
+        function(inputs, AUTH, "login_page"),
+        figure(shot + "02-login.png", "Login form.", max_height=490),
+    ))
+    pages.append(page("Part 1 | Invalid login",
         para("The form uses a Bootstrap card, labeled inputs and a submit button. Invalid credentials return HTTP 401 and display an alert above the form."),
         excerpt(inputs, AUTH, 'if username != "admin"', 'status_code=401, headers=NO_STORE,'),
-        figure([shot + "mobile-login.png", shot + "mobile-invalid-login.png"],
-               "Login form (left) and the alert after an invalid login (right), at 375px width.", max_height=446),
+        figure(shot + "03-invalid-login.png", "Alert after an invalid username or password.", max_height=490),
     ))
     pages.append(page("Part 1 | Protected dashboard",
         para("A successful login redirects to the dashboard, which displays admin and the 300-second idle limit. The route checks the server's session registry before displaying the page."),
         excerpt(inputs, AUTH, "async def dashboard", 'return RedirectResponse("/login"'),
-        figure(shot + "mobile-dashboard.png", "Dashboard after login, at 375px width. An anonymous request to this route returned HTTP 303 to /login.", max_height=456),
+        figure(shot + "04-dashboard.png", "Dashboard after a successful login.", max_height=490),
     ))
-    pages.append(page("Part 1 | Logout and cookie replay",
-        para("Logout removes the server's session entry and clears the browser cookie. To test revocation, the browser suite saves a valid cookie, logs out, then sends that old cookie to /dashboard from a fresh browser context. Access is denied."),
-        function(inputs, AUTH, "revoke_session"),
+    pages.append(page("Part 1 | Logout",
+        para("Logout removes the server's session entry, clears the browser cookie and returns to the homepage."),
         excerpt(inputs, AUTH, "async def logout", 'return RedirectResponse("/",'),
-        figure([report_shot + "auth-post-logout.png", shot + "mobile-logout-replay-denied.png"],
-               "Homepage after logout (left) and login page after reusing the old cookie (right). Both redirects returned HTTP 303.", max_height=416),
+        figure(shot + "06-after-logout.png", "Homepage after logout, with Login available again.", max_height=490),
+    ))
+    pages.append(page("Part 1 | Reusing a logged-out cookie",
+        para("The terminal check logs in and saves the cookie. It first reaches /dashboard with HTTP 200, then logs out and sends the same saved cookie again. The second dashboard request returns HTTP 303 to /login."),
+        function(inputs, AUTH, "revoke_session"),
+        figure(shot + "08-logout-replay.png", "The saved cookie is rejected after logout.", max_height=400),
     ))
     pages.append(page("Part 1 | Secure session cookie",
         para("HttpOnly prevents ordinary page JavaScript from reading the cookie. Secure restricts it to HTTPS, and SameSite=lax limits cross-site sending. Max-Age=3600 sets the cookie lifetime; the server enforces the shorter idle timeout separately."),
         excerpt(inputs, WEB + "main.py", "app.add_middleware(", "https_only=True,"),
-        code(header_path + " | captured Set-Cookie", cookie_lines[0]),
-        figure(report_shot + "auth-cookie-header.png", "HTTPS login response. The session cookie value is hidden.", max_height=335),
-        para(f"The browser ran against {browser['configuration']['base_url']} with a local self-signed certificate and sent the cookie with its dashboard request. Certificate acceptance was limited to the test browser contexts."),
+        figure(shot + "07-cookie-header.png", "Login response with HttpOnly, SameSite=lax and Secure.", max_height=335),
+        para("The curl command trusts the local development certificate for this request. It prints the response headers and hides only the cookie value."),
     ))
     pages.append(page("Part 1 | Idle timeout",
         para("A session expires after 300 seconds without activity. The server checks expiry before renewing the session. Home, login and dashboard requests renew it; static files and rental API requests do not."),
         function(inputs, WEB + "session_store.py", "cleanup"),
         table([
             ["Check", "Result"],
-            ["Copied expired cookie", "A separate server used a 2-second demo timeout. Replaying the cookie after the wait returned 303 to /login."],
+            ["Copied expired cookie", "The live check waited 301.0 seconds with the normal 300-second timeout. Replaying the saved cookie returned 303 to /login."],
             ["300-second boundary", "A controlled clock confirmed renewal before the boundary and denial at exactly the limit."],
             ["Other invalid sessions", "Changed cookies, unknown IDs, mismatched usernames and replaced logins were rejected."],
         ], [126, WIDTH - 126]),
-        figure(shot + "idle-replay-denied.png", "The copied cookie is denied after the short expiry demonstration. The application default remains 300 seconds.", max_height=245),
+        figure(shot + "09-idle-timeout.png", "The saved cookie is rejected after 301 seconds without activity.", max_height=245),
     ))
     pages.append(page("Part 1 | Bootstrap and templates",
         para("base.html shares the navbar across the home, login and dashboard pages. Bootstrap cards organize content, buttons identify actions and alerts explain errors. Bootstrap 5.3.2 is stored locally."),
         excerpt(inputs, WEB + "templates/base.html", '<nav class="navbar', '<a class="nav-link" href="/login">'),
-        figure(report_shot + "auth-templates-directory.png", "Application templates.", max_height=260),
+        figure(shot + "10-templates-directory.png", "Application templates.", max_height=260),
         para("Browser tests checked the pages at 1280px and 375px widths. The content stayed within the screen without horizontal scrolling."),
     ))
     corpus_rows = [["Source", "Document", "Text bytes"]]
@@ -362,7 +386,7 @@ def build_pages(inputs, commit, code_tag=None):
         para("All three methods found the expected source for every question. Sentence-window context supplied four complete answers, semantic splitting supplied two and token splitting supplied one."),
         table(aggregate, [103, 48, 62, 65, 65, 78, WIDTH - 421]),
         table(support, [114, 127, 127, WIDTH - 368]),
-        code("Recompute the tables from recorded results", "python code/retrieval_summarize.py \\\n  --run-dir reports/hw03/raw/part2/baseline-20260920"),
+        code("Recompute the tables from recorded results", "python code/retrieval_summarize.py \\\n  --run-dir reports/hw03/raw/part2/manual-screenshots-20260921"),
         figure(part2_picture("metrics"), "Results across the five questions.", max_height=330),
     ))
     by_query = sorted(summary["per_query"], key=lambda row: (row["question_id"], METHODS.index(row["technique"])))
@@ -394,9 +418,9 @@ def build_pages(inputs, commit, code_tag=None):
     pages.append(page("Part 2 | Observations and conclusion",
         heading("Observations"),
         para("Sentence windows supplied complete answers for four of five questions, compared with two for semantic splitting and one for token splitting. Q3 shows why the extra context helps: a sentence matches part of the question, while nearby text supplies the other fact. All methods found the right source for Q2, but none retrieved its answer. Source recall alone therefore overstates success here."),
-        para("Semantic search was fastest at 1.35 ms, followed by token search at 3.77 ms and sentence-window search at 21.89 ms. This order is consistent with the number of chunks, although the experiment does not isolate chunk count as the cause. Long semantic chunks often exceeded the model's input limit, and the strict Q5 label also affects the comparison."),
+        para(f"Semantic search was fastest at {method_stats['semantic']['mean_search_latency_ms']:.3f} ms, followed by token search at {method_stats['token']['mean_search_latency_ms']:.3f} ms and sentence-window search at {method_stats['sentence_window']['mean_search_latency_ms']:.3f} ms. This order is consistent with the number of chunks, although the experiment does not isolate chunk count as the cause. Long semantic chunks often exceeded the model's input limit, and the strict Q5 label also affects the comparison."),
         heading("Conclusion"),
-        para("Sentence windows worked best for this corpus because their context supported four of five answers and their average top-1 cosine was highest. They took about 22 ms per search, compared with 1-4 ms for the other methods. Semantic splitting was faster, but the model could not read all of its longer chunks. The Q2 failure shows that a useful retrieval check needs to examine the answer text as well as its similarity score."),
+        para(f"Sentence windows worked best for this corpus because their context supported four of five answers and their average top-1 cosine was highest. They took about {method_stats['sentence_window']['mean_search_latency_ms']:.0f} ms per search, compared with 1-4 ms for the other methods. Semantic splitting was faster, but the model could not read all of its longer chunks. The Q2 failure shows that a useful retrieval check needs to examine the answer text as well as its similarity score."),
     ))
     ai = inputs.text("reports/hw03/AI_USE.md")
     ai_elements = []

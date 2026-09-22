@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "capture_method": "Screenshots taken and supplied by Pragya Apurva from Chrome and Terminal; original image bytes retained.",
+  "retrieval_run": "reports/hw03/raw/part2/manual-screenshots-20260921",
+  "imported_at": "2026-09-22T04:24:42.112710+00:00",
+  "images": {
+    "00-server-startup.png": {
+      "description": "Terminal: successful HTTPS startup on [::1]:8702",
+      "sha256": "e15ff400a34e047706fe152d7363a2cb567296daf517766c0e4539ed6bd68f1d",
+      "saved_at": "2026-09-22T03:56:12.461870+00:00",
+      "image_modified": false,
+      "original_attachment_name": "codex-clipboard-7c2b29ee-8eaa-4b2d-9092-e818fcc4fdf3.png",
+      "path": "reports/hw03/screenshots/manual/00-server-startup.png"
+    },
+    "01-home.png": {
+      "description": "Browser: signed-out homepage with Login button and address bar",
+      "sha256": "0c2b84c718808b6ab558bba4b6af780402244b5962259715e3e3175cd43e1b4f",
+      "saved_at": "2026-09-22T03:56:12.462341+00:00",
+      "image_modified": false,
+      "original_attachment_name": "codex-clipboard-810c5a35-375d-4aae-a265-6382db630879.png",
+      "path": "reports/hw03/screenshots/manual/01-home.png"
+    },
+    "02-login.png": {
+      "description": "Browser page: empty login form with username and password fields; address bar outside capture",
+      "sha256": "fcc2f70f226274dbff6990f957de332311e87b91093028357f4a49fb32843c47",
+      "saved_at": "2026-09-22T03:58:05.109306+00:00",
+      "image_modified": false,
+      "original_attachment_name": "codex-clipboard-8b5525eb-a692-45a1-aada-fed1eb1dffe7.png",
+      "path": "reports/hw03/screenshots/manual/02-login.png"
+    },
+    "03-invalid-login.png": {
+      "description": "Browser page: login form displaying Invalid username or password alert; address bar outside capture",
+      "sha256": "087f4aec6119d9a9e46205e0964e2aa6ffe94ff7d95b799d9edf3740c181cc8a",
+      "saved_at": "2026-09-22T03:59:01.827741+00:00",
+      "image_modified": false,
+      "original_attachment_name": "codex-clipboard-556b7f8b-971c-4a86-87fb-75278cffb900.png",
+      "path": "reports/hw03/screenshots/manual/03-invalid-login.png"
+    },
+    "04-dashboard.png": {
+      "description": "Browser page: authenticated dashboard welcoming admin and displaying the 300-second idle timeout; address bar outside capture",
+      "sha256": "187f071f2aaf3db55dd83d124d3a3a0fff39e3d624a4b7b1d4e36981a3f130c5",
+      "saved_at": "2026-09-22T03:59:01.827441+00:00",
+      "image_modified": false,
+      "original_attachment_name": "codex-clipboard-752c11a5-9c04-4afb-a5f8-fccbc79e73d5.png",
+      "path": "reports/hw03/screenshots/manual/04-dashboard.png"
+    },
+    "05-home-logged-in.png": {
+      "description": "Browser: authenticated homepage showing admin, Dashboard and Logout controls, and the HTTPS address bar",
+      "sha256": "fb33c5bde3d4258cc0ce27aa893a21cce8b63ee9d25814c47201a923b6180551",
+      "saved_at": "2026-09-22T04:02:44.913513+00:00",
+      "image_modified": false,
+      "original_attachment_name": "codex-clipboard-e2ab39a4-f5d9-4771-894c-26d0a0a3fc09.png",
+      "path": "reports/hw03/screenshots/manual/05-home-logged-in.png"
+    },
+    "06-after-logout.png": {
+      "description": "Browser: homepage supplied after logout, showing Login controls and HTTPS address bar",
+      "sha256": "09263aea463ece87d05ac1b79a98337fc67e56d567340a39d06e8abcf786ae4b",
+      "saved_at": "2026-09-22T04:03:23.740769+00:00",
+      "image_modified": false,
+      "original_attachment_name": "codex-clipboard-e918aee5-e2bc-4379-8af4-404bf2220c25.png",
+      "path": "reports/hw03/screenshots/manual/06-after-logout.png"
+    },
+    "07-cookie-header.png": {
+      "description": "Terminal: curl login response HTTP 303, Location /dashboard, and Set-Cookie with HttpOnly, SameSite=lax, Secure; cookie value redacted by displayed sed command before capture",
+      "sha256": "bb48e59ed01a5c52426bfef733e08cb1c8396a67a88bdd93a0ce670b0a6c45e6",
+      "saved_at": "2026-09-22T04:05:08.386213+00:00",
+      "image_modified": false,
+      "original_attachment_name": "codex-clipboard-7ff083e4-6188-44a7-8b2d-68e1d3f35cb6.png",
+      "path": "reports/hw03/screenshots/manual/07-cookie-header.png"
+    },
+    "08-logout-replay.png": {
+      "description": "Terminal: live logout replay check, dashboard HTTP 200 before logout and HTTP 303 to /login when the same saved cookie is replayed after logout; PASS displayed",
+      "sha256": "6ed3afda82b29e0511a312d01301994c908da0824434653c80266de7602c8e16",
+      "saved_at": "2026-09-22T04:08:08.794065+00:00",
+      "image_modified": false,
+      "original_attachment_name": "codex-clipboard-e234f396-8e53-4910-8550-30b053d25a88.png",
+      "path": "reports/hw03/screenshots/manual/08-logout-replay.png"
+    },
+    "09-idle-timeout.png": {
+      "description": "Terminal: real 301.0-second idle wait, dashboard HTTP 200 before wait and HTTP 303 to /login with saved expired cookie; PASS displayed",
+      "sha256": "71cfa751ba1a882abb0d1f4b7b26d7389fb4a5d717c441d90be25096098bb227",
+      "saved_at": "2026-09-22T04:22:40.563481+00:00",
+      "image_modified": false,
+      "original_attachment_name": "codex-clipboard-2fae7351-cf64-4de6-a3fd-9eec708b0a13.png",
+      "path": "reports/hw03/screenshots/manual/09-idle-timeout.png"
+    },
+    "10-templates-directory.png": {
+      "description": "Terminal: actual templates directory listing showing base.html, dashboard.html, index.html and login.html",
+      "sha256": "21bb330d674291837c118b5ea3b539b168050d92f6777da6154e64ef3a230cf0",
+      "saved_at": "2026-09-22T04:14:33.381375+00:00",
+      "image_modified": false,
+      "original_attachment_name": "codex-clipboard-eab987ef-ad08-4479-88bb-d1bfe4ca2ee4.png",
+      "path": "reports/hw03/screenshots/manual/10-templates-directory.png"
+    },
+    "11-token-output.png": {
+      "description": "Terminal: new-run token Q1 stdout with embedding dimension and first eight values, query/document shapes, three retrieval rows, and search-only timings",
+      "sha256": "2f189a75d2792a7d3c521b3fd5ae35ede134d9ca9e3b4726d6f05335182f195d",
+      "saved_at": "2026-09-22T04:15:57.698840+00:00",
+      "image_modified": false,
+      "evidence_run": "manual-screenshots-20260921",
+      "console_sha256": "d98e71d5bcaff286e565c5176d66d0d2db33caf6168dcfef2f24e8dcfc096a73",
+      "original_attachment_name": "codex-clipboard-70ddc494-a16d-413c-b013-520303d0c48e.png",
+      "path": "reports/hw03/screenshots/manual/11-token-output.png"
+    },
+    "12-semantic-output.png": {
+      "description": "Terminal: new-run semantic Q1 stdout with embedding dimension and first eight values, query/document shapes, three retrieval rows, and search-only timings",
+      "sha256": "71ecb3049aced0ea269781259c167d77d320b898045d64eac316061d79be09e3",
+      "saved_at": "2026-09-22T04:16:42.685686+00:00",
+      "image_modified": false,
+      "evidence_run": "manual-screenshots-20260921",
+      "console_sha256": "d98e71d5bcaff286e565c5176d66d0d2db33caf6168dcfef2f24e8dcfc096a73",
+      "original_attachment_name": "codex-clipboard-9ed60345-e477-4ece-8313-3d28a80ea072.png",
+      "path": "reports/hw03/screenshots/manual/12-semantic-output.png"
+    },
+    "13-sentence-window-output.png": {
+      "description": "Terminal: new-run sentence-window Q1 stdout with embedding dimension and first eight values, query/document shapes, three retrieval rows, and search-only timings",
+      "sha256": "bc15737cb8a7e11a59a8dfe810b7bbb3508176464442286d662dd615b082428e",
+      "saved_at": "2026-09-22T04:17:34.748359+00:00",
+      "image_modified": false,
+      "evidence_run": "manual-screenshots-20260921",
+      "console_sha256": "d98e71d5bcaff286e565c5176d66d0d2db33caf6168dcfef2f24e8dcfc096a73",
+      "original_attachment_name": "codex-clipboard-c92be889-3963-4f84-8d22-0d23c2a9f1e3.png",
+      "path": "reports/hw03/screenshots/manual/13-sentence-window-output.png"
+    },
+    "14-comparison-table.png": {
+      "description": "Terminal: new-run aggregate comparison table across five questions, including all three methods, retrieval scores, answer support, and search timings",
+      "sha256": "7253b2b92bc3ca0e619f44c5ccebe1b59fd165659c6a2a239b150a93d90d86ad",
+      "saved_at": "2026-09-22T04:19:18.309982+00:00",
+      "image_modified": false,
+      "evidence_run": "manual-screenshots-20260921",
+      "metrics_sha256": "71c99c05b39a3b82991aa281b8d335fb36d68c305ef6081ca448b40dbc600cb5",
+      "original_attachment_name": "codex-clipboard-4861e75d-ee02-4f47-862c-e3dd6cfe62dd.png",
+      "path": "reports/hw03/screenshots/manual/14-comparison-table.png"
+    },
+    "15-high-score-failure.png": {
+      "description": "Terminal: Q2 token rank-1 failure, expected historical $480 answer, 0.751100 store/cosine scores and complete 1010-character returned passage",
+      "sha256": "8e791dfcaa397c4037606a0f281cc311291b162e2e74e0b6518c1313bb17a171",
+      "saved_at": "2026-09-22T04:20:53.065045+00:00",
+      "image_modified": false,
+      "evidence_run": "manual-screenshots-20260921",
+      "records_sha256": "bff7da8cbf60031cb4d7b62e7e4333b7d178193e431654a3122a1349fd125c43",
+      "display_script_sha256": "6fc27fa9a2b40495fcb87287394b31a76126c79d0feb983c65148ebeecad7c9e",
+      "original_attachment_name": "codex-clipboard-1cb26f86-42be-4063-8b6b-340e5139caa3.png",
+      "path": "reports/hw03/screenshots/manual/15-high-score-failure.png"
+    }
+  },
+  "support_scripts": {
+    "capture_session_checks.py": {
+      "original_path": "reports/hw03/raw/manual-captures/original-capture_session_checks.py",
+      "original_sha256": "e94fd9db13675432596f825736e151a05866f2d80d8268f0a960a20140b10abd",
+      "portable_path": "reports/hw03/raw/manual-captures/capture_session_checks.py",
+      "portable_sha256": "379bcaffc82bfd17c16bd3d9a17779790faa318f89c614850b8eaf7ea6d96e07",
+      "change": "Only repository-root discovery changed for use from the committed path."
+    },
+    "show_retrieval_failure.py": {
+      "original_path": "reports/hw03/raw/manual-captures/original-show_retrieval_failure.py",
+      "original_sha256": "6fc27fa9a2b40495fcb87287394b31a76126c79d0feb983c65148ebeecad7c9e",
+      "portable_path": "reports/hw03/raw/manual-captures/show_retrieval_failure.py",
+      "portable_sha256": "73ee09fdb90d826dc85881aff76bf8545cc8f1b79ef3e46e2c8c8e504c9242d1",
+      "change": "Only repository-root discovery changed for use from the committed path."
+    }
+  },
+  "retrieval_source_sha256": {
+    "reports/hw03/raw/part2/manual-screenshots-20260921/console.txt": "d98e71d5bcaff286e565c5176d66d0d2db33caf6168dcfef2f24e8dcfc096a73",
+    "reports/hw03/raw/part2/manual-screenshots-20260921/records.json": "bff7da8cbf60031cb4d7b62e7e4333b7d178193e431654a3122a1349fd125c43",
+    "reports/hw03/raw/part2/manual-screenshots-20260921/summary.json": "078a8b06150fd50f996923de0fe3859a5be63505cf4c1c315421e549cba056fe",
+    "reports/hw03/raw/part2/manual-screenshots-20260921/annotations.json": "c5d0bcce6ab0e88e5e34367058281e94a2553d78013c3993fc13c3223f154ee5",
+    "reports/hw03/raw/part2/manual-screenshots-20260921/METRICS.md": "71c99c05b39a3b82991aa281b8d335fb36d68c305ef6081ca448b40dbc600cb5",
+    "reports/hw03/raw/part2/manual-screenshots-20260921/run.json": "ab4d27ad82fabe4906cfbecf2bf786ae3e2c70a3ce3aa70daf99860822951869"
+  }
+}

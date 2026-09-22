@@ -56,7 +56,7 @@ To check the saved results without downloading a model or repeating the experime
 
 ```bash
 python3 code/retrieval_summarize.py \
-  --run-dir reports/hw03/raw/part2/baseline-20260920 --check
+  --run-dir reports/hw03/raw/part2/manual-screenshots-20260921 --check
 ```
 
 The saved results contain answer-support labels based on the returned passages. A high similarity score alone does not establish that a passage contains the answer.
@@ -97,7 +97,8 @@ Run the retrieval tests:
 With both environments installed, run the combined verifier:
 
 ```bash
-python3 scripts/verify_hw03.py --require-report
+python3 scripts/verify_hw03.py --require-report \
+  --run-dir reports/hw03/raw/part2/manual-screenshots-20260921
 ```
 
 The verifier checks the saved results, source versions, and report build hashes. It reruns the web/API tests and writes updated verification records under `reports/hw03/`. The [reproduction guide](reports/hw03/REPRODUCIBLE_RUN_INSTRUCTIONS.md) includes browser-test setup and an optional check using the cached embedding model.

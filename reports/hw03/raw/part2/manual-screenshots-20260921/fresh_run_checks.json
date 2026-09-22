@@ -1,0 +1,11 @@
+{
+  "status": "pass",
+  "scope": "Fresh-run input, campaign, node inventory, vector, hit-to-node, annotation-quote and records hash checks; shared report and root METRICS integration are deferred.",
+  "verified_at": "2026-09-22T03:52:47.613081+00:00",
+  "run_id": "manual-screenshots-20260921",
+  "code_commit": "85a6dd8f2dfe2a89a8301a3accc8aef4d533c443",
+  "freeze_commit": "08bd6e0495ce03281aa8fab7f70ac0b51e1c1442",
+  "comparison_count": 15,
+  "hit_count": 45,
+  "measured_search_count": 150
+}

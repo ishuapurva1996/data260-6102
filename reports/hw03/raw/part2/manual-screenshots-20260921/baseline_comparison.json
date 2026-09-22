@@ -1,0 +1,177 @@
+{
+  "baseline_run_id": "baseline-20260920",
+  "fresh_run_id": "manual-screenshots-20260921",
+  "compared_at": "2026-09-22T03:52:17.690883+00:00",
+  "complete_hit_objects_identical": true,
+  "vector_sidecars_byte_identical": true,
+  "independently_reviewed_hit_count": 45,
+  "central_positive_hit_count": 6,
+  "context_positive_hit_count": 8,
+  "per_query": [
+    {
+      "question_id": "Q1",
+      "technique": "token",
+      "changed_record_fields": [
+        "mean_search_seconds",
+        "recorded_at",
+        "search_seconds"
+      ],
+      "baseline_mean_ms": 3.655795892700553,
+      "fresh_mean_ms": 3.4762125000270316
+    },
+    {
+      "question_id": "Q2",
+      "technique": "token",
+      "changed_record_fields": [
+        "mean_search_seconds",
+        "recorded_at",
+        "search_seconds"
+      ],
+      "baseline_mean_ms": 3.8200375041924417,
+      "fresh_mean_ms": 3.485729100066237
+    },
+    {
+      "question_id": "Q3",
+      "technique": "token",
+      "changed_record_fields": [
+        "mean_search_seconds",
+        "recorded_at",
+        "search_seconds"
+      ],
+      "baseline_mean_ms": 3.7647665245458484,
+      "fresh_mean_ms": 3.451979099554592
+    },
+    {
+      "question_id": "Q4",
+      "technique": "token",
+      "changed_record_fields": [
+        "mean_search_seconds",
+        "recorded_at",
+        "search_seconds"
+      ],
+      "baseline_mean_ms": 3.812279016710818,
+      "fresh_mean_ms": 3.3798791002482176
+    },
+    {
+      "question_id": "Q5",
+      "technique": "token",
+      "changed_record_fields": [
+        "mean_search_seconds",
+        "recorded_at",
+        "search_seconds"
+      ],
+      "baseline_mean_ms": 3.7997998064383864,
+      "fresh_mean_ms": 3.3796124000218697
+    },
+    {
+      "question_id": "Q1",
+      "technique": "semantic",
+      "changed_record_fields": [
+        "mean_search_seconds",
+        "recorded_at",
+        "search_seconds"
+      ],
+      "baseline_mean_ms": 1.3174460153095424,
+      "fresh_mean_ms": 1.3209500004450092
+    },
+    {
+      "question_id": "Q2",
+      "technique": "semantic",
+      "changed_record_fields": [
+        "mean_search_seconds",
+        "recorded_at",
+        "search_seconds"
+      ],
+      "baseline_mean_ms": 1.3430416234768927,
+      "fresh_mean_ms": 1.3098914994770894
+    },
+    {
+      "question_id": "Q3",
+      "technique": "semantic",
+      "changed_record_fields": [
+        "mean_search_seconds",
+        "recorded_at",
+        "search_seconds"
+      ],
+      "baseline_mean_ms": 1.3191251317039132,
+      "fresh_mean_ms": 1.3309417001437396
+    },
+    {
+      "question_id": "Q4",
+      "technique": "semantic",
+      "changed_record_fields": [
+        "mean_search_seconds",
+        "recorded_at",
+        "search_seconds"
+      ],
+      "baseline_mean_ms": 1.320441614370793,
+      "fresh_mean_ms": 1.3171501002943842
+    },
+    {
+      "question_id": "Q5",
+      "technique": "semantic",
+      "changed_record_fields": [
+        "mean_search_seconds",
+        "recorded_at",
+        "search_seconds"
+      ],
+      "baseline_mean_ms": 1.4461831655353308,
+      "fresh_mean_ms": 1.325787399764522
+    },
+    {
+      "question_id": "Q1",
+      "technique": "sentence_window",
+      "changed_record_fields": [
+        "mean_search_seconds",
+        "recorded_at",
+        "search_seconds"
+      ],
+      "baseline_mean_ms": 21.909025020431727,
+      "fresh_mean_ms": 20.11619610057096
+    },
+    {
+      "question_id": "Q2",
+      "technique": "sentence_window",
+      "changed_record_fields": [
+        "mean_search_seconds",
+        "recorded_at",
+        "search_seconds"
+      ],
+      "baseline_mean_ms": 22.133658500388265,
+      "fresh_mean_ms": 20.144779099791776
+    },
+    {
+      "question_id": "Q3",
+      "technique": "sentence_window",
+      "changed_record_fields": [
+        "mean_search_seconds",
+        "recorded_at",
+        "search_seconds"
+      ],
+      "baseline_mean_ms": 21.83216674020514,
+      "fresh_mean_ms": 20.099966600173502
+    },
+    {
+      "question_id": "Q4",
+      "technique": "sentence_window",
+      "changed_record_fields": [
+        "mean_search_seconds",
+        "recorded_at",
+        "search_seconds"
+      ],
+      "baseline_mean_ms": 21.230312599800527,
+      "fresh_mean_ms": 20.198625199554954
+    },
+    {
+      "question_id": "Q5",
+      "technique": "sentence_window",
+      "changed_record_fields": [
+        "mean_search_seconds",
+        "recorded_at",
+        "search_seconds"
+      ],
+      "baseline_mean_ms": 22.324729210231453,
+      "fresh_mean_ms": 20.318104399484582
+    }
+  ]
+}

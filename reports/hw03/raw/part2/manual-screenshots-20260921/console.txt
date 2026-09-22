@@ -1,0 +1,152 @@
+2026-09-22T03:50:42.455276+00:00 COMMAND: /Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/integration/.venv-retrieval/bin/python code/retrieval_compare.py run --freeze-commit 08bd6e0495ce03281aa8fab7f70ac0b51e1c1442 --run-id manual-screenshots-20260921
+Code revision: 85a6dd8f2dfe2a89a8301a3accc8aef4d533c443; freeze: 08bd6e0495ce03281aa8fab7f70ac0b51e1c1442
+LLM is explicitly disabled. Using MockLLM.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 9348.31it/s]
+
+2026-09-22T03:50:45.939240+00:00 BUILD token
+LLM is explicitly disabled. Using MockLLM.
+Index ready: 440 chunks; stats: {"technique": "token", "chunk_count": 440, "average_character_length": 936.7022727272728, "average_token_length": 192.49772727272727, "average_context_character_length": 936.7022727272728, "average_context_token_length": 192.49772727272727, "max_seq_length": 256, "token_lengths_include_special_tokens": true, "indexed_truncation_count": 0, "indexed_truncation_fraction": 0.0, "semantic_buffer_count": 0, "semantic_buffer_truncation_count": 0, "semantic_buffer_truncation_fraction": 0.0}
+
+token | Q1 | A HUD-assisted rental applicant receives a rejection notice. Within how many days may the applicant request a meeting with the owner to dispute the rejection?
+Query dimension: 384; first 8: [0.012973719276487827, 0.11042667925357819, 0.044443272054195404, 0.07047010213136673, -0.004238628316670656, -0.05338478833436966, -0.021405398845672607, -0.01651100255548954]
+Vector shapes: query=[384], documents=[3, 384]
+rank | store_score | cosine_sim | chunk_len | preview
+1 | 0.607530 | 0.607530 | 981 | time to submit a written answer to the complaint. • Investigate your complaint, and determine whether or not there is reasonable cause to believe that the respo
+2 | 0.577797 | 0.577797 | 965 | enable HUD and the owner to ascertain whether the owner has complied, or is complying with, nondiscrimination requirements. (See Chapter 2.) Section 4: Selecti
+3 | 0.572324 | 0.572324 | 958 | investigates the complaint. What Happens After A Complaint Investigation? Determination of Reasonable Cause, Charge of Discrimination, and Election: When your
+Search-only durations (ms): [3.577, 3.4895, 3.5073, 3.5127, 3.5264, 3.4388, 3.4332, 3.4115, 3.4365, 3.4293]
+
+token | Q2 | In the archived HUD Handbook’s rent calculation, how much is deducted from annual income for each eligible dependent?
+Query dimension: 384; first 8: [-0.005864316131919622, 0.033570267260074615, 0.03630773723125458, 0.008322982117533684, 0.07612908631563187, 0.004099882207810879, -0.05770757421851158, 0.0007813121192157269]
+Vector shapes: query=[384], documents=[3, 384]
+rank | store_score | cosine_sim | chunk_len | preview
+1 | 0.751100 | 0.751100 | 1010 | CHAPTER 5. DETERMINING INCOME AND CALCULATING RENT 5-1 Introduction A. Owners must determine the amount of a family’s income before the family is allowed to m
+2 | 0.680923 | 0.680923 | 904 | assisted-housing programs. B. Unit Rent 1. The contract rent (basic rent in the Section 236 program) represents the amount of rent an owner is entitled to col
+3 | 0.673682 | 0.673682 | 892 | Unearned income • Foster children • Utility allowance • Full-time student • Utility reimbursement • Gross rent • Very low-income family • Hardship exemption • W
+Search-only durations (ms): [3.7827, 3.4703, 3.5393, 3.4782, 3.5889, 3.321, 3.4469, 3.3635, 3.4934, 3.3732]
+
+token | Q3 | A renter is worried about lead in tap water. Does boiling the water remove lead, and should drinking, cooking and baby formula use hot or cold water?
+Query dimension: 384; first 8: [0.01066935807466507, -0.014263938181102276, -0.050092246383428574, 0.00022114787134341896, 0.024917591363191605, 0.015443702228367329, -0.01739531010389328, -0.01974644511938095]
+Vector shapes: query=[384], documents=[3, 384]
+rank | store_score | cosine_sim | chunk_len | preview
+1 | 0.678257 | 0.678257 | 884 | pipes, fixtures, brass or chrome-plated brass faucets and plumbing with lead solder. Lead pipes are more likely to be found in older cities and homes built befo
+2 | 0.588197 | 0.588197 | 921 | screen (also known as an aerator). • If you use a filter certified to remove lead, read the directions to learn when to change the cartridge. Using a filter aft
+3 | 0.528002 | 0.528002 | 901 | power tools and equipment not equipped with a shroud and HEPA vacuum attachment • Using a heat gun at temperatures greater than 1100°F • Clean up thoroughly. Th
+Search-only durations (ms): [3.4782, 3.4357, 3.4492, 3.4205, 3.695, 3.3849, 3.5582, 3.3557, 3.4011, 3.3412]
+
+token | Q4 | A rental applicant believes housing discrimination occurred. What time limit does HUD’s Fair Housing booklet give for filing a complaint with HUD?
+Query dimension: 384; first 8: [-0.04532822594046593, 0.02842184528708458, 0.017917586490511894, 0.016188403591513634, 0.028944354504346848, -0.013017200864851475, -0.07625283300876617, -0.07090145349502563]
+Vector shapes: query=[384], documents=[3, 384]
+rank | store_score | cosine_sim | chunk_len | preview
+1 | 0.720861 | 0.720861 | 892 | provides no formal appeal process for complaints dismissed by HUD. However, if your complaint is dismissed with a Determination of No Reasonable Cause, you may
+2 | 0.699044 | 0.699044 | 981 | time to submit a written answer to the complaint. • Investigate your complaint, and determine whether or not there is reasonable cause to believe that the respo
+3 | 0.676665 | 0.676665 | 934 | lawsuit against the respondent(s) in Federal District Court. The time during which HUD was processing your complaint is not counted in the 2-year filing period.
+Search-only durations (ms): [3.4662, 3.3651, 3.4944, 3.3381, 3.3493, 3.3644, 3.3958, 3.3701, 3.3063, 3.3492]
+
+token | Q5 | For project-based Section 8 rental housing, what minimum percentage of assisted units that become available during a project fiscal year must be leased to extremely low-income families?
+Query dimension: 384; first 8: [0.06639570742845535, -0.019606616348028183, 0.016892749816179276, 0.037822797894477844, -0.06215791031718254, 0.053824979811906815, -0.06367768347263336, 0.07437418401241302]
+Vector shapes: query=[384], documents=[3, 384]
+rank | store_score | cosine_sim | chunk_len | preview
+1 | 0.667190 | 0.667190 | 608 | 891.410, 891.610, 891.750 (Selection and admission of tenants) B. Income-Targeting These regulations are applicable only to the Section 8 project-based progra
+2 | 0.647628 | 0.647628 | 1019 | of a property or unit based on its extremely low-income status in order to satisfy income-targeting requirements. (See paragraph 4-5 for an explanation of the i
+3 | 0.644321 | 0.644321 | 1005 | program has been combined with a wide range of programs, from Section 202 projects with Section 8 already in place (Section 202/8) to housing choice voucher ass
+Search-only durations (ms): [3.4217, 3.3862, 3.4233, 3.3465, 3.3541, 3.4206, 3.4411, 3.2833, 3.3604, 3.359]
+
+2026-09-22T03:50:53.726434+00:00 BUILD semantic
+LLM is explicitly disabled. Using MockLLM.
+Index ready: 143 chunks; stats: {"technique": "semantic", "chunk_count": 143, "average_character_length": 2406.286713286713, "average_token_length": 492.3986013986014, "average_context_character_length": 2406.286713286713, "average_context_token_length": 492.3986013986014, "max_seq_length": 256, "token_lengths_include_special_tokens": true, "indexed_truncation_count": 76, "indexed_truncation_fraction": 0.5314685314685315, "semantic_buffer_count": 2735, "semantic_buffer_truncation_count": 8, "semantic_buffer_truncation_fraction": 0.0029250457038391227}
+
+semantic | Q1 | A HUD-assisted rental applicant receives a rejection notice. Within how many days may the applicant request a meeting with the owner to dispute the rejection?
+Query dimension: 384; first 8: [0.012973719276487827, 0.11042667925357819, 0.044443272054195404, 0.07047010213136673, -0.004238628316670656, -0.05338478833436966, -0.021405398845672607, -0.01651100255548954]
+Vector shapes: query=[384], documents=[3, 384]
+rank | store_score | cosine_sim | chunk_len | preview
+1 | 0.558995 | 0.558995 | 2238 | 408 (a) (6), (7) and (8) 5-16 Effective Term of Verifications Verifications and consent forms must be used within a reasonable time. HUD has set specific limi
+2 | 0.550472 | 0.550472 | 7552 | Prompt notification. Owners must promptly notify the applicant in writing of the denial of admission or assistance. B. Conditions under Which Owners May Reject
+3 | 0.535286 | 0.535286 | 2127 | *NDNH. Information received from HHS’ NDNH is limited to wages and unemployment compensation received during period(s) within the last five years when the tenan
+Search-only durations (ms): [1.3509, 1.3217, 1.323, 1.3617, 1.2695, 1.2919, 1.2665, 1.4667, 1.2854, 1.2722]
+
+semantic | Q2 | In the archived HUD Handbook’s rent calculation, how much is deducted from annual income for each eligible dependent?
+Query dimension: 384; first 8: [-0.005864316131919622, 0.033570267260074615, 0.03630773723125458, 0.008322982117533684, 0.07612908631563187, 0.004099882207810879, -0.05770757421851158, 0.0007813121192157269]
+Vector shapes: query=[384], documents=[3, 384]
+rank | store_score | cosine_sim | chunk_len | preview
+1 | 0.743808 | 0.743808 | 2119 | CHAPTER 5. DETERMINING INCOME AND CALCULATING RENT 5-1 Introduction A. Owners must determine the amount of a family’s income before the family is allowed to m
+2 | 0.617536 | 0.617536 | 953 | Each as-paid locality works somewhat differently, and many are subject to court-ordered modifications to the basic policy. Owners should discuss how the rules a
+3 | 0.558558 | 0.558558 | 711 | Obtain family income and composition information and other data needed to verify eligibility and compute the tenant’s share of the rent. (See Chapter 5.) 4. Re
+Search-only durations (ms): [1.33, 1.2993, 1.2802, 1.2997, 1.2946, 1.2792, 1.2882, 1.3318, 1.3893, 1.3068]
+
+semantic | Q3 | A renter is worried about lead in tap water. Does boiling the water remove lead, and should drinking, cooking and baby formula use hot or cold water?
+Query dimension: 384; first 8: [0.01066935807466507, -0.014263938181102276, -0.050092246383428574, 0.00022114787134341896, 0.024917591363191605, 0.015443702228367329, -0.01739531010389328, -0.01974644511938095]
+Vector shapes: query=[384], documents=[3, 384]
+rank | store_score | cosine_sim | chunk_len | preview
+1 | 0.688083 | 0.688083 | 2000 | To learn more about EPA’s requirements for RRP projects, visit epa.gov/getleadsafe, or read The Lead-Safe Certified Guide to Renovate Right. Other Sources of L
+2 | 0.445858 | 0.445858 | 4925 | Clean floors, window frames, window sills and other surfaces weekly. Use a mop or sponge with warm water and a general all-purpose cleaner. (Remember: never mix
+3 | 0.434190 | 0.434190 | 2170 | • Always keep painted surfaces in good condition to minimize deterioration. • Get your home checked for lead hazards. Find a certified risk assessor at cdxapps
+Search-only durations (ms): [1.3307, 1.359, 1.3236, 1.323, 1.3173, 1.3195, 1.3215, 1.3607, 1.3195, 1.3346]
+
+semantic | Q4 | A rental applicant believes housing discrimination occurred. What time limit does HUD’s Fair Housing booklet give for filing a complaint with HUD?
+Query dimension: 384; first 8: [-0.04532822594046593, 0.02842184528708458, 0.017917586490511894, 0.016188403591513634, 0.028944354504346848, -0.013017200864851475, -0.07625283300876617, -0.07090145349502563]
+Vector shapes: query=[384], documents=[3, 384]
+rank | store_score | cosine_sim | chunk_len | preview
+1 | 0.664630 | 0.664630 | 2203 | • Pay punitive damages to you. Determination of No Reasonable Cause and Dismissal: If HUD finds that there is no reasonable cause to believe that the responden
+2 | 0.555742 | 0.555742 | 2127 | *NDNH. Information received from HHS’ NDNH is limited to wages and unemployment compensation received during period(s) within the last five years when the tenan
+3 | 0.539427 | 0.539427 | 2238 | 408 (a) (6), (7) and (8) 5-16 Effective Term of Verifications Verifications and consent forms must be used within a reasonable time. HUD has set specific limi
+Search-only durations (ms): [1.3375, 1.3193, 1.387, 1.3151, 1.308, 1.2972, 1.308, 1.3093, 1.2984, 1.2918]
+
+semantic | Q5 | For project-based Section 8 rental housing, what minimum percentage of assisted units that become available during a project fiscal year must be leased to extremely low-income families?
+Query dimension: 384; first 8: [0.06639570742845535, -0.019606616348028183, 0.016892749816179276, 0.037822797894477844, -0.06215791031718254, 0.053824979811906815, -0.06367768347263336, 0.07437418401241302]
+Vector shapes: query=[384], documents=[3, 384]
+rank | store_score | cosine_sim | chunk_len | preview
+1 | 0.567229 | 0.567229 | 481 | Minimum Income Requirement. Section 236 and Section 221(d)(3) BMIR applicants who receive no other form of assistance, such as Section 8, may be screened for th
+2 | 0.556141 | 0.556141 | 2927 |  Less than 40% after the third quarter of the fiscal year. This policy will ensure that, regardless of which bedroom size units become available, the owner wi
+3 | 0.545799 | 0.545799 | 1267 | The tenant will pay no tenant rent. The utility reimbursement is calculated by subtracting the TTP from the utility allowance. D. Section 8 Minimum Rent Tenan
+Search-only durations (ms): [1.3195, 1.3228, 1.2795, 1.526, 1.3574, 1.3128, 1.3391, 1.2717, 1.2684, 1.2606]
+
+2026-09-22T03:51:26.906217+00:00 BUILD sentence_window
+LLM is explicitly disabled. Using MockLLM.
+Index ready: 2735 chunks; stats: {"technique": "sentence_window", "chunk_count": 2735, "average_character_length": 125.81316270566728, "average_token_length": 27.640585009140768, "average_context_character_length": 884.3886654478977, "average_context_token_length": 180.93747714808043, "max_seq_length": 256, "token_lengths_include_special_tokens": true, "indexed_truncation_count": 0, "indexed_truncation_fraction": 0.0, "semantic_buffer_count": 0, "semantic_buffer_truncation_count": 0, "semantic_buffer_truncation_fraction": 0.0}
+
+sentence_window | Q1 | A HUD-assisted rental applicant receives a rejection notice. Within how many days may the applicant request a meeting with the owner to dispute the rejection?
+Query dimension: 384; first 8: [0.012973719276487827, 0.11042667925357819, 0.044443272054195404, 0.07047010213136673, -0.004238628316670656, -0.05338478833436966, -0.021405398845672607, -0.01651100255548954]
+Vector shapes: query=[384], documents=[3, 384]
+rank | store_score | cosine_sim | chunk_len | preview
+1 | 0.713393 | 0.713393 | 223 | The written rejection notice must include: a. The specifically stated reason(s) for the rejection; b. The applicant’s right to respond to the owner in writing
+2 | 0.671608 | 0.671608 | 150 | • Notify you and the respondent if HUD cannot complete its investigation within 100 days of filing your complaint, and provide reason for the delay.
+3 | 0.627986 | 0.627986 | 143 | Within 5 business days of the owner response or meeting, the owner must advise the applicant in writing of the final decision on eligibility.
+Search-only durations (ms): [20.1942, 20.1749, 20.7126, 20.0082, 19.8586, 20.3684, 20.0414, 20.014, 19.8897, 19.8999]
+
+sentence_window | Q2 | In the archived HUD Handbook’s rent calculation, how much is deducted from annual income for each eligible dependent?
+Query dimension: 384; first 8: [-0.005864316131919622, 0.033570267260074615, 0.03630773723125458, 0.008322982117533684, 0.07612908631563187, 0.004099882207810879, -0.05770757421851158, 0.0007813121192157269]
+Vector shapes: query=[384], documents=[3, 384]
+rank | store_score | cosine_sim | chunk_len | preview
+1 | 0.717505 | 0.717505 | 88 | Tenant Rent Formulas http://portal.hud.gov/hudportal/documents/huddoc?id=DOC_35705.pdf
+2 | 0.682270 | 0.682270 | 126 | Provide each *applicant* with a copy of the appropriate HUD fact sheet, which describes how the tenant's rent is calculated.
+3 | 0.645720 | 0.645720 | 87 | See Section 4 of this chapter for information about specific rent calculation methods.
+Search-only durations (ms): [20.3413, 20.2067, 19.9637, 20.0455, 19.9938, 19.9583, 20.0853, 20.2717, 20.116, 20.4655]
+
+sentence_window | Q3 | A renter is worried about lead in tap water. Does boiling the water remove lead, and should drinking, cooking and baby formula use hot or cold water?
+Query dimension: 384; first 8: [0.01066935807466507, -0.014263938181102276, -0.050092246383428574, 0.00022114787134341896, 0.024917591363191605, 0.015443702228367329, -0.01739531010389328, -0.01974644511938095]
+Vector shapes: query=[384], documents=[3, 384]
+rank | store_score | cosine_sim | chunk_len | preview
+1 | 0.760265 | 0.760265 | 47 | Boiling water does not remove lead from water.
+2 | 0.728954 | 0.728954 | 131 | Important Steps You Can Take to Reduce Lead in Drinking Water • Use only cold water for drinking, cooking and making baby formula.
+3 | 0.607445 | 0.607445 | 129 | For more information about lead in drinking water, please use EPA’s Safe Drinking Water online form at epa.gov/safewaterhotline.
+Search-only durations (ms): [19.9727, 20.0798, 20.331, 20.0397, 20.4791, 20.1, 19.9489, 20.0373, 20.056, 19.9552]
+
+sentence_window | Q4 | A rental applicant believes housing discrimination occurred. What time limit does HUD’s Fair Housing booklet give for filing a complaint with HUD?
+Query dimension: 384; first 8: [-0.04532822594046593, 0.02842184528708458, 0.017917586490511894, 0.016188403591513634, 0.028944354504346848, -0.013017200864851475, -0.07625283300876617, -0.07090145349502563]
+Vector shapes: query=[384], documents=[3, 384]
+rank | store_score | cosine_sim | chunk_len | preview
+1 | 0.759191 | 0.759191 | 144 | You have one year after the alleged discrimination occurred or ended to file a complaint with HUD, but you should file it as soon as possible.
+2 | 0.751570 | 0.751570 | 216 | The State or local public fair housing agency must start investigating your complaint within 30 days of HUD’s referral, or HUD may retrieve (“reactivate”) the c
+3 | 0.738943 | 0.738943 | 102 | HUD will notify you in writing when your complaint is accepted for filing under the Fair Housing Act.
+Search-only durations (ms): [20.3028, 20.2245, 20.348, 20.083, 20.0554, 19.8786, 20.4524, 20.2448, 20.5112, 19.8855]
+
+sentence_window | Q5 | For project-based Section 8 rental housing, what minimum percentage of assisted units that become available during a project fiscal year must be leased to extremely low-income families?
+Query dimension: 384; first 8: [0.06639570742845535, -0.019606616348028183, 0.016892749816179276, 0.037822797894477844, -0.06215791031718254, 0.053824979811906815, -0.06367768347263336, 0.07437418401241302]
+Vector shapes: query=[384], documents=[3, 384]
+rank | store_score | cosine_sim | chunk_len | preview
+1 | 0.792651 | 0.792651 | 400 | 4-5 Income-Targeting – Applicable Only to the Section 8 Project-Based Program Except Where Otherwise Noted A. Key Requirements For each project assisted under
+2 | 0.650973 | 0.650973 | 122 | D. Section 8 Minimum Rent Tenants in properties subsidized through the Section 8 program must pay a minimum TTP of $25.
+3 | 0.647182 | 0.647182 | 89 | D. Section 8 Units: Extremely Low-Income Targeting Requirements and Tenant Selection 1.
+Search-only durations (ms): [20.5182, 19.8195, 21.0428, 20.564, 19.9936, 20.3004, 20.4015, 20.0192, 20.1161, 20.4057]
+2026-09-22T03:51:45.940418+00:00 END status=complete

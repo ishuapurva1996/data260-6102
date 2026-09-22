@@ -2,12 +2,12 @@
   "schema_version": 1,
   "assignment": "HW3",
   "status": "pass",
-  "started_at": "2026-09-21T07:18:12.156023+00:00",
-  "finished_at": "2026-09-21T07:18:20.628537+00:00",
+  "started_at": "2026-09-22T04:35:35.404591+00:00",
+  "finished_at": "2026-09-22T04:35:37.644860+00:00",
   "provenance": {
-    "checkout_commit": "25665d97e5cd341925182f442f5ce73e99799ed2",
+    "checkout_commit": "85a6dd8f2dfe2a89a8301a3accc8aef4d533c443",
     "branch": "codex/hw3-integration",
-    "working_tree_status": "M reports/hw03/raw/part1/self-check-pytest.txt\n?? reports/hw03/raw/integration/20260921T064912554232Z/\n?? reports/hw03/raw/integration/20260921T071812156107Z/\n?? reports/hw03/verification.json",
+    "working_tree_status": "M README.md\n M reports/hw03/METRICS.md\n M reports/hw03/REPRODUCIBLE_RUN_INSTRUCTIONS.md\n M reports/hw03/RUN_LOG.txt\n M reports/hw03/part2/REPORT_SECTION.md\n M reports/hw03/part2/REPRODUCIBLE_RUN_INSTRUCTIONS.md\n M reports/hw03/raw/part1/self-check-pytest.txt\n M reports/hw03/report-build.json\n M reports/hw03/report.md\n M reports/hw03/report.pdf\n M scripts/build_hw03_report.py\n?? reports/hw03/raw/integration/20260922T043535404710Z/\n?? reports/hw03/raw/manual-captures/\n?? reports/hw03/raw/part2/manual-screenshots-20260921/\n?? reports/hw03/screenshots/manual/",
     "source_sha256": {
       "code/retrieval_compare.py": "083c90e66900a7ebb832b14646f826d8d8b7482eda99f5c4509f6b683706e68f",
       "code/retrieval_summarize.py": "aaf3561679bb6b2706effbe01afde1215620b1ac3be0d2367aaf3d74858dd5a8",
@@ -52,7 +52,7 @@
       "tests/test_hw03_auth.py": "c22c16647003415b114373ebab97c9267e6adfd539c77197c1389f363aff685c",
       "tests/test_hw03_integration.py": "1c67ec926e6f8ab787c5cb1fa0239a5abfebbdb572d9706ad51efda2317b8e30"
     },
-    "retrieval_measured_code_commit": "cc0a57bae6e19778021643bffebf5c66d5e7c0a3",
+    "retrieval_measured_code_commit": "85a6dd8f2dfe2a89a8301a3accc8aef4d533c443",
     "retrieval_input_freeze_commit": "08bd6e0495ce03281aa8fab7f70ac0b51e1c1442"
   },
   "parts": [
@@ -62,16 +62,16 @@
         "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/integration/.venv-web/bin/python",
         "scripts/verify_hw03_part1.py",
         "--output",
-        "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/integration/reports/hw03/raw/integration/20260921T071812156107Z/part1.json"
+        "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/integration/reports/hw03/raw/integration/20260922T043535404710Z/part1.json"
       ],
-      "started_at": "2026-09-21T07:18:12.156473+00:00",
-      "output": "reports/hw03/raw/integration/20260921T071812156107Z/part1.json",
-      "log": "reports/hw03/raw/integration/20260921T071812156107Z/part1.txt",
+      "started_at": "2026-09-22T04:35:35.405254+00:00",
+      "output": "reports/hw03/raw/integration/20260922T043535404710Z/part1.json",
+      "log": "reports/hw03/raw/integration/20260922T043535404710Z/part1.txt",
       "exit_code": 0,
       "reported_status": "pass",
       "status": "pass",
-      "output_sha256": "36c4d965caeb6ec7123137f2b261b20d976ac4434085bf383354a219f685423b",
-      "finished_at": "2026-09-21T07:18:13.126070+00:00",
+      "output_sha256": "751bdb1da3966e6549c0e3b260c29efad5b0201244947ec91bc41015e0f92cd7",
+      "finished_at": "2026-09-22T04:35:36.323937+00:00",
       "log_sha256": "afb62c883912fffdab58e978d54050d2ea65c212d55ac9f3cf5c98661bdb6604"
     },
     {
@@ -80,21 +80,20 @@
         "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/integration/.venv-retrieval/bin/python",
         "scripts/verify_hw03_part2.py",
         "--run-dir",
-        "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/integration/reports/hw03/raw/part2/baseline-20260920",
+        "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/integration/reports/hw03/raw/part2/manual-screenshots-20260921",
         "--require-report",
-        "--smoke",
         "--output",
-        "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/integration/reports/hw03/raw/integration/20260921T071812156107Z/part2.json"
+        "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/integration/reports/hw03/raw/integration/20260922T043535404710Z/part2.json"
       ],
-      "started_at": "2026-09-21T07:18:13.126138+00:00",
-      "output": "reports/hw03/raw/integration/20260921T071812156107Z/part2.json",
-      "log": "reports/hw03/raw/integration/20260921T071812156107Z/part2.txt",
+      "started_at": "2026-09-22T04:35:36.324004+00:00",
+      "output": "reports/hw03/raw/integration/20260922T043535404710Z/part2.json",
+      "log": "reports/hw03/raw/integration/20260922T043535404710Z/part2.txt",
       "exit_code": 0,
       "reported_status": "pass",
       "status": "pass",
-      "output_sha256": "f80d0af4aa2c200b2c8ef18dd479eff2d55e1122098837473c5b0039468003ef",
-      "finished_at": "2026-09-21T07:18:20.015413+00:00",
-      "log_sha256": "1b6dbf699c3e624e999f2a511454b76de34f72c0408cc44a5929fbde85dc58fd"
+      "output_sha256": "d32178544a8211aaff7eb06e9834bf8df7c203bee370af536477054217d4d888",
+      "finished_at": "2026-09-22T04:35:37.163927+00:00",
+      "log_sha256": "54026d94abcd7171a02b0d2e7374f30dc1f517123684186a31b56620f4539405"
     }
   ],
   "checks": [
@@ -157,10 +156,10 @@
       "name": "report_build_identity",
       "passed": true,
       "details": {
-        "pdf_sha256": "4fad31c20577929d4bb7baa7440da4db5a06ea09d19687811dc3a8637ceb5bc0",
-        "markdown_sha256": "3aaeda4df4f68054d5f6ab65b732d5b8e28df9d28185a3376ec2b3298df8822e",
-        "page_count_reported_by_builder": 25,
-        "source_count": 47,
+        "pdf_sha256": "23febff98ff2127c0d83eb4f5973fb1796d924ade9ac31974b224a71d741fe39",
+        "markdown_sha256": "1fedd8c6586467a48d6269e40aaa5a6fed0761c08f25c9f28bff86ca66f38fd0",
+        "page_count_reported_by_builder": 28,
+        "source_count": 51,
         "tested_code_commit": "96b04abc04bb4cde131958ba38f37116336a4442",
         "visual_qa": "not performed by this verifier"
       }

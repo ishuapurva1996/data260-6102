@@ -1,6 +1,6 @@
 # Homework 3 | Rental Housing Listings
 
-Pragya Apurva | DATA 260 | September 20, 2026
+Pragya Apurva | DATA 260 | September 21, 2026
 
 | Personal configuration | Value | Calculation / meaning |
 | --- | --- | --- |
@@ -55,6 +55,10 @@ code/web_application/main.py | lines 108-116
 
 The routes are in routers/auth.py. This single-worker teaching app uses public demo credentials and keeps sessions in memory. A restart clears them. The existing rental API remains unchanged and does not require login.
 
+![00-server-startup.png](screenshots/manual/00-server-startup.png)
+
+HTTPS application startup on port 8702.
+
 # Part 1 | Home page
 
 The homepage retains the rental controls and changes its navigation when a user signs in.
@@ -69,13 +73,48 @@ async def home(request: Request):
     )
 ```
 
-![auth-home.png](screenshots/integration/auth-home.png)
+![01-home.png](screenshots/manual/01-home.png)
 
-![auth-authenticated-home.png](screenshots/integration/auth-authenticated-home.png)
+Homepage before login.
 
-Home before login (left) and after login (right), shown at 375 x 812 pixels.
+# Part 1 | Home after login
 
-# Part 1 | Login form and error message
+After login, the homepage displays the username and links to the dashboard and logout.
+
+code/web_application/routers/auth.py | lines 33-37
+
+```
+@router.get("/", response_class=HTMLResponse)
+async def home(request: Request):
+    return templates.TemplateResponse(
+        request=request, name="index.html", context={"user": current_user(request)}, headers=NO_STORE,
+    )
+```
+
+![05-home-logged-in.png](screenshots/manual/05-home-logged-in.png)
+
+Homepage with an active admin session.
+
+# Part 1 | Login form
+
+The login page uses a Bootstrap card with labeled username and password fields.
+
+code/web_application/routers/auth.py | lines 40-45
+
+```
+@router.get("/login", response_class=HTMLResponse)
+async def login_page(request: Request):
+    return templates.TemplateResponse(
+        request=request, name="login.html",
+        context={"user": current_user(request), "error": None}, headers=NO_STORE,
+    )
+```
+
+![02-login.png](screenshots/manual/02-login.png)
+
+Login form.
+
+# Part 1 | Invalid login
 
 The form uses a Bootstrap card, labeled inputs and a submit button. Invalid credentials return HTTP 401 and display an alert above the form.
 
@@ -90,11 +129,9 @@ code/web_application/routers/auth.py | lines 59-64
         )
 ```
 
-![mobile-login.png](screenshots/part1/mobile-login.png)
+![03-invalid-login.png](screenshots/manual/03-invalid-login.png)
 
-![mobile-invalid-login.png](screenshots/part1/mobile-invalid-login.png)
-
-Login form (left) and the alert after an invalid login (right), at 375px width.
+Alert after an invalid username or password.
 
 # Part 1 | Protected dashboard
 
@@ -109,13 +146,29 @@ async def dashboard(request: Request):
         return RedirectResponse("/login", status_code=303, headers=NO_STORE)
 ```
 
-![mobile-dashboard.png](screenshots/part1/mobile-dashboard.png)
+![04-dashboard.png](screenshots/manual/04-dashboard.png)
 
-Dashboard after login, at 375px width. An anonymous request to this route returned HTTP 303 to /login.
+Dashboard after a successful login.
 
-# Part 1 | Logout and cookie replay
+# Part 1 | Logout
 
-Logout removes the server's session entry and clears the browser cookie. To test revocation, the browser suite saves a valid cookie, logs out, then sends that old cookie to /dashboard from a fresh browser context. Access is denied.
+Logout removes the server's session entry, clears the browser cookie and returns to the homepage.
+
+code/web_application/routers/auth.py | lines 89-91
+
+```
+async def logout(request: Request):
+    revoke_session(request)
+    return RedirectResponse("/", status_code=303, headers=NO_STORE)
+```
+
+![06-after-logout.png](screenshots/manual/06-after-logout.png)
+
+Homepage after logout, with Login available again.
+
+# Part 1 | Reusing a logged-out cookie
+
+The terminal check logs in and saves the cookie. It first reaches /dashboard with HTTP 200, then logs out and sends the same saved cookie again. The second dashboard request returns HTTP 303 to /login.
 
 code/web_application/routers/auth.py | lines 26-30
 
@@ -127,19 +180,9 @@ def revoke_session(request: Request) -> None:
     request.scope["session"] = {}
 ```
 
-code/web_application/routers/auth.py | lines 89-91
+![08-logout-replay.png](screenshots/manual/08-logout-replay.png)
 
-```
-async def logout(request: Request):
-    revoke_session(request)
-    return RedirectResponse("/", status_code=303, headers=NO_STORE)
-```
-
-![auth-post-logout.png](screenshots/integration/auth-post-logout.png)
-
-![mobile-logout-replay-denied.png](screenshots/part1/mobile-logout-replay-denied.png)
-
-Homepage after logout (left) and login page after reusing the old cookie (right). Both redirects returned HTTP 303.
+The saved cookie is rejected after logout.
 
 # Part 1 | Secure session cookie
 
@@ -158,17 +201,11 @@ code/web_application/main.py | lines 108-115
     )
 ```
 
-reports/hw03/raw/part1/desktop-login-response-headers.txt | captured Set-Cookie
+![07-cookie-header.png](screenshots/manual/07-cookie-header.png)
 
-```
-set-cookie: session=[REDACTED]; path=/; Max-Age=3600; httponly; samesite=lax; secure
-```
+Login response with HttpOnly, SameSite=lax and Secure.
 
-![auth-cookie-header.png](screenshots/integration/auth-cookie-header.png)
-
-HTTPS login response. The session cookie value is hidden.
-
-The browser ran against https://[::1]:8702 with a local self-signed certificate and sent the cookie with its dashboard request. Certificate acceptance was limited to the test browser contexts.
+The curl command trusts the local development certificate for this request. It prints the response headers and hides only the cookie value.
 
 # Part 1 | Idle timeout
 
@@ -190,13 +227,13 @@ code/web_application/session_store.py | lines 27-35
 
 | Check | Result |
 | --- | --- |
-| Copied expired cookie | A separate server used a 2-second demo timeout. Replaying the cookie after the wait returned 303 to /login. |
+| Copied expired cookie | The live check waited 301.0 seconds with the normal 300-second timeout. Replaying the saved cookie returned 303 to /login. |
 | 300-second boundary | A controlled clock confirmed renewal before the boundary and denial at exactly the limit. |
 | Other invalid sessions | Changed cookies, unknown IDs, mismatched usernames and replaced logins were rejected. |
 
-![idle-replay-denied.png](screenshots/part1/idle-replay-denied.png)
+![09-idle-timeout.png](screenshots/manual/09-idle-timeout.png)
 
-The copied cookie is denied after the short expiry demonstration. The application default remains 300 seconds.
+The saved cookie is rejected after 301 seconds without activity.
 
 # Part 1 | Bootstrap and templates
 
@@ -217,7 +254,7 @@ code/web_application/templates/base.html | lines 12-21
         <a class="nav-link" href="/login">Login</a>
 ```
 
-![auth-templates-directory.png](screenshots/integration/auth-templates-directory.png)
+![10-templates-directory.png](screenshots/manual/10-templates-directory.png)
 
 Application templates.
 
@@ -240,7 +277,7 @@ The four local text files contain 345,859 bytes, above the 204,800-byte minimum.
 
 SOURCES.md and CORPUS_MANIFEST.json record the URLs, access dates, filenames, byte sizes and hashes. Original PDFs are retained, and answer passages were checked against their page images. The first 12,000 characters of Tiny Shakespeare were used only for the warm-up.
 
-Inputs were committed before retrieval at 08bd6e0495ce03281aa8fab7f70ac0b51e1c1442. The measured run used code cc0a57bae6e19778021643bffebf5c66d5e7c0a3. Package versions are pinned in requirements-retrieval.txt; FAISS is installed, while the indexes use SimpleVectorStore.
+Inputs were committed before retrieval at 08bd6e0495ce03281aa8fab7f70ac0b51e1c1442. The measured run used code 85a6dd8f2dfe2a89a8301a3accc8aef4d533c443. Package versions are pinned in requirements-retrieval.txt; FAISS is installed, while the indexes use SimpleVectorStore.
 
 # Part 2 | Five questions
 
@@ -292,7 +329,7 @@ src/retrieval/evaluation.py | lines 25-25
     cosine = np.dot(left / np.linalg.norm(left), right / np.linalg.norm(right))
 ```
 
-![token.png](screenshots/integration/token.png)
+![11-token-output.png](screenshots/manual/11-token-output.png)
 
 Helper output for Q1 using the token index. [384] is the query vector's shape; [3, 384] represents three document vectors. The table shows store scores, calculated cosines, lengths and text previews.
 
@@ -312,7 +349,7 @@ src/retrieval/chunking.py | lines 77-83
         )
 ```
 
-![token.png](screenshots/integration/token.png)
+![11-token-output.png](screenshots/manual/11-token-output.png)
 
 Token output for Q1 (k = 3).
 
@@ -332,7 +369,7 @@ src/retrieval/chunking.py | lines 85-91
         )
 ```
 
-![semantic.png](screenshots/integration/semantic.png)
+![12-semantic-output.png](screenshots/manual/12-semantic-output.png)
 
 Semantic output for Q1 (k = 3).
 
@@ -350,7 +387,7 @@ src/retrieval/chunking.py | lines 93-97
         )
 ```
 
-![sentence_window.png](screenshots/integration/sentence_window.png)
+![13-sentence-window-output.png](screenshots/manual/13-sentence-window-output.png)
 
 Sentence window output for Q1 (k = 3).
 
@@ -377,9 +414,9 @@ All three methods found the expected source for every question. Sentence-window 
 
 | Method | Chunks | Mean chars | Top-1 | Mean@3 | Recall@3 | Search ms |
 | --- | --- | --- | --- | --- | --- | --- |
-| Token | 440 | 936.7 | 0.6850 | 0.6476 | 1.0000 | 3.771 |
-| Semantic | 143 | 2406.3 | 0.6445 | 0.5708 | 1.0000 | 1.349 |
-| Sentence window | 2735 | 125.8 | 0.7486 | 0.6997 | 1.0000 | 21.886 |
+| Token | 440 | 936.7 | 0.6850 | 0.6476 | 1.0000 | 3.435 |
+| Semantic | 143 | 2406.3 | 0.6445 | 0.5708 | 1.0000 | 1.321 |
+| Sentence window | 2735 | 125.8 | 0.7486 | 0.6997 | 1.0000 | 20.176 |
 
 | Method | Central support@3 | Context support@3 | Answers supported (context) |
 | --- | --- | --- | --- |
@@ -391,10 +428,10 @@ Recompute the tables from recorded results
 
 ```
 python code/retrieval_summarize.py \
-  --run-dir reports/hw03/raw/part2/baseline-20260920
+  --run-dir reports/hw03/raw/part2/manual-screenshots-20260921
 ```
 
-![metrics.png](screenshots/integration/metrics.png)
+![14-comparison-table.png](screenshots/manual/14-comparison-table.png)
 
 Results across the five questions.
 
@@ -404,21 +441,21 @@ Each row uses k = 3 and has source Recall@3 = 1.0000. A support value of 1 means
 
 | Q | Method | Top-1 | Mean@3 | Support central/context | Search ms |
 | --- | --- | --- | --- | --- | --- |
-| Q1 | Token | 0.6075 | 0.5859 | 0/0 | 3.656 |
-| Q1 | Semantic | 0.5590 | 0.5483 | 1/1 | 1.317 |
-| Q1 | Sentence window | 0.7134 | 0.6710 | 1/1 | 21.909 |
-| Q2 | Token | 0.7511 | 0.7019 | 0/0 | 3.820 |
-| Q2 | Semantic | 0.7438 | 0.6400 | 0/0 | 1.343 |
-| Q2 | Sentence window | 0.7175 | 0.6818 | 0/0 | 22.134 |
-| Q3 | Token | 0.6783 | 0.5982 | 1/1 | 3.765 |
-| Q3 | Semantic | 0.6881 | 0.5227 | 1/1 | 1.319 |
-| Q3 | Sentence window | 0.7603 | 0.6989 | 0/1 | 21.832 |
-| Q4 | Token | 0.7209 | 0.6989 | 0/0 | 3.812 |
-| Q4 | Semantic | 0.6646 | 0.5866 | 0/0 | 1.320 |
-| Q4 | Sentence window | 0.7592 | 0.7499 | 1/1 | 21.230 |
-| Q5 | Token | 0.6672 | 0.6530 | 0/0 | 3.800 |
-| Q5 | Semantic | 0.5672 | 0.5564 | 0/0 | 1.446 |
-| Q5 | Sentence window | 0.7927 | 0.6969 | 1/1 | 22.325 |
+| Q1 | Token | 0.6075 | 0.5859 | 0/0 | 3.476 |
+| Q1 | Semantic | 0.5590 | 0.5483 | 1/1 | 1.321 |
+| Q1 | Sentence window | 0.7134 | 0.6710 | 1/1 | 20.116 |
+| Q2 | Token | 0.7511 | 0.7019 | 0/0 | 3.486 |
+| Q2 | Semantic | 0.7438 | 0.6400 | 0/0 | 1.310 |
+| Q2 | Sentence window | 0.7175 | 0.6818 | 0/0 | 20.145 |
+| Q3 | Token | 0.6783 | 0.5982 | 1/1 | 3.452 |
+| Q3 | Semantic | 0.6881 | 0.5227 | 1/1 | 1.331 |
+| Q3 | Sentence window | 0.7603 | 0.6989 | 0/1 | 20.100 |
+| Q4 | Token | 0.7209 | 0.6989 | 0/0 | 3.380 |
+| Q4 | Semantic | 0.6646 | 0.5866 | 0/0 | 1.317 |
+| Q4 | Sentence window | 0.7592 | 0.7499 | 1/1 | 20.199 |
+| Q5 | Token | 0.6672 | 0.6530 | 0/0 | 3.380 |
+| Q5 | Semantic | 0.5672 | 0.5564 | 0/0 | 1.326 |
+| Q5 | Sentence window | 0.7927 | 0.6969 | 1/1 | 20.318 |
 
 For Q3, separate central sentences give the boiling and cold-water facts. Each alone is incomplete, while their expanded windows contain both facts. Q2's answer is absent from every method's results despite the high cosine scores.
 
@@ -442,7 +479,7 @@ The comparison covers five questions, four documents and one model configuration
 
 Q2 asks for the $480 dependent deduction. The top token hit scores 0.7511, above the 0.50 confidence threshold, but omits the amount. It reaches the right source without answering the question. Shared words about income and deductions likely explain the similarity.
 
-![failure.png](screenshots/integration/failure.png)
+![15-high-score-failure.png](screenshots/manual/15-high-score-failure.png)
 
 Q2's top token hit, including its complete returned text.
 
@@ -452,11 +489,11 @@ Q2's top token hit, including its complete returned text.
 
 Sentence windows supplied complete answers for four of five questions, compared with two for semantic splitting and one for token splitting. Q3 shows why the extra context helps: a sentence matches part of the question, while nearby text supplies the other fact. All methods found the right source for Q2, but none retrieved its answer. Source recall alone therefore overstates success here.
 
-Semantic search was fastest at 1.35 ms, followed by token search at 3.77 ms and sentence-window search at 21.89 ms. This order is consistent with the number of chunks, although the experiment does not isolate chunk count as the cause. Long semantic chunks often exceeded the model's input limit, and the strict Q5 label also affects the comparison.
+Semantic search was fastest at 1.321 ms, followed by token search at 3.435 ms and sentence-window search at 20.176 ms. This order is consistent with the number of chunks, although the experiment does not isolate chunk count as the cause. Long semantic chunks often exceeded the model's input limit, and the strict Q5 label also affects the comparison.
 
 ## Conclusion
 
-Sentence windows worked best for this corpus because their context supported four of five answers and their average top-1 cosine was highest. They took about 22 ms per search, compared with 1-4 ms for the other methods. Semantic splitting was faster, but the model could not read all of its longer chunks. The Q2 failure shows that a useful retrieval check needs to examine the answer text as well as its similarity score.
+Sentence windows worked best for this corpus because their context supported four of five answers and their average top-1 cosine was highest. They took about 20 ms per search, compared with 1-4 ms for the other methods. Semantic splitting was faster, but the model could not read all of its longer chunks. The Q2 failure shows that a useful retrieval check needs to examine the answer text as well as its similarity score.
 
 # AI assistant use
 

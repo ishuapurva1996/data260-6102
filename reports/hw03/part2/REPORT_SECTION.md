@@ -17,13 +17,15 @@ A **token** is a piece of text used by the model; it can be a word, part of a wo
 | VERIFY_SEED | `266102` |
 | DOMAIN_ID | `6` — Rental Housing Listings |
 
-Part 2 runs as a local command-line experiment and does not bind a web port. The repository address is [ishuapurva1996/data260-6102](https://github.com/ishuapurva1996/data260-6102); this section does not assert that the Part 2 branch has been published or that collaborator access has been checked.
+Part 2 runs as a local command-line experiment and does not bind a web port. The repository address is [ishuapurva1996/data260-6102](https://github.com/ishuapurva1996/data260-6102).
 
 The run used Python **3.12.14** on **macOS 15.7.4, arm64**, with CPU execution and **one PyTorch thread**. A supplemental hardware probe identified an **Apple M4, 24 GiB memory, and 10 logical CPUs**. The sandbox denied the hardware probe during the campaign, so `run.json` preserves unavailable hardware fields; the later probe on the same host is recorded separately in [hardware.json](hardware.json).
 
 All methods used [sentence-transformers/all-MiniLM-L6-v2](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2), pinned to revision `1110a243fdf4706b3f48f1d95db1a4f5529b4d41`, with **384-dimensional normalized vectors**, a **256-token maximum input length**, and batch size 32. Normalization scales each vector to length one. The model was downloaded once and then loaded locally; the experiment made no paid API calls. Key installed versions were `llama-index`/`llama-index-core` 0.14.24, `llama-index-embeddings-huggingface` 0.8.0, `sentence-transformers` 6.1.0, `torch` 2.14.0, `transformers` 5.17.0, `faiss-cpu` 1.15.1, `numpy` 2.5.3, and `pandas` 3.0.6. The complete environment is pinned in [requirements-retrieval.txt](../../../requirements-retrieval.txt). FAISS was installed as requested; the comparison used LlamaIndex's in-memory `SimpleVectorStore`.
 
-The corpus, questions and configuration were committed at **`08bd6e0495ce03281aa8fab7f70ac0b51e1c1442` before graded retrieval**. The campaign used tested code commit **`cc0a57bae6e19778021643bffebf5c66d5e7c0a3`**, a descendant of the input commit. Run `baseline-20260920` started at `2026-09-20T08:31:30.149864+00:00` and finished at `2026-09-20T08:32:33.685826+00:00`. Its [run.json](../raw/part2/baseline-20260920/run.json) records code/input hashes, settings and dependency versions. These are local experiment commits; the final combined submission tag and PDF are reserved for integration.
+The corpus, questions and configuration were committed at **`08bd6e0495ce03281aa8fab7f70ac0b51e1c1442` before retrieval**. This report uses run `manual-screenshots-20260921`, recorded at code commit **`85a6dd8f2dfe2a89a8301a3accc8aef4d533c443`**, a descendant of the input commit. It started at `2026-09-22T03:50:41.493148+00:00` and finished at `2026-09-22T03:51:45.916194+00:00` (September 21, 2026, in the local Pacific time zone). Its [run.json](../raw/part2/manual-screenshots-20260921/run.json) records code/input hashes, settings and dependency versions.
+
+The original `baseline-20260920` experiment remains unchanged. A [comparison of the two runs](../raw/part2/manual-screenshots-20260921/baseline_comparison.json) found identical complete hits and vector sidecars. Only timestamps and search timings changed; the tables below use the new timings.
 
 ## Corpus and questions fixed before retrieval
 
@@ -48,7 +50,7 @@ The five questions in [questions.yaml](../questions.yaml) were authored from sou
 | Q4 | A rental applicant believes housing discrimination occurred. What time limit does HUD's Fair Housing booklet give for filing a complaint with HUD? | One year after the alleged discrimination occurred or ended. | `HUD_FAIR`, PDF page 10 / printed page 6 |
 | Q5 | For project-based Section 8 rental housing, what minimum percentage of assisted units that become available during a project fiscal year must be leased to extremely low-income families? | At least 40% of those assisted units. | `HUD_SELECTION`, paragraph 4-5.A; PDF page 10 |
 
-The source audit searched all four counted documents and read matching contexts, independently of retrieval scores. All five requested facts occur in only one corpus document, exceeding the requirement for at least two such questions. [GOLD_EVIDENCE_AUDIT.md](GOLD_EVIDENCE_AUDIT.md) and [single_source_audit.json](../corpus/single_source_audit.json) preserve the evidence. This audit was performed by Codex agents; it is not a claim of independent student verification.
+The source audit searched all four counted documents and read matching contexts, independently of retrieval scores. All five requested facts occur in only one corpus document, exceeding the requirement for at least two such questions. [GOLD_EVIDENCE_AUDIT.md](GOLD_EVIDENCE_AUDIT.md) and [single_source_audit.json](../corpus/single_source_audit.json) preserve the evidence. Codex performed this source audit.
 
 ## Implementation and actual output
 
@@ -61,7 +63,7 @@ return VectorStoreIndex(nodes, storage_context=storage_context,
                         embed_model=embed_model, show_progress=False)
 ```
 
-This excerpt is from [indexing.py](../../../src/retrieval/indexing.py). The following parser excerpts are from [chunking.py](../../../src/retrieval/chunking.py), with each corresponding Q1 output immediately below it. The screenshots capture browser displays of the actual saved console output; they are not generated illustrations. Full output for all 15 question/method combinations is in [console.txt](../raw/part2/baseline-20260920/console.txt).
+This excerpt is from [indexing.py](../../../src/retrieval/indexing.py). The following parser excerpts are from [chunking.py](../../../src/retrieval/chunking.py), with each corresponding Q1 output immediately below it. The screenshots were taken in Terminal by Pragya Apurva while displaying the new run’s saved output. Full output for all 15 question/method combinations is in [console.txt](../raw/part2/manual-screenshots-20260921/console.txt).
 
 ### TokenTextSplitter
 
@@ -77,7 +79,7 @@ parser = TokenTextSplitter(
 )
 ```
 
-![Actual token-splitter Q1 output](../screenshots/part2/token.png)
+![Actual token-splitter Q1 output](../screenshots/manual/11-token-output.png)
 
 ### SemanticSplitterNodeParser
 
@@ -93,7 +95,7 @@ parser = AuditedSemanticSplitter.from_defaults(
 )
 ```
 
-![Actual semantic-splitter Q1 output](../screenshots/part2/semantic.png)
+![Actual semantic-splitter Q1 output](../screenshots/manual/12-semantic-output.png)
 
 ### SentenceWindowNodeParser
 
@@ -107,7 +109,7 @@ parser = SentenceWindowNodeParser.from_defaults(
 )
 ```
 
-![Actual sentence-window Q1 output](../screenshots/part2/sentence_window.png)
+![Actual sentence-window Q1 output](../screenshots/manual/13-sentence-window-output.png)
 
 Every output prints the query dimension, first eight vector values, query/document shapes, ranked store scores, independently computed cosines, chunk lengths and approximately 160-character previews. Q1's first eight values, identical across the three methods, are `[0.012974, 0.110427, 0.044443, 0.070470, -0.004239, -0.053385, -0.021405, -0.016511]`. These are only the first eight coordinates of a 384-value vector, not eight separate scores. Query shape `[384]` means one 384-value vector; document shape `[3, 384]` means three returned vectors with 384 values each. Complete vectors and texts are saved in the run directory, so previews are not the basis for answer labels.
 
@@ -117,41 +119,41 @@ For each question/method pair, the query was embedded before timing. One unmeasu
 
 **Top-1 cosine** is the maximum explicit cosine among the returned top three hits, following the assignment's definition. **Mean@3 cosine** averages those three cosines. **Source Recall@3** is the number of distinct expected source documents retrieved divided by the number expected. Each question has one expected source, so a source hit is either 0 or 1; repeated chunks from that source cannot increase it.
 
-**Answer support@3** is 1 only when at least one individual returned text supplies every fact required by the question. Central-text support and expanded-context support are scored separately. A Codex agent read all 45 complete hits, stored quotations and rationales in [annotations.json](../raw/part2/baseline-20260920/annotations.json), and documented the decisions in [ANSWER_SUPPORT_REVIEW.md](ANSWER_SUPPORT_REVIEW.md). These are agent-reviewed relevance labels, not automatic inferences from similarity and not student review. Macro averages below give each of the five questions equal weight.
+**Answer support@3** is 1 only when at least one individual returned text supplies every fact required by the question. Central-text support and expanded-context support are scored separately. Codex reviewed all 45 complete hits from the new run against the frozen expected answers. Quotations, rationales and labels are saved in [annotations.json](../raw/part2/manual-screenshots-20260921/annotations.json). The labels agreed with the original decisions in [ANSWER_SUPPORT_REVIEW.md](ANSWER_SUPPORT_REVIEW.md). Support labels are based on passage content. Macro averages below give each of the five questions equal weight.
 
 | Method | Chunks | Mean central characters | Top-1 cosine | Mean@3 cosine | Source Recall@3 | Central support@3 | Context support@3 | Mean search ms |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Token | 440 | 936.7 | 0.6850 | 0.6476 | 1.0000 | 0.2000 | 0.2000 | 3.771 |
-| Semantic | 143 | 2,406.3 | 0.6445 | 0.5708 | 1.0000 | 0.4000 | 0.4000 | 1.349 |
-| Sentence window | 2,735 | 125.8 | 0.7486 | 0.6997 | 1.0000 | 0.6000 | 0.8000 | 21.886 |
+| Token | 440 | 936.7 | 0.6850 | 0.6476 | 1.0000 | 0.2000 | 0.2000 | 3.435 |
+| Semantic | 143 | 2,406.3 | 0.6445 | 0.5708 | 1.0000 | 0.4000 | 0.4000 | 1.321 |
+| Sentence window | 2,735 | 125.8 | 0.7486 | 0.6997 | 1.0000 | 0.6000 | 0.8000 | 20.176 |
 
 The table can be regenerated without a model or network connection using the saved data:
 
 ```bash
-python code/retrieval_summarize.py --run-dir reports/hw03/raw/part2/baseline-20260920
+python code/retrieval_summarize.py --run-dir reports/hw03/raw/part2/manual-screenshots-20260921
 ```
 
-![Actual saved aggregate metrics and truncation audit](../screenshots/part2/metrics.png)
+![Comparison table from the new run](../screenshots/manual/14-comparison-table.png)
 
 The compact per-question table shows where the aggregate differences arise. Every row has source recall 1.0000 and `k=3`; support is shown as central/context, with 1 meaning complete support in at least one hit.
 
 | Question | Method | Top-1 cosine | Mean@3 cosine | Support central/context | Search ms |
 |---|---|---:|---:|---:|---:|
-| Q1 | Token | 0.6075 | 0.5859 | 0/0 | 3.656 |
-| Q1 | Semantic | 0.5590 | 0.5483 | 1/1 | 1.317 |
-| Q1 | Sentence window | 0.7134 | 0.6710 | 1/1 | 21.909 |
-| Q2 | Token | 0.7511 | 0.7019 | 0/0 | 3.820 |
-| Q2 | Semantic | 0.7438 | 0.6400 | 0/0 | 1.343 |
-| Q2 | Sentence window | 0.7175 | 0.6818 | 0/0 | 22.134 |
-| Q3 | Token | 0.6783 | 0.5982 | 1/1 | 3.765 |
-| Q3 | Semantic | 0.6881 | 0.5227 | 1/1 | 1.319 |
-| Q3 | Sentence window | 0.7603 | 0.6989 | 0/1 | 21.832 |
-| Q4 | Token | 0.7209 | 0.6989 | 0/0 | 3.812 |
-| Q4 | Semantic | 0.6646 | 0.5866 | 0/0 | 1.320 |
-| Q4 | Sentence window | 0.7592 | 0.7499 | 1/1 | 21.230 |
-| Q5 | Token | 0.6672 | 0.6530 | 0/0 | 3.800 |
-| Q5 | Semantic | 0.5672 | 0.5564 | 0/0 | 1.446 |
-| Q5 | Sentence window | 0.7927 | 0.6969 | 1/1 | 22.325 |
+| Q1 | Token | 0.6075 | 0.5859 | 0/0 | 3.476 |
+| Q1 | Semantic | 0.5590 | 0.5483 | 1/1 | 1.321 |
+| Q1 | Sentence window | 0.7134 | 0.6710 | 1/1 | 20.116 |
+| Q2 | Token | 0.7511 | 0.7019 | 0/0 | 3.486 |
+| Q2 | Semantic | 0.7438 | 0.6400 | 0/0 | 1.310 |
+| Q2 | Sentence window | 0.7175 | 0.6818 | 0/0 | 20.145 |
+| Q3 | Token | 0.6783 | 0.5982 | 1/1 | 3.452 |
+| Q3 | Semantic | 0.6881 | 0.5227 | 1/1 | 1.331 |
+| Q3 | Sentence window | 0.7603 | 0.6989 | 0/1 | 20.100 |
+| Q4 | Token | 0.7209 | 0.6989 | 0/0 | 3.380 |
+| Q4 | Semantic | 0.6646 | 0.5866 | 0/0 | 1.317 |
+| Q4 | Sentence window | 0.7592 | 0.7499 | 1/1 | 20.199 |
+| Q5 | Token | 0.6672 | 0.6530 | 0/0 | 3.380 |
+| Q5 | Semantic | 0.5672 | 0.5564 | 0/0 | 1.326 |
+| Q5 | Sentence window | 0.7927 | 0.6969 | 1/1 | 20.318 |
 
 The model can represent only the first 256 input tokens. **76 of 143 semantic chunks (53.15%)** exceeded that limit, as did **8 of 2,735 semantic boundary buffers (0.29%)**. No token chunk, central sentence or query exceeded it. Semantic chunks were kept intact, as required by the frozen baseline, so a saved full passage can contain answer text that did not influence its embedding. Average central lengths in model tokens, including special tokens, were 192.5 for token splitting, 492.4 for semantic splitting and 27.6 for sentence windows. Sentence-window context averaged 884.4 characters / 180.9 tokens; this context was not embedded for search.
 
@@ -179,20 +181,20 @@ def cosine_similarity(left, right):
     return float(np.clip(cosine, -1.0, 1.0))
 ```
 
-![Actual Q2 high-similarity failure with its complete returned text](../screenshots/part2/failure.png)
+![Actual Q2 high-similarity failure with its complete returned text](../screenshots/manual/15-high-score-failure.png)
 
 ## Observations
 
 Sentence windows made the complete answer available in context for **four of five questions**, compared with two for semantic splitting and one for token splitting. The Q3 result shows the benefit directly: a short sentence can match a precise question, while nearby text supplies the second required fact. All methods achieved perfect source recall, yet all missed Q2's answer, so document-level recall alone substantially overstates success on this corpus.
 
-Semantic splitting searched fastest at about **1.35 ms**, token splitting took **3.77 ms**, and sentence windows took **21.89 ms**. This ordering is consistent with their different index sizes, but the campaign does not isolate chunk count as the only cause. Semantic truncation and the strict Q5 judgment limit the comparison; five questions on four documents support a local finding, not a general ranking of the methods.
+Semantic splitting searched fastest at about **1.32 ms**, token splitting took **3.43 ms**, and sentence windows took **20.18 ms**. This ordering is consistent with their different index sizes, but the campaign does not isolate chunk count as the only cause. Semantic truncation and the strict Q5 judgment limit the comparison; five questions on four documents support a local finding, not a general ranking of the methods.
 
 ## Conclusion
 
-For this corpus and frozen configuration, **sentence windows worked best when the goal was to retrieve enough text to answer the question**, with context support of 0.80 and the highest average cosine. Their approximately 22 ms search time was higher than the 1–4 ms measured for the other methods. Semantic splitting was fastest, but many long chunks exceeded the model's input limit. The high-scoring Q2 failure shows why a useful evaluation must inspect answer content as well as similarity and source recall.
+For this corpus and frozen configuration, **sentence windows worked best when the goal was to retrieve enough text to answer the question**, with context support of 0.80 and the highest average cosine. Their approximately 20 ms search time was higher than the 1–4 ms measured for the other methods. Semantic splitting was fastest, but many long chunks exceeded the model's input limit. The high-scoring Q2 failure shows why a useful evaluation must inspect answer content as well as similarity and source recall.
 
-## Verification and evidence for integration
+## Verification and evidence
 
-The focused `tests/retrieval/` suite checks source/input integrity, chunk boundaries, metadata exclusion, vector/cosine behavior, score aggregation, frozen-query consistency and verifier rejection cases. Real local-model warm-up/smoke checks exercise the embedding path. [verification.json](verification.json) and [RUN_LOG.txt](RUN_LOG.txt) record the final check results and commands; [REPRODUCIBLE_RUN_INSTRUCTIONS.md](REPRODUCIBLE_RUN_INSTRUCTIONS.md) provides the exact setup and rerun steps.
+The focused `tests/retrieval/` suite checks source/input integrity, chunk boundaries, metadata exclusion, vector/cosine behavior, score aggregation, frozen-query consistency and verifier rejection cases. Real local-model warm-up/smoke checks exercise the embedding path. [fresh_run_checks.json](../raw/part2/manual-screenshots-20260921/fresh_run_checks.json) records the new run’s input, vector and annotation checks; the shared [RUN_LOG.txt](../RUN_LOG.txt) records execution output and capture details; [REPRODUCIBLE_RUN_INSTRUCTIONS.md](REPRODUCIBLE_RUN_INSTRUCTIONS.md) provides the exact setup and rerun steps.
 
-The saved baseline is under `reports/hw03/raw/part2/baseline-20260920/`: `run.json` preserves provenance; `records.json` contains all hits and timing samples; the vector sidecars preserve query/document vectors; the three node inventories preserve indexed text; `annotations.json` records relevance evidence; and `summary.json` supports offline table regeneration. The complete metrics are in `reports/hw03/METRICS.md`, and the five report screenshots are under `reports/hw03/screenshots/part2/`. [AI_USE.md](AI_USE.md) identifies the work performed by AI, and [INTEGRATION_NOTES.md](INTEGRATION_NOTES.md) records the boundaries for the later combined report.
+The new run is under `reports/hw03/raw/part2/manual-screenshots-20260921/`: `run.json` preserves provenance; `records.json` contains all hits and timing samples; the vector sidecars preserve query/document vectors; the three node inventories preserve indexed text; `annotations.json` records relevance evidence; and `summary.json` supports offline table regeneration. The complete metrics are in `reports/hw03/METRICS.md`. The five Terminal screenshots are `11-token-output.png` through `15-high-score-failure.png` under `reports/hw03/screenshots/manual/`; the [capture manifest](../raw/manual-captures/capture-manifest.json) records the supplied files and hashes. The original baseline and its browser evidence remain available as historical records. [AI_USE.md](AI_USE.md) describes AI assistance.

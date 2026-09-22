@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "checked_at": "2026-09-22T05:24:16.021042+00:00",
+  "scope": "Checks of the user-supplied screenshots, their original image bytes and embedded PDF pixels, fresh-run source hashes, PDF build inputs, matching upload copy, and rendered-page visual review. Older automated screenshot checks remain archival evidence.",
+  "capture_manifest_sha256": "93db0d78e60b791c73d966e8b395b6584267a15ad306dee7eeda5ad382260b69",
+  "pdf_sha256": "23febff98ff2127c0d83eb4f5973fb1796d924ade9ac31974b224a71d741fe39",
+  "page_count": 28,
+  "images": {
+    "00-server-startup.png": {
+      "sha256": "e15ff400a34e047706fe152d7363a2cb567296daf517766c0e4539ed6bd68f1d",
+      "original_bytes_match": true,
+      "embedded_pixels_match": true,
+      "pdf_pages": [
+        2
+      ]
+    },
+    "01-home.png": {
+      "sha256": "0c2b84c718808b6ab558bba4b6af780402244b5962259715e3e3175cd43e1b4f",
+      "original_bytes_match": true,
+      "embedded_pixels_match": true,
+      "pdf_pages": [
+        3
+      ]
+    },
+    "02-login.png": {
+      "sha256": "fcc2f70f226274dbff6990f957de332311e87b91093028357f4a49fb32843c47",
+      "original_bytes_match": true,
+      "embedded_pixels_match": true,
+      "pdf_pages": [
+        5
+      ]
+    },
+    "03-invalid-login.png": {
+      "sha256": "087f4aec6119d9a9e46205e0964e2aa6ffe94ff7d95b799d9edf3740c181cc8a",
+      "original_bytes_match": true,
+      "embedded_pixels_match": true,
+      "pdf_pages": [
+        6
+      ]
+    },
+    "04-dashboard.png": {
+      "sha256": "187f071f2aaf3db55dd83d124d3a3a0fff39e3d624a4b7b1d4e36981a3f130c5",
+      "original_bytes_match": true,
+      "embedded_pixels_match": true,
+      "pdf_pages": [
+        7
+      ]
+    },
+    "05-home-logged-in.png": {
+      "sha256": "fb33c5bde3d4258cc0ce27aa893a21cce8b63ee9d25814c47201a923b6180551",
+      "original_bytes_match": true,
+      "embedded_pixels_match": true,
+      "pdf_pages": [
+        4
+      ]
+    },
+    "06-after-logout.png": {
+      "sha256": "09263aea463ece87d05ac1b79a98337fc67e56d567340a39d06e8abcf786ae4b",
+      "original_bytes_match": true,
+      "embedded_pixels_match": true,
+      "pdf_pages": [
+        8
+      ]
+    },
+    "07-cookie-header.png": {
+      "sha256": "bb48e59ed01a5c52426bfef733e08cb1c8396a67a88bdd93a0ce670b0a6c45e6",
+      "original_bytes_match": true,
+      "embedded_pixels_match": true,
+      "pdf_pages": [
+        10
+      ]
+    },
+    "08-logout-replay.png": {
+      "sha256": "6ed3afda82b29e0511a312d01301994c908da0824434653c80266de7602c8e16",
+      "original_bytes_match": true,
+      "embedded_pixels_match": true,
+      "pdf_pages": [
+        9
+      ]
+    },
+    "09-idle-timeout.png": {
+      "sha256": "71cfa751ba1a882abb0d1f4b7b26d7389fb4a5d717c441d90be25096098bb227",
+      "original_bytes_match": true,
+      "embedded_pixels_match": true,
+      "pdf_pages": [
+        11
+      ]
+    },
+    "10-templates-directory.png": {
+      "sha256": "21bb330d674291837c118b5ea3b539b168050d92f6777da6154e64ef3a230cf0",
+      "original_bytes_match": true,
+      "embedded_pixels_match": true,
+      "pdf_pages": [
+        12
+      ]
+    },
+    "11-token-output.png": {
+      "sha256": "2f189a75d2792a7d3c521b3fd5ae35ede134d9ca9e3b4726d6f05335182f195d",
+      "original_bytes_match": true,
+      "embedded_pixels_match": true,
+      "pdf_pages": [
+        15,
+        16
+      ]
+    },
+    "12-semantic-output.png": {
+      "sha256": "71ecb3049aced0ea269781259c167d77d320b898045d64eac316061d79be09e3",
+      "original_bytes_match": true,
+      "embedded_pixels_match": true,
+      "pdf_pages": [
+        17
+      ]
+    },
+    "13-sentence-window-output.png": {
+      "sha256": "bc15737cb8a7e11a59a8dfe810b7bbb3508176464442286d662dd615b082428e",
+      "original_bytes_match": true,
+      "embedded_pixels_match": true,
+      "pdf_pages": [
+        18
+      ]
+    },
+    "14-comparison-table.png": {
+      "sha256": "7253b2b92bc3ca0e619f44c5ccebe1b59fd165659c6a2a239b150a93d90d86ad",
+      "original_bytes_match": true,
+      "embedded_pixels_match": true,
+      "pdf_pages": [
+        20
+      ]
+    },
+    "15-high-score-failure.png": {
+      "sha256": "8e791dfcaa397c4037606a0f281cc311291b162e2e74e0b6518c1313bb17a171",
+      "original_bytes_match": true,
+      "embedded_pixels_match": true,
+      "pdf_pages": [
+        23
+      ]
+    }
+  },
+  "retrieval_sources_match_capture_manifest": true,
+  "report_build_sources_match": true,
+  "upload_copy_byte_identical": true,
+  "ai_use_matches_HEAD": true,
+  "baseline_directory_unchanged": true,
+  "aggregate_verification": {
+    "path": "reports/hw03/verification.json",
+    "status": "pass",
+    "sha256": "8de4dd1456a362832409d592f94772ee543b99f133f8fd8e8b8053da007324a9"
+  },
+  "visual_review": {
+    "status": "pass",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28
+    ],
+    "method": "Each page rendered with Poppler at 110 DPI and visually inspected by Codex. Pages 1\u201314 received a separate Codex subagent review; pages 15\u201328 were inspected by the root agent.",
+    "notes": "No report-content clipping, overlap, or caption mismatch. Wide original terminal captures contain small text at page-fit; full-resolution pixels are embedded and readable with PDF zoom. Partial lines at the edges of some screenshots are present in the user originals."
+  },
+  "publication": "Local revision only. No commit, push, or tag change performed for this report update."
+}

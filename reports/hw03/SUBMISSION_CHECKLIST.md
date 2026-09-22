@@ -1,6 +1,6 @@
 # HW3 final submission checklist
 
-The student has approved the combined HW3 code, report, and evidence for final commits, tagging, and GitHub publication. Consult `verification.json`, `report-review.json`, and `RUN_LOG.txt` for completed local checks. Unchecked publication/access/upload items require confirmation; approval alone does not establish that they succeeded.
+The combined HW3 code, report, and evidence are approved for final commits, tagging, and GitHub publication. Consult `verification.json`, `raw/manual-captures/verification.json`, and `RUN_LOG.txt` for checks of the current 28-page report. `report-review.json` retains the review of the earlier report. Unchecked publication/access/upload items require confirmation; approval alone does not establish that they succeeded.
 
 - [x] Student approval to commit, tag and publish the combined package.
 - [x] Select verified code commit `96b04abc04bb4cde131958ba38f37116336a4442` for `hw3-code`.

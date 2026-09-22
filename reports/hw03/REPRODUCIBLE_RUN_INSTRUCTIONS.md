@@ -1,18 +1,14 @@
-# Reproduce and verify the integrated HW3 submission
+# Reproduce the application, retrieval results and report
 
-Run commands from this Git repository's root. The integration checkout is `/Users/pragyaapurva/Documents/SJSU/DATA 260/HW3/worktrees/integration`. Python 3.12 is recommended; the recorded runtime was 3.12.14 on macOS arm64. Part 1 and Part 2 have separate environments. No API key, hosted model, or paid service is needed.
+Run commands from the repository root. Python 3.12 is recommended; the recorded runtime was 3.12.14 on macOS arm64. Web and retrieval dependencies use separate environments. No API key or hosted model is needed.
 
-The student has approved the combined submission for final commits, tagging, and GitHub publication. The report identifies tested code commit `96b04abc04bb4cde131958ba38f37116336a4442`, selected for `hw3-code`. The required `hw3` tag will identify the complete code/report/evidence package. Inspect `verification.json` and `RUN_LOG.txt` for actual local checks, and the [submission checklist](SUBMISSION_CHECKLIST.md) for publication, collaborator access, and course-upload completion; listing a command or link is not evidence that it succeeded.
-
-Publication targets: [report on main](https://github.com/ishuapurva1996/data260-6102/blob/main/reports/hw03/report.pdf), [complete submission at hw3](https://github.com/ishuapurva1996/data260-6102/tree/hw3), and [tested code at hw3-code](https://github.com/ishuapurva1996/data260-6102/tree/hw3-code). Verify these destinations after pushing.
+The current report uses retrieval run `manual-screenshots-20260921` and the screenshots supplied by Pragya Apurva in `screenshots/manual/`. The original `baseline-20260920` run and automated browser evidence remain unchanged. The new run produced identical hits and vectors, with new search timings.
 
 ## Prepare environments
 
 ```bash
 python3.12 -m venv .venv-web
 .venv-web/bin/python -m pip install -r requirements.txt
-npm install --package-lock=false
-npx playwright install chromium
 .venv-web/bin/python scripts/run_hw03_web.py --prepare-cert
 
 python3.12 -m venv .venv-retrieval
@@ -20,61 +16,87 @@ python3.12 -m venv .venv-retrieval
 .venv-retrieval/bin/python code/retrieval_compare.py download-model
 ```
 
-Installation and `download-model` need network access. The latter downloads the pinned public sentence-embedding model into ignored `.venv-retrieval/model-cache`; `HW3_MODEL_CACHE` can override that location. Evaluation subsequently requires local cached files and runs on CPU with one PyTorch thread. Part 2 dependencies must not be installed into the web environment. Existing ignored environments may be reused if their versions match the recorded requirements.
+Installation and `download-model` need network access. The latter downloads the pinned public embedding model into ignored `.venv-retrieval/model-cache`; `HW3_MODEL_CACHE` can override that location. Later evaluation uses local cached files, the CPU and one PyTorch thread. Keep the self-signed TLS certificate and key in ignored `tmp/https`.
 
-The self-signed TLS certificate/key stay in ignored `tmp/https`; do not commit keys or alter OS trust. `npm install --package-lock=false` retains the existing repository lockfile policy. See the two part guides for exact recorded package/runtime details and host-specific bundled executable paths:
+- [Authentication setup and automated tests](part1/REPRODUCIBLE_RUN_INSTRUCTIONS.md)
+- [Retrieval setup and rerun instructions](part2/REPRODUCIBLE_RUN_INSTRUCTIONS.md)
 
-- [Part 1 guide](part1/REPRODUCIBLE_RUN_INSTRUCTIONS.md)
-- [Part 2 guide](part2/REPRODUCIBLE_RUN_INSTRUCTIONS.md)
-
-## Run and verify authentication
+## Run authentication and capture the browser
 
 ```bash
 .venv-web/bin/python scripts/run_hw03_web.py --host ::1 --port 8702
 ```
 
-Visit `https://[::1]:8702/`; public demonstration credentials are `admin` / `password`. A manual browser shows a self-signed-certificate warning. Test login, Dashboard, Logout, and the retained rental form. The default inactivity limit is 300 seconds. Stop this server with Ctrl-C before running the suite below. If another process owns the port/address, leave it alone; choose the other documented loopback address when free.
+Leave the server running and open `https://[::1]:8702/`. The browser displays a warning for the self-signed certificate. The demonstration login is `admin` / `password`. Capture the signed-out homepage, empty login form, invalid login, successful dashboard, signed-in homepage and homepage after logout. The recorded images are `01-home.png` through `06-after-logout.png` in `screenshots/manual/`.
 
-Commit changed runtime/test source locally before collecting authoritative browser evidence. Run the following only when intentionally refreshing Part 1 evidence:
+In a second Terminal tab, print the real login response headers, redacting the cookie value:
+
+```bash
+curl --noproxy '*' --cacert tmp/https/cert.pem \
+  --silent --show-error --dump-header - --output /dev/null \
+  --data 'username=admin&password=password' \
+  'https://[::1]:8702/login' \
+  | sed -E 's/(session=)[^;]*/\1[REDACTED]/'
+```
+
+The response should show HTTP 303, `location: /dashboard`, and `HttpOnly`, `Secure` and `SameSite=lax` cookie attributes. `07-cookie-header.png` records this check.
+
+The capture helpers make requests to the running HTTPS server and use the local certificate:
+
+```bash
+.venv-web/bin/python reports/hw03/raw/manual-captures/capture_session_checks.py logout
+.venv-web/bin/python reports/hw03/raw/manual-captures/capture_session_checks.py idle
+ls -l code/web_application/templates
+```
+
+The logout check saves a cookie, logs out and attempts to reuse the same cookie. The idle check uses the normal **300-second** session limit and waits **301 seconds** without requests before retrying. Keep the server and Mac awake during the wait. Both checks should show HTTP 200 before expiry or logout, then HTTP 303 to `/login` when the saved cookie is reused. The actual Terminal captures are `08-logout-replay.png`, `09-idle-timeout.png` and `10-templates-directory.png`. The [capture manifest](raw/manual-captures/capture-manifest.json) records filenames, hashes and provenance.
+
+The older automated authentication suite used a separate 2-second timeout for its fast expiry check. That historical test is distinct from the 301-second wait shown in the current report.
+
+## Run automated authentication tests
+
+Stop the manual server with Control-C before running browser suites on the same port:
 
 ```bash
 .venv-web/bin/python -m pytest tests/test_api.py tests/test_hw03_auth.py tests/test_hw03_integration.py -q
+npm install --package-lock=false
+npx playwright install chromium
 node tests/browser_part2.cjs
 node tests/browser_hw03_auth.cjs
 ```
 
-`browser_part2.cjs` is the retained **HW2 rental regression suite**, not HW3 retrieval. The HW3 auth suite starts and stops only its own HTTPS processes, exercises desktop/mobile behavior and copied-cookie rejection, and uses a separate 2-second idle-expiry demonstration. It refreshes `raw/part1/` and `screenshots/part1/`; inspect the new images and preserve timestamped console logs. The normal source default stays 300 seconds. Signing secrets and complete cookie values must not appear in committed evidence.
+`browser_part2.cjs` checks the retained rental application, not document retrieval. The authentication browser suite starts and stops its own HTTPS processes and checks desktop/mobile behavior and copied-cookie rejection. These commands refresh `raw/part1/` and `screenshots/part1/`; they do not replace the manually captured images. Keep complete cookie values and signing secrets out of saved evidence.
 
-## Verify the existing retrieval experiment
+## Verify the saved retrieval results
 
 ```bash
 .venv-retrieval/bin/python -m pytest tests/retrieval -q
 .venv-retrieval/bin/python code/retrieval_compare.py check-inputs
 .venv-retrieval/bin/python code/retrieval_summarize.py \
-  --run-dir reports/hw03/raw/part2/baseline-20260920 --check
+  --run-dir reports/hw03/raw/part2/manual-screenshots-20260921 --check
 .venv-retrieval/bin/python reports/hw03/part2/check_evidence_corruption.py \
+  --run-dir reports/hw03/raw/part2/manual-screenshots-20260921 \
   --output /tmp/hw3-evidence-corruption.json
 ```
 
-The saved baseline is the original 15 measured comparisons. The summarizer and default evidence verifier require no network or embedding rerun. The corruption checker makes temporary copies and confirms intentionally damaged evidence is rejected; it does not alter the baseline. The command above writes its new receipt to `/tmp/hw3-evidence-corruption.json`, preserving the original recorded negative-check receipt. Copy the new receipt into a distinct integration evidence directory if retaining that rerun. Preserving merge ancestry proves that corpus/questions/settings commit `08bd6e0495ce03281aa8fab7f70ac0b51e1c1442` preceded measured-code commit `cc0a57bae6e19778021643bffebf5c66d5e7c0a3`.
+The saved run contains 15 question/method comparisons and 150 timed searches. The summarizer and default verifier need no network or embedding rerun. The corruption checker uses temporary copies to confirm that damaged evidence is rejected. The output path above preserves earlier verification receipts.
 
-If deliberately repeating the experiment, use a new run ID and the instructions in the Part 2 guide. Existing run directories cannot be overwritten. Do not replace the original measured result merely because the two parts were merged. Changed experiment code or inputs requires new evidence and an updated explanation.
+The input commit `08bd6e0495ce03281aa8fab7f70ac0b51e1c1442` precedes both the original experiment and the new run at `85a6dd8f2dfe2a89a8301a3accc8aef4d533c443`. The new run's `baseline_comparison.json` records unchanged full hits and vector sidecars; `annotations.json` records Codex's review of the returned passages. See the Part 2 guide to create another run with a new ID. Existing run directories cannot be overwritten.
 
-## Run aggregate verification
-
-After committing the integrated source and running the appropriate suites:
+## Run combined verification
 
 ```bash
-python3 scripts/verify_hw03.py --smoke
+python3 scripts/verify_hw03.py \
+  --run-dir reports/hw03/raw/part2/manual-screenshots-20260921 --smoke
 ```
 
-The standard-library orchestrator invokes the Part 1 verifier with `.venv-web/bin/python` and the Part 2 verifier with `.venv-retrieval/bin/python`. It writes `reports/hw03/verification.json` and a fresh timestamped directory beneath `raw/integration/`. Each directory retains both part JSON receipts and captured stdout/stderr. Supply `--web-python`, `--retrieval-python`, `--receipt-dir`, or `--output` to override those locations. Receipt directories must be new, preventing accidental replacement of prior receipts. `--smoke` explicitly checks the real cached embedding model; omit it for evidence-only Part 2 verification.
+The orchestrator invokes the web verifier with `.venv-web/bin/python` and the retrieval verifier with `.venv-retrieval/bin/python`. It writes `reports/hw03/verification.json` and a new timestamped receipt directory under `raw/integration/`. Supply `--web-python`, `--retrieval-python`, `--receipt-dir` or `--output` to change those locations. `--smoke` checks the cached embedding model; omit it for saved-evidence verification.
 
-A passing result requires successful subprocess exits, passing part payloads, committed current source, preserved experiment history, and unchanged measured retrieval runtime. A later hardening change to the Part 2 verifier is distinguished from the unchanged retrieval runtime that produced the baseline. The Part 1 subprocess reruns web/API tests and refreshes `raw/part1/self-check-pytest.txt`. The aggregate command does not rerun browser captures or the full retrieval test suite.
+A pass requires successful part checks, committed runtime source, preserved experiment ancestry and matching saved hashes. The web verifier reruns web/API tests and refreshes `raw/part1/self-check-pytest.txt`. This command does not rerun the browser captures or full retrieval test suite. Pass `--run-dir` explicitly because the script's default points to the original baseline.
 
-## Assemble and check the report
+## Build and check the report
 
-The report build script uses the source sections, screenshots, AI-use answers, and measured results to produce `report.pdf`, a generated Markdown reference (`report.md`), and `report-build.json`. Edit the narrative in `scripts/build_hw03_report.py` or its input files and regenerate; editing the generated Markdown alone does not change the PDF.
+Edit the narrative in `scripts/build_hw03_report.py` or its inputs, then regenerate the PDF. Editing generated `report.md` alone does not change the PDF.
 
 ```bash
 python3.12 -m venv .venv-report
@@ -85,18 +107,18 @@ python3.12 -m venv .venv-report
   --upload-copy ../../Apurva_HW3.pdf
 ```
 
-The optional upload destination may be any chosen path outside the repository; the current working copy uses the assignment's `HW3/Apurva_HW3.pdf` location. The recorded build used the bundled document runtime with the same pinned packages. Installation needs network; assembly itself uses only saved local inputs. The code reference above matches the completed integration checks in `raw/integration/checks.json`; create and verify its `hw3-code` tag before the final build. If runtime source changes, commit and rerun affected checks, then use the resulting verified reference instead of silently relabeling old evidence. Later documentation and verifier-only commits do not change the runtime that produced these checks.
+The tested-code tag identifies the integrated runtime checks. The new retrieval run separately records its execution commit in `run.json`; its experiment code and inputs match the earlier run. The build manifest records the PDF, Markdown and consumed-input hashes. Assembly uses saved local inputs and requires passing integration receipts. Installation needs network access.
 
-The manifest records the tested-code commit, PDF and Markdown hashes, consumed source hashes and page count. It requires successful integration receipts before generating the report. Final visual review is a separate step.
+The report uses the supplied browser and Terminal images under `screenshots/manual/`. Do not run the old report-viewer capture scripts to replace these images: those scripts produce a different presentation of saved evidence. Preserve the raw screenshots and their manifest when rebuilding. Review every rendered page for image readability, captions and page breaks.
 
-The saved report figures can be reused. If deliberately refreshing their presentation, run `node scripts/capture_hw03_report_evidence.mjs` for browser views of the original retrieval output, and `node scripts/capture_hw03_auth_report.cjs` for three new mobile viewport captures plus saved-header/directory viewers. The latter starts and stops its own local HTTPS server and refuses an occupied `::1:8702`; it does not alter or replace the original 27-check browser evidence. Both scripts save input hashes and screenshot receipts under `raw/integration/`. Regenerate the report after any figure changes.
-
-After building and visually checking every page:
+After building:
 
 ```bash
-python3 scripts/verify_hw03.py --require-report --smoke
+python3 scripts/verify_hw03.py \
+  --run-dir reports/hw03/raw/part2/manual-screenshots-20260921 \
+  --require-report --smoke
 ```
 
-`--require-report` checks the required shared files, PDF file markers, manifest hashes and tested-code ancestry. It does **not** claim to render the PDF or judge visual quality. Keep the actual page inspection result separately in the integration log/evidence. Build inputs should not include a subsequently rewritten aggregate `verification.json`, which would create a freshness cycle.
+`--require-report` checks required files, PDF markers, manifest hashes and tested-code ancestry. It does not inspect the page layout. Keep the visual review result in the run log. Avoid using a subsequently rewritten `verification.json` as a report input, which would create a hash cycle.
 
-The submission PDF inside Git is `reports/hw03/report.pdf`. The external upload copy is `Apurva_HW3.pdf`; compare its SHA-256 with the repository copy after every report revision. The student has approved final commits, Git tags and GitHub publication. Commit the complete package, publish the approved branch and tags, then verify the remote report and tag links plus collaborator access. Course-portal upload is a separate completion step; confirm the uploaded filename and successful submission receipt.
+The repository PDF is `reports/hw03/report.pdf`; the external upload copy is `Apurva_HW3.pdf`. Their SHA-256 hashes must match after each revision. GitHub publication and course-portal upload are separate from local rebuilding and verification; the [submission checklist](SUBMISSION_CHECKLIST.md) records those steps.
