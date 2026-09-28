@@ -1,0 +1,95 @@
+{
+  "homework": 4,
+  "part": 3,
+  "SID4": 6102,
+  "SEED": 6102,
+  "VERIFY_SEED": 266102,
+  "timestamp_utc": "2026-09-28T00:50:03.902977+00:00",
+  "measured_revision": "9860a20342072168ed68a8d41eb16d9bfecf7729",
+  "current_head_at_check": "62117550e2e2a253ea754152d2bb1007cc6b1f9a",
+  "scope": "Part3 evidence only; not whole-homework/tagged verification",
+  "checks": [
+    {
+      "name": "Selected HTTP attempt complete",
+      "passed": true,
+      "detail": "180 observed successful rows; six groups of30 validated by summarizer"
+    },
+    {
+      "name": "Measured clean revision",
+      "passed": true,
+      "detail": "9860a20342072168ed68a8d41eb16d9bfecf7729"
+    },
+    {
+      "name": "Full payload equality",
+      "passed": true,
+      "detail": "Baseline hashes equal across naive/fixed and every request in each size"
+    },
+    {
+      "name": "Separate warmups",
+      "passed": true,
+      "detail": "18 outside measured rows;6 preflight responses also separate"
+    },
+    {
+      "name": "Exact real seed",
+      "passed": true,
+      "detail": "9513ac766ab94f7c23c9257536d8e0f623c8bcbf530f6881e3c354cc7ced1b78"
+    },
+    {
+      "name": "Raw hash",
+      "passed": true,
+      "detail": "de93e1f8d771805807a32928e69a0af230944d41038e9b6403825cc7af9e1dd8"
+    },
+    {
+      "name": "Metrics reproduce",
+      "passed": true,
+      "detail": "All six groups and percentile ratios identical; independent recomputation also saved"
+    },
+    {
+      "name": "Index complete",
+      "passed": true,
+      "detail": "reports/hw04/raw/part3/index/20260928T004453-df40d32d"
+    },
+    {
+      "name": "Index same data/query/results",
+      "passed": true,
+      "detail": "compare_snapshots and validate_seed_identity passed on preserved MySQL snapshots"
+    },
+    {
+      "name": "Indexed repeat refused without DDL",
+      "passed": true,
+      "detail": "Intentional failure retained separately"
+    },
+    {
+      "name": "Executed source unchanged",
+      "passed": true,
+      "detail": "App .py/.sql, requirements and launcher hashes equal measured configuration; only seed CLI guard/test changed later"
+    },
+    {
+      "name": "Measured tool unchanged: benchmark.py",
+      "passed": true,
+      "detail": "No diff from measured revision"
+    },
+    {
+      "name": "Measured tool unchanged: summarize.py",
+      "passed": true,
+      "detail": "No diff from measured revision"
+    },
+    {
+      "name": "Measured tool unchanged: index_experiment.py",
+      "passed": true,
+      "detail": "No diff from measured revision"
+    },
+    {
+      "name": "Final scoped tests",
+      "passed": true,
+      "detail": "52 passed after seed output guard; real MySQL plus foundation access gate; dependency warnings retained"
+    }
+  ],
+  "postman_screenshots": {
+    "status": "pending_manual_access",
+    "required": 6,
+    "captured": 0,
+    "capture_steps": "reports/hw04/screenshots/part3/README.md"
+  },
+  "all_automated_checks_passed": true
+}

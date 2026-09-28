@@ -1,0 +1,119 @@
+{
+  "database": "s6102_rel",
+  "database_host": "127.0.0.1",
+  "database_port": 33363,
+  "mysql_version": "8.4.11",
+  "schema_revision": "001_initial.sql",
+  "seed": 6102,
+  "rental_count": 5000,
+  "manager_count": 200,
+  "foundation_commit": "f29e7cc85baf52bea30bd4bb3209d1bd79b22051",
+  "seed_manifest": "reports/hw04/raw/part3/seed_manifest.json",
+  "seed_manifest_sha256": "86acc81f45a3e564bbd0ed575213d17f68b7a84747cda8e4e24bac720d790e09",
+  "dataset_sha256": "9513ac766ab94f7c23c9257536d8e0f623c8bcbf530f6881e3c354cc7ced1b78",
+  "instance_ownership": {
+    "format_version": 1,
+    "purpose": "hw04-part3-performance",
+    "disposable": true,
+    "host": "127.0.0.1",
+    "port": 33363,
+    "database": "s6102_rel",
+    "server_uuid": "3d515eaf-bad3-11f1-8b89-0ecd67fb62d4",
+    "docker_container_id": "5d65145f0fa1ff2e2d9304470e0ba70734a4bd00e7cd9d2f644569520a9318ad",
+    "docker_container_name": "hw4-part3-mysql-6102"
+  },
+  "index_state": {
+    "migration_journal": [
+      {
+        "version": 1,
+        "name": "001_initial.sql",
+        "checksum": "d738249ea390692161830c653d0ad8b75fb3e1ee5a8aace23a760413c9ab181f",
+        "applied_at": "2026-09-28 00:31:22.542197"
+      }
+    ],
+    "rental_indexes": [
+      {
+        "Table": "rentals",
+        "Non_unique": 0,
+        "Key_name": "PRIMARY",
+        "Seq_in_index": 1,
+        "Column_name": "id",
+        "Collation": "A",
+        "Cardinality": 4868,
+        "Sub_part": null,
+        "Packed": null,
+        "Null": "",
+        "Index_type": "BTREE",
+        "Comment": "",
+        "Index_comment": "",
+        "Visible": "YES",
+        "Expression": null
+      },
+      {
+        "Table": "rentals",
+        "Non_unique": 1,
+        "Key_name": "ix_rentals_manager_id",
+        "Seq_in_index": 1,
+        "Column_name": "manager_id",
+        "Collation": "A",
+        "Cardinality": 200,
+        "Sub_part": null,
+        "Packed": null,
+        "Null": "YES",
+        "Index_type": "BTREE",
+        "Comment": "",
+        "Index_comment": "",
+        "Visible": "YES",
+        "Expression": null
+      }
+    ],
+    "title_index_present": false
+  },
+  "worker_count": 1,
+  "reload": false,
+  "server": "uvicorn with the shared scripts/run_hw04_web.py launcher",
+  "runtime": {
+    "captured_at_utc": "2026-09-28T00:36:29.542346+00:00",
+    "python": "3.13.5 (v3.13.5:6cb20a219a8, Jun 11 2025, 12:23:45) [Clang 16.0.0 (clang-1600.0.26.6)]",
+    "platform": "macOS-15.7.4-arm64-arm-64bit-Mach-O",
+    "hardware": {
+      "machdep.cpu.brand_string": "Apple M4",
+      "hw.memsize": "25769803776",
+      "hw.ncpu": "10"
+    },
+    "packages": {
+      "fastapi": "0.109.0",
+      "uvicorn": "0.27.0",
+      "SQLAlchemy": "2.0.43",
+      "PyMySQL": "1.1.2",
+      "httpx": "0.27.2",
+      "pydantic": "2.12.5",
+      "starlette": "0.35.1",
+      "argon2-cffi": "25.1.0",
+      "python-dotenv": "1.1.1"
+    },
+    "implementation_source_sha256": {
+      "code/web_application/__init__.py": "c21952d0fad8998e1f7ea98009cd118016a8afb4ca15cc9d10379d31d6b6248e",
+      "code/web_application/database.py": "f0cf148e7578ff959085fa99eec9749a4b7ef903ec86f03aa3553c6a0bc30271",
+      "code/web_application/main.py": "59e4ad72fe576d4931f5e2e314484a331f67bd656a71bfb218f990a26f52ad67",
+      "code/web_application/migrations/001_initial.sql": "d738249ea390692161830c653d0ad8b75fb3e1ee5a8aace23a760413c9ab181f",
+      "code/web_application/migrations/003_listing_title_index.sql": "f0278ae79cceb26a33367762ef37f7749a602bcc7cbd2632dcb0bc7052f37ab7",
+      "code/web_application/models.py": "671681cf6c574b01bc30645caa8f182481b69bb7fe6c432cc79a1cbfd1e49a7a",
+      "code/web_application/query_metrics.py": "9d41e0d87eebfd4dbc6a0b1b562b2e77c58be2031ed7accfde6fd27398ea9f5a",
+      "code/web_application/routers/__init__.py": "e940586d67bb15ff7ea19688e0c562dc2232bfcc48fc7db009ed383b06c5f672",
+      "code/web_application/routers/auth.py": "8fd3ba7c91de610d1da10586eb93eea2ef3c3a80ba2e10ad0a1b843bdb759e67",
+      "code/web_application/routers/performance.py": "2a95eb6ae6cb492f5e087c26fbe0962405a83e1bd19001beadafe30aeb52f8f8",
+      "code/web_application/routers/rentals.py": "376a521fcda36c6cd831dab8811c2cc1d4d009c4bac5a56d296b085406733d75",
+      "code/web_application/schemas.py": "b685c3076f16546ba714b8a9bf206dca818c947feae09a34c514da1bc198eb44",
+      "code/web_application/session_store.py": "3ba70c03ebb54f9f6b8d1936f1ae7d61f60e20b8479ccf7b4314df4c41e80ba4",
+      "requirements.txt": "155b87e26288e9e3d15009d674a5c63fe7ae1889d64e1d59135bd227774e3f5e",
+      "scripts/run_hw04_web.py": "af488a74b8ce835b9e176eb313ea5f4b86eaf3eb7081a5ff924b864222190c31"
+    }
+  },
+  "tls": "HTTPS localhost8702; client trusts generated local certificate via --ca-file, no verification bypass",
+  "notes": [
+    "Warm caches: seeding, functional tests and complete dataset verification preceded the run; no cache flush.",
+    "Parts1/2 will be quiet during the selectedrun. Other preexisting Docker services are left untouched; incidental background load is a limitation.",
+    "SQLAlchemy cursor executions include auth lookup/activity UPDATE. DBAPI pool ping, connection initialization and transaction protocol are outside statement-event counts, inside HTTP latency."
+  ]
+}

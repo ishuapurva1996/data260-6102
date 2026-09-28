@@ -1,0 +1,843 @@
+{
+  "actual_counts": {
+    "associated_rentals": 5000,
+    "distinct_managers": 200,
+    "property_managers": 200,
+    "rentals": 5000,
+    "unique_listing_titles": 5000
+  },
+  "auth_records_policy": "Existing users and sessions are preserved; seeder never writes either table.",
+  "format_version": 1,
+  "generated_dataset_sha256": "9513ac766ab94f7c23c9257536d8e0f623c8bcbf530f6881e3c354cc7ced1b78",
+  "manager_distribution": [
+    {
+      "manager_id": 1,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 2,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 3,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 4,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 5,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 6,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 7,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 8,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 9,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 10,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 11,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 12,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 13,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 14,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 15,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 16,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 17,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 18,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 19,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 20,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 21,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 22,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 23,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 24,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 25,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 26,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 27,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 28,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 29,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 30,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 31,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 32,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 33,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 34,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 35,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 36,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 37,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 38,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 39,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 40,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 41,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 42,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 43,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 44,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 45,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 46,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 47,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 48,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 49,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 50,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 51,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 52,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 53,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 54,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 55,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 56,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 57,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 58,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 59,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 60,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 61,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 62,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 63,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 64,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 65,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 66,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 67,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 68,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 69,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 70,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 71,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 72,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 73,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 74,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 75,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 76,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 77,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 78,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 79,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 80,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 81,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 82,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 83,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 84,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 85,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 86,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 87,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 88,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 89,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 90,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 91,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 92,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 93,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 94,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 95,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 96,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 97,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 98,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 99,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 100,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 101,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 102,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 103,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 104,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 105,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 106,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 107,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 108,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 109,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 110,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 111,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 112,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 113,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 114,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 115,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 116,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 117,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 118,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 119,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 120,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 121,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 122,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 123,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 124,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 125,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 126,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 127,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 128,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 129,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 130,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 131,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 132,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 133,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 134,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 135,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 136,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 137,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 138,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 139,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 140,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 141,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 142,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 143,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 144,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 145,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 146,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 147,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 148,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 149,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 150,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 151,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 152,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 153,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 154,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 155,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 156,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 157,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 158,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 159,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 160,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 161,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 162,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 163,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 164,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 165,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 166,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 167,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 168,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 169,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 170,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 171,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 172,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 173,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 174,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 175,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 176,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 177,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 178,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 179,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 180,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 181,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 182,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 183,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 184,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 185,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 186,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 187,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 188,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 189,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 190,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 191,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 192,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 193,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 194,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 195,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 196,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 197,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 198,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 199,
+      "rental_count": 25
+    },
+    {
+      "manager_id": 200,
+      "rental_count": 25
+    }
+  ],
+  "mysql_version": "8.4.11",
+  "ownership": {
+    "database": "s6102_rel",
+    "disposable": true,
+    "docker_container_id": "5d65145f0fa1ff2e2d9304470e0ba70734a4bd00e7cd9d2f644569520a9318ad",
+    "docker_container_name": "hw4-part3-mysql-6102",
+    "format_version": 1,
+    "host": "127.0.0.1",
+    "port": 33363,
+    "purpose": "hw04-part3-performance",
+    "server_uuid": "3d515eaf-bad3-11f1-8b89-0ecd67fb62d4"
+  },
+  "rental_id_range": {
+    "max": 5000,
+    "min": 1
+  },
+  "reset_policy": "No reset/delete/drop support. Nonempty target is refused.",
+  "schema_migrations": [
+    {
+      "checksum": "d738249ea390692161830c653d0ad8b75fb3e1ee5a8aace23a760413c9ab181f",
+      "name": "001_initial.sql",
+      "version": 1
+    }
+  ],
+  "schema_revision": "001_initial.sql",
+  "seed": 6102,
+  "seeded_at_utc": "2026-09-28T00:31:26.627443+00:00",
+  "selective_title": "HW4-6102-00001 Condo in Rose Garden",
+  "stored_dataset_sha256": "9513ac766ab94f7c23c9257536d8e0f623c8bcbf530f6881e3c354cc7ced1b78"
+}

@@ -1,0 +1,40 @@
+{
+  "query_block": {
+    "select_id": 1,
+    "cost_info": {
+      "query_cost": "1.05"
+    },
+    "ordering_operation": {
+      "using_filesort": false,
+      "table": {
+        "table_name": "rentals",
+        "access_type": "ref",
+        "possible_keys": [
+          "ix_rentals_listing_title"
+        ],
+        "key": "ix_rentals_listing_title",
+        "used_key_parts": [
+          "listing_title"
+        ],
+        "key_length": "1022",
+        "ref": [
+          "const"
+        ],
+        "rows_examined_per_scan": 1,
+        "rows_produced_per_join": 1,
+        "filtered": "100.00",
+        "using_index": true,
+        "cost_info": {
+          "read_cost": "0.95",
+          "eval_cost": "0.10",
+          "prefix_cost": "1.05",
+          "data_read_per_join": "3K"
+        },
+        "used_columns": [
+          "id",
+          "listing_title"
+        ]
+      }
+    }
+  }
+}

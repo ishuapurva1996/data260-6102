@@ -1,0 +1,95 @@
+{
+  "captured_at_utc": "2026-09-28T00:44:53.122218Z",
+  "dataset": {
+    "counts": {
+      "associated_rentals": 5000,
+      "distinct_managers": 200,
+      "property_managers": 200,
+      "rentals": 5000,
+      "unique_listing_titles": 5000
+    },
+    "physical_rows_sha256": "0bdee7bbc69b260905cecc69f0ffb9b7b4628ec61fb11cacd1640902571f7e3d",
+    "rental_id_range": {
+      "max": 5000,
+      "min": 1
+    },
+    "stored_dataset_sha256": "9513ac766ab94f7c23c9257536d8e0f623c8bcbf530f6881e3c354cc7ced1b78"
+  },
+  "explain_format_json_raw": "{\n  \"query_block\": {\n    \"select_id\": 1,\n    \"cost_info\": {\n      \"query_cost\": \"511.05\"\n    },\n    \"ordering_operation\": {\n      \"using_filesort\": false,\n      \"table\": {\n        \"table_name\": \"rentals\",\n        \"access_type\": \"index\",\n        \"key\": \"PRIMARY\",\n        \"used_key_parts\": [\n          \"id\"\n        ],\n        \"key_length\": \"4\",\n        \"rows_examined_per_scan\": 4868,\n        \"rows_produced_per_join\": 486,\n        \"filtered\": \"10.00\",\n        \"cost_info\": {\n          \"read_cost\": \"462.37\",\n          \"eval_cost\": \"48.68\",\n          \"prefix_cost\": \"511.05\",\n          \"data_read_per_join\": \"1M\"\n        },\n        \"used_columns\": [\n          \"id\",\n          \"listing_title\"\n        ],\n        \"attached_condition\": \"(`s6102_rel`.`rentals`.`listing_title` = 'HW4-6102-00001 Condo in Rose Garden')\"\n      }\n    }\n  }\n}",
+  "explain_traditional": [
+    {
+      "Extra": "Using where",
+      "filtered": 10.0,
+      "id": 1,
+      "key": "PRIMARY",
+      "key_len": "4",
+      "partitions": null,
+      "possible_keys": null,
+      "ref": null,
+      "rows": 4868,
+      "select_type": "SIMPLE",
+      "table": "rentals",
+      "type": "index"
+    }
+  ],
+  "indexes": [
+    {
+      "Cardinality": 4868,
+      "Collation": "A",
+      "Column_name": "id",
+      "Comment": "",
+      "Expression": null,
+      "Index_comment": "",
+      "Index_type": "BTREE",
+      "Key_name": "PRIMARY",
+      "Non_unique": 0,
+      "Null": "",
+      "Packed": null,
+      "Seq_in_index": 1,
+      "Sub_part": null,
+      "Table": "rentals",
+      "Visible": "YES"
+    },
+    {
+      "Cardinality": 200,
+      "Collation": "A",
+      "Column_name": "manager_id",
+      "Comment": "",
+      "Expression": null,
+      "Index_comment": "",
+      "Index_type": "BTREE",
+      "Key_name": "ix_rentals_manager_id",
+      "Non_unique": 1,
+      "Null": "YES",
+      "Packed": null,
+      "Seq_in_index": 1,
+      "Sub_part": null,
+      "Table": "rentals",
+      "Visible": "YES"
+    }
+  ],
+  "parameters": {
+    "title": "HW4-6102-00001 Condo in Rose Garden"
+  },
+  "query": "SELECT id,listing_title FROM rentals WHERE listing_title=:title ORDER BY id",
+  "result_sha256": "08a9e04c383c00283a084c95bfaa507d93e4aac314a0778e6fce77a3e3b92e3e",
+  "results": [
+    {
+      "id": 1,
+      "listing_title": "HW4-6102-00001 Condo in Rose Garden"
+    }
+  ],
+  "schema_migrations": [
+    {
+      "applied_at": "2026-09-28T00:31:22.542197",
+      "checksum": "d738249ea390692161830c653d0ad8b75fb3e1ee5a8aace23a760413c9ab181f",
+      "name": "001_initial.sql",
+      "version": 1
+    }
+  ],
+  "server": {
+    "database_name": "s6102_rel",
+    "server_uuid": "3d515eaf-bad3-11f1-8b89-0ecd67fb62d4",
+    "version": "8.4.11"
+  }
+}

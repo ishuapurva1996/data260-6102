@@ -1,0 +1,16 @@
+[
+  {
+    "Extra": "Using where",
+    "filtered": 10.0,
+    "id": 1,
+    "key": "PRIMARY",
+    "key_len": "4",
+    "partitions": null,
+    "possible_keys": null,
+    "ref": null,
+    "rows": 4868,
+    "select_type": "SIMPLE",
+    "table": "rentals",
+    "type": "index"
+  }
+]

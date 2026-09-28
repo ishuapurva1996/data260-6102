@@ -1,0 +1,172 @@
+{
+  "timestamp": "2026-09-28T00:41:31.239420+00:00",
+  "classification": "Real MySQL execution-listener verification through TestClient; not measured HTTP latency rows",
+  "parameters_policy": "No parameter values captured; auth opaque identifiers and credentials excluded",
+  "results": [
+    {
+      "page_size": 10,
+      "version": "naive",
+      "independent_total": 13,
+      "independent_data": 11,
+      "header_total": 13,
+      "header_data": 11,
+      "statement_shapes": [
+        {
+          "sql": "SELECT sessions.id, sessions.user_id, sessions.created_at, sessions.expires_at, sessions.last_activity_at, users.id AS id_1, users.name, users.email, users.password_hash \nFROM sessions INNER JOIN users ON sessions.user_id = users.id \nWHERE sessions.id = %(id_2)s",
+          "is_data_query": false,
+          "executions": 1
+        },
+        {
+          "sql": "UPDATE sessions SET last_activity_at=%(last_activity_at)s WHERE sessions.id = %(sessions_id)s",
+          "is_data_query": false,
+          "executions": 1
+        },
+        {
+          "sql": "SELECT rentals.id, rentals.listing_title, rentals.property_address, rentals.submitter_email, rentals.description, rentals.property_type, rentals.terms_accepted, rentals.manager_id \nFROM rentals ORDER BY rentals.id \n LIMIT %(param_1)s, %(param_2)s",
+          "is_data_query": true,
+          "executions": 1
+        },
+        {
+          "sql": "SELECT property_managers.id, property_managers.name \nFROM property_managers \nWHERE property_managers.id = %(id_1)s",
+          "is_data_query": true,
+          "executions": 10
+        }
+      ]
+    },
+    {
+      "page_size": 10,
+      "version": "fixed",
+      "independent_total": 3,
+      "independent_data": 1,
+      "header_total": 3,
+      "header_data": 1,
+      "statement_shapes": [
+        {
+          "sql": "SELECT sessions.id, sessions.user_id, sessions.created_at, sessions.expires_at, sessions.last_activity_at, users.id AS id_1, users.name, users.email, users.password_hash \nFROM sessions INNER JOIN users ON sessions.user_id = users.id \nWHERE sessions.id = %(id_2)s",
+          "is_data_query": false,
+          "executions": 1
+        },
+        {
+          "sql": "UPDATE sessions SET last_activity_at=%(last_activity_at)s WHERE sessions.id = %(sessions_id)s",
+          "is_data_query": false,
+          "executions": 1
+        },
+        {
+          "sql": "SELECT rentals.id, rentals.listing_title, rentals.property_address, rentals.submitter_email, rentals.description, rentals.property_type, rentals.terms_accepted, rentals.manager_id, property_managers.id AS id_1, property_managers.name \nFROM rentals LEFT OUTER JOIN property_managers ON rentals.manager_id = property_managers.id ORDER BY rentals.id \n LIMIT %(param_1)s, %(param_2)s",
+          "is_data_query": true,
+          "executions": 1
+        }
+      ]
+    },
+    {
+      "page_size": 50,
+      "version": "naive",
+      "independent_total": 53,
+      "independent_data": 51,
+      "header_total": 53,
+      "header_data": 51,
+      "statement_shapes": [
+        {
+          "sql": "SELECT sessions.id, sessions.user_id, sessions.created_at, sessions.expires_at, sessions.last_activity_at, users.id AS id_1, users.name, users.email, users.password_hash \nFROM sessions INNER JOIN users ON sessions.user_id = users.id \nWHERE sessions.id = %(id_2)s",
+          "is_data_query": false,
+          "executions": 1
+        },
+        {
+          "sql": "UPDATE sessions SET last_activity_at=%(last_activity_at)s WHERE sessions.id = %(sessions_id)s",
+          "is_data_query": false,
+          "executions": 1
+        },
+        {
+          "sql": "SELECT rentals.id, rentals.listing_title, rentals.property_address, rentals.submitter_email, rentals.description, rentals.property_type, rentals.terms_accepted, rentals.manager_id \nFROM rentals ORDER BY rentals.id \n LIMIT %(param_1)s, %(param_2)s",
+          "is_data_query": true,
+          "executions": 1
+        },
+        {
+          "sql": "SELECT property_managers.id, property_managers.name \nFROM property_managers \nWHERE property_managers.id = %(id_1)s",
+          "is_data_query": true,
+          "executions": 50
+        }
+      ]
+    },
+    {
+      "page_size": 50,
+      "version": "fixed",
+      "independent_total": 3,
+      "independent_data": 1,
+      "header_total": 3,
+      "header_data": 1,
+      "statement_shapes": [
+        {
+          "sql": "SELECT sessions.id, sessions.user_id, sessions.created_at, sessions.expires_at, sessions.last_activity_at, users.id AS id_1, users.name, users.email, users.password_hash \nFROM sessions INNER JOIN users ON sessions.user_id = users.id \nWHERE sessions.id = %(id_2)s",
+          "is_data_query": false,
+          "executions": 1
+        },
+        {
+          "sql": "UPDATE sessions SET last_activity_at=%(last_activity_at)s WHERE sessions.id = %(sessions_id)s",
+          "is_data_query": false,
+          "executions": 1
+        },
+        {
+          "sql": "SELECT rentals.id, rentals.listing_title, rentals.property_address, rentals.submitter_email, rentals.description, rentals.property_type, rentals.terms_accepted, rentals.manager_id, property_managers.id AS id_1, property_managers.name \nFROM rentals LEFT OUTER JOIN property_managers ON rentals.manager_id = property_managers.id ORDER BY rentals.id \n LIMIT %(param_1)s, %(param_2)s",
+          "is_data_query": true,
+          "executions": 1
+        }
+      ]
+    },
+    {
+      "page_size": 200,
+      "version": "naive",
+      "independent_total": 203,
+      "independent_data": 201,
+      "header_total": 203,
+      "header_data": 201,
+      "statement_shapes": [
+        {
+          "sql": "SELECT sessions.id, sessions.user_id, sessions.created_at, sessions.expires_at, sessions.last_activity_at, users.id AS id_1, users.name, users.email, users.password_hash \nFROM sessions INNER JOIN users ON sessions.user_id = users.id \nWHERE sessions.id = %(id_2)s",
+          "is_data_query": false,
+          "executions": 1
+        },
+        {
+          "sql": "UPDATE sessions SET last_activity_at=%(last_activity_at)s WHERE sessions.id = %(sessions_id)s",
+          "is_data_query": false,
+          "executions": 1
+        },
+        {
+          "sql": "SELECT rentals.id, rentals.listing_title, rentals.property_address, rentals.submitter_email, rentals.description, rentals.property_type, rentals.terms_accepted, rentals.manager_id \nFROM rentals ORDER BY rentals.id \n LIMIT %(param_1)s, %(param_2)s",
+          "is_data_query": true,
+          "executions": 1
+        },
+        {
+          "sql": "SELECT property_managers.id, property_managers.name \nFROM property_managers \nWHERE property_managers.id = %(id_1)s",
+          "is_data_query": true,
+          "executions": 200
+        }
+      ]
+    },
+    {
+      "page_size": 200,
+      "version": "fixed",
+      "independent_total": 3,
+      "independent_data": 1,
+      "header_total": 3,
+      "header_data": 1,
+      "statement_shapes": [
+        {
+          "sql": "SELECT sessions.id, sessions.user_id, sessions.created_at, sessions.expires_at, sessions.last_activity_at, users.id AS id_1, users.name, users.email, users.password_hash \nFROM sessions INNER JOIN users ON sessions.user_id = users.id \nWHERE sessions.id = %(id_2)s",
+          "is_data_query": false,
+          "executions": 1
+        },
+        {
+          "sql": "UPDATE sessions SET last_activity_at=%(last_activity_at)s WHERE sessions.id = %(sessions_id)s",
+          "is_data_query": false,
+          "executions": 1
+        },
+        {
+          "sql": "SELECT rentals.id, rentals.listing_title, rentals.property_address, rentals.submitter_email, rentals.description, rentals.property_type, rentals.terms_accepted, rentals.manager_id, property_managers.id AS id_1, property_managers.name \nFROM rentals LEFT OUTER JOIN property_managers ON rentals.manager_id = property_managers.id ORDER BY rentals.id \n LIMIT %(param_1)s, %(param_2)s",
+          "is_data_query": true,
+          "executions": 1
+        }
+      ]
+    }
+  ]
+}

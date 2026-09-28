@@ -1,0 +1,13 @@
+{
+  "successful_attempt": "reports/hw04/raw/part3/index/20260928T004453-df40d32d",
+  "status": "complete",
+  "comparison": "reports/hw04/raw/part3/index/20260928T004453-df40d32d/comparison.json",
+  "before": "reports/hw04/raw/part3/index/20260928T004453-df40d32d/before.json",
+  "after": "reports/hw04/raw/part3/index/20260928T004453-df40d32d/after.json",
+  "code_revision": "62117550e2e2a253ea754152d2bb1007cc6b1f9a",
+  "dirty": true,
+  "dirty_scope": "Only report/evidence changes listed in configuration.json; executed source and migration unchanged.",
+  "refused_repeat": "reports/hw04/raw/part3/index/20260928T004504-a87ff5a9",
+  "equal_dataset": true,
+  "equal_results": true
+}

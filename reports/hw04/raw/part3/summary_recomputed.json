@@ -1,0 +1,9 @@
+{
+  "check": "Independent percentile/count/ratio/hash recomputation",
+  "passed": true,
+  "requests": 180,
+  "groups": 6,
+  "percentile_values_checked": 18,
+  "ratios_checked": 9,
+  "raw_sha256": "de93e1f8d771805807a32928e69a0af230944d41038e9b6403825cc7af9e1dd8"
+}

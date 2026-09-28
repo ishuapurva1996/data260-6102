@@ -1,0 +1,303 @@
+HW4 Part 3 run log
+Actual command outputs below. Initial preparation notes are labeled notes rather than reconstructed console output.
+
+Preparation notes (2026-09-27 local):
+- Verified hw3^{commit} = 5742b2aadbafee5ba208311723ea470c09811dc5.
+- Created codex/hw4-part3-performance worktree at that baseline; main checkout and sibling worktrees untouched.
+- Dedicated Docker MySQL8.4.11: hw4-part3-mysql-6102, host127.0.0.1:33363, serverUUID3d515eaf-bad3-11f1-8b89-0ecd67fb62d4, database s6102_rel. No shared database changes.
+- First dependency installation in sandbox failed DNS; escalated isolated uv install succeeded.
+- python -m pytest from repo root hit legacy code/__init__.py shadowing stdlib code in pdb. Use .venv/bin/pytest instead (no source workaround).
+- Instrumentation proof-first: tests/test_hw04_part3.py initially failed with ModuleNotFoundError web_application.query_metrics; after implementation, 2 passed.
+- Postman UI inventory: native apps and /Applications plus ~/Applications show no Postman; screenshots pending manual access.
+
+2026-09-28T00:29:02.779614+00:00
+$ .venv/bin/pytest tests/test_hw04_part3.py -q
+..                                                                       [100%]
+2 passed in 0.05s
+exit_code=0
+
+2026-09-28T00:29:38.694665+00:00
+$ .venv/bin/pytest tests/test_hw04_part3.py tests/test_hw04_part3_seed.py -q
+............                                                             [100%]
+12 passed in 0.19s
+exit_code=0
+
+2026-09-28T00:30:14.814834+00:00
+$ .venv/bin/pytest tests/test_hw04_part3.py tests/test_hw04_part3_seed.py tests/test_hw04_part3_measurement.py -q
+.................................                                        [100%]
+33 passed in 0.45s
+exit_code=0
+
+2026-09-28T00:31:22.646150+00:00
+$ .venv/bin/python scripts/hw04/db_setup.py --migrate --through 1 --seed-account
+Applied migrations: 001_initial.sql
+Teaching account created.
+exit_code=0
+
+2026-09-28T00:31:26.680377+00:00
+$ .venv/bin/python scripts/hw04/part3/seed_data.py --ownership-manifest /private/tmp/hw4-part3-ownership.json --schema-revision 001_initial.sql --output reports/hw04/raw/part3/seed_manifest.json
+{"actual_counts": {"associated_rentals": 5000, "distinct_managers": 200, "property_managers": 200, "rentals": 5000, "unique_listing_titles": 5000}, "generated_dataset_sha256": "9513ac766ab94f7c23c9257536d8e0f623c8bcbf530f6881e3c354cc7ced1b78", "seed_manifest": "reports/hw04/raw/part3/seed_manifest.json"}
+exit_code=0
+
+2026-09-28T00:32:24.223111+00:00
+$ .venv/bin/pytest tests/test_hw04_part3.py -k actual_sql and 10 -q
+F                                                                        [100%]
+=================================== FAILURES ===================================
+______________ test_mysql_payload_and_actual_sql_include_auth[10] ______________
+
+mysql_app = <fastapi.applications.FastAPI object at 0x1048c74d0>, size = 10
+
+    @LIVE
+    @pytest.mark.parametrize('size', [10, 50, 200])
+    def test_mysql_payload_and_actual_sql_include_auth(mysql_app, size):
+        from sqlalchemy import event
+        from web_application.database import db_session_basede26
+        observed = []
+        def record(conn, cursor, statement, parameters, context, executemany):
+            observed.append({'sql': statement, 'data': bool(context.execution_options.get('hw4_data_query'))})
+        with authenticated_client(mysql_app) as client:
+            event.listen(db_session_basede26, 'before_cursor_execute', record)
+            try:
+                payloads = []
+                for version in ('naive', 'fixed'):
+                    observed.clear()
+                    response = client.get(f'/api/rentals/{version}?page_size={size}&offset=0')
+>                   assert response.status_code == 200
+E                   assert 422 == 200
+E                    +  where 422 = <Response [422 Unprocessable Entity]>.status_code
+
+tests/test_hw04_part3.py:111: AssertionError
+=============================== warnings summary ===============================
+tests/test_hw04_part3.py::test_mysql_payload_and_actual_sql_include_auth[10]
+  /Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part3-performance/.venv/lib/python3.13/site-packages/starlette/formparsers.py:10: PendingDeprecationWarning: Please use `import python_multipart` instead.
+    import multipart
+
+tests/test_hw04_part3.py::test_mysql_payload_and_actual_sql_include_auth[10]
+  /Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part3-performance/.venv/lib/python3.13/site-packages/starlette/testclient.py:31: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    [], typing.ContextManager[anyio.abc.BlockingPortal]
+
+tests/test_hw04_part3.py::test_mysql_payload_and_actual_sql_include_auth[10]
+  /Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part3-performance/.venv/lib/python3.13/site-packages/httpx/_client.py:690: DeprecationWarning: The 'app' shortcut is now deprecated. Use the explicit style 'transport=WSGITransport(app=...)' instead.
+    warnings.warn(message, DeprecationWarning)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_hw04_part3.py::test_mysql_payload_and_actual_sql_include_auth[10]
+1 failed, 7 deselected, 3 warnings in 0.65s
+exit_code=1
+
+2026-09-28T00:32:46.212570+00:00
+$ .venv/bin/pytest tests/test_hw04_part3.py tests/test_hw04_part3_seed.py tests/test_hw04_part3_measurement.py -q
+.......................................                                  [100%]
+=============================== warnings summary ===============================
+tests/test_hw04_part3.py::test_mysql_payload_and_actual_sql_include_auth[10]
+  /Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part3-performance/.venv/lib/python3.13/site-packages/starlette/formparsers.py:10: PendingDeprecationWarning: Please use `import python_multipart` instead.
+    import multipart
+
+tests/test_hw04_part3.py::test_mysql_payload_and_actual_sql_include_auth[10]
+  /Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part3-performance/.venv/lib/python3.13/site-packages/starlette/testclient.py:31: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    [], typing.ContextManager[anyio.abc.BlockingPortal]
+
+tests/test_hw04_part3.py: 12 warnings
+  /Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part3-performance/.venv/lib/python3.13/site-packages/httpx/_client.py:690: DeprecationWarning: The 'app' shortcut is now deprecated. Use the explicit style 'transport=WSGITransport(app=...)' instead.
+    warnings.warn(message, DeprecationWarning)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+39 passed, 14 warnings in 1.63s
+exit_code=0
+
+2026-09-28T00:34:23.347202+00:00
+$ .venv/bin/python tmp/part3-runtime/smoke_http.py
+{"classification": "DEVELOPMENT HTTP functional checks; not selected latency evidence", "base_url": "https://localhost:8733", "equal_payloads": true}
+Six endpoint/size responses validated; observed total SQL: [13, 3, 53, 3, 203, 3]
+exit_code=0
+
+2026-09-28T00:35:25.364254+00:00
+$ .venv/bin/pytest tests/test_hw04_part3.py tests/test_hw04_part3_seed.py tests/test_hw04_part3_measurement.py tests/test_hw04_part3_index.py tests/test_hw04_foundation_gate.py -q
+..................................................                       [100%]
+=============================== warnings summary ===============================
+.venv/lib/python3.13/site-packages/starlette/formparsers.py:10
+  /Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part3-performance/.venv/lib/python3.13/site-packages/starlette/formparsers.py:10: PendingDeprecationWarning: Please use `import python_multipart` instead.
+    import multipart
+
+.venv/lib/python3.13/site-packages/starlette/testclient.py:31
+  /Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part3-performance/.venv/lib/python3.13/site-packages/starlette/testclient.py:31: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    [], typing.ContextManager[anyio.abc.BlockingPortal]
+
+tests/test_hw04_part3.py: 12 warnings
+tests/test_hw04_foundation_gate.py: 1 warning
+  /Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part3-performance/.venv/lib/python3.13/site-packages/httpx/_client.py:690: DeprecationWarning: The 'app' shortcut is now deprecated. Use the explicit style 'transport=WSGITransport(app=...)' instead.
+    warnings.warn(message, DeprecationWarning)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+50 passed, 15 warnings in 1.82s
+exit_code=0
+
+2026-09-28T00:36:29.615863+00:00
+$ .venv/bin/python tmp/part3-runtime/snapshot.py
+Verified unchanged5000/200 dataset and title-index absence; recorded runtime/configuration/source hashes.
+{"mysql": "8.4.11", "hardware": {"machdep.cpu.brand_string": "Apple M4", "hw.memsize": "25769803776", "hw.ncpu": "10"}, "dataset_sha256": "9513ac766ab94f7c23c9257536d8e0f623c8bcbf530f6881e3c354cc7ced1b78"}
+exit_code=0
+
+2026-09-28T00:37:08.980480+00:00
+$ .venv/bin/python scripts/hw04/part3/seed_data.py --ownership-manifest /private/tmp/hw4-part3-ownership.json --schema-revision 001_initial.sql --output reports/hw04/raw/part3/reseed_refused.json
+Traceback (most recent call last):
+  File "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part3-performance/scripts/hw04/part3/seed_data.py", line 207, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part3-performance/scripts/hw04/part3/seed_data.py", line 193, in main
+    evidence = seed_owned_database(
+        engine=db_session_basede26, session_factory=SessionLocal,
+        rental_model=Rental, manager_model=PropertyManager,
+        ownership_manifest=args.ownership_manifest, schema_revision=args.schema_revision,
+    )
+  File "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part3-performance/scripts/hw04/part3/seed_data.py", line 124, in seed_owned_database
+    assert_empty_seed_target(rental_count, manager_count)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part3-performance/scripts/hw04/part3/seed_data.py", line 91, in assert_empty_seed_target
+    raise OwnershipError("Refusing seed: rentals and property_managers must both be empty; no reset/delete/drop is supported")
+ownership.OwnershipError: Refusing seed: rentals and property_managers must both be empty; no reset/delete/drop is supported
+exit_code=1
+
+2026-09-28T00:39:05.961826+00:00
+$ .venv/bin/python scripts/hw04/part3/benchmark.py --config reports/hw04/raw/part3/benchmark_config.json --ca-file tmp/https/cert.pem --email-env HW4_SEED_EMAIL --password-env HW4_SEED_PASSWORD
+Completed exactly 180 validated measured requests: reports/hw04/raw/part3/attempts/20260928T003859.945761Z-cd277c20
+exit_code=0
+
+2026-09-28T00:39:21.585811+00:00
+$ .venv/bin/python scripts/hw04/part3/summarize.py --raw reports/hw04/raw/part3/attempts/20260928T003859.945761Z-cd277c20/requests.jsonl --output-dir reports/hw04/part3
+Validated 180 requests; summaries: reports/hw04/part3
+exit_code=0
+
+2026-09-28T00:40:42.109674+00:00
+$ .venv/bin/python tmp/part3-runtime/recompute.py
+{"check": "Independent percentile/count/ratio/hash recomputation", "passed": true, "requests": 180, "groups": 6, "percentile_values_checked": 18, "ratios_checked": 9, "raw_sha256": "de93e1f8d771805807a32928e69a0af230944d41038e9b6403825cc7af9e1dd8"}
+exit_code=0
+
+2026-09-28T00:41:31.294750+00:00
+$ .venv/bin/python tmp/part3-runtime/capture_sql.py
+Independent execution listener matched headers for all six groups: [13, 3, 53, 3, 203, 3]
+exit_code=0
+
+2026-09-28T00:44:53.332557+00:00
+$ .venv/bin/python scripts/hw04/part3/index_experiment.py --ownership-manifest /private/tmp/hw4-part3-ownership.json --seed-manifest reports/hw04/raw/part3/seed_manifest.json --output-root reports/hw04/raw/part3/index
+{"status": "complete", "evidence": "reports/hw04/raw/part3/index/20260928T004453-df40d32d"}
+exit_code=0
+
+2026-09-28T00:45:04.144335+00:00
+$ .venv/bin/python scripts/hw04/part3/index_experiment.py --ownership-manifest /private/tmp/hw4-part3-ownership.json --seed-manifest reports/hw04/raw/part3/seed_manifest.json --output-root reports/hw04/raw/part3/index
+{"status": "failed", "evidence": "reports/hw04/raw/part3/index/20260928T004504-a87ff5a9", "error": "A listing-title index or the proposed index name already exists; refusing to relabel it as a before state"}
+exit_code=1
+
+2026-09-28T00:45:04.463569+00:00
+$ .venv/bin/python scripts/hw04/db_setup.py --migrate --through 3
+Applied migrations: none; already current
+exit_code=0
+
+2026-09-28T00:46:46.639833+00:00
+$ .venv/bin/pytest tests/test_hw04_part3_seed.py -k SeedEvidencePathTests -q
+F.                                                                       [100%]
+=================================== FAILURES ===================================
+_ SeedEvidencePathTests.test_invalid_evidence_parent_is_rejected_before_database_seed _
+
+self = <test_hw04_part3_seed.SeedEvidencePathTests testMethod=test_invalid_evidence_parent_is_rejected_before_database_seed>
+
+    def test_invalid_evidence_parent_is_rejected_before_database_seed(self):
+        with TemporaryDirectory() as temporary:
+            parent = Path(temporary) / "ordinary-file"
+            parent.write_text("preserve this file")
+            output = parent / "seed.json"
+            with patch("seed_data.seed_owned_database", return_value={}) as seed:
+                with self.assertRaises(OSError):
+                    seed_main(["--ownership-manifest", "/tmp/unused.json",
+                               "--schema-revision", "001", "--output", str(output)])
+>               seed.assert_not_called()
+
+tests/test_hw04_part3_seed.py:102: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <MagicMock name='seed_owned_database' id='4327191760'>
+
+    def assert_not_called(self):
+        """assert that the mock was never called.
+        """
+        if self.call_count != 0:
+            msg = ("Expected '%s' to not have been called. Called %s times.%s"
+                   % (self._mock_name or 'mock',
+                      self.call_count,
+                      self._calls_repr()))
+>           raise AssertionError(msg)
+E           AssertionError: Expected 'seed_owned_database' to not have been called. Called 1 times.
+E           Calls: [call(engine=Engine(mysql+pymysql://part3:***@127.0.0.1:33363/s6102_rel), session_factory=sessionmaker(class_='Session', bind=Engine(mysql+pymysql://part3:***@127.0.0.1:33363/s6102_rel), autoflush=True, expire_on_commit=False), rental_model=<class 'web_application.models.Rental'>, manager_model=<class 'web_application.models.PropertyManager'>, ownership_manifest=PosixPath('/tmp/unused.json'), schema_revision='001')].
+
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/mock.py:940: AssertionError
+=============================== warnings summary ===============================
+tests/test_hw04_part3_seed.py::SeedEvidencePathTests::test_invalid_evidence_parent_is_rejected_before_database_seed
+  /Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part3-performance/.venv/lib/python3.13/site-packages/starlette/formparsers.py:10: PendingDeprecationWarning: Please use `import python_multipart` instead.
+    import multipart
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_hw04_part3_seed.py::SeedEvidencePathTests::test_invalid_evidence_parent_is_rejected_before_database_seed
+1 failed, 1 passed, 10 deselected, 1 warning in 0.32s
+exit_code=1
+
+2026-09-28T00:48:35.280676+00:00
+$ .venv/bin/pytest tests/test_hw04_part3_seed.py -q
+............                                                             [100%]
+=============================== warnings summary ===============================
+tests/test_hw04_part3_seed.py::SeedEvidencePathTests::test_invalid_evidence_parent_is_rejected_before_database_seed
+  /Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part3-performance/.venv/lib/python3.13/site-packages/starlette/formparsers.py:10: PendingDeprecationWarning: Please use `import python_multipart` instead.
+    import multipart
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+12 passed, 1 warning in 0.38s
+exit_code=0
+
+2026-09-28T00:49:12.940196+00:00
+$ .venv/bin/pytest tests/test_hw04_part3.py tests/test_hw04_part3_seed.py tests/test_hw04_part3_measurement.py tests/test_hw04_part3_index.py tests/test_hw04_foundation_gate.py -q
+....................................................                     [100%]
+=============================== warnings summary ===============================
+.venv/lib/python3.13/site-packages/starlette/formparsers.py:10
+  /Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part3-performance/.venv/lib/python3.13/site-packages/starlette/formparsers.py:10: PendingDeprecationWarning: Please use `import python_multipart` instead.
+    import multipart
+
+.venv/lib/python3.13/site-packages/starlette/testclient.py:31
+  /Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part3-performance/.venv/lib/python3.13/site-packages/starlette/testclient.py:31: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    [], typing.ContextManager[anyio.abc.BlockingPortal]
+
+tests/test_hw04_part3.py: 12 warnings
+tests/test_hw04_foundation_gate.py: 1 warning
+  /Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part3-performance/.venv/lib/python3.13/site-packages/httpx/_client.py:690: DeprecationWarning: The 'app' shortcut is now deprecated. Use the explicit style 'transport=WSGITransport(app=...)' instead.
+    warnings.warn(message, DeprecationWarning)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+52 passed, 15 warnings in 1.80s
+exit_code=0
+
+2026-09-28T00:49:13.006464+00:00
+$ .venv/bin/python scripts/hw04/part3/summarize.py --raw reports/hw04/raw/part3/attempts/20260928T003859.945761Z-cd277c20/requests.jsonl --output-dir tmp/part3-recomputed
+Validated 180 requests; summaries: tmp/part3-recomputed
+exit_code=0
+
+2026-09-28T00:49:56.121890+00:00
+$ .venv/bin/python tmp/part3-runtime/verify_evidence.py
+Traceback (most recent call last):
+  File "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part3-performance/tmp/part3-runtime/verify_evidence.py", line 23, in <module>
+    check('Metrics reproduce',all(recorded[k]==v for k,v in metrics.items()),'All six groups and percentile ratios identical; independent recomputation also saved')
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part3-performance/tmp/part3-runtime/verify_evidence.py", line 14, in check
+    assert condition, name
+           ^^^^^^^^^
+AssertionError: Metrics reproduce
+exit_code=1
+
+2026-09-28T00:50:03.927590+00:00
+$ .venv/bin/python tmp/part3-runtime/verify_evidence.py
+{"automated_checks_passed": 15, "selected_http_requests": 180, "postman_screenshots": "0/6, pending manual access"}
+exit_code=0
+
+2026-09-28T00:54:37.354644+00:00 FINAL HANDOFF CHECK
+Completed source-review receipt copied verbatim to reports/hw04/part3/REVIEW.json; reviewed revision 4cec543, one confirmed P2 resolved in df4d1a0.
+Bounded independent handoff/report consistency review: no material inconsistencies; all six Postman images explicitly pending.
+Source/prose whitespace check passed; original raw console failure traces preserved including original whitespace.
