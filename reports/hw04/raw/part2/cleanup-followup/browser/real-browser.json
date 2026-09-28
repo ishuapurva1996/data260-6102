@@ -1,0 +1,639 @@
+{
+  "schema_version": 1,
+  "mode": "REAL",
+  "started_at": "2026-09-28T01:14:35.781Z",
+  "status": "pass",
+  "command": "node tests/browser_hw04_part1.cjs --real",
+  "base_url": "https://127.0.0.1:8702",
+  "cwd": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part2-backend",
+  "checks": [
+    {
+      "name": "Signed-out direct visits hide protected records",
+      "status": "pass",
+      "started_at": "2026-09-28T01:14:36.199Z",
+      "details": {
+        "file": "reports/hw04/screenshots/part2/cleanup-followup/browser/real-signed-out.png",
+        "mode": "REAL",
+        "captured_at": "2026-09-28T01:14:36.429Z",
+        "actual_url": "https://127.0.0.1:8702/delete?id=17",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "full_page": true,
+        "dimensions": {
+          "viewport_width": 1280,
+          "document_width": 1280,
+          "body_width": 1280,
+          "document_height": 900,
+          "scroll_y": 0
+        }
+      },
+      "finished_at": "2026-09-28T01:14:36.429Z",
+      "actual_url": "https://127.0.0.1:8702/delete?id=17"
+    },
+    {
+      "name": "Unauthenticated CRUD APIs reject requests; unknown API remains JSON",
+      "status": "pass",
+      "started_at": "2026-09-28T01:14:36.429Z",
+      "details": {
+        "unauthenticated": [
+          {
+            "method": "GET",
+            "path": "/api/rentals",
+            "status": 401
+          },
+          {
+            "method": "GET",
+            "path": "/api/rentals/1",
+            "status": 401
+          },
+          {
+            "method": "POST",
+            "path": "/api/rentals",
+            "status": 401
+          },
+          {
+            "method": "PUT",
+            "path": "/api/rentals/1",
+            "status": 401
+          },
+          {
+            "method": "DELETE",
+            "path": "/api/rentals/1",
+            "status": 401
+          }
+        ],
+        "unknown_api": {
+          "status": 404,
+          "content_type": "application/json"
+        }
+      },
+      "finished_at": "2026-09-28T01:14:36.447Z",
+      "actual_url": "https://127.0.0.1:8702/delete?id=17"
+    },
+    {
+      "name": "Invalid credentials stay rejected",
+      "status": "pass",
+      "started_at": "2026-09-28T01:14:36.447Z",
+      "details": {
+        "response_status": 401,
+        "screenshot": {
+          "file": "reports/hw04/screenshots/part2/cleanup-followup/browser/real-invalid-login.png",
+          "mode": "REAL",
+          "captured_at": "2026-09-28T01:14:36.657Z",
+          "actual_url": "https://127.0.0.1:8702/login",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "full_page": true,
+          "dimensions": {
+            "viewport_width": 1280,
+            "document_width": 1280,
+            "body_width": 1280,
+            "document_height": 900,
+            "scroll_y": 0
+          }
+        }
+      },
+      "finished_at": "2026-09-28T01:14:36.657Z",
+      "actual_url": "https://127.0.0.1:8702/login"
+    },
+    {
+      "name": "Valid HTTPS login sets an opaque HTTP-only secure cookie",
+      "status": "pass",
+      "started_at": "2026-09-28T01:14:36.657Z",
+      "details": {
+        "status": 200,
+        "cookie": {
+          "name": "s6102_session",
+          "value": "[REDACTED]",
+          "httpOnly": true,
+          "secure": true,
+          "sameSite": "Lax",
+          "path": "/"
+        },
+        "captured_set_cookie_headers": [
+          {
+            "name": "set-cookie",
+            "value": "s6102_session=[REDACTED]; HttpOnly; Max-Age=3600; Path=/; SameSite=lax; Secure"
+          }
+        ],
+        "javascript_cannot_read_cookie": true,
+        "screenshot": {
+          "file": "reports/hw04/screenshots/part2/cleanup-followup/browser/real-authenticated-home.png",
+          "mode": "REAL",
+          "captured_at": "2026-09-28T01:14:36.864Z",
+          "actual_url": "https://127.0.0.1:8702/",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "full_page": true,
+          "dimensions": {
+            "viewport_width": 1280,
+            "document_width": 1280,
+            "body_width": 1280,
+            "document_height": 953,
+            "scroll_y": 0
+          }
+        }
+      },
+      "finished_at": "2026-09-28T01:14:36.864Z",
+      "actual_url": "https://127.0.0.1:8702/"
+    },
+    {
+      "name": "Create sends six fields and renders the database-assigned ID",
+      "status": "pass",
+      "started_at": "2026-09-28T01:14:36.864Z",
+      "details": {
+        "server_id": 14,
+        "sent_body": {
+          "listingTitle": "HW4 browser verification c3b22b1c-20a6-45b1-a712-9b4585473071",
+          "propertyAddress": "6102 Verification Avenue",
+          "submitterEmail": "c3b22b1c-20a6-45b1-a712-9b4585473071@example.com",
+          "description": "HW4 Part 1 browser cleanup run c3b22b1c-20a6-45b1-a712-9b4585473071",
+          "propertyType": "apartment",
+          "termsAccepted": true
+        },
+        "status": 201,
+        "screenshot": {
+          "file": "reports/hw04/screenshots/part2/cleanup-followup/browser/real-created-home.png",
+          "mode": "REAL",
+          "captured_at": "2026-09-28T01:14:37.184Z",
+          "actual_url": "https://127.0.0.1:8702/",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "full_page": true,
+          "dimensions": {
+            "viewport_width": 1280,
+            "document_width": 1280,
+            "body_width": 1280,
+            "document_height": 1429,
+            "scroll_y": 379
+          }
+        }
+      },
+      "finished_at": "2026-09-28T01:14:37.184Z",
+      "actual_url": "https://127.0.0.1:8702/"
+    },
+    {
+      "name": "Update direct URL and refresh retain selection; two fields persist",
+      "status": "pass",
+      "started_at": "2026-09-28T01:14:37.184Z",
+      "details": {
+        "sent_body": {
+          "listingTitle": "HW4 browser verification c3b22b1c-20a6-45b1-a712-9b4585473071 revised",
+          "propertyAddress": "8702 Persistent Record Road"
+        },
+        "unchanged_extra_fields": true,
+        "screenshot": {
+          "file": "reports/hw04/screenshots/part2/cleanup-followup/browser/real-updated-home.png",
+          "mode": "REAL",
+          "captured_at": "2026-09-28T01:14:37.518Z",
+          "actual_url": "https://127.0.0.1:8702/",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "full_page": true,
+          "dimensions": {
+            "viewport_width": 1280,
+            "document_width": 1280,
+            "body_width": 1280,
+            "document_height": 1429,
+            "scroll_y": 379
+          }
+        }
+      },
+      "finished_at": "2026-09-28T01:14:37.518Z",
+      "actual_url": "https://127.0.0.1:8702/"
+    },
+    {
+      "name": "Updated rental and authentication survive owner-controlled backend restart",
+      "status": "pass",
+      "started_at": "2026-09-28T01:14:37.518Z",
+      "details": {
+        "record_id": 14,
+        "restart_acknowledged": true,
+        "session_survived": true,
+        "screenshot": {
+          "file": "reports/hw04/screenshots/part2/cleanup-followup/browser/real-after-backend-restart.png",
+          "mode": "REAL",
+          "captured_at": "2026-09-28T01:14:40.383Z",
+          "actual_url": "https://127.0.0.1:8702/",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "full_page": true,
+          "dimensions": {
+            "viewport_width": 1280,
+            "document_width": 1280,
+            "body_width": 1280,
+            "document_height": 1429,
+            "scroll_y": 0
+          }
+        }
+      },
+      "finished_at": "2026-09-28T01:14:40.383Z",
+      "actual_url": "https://127.0.0.1:8702/"
+    },
+    {
+      "name": "Real missing/invalid ID routes remain safe",
+      "status": "pass",
+      "started_at": "2026-09-28T01:14:40.383Z",
+      "details": [
+        {
+          "path": "/update",
+          "message": "Choose a listing from the home page to update. A valid positive listing ID is required."
+        },
+        {
+          "path": "/delete",
+          "message": "Choose a listing from the home page to delete. A valid positive listing ID is required."
+        },
+        {
+          "path": "/update?id=invalid",
+          "message": "Choose a listing from the home page to update. A valid positive listing ID is required."
+        },
+        {
+          "path": "/delete?id=-1",
+          "message": "Choose a listing from the home page to delete. A valid positive listing ID is required."
+        }
+      ],
+      "finished_at": "2026-09-28T01:14:40.528Z",
+      "actual_url": "https://127.0.0.1:8702/delete?id=-1"
+    },
+    {
+      "name": "Narrow real browser shows persisted records without horizontal overflow",
+      "status": "pass",
+      "started_at": "2026-09-28T01:14:40.528Z",
+      "details": {
+        "file": "reports/hw04/screenshots/part2/cleanup-followup/browser/real-mobile-home.png",
+        "mode": "REAL",
+        "captured_at": "2026-09-28T01:14:40.613Z",
+        "actual_url": "https://127.0.0.1:8702/",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "full_page": true,
+        "dimensions": {
+          "viewport_width": 390,
+          "document_width": 390,
+          "body_width": 390,
+          "document_height": 1869,
+          "scroll_y": 0
+        }
+      },
+      "finished_at": "2026-09-28T01:14:40.614Z",
+      "actual_url": "https://127.0.0.1:8702/"
+    },
+    {
+      "name": "Delete direct URL confirms selected record, then handles empty 204",
+      "status": "pass",
+      "started_at": "2026-09-28T01:14:40.614Z",
+      "details": {
+        "deleted_id": 14,
+        "response_status": 204,
+        "response_body": "204 No Content (status/header check)",
+        "subsequent_get_status": 404,
+        "screenshot": {
+          "file": "reports/hw04/screenshots/part2/cleanup-followup/browser/real-deleted-home.png",
+          "mode": "REAL",
+          "captured_at": "2026-09-28T01:14:40.829Z",
+          "actual_url": "https://127.0.0.1:8702/",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "full_page": true,
+          "dimensions": {
+            "viewport_width": 1280,
+            "document_width": 1280,
+            "body_width": 1280,
+            "document_height": 1027,
+            "scroll_y": 0
+          }
+        }
+      },
+      "finished_at": "2026-09-28T01:14:40.829Z",
+      "actual_url": "https://127.0.0.1:8702/"
+    },
+    {
+      "name": "Logout clears cookie and blocks protected routes again",
+      "status": "pass",
+      "started_at": "2026-09-28T01:14:40.829Z",
+      "details": {
+        "api_after_logout": 401,
+        "screenshot": {
+          "file": "reports/hw04/screenshots/part2/cleanup-followup/browser/real-after-logout.png",
+          "mode": "REAL",
+          "captured_at": "2026-09-28T01:14:40.923Z",
+          "actual_url": "https://127.0.0.1:8702/create",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "full_page": true,
+          "dimensions": {
+            "viewport_width": 1280,
+            "document_width": 1280,
+            "body_width": 1280,
+            "document_height": 900,
+            "scroll_y": 0
+          }
+        }
+      },
+      "finished_at": "2026-09-28T01:14:40.923Z",
+      "actual_url": "https://127.0.0.1:8702/create"
+    },
+    {
+      "name": "No uncaught browser JavaScript errors",
+      "status": "pass",
+      "started_at": "2026-09-28T01:14:40.923Z",
+      "details": {
+        "uncaught_errors": []
+      },
+      "finished_at": "2026-09-28T01:14:40.924Z",
+      "actual_url": "https://127.0.0.1:8702/create"
+    }
+  ],
+  "screenshots": [
+    {
+      "file": "reports/hw04/screenshots/part2/cleanup-followup/browser/real-signed-out.png",
+      "mode": "REAL",
+      "captured_at": "2026-09-28T01:14:36.429Z",
+      "actual_url": "https://127.0.0.1:8702/delete?id=17",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "full_page": true,
+      "dimensions": {
+        "viewport_width": 1280,
+        "document_width": 1280,
+        "body_width": 1280,
+        "document_height": 900,
+        "scroll_y": 0
+      }
+    },
+    {
+      "file": "reports/hw04/screenshots/part2/cleanup-followup/browser/real-invalid-login.png",
+      "mode": "REAL",
+      "captured_at": "2026-09-28T01:14:36.657Z",
+      "actual_url": "https://127.0.0.1:8702/login",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "full_page": true,
+      "dimensions": {
+        "viewport_width": 1280,
+        "document_width": 1280,
+        "body_width": 1280,
+        "document_height": 900,
+        "scroll_y": 0
+      }
+    },
+    {
+      "file": "reports/hw04/screenshots/part2/cleanup-followup/browser/real-authenticated-home.png",
+      "mode": "REAL",
+      "captured_at": "2026-09-28T01:14:36.864Z",
+      "actual_url": "https://127.0.0.1:8702/",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "full_page": true,
+      "dimensions": {
+        "viewport_width": 1280,
+        "document_width": 1280,
+        "body_width": 1280,
+        "document_height": 953,
+        "scroll_y": 0
+      }
+    },
+    {
+      "file": "reports/hw04/screenshots/part2/cleanup-followup/browser/real-create-form.png",
+      "mode": "REAL",
+      "captured_at": "2026-09-28T01:14:37.014Z",
+      "actual_url": "https://127.0.0.1:8702/create",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "full_page": true,
+      "dimensions": {
+        "viewport_width": 1280,
+        "document_width": 1280,
+        "body_width": 1280,
+        "document_height": 1190,
+        "scroll_y": 89
+      }
+    },
+    {
+      "file": "reports/hw04/screenshots/part2/cleanup-followup/browser/real-created-home.png",
+      "mode": "REAL",
+      "captured_at": "2026-09-28T01:14:37.184Z",
+      "actual_url": "https://127.0.0.1:8702/",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "full_page": true,
+      "dimensions": {
+        "viewport_width": 1280,
+        "document_width": 1280,
+        "body_width": 1280,
+        "document_height": 1429,
+        "scroll_y": 379
+      }
+    },
+    {
+      "file": "reports/hw04/screenshots/part2/cleanup-followup/browser/real-update-form.png",
+      "mode": "REAL",
+      "captured_at": "2026-09-28T01:14:37.324Z",
+      "actual_url": "https://127.0.0.1:8702/update?id=14",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "full_page": true,
+      "dimensions": {
+        "viewport_width": 1280,
+        "document_width": 1280,
+        "body_width": 1280,
+        "document_height": 900,
+        "scroll_y": 0
+      }
+    },
+    {
+      "file": "reports/hw04/screenshots/part2/cleanup-followup/browser/real-updated-home.png",
+      "mode": "REAL",
+      "captured_at": "2026-09-28T01:14:37.518Z",
+      "actual_url": "https://127.0.0.1:8702/",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "full_page": true,
+      "dimensions": {
+        "viewport_width": 1280,
+        "document_width": 1280,
+        "body_width": 1280,
+        "document_height": 1429,
+        "scroll_y": 379
+      }
+    },
+    {
+      "file": "reports/hw04/screenshots/part2/cleanup-followup/browser/real-after-backend-restart.png",
+      "mode": "REAL",
+      "captured_at": "2026-09-28T01:14:40.383Z",
+      "actual_url": "https://127.0.0.1:8702/",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "full_page": true,
+      "dimensions": {
+        "viewport_width": 1280,
+        "document_width": 1280,
+        "body_width": 1280,
+        "document_height": 1429,
+        "scroll_y": 0
+      }
+    },
+    {
+      "file": "reports/hw04/screenshots/part2/cleanup-followup/browser/real-mobile-home.png",
+      "mode": "REAL",
+      "captured_at": "2026-09-28T01:14:40.613Z",
+      "actual_url": "https://127.0.0.1:8702/",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "full_page": true,
+      "dimensions": {
+        "viewport_width": 390,
+        "document_width": 390,
+        "body_width": 390,
+        "document_height": 1869,
+        "scroll_y": 0
+      }
+    },
+    {
+      "file": "reports/hw04/screenshots/part2/cleanup-followup/browser/real-delete-confirmation.png",
+      "mode": "REAL",
+      "captured_at": "2026-09-28T01:14:40.673Z",
+      "actual_url": "https://127.0.0.1:8702/delete?id=14",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "full_page": true,
+      "dimensions": {
+        "viewport_width": 1280,
+        "document_width": 1280,
+        "body_width": 1280,
+        "document_height": 900,
+        "scroll_y": 0
+      }
+    },
+    {
+      "file": "reports/hw04/screenshots/part2/cleanup-followup/browser/real-deleted-home.png",
+      "mode": "REAL",
+      "captured_at": "2026-09-28T01:14:40.829Z",
+      "actual_url": "https://127.0.0.1:8702/",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "full_page": true,
+      "dimensions": {
+        "viewport_width": 1280,
+        "document_width": 1280,
+        "body_width": 1280,
+        "document_height": 1027,
+        "scroll_y": 0
+      }
+    },
+    {
+      "file": "reports/hw04/screenshots/part2/cleanup-followup/browser/real-after-logout.png",
+      "mode": "REAL",
+      "captured_at": "2026-09-28T01:14:40.923Z",
+      "actual_url": "https://127.0.0.1:8702/create",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "full_page": true,
+      "dimensions": {
+        "viewport_width": 1280,
+        "document_width": 1280,
+        "body_width": 1280,
+        "document_height": 900,
+        "scroll_y": 0
+      }
+    }
+  ],
+  "requests": [
+    {
+      "method": "POST",
+      "path": "/api/rentals",
+      "body": {
+        "listingTitle": "HW4 browser verification c3b22b1c-20a6-45b1-a712-9b4585473071",
+        "propertyAddress": "6102 Verification Avenue",
+        "submitterEmail": "c3b22b1c-20a6-45b1-a712-9b4585473071@example.com",
+        "description": "HW4 Part 1 browser cleanup run c3b22b1c-20a6-45b1-a712-9b4585473071",
+        "propertyType": "apartment",
+        "termsAccepted": true
+      },
+      "status": 201,
+      "returned_id": 14
+    },
+    {
+      "method": "PUT",
+      "path": "/api/rentals/14",
+      "body": {
+        "listingTitle": "HW4 browser verification c3b22b1c-20a6-45b1-a712-9b4585473071 revised",
+        "propertyAddress": "8702 Persistent Record Road"
+      },
+      "status": 200
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/rentals/14",
+      "status": 204
+    }
+  ],
+  "limitations": [
+    "The owner supplies the running HTTPS/MySQL service and credentials. The runner never resets a database.",
+    "Idle expiry is captured separately by --expiry against an explicitly configured short-timeout service."
+  ],
+  "git_revision": "6957de05690566887cab38a8d4c03537f665417a",
+  "source_sha256": {
+    "frontend/src/App.jsx": "c53234691d418cf00f6f0111d61f432f0e55b7cf2d774c9e6f374c0e10a37986",
+    "frontend/src/api/client.js": "b70c7aee950c15d639af37a6ac7c59843907055b3774139ff939607428bb618c",
+    "frontend/src/auth/AuthContext.jsx": "1bd2dc5d50f517dd4f805a557375250fe8db61dec53ae12cf986c1970e962557",
+    "frontend/src/components/forms.jsx": "d65150f1777f63cc39156bbe8fbeccca3303834a6999123b3d32fd1ce39f1512",
+    "frontend/src/main.jsx": "9caa0ca3ee8cbe0c9c052134346ac7dca26c0584cd929c07cd5b485940acfb88",
+    "frontend/src/pages/CreateRecord.jsx": "59a568169fd742775d48e0f021ecfd3554dec9e8fbd26707a01581b7b94c6399",
+    "frontend/src/pages/DeleteRecord.jsx": "382eb88c8506346ac81cbc9cc06e0689903570b95fcee42afd81f5ec89909e49",
+    "frontend/src/pages/Home.jsx": "f151c9802aa0d2de96bd70fb9a3d9e717abe51b4a9d5033833390d756d8296b5",
+    "frontend/src/pages/Login.jsx": "99c97544645656a30212e8d79f5417b572f4b5671c6d4b84f71b5c9b721bebb0",
+    "frontend/src/pages/UpdateRecord.jsx": "b1837f0376d7e90873127e5fac2271c2f5e748335b75be002de568b416f5233d",
+    "frontend/src/styles.css": "1f010b64752020407c477c0ed9894b4e43856a02f9fa372456b687a4aec1c15a",
+    "frontend/package.json": "c475bf47a063a7498f1978b8056220babbf7fc85d46b0052bbaa33c99d00e708",
+    "frontend/package-lock.json": "68c01a3da7ac965f5f8d9d305eef7aa973014a813d32760e8cbf94c4e3970969",
+    "frontend/vite.config.js": "e0074b500074eb549063648ead9567ffffb125325eb0a0a9b1a29a12bce3837f",
+    "tests/browser_hw04_part1.cjs": "9bb7544454300d0da34c283468406d8797ccdffd2da9f17328682041458c227e",
+    "tests/browser_hw04_part1_runtime.py": "076f2374c18f2211de1b045e50abae6aa086b3fd91fedd2001925892bd3802f7"
+  },
+  "finished_at": "2026-09-28T01:14:41.028Z",
+  "passed_checks": 12,
+  "failed_checks": 0
+}

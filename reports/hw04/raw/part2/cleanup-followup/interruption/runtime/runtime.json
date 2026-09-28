@@ -1,0 +1,44 @@
+{
+  "started_at": "2026-09-28T01:15:32.869490+00:00",
+  "revision": "307b1d9adc050e422a205e2d3219914c2234d816",
+  "source_sha256": {
+    "tests/browser_hw04_part1_runtime.py": "076f2374c18f2211de1b045e50abae6aa086b3fd91fedd2001925892bd3802f7"
+  },
+  "status": "interrupted",
+  "base_url": "https://127.0.0.1:8712",
+  "production_idle_seconds": 300,
+  "absolute_seconds": 3600,
+  "expiry_demonstration_idle_seconds": 2,
+  "processes": [
+    {
+      "pid": 75922,
+      "idle_timeout_seconds": 300,
+      "started_at": "2026-09-28T01:15:32.936736+00:00",
+      "stopped_at": "2026-09-28T01:15:35.300618+00:00",
+      "returncode": 0
+    }
+  ],
+  "browser_processes": [
+    {
+      "pid": 75923,
+      "mode": "real",
+      "returncode": 143,
+      "stopped_at": "2026-09-28T01:15:35.067749+00:00"
+    }
+  ],
+  "checks": [
+    {
+      "name": "MySQL evidence database is s6102_rel",
+      "passed": true
+    }
+  ],
+  "cleanup_run_id": "81d93286-07c8-48d2-b340-894103e65f6a",
+  "mysql_version": "8.4.11",
+  "signal": 15,
+  "teardown_errors": [],
+  "rental_cleanup": {
+    "status": "deleted",
+    "record_id": 15
+  },
+  "finished_at": "2026-09-28T01:15:35.316311+00:00"
+}

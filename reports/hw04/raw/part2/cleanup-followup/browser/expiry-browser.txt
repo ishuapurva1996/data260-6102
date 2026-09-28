@@ -1,0 +1,3 @@
+PASS [EXPIRY] Real login before controlled idle expiry
+PASS [EXPIRY] Expired MySQL session clears records and returns to login
+Evidence: reports/hw04/raw/part2/cleanup-followup/browser/expiry-browser.json (pass)

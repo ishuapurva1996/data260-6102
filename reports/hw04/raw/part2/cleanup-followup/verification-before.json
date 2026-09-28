@@ -1,7 +1,7 @@
 {
   "scope": "HW4 Parts1\u20133 only; not final whole-homework verification",
-  "timestamp_utc": "2026-09-28T01:16:15.241788+00:00",
-  "revision": "307b1d9adc050e422a205e2d3219914c2234d816",
+  "timestamp_utc": "2026-09-28T00:58:08.565999+00:00",
+  "revision": "e7382ddb9cc5e0a5cd867653254a0c6f62f2f9c7",
   "seed": 6102,
   "verify_seed": 266102,
   "database": "s6102_rel",
@@ -20,7 +20,7 @@
     {
       "name": "part1_commit_integrated",
       "passed": true,
-      "commit": "5d84f1a038cfdfcedb667b8047e06d5ef095164b"
+      "commit": "5db1d4a12d996fa5eb45e9b71d7b2dbcd0708991"
     },
     {
       "name": "part3_commit_integrated",
@@ -41,63 +41,63 @@
       "passed": true
     },
     {
-      "name": "reports/hw04/raw/part2/cleanup-followup/browser/real-browser.json:overall_pass",
+      "name": "reports/hw04/raw/part2/integrated-browser/real-browser.json:overall_pass",
       "passed": true
     },
     {
-      "name": "reports/hw04/raw/part2/cleanup-followup/browser/real-browser.json:individual_checks",
+      "name": "reports/hw04/raw/part2/integrated-browser/real-browser.json:individual_checks",
       "passed": true
     },
     {
-      "name": "reports/hw04/raw/part2/cleanup-followup/browser/real-browser.json:real_https_8702",
+      "name": "reports/hw04/raw/part2/integrated-browser/real-browser.json:real_https_8702",
       "passed": true
     },
     {
-      "name": "browser_screenshot:reports/hw04/screenshots/part2/cleanup-followup/browser/real-signed-out.png",
+      "name": "browser_screenshot:reports/hw04/screenshots/part2/integrated-browser/real-signed-out.png",
       "passed": true
     },
     {
-      "name": "browser_screenshot:reports/hw04/screenshots/part2/cleanup-followup/browser/real-invalid-login.png",
+      "name": "browser_screenshot:reports/hw04/screenshots/part2/integrated-browser/real-invalid-login.png",
       "passed": true
     },
     {
-      "name": "browser_screenshot:reports/hw04/screenshots/part2/cleanup-followup/browser/real-authenticated-home.png",
+      "name": "browser_screenshot:reports/hw04/screenshots/part2/integrated-browser/real-authenticated-home.png",
       "passed": true
     },
     {
-      "name": "browser_screenshot:reports/hw04/screenshots/part2/cleanup-followup/browser/real-create-form.png",
+      "name": "browser_screenshot:reports/hw04/screenshots/part2/integrated-browser/real-create-form.png",
       "passed": true
     },
     {
-      "name": "browser_screenshot:reports/hw04/screenshots/part2/cleanup-followup/browser/real-created-home.png",
+      "name": "browser_screenshot:reports/hw04/screenshots/part2/integrated-browser/real-created-home.png",
       "passed": true
     },
     {
-      "name": "browser_screenshot:reports/hw04/screenshots/part2/cleanup-followup/browser/real-update-form.png",
+      "name": "browser_screenshot:reports/hw04/screenshots/part2/integrated-browser/real-update-form.png",
       "passed": true
     },
     {
-      "name": "browser_screenshot:reports/hw04/screenshots/part2/cleanup-followup/browser/real-updated-home.png",
+      "name": "browser_screenshot:reports/hw04/screenshots/part2/integrated-browser/real-updated-home.png",
       "passed": true
     },
     {
-      "name": "browser_screenshot:reports/hw04/screenshots/part2/cleanup-followup/browser/real-after-backend-restart.png",
+      "name": "browser_screenshot:reports/hw04/screenshots/part2/integrated-browser/real-after-backend-restart.png",
       "passed": true
     },
     {
-      "name": "browser_screenshot:reports/hw04/screenshots/part2/cleanup-followup/browser/real-mobile-home.png",
+      "name": "browser_screenshot:reports/hw04/screenshots/part2/integrated-browser/real-mobile-home.png",
       "passed": true
     },
     {
-      "name": "browser_screenshot:reports/hw04/screenshots/part2/cleanup-followup/browser/real-delete-confirmation.png",
+      "name": "browser_screenshot:reports/hw04/screenshots/part2/integrated-browser/real-delete-confirmation.png",
       "passed": true
     },
     {
-      "name": "browser_screenshot:reports/hw04/screenshots/part2/cleanup-followup/browser/real-deleted-home.png",
+      "name": "browser_screenshot:reports/hw04/screenshots/part2/integrated-browser/real-deleted-home.png",
       "passed": true
     },
     {
-      "name": "browser_screenshot:reports/hw04/screenshots/part2/cleanup-followup/browser/real-after-logout.png",
+      "name": "browser_screenshot:reports/hw04/screenshots/part2/integrated-browser/real-after-logout.png",
       "passed": true
     },
     {
@@ -109,11 +109,11 @@
       "passed": true
     },
     {
-      "name": "reports/hw04/raw/part2/cleanup-followup/integration-smoke.json:overall_pass",
+      "name": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part2-backend/reports/hw04/raw/part2/integration-smoke.json:overall_pass",
       "passed": true
     },
     {
-      "name": "reports/hw04/raw/part2/cleanup-followup/integration-smoke.json:individual_checks",
+      "name": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part2-backend/reports/hw04/raw/part2/integration-smoke.json:individual_checks",
       "passed": true
     },
     {
@@ -123,8 +123,8 @@
     {
       "name": "real_mysql_pytest_passed",
       "passed": true,
-      "test_count": 209,
-      "artifact": "reports/hw04/raw/part2/cleanup-followup/pytest-integrated.txt"
+      "test_count": 191,
+      "artifact": "reports/hw04/raw/part2/pytest-integrated.txt"
     },
     {
       "name": "benchmark_180_validated_requests",

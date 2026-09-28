@@ -1,0 +1,55 @@
+{
+  "timestamp_utc": "2026-09-28T01:17:00.960114+00:00",
+  "revision": "307b1d9adc050e422a205e2d3219914c2234d816",
+  "status": "pass",
+  "checks": [
+    {
+      "name": "Normal browser source fingerprints match",
+      "passed": true
+    },
+    {
+      "name": "Pytest source fingerprints match",
+      "passed": true
+    },
+    {
+      "name": "Combined smoke source fingerprints match",
+      "passed": true
+    },
+    {
+      "name": "Normal final cleanup safe",
+      "passed": true,
+      "cleanup": {
+        "status": "already_absent",
+        "record_id": 14
+      }
+    },
+    {
+      "name": "Eight real interruption checks pass",
+      "passed": true
+    },
+    {
+      "name": "Application unchanged since initial integration",
+      "passed": true
+    },
+    {
+      "name": "HTTPS port8702 released",
+      "passed": true
+    },
+    {
+      "name": "HTTPS port8712 released",
+      "passed": true
+    },
+    {
+      "name": "Own follow-up rows absent",
+      "passed": true,
+      "record_ids": [
+        14,
+        15
+      ]
+    },
+    {
+      "name": "Two original rentals retained",
+      "passed": true
+    }
+  ]
+}

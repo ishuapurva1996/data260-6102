@@ -149,3 +149,19 @@ Every integrated harness stopped only its own API process. No seeded rental/mana
 Part4, final homeworkPDF, collaborators, hw4tag and taggedverification.json remain later work. No push/PR/deploy/tag performed.
 Read-only post-integration database check passed: Part3 dataset hashes, index inventory and query results exactly match its saved after-index snapshot. API/browser3362 and ordinary fixture3363 each retain two original rentals. See raw/part2/integrated-database-preserved.json.
 Final bounded seam review found no concrete integration defect; original review scope remains labeled. Private credential/cookie text scan passed; no secret values saved.
+
+=== Browser interruption cleanup follow-up ===
+Recorded UTC: 2026-09-28T01:17:38.318698+00:00
+Merged Part1 follow-up5d84f1a038cfdfcedb667b8047e06d5ef095164b preserving original5db1d4a ancestry and evidence.
+Merge source6957de05690566887cab38a8d4c03537f665417a; provenance regression checkpoint307b1d9adc050e422a205e2d3219914c2234d816. Frontend/backend/runtime performance paths unchanged.
+Normal browser command: python tests/browser_hw04_part1_runtime.py --env-file <private app.env> --node <bundled Node> --port 8702 --raw-dir reports/hw04/raw/part2/cleanup-followup/browser --screenshots-dir reports/hw04/screenshots/part2/cleanup-followup/browser. NODE_PATH points to bundled Playwright.
+Normal outcome:12 browser checks,2 expiry checks,6 runtime checks pass; UI deleted ID14, final cleanup already_absent. Original integrated-browser outputs untouched.
+Interruption command: python tests/check_hw04_part1_interruption.py --env-file <private app.env> --node <bundled Node> --port 8712 --raw-dir reports/hw04/raw/part2/cleanup-followup/interruption --screenshots-dir reports/hw04/screenshots/part2/cleanup-followup/interruption.
+Interruption outcome:8/8 pass; exact ID15 removed by wrapper, exit143 recorded, original rows preserved, owned processes stopped. Finished 2026-09-28T01:15:35.397312+00:00.
+First follow-up Python run:208 passed,111 warnings,6.06s; saved as pytest-before-provenance-extension.txt with its original metadata. Added one provenance regression and included browser runtime/interruption driver in tested-source hashes.
+Selected Python run:209 passed,111 warnings,5.95s,no skips. Start 2026-09-28T01:15:32.510124+00:00; finish 2026-09-28T01:15:38.785585+00:00.17 cleanup guard unit tests use SQLite explicitly; application, auth, CRUD, performance and live cancellation proof use real MySQL. No SQLite substituted for MySQL acceptance.
+Combined smoke command: python scripts/hw04/part2/integration_smoke.py --env-file <private Part3.env> --output reports/hw04/raw/part2/cleanup-followup/integration-smoke.json.29/29 pass; all6performance combinations equal with expected SQL counts.
+Partial verifier selects new browser/pytest/smoke paths and Part1 follow-up commit; original API evidence remains selected because application source is unchanged. Previous verification.parts123.json preserved as cleanup-followup/verification-before.json. New result:automated_status pass,status incomplete,34/46 checks pass,12manualimages remain.
+Bounded independent review found no concrete ownership/failure-path defect; it ran no tests and made no edits. Parent ran all above evidence.
+Final read-only check:10/10 pass at 2026-09-28T01:17:00.960114+00:00; source hashes match,8702/8712 free, IDs14/15 absent, two original rentals retained. See cleanup-followup/final-check.json.
+No benchmark remeasurement:only test harness/provenance changed. Original180 samples and separate index experiment remain intact. No push/PR/deploy/tag.

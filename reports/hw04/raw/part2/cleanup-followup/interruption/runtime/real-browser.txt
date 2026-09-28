@@ -1,0 +1,10 @@
+PASS [REAL] Signed-out direct visits hide protected records
+PASS [REAL] Unauthenticated CRUD APIs reject requests; unknown API remains JSON
+PASS [REAL] Invalid credentials stay rejected
+PASS [REAL] Valid HTTPS login sets an opaque HTTP-only secure cookie
+Error: Browser closed at the confirmed-create checkpoint
+    at /Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part2-backend/tests/browser_hw04_part1.cjs:626:38
+    at async check (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part2-backend/tests/browser_hw04_part1.cjs:58:22)
+    at async realFlow (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part2-backend/tests/browser_hw04_part1.cjs:599:5)
+    at async main (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part2-backend/tests/browser_hw04_part1.cjs:798:10)
+Evidence: reports/hw04/raw/part2/cleanup-followup/interruption/runtime/real-browser.json (interrupted)

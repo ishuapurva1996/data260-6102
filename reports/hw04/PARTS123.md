@@ -14,9 +14,11 @@ Parts 1–3 are merged into one local Rental Housing Listings application, and t
 | Hardware recorded for the performance run | Apple M4, 10 CPU cores, 24 GiB memory; macOS 15.7.4 arm64 |
 | Local language model | None used by Parts 1–3 |
 | Integration branch | codex/hw4-part2-backend |
-| Tested integrated code | e7382ddb9cc5e0a5cd867653254a0c6f62f2f9c7 |
+| Current tested code | 307b1d9adc050e422a205e2d3219914c2234d816 |
+| Initial integrated code | e7382ddb9cc5e0a5cd867653254a0c6f62f2f9c7 |
 | Shared foundation B | f29e7cc85baf52bea30bd4bb3209d1bd79b22051 |
-| Imported Part 1 final commit | 5db1d4a12d996fa5eb45e9b71d7b2dbcd0708991 |
+| Initial Part 1 handoff | 5db1d4a12d996fa5eb45e9b71d7b2dbcd0708991 |
+| Current Part 1 cleanup handoff | 5d84f1a038cfdfcedb667b8047e06d5ef095164b |
 | Imported Part 3 final commit | 4f8390b84752d861ea6b47c5ac8615680192d841 |
 | Part 3 measured revision | 9860a20342072168ed68a8d41eb16d9bfecf7729 |
 | Verified HW3 baseline | 5742b2aadbafee5ba208311723ea470c09811dc5 |
@@ -65,7 +67,7 @@ The later index experiment added `ix_rentals_listing_title`. For a selective tit
 
 Integration preserved the measured performance, authentication, model, schema, SQL-counter, and serialization source hashes. The sole changed Python file in the recorded application hash set is ordinary `routers/rentals.py`: its optional `q` search now preserves HW3 Unicode casefold matching. That route is not called by the measured performance endpoints. The integrated smoke run again found total SQL counts 13/53/203 naive and three fixed, with equal ordered payloads at all three sizes. No full timing rerun was needed because the measured execution path did not change. The published latency values remain measurements of the original recorded environment, not new latency claims for the integration smoke run.
 
-## Integrated verification
+## Initial integration verification
 
 The integrated tests used dedicated MySQL instances and exclusive HTTPS evidence slots. API/browser work used the evidence database on host port 3362; ordinary pytest fixtures used a separate instance on 3363; Part 3 live checks and the combined performance smoke used the dedicated performance instance on 33363. All three database names are `s6102_rel`. Shared data was not reset, and the harnesses stopped only their own processes.
 
@@ -79,9 +81,26 @@ The integrated tests used dedicated MySQL instances and exclusive HTTPS evidence
 
 The 29 smoke checks cover the exact 5,000/200 dataset, the five built React routes and actual assets, API JSON 404 behavior, retained docs, shared authentication, all six size/version combinations, equal payloads, SQL counts, and revoked-token rejection. [Pytest metadata](raw/part2/pytest-integrated.metadata.json) records source hashes and confirms source was unchanged during the run. The API and pytest artifacts mark the worktree dirty because new evidence was present; the tested revision and source hashes are recorded rather than implying a clean final tagged checkout.
 
-Evidence: [pytest output](raw/part2/pytest-integrated.txt), [combined smoke output](raw/part2/integration-smoke.json), and [verification.parts123.json](verification.parts123.json). Failed early attempts remain beside selected passes and are not counted as successful runs.
+Evidence: [pytest output](raw/part2/pytest-integrated.txt), [combined smoke output](raw/part2/integration-smoke.json), and [initial partial verification](raw/part2/cleanup-followup/verification-before.json). Failed early attempts remain beside selected passes and are not counted as successful runs.
 
 A later read-only [database preservation check](raw/part2/integrated-database-preserved.json) at `2026-09-28T01:00:51.453365+00:00` passed: the performance dataset, index inventory, and query results match the post-index snapshot, while the API/browser and ordinary-test instances each still contain two rentals.
+
+## Current cleanup follow-up
+
+Part 1 cleanup commit `5d84f1a038cfdfcedb667b8047e06d5ef095164b` was merged at `6957de05690566887cab38a8d4c03537f665417a`. Current tested code is `307b1d9adc050e422a205e2d3219914c2234d816`. The change affects the browser test runner and verification provenance; frontend/backend application code and the measured performance path are unchanged, so the original benchmark remains selected.
+
+| Follow-up check | Actual outcome | Evidence |
+| --- | --- | --- |
+| Normal HTTPS browser/runtime at merge `6957de0` | 12 browser, two expiry, and six runtime checks passed; cleanup `already_absent` for ID 14 | [browser](raw/part2/cleanup-followup/browser/real-browser.json), [expiry](raw/part2/cleanup-followup/browser/expiry-browser.json), [runtime](raw/part2/cleanup-followup/browser/runtime.json) |
+| Deliberate interruption at current code | 8/8 passed; exact confirmed-created ID 15 deleted and every pre-existing rental unchanged | [interruption check](raw/part2/cleanup-followup/interruption/check.json) |
+| Current selected Python suite | 209 passed, 111 warnings, no skips, 5.95 s | [pytest](raw/part2/cleanup-followup/pytest-integrated.txt), [metadata](raw/part2/cleanup-followup/pytest-integrated.metadata.json) |
+| Current combined smoke | 29/29 passed | [smoke](raw/part2/cleanup-followup/integration-smoke.json) |
+
+The normal runtime ran at `2026-09-28T01:14:34.935389+00:00` through `01:14:46.483869+00:00`. The interruption check ran at `01:15:32.713257+00:00` through `01:15:35.397312+00:00` on isolated development port 8712; it deliberately produced runtime status `interrupted` and exit 143, then verified row cleanup, process shutdown, and port release. That interrupted browser trace is not a failed normal acceptance run.
+
+The current pytest run began at `2026-09-28T01:15:32.510124+00:00`; the 29-check smoke ran at `01:15:50.150794+00:00` through `01:15:53.159300+00:00`. Seventeen new cleanup-guard unit tests use SQLite. Required MySQL evidence remains the live interruption check and integrated MySQL checks; SQLite is not substituted for that proof. The additional provenance regression and metadata cover the CJS browser runner, Python runtime runner, and interruption driver.
+
+At `2026-09-28T01:16:15.241788+00:00`, [current partial verification](verification.parts123.json) again reported 34/46 checks passing, automated status **pass**, and overall **incomplete** solely for the same 12 manual captures. [The previous verifier](raw/part2/cleanup-followup/verification-before.json), initial integration timings, and original screenshot paths are preserved.
 
 ## Captured structure and remaining work
 

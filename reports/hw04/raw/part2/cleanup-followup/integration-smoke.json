@@ -1,0 +1,223 @@
+{
+  "scope": "Integrated Parts 1\u20133, real HTTPS and MySQL",
+  "started_at": "2026-09-28T01:15:50.150794+00:00",
+  "revision": "307b1d9adc050e422a205e2d3219914c2234d816",
+  "source_sha256": {
+    "code/web_application/__init__.py": "c21952d0fad8998e1f7ea98009cd118016a8afb4ca15cc9d10379d31d6b6248e",
+    "code/web_application/database.py": "f0cf148e7578ff959085fa99eec9749a4b7ef903ec86f03aa3553c6a0bc30271",
+    "code/web_application/main.py": "59e4ad72fe576d4931f5e2e314484a331f67bd656a71bfb218f990a26f52ad67",
+    "code/web_application/models.py": "671681cf6c574b01bc30645caa8f182481b69bb7fe6c432cc79a1cbfd1e49a7a",
+    "code/web_application/query_metrics.py": "9d41e0d87eebfd4dbc6a0b1b562b2e77c58be2031ed7accfde6fd27398ea9f5a",
+    "code/web_application/routers/__init__.py": "e940586d67bb15ff7ea19688e0c562dc2232bfcc48fc7db009ed383b06c5f672",
+    "code/web_application/routers/auth.py": "8fd3ba7c91de610d1da10586eb93eea2ef3c3a80ba2e10ad0a1b843bdb759e67",
+    "code/web_application/routers/performance.py": "2a95eb6ae6cb492f5e087c26fbe0962405a83e1bd19001beadafe30aeb52f8f8",
+    "code/web_application/routers/rentals.py": "3aeae42d6184a56985372f3bdb49a0fd9b4b313b5ca4a6fa7350767e2cd3bc98",
+    "code/web_application/schemas.py": "b685c3076f16546ba714b8a9bf206dca818c947feae09a34c514da1bc198eb44",
+    "code/web_application/session_store.py": "3ba70c03ebb54f9f6b8d1936f1ae7d61f60e20b8479ccf7b4314df4c41e80ba4",
+    "frontend/src/App.jsx": "c53234691d418cf00f6f0111d61f432f0e55b7cf2d774c9e6f374c0e10a37986",
+    "frontend/src/api/client.js": "b70c7aee950c15d639af37a6ac7c59843907055b3774139ff939607428bb618c",
+    "frontend/src/auth/AuthContext.jsx": "1bd2dc5d50f517dd4f805a557375250fe8db61dec53ae12cf986c1970e962557",
+    "frontend/src/components/forms.jsx": "d65150f1777f63cc39156bbe8fbeccca3303834a6999123b3d32fd1ce39f1512",
+    "frontend/src/main.jsx": "9caa0ca3ee8cbe0c9c052134346ac7dca26c0584cd929c07cd5b485940acfb88",
+    "frontend/src/pages/CreateRecord.jsx": "59a568169fd742775d48e0f021ecfd3554dec9e8fbd26707a01581b7b94c6399",
+    "frontend/src/pages/DeleteRecord.jsx": "382eb88c8506346ac81cbc9cc06e0689903570b95fcee42afd81f5ec89909e49",
+    "frontend/src/pages/Home.jsx": "f151c9802aa0d2de96bd70fb9a3d9e717abe51b4a9d5033833390d756d8296b5",
+    "frontend/src/pages/Login.jsx": "99c97544645656a30212e8d79f5417b572f4b5671c6d4b84f71b5c9b721bebb0",
+    "frontend/src/pages/UpdateRecord.jsx": "b1837f0376d7e90873127e5fac2271c2f5e748335b75be002de568b416f5233d",
+    "frontend/src/styles.css": "1f010b64752020407c477c0ed9894b4e43856a02f9fa372456b687a4aec1c15a",
+    "frontend/dist/assets/index-Bq_7-Hvp.js": "1c588380dfb7502d6bc7b25a1bb820784bf9056d80807611243ccfe6cba18da9",
+    "frontend/dist/assets/index-DPvocVsl.css": "efe1dd19ff21ed40ec2c1f19a99b355c2fa83787faa893b4330bb96a04d02f72",
+    "frontend/dist/index.html": "55fe2906541ef0f14ce3ae4d2a8b3a8f24639d5f1324300f51e59daf13a4f17d",
+    "requirements.txt": "155b87e26288e9e3d15009d674a5c63fe7ae1889d64e1d59135bd227774e3f5e",
+    "scripts/run_hw04_web.py": "af488a74b8ce835b9e176eb313ea5f4b86eaf3eb7081a5ff924b864222190c31",
+    "frontend/package.json": "c475bf47a063a7498f1978b8056220babbf7fc85d46b0052bbaa33c99d00e708",
+    "frontend/package-lock.json": "68c01a3da7ac965f5f8d9d305eef7aa973014a813d32760e8cbf94c4e3970969",
+    "frontend/vite.config.js": "e0074b500074eb549063648ead9567ffffb125325eb0a0a9b1a29a12bce3837f",
+    "tests/browser_hw04_part1.cjs": "9bb7544454300d0da34c283468406d8797ccdffd2da9f17328682041458c227e",
+    "tests/browser_hw04_part1_runtime.py": "076f2374c18f2211de1b045e50abae6aa086b3fd91fedd2001925892bd3802f7"
+  },
+  "base_url": "https://127.0.0.1:8702",
+  "checks": [
+    {
+      "name": "MySQL shared database",
+      "passed": true
+    },
+    {
+      "name": "Exact performance dataset",
+      "passed": true
+    },
+    {
+      "name": "Built React deep link /",
+      "passed": true
+    },
+    {
+      "name": "Built React deep link /login",
+      "passed": true
+    },
+    {
+      "name": "Built React deep link /create",
+      "passed": true
+    },
+    {
+      "name": "Built React deep link /update?id=1",
+      "passed": true
+    },
+    {
+      "name": "Built React deep link /delete?id=1",
+      "passed": true
+    },
+    {
+      "name": "Built asset references present",
+      "passed": true
+    },
+    {
+      "name": "Built asset served /assets/index-Bq_7-Hvp.js",
+      "passed": true
+    },
+    {
+      "name": "Built asset served /assets/index-DPvocVsl.css",
+      "passed": true
+    },
+    {
+      "name": "Unknown API remains JSON404",
+      "passed": true
+    },
+    {
+      "name": "OpenAPI docs retained",
+      "passed": true
+    },
+    {
+      "name": "naive requires shared auth",
+      "passed": true
+    },
+    {
+      "name": "fixed requires shared auth",
+      "passed": true
+    },
+    {
+      "name": "Shared login succeeds",
+      "passed": true
+    },
+    {
+      "name": "Ordinary CRUD uses same session",
+      "passed": true
+    },
+    {
+      "name": "naive/10 response and SQL counts",
+      "passed": true
+    },
+    {
+      "name": "fixed/10 response and SQL counts",
+      "passed": true
+    },
+    {
+      "name": "Equivalent ordered payloads/10",
+      "passed": true
+    },
+    {
+      "name": "naive/50 response and SQL counts",
+      "passed": true
+    },
+    {
+      "name": "fixed/50 response and SQL counts",
+      "passed": true
+    },
+    {
+      "name": "Equivalent ordered payloads/50",
+      "passed": true
+    },
+    {
+      "name": "naive/200 response and SQL counts",
+      "passed": true
+    },
+    {
+      "name": "fixed/200 response and SQL counts",
+      "passed": true
+    },
+    {
+      "name": "Equivalent ordered payloads/200",
+      "passed": true
+    },
+    {
+      "name": "Logout succeeds",
+      "passed": true
+    },
+    {
+      "name": "naive rejects revoked token",
+      "passed": true
+    },
+    {
+      "name": "fixed rejects revoked token",
+      "passed": true
+    },
+    {
+      "name": "Application source unchanged during smoke",
+      "passed": true
+    }
+  ],
+  "performance": [
+    {
+      "version": "naive",
+      "page_size": 10,
+      "status": 200,
+      "total_sql": 13,
+      "data_sql": 11,
+      "auth_sql": 2,
+      "response_sha256": "d2031669d60917cc5275826005613815089c9f64e98ae51ca5640e75cceb370c"
+    },
+    {
+      "version": "fixed",
+      "page_size": 10,
+      "status": 200,
+      "total_sql": 3,
+      "data_sql": 1,
+      "auth_sql": 2,
+      "response_sha256": "d2031669d60917cc5275826005613815089c9f64e98ae51ca5640e75cceb370c"
+    },
+    {
+      "version": "naive",
+      "page_size": 50,
+      "status": 200,
+      "total_sql": 53,
+      "data_sql": 51,
+      "auth_sql": 2,
+      "response_sha256": "85e7d270626fb0740ef5586b67244e0fedc4e63fadca9b13058e4cbb77fe7d6e"
+    },
+    {
+      "version": "fixed",
+      "page_size": 50,
+      "status": 200,
+      "total_sql": 3,
+      "data_sql": 1,
+      "auth_sql": 2,
+      "response_sha256": "85e7d270626fb0740ef5586b67244e0fedc4e63fadca9b13058e4cbb77fe7d6e"
+    },
+    {
+      "version": "naive",
+      "page_size": 200,
+      "status": 200,
+      "total_sql": 203,
+      "data_sql": 201,
+      "auth_sql": 2,
+      "response_sha256": "93f84a38814238df8dc578d26dbe03508c9cd54f95805599a68d927b6bc8ba5b"
+    },
+    {
+      "version": "fixed",
+      "page_size": 200,
+      "status": 200,
+      "total_sql": 3,
+      "data_sql": 1,
+      "auth_sql": 2,
+      "response_sha256": "93f84a38814238df8dc578d26dbe03508c9cd54f95805599a68d927b6bc8ba5b"
+    }
+  ],
+  "mysql_version": "8.4.11",
+  "database": "s6102_rel",
+  "mysql_server_uuid": "3d515eaf-bad3-11f1-8b89-0ecd67fb62d4",
+  "dataset_counts": {
+    "rentals": 5000,
+    "property_managers": 200
+  },
+  "status": "pass",
+  "finished_at": "2026-09-28T01:15:53.159300+00:00"
+}

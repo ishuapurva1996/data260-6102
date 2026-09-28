@@ -1,6 +1,6 @@
 # Part 2: MySQL persistence and server-side sessions
 
-Part 2 moves the existing Rental Housing Listings service from process memory to MySQL and owns the final local integration of Parts 1–3. The merged application passed 23 real HTTPS/MySQL acceptance checks, 191 selected Python tests, all real-browser/restart/expiry checks, and 29 combined serving/auth/performance smoke checks. The project-folder screenshots are captured. Six Part 2 images remain pending: five Postman CRUD responses and one database view. The saved HTTP responses do not replace those images.
+Part 2 moves the existing Rental Housing Listings service from process memory to MySQL and owns the final local integration of Parts 1–3. The initial integration passed 23 real HTTPS/MySQL acceptance checks, 191 selected Python tests, all real-browser/restart/expiry checks, and 29 combined serving/auth/performance smoke checks. The later cleanup follow-up passed 209 tests and the live interruption check, as recorded separately below. The project-folder screenshots are captured. Six Part 2 images remain pending: five Postman CRUD responses and one database view. The saved HTTP responses do not replace those images.
 
 | Configuration | Value |
 | --- | --- |
@@ -11,7 +11,8 @@ Part 2 moves the existing Rental Housing Listings service from process memory to
 | Database / engine | s6102_rel / MySQL 8.4.11 |
 | Required connection variable | db_session_basede26 |
 | Shared foundation B | f29e7cc85baf52bea30bd4bb3209d1bd79b22051 |
-| Tested integrated code | e7382ddb9cc5e0a5cd867653254a0c6f62f2f9c7 |
+| Current tested code | 307b1d9adc050e422a205e2d3219914c2234d816 |
+| Initial integrated code | e7382ddb9cc5e0a5cd867653254a0c6f62f2f9c7 |
 | Integration branch | codex/hw4-part2-backend |
 
 The foundation acceptance ran at `2026-09-28T00:28:47.592877+00:00` over `https://127.0.0.1:8702`. Its artifact records the HW3 baseline revision `5742b2aadbafee5ba208311723ea470c09811dc5` with a dirty working tree, because the foundation code had not yet been committed. That record is evidence for the pre-commit foundation gate, not an assertion that HW3 already contained this implementation. Foundation B was then committed and shared with Parts 1 and 3. The separate integrated run at `e7382ddb9cc5e0a5cd867653254a0c6f62f2f9c7` also passed 23 checks at `2026-09-28T00:55:59.072951+00:00`; its output is [integrated-api.json](../raw/part2/integrated-api.json). The earlier foundation outputs below retain their original IDs and timestamps.
@@ -207,7 +208,7 @@ Python imports use `web_application` with the repository's `code/` on the import
 
 The earlier path inventory at `2026-09-28T00:33:10.848027+00:00` remains in [project-structure.json](../raw/part2/project-structure.json). Its empty `frontend` list reflects the independent backend branch at that time. It is not the final combined tree.
 
-## Verification results and remaining work
+## Initial verification results and remaining work
 
 | Evidence | Actual outcome |
 | --- | --- |
@@ -217,20 +218,20 @@ The earlier path inventory at `2026-09-28T00:33:10.848027+00:00` remains in [pro
 | [integrated expiry](../raw/part2/integrated-browser/expiry-browser.json) | 2/2 passed |
 | [integrated runtime](../raw/part2/integrated-browser/runtime.json) | 6/6 passed, including actual restarts |
 | [combined smoke](../raw/part2/integration-smoke.json) | 29/29 passed |
-| [partial verifier](../verification.parts123.json) | Automated status pass; 34/46 checks pass; 12 unavailable manual captures keep overall status incomplete |
+| [initial partial verifier](../raw/part2/cleanup-followup/verification-before.json) | Automated status pass; 34/46 checks pass; 12 unavailable manual captures keep overall status incomplete |
 | [api-acceptance.json](../raw/part2/api-acceptance.json) | Historical foundation gate: 23/23 passed |
 | [schema-smoke.json](../raw/part2/schema-smoke.json) | Repeated migration applied nothing; repeated seed inserted nothing; two rows preserved |
 | [pytest-backend.txt](../raw/part2/pytest-backend.txt) | 122 passed, 98 warnings in 4.31 seconds; no skips |
 | [api-acceptance-attempt1.json](../raw/part2/api-acceptance-attempt1.json) | Failed with ConnectError during the restart harness sequence; retained as failed evidence |
 | [pytest-backend-attempt1.txt](../raw/part2/pytest-backend-attempt1.txt) | 110 passed, 4 failed; expected exception class did not match PyMySQL's CHECK-violation mapping |
 
-The historical 122-test run includes 114 current web tests and eight unchanged HW3 aggregate-verifier tests. Its 98 warnings are dependency deprecations. The final integrated suite includes later review regressions, partial-verifier tests, and Part 3 tests; it passed 191 tests with 111 dependency deprecation warnings. Its metadata records exact source hashes and confirms source was unchanged during the run. The failed constraint tests were corrected to assert MySQL error numbers `1048` for NOT NULL and `3819` for CHECK violations, while still asserting rollback and unchanged rows. Database validation was not weakened.
+The historical 122-test run includes 114 current web tests and eight unchanged HW3 aggregate-verifier tests. Its 98 warnings are dependency deprecations. The initial integrated suite includes later review regressions, partial-verifier tests, and Part 3 tests; it passed 191 tests with 111 dependency deprecation warnings. Its metadata records exact source hashes and confirms source was unchanged during the run. The failed constraint tests were corrected to assert MySQL error numbers `1048` for NOT NULL and `3819` for CHECK violations, while still asserting rollback and unchanged rows. Database validation was not weakened.
 
 The foundation acceptance used the dedicated `data260-hw4-mysql` container on host port **3362**. Part 2 then released HTTPS port **8702** and that evidence database to Part 1. Later backend tests used `data260-hw4-part2-tests` on **3363**. No shared database reset is part of this workflow.
 
-## Final local integration of Parts 1–3
+## Initial local integration of Parts 1–3
 
-Part 1 commit `5db1d4a12d996fa5eb45e9b71d7b2dbcd0708991` and Part 3 commit `4f8390b84752d861ea6b47c5ac8615680192d841` are merged into `codex/hw4-part2-backend`, preserving foundation B as a shared ancestor. Integrated tested code is `e7382ddb9cc5e0a5cd867653254a0c6f62f2f9c7`. Subsequent evidence/documentation commits can be resolved from the branch tip without relabeling the tested revision.
+Part 1 commit `5db1d4a12d996fa5eb45e9b71d7b2dbcd0708991` and Part 3 commit `4f8390b84752d861ea6b47c5ac8615680192d841` are merged into `codex/hw4-part2-backend`, preserving foundation B as a shared ancestor. Initial integrated tested code is `e7382ddb9cc5e0a5cd867653254a0c6f62f2f9c7`. Subsequent evidence/documentation commits can be resolved from the branch tip without relabeling the tested revision.
 
 The selected pytest run began at `2026-09-28T00:56:08.104131+00:00`. The browser runtime ran from `2026-09-28T00:56:20.413881+00:00` through `2026-09-28T00:56:31.124030+00:00`. It confirmed that browser-created rental ID 10 and the existing login survived a backend restart, and that deletion stayed effective after another restart. The two-check expiry demonstration used the documented two-second test seam; production retains 300-second idle and 3,600-second absolute lifetimes.
 
@@ -238,9 +239,26 @@ The combined smoke ran from `2026-09-28T00:56:42.886910+00:00` through `2026-09-
 
 The original 180-request benchmark remains tied to clean revision `9860a20342072168ed68a8d41eb16d9bfecf7729`. Source comparison found no change to measured query, authentication, schema/model, SQL-counter, or serialization code. The ordinary CRUD search-only change is outside the measured endpoints. The recorded timing run therefore remains applicable to its original environment without a new integrated latency claim. Its full results and the separate index experiment are in [METRICS.md](../METRICS.md).
 
-At `2026-09-28T00:58:08.565999+00:00`, the [partial verifier](../verification.parts123.json) reported automated status **pass** and overall **incomplete**. All 12 false checks are missing manual evidence: five Part 2 Postman images, six Part 3 Postman images, and one database image. The project-folder evidence item passes. Postman is unavailable, and the native Terminal capture attempt was denied by the computer-use tool. Actual schema/query JSON is retained; no screenshot was substituted or fabricated.
+At `2026-09-28T00:58:08.565999+00:00`, the [initial partial verifier](../raw/part2/cleanup-followup/verification-before.json) reported automated status **pass** and overall **incomplete**. All 12 false checks are missing manual evidence: five Part 2 Postman images, six Part 3 Postman images, and one database image. The project-folder evidence item passes. Postman is unavailable, and the native Terminal capture attempt was denied by the computer-use tool. Actual schema/query JSON is retained; no screenshot was substituted or fabricated.
 
 See [the combined partial write-up](../PARTS123.md) and [handoff](HANDOFF.md) for exact revisions, runtime ownership, evidence locations, and reproduction steps. Part 4, the whole-homework PDF, collaborator access checks, the `hw4` tag, and verification against that tag remain later work.
+
+## Current cleanup follow-up
+
+Part 1 cleanup commit `5d84f1a038cfdfcedb667b8047e06d5ef095164b` was merged at `6957de05690566887cab38a8d4c03537f665417a`. Current tested code is `307b1d9adc050e422a205e2d3219914c2234d816`. The change affects the browser test runner and verification provenance; frontend/backend application code and the measured performance path are unchanged, so the original benchmark remains selected.
+
+| Follow-up check | Actual outcome | Evidence |
+| --- | --- | --- |
+| Normal HTTPS browser/runtime at merge `6957de0` | 12 browser, two expiry, and six runtime checks passed; cleanup `already_absent` for ID 14 | [browser](../raw/part2/cleanup-followup/browser/real-browser.json), [expiry](../raw/part2/cleanup-followup/browser/expiry-browser.json), [runtime](../raw/part2/cleanup-followup/browser/runtime.json) |
+| Deliberate interruption at current code | 8/8 passed; exact confirmed-created ID 15 deleted and every pre-existing rental unchanged | [interruption check](../raw/part2/cleanup-followup/interruption/check.json) |
+| Current selected Python suite | 209 passed, 111 warnings, no skips, 5.95 s | [pytest](../raw/part2/cleanup-followup/pytest-integrated.txt), [metadata](../raw/part2/cleanup-followup/pytest-integrated.metadata.json) |
+| Current combined smoke | 29/29 passed | [smoke](../raw/part2/cleanup-followup/integration-smoke.json) |
+
+The normal runtime ran at `2026-09-28T01:14:34.935389+00:00` through `01:14:46.483869+00:00`. The interruption check ran at `01:15:32.713257+00:00` through `01:15:35.397312+00:00` on isolated development port 8712; it deliberately produced runtime status `interrupted` and exit 143, then verified row cleanup, process shutdown, and port release. That interrupted browser trace is not a failed normal acceptance run.
+
+The current pytest run began at `2026-09-28T01:15:32.510124+00:00`; the 29-check smoke ran at `01:15:50.150794+00:00` through `01:15:53.159300+00:00`. Seventeen new cleanup-guard unit tests use SQLite. Required MySQL evidence remains the live interruption check and integrated MySQL checks; SQLite is not substituted for that proof. The additional provenance regression and metadata cover the CJS browser runner, Python runtime runner, and interruption driver.
+
+At `2026-09-28T01:16:15.241788+00:00`, [current partial verification](../verification.parts123.json) again reported 34/46 checks passing, automated status **pass**, and overall **incomplete** solely for the same 12 manual captures. [The previous verifier](../raw/part2/cleanup-followup/verification-before.json), initial integration timings, and original screenshot paths are preserved.
 
 ## Review follow-up
 

@@ -1,0 +1,72 @@
+{
+  "started_at": "2026-09-28T01:15:32.713257+00:00",
+  "status": "pass",
+  "revision": "307b1d9adc050e422a205e2d3219914c2234d816",
+  "source_sha256": {
+    "tests/browser_hw04_part1.cjs": "9bb7544454300d0da34c283468406d8797ccdffd2da9f17328682041458c227e",
+    "tests/browser_hw04_part1_runtime.py": "076f2374c18f2211de1b045e50abae6aa086b3fd91fedd2001925892bd3802f7",
+    "tests/check_hw04_part1_interruption.py": "2209243dc821bd47294f06264e4dd8442f93e67d6cf77250be35a39894be3e80"
+  },
+  "port": 8712,
+  "checks": [
+    {
+      "name": "Confirmed ID is persisted in a private per-run journal",
+      "passed": true
+    },
+    {
+      "name": "Real POST completed and exact owned rental exists before interruption",
+      "passed": true
+    },
+    {
+      "name": "Runtime records interruption and exits with SIGTERM status",
+      "passed": true,
+      "returncode": 143,
+      "runtime_status": "interrupted"
+    },
+    {
+      "name": "Wrapper records exact-row cleanup after browser termination",
+      "passed": true,
+      "cleanup": {
+        "status": "deleted",
+        "record_id": 15
+      }
+    },
+    {
+      "name": "Confirmed-created rental is absent after interruption",
+      "passed": true,
+      "record_id": 15
+    },
+    {
+      "name": "All pre-existing rentals remain unchanged",
+      "passed": true
+    },
+    {
+      "name": "Owned wrapper, API, Node and Chromium processes stopped",
+      "passed": true,
+      "process_count": 7
+    },
+    {
+      "name": "Isolated HTTPS port is released",
+      "passed": true,
+      "port": 8712
+    }
+  ],
+  "checkpoint": {
+    "run_id": "81d93286-07c8-48d2-b340-894103e65f6a",
+    "record_id": 15,
+    "description": "HW4 Part 1 browser cleanup run 81d93286-07c8-48d2-b340-894103e65f6a",
+    "submitter_email": "81d93286-07c8-48d2-b340-894103e65f6a@example.com",
+    "post_status": 201,
+    "cleanup_journal": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part2-backend/tmp/hw4-part1-cleanup-m_5hbjdy/rental.json"
+  },
+  "owned_pids_at_interrupt": [
+    75919,
+    75922,
+    75923,
+    75930,
+    75931,
+    75932,
+    75933
+  ],
+  "finished_at": "2026-09-28T01:15:35.397312+00:00"
+}

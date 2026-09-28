@@ -1,0 +1,14 @@
+PASS [REAL] Signed-out direct visits hide protected records
+PASS [REAL] Unauthenticated CRUD APIs reject requests; unknown API remains JSON
+PASS [REAL] Invalid credentials stay rejected
+PASS [REAL] Valid HTTPS login sets an opaque HTTP-only secure cookie
+PASS [REAL] Create sends six fields and renders the database-assigned ID
+PASS [REAL] Update direct URL and refresh retain selection; two fields persist
+RESTART READY: /var/folders/pj/9dp_jz_d5llfnj6rv0yglfn00000gn/T/hw4-part1-04eu4nfr/ready.json
+PASS [REAL] Updated rental and authentication survive owner-controlled backend restart
+PASS [REAL] Real missing/invalid ID routes remain safe
+PASS [REAL] Narrow real browser shows persisted records without horizontal overflow
+PASS [REAL] Delete direct URL confirms selected record, then handles empty 204
+PASS [REAL] Logout clears cookie and blocks protected routes again
+PASS [REAL] No uncaught browser JavaScript errors
+Evidence: reports/hw04/raw/part2/cleanup-followup/browser/real-browser.json (pass)

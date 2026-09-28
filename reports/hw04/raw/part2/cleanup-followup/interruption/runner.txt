@@ -1,0 +1,3 @@
+Certificate ready: /Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part2-backend/tmp/https/cert.pem
+PASS [RUNTIME] MySQL evidence database is s6102_rel
+CLEANUP [RUNTIME] deleted

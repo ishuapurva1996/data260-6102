@@ -1,0 +1,93 @@
+{
+  "started_at": "2026-09-28T01:14:34.935389+00:00",
+  "revision": "6957de05690566887cab38a8d4c03537f665417a",
+  "source_sha256": {
+    "tests/browser_hw04_part1_runtime.py": "076f2374c18f2211de1b045e50abae6aa086b3fd91fedd2001925892bd3802f7"
+  },
+  "status": "pass",
+  "base_url": "https://127.0.0.1:8702",
+  "production_idle_seconds": 300,
+  "absolute_seconds": 3600,
+  "expiry_demonstration_idle_seconds": 2,
+  "processes": [
+    {
+      "pid": 75664,
+      "idle_timeout_seconds": 300,
+      "started_at": "2026-09-28T01:14:35.005984+00:00",
+      "stopped_at": "2026-09-28T01:14:39.819994+00:00",
+      "returncode": 0
+    },
+    {
+      "pid": 75699,
+      "idle_timeout_seconds": 300,
+      "started_at": "2026-09-28T01:14:39.821384+00:00",
+      "stopped_at": "2026-09-28T01:14:41.304326+00:00",
+      "returncode": 0
+    },
+    {
+      "pid": 75702,
+      "idle_timeout_seconds": 300,
+      "started_at": "2026-09-28T01:14:41.306009+00:00",
+      "stopped_at": "2026-09-28T01:14:41.934307+00:00",
+      "returncode": 0
+    },
+    {
+      "pid": 75704,
+      "idle_timeout_seconds": 2,
+      "started_at": "2026-09-28T01:14:41.936403+00:00",
+      "stopped_at": "2026-09-28T01:14:46.468796+00:00",
+      "returncode": 0
+    }
+  ],
+  "browser_processes": [
+    {
+      "pid": 75665,
+      "mode": "real",
+      "returncode": 0
+    },
+    {
+      "pid": 75708,
+      "mode": "expiry",
+      "returncode": 0,
+      "stopped_at": "2026-09-28T01:14:46.175298+00:00"
+    }
+  ],
+  "checks": [
+    {
+      "name": "MySQL evidence database is s6102_rel",
+      "passed": true
+    },
+    {
+      "name": "Backend restarted during browser workflow",
+      "passed": true,
+      "before_pid": 75664,
+      "after_pid": 75699
+    },
+    {
+      "name": "Real browser suite passed",
+      "passed": true
+    },
+    {
+      "name": "Login after second restart",
+      "passed": true
+    },
+    {
+      "name": "Deleted rental stays absent after second restart",
+      "passed": true,
+      "record_id": 14,
+      "get_status": 404
+    },
+    {
+      "name": "Real browser idle expiry suite passed",
+      "passed": true
+    }
+  ],
+  "cleanup_run_id": "c3b22b1c-20a6-45b1-a712-9b4585473071",
+  "mysql_version": "8.4.11",
+  "teardown_errors": [],
+  "rental_cleanup": {
+    "status": "already_absent",
+    "record_id": 14
+  },
+  "finished_at": "2026-09-28T01:14:46.483869+00:00"
+}
