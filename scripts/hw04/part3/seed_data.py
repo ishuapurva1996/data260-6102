@@ -12,6 +12,7 @@ from collections import Counter
 from datetime import datetime, timezone
 import hashlib
 import json
+import os
 from pathlib import Path
 import random
 import sys
@@ -91,11 +92,13 @@ def assert_empty_seed_target(rental_count: int, manager_count: int) -> None:
         raise OwnershipError("Refusing seed: rentals and property_managers must both be empty; no reset/delete/drop is supported")
 
 
-def seed_owned_database(*, engine, session_factory, rental_model, manager_model, ownership_manifest, schema_revision: str, dataset=None) -> dict:
+def seed_owned_database(*, engine, session_factory, rental_model, manager_model, ownership_manifest, schema_revision: str, dataset=None, evidence_writer=None) -> dict:
     """Insert into an empty verified instance, leaving existing auth rows untouched.
 
     The transaction is atomic. Even a verified disposable instance is never
     emptied automatically. Use a freshly provisioned owned instance for reruns.
+    A supplied evidence writer runs before commit so a write failure rolls back
+    the inserts instead of leaving a seeded database without its manifest.
     """
     from sqlalchemy import func, select, text
 
@@ -174,6 +177,8 @@ def seed_owned_database(*, engine, session_factory, rental_model, manager_model,
                 "auth_records_policy": "Existing users and sessions are preserved; seeder never writes either table.",
                 "reset_policy": "No reset/delete/drop support. Nonempty target is refused.",
             }
+            if evidence_writer is not None:
+                evidence_writer(evidence)
     return evidence
 
 
@@ -190,15 +195,29 @@ def main(argv=None) -> int:
     from web_application.database import SessionLocal, db_session_basede26
     from web_application.models import PropertyManager, Rental
 
-    evidence = seed_owned_database(
-        engine=db_session_basede26, session_factory=SessionLocal,
-        rental_model=Rental, manager_model=PropertyManager,
-        ownership_manifest=args.ownership_manifest, schema_revision=args.schema_revision,
-    )
+    # Reserve the evidence destination before database writes. Never replace an
+    # existing artifact; a bad/unwritable parent must fail before seeding starts.
     args.output.parent.mkdir(parents=True, exist_ok=True)
     with args.output.open("x", encoding="utf-8") as output:
-        json.dump(evidence, output, indent=2, sort_keys=True)
-        output.write("\n")
+        try:
+            def write_evidence(evidence):
+                json.dump(evidence, output, indent=2, sort_keys=True)
+                output.write("\n")
+                output.flush()
+                os.fsync(output.fileno())
+
+            evidence = seed_owned_database(
+                engine=db_session_basede26, session_factory=SessionLocal,
+                rental_model=Rental, manager_model=PropertyManager,
+                ownership_manifest=args.ownership_manifest, schema_revision=args.schema_revision,
+                evidence_writer=write_evidence,
+            )
+        except BaseException:
+            # Seed/manifest failures roll back the transaction and remove only
+            # this invocation's exclusive reservation, allowing a safe retry.
+            output.close()
+            args.output.unlink(missing_ok=True)
+            raise
     print(json.dumps({"seed_manifest": str(args.output), "actual_counts": evidence["actual_counts"], "generated_dataset_sha256": evidence["generated_dataset_sha256"]}, sort_keys=True))
     return 0
 

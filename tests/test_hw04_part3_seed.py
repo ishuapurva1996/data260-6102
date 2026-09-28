@@ -2,12 +2,14 @@
 
 from pathlib import Path
 import sys
+from tempfile import TemporaryDirectory
 import unittest
 from unittest.mock import patch
 
 
 SCRIPT_DIR = Path(__file__).resolve().parents[1] / "scripts/hw04/part3"
 sys.path.insert(0, str(SCRIPT_DIR))
+from seed_data import main as seed_main
 from seed_data import assert_empty_seed_target, dataset_checksum, generate_dataset, seed_owned_database, validate_dataset
 from ownership import OwnershipError, validate_manifest, validate_observed_target
 
@@ -85,6 +87,29 @@ class DatasetTests(unittest.TestCase):
                     manager_model=object, ownership_manifest="/tmp/missing.json", schema_revision="001",
                 )
         self.assertEqual(session_calls, [])
+
+
+class SeedEvidencePathTests(unittest.TestCase):
+    def test_invalid_evidence_parent_is_rejected_before_database_seed(self):
+        with TemporaryDirectory() as temporary:
+            parent = Path(temporary) / "ordinary-file"
+            parent.write_text("preserve this file")
+            output = parent / "seed.json"
+            with patch("seed_data.seed_owned_database", return_value={}) as seed:
+                with self.assertRaises(OSError):
+                    seed_main(["--ownership-manifest", "/tmp/unused.json",
+                               "--schema-revision", "001", "--output", str(output)])
+                seed.assert_not_called()
+            self.assertEqual(parent.read_text(), "preserve this file")
+
+    def test_seed_failure_removes_only_its_reserved_output(self):
+        with TemporaryDirectory() as temporary:
+            output = Path(temporary) / "seed.json"
+            with patch("seed_data.seed_owned_database", side_effect=OwnershipError("refused")):
+                with self.assertRaises(OwnershipError):
+                    seed_main(["--ownership-manifest", "/tmp/unused.json",
+                               "--schema-revision", "001", "--output", str(output)])
+            self.assertFalse(output.exists())
 
 
 class OwnershipTests(unittest.TestCase):
