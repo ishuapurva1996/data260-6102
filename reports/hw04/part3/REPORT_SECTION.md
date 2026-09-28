@@ -130,3 +130,42 @@ The runner logs in outside measurement, validates full naive/fixed equality for1
 
 Percentiles sort the30 timings and use R7 linear interpolation at rank `(n−1) × p`. p50 is the middle of the observations. p95 and p99 describe the slow tail; at only30 samples, they depend strongly on the slowest few requests. The experiment uses warm caches and one worker without reload. Parts1/2 coordinated a quiet slot; unrelated pre-existing services were preserved, so incidental system noise remains possible.
 
+## 3.7: Observed latency and speed-up
+
+The selected run is `20260928T003859.945761Z-cd277c20`, executed from clean revision `9860a20342072168ed68a8d41eb16d9bfecf7729` on HTTPS port 8702. Its interval was 2026-09-28 00:38:59.945643–00:39:05.948186 UTC, including login, equality checks and warmups. Raw selected rows are in `raw/part3/attempts/20260928T003859.945761Z-cd277c20/requests.jsonl`; preflight, warmups and the complete manifest are adjacent. `benchmark_config.json` records the initial migration 001/index state, exact package versions, hardware, dataset checksum and source hashes.
+
+
+Run: `20260928T003859.945761Z-cd277c20`  
+Measured revision: `9860a20342072168ed68a8d41eb16d9bfecf7729`; dirty: `false`.  
+Selected requests: **180** (30 per endpoint and page size).
+
+Percentiles: R7 linear interpolation: rank=(n-1)*p, interpolate adjacent sorted values. All latencies are end-to-end HTTP milliseconds.
+
+| Page size | Version | Requests | Total SQL/request (min–max) | Data SQL/request (min–max) | p50 ms | p95 ms | p99 ms |
+| ---: | --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| 10 | naive | 30 | 13–13 | 11–11 | 11.514 | 21.160 | 23.194 |
+| 10 | fixed | 30 | 3–3 | 1–1 | 7.557 | 12.575 | 85.671 |
+| 50 | naive | 30 | 53–53 | 51–51 | 26.380 | 42.758 | 53.385 |
+| 50 | fixed | 30 | 3–3 | 1–1 | 8.630 | 12.088 | 15.529 |
+| 200 | naive | 30 | 203–203 | 201–201 | 74.496 | 175.151 | 205.407 |
+| 200 | fixed | 30 | 3–3 | 1–1 | 14.202 | 25.722 | 29.632 |
+
+SQL counts come from response instrumentation, including authentication and session activity in the total. The JSON summary preserves every observed counter value and frequency.
+
+| Page size | p50 speed-up | p95 speed-up | p99 speed-up |
+| ---: | ---: | ---: | ---: |
+| 10 | 1.524× | 1.683× | 0.271× |
+| 50 | 3.057× | 3.537× | 3.438× |
+| 200 | 5.245× | 6.809× | 6.932× |
+
+Each speed-up divides the naive percentile by the corresponding fixed percentile. Values above 1 mean the fixed version was faster; values below 1 mean it was slower. These are ratios of percentiles, not percentiles of paired ratios.
+
+With only 30 requests in each group, p95 and p99 depend strongly on the slowest observations. These observations do not establish performance outside this recorded environment.
+
+
+The median latency improved from 11.514 to 7.557 ms at 10 rows, from 26.380 to 8.630 ms at 50 rows, and from 74.496 to 14.202 ms at 200 rows. The fixed version's median speed-up grew from 1.524× to 3.057× to 5.245×. Each larger naive page adds more database round trips; the join removes those trips. The fixed version still transfers and serializes more rows on larger pages, and both versions pay for HTTPS, authentication and activity updates. These shared costs limit the small-page benefit.
+
+The result is not uniformly faster at every percentile. At size 10, fixed iteration 22 took 115.455 ms; the next-largest fixed observation was 12.753 ms. This outlier raised fixed p99 to 85.671 ms, versus 23.194 ms for naive, giving a p99 ratio of 0.271×. The available evidence cannot identify its cause; scheduling, connection or system noise are possibilities, not established explanations. We kept it in the selected first successful run. No samples were discarded or chosen to exaggerate speed-up.
+
+`metrics.json` stores full-precision percentiles and observed SQL distributions; `summary_recomputed.json` independently checks all 18 percentile values, nine ratios, SQL ranges and the raw file hash. There were no failed HTTP measurement attempts in this session. Expected proof-first test failures and the deliberately refused repeat seed are preserved in `RUN_LOG.txt`, not mixed into the 180 rows.
+

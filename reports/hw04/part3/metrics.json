@@ -1,0 +1,153 @@
+{
+  "run_id": "20260928T003859.945761Z-cd277c20",
+  "code_revision": "9860a20342072168ed68a8d41eb16d9bfecf7729",
+  "dirty": false,
+  "config_sha256": "16d8b0925a125c92643b0b959abe609658c82710eacc0e8c84653a03f5f54181",
+  "request_count": 180,
+  "percentile_method": "R7 linear interpolation: rank=(n-1)*p, interpolate adjacent sorted values",
+  "speedup_definition": "naive latency percentile / fixed latency at the same percentile",
+  "groups": [
+    {
+      "page_size": 10,
+      "version": "naive",
+      "samples": 30,
+      "p50_ms": 11.514375000000001,
+      "p95_ms": 21.1598439,
+      "p99_ms": 23.193501610000002,
+      "total_sql_min": 13,
+      "total_sql_max": 13,
+      "total_sql_mean": 13,
+      "total_sql_distribution": {
+        "13": 30
+      },
+      "data_sql_min": 11,
+      "data_sql_max": 11,
+      "data_sql_mean": 11,
+      "data_sql_distribution": {
+        "11": 30
+      }
+    },
+    {
+      "page_size": 10,
+      "version": "fixed",
+      "samples": 30,
+      "p50_ms": 7.5566465,
+      "p95_ms": 12.575306249999999,
+      "p99_ms": 85.6713312500001,
+      "total_sql_min": 3,
+      "total_sql_max": 3,
+      "total_sql_mean": 3,
+      "total_sql_distribution": {
+        "3": 30
+      },
+      "data_sql_min": 1,
+      "data_sql_max": 1,
+      "data_sql_mean": 1,
+      "data_sql_distribution": {
+        "1": 30
+      }
+    },
+    {
+      "page_size": 50,
+      "version": "naive",
+      "samples": 30,
+      "p50_ms": 26.3802295,
+      "p95_ms": 42.75779724999997,
+      "p99_ms": 53.385361710000005,
+      "total_sql_min": 53,
+      "total_sql_max": 53,
+      "total_sql_mean": 53,
+      "total_sql_distribution": {
+        "53": 30
+      },
+      "data_sql_min": 51,
+      "data_sql_max": 51,
+      "data_sql_mean": 51,
+      "data_sql_distribution": {
+        "51": 30
+      }
+    },
+    {
+      "page_size": 50,
+      "version": "fixed",
+      "samples": 30,
+      "p50_ms": 8.629958,
+      "p95_ms": 12.088499999999993,
+      "p99_ms": 15.528823570000004,
+      "total_sql_min": 3,
+      "total_sql_max": 3,
+      "total_sql_mean": 3,
+      "total_sql_distribution": {
+        "3": 30
+      },
+      "data_sql_min": 1,
+      "data_sql_max": 1,
+      "data_sql_mean": 1,
+      "data_sql_distribution": {
+        "1": 30
+      }
+    },
+    {
+      "page_size": 200,
+      "version": "naive",
+      "samples": 30,
+      "p50_ms": 74.496375,
+      "p95_ms": 175.15124169999996,
+      "p99_ms": 205.40654861000004,
+      "total_sql_min": 203,
+      "total_sql_max": 203,
+      "total_sql_mean": 203,
+      "total_sql_distribution": {
+        "203": 30
+      },
+      "data_sql_min": 201,
+      "data_sql_max": 201,
+      "data_sql_mean": 201,
+      "data_sql_distribution": {
+        "201": 30
+      }
+    },
+    {
+      "page_size": 200,
+      "version": "fixed",
+      "samples": 30,
+      "p50_ms": 14.2021875,
+      "p95_ms": 25.722265099999987,
+      "p99_ms": 29.632002040000003,
+      "total_sql_min": 3,
+      "total_sql_max": 3,
+      "total_sql_mean": 3,
+      "total_sql_distribution": {
+        "3": 30
+      },
+      "data_sql_min": 1,
+      "data_sql_max": 1,
+      "data_sql_mean": 1,
+      "data_sql_distribution": {
+        "1": 30
+      }
+    }
+  ],
+  "speedups": [
+    {
+      "page_size": 10,
+      "p50_ratio": 1.5237413844884766,
+      "p95_ratio": 1.6826503847570313,
+      "p99_ratio": 0.27072652276545517
+    },
+    {
+      "page_size": 50,
+      "p50_ratio": 3.0568201490667737,
+      "p95_ratio": 3.5370639243909494,
+      "p99_ratio": 3.4378239580965237
+    },
+    {
+      "page_size": 200,
+      "p50_ratio": 5.24541553897947,
+      "p95_ratio": 6.809324179619004,
+      "p99_ratio": 6.931915985046281
+    }
+  ],
+  "raw_path": "reports/hw04/raw/part3/attempts/20260928T003859.945761Z-cd277c20/requests.jsonl",
+  "raw_sha256": "de93e1f8d771805807a32928e69a0af230944d41038e9b6403825cc7af9e1dd8"
+}
