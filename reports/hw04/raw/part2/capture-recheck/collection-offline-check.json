@@ -1,0 +1,156 @@
+{
+  "scope": "Offline Node vm stub checks only; not Postman execution, not HTTP or MySQL evidence",
+  "started_at": "2026-09-28T01:31:17.835Z",
+  "finished_at": "2026-09-28T01:31:17.862Z",
+  "node_version": "v24.19.0",
+  "collection_path": "reports/hw04/part2/postman_collection.json",
+  "collection_sha256": "c3fb27236c3bd3faeee7dd286af4dd66273872de58dac309fed53efbe88c81fc",
+  "fixture_notice": "UUID, returned ID42, statuses and responses below are synthetic stub inputs; no real request was sent.",
+  "prepared_payload_example": {
+    "listingTitle": "HW4 Postman capture 11111111-1111-4111-8111-111111111111",
+    "propertyAddress": "260 Capture Lane, San Jose, CA",
+    "submitterEmail": "capture+11111111-1111-4111-8111-111111111111@example.com",
+    "description": "HW4 Postman capture run 11111111-1111-4111-8111-111111111111",
+    "propertyType": "apartment",
+    "termsAccepted": true
+  },
+  "checks": [
+    {
+      "name": "All saved scripts compile; no hidden sendRequest is present",
+      "passed": true
+    },
+    {
+      "name": "HTTPS8702 default and all credential/run-variable defaults are unchanged or blank",
+      "passed": true
+    },
+    {
+      "name": "Fresh Create persists UUID intent before any response and prepares all six fields",
+      "passed": true
+    },
+    {
+      "name": "Create refuses retained captureRunId and skips before throwing",
+      "passed": true
+    },
+    {
+      "name": "Create refuses retained captureIntent and skips before throwing",
+      "passed": true
+    },
+    {
+      "name": "Create refuses retained rentalId and skips before throwing",
+      "passed": true
+    },
+    {
+      "name": "Create refuses retained createdRental and skips before throwing",
+      "passed": true
+    },
+    {
+      "name": "Simulated201 saves returned ID42/row and retains intent",
+      "passed": true
+    },
+    {
+      "name": "Simulated500 keeps uncertain intent and does not invent a returned ID",
+      "passed": true
+    },
+    {
+      "name": "List rentals: valid ownership pins exact local ID",
+      "passed": true
+    },
+    {
+      "name": "List rentals: refuses conflicting env ID override",
+      "passed": true
+    },
+    {
+      "name": "List rentals: refuses conflicting local ID override",
+      "passed": true
+    },
+    {
+      "name": "List rentals: refuses missing ownership",
+      "passed": true
+    },
+    {
+      "name": "List rentals: refuses returned-row UUID marker mismatch",
+      "passed": true
+    },
+    {
+      "name": "Read created rental: valid ownership pins exact local ID",
+      "passed": true
+    },
+    {
+      "name": "Read created rental: refuses conflicting env ID override",
+      "passed": true
+    },
+    {
+      "name": "Read created rental: refuses conflicting local ID override",
+      "passed": true
+    },
+    {
+      "name": "Read created rental: refuses missing ownership",
+      "passed": true
+    },
+    {
+      "name": "Read created rental: refuses returned-row UUID marker mismatch",
+      "passed": true
+    },
+    {
+      "name": "Update created rental: valid ownership pins exact local ID",
+      "passed": true
+    },
+    {
+      "name": "Update created rental: refuses conflicting env ID override",
+      "passed": true
+    },
+    {
+      "name": "Update created rental: refuses conflicting local ID override",
+      "passed": true
+    },
+    {
+      "name": "Update created rental: refuses missing ownership",
+      "passed": true
+    },
+    {
+      "name": "Update created rental: refuses returned-row UUID marker mismatch",
+      "passed": true
+    },
+    {
+      "name": "Delete created rental: valid ownership pins exact local ID",
+      "passed": true
+    },
+    {
+      "name": "Delete created rental: refuses conflicting env ID override",
+      "passed": true
+    },
+    {
+      "name": "Delete created rental: refuses conflicting local ID override",
+      "passed": true
+    },
+    {
+      "name": "Delete created rental: refuses missing ownership",
+      "passed": true
+    },
+    {
+      "name": "Delete created rental: refuses returned-row UUID marker mismatch",
+      "passed": true
+    },
+    {
+      "name": "Unsafe or mismatching returned IDs are refused before a targeted request",
+      "passed": true
+    },
+    {
+      "name": "Fresh read assertions allow updated title/address while retaining immutable ownership",
+      "passed": true
+    },
+    {
+      "name": "SimulatedDELETE204 retains every run variable and blocks duplicate Create",
+      "passed": true
+    }
+  ],
+  "passed_checks": 32,
+  "failed_checks": 0,
+  "status": "pass",
+  "network_requests": 0,
+  "limitations": [
+    "Postman application execution and UI captures remain unverified.",
+    "Fresh manual GET ownership confirmation is still required before Update/Delete.",
+    "Operator must confirm exact-ID404 and explicitly clear only nonsecret run variables; the stub does not perform that confirmation."
+  ]
+}

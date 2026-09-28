@@ -1,7 +1,7 @@
 {
   "scope": "HW4 Parts1\u20133 only; not final whole-homework verification",
-  "timestamp_utc": "2026-09-28T01:29:57.820815+00:00",
-  "revision": "fcd76835c7a31e74dba8684ebe794e0f550f28a2",
+  "timestamp_utc": "2026-09-28T01:16:15.241788+00:00",
+  "revision": "307b1d9adc050e422a205e2d3219914c2234d816",
   "seed": 6102,
   "verify_seed": 266102,
   "database": "s6102_rel",
@@ -154,42 +154,42 @@
       "passed": false,
       "category": "manual_evidence",
       "file": null,
-      "reason": "Postman remains absent from the checked app inventory/folders and could not be opened. Actual Postman UI access is needed."
+      "reason": "Postman application unavailable; collection/API output is not a screenshot substitute."
     },
     {
       "name": "manual_capture:part2/postman-list",
       "passed": false,
       "category": "manual_evidence",
       "file": null,
-      "reason": "Postman remains absent from the checked app inventory/folders and could not be opened. Actual Postman UI access is needed."
+      "reason": "Postman application unavailable; collection/API output is not a screenshot substitute."
     },
     {
       "name": "manual_capture:part2/postman-id",
       "passed": false,
       "category": "manual_evidence",
       "file": null,
-      "reason": "Postman remains absent from the checked app inventory/folders and could not be opened. Actual Postman UI access is needed."
+      "reason": "Postman application unavailable; collection/API output is not a screenshot substitute."
     },
     {
       "name": "manual_capture:part2/postman-update",
       "passed": false,
       "category": "manual_evidence",
       "file": null,
-      "reason": "Postman remains absent from the checked app inventory/folders and could not be opened. Actual Postman UI access is needed."
+      "reason": "Postman application unavailable; collection/API output is not a screenshot substitute."
     },
     {
       "name": "manual_capture:part2/postman-delete",
       "passed": false,
       "category": "manual_evidence",
       "file": null,
-      "reason": "Postman remains absent from the checked app inventory/folders and could not be opened. Actual Postman UI access is needed."
+      "reason": "Postman application unavailable; collection/API output is not a screenshot substitute."
     },
     {
       "name": "manual_capture:part2/database",
       "passed": false,
       "category": "manual_evidence",
       "file": null,
-      "reason": "Native Terminal UI access was denied again; no dedicated MySQL GUI was found in the checked app inventory/folders. An allowed database client is needed."
+      "reason": "Native Terminal UI capture denied; schema/query JSON remains available."
     },
     {
       "name": "manual_capture:part2/project-structure",

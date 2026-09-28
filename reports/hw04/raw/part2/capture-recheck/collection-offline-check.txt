@@ -1,0 +1,7 @@
+OFFLINE STUB ONLY — not Postman execution.
+Collection: reports/hw04/part2/postman_collection.json
+SHA256: c3fb27236c3bd3faeee7dd286af4dd66273872de58dac309fed53efbe88c81fc
+Started: 2026-09-28T01:31:17.835Z
+Finished: 2026-09-28T01:31:17.862Z
+32 checks passed; 0 failed; 0 network requests.
+No UI, server, database or benchmark was used. All six Part2 screenshots remain pending.

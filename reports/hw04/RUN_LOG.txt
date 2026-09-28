@@ -161,3 +161,16 @@ Partial verifier selects new browser/pytest/smoke paths and Part1 follow-up comm
 Bounded independent review found no concrete ownership/failure-path defect; it ran no tests and made no edits. Parent ran all above evidence.
 Final read-only check:10/10 pass at 2026-09-28T01:17:00.960114+00:00; source hashes match,8702/8712 free, IDs14/15 absent, two original rentals retained. See cleanup-followup/final-check.json.
 No benchmark remeasurement:only test harness/provenance changed. Original180 samples and separate index experiment remain intact. No push/PR/deploy/tag.
+
+=== Part 2 manual-capture availability recheck ===
+Recorded UTC: 2026-09-28T01:30:36.012668+00:00
+Source checkpoint: fcd76835c7a31e74dba8684ebe794e0f550f28a2. Scope: six pending Part2 images and independent capture preparation only.
+Re-read Part1/Part2/Part3 coordination. lsof -nP -iTCP:8702 -sTCP:LISTEN returned exit1 with no output. No port reservation, API start, rental creation or database write performed.
+cua.getState listed no Postman or dedicated MySQL GUI. Direct app-bundle inspection in /Applications, ~/Applications and /System/Applications found no Postman or checked database GUI names.
+cua.getApp("Postman") returned Invalid app: Postman. cua.getApp("com.apple.Terminal") returned Computer Use is not allowed to use the app 'com.apple.Terminal' for safety reasons. No workaround, installation or permission change attempted.
+Completed images:0. Six Part2 images remain false; six Part3 image entries are untouched. Existing project-folder captures remain true. Availability/provenance: raw/part2/capture-recheck/availability.json.
+Reviewed the unexecuted Postman collection for owned-row safety. Prepared a unique immutable marker and stale/override guards; documented manual current-row checks and uncertain-response recovery. Offline script checks are not Postman screenshots or live execution.
+Partial verifier ran 2026-09-28T01:29:57.581094+00:00 through 2026-09-28T01:29:57.832059+00:00. Exact selected-artifact command and results: raw/part2/capture-recheck/verification-run.json; stdout: verifier-output.txt.
+Result: exit1, automated_status pass, status incomplete,34/46 passed; all12false checks are the unchanged manual screenshot gaps. Previous verifier preserved byte-for-byte as capture-recheck/verification-before.json.
+Application source, selected209-test output, API/browser evidence, original180benchmark requests and index experiment unchanged. No push, PR, deploy, tag or Part4 work.
+Offline checker:32 passed,0 failed,0 network requests, started 2026-09-28T01:31:17.835Z, finished 2026-09-28T01:31:17.862Z. Checker source preserved exactly as raw/part2/capture-recheck/collection-offline-check.cjs; run with bundled Node. Synthetic inputs are explicitly labeled. Collection SHA256:c3fb27236c3bd3faeee7dd286af4dd66273872de58dac309fed53efbe88c81fc.

@@ -1,7 +1,7 @@
 {
   "info": {
     "name": "DATA260 HW4 Part 2 - Rental CRUD",
-    "description": "Prepared capture collection; not executed in Postman in this session. Reserve exclusive port 8702 and coordinate the evidence database before running. Set local email/password environment variables; never export a populated environment. Run in order. Each rental mutation acts only on the row created by this run. See MANUAL_CAPTURES.md.",
+    "description": "Prepared collection for one manually supervised capture; not executed in Postman in this session. Reserve exclusive HTTPS port 8702 and coordinate the evidence database. Local credentials remain blank. Create reserves a UUID intent before POST; returned-ID ownership stays recorded through DELETE for manual 404 proof. Before Update/Delete, confirm ownership with a fresh manual GET. Never clear an uncertain run or retry Create blindly. See MANUAL_CAPTURES.md.",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "variable": [
@@ -27,6 +27,16 @@
     },
     {
       "key": "createdRental",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "captureRunId",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "captureIntent",
       "value": "",
       "type": "string"
     }
@@ -93,7 +103,7 @@
           }
         ],
         "url": "{{baseUrl}}/api/rentals",
-        "description": "Creates one capture-only rental and remembers its returned ID. Save screenshot 01-post-create.png.",
+        "description": "One manual capture run only. Refuses while captureRunId, captureIntent, rentalId or createdRental is retained. Stores a UUID and immutable email/description intent before POST; records an actual 201 response ID. Keep uncertain runs for manual recovery. Save 01-post-create.png.",
         "body": {
           "mode": "raw",
           "raw": "{{createPayload}}",
@@ -110,7 +120,32 @@
           "script": {
             "type": "text/javascript",
             "exec": [
-              "const payload = { listingTitle: 'HW4 Postman capture ' + Date.now(), propertyAddress: '260 Capture Lane, San Jose, CA', submitterEmail: 'capture@example.com', description: 'A rental created only for the HW4 Postman evidence capture.', propertyType: 'apartment', termsAccepted: true };",
+              "function refuseCapture(message) {",
+              "  pm.execution.skipRequest();",
+              "  throw new Error(message);",
+              "}",
+              "const runKeys = ['captureRunId', 'captureIntent', 'rentalId', 'createdRental'];",
+              "const retained = runKeys.filter(key => {",
+              "  const value = pm.collectionVariables.get(key);",
+              "  return value !== undefined && value !== null && String(value).length > 0;",
+              "});",
+              "if (retained.length > 0) {",
+              "  refuseCapture('A prior capture is retained. Confirm its exact ID returns 404, then explicitly clear only captureRunId, captureIntent, rentalId and createdRental before starting another run.');",
+              "}",
+              "const captureRunId = pm.variables.replaceIn('{{$guid}}');",
+              "if (typeof captureRunId !== 'string' || !/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(captureRunId)) {",
+              "  refuseCapture('Postman did not produce a valid capture UUID. No request will be sent.');",
+              "}",
+              "const payload = {",
+              "  listingTitle: 'HW4 Postman capture ' + captureRunId,",
+              "  propertyAddress: '260 Capture Lane, San Jose, CA',",
+              "  submitterEmail: 'capture+' + captureRunId + '@example.com',",
+              "  description: 'HW4 Postman capture run ' + captureRunId,",
+              "  propertyType: 'apartment',",
+              "  termsAccepted: true",
+              "};",
+              "pm.collectionVariables.set('captureRunId', captureRunId);",
+              "pm.collectionVariables.set('captureIntent', JSON.stringify(payload));",
               "pm.variables.set('createPayload', JSON.stringify(payload));"
             ]
           }
@@ -123,11 +158,15 @@
               "pm.test('Create returns 201', () => pm.response.to.have.status(201));",
               "if (pm.response.code === 201) {",
               "  const row = pm.response.json();",
-              "  pm.test('Generated ID is a positive integer', () => { pm.expect(Number.isInteger(row.id)).to.be.true; pm.expect(row.id).to.be.above(0); });",
-              "  pm.test('Six create fields match request', () => { const sent = JSON.parse(pm.variables.get('createPayload')); Object.keys(sent).forEach(key => pm.expect(row[key]).to.eql(sent[key])); });",
-              "  pm.collectionVariables.set('rentalId', String(row.id));",
+              "  // Keep all available confirmation data even if an assertion fails; never auto-clear uncertain ownership.",
               "  pm.collectionVariables.set('createdRental', JSON.stringify(row));",
-              "}"
+              "  if (row && typeof row === 'object' && row.id !== undefined && row.id !== null) {",
+              "    pm.collectionVariables.set('rentalId', String(row.id));",
+              "  }",
+              "  pm.test('Generated ID is a positive safe integer', () => { pm.expect(Number.isSafeInteger(row.id)).to.be.true; pm.expect(row.id).to.be.above(0); });",
+              "  pm.test('Six create fields match persisted intent', () => { const sent = JSON.parse(pm.collectionVariables.get('captureIntent')); Object.keys(sent).forEach(key => pm.expect(row[key]).to.eql(sent[key])); });",
+              "}",
+              "// A non-201, missing response, or invalid body keeps captureRunId/captureIntent for manual recovery."
             ]
           }
         }
@@ -147,7 +186,42 @@
           "script": {
             "type": "text/javascript",
             "exec": [
-              "if (!pm.collectionVariables.get('rentalId')) { throw new Error('Run Create rental first.'); }"
+              "function refuseCapture(message) {",
+              "  pm.execution.skipRequest();",
+              "  throw new Error(message);",
+              "}",
+              "const captureRunId = pm.collectionVariables.get('captureRunId');",
+              "const idText = pm.collectionVariables.get('rentalId');",
+              "if (typeof captureRunId !== 'string' || !/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(captureRunId)) {",
+              "  refuseCapture('Missing valid captureRunId. Do not select or guess a rental ID.');",
+              "}",
+              "let captureIntent;",
+              "let createdRental;",
+              "try {",
+              "  captureIntent = JSON.parse(pm.collectionVariables.get('captureIntent'));",
+              "  createdRental = JSON.parse(pm.collectionVariables.get('createdRental'));",
+              "} catch (error) {",
+              "  refuseCapture('Missing or invalid capture ownership JSON. Preserve the run variables for manual review.');",
+              "}",
+              "if (!captureIntent || typeof captureIntent !== 'object' || Array.isArray(captureIntent) ||",
+              "    !createdRental || typeof createdRental !== 'object' || Array.isArray(createdRental)) {",
+              "  refuseCapture('Capture intent and created rental must be recorded objects.');",
+              "}",
+              "const expectedDescription = 'HW4 Postman capture run ' + captureRunId;",
+              "const expectedEmail = 'capture+' + captureRunId + '@example.com';",
+              "if (captureIntent.description !== expectedDescription || captureIntent.submitterEmail !== expectedEmail ||",
+              "    createdRental.description !== captureIntent.description || createdRental.submitterEmail !== captureIntent.submitterEmail) {",
+              "  refuseCapture('Stored capture UUID markers do not match. Do not mutate this rental.');",
+              "}",
+              "if (!Number.isSafeInteger(createdRental.id) || createdRental.id <= 0 ||",
+              "    String(idText) !== String(createdRental.id)) {",
+              "  refuseCapture('rentalId must exactly match the positive integer ID returned by this capture POST.');",
+              "}",
+              "const validatedId = String(createdRental.id);",
+              "if (String(pm.variables.get('rentalId')) !== validatedId) {",
+              "  refuseCapture('A resolved rentalId override differs from the recorded capture ID. Remove the override before continuing.');",
+              "}",
+              "pm.variables.set('rentalId', validatedId);"
             ]
           }
         },
@@ -169,7 +243,7 @@
         "method": "GET",
         "header": [],
         "url": "{{baseUrl}}/api/rentals/{{rentalId}}",
-        "description": "Run before Update. Save screenshot 03-get-by-id.png."
+        "description": "Read the confirmed returned ID. Before each Update/Delete, manually verify this fresh response has the recorded ID and immutable description/email UUID markers. Initial read is screenshot 03-get-by-id.png. After DELETE, a separate manual GET must prove 404; this request normally expects 200."
       },
       "event": [
         {
@@ -177,7 +251,42 @@
           "script": {
             "type": "text/javascript",
             "exec": [
-              "if (!pm.collectionVariables.get('rentalId')) { throw new Error('Run Create rental first.'); }"
+              "function refuseCapture(message) {",
+              "  pm.execution.skipRequest();",
+              "  throw new Error(message);",
+              "}",
+              "const captureRunId = pm.collectionVariables.get('captureRunId');",
+              "const idText = pm.collectionVariables.get('rentalId');",
+              "if (typeof captureRunId !== 'string' || !/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(captureRunId)) {",
+              "  refuseCapture('Missing valid captureRunId. Do not select or guess a rental ID.');",
+              "}",
+              "let captureIntent;",
+              "let createdRental;",
+              "try {",
+              "  captureIntent = JSON.parse(pm.collectionVariables.get('captureIntent'));",
+              "  createdRental = JSON.parse(pm.collectionVariables.get('createdRental'));",
+              "} catch (error) {",
+              "  refuseCapture('Missing or invalid capture ownership JSON. Preserve the run variables for manual review.');",
+              "}",
+              "if (!captureIntent || typeof captureIntent !== 'object' || Array.isArray(captureIntent) ||",
+              "    !createdRental || typeof createdRental !== 'object' || Array.isArray(createdRental)) {",
+              "  refuseCapture('Capture intent and created rental must be recorded objects.');",
+              "}",
+              "const expectedDescription = 'HW4 Postman capture run ' + captureRunId;",
+              "const expectedEmail = 'capture+' + captureRunId + '@example.com';",
+              "if (captureIntent.description !== expectedDescription || captureIntent.submitterEmail !== expectedEmail ||",
+              "    createdRental.description !== captureIntent.description || createdRental.submitterEmail !== captureIntent.submitterEmail) {",
+              "  refuseCapture('Stored capture UUID markers do not match. Do not mutate this rental.');",
+              "}",
+              "if (!Number.isSafeInteger(createdRental.id) || createdRental.id <= 0 ||",
+              "    String(idText) !== String(createdRental.id)) {",
+              "  refuseCapture('rentalId must exactly match the positive integer ID returned by this capture POST.');",
+              "}",
+              "const validatedId = String(createdRental.id);",
+              "if (String(pm.variables.get('rentalId')) !== validatedId) {",
+              "  refuseCapture('A resolved rentalId override differs from the recorded capture ID. Remove the override before continuing.');",
+              "}",
+              "pm.variables.set('rentalId', validatedId);"
             ]
           }
         },
@@ -188,8 +297,12 @@
             "exec": [
               "pm.test('ID read returns 200', () => pm.response.to.have.status(200));",
               "if (pm.response.code === 200) {",
+              "  const row = pm.response.json();",
               "  const original = JSON.parse(pm.collectionVariables.get('createdRental'));",
-              "  pm.test('ID read matches original create', () => pm.expect(pm.response.json()).to.deep.equal(original));",
+              "  pm.test('ID read matches recorded capture and immutable fields', () => {",
+              "    pm.expect(row.id).to.eql(original.id);",
+              "    ['submitterEmail', 'description', 'propertyType', 'termsAccepted'].forEach(key => pm.expect(row[key]).to.eql(original[key]));",
+              "  });",
               "}"
             ]
           }
@@ -207,7 +320,7 @@
           }
         ],
         "url": "{{baseUrl}}/api/rentals/{{rentalId}}",
-        "description": "Sends only listingTitle/propertyAddress. Save 04-put-update.png and capture the database row before Delete.",
+        "description": "Send only after a fresh manual GET confirms exact ID and immutable UUID markers. Local guards validate saved ownership and reject rentalId overrides; no hidden HTTP requests occur. Sends only title/address. Save 04-put-update.png and database image before Delete.",
         "body": {
           "mode": "raw",
           "raw": "{{updatePayload}}",
@@ -224,9 +337,45 @@
           "script": {
             "type": "text/javascript",
             "exec": [
-              "if (!pm.collectionVariables.get('rentalId')) { throw new Error('Run Create rental first.'); }",
-              "const original = JSON.parse(pm.collectionVariables.get('createdRental'));",
-              "pm.variables.set('updatePayload', JSON.stringify({listingTitle: original.listingTitle + ' updated', propertyAddress: '261 Capture Lane, San Jose, CA'}));"
+              "function refuseCapture(message) {",
+              "  pm.execution.skipRequest();",
+              "  throw new Error(message);",
+              "}",
+              "const captureRunId = pm.collectionVariables.get('captureRunId');",
+              "const idText = pm.collectionVariables.get('rentalId');",
+              "if (typeof captureRunId !== 'string' || !/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(captureRunId)) {",
+              "  refuseCapture('Missing valid captureRunId. Do not select or guess a rental ID.');",
+              "}",
+              "let captureIntent;",
+              "let createdRental;",
+              "try {",
+              "  captureIntent = JSON.parse(pm.collectionVariables.get('captureIntent'));",
+              "  createdRental = JSON.parse(pm.collectionVariables.get('createdRental'));",
+              "} catch (error) {",
+              "  refuseCapture('Missing or invalid capture ownership JSON. Preserve the run variables for manual review.');",
+              "}",
+              "if (!captureIntent || typeof captureIntent !== 'object' || Array.isArray(captureIntent) ||",
+              "    !createdRental || typeof createdRental !== 'object' || Array.isArray(createdRental)) {",
+              "  refuseCapture('Capture intent and created rental must be recorded objects.');",
+              "}",
+              "const expectedDescription = 'HW4 Postman capture run ' + captureRunId;",
+              "const expectedEmail = 'capture+' + captureRunId + '@example.com';",
+              "if (captureIntent.description !== expectedDescription || captureIntent.submitterEmail !== expectedEmail ||",
+              "    createdRental.description !== captureIntent.description || createdRental.submitterEmail !== captureIntent.submitterEmail) {",
+              "  refuseCapture('Stored capture UUID markers do not match. Do not mutate this rental.');",
+              "}",
+              "if (!Number.isSafeInteger(createdRental.id) || createdRental.id <= 0 ||",
+              "    String(idText) !== String(createdRental.id)) {",
+              "  refuseCapture('rentalId must exactly match the positive integer ID returned by this capture POST.');",
+              "}",
+              "const validatedId = String(createdRental.id);",
+              "if (String(pm.variables.get('rentalId')) !== validatedId) {",
+              "  refuseCapture('A resolved rentalId override differs from the recorded capture ID. Remove the override before continuing.');",
+              "}",
+              "pm.variables.set('rentalId', validatedId);",
+              "",
+              "// A fresh manual GET must confirm this ID and both immutable UUID markers before Send.",
+              "pm.variables.set('updatePayload', JSON.stringify({listingTitle: createdRental.listingTitle + ' updated', propertyAddress: '261 Capture Lane, San Jose, CA'}));"
             ]
           }
         },
@@ -252,7 +401,7 @@
         "method": "DELETE",
         "header": [],
         "url": "{{baseUrl}}/api/rentals/{{rentalId}}",
-        "description": "Deletes only the ID created by this collection. Save 05-delete.png. A manual GET of the retained rentalId should now return 404."
+        "description": "Send only after a fresh manual GET confirms exact ID and immutable UUID markers. Deletes that confirmed ID only; no hidden HTTP requests occur. Save 05-delete.png. A 204 retains all run variables: manually GET that exact ID and confirm 404 before explicitly clearing only captureRunId, captureIntent, rentalId and createdRental."
       },
       "event": [
         {
@@ -260,7 +409,44 @@
           "script": {
             "type": "text/javascript",
             "exec": [
-              "if (!pm.collectionVariables.get('rentalId')) { throw new Error('Run Create rental first.'); }"
+              "function refuseCapture(message) {",
+              "  pm.execution.skipRequest();",
+              "  throw new Error(message);",
+              "}",
+              "const captureRunId = pm.collectionVariables.get('captureRunId');",
+              "const idText = pm.collectionVariables.get('rentalId');",
+              "if (typeof captureRunId !== 'string' || !/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(captureRunId)) {",
+              "  refuseCapture('Missing valid captureRunId. Do not select or guess a rental ID.');",
+              "}",
+              "let captureIntent;",
+              "let createdRental;",
+              "try {",
+              "  captureIntent = JSON.parse(pm.collectionVariables.get('captureIntent'));",
+              "  createdRental = JSON.parse(pm.collectionVariables.get('createdRental'));",
+              "} catch (error) {",
+              "  refuseCapture('Missing or invalid capture ownership JSON. Preserve the run variables for manual review.');",
+              "}",
+              "if (!captureIntent || typeof captureIntent !== 'object' || Array.isArray(captureIntent) ||",
+              "    !createdRental || typeof createdRental !== 'object' || Array.isArray(createdRental)) {",
+              "  refuseCapture('Capture intent and created rental must be recorded objects.');",
+              "}",
+              "const expectedDescription = 'HW4 Postman capture run ' + captureRunId;",
+              "const expectedEmail = 'capture+' + captureRunId + '@example.com';",
+              "if (captureIntent.description !== expectedDescription || captureIntent.submitterEmail !== expectedEmail ||",
+              "    createdRental.description !== captureIntent.description || createdRental.submitterEmail !== captureIntent.submitterEmail) {",
+              "  refuseCapture('Stored capture UUID markers do not match. Do not mutate this rental.');",
+              "}",
+              "if (!Number.isSafeInteger(createdRental.id) || createdRental.id <= 0 ||",
+              "    String(idText) !== String(createdRental.id)) {",
+              "  refuseCapture('rentalId must exactly match the positive integer ID returned by this capture POST.');",
+              "}",
+              "const validatedId = String(createdRental.id);",
+              "if (String(pm.variables.get('rentalId')) !== validatedId) {",
+              "  refuseCapture('A resolved rentalId override differs from the recorded capture ID. Remove the override before continuing.');",
+              "}",
+              "pm.variables.set('rentalId', validatedId);",
+              "",
+              "// A fresh manual GET must confirm this ID and both immutable UUID markers before Send."
             ]
           }
         },

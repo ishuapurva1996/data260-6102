@@ -1,0 +1,81 @@
+{
+  "recorded_at_utc": "2026-09-28T01:29:38.647410+00:00",
+  "revision": "fcd76835c7a31e74dba8684ebe794e0f550f28a2",
+  "scope": "Availability recheck and preparation only; no UI captures or API/database mutations",
+  "status": "blocked",
+  "observations": [
+    {
+      "tool": "cua.getState",
+      "result": "No Postman or dedicated MySQL GUI listed; Terminal listed; only enabled browser was Codex In-app Browser with no tabs"
+    },
+    {
+      "tool": "Filesystem application-bundle inspection",
+      "roots": [
+        "/Applications",
+        "/Users/pragyaapurva/Applications",
+        "/System/Applications"
+      ],
+      "matching_names_checked": [
+        "Postman",
+        "DBeaver",
+        "MySQLWorkbench",
+        "MySQL Workbench",
+        "TablePlus",
+        "Sequel Ace",
+        "Sequel Pro",
+        "DataGrip",
+        "Beekeeper Studio",
+        "DB Browser for SQLite"
+      ],
+      "matching_bundles": [],
+      "scope_limit": "Direct .app bundles in the three named roots; not an exhaustive whole-disk software search"
+    },
+    {
+      "tool": "cua.getApp(\"Postman\")",
+      "result": "Invalid app: Postman"
+    },
+    {
+      "tool": "cua.getApp(\"com.apple.Terminal\")",
+      "result": "Computer Use is not allowed to use the app 'com.apple.Terminal' for safety reasons."
+    },
+    {
+      "tool": "lsof -nP -iTCP:8702 -sTCP:LISTEN",
+      "exit_code": 1,
+      "stdout": "",
+      "result": "No listener reported"
+    },
+    {
+      "tool": "Read-only VS Code extension-directory inspection",
+      "root": "/Users/pragyaapurva/.vscode/extensions",
+      "terms_checked": [
+        "postman",
+        "mysql",
+        "sqltools",
+        "database-client",
+        "dbclient",
+        "dbeaver"
+      ],
+      "matching_directories": [],
+      "scope_limit": "Directory-name matches only; no extension installed or UI permission bypassed"
+    }
+  ],
+  "part2_images_completed_this_attempt": [],
+  "part2_images_pending": [
+    "01-post-create.png",
+    "02-get-list.png",
+    "03-get-by-id.png",
+    "04-put-update.png",
+    "05-delete.png",
+    "06-database.png"
+  ],
+  "required_access_step": "Make Postman and an allowed MySQL database UI available; any new software installation requires separate user authorization. Do not bypass the native Terminal denial.",
+  "runtime": {
+    "port_8702_claimed": false,
+    "server_started": false,
+    "rental_created": false,
+    "database_writes": false,
+    "credentials_read_or_exported": false,
+    "software_installed": false
+  },
+  "existing_evidence": "Historical images, API/browser results, index evidence and 180 benchmark samples retained unchanged; Part3 captures untouched"
+}

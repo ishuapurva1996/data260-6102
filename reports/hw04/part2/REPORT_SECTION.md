@@ -258,7 +258,7 @@ The normal runtime ran at `2026-09-28T01:14:34.935389+00:00` through `01:14:46.4
 
 The current pytest run began at `2026-09-28T01:15:32.510124+00:00`; the 29-check smoke ran at `01:15:50.150794+00:00` through `01:15:53.159300+00:00`. Seventeen new cleanup-guard unit tests use SQLite. Required MySQL evidence remains the live interruption check and integrated MySQL checks; SQLite is not substituted for that proof. The additional provenance regression and metadata cover the CJS browser runner, Python runtime runner, and interruption driver.
 
-At `2026-09-28T01:16:15.241788+00:00`, [current partial verification](../verification.parts123.json) again reported 34/46 checks passing, automated status **pass**, and overall **incomplete** solely for the same 12 manual captures. [The previous verifier](../raw/part2/cleanup-followup/verification-before.json), initial integration timings, and original screenshot paths are preserved.
+At `2026-09-28T01:16:15.241788+00:00`, [cleanup-follow-up partial verification](../raw/part2/capture-recheck/verification-before.json) again reported 34/46 checks passing, automated status **pass**, and overall **incomplete** solely for the same 12 manual captures. [The previous verifier](../raw/part2/cleanup-followup/verification-before.json), initial integration timings, and original screenshot paths are preserved.
 
 ## Review follow-up
 
@@ -278,3 +278,13 @@ The acceptance harness now attempts server shutdown and resource closure even
 if database cleanup fails, and records cleanup failures without secret details.
 HW4 fixture imports are lazy so they do not force the web stack into the
 repository's separate retrieval environment. These changes have focused tests.
+
+## Remaining Part 2 capture access recheck
+
+At `2026-09-28T01:29:38.647410+00:00`, the [availability record](../raw/part2/capture-recheck/availability.json) confirmed that Postman was still absent from the checked app inventory and application folders, and could not be opened. Native Terminal access was denied again by the computer-use tool. No dedicated MySQL GUI was found in the inspected locations. No new screenshot, server process, or capture rental was created. Port 8702 was free and was not claimed; the existing databases and benchmark measurements were untouched.
+
+All six Part 2 images therefore remain pending: POST, list GET, ID GET, PUT, DELETE, and the database view. The existing project-folder images remain complete. The required next step is to make Postman and an allowed database client available, with separate authorization for any new installation. The database view must use the API's Part 2 instance on host port 3362, capture only this run's uniquely marked rental before deletion, and omit credentials, token values, and password hashes. The Terminal denial was not bypassed.
+
+The [capture instructions](MANUAL_CAPTURES.md) now explain single-run ownership, recovery after an uncertain POST, a fresh exact-ID/marker comparison before each mutation, the database-before-delete order, and a final literal-ID 404 check. The prepared collection uses a GUID in immutable fields and guards against stale or overridden IDs; offline script checks are explicitly separate from actual Postman execution. Each new image must be placed beneath its corresponding code excerpt once genuinely captured.
+
+The [partial verifier](../verification.parts123.json) was rerun against the retained selected evidence at `2026-09-28T01:29:57.581094+00:00`. It again reports **automated status pass**, **34/46 checks passed**, and **overall incomplete** for the same 12 manual images (six Part 2 and six Part 3). Its exit code 1 reflects these missing images. [Run details](../raw/part2/capture-recheck/verification-run.json) preserve the exact command; [the prior verifier](../raw/part2/capture-recheck/verification-before.json) is retained. This recheck is not a new API, browser, pytest, or performance measurement run.
