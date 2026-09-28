@@ -1,0 +1,59 @@
+{
+  "format_version": 1,
+  "origin": "user-provided screenshot",
+  "input_path": "/var/folders/pj/9dp_jz_d5llfnj6rv0yglfn00000gn/T/codex-clipboard-34557cac-256b-4f8e-abd1-3c760d7073a7.png",
+  "ingested_at_utc": "2026-09-28T03:50:51.701131+00:00",
+  "capture_time_utc": null,
+  "capture_time_note": "No actual capture timestamp was supplied. Ingestion time and input file modification time are recorded separately and are not asserted as capture time.",
+  "input_file_mtime_utc": "2026-09-28T03:49:46.467054+00:00",
+  "source_sha256": "c71ac7d76265dca564de8fc76862184d6114fb5b4eb229b256fe22d2f4fa1380",
+  "source_bytes": 205079,
+  "format": "PNG",
+  "width": 1442,
+  "height": 1226,
+  "copies": [
+    {
+      "file": "reports/hw04/screenshots/part2/06-database.png",
+      "sha256": "c71ac7d76265dca564de8fc76862184d6114fb5b4eb229b256fe22d2f4fa1380",
+      "byte_identical_to_input": true
+    },
+    {
+      "file": "reports/hw04/raw/part2/postman/user-database-original.png",
+      "sha256": "c71ac7d76265dca564de8fc76862184d6114fb5b4eb229b256fe22d2f4fa1380",
+      "byte_identical_to_input": true
+    }
+  ],
+  "content_edits": false,
+  "visual_review": {
+    "status": "passed",
+    "method": "Direct view_image inspection at original resolution",
+    "database_name_visible": "s6102_rel",
+    "tables_visible": [
+      "property_managers",
+      "rentals",
+      "schema_migrations",
+      "sessions",
+      "users"
+    ],
+    "rental_id_visible": 16,
+    "listing_title_visible": "HW4 Postman capture 591325c9-5c03-4baa-bef3-a06eea2b2714 updated",
+    "property_address_visible": "261 Capture Lane, San Jose, CA",
+    "container_name_visible": "data260-hw4-mysql",
+    "exact_id_predicate_visible": "WHERE id=16",
+    "fields_readable": true,
+    "layout_note": "MySQL table borders, property_address header and address wrap across terminal lines; the complete values remain readable.",
+    "password_value_visible": false,
+    "password_note": "Only the MYSQL_ROOT_PASSWORD environment variable reference appears in the command; no password value is shown.",
+    "cookie_or_token_value_visible": false,
+    "issues": []
+  },
+  "supporting_terminal_text": {
+    "file": "reports/hw04/raw/part2/postman/user-terminal-observation.json",
+    "input_path": "/private/tmp/hw4-part2-user-terminal-observation.json",
+    "sha256": "92cfc133d31184bb219200b1bab8765b0416df6f365b842a6087962e4398b369",
+    "bytes": 5712,
+    "byte_identical_to_input": true,
+    "evidence_type": "JSON containing supporting terminal text, not an image",
+    "note": "Supporting observation is retained separately; it is not substituted for the user-provided screenshot."
+  }
+}

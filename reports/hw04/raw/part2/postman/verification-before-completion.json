@@ -1,7 +1,7 @@
 {
   "scope": "HW4 Parts1\u20133 only; not final whole-homework verification",
-  "timestamp_utc": "2026-09-28T03:55:38.224044+00:00",
-  "revision": "53937d1d6f3ece1353302fa7135107c9a6ca592c",
+  "timestamp_utc": "2026-09-28T02:33:01.340953+00:00",
+  "revision": "5c939bd8b32c41c7514bb061210a1f4e43b25862",
   "seed": 6102,
   "verify_seed": 266102,
   "database": "s6102_rel",
@@ -179,17 +179,17 @@
     },
     {
       "name": "manual_capture:part2/postman-delete",
-      "passed": true,
+      "passed": false,
       "category": "manual_evidence",
-      "file": "reports/hw04/screenshots/part2/05-delete.png",
-      "reason": "Actual Postman response for uniquely marked capture rental 16; original JPEG retained with pixel-identical PNG conversion."
+      "file": null,
+      "reason": "Postman is available. DELETE capture waits for the database screenshot of this same owned rental 16."
     },
     {
       "name": "manual_capture:part2/database",
-      "passed": true,
+      "passed": false,
       "category": "manual_evidence",
-      "file": "reports/hw04/screenshots/part2/06-database.png",
-      "reason": "Actual user-provided terminal screenshot shows s6102_rel, five tables, and owned rental 16 after its update; bytes preserved unchanged."
+      "file": null,
+      "reason": "Awaiting user screenshot of MySQL CLI output for owned rental 16. Computer Use denied native Terminal and Codex app control; no MySQL GUI installation required."
     },
     {
       "name": "manual_capture:part2/project-structure",
@@ -246,7 +246,7 @@
     }
   ],
   "automated_status": "pass",
-  "status": "pass",
+  "status": "incomplete",
   "outside_scope": [
     "Part4",
     "final whole-homework PDF",

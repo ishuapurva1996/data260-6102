@@ -1,10 +1,10 @@
 {
   "format_version": 1,
-  "reviewed_at_utc": "2026-09-28T02:31:44.105212+00:00",
+  "reviewed_at_utc": "2026-09-28T03:55:03.232081+00:00",
   "reviewer": "code_review subagent",
-  "method": "Direct visual inspection of saved PNGs at original resolution using view_image. The four earlier primary captures remain byte-identical to their reviewed SHA256 values; one new updated-ID GET capture was directly reviewed in this follow-up.",
+  "method": "Direct view_image inspection of saved PNGs at original resolution. Previously reviewed images remain byte-identical to their recorded SHA256 values; this follow-up directly reviewed five new pre-delete, DELETE, DELETE-tests, deleted-ID-404 and logout captures.",
   "status": "passed",
-  "primary_images_reviewed": 4,
+  "primary_images_reviewed": 5,
   "issues": [],
   "images": [
     {
@@ -89,15 +89,100 @@
       "login_credentials_visible": false,
       "cookie_or_token_value_visible": false,
       "observation": "Complete updated rental is readable in a literal-ID GET response: title has the updated suffix, address is 261 Capture Lane, San Jose, CA, and immutable UUID email/description match the create/PUT evidence. Test Results shows 2/2."
+    },
+    {
+      "file": "reports/hw04/screenshots/part2/04-pre-delete-owned-read.png",
+      "sha256": "363891e475056a708cef75e74377144fc7bc0b7d3eed94d75293c1b972452ad6",
+      "role": "supporting pre-delete ownership read",
+      "status": "passed",
+      "method_visible": "GET",
+      "full_url_visible": "https://127.0.0.1:8702/api/rentals/16",
+      "http_status_visible": 200,
+      "fields_readable": true,
+      "login_credentials_visible": false,
+      "cookie_or_token_value_visible": false,
+      "observation": "Complete updated ID16 response is readable with the expected UUID email/description, updated title, 261 Capture Lane address and Test Results 2/2.",
+      "rental_ids_visible": [
+        16
+      ],
+      "uuid_marker_visible": "591325c9-5c03-4baa-bef3-a06eea2b2714",
+      "test_results_visible": "2/2"
+    },
+    {
+      "file": "reports/hw04/screenshots/part2/05-delete.png",
+      "sha256": "7496190724afb23e4384537e3a0ed7214f38a974b8c59c2402bd38cc0ddf7518",
+      "role": "primary DELETE response",
+      "status": "passed",
+      "method_visible": "DELETE",
+      "full_url_visible": "https://127.0.0.1:8702/api/rentals/16",
+      "http_status_visible": 204,
+      "fields_readable": true,
+      "login_credentials_visible": false,
+      "cookie_or_token_value_visible": false,
+      "observation": "The exact ID16 DELETE URL, 204 No Content status, blank Raw response body and Test Results 2/2 are visible.",
+      "target_rental_id_visible": 16,
+      "response_body_visibly_empty": true,
+      "test_results_visible": "2/2"
+    },
+    {
+      "file": "reports/hw04/screenshots/part2/05-delete-tests.png",
+      "sha256": "ade244f2e900ef2511d3e08b04a882e9eed41e07f5f8239b30b53c9c868d15f0",
+      "role": "supporting DELETE tests",
+      "status": "passed",
+      "method_visible": "DELETE",
+      "full_url_visible": "https://127.0.0.1:8702/api/rentals/16",
+      "http_status_visible": 204,
+      "fields_readable": true,
+      "login_credentials_visible": false,
+      "cookie_or_token_value_visible": false,
+      "observation": "The test panel displays PASSED for Delete returns 204 and Delete body is empty, with Test Results 2/2.",
+      "target_rental_id_visible": 16,
+      "test_results_visible": "2/2",
+      "passed_test_names_visible": [
+        "Delete returns 204",
+        "Delete body is empty"
+      ]
+    },
+    {
+      "file": "reports/hw04/screenshots/part2/05-deleted-id-404.png",
+      "sha256": "6bb529f17c2f601a27e090f0da131977182c008defb0eabe03d204d327e1be67",
+      "role": "supporting deleted-ID read",
+      "status": "passed",
+      "method_visible": "GET",
+      "full_url_visible": "https://127.0.0.1:8702/api/rentals/16",
+      "http_status_visible": 404,
+      "fields_readable": true,
+      "login_credentials_visible": false,
+      "cookie_or_token_value_visible": false,
+      "observation": "The literal-ID GET returns 404 Not Found and a readable JSON detail saying Rental listing ID 16 was not found.",
+      "target_rental_id_visible": 16,
+      "response_detail_visible": "Rental listing ID 16 was not found."
+    },
+    {
+      "file": "reports/hw04/screenshots/part2/08-logout.png",
+      "sha256": "408ba8d8c87726d3b5531c853a06e3a16a44bf07a4b0480534eec3cc22e37297",
+      "role": "supporting logout response",
+      "status": "passed",
+      "method_visible": "POST",
+      "full_url_visible": "https://127.0.0.1:8702/api/auth/logout",
+      "http_status_visible": 204,
+      "fields_readable": true,
+      "login_credentials_visible": false,
+      "cookie_or_token_value_visible": false,
+      "observation": "Logout returns 204 No Content with a blank Raw response body and Test Results 2/2; no credential or cookie panel is displayed.",
+      "response_body_visibly_empty": true,
+      "test_results_visible": "2/2"
     }
   ],
   "limitations": [
-    "This review covers four primary POST/list/ID-GET/PUT images and the supporting updated-ID GET image. The other five converted support images were checked for hashes, format and pixel equality but not visually reviewed.",
-    "DELETE and database-client screenshots were not available in this review scope.",
-    "Screenshot content is reviewed as captured evidence; this pass sent no HTTP requests and made no database queries."
+    "This file records five primary CRUD images and five supporting Postman images reviewed directly. The remaining five earlier support images were checked for hashes, format and pixel equality but not visually reviewed in these passes.",
+    "The user-provided database image has its own separate provenance and visual review in database-image.json.",
+    "Visible Test Results summaries are distinguished from actual named test-panel assertions. No HTTP requests or database queries were performed by this review."
   ],
   "initial_reviewed_at_utc": "2026-09-28T02:26:07.414383+00:00",
-  "support_images_reviewed": 1,
-  "total_images_reviewed": 5,
-  "previous_primary_hashes_rechecked_unchanged": true
+  "support_images_reviewed": 5,
+  "total_images_reviewed": 10,
+  "previous_primary_hashes_rechecked_unchanged": true,
+  "previous_reviewed_image_hashes_rechecked_unchanged": true,
+  "database_image_review": "reports/hw04/raw/part2/postman/database-image.json"
 }

@@ -1,6 +1,6 @@
 {
-  "started_at_utc": "2026-09-28T03:55:37.917251+00:00",
-  "finished_at_utc": "2026-09-28T03:55:38.235046+00:00",
+  "started_at_utc": "2026-09-28T02:33:01.034223+00:00",
+  "finished_at_utc": "2026-09-28T02:33:01.355244+00:00",
   "command": [
     "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part2-backend/.venv/bin/python",
     "scripts/verify_hw04_parts123.py",
@@ -23,11 +23,14 @@
     "--output",
     "reports/hw04/verification.parts123.json"
   ],
-  "exit_code": 0,
+  "exit_code": 1,
   "automated_status": "pass",
-  "status": "pass",
-  "passed": 46,
+  "status": "incomplete",
+  "passed": 44,
   "total": 46,
-  "false_checks": [],
-  "note": "Rechecked retained selected automated evidence and completed genuine captures against current source; no new automated API harness, browser suite, pytest suite or benchmark run claimed"
+  "false_checks": [
+    "manual_capture:part2/postman-delete",
+    "manual_capture:part2/database"
+  ],
+  "note": "Rechecked retained selected evidence against current source; no fresh API, browser, pytest or benchmark run claimed"
 }

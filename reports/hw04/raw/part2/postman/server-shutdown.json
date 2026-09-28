@@ -1,0 +1,20 @@
+{
+  "recorded_at_utc": "2026-09-28T03:54:54.862164+00:00",
+  "owned_uvicorn_pid": 82539,
+  "exec_session_id": 66032,
+  "port": 8702,
+  "before_shutdown_listener_pid": 82539,
+  "action": "Ctrl-C sent through the owned exec session",
+  "uvicorn_output": [
+    "Shutting down",
+    "Application shutdown complete.",
+    "Finished server process [82539]"
+  ],
+  "launcher_exit_code": 1,
+  "launcher_exit_note": "Expected KeyboardInterrupt after manual Ctrl-C; not an application request failure.",
+  "after_shutdown_lsof_exit_code": 1,
+  "after_shutdown_lsof_output": "",
+  "port_released": true,
+  "process_list_crosscheck": "ps denied by shell sandbox; shutdown verified through completed owned session and no listening socket",
+  "unrelated_processes_stopped": false
+}

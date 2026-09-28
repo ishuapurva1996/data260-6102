@@ -1,0 +1,187 @@
+{
+  "scope": "Read-only Part 2 MySQL postflight after actual Postman DELETE; no user/session secret rows selected; no database writes",
+  "started_at": "2026-09-28T03:55:01.441939+00:00",
+  "finished_at": "2026-09-28T03:55:01.530488+00:00",
+  "running_application_revision": "7350d9c98e8b56fcab4979fd94e0b39246f2b6d3",
+  "head_at_capture": "53937d1d6f3ece1353302fa7135107c9a6ca592c",
+  "preflight": "reports/hw04/raw/part2/postman/preflight.json",
+  "preflight_sha256": "82be83373a0e77184318960a2e28bf4eae7b5d08c9dcb8d3c9454a1fa77027cd",
+  "connection": {
+    "host": "127.0.0.1",
+    "host_port": 3362,
+    "database": "s6102_rel",
+    "driver": "mysql+pymysql"
+  },
+  "read_only_transaction": true,
+  "server": {
+    "version": "8.4.11",
+    "database_name": "s6102_rel",
+    "server_uuid": "0dc495c2-bad3-11f1-91e1-d23c30ccc7c6",
+    "server_hostname": "1df2089e42d4",
+    "server_port": 3306
+  },
+  "tables": [
+    "property_managers",
+    "rentals",
+    "schema_migrations",
+    "sessions",
+    "users"
+  ],
+  "rental_fields": [
+    "id",
+    "listing_title",
+    "property_address",
+    "submitter_email",
+    "description",
+    "property_type",
+    "terms_accepted",
+    "manager_id"
+  ],
+  "rentals": [
+    {
+      "id": 1,
+      "listing_title": "Sunny Downtown Apartment",
+      "property_address": "123 San Carlos Street, San Jose, CA",
+      "submitter_email": "downtown@example.com",
+      "description": "A bright apartment close to campus, shops, and public transit.",
+      "property_type": "apartment",
+      "terms_accepted": true,
+      "manager_id": null
+    },
+    {
+      "id": 2,
+      "listing_title": "Spacious Garden House",
+      "property_address": "456 Willow Street, San Jose, CA",
+      "submitter_email": "garden@example.com",
+      "description": "A comfortable house with a private garden and a sunny living room.",
+      "property_type": "house",
+      "terms_accepted": true,
+      "manager_id": null
+    }
+  ],
+  "existing_rental_ids": [
+    1,
+    2
+  ],
+  "counts": {
+    "rentals": 2,
+    "property_managers": 0
+  },
+  "rentals_sha256": "68bb635724ff0b10bdd29403157f5262279f41ad63fb214d1ce1322ad33e4643",
+  "hash_encoding": "UTF-8 JSON of ordered rental rows; sort_keys=True, separators=(comma,colon), ensure_ascii=False; terms_accepted serialized as Boolean",
+  "indexes": {
+    "rentals": [
+      {
+        "Table": "rentals",
+        "Non_unique": 0,
+        "Key_name": "PRIMARY",
+        "Seq_in_index": 1,
+        "Column_name": "id",
+        "Collation": "A",
+        "Cardinality": 2,
+        "Sub_part": null,
+        "Packed": null,
+        "Null": "",
+        "Index_type": "BTREE",
+        "Comment": "",
+        "Index_comment": "",
+        "Visible": "YES",
+        "Expression": null
+      },
+      {
+        "Table": "rentals",
+        "Non_unique": 1,
+        "Key_name": "ix_rentals_manager_id",
+        "Seq_in_index": 1,
+        "Column_name": "manager_id",
+        "Collation": "A",
+        "Cardinality": 1,
+        "Sub_part": null,
+        "Packed": null,
+        "Null": "YES",
+        "Index_type": "BTREE",
+        "Comment": "",
+        "Index_comment": "",
+        "Visible": "YES",
+        "Expression": null
+      }
+    ],
+    "property_managers": [
+      {
+        "Table": "property_managers",
+        "Non_unique": 0,
+        "Key_name": "PRIMARY",
+        "Seq_in_index": 1,
+        "Column_name": "id",
+        "Collation": "A",
+        "Cardinality": 0,
+        "Sub_part": null,
+        "Packed": null,
+        "Null": "",
+        "Index_type": "BTREE",
+        "Comment": "",
+        "Index_comment": "",
+        "Visible": "YES",
+        "Expression": null
+      }
+    ]
+  },
+  "index_comparison": "Compare all returned SHOW INDEX fields except optimizer Cardinality; sort by Key_name and Seq_in_index. Covers rentals and property_managers, matching preflight scope.",
+  "migration_journal": [
+    {
+      "version": 1,
+      "name": "001_initial.sql",
+      "checksum": "d738249ea390692161830c653d0ad8b75fb3e1ee5a8aace23a760413c9ab181f",
+      "applied_at": "2026-09-28 00:26:53.255751"
+    }
+  ],
+  "checks": [
+    {
+      "name": "Authorized local MySQL target is port 3362 / s6102_rel",
+      "passed": true
+    },
+    {
+      "name": "Server identity and version equal preflight",
+      "passed": true
+    },
+    {
+      "name": "Owned capture rental ID 16 is absent",
+      "passed": true
+    },
+    {
+      "name": "Only original IDs 1 and 2 remain",
+      "passed": true
+    },
+    {
+      "name": "All ordered original rental fields exactly equal preflight",
+      "passed": true
+    },
+    {
+      "name": "Canonical rental SHA256 equals preflight",
+      "passed": true
+    },
+    {
+      "name": "Manager count is unchanged at zero",
+      "passed": true
+    },
+    {
+      "name": "Table inventory is preserved",
+      "passed": true
+    },
+    {
+      "name": "Migration journal is preserved",
+      "passed": true
+    },
+    {
+      "name": "Rental and manager index definitions are preserved, ignoring optimizer cardinality",
+      "passed": true
+    },
+    {
+      "name": "Original preflight file is unchanged",
+      "passed": true
+    }
+  ],
+  "passed": 11,
+  "total": 11,
+  "status": "pass"
+}

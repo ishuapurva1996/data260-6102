@@ -1,9 +1,9 @@
 {
-  "scope": "Actual Part 2 Postman CRUD screenshots; capture workflow in progress",
-  "updated_at_utc": "2026-09-28T02:32:53.771262+00:00",
-  "status": "incomplete",
+  "scope": "Completed actual Part 2 Postman CRUD and user-provided database screenshot evidence",
+  "updated_at_utc": "2026-09-28T03:55:37.848043+00:00",
+  "status": "complete",
   "running_application_revision": "7350d9c98e8b56fcab4979fd94e0b39246f2b6d3",
-  "current_head": "5c939bd8b32c41c7514bb061210a1f4e43b25862",
+  "current_head": "53937d1d6f3ece1353302fa7135107c9a6ca592c",
   "evidence_only_merge": "5c939bd8b32c41c7514bb061210a1f4e43b25862",
   "application_source_unchanged_during_merge": true,
   "application": "Postman 12.29.5",
@@ -18,7 +18,7 @@
     "owned_uvicorn_pid": 82539,
     "exec_session_id": 66032,
     "port": 8702,
-    "state": "running; database capture precedes owned-row deletion"
+    "state": "stopped; port 8702 released; MySQL container retained"
   },
   "owned_rental": {
     "id": 16,
@@ -68,6 +68,36 @@
       "status": 200,
       "assertions_passed": 2,
       "assertions_failed": 0
+    },
+    {
+      "request": "Login renewed after the manual capture wait",
+      "status": 200,
+      "assertion_count_not_added": "No login test-detail capture included"
+    },
+    {
+      "request": "Fresh GET /api/rentals/16 before deletion",
+      "status": 200,
+      "assertions_passed": 2,
+      "status_check_passed": true,
+      "ownership_check_passed": true
+    },
+    {
+      "request": "DELETE /api/rentals/16",
+      "status": 204,
+      "body_empty": true,
+      "assertions_passed": 2,
+      "assertions_failed": 0
+    },
+    {
+      "request": "Plain GET /api/rentals/16 after deletion",
+      "status": 404,
+      "response_detail": "Rental listing ID 16 was not found.",
+      "collection_tests_inherited": false
+    },
+    {
+      "request": "POST /api/auth/logout",
+      "status": 204,
+      "test_results_display": "2/2"
     }
   ],
   "capture_log": "reports/hw04/raw/part2/postman/capture-log.json",
@@ -178,6 +208,21 @@
       "original_preserved": true
     },
     {
+      "source": "reports/hw04/raw/part2/postman/native-captures/04-pre-delete-owned-read.jpg",
+      "source_format": "JPEG",
+      "source_sha256": "fa54f07b3450ad4a5b5ee939d7a1a7116679da2c3e34b8d79c1bb9530de3ecb2",
+      "source_bytes": 279669,
+      "png": "reports/hw04/screenshots/part2/04-pre-delete-owned-read.png",
+      "png_format": "PNG",
+      "png_sha256": "363891e475056a708cef75e74377144fc7bc0b7d3eed94d75293c1b972452ad6",
+      "png_bytes": 508732,
+      "width": 2560,
+      "height": 1600,
+      "mode": "RGB",
+      "decoded_pixels_identical": true,
+      "original_preserved": true
+    },
+    {
       "source": "reports/hw04/raw/part2/postman/native-captures/04-put-update-tests.jpg",
       "source_format": "JPEG",
       "source_sha256": "f69ea16166a32d54a862a0ddd44bbf37864ab83456da3c3ab65e5fb5d3e669be",
@@ -221,24 +266,105 @@
       "mode": "RGB",
       "decoded_pixels_identical": true,
       "original_preserved": true
+    },
+    {
+      "source": "reports/hw04/raw/part2/postman/native-captures/05-delete-tests.jpg",
+      "source_format": "JPEG",
+      "source_sha256": "df4f03ae296dfb35fc9820c095b521fa3d4979e85abaac980786a8257dfd9e3e",
+      "source_bytes": 218780,
+      "png": "reports/hw04/screenshots/part2/05-delete-tests.png",
+      "png_format": "PNG",
+      "png_sha256": "ade244f2e900ef2511d3e08b04a882e9eed41e07f5f8239b30b53c9c868d15f0",
+      "png_bytes": 332305,
+      "width": 2560,
+      "height": 1600,
+      "mode": "RGB",
+      "decoded_pixels_identical": true,
+      "original_preserved": true
+    },
+    {
+      "source": "reports/hw04/raw/part2/postman/native-captures/05-delete.jpg",
+      "source_format": "JPEG",
+      "source_sha256": "c1254a39249d7d72e3eb96526e9272c8963aa180c63a52e94ae6045a8eb445e6",
+      "source_bytes": 215032,
+      "png": "reports/hw04/screenshots/part2/05-delete.png",
+      "png_format": "PNG",
+      "png_sha256": "7496190724afb23e4384537e3a0ed7214f38a974b8c59c2402bd38cc0ddf7518",
+      "png_bytes": 312111,
+      "width": 2560,
+      "height": 1600,
+      "mode": "RGB",
+      "decoded_pixels_identical": true,
+      "original_preserved": true
+    },
+    {
+      "source": "reports/hw04/raw/part2/postman/native-captures/05-deleted-id-404.jpg",
+      "source_format": "JPEG",
+      "source_sha256": "9ba50ee7f99c7e9f4cfca1357103b4c35ba973b3943868ebc4b2ab01746bbd14",
+      "source_bytes": 228557,
+      "png": "reports/hw04/screenshots/part2/05-deleted-id-404.png",
+      "png_format": "PNG",
+      "png_sha256": "6bb529f17c2f601a27e090f0da131977182c008defb0eabe03d204d327e1be67",
+      "png_bytes": 362333,
+      "width": 2560,
+      "height": 1600,
+      "mode": "RGB",
+      "decoded_pixels_identical": true,
+      "original_preserved": true
+    },
+    {
+      "source": "reports/hw04/raw/part2/postman/native-captures/08-logout.jpg",
+      "source_format": "JPEG",
+      "source_sha256": "046cdd83ac94c57279a5a384be7aa8d0d870367c29c36d5f4e36c032754228ad",
+      "source_bytes": 212121,
+      "png": "reports/hw04/screenshots/part2/08-logout.png",
+      "png_format": "PNG",
+      "png_sha256": "408ba8d8c87726d3b5531c853a06e3a16a44bf07a4b0480534eec3cc22e37297",
+      "png_bytes": 298057,
+      "width": 2560,
+      "height": 1600,
+      "mode": "RGB",
+      "decoded_pixels_identical": true,
+      "original_preserved": true
     }
   ],
   "format_conversion": "Native JPEG bytes retained unmodified; PNG decoded pixels identical; no cropping, resizing, annotations, or compositing",
   "visual_review": "reports/hw04/raw/part2/postman/visual-review.json",
   "database_preflight": "reports/hw04/raw/part2/postman/preflight.json",
-  "pending": [
-    "User-provided database screenshot of owned rental 16",
-    "Fresh ownership GET, DELETE 204 screenshot, literal ID GET 404, Logout 204",
-    "Clear local Postman credential values",
-    "Read-only database postflight and owned-server shutdown"
-  ],
+  "pending": [],
   "ui_access": {
     "checked_at_utc": "2026-09-28T02:32:53.771262+00:00",
     "codex_terminal_read": "Supported read_thread_terminal returned idle shell prompt",
     "codex_control": "Computer Use is not allowed to use the app com.openai.codex for safety reasons",
     "native_terminal_control": "Previously denied by Computer Use",
     "workaround_attempted": false,
-    "manual_step": "User can run the read-only mysql CLI command in the available Codex terminal and attach an actual screenshot; no GUI installation required"
+    "manual_step": "Completed: user supplied actual terminal screenshot; bytes preserved unchanged. No UI access restriction was bypassed."
   },
-  "measurement_note": "These functional captures do not replace or rerun the original 180-request benchmark."
+  "measurement_note": "These functional captures do not replace or rerun the original 180-request benchmark.",
+  "evidence_head_before_final_commit": "53937d1d6f3ece1353302fa7135107c9a6ca592c",
+  "database_image": "reports/hw04/raw/part2/postman/database-image.json",
+  "database_postflight": "reports/hw04/raw/part2/postman/postflight.json",
+  "local_values_cleared": "reports/hw04/raw/part2/postman/local-values-cleared.json",
+  "server_shutdown": "reports/hw04/raw/part2/postman/server-shutdown.json",
+  "primary_crud_assertions": {
+    "passed": 12,
+    "failed": 0,
+    "scope": "POST 3 + list GET 2 + initial ID GET 2 + PUT 3 + DELETE 2. Supplemental reads and login/logout are separate; no Collection Runner total claimed."
+  },
+  "cleanup": {
+    "owned_rental_id": 16,
+    "deleted": true,
+    "followup_get_status": 404,
+    "logout_status": 204,
+    "original_rental_ids": [
+      1,
+      2
+    ],
+    "original_rentals_hash_unchanged": true,
+    "postflight_passed": 11,
+    "postflight_total": 11,
+    "local_credentials_cleared": true,
+    "owned_server_stopped": true,
+    "port_8702_released": true
+  }
 }

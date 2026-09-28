@@ -1,6 +1,6 @@
 # HW4 Parts 1–3: local integration record
 
-Parts 1–3 are merged into one local Rental Housing Listings application, and the integrated API, browser, MySQL, and performance smoke checks passed. The current partial verifier reports **automated_status: pass** and **status: incomplete**: **44 of 46** checks pass. The database screenshot and final Part 2 DELETE screenshot remain pending; the other required captures are present. This is a partial write-up for Parts 1–3, not the whole-homework PDF or verification on a submission tag.
+Parts 1–3 are merged into one local Rental Housing Listings application, and the integrated API, browser, MySQL, and performance smoke checks passed. The Parts 1–3 partial verifier reports **automated_status: pass**, **status: pass**, and **46/46 checks passed**. All required Parts 1–3 captures are present, and the capture rental, local credentials, and owned server have been cleaned up. This is a partial write-up for Parts 1–3, not the whole-homework PDF or verification on a submission tag.
 
 ## Configuration and revisions
 
@@ -48,11 +48,11 @@ Every ordinary rental operation and both performance routes require the same dat
 
 Foundation B was published after 23 real HTTPS/MySQL checks and a repeat-migration/seed check that preserved two existing demo rows. That historical acceptance artifact identifies a dirty HW3-baseline tree before B was committed. It remains labeled as the foundation gate. The integrated run at `e7382ddb9cc5e0a5cd867653254a0c6f62f2f9c7` independently passed the same 23 checks, using rental ID 9 for its create/read/update/delete sequence. Both actual process restart and logout-token revocation passed.
 
-See [Part 2 report](part2/REPORT_SECTION.md), [foundation handoff](part2/FOUNDATION.md), [integrated API output](raw/part2/integrated-api.json), and [schema output](raw/part2/schema-smoke.json). Four actual Postman CRUD response images are now available; the DELETE and database images are still pending. Historical HTTPX output remains separately labeled.
+See [Part 2 report](part2/REPORT_SECTION.md), [foundation handoff](part2/FOUNDATION.md), [integrated API output](raw/part2/integrated-api.json), and [schema output](raw/part2/schema-smoke.json). All five actual Postman CRUD responses and the user-provided database screenshot are now included. Historical HTTPX output remains separately labeled.
 
 ### Part 2 CRUD code and actual outputs
 
-The API keeps the existing six-field create body. An update accepts only `listingTitle` and `propertyAddress`, so editing these two fields preserves the landlord email, description, property type, and accepted terms. All rental routes share `Depends(require_user)`. The historical output examples below are the original foundation run using ID 4. The integrated rerun performed the same sequence with ID 9 and passed every operation; both artifacts remain available. The newer Postman images show a separate capture run using returned ID 16 and marker `591325c9-5c03-4baa-bef3-a06eea2b2714`, against application source `7350d9c98e8b56fcab4979fd94e0b39246f2b6d3`. ID 16 remains available for the pending database screenshot.
+The API keeps the existing six-field create body. An update accepts only `listingTitle` and `propertyAddress`, so editing these two fields preserves the landlord email, description, property type, and accepted terms. All rental routes share `Depends(require_user)`. The historical output examples below are the original foundation run using ID 4. The integrated rerun performed the same sequence with ID 9 and passed every operation; both artifacts remain available. The newer Postman images show a separate capture run using returned ID 16 and marker `591325c9-5c03-4baa-bef3-a06eea2b2714`, against application source `7350d9c98e8b56fcab4979fd94e0b39246f2b6d3`. The database image was captured before ID 16 was deleted; its absence was then verified.
 
 Excerpt from [routers/rentals.py](../../code/web_application/routers/rentals.py):
 
@@ -123,12 +123,29 @@ db.commit()
 return Response(status_code=204)
 ```
 
-The historical acceptance deletion of `/api/rentals/4` returned **204** with no body. Reading that ID afterward returned **404**. The acceptance harness removed only the row it created.
+![Actual Postman DELETE of ID 16 returned 204 with an empty body.](screenshots/part2/05-delete.png)
 
-**Required adjacent screenshot:** `05-delete.png` is pending.
+A [fresh ownership GET](screenshots/part2/04-pre-delete-owned-read.png) at `2026-09-28T03:50:45.953Z` passed the status and immutable-marker checks for ID **16**. DELETE then returned **204** with an empty body at `2026-09-28T03:51:06.099Z`; the [test view](screenshots/part2/05-delete-tests.png) records two passed assertions. A separate [plain GET of literal ID 16](screenshots/part2/05-deleted-id-404.png) returned **404** at `2026-09-28T03:51:29.776Z`. This deleted only the capture run’s row.
+
+The historical acceptance deletion of `/api/rentals/4` returned **204** with no body. Reading that ID afterward returned **404**. The acceptance harness removed only the row it created.
 
 All five sanitized responses are saved together in [api-acceptance.json](raw/part2/api-acceptance.json). [postman_collection.json](part2/postman_collection.json) supplies login, the five CRUD requests, and logout with status assertions. It has blank credential values and remembers the ID returned by its own POST.
 
+
+### Part 2 database output
+
+The user ran this read-only SQL against the same `data260-hw4-mysql` container used by the API on host port 3362:
+
+```sql
+SELECT DATABASE() AS database_name;
+SHOW TABLES;
+SELECT id, listing_title, property_address
+FROM rentals WHERE id=16;
+```
+
+![Actual user-provided database screenshot showing s6102_rel, the five tables and updated rental 16 before deletion.](screenshots/part2/06-database.png)
+
+The original PNG is preserved unchanged. The complete title and address are readable despite terminal wrapping. Its actual capture time was not supplied; [provenance](raw/part2/postman/database-image.json) separately records ingestion and file modification times. ID 16 was subsequently deleted and the original two rows preserved.
 
 ## Part 3: Query performance
 
@@ -283,16 +300,20 @@ At `2026-09-28T01:16:15.241788+00:00`, [cleanup-follow-up partial verification](
 
 ![Actual Finder capture of shared backend modules and migrations after merging Parts 1–3.](screenshots/part2/07-project-backend.png)
 
-The Finder captures satisfy the project-folder evidence item. Part 1 and integrated browser images are also available. Postman 12.29.5 is now installed. Part 3 completed all six required endpoint/size captures, and Part 2 completed POST, list GET, ID GET and PUT. Original JPEG bytes are retained alongside PNG conversions with identical decoded pixels.
+The Finder captures satisfy the project-folder evidence item. Part 1 and integrated browser images are also available. All five Part 2 CRUD response images, all six Part 3 endpoint/size response images, and the database screenshot are captured. Fifteen native Part 2 Postman JPEGs are retained with pixel-identical PNG conversions; the user’s database PNG is copied byte-for-byte. No image content was edited.
 
-The remaining two images are the database view of the uniquely marked rental 16 and the subsequent DELETE response. The user can run the existing container's MySQL CLI in the Codex terminal and attach a screenshot; a graphical database client is not required. The computer-use tool denied native Terminal and Codex app control, so no automated terminal screenshot is claimed. Rental 16 remains until the database view is captured.
+The database screenshot shows `s6102_rel`, the five tables, and updated rental 16 before deletion. Its terminal table wraps, but the complete title and address are readable. The user took this image because the computer-use tool denied native Terminal and Codex app control. A MySQL GUI was unnecessary. [Image provenance](raw/part2/postman/database-image.json) records ingestion at 2026-09-28T03:50:51.701131+00:00; the actual capture timestamp was not supplied and remains unknown.
 
-The [manual capture manifest](manual-captures.json) and [current capture record](raw/part2/postman/manifest.json) identify each actual image and pending step. No image is synthesized.
+The [manual capture manifest](manual-captures.json) now records 13/13 completed evidence items. The [capture record](raw/part2/postman/manifest.json) connects actual images, requests, database preservation, local credential clearing and server shutdown.
 
 Part 4, the final whole-homework PDF and combined AI-use review, collaborator access confirmation, the `hw4` tag, and verification on that tagged commit remain later submission work. Nothing was pushed, published, or deployed by this local integration.
 
-## Current capture verification
+## Final Parts 1–3 capture verification
 
-At 2026-09-28T02:33:01.034223+00:00 the [partial verifier](verification.parts123.json) passed 44/46 checks with automated status pass. Only the Part 2 DELETE and database images are pending. The [invocation and result](raw/part2/postman/verification-run.json) retain its exit code 1, and [the prior verifier](raw/part2/postman/verification-before.json) preserves the earlier 34/46 state. This run rechecks selected evidence and source hashes; it does not claim another full test or timing run.
+At `2026-09-28T03:55:37.917251+00:00`, the [partial verifier](verification.parts123.json) passed **46/46 checks**, with automated and overall status **pass** and exit code **0**. There are no remaining Parts 1–3 manual captures or sibling implementation handoffs. [The exact invocation](raw/part2/postman/verification-run.json) and [the preceding 44/46 result](raw/part2/postman/verification-before-completion.json) remain available. This is a selected-evidence/source check, not a new automated API, pytest, browser or benchmark run.
 
-Part 3 evidence-only commit `e58669ffbfe3ed459ec2c7e664caa6186ba7ec8a` merged at `5c939bd8b32c41c7514bb061210a1f4e43b25862`. Part 2's capture server started from `7350d9c98e8b56fcab4979fd94e0b39246f2b6d3`; application source is unchanged by that merge. The live capture uses MySQL 3362 and owned rental 16. Its [capture log](raw/part2/postman/capture-log.json) records real timestamps and image hashes. Older availability failures remain in [capture-recheck](raw/part2/capture-recheck/availability.json) as historical observations.
+Part 3 evidence-only commit `e58669ffbfe3ed459ec2c7e664caa6186ba7ec8a` merged at `5c939bd8b32c41c7514bb061210a1f4e43b25862`; available-capture checkpoint `53937d1d6f3ece1353302fa7135107c9a6ca592c` preserved the earlier incomplete state. Part 2’s capture server ran application source `7350d9c98e8b56fcab4979fd94e0b39246f2b6d3`. Later evidence-only commits did not alter that application source or the measured performance path.
+
+The five primary CRUD operations passed 12 assertions: POST 3, list GET 2, initial ID GET 2, PUT 3, DELETE 2. This is not a Collection Runner total. After the user supplied the database image, a renewed login returned 200 and a fresh exact-ID GET confirmed the saved UUID in the immutable email and description. DELETE returned 204 with an empty body at 03:51:06.099 UTC; a separate literal-ID GET returned 404 at 03:51:29.776 UTC; logout returned 204 at 03:51:48.474 UTC. [The capture log](raw/part2/postman/capture-log.json) retains exact image timestamps and hashes.
+
+The [read-only database postflight](raw/part2/postman/postflight.json) passed **11/11 checks**. ID 16 is absent, and only original IDs 1 and 2 remain with every recorded field and their canonical hash unchanged. The manager count, server identity, migration journal, tables and index definitions are preserved. The [local-value record](raw/part2/postman/local-values-cleared.json) confirms the email and password values were empty after reopening Postman’s Variables tab; only this capture collection’s temporary state was cleared. The [shutdown record](raw/part2/postman/server-shutdown.json) confirms owned Uvicorn PID 82539 stopped and port 8702 was free. The launcher’s exit 1 was the expected KeyboardInterrupt after Ctrl-C; Uvicorn reported successful shutdown. The three dedicated MySQL databases remain available without reset.

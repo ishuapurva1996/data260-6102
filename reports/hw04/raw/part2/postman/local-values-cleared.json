@@ -1,0 +1,18 @@
+{
+  "verified_at_utc": "2026-09-28T03:54:18.418Z",
+  "application": "Postman 12.29.5",
+  "collection": "DATA260 HW4 Part 2 - Rental CRUD",
+  "verification": "Reopened Overview then Variables and inspected actual accessibility rows",
+  "email_local_value_empty": true,
+  "password_local_value_empty": true,
+  "rentalId_local_value_empty": true,
+  "captureRunId_local_value_empty": true,
+  "createdRental_variable_removed": true,
+  "captureIntent_variable_removed": true,
+  "share_controls_not_used": true,
+  "logout_status": 204,
+  "owned_rental_id": 16,
+  "owned_rental_delete_status": 204,
+  "owned_rental_followup_status": 404,
+  "note": "Only this imported capture collection was cleaned. The repository collection template remains unchanged and recreates run state on its next POST."
+}

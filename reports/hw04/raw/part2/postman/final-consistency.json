@@ -1,0 +1,60 @@
+{
+  "checked_at_utc": "2026-09-28T03:58:49.553935+00:00",
+  "status": "pass",
+  "checks": [
+    {
+      "name": "Application and tests unchanged since capture server launch",
+      "passed": true
+    },
+    {
+      "name": "Part 3 artifacts unchanged during Part 2 completion",
+      "passed": true
+    },
+    {
+      "name": "Shared foundation remains an ancestor",
+      "passed": true
+    },
+    {
+      "name": "Verified HW3 tag remains unchanged",
+      "passed": true
+    },
+    {
+      "name": "All 13 manual items captured with existing files",
+      "passed": true
+    },
+    {
+      "name": "Partial verifier passes all 46 checks",
+      "passed": true
+    },
+    {
+      "name": "Read-only postflight passes all 11 checks",
+      "passed": true
+    },
+    {
+      "name": "All 15 Postman image pairs retain recorded hashes",
+      "passed": true
+    },
+    {
+      "name": "Database screenshot copies are unchanged",
+      "passed": true
+    },
+    {
+      "name": "Database capture time is not invented",
+      "passed": true
+    },
+    {
+      "name": "All current report links resolve",
+      "passed": true
+    },
+    {
+      "name": "No private password or DSN value in new text artifacts",
+      "passed": true
+    },
+    {
+      "name": "Git whitespace checks pass",
+      "passed": true
+    }
+  ],
+  "local_links_checked": 229,
+  "note": "Artifact/source consistency checks; image visual review and live database checks are separately recorded. No application test or benchmark rerun."
+}

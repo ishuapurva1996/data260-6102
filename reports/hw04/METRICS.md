@@ -1,6 +1,6 @@
 # HW4 Parts 1–3 metrics and verification
 
-These results keep the original Part 3 timing experiment separate from the later integrated functional checks. The combined local application passed its automated checks; required manual captures remain incomplete.
+These results keep the original Part 3 timing experiment separate from the later integrated functional checks. The combined local application passed its automated checks; required Parts 1–3 manual captures are complete.
 
 ## Part 3 measured latency and SQL counts
 
@@ -77,8 +77,8 @@ Current tested code is `307b1d9adc050e422a205e2d3219914c2234d816`, after Part 1 
 
 The normal runtime began at `2026-09-28T01:14:34.935389+00:00`; the current pytest began at `01:15:32.510124+00:00`; smoke began at `01:15:50.150794+00:00`; partial verification ran at `01:16:15.241788+00:00`. Seventeen cleanup-guard unit tests use SQLite, while the live interruption and integration checks provide the real-MySQL proof. An added provenance regression records the browser runner, runtime runner, and interruption driver. This runner-only follow-up changes neither frontend/backend application behavior nor the measured performance path, so the original 180 timings are retained.
 
-## Later functional Postman captures
+## Completed functional Postman captures
 
-Part 3 completed six actual response captures and a local Collection Runner iteration: 53 passed, zero failed, three expected equality-check skips, zero errors. Part 2 has captured POST 201, list GET 200, ID GET 200 and PUT 200 for uniquely marked rental 16. These are functional observations; the response times visible in screenshots do not replace the original 180 timings above.
+Part 3 completed six actual response captures and a local Collection Runner iteration: 53 passed, zero failed, three expected equality-check skips, zero errors. Part 2 completed POST 201, list GET 200, ID GET 200, PUT 200 and DELETE 204 for uniquely marked rental 16. The five primary CRUD operations passed 12 assertions, with zero failures. Supplemental requests confirmed the updated row, then absence with 404 after deletion, and logout with 204. These are functional observations; screenshot response times do not replace the original 180 timings above.
 
-At 2026-09-28T02:33:01.034223+00:00, [partial verification](verification.parts123.json) passed 44/46 checks with automated status pass. The database view and subsequent Part 2 DELETE image remain pending. Project-folder and browser screenshots are captured. Part 4 and final tagged whole-homework verification remain outside these metrics.
+At `2026-09-28T03:55:37.917251+00:00`, [partial verification](verification.parts123.json) passed **46/46 checks**, automated and overall status pass, exit 0. All required Parts 1–3 images are now captured, including the user-provided database view. The read-only postflight passed 11/11 checks with original rows and their hash unchanged; local credentials were cleared and the owned server stopped. Part 4 and final tagged whole-homework verification remain outside these metrics.

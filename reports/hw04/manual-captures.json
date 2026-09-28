@@ -37,19 +37,23 @@
   },
   {
     "name": "part2/postman-delete",
-    "captured": false,
-    "file": null,
-    "reason": "Postman is available. DELETE capture waits for the database screenshot of this same owned rental 16.",
-    "last_checked_at": "2026-09-28T02:32:53.771262+00:00",
-    "availability_evidence": "reports/hw04/raw/part2/postman/manifest.json"
+    "captured": true,
+    "file": "reports/hw04/screenshots/part2/05-delete.png",
+    "reason": "Actual Postman response for uniquely marked capture rental 16; original JPEG retained with pixel-identical PNG conversion.",
+    "captured_at": "2026-09-28T03:51:06.099Z",
+    "revision": "7350d9c98e8b56fcab4979fd94e0b39246f2b6d3",
+    "provenance": "reports/hw04/raw/part2/postman/manifest.json"
   },
   {
     "name": "part2/database",
-    "captured": false,
-    "file": null,
-    "reason": "Awaiting user screenshot of MySQL CLI output for owned rental 16. Computer Use denied native Terminal and Codex app control; no MySQL GUI installation required.",
-    "last_checked_at": "2026-09-28T02:32:53.771262+00:00",
-    "availability_evidence": "reports/hw04/raw/part2/postman/manifest.json"
+    "captured": true,
+    "file": "reports/hw04/screenshots/part2/06-database.png",
+    "reason": "Actual user-provided terminal screenshot shows s6102_rel, five tables, and owned rental 16 after its update; bytes preserved unchanged.",
+    "captured_at": null,
+    "received_at": "2026-09-28T03:50:51.701131+00:00",
+    "revision": "7350d9c98e8b56fcab4979fd94e0b39246f2b6d3",
+    "provenance": "reports/hw04/raw/part2/postman/database-image.json",
+    "capture_time_note": "No actual capture timestamp was supplied. Ingestion time and input file modification time are recorded separately and are not asserted as capture time."
   },
   {
     "name": "part2/project-structure",

@@ -1,6 +1,6 @@
 # Part 2 and integrated Parts 1–3 handoff
 
-Parts 1–3 are merged locally on **codex/hw4-part2-backend**. Current tested code **307b1d9adc050e422a205e2d3219914c2234d816** passed the cleanup follow-up checks; the original API and integration evidence at `e7382ddb9cc5e0a5cd867653254a0c6f62f2f9c7` is preserved below. The current partial verifier reports **automated_status: pass** and **status: incomplete**: **44 of 46** checks pass. The database screenshot and final Part 2 DELETE screenshot remain pending; the other required captures are present. There are no unfinished sibling implementation dependencies.
+Parts 1–3 are merged locally on **codex/hw4-part2-backend**. Current tested code **307b1d9adc050e422a205e2d3219914c2234d816** passed the cleanup follow-up checks; the original API and integration evidence at `e7382ddb9cc5e0a5cd867653254a0c6f62f2f9c7` is preserved below. The Parts 1–3 partial verifier reports **automated_status: pass**, **status: pass**, and **46/46 checks passed**. All required Parts 1–3 captures are present, and the capture rental, local credentials, and owned server have been cleaned up. There are no unfinished sibling implementation dependencies.
 
 | Item | Value |
 | --- | --- |
@@ -72,7 +72,7 @@ At `2026-09-28T01:16:15.241788+00:00`, [cleanup-follow-up partial verification](
 
 ## Runtime ownership
 
-Evidence-slot order was foundation/auth, Part 1 browser, Part 3 benchmark, then final combined integration. The initial integration and cleanup-check processes were stopped, and port 8702 was observed free after those checks. A later Part 2 Postman capture slot is active as described below. Do not act on historical PIDs; consult the external coordination note and verify current ownership before starting or stopping anything.
+Evidence-slot order was foundation/auth, Part 1 browser, Part 3 benchmark, then final combined integration. The initial integration and cleanup-check processes were stopped, and port 8702 was observed free after those checks. The later Part 2 Postman capture slot has also finished and released port 8702. Do not act on historical PIDs; consult the external coordination note and verify current ownership before starting or stopping anything.
 
 | Instance | Host port | Purpose and retained state |
 | --- | ---: | --- |
@@ -101,12 +101,14 @@ python tests/browser_hw04_part1_runtime.py --env-file /path/to/private/app.env -
 
 These commands use a separate review output directory so the selected evidence remains available. The exact selected pytest command is in `raw/part2/pytest-integrated.metadata.json`. Part 3 setup, benchmark, and ownership-manifest commands remain in its committed [tooling README](../../../scripts/hw04/part3/README.md). Do not print private environment values, reset shared data, or run writes/heavy workloads during timing measurements.
 
-## Remaining captures and later submission work
+## Completed captures and later submission work
 
-All sibling implementation and Part 3 evidence commits are merged. Two required images remain: the database view of Part 2 capture rental 16 and its later DELETE response. Four Part 2 CRUD images, all six Part 3 endpoint/size images, the project-folder images, and browser evidence are captured. The existing MySQL CLI is sufficient; a GUI installation is unnecessary. Native Terminal and Codex app control were denied by the computer-use tool. The user can run the read-only command in [MANUAL_CAPTURES.md](MANUAL_CAPTURES.md) and attach the actual database screenshot.
+All sibling implementation and evidence commits are merged. All **13/13 manual evidence items** are captured: five Part 2 CRUD images, one database image, the project-folder item, and six Part 3 endpoint/size images. Browser images are also retained. See [Part 2 capture inventory](MANUAL_CAPTURES.md), [Part 3 capture inventory](../screenshots/part3/README.md), and [the manifest](../manual-captures.json).
 
-The current capture server remains owned by this task: Uvicorn PID 82539, exec session 66032, HTTPS 8702, MySQL 3362. Keep exact rental 16, UUID `591325c9-5c03-4baa-bef3-a06eea2b2714`, until that image arrives. Then perform a fresh authenticated ownership GET, DELETE 204, literal-ID GET 404, logout, clear local Postman credentials, check original rows unchanged, stop only this owned server, and release 8702. Verify current PID/ownership before stopping anything; never act on this record alone after runtime changes.
+The database image was supplied by the user and preserved unchanged. It shows database `s6102_rel`, all five tables, and uniquely marked rental 16 after update. Its actual capture time was not supplied; provenance distinguishes file modification time from ingestion time. The later Postman DELETE returned 204, a plain GET of literal ID 16 returned 404, and logout returned 204. The five primary CRUD operations passed 12 assertions, with no failed assertions.
 
-The [current partial verifier](../verification.parts123.json) at 2026-09-28T02:33:01.034223+00:00 reports automated pass and 44/46 checks, incomplete only for these two images. [The exact invocation](../raw/part2/postman/verification-run.json) and [prior verifier](../raw/part2/postman/verification-before.json) are preserved. This is an evidence/source recheck, not a new pytest, browser, API or benchmark run.
+The [read-only postflight](../raw/part2/postman/postflight.json) passed 11/11 checks: original IDs 1 and 2 and their hash remain unchanged; ID 16 is absent; schema and indexes are preserved. [Local Postman credentials were cleared](../raw/part2/postman/local-values-cleared.json). Owned server PID 82539 / session 66032 stopped, and port **8702 is released**. The launcher returned an expected KeyboardInterrupt after Ctrl-C; Uvicorn reported shutdown complete and a subsequent listener check was empty. No unrelated server was stopped and no database reset occurred.
 
-The combined [PARTS123.md](../PARTS123.md), [METRICS.md](../METRICS.md), and [AI_USE.md](../AI_USE.md) explain the separate evidence groups. Part 4, the whole-homework PDF, student review, collaborator checks, the `hw4` tag and tagged verification remain later work. No push, PR or deployment is part of this handoff.
+The [current partial verifier](../verification.parts123.json) at `2026-09-28T03:55:37.917251+00:00` reports **46/46 checks passed**, automated status **pass**, overall **pass**, and exit **0**. [The exact invocation](../raw/part2/postman/verification-run.json) and [prior 44/46 verifier](../raw/part2/postman/verification-before-completion.json) are preserved. These are Parts 1–3 evidence checks; they do not replace eventual tagged whole-homework verification.
+
+The combined [PARTS123.md](../PARTS123.md), [METRICS.md](../METRICS.md), and [AI_USE.md](../AI_USE.md) preserve the separate test and measurement groups. No new benchmark was needed because application and measured-path code did not change during capture work. Part 4, the whole-homework PDF, student review, collaborator checks, the `hw4` tag and tagged verification remain later work. No push, PR or deployment is part of this handoff.

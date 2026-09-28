@@ -1,6 +1,6 @@
 # Part 2: MySQL persistence and server-side sessions
 
-Part 2 moves the existing Rental Housing Listings service from process memory to MySQL and owns the final local integration of Parts 1–3. The initial integration passed 23 real HTTPS/MySQL acceptance checks, 191 selected Python tests, all real-browser/restart/expiry checks, and 29 combined serving/auth/performance smoke checks. The later cleanup follow-up passed 209 tests and the live interruption check, as recorded separately below. The project-folder screenshots and four actual Part 2 Postman responses are captured. Only the Part 2 DELETE and database images remain pending; all six Part 3 Postman images are complete. The latest partial verification passes 44 of 46 checks, with automated status pass and overall status incomplete.
+Part 2 moves the existing Rental Housing Listings service from process memory to MySQL and owns the final local integration of Parts 1–3. The initial integration passed 23 real HTTPS/MySQL acceptance checks, 191 selected Python tests, all real-browser/restart/expiry checks, and 29 combined serving/auth/performance smoke checks. The later cleanup follow-up passed 209 tests and the live interruption check, as recorded separately below. All required Parts 1–3 captures are complete, including the five Part 2 Postman CRUD responses, the user-provided database image, both project-folder views, and all six Part 3 Postman images. Final Parts 1–3 verification passes **46/46 checks**. The capture rental was deleted, original database rows were preserved, and port 8702 was released. Part 4 and final whole-homework submission work remain separate.
 
 | Configuration | Value |
 | --- | --- |
@@ -67,7 +67,19 @@ property_address: Mapped[str] = mapped_column(String(255), nullable=False)
 
 The saved MySQL `SHOW CREATE TABLE` output confirms `AUTO_INCREMENT`, required columns, a unique email key, and the foreign keys. MySQL checks also reject empty titles/addresses, short descriptions, unsupported property types, and unaccepted terms. Application validation additionally checks email syntax, length limits, and unexpected fields. Real MySQL tests verify distinct IDs for concurrent inserts and rollback after a failed write. Deleting the highest rental does not reset the ID sequence.
 
-**Required output screenshot:** `reports/hw04/screenshots/part2/06-database.png` is pending. The schema JSON above is supporting evidence, not a screenshot. [MANUAL_CAPTURES.md](MANUAL_CAPTURES.md) gives the exact capture steps.
+The user ran these read-only queries in the MySQL CLI inside `data260-hw4-mysql` while the capture rental still existed:
+
+```sql
+SELECT DATABASE() AS database_name;
+SHOW TABLES;
+SELECT id, listing_title, property_address
+FROM rentals
+WHERE id = 16;
+```
+
+![User-provided terminal screenshot of s6102_rel tables and updated rental ID 16.](../screenshots/part2/06-database.png)
+
+The actual image shows database **s6102_rel**, all five tables, and ID **16** with its UUID-marked updated title and address **261 Capture Lane, San Jose, CA**. Its original capture time was not supplied; ingestion at `2026-09-28T03:50:51.701131+00:00` is recorded separately. The [image provenance](../raw/part2/postman/database-image.json) confirms the saved screenshot and retained original are byte-identical to the user’s input, with no content edits. No password value, cookie, or token is visible. The row was later deleted and checked absent. [MANUAL_CAPTURES.md](MANUAL_CAPTURES.md) retains the capture procedure for a future run.
 
 ## Email/password login and persistent sessions
 
@@ -110,7 +122,7 @@ Expiry checks moved the test token's stored timestamps past the relevant boundar
 
 ## The five CRUD operations
 
-The API keeps the existing six-field create body. An update accepts only `listingTitle` and `propertyAddress`, so editing these two fields preserves the landlord email, description, property type, and accepted terms. All rental routes share `Depends(require_user)`. The historical output examples below are the original foundation run using ID 4. The integrated rerun performed the same sequence with ID 9 and passed every operation; both artifacts remain available. The newer Postman images show a separate capture run using returned ID 16 and marker `591325c9-5c03-4baa-bef3-a06eea2b2714`, against application source `7350d9c98e8b56fcab4979fd94e0b39246f2b6d3`. ID 16 remains available for the pending database screenshot.
+The API keeps the existing six-field create body. An update accepts only `listingTitle` and `propertyAddress`, so editing these two fields preserves the landlord email, description, property type, and accepted terms. All rental routes share `Depends(require_user)`. The historical output examples below are the original foundation run using ID 4. The integrated rerun performed the same sequence with ID 9 and passed every operation; both artifacts remain available. The newer Postman images show a separate capture run using returned ID 16 and marker `591325c9-5c03-4baa-bef3-a06eea2b2714`, against application source `7350d9c98e8b56fcab4979fd94e0b39246f2b6d3`. The database image was captured before ID 16 was deleted; its absence was then verified.
 
 Excerpt from [routers/rentals.py](../../../code/web_application/routers/rentals.py):
 
@@ -181,9 +193,11 @@ db.commit()
 return Response(status_code=204)
 ```
 
-The historical acceptance deletion of `/api/rentals/4` returned **204** with no body. Reading that ID afterward returned **404**. The acceptance harness removed only the row it created.
+![Actual Postman DELETE of ID 16 returned 204 with an empty body.](../screenshots/part2/05-delete.png)
 
-**Required adjacent screenshot:** `05-delete.png` is pending.
+A [fresh ownership GET](../screenshots/part2/04-pre-delete-owned-read.png) at `2026-09-28T03:50:45.953Z` passed the status and immutable-marker checks for ID **16**. DELETE then returned **204** with an empty body at `2026-09-28T03:51:06.099Z`; the [test view](../screenshots/part2/05-delete-tests.png) records two passed assertions. A separate [plain GET of literal ID 16](../screenshots/part2/05-deleted-id-404.png) returned **404** at `2026-09-28T03:51:29.776Z`. This deleted only the capture run’s row.
+
+The historical acceptance deletion of `/api/rentals/4` returned **204** with no body. Reading that ID afterward returned **404**. The acceptance harness removed only the row it created.
 
 All five sanitized responses are saved together in [api-acceptance.json](../raw/part2/api-acceptance.json). [postman_collection.json](postman_collection.json) supplies login, the five CRUD requests, and logout with status assertions. It has blank credential values and remembers the ID returned by its own POST.
 
@@ -300,8 +314,16 @@ The partial verifier was rerun against the retained selected evidence at `2026-0
 
 ## Actual Postman capture follow-up
 
-Postman 12.29.5 is now available. The four primary images above and six supporting views are genuine native captures from the HTTPS application on port 8702, with certificate verification enabled. The [capture manifest](../raw/part2/postman/manifest.json) records application source `7350d9c98e8b56fcab4979fd94e0b39246f2b6d3`, evidence-only merge `5c939bd8b32c41c7514bb061210a1f4e43b25862`, and unchanged application source during that merge. Part 3’s six completed Postman images were merged from `e58669ffbfe3ed459ec2c7e664caa6186ba7ec8a`. The [capture log](../raw/part2/postman/capture-log.json) preserves timestamps and observations. Original JPEGs are retained; the [format check](../raw/part2/postman/image-format-check.json) confirms identical decoded pixels after PNG conversion, with no cropping, resizing, annotation, or compositing. The [visual review](../raw/part2/postman/visual-review.json) passed for the four primary images and updated-ID GET.
+Postman 12.29.5 is now available. The five primary images above and ten supporting views are genuine native captures from the HTTPS application on port 8702, with certificate verification enabled. The [capture manifest](../raw/part2/postman/manifest.json) records application source `7350d9c98e8b56fcab4979fd94e0b39246f2b6d3`, evidence-only merge `5c939bd8b32c41c7514bb061210a1f4e43b25862`, and unchanged application source during that merge. Part 3’s six completed Postman images were merged from `e58669ffbfe3ed459ec2c7e664caa6186ba7ec8a`. The [capture log](../raw/part2/postman/capture-log.json) preserves timestamps and observations. Original JPEGs are retained; the [format check](../raw/part2/postman/image-format-check.json) confirms identical decoded pixels after PNG conversion, with no cropping, resizing, annotation, or compositing. The [visual review](../raw/part2/postman/visual-review.json) passed for all five primary images and five supporting images. The remaining five support views were checked for hashes, format, and decoded-pixel equality. The user-provided database image has its own provenance and visual review.
 
-At `2026-09-28T02:33:01.034223+00:00`, the [latest partial-verifier run](../raw/part2/postman/verification-run.json) reported **44/46 checks passed**, **automated status pass**, and **overall incomplete**. Only `part2/postman-delete` and `part2/database` remain false. This checks the retained automated evidence and newly available images; it is not another API, browser, pytest, or benchmark run.
+At `2026-09-28T02:33:01.034223+00:00`, the [pre-completion verifier run](../raw/part2/postman/verification-run-before-completion.json) reported **44/46 checks passed**, **automated status pass**, and **overall incomplete**. At that time, only `part2/postman-delete` and `part2/database` were false. This historical result is preserved separately from the final run.
 
-The user is preparing the database screenshot while owned rental **16** remains present. Native Terminal and Codex app control were denied by the computer-use tool; the available Codex terminal reader can only read output. A MySQL GUI is not required: the user can run the supplied Docker/MySQL CLI command and capture `SELECT DATABASE()`, `SHOW TABLES`, and the title/address query for exact ID 16. After that image is saved, the remaining sequence is a fresh ownership GET, DELETE capture, literal-ID 404 proof, logout, local credential clearing, and read-only database postflight. None of those remaining actions is claimed complete.
+The user supplied the actual terminal/database image without bypassing the computer-use restrictions on Terminal or Codex app control. A MySQL GUI was not needed. The five primary CRUD requests passed **12 assertions** in total: POST 3, list GET 2, initial ID GET 2, PUT 3, and DELETE 2. These are observed per-request results, not a Collection Runner total; supporting reads and login/logout are counted separately.
+
+[Logout](../screenshots/part2/08-logout.png) returned **204** at `2026-09-28T03:51:48.474Z`. At `2026-09-28T03:54:18.418Z`, [local-value inspection](../raw/part2/postman/local-values-cleared.json) confirmed empty email, password, rental ID, and run-marker values; `createdRental` and `captureIntent` were removed only from this imported capture collection. The repository template remains unchanged.
+
+The [database postflight](../raw/part2/postman/postflight.json) at `2026-09-28T03:55:01.441939+00:00` passed **11/11 checks**. Only original IDs **1 and 2** remained, with every selected field and their canonical SHA256 unchanged from preflight. ID 16 was absent; the manager count stayed zero, and the server identity, table inventory, migration journal, and index definitions were preserved. Index comparison ignores optimizer cardinality. No database writes or user/session secret-row queries were made by that check.
+
+The [shutdown record](../raw/part2/postman/server-shutdown.json) confirms the owned Uvicorn process **82539** stopped cleanly after Ctrl-C through session **66032**. The launcher’s exit 1 was the expected `KeyboardInterrupt`, not a request failure. Port **8702** had no listener afterward; the MySQL container was retained.
+
+At `2026-09-28T03:55:37.917251+00:00`, the [final Parts 1–3 verifier](../raw/part2/postman/verification-run.json) passed **46/46 checks**, with automated and overall status **pass**, exit **0**, and no false checks. All **13/13** required manual evidence items are complete in the [capture manifest](../manual-captures.json). This verification reuses the selected API, browser, pytest, and benchmark evidence; the capture work does not claim new performance measurements. No Parts 1–3 captures remain pending. Part 4, the whole-homework PDF, collaborator access checks, the `hw4` tag, and tagged-commit verification remain later work.

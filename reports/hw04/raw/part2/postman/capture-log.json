@@ -137,5 +137,78 @@
       "status_check_passed": true,
       "ownership_check_passed": true
     }
+  },
+  {
+    "name": "04-pre-delete-owned-read",
+    "file": "reports/hw04/raw/part2/postman/native-captures/04-pre-delete-owned-read.jpg",
+    "captured_at": "2026-09-28T03:50:45.953Z",
+    "sha256": "fa54f07b3450ad4a5b5ee939d7a1a7116679da2c3e34b8d79c1bb9530de3ecb2",
+    "format": "jpg",
+    "observed": {
+      "method": "GET",
+      "url": "https://127.0.0.1:8702/api/rentals/16",
+      "status": 200,
+      "rental_id": 16,
+      "marker": "591325c9-5c03-4baa-bef3-a06eea2b2714",
+      "assertions_passed": 2,
+      "status_check_passed": true,
+      "ownership_check_passed": true
+    }
+  },
+  {
+    "name": "05-delete",
+    "file": "reports/hw04/raw/part2/postman/native-captures/05-delete.jpg",
+    "captured_at": "2026-09-28T03:51:06.099Z",
+    "sha256": "c1254a39249d7d72e3eb96526e9272c8963aa180c63a52e94ae6045a8eb445e6",
+    "format": "jpg",
+    "observed": {
+      "method": "DELETE",
+      "url": "https://127.0.0.1:8702/api/rentals/16",
+      "status": 204,
+      "rental_id": 16,
+      "test_results": "2/2"
+    }
+  },
+  {
+    "name": "05-delete-tests",
+    "file": "reports/hw04/raw/part2/postman/native-captures/05-delete-tests.jpg",
+    "captured_at": "2026-09-28T03:51:12.831Z",
+    "sha256": "df4f03ae296dfb35fc9820c095b521fa3d4979e85abaac980786a8257dfd9e3e",
+    "format": "jpg",
+    "observed": {
+      "passed": 2,
+      "failed": 0,
+      "checks": [
+        "Delete returns 204",
+        "Delete body is empty"
+      ]
+    }
+  },
+  {
+    "name": "05-deleted-id-404",
+    "file": "reports/hw04/raw/part2/postman/native-captures/05-deleted-id-404.jpg",
+    "captured_at": "2026-09-28T03:51:29.776Z",
+    "sha256": "9ba50ee7f99c7e9f4cfca1357103b4c35ba973b3943868ebc4b2ab01746bbd14",
+    "format": "jpg",
+    "observed": {
+      "method": "GET",
+      "url": "https://127.0.0.1:8702/api/rentals/16",
+      "status": 404,
+      "rental_id": 16,
+      "request_kind": "plain unsaved request without inherited collection tests"
+    }
+  },
+  {
+    "name": "08-logout",
+    "file": "reports/hw04/raw/part2/postman/native-captures/08-logout.jpg",
+    "captured_at": "2026-09-28T03:51:48.474Z",
+    "sha256": "046cdd83ac94c57279a5a384be7aa8d0d870367c29c36d5f4e36c032754228ad",
+    "format": "jpg",
+    "observed": {
+      "method": "POST",
+      "url": "https://127.0.0.1:8702/api/auth/logout",
+      "status": 204,
+      "test_results": "2/2"
+    }
   }
 ]
