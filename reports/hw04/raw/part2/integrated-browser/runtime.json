@@ -1,0 +1,70 @@
+{
+  "started_at": "2026-09-28T00:56:20.413881+00:00",
+  "revision": "e7382ddb9cc5e0a5cd867653254a0c6f62f2f9c7",
+  "source_sha256": {
+    "tests/browser_hw04_part1_runtime.py": "9ffddaa9282f3681781e7ecbb0fcc69a725ee95490366e0b5068c779c2d89fb6"
+  },
+  "status": "pass",
+  "base_url": "https://127.0.0.1:8702",
+  "production_idle_seconds": 300,
+  "absolute_seconds": 3600,
+  "expiry_demonstration_idle_seconds": 2,
+  "processes": [
+    {
+      "pid": 72764,
+      "idle_timeout_seconds": 300,
+      "started_at": "2026-09-28T00:56:20.472906+00:00",
+      "stopped_at": "2026-09-28T00:56:24.731004+00:00"
+    },
+    {
+      "pid": 72792,
+      "idle_timeout_seconds": 300,
+      "started_at": "2026-09-28T00:56:24.732327+00:00",
+      "stopped_at": "2026-09-28T00:56:25.991202+00:00"
+    },
+    {
+      "pid": 72796,
+      "idle_timeout_seconds": 300,
+      "started_at": "2026-09-28T00:56:25.992787+00:00",
+      "stopped_at": "2026-09-28T00:56:26.676465+00:00"
+    },
+    {
+      "pid": 72797,
+      "idle_timeout_seconds": 2,
+      "started_at": "2026-09-28T00:56:26.678156+00:00",
+      "stopped_at": "2026-09-28T00:56:31.123984+00:00"
+    }
+  ],
+  "checks": [
+    {
+      "name": "MySQL evidence database is s6102_rel",
+      "passed": true
+    },
+    {
+      "name": "Backend restarted during browser workflow",
+      "passed": true,
+      "before_pid": 72764,
+      "after_pid": 72792
+    },
+    {
+      "name": "Real browser suite passed",
+      "passed": true
+    },
+    {
+      "name": "Login after second restart",
+      "passed": true
+    },
+    {
+      "name": "Deleted rental stays absent after second restart",
+      "passed": true,
+      "record_id": 10,
+      "get_status": 404
+    },
+    {
+      "name": "Real browser idle expiry suite passed",
+      "passed": true
+    }
+  ],
+  "mysql_version": "8.4.11",
+  "finished_at": "2026-09-28T00:56:31.124030+00:00"
+}

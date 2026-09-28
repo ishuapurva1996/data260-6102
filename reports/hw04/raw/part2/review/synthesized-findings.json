@@ -1,0 +1,132 @@
+{
+  "findings": [],
+  "first_evidence_backfilled": 0,
+  "malformed_findings": 0,
+  "malformed_returns": 0,
+  "pre_existing_findings": [],
+  "residual_risks": [],
+  "status": "complete",
+  "suppressed_by_confidence": {},
+  "suppressed_findings": [],
+  "testing_gaps": [
+    "scripts/hw04/db_setup.py:136-155 has an existing-email preservation branch without repeatable coverage: seed an account, call seed_account again with the same normalized email but different name/password, and assert false is returned and the original name/password hash remain unchanged. Saved schema-smoke evidence covers repeat migration/demo seeding but does not establish this account-preservation behavior."
+  ],
+  "run_id": "20260927-173303-38281e44",
+  "primary_count": 0,
+  "actionable_findings": [],
+  "triage_groups": [],
+  "semantic_duplicates_merged": 1,
+  "mode_aware_demotion_count": 0,
+  "settlement_suppressed_count": 0,
+  "missing_quote_demotion_count": 0,
+  "rejected_candidates": [
+    {
+      "title": "Always stop owned server after database cleanup failure",
+      "reason": "Resolved in current source: scripts/hw04/part2/acceptance.py:25-42 attempts cleanup actions independently and catches sanitized errors; lines174-180 always record the result after cleanup. tests/test_hw04_acceptance_cleanup.py covers DB cleanup failure and no-row cleanup."
+    },
+    {
+      "title": "Isolate HW4 fixture imports from unrelated test suites",
+      "reason": "Resolved in current tests/conftest.py:16 imports only pytest at module level; web/database imports are deferred inside fixtures."
+    },
+    {
+      "title": "Reject stale browser and integration evidence",
+      "reason": "Resolved in current verifier: browser source fingerprints are checked at lines88-89, integration source fingerprints at154, and a changed-frontend negative test exists."
+    },
+    {
+      "title": "Old pytest success survives later runtime and test changes",
+      "reason": "Resolved for the alleged changed-runtime/test case: test_fingerprints() includes backend, HW4 scripts, selected tests and verifier; metadata tested_source_sha256 must equal current fingerprints at line163 (line shifted during updates)."
+    },
+    {
+      "title": "Reject contradictory nested failure indicators / Contradictory nested failure is counted as passed",
+      "reason": "Semantic duplicate, resolved in current verifier: passed must be exactly True when present and textual status must equal pass. The original contradictory True/fail and 0/pass inputs now fail."
+    },
+    {
+      "title": "Keep screenshot evidence inside the report artifact tree",
+      "reason": "Resolved in current screenshot_valid(): rejects nonstring, empty and absolute references, resolves symlinks, requires resolved reports/hw04/screenshots containment, and both browser/manual paths call it."
+    },
+    {
+      "title": "Empty PNG placeholders satisfy screenshot evidence checks",
+      "reason": "Resolved in current screenshot_valid(): reads PNG signature, checks chunk framing/CRC, requires nonzero IHDR dimensions and IEND plus inflated image data; empty placeholder no longer passes. No new capture-digest requirement retained because immutability was not an established contract."
+    },
+    {
+      "title": "Preserve numeric HTTP status metadata in passing API checks",
+      "reason": "Current-source reinspection confirms parent fixed the regression noticed during synthesis: verifier permits integer status100..599 with passed exactly True, preserving current acceptance producer metadata. Parent reports13verifier tests pass; review did not execute them."
+    },
+    {
+      "title": "Malformed login redaction coverage gap",
+      "reason": "Current tests/test_hw04_serving.py:88-97 checks a sentinel password is absent from the422response and input/ctx fields are removed. Do not retain the earlier missing-redaction-test note."
+    },
+    {
+      "title": "Launcher exit can leave the owned HTTPS child running",
+      "reason": "Resolved after Part2 checkpoint87341d4: current integration_smoke.py:67-78 prepares certificates separately and directly starts a one-worker Uvicorn process with2-second graceful timeout. stop():54-61 now waits on the actual server PID and kills only its owned group on timeout, so no untracked launcher child remains. Read-only inspection; no runtime/test execution."
+    }
+  ],
+  "coverage": [
+    "Review is the Part 2 foundation checkpoint, not final integrated Parts 1\u20133 delivery. U4/U5 evidence/merge work is actively ongoing in parent; report incompleteness honestly, but do not treat known unfinished sibling dependencies as production defects.",
+    "Untracked files listed in scope are excluded from the reviewed diff; their test content may inform coverage context only.",
+    "Project standards: not run (no applicable repo standards files).",
+    "No tests/DB writes were run by reviewers. Parent reports real-MySQL acceptance 23 passed and is running full backend suite concurrently.",
+    "Local persona models inherited session model because active collaboration tool policy permits overrides only under explicit user/AGENTS instruction.",
+    "Scope expanded during review when parent staged tests, verifier and evidence. Correctness reran narrowly against new verifier/fixtures/tests; maintainability, api-contract, performance, migration, reliability and adversarial inspected refreshed scope. Security originally reviewed stable foundation and no auth/security production code changed since that pass.",
+    "Parent fixed and locally regression-tested search casefold, acceptance cleanup and eager test fixture imports while review ran. Validate current source before retaining earlier candidates. Parent also added null manual capture handling and browser/integration source fingerprints.",
+    "Parent reports backend suite 122 passed on real MySQL and targeted search/cleanup 3 passed; these are parent-reported, not reviewer executed.",
+    "Parent added tests/test_hw04_serving.py:test_malformed_login_errors_do_not_echo_password after security pass; do not retain a missing-secret-redaction-test note if current coverage confirms it.",
+    "No external peer was launched and no peer job remains outstanding.",
+    "Cross-model pass not run: invoking parent explicitly prohibited external messages; local adversarial fallback selected.",
+    "Merge inspection read current source while the parent applied fixes. All seven unique original finding claims were resolved before validation; one numeric-status regression introduced during that work was also corrected on current-source reinspection.",
+    "No tests, runtime probes or database operations were executed by the merge leaf. Parent-reported13verifier tests pass is not a reviewer-executed result.",
+    "Missing sibling integration and unavailable manual captures are pending work under the explicit live-checkpoint scope, not completed requirements and not production-defect findings.",
+    "Parent added scripts/hw04/part2/integration_smoke.py after initial merge. Correctness and adversarial ran bounded read-only supplements on it; raw returns refreshed, and merger must incorporate the supplemental candidate.",
+    "Parent reports all13verifier tests pass after current fixes, including numeric HTTP status metadata. No reviewer ran tests.",
+    "Final incremental merge:0primary findings,0selected validators,0shortcut-skipped. The integration-smoke child-cleanup candidate was resolved by directly tracking Uvicorn; current source inspected after Part2 checkpoint87341d4.",
+    "Review scope remains the original Part2 foundation/checkpoint and its small integration-harness supplement. Part1 was merged by the parent during receipt generation; no sibling merge code was reviewed or claimed verified by this receipt."
+  ],
+  "coverage_notes": [
+    "Review is the Part 2 foundation checkpoint, not final integrated Parts 1\u20133 delivery. U4/U5 evidence/merge work is actively ongoing in parent; report incompleteness honestly, but do not treat known unfinished sibling dependencies as production defects.",
+    "Untracked files listed in scope are excluded from the reviewed diff; their test content may inform coverage context only.",
+    "Project standards: not run (no applicable repo standards files).",
+    "No tests/DB writes were run by reviewers. Parent reports real-MySQL acceptance 23 passed and is running full backend suite concurrently.",
+    "Local persona models inherited session model because active collaboration tool policy permits overrides only under explicit user/AGENTS instruction.",
+    "Scope expanded during review when parent staged tests, verifier and evidence. Correctness reran narrowly against new verifier/fixtures/tests; maintainability, api-contract, performance, migration, reliability and adversarial inspected refreshed scope. Security originally reviewed stable foundation and no auth/security production code changed since that pass.",
+    "Parent fixed and locally regression-tested search casefold, acceptance cleanup and eager test fixture imports while review ran. Validate current source before retaining earlier candidates. Parent also added null manual capture handling and browser/integration source fingerprints.",
+    "Parent reports backend suite 122 passed on real MySQL and targeted search/cleanup 3 passed; these are parent-reported, not reviewer executed.",
+    "Parent added tests/test_hw04_serving.py:test_malformed_login_errors_do_not_echo_password after security pass; do not retain a missing-secret-redaction-test note if current coverage confirms it.",
+    "No external peer was launched and no peer job remains outstanding.",
+    "Cross-model pass not run: invoking parent explicitly prohibited external messages; local adversarial fallback selected.",
+    "Merge inspection read current source while the parent applied fixes. All seven unique original finding claims were resolved before validation; one numeric-status regression introduced during that work was also corrected on current-source reinspection.",
+    "No tests, runtime probes or database operations were executed by the merge leaf. Parent-reported13verifier tests pass is not a reviewer-executed result.",
+    "Missing sibling integration and unavailable manual captures are pending work under the explicit live-checkpoint scope, not completed requirements and not production-defect findings.",
+    "Parent added scripts/hw04/part2/integration_smoke.py after initial merge. Correctness and adversarial ran bounded read-only supplements on it; raw returns refreshed, and merger must incorporate the supplemental candidate.",
+    "Parent reports all13verifier tests pass after current fixes, including numeric HTTP status metadata. No reviewer ran tests.",
+    "Final incremental merge:0primary findings,0selected validators,0shortcut-skipped. The integration-smoke child-cleanup candidate was resolved by directly tracking Uvicorn; current source inspected after Part2 checkpoint87341d4.",
+    "Review scope remains the original Part2 foundation/checkpoint and its small integration-harness supplement. Part1 was merged by the parent during receipt generation; no sibling merge code was reviewed or claimed verified by this receipt."
+  ],
+  "fold_in_outcome": {
+    "selected": true,
+    "target": null,
+    "route": null,
+    "preference_source": null,
+    "outcome": "in-process-fallback",
+    "artifact": null,
+    "coverage": "Cross-model pass not run: invoking parent explicitly prohibited external messages; local adversarial fallback selected."
+  },
+  "peer": {
+    "selected": true,
+    "target": null,
+    "route": null,
+    "preference_source": null,
+    "outcome": "in-process-fallback",
+    "artifact": null,
+    "coverage": "Cross-model pass not run: invoking parent explicitly prohibited external messages; local adversarial fallback selected."
+  },
+  "validator_selection": {
+    "selected_count": 0,
+    "shortcut_skipped_count": 0,
+    "shortcut_basis": "All original and supplemental candidates resolved on current-source inspection; no validator shortcut used."
+  },
+  "source_detail_map": "/tmp/compound-engineering-501/ce-code-review/20260927-173303-38281e44/source-detail-map.json",
+  "current_candidate_details": "/tmp/compound-engineering-501/ce-code-review/20260927-173303-38281e44/current-candidate-details.json",
+  "learnings": [],
+  "agent_native_gaps": [],
+  "deployment_notes": []
+}

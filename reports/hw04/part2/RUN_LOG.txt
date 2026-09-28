@@ -123,3 +123,29 @@ SOURCE: subsequent review fixes (raw artifacts carry exact run timestamps)
 - Lazy HW4 fixture imports preserve separate retrieval/agent test-environment collection.
 - Expanded reviewed suite:130passed,99deprecation warnings,no skips,4.31s.
   Evidence:raw/part2/pytest-backend-reviewed.txt and matching.metadata.json.
+
+=== Final integrated Parts 1–3 checks ===
+Recorded UTC: 2026-09-28T00:58:59.839026+00:00
+Tested integration code: e7382ddb9cc5e0a5cd867653254a0c6f62f2f9c7
+Part 1 merged commit: 5db1d4a12d996fa5eb45e9b71d7b2dbcd0708991
+Part 3 merged commit: 4f8390b84752d861ea6b47c5ac8615680192d841
+Both merges used --no-ff and retained shared foundation ancestry; no conflicts.
+Build: npm ci --prefix frontend; npm run build --prefix frontend. Passed; raw/part2/integrated-build.txt.
+Toolchain: bundled Node24.19.0; npm11.20.0 from verified Part1 pnpm tool cache. Initial invocation found no npm on PATH; used the absolute cached npm executable. No project package versions changed.
+API command: python scripts/hw04/part2/acceptance.py --env-file <private app.env> --manage-server --port 8702 --output reports/hw04/raw/part2/integrated-api.json. 23 checks pass at 2026-09-28T00:55:59.072951+00:00.
+Browser command: python tests/browser_hw04_part1_runtime.py --env-file <private app.env> --node <bundled Node> --raw-dir reports/hw04/raw/part2/integrated-browser --screenshots-dir reports/hw04/screenshots/part2/integrated-browser. NODE_PATH used bundled Playwright1.62.1.
+real-browser: pass; 12 checks; original timestamps/source hashes in JSON.
+expiry-browser: pass; 2 checks; original timestamps/source hashes in JSON.
+runtime: pass; 6 checks; original timestamps/source hashes in JSON.
+Python command: python -m pytest tests/test_api.py tests/test_hw03_auth.py tests/test_hw03_integration.py tests/test_hw04_acceptance_cleanup.py tests/test_hw04_auth.py tests/test_hw04_database.py tests/test_hw04_fixture_isolation.py tests/test_hw04_foundation_gate.py tests/test_hw04_part3.py tests/test_hw04_part3_index.py tests/test_hw04_part3_measurement.py tests/test_hw04_part3_seed.py tests/test_hw04_search_regression.py tests/test_hw04_serving.py tests/test_hw04_verifier.py -q --tb=short
+Python: 191 passed, 111 warnings, 5.42 s, no skips; start 2026-09-28T00:56:08.104131+00:00; finish 2026-09-28T00:56:13.809031+00:00; source_unchanged=True.
+Ordinary pytest fixtures used isolated3363; live Part3 tests used dedicated33363. Both realMySQL8.4.11,s6102_rel.
+Performance/serving command: python scripts/hw04/part2/integration_smoke.py --env-file <private Part3.env>. 29 checks pass, actual HTTPS8702, retained5000/200 dataset after index experiment. Six combinations equal; totalSQL13/53/203 naive vs3fixed; authentication2 each.
+Measured HTTP source comparison against9860a203: only ordinary CRUD search handler and README differ. Neither benchmark endpoint calls that handler. Benchmark/auth/models/counter/serializer/launcher match. Retained original180-request experiment; no integration timing numbers invented.
+Review receipt: raw/part2/review/review.json covers Part2 checkpoint and harness fix, not sibling source. All primary findings resolved. Follow-up account-seed preservation gap now covered by a passing realMySQL test.
+Finder project screenshots captured through computer-use API. Tool returned JPEG bytes; originals preserved as07-project-{backend,structure}.jpg. sips format conversion produced PNG copies without content edits. Native Terminal UI capture was denied; no alternative terminal bypass attempted.
+Partial verifier: automated_status=pass; status=incomplete; 34/46 checks pass; exit1 is expected for12missingmanual captures (11Postman,1database).
+Every integrated harness stopped only its own API process. No seeded rental/manager reset or index removal occurred. API/browser3362 retained; fixture3363 and Part3dataset33363 retained.
+Part4, final homeworkPDF, collaborators, hw4tag and taggedverification.json remain later work. No push/PR/deploy/tag performed.
+Read-only post-integration database check passed: Part3 dataset hashes, index inventory and query results exactly match its saved after-index snapshot. API/browser3362 and ordinary fixture3363 each retain two original rentals. See raw/part2/integrated-database-preserved.json.
+Final bounded seam review found no concrete integration defect; original review scope remains labeled. Private credential/cookie text scan passed; no secret values saved.

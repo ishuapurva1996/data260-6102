@@ -1,0 +1,29 @@
+{
+  "captured_at": "2026-09-28T00:58:59.839644+00:00",
+  "revision": "e7382ddb9cc5e0a5cd867653254a0c6f62f2f9c7",
+  "tool": "cua_repl Finder getScreenshot",
+  "original_format": "JPEG",
+  "png_conversion": "macOS sips -s format png; no content edits",
+  "files": [
+    {
+      "file": "reports/hw04/screenshots/part2/07-project-backend.jpg",
+      "sha256": "ab5b8590b4a4cf25f853d2781783efc44debf59f8e2ceeba88ce6455f69fcfeb",
+      "bytes": 276542
+    },
+    {
+      "file": "reports/hw04/screenshots/part2/07-project-backend.png",
+      "sha256": "a891ed1d7345ae614cbf94310c9cf99e5f1541c80fcd51011bf9028d23cfd7b6",
+      "bytes": 621275
+    },
+    {
+      "file": "reports/hw04/screenshots/part2/07-project-structure.jpg",
+      "sha256": "d16704471ce1df79c63db1b7a00044bec538e2e99712312dc2c8489bc7ef1682",
+      "bytes": 238639
+    },
+    {
+      "file": "reports/hw04/screenshots/part2/07-project-structure.png",
+      "sha256": "052c6418d6916668e38b6145e7de0c7468632f03d83b7f8f96470a8c92d06d99",
+      "bytes": 527427
+    }
+  ]
+}

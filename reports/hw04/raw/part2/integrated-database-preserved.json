@@ -1,0 +1,46 @@
+{
+  "timestamp_utc": "2026-09-28T01:00:51.453365+00:00",
+  "scope": "Read-only database preservation check after integration",
+  "performance_database": {
+    "same_dataset": true,
+    "same_indexes": true,
+    "same_results": true,
+    "dataset": {
+      "stored_dataset_sha256": "9513ac766ab94f7c23c9257536d8e0f623c8bcbf530f6881e3c354cc7ced1b78",
+      "physical_rows_sha256": "0bdee7bbc69b260905cecc69f0ffb9b7b4628ec61fb11cacd1640902571f7e3d",
+      "counts": {
+        "rentals": 5000,
+        "property_managers": 200,
+        "associated_rentals": 5000,
+        "distinct_managers": 200,
+        "unique_listing_titles": 5000
+      },
+      "rental_id_range": {
+        "min": 1,
+        "max": 5000
+      }
+    },
+    "server": {
+      "version": "8.4.11",
+      "server_uuid": "3d515eaf-bad3-11f1-8b89-0ecd67fb62d4",
+      "database_name": "s6102_rel"
+    }
+  },
+  "other_instances": [
+    {
+      "role": "API/browser evidence",
+      "port": 3362,
+      "database": "s6102_rel",
+      "rentals": 2,
+      "managers": 0
+    },
+    {
+      "role": "ordinary test fixtures",
+      "port": 3363,
+      "database": "s6102_rel",
+      "rentals": 2,
+      "managers": 0
+    }
+  ],
+  "status": "pass"
+}

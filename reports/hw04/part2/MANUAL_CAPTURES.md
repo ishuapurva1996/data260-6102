@@ -1,6 +1,6 @@
 # Part 2 manual captures still required
 
-**Status: seven screenshots pending.** Postman was not available in the inspected local application inventory. No database or project-folder screenshot has been captured for this fragment. HTTPX JSON responses, pytest output, and the folder inventory support verification but do not satisfy the assignment's screenshot requirement.
+**Status: six Part 2 screenshots pending: five Postman CRUD captures and one database capture.** Postman was not available in the inspected local application inventory, and native Terminal capture was denied by the computer-use tool. Two actual Finder screenshots now show the integrated project root and expanded backend. HTTPX JSON responses, pytest output, and the folder inventory support verification but do not satisfy the assignment's screenshot requirement.
 
 Save actual images under `reports/hw04/screenshots/part2/`. Do not create placeholder images. Keep each relevant code excerpt directly above its resulting screenshot in the final report.
 
@@ -56,4 +56,6 @@ These are capture instructions, not claimed query output. The selected test acco
 
 Save `07-project-structure.png` from the actual integrated worktree in an editor or file browser. Expand `code/web_application/` to show `database.py`, `models.py`, `schemas.py`, `session_store.py`, `routers/`, and `migrations/`. Also show `frontend/src/`, `scripts/hw04/`, and `reports/hw04/`. Hide generated environments, `node_modules`, private runtime configuration, and unrelated personal directories. The image must show the shared application layout, not the teaching demo directory.
 
-After capture, verify all seven files exist and are readable, add their actual dates and tested revision to the run log, and place the images beneath their corresponding code excerpts. Mark only the screenshots that were actually captured complete. The final whole-homework report and Part 4 remain separate work.
+After the remaining captures, verify all required files exist and are readable, add their actual dates and tested revision to the run log, and place the images beneath their corresponding code excerpts. Mark only the screenshots that were actually captured complete. The final whole-homework report and Part 4 remain separate work.
+
+Captured project evidence: [root](../screenshots/part2/07-project-structure.png) and [backend](../screenshots/part2/07-project-backend.png). Their capture time and revision are recorded in [the manifest](../manual-captures.json). These are genuine Finder captures, not generated diagrams.

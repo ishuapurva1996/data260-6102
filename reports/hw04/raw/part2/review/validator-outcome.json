@@ -1,0 +1,5 @@
+{
+  "outcome": "empty-batch",
+  "reason": "Incremental merge inspected current-source direct-Uvicorn fix; no primary findings remain.",
+  "verdicts": null
+}

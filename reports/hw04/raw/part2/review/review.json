@@ -1,0 +1,205 @@
+{
+  "status": "complete",
+  "verdict": "Ready to merge",
+  "verdict_reason": "Ready for the reviewed Part 2 checkpoint only: no primary findings remain. This is not approval of the final combined Parts 1-3 application. U4/U5 integration work and manual captures are explicitly deferred at this live checkpoint; the final handoff remains pending.",
+  "scope": {
+    "base": "5742b2aadbafee5ba208311723ea470c09811dc5",
+    "branch": "codex/hw4-part2-backend",
+    "head_sha": "f29e7cc85baf52bea30bd4bb3209d1bd79b22051",
+    "checkpoint_sha": "87341d47e74297391e471c82f1add96bbe981a62",
+    "pr_url": null,
+    "files_changed": 60,
+    "description": "Part 2 foundation plus checkpoint tests/docs/verifier and the direct-Uvicorn integration-harness follow-up. Sibling merge code is excluded.",
+    "file_inventory": "/tmp/compound-engineering-501/ce-code-review/20260927-173303-38281e44/reviewed-files.txt"
+  },
+  "intent": "Replace process-memory HW3 rental/session stores with MySQL s6102_rel, strict ordinary CRUD and opaque-cookie email/password authentication in the existing service. Provide stable shared models/dependencies, versioned additive setup, and HTTPS React-serving foundation for Parts 1 and 3; preserve existing data and the documented six-field/two-field API contracts. This is the Part 2 foundation checkpoint: sibling integration/evidence work remains in progress and must not be claimed complete.",
+  "intent_confidence": "explicit",
+  "reviewers": [
+    "correctness",
+    "testing",
+    "maintainability",
+    "security",
+    "performance",
+    "api-contract",
+    "data-migration",
+    "reliability",
+    "adversarial"
+  ],
+  "findings": [],
+  "actionable_findings": [],
+  "triage_groups": [],
+  "pre_existing_findings": [],
+  "requirements_completeness": {
+    "plan_source": "explicit",
+    "plan_path": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part2-backend/docs/plans/2026-09-27-1715-feat-hw4-part2-backend-plan.md",
+    "requirements": [
+      {
+        "id": "R1",
+        "status": "met",
+        "evidence": "Existing FastAPI entry point, s6102_rel and db_session_basede26 appear in the reviewed implementation."
+      },
+      {
+        "id": "R2",
+        "status": "met",
+        "evidence": "MySQL models and protected POST/list GET/ID GET/PUT/DELETE implement the agreed body contracts and database-generated IDs."
+      },
+      {
+        "id": "R3",
+        "status": "met",
+        "evidence": "Normalized unique email, Argon2 password hashes and email/password login are implemented."
+      },
+      {
+        "id": "R4",
+        "status": "met",
+        "evidence": "Opaque MySQL sessions, Secure HTTP-only cookies, shared authentication dependency and revocation/expiry checks are implemented."
+      },
+      {
+        "id": "R5",
+        "status": "met",
+        "evidence": "Real-MySQL acceptance and backend test artifacts cover persistence, logout and expiry. Parent reports 23 acceptance checks and 122 backend tests passed; reviewers did not execute them."
+      },
+      {
+        "id": "R6",
+        "status": "partially addressed",
+        "evidence": "Postman collection, raw API/schema evidence and manual-capture instructions exist; required Postman/database/project-structure UI screenshots remain pending."
+      },
+      {
+        "id": "R7",
+        "status": "partially addressed",
+        "evidence": "Foundation f29e7cc was published and integration/verifier tooling exists. Final combined Parts 1-3 behavior and evidence are outside this checkpoint receipt."
+      }
+    ],
+    "implementation_units": [
+      {
+        "id": "U1",
+        "status": "met",
+        "evidence": "Shared MySQL configuration, four-model schema, additive migration and setup tooling are present."
+      },
+      {
+        "id": "U2",
+        "status": "met",
+        "evidence": "Persistent email authentication and session lifecycle are implemented with backend coverage."
+      },
+      {
+        "id": "U3",
+        "status": "met",
+        "evidence": "Ordinary CRUD, shared exports, HTTPS launcher and explicit React-serving plumbing were released in the foundation."
+      },
+      {
+        "id": "U4",
+        "status": "partially addressed",
+        "evidence": "Serving plumbing and Part 2 evidence tooling are present; real frontend integration and missing UI captures are pending in this review scope."
+      },
+      {
+        "id": "U5",
+        "status": "partially addressed",
+        "evidence": "Integration harness and partial verifier were reviewed, including direct-Uvicorn cleanup. Sibling merge code and final combined reruns were not reviewed."
+      }
+    ],
+    "unrequested_behavior_rules": [],
+    "scope_note": "Pending integration and unavailable captures are intentional checkpoint dependencies, not completed requirements or production-defect findings."
+  },
+  "learnings": [],
+  "agent_native_gaps": [],
+  "deployment_notes": [],
+  "residual_risks": [],
+  "testing_gaps": [
+    "scripts/hw04/db_setup.py:136-155 has an existing-email preservation branch without repeatable coverage: seed an account, call seed_account again with the same normalized email but different name/password, and assert false is returned and the original name/password hash remain unchanged. Saved schema-smoke evidence covers repeat migration/demo seeding but does not establish this account-preservation behavior."
+  ],
+  "coverage": {
+    "depth": "full",
+    "reviewer_selection": [
+      {
+        "reviewer": "correctness",
+        "tier": "session",
+        "reason": "always-on"
+      },
+      {
+        "reviewer": "testing",
+        "tier": "session",
+        "reason": "Authentication/CRUD behavior and tracked test suites changed."
+      },
+      {
+        "reviewer": "maintainability",
+        "tier": "session",
+        "reason": "New package/database abstraction and more than 200 executable lines."
+      },
+      {
+        "reviewer": "security",
+        "tier": "session",
+        "reason": "New credential verification, session lookup and protected routes."
+      },
+      {
+        "reviewer": "performance",
+        "tier": "session",
+        "reason": "ORM query shape and session activity writes on every authenticated request."
+      },
+      {
+        "reviewer": "api-contract",
+        "tier": "session",
+        "reason": "Shared route/body/response contracts consumed by two sibling branches."
+      },
+      {
+        "reviewer": "data-migration",
+        "tier": "session",
+        "reason": "New SQL migration, journal and account/data seed script."
+      },
+      {
+        "reviewer": "reliability",
+        "tier": "session",
+        "reason": "Database/session rollback, process launcher and health endpoint."
+      },
+      {
+        "reviewer": "adversarial",
+        "tier": "session",
+        "reason": "Persistent authentication and CRUD plus new evidence acceptance guard."
+      }
+    ],
+    "cross_model": "Cross-model pass not run: invoking parent explicitly prohibited external messages; local adversarial fallback selected.",
+    "peer_outcome": "in-process-fallback",
+    "peer_jobs_outstanding": 0,
+    "validator": {
+      "outcome": "empty-batch",
+      "reason": "Incremental merge inspected current-source direct-Uvicorn fix; no primary findings remain.",
+      "selected": 0,
+      "confirmed": 0,
+      "rejected": 0,
+      "unresolved": 0,
+      "malformed": 0,
+      "failed": 0,
+      "shortcut_skipped": 0,
+      "shortcut_basis": "All original and supplemental candidates resolved on current-source inspection; no cross-model shortcut was used."
+    },
+    "suppressed_by_confidence": {},
+    "mode_aware_demotion_count": 0,
+    "settlement_suppressed_count": 0,
+    "first_evidence_backfilled": 0,
+    "missing_quote_demotion_count": 0,
+    "semantic_duplicates_merged": 1,
+    "malformed_findings": 0,
+    "malformed_returns": 0,
+    "protected_subject_reclassifications": 0,
+    "validation_degraded_blockers": 0,
+    "failed_reviewers": [],
+    "compound_packs": {
+      "roots": [],
+      "errors": [],
+      "warnings": []
+    },
+    "standards": "Successful repo search found no applicable CODING_STANDARDS.md, AGENTS.md or CLAUDE.md.",
+    "notes": [
+      "Reviewers performed read-only inspection. No tests, runtime probes, database writes, source edits, index changes or commits were performed by this review.",
+      "Parent-reported results: real-MySQL acceptance 23 passed; backend suite 122 passed; targeted search/cleanup 3 passed; verifier 13 passed. These are not reviewer-executed results.",
+      "Scope expanded during review to staged tests, verifier and evidence. Correctness and the relevant lenses inspected refreshed scope. The security pass covered stable foundation production code; no later auth/security production changes were reported.",
+      "Original search, cleanup, fixture-import, evidence-validation and redaction concerns were resolved before validation. The integration-harness child cleanup was re-inspected after the direct-Uvicorn fix.",
+      "Foundation head_sha is the dispatch revision. Checkpoint 87341d4 and the narrow subsequent harness fix were inspected; sibling Parts 1 and 3 integration is not certified by this receipt.",
+      "The shared files.txt was refreshed during sibling integration. reviewed-files.txt records the Part 2 checkpoint inventory used for files_changed; it does not expand the review into sibling code.",
+      "No untracked paths are listed in the supplied exclusion array. Any untracked test reads were coverage context only until staged and included in refreshed scope.",
+      "Local persona models inherited the session model. Cross-model review was not run because the invoking parent prohibited external messages; the local adversarial fallback completed, and no external peer job is outstanding.",
+      "No applicable repository standards files were found. Learnings, agent-native and deployment-verification reviewers were not selected.",
+      "The plan reverse check found no additional unrequested behavior rule in the reviewed Part 2 routes and contracts. Final integrated behavior and manual screenshot evidence remain pending."
+    ]
+  },
+  "artifact_path": "/tmp/compound-engineering-501/ce-code-review/20260927-173303-38281e44",
+  "run_id": "20260927-173303-38281e44"
+}

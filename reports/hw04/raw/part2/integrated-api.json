@@ -1,0 +1,193 @@
+{
+  "timestamp_utc": "2026-09-28T00:55:59.072951+00:00",
+  "base_url": "https://127.0.0.1:8702",
+  "revision": "e7382ddb9cc5e0a5cd867653254a0c6f62f2f9c7",
+  "working_tree_dirty": true,
+  "checks": [
+    {
+      "name": "database name",
+      "passed": true
+    },
+    {
+      "name": "anonymous rentals denied",
+      "passed": true
+    },
+    {
+      "name": "bad credentials denied",
+      "passed": true
+    },
+    {
+      "name": "valid login",
+      "passed": true
+    },
+    {
+      "name": "cookie security",
+      "passed": true
+    },
+    {
+      "name": "POST create",
+      "passed": true,
+      "status": 201
+    },
+    {
+      "name": "GET list",
+      "passed": true,
+      "status": 200
+    },
+    {
+      "name": "created row listed",
+      "passed": true
+    },
+    {
+      "name": "GET by ID",
+      "passed": true,
+      "status": 200
+    },
+    {
+      "name": "ID read matches create",
+      "passed": true
+    },
+    {
+      "name": "PUT update",
+      "passed": true,
+      "status": 200
+    },
+    {
+      "name": "other fields preserved",
+      "passed": true
+    },
+    {
+      "name": "invalid write rejected",
+      "passed": true
+    },
+    {
+      "name": "real process restart retains login",
+      "passed": true
+    },
+    {
+      "name": "real process restart retains rental",
+      "passed": true
+    },
+    {
+      "name": "DELETE record",
+      "passed": true,
+      "status": 204
+    },
+    {
+      "name": "deleted row absent",
+      "passed": true
+    },
+    {
+      "name": "logout and copied-token replay",
+      "passed": true
+    },
+    {
+      "name": "logout removes database token",
+      "passed": true
+    },
+    {
+      "name": "idle expiry denied",
+      "passed": true
+    },
+    {
+      "name": "absolute expiry denied",
+      "passed": true
+    },
+    {
+      "name": "unknown API stays JSON 404",
+      "passed": true
+    },
+    {
+      "name": "docs available",
+      "passed": true
+    }
+  ],
+  "operations": [
+    {
+      "name": "POST create",
+      "method": "POST",
+      "path": "/api/rentals",
+      "status": 201,
+      "response": {
+        "listingTitle": "HW4 acceptance 9d27ca39d6",
+        "propertyAddress": "260 Verification Lane, San Jose, CA",
+        "submitterEmail": "verification@example.com",
+        "description": "A real MySQL acceptance record for verified persistent CRUD.",
+        "propertyType": "apartment",
+        "termsAccepted": true,
+        "id": 9
+      }
+    },
+    {
+      "name": "GET list",
+      "method": "GET",
+      "path": "/api/rentals?q=HW4 acceptance 9d27ca39d6",
+      "status": 200,
+      "response": [
+        {
+          "listingTitle": "HW4 acceptance 9d27ca39d6",
+          "propertyAddress": "260 Verification Lane, San Jose, CA",
+          "submitterEmail": "verification@example.com",
+          "description": "A real MySQL acceptance record for verified persistent CRUD.",
+          "propertyType": "apartment",
+          "termsAccepted": true,
+          "id": 9
+        }
+      ]
+    },
+    {
+      "name": "GET by ID",
+      "method": "GET",
+      "path": "/api/rentals/9",
+      "status": 200,
+      "response": {
+        "listingTitle": "HW4 acceptance 9d27ca39d6",
+        "propertyAddress": "260 Verification Lane, San Jose, CA",
+        "submitterEmail": "verification@example.com",
+        "description": "A real MySQL acceptance record for verified persistent CRUD.",
+        "propertyType": "apartment",
+        "termsAccepted": true,
+        "id": 9
+      }
+    },
+    {
+      "name": "PUT update",
+      "method": "PUT",
+      "path": "/api/rentals/9",
+      "status": 200,
+      "response": {
+        "listingTitle": "HW4 acceptance 9d27ca39d6 updated",
+        "propertyAddress": "261 Verification Lane",
+        "submitterEmail": "verification@example.com",
+        "description": "A real MySQL acceptance record for verified persistent CRUD.",
+        "propertyType": "apartment",
+        "termsAccepted": true,
+        "id": 9
+      }
+    },
+    {
+      "name": "DELETE record",
+      "method": "DELETE",
+      "path": "/api/rentals/9",
+      "status": 204,
+      "response": null
+    }
+  ],
+  "scope": "Part 2 real HTTPS/MySQL",
+  "mysql_version": "8.4.11",
+  "tables": [
+    "property_managers",
+    "rentals",
+    "schema_migrations",
+    "sessions",
+    "users"
+  ],
+  "cookie_attributes": [
+    "HttpOnly",
+    "Max-Age=3600",
+    "Path=/",
+    "SameSite=lax",
+    "Secure"
+  ],
+  "status": "pass"
+}

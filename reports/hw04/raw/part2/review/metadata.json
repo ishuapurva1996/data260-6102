@@ -1,0 +1,89 @@
+{
+  "branch": "codex/hw4-part2-backend",
+  "checkpoint_sha": "87341d47e74297391e471c82f1add96bbe981a62",
+  "completed_at": "2026-09-28T00:52:55.481390+00:00",
+  "cost": {
+    "host": "codex",
+    "scope": {
+      "changed_lines": 3301,
+      "depth": "full",
+      "exec_nontest_lines": 1203,
+      "size_band": "large",
+      "unclassified_lines": {
+        ".example": 9,
+        ".json": 388,
+        ".md": 1025,
+        ".sql": 46,
+        ".txt": 6
+      }
+    },
+    "stages": [
+      {
+        "elapsed_seconds": 0.038,
+        "ended_at": "2026-09-28T00:33:04.071762+00:00",
+        "facts": {
+          "changed_lines": 3301,
+          "depth": "full",
+          "exec_nontest_lines": 1203,
+          "size_band": "large",
+          "unclassified_lines": {
+            ".example": 9,
+            ".json": 388,
+            ".md": 1025,
+            ".sql": 46,
+            ".txt": 6
+          }
+        },
+        "stage": "scope",
+        "started_at": "2026-09-28T00:33:04.033925+00:00"
+      },
+      {
+        "elapsed_seconds": 63.673,
+        "ended_at": "2026-09-28T00:34:07.744825+00:00",
+        "reviewers": 9,
+        "stage": "select",
+        "started_at": "2026-09-28T00:33:04.071762+00:00"
+      },
+      {
+        "candidates": 8,
+        "elapsed_seconds": 629.568,
+        "ended_at": "2026-09-28T00:44:37.313220+00:00",
+        "stage": "dispatch",
+        "started_at": "2026-09-28T00:34:07.744825+00:00"
+      },
+      {
+        "candidates": 0,
+        "elapsed_seconds": 0.121,
+        "ended_at": "2026-09-28T00:50:36.780464+00:00",
+        "stage": "merge",
+        "started_at": "2026-09-28T00:50:36.659515+00:00"
+      },
+      {
+        "candidates": 0,
+        "elapsed_seconds": 0.034,
+        "ended_at": "2026-09-28T00:47:37.168345+00:00",
+        "stage": "validate",
+        "started_at": "2026-09-28T00:47:37.134619+00:00"
+      },
+      {
+        "candidates": 0,
+        "elapsed_seconds": 61.083,
+        "ended_at": "2026-09-28T00:52:55.526733+00:00",
+        "stage": "report",
+        "started_at": "2026-09-28T00:51:54.443611+00:00"
+      }
+    ],
+    "status": "complete",
+    "totals": {
+      "artifact_bytes": 1557231,
+      "candidates": 8,
+      "elapsed_seconds": 754.517,
+      "reviewers": 9
+    },
+    "truncated_events": 0
+  },
+  "head_sha": "f29e7cc85baf52bea30bd4bb3209d1bd79b22051",
+  "run_id": "20260927-173303-38281e44",
+  "scope_note": "Part 2 foundation plus checkpoint tests/docs/verifier and the direct-Uvicorn integration-harness follow-up. Sibling merge code is excluded.",
+  "verdict": "Ready to merge"
+}

@@ -37,9 +37,14 @@
   },
   {
     "name": "part2/project-structure",
-    "captured": false,
-    "file": null,
-    "reason": "Finder capture planned after integration."
+    "captured": true,
+    "file": "reports/hw04/screenshots/part2/07-project-structure.png",
+    "reason": "Actual Finder screenshots of the integrated worktree root and expanded backend modules.",
+    "additional_files": [
+      "reports/hw04/screenshots/part2/07-project-backend.png"
+    ],
+    "captured_at": "2026-09-28T00:57:38.687165+00:00",
+    "revision": "e7382ddb9cc5e0a5cd867653254a0c6f62f2f9c7"
   },
   {
     "name": "part3/postman-naive-10",
