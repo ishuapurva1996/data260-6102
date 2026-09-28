@@ -7,7 +7,7 @@
 // after READY exists and writes DONE only once the restarted server is ready.
 const assert = require('node:assert/strict');
 const { execFileSync } = require('node:child_process');
-const { createHash } = require('node:crypto');
+const { createHash, randomUUID } = require('node:crypto');
 const fs = require('node:fs/promises');
 const path = require('node:path');
 const { chromium } = require('playwright');
@@ -38,6 +38,17 @@ function redact(value) {
   let safe = String(value);
   for (const secret of secrets) safe = safe.split(secret).join('[REDACTED]');
   return safe.replace(/(s6102_session=)[^;\s]+/gi, '$1[REDACTED]');
+}
+
+async function writePrivateJSON(filename, value) {
+  // Atomic replacement keeps the prior intent readable even if Node is killed.
+  const temporary = `${filename}.next`;
+  const file = await fs.open(temporary, 'wx', 0o600);
+  try {
+    await file.writeFile(`${JSON.stringify(value)}\n`);
+    await file.sync();
+  } finally { await file.close(); }
+  await fs.rename(temporary, filename);
 }
 
 async function check(name, action, page) {
@@ -509,6 +520,7 @@ async function restartCheckpoint(page, id, title) {
   console.log(`RESTART READY: ${ready}`);
   const started = Date.now();
   for (;;) {
+    if (page.isClosed()) throw new Error('Browser closed before restart acknowledgement');
     try { await fs.access(done); break; } catch { /* Owner has not acknowledged its completed restart. */ }
     if (Date.now() - started > 120000) throw new Error('Owner did not acknowledge restart within 120 seconds');
     await delay(250);
@@ -531,7 +543,14 @@ async function realFlow(browser) {
   const errors = [];
   page.on('pageerror', (error) => errors.push(redact(error.message)));
   let createdId;
-  const created = { ...fixture(), listingTitle: `HW4 browser verification ${Date.now()}`, propertyAddress: '6102 Verification Avenue' };
+  const runId = process.env.HW4_CLEANUP_RUN_ID || randomUUID();
+  assert.match(runId, /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/);
+  const journal = process.env.HW4_CLEANUP_JOURNAL;
+  async function recordCreation(phase, recordId = null) {
+    if (journal) await writePrivateJSON(journal, { schema_version: 1, run_id: runId, record_id: recordId, phase });
+  }
+  const created = { ...fixture(), listingTitle: `HW4 browser verification ${runId}`, propertyAddress: '6102 Verification Avenue',
+    description: `HW4 Part 1 browser cleanup run ${runId}`, submitterEmail: `${runId}@example.com` };
   delete created.id;
   try {
     await check('Signed-out direct visits hide protected records', () => signedOutRoutes(page), page);
@@ -583,15 +602,32 @@ async function realFlow(browser) {
       await fillRental(page, created);
       await snapshot(page, 'create-form');
       const pending = page.waitForResponse(requestMatch('POST', '/api/rentals'));
+      // Persist intent before POST; the wrapper can recover an unobserved commit.
+      await recordCreation('create_pending');
       await page.getByRole('button', { name: 'Add listing', exact: true }).click();
       const response = await pending;
       assert.equal(response.status(), 201);
-      const body = response.request().postDataJSON();
-      assert.deepEqual(Object.keys(body).sort(), CREATE_KEYS);
-      assert.deepEqual(body, created);
       const record = await response.json();
       assert(Number.isSafeInteger(record.id) && record.id > 0);
       createdId = record.id;
+      await recordCreation('created', createdId);
+      const body = response.request().postDataJSON();
+      assert.deepEqual(Object.keys(body).sort(), CREATE_KEYS);
+      assert.deepEqual(body, created);
+      // Regression-only pause: the parent interrupts after a real POST is confirmed.
+      if (process.env.HW4_CREATED_CHECKPOINT_FILE) {
+        await writePrivateJSON(process.env.HW4_CREATED_CHECKPOINT_FILE, {
+          run_id: runId, record_id: createdId, description: created.description,
+          submitter_email: created.submitterEmail, post_status: response.status(),
+          cleanup_journal: journal || null,
+        });
+        const deadline = Date.now() + 120000;
+        while (Date.now() < deadline) {
+          if (page.isClosed()) throw new Error('Browser closed at the confirmed-create checkpoint');
+          await delay(100);
+        }
+        throw new Error('Confirmed-create checkpoint was not interrupted within 120 seconds');
+      }
       await waitHome(page);
       await cardFor(page, created.listingTitle).waitFor();
       await cardFor(page, created.listingTitle).scrollIntoViewIfNeeded();
@@ -676,10 +712,18 @@ async function realFlow(browser) {
     await check('No uncaught browser JavaScript errors', async () => { assert.deepEqual(errors, []); return { uncaught_errors: errors }; }, page);
   } finally {
     // Only remove this runner's own row if a later assertion failed.
-    if (createdId !== undefined) {
+    if (createdId !== undefined && evidence.status !== 'interrupted') {
       try {
-        const result = await context.request.delete(`${BASE}/api/rentals/${createdId}`);
-        evidence.failure_cleanup = { record_id: createdId, delete_status: result.status() };
+        const current = await context.request.get(`${BASE}/api/rentals/${createdId}`);
+        if (current.status() === 404) evidence.failure_cleanup = { record_id: createdId, status: 'already_absent' };
+        else {
+          assert.equal(current.status(), 200);
+          const row = await current.json();
+          assert.equal(row.description, created.description, 'Cleanup ownership marker must match');
+          assert.equal(row.submitterEmail, created.submitterEmail, 'Cleanup ownership email must match');
+          const result = await context.request.delete(`${BASE}/api/rentals/${createdId}`);
+          evidence.failure_cleanup = { record_id: createdId, delete_status: result.status() };
+        }
       } catch (error) { evidence.failure_cleanup = { record_id: createdId, error: redact(error.message) }; }
     }
     await context.close();
@@ -736,17 +780,29 @@ async function main() {
   await fs.mkdir(SHOTS, { recursive: true });
   await sourceMetadata();
   let browser;
+  for (const [name, number] of [['SIGTERM', 15], ['SIGINT', 2]]) {
+    process.on(name, () => {
+      if (evidence.status === 'interrupted') return;
+      evidence.status = 'interrupted';
+      evidence.signal = name;
+      process.exitCode = 128 + number;
+      // Close Chromium explicitly; the Python owner cleans the journaled row.
+      if (browser) void browser.close().catch(() => {});
+    });
+  }
   try {
     if (MODE === 'real') assert(EMAIL && PASSWORD, 'Real mode requires HW4_SEED_EMAIL and HW4_SEED_PASSWORD supplied outside tracked source');
     browser = await chromium.launch({ headless: true });
     if (MODE === 'mock') await mockFlow(browser);
     else if (MODE === 'expiry') await expiryFlow(browser);
     else await realFlow(browser);
-    evidence.status = 'pass';
+    if (evidence.status !== 'interrupted') evidence.status = 'pass';
   } catch (error) {
-    evidence.status = 'fail';
+    if (evidence.status !== 'interrupted') {
+      evidence.status = 'fail';
+      process.exitCode = 1;
+    }
     evidence.error = redact(error.stack || error);
-    process.exitCode = 1;
     console.error(evidence.error);
   } finally {
     if (browser) await browser.close();

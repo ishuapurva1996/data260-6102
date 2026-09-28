@@ -1,0 +1,3 @@
+Certificate ready: /Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tmp/https/cert.pem
+PASS [RUNTIME] MySQL evidence database is s6102_rel
+FAIL [RUNTIME] RuntimeError; inspect the sanitized browser logs.

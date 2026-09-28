@@ -1,0 +1,14 @@
+{
+  "started_at": "2026-09-28T01:08:26.576098+00:00",
+  "status": "fail",
+  "revision": "5db1d4a12d996fa5eb45e9b71d7b2dbcd0708991",
+  "source_sha256": {
+    "tests/browser_hw04_part1.cjs": "67d355ac4233c390435a533ea19841a65df040f954165be3e7c66c1fdbbb3db3",
+    "tests/browser_hw04_part1_runtime.py": "901a2770d23b21113732dde5c2632808ec3d25f997708e73a52c4a3d20c4ec59",
+    "tests/check_hw04_part1_interruption.py": "1799d3ecd8601483db7ac5b256e8fe0419c74e3d998f6ba1c402eaf90149f5b4"
+  },
+  "port": 8712,
+  "checks": [],
+  "error_type": "RuntimeError",
+  "finished_at": "2026-09-28T01:08:26.850148+00:00"
+}

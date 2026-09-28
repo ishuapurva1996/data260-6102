@@ -11,3 +11,12 @@
 The assistant used the provided teaching demo for the React component/props pattern, not its user-ID login. The final runtime has no mock backend or local session token. No password, live cookie value, or database connection string is intentionally stored in the report, screenshots, or coordination handoff.
 
 Review also identified late-response races and a process-cleanup gap. Codex added regression checks, observed an actual pending-Cancel failure before fixing it, and reran all selected tests on committed code. The final mock suite has 19 checks. A real SIGTERM experiment verified that the runtime runner stops its owned server and records an interrupted run. The dedicated review receipt could not be rendered because the host agent limit was reached; underlying reviews and validation plus the final manual diff scan are recorded in REVIEW.md.
+
+The later cleanup follow-up strengthened that interruption check by waiting for a
+real successful create first. Codex reproduced a leftover MySQL row, added a
+private per-run journal and ownership-checked cleanup, and verified that the
+interrupted run removes its row while preserving existing data. A review worker
+added 17 isolated guard tests. The new eight-check cancellation regression and
+the normal browser/restart/expiry checks passed; their actual outputs, setup
+failures and separate screenshots are documented in CLEANUP_FOLLOWUP.md. These
+checks used the final source before its local commit and recorded its file hashes.

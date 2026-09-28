@@ -69,7 +69,7 @@ MySQL acceptance used existing container `data260-hw4-mysql` on `127.0.0.1:3362`
 
 ## Remaining integration and limitations
 
-Part 2 must merge this branch, build the frontend, and rerun the saved Part 1 runtime command alongside its combined Parts 1–3 checks after coordinating the port. Part 1 has real screenshots; no Part 1 manual screen capture remains. Part 2/3 Postman screenshots, Part 4, the combined final PDF, collaborator verification, final tagged-commit verification, and the `hw4` tag are outside this task.
+Part 2 incorporated the original Part 1 handoff into its integrated tip `2d03ae4074a8d6d69a9e84dacf1ce3fea7d2bafb`. A subsequent, narrowly scoped browser interruption cleanup fix is documented in [CLEANUP_FOLLOWUP.md](CLEANUP_FOLLOWUP.md), with separate reproduction and success evidence. Part 2 must incorporate that follow-up and refresh runner-dependent integration evidence. The follow-up commit hash is in `HW4_coordination/part1.md`. Part 1 has real screenshots; no Part 1 manual screen capture remains. Part 2/3 Postman screenshots, Part 4, the combined final PDF, collaborator verification, final tagged-commit verification, and the `hw4` tag are outside this task.
 
 `npm audit` reported two moderate Router 6-related entries. The fixes advertised by npm require Router 7, while the shared teaching contract selects Router 6. This client uses fixed local destinations and positive numeric IDs and does not use server-side rendering/hydration, the features described by those advisories. The audit is not claimed clean; a later Router 7 migration should be coordinated rather than silently changing the shared contract.
 

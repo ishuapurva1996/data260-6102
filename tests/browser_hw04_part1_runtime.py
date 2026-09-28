@@ -17,13 +17,63 @@ import subprocess
 import sys
 import tempfile
 import time
+from uuid import UUID, uuid4
 
 import httpx
 from dotenv import load_dotenv
-from sqlalchemy import create_engine, text
+from sqlalchemy import column, create_engine, delete, select, table, text
 
 ROOT = Path(__file__).resolve().parents[1]
 RAW = ROOT / 'reports/hw04/raw/part1'
+
+
+def cleanup_rental(journal_path, engine):
+    """Delete one proven-owned test row; retain the private journal on uncertainty.
+
+    The caller must first stop its browser and API, allowing in-flight SQL to
+    finish. Exact marker recovery covers a POST committed before its ID reached
+    the journal. No title/prefix matching or unguarded multi-row DELETE is used.
+    """
+    result = {'status': 'failed', 'recovery_journal': str(journal_path)}
+    try:
+        journal = json.loads(journal_path.read_text())
+        run_id, record_id = journal['run_id'], journal['record_id']
+        if (journal['schema_version'] != 1 or str(UUID(run_id)) != run_id
+                or journal['phase'] not in ('not_started', 'create_pending', 'created')
+                or (record_id is not None and (type(record_id) is not int or record_id <= 0))
+                or (journal['phase'] == 'created' and record_id is None)
+                or (journal['phase'] == 'not_started' and record_id is not None)):
+            raise ValueError('Invalid cleanup journal')
+        result['record_id'] = record_id
+        status = 'not_created'
+        if journal['phase'] != 'not_started':
+            marker, email = f'HW4 Part 1 browser cleanup run {run_id}', f'{run_id}@example.com'
+            rentals = table('rentals', column('id'), column('description'), column('submitter_email'))
+            ownership = (rentals.c.description == marker) & (rentals.c.submitter_email == email)
+            selection = rentals.c.id == record_id if record_id is not None else ownership
+            with engine.begin() as connection:
+                matches = connection.execute(select(rentals).where(selection).limit(2).with_for_update()).mappings().all()
+                if len(matches) > 1:
+                    return dict(result, status='ambiguous')
+                if matches:
+                    row = matches[0]
+                    # Compare in Python too: MySQL text collation can ignore case.
+                    if row['description'] != marker or row['submitter_email'] != email:
+                        return dict(result, status='ownership_mismatch')
+                    result['record_id'] = row['id']
+                    deleted = connection.execute(delete(rentals).where((rentals.c.id == row['id']) & ownership))
+                    if deleted.rowcount != 1:
+                        raise RuntimeError('Exact owned row was not deleted')
+                    status = 'deleted'
+                elif record_id is not None:
+                    status = 'already_absent'
+        # Only discard recovery information after the transaction commits.
+        journal_path.unlink()
+        result.pop('recovery_journal')
+        return dict(result, status=status)
+    except Exception as error:
+        # Driver messages can contain a database URL or password.
+        return dict(result, status='failed', error_type=type(error).__name__)
 
 
 def main():
@@ -42,11 +92,22 @@ def main():
                 'source_sha256': {str(Path(__file__).relative_to(ROOT)): sha256(Path(__file__).read_bytes()).hexdigest()},
                 'status': 'running', 'base_url': f'https://127.0.0.1:{args.port}',
                 'production_idle_seconds': 300, 'absolute_seconds': 3600,
-                'expiry_demonstration_idle_seconds': 2, 'processes': [], 'checks': []}
+                'expiry_demonstration_idle_seconds': 2, 'processes': [], 'browser_processes': [], 'checks': []}
     process = browser = None
+    run_id = str(uuid4())
+    (ROOT / 'tmp').mkdir(exist_ok=True)
+    # Outside TemporaryDirectory: failures must retain recovery information.
+    journal_dir = Path(tempfile.mkdtemp(prefix='hw4-part1-cleanup-', dir=ROOT / 'tmp'))
+    journal = journal_dir / 'rental.json'
+    with open(journal, 'x', opener=lambda name, flags: os.open(name, flags, 0o600)) as output:
+        json.dump({'schema_version': 1, 'run_id': run_id, 'record_id': None, 'phase': 'not_started'}, output)
+        output.flush()
+        os.fsync(output.fileno())
+    evidence['cleanup_run_id'] = run_id
     base = evidence['base_url']
     private_env = dict(os.environ, HW4_BASE_URL=base, HW4_RAW_DIR=str(raw),
-                       HW4_SCREENSHOTS_DIR=str(args.screenshots_dir.resolve()))
+                       HW4_SCREENSHOTS_DIR=str(args.screenshots_dir.resolve()),
+                       HW4_CLEANUP_RUN_ID=run_id, HW4_CLEANUP_JOURNAL=str(journal))
     credentials = {'email': os.environ['HW4_SEED_EMAIL'], 'password': os.environ['HW4_SEED_PASSWORD']}
 
     def check(name, ok, **details):
@@ -96,15 +157,23 @@ def main():
 
     def stop():
         nonlocal process
-        if process is not None and process.poll() is None:
-            os.killpg(process.pid, signal.SIGTERM)
-            try:
-                process.wait(timeout=8)
-            except subprocess.TimeoutExpired:
-                os.killpg(process.pid, signal.SIGKILL)
-                process.wait(timeout=5)
+        if process is not None:
+            stop_owned(process)
             evidence['processes'][-1]['stopped_at'] = datetime.now(timezone.utc).isoformat()
+            evidence['processes'][-1]['returncode'] = process.returncode
         process = None
+
+    def stop_owned(child):
+        if child.poll() is None:
+            try:
+                os.killpg(child.pid, signal.SIGTERM)
+            except ProcessLookupError:
+                pass
+            try:
+                child.wait(timeout=8)
+            except subprocess.TimeoutExpired:
+                os.killpg(child.pid, signal.SIGKILL)
+                child.wait(timeout=5)
 
     def interrupted(signum, _frame):
         evidence['status'] = 'interrupted'
@@ -127,6 +196,7 @@ def main():
             with (raw / 'real-browser.txt').open('w') as output:
                 browser = subprocess.Popen([args.node, 'tests/browser_hw04_part1.cjs', '--real'], cwd=ROOT,
                                            env=env, stdout=output, stderr=subprocess.STDOUT, start_new_session=True)
+                evidence['browser_processes'].append({'pid': browser.pid, 'mode': 'real'})
                 deadline = time.monotonic() + 120
                 while not ready.exists():
                     if browser.poll() is not None:
@@ -141,6 +211,7 @@ def main():
                       before_pid=old_pid, after_pid=process.pid)
                 done.write_text(datetime.now(timezone.utc).isoformat())
                 check('Real browser suite passed', browser.wait(timeout=120) == 0)
+                evidence['browser_processes'][-1]['returncode'] = browser.returncode
             result = json.loads((raw / 'real-browser.json').read_text())
             deleted_id = next(item['details']['deleted_id'] for item in result['checks']
                               if item['name'].startswith('Delete direct URL'))
@@ -157,6 +228,7 @@ def main():
             with (raw / 'expiry-browser.txt').open('w') as output:
                 browser = subprocess.Popen([args.node, 'tests/browser_hw04_part1.cjs', '--expiry'], cwd=ROOT,
                                            env=dict(private_env, HW4_EXPIRY_TEST='2'), stdout=output, stderr=subprocess.STDOUT, start_new_session=True)
+                evidence['browser_processes'].append({'pid': browser.pid, 'mode': 'expiry'})
                 check('Real browser idle expiry suite passed', browser.wait(timeout=90) == 0)
             evidence['status'] = 'pass'
     except Exception as error:
@@ -166,17 +238,53 @@ def main():
         print(f'FAIL [RUNTIME] {type(error).__name__}; inspect the sanitized browser logs.', flush=True)
         raise SystemExit(1) from None
     finally:
-        if browser is not None and browser.poll() is None:
-            os.killpg(browser.pid, signal.SIGTERM)
+        # A second Ctrl-C must not interrupt bounded cleanup and evidence writing.
+        signal.signal(signal.SIGTERM, signal.SIG_IGN)
+        signal.signal(signal.SIGINT, signal.SIG_IGN)
+        evidence['teardown_errors'] = []
+        if browser is not None:
             try:
-                browser.wait(timeout=5)
-            except subprocess.TimeoutExpired:
-                os.killpg(browser.pid, signal.SIGKILL)
-                browser.wait(timeout=5)
-        stop()
+                stop_owned(browser)
+                evidence['browser_processes'][-1].update(returncode=browser.returncode,
+                    stopped_at=datetime.now(timezone.utc).isoformat())
+            except Exception as error:
+                evidence['teardown_errors'].append({'process': 'browser', 'error_type': type(error).__name__})
+        try:
+            stop()
+        except Exception as error:
+            evidence['teardown_errors'].append({'process': 'api', 'error_type': type(error).__name__})
+        engine = None
+        try:
+            if evidence['teardown_errors']:
+                evidence['rental_cleanup'] = {'status': 'failed', 'reason': 'process_teardown_incomplete',
+                                              'recovery_journal': str(journal)}
+            else:
+                engine = create_engine(os.environ['HW4_DATABASE_URL'], hide_parameters=True,
+                                       connect_args={'connect_timeout': 5, 'read_timeout': 5, 'write_timeout': 5})
+                evidence['rental_cleanup'] = cleanup_rental(journal, engine)
+                if not journal.exists():
+                    try:
+                        journal.with_name(journal.name + '.next').unlink(missing_ok=True)
+                        journal_dir.rmdir()
+                    except OSError as error:
+                        # Rental cleanup already committed; directory housekeeping
+                        # must not claim a nonexistent recovery journal is needed.
+                        evidence['journal_directory_cleanup_error_type'] = type(error).__name__
+        except Exception as error:
+            evidence['rental_cleanup'] = {'status': 'failed', 'error_type': type(error).__name__,
+                                          'recovery_journal': str(journal)}
+        finally:
+            if engine is not None:
+                engine.dispose()
+        if evidence['rental_cleanup']['status'] not in ('deleted', 'already_absent', 'not_created'):
+            # Keep interruption as the primary outcome; never report a clean pass.
+            if evidence['status'] == 'pass':
+                evidence['status'] = 'fail'
         evidence['finished_at'] = datetime.now(timezone.utc).isoformat()
         (raw / 'runtime.json').write_text(json.dumps(evidence, indent=2) + '\n')
+        print(f"CLEANUP [RUNTIME] {evidence['rental_cleanup']['status']}", flush=True)
+    return 0 if evidence['status'] == 'pass' else 1
 
 
 if __name__ == '__main__':
-    main()
+    sys.exit(main())

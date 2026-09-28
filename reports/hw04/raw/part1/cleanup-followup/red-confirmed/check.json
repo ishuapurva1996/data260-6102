@@ -1,0 +1,47 @@
+{
+  "started_at": "2026-09-28T01:06:45.753693+00:00",
+  "status": "fail",
+  "revision": "5db1d4a12d996fa5eb45e9b71d7b2dbcd0708991",
+  "source_sha256": {
+    "tests/browser_hw04_part1.cjs": "f084d55871013a7c06ef57475223845780ee354d357bb0562194f3bf69298952",
+    "tests/browser_hw04_part1_runtime.py": "9ffddaa9282f3681781e7ecbb0fcc69a725ee95490366e0b5068c779c2d89fb6",
+    "tests/check_hw04_part1_interruption.py": "1799d3ecd8601483db7ac5b256e8fe0419c74e3d998f6ba1c402eaf90149f5b4"
+  },
+  "port": 8712,
+  "checks": [
+    {
+      "name": "Real POST completed and exact owned rental exists before interruption",
+      "passed": true
+    },
+    {
+      "name": "Runtime records interruption and exits with SIGTERM status",
+      "passed": true,
+      "returncode": 143,
+      "runtime_status": "interrupted"
+    },
+    {
+      "name": "Confirmed-created rental is absent after interruption",
+      "passed": false,
+      "record_id": 11
+    }
+  ],
+  "checkpoint": {
+    "run_id": "646191eb-696d-44d6-8a48-651d3203dbde",
+    "record_id": 11,
+    "description": "HW4 Part 1 browser cleanup run 646191eb-696d-44d6-8a48-651d3203dbde",
+    "submitter_email": "646191eb-696d-44d6-8a48-651d3203dbde@example.com",
+    "post_status": 201
+  },
+  "owned_pids_at_interrupt": [
+    74447,
+    74450,
+    74451,
+    74458,
+    74459,
+    74460,
+    74462
+  ],
+  "error_type": "AssertionError",
+  "regression_recovery": "deleted_exact_checkpoint_row",
+  "finished_at": "2026-09-28T01:06:48.457223+00:00"
+}
