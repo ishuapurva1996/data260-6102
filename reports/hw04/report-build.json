@@ -1,0 +1,3560 @@
+{
+  "figures": [
+    {
+      "section": "Login.jsx - Log in using email and password",
+      "source": "reports/hw04/screenshots/user/Part1_02_LoginForm_Code_1.png",
+      "sha256": "191c7922f96f8471832660c2af19393d503ecfbe37152d63e8b7544e691d9170",
+      "source_width_px": 1646,
+      "source_height_px": 702,
+      "crop": [
+        0,
+        0,
+        1646,
+        702
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 225.72992987055233,
+      "pixels_to_points": 0.32155260665320845,
+      "page": 2,
+      "page_position_pt": [
+        33.0,
+        519.1598339089753
+      ]
+    },
+    {
+      "section": "Login.jsx - Log in using email and password",
+      "source": "reports/hw04/screenshots/user/Part1_02_LoginForm_Code_2.png",
+      "sha256": "872b5a608da870247e3ee1de5943b31dc1e12fe8c59644bbf7d4e8b49460ab97",
+      "source_width_px": 1890,
+      "source_height_px": 1224,
+      "crop": [
+        0,
+        0,
+        1890,
+        1224
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 342.7689538807649,
+      "pixels_to_points": 0.28003999500062493,
+      "page": 3,
+      "page_position_pt": [
+        33.0,
+        450.1208098987628
+      ]
+    },
+    {
+      "section": "Login.jsx - Log in using email and password",
+      "source": "reports/hw04/screenshots/user/Part1_02_LoginForm.png",
+      "sha256": "86bd603d6daae1cfb63ace5d00d13542c9b9331b6f6b33e841fa68b5a1848377",
+      "source_width_px": 2920,
+      "source_height_px": 1594,
+      "crop": [
+        0,
+        0,
+        2920,
+        1594
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 288.92646963650094,
+      "pixels_to_points": 0.18125876388739082,
+      "page": 3,
+      "page_position_pt": [
+        33.0,
+        140.19434026226185
+      ]
+    },
+    {
+      "section": "After successful login",
+      "source": "reports/hw04/screenshots/user/Part1_03_LoginSuccess_Code_1.png",
+      "sha256": "dd732b2cffb6ea1ed8f6530f8a7933ab06591f89f706b056523bd1edef593bb3",
+      "source_width_px": 1246,
+      "source_height_px": 364,
+      "crop": [
+        0,
+        0,
+        1246,
+        364
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 154.6198354419181,
+      "pixels_to_points": 0.4247797676975772,
+      "page": 4,
+      "page_position_pt": [
+        33.0,
+        618.2699283376096
+      ]
+    },
+    {
+      "section": "After successful login",
+      "source": "reports/hw04/screenshots/user/Part1_03_LoginSuccess.png",
+      "sha256": "8d0d9fa826ed8914e797d2ca643b3732a638d4e9887aa9b56701a5ce15b900b7",
+      "source_width_px": 2930,
+      "source_height_px": 1748,
+      "crop": [
+        0,
+        0,
+        2930,
+        1748
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 315.7589529977695,
+      "pixels_to_points": 0.18064013329391848,
+      "page": 4,
+      "page_position_pt": [
+        33.0,
+        281.5109753398401
+      ]
+    },
+    {
+      "section": "Set an HTTP-only cookie containing a server-side session token",
+      "source": "reports/hw04/screenshots/user/Part1_04_SessionCookie_Code_1.png",
+      "sha256": "e00e59f018582e6f9d73c7934027b227dab0e99fae4b086e1a35520286d3b128",
+      "source_width_px": 1482,
+      "source_height_px": 416,
+      "crop": [
+        0,
+        0,
+        1482,
+        416
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 148.56858682138417,
+      "pixels_to_points": 0.35713602601294275,
+      "page": 5,
+      "page_position_pt": [
+        33.0,
+        624.3211769581435
+      ]
+    },
+    {
+      "section": "Set an HTTP-only cookie containing a server-side session token",
+      "source": "reports/hw04/screenshots/user/Part1_04_SessionCookie_Code_2.png",
+      "sha256": "8f4485c0fceb8104035c37327e32f71d6331d90cb988dd84aef2d5f4c0a85498",
+      "source_width_px": 1750,
+      "source_height_px": 546,
+      "crop": [
+        0,
+        0,
+        1750,
+        546
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 165.1339842519685,
+      "pixels_to_points": 0.3024431946006749,
+      "page": 5,
+      "page_position_pt": [
+        33.0,
+        438.187192706175
+      ]
+    },
+    {
+      "section": "Set an HTTP-only cookie containing a server-side session token",
+      "source": "reports/hw04/screenshots/user/Part1_04_SessionCookie.png",
+      "sha256": "b8077df447a2012242dd8eb4afcf9d452dac09d9806576fe152910fb90936352",
+      "source_width_px": 2912,
+      "source_height_px": 1668,
+      "crop": [
+        0,
+        0,
+        2912,
+        1668
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 303.1702215107727,
+      "pixels_to_points": 0.18175672752444408,
+      "page": 5,
+      "page_position_pt": [
+        33.0,
+        114.01697119540228
+      ]
+    },
+    {
+      "section": "Only logged-in users may view records and perform CRUD; otherwise show \"Login required\"",
+      "source": "reports/hw04/screenshots/user/Part1_01_LoginRequired_Code.png",
+      "sha256": "04f06efbe7291d31008e4b03507debf28e0e4dc5bc5917b3bc099791b2c2b598",
+      "source_width_px": 1214,
+      "source_height_px": 586,
+      "crop": [
+        0,
+        0,
+        1214,
+        586
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 255.4822867075718,
+      "pixels_to_points": 0.435976598477085,
+      "page": 6,
+      "page_position_pt": [
+        33.0,
+        503.4074770719559
+      ]
+    },
+    {
+      "section": "Only logged-in users may view records and perform CRUD; otherwise show \"Login required\"",
+      "source": "reports/hw04/screenshots/user/Part1_01_LoginRequired.png",
+      "sha256": "b0047b710f237e1cdf9e1ff3831158daf84145f19845fe5f21f21bf81d2b9206",
+      "source_width_px": 2912,
+      "source_height_px": 1428,
+      "crop": [
+        0,
+        0,
+        2912,
+        1428
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 259.54860690490614,
+      "pixels_to_points": 0.18175672752444408,
+      "page": 6,
+      "page_position_pt": [
+        33.0,
+        222.85887016704976
+      ]
+    },
+    {
+      "section": "I. Home Page - Display all records at /",
+      "source": "reports/hw04/screenshots/user/Part1_05_Home_Code_1.png",
+      "sha256": "e04d1d3cf0fdb6d8fec589e23fe4e9f465688451e9d9801f9a1c16eeb8098fc2",
+      "source_width_px": 1586,
+      "source_height_px": 936,
+      "crop": [
+        0,
+        0,
+        1586,
+        936
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 312.3593649154512,
+      "pixels_to_points": 0.33371727020881536,
+      "page": 7,
+      "page_position_pt": [
+        33.0,
+        460.5303988640765
+      ]
+    },
+    {
+      "section": "I. Home Page - Display all records at /",
+      "source": "reports/hw04/screenshots/user/Part1_05_Home_Code_2.png",
+      "sha256": "2cac685fa40b80467e4e1b46422b464993c24704a9c4386a80d803feab89fac9",
+      "source_width_px": 1768,
+      "source_height_px": 1140,
+      "crop": [
+        0,
+        0,
+        1768,
+        1140
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 341.2749848576621,
+      "pixels_to_points": 0.29936402180496674,
+      "page": 8,
+      "page_position_pt": [
+        33.0,
+        451.6147789218656
+      ]
+    },
+    {
+      "section": "I. Home Page - Display all records at /",
+      "source": "reports/hw04/screenshots/user/Part1_03_LoginSuccess.png",
+      "sha256": "8d0d9fa826ed8914e797d2ca643b3732a638d4e9887aa9b56701a5ce15b900b7",
+      "source_width_px": 2930,
+      "source_height_px": 1748,
+      "crop": [
+        0,
+        0,
+        2930,
+        1748
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 315.7589529977695,
+      "pixels_to_points": 0.18064013329391848,
+      "page": 8,
+      "page_position_pt": [
+        33.0,
+        114.85582592409611
+      ]
+    },
+    {
+      "section": "II. Add a New Record - CreateRecord.jsx at /create; props, primary and secondary fields, and submit button",
+      "source": "reports/hw04/screenshots/user/Part1_06_CreateForm_Code_1.png",
+      "sha256": "a2f9468c766f5f5eb78c821f62d485f245a5ab77f95fe265627267fdc2299382",
+      "source_width_px": 1958,
+      "source_height_px": 1004,
+      "crop": [
+        0,
+        0,
+        1958,
+        1004
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 271.3956552162339,
+      "pixels_to_points": 0.27031439762573095,
+      "page": 9,
+      "page_position_pt": [
+        33.0,
+        487.4941085632938
+      ]
+    },
+    {
+      "section": "II. Add a New Record - CreateRecord.jsx at /create; props, primary and secondary fields, and submit button",
+      "source": "reports/hw04/screenshots/user/Part1_06_CreateForm_Code_2.png",
+      "sha256": "99cea82181ea60fce8f7893717ba359407f768458c555f682714bd095d92aeb3",
+      "source_width_px": 1308,
+      "source_height_px": 1266,
+      "crop": [
+        0,
+        0,
+        1308,
+        1266
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 512.280502781189,
+      "pixels_to_points": 0.40464494690457276,
+      "page": 10,
+      "page_position_pt": [
+        33.0,
+        280.60926099833864
+      ]
+    },
+    {
+      "section": "II. Add a New Record - CreateRecord.jsx at /create; props, primary and secondary fields, and submit button",
+      "source": "reports/hw04/screenshots/user/Part1_06_CreateForm_Code_3.png",
+      "sha256": "fe2542675901ef31194d87778445f3389d1b47d2993e7bb01d8f5e74b88aa526",
+      "source_width_px": 1412,
+      "source_height_px": 1546,
+      "crop": [
+        0,
+        0,
+        1412,
+        1546
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 579.504293903772,
+      "pixels_to_points": 0.37484106979545406,
+      "page": 11,
+      "page_position_pt": [
+        33.0,
+        213.3854698757557
+      ]
+    },
+    {
+      "section": "II. Add a New Record - CreateRecord.jsx at /create; props, primary and secondary fields, and submit button",
+      "source": "reports/hw04/screenshots/user/Part1_06_CreateForm_Code_4.png",
+      "sha256": "14bdf26caaef47e42815ad4572c932d2c51e9132ae1e94929630f09607f2ab9b",
+      "source_width_px": 1710,
+      "source_height_px": 986,
+      "crop": [
+        0,
+        0,
+        1710,
+        986
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 305.18463876226,
+      "pixels_to_points": 0.30951788921121703,
+      "page": 12,
+      "page_position_pt": [
+        33.0,
+        487.7051250172677
+      ]
+    },
+    {
+      "section": "II. Add a New Record - CreateRecord.jsx at /create; props, primary and secondary fields, and submit button",
+      "source": "reports/hw04/screenshots/user/Part1_06_CreateForm_Code_5.png",
+      "sha256": "85d12ef5d30417085ef3455f15577340b7feb0b89d7d0baf8e24331d7bc06ecd",
+      "source_width_px": 1836,
+      "source_height_px": 826,
+      "crop": [
+        0,
+        0,
+        1836,
+        826
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 238.11636045494313,
+      "pixels_to_points": 0.2882764654418198,
+      "page": 13,
+      "page_position_pt": [
+        33.0,
+        554.7734033245846
+      ]
+    },
+    {
+      "section": "II. Add a New Record - CreateRecord.jsx at /create; props, primary and secondary fields, and submit button",
+      "source": "reports/hw04/screenshots/user/Part1_06_CreateForm.png",
+      "sha256": "59d4b4e02ae52b1c0aab55496df2fc375a190e3b38d9d88b4025b6eb8bdbdf12",
+      "source_width_px": 2830,
+      "source_height_px": 1596,
+      "crop": [
+        0,
+        0,
+        2830,
+        1596
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 298.4889902896414,
+      "pixels_to_points": 0.18702317687320888,
+      "page": 13,
+      "page_position_pt": [
+        33.0,
+        235.2844130349432
+      ]
+    },
+    {
+      "section": "II. Add a New Record - Add a record with an auto-incremented ID",
+      "source": "reports/hw04/screenshots/user/Part1_07_CreateSuccess_Code_1.png",
+      "sha256": "ecdc682cdfd01c9e5dae8b8c64a06958e30c23d9c14bfb0427b47674ca575e5a",
+      "source_width_px": 1832,
+      "source_height_px": 568,
+      "crop": [
+        0,
+        0,
+        1832,
+        568
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 164.09854554206927,
+      "pixels_to_points": 0.28890589003885436,
+      "page": 14,
+      "page_position_pt": [
+        33.0,
+        608.7912182374585
+      ]
+    },
+    {
+      "section": "II. Add a New Record - Add a record with an auto-incremented ID",
+      "source": "reports/hw04/screenshots/user/Part1_07_CreateSuccess_Code_2.png",
+      "sha256": "4648d4ca5a0d4568477353e735923fbf69b8a082e157ebcf32200c73189839cc",
+      "source_width_px": 1980,
+      "source_height_px": 490,
+      "crop": [
+        0,
+        0,
+        1980,
+        490
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 130.9823431162014,
+      "pixels_to_points": 0.26731090431877835,
+      "page": 14,
+      "page_position_pt": [
+        33.0,
+        456.8088751212571
+      ]
+    },
+    {
+      "section": "II. Add a New Record - Add a record with an auto-incremented ID",
+      "source": "reports/hw04/screenshots/user/Part1_07_CreateSuccess_Code_3.png",
+      "sha256": "00abe5752b8a80f6685b561ffa3351756ab840ed5d2f37faed18b468168a401e",
+      "source_width_px": 2152,
+      "source_height_px": 380,
+      "crop": [
+        0,
+        0,
+        2152,
+        380
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 93.45944442818254,
+      "pixels_to_points": 0.24594590638995406,
+      "page": 15,
+      "page_position_pt": [
+        33.0,
+        699.4303193513451
+      ]
+    },
+    {
+      "section": "II. Add a New Record - Add a record with an auto-incremented ID",
+      "source": "reports/hw04/screenshots/user/Part1_07_CreateSuccess.png",
+      "sha256": "99daf0da243d0fa1a523400d7cec51c227633777cfe984bed0b5c9f6631bef93",
+      "source_width_px": 2940,
+      "source_height_px": 1764,
+      "crop": [
+        0,
+        0,
+        2940,
+        1764
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 317.5653543307087,
+      "pixels_to_points": 0.18002571107183032,
+      "page": 15,
+      "page_position_pt": [
+        33.0,
+        360.8649650206364
+      ]
+    },
+    {
+      "section": "II. Add a New Record - Redirect to the home page with the updated list",
+      "source": "reports/hw04/screenshots/user/Part1_07_CreateSuccess_Code_4.png",
+      "sha256": "652d443afc737ffa6020d4526b40161fda60d710dcb9738630598a4958654fbb",
+      "source_width_px": 2026,
+      "source_height_px": 736,
+      "crop": [
+        0,
+        0,
+        2026,
+        736
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 192.27385717950114,
+      "pixels_to_points": 0.2612416537764961,
+      "page": 16,
+      "page_position_pt": [
+        33.0,
+        580.6159066000266
+      ]
+    },
+    {
+      "section": "II. Add a New Record - Redirect to the home page with the updated list",
+      "source": "reports/hw04/screenshots/user/Part1_07_CreateSuccess.png",
+      "sha256": "99daf0da243d0fa1a523400d7cec51c227633777cfe984bed0b5c9f6631bef93",
+      "source_width_px": 2940,
+      "source_height_px": 1764,
+      "crop": [
+        0,
+        0,
+        2940,
+        1764
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 317.5653543307087,
+      "pixels_to_points": 0.18002571107183032,
+      "page": 16,
+      "page_position_pt": [
+        33.0,
+        242.0505522693179
+      ]
+    },
+    {
+      "section": "III. Update Record - UpdateRecord.jsx at /update; props, input fields, and submit button",
+      "source": "reports/hw04/screenshots/user/Part1_08_UpdateForm_Code_1.png",
+      "sha256": "4e368109c8584ef378de990b9448bc1766f9c1c35b9f211c789d2dc2a27d9d17",
+      "source_width_px": 1630,
+      "source_height_px": 542,
+      "crop": [
+        0,
+        0,
+        1630,
+        542
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 175.9922515820492,
+      "pixels_to_points": 0.32470895125839333,
+      "page": 17,
+      "page_position_pt": [
+        33.0,
+        582.8975121974785
+      ]
+    },
+    {
+      "section": "III. Update Record - UpdateRecord.jsx at /update; props, input fields, and submit button",
+      "source": "reports/hw04/screenshots/user/Part1_08_UpdateForm_Code_2.png",
+      "sha256": "44844589e875bac6185563c18ff6e91c12ebf00f25f5a52d1f865101f2b8e725",
+      "source_width_px": 1540,
+      "source_height_px": 912,
+      "crop": [
+        0,
+        0,
+        1540,
+        912
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 313.44112894979037,
+      "pixels_to_points": 0.3436854484098579,
+      "page": 17,
+      "page_position_pt": [
+        33.0,
+        248.4563832476881
+      ]
+    },
+    {
+      "section": "III. Update Record - UpdateRecord.jsx at /update; props, input fields, and submit button",
+      "source": "reports/hw04/screenshots/user/Part1_08_UpdateForm_Code_3.png",
+      "sha256": "0ecc22a47756454a787e335ae64ecf1b1be12c2f7639547dc6a7eaf9f6707ba0",
+      "source_width_px": 1886,
+      "source_height_px": 698,
+      "crop": [
+        0,
+        0,
+        1886,
+        698
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 195.88248261120066,
+      "pixels_to_points": 0.2806339292424078,
+      "page": 18,
+      "page_position_pt": [
+        33.0,
+        597.007281168327
+      ]
+    },
+    {
+      "section": "III. Update Record - UpdateRecord.jsx at /update; props, input fields, and submit button",
+      "source": "reports/hw04/screenshots/user/Part1_08_UpdateForm.png",
+      "sha256": "66ab8e40ff5545cd48512542545cf3a2b477c6d73307deed700bde0108ef3b74",
+      "source_width_px": 2920,
+      "source_height_px": 1358,
+      "crop": [
+        0,
+        0,
+        2920,
+        1358
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 246.14940135907673,
+      "pixels_to_points": 0.18125876388739082,
+      "page": 18,
+      "page_position_pt": [
+        33.0,
+        329.85787980925033
+      ]
+    },
+    {
+      "section": "III. Update Record - Update through the backend, persist in MySQL, and return home",
+      "source": "reports/hw04/screenshots/user/Part1_09_UpdateSuccess_Code_1.png",
+      "sha256": "9ddaaa3acfee8d470eba2d224b00c39ae0f645224bdd3d833160ae12ea91debb",
+      "source_width_px": 2090,
+      "source_height_px": 344,
+      "crop": [
+        0,
+        0,
+        2090,
+        344
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 87.11521681799346,
+      "pixels_to_points": 0.25324190935463214,
+      "page": 19,
+      "page_position_pt": [
+        33.0,
+        685.7745469615343
+      ]
+    },
+    {
+      "section": "III. Update Record - Update through the backend, persist in MySQL, and return home",
+      "source": "reports/hw04/screenshots/user/Part1_09_UpdateSuccess.png",
+      "sha256": "b9222dd87af4357fe8a8a36a27ffc71052c2bbe5276ed9cf2d772513e483ec62",
+      "source_width_px": 2908,
+      "source_height_px": 1700,
+      "crop": [
+        0,
+        0,
+        2908,
+        1700
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 309.4114525230426,
+      "pixels_to_points": 0.18200673677826038,
+      "page": 19,
+      "page_position_pt": [
+        33.0,
+        355.36309443849166
+      ]
+    },
+    {
+      "section": "IV. Delete the Record - DeleteRecord.jsx at /delete; props and Delete button",
+      "source": "reports/hw04/screenshots/user/Part1_10_DeleteConfirmation_Code_1.png",
+      "sha256": "e3b87d7734b3339da69df166bd34c82485e779728008b465d7240d397a48a37c",
+      "source_width_px": 1772,
+      "source_height_px": 1020,
+      "crop": [
+        0,
+        0,
+        1772,
+        1020
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 304.66202164909976,
+      "pixels_to_points": 0.29868825651872527,
+      "page": 20,
+      "page_position_pt": [
+        33.0,
+        468.22774213042794
+      ]
+    },
+    {
+      "section": "IV. Delete the Record - DeleteRecord.jsx at /delete; props and Delete button",
+      "source": "reports/hw04/screenshots/user/Part1_10_DeleteConfirmation.png",
+      "sha256": "02e34a8296b51b130b5e1918f91c7ac80a30aebab8b2ba3ad65d9ae11542558a",
+      "source_width_px": 2914,
+      "source_height_px": 1372,
+      "crop": [
+        0,
+        0,
+        2914,
+        1372
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 249.19907695134543,
+      "pixels_to_points": 0.1816319802852372,
+      "page": 20,
+      "page_position_pt": [
+        33.0,
+        198.0286651790825
+      ]
+    },
+    {
+      "section": "IV. Delete the Record - Remove the record through the API and return home",
+      "source": "reports/hw04/screenshots/user/Part1_11_DeleteSuccess_Code_1.png",
+      "sha256": "e5e439b08241b1f5c097b23328d5821b7c7578ca134eb5bbcd11678827f57c74",
+      "source_width_px": 1606,
+      "source_height_px": 410,
+      "crop": [
+        0,
+        0,
+        1606,
+        410
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 135.12016944332768,
+      "pixels_to_points": 0.3295613888861651,
+      "page": 21,
+      "page_position_pt": [
+        33.0,
+        637.7695943362
+      ]
+    },
+    {
+      "section": "IV. Delete the Record - Remove the record through the API and return home",
+      "source": "reports/hw04/screenshots/user/Part1_11_DeleteSuccess.png",
+      "sha256": "b17243e0a01bbd17f99fc106cb67dd6132f87053585fc3e11c1c5dd4a1236e67",
+      "source_width_px": 2936,
+      "source_height_px": 1496,
+      "crop": [
+        0,
+        0,
+        2936,
+        1496
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 269.6853826514193,
+      "pixels_to_points": 0.18027097770816797,
+      "page": 21,
+      "page_position_pt": [
+        33.0,
+        347.08421168478077
+      ]
+    },
+    {
+      "section": "V. Pass props for Create, Update, and Delete",
+      "source": "reports/hw04/screenshots/user/Part1_13_Routing_Code_2.png",
+      "sha256": "66aafe4e87e7e95e73077f6ade91e60c1e041e1e001fbf9a830af854b10157cc",
+      "source_width_px": 1764,
+      "source_height_px": 702,
+      "crop": [
+        0,
+        0,
+        1764,
+        702
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 210.63008195404146,
+      "pixels_to_points": 0.30004285178638385,
+      "page": 21,
+      "page_position_pt": [
+        33.0,
+        87.45412973073931
+      ]
+    },
+    {
+      "section": "V. Pass props for Create, Update, and Delete",
+      "source": "reports/hw04/screenshots/user/Part1_12_Props_Code_1.png",
+      "sha256": "a74ca21eb7fed0cac09cd1fa0e6d022dd67eca1c2e8177b23753a04109b4c629",
+      "source_width_px": 1422,
+      "source_height_px": 818,
+      "crop": [
+        0,
+        0,
+        1422,
+        818
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 304.4637363367554,
+      "pixels_to_points": 0.37220505664640025,
+      "page": 22,
+      "page_position_pt": [
+        33.0,
+        488.4260274427723
+      ]
+    },
+    {
+      "section": "V. Pass props for Create, Update, and Delete",
+      "source": "reports/hw04/screenshots/user/Part1_06_CreateForm.png",
+      "sha256": "59d4b4e02ae52b1c0aab55496df2fc375a190e3b38d9d88b4025b6eb8bdbdf12",
+      "source_width_px": 2830,
+      "source_height_px": 1596,
+      "crop": [
+        0,
+        0,
+        2830,
+        1596
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 298.4889902896414,
+      "pixels_to_points": 0.18702317687320888,
+      "page": 22,
+      "page_position_pt": [
+        33.0,
+        168.93703715313092
+      ]
+    },
+    {
+      "section": "V. Pass props for Create, Update, and Delete",
+      "source": "reports/hw04/screenshots/user/Part1_08_UpdateForm.png",
+      "sha256": "66ab8e40ff5545cd48512542545cf3a2b477c6d73307deed700bde0108ef3b74",
+      "source_width_px": 2920,
+      "source_height_px": 1358,
+      "crop": [
+        0,
+        0,
+        2920,
+        1358
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 246.14940135907673,
+      "pixels_to_points": 0.18125876388739082,
+      "page": 23,
+      "page_position_pt": [
+        33.0,
+        546.740362420451
+      ]
+    },
+    {
+      "section": "V. Pass props for Create, Update, and Delete",
+      "source": "reports/hw04/screenshots/user/Part1_10_DeleteConfirmation.png",
+      "sha256": "02e34a8296b51b130b5e1918f91c7ac80a30aebab8b2ba3ad65d9ae11542558a",
+      "source_width_px": 2914,
+      "source_height_px": 1372,
+      "crop": [
+        0,
+        0,
+        2914,
+        1372
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 249.19907695134543,
+      "pixels_to_points": 0.1816319802852372,
+      "page": 23,
+      "page_position_pt": [
+        33.0,
+        276.54128546910556
+      ]
+    },
+    {
+      "section": "V. Use useState and useEffect where necessary",
+      "source": "reports/hw04/screenshots/user/Part1_05_Home_Code_1.png",
+      "sha256": "e04d1d3cf0fdb6d8fec589e23fe4e9f465688451e9d9801f9a1c16eeb8098fc2",
+      "source_width_px": 1586,
+      "source_height_px": 936,
+      "crop": [
+        0,
+        0,
+        1586,
+        936
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 312.3593649154512,
+      "pixels_to_points": 0.33371727020881536,
+      "page": 24,
+      "page_position_pt": [
+        33.0,
+        460.5303988640765
+      ]
+    },
+    {
+      "section": "V. Use useState and useEffect where necessary",
+      "source": "reports/hw04/screenshots/user/Part1_03_LoginSuccess.png",
+      "sha256": "8d0d9fa826ed8914e797d2ca643b3732a638d4e9887aa9b56701a5ce15b900b7",
+      "source_width_px": 2930,
+      "source_height_px": 1748,
+      "crop": [
+        0,
+        0,
+        2930,
+        1748
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 315.7589529977695,
+      "pixels_to_points": 0.18064013329391848,
+      "page": 24,
+      "page_position_pt": [
+        33.0,
+        123.77144586630703
+      ]
+    },
+    {
+      "section": "V. Use React Router for routing",
+      "source": "reports/hw04/screenshots/user/Part1_13_Routing_Code_1.png",
+      "sha256": "bf819b70d2fa7b3e568abbf14032380e3ab4ff1d83f99fdbc3baf8f6e5a3f143",
+      "source_width_px": 1506,
+      "source_height_px": 784,
+      "crop": [
+        0,
+        0,
+        1506,
+        784
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 275.53257834802525,
+      "pixels_to_points": 0.3514446152398281,
+      "page": 25,
+      "page_position_pt": [
+        33.0,
+        497.35718543150244
+      ]
+    },
+    {
+      "section": "V. Use React Router for routing",
+      "source": "reports/hw04/screenshots/user/Part1_13_Routing_Code_2.png",
+      "sha256": "66aafe4e87e7e95e73077f6ade91e60c1e041e1e001fbf9a830af854b10157cc",
+      "source_width_px": 1764,
+      "source_height_px": 702,
+      "crop": [
+        0,
+        0,
+        1764,
+        702
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 210.63008195404146,
+      "pixels_to_points": 0.30004285178638385,
+      "page": 25,
+      "page_position_pt": [
+        33.0,
+        265.727103477461
+      ]
+    },
+    {
+      "section": "V. Use React Router for routing",
+      "source": "reports/hw04/screenshots/user/Part1_13_Routing_Code_3.png",
+      "sha256": "7cdfcf361048ecf2771f90d8c3f9b37d2dc7877e57c5261b5d491b82a19a8757",
+      "source_width_px": 1442,
+      "source_height_px": 636,
+      "crop": [
+        0,
+        0,
+        1442,
+        636
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 233.43916476459862,
+      "pixels_to_points": 0.367042711894023,
+      "page": 26,
+      "page_position_pt": [
+        33.0,
+        559.4505990149291
+      ]
+    },
+    {
+      "section": "V. Use React Router for routing",
+      "source": "reports/hw04/screenshots/user/Part1_03_LoginSuccess.png",
+      "sha256": "8d0d9fa826ed8914e797d2ca643b3732a638d4e9887aa9b56701a5ce15b900b7",
+      "source_width_px": 2930,
+      "source_height_px": 1748,
+      "crop": [
+        0,
+        0,
+        2930,
+        1748
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 315.7589529977695,
+      "pixels_to_points": 0.18064013329391848,
+      "page": 26,
+      "page_position_pt": [
+        33.0,
+        222.69164601715966
+      ]
+    },
+    {
+      "section": "V. Use React Router for routing",
+      "source": "reports/hw04/screenshots/user/Part1_06_CreateForm.png",
+      "sha256": "59d4b4e02ae52b1c0aab55496df2fc375a190e3b38d9d88b4025b6eb8bdbdf12",
+      "source_width_px": 2830,
+      "source_height_px": 1596,
+      "crop": [
+        0,
+        0,
+        2830,
+        1596
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 298.4889902896414,
+      "pixels_to_points": 0.18702317687320888,
+      "page": 27,
+      "page_position_pt": [
+        33.0,
+        494.4007734898863
+      ]
+    },
+    {
+      "section": "V. Use React Router for routing",
+      "source": "reports/hw04/screenshots/user/Part1_08_UpdateForm.png",
+      "sha256": "66ab8e40ff5545cd48512542545cf3a2b477c6d73307deed700bde0108ef3b74",
+      "source_width_px": 2920,
+      "source_height_px": 1358,
+      "crop": [
+        0,
+        0,
+        2920,
+        1358
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 246.14940135907673,
+      "pixels_to_points": 0.18125876388739082,
+      "page": 27,
+      "page_position_pt": [
+        33.0,
+        227.25137213080959
+      ]
+    },
+    {
+      "section": "V. Use React Router for routing",
+      "source": "reports/hw04/screenshots/user/Part1_10_DeleteConfirmation.png",
+      "sha256": "02e34a8296b51b130b5e1918f91c7ac80a30aebab8b2ba3ad65d9ae11542558a",
+      "source_width_px": 2914,
+      "source_height_px": 1372,
+      "crop": [
+        0,
+        0,
+        2914,
+        1372
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 249.19907695134543,
+      "pixels_to_points": 0.1816319802852372,
+      "page": 28,
+      "page_position_pt": [
+        33.0,
+        543.6906868281823
+      ]
+    },
+    {
+      "section": "Database - Create <PREFIX>_rel; use db_session_basede26",
+      "source": "reports/hw04/screenshots/user/Part2_08_Database_Code_1.png",
+      "sha256": "8fde5c3f0de8b51cdfddedbdbe2eaddaabafc7dda3d2f824e7e173d21bbd05e7",
+      "source_width_px": 1784,
+      "source_height_px": 656,
+      "crop": [
+        0,
+        0,
+        1784,
+        656
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 194.62151760177963,
+      "pixels_to_points": 0.29667914268563966,
+      "page": 29,
+      "page_position_pt": [
+        33.0,
+        550.2682461777481
+      ]
+    },
+    {
+      "section": "Database - Create <PREFIX>_rel; use db_session_basede26",
+      "source": "reports/hw04/screenshots/user/Part2_08_Database_Code_2.png",
+      "sha256": "67ef09e80c8f38971d92bb46d661cc2ef065aa9f60c6f5bfb4a8c51ece536705",
+      "source_width_px": 1652,
+      "source_height_px": 1036,
+      "crop": [
+        0,
+        0,
+        1652,
+        1036
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 331.918590684639,
+      "pixels_to_points": 0.32038474004308787,
+      "page": 29,
+      "page_position_pt": [
+        33.0,
+        197.34965549310908
+      ]
+    },
+    {
+      "section": "Database - Create <PREFIX>_rel; use db_session_basede26",
+      "source": "reports/hw04/screenshots/user/Part2_08_Database.png",
+      "sha256": "221282046b32e76497a295d44c91f956434685579dbff7d72594c7551ba43834",
+      "source_width_px": 2218,
+      "source_height_px": 1680,
+      "crop": [
+        0,
+        0,
+        2218,
+        1680
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 400.89404514246365,
+      "pixels_to_points": 0.23862740782289502,
+      "page": 30,
+      "page_position_pt": [
+        33.0,
+        391.99571863706404
+      ]
+    },
+    {
+      "section": "Database - Primary domain table with auto-increment ID, primary field, and secondary field",
+      "source": "reports/hw04/screenshots/user/Part1_07_CreateSuccess_Code_2.png",
+      "sha256": "4648d4ca5a0d4568477353e735923fbf69b8a082e157ebcf32200c73189839cc",
+      "source_width_px": 1980,
+      "source_height_px": 490,
+      "crop": [
+        0,
+        0,
+        1980,
+        490
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 130.9823431162014,
+      "pixels_to_points": 0.26731090431877835,
+      "page": 31,
+      "page_position_pt": [
+        33.0,
+        627.9074206633263
+      ]
+    },
+    {
+      "section": "Database - Primary domain table with auto-increment ID, primary field, and secondary field",
+      "source": "reports/hw04/screenshots/user/Part2_09_TableDefinitions_1.png",
+      "sha256": "3d8813634b33d4c42e08f65f27749ef12f0d2a4cc56e0977d44ccf7dcfdbba7e",
+      "source_width_px": 2320,
+      "source_height_px": 1270,
+      "crop": [
+        0,
+        0,
+        2320,
+        1270
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 289.73275862068965,
+      "pixels_to_points": 0.22813603040999186,
+      "page": 31,
+      "page_position_pt": [
+        33.0,
+        317.17466204263667
+      ]
+    },
+    {
+      "section": "Database - users: id, name, unique email, password_hash",
+      "source": "reports/hw04/screenshots/user/Part2_09_TableDefinitions_Code_1.png",
+      "sha256": "036f860964786f2a08057192ba165d04b07916b3a3dcdd0cab1f45302fc284f5",
+      "source_width_px": 1854,
+      "source_height_px": 388,
+      "crop": [
+        0,
+        0,
+        1854,
+        388
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 110.76533394490737,
+      "pixels_to_points": 0.2854776648064623,
+      "page": 32,
+      "page_position_pt": [
+        33.0,
+        662.1244298346203
+      ]
+    },
+    {
+      "section": "Database - users: id, name, unique email, password_hash",
+      "source": "reports/hw04/screenshots/user/Part2_09_TableDefinitions_1.png",
+      "sha256": "3d8813634b33d4c42e08f65f27749ef12f0d2a4cc56e0977d44ccf7dcfdbba7e",
+      "source_width_px": 2320,
+      "source_height_px": 1270,
+      "crop": [
+        0,
+        0,
+        2320,
+        1270
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 289.73275862068965,
+      "pixels_to_points": 0.22813603040999186,
+      "page": 32,
+      "page_position_pt": [
+        33.0,
+        351.39167121393064
+      ]
+    },
+    {
+      "section": "Database - sessions: session token, user_id, created_at, expires_at",
+      "source": "reports/hw04/screenshots/user/Part2_09_TableDefinitions_Code_2.png",
+      "sha256": "b3b91e6585ee9d8103c5746d5b7eda6ab51dea536cfd5615ac537c31d25dac55",
+      "source_width_px": 1642,
+      "source_height_px": 436,
+      "crop": [
+        0,
+        0,
+        1642,
+        436
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 140.53846375171435,
+      "pixels_to_points": 0.3223359260360421,
+      "page": 33,
+      "page_position_pt": [
+        33.0,
+        632.3513000278133
+      ]
+    },
+    {
+      "section": "Database - sessions: session token, user_id, created_at, expires_at",
+      "source": "reports/hw04/screenshots/user/Part2_09_TableDefinitions_2.png",
+      "sha256": "7984b7e02aeaf95b085f4e99670bf42908462256ec66b666907b9abfe2fdd777",
+      "source_width_px": 1640,
+      "source_height_px": 810,
+      "crop": [
+        0,
+        0,
+        1640,
+        810
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 261.4105050893029,
+      "pixels_to_points": 0.322729018628769,
+      "page": 33,
+      "page_position_pt": [
+        33.0,
+        349.9407949385104
+      ]
+    },
+    {
+      "section": "Store the session server-side; use an opaque HTTP-only cookie",
+      "source": "reports/hw04/screenshots/user/Part1_04_SessionCookie_Code_1.png",
+      "sha256": "e00e59f018582e6f9d73c7934027b227dab0e99fae4b086e1a35520286d3b128",
+      "source_width_px": 1482,
+      "source_height_px": 416,
+      "crop": [
+        0,
+        0,
+        1482,
+        416
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 148.56858682138417,
+      "pixels_to_points": 0.35713602601294275,
+      "page": 33,
+      "page_position_pt": [
+        33.0,
+        152.37220811712623
+      ]
+    },
+    {
+      "section": "Store the session server-side; use an opaque HTTP-only cookie",
+      "source": "reports/hw04/screenshots/user/Part1_04_SessionCookie_Code_2.png",
+      "sha256": "8f4485c0fceb8104035c37327e32f71d6331d90cb988dd84aef2d5f4c0a85498",
+      "source_width_px": 1750,
+      "source_height_px": 546,
+      "crop": [
+        0,
+        0,
+        1750,
+        546
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 165.1339842519685,
+      "pixels_to_points": 0.3024431946006749,
+      "page": 34,
+      "page_position_pt": [
+        33.0,
+        627.7557795275592
+      ]
+    },
+    {
+      "section": "Store the session server-side; use an opaque HTTP-only cookie",
+      "source": "reports/hw04/screenshots/user/Part2_10_ServerSession.png",
+      "sha256": "93d28281b9fa8e77d868253926613b658892b59b10b8441b88267bf67cffc9bd",
+      "source_width_px": 2306,
+      "source_height_px": 896,
+      "crop": [
+        0,
+        0,
+        2306,
+        896
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 205.65087993662547,
+      "pixels_to_points": 0.22952107135784092,
+      "page": 34,
+      "page_position_pt": [
+        33.0,
+        401.1048995909337
+      ]
+    },
+    {
+      "section": "Store the session server-side; use an opaque HTTP-only cookie",
+      "source": "reports/hw04/screenshots/user/Part1_04_SessionCookie.png",
+      "sha256": "b8077df447a2012242dd8eb4afcf9d452dac09d9806576fe152910fb90936352",
+      "source_width_px": 2912,
+      "source_height_px": 1668,
+      "crop": [
+        0,
+        0,
+        2912,
+        1668
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 303.1702215107727,
+      "pixels_to_points": 0.18175672752444408,
+      "page": 34,
+      "page_position_pt": [
+        33.0,
+        76.934678080161
+      ]
+    },
+    {
+      "section": "Login and session validation",
+      "source": "reports/hw04/screenshots/user/Part2_01_LoginSuccess_Code_1.png",
+      "sha256": "c49cbf1f0e8e5e1ee07787a5e9745d17f69efd3495f6922e676436e62726dc60",
+      "source_width_px": 1788,
+      "source_height_px": 812,
+      "crop": [
+        0,
+        0,
+        1788,
+        812
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 240.36452993711356,
+      "pixels_to_points": 0.2960154309570364,
+      "page": 35,
+      "page_position_pt": [
+        33.0,
+        532.5252338424141
+      ]
+    },
+    {
+      "section": "Login and session validation",
+      "source": "reports/hw04/screenshots/user/Part2_10_ServerSession_Code_1.png",
+      "sha256": "bf8accea39f73c6ab41153a2d5f708ff349991cf12e44b43627eac95ecaff3a1",
+      "source_width_px": 1580,
+      "source_height_px": 486,
+      "crop": [
+        0,
+        0,
+        1580,
+        486
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 162.80249177713546,
+      "pixels_to_points": 0.3349845509817602,
+      "page": 35,
+      "page_position_pt": [
+        33.0,
+        348.7227420652786
+      ]
+    },
+    {
+      "section": "Login and session validation",
+      "source": "reports/hw04/screenshots/user/Part2_01_LoginSuccess.png",
+      "sha256": "329c195b6c3a6f582c6600192cc7664239a9a0f11845dced62d9bca717990916",
+      "source_width_px": 2538,
+      "source_height_px": 926,
+      "crop": [
+        0,
+        0,
+        2538,
+        926
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 193.1084305951118,
+      "pixels_to_points": 0.20854042180897603,
+      "page": 35,
+      "page_position_pt": [
+        33.0,
+        134.61431147016683
+      ]
+    },
+    {
+      "section": "Add a new record (POST) - Postman response",
+      "source": "reports/hw04/screenshots/user/Part1_07_CreateSuccess_Code_3.png",
+      "sha256": "00abe5752b8a80f6685b561ffa3351756ab840ed5d2f37faed18b468168a401e",
+      "source_width_px": 2152,
+      "source_height_px": 380,
+      "crop": [
+        0,
+        0,
+        2152,
+        380
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 93.45944442818254,
+      "pixels_to_points": 0.24594590638995406,
+      "page": 36,
+      "page_position_pt": [
+        33.0,
+        679.4303193513451
+      ]
+    },
+    {
+      "section": "Add a new record (POST) - Postman response",
+      "source": "reports/hw04/screenshots/user/Part2_02_CreateRecord_Complete.png",
+      "sha256": "601be1df9ebc17e422d253d30661468dc8b132056a2f6512e06c6d2ded2cb9b8",
+      "source_width_px": 2932,
+      "source_height_px": 944,
+      "crop": [
+        0,
+        0,
+        2932,
+        944
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 170.4079663984703,
+      "pixels_to_points": 0.1805169135577016,
+      "page": 36,
+      "page_position_pt": [
+        33.0,
+        488.0223529528748
+      ]
+    },
+    {
+      "section": "View all records (GET) - Postman response",
+      "source": "reports/hw04/screenshots/user/Part2_03_ListRecords_Code_1.png",
+      "sha256": "8112924be291670d952e17f04cfe7440a0fe24b647449a165f5cb9a89fd7e32f",
+      "source_width_px": 1608,
+      "source_height_px": 830,
+      "crop": [
+        0,
+        0,
+        1608,
+        830
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 273.19573392878135,
+      "pixels_to_points": 0.3291514866611823,
+      "page": 37,
+      "page_position_pt": [
+        33.0,
+        499.69402985074635
+      ]
+    },
+    {
+      "section": "View all records (GET) - Postman response",
+      "source": "reports/hw04/screenshots/user/Part2_03_ListRecords_Complete.png",
+      "sha256": "d948e2056d449537975fe70d5a1ba33e4288cd177771abee260223bc5d005a3f",
+      "source_width_px": 2930,
+      "source_height_px": 1420,
+      "crop": [
+        0,
+        0,
+        2930,
+        1420
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 256.50898927736426,
+      "pixels_to_points": 0.18064013329391848,
+      "page": 37,
+      "page_position_pt": [
+        33.0,
+        222.18504057338208
+      ]
+    },
+    {
+      "section": "View a record by ID (GET) - Postman response",
+      "source": "reports/hw04/screenshots/user/Part2_04_GetRecordByID_Code_1.png",
+      "sha256": "465f86a991a863abb82d5cc18e710b2bf293924de41d2dc01aa46ef83fa547c0",
+      "source_width_px": 1500,
+      "source_height_px": 198,
+      "crop": [
+        0,
+        0,
+        1500,
+        198
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 69.8643779527559,
+      "pixels_to_points": 0.3528503937007874,
+      "page": 38,
+      "page_position_pt": [
+        33.0,
+        703.0253858267718
+      ]
+    },
+    {
+      "section": "View a record by ID (GET) - Postman response",
+      "source": "reports/hw04/screenshots/user/Part2_04_GetRecordByID.png",
+      "sha256": "e9cae8e552a6e26bbde120d8455c608c40c6807c08462c4b6435913491e39760",
+      "source_width_px": 2534,
+      "source_height_px": 1184,
+      "crop": [
+        0,
+        0,
+        2534,
+        1184
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 247.3016176845298,
+      "pixels_to_points": 0.20886960953085287,
+      "page": 38,
+      "page_position_pt": [
+        33.0,
+        434.72376814224197
+      ]
+    },
+    {
+      "section": "Update record details (PUT) - Postman response",
+      "source": "reports/hw04/screenshots/user/Part1_09_UpdateSuccess_Code_1.png",
+      "sha256": "9ddaaa3acfee8d470eba2d224b00c39ae0f645224bdd3d833160ae12ea91debb",
+      "source_width_px": 2090,
+      "source_height_px": 344,
+      "crop": [
+        0,
+        0,
+        2090,
+        344
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 87.11521681799346,
+      "pixels_to_points": 0.25324190935463214,
+      "page": 38,
+      "page_position_pt": [
+        33.0,
+        298.60855132424854
+      ]
+    },
+    {
+      "section": "Update record details (PUT) - Postman response",
+      "source": "reports/hw04/screenshots/user/Part2_05_UpdateRecord.png",
+      "sha256": "32982649974e5e33b5b3d2cb5c423cafa5d88780e43e232ffc9b3f11d21ad9d3",
+      "source_width_px": 2522,
+      "source_height_px": 1086,
+      "crop": [
+        0,
+        0,
+        2522,
+        1086
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 227.9116936314761,
+      "pixels_to_points": 0.20986343796636842,
+      "page": 38,
+      "page_position_pt": [
+        33.0,
+        49.696857692772426
+      ]
+    },
+    {
+      "section": "Delete a record (DELETE) - Postman response",
+      "source": "reports/hw04/screenshots/user/Part1_11_DeleteSuccess_Code_1.png",
+      "sha256": "e5e439b08241b1f5c097b23328d5821b7c7578ca134eb5bbcd11678827f57c74",
+      "source_width_px": 1606,
+      "source_height_px": 410,
+      "crop": [
+        0,
+        0,
+        1606,
+        410
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 135.12016944332768,
+      "pixels_to_points": 0.3295613888861651,
+      "page": 39,
+      "page_position_pt": [
+        33.0,
+        637.7695943362
+      ]
+    },
+    {
+      "section": "Delete a record (DELETE) - Postman response",
+      "source": "reports/hw04/screenshots/user/Part2_06_DeleteRecord.png",
+      "sha256": "e36f1d42014e793e61e6ac72ffb6b7865ffd5e4f9b82cfbb5d45b1bada3f5d63",
+      "source_width_px": 2534,
+      "source_height_px": 1232,
+      "crop": [
+        0,
+        0,
+        2534,
+        1232
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 257.32735894201073,
+      "pixels_to_points": 0.20886960953085287,
+      "page": 39,
+      "page_position_pt": [
+        33.0,
+        359.4422353941893
+      ]
+    },
+    {
+      "section": "Delete a record (DELETE) - Postman response",
+      "source": "reports/hw04/screenshots/user/Part2_07_DeleteVerification.png",
+      "sha256": "c02752b58c3dd782458b1cacfcd1e3be0d3827ccce961db1ffa0c5171bb7e391",
+      "source_width_px": 2534,
+      "source_height_px": 1164,
+      "crop": [
+        0,
+        0,
+        2534,
+        1164
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 243.12422549391275,
+      "pixels_to_points": 0.20886960953085287,
+      "page": 39,
+      "page_position_pt": [
+        33.0,
+        95.31800990027656
+      ]
+    },
+    {
+      "section": "Submit a screenshot of the project folder structure",
+      "source": "reports/hw04/screenshots/user/Part2_11_ProjectStructure_1.png",
+      "sha256": "79cbb5d5b9da3b571c93e5cc25856fe76e231c8901efa3d98caa86e9011b4e92",
+      "source_width_px": 838,
+      "source_height_px": 976,
+      "crop": [
+        0,
+        0,
+        838,
+        976
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 616.4355326705881,
+      "pixels_to_points": 0.6315937834739632,
+      "page": 40,
+      "page_position_pt": [
+        33.0,
+        156.45423110893955
+      ]
+    },
+    {
+      "section": "Submit a screenshot of the project folder structure",
+      "source": "reports/hw04/screenshots/user/Part2_11_ProjectStructure_2.png..png",
+      "sha256": "e9d20791ca9000a67082a70efafae6bffd97bc8dc8e72ed3bb97a0fd618b3846",
+      "source_width_px": 726,
+      "source_height_px": 1438,
+      "crop": [
+        0,
+        0,
+        726,
+        1438
+      ],
+      "full_original": true,
+      "width_pt": 328.164116828929,
+      "height_pt": 650.0,
+      "pixels_to_points": 0.4520166898470097,
+      "page": 41,
+      "page_position_pt": [
+        33.0,
+        142.8897637795277
+      ]
+    },
+    {
+      "section": "1. Seed 5,000 primary rows and 200 related rows using SEED; generator and schema",
+      "source": "reports/hw04/screenshots/user/Part3_07_SeedResults_Code_1.png",
+      "sha256": "98eafb0c819e3d8470ea05405c519332d0eb852ea287a420632696f664cdff47",
+      "source_width_px": 2076,
+      "source_height_px": 1106,
+      "crop": [
+        0,
+        0,
+        2076,
+        1106
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 281.9743753129125,
+      "pixels_to_points": 0.2549497064312048,
+      "page": 42,
+      "page_position_pt": [
+        33.0,
+        462.9153884666152
+      ]
+    },
+    {
+      "section": "1. Seed 5,000 primary rows and 200 related rows using SEED; generator and schema",
+      "source": "reports/hw04/screenshots/user/Part3_07_SeedResults_Code_2.png",
+      "sha256": "ec9370c7d02e74536b9ac22a8e082274e15b1329618ce0b02dc3a713ced72da4",
+      "source_width_px": 1850,
+      "source_height_px": 414,
+      "crop": [
+        0,
+        0,
+        1850,
+        414
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 118.44329431793999,
+      "pixels_to_points": 0.28609491381144925,
+      "page": 42,
+      "page_position_pt": [
+        33.0,
+        323.4720941486752
+      ]
+    },
+    {
+      "section": "1. Seed 5,000 primary rows and 200 related rows using SEED; generator and schema",
+      "source": "reports/hw04/screenshots/user/Part3_07_SeedResults_Code_3.png",
+      "sha256": "457e747f02a800910ab3617467d90b01422594492713f6457616f9c2d01a723e",
+      "source_width_px": 1952,
+      "source_height_px": 984,
+      "crop": [
+        0,
+        0,
+        1952,
+        984
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 266.8069575319479,
+      "pixels_to_points": 0.2711452820446625,
+      "page": 43,
+      "page_position_pt": [
+        33.0,
+        526.0828062475798
+      ]
+    },
+    {
+      "section": "1. Seed 5,000 primary rows and 200 related rows using SEED; generator and schema",
+      "source": "reports/hw04/screenshots/user/Part3_07_SeedResults.png",
+      "sha256": "3af7625027dd9b56e069025f498e4a0e8a0e9f57206bcfdad723fc1535ce338b",
+      "source_width_px": 2216,
+      "source_height_px": 1172,
+      "crop": [
+        0,
+        0,
+        2216,
+        1172
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 279.9237329088377,
+      "pixels_to_points": 0.23884277551948607,
+      "page": 43,
+      "page_position_pt": [
+        33.0,
+        225.15907333874213
+      ]
+    },
+    {
+      "section": "2. Associate the related rows and include the related data in the list response",
+      "source": "reports/hw04/screenshots/user/Part3_01_Naive_10_Code_1.png",
+      "sha256": "28bc894bf034aacba3ac552517f6f04f1cfe8fb212cc0b31a3a62243f7019a36",
+      "source_width_px": 1420,
+      "source_height_px": 530,
+      "crop": [
+        0,
+        0,
+        1420,
+        530
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 197.54652323389155,
+      "pixels_to_points": 0.3727292891205501,
+      "page": 44,
+      "page_position_pt": [
+        33.0,
+        575.3432405456361
+      ]
+    },
+    {
+      "section": "2. Associate the related rows and include the related data in the list response",
+      "source": "reports/hw04/screenshots/user/Part3_01_Naive_10.png",
+      "sha256": "55f4d0a88ae25aeafc0ea678719c3734091a888e21ecc2e582640f5c7cace3d1",
+      "source_width_px": 2514,
+      "source_height_px": 1534,
+      "crop": [
+        0,
+        0,
+        2514,
+        1534
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 322.9549546163532,
+      "pixels_to_points": 0.21053126115798773,
+      "page": 44,
+      "page_position_pt": [
+        33.0,
+        231.38828592928297
+      ]
+    },
+    {
+      "section": "3. Build a list endpoint with one extra query per record",
+      "source": "reports/hw04/screenshots/user/Part3_01_Naive_10_Code_2.png",
+      "sha256": "12a222344c384abb94e3be07aa84e91e9975c5174f82a95de3bdbe5a78f41581",
+      "source_width_px": 1776,
+      "source_height_px": 540,
+      "crop": [
+        0,
+        0,
+        1776,
+        540
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 160.9283890189402,
+      "pixels_to_points": 0.29801553522025964,
+      "page": 45,
+      "page_position_pt": [
+        33.0,
+        611.9613747605874
+      ]
+    },
+    {
+      "section": "3. Build a list endpoint with one extra query per record",
+      "source": "reports/hw04/screenshots/user/Part3_01_Naive_10.png",
+      "sha256": "55f4d0a88ae25aeafc0ea678719c3734091a888e21ecc2e582640f5c7cace3d1",
+      "source_width_px": 2514,
+      "source_height_px": 1534,
+      "crop": [
+        0,
+        0,
+        2514,
+        1534
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 322.9549546163532,
+      "pixels_to_points": 0.21053126115798773,
+      "page": 45,
+      "page_position_pt": [
+        33.0,
+        268.00642014423426
+      ]
+    },
+    {
+      "section": "4. Measure SQL queries and p50/p95/p99 for 30 requests at page sizes 10, 50, and 200",
+      "source": "reports/hw04/screenshots/user/Part3_08_Measurements_Code_1.png",
+      "sha256": "7682b12aa1357d8d9cfe82639c0316726e9b15f2845694b9ab9f5fa6040b3917",
+      "source_width_px": 1796,
+      "source_height_px": 944,
+      "crop": [
+        0,
+        0,
+        1796,
+        944
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 278.19385160373884,
+      "pixels_to_points": 0.2946968766988759,
+      "page": 46,
+      "page_position_pt": [
+        33.0,
+        480.69591217578886
+      ]
+    },
+    {
+      "section": "4. Measure SQL queries and p50/p95/p99 for 30 requests at page sizes 10, 50, and 200",
+      "source": "reports/hw04/screenshots/user/Part3_08_Measurements_Code_2.png",
+      "sha256": "ac5a6b3605345bd298f8197ae065fb2ef9dff91aaadc54c57e76b925ed3772d9",
+      "source_width_px": 1568,
+      "source_height_px": 1002,
+      "crop": [
+        0,
+        0,
+        1568,
+        1002
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 338.2233046762012,
+      "pixels_to_points": 0.33754820825968185,
+      "page": 46,
+      "page_position_pt": [
+        33.0,
+        121.47260749958764
+      ]
+    },
+    {
+      "section": "4. Measure SQL queries and p50/p95/p99 for 30 requests at page sizes 10, 50, and 200",
+      "source": "reports/hw04/screenshots/user/Part3_08_Measurements_Code_3.png",
+      "sha256": "b6a44ad48520f164f8d4fa65d9e36ae49ea160b359b357a96f03394b3fbc759d",
+      "source_width_px": 1928,
+      "source_height_px": 980,
+      "crop": [
+        0,
+        0,
+        1928,
+        980
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 269.0301238278825,
+      "pixels_to_points": 0.2745205345182475,
+      "page": 47,
+      "page_position_pt": [
+        33.0,
+        523.8596399516452
+      ]
+    },
+    {
+      "section": "4. Measure SQL queries and p50/p95/p99 for 30 requests at page sizes 10, 50, and 200",
+      "source": "reports/hw04/screenshots/user/Part3_08_Measurements_Code_4.png",
+      "sha256": "7fab7bca97687a47ce7f8e293bd9043f399e5aeb0f4e0b554674e8e378482710",
+      "source_width_px": 2074,
+      "source_height_px": 1178,
+      "crop": [
+        0,
+        0,
+        2074,
+        1178
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 300.62036917516457,
+      "pixels_to_points": 0.255195559571447,
+      "page": 47,
+      "page_position_pt": [
+        33.0,
+        202.23927077648068
+      ]
+    },
+    {
+      "section": "4. Measure SQL queries and p50/p95/p99 for 30 requests at page sizes 10, 50, and 200",
+      "source": "reports/hw04/screenshots/user/Part3_08_Measurements_Code_5.png",
+      "sha256": "9debdd0a4daa9243d47880a9aa522b1bd315d05ab04900580b2efe03f7f7c2d4",
+      "source_width_px": 1534,
+      "source_height_px": 678,
+      "crop": [
+        0,
+        0,
+        1534,
+        678
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 233.93015019146077,
+      "pixels_to_points": 0.3450297200464023,
+      "page": 48,
+      "page_position_pt": [
+        33.0,
+        558.959613588067
+      ]
+    },
+    {
+      "section": "4. Measure SQL queries and p50/p95/p99 for 30 requests at page sizes 10, 50, and 200",
+      "source": "reports/hw04/screenshots/user/Part3_08_Measurements_Code_6.png",
+      "sha256": "40b13f0c8a2c5c96c034db0309131bb9591f420f4ceb300bb849fce6cfa1f408",
+      "source_width_px": 1876,
+      "source_height_px": 1068,
+      "crop": [
+        0,
+        0,
+        1876,
+        1068
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 301.31467521783657,
+      "pixels_to_points": 0.2821298457095848,
+      "page": 48,
+      "page_position_pt": [
+        33.0,
+        236.64493837023042
+      ]
+    },
+    {
+      "section": "4. Measure SQL queries and p50/p95/p99 for 30 requests at page sizes 10, 50, and 200",
+      "source": "reports/hw04/screenshots/user/Part3_08_Measurements.png",
+      "sha256": "40294fab73ec353f93d4d139cc69632e552852654f6c98a86f1dceb4fbdf5e1e",
+      "source_width_px": 2130,
+      "source_height_px": 1570,
+      "crop": [
+        0,
+        0,
+        2130,
+        1570
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 390.12332261284246,
+      "pixels_to_points": 0.2484861927470334,
+      "page": 49,
+      "page_position_pt": [
+        33.0,
+        402.76644116668524
+      ]
+    },
+    {
+      "section": "5. Fix N+1 using a join or eager loading and repeat the measurements",
+      "source": "reports/hw04/screenshots/user/Part3_02_Fixed_10_Code_1.png",
+      "sha256": "271dc46c1ea05b551f788970be4986d1397f7cc6e2cc478994812ebaaad94f64",
+      "source_width_px": 1724,
+      "source_height_px": 476,
+      "crop": [
+        0,
+        0,
+        1724,
+        476
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 146.13409576703145,
+      "pixels_to_points": 0.3070044028719148,
+      "page": 49,
+      "page_position_pt": [
+        33.0,
+        187.6323453996538
+      ]
+    },
+    {
+      "section": "5. Fix N+1 using a join or eager loading and repeat the measurements",
+      "source": "reports/hw04/screenshots/user/Part3_02_Fixed_10.png",
+      "sha256": "40f3dca61469d6ccbfd68b74c82293e5c759c5cd1fbf0b102da00b7d3320b587",
+      "source_width_px": 2536,
+      "source_height_px": 1532,
+      "crop": [
+        0,
+        0,
+        2536,
+        1532
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 319.7358851436946,
+      "pixels_to_points": 0.2087048858640304,
+      "page": 50,
+      "page_position_pt": [
+        33.0,
+        473.1538786358331
+      ]
+    },
+    {
+      "section": "5. Fix N+1 using a join or eager loading and repeat the measurements",
+      "source": "reports/hw04/screenshots/user/Part3_08_Measurements.png",
+      "sha256": "40294fab73ec353f93d4d139cc69632e552852654f6c98a86f1dceb4fbdf5e1e",
+      "source_width_px": 2130,
+      "source_height_px": 1570,
+      "crop": [
+        0,
+        0,
+        2130,
+        1570
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 390.12332261284246,
+      "pixels_to_points": 0.2484861927470334,
+      "page": 50,
+      "page_position_pt": [
+        33.0,
+        62.03055602299065
+      ]
+    },
+    {
+      "section": "6. Save the raw data for all 180 requests",
+      "source": "reports/hw04/screenshots/user/Part3_09_RawData_Code_1.png",
+      "sha256": "ce65f2cfbc7a7d8d5434beb9399860129b45ec547275c0d4e1ccb3e12d62a2ae",
+      "source_width_px": 1872,
+      "source_height_px": 226,
+      "crop": [
+        0,
+        0,
+        1872,
+        226
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 63.89758732081568,
+      "pixels_to_points": 0.28273268726024636,
+      "page": 51,
+      "page_position_pt": [
+        33.0,
+        708.992176458712
+      ]
+    },
+    {
+      "section": "6. Save the raw data for all 180 requests",
+      "source": "reports/hw04/screenshots/user/Part3_09_RawData.png",
+      "sha256": "314fda8aac3850a8afb5652c9ed15dfbace3eb57d22c29cf23a67ff9a999eb6b",
+      "source_width_px": 2866,
+      "source_height_px": 1786,
+      "crop": [
+        0,
+        0,
+        2866,
+        1786
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 329.82770576566975,
+      "pixels_to_points": 0.18467396739399203,
+      "page": 51,
+      "page_position_pt": [
+        33.0,
+        358.1644706930423
+      ]
+    },
+    {
+      "section": "7. Report the speed-up at each page size and explain why it changes",
+      "source": "reports/hw04/screenshots/user/Part3_12_Speedup_Code.png",
+      "sha256": "bf8530b97caa249b3e9c38c9e99a3b14480c72be2aaff9dd7086d7d9cf63583f",
+      "source_width_px": 1628,
+      "source_height_px": 444,
+      "crop": [
+        0,
+        0,
+        1628,
+        444
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 144.34788833214031,
+      "pixels_to_points": 0.3251078566039196,
+      "page": 52,
+      "page_position_pt": [
+        33.0,
+        628.5418754473874
+      ]
+    },
+    {
+      "section": "7. Report the speed-up at each page size and explain why it changes",
+      "source": "reports/hw04/screenshots/user/Part3_08_Measurements.png",
+      "sha256": "40294fab73ec353f93d4d139cc69632e552852654f6c98a86f1dceb4fbdf5e1e",
+      "source_width_px": 2130,
+      "source_height_px": 1570,
+      "crop": [
+        0,
+        0,
+        2130,
+        1570
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 390.12332261284246,
+      "pixels_to_points": 0.2484861927470334,
+      "page": 52,
+      "page_position_pt": [
+        33.0,
+        217.41855283454493
+      ]
+    },
+    {
+      "section": "8. Add an index; show EXPLAIN before and after and explain what changed",
+      "source": "reports/hw04/screenshots/user/Part3_11_ExplainAfter_Code_1.png",
+      "sha256": "0d0b2742dd64022b10a4f88ee61944bed773ecc138e75b1414021433e313fcd1",
+      "source_width_px": 2014,
+      "source_height_px": 926,
+      "crop": [
+        0,
+        0,
+        2014,
+        926
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 243.35114044210218,
+      "pixels_to_points": 0.2627982078208447,
+      "page": 53,
+      "page_position_pt": [
+        33.0,
+        529.5386233374255
+      ]
+    },
+    {
+      "section": "8. Add an index; show EXPLAIN before and after and explain what changed",
+      "source": "reports/hw04/screenshots/user/Part3_13_ExplainQuery.png",
+      "sha256": "62dbd770b0579bd8bbc007cac0322043ec958c46509349c8f1a23226bab4cbc3",
+      "source_width_px": 1594,
+      "source_height_px": 380,
+      "crop": [
+        0,
+        0,
+        1594,
+        380
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 126.17611318033178,
+      "pixels_to_points": 0.33204240310613625,
+      "page": 54,
+      "page_position_pt": [
+        33.0,
+        666.713650599196
+      ]
+    },
+    {
+      "section": "8. Add an index; show EXPLAIN before and after and explain what changed",
+      "source": "reports/hw04/screenshots/user/Part3_10_ExplainBefore.png",
+      "sha256": "c980f1988d480e9f15202a7784f163aa79c49cbbc47adfce234d5fa4daa44925",
+      "source_width_px": 1308,
+      "source_height_px": 1334,
+      "crop": [
+        0,
+        0,
+        1308,
+        1334
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 539.7963591707,
+      "pixels_to_points": 0.40464494690457276,
+      "page": 54,
+      "page_position_pt": [
+        33.0,
+        105.9172914284959
+      ]
+    },
+    {
+      "section": "8. Add an index; show EXPLAIN before and after and explain what changed",
+      "source": "reports/hw04/screenshots/user/Part3_11_ExplainAfter.png",
+      "sha256": "e0b19e7ca9a8dcc47143ae8ea6cbbfe6db1f75f3e8c5f0f5a9cbbaf756df0e23",
+      "source_width_px": 1226,
+      "source_height_px": 1364,
+      "crop": [
+        0,
+        0,
+        1226,
+        1364
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 588.8514726850009,
+      "pixels_to_points": 0.4317092908247807,
+      "page": 55,
+      "page_position_pt": [
+        33.0,
+        204.0382910945268
+      ]
+    },
+    {
+      "section": "9. Postman - Page size 10, naive endpoint",
+      "source": "reports/hw04/screenshots/user/Part3_01_Naive_10_Code_2.png",
+      "sha256": "12a222344c384abb94e3be07aa84e91e9975c5174f82a95de3bdbe5a78f41581",
+      "source_width_px": 1776,
+      "source_height_px": 540,
+      "crop": [
+        0,
+        0,
+        1776,
+        540
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 160.9283890189402,
+      "pixels_to_points": 0.29801553522025964,
+      "page": 56,
+      "page_position_pt": [
+        33.0,
+        611.9613747605874
+      ]
+    },
+    {
+      "section": "9. Postman - Page size 10, naive endpoint",
+      "source": "reports/hw04/screenshots/user/Part3_01_Naive_10.png",
+      "sha256": "55f4d0a88ae25aeafc0ea678719c3734091a888e21ecc2e582640f5c7cace3d1",
+      "source_width_px": 2514,
+      "source_height_px": 1534,
+      "crop": [
+        0,
+        0,
+        2514,
+        1534
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 322.9549546163532,
+      "pixels_to_points": 0.21053126115798773,
+      "page": 56,
+      "page_position_pt": [
+        33.0,
+        268.00642014423426
+      ]
+    },
+    {
+      "section": "9. Postman - Page size 10, fixed endpoint",
+      "source": "reports/hw04/screenshots/user/Part3_02_Fixed_10_Code_1.png",
+      "sha256": "271dc46c1ea05b551f788970be4986d1397f7cc6e2cc478994812ebaaad94f64",
+      "source_width_px": 1724,
+      "source_height_px": 476,
+      "crop": [
+        0,
+        0,
+        1724,
+        476
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 146.13409576703145,
+      "pixels_to_points": 0.3070044028719148,
+      "page": 57,
+      "page_position_pt": [
+        33.0,
+        626.7556680124962
+      ]
+    },
+    {
+      "section": "9. Postman - Page size 10, fixed endpoint",
+      "source": "reports/hw04/screenshots/user/Part3_02_Fixed_10.png",
+      "sha256": "40f3dca61469d6ccbfd68b74c82293e5c759c5cd1fbf0b102da00b7d3320b587",
+      "source_width_px": 2536,
+      "source_height_px": 1532,
+      "crop": [
+        0,
+        0,
+        2536,
+        1532
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 319.7358851436946,
+      "pixels_to_points": 0.2087048858640304,
+      "page": 57,
+      "page_position_pt": [
+        33.0,
+        286.01978286880166
+      ]
+    },
+    {
+      "section": "9. Postman - Page size 50, naive endpoint",
+      "source": "reports/hw04/screenshots/user/Part3_01_Naive_10_Code_2.png",
+      "sha256": "12a222344c384abb94e3be07aa84e91e9975c5174f82a95de3bdbe5a78f41581",
+      "source_width_px": 1776,
+      "source_height_px": 540,
+      "crop": [
+        0,
+        0,
+        1776,
+        540
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 160.9283890189402,
+      "pixels_to_points": 0.29801553522025964,
+      "page": 58,
+      "page_position_pt": [
+        33.0,
+        611.9613747605874
+      ]
+    },
+    {
+      "section": "9. Postman - Page size 50, naive endpoint",
+      "source": "reports/hw04/screenshots/user/Part3_03_Naive_50.png",
+      "sha256": "ce7ca4daf84678fea344377a6dcbca0ea8da973544516c84698235d1d8e131f7",
+      "source_width_px": 2538,
+      "source_height_px": 1384,
+      "crop": [
+        0,
+        0,
+        2538,
+        1384
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 288.61994378362283,
+      "pixels_to_points": 0.20854042180897603,
+      "page": 58,
+      "page_position_pt": [
+        33.0,
+        302.3414309769646
+      ]
+    },
+    {
+      "section": "9. Postman - Page size 50, fixed endpoint",
+      "source": "reports/hw04/screenshots/user/Part3_02_Fixed_10_Code_1.png",
+      "sha256": "271dc46c1ea05b551f788970be4986d1397f7cc6e2cc478994812ebaaad94f64",
+      "source_width_px": 1724,
+      "source_height_px": 476,
+      "crop": [
+        0,
+        0,
+        1724,
+        476
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 146.13409576703145,
+      "pixels_to_points": 0.3070044028719148,
+      "page": 59,
+      "page_position_pt": [
+        33.0,
+        626.7556680124962
+      ]
+    },
+    {
+      "section": "9. Postman - Page size 50, fixed endpoint",
+      "source": "reports/hw04/screenshots/user/Part3_04_Fixed_50.png",
+      "sha256": "0d7c84aae7eb14a8fd99d42d88ebba7554f626be017de6490d704817f5bf157d",
+      "source_width_px": 2538,
+      "source_height_px": 1438,
+      "crop": [
+        0,
+        0,
+        2538,
+        1438
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 299.88112656130755,
+      "pixels_to_points": 0.20854042180897603,
+      "page": 59,
+      "page_position_pt": [
+        33.0,
+        305.8745414511887
+      ]
+    },
+    {
+      "section": "9. Postman - Page size 200, naive endpoint",
+      "source": "reports/hw04/screenshots/user/Part3_01_Naive_10_Code_2.png",
+      "sha256": "12a222344c384abb94e3be07aa84e91e9975c5174f82a95de3bdbe5a78f41581",
+      "source_width_px": 1776,
+      "source_height_px": 540,
+      "crop": [
+        0,
+        0,
+        1776,
+        540
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 160.9283890189402,
+      "pixels_to_points": 0.29801553522025964,
+      "page": 60,
+      "page_position_pt": [
+        33.0,
+        611.9613747605874
+      ]
+    },
+    {
+      "section": "9. Postman - Page size 200, naive endpoint",
+      "source": "reports/hw04/screenshots/user/Part3_05_Naive_200.png",
+      "sha256": "9bb57c527f424c104eee7d07c35ec0c7c81d9e5772be3251502ce874c08d9159",
+      "source_width_px": 2500,
+      "source_height_px": 1536,
+      "crop": [
+        0,
+        0,
+        2500,
+        1536
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 325.1869228346457,
+      "pixels_to_points": 0.21171023622047247,
+      "page": 60,
+      "page_position_pt": [
+        33.0,
+        265.7744519259417
+      ]
+    },
+    {
+      "section": "9. Postman - Page size 200, fixed endpoint",
+      "source": "reports/hw04/screenshots/user/Part3_02_Fixed_10_Code_1.png",
+      "sha256": "271dc46c1ea05b551f788970be4986d1397f7cc6e2cc478994812ebaaad94f64",
+      "source_width_px": 1724,
+      "source_height_px": 476,
+      "crop": [
+        0,
+        0,
+        1724,
+        476
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 146.13409576703145,
+      "pixels_to_points": 0.3070044028719148,
+      "page": 61,
+      "page_position_pt": [
+        33.0,
+        626.7556680124962
+      ]
+    },
+    {
+      "section": "9. Postman - Page size 200, fixed endpoint",
+      "source": "reports/hw04/screenshots/user/Part3_06_Fixed_200.png",
+      "sha256": "4436a3b3a414e8c6e8d216a0f5bcd9742516f9d24950c4328fa67eb73631f4dd",
+      "source_width_px": 2490,
+      "source_height_px": 1570,
+      "crop": [
+        0,
+        0,
+        2490,
+        1570
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 333.71995066881703,
+      "pixels_to_points": 0.21256047813300447,
+      "page": 61,
+      "page_position_pt": [
+        33.0,
+        272.0357173436792
+      ]
+    },
+    {
+      "section": "1. Corpus and index - Five documents; chunks with text, source, and ID; embeddings and vector store",
+      "source": "reports/hw04/screenshots/user/Part4_23_Chunking_Code.png",
+      "sha256": "5cbdceb709628fae47aabbe9e1e5ad10a593203ccb6a95c7a27dfb1e5eb148d0",
+      "source_width_px": 2272,
+      "source_height_px": 1160,
+      "crop": [
+        0,
+        0,
+        2272,
+        1160
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 270.22873461239885,
+      "pixels_to_points": 0.23295580570034383,
+      "page": 62,
+      "page_position_pt": [
+        33.0,
+        460.66102916712885
+      ]
+    },
+    {
+      "section": "1. Corpus and index - Five documents; chunks with text, source, and ID; embeddings and vector store",
+      "source": "reports/hw04/screenshots/user/Part4_24_VectorIndex_Code.png",
+      "sha256": "2b5616c2cd4706cb7e6828e4f89d31ed797a19819ed55b19b95c56e72380428e",
+      "source_width_px": 2466,
+      "source_height_px": 692,
+      "crop": [
+        0,
+        0,
+        2466,
+        692
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 148.52340172806868,
+      "pixels_to_points": 0.21462919324865415,
+      "page": 63,
+      "page_position_pt": [
+        33.0,
+        644.366362051459
+      ]
+    },
+    {
+      "section": "1. Corpus and index - Five documents; chunks with text, source, and ID; embeddings and vector store",
+      "source": "reports/hw04/screenshots/user/Part4_01_CorpusIndex.png",
+      "sha256": "84d05d2cd2ac1663c852139fd30fd58dd8e8d2760e429115464d6105e84fd400",
+      "source_width_px": 2618,
+      "source_height_px": 1770,
+      "crop": [
+        0,
+        0,
+        2618,
+        1770
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 357.83720216791085,
+      "pixels_to_points": 0.20216791082932817,
+      "page": 63,
+      "page_position_pt": [
+        33.0,
+        265.5291598835481
+      ]
+    },
+    {
+      "section": "2. Retrieve the top three chunks for each question; print source and score before the LLM call",
+      "source": "reports/hw04/screenshots/user/Part4_25_Retrieval_Code.png",
+      "sha256": "f6fb61b2c7c9105422902a1263c9e5a88372cd3163ef9d6c59c446f69a4f795f",
+      "source_width_px": 2364,
+      "source_height_px": 732,
+      "crop": [
+        0,
+        0,
+        2364,
+        732
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 163.88736560214238,
+      "pixels_to_points": 0.22388984371877374,
+      "page": 64,
+      "page_position_pt": [
+        33.0,
+        595.0023981773853
+      ]
+    },
+    {
+      "section": "2. Retrieve the top three chunks for each question; print source and score before the LLM call",
+      "source": "reports/hw04/screenshots/user/Part4_26_PrintBeforeGeneration_Code.png",
+      "sha256": "262b4b699ba597436acbf6f6e4185ba83caa3ad68a5707cb3e614b7b3bd91c1b",
+      "source_width_px": 2508,
+      "source_height_px": 684,
+      "crop": [
+        0,
+        0,
+        2508,
+        684
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 144.34788833214031,
+      "pixels_to_points": 0.21103492446219344,
+      "page": 64,
+      "page_position_pt": [
+        33.0,
+        429.654509845245
+      ]
+    },
+    {
+      "section": "2. Q1 - Retrieved chunks, sources, and scores",
+      "source": "reports/hw04/screenshots/user/Part4_02_Q1_Retrieval.png",
+      "sha256": "1e058a86fe948a815f8d654b59c67037394865f2424d076dc2d5ee66757cf776",
+      "source_width_px": 1960,
+      "source_height_px": 1156,
+      "crop": [
+        0,
+        0,
+        1960,
+        1156
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 312.1645829985538,
+      "pixels_to_points": 0.2700385666077455,
+      "page": 64,
+      "page_position_pt": [
+        33.0,
+        68.48992684669122
+      ]
+    },
+    {
+      "section": "2. Q2 - Retrieved chunks, sources, and scores",
+      "source": "reports/hw04/screenshots/user/Part4_03_Q2_Retrieval.png",
+      "sha256": "db4f7d194624d47fb1a87a5e73cebe353d87d5ec12bae6a2822afd19c6a23978",
+      "source_width_px": 1918,
+      "source_height_px": 1440,
+      "crop": [
+        0,
+        0,
+        1918,
+        1440
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 397.37062064322254,
+      "pixels_to_points": 0.27595181989112677,
+      "page": 65,
+      "page_position_pt": [
+        33.0,
+        375.51914313630516
+      ]
+    },
+    {
+      "section": "2. Q3 - Retrieved chunks, sources, and scores",
+      "source": "reports/hw04/screenshots/user/Part4_04_Q3_Retrieval.png",
+      "sha256": "dbdcf7f643b54f368a824309cbdf3b63cc4aec9410ba33b430faa213fae87b66",
+      "source_width_px": 1942,
+      "source_height_px": 1528,
+      "crop": [
+        0,
+        0,
+        1942,
+        1528
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 416.44341007322595,
+      "pixels_to_points": 0.2725414987390222,
+      "page": 66,
+      "page_position_pt": [
+        33.0,
+        356.44635370630175
+      ]
+    },
+    {
+      "section": "2. Q4 - Retrieved chunks, sources, and scores",
+      "source": "reports/hw04/screenshots/user/Part4_05_Q4_Retrieval.png",
+      "sha256": "ac3d15dd86ec3a597a099bdeb28fc495958a410a9015d6637b193c35835a03d7",
+      "source_width_px": 1944,
+      "source_height_px": 1226,
+      "crop": [
+        0,
+        0,
+        1944,
+        1226
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 333.79211626324485,
+      "pixels_to_points": 0.27226110625060757,
+      "page": 67,
+      "page_position_pt": [
+        33.0,
+        439.09764751628285
+      ]
+    },
+    {
+      "section": "2. Q5 - Retrieved chunks, sources, and scores",
+      "source": "reports/hw04/screenshots/user/Part4_06_Q5_Retrieval_1.png",
+      "sha256": "740460e54b6bea8efe9fb687b95517b2f4a232aed88f754cc5768c0853b8993a",
+      "source_width_px": 1928,
+      "source_height_px": 1238,
+      "crop": [
+        0,
+        0,
+        1928,
+        1238
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 339.85642173359037,
+      "pixels_to_points": 0.2745205345182475,
+      "page": 67,
+      "page_position_pt": [
+        33.0,
+        50.24122578269248
+      ]
+    },
+    {
+      "section": "2. Q5 - Retrieved chunks, sources, and scores",
+      "source": "reports/hw04/screenshots/user/Part4_06_Q5_Retrieval_2.png",
+      "sha256": "b99b938009492476d4141b6538b848a865568ae247ddb5559f56d5ab7939e9b5",
+      "source_width_px": 1866,
+      "source_height_px": 1198,
+      "crop": [
+        0,
+        0,
+        1866,
+        1198
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 339.8028711041345,
+      "pixels_to_points": 0.2836417955794111,
+      "page": 68,
+      "page_position_pt": [
+        33.0,
+        453.0868926753932
+      ]
+    },
+    {
+      "section": "2. Q6 - Retrieved chunks, sources, and scores",
+      "source": "reports/hw04/screenshots/user/Part4_07_Q6_Retrieval.png",
+      "sha256": "034783ade9615c22b67c69b3aa4445556bd8026fa1fd8aa87371063ac89660b9",
+      "source_width_px": 1980,
+      "source_height_px": 1394,
+      "crop": [
+        0,
+        0,
+        1980,
+        1394
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 372.631400620377,
+      "pixels_to_points": 0.26731090431877835,
+      "page": 69,
+      "page_position_pt": [
+        33.0,
+        400.2583631591507
+      ]
+    },
+    {
+      "section": "3. Run the same questions through A: No RAG, B: Basic RAG, and C: context-engineered RAG",
+      "source": "reports/hw04/screenshots/user/Part4_27_ABC_Prompts_Code.png",
+      "sha256": "329f6ab8235f188bfd6ea8d1cb5c66f8e354716849dfd89a6f094cf3b4188b74",
+      "source_width_px": 2042,
+      "source_height_px": 1028,
+      "crop": [
+        0,
+        0,
+        2042,
+        1028
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 266.45215822067297,
+      "pixels_to_points": 0.25919470644034337,
+      "page": 69,
+      "page_position_pt": [
+        33.0,
+        70.80620493847772
+      ]
+    },
+    {
+      "section": "3(C). Drop irrelevant and duplicate chunks; order and label sources; ground, cite, and refuse",
+      "source": "reports/hw04/screenshots/user/Part4_28_ContextFiltering_Code.png",
+      "sha256": "a22bcf2de115b05b049cef71e7fe814061ccda0452e92f024d592673648d3ded",
+      "source_width_px": 1958,
+      "source_height_px": 1132,
+      "crop": [
+        0,
+        0,
+        1958,
+        1132
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 305.99589811232744,
+      "pixels_to_points": 0.27031439762573095,
+      "page": 70,
+      "page_position_pt": [
+        33.0,
+        452.89386566720026
+      ]
+    },
+    {
+      "section": "3(C). Drop irrelevant and duplicate chunks; order and label sources; ground, cite, and refuse",
+      "source": "reports/hw04/screenshots/user/Part4_16_Q3_C_Answer_Complete.png",
+      "sha256": "750a7129df87e88ef02d62bce403efad97802bcad6067799645ac9fdf23429b2",
+      "source_width_px": 1966,
+      "source_height_px": 410,
+      "crop": [
+        0,
+        0,
+        1966,
+        410
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 110.37792071514967,
+      "pixels_to_points": 0.26921444076865775,
+      "page": 70,
+      "page_position_pt": [
+        33.0,
+        321.5159449520506
+      ]
+    },
+    {
+      "section": "3(C). Drop irrelevant and duplicate chunks; order and label sources; ground, cite, and refuse",
+      "source": "reports/hw04/screenshots/user/Part4_18_Q5_C_Answer.png",
+      "sha256": "e0eee156ea5cd4da7d25efa0cb7fe49577cdfd367abe003e9724fd0f664032c4",
+      "source_width_px": 1948,
+      "source_height_px": 244,
+      "crop": [
+        0,
+        0,
+        1948,
+        244
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 66.29529984316643,
+      "pixels_to_points": 0.27170204853756735,
+      "page": 70,
+      "page_position_pt": [
+        33.0,
+        234.22064510888413
+      ]
+    },
+    {
+      "section": "4. Test set of six questions - Run each through A, B, and C",
+      "source": "reports/hw04/screenshots/user/Part4_29_ExperimentLoop_Code.png",
+      "sha256": "9bef7551ad1a2d822dd626c903739e7a86941021dceb0fecc78911e96c25a250",
+      "source_width_px": 1970,
+      "source_height_px": 664,
+      "crop": [
+        0,
+        0,
+        1970,
+        664
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 178.39542747511894,
+      "pixels_to_points": 0.2686678124625285,
+      "page": 71,
+      "page_position_pt": [
+        33.0,
+        594.4943363044088
+      ]
+    },
+    {
+      "section": "4. Q1: Answer in one chunk",
+      "source": "reports/hw04/screenshots/user/Part4_08_Q1_A_Answer.png",
+      "sha256": "312f20abfffacf9907b3b4b60ec40b6df5f884d237682710b249f2419a7054c0",
+      "source_width_px": 1900,
+      "source_height_px": 548,
+      "crop": [
+        0,
+        0,
+        1900,
+        548
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 152.65422295897224,
+      "pixels_to_points": 0.2785661002900953,
+      "page": 71,
+      "page_position_pt": [
+        33.0,
+        392.8401133454365
+      ]
+    },
+    {
+      "section": "4. Q1: Answer in one chunk",
+      "source": "reports/hw04/screenshots/user/Part4_09_Q1_B_Answer.png",
+      "sha256": "0bb586d850810cf9ac4730315e5df6147cc7f671ac5096a65a34c613c707aa84",
+      "source_width_px": 2094,
+      "source_height_px": 272,
+      "crop": [
+        0,
+        0,
+        2094,
+        272
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 68.75021997608467,
+      "pixels_to_points": 0.25275816167678183,
+      "page": 71,
+      "page_position_pt": [
+        33.0,
+        303.08989336935184
+      ]
+    },
+    {
+      "section": "4. Q1: Answer in one chunk",
+      "source": "reports/hw04/screenshots/user/Part4_10_Q1_C_Answer.png",
+      "sha256": "ebff7d32d947757231969c7f875e3a160ec56864d4f5855fe1b54b56b39d2aec",
+      "source_width_px": 2170,
+      "source_height_px": 260,
+      "crop": [
+        0,
+        0,
+        2170,
+        260
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 63.41550854530281,
+      "pixels_to_points": 0.2439058020973185,
+      "page": 71,
+      "page_position_pt": [
+        33.0,
+        218.67438482404904
+      ]
+    },
+    {
+      "section": "4. Q2: Answer needs two chunks",
+      "source": "reports/hw04/screenshots/user/Part4_11_Q2_A_Answer_1.png",
+      "sha256": "207834a2aa7129b02249588beae0759a91f831c0689830626632fd3c1f861de1",
+      "source_width_px": 1960,
+      "source_height_px": 1012,
+      "crop": [
+        0,
+        0,
+        1960,
+        1012
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 273.2790294070384,
+      "pixels_to_points": 0.2700385666077455,
+      "page": 72,
+      "page_position_pt": [
+        33.0,
+        499.6107343724893
+      ]
+    },
+    {
+      "section": "4. Q2: Answer needs two chunks",
+      "source": "reports/hw04/screenshots/user/Part4_11_Q2_A_Answer_2.png",
+      "sha256": "42f26c0dbe7012a9c3a5b575bf054697f7f269b1d05e48a6dea5def24bb8140e",
+      "source_width_px": 1978,
+      "source_height_px": 1158,
+      "crop": [
+        0,
+        0,
+        1978,
+        1158
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 309.8590161063032,
+      "pixels_to_points": 0.2675811883474121,
+      "page": 72,
+      "page_position_pt": [
+        33.0,
+        168.75171826618606
+      ]
+    },
+    {
+      "section": "4. Q2: Answer needs two chunks",
+      "source": "reports/hw04/screenshots/user/Part4_12_Q2_B_Answer.png",
+      "sha256": "54db8e0a692726ff932dd64f8e68701f54f2e3567aaff3667ed12625fb20c302",
+      "source_width_px": 1954,
+      "source_height_px": 446,
+      "crop": [
+        0,
+        0,
+        1954,
+        446
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 120.8070181094303,
+      "pixels_to_points": 0.2708677536085881,
+      "page": 73,
+      "page_position_pt": [
+        33.0,
+        672.0827456700974
+      ]
+    },
+    {
+      "section": "4. Q2: Answer needs two chunks",
+      "source": "reports/hw04/screenshots/user/Part4_13_Q2_C_Answer.png",
+      "sha256": "fbf19bf8e30055bb73d29e6de13abdf503ba17e513fb51a00c262334ecb1cdad",
+      "source_width_px": 1966,
+      "source_height_px": 306,
+      "crop": [
+        0,
+        0,
+        1966,
+        306
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 82.37961887520927,
+      "pixels_to_points": 0.26921444076865775,
+      "page": 73,
+      "page_position_pt": [
+        33.0,
+        568.7031267948881
+      ]
+    },
+    {
+      "section": "4. Q3: Similar information across documents",
+      "source": "reports/hw04/screenshots/user/Part4_14_Q3_A_Answer_1.png",
+      "sha256": "14849d89dfb14e38d9baf4680650e12b2f78fe5bb07d7f006838e292138b4b58",
+      "source_width_px": 1994,
+      "source_height_px": 694,
+      "crop": [
+        0,
+        0,
+        1994,
+        694
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 184.21126371239703,
+      "pixels_to_points": 0.26543409756829545,
+      "page": 73,
+      "page_position_pt": [
+        33.0,
+        335.49186308249114
+      ]
+    },
+    {
+      "section": "4. Q3: Similar information across documents",
+      "source": "reports/hw04/screenshots/user/Part4_14_Q3_A_Answer_2.png",
+      "sha256": "34f840c5c57e4fdde5c91d3a8be0cf2b079fca0d98bcacc9cb2bf6d3d080dd7e",
+      "source_width_px": 1980,
+      "source_height_px": 746,
+      "crop": [
+        0,
+        0,
+        1980,
+        746
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 199.41393462180866,
+      "pixels_to_points": 0.26731090431877835,
+      "page": 73,
+      "page_position_pt": [
+        33.0,
+        115.07792846068247
+      ]
+    },
+    {
+      "section": "4. Q3: Similar information across documents",
+      "source": "reports/hw04/screenshots/user/Part4_14_Q3_A_Answer_3.png",
+      "sha256": "6a9b8d510f5c501542823b6ebf401235591b8f582e605e124a3ddb5e4fb51f1d",
+      "source_width_px": 1960,
+      "source_height_px": 458,
+      "crop": [
+        0,
+        0,
+        1960,
+        458
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 123.67766350634744,
+      "pixels_to_points": 0.2700385666077455,
+      "page": 74,
+      "page_position_pt": [
+        33.0,
+        669.2121002731802
+      ]
+    },
+    {
+      "section": "4. Q3: Similar information across documents",
+      "source": "reports/hw04/screenshots/user/Part4_15_Q3_B_Answer_Complete.png",
+      "sha256": "d9811406c6de5041a474f975aaa60a39a94f1b9a5f8d65df7aa8174fd10b57f2",
+      "source_width_px": 1944,
+      "source_height_px": 510,
+      "crop": [
+        0,
+        0,
+        1944,
+        510
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 138.85316418780985,
+      "pixels_to_points": 0.27226110625060757,
+      "page": 74,
+      "page_position_pt": [
+        33.0,
+        509.3589360853704
+      ]
+    },
+    {
+      "section": "4. Q3: Similar information across documents",
+      "source": "reports/hw04/screenshots/user/Part4_16_Q3_C_Answer_Complete.png",
+      "sha256": "750a7129df87e88ef02d62bce403efad97802bcad6067799645ac9fdf23429b2",
+      "source_width_px": 1966,
+      "source_height_px": 410,
+      "crop": [
+        0,
+        0,
+        1966,
+        410
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 110.37792071514967,
+      "pixels_to_points": 0.26921444076865775,
+      "page": 74,
+      "page_position_pt": [
+        33.0,
+        377.9810153702207
+      ]
+    },
+    {
+      "section": "4. Q4: Ambiguous",
+      "source": "reports/hw04/screenshots/user/Part4_17_Q4_ABC_Answers.png",
+      "sha256": "c1faaa0921a5dc72deea379c3d92d9cee75060ae386e9c5ff7fd4468d9b5e87f",
+      "source_width_px": 1916,
+      "source_height_px": 970,
+      "crop": [
+        0,
+        0,
+        1916,
+        970
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 267.95267371328066,
+      "pixels_to_points": 0.2762398698075058,
+      "page": 74,
+      "page_position_pt": [
+        33.0,
+        61.02834165694003
+      ]
+    },
+    {
+      "section": "4. Q5: Answer not in the documents - must be refused",
+      "source": "reports/hw04/screenshots/user/Part4_18_Q5_A_Answer.png",
+      "sha256": "6d1e7c2e7d063fb4b8cdb4cb33822a91b3996b44e7404958a959c176aa52db13",
+      "source_width_px": 1926,
+      "source_height_px": 382,
+      "crop": [
+        0,
+        0,
+        1926,
+        382
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 104.97574018200997,
+      "pixels_to_points": 0.27480560257070674,
+      "page": 75,
+      "page_position_pt": [
+        33.0,
+        646.9140235975177
+      ]
+    },
+    {
+      "section": "4. Q5: Answer not in the documents - must be refused",
+      "source": "reports/hw04/screenshots/user/Part4_18_Q5_B_Answer.png",
+      "sha256": "e338ce9de37b96f8acdb5e19046c5379fb644fdd9bc127d6accd70b7ebb081a9",
+      "source_width_px": 1914,
+      "source_height_px": 292,
+      "crop": [
+        0,
+        0,
+        1914,
+        292
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 80.74632833905166,
+      "pixels_to_points": 0.27652852170908104,
+      "page": 75,
+      "page_position_pt": [
+        33.0,
+        545.1676952584661
+      ]
+    },
+    {
+      "section": "4. Q5: Answer not in the documents - must be refused",
+      "source": "reports/hw04/screenshots/user/Part4_18_Q5_C_Answer.png",
+      "sha256": "e0eee156ea5cd4da7d25efa0cb7fe49577cdfd367abe003e9724fd0f664032c4",
+      "source_width_px": 1948,
+      "source_height_px": 244,
+      "crop": [
+        0,
+        0,
+        1948,
+        244
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 66.29529984316643,
+      "pixels_to_points": 0.27170204853756735,
+      "page": 75,
+      "page_position_pt": [
+        33.0,
+        457.87239541529965
+      ]
+    },
+    {
+      "section": "4. Q6: Unrelated - must be refused",
+      "source": "reports/hw04/screenshots/user/Part4_19_Q6_ABC_Answers.png",
+      "sha256": "fc2648a6e5e117d5a096764b45041ae9830732b0c11a08a1632084b75c0a7e42",
+      "source_width_px": 1848,
+      "source_height_px": 676,
+      "crop": [
+        0,
+        0,
+        1848,
+        676
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 193.6094692708866,
+      "pixels_to_points": 0.2864045403415482,
+      "page": 75,
+      "page_position_pt": [
+        33.0,
+        215.26292614441306
+      ]
+    },
+    {
+      "section": "5. Sweep the context size at k = 1, 3, and 5; report whether more context helped",
+      "source": "reports/hw04/screenshots/user/Part4_29_ExperimentLoop_Code.png",
+      "sha256": "9bef7551ad1a2d822dd626c903739e7a86941021dceb0fecc78911e96c25a250",
+      "source_width_px": 1970,
+      "source_height_px": 664,
+      "crop": [
+        0,
+        0,
+        1970,
+        664
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 178.39542747511894,
+      "pixels_to_points": 0.2686678124625285,
+      "page": 76,
+      "page_position_pt": [
+        33.0,
+        594.4943363044088
+      ]
+    },
+    {
+      "section": "5. Sweep the context size at k = 1, 3, and 5; report whether more context helped",
+      "source": "reports/hw04/screenshots/user/Part4_20_Q2_C_k1.png",
+      "sha256": "1bb029b4164e4d0308eb9015d75ba49005f8f3ed02665225a77a07ebdecbd8df",
+      "source_width_px": 1962,
+      "source_height_px": 276,
+      "crop": [
+        0,
+        0,
+        1962,
+        276
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 74.45467023044138,
+      "pixels_to_points": 0.2697632979363818,
+      "page": 76,
+      "page_position_pt": [
+        33.0,
+        499.0396660739674
+      ]
+    },
+    {
+      "section": "5. Sweep the context size at k = 1, 3, and 5; report whether more context helped",
+      "source": "reports/hw04/screenshots/user/Part4_13_Q2_C_Answer.png",
+      "sha256": "fbf19bf8e30055bb73d29e6de13abdf503ba17e513fb51a00c262334ecb1cdad",
+      "source_width_px": 1966,
+      "source_height_px": 306,
+      "crop": [
+        0,
+        0,
+        1966,
+        306
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 82.37961887520927,
+      "pixels_to_points": 0.26921444076865775,
+      "page": 76,
+      "page_position_pt": [
+        33.0,
+        395.6600471987581
+      ]
+    },
+    {
+      "section": "5. Sweep the context size at k = 1, 3, and 5; report whether more context helped",
+      "source": "reports/hw04/screenshots/user/Part4_21_Q2_C_k5.png",
+      "sha256": "b43b71d51e80d1f512f5f806ccc373de1a49dd47840fbe405520e4ea69933630",
+      "source_width_px": 1914,
+      "source_height_px": 344,
+      "crop": [
+        0,
+        0,
+        1914,
+        344
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 95.12581146792388,
+      "pixels_to_points": 0.27652852170908104,
+      "page": 76,
+      "page_position_pt": [
+        33.0,
+        279.5342357308342
+      ]
+    },
+    {
+      "section": "6. Evaluate each question and configuration; summarize accuracy, faithfulness, format, and robustness",
+      "source": "reports/hw04/screenshots/user/Part4_30_EvaluationRecords_Code.png",
+      "sha256": "37fa01d8f3ff72547605d0a2c4ab58559fa471f2c6d48e01b0cde702ba50bcd0",
+      "source_width_px": 1892,
+      "source_height_px": 504,
+      "crop": [
+        0,
+        0,
+        1892,
+        504
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 140.99096069650915,
+      "pixels_to_points": 0.27974396963593084,
+      "page": 77,
+      "page_position_pt": [
+        33.0,
+        617.8988030830185
+      ]
+    },
+    {
+      "section": "6. Evaluate each question and configuration; summarize accuracy, faithfulness, format, and robustness",
+      "source": "reports/hw04/screenshots/user/Part4_31_EvaluationSummary_Code.png",
+      "sha256": "237fec881477f1b1bfbe2668f0f1b55cb7968a893bc4f4e45934813a51c295d8",
+      "source_width_px": 1964,
+      "source_height_px": 958,
+      "crop": [
+        0,
+        0,
+        1964,
+        958
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 258.1700691181423,
+      "pixels_to_points": 0.26948858989367674,
+      "page": 77,
+      "page_position_pt": [
+        33.0,
+        338.7287339648762
+      ]
+    },
+    {
+      "section": "6. Evaluate each question and configuration; summarize accuracy, faithfulness, format, and robustness",
+      "source": "reports/hw04/screenshots/user/Part4_22_Evaluation.png",
+      "sha256": "ca70a8c4890f2c2c12a61dc6594f299493e982a71bf7011c29f62540071efdb7",
+      "source_width_px": 1978,
+      "source_height_px": 1022,
+      "crop": [
+        0,
+        0,
+        1978,
+        1022
+      ],
+      "full_original": true,
+      "width_pt": 529.2755905511812,
+      "height_pt": 273.4679744910552,
+      "pixels_to_points": 0.2675811883474121,
+      "page": 77,
+      "page_position_pt": [
+        33.0,
+        44.260759473821
+      ]
+    }
+  ],
+  "source_snippets": [],
+  "sections": [
+    "DATA 260 - HOMEWORK 4",
+    "Section 0 - Personal Configuration and Domain",
+    "Part 1 - React Client",
+    "Login.jsx - Log in using email and password",
+    "After successful login",
+    "Set an HTTP-only cookie containing a server-side session token",
+    "Only logged-in users may view records and perform CRUD; otherwise show \"Login required\"",
+    "I. Home Page - Display all records at /",
+    "II. Add a New Record - CreateRecord.jsx at /create; props, primary and secondary fields, and submit button",
+    "II. Add a New Record - Add a record with an auto-incremented ID",
+    "II. Add a New Record - Redirect to the home page with the updated list",
+    "III. Update Record - UpdateRecord.jsx at /update; props, input fields, and submit button",
+    "III. Update Record - Update through the backend, persist in MySQL, and return home",
+    "IV. Delete the Record - DeleteRecord.jsx at /delete; props and Delete button",
+    "IV. Delete the Record - Remove the record through the API and return home",
+    "V. Pass props for Create, Update, and Delete",
+    "V. Use useState and useEffect where necessary",
+    "V. Use React Router for routing",
+    "Part 2 - MySQL Persistence and Server-Side Sessions",
+    "Database - Create <PREFIX>_rel; use db_session_basede26",
+    "Database - Primary domain table with auto-increment ID, primary field, and secondary field",
+    "Database - users: id, name, unique email, password_hash",
+    "Database - sessions: session token, user_id, created_at, expires_at",
+    "Store the session server-side; use an opaque HTTP-only cookie",
+    "Login and session validation",
+    "Add a new record (POST) - Postman response",
+    "View all records (GET) - Postman response",
+    "View a record by ID (GET) - Postman response",
+    "Update record details (PUT) - Postman response",
+    "Delete a record (DELETE) - Postman response",
+    "Submit a screenshot of the project folder structure",
+    "Part 3 - N+1 Measurement and Query Tuning",
+    "1. Seed 5,000 primary rows and 200 related rows using SEED; generator and schema",
+    "2. Associate the related rows and include the related data in the list response",
+    "3. Build a list endpoint with one extra query per record",
+    "4. Measure SQL queries and p50/p95/p99 for 30 requests at page sizes 10, 50, and 200",
+    "5. Fix N+1 using a join or eager loading and repeat the measurements",
+    "6. Save the raw data for all 180 requests",
+    "7. Report the speed-up at each page size and explain why it changes",
+    "8. Add an index; show EXPLAIN before and after and explain what changed",
+    "9. Postman - Page size 10, naive endpoint",
+    "9. Postman - Page size 10, fixed endpoint",
+    "9. Postman - Page size 50, naive endpoint",
+    "9. Postman - Page size 50, fixed endpoint",
+    "9. Postman - Page size 200, naive endpoint",
+    "9. Postman - Page size 200, fixed endpoint",
+    "Part 4 - Build a Grounded RAG Question-Answering System",
+    "1. Corpus and index - Five documents; chunks with text, source, and ID; embeddings and vector store",
+    "2. Retrieve the top three chunks for each question; print source and score before the LLM call",
+    "2. Q1 - Retrieved chunks, sources, and scores",
+    "2. Q2 - Retrieved chunks, sources, and scores",
+    "2. Q3 - Retrieved chunks, sources, and scores",
+    "2. Q4 - Retrieved chunks, sources, and scores",
+    "2. Q5 - Retrieved chunks, sources, and scores",
+    "2. Q6 - Retrieved chunks, sources, and scores",
+    "3. Run the same questions through A: No RAG, B: Basic RAG, and C: context-engineered RAG",
+    "3(C). Drop irrelevant and duplicate chunks; order and label sources; ground, cite, and refuse",
+    "4. Test set of six questions - Run each through A, B, and C",
+    "4. Q1: Answer in one chunk",
+    "4. Q2: Answer needs two chunks",
+    "4. Q3: Similar information across documents",
+    "4. Q4: Ambiguous",
+    "4. Q5: Answer not in the documents - must be refused",
+    "4. Q6: Unrelated - must be refused",
+    "5. Sweep the context size at k = 1, 3, and 5; report whether more context helped",
+    "6. Evaluate each question and configuration; summarize accuracy, faithfulness, format, and robustness",
+    "7. Short analysis",
+    "AI assistant use",
+    "1. What I used AI for and what I did myself",
+    "2. One AI-produced result that was unsuitable",
+    "3. How I detected the problem or checked the result",
+    "4. What changed and why it works now"
+  ],
+  "analysis_words": 408,
+  "replacements": [
+    {
+      "excluded": "Part2_02_CreateRecord.png",
+      "reason": "Wrong GET performance request; not POST",
+      "replacement": "screenshots/part2/Part2_02_CreateRecord_Complete.png"
+    },
+    {
+      "excluded": "Part4_18_Q5_ABC_Answers.png",
+      "reason": "Contains Q4, not Q5",
+      "replacement": "user-provided Part4_18_Q5_A/B/C_Answer.png"
+    }
+  ],
+  "all_screenshots_user_supplied": true,
+  "pages": 79,
+  "pdf_sha256": "f32be34d0f60830729e55445505e90e206a33837dd377d6ebfc8c2ae6c54ddff",
+  "size_bytes": 23090619,
+  "unique_source_images": 122,
+  "ai_use_included_as_requested": true,
+  "ai_use_source": "reports/hw04/AI_USE.md",
+  "ai_use_sha256": "f82ebe12d81525deaf8b3a28e606855f7dbc6abe8d918b7ed91679cb0877dbaf",
+  "all_screenshots_uncropped": true,
+  "source_images_unchanged": true,
+  "provenance": "Original screenshots supplied by the student; copied byte-for-byte. Full images embedded at proportional scale without cropping.",
+  "tagged_code_commit": "e9b254f8f949897061f7d202c67b5e0c6ed04221",
+  "tagged_code_ref": "hw4-code",
+  "submission_tag": "hw4"
+}
