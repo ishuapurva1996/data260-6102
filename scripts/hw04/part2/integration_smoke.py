@@ -62,9 +62,18 @@ def main():
 
     try:
         with socket.socket() as probe:
+            probe.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
             probe.bind(('127.0.0.1',args.port))
-        process = subprocess.Popen([sys.executable,str(ROOT/'scripts/run_hw04_web.py'),
-                                    '--port',str(args.port),'--env-file',str(args.env_file)],
+        subprocess.run([sys.executable,str(ROOT/'scripts/run_hw04_web.py'),'--prepare-cert'],
+                       cwd=ROOT,check=True,stdout=subprocess.DEVNULL)
+        # Track Uvicorn itself: waiting only for a launcher could leave its child
+        # draining requests while the next evidence runner claims the same port.
+        process = subprocess.Popen([sys.executable,'-m','uvicorn','web_application.main:app',
+                                    '--app-dir',str(ROOT/'code'),'--host','127.0.0.1',
+                                    '--port',str(args.port),'--workers','1',
+                                    '--timeout-graceful-shutdown','2',
+                                    '--ssl-certfile',str(ROOT/'tmp/https/cert.pem'),
+                                    '--ssl-keyfile',str(ROOT/'tmp/https/key.pem')],
                                    cwd=ROOT,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL,
                                    start_new_session=True)
         for _ in range(100):
