@@ -126,7 +126,7 @@ def _validate_payload(payload, page_size):
             raise BenchmarkError("Every seeded rental must contain its manager ID and name")
 
 
-def _sample(client, *, page_size, version, iteration, phase, identity, expected_payload, handle):
+def _sample(client, *, page_size, version, iteration, phase, identity, expected_payload, handle, expected_digest=None):
     row = {**identity, "timestamp": utc_now(), "phase": phase, "page_size": page_size,
            "version": version, "iteration": iteration, "http_status": None,
            "returned_count": None, "elapsed_ms": None, "total_sql": None, "data_sql": None,
@@ -155,7 +155,7 @@ def _sample(client, *, page_size, version, iteration, phase, identity, expected_
             raise BenchmarkError("Total SQL counter must include authentication in addition to data queries")
         if row["data_sql"] != (page_size + 1 if version == "naive" else 1):
             raise BenchmarkError("Observed data-query count does not demonstrate the required N+1/join strategy")
-        if expected_payload is not None and (payload != expected_payload or row["payload_sha256"] != digest(expected_payload)):
+        if expected_payload is not None and (payload != expected_payload or row["payload_sha256"] != (expected_digest or digest(expected_payload))):
             raise BenchmarkError("Full ordered response payload differs from the validated baseline")
         row["valid"] = True
     except (Exception, KeyboardInterrupt) as error:
@@ -218,14 +218,16 @@ def run_benchmark(client, output_root, *, email, password, metadata, warmups=3):
                 for iteration in range(1, warmups + 1):
                     for version in VERSIONS:
                         _sample(client, page_size=size, version=version, iteration=iteration,
-                                phase="warmup", identity=identity, expected_payload=baselines[size], handle=warming)
+                                phase="warmup", identity=identity, expected_payload=baselines[size], handle=warming,
+                                expected_digest=manifest["baseline_payload_sha256"][str(size)])
             for size in SIZES:
                 for iteration in range(1, REPETITIONS + 1):
                     for version in VERSIONS:
                         # Count attempted requests as well; a failed final row remains auditable.
                         measured_rows += 1
                         _sample(client, page_size=size, version=version, iteration=iteration,
-                                phase="measured", identity=identity, expected_payload=baselines[size], handle=measured)
+                                phase="measured", identity=identity, expected_payload=baselines[size], handle=measured,
+                                expected_digest=manifest["baseline_payload_sha256"][str(size)])
             manifest["status"] = "success"
         except (Exception, KeyboardInterrupt) as error:
             manifest["status"] = "failed"

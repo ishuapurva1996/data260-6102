@@ -15,7 +15,8 @@ if not __package__:
     sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from web_application.database import SessionLocal
-from web_application.routers import auth, rentals
+from web_application.routers import auth, rentals, performance
+from web_application.query_metrics import QueryMetricsMiddleware, install_query_counter
 
 PORT_BASE = 8702
 ROOT = Path(__file__).resolve().parents[2]
@@ -44,7 +45,10 @@ def create_app(*, session_factory=None, clock=utc_now, idle_timeout=300,
         return JSONResponse(status_code=422, content={"detail": detail})
 
     app.include_router(auth.router)
-    # Part 3 registers its literal /naive and /fixed paths here, BEFORE rentals.
+    # Literal performance paths must precede the dynamic rental-ID routes.
+    install_query_counter()
+    app.add_middleware(QueryMetricsMiddleware)
+    app.include_router(performance.router)
     app.include_router(rentals.router)
 
     @app.middleware("http")

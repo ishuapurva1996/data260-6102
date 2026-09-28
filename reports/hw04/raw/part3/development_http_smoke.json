@@ -1,0 +1,140 @@
+{
+  "timestamp": "2026-09-28T00:34:23.336321+00:00",
+  "classification": "DEVELOPMENT HTTP functional checks; not selected latency evidence",
+  "base_url": "https://localhost:8733",
+  "equal_payloads": true,
+  "results": [
+    {
+      "size": 10,
+      "version": "naive",
+      "status": 200,
+      "total_sql": 13,
+      "data_sql": 11,
+      "returned_count": 10,
+      "first_row": {
+        "listingTitle": "HW4-6102-00001 Condo in Rose Garden",
+        "propertyAddress": "101 Oak Street, San Jose, CA 95112",
+        "submitterEmail": "landlord020@example.com",
+        "description": "Well maintained condo in Rose Garden, with a bright living area and convenient access to local amenities.",
+        "propertyType": "condo",
+        "termsAccepted": true,
+        "id": 1,
+        "manager": {
+          "id": 20,
+          "name": "HW4 Property Manager 020"
+        }
+      },
+      "payload_sha256": "39d4f3e71ed3ad3e80ea83b484c45f7cf8f40fe3743efa9661002e1ed30d7ef9"
+    },
+    {
+      "size": 10,
+      "version": "fixed",
+      "status": 200,
+      "total_sql": 3,
+      "data_sql": 1,
+      "returned_count": 10,
+      "first_row": {
+        "listingTitle": "HW4-6102-00001 Condo in Rose Garden",
+        "propertyAddress": "101 Oak Street, San Jose, CA 95112",
+        "submitterEmail": "landlord020@example.com",
+        "description": "Well maintained condo in Rose Garden, with a bright living area and convenient access to local amenities.",
+        "propertyType": "condo",
+        "termsAccepted": true,
+        "id": 1,
+        "manager": {
+          "id": 20,
+          "name": "HW4 Property Manager 020"
+        }
+      },
+      "payload_sha256": "39d4f3e71ed3ad3e80ea83b484c45f7cf8f40fe3743efa9661002e1ed30d7ef9"
+    },
+    {
+      "size": 50,
+      "version": "naive",
+      "status": 200,
+      "total_sql": 53,
+      "data_sql": 51,
+      "returned_count": 50,
+      "first_row": {
+        "listingTitle": "HW4-6102-00001 Condo in Rose Garden",
+        "propertyAddress": "101 Oak Street, San Jose, CA 95112",
+        "submitterEmail": "landlord020@example.com",
+        "description": "Well maintained condo in Rose Garden, with a bright living area and convenient access to local amenities.",
+        "propertyType": "condo",
+        "termsAccepted": true,
+        "id": 1,
+        "manager": {
+          "id": 20,
+          "name": "HW4 Property Manager 020"
+        }
+      },
+      "payload_sha256": "b60752dc790f8bb099b346642b8952be21b33e67343d58ae74b2342f180931d2"
+    },
+    {
+      "size": 50,
+      "version": "fixed",
+      "status": 200,
+      "total_sql": 3,
+      "data_sql": 1,
+      "returned_count": 50,
+      "first_row": {
+        "listingTitle": "HW4-6102-00001 Condo in Rose Garden",
+        "propertyAddress": "101 Oak Street, San Jose, CA 95112",
+        "submitterEmail": "landlord020@example.com",
+        "description": "Well maintained condo in Rose Garden, with a bright living area and convenient access to local amenities.",
+        "propertyType": "condo",
+        "termsAccepted": true,
+        "id": 1,
+        "manager": {
+          "id": 20,
+          "name": "HW4 Property Manager 020"
+        }
+      },
+      "payload_sha256": "b60752dc790f8bb099b346642b8952be21b33e67343d58ae74b2342f180931d2"
+    },
+    {
+      "size": 200,
+      "version": "naive",
+      "status": 200,
+      "total_sql": 203,
+      "data_sql": 201,
+      "returned_count": 200,
+      "first_row": {
+        "listingTitle": "HW4-6102-00001 Condo in Rose Garden",
+        "propertyAddress": "101 Oak Street, San Jose, CA 95112",
+        "submitterEmail": "landlord020@example.com",
+        "description": "Well maintained condo in Rose Garden, with a bright living area and convenient access to local amenities.",
+        "propertyType": "condo",
+        "termsAccepted": true,
+        "id": 1,
+        "manager": {
+          "id": 20,
+          "name": "HW4 Property Manager 020"
+        }
+      },
+      "payload_sha256": "f7a455464224527bd00aa68690fd813ab464fe6092233e0c3e13e4ee59473604"
+    },
+    {
+      "size": 200,
+      "version": "fixed",
+      "status": 200,
+      "total_sql": 3,
+      "data_sql": 1,
+      "returned_count": 200,
+      "first_row": {
+        "listingTitle": "HW4-6102-00001 Condo in Rose Garden",
+        "propertyAddress": "101 Oak Street, San Jose, CA 95112",
+        "submitterEmail": "landlord020@example.com",
+        "description": "Well maintained condo in Rose Garden, with a bright living area and convenient access to local amenities.",
+        "propertyType": "condo",
+        "termsAccepted": true,
+        "id": 1,
+        "manager": {
+          "id": 20,
+          "name": "HW4 Property Manager 020"
+        }
+      },
+      "payload_sha256": "f7a455464224527bd00aa68690fd813ab464fe6092233e0c3e13e4ee59473604"
+    }
+  ]
+}

@@ -105,9 +105,20 @@ def seed_owned_database(*, engine, session_factory, rental_model, manager_model,
     if dataset.get("seed") != SEED:
         raise ValueError("The measured assignment seed must be 6102")
     validate_dataset(dataset)
+    generated_checksum = dataset_checksum(dataset)
     ownership = verify_engine_ownership(engine, ownership_manifest)
     with session_factory() as session:
         with session.begin():
+            journal = [dict(row) for row in session.execute(text(
+                "SELECT version, name, checksum FROM schema_migrations ORDER BY version"
+            )).mappings()]
+            if not journal or schema_revision not in {journal[-1]["name"], f"{journal[-1]['version']:03d}"}:
+                raise ValueError("Supplied schema revision does not match the actual migration journal")
+            migration_dir = Path(__file__).resolve().parents[3] / "code/web_application/migrations"
+            for migration in journal:
+                source = (migration_dir / migration["name"]).read_bytes()
+                if hashlib.sha256(source).hexdigest() != migration["checksum"]:
+                    raise ValueError("Live migration checksum differs from the imported source")
             rental_count = session.scalar(select(func.count()).select_from(rental_model))
             manager_count = session.scalar(select(func.count()).select_from(manager_model))
             assert_empty_seed_target(rental_count, manager_count)
@@ -146,14 +157,14 @@ def seed_owned_database(*, engine, session_factory, rental_model, manager_model,
                 } for row in stored_rentals],
             }
             stored_checksum = dataset_checksum(stored_dataset)
-            if stored_checksum != dataset_checksum(dataset) or title_count != RENTAL_COUNT:
+            if stored_checksum != generated_checksum or title_count != RENTAL_COUNT:
                 raise ValueError("Stored values differ from the generated dataset; transaction rolled back")
             mysql_version = session.scalar(text("SELECT VERSION()"))
             evidence = {
-                "format_version": 1, "seed": SEED, "generated_dataset_sha256": dataset_checksum(dataset),
+                "format_version": 1, "seed": SEED, "generated_dataset_sha256": generated_checksum,
                 "stored_dataset_sha256": stored_checksum,
                 "seeded_at_utc": datetime.now(timezone.utc).isoformat(), "schema_revision": schema_revision,
-                "ownership": ownership, "mysql_version": mysql_version,
+                "ownership": ownership, "mysql_version": mysql_version, "schema_migrations": journal,
                 "actual_counts": {"rentals": actual_rental_count, "property_managers": actual_manager_count,
                     "associated_rentals": sum(count for _, count in distribution), "distinct_managers": len(distribution),
                     "unique_listing_titles": title_count},
