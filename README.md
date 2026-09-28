@@ -16,7 +16,7 @@ report remains unchanged and describes the earlier in-memory implementation.
 
 ## Run the HW4 application locally
 
-Use Python 3.12, Node.js and a dedicated MySQL 8 instance containing `s6102_rel`.
+Use Python 3.12, Node.js 22.12 or newer, and a dedicated MySQL 8 instance containing `s6102_rel`.
 Keep your connection and teaching-account values outside tracked source; see
 [database setup](docs/HW4_DATABASE.md) and [.env.hw04.example](.env.hw04.example).
 
@@ -117,6 +117,27 @@ savepoints; auto-increment values may still be consumed. Unconfigured real-DB
 tests skip explicitly and do not count as MySQL proof. The partial integration
 verifier is `scripts/verify_hw04_parts123.py`; its per-check outcomes remain
 separate from final whole-homework verification.
+
+After building React, the repeatable browser run checks CRUD, restart persistence,
+logout and controlled idle expiry. Preserve the original branch evidence by using
+separate output directories:
+
+```sh
+.venv/bin/python tests/browser_hw04_part1_runtime.py \
+  --env-file /path/to/private/app.env --node node \
+  --raw-dir reports/hw04/raw/part2/integrated-browser \
+  --screenshots-dir reports/hw04/screenshots/part2/integrated-browser
+.venv/bin/python scripts/hw04/part2/integration_smoke.py \
+  --env-file /path/to/private/performance.env
+```
+
+Run these sequentially on the reserved port 8702. The second command requires
+Part 3's existing 5,000-rental/200-manager dataset; it verifies built assets,
+deep links, shared authentication, equivalent payloads and measured SQL counts.
+It does not seed or reset data. See [Part 3 instructions](scripts/hw04/part3/README.md)
+for ownership checks and the explicit `HW4_PART3_MYSQL_TESTS=1` opt-in required by
+its live pytest cases. `HW4_TEST_DATABASE_URL` can independently point ordinary
+CRUD fixtures at a separate test instance.
 
 Historical HW3 reports and verifier scripts are preserved for reference. Their
 old public-API/signed-cookie/Jinja expectations do not describe the current app;

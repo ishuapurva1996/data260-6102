@@ -99,7 +99,8 @@ def fingerprint(paths):
 def browser_fingerprints():
     return fingerprint([*sorted((ROOT/'frontend/src').rglob('*')),
                         *[ROOT/p for p in ('frontend/package.json','frontend/package-lock.json',
-                                           'frontend/vite.config.js','tests/browser_hw04_part1.cjs')]])
+                                           'frontend/vite.config.js','tests/browser_hw04_part1.cjs',
+                                           'tests/browser_hw04_part1_runtime.py')]])
 
 
 def source_fingerprints():

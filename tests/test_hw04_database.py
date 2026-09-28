@@ -26,6 +26,29 @@ def test_required_engine_name_and_factory_binding():
     assert database.SessionLocal.kw["bind"] is database.db_session_basede26
 
 
+def test_repeat_account_seed_preserves_existing_name_and_password(hw4_engine):
+    import importlib.util
+    from pathlib import Path
+    from argon2 import PasswordHasher
+    from sqlalchemy import text
+    path = Path(__file__).resolve().parents[1] / 'scripts/hw04/db_setup.py'
+    spec = importlib.util.spec_from_file_location('account_seed_test', path)
+    setup = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(setup)
+    email = f'seed-{uuid4().hex}@example.com'
+    with hw4_engine.connect() as connection:
+        transaction = connection.begin()
+        try:
+            assert setup.seed_account(connection, name='Original name', email=email, password='original test password') is True
+            before = connection.execute(text('SELECT name, password_hash FROM users WHERE email=:email'), {'email':email}).one()
+            assert setup.seed_account(connection, name='Replacement name', email=email.upper(), password='replacement test password') is False
+            after = connection.execute(text('SELECT name, password_hash FROM users WHERE email=:email'), {'email':email}).one()
+            assert after == before and after.name == 'Original name'
+            assert PasswordHasher().verify(after.password_hash, 'original test password')
+        finally:
+            transaction.rollback()
+
+
 @pytest.mark.parametrize("url", ["sqlite:///:memory:", "mysql+pymysql://localhost/not_s6102", "not a URL"])
 def test_connection_configuration_rejects_wrong_driver_or_database(monkeypatch, url):
     monkeypatch.setenv("HW4_DATABASE_URL", url)
