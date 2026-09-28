@@ -73,8 +73,12 @@ Current tested code is `307b1d9adc050e422a205e2d3219914c2234d816`, after Part 1 
 | Live MySQL interruption cleanup | 8/8 passed; exact ID 15 deleted; prior rows unchanged; owned processes stopped and port 8712 released | [check](raw/part2/cleanup-followup/interruption/check.json) |
 | Selected Python suite | 209 passed, 111 warnings, no skips, 5.95 s | [output](raw/part2/cleanup-followup/pytest-integrated.txt) |
 | Combined smoke | 29/29 passed | [smoke](raw/part2/cleanup-followup/integration-smoke.json) |
-| Current partial verifier | 34/46 pass; automated pass; incomplete solely for 12 manual images | [verification](verification.parts123.json) |
+| Cleanup-stage partial verifier | 34/46 pass; automated pass; incomplete solely for 12 manual images at that time | [preserved verification](raw/part2/capture-recheck/verification-before.json) |
 
 The normal runtime began at `2026-09-28T01:14:34.935389+00:00`; the current pytest began at `01:15:32.510124+00:00`; smoke began at `01:15:50.150794+00:00`; partial verification ran at `01:16:15.241788+00:00`. Seventeen cleanup-guard unit tests use SQLite, while the live interruption and integration checks provide the real-MySQL proof. An added provenance regression records the browser runner, runtime runner, and interruption driver. This runner-only follow-up changes neither frontend/backend application behavior nor the measured performance path, so the original 180 timings are retained.
 
-The remaining manual evidence is five Part 2 Postman screenshots, six Part 3 Postman screenshots, and one database screenshot. Project-folder and browser screenshots are captured. Part 4 and final tagged whole-homework verification remain outside these metrics.
+## Later functional Postman captures
+
+Part 3 completed six actual response captures and a local Collection Runner iteration: 53 passed, zero failed, three expected equality-check skips, zero errors. Part 2 has captured POST 201, list GET 200, ID GET 200 and PUT 200 for uniquely marked rental 16. These are functional observations; the response times visible in screenshots do not replace the original 180 timings above.
+
+At 2026-09-28T02:33:01.034223+00:00, [partial verification](verification.parts123.json) passed 44/46 checks with automated status pass. The database view and subsequent Part 2 DELETE image remain pending. Project-folder and browser screenshots are captured. Part 4 and final tagged whole-homework verification remain outside these metrics.

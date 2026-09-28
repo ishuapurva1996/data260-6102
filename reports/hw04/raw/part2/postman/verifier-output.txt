@@ -1,0 +1,1 @@
+{"status": "incomplete", "automated_status": "pass", "passed": 44, "total": 46, "output": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part2-backend/reports/hw04/verification.parts123.json"}

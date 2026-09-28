@@ -1,6 +1,6 @@
 # HW4 Parts 1–3: local integration record
 
-Parts 1–3 are merged into one local Rental Housing Listings application, and the integrated API, browser, MySQL, and performance smoke checks passed. The partial verifier reports **automated_status: pass** and **status: incomplete**: 34 of 46 recorded checks pass, while 12 required manual captures remain unavailable. This is a partial write-up for Parts 1–3, not the whole-homework PDF or verification on a submission tag.
+Parts 1–3 are merged into one local Rental Housing Listings application, and the integrated API, browser, MySQL, and performance smoke checks passed. The current partial verifier reports **automated_status: pass** and **status: incomplete**: **44 of 46** checks pass. The database screenshot and final Part 2 DELETE screenshot remain pending; the other required captures are present. This is a partial write-up for Parts 1–3, not the whole-homework PDF or verification on a submission tag.
 
 ## Configuration and revisions
 
@@ -19,7 +19,8 @@ Parts 1–3 are merged into one local Rental Housing Listings application, and t
 | Shared foundation B | f29e7cc85baf52bea30bd4bb3209d1bd79b22051 |
 | Initial Part 1 handoff | 5db1d4a12d996fa5eb45e9b71d7b2dbcd0708991 |
 | Current Part 1 cleanup handoff | 5d84f1a038cfdfcedb667b8047e06d5ef095164b |
-| Imported Part 3 final commit | 4f8390b84752d861ea6b47c5ac8615680192d841 |
+| Imported Part 3 implementation commit | 4f8390b84752d861ea6b47c5ac8615680192d841 |
+| Imported Part 3 Postman evidence commit | e58669ffbfe3ed459ec2c7e664caa6186ba7ec8a |
 | Part 3 measured revision | 9860a20342072168ed68a8d41eb16d9bfecf7729 |
 | Verified HW3 baseline | 5742b2aadbafee5ba208311723ea470c09811dc5 |
 
@@ -47,7 +48,87 @@ Every ordinary rental operation and both performance routes require the same dat
 
 Foundation B was published after 23 real HTTPS/MySQL checks and a repeat-migration/seed check that preserved two existing demo rows. That historical acceptance artifact identifies a dirty HW3-baseline tree before B was committed. It remains labeled as the foundation gate. The integrated run at `e7382ddb9cc5e0a5cd867653254a0c6f62f2f9c7` independently passed the same 23 checks, using rental ID 9 for its create/read/update/delete sequence. Both actual process restart and logout-token revocation passed.
 
-See [Part 2 report](part2/REPORT_SECTION.md), [foundation handoff](part2/FOUNDATION.md), [integrated API output](raw/part2/integrated-api.json), and [schema output](raw/part2/schema-smoke.json). The five Postman CRUD screenshots and database-client screenshot remain pending; HTTPX output is supporting evidence rather than a replacement.
+See [Part 2 report](part2/REPORT_SECTION.md), [foundation handoff](part2/FOUNDATION.md), [integrated API output](raw/part2/integrated-api.json), and [schema output](raw/part2/schema-smoke.json). Four actual Postman CRUD response images are now available; the DELETE and database images are still pending. Historical HTTPX output remains separately labeled.
+
+### Part 2 CRUD code and actual outputs
+
+The API keeps the existing six-field create body. An update accepts only `listingTitle` and `propertyAddress`, so editing these two fields preserves the landlord email, description, property type, and accepted terms. All rental routes share `Depends(require_user)`. The historical output examples below are the original foundation run using ID 4. The integrated rerun performed the same sequence with ID 9 and passed every operation; both artifacts remain available. The newer Postman images show a separate capture run using returned ID 16 and marker `591325c9-5c03-4baa-bef3-a06eea2b2714`, against application source `7350d9c98e8b56fcab4979fd94e0b39246f2b6d3`. ID 16 remains available for the pending database screenshot.
+
+Excerpt from [routers/rentals.py](../../code/web_application/routers/rentals.py):
+
+```python
+router = APIRouter(prefix="/api/rentals", tags=["rentals"], dependencies=[Depends(require_user)])
+```
+
+### Add a record: POST /api/rentals
+
+The create handler constructs a `Rental`, commits it, and returns its database-generated ID.
+
+```python
+db.add(row)
+db.commit()
+return rental_json(row)
+```
+
+![Actual Postman POST returned 201 with created rental ID 16.](screenshots/part2/01-post-create.png)
+
+Captured at `2026-09-28T02:19:33.156Z`: POST returned **201** and all six fields for ID **16**. Its title, email, and description contain this capture run’s UUID. The [Postman test view](screenshots/part2/01-post-create-tests.png) records three passed assertions and none failed.
+
+Actual response in the acceptance artifact: **201**, ID **4**, title **HW4 acceptance 20a5a6cf67**, address **260 Verification Lane, San Jose, CA**, landlord email **verification@example.com**, description **A real MySQL acceptance record for verified persistent CRUD.**, property type **apartment**, and accepted terms **true**. This ID is a historical result from that run; new captures must use the ID returned by their own POST.
+
+### View records: GET /api/rentals
+
+```python
+statement = select(Rental).order_by(Rental.id)
+```
+
+![Actual unfiltered Postman list returned 200 with original IDs 1 and 2 and capture ID 16.](screenshots/part2/02-get-list.png)
+
+Captured at `2026-09-28T02:21:10.683Z`: the unfiltered GET returned **200** with IDs **1, 2, and 16**. The [Postman test view](screenshots/part2/02-get-list-tests.png) records two passed assertions and none failed.
+
+The endpoint returns a JSON array and supports the preserved optional title/address search. The actual acceptance request used `?q=HW4 acceptance 20a5a6cf67`; it returned **200** and one matching object with ID **4**, identical to the create response. The selected API tests also cover the unfiltered list.
+
+### View one record: GET /api/rentals/{id}
+
+```python
+return rental_json(find_rental(db, rental_id))
+```
+
+![Actual Postman GET of literal ID 16 returned 200 and the created rental.](screenshots/part2/03-get-by-id.png)
+
+Captured at `2026-09-28T02:21:52.163Z`: `GET /api/rentals/16` returned **200**, with the original values and immutable UUID markers matching the POST. The [Postman test view](screenshots/part2/03-get-by-id-tests.png) records two passed assertions and none failed.
+
+The historical acceptance request `GET /api/rentals/4` returned **200** with the same object as the POST response. A missing positive ID returns **404**.
+
+### Update a record: PUT /api/rentals/{id}
+
+```python
+row = find_rental(db, rental_id)
+row.listing_title, row.property_address = payload.listingTitle, payload.propertyAddress
+db.commit()
+return rental_json(row)
+```
+
+![Actual Postman PUT of ID 16 returned 200 with changed title and address.](screenshots/part2/04-put-update.png)
+
+Captured at `2026-09-28T02:22:53.371Z`: PUT returned **200** for ID **16**, added ` updated` to its title, and set the address to **261 Capture Lane, San Jose, CA**. The email, description, property type, and accepted terms remain unchanged. The [Postman test view](screenshots/part2/04-put-update-tests.png) records three passed assertions and none failed. A [subsequent literal-ID GET](screenshots/part2/04-updated-id-read.png) at `2026-09-28T02:27:19.326Z` returned the updated row and passed both status and ownership assertions.
+
+The historical acceptance request to `/api/rentals/4` returned **200**, title **HW4 acceptance 20a5a6cf67 updated**, and address **261 Verification Lane**. The other four fields matched their original values. A subsequent request with an empty title returned **422**.
+
+### Delete a record: DELETE /api/rentals/{id}
+
+```python
+db.delete(find_rental(db, rental_id))
+db.commit()
+return Response(status_code=204)
+```
+
+The historical acceptance deletion of `/api/rentals/4` returned **204** with no body. Reading that ID afterward returned **404**. The acceptance harness removed only the row it created.
+
+**Required adjacent screenshot:** `05-delete.png` is pending.
+
+All five sanitized responses are saved together in [api-acceptance.json](raw/part2/api-acceptance.json). [postman_collection.json](part2/postman_collection.json) supplies login, the five CRUD requests, and logout with status assertions. It has blank credential values and remembers the ID returned by its own POST.
+
 
 ## Part 3: Query performance
 
@@ -66,6 +147,100 @@ The median benefit grows with page size because the naive route adds database ro
 The later index experiment added `ix_rentals_listing_title`. For a selective title lookup, MySQL EXPLAIN changed from access type `index`, key `PRIMARY`, and 4,868 estimated rows to access type `ref`, key `ix_rentals_listing_title`, and one estimated row. Results and dataset hashes stayed equal. These are optimizer estimates, not measured latency or actual scanned-row counts. The index experiment is separate from the unindexed N+1 timing run. See [index comparison](raw/part3/index/20260928T004453-df40d32d/comparison.json) and [Part 3 report](part3/REPORT_SECTION.md).
 
 Integration preserved the measured performance, authentication, model, schema, SQL-counter, and serialization source hashes. The sole changed Python file in the recorded application hash set is ordinary `routers/rentals.py`: its optional `q` search now preserves HW3 Unicode casefold matching. That route is not called by the measured performance endpoints. The integrated smoke run again found total SQL counts 13/53/203 naive and three fixed, with equal ordered payloads at all three sizes. No full timing rerun was needed because the measured execution path did not change. The published latency values remain measurements of the original recorded environment, not new latency claims for the integration smoke run.
+
+### Part 3 query code
+
+To show N+1, first fetch one page of rentals, then perform one manager lookup per rental. For N rentals this needs N+1 data statements. SQLAlchemy's identity map remembers loaded objects inside a session; `Session.get` could reuse an object and avoid the extra query. The explicit SELECT below always goes to MySQL, even for repeated manager IDs.
+
+```python
+@router.get('/naive', response_model=list[PerformanceRentalResponse])
+def naive(page_size: int = Query(10, ge=1, le=200), offset: int = Query(0, ge=0),
+          db: Session = Depends(get_db)):
+    rentals = db.scalars(select(Rental).order_by(Rental.id).limit(page_size).offset(offset)
+                         .execution_options(hw4_data_query=True)).all()
+    rows = []
+    for rental in rentals:
+        # An explicit SELECT always executes, even when the same manager is
+        # already in the ORM identity map. Session.get/lazy access would hide N+1.
+        manager = db.scalar(select(PropertyManager).where(PropertyManager.id == rental.manager_id)
+                            .execution_options(hw4_data_query=True))
+        rows.append(_serialize(rental, manager))
+    return rows
+```
+
+The fixed version joins rentals to managers in one data statement. A left join keeps a rental even if its manager is null. Both implementations share the same ordering, pagination, ordinary-field serializer and response validation.
+
+```python
+@router.get('/fixed', response_model=list[PerformanceRentalResponse])
+def fixed(page_size: int = Query(10, ge=1, le=200), offset: int = Query(0, ge=0),
+          db: Session = Depends(get_db)):
+    rows = db.execute(select(Rental, PropertyManager)
+                      .outerjoin(PropertyManager, Rental.manager_id == PropertyManager.id)
+                      .order_by(Rental.id).limit(page_size).offset(offset)
+                      .execution_options(hw4_data_query=True)).all()
+    return [_serialize(rental, manager) for rental, manager in rows]
+```
+
+
+### Part 3 actual Postman outputs
+
+All six required endpoint/size screenshots were captured in **Postman 12.29.5** against server revision `4f8390b84752d861ea6b47c5ac8615680192d841` at `https://localhost:8702`. Part 2 assigned an exclusive capture slot. The dedicated `s6102_rel` database at port 33363 still contained exactly 5,000 rentals and 200 managers, with migrations 001/003 and the listing-title index present. The [capture manifest](raw/part3/postman/manifest.json) records timestamps, image hashes and configuration.
+
+The unchanged [collection](part3/postman_collection.json) ran one local functional iteration at **2026-09-28 01:53:31 UTC**: login followed by six GET requests. Postman reported **53 passed, 0 failed, 3 skipped and 0 errors**. All three fixed payloads equaled their naive counterpart; each earlier naive equality check was skipped until that counterpart was available. The [runner summary](screenshots/part3/collection-run-summary.png), [size-200 equality screenshot](screenshots/part3/payload-equality-200.png), and [runner text, top](raw/part3/postman/runner-results-top.txt)/[bottom](raw/part3/postman/runner-results-bottom.txt) preserve the results. The [configuration screenshot](screenshots/part3/collection-run-configuration.png) shows one local functional iteration.
+
+Each request below was then sent individually to capture its response. Its matching test image shows eight passing checks for status, JSON type, exact row count, ascending IDs, manager data and observed SQL headers. The equality check is skipped in these individual sends because its comparison values live only within one Collection Runner run; the completed run above supplies the equality evidence.
+
+```http
+GET https://localhost:8702/api/rentals/naive?page_size=10&offset=0
+```
+
+![Postman naive response, 10 rentals](screenshots/part3/naive-10.png)
+
+[Observed response headers](screenshots/part3/naive-10-headers.png) show **13 total SQL statements**, including auth, and **11 data statements**. [Passing tests](screenshots/part3/naive-10-tests.png) confirm exactly 10 rows and populated manager data.
+
+```http
+GET https://localhost:8702/api/rentals/fixed?page_size=10&offset=0
+```
+
+![Postman fixed response, 10 rentals](screenshots/part3/fixed-10.png)
+
+[Observed response headers](screenshots/part3/fixed-10-headers.png) show **3 total SQL statements**, including auth, and **1 data statements**. [Passing tests](screenshots/part3/fixed-10-tests.png) confirm exactly 10 rows and populated manager data.
+
+```http
+GET https://localhost:8702/api/rentals/naive?page_size=50&offset=0
+```
+
+![Postman naive response, 50 rentals](screenshots/part3/naive-50.png)
+
+[Observed response headers](screenshots/part3/naive-50-headers.png) show **53 total SQL statements**, including auth, and **51 data statements**. [Passing tests](screenshots/part3/naive-50-tests.png) confirm exactly 50 rows and populated manager data.
+
+```http
+GET https://localhost:8702/api/rentals/fixed?page_size=50&offset=0
+```
+
+![Postman fixed response, 50 rentals](screenshots/part3/fixed-50.png)
+
+[Observed response headers](screenshots/part3/fixed-50-headers.png) show **3 total SQL statements**, including auth, and **1 data statements**. [Passing tests](screenshots/part3/fixed-50-tests.png) confirm exactly 50 rows and populated manager data.
+
+```http
+GET https://localhost:8702/api/rentals/naive?page_size=200&offset=0
+```
+
+![Postman naive response, 200 rentals](screenshots/part3/naive-200.png)
+
+[Observed response headers](screenshots/part3/naive-200-headers.png) show **203 total SQL statements**, including auth, and **201 data statements**. [Passing tests](screenshots/part3/naive-200-tests.png) confirm exactly 200 rows and populated manager data.
+
+```http
+GET https://localhost:8702/api/rentals/fixed?page_size=200&offset=0
+```
+
+![Postman fixed response, 200 rentals](screenshots/part3/fixed-200.png)
+
+[Observed response headers](screenshots/part3/fixed-200-headers.png) show **3 total SQL statements**, including auth, and **1 data statements**. [Passing tests](screenshots/part3/fixed-200-tests.png) confirm exactly 200 rows and populated manager data.
+
+[SSL verification remained enabled](screenshots/part3/tls-verification.png), with the [custom public CA loaded](screenshots/part3/tls-ca.png) with user assistance. Credentials stayed in unshared local values and were cleared afterward; the [clearing record](raw/part3/postman/local-values-cleared.json) records UI verification at 2026-09-28 02:07:07.440 UTC. No credentials or cookie values are visible in these images. The [capture inventory and procedure](screenshots/part3/README.md) links all 23 visually reviewed captures. The native tool emitted JPEG bytes; the exact [native originals](raw/part3/postman/native-captures/) are retained, and the displayed PNGs are lossless conversions with identical decoded pixels and dimensions. No crop, resize, annotation or composite was applied ([format verification](raw/part3/postman/image-format-check.json)).
+
+These are functional screenshot requests after the index experiment. Their visible response times do not replace the selected 180-request dataset or its percentiles. The original timing rows, metrics, seed manifest, index snapshots and measured source bytes remain unchanged; [preservation evidence](raw/part3/postman/preservation_after.json) and the [database postflight](raw/part3/postman/postflight.json) record those checks. The query excerpts and matching request images are paired in this report.
 
 ## Initial integration verification
 
@@ -108,18 +283,16 @@ At `2026-09-28T01:16:15.241788+00:00`, [cleanup-follow-up partial verification](
 
 ![Actual Finder capture of shared backend modules and migrations after merging Parts 1–3.](screenshots/part2/07-project-backend.png)
 
-The two Finder captures satisfy the project-folder evidence item. Original captured JPEG bytes are retained beside PNG format conversions; no content was edited. Part 1 and integrated browser screenshots are available. The remaining **12 manual captures** are five Part 2 Postman CRUD responses, six Part 3 Postman size/version responses, and one database-client view. Postman is absent from the available native apps. The attempted native Terminal capture was denied by the computer-use tool; real schema/query JSON is available, but it does not replace the required database screenshot.
+The Finder captures satisfy the project-folder evidence item. Part 1 and integrated browser images are also available. Postman 12.29.5 is now installed. Part 3 completed all six required endpoint/size captures, and Part 2 completed POST, list GET, ID GET and PUT. Original JPEG bytes are retained alongside PNG conversions with identical decoded pixels.
 
-The [manual capture manifest](manual-captures.json) records each item separately. Follow [Part 2 capture steps](part2/MANUAL_CAPTURES.md) and [Part 3 capture steps](screenshots/part3/README.md). The collections contain no configured credentials, and no image has been fabricated.
+The remaining two images are the database view of the uniquely marked rental 16 and the subsequent DELETE response. The user can run the existing container's MySQL CLI in the Codex terminal and attach a screenshot; a graphical database client is not required. The computer-use tool denied native Terminal and Codex app control, so no automated terminal screenshot is claimed. Rental 16 remains until the database view is captured.
+
+The [manual capture manifest](manual-captures.json) and [current capture record](raw/part2/postman/manifest.json) identify each actual image and pending step. No image is synthesized.
 
 Part 4, the final whole-homework PDF and combined AI-use review, collaborator access confirmation, the `hw4` tag, and verification on that tagged commit remain later submission work. Nothing was pushed, published, or deployed by this local integration.
 
-## Remaining Part 2 capture access recheck
+## Current capture verification
 
-At `2026-09-28T01:29:38.647410+00:00`, the [availability record](raw/part2/capture-recheck/availability.json) confirmed that Postman was still absent from the checked app inventory and application folders, and could not be opened. Native Terminal access was denied again by the computer-use tool. No dedicated MySQL GUI was found in the inspected locations. No new screenshot, server process, or capture rental was created. Port 8702 was free and was not claimed; the existing databases and benchmark measurements were untouched.
+At 2026-09-28T02:33:01.034223+00:00 the [partial verifier](verification.parts123.json) passed 44/46 checks with automated status pass. Only the Part 2 DELETE and database images are pending. The [invocation and result](raw/part2/postman/verification-run.json) retain its exit code 1, and [the prior verifier](raw/part2/postman/verification-before.json) preserves the earlier 34/46 state. This run rechecks selected evidence and source hashes; it does not claim another full test or timing run.
 
-All six Part 2 images therefore remain pending: POST, list GET, ID GET, PUT, DELETE, and the database view. The existing project-folder images remain complete. The required next step is to make Postman and an allowed database client available, with separate authorization for any new installation. The database view must use the API's Part 2 instance on host port 3362, capture only this run's uniquely marked rental before deletion, and omit credentials, token values, and password hashes. The Terminal denial was not bypassed.
-
-The [capture instructions](part2/MANUAL_CAPTURES.md) now explain single-run ownership, recovery after an uncertain POST, a fresh exact-ID/marker comparison before each mutation, the database-before-delete order, and a final literal-ID 404 check. The prepared collection uses a GUID in immutable fields and guards against stale or overridden IDs; offline script checks are explicitly separate from actual Postman execution. Each new image must be placed beneath its corresponding code excerpt once genuinely captured.
-
-The [partial verifier](verification.parts123.json) was rerun against the retained selected evidence at `2026-09-28T01:29:57.581094+00:00`. It again reports **automated status pass**, **34/46 checks passed**, and **overall incomplete** for the same 12 manual images (six Part 2 and six Part 3). Its exit code 1 reflects these missing images. [Run details](raw/part2/capture-recheck/verification-run.json) preserve the exact command; [the prior verifier](raw/part2/capture-recheck/verification-before.json) is retained. This recheck is not a new API, browser, pytest, or performance measurement run.
+Part 3 evidence-only commit `e58669ffbfe3ed459ec2c7e664caa6186ba7ec8a` merged at `5c939bd8b32c41c7514bb061210a1f4e43b25862`. Part 2's capture server started from `7350d9c98e8b56fcab4979fd94e0b39246f2b6d3`; application source is unchanged by that merge. The live capture uses MySQL 3362 and owned rental 16. Its [capture log](raw/part2/postman/capture-log.json) records real timestamps and image hashes. Older availability failures remain in [capture-recheck](raw/part2/capture-recheck/availability.json) as historical observations.

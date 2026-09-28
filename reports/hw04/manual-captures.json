@@ -1,51 +1,55 @@
 [
   {
     "name": "part2/postman-create",
-    "captured": false,
-    "file": null,
-    "reason": "Postman remains absent from the checked app inventory/folders and could not be opened. Actual Postman UI access is needed.",
-    "last_checked_at": "2026-09-28T01:29:38.647410+00:00",
-    "availability_evidence": "reports/hw04/raw/part2/capture-recheck/availability.json"
+    "captured": true,
+    "file": "reports/hw04/screenshots/part2/01-post-create.png",
+    "reason": "Actual Postman response for uniquely marked capture rental 16; original JPEG retained with pixel-identical PNG conversion.",
+    "captured_at": "2026-09-28T02:19:33.156Z",
+    "revision": "7350d9c98e8b56fcab4979fd94e0b39246f2b6d3",
+    "provenance": "reports/hw04/raw/part2/postman/manifest.json"
   },
   {
     "name": "part2/postman-list",
-    "captured": false,
-    "file": null,
-    "reason": "Postman remains absent from the checked app inventory/folders and could not be opened. Actual Postman UI access is needed.",
-    "last_checked_at": "2026-09-28T01:29:38.647410+00:00",
-    "availability_evidence": "reports/hw04/raw/part2/capture-recheck/availability.json"
+    "captured": true,
+    "file": "reports/hw04/screenshots/part2/02-get-list.png",
+    "reason": "Actual Postman response for uniquely marked capture rental 16; original JPEG retained with pixel-identical PNG conversion.",
+    "captured_at": "2026-09-28T02:21:10.683Z",
+    "revision": "7350d9c98e8b56fcab4979fd94e0b39246f2b6d3",
+    "provenance": "reports/hw04/raw/part2/postman/manifest.json"
   },
   {
     "name": "part2/postman-id",
-    "captured": false,
-    "file": null,
-    "reason": "Postman remains absent from the checked app inventory/folders and could not be opened. Actual Postman UI access is needed.",
-    "last_checked_at": "2026-09-28T01:29:38.647410+00:00",
-    "availability_evidence": "reports/hw04/raw/part2/capture-recheck/availability.json"
+    "captured": true,
+    "file": "reports/hw04/screenshots/part2/03-get-by-id.png",
+    "reason": "Actual Postman response for uniquely marked capture rental 16; original JPEG retained with pixel-identical PNG conversion.",
+    "captured_at": "2026-09-28T02:21:52.163Z",
+    "revision": "7350d9c98e8b56fcab4979fd94e0b39246f2b6d3",
+    "provenance": "reports/hw04/raw/part2/postman/manifest.json"
   },
   {
     "name": "part2/postman-update",
-    "captured": false,
-    "file": null,
-    "reason": "Postman remains absent from the checked app inventory/folders and could not be opened. Actual Postman UI access is needed.",
-    "last_checked_at": "2026-09-28T01:29:38.647410+00:00",
-    "availability_evidence": "reports/hw04/raw/part2/capture-recheck/availability.json"
+    "captured": true,
+    "file": "reports/hw04/screenshots/part2/04-put-update.png",
+    "reason": "Actual Postman response for uniquely marked capture rental 16; original JPEG retained with pixel-identical PNG conversion.",
+    "captured_at": "2026-09-28T02:22:53.371Z",
+    "revision": "7350d9c98e8b56fcab4979fd94e0b39246f2b6d3",
+    "provenance": "reports/hw04/raw/part2/postman/manifest.json"
   },
   {
     "name": "part2/postman-delete",
     "captured": false,
     "file": null,
-    "reason": "Postman remains absent from the checked app inventory/folders and could not be opened. Actual Postman UI access is needed.",
-    "last_checked_at": "2026-09-28T01:29:38.647410+00:00",
-    "availability_evidence": "reports/hw04/raw/part2/capture-recheck/availability.json"
+    "reason": "Postman is available. DELETE capture waits for the database screenshot of this same owned rental 16.",
+    "last_checked_at": "2026-09-28T02:32:53.771262+00:00",
+    "availability_evidence": "reports/hw04/raw/part2/postman/manifest.json"
   },
   {
     "name": "part2/database",
     "captured": false,
     "file": null,
-    "reason": "Native Terminal UI access was denied again; no dedicated MySQL GUI was found in the checked app inventory/folders. An allowed database client is needed.",
-    "last_checked_at": "2026-09-28T01:29:38.647410+00:00",
-    "availability_evidence": "reports/hw04/raw/part2/capture-recheck/availability.json"
+    "reason": "Awaiting user screenshot of MySQL CLI output for owned rental 16. Computer Use denied native Terminal and Codex app control; no MySQL GUI installation required.",
+    "last_checked_at": "2026-09-28T02:32:53.771262+00:00",
+    "availability_evidence": "reports/hw04/raw/part2/postman/manifest.json"
   },
   {
     "name": "part2/project-structure",
@@ -60,38 +64,56 @@
   },
   {
     "name": "part3/postman-naive-10",
-    "captured": false,
-    "file": null,
-    "reason": "Postman application unavailable; collection/API output is not a screenshot substitute."
+    "captured": true,
+    "file": "reports/hw04/screenshots/part3/naive-10.png",
+    "reason": "Actual Postman response; original JPEG retained and PNG decoded pixels verified identical.",
+    "captured_at": "2026-09-28T02:00:38.851Z",
+    "revision": "4f8390b84752d861ea6b47c5ac8615680192d841",
+    "provenance": "reports/hw04/raw/part3/postman/manifest.json"
   },
   {
     "name": "part3/postman-naive-50",
-    "captured": false,
-    "file": null,
-    "reason": "Postman application unavailable; collection/API output is not a screenshot substitute."
+    "captured": true,
+    "file": "reports/hw04/screenshots/part3/naive-50.png",
+    "reason": "Actual Postman response; original JPEG retained and PNG decoded pixels verified identical.",
+    "captured_at": "2026-09-28T02:02:55.538Z",
+    "revision": "4f8390b84752d861ea6b47c5ac8615680192d841",
+    "provenance": "reports/hw04/raw/part3/postman/manifest.json"
   },
   {
     "name": "part3/postman-naive-200",
-    "captured": false,
-    "file": null,
-    "reason": "Postman application unavailable; collection/API output is not a screenshot substitute."
+    "captured": true,
+    "file": "reports/hw04/screenshots/part3/naive-200.png",
+    "reason": "Actual Postman response; original JPEG retained and PNG decoded pixels verified identical.",
+    "captured_at": "2026-09-28T02:04:44.180Z",
+    "revision": "4f8390b84752d861ea6b47c5ac8615680192d841",
+    "provenance": "reports/hw04/raw/part3/postman/manifest.json"
   },
   {
     "name": "part3/postman-fixed-10",
-    "captured": false,
-    "file": null,
-    "reason": "Postman application unavailable; collection/API output is not a screenshot substitute."
+    "captured": true,
+    "file": "reports/hw04/screenshots/part3/fixed-10.png",
+    "reason": "Actual Postman response; original JPEG retained and PNG decoded pixels verified identical.",
+    "captured_at": "2026-09-28T02:02:04.851Z",
+    "revision": "4f8390b84752d861ea6b47c5ac8615680192d841",
+    "provenance": "reports/hw04/raw/part3/postman/manifest.json"
   },
   {
     "name": "part3/postman-fixed-50",
-    "captured": false,
-    "file": null,
-    "reason": "Postman application unavailable; collection/API output is not a screenshot substitute."
+    "captured": true,
+    "file": "reports/hw04/screenshots/part3/fixed-50.png",
+    "reason": "Actual Postman response; original JPEG retained and PNG decoded pixels verified identical.",
+    "captured_at": "2026-09-28T02:03:39.291Z",
+    "revision": "4f8390b84752d861ea6b47c5ac8615680192d841",
+    "provenance": "reports/hw04/raw/part3/postman/manifest.json"
   },
   {
     "name": "part3/postman-fixed-200",
-    "captured": false,
-    "file": null,
-    "reason": "Postman application unavailable; collection/API output is not a screenshot substitute."
+    "captured": true,
+    "file": "reports/hw04/screenshots/part3/fixed-200.png",
+    "reason": "Actual Postman response; original JPEG retained and PNG decoded pixels verified identical.",
+    "captured_at": "2026-09-28T02:05:26.335Z",
+    "revision": "4f8390b84752d861ea6b47c5ac8615680192d841",
+    "provenance": "reports/hw04/raw/part3/postman/manifest.json"
   }
 ]

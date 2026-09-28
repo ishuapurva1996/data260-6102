@@ -1,0 +1,103 @@
+{
+  "format_version": 1,
+  "reviewed_at_utc": "2026-09-28T02:31:44.105212+00:00",
+  "reviewer": "code_review subagent",
+  "method": "Direct visual inspection of saved PNGs at original resolution using view_image. The four earlier primary captures remain byte-identical to their reviewed SHA256 values; one new updated-ID GET capture was directly reviewed in this follow-up.",
+  "status": "passed",
+  "primary_images_reviewed": 4,
+  "issues": [],
+  "images": [
+    {
+      "file": "reports/hw04/screenshots/part2/01-post-create.png",
+      "sha256": "b33dae0dc87c0b7923bc6c90d4ff74aa573d20ae330a605af511d099e40d5698",
+      "status": "passed",
+      "method_visible": "POST",
+      "full_url_visible": "https://127.0.0.1:8702/api/rentals",
+      "http_status_visible": 201,
+      "rental_ids_visible": [
+        16
+      ],
+      "uuid_marker_visible": "591325c9-5c03-4baa-bef3-a06eea2b2714",
+      "fields_readable": true,
+      "login_credentials_visible": false,
+      "cookie_or_token_value_visible": false,
+      "observation": "Response shows the created rental with all seven fields, UUID-marked title/email/description, address 260 Capture Lane, San Jose, CA, apartment type and accepted terms."
+    },
+    {
+      "file": "reports/hw04/screenshots/part2/02-get-list.png",
+      "sha256": "82eecf6c905be04fc91a4dfabfb99c21a6a9ae6c6e9d6034de665b34ff4cd552",
+      "status": "passed",
+      "method_visible": "GET",
+      "full_url_visible": "https://127.0.0.1:8702/api/rentals",
+      "http_status_visible": 200,
+      "rental_ids_visible": [
+        1,
+        2,
+        16
+      ],
+      "uuid_marker_visible": "591325c9-5c03-4baa-bef3-a06eea2b2714",
+      "fields_readable": true,
+      "login_credentials_visible": false,
+      "cookie_or_token_value_visible": false,
+      "observation": "Unfiltered URL has no query string. The entire response array is visible with the original IDs 1 and 2 plus created ID 16, including its UUID markers."
+    },
+    {
+      "file": "reports/hw04/screenshots/part2/03-get-by-id.png",
+      "sha256": "f46740c45654f63403651383c835d197160ebcbc736d2e84473a5cfe29119896",
+      "status": "passed",
+      "method_visible": "GET",
+      "full_url_visible": "https://127.0.0.1:8702/api/rentals/16",
+      "http_status_visible": 200,
+      "rental_ids_visible": [
+        16
+      ],
+      "uuid_marker_visible": "591325c9-5c03-4baa-bef3-a06eea2b2714",
+      "fields_readable": true,
+      "login_credentials_visible": false,
+      "cookie_or_token_value_visible": false,
+      "observation": "Literal ID 16 URL and complete matching rental response are readable; UUID markers and original title/address match the create capture."
+    },
+    {
+      "file": "reports/hw04/screenshots/part2/04-put-update.png",
+      "sha256": "fbc3af07aa3793f76a25ffd86f84dce58da438f5518121b3373791d227788660",
+      "status": "passed",
+      "method_visible": "PUT",
+      "full_url_visible": "https://127.0.0.1:8702/api/rentals/16",
+      "http_status_visible": 200,
+      "rental_ids_visible": [
+        16
+      ],
+      "uuid_marker_visible": "591325c9-5c03-4baa-bef3-a06eea2b2714",
+      "fields_readable": true,
+      "login_credentials_visible": false,
+      "cookie_or_token_value_visible": false,
+      "observation": "Response retains ID 16 and immutable UUID email/description; title has the updated suffix and address is 261 Capture Lane, San Jose, CA."
+    },
+    {
+      "file": "reports/hw04/screenshots/part2/04-updated-id-read.png",
+      "sha256": "b061a9d64985f427342a26b62d0aa83e93106d8dd45d7cb56d93cbf5fccf9220",
+      "role": "supporting updated-ID read",
+      "status": "passed",
+      "method_visible": "GET",
+      "full_url_visible": "https://127.0.0.1:8702/api/rentals/16",
+      "http_status_visible": 200,
+      "rental_ids_visible": [
+        16
+      ],
+      "uuid_marker_visible": "591325c9-5c03-4baa-bef3-a06eea2b2714",
+      "fields_readable": true,
+      "login_credentials_visible": false,
+      "cookie_or_token_value_visible": false,
+      "observation": "Complete updated rental is readable in a literal-ID GET response: title has the updated suffix, address is 261 Capture Lane, San Jose, CA, and immutable UUID email/description match the create/PUT evidence. Test Results shows 2/2."
+    }
+  ],
+  "limitations": [
+    "This review covers four primary POST/list/ID-GET/PUT images and the supporting updated-ID GET image. The other five converted support images were checked for hashes, format and pixel equality but not visually reviewed.",
+    "DELETE and database-client screenshots were not available in this review scope.",
+    "Screenshot content is reviewed as captured evidence; this pass sent no HTTP requests and made no database queries."
+  ],
+  "initial_reviewed_at_utc": "2026-09-28T02:26:07.414383+00:00",
+  "support_images_reviewed": 1,
+  "total_images_reviewed": 5,
+  "previous_primary_hashes_rechecked_unchanged": true
+}

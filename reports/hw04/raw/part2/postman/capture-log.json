@@ -1,0 +1,141 @@
+[
+  {
+    "name": "01-post-create",
+    "file": "reports/hw04/raw/part2/postman/native-captures/01-post-create.jpg",
+    "captured_at": "2026-09-28T02:19:33.156Z",
+    "sha256": "d41418284843b0db5630e80e22a0a5726a40e3f07bd919a5aec4ad6407cf10a4",
+    "format": "jpg",
+    "observed": {
+      "method": "POST",
+      "url": "https://127.0.0.1:8702/api/rentals",
+      "status": 201,
+      "rental_id": 16,
+      "marker": "591325c9-5c03-4baa-bef3-a06eea2b2714"
+    }
+  },
+  {
+    "name": "01-post-create-tests",
+    "file": "reports/hw04/raw/part2/postman/native-captures/01-post-create-tests.jpg",
+    "captured_at": "2026-09-28T02:20:00.654Z",
+    "sha256": "d5eeec54e8215525e9b77231c7d6b6b0ec59ae59dad860117ad4cbf33c880c69",
+    "format": "jpg",
+    "observed": {
+      "passed": 3,
+      "failed": 0
+    }
+  },
+  {
+    "name": "02-get-list-top",
+    "file": "reports/hw04/raw/part2/postman/native-captures/02-get-list-top.jpg",
+    "captured_at": "2026-09-28T02:20:47.842Z",
+    "sha256": "ca307748466330e3051acd8e6d3a429c84cc4b001908e0add4a7924998eda6be",
+    "format": "jpg",
+    "observed": {
+      "method": "GET",
+      "url": "https://127.0.0.1:8702/api/rentals",
+      "status": 200,
+      "visible_original_ids": [
+        1,
+        2
+      ],
+      "capture_row_visible_partially": true
+    }
+  },
+  {
+    "name": "02-get-list",
+    "file": "reports/hw04/raw/part2/postman/native-captures/02-get-list.jpg",
+    "captured_at": "2026-09-28T02:21:10.683Z",
+    "sha256": "03223c8fff6436918a0002d02e9a3b62d0a065a1406ebc7f7a90b0b75de76a2c",
+    "format": "jpg",
+    "observed": {
+      "method": "GET",
+      "url": "https://127.0.0.1:8702/api/rentals",
+      "status": 200,
+      "rental_ids": [
+        1,
+        2,
+        16
+      ],
+      "test_results": "2/2"
+    }
+  },
+  {
+    "name": "02-get-list-tests",
+    "file": "reports/hw04/raw/part2/postman/native-captures/02-get-list-tests.jpg",
+    "captured_at": "2026-09-28T02:21:21.094Z",
+    "sha256": "b797686a117b8430d7a662baf2fd39060071fddeb8e7adb97139784bb3b76384",
+    "format": "jpg",
+    "observed": {
+      "passed": 2,
+      "failed": 0
+    }
+  },
+  {
+    "name": "03-get-by-id",
+    "file": "reports/hw04/raw/part2/postman/native-captures/03-get-by-id.jpg",
+    "captured_at": "2026-09-28T02:21:52.163Z",
+    "sha256": "00364c27deb8f4add89824cef0389575d4d5f8c2a8c9032b49c980f09bd3ea9c",
+    "format": "jpg",
+    "observed": {
+      "method": "GET",
+      "url": "https://127.0.0.1:8702/api/rentals/16",
+      "status": 200,
+      "rental_id": 16,
+      "immutable_marker_match": true
+    }
+  },
+  {
+    "name": "03-get-by-id-tests",
+    "file": "reports/hw04/raw/part2/postman/native-captures/03-get-by-id-tests.jpg",
+    "captured_at": "2026-09-28T02:21:55.903Z",
+    "sha256": "a5a243de53c156917a8d2efb74f97c37140fa0a1d4d84ab46ac5c9fdc70d7599",
+    "format": "jpg",
+    "observed": {
+      "passed": 2,
+      "failed": 0
+    }
+  },
+  {
+    "name": "04-put-update",
+    "file": "reports/hw04/raw/part2/postman/native-captures/04-put-update.jpg",
+    "captured_at": "2026-09-28T02:22:53.371Z",
+    "sha256": "6d79eb2fc94913e6b46e9dbb102efe8b5bfd8b51f7b19ce298e22aa61fd81f3b",
+    "format": "jpg",
+    "observed": {
+      "method": "PUT",
+      "url": "https://127.0.0.1:8702/api/rentals/16",
+      "status": 200,
+      "rental_id": 16,
+      "title_suffix": " updated",
+      "property_address": "261 Capture Lane, San Jose, CA",
+      "test_results": "3/3"
+    }
+  },
+  {
+    "name": "04-put-update-tests",
+    "file": "reports/hw04/raw/part2/postman/native-captures/04-put-update-tests.jpg",
+    "captured_at": "2026-09-28T02:22:57.039Z",
+    "sha256": "f69ea16166a32d54a862a0ddd44bbf37864ab83456da3c3ab65e5fb5d3e669be",
+    "format": "jpg",
+    "observed": {
+      "passed": 3,
+      "failed": 0
+    }
+  },
+  {
+    "name": "04-updated-id-read",
+    "file": "reports/hw04/raw/part2/postman/native-captures/04-updated-id-read.jpg",
+    "captured_at": "2026-09-28T02:27:19.326Z",
+    "sha256": "07b69a2ee59c1ca38da3b70005a61bd52fcda582cb3f6eab981a1e99adf9c31b",
+    "format": "jpg",
+    "observed": {
+      "method": "GET",
+      "url": "https://127.0.0.1:8702/api/rentals/16",
+      "status": 200,
+      "rental_id": 16,
+      "assertions_passed": 2,
+      "status_check_passed": true,
+      "ownership_check_passed": true
+    }
+  }
+]

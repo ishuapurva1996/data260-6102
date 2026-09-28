@@ -1,7 +1,7 @@
 {
   "scope": "HW4 Parts1\u20133 only; not final whole-homework verification",
-  "timestamp_utc": "2026-09-28T02:33:01.340953+00:00",
-  "revision": "5c939bd8b32c41c7514bb061210a1f4e43b25862",
+  "timestamp_utc": "2026-09-28T01:29:57.820815+00:00",
+  "revision": "fcd76835c7a31e74dba8684ebe794e0f550f28a2",
   "seed": 6102,
   "verify_seed": 266102,
   "database": "s6102_rel",
@@ -25,7 +25,7 @@
     {
       "name": "part3_commit_integrated",
       "passed": true,
-      "commit": "e58669ffbfe3ed459ec2c7e664caa6186ba7ec8a"
+      "commit": "4f8390b84752d861ea6b47c5ac8615680192d841"
     },
     {
       "name": "historical_reports_and_unrelated_code_preserved",
@@ -151,45 +151,45 @@
     },
     {
       "name": "manual_capture:part2/postman-create",
-      "passed": true,
+      "passed": false,
       "category": "manual_evidence",
-      "file": "reports/hw04/screenshots/part2/01-post-create.png",
-      "reason": "Actual Postman response for uniquely marked capture rental 16; original JPEG retained with pixel-identical PNG conversion."
+      "file": null,
+      "reason": "Postman remains absent from the checked app inventory/folders and could not be opened. Actual Postman UI access is needed."
     },
     {
       "name": "manual_capture:part2/postman-list",
-      "passed": true,
+      "passed": false,
       "category": "manual_evidence",
-      "file": "reports/hw04/screenshots/part2/02-get-list.png",
-      "reason": "Actual Postman response for uniquely marked capture rental 16; original JPEG retained with pixel-identical PNG conversion."
+      "file": null,
+      "reason": "Postman remains absent from the checked app inventory/folders and could not be opened. Actual Postman UI access is needed."
     },
     {
       "name": "manual_capture:part2/postman-id",
-      "passed": true,
+      "passed": false,
       "category": "manual_evidence",
-      "file": "reports/hw04/screenshots/part2/03-get-by-id.png",
-      "reason": "Actual Postman response for uniquely marked capture rental 16; original JPEG retained with pixel-identical PNG conversion."
+      "file": null,
+      "reason": "Postman remains absent from the checked app inventory/folders and could not be opened. Actual Postman UI access is needed."
     },
     {
       "name": "manual_capture:part2/postman-update",
-      "passed": true,
+      "passed": false,
       "category": "manual_evidence",
-      "file": "reports/hw04/screenshots/part2/04-put-update.png",
-      "reason": "Actual Postman response for uniquely marked capture rental 16; original JPEG retained with pixel-identical PNG conversion."
+      "file": null,
+      "reason": "Postman remains absent from the checked app inventory/folders and could not be opened. Actual Postman UI access is needed."
     },
     {
       "name": "manual_capture:part2/postman-delete",
       "passed": false,
       "category": "manual_evidence",
       "file": null,
-      "reason": "Postman is available. DELETE capture waits for the database screenshot of this same owned rental 16."
+      "reason": "Postman remains absent from the checked app inventory/folders and could not be opened. Actual Postman UI access is needed."
     },
     {
       "name": "manual_capture:part2/database",
       "passed": false,
       "category": "manual_evidence",
       "file": null,
-      "reason": "Awaiting user screenshot of MySQL CLI output for owned rental 16. Computer Use denied native Terminal and Codex app control; no MySQL GUI installation required."
+      "reason": "Native Terminal UI access was denied again; no dedicated MySQL GUI was found in the checked app inventory/folders. An allowed database client is needed."
     },
     {
       "name": "manual_capture:part2/project-structure",
@@ -200,45 +200,45 @@
     },
     {
       "name": "manual_capture:part3/postman-naive-10",
-      "passed": true,
+      "passed": false,
       "category": "manual_evidence",
-      "file": "reports/hw04/screenshots/part3/naive-10.png",
-      "reason": "Actual Postman response; original JPEG retained and PNG decoded pixels verified identical."
+      "file": null,
+      "reason": "Postman application unavailable; collection/API output is not a screenshot substitute."
     },
     {
       "name": "manual_capture:part3/postman-naive-50",
-      "passed": true,
+      "passed": false,
       "category": "manual_evidence",
-      "file": "reports/hw04/screenshots/part3/naive-50.png",
-      "reason": "Actual Postman response; original JPEG retained and PNG decoded pixels verified identical."
+      "file": null,
+      "reason": "Postman application unavailable; collection/API output is not a screenshot substitute."
     },
     {
       "name": "manual_capture:part3/postman-naive-200",
-      "passed": true,
+      "passed": false,
       "category": "manual_evidence",
-      "file": "reports/hw04/screenshots/part3/naive-200.png",
-      "reason": "Actual Postman response; original JPEG retained and PNG decoded pixels verified identical."
+      "file": null,
+      "reason": "Postman application unavailable; collection/API output is not a screenshot substitute."
     },
     {
       "name": "manual_capture:part3/postman-fixed-10",
-      "passed": true,
+      "passed": false,
       "category": "manual_evidence",
-      "file": "reports/hw04/screenshots/part3/fixed-10.png",
-      "reason": "Actual Postman response; original JPEG retained and PNG decoded pixels verified identical."
+      "file": null,
+      "reason": "Postman application unavailable; collection/API output is not a screenshot substitute."
     },
     {
       "name": "manual_capture:part3/postman-fixed-50",
-      "passed": true,
+      "passed": false,
       "category": "manual_evidence",
-      "file": "reports/hw04/screenshots/part3/fixed-50.png",
-      "reason": "Actual Postman response; original JPEG retained and PNG decoded pixels verified identical."
+      "file": null,
+      "reason": "Postman application unavailable; collection/API output is not a screenshot substitute."
     },
     {
       "name": "manual_capture:part3/postman-fixed-200",
-      "passed": true,
+      "passed": false,
       "category": "manual_evidence",
-      "file": "reports/hw04/screenshots/part3/fixed-200.png",
-      "reason": "Actual Postman response; original JPEG retained and PNG decoded pixels verified identical."
+      "file": null,
+      "reason": "Postman application unavailable; collection/API output is not a screenshot substitute."
     },
     {
       "name": "verifier_did_not_modify_application_source",

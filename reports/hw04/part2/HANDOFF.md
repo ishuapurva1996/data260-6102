@@ -1,6 +1,6 @@
 # Part 2 and integrated Parts 1–3 handoff
 
-Parts 1–3 are merged locally on **codex/hw4-part2-backend**. Current tested code **307b1d9adc050e422a205e2d3219914c2234d816** passed the cleanup follow-up checks; the original API and integration evidence at `e7382ddb9cc5e0a5cd867653254a0c6f62f2f9c7` is preserved below. The partial verifier reports **automated_status: pass** and **status: incomplete** because 12 required manual captures remain unavailable. There are no unfinished sibling implementation dependencies.
+Parts 1–3 are merged locally on **codex/hw4-part2-backend**. Current tested code **307b1d9adc050e422a205e2d3219914c2234d816** passed the cleanup follow-up checks; the original API and integration evidence at `e7382ddb9cc5e0a5cd867653254a0c6f62f2f9c7` is preserved below. The current partial verifier reports **automated_status: pass** and **status: incomplete**: **44 of 46** checks pass. The database screenshot and final Part 2 DELETE screenshot remain pending; the other required captures are present. There are no unfinished sibling implementation dependencies.
 
 | Item | Value |
 | --- | --- |
@@ -11,7 +11,8 @@ Parts 1–3 are merged locally on **codex/hw4-part2-backend**. Current tested co
 | Early foundation B | f29e7cc85baf52bea30bd4bb3209d1bd79b22051 |
 | Initial Part 1 handoff | 5db1d4a12d996fa5eb45e9b71d7b2dbcd0708991 |
 | Current Part 1 cleanup handoff | 5d84f1a038cfdfcedb667b8047e06d5ef095164b |
-| Imported Part 3 final commit | 4f8390b84752d861ea6b47c5ac8615680192d841 |
+| Imported Part 3 implementation commit | 4f8390b84752d861ea6b47c5ac8615680192d841 |
+| Imported Part 3 Postman evidence commit | e58669ffbfe3ed459ec2c7e664caa6186ba7ec8a |
 | Current tested code | 307b1d9adc050e422a205e2d3219914c2234d816 |
 | Initial integrated tested code | e7382ddb9cc5e0a5cd867653254a0c6f62f2f9c7 |
 | Original performance measured revision | 9860a20342072168ed68a8d41eb16d9bfecf7729 |
@@ -71,7 +72,7 @@ At `2026-09-28T01:16:15.241788+00:00`, [cleanup-follow-up partial verification](
 
 ## Runtime ownership
 
-Evidence-slot order was foundation/auth, Part 1 browser, Part 3 benchmark, then final combined integration. All owned API processes have been stopped, and the integration owner observed port 8702 free after the checks. Do not act on historical PIDs; consult the external coordination note and verify current ownership before starting or stopping anything.
+Evidence-slot order was foundation/auth, Part 1 browser, Part 3 benchmark, then final combined integration. The initial integration and cleanup-check processes were stopped, and port 8702 was observed free after those checks. A later Part 2 Postman capture slot is active as described below. Do not act on historical PIDs; consult the external coordination note and verify current ownership before starting or stopping anything.
 
 | Instance | Host port | Purpose and retained state |
 | --- | ---: | --- |
@@ -102,23 +103,10 @@ These commands use a separate review output directory so the selected evidence r
 
 ## Remaining captures and later submission work
 
-The integration dependencies are complete. Remaining evidence is precisely **12 images**:
+All sibling implementation and Part 3 evidence commits are merged. Two required images remain: the database view of Part 2 capture rental 16 and its later DELETE response. Four Part 2 CRUD images, all six Part 3 endpoint/size images, the project-folder images, and browser evidence are captured. The existing MySQL CLI is sufficient; a GUI installation is unnecessary. Native Terminal and Codex app control were denied by the computer-use tool. The user can run the read-only command in [MANUAL_CAPTURES.md](MANUAL_CAPTURES.md) and attach the actual database screenshot.
 
-- Part 2: five Postman CRUD responses and one database-client view.
-- Part 3: naive/fixed Postman responses at page sizes 10, 50, and 200, six images.
+The current capture server remains owned by this task: Uvicorn PID 82539, exec session 66032, HTTPS 8702, MySQL 3362. Keep exact rental 16, UUID `591325c9-5c03-4baa-bef3-a06eea2b2714`, until that image arrives. Then perform a fresh authenticated ownership GET, DELETE 204, literal-ID GET 404, logout, clear local Postman credentials, check original rows unchanged, stop only this owned server, and release 8702. Verify current PID/ownership before stopping anything; never act on this record alone after runtime changes.
 
-Project-folder and browser evidence are captured. Postman is unavailable in the inspected native apps. The computer-use tool denied the native Terminal capture, so the database screenshot remains pending despite actual schema/query JSON. Follow [Part 2 capture steps](MANUAL_CAPTURES.md), [Part 3 capture steps](../screenshots/part3/README.md), and [the per-item manifest](../manual-captures.json). Use the provided collections with local credentials and record actual output; do not substitute fabricated images.
+The [current partial verifier](../verification.parts123.json) at 2026-09-28T02:33:01.034223+00:00 reports automated pass and 44/46 checks, incomplete only for these two images. [The exact invocation](../raw/part2/postman/verification-run.json) and [prior verifier](../raw/part2/postman/verification-before.json) are preserved. This is an evidence/source recheck, not a new pytest, browser, API or benchmark run.
 
-The combined [PARTS123.md](../PARTS123.md), [METRICS.md](../METRICS.md), and [AI_USE.md](../AI_USE.md) summarize the available evidence. `verification.parts123.json` objectively marks all automated checks passed and missing manual items failed. It is not `verification.json` for the eventual submission tag.
-
-Part 4, the final whole-homework PDF, student review of the final explanation/AI-use disclosure, collaborator access checks, the `hw4` tag, and tagged-commit verification remain later work. No push, PR, deployment, or tag mutation is part of this local handoff.
-
-## Remaining Part 2 capture access recheck
-
-At `2026-09-28T01:29:38.647410+00:00`, the [availability record](../raw/part2/capture-recheck/availability.json) confirmed that Postman was still absent from the checked app inventory and application folders, and could not be opened. Native Terminal access was denied again by the computer-use tool. No dedicated MySQL GUI was found in the inspected locations. No new screenshot, server process, or capture rental was created. Port 8702 was free and was not claimed; the existing databases and benchmark measurements were untouched.
-
-All six Part 2 images therefore remain pending: POST, list GET, ID GET, PUT, DELETE, and the database view. The existing project-folder images remain complete. The required next step is to make Postman and an allowed database client available, with separate authorization for any new installation. The database view must use the API's Part 2 instance on host port 3362, capture only this run's uniquely marked rental before deletion, and omit credentials, token values, and password hashes. The Terminal denial was not bypassed.
-
-The [capture instructions](MANUAL_CAPTURES.md) now explain single-run ownership, recovery after an uncertain POST, a fresh exact-ID/marker comparison before each mutation, the database-before-delete order, and a final literal-ID 404 check. The prepared collection uses a GUID in immutable fields and guards against stale or overridden IDs; offline script checks are explicitly separate from actual Postman execution. Each new image must be placed beneath its corresponding code excerpt once genuinely captured.
-
-The [partial verifier](../verification.parts123.json) was rerun against the retained selected evidence at `2026-09-28T01:29:57.581094+00:00`. It again reports **automated status pass**, **34/46 checks passed**, and **overall incomplete** for the same 12 manual images (six Part 2 and six Part 3). Its exit code 1 reflects these missing images. [Run details](../raw/part2/capture-recheck/verification-run.json) preserve the exact command; [the prior verifier](../raw/part2/capture-recheck/verification-before.json) is retained. This recheck is not a new API, browser, pytest, or performance measurement run.
+The combined [PARTS123.md](../PARTS123.md), [METRICS.md](../METRICS.md), and [AI_USE.md](../AI_USE.md) explain the separate evidence groups. Part 4, the whole-homework PDF, student review, collaborator checks, the `hw4` tag and tagged verification remain later work. No push, PR or deployment is part of this handoff.

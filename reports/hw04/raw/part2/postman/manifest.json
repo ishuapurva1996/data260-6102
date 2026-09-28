@@ -1,0 +1,244 @@
+{
+  "scope": "Actual Part 2 Postman CRUD screenshots; capture workflow in progress",
+  "updated_at_utc": "2026-09-28T02:32:53.771262+00:00",
+  "status": "incomplete",
+  "running_application_revision": "7350d9c98e8b56fcab4979fd94e0b39246f2b6d3",
+  "current_head": "5c939bd8b32c41c7514bb061210a1f4e43b25862",
+  "evidence_only_merge": "5c939bd8b32c41c7514bb061210a1f4e43b25862",
+  "application_source_unchanged_during_merge": true,
+  "application": "Postman 12.29.5",
+  "base_url": "https://127.0.0.1:8702",
+  "ssl_verification_enabled": true,
+  "connection": {
+    "database": "s6102_rel",
+    "mysql_host_port": 3362,
+    "container": "data260-hw4-mysql"
+  },
+  "runtime": {
+    "owned_uvicorn_pid": 82539,
+    "exec_session_id": 66032,
+    "port": 8702,
+    "state": "running; database capture precedes owned-row deletion"
+  },
+  "owned_rental": {
+    "id": 16,
+    "marker": "591325c9-5c03-4baa-bef3-a06eea2b2714",
+    "revision": "7350d9c98e8b56fcab4979fd94e0b39246f2b6d3",
+    "database_port": 3362,
+    "server_pid": 82539
+  },
+  "observed_requests": [
+    {
+      "request": "Login",
+      "status": 200,
+      "screenshot_omitted": "Avoid credential and cookie exposure; no assertion count inferred"
+    },
+    {
+      "request": "POST /api/rentals",
+      "status": 201,
+      "rental_id": 16,
+      "assertions_passed": 3,
+      "assertions_failed": 0
+    },
+    {
+      "request": "GET /api/rentals",
+      "status": 200,
+      "rental_ids": [
+        1,
+        2,
+        16
+      ],
+      "assertions_passed": 2,
+      "assertions_failed": 0
+    },
+    {
+      "request": "GET /api/rentals/16",
+      "status": 200,
+      "assertions_passed": 2,
+      "assertions_failed": 0
+    },
+    {
+      "request": "PUT /api/rentals/16",
+      "status": 200,
+      "assertions_passed": 3,
+      "assertions_failed": 0
+    },
+    {
+      "request": "GET /api/rentals/16 after update",
+      "status": 200,
+      "assertions_passed": 2,
+      "assertions_failed": 0
+    }
+  ],
+  "capture_log": "reports/hw04/raw/part2/postman/capture-log.json",
+  "images": [
+    {
+      "source": "reports/hw04/raw/part2/postman/native-captures/01-post-create-tests.jpg",
+      "source_format": "JPEG",
+      "source_sha256": "d5eeec54e8215525e9b77231c7d6b6b0ec59ae59dad860117ad4cbf33c880c69",
+      "source_bytes": 338125,
+      "png": "reports/hw04/screenshots/part2/01-post-create-tests.png",
+      "png_format": "PNG",
+      "png_sha256": "c6620790553e8721198a177f8c762690e77a9a9275518668ead627829d1d7f74",
+      "png_bytes": 614072,
+      "width": 2560,
+      "height": 1600,
+      "mode": "RGB",
+      "decoded_pixels_identical": true,
+      "original_preserved": true
+    },
+    {
+      "source": "reports/hw04/raw/part2/postman/native-captures/01-post-create.jpg",
+      "source_format": "JPEG",
+      "source_sha256": "d41418284843b0db5630e80e22a0a5726a40e3f07bd919a5aec4ad6407cf10a4",
+      "source_bytes": 405958,
+      "png": "reports/hw04/screenshots/part2/01-post-create.png",
+      "png_format": "PNG",
+      "png_sha256": "b33dae0dc87c0b7923bc6c90d4ff74aa573d20ae330a605af511d099e40d5698",
+      "png_bytes": 819909,
+      "width": 2560,
+      "height": 1600,
+      "mode": "RGB",
+      "decoded_pixels_identical": true,
+      "original_preserved": true
+    },
+    {
+      "source": "reports/hw04/raw/part2/postman/native-captures/02-get-list-tests.jpg",
+      "source_format": "JPEG",
+      "source_sha256": "b797686a117b8430d7a662baf2fd39060071fddeb8e7adb97139784bb3b76384",
+      "source_bytes": 216555,
+      "png": "reports/hw04/screenshots/part2/02-get-list-tests.png",
+      "png_format": "PNG",
+      "png_sha256": "108cbf019224cfe26e28edb94a2eabfbc76cfbb5fce1ca6fe0c151b1379c6d39",
+      "png_bytes": 324720,
+      "width": 2560,
+      "height": 1600,
+      "mode": "RGB",
+      "decoded_pixels_identical": true,
+      "original_preserved": true
+    },
+    {
+      "source": "reports/hw04/raw/part2/postman/native-captures/02-get-list-top.jpg",
+      "source_format": "JPEG",
+      "source_sha256": "ca307748466330e3051acd8e6d3a429c84cc4b001908e0add4a7924998eda6be",
+      "source_bytes": 516837,
+      "png": "reports/hw04/screenshots/part2/02-get-list-top.png",
+      "png_format": "PNG",
+      "png_sha256": "6ecce21e865d7d1ef2ca1dccd190f3f73af2af0f03def05e93594a457951bc01",
+      "png_bytes": 1158975,
+      "width": 2560,
+      "height": 1600,
+      "mode": "RGB",
+      "decoded_pixels_identical": true,
+      "original_preserved": true
+    },
+    {
+      "source": "reports/hw04/raw/part2/postman/native-captures/02-get-list.jpg",
+      "source_format": "JPEG",
+      "source_sha256": "03223c8fff6436918a0002d02e9a3b62d0a065a1406ebc7f7a90b0b75de76a2c",
+      "source_bytes": 379364,
+      "png": "reports/hw04/screenshots/part2/02-get-list.png",
+      "png_format": "PNG",
+      "png_sha256": "82eecf6c905be04fc91a4dfabfb99c21a6a9ae6c6e9d6034de665b34ff4cd552",
+      "png_bytes": 815491,
+      "width": 2560,
+      "height": 1600,
+      "mode": "RGB",
+      "decoded_pixels_identical": true,
+      "original_preserved": true
+    },
+    {
+      "source": "reports/hw04/raw/part2/postman/native-captures/03-get-by-id-tests.jpg",
+      "source_format": "JPEG",
+      "source_sha256": "a5a243de53c156917a8d2efb74f97c37140fa0a1d4d84ab46ac5c9fdc70d7599",
+      "source_bytes": 221658,
+      "png": "reports/hw04/screenshots/part2/03-get-by-id-tests.png",
+      "png_format": "PNG",
+      "png_sha256": "630673e29ee4ead63b53e06319f8dc0036e9d5d09fb0e207d6e1d56231749968",
+      "png_bytes": 330532,
+      "width": 2560,
+      "height": 1600,
+      "mode": "RGB",
+      "decoded_pixels_identical": true,
+      "original_preserved": true
+    },
+    {
+      "source": "reports/hw04/raw/part2/postman/native-captures/03-get-by-id.jpg",
+      "source_format": "JPEG",
+      "source_sha256": "00364c27deb8f4add89824cef0389575d4d5f8c2a8c9032b49c980f09bd3ea9c",
+      "source_bytes": 278078,
+      "png": "reports/hw04/screenshots/part2/03-get-by-id.png",
+      "png_format": "PNG",
+      "png_sha256": "f46740c45654f63403651383c835d197160ebcbc736d2e84473a5cfe29119896",
+      "png_bytes": 498735,
+      "width": 2560,
+      "height": 1600,
+      "mode": "RGB",
+      "decoded_pixels_identical": true,
+      "original_preserved": true
+    },
+    {
+      "source": "reports/hw04/raw/part2/postman/native-captures/04-put-update-tests.jpg",
+      "source_format": "JPEG",
+      "source_sha256": "f69ea16166a32d54a862a0ddd44bbf37864ab83456da3c3ab65e5fb5d3e669be",
+      "source_bytes": 226066,
+      "png": "reports/hw04/screenshots/part2/04-put-update-tests.png",
+      "png_format": "PNG",
+      "png_sha256": "4dd241868c3ac9b2c9d80ccac8264158ddd7a84c66abae04adad8a4139d01298",
+      "png_bytes": 352254,
+      "width": 2560,
+      "height": 1600,
+      "mode": "RGB",
+      "decoded_pixels_identical": true,
+      "original_preserved": true
+    },
+    {
+      "source": "reports/hw04/raw/part2/postman/native-captures/04-put-update.jpg",
+      "source_format": "JPEG",
+      "source_sha256": "6d79eb2fc94913e6b46e9dbb102efe8b5bfd8b51f7b19ce298e22aa61fd81f3b",
+      "source_bytes": 280559,
+      "png": "reports/hw04/screenshots/part2/04-put-update.png",
+      "png_format": "PNG",
+      "png_sha256": "fbc3af07aa3793f76a25ffd86f84dce58da438f5518121b3373791d227788660",
+      "png_bytes": 510345,
+      "width": 2560,
+      "height": 1600,
+      "mode": "RGB",
+      "decoded_pixels_identical": true,
+      "original_preserved": true
+    },
+    {
+      "source": "reports/hw04/raw/part2/postman/native-captures/04-updated-id-read.jpg",
+      "source_format": "JPEG",
+      "source_sha256": "07b69a2ee59c1ca38da3b70005a61bd52fcda582cb3f6eab981a1e99adf9c31b",
+      "source_bytes": 279482,
+      "png": "reports/hw04/screenshots/part2/04-updated-id-read.png",
+      "png_format": "PNG",
+      "png_sha256": "b061a9d64985f427342a26b62d0aa83e93106d8dd45d7cb56d93cbf5fccf9220",
+      "png_bytes": 507663,
+      "width": 2560,
+      "height": 1600,
+      "mode": "RGB",
+      "decoded_pixels_identical": true,
+      "original_preserved": true
+    }
+  ],
+  "format_conversion": "Native JPEG bytes retained unmodified; PNG decoded pixels identical; no cropping, resizing, annotations, or compositing",
+  "visual_review": "reports/hw04/raw/part2/postman/visual-review.json",
+  "database_preflight": "reports/hw04/raw/part2/postman/preflight.json",
+  "pending": [
+    "User-provided database screenshot of owned rental 16",
+    "Fresh ownership GET, DELETE 204 screenshot, literal ID GET 404, Logout 204",
+    "Clear local Postman credential values",
+    "Read-only database postflight and owned-server shutdown"
+  ],
+  "ui_access": {
+    "checked_at_utc": "2026-09-28T02:32:53.771262+00:00",
+    "codex_terminal_read": "Supported read_thread_terminal returned idle shell prompt",
+    "codex_control": "Computer Use is not allowed to use the app com.openai.codex for safety reasons",
+    "native_terminal_control": "Previously denied by Computer Use",
+    "workaround_attempted": false,
+    "manual_step": "User can run the read-only mysql CLI command in the available Codex terminal and attach an actual screenshot; no GUI installation required"
+  },
+  "measurement_note": "These functional captures do not replace or rerun the original 180-request benchmark."
+}
