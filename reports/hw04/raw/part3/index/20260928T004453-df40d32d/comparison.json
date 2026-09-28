@@ -1,0 +1,32 @@
+{
+  "after": [
+    {
+      "access_type": "ref",
+      "extra": "Using index",
+      "filtered": 100.0,
+      "key": "ix_rentals_listing_title",
+      "possible_keys": "ix_rentals_listing_title",
+      "rows": 1,
+      "table": "rentals"
+    }
+  ],
+  "before": [
+    {
+      "access_type": "index",
+      "extra": "Using where",
+      "filtered": 10.0,
+      "key": "PRIMARY",
+      "possible_keys": null,
+      "rows": 4868,
+      "table": "rentals"
+    }
+  ],
+  "equal_dataset": true,
+  "equal_results": true,
+  "interpretation_note": "Access type, key and rows are observed EXPLAIN fields. rows is an optimizer estimate, not an actual execution count or a measured latency.",
+  "parameters": {
+    "title": "HW4-6102-00001 Condo in Rose Garden"
+  },
+  "query": "SELECT id,listing_title FROM rentals WHERE listing_title=:title ORDER BY id",
+  "result_sha256": "08a9e04c383c00283a084c95bfaa507d93e4aac314a0778e6fce77a3e3b92e3e"
+}

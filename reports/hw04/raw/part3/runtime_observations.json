@@ -1,0 +1,26 @@
+{
+  "classification": "Runtime observations recorded during this session; not an application-provided attestation",
+  "measured_revision": "9860a20342072168ed68a8d41eb16d9bfecf7729",
+  "worktree": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part3-performance",
+  "launcher_command": [
+    ".venv/bin/python",
+    "scripts/run_hw04_web.py",
+    "--env-file",
+    ".env",
+    "--port",
+    "8702"
+  ],
+  "observed_uvicorn_pid": 65284,
+  "observed_startup": "Uvicorn running on https://127.0.0.1:8702",
+  "workers": 1,
+  "reload": false,
+  "tls_client_verification": "Explicit local certificate via --ca-file tmp/https/cert.pem",
+  "database_instance": "hw4-part3-mysql-6102",
+  "database_host": "127.0.0.1",
+  "database_port": 33363,
+  "database": "s6102_rel",
+  "server_uuid": "3d515eaf-bad3-11f1-8b89-0ecd67fb62d4",
+  "coordination": "Parts1/2 explicitly released8702 and paused heavy work for this run; start/end messages were sent.",
+  "completion": "All180 validated; owned PID65284 stopped and lsof8702 check empty afterward.",
+  "execution_source_check": "git diff 9860a203 -- code/web_application scripts/hw04/part3 requirements.txt scripts/run_hw04_web.py was empty immediately after measurement."
+}

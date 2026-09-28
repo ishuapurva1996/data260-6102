@@ -1,0 +1,14 @@
+[
+  {
+    "applied_at": "2026-09-28T00:31:22.542197",
+    "checksum": "d738249ea390692161830c653d0ad8b75fb3e1ee5a8aace23a760413c9ab181f",
+    "name": "001_initial.sql",
+    "version": 1
+  },
+  {
+    "applied_at": "2026-09-28T00:44:53.221587",
+    "checksum": "f0278ae79cceb26a33367762ef37f7749a602bcc7cbd2632dcb0bc7052f37ab7",
+    "name": "003_listing_title_index.sql",
+    "version": 3
+  }
+]

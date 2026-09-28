@@ -1,0 +1,11 @@
+{
+  "ddl_attempted": false,
+  "error": "A listing-title index or the proposed index name already exists; refusing to relabel it as a before state",
+  "error_type": "IndexExperimentError",
+  "failed_at_utc": "2026-09-28T00:45:04.090961Z",
+  "failure_stage": "preflight",
+  "format_version": 1,
+  "recovery": "Preserve this attempt. If DDL was attempted, inspect the index and migration journal for partial DDL. The additive migration can finish a missing journal entry, but a new experiment must refuse an existing index; never drop it to recreate before evidence.",
+  "started_at_utc": "2026-09-28T00:45:04.023417Z",
+  "status": "failed"
+}

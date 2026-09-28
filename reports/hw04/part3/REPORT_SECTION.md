@@ -6,7 +6,7 @@ SID4 **6102**; PORT_BASE **8702**; PREFIX **s6102**; SEED **6102**; VERIFY_SEED 
 
 A rental is one row describing a listing. Its `manager_id` refers to one property-manager row. Several rentals can share that manager; this is a many-to-one relationship. The foundation owns both tables and the foreign key in `code/web_application/migrations/001_initial.sql`, imported through commit `f29e7cc85baf52bea30bd4bb3209d1bd79b22051`.
 
-The generator uses a local random-number generator with seed6102, shuffles 25 copies of manager ordinals1–200, and creates 5,000 valid six-field rental records. A unique listing title supports the later selective index query. IDs are assigned by MySQL.
+The generator uses a local random-number generator with seed 6102, shuffles 25 copies of manager ordinals 1–200, and creates 5,000 valid six-field rental records. A unique listing title supports the later selective index query. IDs are assigned by MySQL.
 
 ```python
 def generate_dataset(seed: int = SEED) -> dict:
@@ -53,7 +53,7 @@ Actual MySQL seed output:
 }
 ```
 
-The generated and stored checksums match after reloading the ORM objects. All200 managers have exactly25 rentals. Seeding checks the external ownership manifest, live MySQL UUID and Docker port before writing. It refuses existing rentals/managers and does not alter auth records. A real repeat invocation was refused without reseeding; the expected refusal is retained in `RUN_LOG.txt`.
+The generated and stored checksums match after reloading the ORM objects. All 200 managers have exactly 25 rentals. Seeding checks the external ownership manifest, live MySQL UUID and Docker port before writing. It refuses existing rentals/managers and does not alter auth records. A real repeat invocation was refused without reseeding; the expected refusal is retained in `RUN_LOG.txt`.
 
 Evidence: `raw/part3/seed_manifest.json`, `raw/part3/prebenchmark_database.json`; source: `scripts/hw04/part3/seed_data.py`. The seeder checks the actual foundation migration journal and checksums, rather than claiming an unverified schema.
 
@@ -90,7 +90,7 @@ def fixed(page_size: int = Query(10, ge=1, le=200), offset: int = Query(0, ge=0)
     return [_serialize(rental, manager) for rental, manager in rows]
 ```
 
-Real HTTPS development smoke checks on auxiliary port8733 returned equal full payloads at all three sizes. These checks are separate from the final8702 latency dataset. Example actual response row:
+Real HTTPS development smoke checks on auxiliary port 8733 returned equal full payloads at all three sizes. These checks are separate from the final port 8702 latency dataset. Example actual response row:
 
 ```json
 {
@@ -108,11 +108,11 @@ Real HTTPS development smoke checks on auxiliary port8733 returned equal full pa
 }
 ```
 
-The real-MySQL test additionally set nine page rows to the same manager and one to null under a transaction, then rolled back. The naive version still made11 data statements; the join made1. Concurrent requests retained independent counts.
+The real-MySQL test additionally set nine page rows to the same manager and one to null under a transaction, then rolled back. The naive version still made 11 data statements; the join made 1. Concurrent requests retained independent counts.
 
 ## 3.4 and 3.6: Measurement method and raw evidence
 
-Authentication loads the session/user and updates last activity. Those statements belong to the request cost. The counter starts before dependencies, observes SQLAlchemy cursor executions, and returns totals after JSON serialization. Data statements are tagged separately; reported counts are observed, not calculated from page size.
+Authentication loads the session/user and updates last activity. Those statements belong to the request cost. The counter starts before dependencies, observes SQLAlchemy cursor executions, and returns totals after JSON serialization. Data statements are tagged separately; reported counts are observed, not calculated from page size. `raw/part3/sql_execution_evidence.json` preserves actual statement shapes and separate-listener counts for all six groups, without bound parameter values.
 
 ```python
 def before_cursor_execute(conn, cursor, statement, parameters, context, executemany):
@@ -126,9 +126,9 @@ def before_cursor_execute(conn, cursor, statement, parameters, context, executem
 
 DBAPI connection setup, pool ping and transaction protocol commands are outside SQLAlchemy's cursor-statement event count, but their time remains inside the HTTP measurement. The two endpoints are ordinary fully materialized JSON responses, not streams.
 
-The runner logs in outside measurement, validates full naive/fixed equality for10,50,200 rows, and performs three warmups per group. It then records30 serial requests per endpoint/size, alternating naive then fixed for each iteration: exactly180 selected rows. A monotonic timer surrounds each buffered HTTPS request; JSON validation happens afterward. Every measured response must still equal its preflight baseline. Raw files include run ID, UTC timestamp, actual code revision/dirty state, configuration hash, status, row count, elapsed milliseconds and observed total/data SQL. Failed attempts are never combined with the successful run.
+The runner logs in outside measurement, validates full naive/fixed equality for 10, 50, 200 rows, and performs three warmups per group. It then records 30 serial requests per endpoint/size, alternating naive then fixed for each iteration: exactly 180 selected rows. A monotonic timer surrounds each buffered HTTPS request; JSON validation happens afterward. Every measured response must still equal its preflight baseline. Raw files include run ID, UTC timestamp, actual code revision/dirty state, configuration hash, status, row count, elapsed milliseconds and observed total/data SQL. Failed attempts are never combined with the successful run.
 
-Percentiles sort the30 timings and use R7 linear interpolation at rank `(n−1) × p`. p50 is the middle of the observations. p95 and p99 describe the slow tail; at only30 samples, they depend strongly on the slowest few requests. The experiment uses warm caches and one worker without reload. Parts1/2 coordinated a quiet slot; unrelated pre-existing services were preserved, so incidental system noise remains possible.
+Percentiles sort the 30 timings and use R7 linear interpolation at rank `(n−1) × p`. p50 is the middle of the observations. p95 and p99 describe the slow tail; at only 30 samples, they depend strongly on the slowest few requests. The experiment uses warm caches and one worker without reload. Parts 1/2 coordinated a quiet slot; unrelated pre-existing services were preserved, so incidental system noise remains possible.
 
 ## 3.7: Observed latency and speed-up
 
@@ -169,3 +169,52 @@ The result is not uniformly faster at every percentile. At size 10, fixed iterat
 
 `metrics.json` stores full-precision percentiles and observed SQL distributions; `summary_recomputed.json` independently checks all 18 percentile values, nine ratios, SQL ranges and the raw file hash. There were no failed HTTP measurement attempts in this session. Expected proof-first test failures and the deliberately refused repeat seed are preserved in `RUN_LOG.txt`, not mixed into the 180 rows.
 
+## 3.8: Observed index behavior
+
+An index is a separate ordered structure that helps MySQL locate matching rows. The existing manager foreign-key index is not a new index experiment. After all 180 timing requests finished, migration 003 added a new full-column index on listing title through the foundation migration runner:
+
+```sql
+CREATE INDEX ix_rentals_listing_title ON rentals (listing_title);
+```
+
+The committed migration checks the expected index definition so the shared runner can recover from an interrupted journal write without dropping data. The experiment itself refuses a preexisting title index; it cannot relabel an indexed state as before. Both observations used the exact same query and parameter:
+
+```sql
+SELECT id,listing_title FROM rentals WHERE listing_title=:title ORDER BY id;
+-- title = 'HW4-6102-00001 Condo in Rose Garden'
+```
+
+Actual traditional EXPLAIN comparison:
+
+| State | Access type | Chosen key | Estimated rows | Filtered % | Extra |
+| --- | --- | --- | ---: | ---: | --- |
+| Before | index | PRIMARY | 4868 | 10.0 | Using where |
+| After | ref | ix_rentals_listing_title | 1 | 100.0 | Using index |
+
+Before, MySQL chose a scan of the primary index and filtered rows by title. After, it could look up the equality value through the new title index. `Using index` reports that the index covers the selected columns. These are optimizer estimates, not measured rows read or a claimed index latency speed-up. The actual seeded table still contains 5,000 rows; the estimate 4,868 is not a changed row count. The N+1 speed-up table was measured before this index existed, so it must not be attributed to this later migration.
+
+Actual query output was identical before and after:
+
+```json
+[
+  {
+    "id": 1,
+    "listing_title": "HW4-6102-00001 Condo in Rose Garden"
+  }
+]
+```
+
+The normalized dataset checksum, physical-row checksum, result checksum and row counts all remained equal. Full traditional and JSON EXPLAIN, index inventories, journal entries and snapshots are preserved under `raw/part3/index/20260928T004453-df40d32d/`. Configuration records actual revision `62117550e2e2a253ea754152d2bb1007cc6b1f9a` and dirty=true because only evidence/prose files were pending; the executed code and migration were unchanged. An intentional repeat is retained separately at `raw/part3/index/20260928T004504-a87ff5a9/`, failed at preflight with `ddl_attempted: false`. A subsequent shared migration run reported none applied/already current.
+
+## 3.9: Postman evidence and remaining capture
+
+The collection `reports/hw04/part3/postman_collection.json` has private-variable login and six real requests. For example:
+
+```http
+GET https://localhost:8702/api/rentals/naive?page_size=10&offset=0
+GET https://localhost:8702/api/rentals/fixed?page_size=10&offset=0
+```
+
+Equivalent pairs for 50 and 200 are included, with tests for status, row count, ordering, related manager fields and numeric SQL headers. Existing real HTTP outputs and SQL evidence are preserved above, but they do not replace the assignment's Postman screenshots.
+
+**All six screenshots are PENDING manual Postman access.** Postman was absent from the native app inventory and local Applications directories. `reports/hw04/screenshots/part3/README.md` gives exact login/TLS/cookie/request/capture steps and target filenames. Place each actual screenshot directly below its matching request/code excerpt in the final combined PDF. Do not display credentials or cookie values. Screenshot response timings are separate functional examples and must not be substituted for the selected 180 measurements.

@@ -1,0 +1,14 @@
+{
+  "run_id": "20260928T003859.945761Z-cd277c20",
+  "reason": "First and only successful full HTTP attempt; all samples retained, including the slow fixed-size10 observation.",
+  "measured_revision": "9860a20342072168ed68a8d41eb16d9bfecf7729",
+  "dirty": false,
+  "requests": 180,
+  "raw_jsonl": "reports/hw04/raw/part3/attempts/20260928T003859.945761Z-cd277c20/requests.jsonl",
+  "raw_csv": "reports/hw04/raw/part3/attempts/20260928T003859.945761Z-cd277c20/requests.csv",
+  "manifest": "reports/hw04/raw/part3/attempts/20260928T003859.945761Z-cd277c20/manifest.json",
+  "metrics": "reports/hw04/part3/metrics.json",
+  "raw_jsonl_sha256": "de93e1f8d771805807a32928e69a0af230944d41038e9b6403825cc7af9e1dd8",
+  "raw_csv_sha256": "bc55e20ebfd637fa7cf2126dd590307f2e11d4fcce9a5dcdd7c711be7a09de10",
+  "config_sha256": "16d8b0925a125c92643b0b959abe609658c82710eacc0e8c84653a03f5f54181"
+}

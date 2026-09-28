@@ -1,0 +1,51 @@
+{
+  "code_revision": "62117550e2e2a253ea754152d2bb1007cc6b1f9a",
+  "dirty": true,
+  "format_version": 1,
+  "git_status": [
+    "M reports/hw04/part3/REPORT_SECTION.md",
+    " M reports/hw04/part3/RUN_LOG.txt",
+    "?? reports/hw04/part3/HANDOFF.md",
+    "?? reports/hw04/raw/part3/attempts/20260928T003859.945761Z-cd277c20/requests.csv",
+    "?? reports/hw04/raw/part3/index/20260928T004453-df40d32d/after.json",
+    "?? reports/hw04/raw/part3/index/20260928T004453-df40d32d/applied_migrations.json",
+    "?? reports/hw04/raw/part3/index/20260928T004453-df40d32d/before.json",
+    "?? reports/hw04/raw/part3/index/20260928T004453-df40d32d/comparison.json",
+    "?? reports/hw04/raw/part3/index/20260928T004453-df40d32d/configuration.json",
+    "?? reports/hw04/raw/part3/index/20260928T004453-df40d32d/explain_after_format_json.txt",
+    "?? reports/hw04/raw/part3/index/20260928T004453-df40d32d/explain_after_traditional.json",
+    "?? reports/hw04/raw/part3/index/20260928T004453-df40d32d/explain_before_format_json.txt",
+    "?? reports/hw04/raw/part3/index/20260928T004453-df40d32d/explain_before_traditional.json",
+    "?? reports/hw04/raw/part3/index/20260928T004453-df40d32d/indexes_after.json",
+    "?? reports/hw04/raw/part3/index/20260928T004453-df40d32d/indexes_before.json",
+    "?? reports/hw04/raw/part3/index/20260928T004453-df40d32d/preflight.json",
+    "?? reports/hw04/raw/part3/index/20260928T004453-df40d32d/results_after.json",
+    "?? reports/hw04/raw/part3/index/20260928T004453-df40d32d/results_before.json",
+    "?? reports/hw04/raw/part3/index/20260928T004453-df40d32d/schema_migrations_after.json",
+    "?? reports/hw04/raw/part3/index/20260928T004453-df40d32d/schema_migrations_before.json",
+    "?? reports/hw04/raw/part3/index/20260928T004453-df40d32d/status.json",
+    "?? reports/hw04/raw/part3/runtime_observations.json",
+    "?? reports/hw04/raw/part3/selected_run.json",
+    "?? reports/hw04/raw/part3/sql_execution_evidence.json"
+  ],
+  "migration": "code/web_application/migrations/003_listing_title_index.sql",
+  "migration_sha256": "f0278ae79cceb26a33367762ef37f7749a602bcc7cbd2632dcb0bc7052f37ab7",
+  "ownership": {
+    "database": "s6102_rel",
+    "disposable": true,
+    "docker_container_id": "5d65145f0fa1ff2e2d9304470e0ba70734a4bd00e7cd9d2f644569520a9318ad",
+    "docker_container_name": "hw4-part3-mysql-6102",
+    "format_version": 1,
+    "host": "127.0.0.1",
+    "port": 33363,
+    "purpose": "hw04-part3-performance",
+    "server_uuid": "3d515eaf-bad3-11f1-8b89-0ecd67fb62d4"
+  },
+  "parameters": {
+    "title": "HW4-6102-00001 Condo in Rose Garden"
+  },
+  "query": "SELECT id,listing_title FROM rentals WHERE listing_title=:title ORDER BY id",
+  "seed_manifest": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part3-performance/reports/hw04/raw/part3/seed_manifest.json",
+  "seed_manifest_sha256": "86acc81f45a3e564bbd0ed575213d17f68b7a84747cda8e4e24bac720d790e09",
+  "started_at_utc": "2026-09-28T00:45:04.023417Z"
+}

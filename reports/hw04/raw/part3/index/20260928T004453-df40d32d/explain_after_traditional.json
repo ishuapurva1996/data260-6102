@@ -1,0 +1,16 @@
+[
+  {
+    "Extra": "Using index",
+    "filtered": 100.0,
+    "id": 1,
+    "key": "ix_rentals_listing_title",
+    "key_len": "1022",
+    "partitions": null,
+    "possible_keys": "ix_rentals_listing_title",
+    "ref": "const",
+    "rows": 1,
+    "select_type": "SIMPLE",
+    "table": "rentals",
+    "type": "ref"
+  }
+]

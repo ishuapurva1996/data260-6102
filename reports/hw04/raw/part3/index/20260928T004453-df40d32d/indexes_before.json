@@ -1,0 +1,36 @@
+[
+  {
+    "Cardinality": 4868,
+    "Collation": "A",
+    "Column_name": "id",
+    "Comment": "",
+    "Expression": null,
+    "Index_comment": "",
+    "Index_type": "BTREE",
+    "Key_name": "PRIMARY",
+    "Non_unique": 0,
+    "Null": "",
+    "Packed": null,
+    "Seq_in_index": 1,
+    "Sub_part": null,
+    "Table": "rentals",
+    "Visible": "YES"
+  },
+  {
+    "Cardinality": 200,
+    "Collation": "A",
+    "Column_name": "manager_id",
+    "Comment": "",
+    "Expression": null,
+    "Index_comment": "",
+    "Index_type": "BTREE",
+    "Key_name": "ix_rentals_manager_id",
+    "Non_unique": 1,
+    "Null": "YES",
+    "Packed": null,
+    "Seq_in_index": 1,
+    "Sub_part": null,
+    "Table": "rentals",
+    "Visible": "YES"
+  }
+]
