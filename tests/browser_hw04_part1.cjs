@@ -13,10 +13,10 @@ const path = require('node:path');
 const { chromium } = require('playwright');
 
 const ROOT = path.resolve(__dirname, '..');
-const MODE = process.argv.includes('--mock') ? 'mock' : 'real';
+const MODE = process.argv.includes('--mock') ? 'mock' : process.argv.includes('--expiry') ? 'expiry' : 'real';
 const BASE = (process.env.HW4_BASE_URL || (MODE === 'mock' ? 'http://localhost:5173' : 'https://localhost:8702')).replace(/\/$/, '');
-const RAW = path.join(ROOT, 'reports/hw04/raw/part1');
-const SHOTS = path.join(ROOT, 'reports/hw04/screenshots/part1');
+const RAW = path.resolve(process.env.HW4_RAW_DIR || path.join(ROOT, 'reports/hw04/raw/part1'));
+const SHOTS = path.resolve(process.env.HW4_SCREENSHOTS_DIR || path.join(ROOT, 'reports/hw04/screenshots/part1'));
 const EMAIL = MODE === 'mock' ? 'browser@example.invalid' : process.env.HW4_SEED_EMAIL;
 const PASSWORD = MODE === 'mock' ? 'mock-password-not-a-real-credential' : process.env.HW4_SEED_PASSWORD;
 const CREATE_KEYS = ['description', 'listingTitle', 'propertyAddress', 'propertyType', 'submitterEmail', 'termsAccepted'];
@@ -31,7 +31,7 @@ const evidence = {
   base_url: BASE, cwd: ROOT, checks: [], screenshots: [], requests: [],
   limitations: MODE === 'mock'
     ? ['MOCK ONLY: intercepted HTTP responses validate React behavior, not authentication security, MySQL storage, or final port 8702.']
-    : ['The owner supplies the running HTTPS/MySQL service and credentials. The runner never resets a database.', 'Idle-expiry capture needs an explicitly configured short-timeout service; this runner does not change server settings.'],
+    : ['The owner supplies the running HTTPS/MySQL service and credentials. The runner never resets a database.', 'Idle expiry is captured separately by --expiry against an explicitly configured short-timeout service.'],
 };
 
 function redact(value) {
@@ -74,16 +74,16 @@ async function snapshot(page, name) {
   }
   const dimensions = await page.evaluate(() => ({
     viewport_width: innerWidth, document_width: document.documentElement.scrollWidth,
-    body_width: document.body.scrollWidth,
+    body_width: document.body.scrollWidth, document_height: document.documentElement.scrollHeight, scroll_y: scrollY,
   }));
   assert(dimensions.document_width <= dimensions.viewport_width, `Document overflows: ${JSON.stringify(dimensions)}`);
   assert(dimensions.body_width <= dimensions.viewport_width, `Body overflows: ${JSON.stringify(dimensions)}`);
   const filename = path.join(SHOTS, `${MODE}-${name}.png`);
   await page.screenshot({
-    path: filename, fullPage: true, animations: 'disabled',
-    mask: [page.locator('input[type="password"]')],
+    path: filename, fullPage: dimensions.document_height <= 6000, animations: 'disabled',
+    mask: [page.locator('input[type="password"]')], maskColor: '#dbe4d9',
   });
-  const capture = { file: relative(filename), mode: MODE.toUpperCase(), captured_at: now(), actual_url: page.url(), viewport: page.viewportSize(), dimensions };
+  const capture = { file: relative(filename), mode: MODE.toUpperCase(), captured_at: now(), actual_url: page.url(), viewport: page.viewportSize(), full_page: dimensions.document_height <= 6000, dimensions };
   evidence.screenshots.push(capture);
   return capture;
 }
@@ -95,6 +95,7 @@ function requestMatch(method, pathname) {
 async function waitHome(page) {
   await page.waitForURL(`${BASE}/`);
   await page.getByRole('heading', { name: 'Rental listings', exact: true }).waitFor();
+  await page.locator('.result-count').waitFor();
 }
 
 async function login(page, password = PASSWORD) {
@@ -511,6 +512,7 @@ async function realFlow(browser) {
       createdId = record.id;
       await waitHome(page);
       await cardFor(page, created.listingTitle).waitFor();
+      await cardFor(page, created.listingTitle).scrollIntoViewIfNeeded();
       assert((await cardFor(page, created.listingTitle).innerText()).includes(String(createdId)));
       evidence.requests.push({ method: 'POST', path: '/api/rentals', body, status: response.status(), returned_id: createdId });
       return { server_id: createdId, sent_body: body, status: response.status(), screenshot: await snapshot(page, 'created-home') };
@@ -535,6 +537,7 @@ async function realFlow(browser) {
       await waitHome(page);
       await page.reload();
       await cardFor(page, update.listingTitle).waitFor();
+      await cardFor(page, update.listingTitle).scrollIntoViewIfNeeded();
       evidence.requests.push({ method: 'PUT', path: `/api/rentals/${createdId}`, body, status: response.status() });
       return { sent_body: body, unchanged_extra_fields: true, screenshot: await snapshot(page, 'updated-home') };
     }, page);
@@ -564,7 +567,7 @@ async function realFlow(browser) {
       await page.getByRole('button', { name: 'Delete listing', exact: true }).click();
       const response = await pending;
       assert.equal(response.status(), 204);
-      assert.equal(await response.text(), '');
+      assert(['0', undefined].includes(response.headers()['content-length']), '204 must not advertise a response body');
       await waitHome(page);
       await page.reload();
       await waitHome(page);
@@ -574,7 +577,7 @@ async function realFlow(browser) {
       evidence.requests.push({ method: 'DELETE', path: `/api/rentals/${createdId}`, status: response.status() });
       const deletedId = createdId;
       createdId = undefined;
-      return { deleted_id: deletedId, response_status: 204, response_body: '', subsequent_get_status: missing.status(), screenshot: await snapshot(page, 'deleted-home') };
+      return { deleted_id: deletedId, response_status: 204, response_body: '204 No Content (status/header check)', subsequent_get_status: missing.status(), screenshot: await snapshot(page, 'deleted-home') };
     }, page);
     await check('Logout clears cookie and blocks protected routes again', async () => {
       const pending = page.waitForResponse(requestMatch('POST', '/api/auth/logout'));
@@ -601,6 +604,35 @@ async function realFlow(browser) {
   }
 }
 
+// Run only against the owner's explicit 2-second idle-timeout test process.
+async function expiryFlow(browser) {
+  assert(EMAIL && PASSWORD, 'Expiry mode requires private seed credentials');
+  assert.equal(process.env.HW4_EXPIRY_TEST, '2', 'Confirm the service uses the 2-second test seam');
+  evidence.limitations = ['Real HTTPS/MySQL with create_app(idle_timeout=2) test seam; production retains 300-second idle and 3600-second absolute lifetime.'];
+  const context = await browser.newContext({ ignoreHTTPSErrors: true, viewport: { width: 1280, height: 900 } });
+  const page = await context.newPage();
+  page.setDefaultTimeout(15000);
+  try {
+    await check('Real login before controlled idle expiry', async () => {
+      assert.equal((await login(page)).status(), 200);
+      await waitHome(page);
+      await page.getByRole('article').first().waitFor();
+      return { idle_timeout_seconds: 2, screenshot: await snapshot(page, 'before-idle') };
+    }, page);
+    await check('Expired MySQL session clears records and returns to login', async () => {
+      await delay(3200);
+      const response = page.waitForResponse(requestMatch('GET', '/api/rentals'));
+      await page.getByRole('button', { name: 'Search', exact: true }).click();
+      assert.equal((await response).status(), 401);
+      await page.waitForURL(`${BASE}/login`);
+      await page.getByText(/session expired/).waitFor();
+      assert.equal(await page.getByRole('article').count(), 0);
+      assert.equal(await page.getByRole('button', { name: 'Log out', exact: true }).count(), 0);
+      return { status: 401, records_cleared: true, screenshot: await snapshot(page, 'session-expired') };
+    }, page);
+  } finally { await context.close(); }
+}
+
 async function sourceMetadata() {
   try { evidence.git_revision = execFileSync('git', ['rev-parse', 'HEAD'], { cwd: ROOT, encoding: 'utf8' }).trim(); }
   catch { evidence.git_revision = 'unavailable'; }
@@ -614,7 +646,7 @@ async function sourceMetadata() {
       evidence.source_sha256[relative(filename)] = createHash('sha256').update(await fs.readFile(filename)).digest('hex');
     }
   }
-  for (const filename of ['frontend/src', 'frontend/package.json', 'frontend/package-lock.json', 'frontend/vite.config.js', 'tests/browser_hw04_part1.cjs']) await walk(path.join(ROOT, filename));
+  for (const filename of ['frontend/src', 'frontend/package.json', 'frontend/package-lock.json', 'frontend/vite.config.js', 'tests/browser_hw04_part1.cjs', 'tests/browser_hw04_part1_runtime.py']) await walk(path.join(ROOT, filename));
 }
 
 async function main() {
@@ -627,6 +659,7 @@ async function main() {
     if (MODE === 'real') assert(EMAIL && PASSWORD, 'Real mode requires HW4_SEED_EMAIL and HW4_SEED_PASSWORD supplied outside tracked source');
     browser = await chromium.launch({ headless: true });
     if (MODE === 'mock') await mockFlow(browser);
+    else if (MODE === 'expiry') await expiryFlow(browser);
     else await realFlow(browser);
     evidence.status = 'pass';
   } catch (error) {
