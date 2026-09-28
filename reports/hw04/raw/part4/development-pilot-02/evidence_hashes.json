@@ -1,0 +1,23 @@
+{
+  "RUN_LOG.txt": "9677ba69eaeae55f903dca5fb4ca9195e202c3f8599232779f61420990c84d80",
+  "chunks.jsonl": "21a5467a06ba9a99cdcb8bfc2e7ce4e60e61e3286459fdefbcdee8e9ca030abc",
+  "frozen/code/rag.py": "eb9e198708b74a2631b5a6554e55439c01fb95b895ce18a267f7d3600df2d626",
+  "frozen/experiment_config.json": "65b4e6502221fd73ad05c21df5d4d0e8ea1ee1605bcc6beeb08bc9b1a69244f5",
+  "frozen/reports/hw04/part4/CORPUS_MANIFEST.json": "6a4af0de7c0c5a5ac175c51f39f62878bcec3d3b245329b0fa7b319dd868f5c9",
+  "frozen/reports/hw04/part4/development_questions.yaml": "21ba5148a34d906b12fe10333d1c21b50a40d695e96245dc8a9e716f6191af6e",
+  "frozen/reports/hw04/part4/questions.yaml": "65bb280bc1618ded32be990a2742a71a849cb913ac74fa62ac179642f9821ea9",
+  "frozen/reports/hw04/part4/source_audit.json": "cdf708126893662fad32d88b030f40cc9d5a13a54d5cc0a9e2fa61235fe657c9",
+  "frozen/requirements-rag.txt": "9dafb63c5c67cce59fb9f18efe980ab76c0b2075bd7dc3fbc4716582af356048",
+  "frozen/src/rag/__init__.py": "82cb2c09e2e8b87aa42a9ad5adfb8bce7653c735ffc9b61f4c94c47e5bb4157b",
+  "frozen/src/rag/pipeline.py": "03fa2ae1643b612ef16409d50c8517a95c6c8409f0cdaea7c0a1bd05a3ae4b97",
+  "frozen/src/rag/runner.py": "e987710d910028f6f92eea02a76475b112dd46926879a0031accae23d5f86965",
+  "frozen/src/retrieval/embedding.py": "ee8e7243c9327cb424f3830ea863a27073e8b0695cba2c98f8457df6b9cee23e",
+  "frozen/src/retrieval/indexing.py": "ff4211b2e87262095f55923d891265603073b43865628c6ca39affd2fdea4795",
+  "gold_chunk_audit.json": "49ee8523939a3fb921b1aa00e059682542fe4ac8cd5f77057aadfb1077c41e52",
+  "index_audit.json": "f764fe589234eb89f789244943360e8ce1fc6256432f91a8bc2a5122057a8f5b",
+  "requests.jsonl": "f3f9f6b5edc6a83398ef28cbbfc45741ada02ba4b22135acb35d72106637b7b4",
+  "responses.jsonl": "68c29c5ed429521d6e7fcdb40a9405b6aeb364009cca53bbf61e8a692886a9c6",
+  "retrievals.jsonl": "419543deaa3bfb7a12e5aa02c70f217e771fbdb658d49fdf53f8c2b85c58f662",
+  "retrieved_chunks.txt": "2db819d4ec9c621cb3d986d7331c95361b6afee2336f22316113bee4f18f7b08",
+  "run_metadata.json": "4dd4ce6f484ccb7838addd32c7504632993136123479d869aad990ba5647dd14"
+}

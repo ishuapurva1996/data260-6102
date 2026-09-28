@@ -1,0 +1,357 @@
+LLM is explicitly disabled. Using MockLLM.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 11101.46it/s]
+LLM is explicitly disabled. Using MockLLM.
+[2026-09-28T05:39:56.633439Z] RETRIEVAL D1 requested=5 returned=5
+rank=1 source=EPA_LEAD chunk=EPA_LEAD:3830114fcc78:0018135-0018561 score=0.676446
+title=Protect Your Family From Lead in Your Home location=PDF page 15
+a. Boiling water does not remove lead from water. • Before drinking, flush your home’s pipes by running the tap, taking a shower, doing laundry or doing a load of dishes. • Regularly clean your faucet’s screen (also known as an aerator). • If you use a filter certified to remove lead, read the directions to learn when to change the cartridge. Using a filter after it has expired can make it less effective at removing lead. 
+
+rank=2 source=EPA_LEAD chunk=EPA_LEAD:3830114fcc78:0017714-0018185 score=0.578257
+title=Protect Your Family From Lead in Your Home location=PDF page 15
+ound in older cities and homes built before 1986. You can’t smell or taste lead in drinking water. To find out for certain if you have lead in drinking water, have your water tested (See below). Remember that older homes with a private well can also have plumbing materials that contain lead. Important Steps You Can Take to Reduce Lead in Drinking Water • Use only cold water for drinking, cooking and making baby formula. Boiling water does not remove lead from water. 
+
+rank=3 source=EPA_LEAD chunk=EPA_LEAD:3830114fcc78:0018511-0018937 score=0.544547
+title=Protect Your Family From Lead in Your Home location=PDF page 15
+ired can make it less effective at removing lead. Contact your water company to determine if the pipe that connects your home to the water main (called a service line) is made from lead. Your area’s water company can also provide information about the lead levels in your system’s drinking water. For more information about lead in drinking water, please use EPA’s Safe Drinking Water online form at epa.gov/safewaterhotline. 
+
+rank=4 source=EPA_LEAD chunk=EPA_LEAD:3830114fcc78:0017289-0017764 score=0.505718
+title=Protect Your Family From Lead in Your Home location=PDF page 14; PDF page 15
+contained to prevent release of dust and debris.
+
+To learn more about EPA’s requirements for RRP projects, visit epa.gov/getleadsafe, or read The Lead-Safe Certified Guide to Renovate Right.
+
+Other Sources of Lead
+
+Lead in Drinking Water The most common sources of lead in drinking water in homes are lead pipes, fixtures, brass or chrome-plated brass faucets and plumbing with lead solder. Lead pipes are more likely to be found in older cities and homes built before 1986. 
+
+rank=5 source=EPA_LEAD chunk=EPA_LEAD:3830114fcc78:0018887-0019351 score=0.446296
+title=Protect Your Family From Lead in Your Home location=PDF page 15; PDF page 16
+ng Water online form at epa.gov/safewaterhotline. Call your local health department or water company to find out about testing your water, or visit epa.gov/safewater for EPA’s lead in drinking water information. Some states or utilities offer programs to pay for water testing for residents. Contact your state or local water company to learn more.
+
+Other Sources of Lead, continued
+
+• Lead smelters or other industries that release lead into the air. • Your job. 
+
+[2026-09-28T05:39:56.873397Z] RETRIEVAL D2 requested=5 returned=5
+rank=1 source=HUD_FAIR chunk=HUD_FAIR:c47c156c57ea:0016808-0017294 score=0.754082
+title=Fair Housing: Equal Opportunity for All location=PDF page 18
+treet, SW, Room 5206, Washington, DC 20410-2000.
+
+In Addition
+
+You May File a Private Lawsuit: You may file a private civil lawsuit without first filing a complaint with HUD. You must file your lawsuit within two (2) years of the most recent date of alleged discriminatory action.
+
+If you do file a complaint with HUD and even if HUD dismisses your complaint, the Fair Housing Act gives you the right to file a private civil lawsuit against the respondent(s) in Federal District Court. 
+
+rank=2 source=HUD_FAIR chunk=HUD_FAIR:c47c156c57ea:0009384-0009882 score=0.688330
+title=Fair Housing: Equal Opportunity for All location=PDF page 14
+iling under the Fair Housing Act. HUD also will:
+
+• Notify the alleged violator (respondent) of the filing of your complaint, and allow the respondent time to submit a written answer to the complaint. • Investigate your complaint, and determine whether or not there is reasonable cause to believe that the respondent violated the Fair Housing Act. • Notify you and the respondent if HUD cannot complete its investigation within 100 days of filing your complaint, and provide reason for the delay.
+
+
+
+rank=3 source=HUD_FAIR chunk=HUD_FAIR:c47c156c57ea:0017470-0017870 score=0.702873
+title=Fair Housing: Equal Opportunity for All location=PDF page 18; PDF page 19
+d an attorney, the Court may appoint one for you. Even if HUD is still processing your complaint, you may file a private civil lawsuit against the respondent, unless (1) you have already signed a HUD Conciliation Agreement to resolve your HUD complaint; or (2) a HUD Administrative Law Judge has commenced an Administrative Hearing for your complaint.
+
+Other Tools to Combat Housing Discrimination:
+
+
+
+rank=4 source=HUD_FAIR chunk=HUD_FAIR:c47c156c57ea:0011054-0011544 score=0.695752
+title=Fair Housing: Equal Opportunity for All location=PDF page 15
+ Housing Act, HUD must promptly refer your complaint to that agency for investigation, and must promptly notify you of the referral. The State or local agency will investigate your complaint under the “substantially equivalent” State or local civil rights law or ordinance. The State or local public fair housing agency must start investigating your complaint within 30 days of HUD’s referral, or HUD may retrieve (“reactivate”) the complaint for investigation under the Fair Housing Act.
+
+
+
+rank=5 source=HUD_FAIR chunk=HUD_FAIR:c47c156c57ea:0009832-0010230 score=0.689949
+title=Fair Housing: Equal Opportunity for All location=PDF page 14; PDF page 15
+our complaint, and provide reason for the delay.
+
+Fair Housing Act Conciliation: During the complaint investigation, HUD is required to offer you and the respondent the opportunity to voluntarily resolve your complaint with a Conciliation Agreement.
+
+A Conciliation Agreement provides individual relief to you, and protects the public interest by deterring future discrimination by the respondent. 
+
+[2026-09-28T05:39:57.112815Z] RETRIEVAL D3 requested=5 returned=5
+rank=1 source=HUD_INCOME chunk=HUD_INCOME:2efa6b7ef8ad:0015226-0015625 score=0.598760
+title=HUD Handbook 4350.3 REV-1, Chapter 5: Determining Income and Calculating Rent location=PDF page 8; PDF page 9
+ excluded to the extent that it exceeds $480.
+
+c. When more than one family shares custody of a child, and both families live in assisted housing, only one family at a time can claim the dependent deduction. The family that counts the dependent deduction also counts the unearned income of the child. The other family claims neither the dependent deduction nor the unearned income of the child.
+
+d. 
+
+rank=2 source=HUD_INCOME chunk=HUD_INCOME:2efa6b7ef8ad:0080409-0080909 score=0.568213
+title=HUD Handbook 4350.3 REV-1, Chapter 5: Determining Income and Calculating Rent location=PDF page 41
+ating Adjusted Income
+
+A. Dependent Deduction
+
+1. A family receives a deduction of $480 for each family member *(except foster children and foster adults)* who is:
+
+a. Under 18 years of age;
+
+b. A person with disabilities; or
+
+c. A full-time student of any age.
+
+*It is not necessary for a member of the family to have legal custody of a dependent in order to receive the dependent deduction.*
+
+2. Some family members may never qualify as dependents regardless of age, disability, or student status.
+
+
+rank=3 source=HUD_SELECTION chunk=HUD_SELECTION:970dfc1f3a55:0106053-0106515 score=0.610548
+title=HUD Handbook 4350.3 REV-1, Chapter 4: Waiting List and Tenant Selection location=PDF page 49
+on the family’s income and household composition. *This will include the employment and income information received from SSA’s and HHS’ NDNH databases through HUD’s Computer Matching Agreements with these agencies.*
+
+11. Tell the family that a final decision on eligibility cannot be made until all verifications are complete.
+
+12. Provide each *applicant* with a copy of the appropriate HUD fact sheet, which describes how the tenant's rent is calculated.
+
+13. 
+
+rank=4 source=HUD_INCOME chunk=HUD_INCOME:2efa6b7ef8ad:0000000-0000496 score=0.680738
+title=HUD Handbook 4350.3 REV-1, Chapter 5: Determining Income and Calculating Rent location=PDF page 1
+CHAPTER 5. DETERMINING INCOME AND CALCULATING RENT
+
+5-1 Introduction
+
+A. Owners must determine the amount of a family’s income before the family is allowed to move into assisted housing and at least annually thereafter. The amount of assistance paid on behalf of the family is calculated using the family’s annual income less allowable deductions. HUD program regulations specify the types and amounts of income and deductions to be included in the calculation of annual and adjusted income.
+
+B. 
+
+rank=5 source=HUD_INCOME chunk=HUD_INCOME:2efa6b7ef8ad:0001594-0001966 score=0.523532
+title=HUD Handbook 4350.3 REV-1, Chapter 5: Determining Income and Calculating Rent location=PDF page 1; PDF page 2
+g adjusted income based on allowable deductions.
+
+• Section 3: Verification presents the requirements for verifying information provided by applicants and tenants related to their eligibility.
+
+• Section 4: Calculating Tenant Rent discusses the methods for calculating the tenant’s portion of rent under the different programs covered by this handbook.
+
+5-2 Key Terms
+
+A. 
+
+[2026-09-28T05:39:57.356535Z] RETRIEVAL D4 requested=5 returned=5
+rank=1 source=EPA_DISCLOSURE chunk=EPA_DISCLOSURE:38dd88cf9257:0004176-0004620 score=0.512602
+title=Real Estate Disclosures about Potential Lead Hazards location=Requirements Under the Disclosure Rule
+ator to find a certified inspector in your area.
+
+Keep a signed copy of the disclosures for three years after the sale is completed or the lease begins.
+
+If providing the required disclosure information electronically to renters or buyers, provide, among other things: a clear statement on their right to receive paper documents, procedures to withdraw consent and the consequences of doing so, and how to access and retain electronic records. 
+
+rank=2 source=HUD_INCOME chunk=HUD_INCOME:2efa6b7ef8ad:0130057-0130445 score=0.423549
+title=HUD Handbook 4350.3 REV-1, Chapter 5: Determining Income and Calculating Rent location=PDF page 64; PDF page 65
+ least three years after the tenant moves out
+
+C. The tenant’s file should be available for review by the tenant upon request or by a third party who provides signed authorization for access from the tenant.
+
+*NOTE: The Federal Privacy Act (5 USC 552a, as amended) prohibits the disclosure of an individual’s information to another person without the written
+
+consent of such individual. 
+
+rank=3 source=EPA_DISCLOSURE chunk=EPA_DISCLOSURE:38dd88cf9257:0003412-0003822 score=0.385046
+title=Real Estate Disclosures about Potential Lead Hazards location=Requirements Under the Disclosure Rule
+ents under the Lead-Based Paint Disclosure Rule.
+
+They can use EPA's sample disclosure forms for this purpose.
+
+Sample Seller’s Disclosure of Information in English (PDF) and in Spanish (PDF).
+
+Sample Lessor's Disclosure of Information in English (PDF) and in Spanish (PDF).
+
+Provide homebuyers a 10-day period to conduct a paint inspection or risk assessment for lead-based paint or lead-based paint hazards. 
+
+rank=4 source=EPA_DISCLOSURE chunk=EPA_DISCLOSURE:38dd88cf9257:0006030-0006482 score=0.364790
+title=Real Estate Disclosures about Potential Lead Hazards location=What Happens if a Seller or Lessor Fails to Comply with These Regulations; For More Information
+e, during, and after sales and rental agreements. If you did not receive the disclosure of information on lead-based paint or lead-based paint hazards when you bought or rented pre-1978 housing, report this information to: epa.gov/lead/violation.
+
+Read more about how EPA enforces lead-based paint laws.
+
+For More Information
+
+Lead-Based Paint Disclosure Rule Fact Sheet
+
+Read the Real Estate Notification and Disclosure Rule, Section 1018 of Title X
+
+
+
+rank=5 source=EPA_DISCLOSURE chunk=EPA_DISCLOSURE:38dd88cf9257:0000870-0001224 score=0.389416
+title=Real Estate Disclosures about Potential Lead Hazards location=Real Estate Disclosures about Potential Lead Hazards
+ renters and homebuyers sign a lease or contract. This requirement applies to most pre-1978 private housing, public housing, federally owned housing, and housing receiving federal assistance. It is designed to help people make more informed choices based on the information they receive. However, the Lead-based Paint Disclosure Rule does not apply to:
+
+
+
+[2026-09-28T05:39:57.605419Z] RETRIEVAL D5 requested=5 returned=5
+rank=1 source=HUD_INCOME chunk=HUD_INCOME:2efa6b7ef8ad:0136302-0136748 score=0.486651
+title=HUD Handbook 4350.3 REV-1, Chapter 5: Determining Income and Calculating Rent location=PDF page 68; PDF page 69
+Section 8 program must pay a minimum TTP of $25.
+
+NOTE: Minimum rent does not apply to Section 202 PAC, Section 202 PRAC, Section 811 PRAC, RAP, Rent Supplement, Section 221(d)(3) BMIR or Section 236 programs.
+
+1. The minimum rent is used when 30% of adjusted monthly income and 10% of gross monthly income, and the welfare rent where applicable, are all below $25.
+
+2. The minimum rent includes the tenant’s contribution for rent and utilities. 
+
+rank=2 source=HUD_INCOME chunk=HUD_INCOME:2efa6b7ef8ad:0143833-0144273 score=0.460408
+title=HUD Handbook 4350.3 REV-1, Chapter 5: Determining Income and Calculating Rent location=PDF page 73
+come $98 10% of monthly gross income $43 Minimum rent $25 TTP for Resident A = $98
+
+Resident B: Annual income $3,600 Elderly family deduction - $400 Medical expense deduction - $2,480 Annual adjusted income $720 Monthly adjusted income $60 ($720/12 months) 30% of monthly adjusted income $18 10% of monthly gross income $30 Minimum rent $25 TTP for Resident B = $30
+
+C. Contract Rent and Assistance Payment in Section 202/8 Group Homes
+
+1. 
+
+rank=3 source=HUD_INCOME chunk=HUD_INCOME:2efa6b7ef8ad:0043295-0043795 score=0.457351
+title=HUD Handbook 4350.3 REV-1, Chapter 5: Determining Income and Calculating Rent location=PDF page 21
+ payment = $5,900 annual gross income/ 12 = $492. *** Increased rent does not start until 2/1 in order to give the family notice of rent increase.
+
+Option B: The owner processes one interim re-examination after unemployment benefits are known. 10/1 11/1 12/1 1/1 2/1 Monthly gross income 800 0/800* 0/800* 433* 433* Monthly allowances (three minors x 480 / 12 Months) 120 120 120 120 120 Monthly adjusted income 680 0/680 0/680 313 313 Total tenant payment 204 204* 204* 94 94 Recalculated TTP - 94**
+
+rank=4 source=HUD_SELECTION chunk=HUD_SELECTION:970dfc1f3a55:0028212-0028711 score=0.445791
+title=HUD Handbook 4350.3 REV-1, Chapter 4: Waiting List and Tenant Selection location=PDF page 15
+, requesting HUD concurrence on the preferences.
+
+Figure 4-4: Example of Section 236 Ranking Preferences Based on Income and Rent
+
+Clear River Apartments is a Section 236 property with RAP assistance. The basic rent is $350, and the market rent is $500.
+
+Date of Application Applicant Name Estimated rent based Rank order for upon income reported selection based on on application form. estimated rent (assuming no other preference)
+
+6/15/2001 Joseph Jones $372 3
+
+8/1/2001 Marenka Salnikov $500 5
+
+
+
+rank=5 source=HUD_INCOME chunk=HUD_INCOME:2efa6b7ef8ad:0133606-0134055 score=0.419465
+title=HUD Handbook 4350.3 REV-1, Chapter 5: Determining Income and Calculating Rent location=PDF page 67
+ Payment Formulas
+
+Section 8, PAC, PRAC, and RAP
+
+• TTP is the greater of the following:  30% of monthly adjusted income;  10% of monthly gross income;  Welfare rent (welfare recipients in as-paid localities only); or  The $25 minimum rent (Section 8 only). • Section 8, RAP, and PAC programs may admit an applicant only if the TTP is less than the gross rent. • In PRAC properties, the TTP may exceed the PRAC operating rent.
+
+Rent Supplement
+
+
+
+[2026-09-28T05:39:57.848204Z] RETRIEVAL D6 requested=5 returned=5
+rank=1 source=HUD_INCOME chunk=HUD_INCOME:2efa6b7ef8ad:0087926-0088180 score=0.077818
+title=HUD Handbook 4350.3 REV-1, Chapter 5: Determining Income and Calculating Rent location=PDF page 45
+ting the disabled person or other family member to work.
+
+a. Include payments on a specially-equipped van to the extent they exceed the payments that would be required on a car purchased for transportation of a person who does not have a disability.
+
+b. 
+
+rank=2 source=HUD_FAIR chunk=HUD_FAIR:c47c156c57ea:0004732-0005103 score=0.046339
+title=Fair Housing: Equal Opportunity for All location=PDF page 7; PDF page 8
+ssure that she can have access to her apartment.
+
+However, the Fair Housing Act does not protect a person who is a direct threat to the health or safety of others or who currently uses illegal drugs.
+
+Accessibility Requirements for New Multifamily Buildings: In buildings with four or more units that were first occupied after March 13, 1991, and that have an elevator:
+
+
+
+rank=3 source=HUD_INCOME chunk=HUD_INCOME:2efa6b7ef8ad:0070291-0070576 score=0.085160
+title=HUD Handbook 4350.3 REV-1, Chapter 5: Determining Income and Calculating Rent location=PDF page 36
+puts the remaining amount of $24,000 in the bank. Mia receives her first bank statement and notices that the income on this asset is $205 per month. She must report this increase in income because the family has experienced a cumulative increase in income of more than $200 per month. 
+
+rank=4 source=HUD_SELECTION chunk=HUD_SELECTION:970dfc1f3a55:0032109-0032608 score=0.057183
+title=HUD Handbook 4350.3 REV-1, Chapter 4: Waiting List and Tenant Selection location=PDF page 17
+stalking*.
+
+5. Specific groups of single persons. Owners may adopt a preference for single persons who are elderly, displaced, homeless or persons with disabilities over other single persons.
+
+D. Determining the Relative Weight of Owner-Adopted Preferences
+
+Owners may decide to assign various importance to owner-adopted preferences. If the owner chooses to do so, a ranking, rating, or combination of preference circumstances must be identified in the Tenant Selection Plan and consistently used. 
+
+rank=5 source=HUD_INCOME chunk=HUD_INCOME:2efa6b7ef8ad:0100062-0100483 score=0.070400
+title=HUD Handbook 4350.3 REV-1, Chapter 5: Determining Income and Calculating Rent location=PDF page 50; PDF page 51
+st 62 years of age or a person with disabilities. Each elderly or disabled family receives a $400 family deduction. Because this is a “family deduction” each family receives only one deduction, even if both the head and spouse are elderly or disabled.
+
+Example – Special Calculation for Families Who Are Eligible for Disability Assistance and Medical Expense Deductions The following is basic information on the family:
+
+
+
+[2026-09-28T05:39:58.100889Z] RETRIEVAL D7 requested=5 returned=5
+rank=1 source=HUD_FAIR chunk=HUD_FAIR:c47c156c57ea:0014922-0015417 score=0.437942
+title=Fair Housing: Equal Opportunity for All location=PDF page 17
+ve occurred within the preceding seven-year period.
+
+Civil Trial in Federal District Court: If either you or the respondent elects to have a Federal civil trial for your complaint, HUD must refer your case to the U.S. Department of Justice for enforcement. The U.S. Department of Justice will file a civil lawsuit on your behalf in the U.S. District Court in the district in which the discrimination allegedly occurred. You also may choose to intervene in the case and retain your own attorney. 
+
+rank=2 source=HUD_FAIR chunk=HUD_FAIR:c47c156c57ea:0013393-0013759 score=0.441022
+title=Fair Housing: Equal Opportunity for All location=PDF page 16
+to have a civil trial in Federal District Court.
+
+HUD Administrative Law Judge Hearing: If neither you nor the respondent elects to have a Federal civil trial before the 20-day Election Period expires, HUD will promptly schedule a Hearing for your case before a HUD ALJ. The ALJ Hearing will be conducted in the locality where the discrimination allegedly occurred. 
+
+rank=3 source=HUD_FAIR chunk=HUD_FAIR:c47c156c57ea:0014097-0014522 score=0.385422
+title=Fair Housing: Equal Opportunity for All location=PDF page 17
+tervene in the case and retain your own attorney. At the conclusion of the Hearing, the HUD ALJ will issue a Decision based on findings of fact and conclusions of law. If the HUD ALJ concludes that the respondent(s) violated the Fair Housing Act, the respondent(s) can be ordered to:
+
+• Compensate you for actual damages, including out-of-pocket expenses and emotional distress damages • Provide permanent injunctive relief. 
+
+rank=4 source=HUD_FAIR chunk=HUD_FAIR:c47c156c57ea:0015367-0015757 score=0.364812
+title=Fair Housing: Equal Opportunity for All location=PDF page 17
+tervene in the case and retain your own attorney. Either you or the respondent may request a jury trial, and you each have the right to appear in person, to be represented by legal counsel, to present evidence, to cross-examine witnesses, and to request subpoenas in aid of discovery of evidence. If the Federal Court decides in your favor, a Judge or jury may order the respondent(s) to:
+
+
+
+rank=5 source=HUD_FAIR chunk=HUD_FAIR:c47c156c57ea:0012954-0013443 score=0.439072
+title=Fair Housing: Equal Opportunity for All location=PDF page 16
+g the evidence gathered during the investigation. If HUD determines that there is reasonable cause to believe that the respondent(s) discriminated against you, HUD will issue a Determination of Reasonable Cause and a Charge of Discrimination against the respondent(s). You and the respondent(s) have twenty (20) days after receiving notice of the Charge to decide whether to have your case heard by a HUD Administrative Law Judge (ALJ) or to have a civil trial in Federal District Court.
+
+
+
+[2026-09-28T05:39:58.504351Z] RETRIEVAL D8 requested=5 returned=5
+rank=1 source=EPA_LEAD chunk=EPA_LEAD:3830114fcc78:0000764-0001237 score=0.420077
+title=Protect Your Family From Lead in Your Home location=PDF page 2; PDF page 3
+ning statement about lead-based paint • Give buyers up to 10 days to have a certified inspector or risk assessor check for lead.
+
+If undertaking renovation, repair or painting (RRP) projects in your pre-1978 home or apartment: • Read EPA’s pamphlet, The Lead-Safe Certified Guide to Renovate Right, to learn about the lead-safe work practices that contractors are required to follow when working in your home (see page 12).
+
+Steps to Protect Your Family from Lead Hazards
+
+
+
+rank=2 source=EPA_LEAD chunk=EPA_LEAD:3830114fcc78:0001618-0002053 score=0.402996
+title=Protect Your Family From Lead in Your Home location=PDF page 3
+ndow sills and other surfaces using wet methods.
+
+• Take precautions to avoid exposure to lead dust when remodeling.
+
+• Hire only EPA-, Tribal- or state-approved Lead-Safe Certified renovation firms when renovating, repairing or painting. Find an EPA-certified firm using cdxapps.epa.gov/leadpro.
+
+• Have your home checked for lead-based paint by a certified inspector or risk assessor before buying, renting or renovating your home.
+
+
+
+rank=3 source=EPA_LEAD chunk=EPA_LEAD:3830114fcc78:0016095-0016543 score=0.391167
+title=Protect Your Family From Lead in Your Home location=PDF page 14
+vent lead contamination • Provide a copy of EPA’s lead hazard information document, The Lead-Safe Certified Guide to Renovate Right
+
+RRP contractors working in pre-1978 homes and childcare facilities must follow lead-safe work practices that: • Contain the work area. The area must be contained so that dust and debris do not escape from the work area. Warning signs must be put up, and plastic or other impermeable material and tape must be used. 
+
+rank=4 source=EPA_DISCLOSURE chunk=EPA_DISCLOSURE:38dd88cf9257:0003772-0004226 score=0.353316
+title=Real Estate Disclosures about Potential Lead Hazards location=Requirements Under the Disclosure Rule
+for lead-based paint or lead-based paint hazards. Parties may mutually agree, in writing, to lengthen or shorten the time period for inspection. Homebuyers may waive this inspection opportunity. If a homebuyer is a concerned about possible lead-based paint, they may hire a certified inspector to conduct a lead-based paint inspection before committing to buy. Use EPA’s Lead-Based Paint Professional Locator to find a certified inspector in your area.
+
+
+
+rank=5 source=EPA_LEAD chunk=EPA_LEAD:3830114fcc78:0014197-0014534 score=0.434756
+title=Protect Your Family From Lead in Your Home location=PDF page 12; PDF page 13
+ has the proper equipment to clean up thoroughly. • Certified contractors will employ qualified workers and follow strict safety rules set by their state or Tribe or by the federal government.
+
+Reducing Lead Hazards, continued
+
+If your home has had a lead abatement, dust cleanup activities must be conducted once the work is completed. 
+
+/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part2-backend/reports/hw04/raw/part4/development-followup-hybrid-inspect-01

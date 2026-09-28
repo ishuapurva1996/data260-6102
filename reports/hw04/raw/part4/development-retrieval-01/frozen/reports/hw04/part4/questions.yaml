@@ -1,0 +1,222 @@
+{
+  "schema_version": 1,
+  "status": "source_grounded_draft_pending_U2_chunk_coverage_freeze",
+  "authored_at": "2026-09-28T04:16:43.859236Z",
+  "evaluator": "Codex assistant; independently read frozen corpus passages before scored generation",
+  "offset_units": "Zero-based half-open Unicode character indices into each sources[].path text",
+  "prompt_isolation": "Only id/type/question may be used for orchestration; expected answers, evidence, and qualification notes are evaluation-only and must not be sent to generation or used for scored filtering.",
+  "questions": [
+    {
+      "id": "Q1",
+      "type": "one_chunk",
+      "question": "According to the archived HUD tenant-selection handbook, how many days does an applicant have to request a meeting to dispute a rejection?",
+      "expected_behavior": "answer",
+      "expected_answer": "The archived HUD tenant-selection handbook gives the applicant 14 days to request a meeting to dispute the rejection; cite the supplied passage.",
+      "evidence_logic": "AND across evidence_groups; OR across each group alternatives",
+      "evidence_groups": [
+        {
+          "id": "rejection_deadline",
+          "description": "The archived applicant rejection-meeting deadline is 14 days.",
+          "match": "any_alternative",
+          "alternatives": [
+            {
+              "source_id": "HUD_SELECTION",
+              "start_character": 57879,
+              "end_character": 57997,
+              "quote": "The applicant’s right to respond to the owner in writing or request a meeting within 14 days to dispute the rejection.",
+              "location": "HUD Handbook 4350.3 REV-1, paragraph 4-9.C.2.b; printed page 4-28; PDF page 28."
+            }
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "HUD_SELECTION",
+          "start_character": 57879,
+          "end_character": 57997,
+          "quote": "The applicant’s right to respond to the owner in writing or request a meeting within 14 days to dispute the rejection.",
+          "location": "HUD Handbook 4350.3 REV-1, paragraph 4-9.C.2.b; printed page 4-28; PDF page 28."
+        }
+      ]
+    },
+    {
+      "id": "Q2",
+      "type": "two_chunks",
+      "question": "According to the EPA pamphlet, what does a lead-based paint inspection tell you, and what different information does a risk assessment provide?",
+      "expected_behavior": "answer",
+      "expected_answer": "An inspection tells whether lead-based paint is present and where, but not whether current hazards exist or how to address them. A risk assessment identifies current lead hazards from paint, dust or soil and actions to address them. Both evidence groups are required.",
+      "evidence_logic": "AND across evidence_groups; OR across each group alternatives",
+      "evidence_groups": [
+        {
+          "id": "inspection_definition",
+          "description": "Presence/location of lead-based paint; inspection does not determine current hazards or remedies.",
+          "match": "any_alternative",
+          "alternatives": [
+            {
+              "source_id": "EPA_LEAD",
+              "start_character": 9163,
+              "end_character": 9350,
+              "quote": "A lead-based paint inspection tells you if your home has lead-based paint and where it is located. It won’t tell you whether your home currently has lead hazards or how to deal with them.",
+              "location": "PDF page(s) 9"
+            }
+          ]
+        },
+        {
+          "id": "risk_assessment_definition",
+          "description": "Current hazards from paint/dust/soil and what to do about them.",
+          "match": "any_alternative",
+          "alternatives": [
+            {
+              "source_id": "EPA_LEAD",
+              "start_character": 9587,
+              "end_character": 9733,
+              "quote": "A risk assessment tells you if your home currently has any lead hazards from paint, dust or soil, and what actions to take to address any hazards.",
+              "location": "PDF page(s) 9"
+            }
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "EPA_LEAD",
+          "start_character": 9163,
+          "end_character": 9350,
+          "quote": "A lead-based paint inspection tells you if your home has lead-based paint and where it is located. It won’t tell you whether your home currently has lead hazards or how to deal with them.",
+          "location": "PDF page(s) 9"
+        },
+        {
+          "source_id": "EPA_LEAD",
+          "start_character": 9587,
+          "end_character": 9733,
+          "quote": "A risk assessment tells you if your home currently has any lead hazards from paint, dust or soil, and what actions to take to address any hazards.",
+          "location": "PDF page(s) 9"
+        }
+      ]
+    },
+    {
+      "id": "Q3",
+      "type": "overlapping_sources",
+      "question": "According to the supplied documents, what information about known lead-based paint hazards should a prospective renter of covered pre-1978 housing receive before signing a lease?",
+      "expected_behavior": "answer",
+      "expected_answer": "For housing covered by the disclosure rule, the prospective renter should receive known information about the presence of lead-based paint or lead-based paint hazards, and all available records and reports on them, before signing the lease. The sources also discuss a lead warning statement and the EPA pamphlet. Do not state that all pre-1978 housing is covered or give the buyer-only 10-day inspection opportunity as a renter right. Cite one sufficient source, or both only when both appear in supplied context.",
+      "evidence_logic": "AND across evidence_groups; OR across each group alternatives",
+      "evidence_groups": [
+        {
+          "id": "known_information",
+          "description": "Known information on lead-based paint/hazards is disclosed before the lease.",
+          "match": "any_alternative",
+          "alternatives": [
+            {
+              "source_id": "EPA_LEAD",
+              "start_character": 502,
+              "end_character": 620,
+              "quote": "Disclose known information about the presence of lead-based paint or lead-based paint hazards (or state there is none)",
+              "location": "PDF page(s) 2"
+            },
+            {
+              "source_id": "EPA_DISCLOSURE",
+              "start_character": 2541,
+              "end_character": 2761,
+              "quote": "Disclose any known information about the presence of lead-based paint and lead-based paint hazards in the home or building. This may include the location of the lead-based paint and the condition of the painted surfaces.",
+              "location": "Requirements Under the Disclosure Rule"
+            }
+          ]
+        },
+        {
+          "id": "available_records",
+          "description": "All available reports and records about lead-based paint/hazards are provided.",
+          "match": "any_alternative",
+          "alternatives": [
+            {
+              "source_id": "EPA_LEAD",
+              "start_character": 623,
+              "end_character": 739,
+              "quote": "Provide all available records and reports on lead-based paint and lead-based paint hazards (or state there are none)",
+              "location": "PDF page(s) 2"
+            },
+            {
+              "source_id": "EPA_DISCLOSURE",
+              "start_character": 2763,
+              "end_character": 2906,
+              "quote": "Provide all available records and reports on the presence of lead-based paint and lead-based paint hazards in the housing being sold or leased.",
+              "location": "Requirements Under the Disclosure Rule"
+            }
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "EPA_LEAD",
+          "start_character": 502,
+          "end_character": 620,
+          "quote": "Disclose known information about the presence of lead-based paint or lead-based paint hazards (or state there is none)",
+          "location": "PDF page(s) 2"
+        },
+        {
+          "source_id": "EPA_DISCLOSURE",
+          "start_character": 2541,
+          "end_character": 2761,
+          "quote": "Disclose any known information about the presence of lead-based paint and lead-based paint hazards in the home or building. This may include the location of the lead-based paint and the condition of the painted surfaces.",
+          "location": "Requirements Under the Disclosure Rule"
+        },
+        {
+          "source_id": "EPA_LEAD",
+          "start_character": 623,
+          "end_character": 739,
+          "quote": "Provide all available records and reports on lead-based paint and lead-based paint hazards (or state there are none)",
+          "location": "PDF page(s) 2"
+        },
+        {
+          "source_id": "EPA_DISCLOSURE",
+          "start_character": 2763,
+          "end_character": 2906,
+          "quote": "Provide all available records and reports on the presence of lead-based paint and lead-based paint hazards in the housing being sold or leased.",
+          "location": "Requirements Under the Disclosure Rule"
+        }
+      ],
+      "qualification_notes": {
+        "coverage": "Question expressly says covered pre-1978 housing. An adequate core answer need not enumerate exemptions; a claim about all pre-1978 housing would be wrong.",
+        "exemptions_in_web_snapshot": [
+          "Zero-bedroom units, except when a child under six lives or is expected to live there",
+          "Leases of 100 days or less with no possible renewal or extension",
+          "Housing specifically for elderly people or people with disabilities, except when a child under six resides or is expected to reside there",
+          "Certified lead-based-paint-free housing",
+          "Foreclosure sales",
+          "Housing built after 1977"
+        ],
+        "buyer_vs_renter": "The web article provides homebuyers a 10-day inspection/risk-assessment opportunity, subject to written adjustment or waiver; it says landlords need not obtain an inspection merely because a renter asks.",
+        "scoring_scope": "Known information and available records/reports are the essential shared information asked for. Warning/pamphlet details may be included when supported; they are not extra mandatory gold groups for this question."
+      }
+    },
+    {
+      "id": "Q4",
+      "type": "ambiguous",
+      "question": "How long do I have to file?",
+      "expected_behavior": "clarify",
+      "expected_answer": "Ask which action or process the user means. Do not assume a HUD complaint, lawsuit, rejection dispute, or other deadline. If giving examples with factual deadlines, those claims need support and must be clearly conditional.",
+      "evidence_logic": "AND across evidence_groups; OR across each group alternatives",
+      "evidence_groups": [],
+      "evidence": []
+    },
+    {
+      "id": "Q5",
+      "type": "absent_answer",
+      "question": "What is the monthly rent for Unit 4B at Cedar Grove Apartments on September 27, 2026?",
+      "expected_behavior": "refuse",
+      "expected_answer": "I cannot answer this question from the provided documents",
+      "evidence_logic": "AND across evidence_groups; OR across each group alternatives",
+      "evidence_groups": [],
+      "evidence": []
+    },
+    {
+      "id": "Q6",
+      "type": "unrelated",
+      "question": "Who won the 2022 FIFA World Cup?",
+      "expected_behavior": "refuse",
+      "expected_answer": "I cannot answer this question from the provided documents",
+      "evidence_logic": "AND across evidence_groups; OR across each group alternatives",
+      "evidence_groups": [],
+      "evidence": []
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+FF                                                                       [100%]
+=================================== FAILURES ===================================
+__ test_evidence_blind_routing_keeps_model_clarification_and_logs_both_calls ___
+
+tmp_path = PosixPath('/private/var/folders/pj/9dp_jz_d5llfnj6rv0yglfn00000gn/T/pytest-of-pragyaapurva/pytest-41/test_evidence_blind_routing_ke0')
+
+    def test_evidence_blind_routing_keeps_model_clarification_and_logs_both_calls(tmp_path):
+        from src.rag.runner import measured_answer
+        config=dict(relevance_cutoff=.5,evidence_budget=1800,generator='local',think=False,
+                    clarification_preflight=True,
+                    options=dict(num_ctx=4096,num_predict=768,temperature=0,seed=6102))
+        retrieval=dict(hits=[hit('SECRET CORPUS FACT')],retrieval_id='fixture',query_embedding_seconds=.01,retrieval_seconds=.02)
+        stream=io.StringIO()
+        class Generator:
+            calls=0
+            def generate(self, request):
+                self.calls+=1
+                assert 'SECRET CORPUS FACT' not in request['prompt']
+                assert 'DO NOT LEAK GOLD' not in request['prompt']
+                assert 'RETRIEVAL' in stream.getvalue()
+                assert 'context' not in request and 'messages' not in request
+                answer='CLARIFY' if self.calls==1 else 'Which process do you mean?'
+                return dict(response=answer,done=True,done_reason='stop',prompt_eval_count=30)
+        gen=Generator()
+        row=measured_answer(dict(id='opaque-id',question='What applies?',expected_answer='DO NOT LEAK GOLD'),
+                            'C',3,retrieval,config,tmp_path,gen,'fixture',stream)
+>       assert gen.calls==2
+E       assert 1 == 2
+E        +  where 1 = <test_hw04_rag.test_evidence_blind_routing_keeps_model_clarification_and_logs_both_calls.<locals>.Generator object at 0x1053c5370>.calls
+
+tests/test_hw04_rag.py:229: AssertionError
+----------------------------- Captured stdout call -----------------------------
+[2026-09-28T05:38:48.339378Z] RETRIEVAL opaque-id requested=3 returned=1
+rank=1 source=test chunk=test-1 score=0.800000
+title=Test document location=section 1
+SECRET CORPUS FACT
+
+2026-09-28T05:38:48.339417+00:00 GENERATION START opaque-id-C-k3
+opaque-id-C-k3 failed: AssertionError: assert 'SECRET CORPUS FACT' not in 'Answer only...es?\nAnswer:'
+  
+  'SECRET CORPUS FACT' is contained here:
+    id=test-1
+    SECRET CORPUS FACT
+    
+    Question: What applies?
+    Answer:
+___ test_invalid_routing_is_preserved_and_does_not_silently_pick_a_response ____
+
+tmp_path = PosixPath('/private/var/folders/pj/9dp_jz_d5llfnj6rv0yglfn00000gn/T/pytest-of-pragyaapurva/pytest-41/test_invalid_routing_is_preser0')
+
+    def test_invalid_routing_is_preserved_and_does_not_silently_pick_a_response(tmp_path):
+        from src.rag.runner import measured_answer
+        config=dict(relevance_cutoff=.5,evidence_budget=1800,generator='local',think=False,
+                    clarification_preflight=True,
+                    options=dict(num_ctx=4096,num_predict=768,temperature=0,seed=6102))
+        class Generator:
+            def generate(self, request):return dict(response='MAYBE',done=True,done_reason='stop')
+>       with pytest.raises(ValueError,match='routing'):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValueError
+
+tests/test_hw04_rag.py:245: Failed
+----------------------------- Captured stdout call -----------------------------
+[2026-09-28T05:38:48.358690Z] RETRIEVAL opaque requested=3 returned=0
+2026-09-28T05:38:48.358713+00:00 GENERATION START opaque-C-k3
+opaque-C-k3 complete: MAYBE
+=========================== short test summary info ============================
+FAILED tests/test_hw04_rag.py::test_evidence_blind_routing_keeps_model_clarification_and_logs_both_calls
+FAILED tests/test_hw04_rag.py::test_invalid_routing_is_preserved_and_does_not_silently_pick_a_response
+2 failed, 15 deselected in 0.11s

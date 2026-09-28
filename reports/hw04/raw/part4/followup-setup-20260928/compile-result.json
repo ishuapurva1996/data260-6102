@@ -1,0 +1,12 @@
+{
+  "at": "2026-09-28T05:50:52.996932+00:00",
+  "passed": true,
+  "files": [
+    "code/rag.py",
+    "src/rag/pipeline.py",
+    "src/rag/runner.py",
+    "src/rag/hybrid.py",
+    "src/rag/evaluation.py",
+    "scripts/verify_hw04_part4.py"
+  ]
+}

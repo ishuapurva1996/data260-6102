@@ -1,0 +1,179 @@
+{
+  "schema_version": 1,
+  "run_id": "scored-20260928-02",
+  "evaluator": "Codex assistant (semantic evaluation subagent; not an independent student review)",
+  "method": "Offline manual reading of every saved prompt, actual supplied context, source-label map, and unedited answer against the frozen six-question key. No evaluator model calls. Atomic distinct factual propositions are counted once; repeated wording and restated questions are not additional claims. Epistemic inability-to-answer statements are not factual answer claims, but independent assertions about document topics, procedures, source attribution, or deadlines are counted. Partial support does not credit a whole factual proposition. A has N/A context faithfulness. Valid citation syntax is separate from citation-supported grounding, and omission of an essential gold fact makes accuracy false even when all emitted claims are faithful. Exact refusal formatting is scored separately from whether abstention was appropriate; Q4 requires clarification. Retrieval and final coverage are recomputed from frozen source offsets using evidence_span_coverage. This is an evaluation of saved historical documents, not current legal advice.",
+  "main_response_count": 18,
+  "distinct_response_count": 22,
+  "sweep_reference_count": 6,
+  "configurations": {
+    "A": {
+      "correct_retrieval": {
+        "numerator": null,
+        "denominator": 0,
+        "value": null,
+        "display": "N/A"
+      },
+      "final_context_coverage": {
+        "numerator": null,
+        "denominator": 0,
+        "value": null,
+        "display": "N/A"
+      },
+      "accuracy": {
+        "numerator": 1,
+        "denominator": 6,
+        "value": 0.16666666666666666,
+        "display": "1/6"
+      },
+      "answerable_accuracy": {
+        "numerator": 0,
+        "denominator": 3,
+        "value": 0.0,
+        "display": "0/3"
+      },
+      "faithfulness": {
+        "numerator": null,
+        "denominator": 0,
+        "value": null,
+        "display": "N/A"
+      },
+      "format_compliance": {
+        "numerator": 0,
+        "denominator": 6,
+        "value": 0.0,
+        "display": "0/6"
+      },
+      "robustness": {
+        "numerator": 1,
+        "denominator": 3,
+        "value": 0.3333333333333333,
+        "display": "1/3"
+      },
+      "required_refusal": {
+        "numerator": 1,
+        "denominator": 2,
+        "value": 0.5,
+        "display": "1/2"
+      },
+      "exact_required_refusal": {
+        "numerator": 0,
+        "denominator": 2,
+        "value": 0.0,
+        "display": "0/2"
+      }
+    },
+    "B": {
+      "correct_retrieval": {
+        "numerator": 1,
+        "denominator": 3,
+        "value": 0.3333333333333333,
+        "display": "1/3"
+      },
+      "final_context_coverage": {
+        "numerator": 1,
+        "denominator": 3,
+        "value": 0.3333333333333333,
+        "display": "1/3"
+      },
+      "accuracy": {
+        "numerator": 2,
+        "denominator": 6,
+        "value": 0.3333333333333333,
+        "display": "2/6"
+      },
+      "answerable_accuracy": {
+        "numerator": 0,
+        "denominator": 3,
+        "value": 0.0,
+        "display": "0/3"
+      },
+      "faithfulness": {
+        "numerator": 8,
+        "denominator": 13,
+        "value": 0.6153846153846154,
+        "display": "8/13"
+      },
+      "format_compliance": {
+        "numerator": 0,
+        "denominator": 6,
+        "value": 0.0,
+        "display": "0/6"
+      },
+      "robustness": {
+        "numerator": 2,
+        "denominator": 3,
+        "value": 0.6666666666666666,
+        "display": "2/3"
+      },
+      "required_refusal": {
+        "numerator": 2,
+        "denominator": 2,
+        "value": 1.0,
+        "display": "2/2"
+      },
+      "exact_required_refusal": {
+        "numerator": 0,
+        "denominator": 2,
+        "value": 0.0,
+        "display": "0/2"
+      }
+    },
+    "C": {
+      "correct_retrieval": {
+        "numerator": 1,
+        "denominator": 3,
+        "value": 0.3333333333333333,
+        "display": "1/3"
+      },
+      "final_context_coverage": {
+        "numerator": 1,
+        "denominator": 3,
+        "value": 0.3333333333333333,
+        "display": "1/3"
+      },
+      "accuracy": {
+        "numerator": 2,
+        "denominator": 6,
+        "value": 0.3333333333333333,
+        "display": "2/6"
+      },
+      "answerable_accuracy": {
+        "numerator": 0,
+        "denominator": 3,
+        "value": 0.0,
+        "display": "0/3"
+      },
+      "faithfulness": {
+        "numerator": 4,
+        "denominator": 6,
+        "value": 0.6666666666666666,
+        "display": "4/6"
+      },
+      "format_compliance": {
+        "numerator": 5,
+        "denominator": 6,
+        "value": 0.8333333333333334,
+        "display": "5/6"
+      },
+      "robustness": {
+        "numerator": 2,
+        "denominator": 3,
+        "value": 0.6666666666666666,
+        "display": "2/3"
+      },
+      "required_refusal": {
+        "numerator": 2,
+        "denominator": 2,
+        "value": 1.0,
+        "display": "2/2"
+      },
+      "exact_required_refusal": {
+        "numerator": 2,
+        "denominator": 2,
+        "value": 1.0,
+        "display": "2/2"
+      }
+    }
+  }
+}

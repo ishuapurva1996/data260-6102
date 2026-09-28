@@ -1,0 +1,62 @@
+{
+  "audited_at": "2026-09-28T05:57:32.883510+00:00",
+  "selected_run": "scored-20260928-04",
+  "checks": {
+    "head_unchanged": true,
+    "branch_unchanged": true,
+    "nothing_staged": true,
+    "only_shared_reports_modified_among_tracked_files": true,
+    "all_other_tracked_application_and_historical_files_unchanged": true,
+    "all_prior_shared_content_preserved": true,
+    "all_469_historical_raw_and_screenshot_files_unchanged": true,
+    "parts123_receipt_byte_identical_to_HEAD": true,
+    "all_22_raw_answer_blocks_in_report": true,
+    "report_and_handoff_local_links_exist": true,
+    "all_25_png_and_html_hashes_match": true,
+    "report_reproduction_byte_identical": true,
+    "owned_service_stopped": true
+  },
+  "passed": 13,
+  "total": 13,
+  "historical_file_count": 469,
+  "historical_changes": [],
+  "tracked_changes": [
+    "reports/hw04/AI_USE.md",
+    "reports/hw04/METRICS.md",
+    "reports/hw04/RUN_LOG.txt"
+  ],
+  "shared_prefix_checks": [
+    {
+      "path": "reports/hw04/AI_USE.md",
+      "prior_sha256": "d18669a5de03d384046445a8648661b8154deb11fa0784d941292053d8b96243",
+      "current_sha256": "cf1eaa4e0bde4175879589476e5886ffaaa107d20f5d41edc6cfb87bdfc77b93",
+      "prior_bytes": 11266,
+      "current_bytes": 12498,
+      "exact_prior_prefix": true
+    },
+    {
+      "path": "reports/hw04/METRICS.md",
+      "prior_sha256": "b48b9435f4a945b460ef92c319cadd5adfbaf51c41aace15f48e0e6eb73b6398",
+      "current_sha256": "73c34aa9818e65d5c346df07f8bff26cfab34fe77c4c399503610553ac797c6b",
+      "prior_bytes": 11387,
+      "current_bytes": 12668,
+      "exact_prior_prefix": true
+    },
+    {
+      "path": "reports/hw04/RUN_LOG.txt",
+      "prior_sha256": "75b0e781b3de6a9d0f952b8c6f55d603785423dc5be85012a3860f4183bd0334",
+      "current_sha256": "9e3d9fa787d6115bca3cb1d7de2f4396df77582836225495634ba6ea175ab128",
+      "prior_bytes": 22675,
+      "current_bytes": 23934,
+      "exact_prior_prefix": true
+    }
+  ],
+  "missing_links": [],
+  "screenshot_hash_failures": [],
+  "scope_notes": [
+    "Git diff establishes unchanged tracked application/evidence files except the three append-only shared reports.",
+    "Historical raw/screenshot hashes are compared to the follow-up entry inventory.",
+    "No database commands or connections occurred; this is not a new database snapshot or benchmark.",
+    "Parts1\u20133 saved46/46 verification remains historical, not rerun."
+  ]
+}

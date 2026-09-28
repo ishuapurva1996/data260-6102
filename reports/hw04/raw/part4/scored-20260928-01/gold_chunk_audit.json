@@ -1,0 +1,54 @@
+{
+  "Q1": {
+    "single_complete_chunks": [
+      "HUD_SELECTION:970dfc1f3a55:0057829-0058205"
+    ],
+    "evidence_group_chunks": {
+      "rejection_deadline": [
+        "HUD_SELECTION:970dfc1f3a55:0057829-0058205"
+      ]
+    }
+  },
+  "Q2": {
+    "single_complete_chunks": [],
+    "evidence_group_chunks": {
+      "inspection_definition": [
+        "EPA_LEAD:3830114fcc78:0008845-0009262"
+      ],
+      "risk_assessment_definition": [
+        "EPA_LEAD:3830114fcc78:0009535-0009993"
+      ]
+    },
+    "complete_pair": [
+      "EPA_LEAD:3830114fcc78:0008845-0009262",
+      "EPA_LEAD:3830114fcc78:0009535-0009993"
+    ],
+    "proof_scope": "All actual chunks from all five corpus documents inspected against independently identified evidence groups."
+  },
+  "Q3": {
+    "single_complete_chunks": [
+      "EPA_LEAD:3830114fcc78:0000314-0000814"
+    ],
+    "evidence_group_chunks": {
+      "known_information": [
+        "EPA_LEAD:3830114fcc78:0000314-0000814"
+      ],
+      "available_records": [
+        "EPA_LEAD:3830114fcc78:0000314-0000814",
+        "EPA_DISCLOSURE:38dd88cf9257:0002615-0003019"
+      ]
+    }
+  },
+  "Q4": {
+    "single_complete_chunks": [],
+    "evidence_group_chunks": {}
+  },
+  "Q5": {
+    "single_complete_chunks": [],
+    "evidence_group_chunks": {}
+  },
+  "Q6": {
+    "single_complete_chunks": [],
+    "evidence_group_chunks": {}
+  }
+}

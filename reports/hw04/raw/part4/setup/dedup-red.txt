@@ -1,0 +1,16 @@
+........F                                                                [100%]
+=================================== FAILURES ===================================
+______________ test_near_duplicates_keep_changed_exception_scope _______________
+
+    def test_near_duplicates_keep_changed_exception_scope():
+        common = ' '.join('word' + str(i) for i in range(60))
+        kept, decisions = select_context([hit(common+' except students.',1),hit(common+' except veterans.',2)],cutoff=0,budget=1800)
+>       assert len(kept) == 2, decisions
+E       AssertionError: [{'chunk_id': 'test-1', 'source_id': 'test', 'score': 0.8, 'reason': 'kept', ...}, {'chunk_id': 'test-2', 'source_id': 'test', 'score': 0.8, 'reason': 'redundant_text', ...}]
+E       assert 1 == 2
+E        +  where 1 = len([{'text': 'word0 word1 word2 word3 word4 word5 word6 word7 word8 word9 word10 word11 word12 word13 word14 word15 word1...rd56 word57 word58 word59 except students.', 'chunk_id': 'test-1', 'source_id': 'test', 'title': 'Test document', ...}])
+
+tests/test_hw04_rag.py:129: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_hw04_rag.py::test_near_duplicates_keep_changed_exception_scope
+1 failed, 8 passed in 0.04s

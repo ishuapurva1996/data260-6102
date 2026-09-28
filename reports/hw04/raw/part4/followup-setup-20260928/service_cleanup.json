@@ -1,0 +1,10 @@
+{
+  "at": "2026-09-28T05:55:40.921176+00:00",
+  "owned_pid": 96363,
+  "verified_command": "ollama serve",
+  "signal": "SIGTERM",
+  "listener_remaining": false,
+  "listener_output": "",
+  "ownership": "Only service started in this task on previously free port11434; session11891, ollama-service.log. No other service terminated.",
+  "models_and_caches_retained": true
+}

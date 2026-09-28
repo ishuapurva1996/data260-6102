@@ -1,0 +1,8 @@
+D1 complete According to the EPA pamphlet, water used to make baby formula should be cold [2]. Boiling water does not remove lead from water [1].
+D2 complete I cannot answer this question from the provided documents
+D3 complete I cannot answer this question from the provided documents
+D4 complete According to the EPA disclosure article, signed disclosures should be kept for three years after the sale is completed or the lease begins. [1]
+D5 complete I cannot answer this question from the provided documents
+D6 complete I cannot answer this question from the provided documents.
+D7 complete I cannot answer this question from the provided documents
+D8 complete I cannot answer this question from the provided documents

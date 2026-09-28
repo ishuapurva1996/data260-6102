@@ -1,0 +1,226 @@
+[2026-09-28T04:33:54.555800Z] RETRIEVAL Q1 requested=3 returned=3
+rank=1 source=HUD_SELECTION chunk=HUD_SELECTION:970dfc1f3a55:0040563-0041038 score=0.666502
+title=HUD Handbook 4350.3 REV-1, Chapter 4: Waiting List and Tenant Selection location=PDF page 20
+mission to a property for disqualifying behavior. For those behaviors that would result in denial for a “reasonable time,” the owner must define a reasonable period in the tenant selection plan.
+
+d. Reconsideration of previously denied applicants. An owner may reconsider the application of a previously denied applicant if the owner has sufficient evidence that the members of the household are not and have not engaged in criminal activity for a reasonable period of time. 
+
+rank=2 source=HUD_SELECTION chunk=HUD_SELECTION:970dfc1f3a55:0079454-0079725 score=0.604765
+title=HUD Handbook 4350.3 REV-1, Chapter 4: Waiting List and Tenant Selection location=PDF page 37
+ation for three years. (See Paragraph 4-22.B)
+
+b. If the applicant becomes a tenant, the owner will retain the form HUD-92006 with the application for the term of tenancy plus three years. (See Paragraph 4-22.C)
+
+c. Owners must keep the contact information confidential. 
+
+rank=3 source=HUD_FAIR chunk=HUD_FAIR:c47c156c57ea:0011054-0011544 score=0.600833
+title=Fair Housing: Equal Opportunity for All location=PDF page 15
+ Housing Act, HUD must promptly refer your complaint to that agency for investigation, and must promptly notify you of the referral. The State or local agency will investigate your complaint under the “substantially equivalent” State or local civil rights law or ordinance. The State or local public fair housing agency must start investigating your complaint within 30 days of HUD’s referral, or HUD may retrieve (“reactivate”) the complaint for investigation under the Fair Housing Act.
+
+
+
+[2026-09-28T04:33:54.581399Z] RETRIEVAL Q2 requested=1 returned=1
+rank=1 source=EPA_LEAD chunk=EPA_LEAD:3830114fcc78:0009535-0009993 score=0.824775
+title=Protect Your Family From Lead in Your Home location=PDF page 9
+o be tested in an EPA-recognized lead laboratory
+
+• A risk assessment tells you if your home currently has any lead hazards from paint, dust or soil, and what actions to take to address any hazards. A trained and certified lead-based paint risk assessor will: • Sample paint that is deteriorated on doors, windows, floors, stairs and walls • Sample dust near painted surfaces and sample bare soil in the yard • Get lab tests of paint, dust and soil samples
+
+
+
+[2026-09-28T04:33:54.604829Z] RETRIEVAL Q2 requested=3 returned=3
+rank=1 source=EPA_LEAD chunk=EPA_LEAD:3830114fcc78:0009535-0009993 score=0.824775
+title=Protect Your Family From Lead in Your Home location=PDF page 9
+o be tested in an EPA-recognized lead laboratory
+
+• A risk assessment tells you if your home currently has any lead hazards from paint, dust or soil, and what actions to take to address any hazards. A trained and certified lead-based paint risk assessor will: • Sample paint that is deteriorated on doors, windows, floors, stairs and walls • Sample dust near painted surfaces and sample bare soil in the yard • Get lab tests of paint, dust and soil samples
+
+
+
+rank=2 source=EPA_DISCLOSURE chunk=EPA_DISCLOSURE:38dd88cf9257:0003772-0004226 score=0.792538
+title=Real Estate Disclosures about Potential Lead Hazards location=Requirements Under the Disclosure Rule
+for lead-based paint or lead-based paint hazards. Parties may mutually agree, in writing, to lengthen or shorten the time period for inspection. Homebuyers may waive this inspection opportunity. If a homebuyer is a concerned about possible lead-based paint, they may hire a certified inspector to conduct a lead-based paint inspection before committing to buy. Use EPA’s Lead-Based Paint Professional Locator to find a certified inspector in your area.
+
+
+
+rank=3 source=EPA_LEAD chunk=EPA_LEAD:3830114fcc78:0009943-0010402 score=0.785831
+title=Protect Your Family From Lead in Your Home location=PDF page 9; PDF page 10
+ • Get lab tests of paint, dust and soil samples
+
+• A combination inspection and risk assessment tells you if your home has any lead-based paint, if it has any lead hazards and where both are located.
+
+Be sure to read the report provided to you after your inspection or risk assessment is completed and ask questions about anything you do not understand. Closely monitor areas that are known to have lead-based paint.
+
+Checking Your Home for Lead, continued
+
+
+
+[2026-09-28T04:33:54.627931Z] RETRIEVAL Q2 requested=5 returned=5
+rank=1 source=EPA_LEAD chunk=EPA_LEAD:3830114fcc78:0009535-0009993 score=0.824775
+title=Protect Your Family From Lead in Your Home location=PDF page 9
+o be tested in an EPA-recognized lead laboratory
+
+• A risk assessment tells you if your home currently has any lead hazards from paint, dust or soil, and what actions to take to address any hazards. A trained and certified lead-based paint risk assessor will: • Sample paint that is deteriorated on doors, windows, floors, stairs and walls • Sample dust near painted surfaces and sample bare soil in the yard • Get lab tests of paint, dust and soil samples
+
+
+
+rank=2 source=EPA_DISCLOSURE chunk=EPA_DISCLOSURE:38dd88cf9257:0003772-0004226 score=0.792538
+title=Real Estate Disclosures about Potential Lead Hazards location=Requirements Under the Disclosure Rule
+for lead-based paint or lead-based paint hazards. Parties may mutually agree, in writing, to lengthen or shorten the time period for inspection. Homebuyers may waive this inspection opportunity. If a homebuyer is a concerned about possible lead-based paint, they may hire a certified inspector to conduct a lead-based paint inspection before committing to buy. Use EPA’s Lead-Based Paint Professional Locator to find a certified inspector in your area.
+
+
+
+rank=3 source=EPA_LEAD chunk=EPA_LEAD:3830114fcc78:0009943-0010402 score=0.785831
+title=Protect Your Family From Lead in Your Home location=PDF page 9; PDF page 10
+ • Get lab tests of paint, dust and soil samples
+
+• A combination inspection and risk assessment tells you if your home has any lead-based paint, if it has any lead hazards and where both are located.
+
+Be sure to read the report provided to you after your inspection or risk assessment is completed and ask questions about anything you do not understand. Closely monitor areas that are known to have lead-based paint.
+
+Checking Your Home for Lead, continued
+
+
+
+rank=4 source=EPA_DISCLOSURE chunk=EPA_DISCLOSURE:38dd88cf9257:0002969-0003462 score=0.735154
+title=Real Estate Disclosures about Potential Lead Hazards location=Requirements Under the Disclosure Rule
+ and other units from building-wide evaluations.
+
+Provide a "Lead Warning Statement" to buyers or renters explaining, among other things, that lead from paint can pose health hazards if not managed properly. This can be an attachment to or as language inserted into the contract or lease. This should be in the same language as the rest of the contract. It should include confirmation that the seller or landlord has complied with all requirements under the Lead-Based Paint Disclosure Rule.
+
+
+
+rank=5 source=EPA_DISCLOSURE chunk=EPA_DISCLOSURE:38dd88cf9257:0002615-0003019 score=0.720979
+title=Real Estate Disclosures about Potential Lead Hazards location=Requirements Under the Disclosure Rule
+lead-based paint hazards in the home or building. This may include the location of the lead-based paint and the condition of the painted surfaces.
+
+Provide all available records and reports on the presence of lead-based paint and lead-based paint hazards in the housing being sold or leased. For multi-unit buildings, this includes those for common areas and other units from building-wide evaluations.
+
+
+
+[2026-09-28T04:33:54.655481Z] RETRIEVAL Q3 requested=3 returned=3
+rank=1 source=EPA_DISCLOSURE chunk=EPA_DISCLOSURE:38dd88cf9257:0001843-0002311 score=0.859128
+title=Real Estate Disclosures about Potential Lead Hazards location=Real Estate Disclosures about Potential Lead Hazards; Requirements Under the Disclosure Rule
+er 1977.
+
+Requirements Under the Disclosure Rule
+
+Homebuyers and renters of most pre-1978 private, public, federally owned housing, and housing receiving federal assistance have the right to know whether lead-based paint and lead-based paint hazards are present before signing a contract or lease. Before a homebuyer signs a contract for a housing sale or a renter signs a lease, federal law requires sellers, landlords, real estate agents and property managers to :
+
+
+
+rank=2 source=EPA_DISCLOSURE chunk=EPA_DISCLOSURE:38dd88cf9257:0006030-0006482 score=0.835033
+title=Real Estate Disclosures about Potential Lead Hazards location=What Happens if a Seller or Lessor Fails to Comply with These Regulations; For More Information
+e, during, and after sales and rental agreements. If you did not receive the disclosure of information on lead-based paint or lead-based paint hazards when you bought or rented pre-1978 housing, report this information to: epa.gov/lead/violation.
+
+Read more about how EPA enforces lead-based paint laws.
+
+For More Information
+
+Lead-Based Paint Disclosure Rule Fact Sheet
+
+Read the Real Estate Notification and Disclosure Rule, Section 1018 of Title X
+
+
+
+rank=3 source=EPA_LEAD chunk=EPA_LEAD:3830114fcc78:0000314-0000814 score=0.818309
+title=Protect Your Family From Lead in Your Home location=PDF page 2
+t your family • Where to go for more information
+
+Before renting or buying a pre-1978 home or apartment, federal law requires sellers, landlords, agents and rental property managers to: • Disclose known information about the presence of lead-based paint or lead-based paint hazards (or state there is none) • Provide all available records and reports on lead-based paint and lead-based paint hazards (or state there are none) • Include a specific warning statement about lead-based paint • Give buyer
+
+[2026-09-28T04:33:54.679819Z] RETRIEVAL Q4 requested=3 returned=3
+rank=1 source=HUD_SELECTION chunk=HUD_SELECTION:970dfc1f3a55:0100185-0100577 score=0.485711
+title=HUD Handbook 4350.3 REV-1, Chapter 4: Waiting List and Tenant Selection location=PDF page 46; PDF page 47
+on for removal from the list for three years.
+
+C. When an applicant moves in and begins to receive assistance, the application *and form HUD-92006 completed by the applicant* must be maintained in the tenant file for the duration of the tenancy and for three years after the tenant leaves the property.
+
+D. All files must be kept secure so that personal information remains confidential.
+
+E. 
+
+rank=2 source=HUD_SELECTION chunk=HUD_SELECTION:970dfc1f3a55:0079454-0079725 score=0.453509
+title=HUD Handbook 4350.3 REV-1, Chapter 4: Waiting List and Tenant Selection location=PDF page 37
+ation for three years. (See Paragraph 4-22.B)
+
+b. If the applicant becomes a tenant, the owner will retain the form HUD-92006 with the application for the term of tenancy plus three years. (See Paragraph 4-22.C)
+
+c. Owners must keep the contact information confidential. 
+
+rank=3 source=HUD_INCOME chunk=HUD_INCOME:2efa6b7ef8ad:0113999-0114483 score=0.451687
+title=HUD Handbook 4350.3 REV-1, Chapter 5: Determining Income and Calculating Rent location=PDF page 57; PDF page 58
+s valid for 15 months from the date of signature. The consent allows HUD or a public housing agency to verify information with the Internal Revenue Service *(IRS), the Social Security Administration (SSA), the Department of Health and Human Services (HHS’) National Directory of New Hires (NDNH), and with state agencies that maintain wage and unemployment claim information (SWICAs).* Owners must
+
+keep the original signed form in the tenant’s file and provide a copy to the family. 
+
+[2026-09-28T04:33:54.704875Z] RETRIEVAL Q5 requested=3 returned=3
+rank=1 source=HUD_INCOME chunk=HUD_INCOME:2efa6b7ef8ad:0152437-0152929 score=0.482690
+title=HUD Handbook 4350.3 REV-1, Chapter 5: Determining Income and Calculating Rent location=PDF page 78; PDF page 79
+Section 236 market rent.
+
+Section 221(d)(3) BMIR
+
+• At initial certification, the tenant pays the BMIR rent.
+
+• At recertification, the tenant’s annual income is compared to the BMIR income limits. If the tenant’s annual income is:
+
+ Less than or equal to 110% of the BMIR income limit, the tenant pays the BMIR rent;
+
+ Greater than 110% of the BMIR income limit, the tenant pays 110% of the BMIR rent.
+
+5-30 Determining Tenant Contribution at Properties with Multiple Forms of Subsidy
+
+A. 
+
+rank=2 source=HUD_INCOME chunk=HUD_INCOME:2efa6b7ef8ad:0144223-0144715 score=0.480813
+title=HUD Handbook 4350.3 REV-1, Chapter 5: Determining Income and Calculating Rent location=PDF page 73; PDF page 74
+sistance Payment in Section 202/8 Group Homes
+
+1. In Section 202/8 group homes, the contract rent for a room shared by two occupants is split between the two tenants.
+
+2. The assistance payment for the Section 202/8 double occupancy room is calculated separately for each tenant based on half of the contract rent for the unit.
+
+Example – Assistance Payment, Section 202/8 Double Occupancy Contract rent for the unit $800
+
+Half of the contract rent for the unit $400
+
+TTP for Tenant A = $98
+
+
+
+rank=3 source=HUD_INCOME chunk=HUD_INCOME:2efa6b7ef8ad:0147769-0148180 score=0.471565
+title=HUD Handbook 4350.3 REV-1, Chapter 5: Determining Income and Calculating Rent location=PDF page 76
+tions for the remaining resident remain the same. The other half of the unit is treated like a vacant unit: there is no assistance payment but the owner may be eligible for vacancy loss claims for the vacated half of the unit.
+
+Example – Section 202/8 Calculation at a Change in Occupancy Contract Rent $800 Half of the contract rent $400 Tenant A Tenant Rent $98 Tenant B Tenant Rent $30
+
+Tenant A moves out.
+
+
+
+[2026-09-28T04:33:54.732510Z] RETRIEVAL Q6 requested=3 returned=3
+rank=1 source=HUD_INCOME chunk=HUD_INCOME:2efa6b7ef8ad:0069860-0070341 score=0.148049
+title=HUD Handbook 4350.3 REV-1, Chapter 5: Determining Income and Calculating Rent location=PDF page 36
+le by the tenant (e.g., gems, stamp collection).
+
+Examples – Lump Sum Additions to Family Assets (One-Time Payment) • JoAnne Wettig won $500 in the lottery and received it in one payment. Do not count the $500 as income. At JoAnne’s next annual recertification, she will report all of her assets.
+
+• Mia LaRue, a tenant in a Section 8 property, won $75,000 in one payment in the lottery. She buys a car with some of the money, and puts the remaining amount of $24,000 in the bank. 
+
+rank=2 source=HUD_INCOME chunk=HUD_INCOME:2efa6b7ef8ad:0068304-0068796 score=0.113644
+title=HUD Handbook 4350.3 REV-1, Chapter 5: Determining Income and Calculating Rent location=PDF page 35
+ddress, and phone number of her insurance agent.
+
+Rodrigo called the insurance agent and faxed a copy of the applicant’s approval for release of information. As a result, Rodrigo learned that the annuity is a fixed annuity, with a current value of $20,400 earning interest at an annual rate of 4.5%. The applicant could withdraw the current balance in the account but would pay a surrender penalty of $3,000. If the annuity is withdrawn, then the applicant will owe $1,200 in tax penalties.
+
+
+
+rank=3 source=HUD_INCOME chunk=HUD_INCOME:2efa6b7ef8ad:0060362-0060802 score=0.098124
+title=HUD Handbook 4350.3 REV-1, Chapter 5: Determining Income and Calculating Rent location=PDF page 31
+o years from the date the trust was established.
+
+ Nonrevocable trust distributing income. When a tenant places an asset in a nonrevocable trust but continues to receive income from the trust, the income is added to annual income and the trust is counted as an asset disposed of for less than market value for two years. Following the two-year period, the owner will count only the actual income distributed from the trust to the tenant.
+
+
+

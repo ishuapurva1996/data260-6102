@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "run_id": "scored-20260928-03",
+  "reviewed_at": "2026-09-28T04:45:00.323Z",
+  "reviewer": "Codex capture subagent",
+  "method": "Opened nine actual PNG files with view_image after Chromium capture; independently recomputed all PNG/HTML/source hashes and evidence coverage from manifest. Visual inspection is limited to the listed files; automated rendering checks cover all 25.",
+  "result": "pass",
+  "automated_checks": {
+    "capture_count_25": true,
+    "png_hashes_match": true,
+    "html_hashes_match": true,
+    "source_hashes_match": true,
+    "all_22_have_separate_answer_capture": true,
+    "rubric_R1_through_R8_covered": true,
+    "six_sweep_references": true,
+    "k3_reuse_explicit": true,
+    "sweep_references_resolve": true,
+    "all_25_no_horizontal_clipping": true,
+    "all_answers_and_prompts_exact": true
+  },
+  "visually_inspected_count": 9,
+  "observations": [
+    {
+      "path": "reports/hw04/screenshots/part4/scored-20260928-03/01-corpus-index-chunks.png",
+      "sha256": "9ebaa4eb5124516098c0fa99e71d15faaf92706db8a4f6076a4745900439993e",
+      "observation": "All five source rows and hashes are visible. Frozen chunk code sits immediately above the actual EPA sample; frozen index code precedes the 925-by-384 index audit. The maximum is 500 characters and requested overlap is 50. No visible clipping or overlap."
+    },
+    {
+      "path": "reports/hw04/screenshots/part4/scored-20260928-03/02-retrieval-before-generation.png",
+      "sha256": "61d4bc19ad9f6264680baf6fa6b74ae72b7b7ec58a3f353928d02300591f0b4e",
+      "observation": "The frozen write/flush code is above the exact Q2-k3 transcript. All three retrieved chunks and their source/score lines are visible. Retrieval timestamp 2026-09-28T04:39:52.043841Z precedes generation start 2026-09-28T04:39:52.044062+00:00. No visible clipping."
+    },
+    {
+      "path": "reports/hw04/screenshots/part4/scored-20260928-03/03-evaluation-summary.png",
+      "sha256": "3b05a08b78d331624a9bc9ed470a551b069f01c154179c4cc6b57c68f779d05c",
+      "observation": "Evaluation-time source snapshot is labeled honestly. Summary table is readable with A/B/C accuracy 2/6, 3/6, 2/6; C faithfulness 3/5 and exact refusal 2/2. N/A cells remain N/A. All rows are visible."
+    },
+    {
+      "path": "reports/hw04/screenshots/part4/scored-20260928-03/Q1-A-k0.png",
+      "sha256": "877ceabfb67c7a5d8ff3dc84df9148bcf93acfe45e491382efbfc06b50e8e1ea",
+      "observation": "Question, configuration A, k0, token counts, status, frozen branch excerpt, full raw nonanswer, and direct question prompt are readable. No supplied evidence is correctly stated."
+    },
+    {
+      "path": "reports/hw04/screenshots/part4/scored-20260928-03/Q2-B-k5.png",
+      "sha256": "79baddbdad08e395212526a6cbb6d85d80303490ee56d1e63d66654adc6e1310",
+      "observation": "Sweep k5 is visible with returned/retained counts 5/5. Full raw answer and all supplied context are included. The saved answer claims an inspection locates hazards; this error is retained rather than corrected. Long full-page prompt remains accessible at native 1250px width."
+    },
+    {
+      "path": "reports/hw04/screenshots/part4/scored-20260928-03/Q2-C-k5.png",
+      "sha256": "1c69127fdb70d6968efd7e8714ecd3ba67dd115021ae30becfd5fb6c9458cc7f",
+      "observation": "Source labels [1] through [5], C instructions, answer citation [3], exact prompt, and five kept-context decisions are all present without overlap. This is a 4663px-tall full-page image; reduced previews make text small, so original-size viewing or later PDF splitting is needed. The saved citation/answer defects remain unchanged."
+    },
+    {
+      "path": "reports/hw04/screenshots/part4/scored-20260928-03/Q4-C-k3.png",
+      "sha256": "b83fd84d05956d871741e1159aa5b8e588b96c05aec6222e2260064192fef1e9",
+      "observation": "The ambiguous question and empty retained context are visible. The model refusal is preserved, rather than replaced with the required clarification. All three below-cutoff decisions are shown."
+    },
+    {
+      "path": "reports/hw04/screenshots/part4/scored-20260928-03/Q5-C-k3.png",
+      "sha256": "211c46a1899f311192f53c3c344dc0964d4876ec1ef6c32a344c1195547b64a1",
+      "observation": "The absent-rent question, empty retained context, and exact refusal sentence are visible. Code is immediately above the response. All three rejected candidate decisions remain visible."
+    },
+    {
+      "path": "reports/hw04/screenshots/part4/scored-20260928-03/Q6-C-k3.png",
+      "sha256": "33236d6f08bc5c6b8aa079ebb1b046599bd86570721ba24a6aebe2326fe3ba48",
+      "observation": "The unrelated World Cup question and exact refusal are visible, with completion metadata and the unchanged prompt. Candidate rejection records are visible below."
+    }
+  ],
+  "width_px": 1250,
+  "height_range_px": [
+    1177,
+    4663
+  ],
+  "limitations": [
+    "Full-page C evidence pages are tall because exact prompts, source mappings, and decisions are retained. View at original size. Future whole-homework PDF assembly should split long evidence across pages instead of shrinking an entire page image.",
+    "Visual QA confirms rendering and provenance, not semantic correctness of model responses or judgments. Required correct, grounded C answer demonstration remains incomplete in the selected run."
+  ],
+  "capture_launch": {
+    "initial_attempt": "Sandbox blocked Chromium macOS bootstrap_check_in before any PNG was generated.",
+    "resolution": "Same local capture command succeeded with approved escalated execution. The incomplete source-snapshot directory is preserved as scored-20260928-03-launch-failed."
+  }
+}

@@ -82,3 +82,35 @@ The normal runtime began at `2026-09-28T01:14:34.935389+00:00`; the current pyte
 Part 3 completed six actual response captures and a local Collection Runner iteration: 53 passed, zero failed, three expected equality-check skips, zero errors. Part 2 completed POST 201, list GET 200, ID GET 200, PUT 200 and DELETE 204 for uniquely marked rental 16. The five primary CRUD operations passed 12 assertions, with zero failures. Supplemental requests confirmed the updated row, then absence with 404 after deletion, and logout with 204. These are functional observations; screenshot response times do not replace the original 180 timings above.
 
 At `2026-09-28T03:55:37.917251+00:00`, [partial verification](verification.parts123.json) passed **46/46 checks**, automated and overall status pass, exit 0. All required Parts 1–3 images are now captured, including the user-provided database view. The read-only postflight passed 11/11 checks with original rows and their hash unchanged; local credentials were cleared and the owned server stopped. Part 4 and final tagged whole-homework verification remain outside these metrics.
+
+## Part 4 local RAG — selected run and incomplete demonstration
+
+Selected run: `scored-20260928-03`, local Qwen2.5 3B Q4_K_M, 2026-09-28 04:38:38–04:41:35 UTC. Five housing documents produced 925 normalized 384-dimensional vectors, using at most 500 characters per chunk and 50-character overlap. Maximum embedding length was 194/256 tokens; no silent truncation. All 22 calls (18 main, four extra sweep) completed normally. The six sweep rows reuse the two k=3 main responses.
+
+| Configuration | Full retrieval Q1–Q3 | Accuracy | Answerable accuracy | Faithful claims | Format | Robustness Q4–Q6 | Q5/Q6 refusal | Exact refusal |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| A | N/A | 2/6 | 0/3 | N/A | 1/6 | 2/3 | 1/2 | 0/2 |
+| B | 1/3 | 3/6 | 2/3 | 9/11 | 0/6 | 1/3 | 1/2 | 0/2 |
+| C | 1/3 | 2/6 | 0/3 | 3/5 | 4/6 | 2/3 | 2/2 | 2/2 |
+
+Accuracy includes correct clarification/refusal; faithfulness counts actual-context-supported propositions, while grounded answers also require supporting citations. A has no supplied context. Zero-claim refusals/citation-only outputs are not counted as perfectly faithful. Format uses a common target, with stronger instructions given only to C. The assistant authored semantic judgments; no independent student review is claimed.
+
+No swept k produced a complete supported answer. C meets both exact refusals but fails the required correct, supported, cited answer demonstration, so **Part 4 remains incomplete on that requirement**. Focused tests pass **28/28**, report analysis is **417 words**, and **25 genuine browser captures** cover all 22 answers plus setup/retrieval/evaluation. The isolated Part 4 verifier passes **11/12 checks**; its only failure is the supported-answer demonstration. This is separate from the unchanged Parts 1–3 46/46 receipt. No old benchmark or database work was repeated.
+
+Sources: [Part 4 report](part4/REPORT_SECTION.md), [all exact outputs](raw/part4/scored-20260928-03/responses.jsonl), [judgments](raw/part4/scored-20260928-03/judgments.json), [summary](raw/part4/scored-20260928-03/summary.json), [sweep](raw/part4/scored-20260928-03/k_sweep.csv), [screenshots](screenshots/part4/scored-20260928-03/manifest.json), [verification](part4/verification.json), and [reproduction handoff](part4/HANDOFF.md). Earlier model/prompt failures remain separately retained.
+
+## Part 4 focused follow-up — scored-20260928-04
+
+Selected local rerun: 22 final answers plus 8 auxiliary question-only classification calls; all 30 completed normally. All final A/B/C answers use Qwen2.5:3b; only C adds Qwen2.5:7b for specificity classification. Dense retrieval, corpus, questions and scoring definitions remain unchanged.
+
+| Main metric | A | B | C |
+| --- | --- | --- | --- |
+| Accuracy | 2/6 | 3/6 | 4/6 |
+| Answerable accuracy | 0/3 | 2/3 | 1/3 |
+| Complete retrieval | N/A | 1/3 | 1/3 |
+| Supported factual claims | N/A | 9/11 | 4/5 |
+| Format compliance | 1/6 | 0/6 | 6/6 |
+| Robustness Q4–Q6 | 2/3 | 1/3 | 3/3 |
+| Exact Q5/Q6 refusal | 0/2 | 0/2 | 2/2 |
+
+C now meets the reviewed plan's complete supported cited-answer criterion on Q3 and clarifies Q4; this criterion is not an explicit assignment minimum. Q1/Q2 errors remain, and no sweep k produces a complete supported cited Q2 answer. End-to-end C timings include its auxiliary call; main-only denominators exclude the four extra sweep answers. Semantic judgments are assistant evaluations, distinct from 65 passing focused tests and automated provenance checks. Earlier results above remain historical. See `reports/hw04/part4/REPORT_SECTION.md` and `raw/part4/scored-20260928-04/summary.json`.

@@ -1,0 +1,4 @@
+configuration,correct_retrieval,correct_retrieval_numerator,correct_retrieval_denominator,final_context_coverage,final_context_coverage_numerator,final_context_coverage_denominator,accuracy,accuracy_numerator,accuracy_denominator,answerable_accuracy,answerable_accuracy_numerator,answerable_accuracy_denominator,faithfulness,faithfulness_numerator,faithfulness_denominator,format_compliance,format_compliance_numerator,format_compliance_denominator,robustness,robustness_numerator,robustness_denominator,required_refusal,required_refusal_numerator,required_refusal_denominator,exact_required_refusal,exact_required_refusal_numerator,exact_required_refusal_denominator
+A,N/A,N/A,0,N/A,N/A,0,2/6,2,6,0/3,0,3,N/A,N/A,0,1/6,1,6,2/3,2,3,1/2,1,2,0/2,0,2
+B,1/3,1,3,1/3,1,3,3/6,3,6,2/3,2,3,9/11,9,11,0/6,0,6,1/3,1,3,1/2,1,2,0/2,0,2
+C,1/3,1,3,1/3,1,3,2/6,2,6,0/3,0,3,3/5,3,5,4/6,4,6,2/3,2,3,2/2,2,2,2/2,2,2

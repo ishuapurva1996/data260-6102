@@ -1,0 +1,51 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Q5 · Configuration B · k=3</title>
+<style>*{box-sizing:border-box}html{background:#edf1f5;color:#172434}body{margin:0;font:18px/1.5 Arial,sans-serif}main{width:1250px;padding:36px 42px 42px;margin:0 auto;background:#fff}h1{font-size:26px;line-height:1.25;margin:0 0 10px}h2{font-size:23px;line-height:1.3;margin:22px 0 10px}h3{font-size:19px;line-height:1.3;margin:18px 0 8px}p{margin:8px 0 14px}.eyebrow{color:#344a67;font-weight:700;font-size:17px}.notice{border-left:5px solid #426389;padding:10px 15px;background:#f2f5f9}.meta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:14px 0}.meta div{background:#f0f4f8;padding:9px 12px;overflow-wrap:anywhere;font-size:16px}.meta strong{display:block;font-size:15px;color:#40536b}pre{font:16px/1.48 ui-monospace,SFMono-Regular,Menlo,monospace;white-space:pre-wrap;overflow-wrap:anywhere;word-break:break-word;padding:15px 18px;margin:7px 0 16px;background:#f4f6f8;border:1px solid #d2dce6;border-radius:5px}pre.answer{font-size:18px;line-height:1.6;background:#f7fbf7;border-left:5px solid #477458}pre.code{font-size:16px;line-height:1.42;color:#eaf1fa;background:#19293b;border:none}.source{font-size:15px;color:#455c76;overflow-wrap:anywhere}.question{font-size:21px;line-height:1.45;font-weight:600}table{border-collapse:collapse;width:100%;table-layout:fixed;margin:12px 0 20px;font-size:16px;line-height:1.4}th,td{border:1px solid #bfcddc;text-align:left;vertical-align:top;padding:10px;overflow-wrap:anywhere}th{background:#dfe9f4}footer{border-top:1px solid #c8d3df;margin-top:26px;padding-top:12px;font-size:14px;color:#526275;overflow-wrap:anywhere}.pair{margin:18px 0}.raw-label{color:#2e583c}</style>
+<main><div class="eyebrow">HW4 · Part 4 · scored-20260928-04</div><h1>Saved local experiment output — browser capture</h1><p class="notice">This is a browser-rendered view of saved local experiment evidence. Model answers below are unedited. The page does not claim to be a live model interface.</p><h2>Q5 · Configuration B · k=3</h2><p class="question">What is the monthly rent for Unit 4B at Cedar Grove Apartments on September 27, 2026?</p><div class="meta"><div><strong>Response ID</strong>Q5-B-k3</div><div><strong>Configuration / phase</strong>B / main</div><div><strong>Requested k</strong>3</div><div><strong>Returned / retained chunks</strong>3 / 3</div><div><strong>Completion status</strong>complete; done=true; reason=stop</div><div><strong>Local model</strong>qwen2.5:3b</div><div><strong>Actual prompt / output tokens</strong>434 / 77</div><div><strong>Evidence / prompt token bound</strong>363 / 405</div><div><strong>Generation seconds</strong>2.945</div><div><strong>Generation started</strong>2026-09-28T05:49:41.689318+00:00</div><div><strong>Generation finished</strong>2026-09-28T05:49:44.634439+00:00</div><div><strong>Window / answer reserve</strong>4096 / 768</div><div><strong>Retrieval method</strong>dense</div><div><strong>Routing / final generation seconds</strong>0.000 / 2.945</div></div><section class="pair"><div class="source">Verbatim code excerpt · reports/hw04/raw/part4/scored-20260928-04/frozen/src/rag/pipeline.py:287–293</div><pre class="code"> 287      elif configuration == &quot;B&quot;:
+ 288          context = &quot;\n\n&quot;.join(hit[&quot;text&quot;] for hit in hits)
+ 289          prompt = f&quot;Answer the question using the supplied text.\n\nSupplied text:\n{context}\n\nQuestion: {question}\nAnswer:&quot;
+ 290      elif configuration == &quot;C&quot; and options.get(&#39;response_mode&#39;) == &#39;CLARIFY&#39;:
+ 291          if hits:
+ 292              raise ValueError(&#39;Clarification must not receive document evidence&#39;)
+ 293          context, prompt = &#39;&#39;, clarification_prompt(question)</pre><h3 class="raw-label">Unedited final model response</h3><pre class="answer" id="raw-answer">I do not have enough information in the provided text to determine the monthly rent for Unit 4B at Cedar Grove Apartments on September 27, 2026. The text does not contain any details about Cedar Grove Apartments or Unit 4B. It discusses various housing subsidy and rent-related topics, but does not provide specific information about this particular property or date.</pre></section><h3>Source-number mapping supplied to the model</h3><p>No numbered source labels were supplied in this prompt.</p><h3>Exact saved application prompt</h3><pre id="raw-prompt">Answer the question using the supplied text.
+
+Supplied text:
+Section 236 market rent.
+
+Section 221(d)(3) BMIR
+
+• At initial certification, the tenant pays the BMIR rent.
+
+• At recertification, the tenant’s annual income is compared to the BMIR income limits. If the tenant’s annual income is:
+
+ Less than or equal to 110% of the BMIR income limit, the tenant pays the BMIR rent;
+
+ Greater than 110% of the BMIR income limit, the tenant pays 110% of the BMIR rent.
+
+5-30 Determining Tenant Contribution at Properties with Multiple Forms of Subsidy
+
+A. 
+
+sistance Payment in Section 202/8 Group Homes
+
+1. In Section 202/8 group homes, the contract rent for a room shared by two occupants is split between the two tenants.
+
+2. The assistance payment for the Section 202/8 double occupancy room is calculated separately for each tenant based on half of the contract rent for the unit.
+
+Example – Assistance Payment, Section 202/8 Double Occupancy Contract rent for the unit $800
+
+Half of the contract rent for the unit $400
+
+TTP for Tenant A = $98
+
+
+
+tions for the remaining resident remain the same. The other half of the unit is treated like a vacant unit: there is no assistance payment but the owner may be eligible for vacancy loss claims for the vacated half of the unit.
+
+Example – Section 202/8 Calculation at a Change in Occupancy Contract Rent $800 Half of the contract rent $400 Tenant A Tenant Rent $98 Tenant B Tenant Rent $30
+
+Tenant A moves out.
+
+
+
+Question: What is the monthly rent for Unit 4B at Cedar Grove Apartments on September 27, 2026?
+Answer:</pre><p class="source">Token accounting method: Pinned Qwen2.5-3B tokenizer counts exact evidence/prompt text plus 128-token native-template margin; API counts checked. Runtime counts above come directly from the saved Ollama response.</p><footer>Capture created from saved artifacts. Full source paths, SHA-256 hashes, browser version, rendering checks, and capture time are recorded in manifest.json.</footer></main></html>

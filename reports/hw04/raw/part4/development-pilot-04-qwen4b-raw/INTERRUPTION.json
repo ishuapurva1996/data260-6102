@@ -1,0 +1,10 @@
+{
+  "observed_at": "2026-09-28T04:31:41.567362+00:00",
+  "signal": "SIGTERM",
+  "owned_pid": 92465,
+  "reason": "Even the official empty-thinking raw prompt returned reasoning continuations at the 384-token limit. Stop bounded 4B pilot, retain all completed outputs and any outstanding saved request. Do not select this runtime.",
+  "completed_response_ids": [
+    "D1-C-k3",
+    "D2-C-k3"
+  ]
+}

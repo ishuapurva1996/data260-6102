@@ -1,0 +1,29 @@
+{
+  "at": "2026-09-28T06:05:12.190732+00:00",
+  "selected_run": "scored-20260928-04",
+  "scope": "Optional rejected-hybrid cleanup; no model experiments or semantic rescoring",
+  "model_calls": 0,
+  "database_calls": 0,
+  "historical_files_checked": 811,
+  "selected_run_files_checked": 45,
+  "selected_capture_files_checked": 53,
+  "checks": {
+    "historical_files_unchanged": true,
+    "protected_configuration_scoring_and_parts123_unchanged": true,
+    "exact_archive_matches": true,
+    "live_helper_and_dedicated_tests_removed": true,
+    "dense_top_k_order_scores_metadata_fixture_parity": true,
+    "retired_method_rejected": true,
+    "snapshot_without_hybrid_dependency": true,
+    "analysis_unchanged": true,
+    "python_compilation": true,
+    "capture_script_syntax": true,
+    "head_branch_staging_unchanged": true
+  },
+  "passed": 11,
+  "total": 11,
+  "limitations": [
+    "Dense parity uses explicit synthetic embeddings/index responses, not a model or new real retrieval experiment.",
+    "Historical semantic judgments are unchanged; these checks do not independently establish answer quality."
+  ]
+}

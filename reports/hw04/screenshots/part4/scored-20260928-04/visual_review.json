@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "run_id": "scored-20260928-04",
+  "reviewed_at": "2026-09-28T05:54:17.693066+00:00",
+  "reviewer": "Codex followup_capture assistant",
+  "method": "Viewed nine actual captured PNGs using view_image; image display may scale tall pages. Automated browser checks separately compare raw text and reject horizontal overflow across every page. This is layout/evidence-display review, not independent semantic answer scoring.",
+  "capture_count": 25,
+  "automated_checks": {
+    "all_no_horizontal_clipping": true,
+    "exact_raw_text_checks": 61,
+    "source_hashes_unchanged_during_capture": true,
+    "call_counts": {
+      "final_answers": 22,
+      "auxiliary_routing_calls": 8,
+      "total_local_model_calls": 30
+    }
+  },
+  "visually_inspected_pngs": [
+    {
+      "path": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part2-backend/reports/hw04/screenshots/part4/scored-20260928-04/01-corpus-index-chunks.png",
+      "sha256": "ce70b1f56ffcbd7748f7c050654dc474e5838d7f308f01cebaffc7f908cdb312",
+      "visually_inspected": true,
+      "observation": "Five sources, chunk/index audit, final-answer 3B model, auxiliary 7B classifier, and 22/8/30 call inventory display clearly."
+    },
+    {
+      "path": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part2-backend/reports/hw04/screenshots/part4/scored-20260928-04/Q3-C-k3.png",
+      "sha256": "7c8a7ae86f1a0e5d717bd2f44e5fb42034f8954f82ef6cfcdd7aa56e90241619",
+      "visually_inspected": true,
+      "observation": "CLEAR routing and full cited prose answer appear unedited; final-answer code, source labels, exact prompt and selection decisions are visible."
+    },
+    {
+      "path": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part2-backend/reports/hw04/screenshots/part4/scored-20260928-04/Q4-C-k3.png",
+      "sha256": "c5f7911ff44cd45de7a89af96cbe148efb2517a32c2a6de640caf949280d7b86",
+      "visually_inspected": true,
+      "observation": "CLARIFY routing, frozen clarification function, generated clarifying question and zero supplied source labels are visible."
+    },
+    {
+      "path": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part2-backend/reports/hw04/screenshots/part4/scored-20260928-04/Q5-C-k3.png",
+      "sha256": "06646067a898bbd3d024f269150cfb7bfd6b8eb7b7983e86892a3b3d35b28b19",
+      "visually_inspected": true,
+      "observation": "CLEAR routing and exact document-only refusal are visible with empty final context."
+    },
+    {
+      "path": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part2-backend/reports/hw04/screenshots/part4/scored-20260928-04/Q6-C-k3.png",
+      "sha256": "84433967c1bddbd4d15a9618f765320e416bc513b06496b0b9f19c0ecea43b48",
+      "visually_inspected": true,
+      "observation": "CLEAR routing and exact document-only refusal are visible with empty final context."
+    },
+    {
+      "path": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part2-backend/reports/hw04/screenshots/part4/scored-20260928-04/Q2-C-k1.png",
+      "sha256": "1184fbabc722fccda6c480985501986e0c90d6104108a10a2aac479c0516c9cf",
+      "visually_inspected": true,
+      "observation": "Unedited answer visibly has no citation; image preserves that failure with the single supplied source."
+    },
+    {
+      "path": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part2-backend/reports/hw04/screenshots/part4/scored-20260928-04/Q2-C-k5.png",
+      "sha256": "cdeebdd5aa6aa160ccdbb4c0b89cc396a6049c7b4c53bc04ae610c8cb4b2b298",
+      "visually_inspected": true,
+      "observation": "Unedited answer cites [3]; five source labels and exact evidence remain visible so its attribution failure can be inspected."
+    },
+    {
+      "path": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part2-backend/reports/hw04/screenshots/part4/scored-20260928-04/03-evaluation-summary.png",
+      "sha256": "a46577e4f7e2483756cfa69a3808e83ce1d421675f8b662fc276bf99a7cb5483",
+      "visually_inspected": true,
+      "observation": "Fractions and semantic-evaluation caveat are legible; 22 final answers and 8 auxiliary calls are separate."
+    },
+    {
+      "path": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part2-backend/reports/hw04/screenshots/part4/scored-20260928-04/02-retrieval-before-generation.png",
+      "sha256": "9d6a0aad9b5efcfd57c7d9f8c4254584bceee2bfc4e799b858302e4950726061",
+      "visually_inspected": true,
+      "observation": "Returned dense candidates, exact retrieval transcript and subsequent generation-start timestamp are visible."
+    }
+  ],
+  "limitations": "The remaining 16 PNGs passed automated text and overflow checks but were not separately visually inspected. Long pages are intended to be opened at full image resolution. No model output was rewritten."
+}

@@ -1,0 +1,16 @@
+D1 ROUTE 'CLEAR'
+D1 complete According to the EPA pamphlet, water used to make baby formula should be cold [2]. Boiling water does not remove lead from water [1, 2].
+D2 ROUTE 'CLEAR'
+D2 complete I cannot answer this question from the provided documents
+D3 ROUTE 'CLARIFY'
+D3 complete Who or what is the archived HUD rent handbook for which the dollar deduction for each eligible dependent is being asked?
+D4 ROUTE 'CLEAR'
+D4 complete According to the EPA disclosure article, signed disclosures should be kept for three years after the sale is completed or the lease begins. [1]
+D5 ROUTE 'CLEAR'
+D5 complete I cannot answer this question from the provided documents
+D6 ROUTE 'CLEAR'
+D6 complete I cannot answer this question from the provided documents
+D7 ROUTE 'CLEAR'
+D7 complete I cannot answer this question from the provided documents
+D8 ROUTE 'CLARIFY'
+D8 complete What is the process or data source you would use to determine the exact number of certified lead inspectors working in San Jose today?

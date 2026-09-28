@@ -1,0 +1,9 @@
+{
+  "recorded_at": "2026-09-28T04:47:25.345932+00:00",
+  "owned_pid": 90820,
+  "before_stop_observation": "ps -p90820: ollama ollama serve",
+  "action": "SIGTERM sent to verified task-owned process only",
+  "after_stop_observation": "lsof -nP -iTCP:11434 -sTCP:LISTEN returned exit1 and empty output; no listener remained",
+  "model_files_preserved": true,
+  "other_services_stopped": false
+}

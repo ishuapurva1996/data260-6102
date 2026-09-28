@@ -1,0 +1,12 @@
+{
+  "observed_at": "2026-09-28T04:37:56.992009+00:00",
+  "cpu": "Apple M4",
+  "memory_bytes": 25769803776,
+  "ollama_owned_pid": 90820,
+  "ollama_bind": "127.0.0.1:11434",
+  "startup_environment": {
+    "OLLAMA_NO_CLOUD": "1",
+    "OLLAMA_NOPRUNE": "1"
+  },
+  "source": "Observed owned service launch output and read-only sysctl; no database access"
+}

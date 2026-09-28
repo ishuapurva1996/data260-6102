@@ -1,0 +1,216 @@
+[2026-09-28T04:21:46.403323Z] RETRIEVAL D1 requested=3 returned=3
+rank=1 source=EPA_LEAD chunk=EPA_LEAD:3830114fcc78:0018135-0018561 score=0.676446
+title=Protect Your Family From Lead in Your Home location=PDF page 15
+a. Boiling water does not remove lead from water. • Before drinking, flush your home’s pipes by running the tap, taking a shower, doing laundry or doing a load of dishes. • Regularly clean your faucet’s screen (also known as an aerator). • If you use a filter certified to remove lead, read the directions to learn when to change the cartridge. Using a filter after it has expired can make it less effective at removing lead. 
+
+rank=2 source=EPA_LEAD chunk=EPA_LEAD:3830114fcc78:0017714-0018185 score=0.578257
+title=Protect Your Family From Lead in Your Home location=PDF page 15
+ound in older cities and homes built before 1986. You can’t smell or taste lead in drinking water. To find out for certain if you have lead in drinking water, have your water tested (See below). Remember that older homes with a private well can also have plumbing materials that contain lead. Important Steps You Can Take to Reduce Lead in Drinking Water • Use only cold water for drinking, cooking and making baby formula. Boiling water does not remove lead from water. 
+
+rank=3 source=EPA_LEAD chunk=EPA_LEAD:3830114fcc78:0018511-0018937 score=0.544547
+title=Protect Your Family From Lead in Your Home location=PDF page 15
+ired can make it less effective at removing lead. Contact your water company to determine if the pipe that connects your home to the water main (called a service line) is made from lead. Your area’s water company can also provide information about the lead levels in your system’s drinking water. For more information about lead in drinking water, please use EPA’s Safe Drinking Water online form at epa.gov/safewaterhotline. 
+
+[2026-09-28T04:21:46.416512Z] RETRIEVAL D2 requested=3 returned=3
+rank=1 source=HUD_FAIR chunk=HUD_FAIR:c47c156c57ea:0016808-0017294 score=0.754082
+title=Fair Housing: Equal Opportunity for All location=PDF page 18
+treet, SW, Room 5206, Washington, DC 20410-2000.
+
+In Addition
+
+You May File a Private Lawsuit: You may file a private civil lawsuit without first filing a complaint with HUD. You must file your lawsuit within two (2) years of the most recent date of alleged discriminatory action.
+
+If you do file a complaint with HUD and even if HUD dismisses your complaint, the Fair Housing Act gives you the right to file a private civil lawsuit against the respondent(s) in Federal District Court. 
+
+rank=2 source=HUD_FAIR chunk=HUD_FAIR:c47c156c57ea:0016366-0016858 score=0.720660
+title=Fair Housing: Equal Opportunity for All location=PDF page 18
+equest a copy of the Final Investigative Report.
+
+Reconsiderations of No Reasonable Cause Determinations: The Fair Housing Act provides no formal appeal process for complaints dismissed by HUD. However, if your complaint is dismissed with a Determination of No Reasonable Cause, you may submit a written request for a reconsideration review to: Director, FHEO Office of Enforcement, U.S. Department of Housing and Urban Development, 451 7th Street, SW, Room 5206, Washington, DC 20410-2000.
+
+
+
+rank=3 source=HUD_FAIR chunk=HUD_FAIR:c47c156c57ea:0017470-0017870 score=0.702873
+title=Fair Housing: Equal Opportunity for All location=PDF page 18; PDF page 19
+d an attorney, the Court may appoint one for you. Even if HUD is still processing your complaint, you may file a private civil lawsuit against the respondent, unless (1) you have already signed a HUD Conciliation Agreement to resolve your HUD complaint; or (2) a HUD Administrative Law Judge has commenced an Administrative Hearing for your complaint.
+
+Other Tools to Combat Housing Discrimination:
+
+
+
+[2026-09-28T04:21:46.428667Z] RETRIEVAL D3 requested=3 returned=3
+rank=1 source=HUD_INCOME chunk=HUD_INCOME:2efa6b7ef8ad:0000000-0000496 score=0.680738
+title=HUD Handbook 4350.3 REV-1, Chapter 5: Determining Income and Calculating Rent location=PDF page 1
+CHAPTER 5. DETERMINING INCOME AND CALCULATING RENT
+
+5-1 Introduction
+
+A. Owners must determine the amount of a family’s income before the family is allowed to move into assisted housing and at least annually thereafter. The amount of assistance paid on behalf of the family is calculated using the family’s annual income less allowable deductions. HUD program regulations specify the types and amounts of income and deductions to be included in the calculation of annual and adjusted income.
+
+B. 
+
+rank=2 source=HUD_INCOME chunk=HUD_INCOME:2efa6b7ef8ad:0079284-0079725 score=0.630363
+title=HUD Handbook 4350.3 REV-1, Chapter 5: Determining Income and Calculating Rent location=PDF page 41
+is generally the amount upon which rent is based. See Section 4 of this chapter for information about specific rent calculation methods. This section focuses on the calculation of annual adjusted income. Before rent is calculated, annual adjusted income is converted to monthly adjusted income.
+
+B. Of the five possible deductions, three are available to any assisted family, and two are permitted only for elderly or disabled families.
+
+1. 
+
+rank=3 source=HUD_INCOME chunk=HUD_INCOME:2efa6b7ef8ad:0134756-0135239 score=0.613062
+title=HUD Handbook 4350.3 REV-1, Chapter 5: Determining Income and Calculating Rent location=PDF page 67; PDF page 68
+ -$ 75 Tenant rent: $150
+
+B. Assistance Payments
+
+The assistance payment is the amount the owner bills HUD every month on behalf of the tenant. The assistance payment covers the difference between the TTP and the gross rent. It is the subsidy that HUD pays to the owner.
+
+1. Housing Assistance Payment (HAP) is the assistance payment made by HUD to owners with units receiving assistance from the Section 8 program.
+
+Example – Calculating HAP Gross rent $564 TTP - $175 HAP $389
+
+2. 
+
+[2026-09-28T04:21:46.444172Z] RETRIEVAL D4 requested=3 returned=3
+rank=1 source=EPA_DISCLOSURE chunk=EPA_DISCLOSURE:38dd88cf9257:0004176-0004620 score=0.512602
+title=Real Estate Disclosures about Potential Lead Hazards location=Requirements Under the Disclosure Rule
+ator to find a certified inspector in your area.
+
+Keep a signed copy of the disclosures for three years after the sale is completed or the lease begins.
+
+If providing the required disclosure information electronically to renters or buyers, provide, among other things: a clear statement on their right to receive paper documents, procedures to withdraw consent and the consequences of doing so, and how to access and retain electronic records. 
+
+rank=2 source=HUD_SELECTION chunk=HUD_SELECTION:970dfc1f3a55:0100185-0100577 score=0.445055
+title=HUD Handbook 4350.3 REV-1, Chapter 4: Waiting List and Tenant Selection location=PDF page 46; PDF page 47
+on for removal from the list for three years.
+
+C. When an applicant moves in and begins to receive assistance, the application *and form HUD-92006 completed by the applicant* must be maintained in the tenant file for the duration of the tenancy and for three years after the tenant leaves the property.
+
+D. All files must be kept secure so that personal information remains confidential.
+
+E. 
+
+rank=3 source=HUD_INCOME chunk=HUD_INCOME:2efa6b7ef8ad:0129266-0129664 score=0.435820
+title=HUD Handbook 4350.3 REV-1, Chapter 5: Determining Income and Calculating Rent location=PDF page 64
+nformation on the report is accurate and current. Additional information about the procedures for conducting interim recertifications is discussed in Chapter 7, Section 2.
+
+5-23 Record-Keeping Procedures
+
+A. Owners must keep the following documents in the tenant’s file at the project site:
+
+1. All original, signed forms HUD-9887 and HUD-9887-A;
+
+2. A copy of signed individual consent forms;
+
+3. 
+
+[2026-09-28T04:21:46.459275Z] RETRIEVAL D5 requested=3 returned=3
+rank=1 source=HUD_INCOME chunk=HUD_INCOME:2efa6b7ef8ad:0136302-0136748 score=0.486651
+title=HUD Handbook 4350.3 REV-1, Chapter 5: Determining Income and Calculating Rent location=PDF page 68; PDF page 69
+Section 8 program must pay a minimum TTP of $25.
+
+NOTE: Minimum rent does not apply to Section 202 PAC, Section 202 PRAC, Section 811 PRAC, RAP, Rent Supplement, Section 221(d)(3) BMIR or Section 236 programs.
+
+1. The minimum rent is used when 30% of adjusted monthly income and 10% of gross monthly income, and the welfare rent where applicable, are all below $25.
+
+2. The minimum rent includes the tenant’s contribution for rent and utilities. 
+
+rank=2 source=HUD_INCOME chunk=HUD_INCOME:2efa6b7ef8ad:0134387-0134806 score=0.470507
+title=HUD Handbook 4350.3 REV-1, Chapter 5: Determining Income and Calculating Rent location=PDF page 67; PDF page 68
+, and Rent Supplement Properties
+
+A. Tenant Rent
+
+Tenant rent is the portion of the TTP the tenant pays each month to the owner for rent. Tenant rent is calculated by subtracting the utility allowance from the TTP.
+
+It is possible for tenant rent to be $0 if the utility allowance is greater than the TTP.
+
+Example – Calculating Tenant Rent TTP: $225 Utility allowance: -$ 75 Tenant rent: $150
+
+B. Assistance Payments
+
+
+
+rank=3 source=HUD_INCOME chunk=HUD_INCOME:2efa6b7ef8ad:0042686-0042989 score=0.468968
+title=HUD Handbook 4350.3 REV-1, Chapter 5: Determining Income and Calculating Rent location=PDF page 21
+otal tenant payment (TTP) 204 25 25 25*** 112***
+
+* The family’s income is calculated at $0/month beginning November 1, continuing until benefits actually begin and new income is calculated. TTP is set at the minimum rent. ** Family’s actual income for 1/1 is $100/week x 52 weeks = $5,200 / 12 = $433. 
+
+[2026-09-28T04:21:46.472578Z] RETRIEVAL D6 requested=3 returned=3
+rank=1 source=HUD_FAIR chunk=HUD_FAIR:c47c156c57ea:0005053-0005549 score=0.177813
+title=Fair Housing: Equal Opportunity for All location=PDF page 8
+after March 13, 1991, and that have an elevator:
+
+• Public and common use areas must be accessible to persons with disabilities • All doors and hallways must be wide enough for wheelchairs • All units must have: - An accessible route into and through the unit - Accessible light switches, electrical outlets, thermostats and other environmental controls - Reinforced bathroom walls to allow later installation of grab bars and - Kitchens and bathrooms that can be used by people in wheelchairs.
+
+
+
+rank=2 source=HUD_INCOME chunk=HUD_INCOME:2efa6b7ef8ad:0086061-0086488 score=0.137828
+title=HUD Handbook 4350.3 REV-1, Chapter 5: Determining Income and Calculating Rent location=PDF page 44
+ho is a person with disabilities to be employed.
+
+Examples – Eligible Disability Assistance Expenses The payments made on a motorized wheelchair for the 42-year-old son of the head of the family enable the son to leave the house and go to work each day on his own. Prior to the purchase of the motorized wheelchair, the son was unable to make the commute to work. These payments are an eligible disability assistance expense.
+
+
+
+rank=3 source=HUD_INCOME chunk=HUD_INCOME:2efa6b7ef8ad:0089479-0089852 score=0.118154
+title=HUD Handbook 4350.3 REV-1, Chapter 5: Determining Income and Calculating Rent location=PDF page 45
+r mother Grace Prior. Her mother works full time. Kenisha works part time at the library. She requires a motorized wheelchair and special transportation to get to her job. Grace Prior‘s Income $24,000 Kenisha Prior’s Income + 5,000 Total income $29,000
+
+Disability Assistance Expense $8,000 (3% of annual income) - $870 $7,130
+
+The $7,130 exceeds the amount Kenisha earns. 
+
+[2026-09-28T04:21:46.484767Z] RETRIEVAL D7 requested=3 returned=3
+rank=1 source=HUD_FAIR chunk=HUD_FAIR:c47c156c57ea:0017244-0017520 score=0.536167
+title=Fair Housing: Equal Opportunity for All location=PDF page 18
+inst the respondent(s) in Federal District Court. The time during which HUD was processing your complaint is not counted in the 2-year filing period. You must file your lawsuit at your own expense; however, if you cannot afford an attorney, the Court may appoint one for you. 
+
+rank=2 source=HUD_SELECTION chunk=HUD_SELECTION:970dfc1f3a55:0141357-0141854 score=0.484895
+title=HUD Handbook 4350.3 REV-1, Chapter 4: Waiting List and Tenant Selection location=PDF page 65
+ Appeal Process
+
+1. Submission of appeal request. When the owner receives notification from the DHS that secondary verification has failed to confirm eligible immigration status, the owner must notify the family of this result. The family has 30 days from the date of the owner's notification to request an appeal of the DHS results. The family must make the request in writing directly to the DHS and must provide the owner with a copy of the written request for appeal and proof of mailing.
+
+2. 
+
+rank=3 source=HUD_SELECTION chunk=HUD_SELECTION:970dfc1f3a55:0142427-0142918 score=0.466892
+title=HUD Handbook 4350.3 REV-1, Chapter 4: Waiting List and Tenant Selection location=PDF page 65; PDF page 66
+t Form.)
+
+3. When decision will be issued by DHS. The DHS will issue a decision within 30 days of its receipt of documentation concerning the family's appeal of the verification of immigration status. The notice will be sent to the family, and a copy will be sent to the owner. If, for any reason, the DHS is unable to issue a decision within 30 days, the DHS will inform the family and owner of the reason for the delay.
+
+4. Notification of DHS decision and of informal hearing procedures. 
+
+[2026-09-28T04:21:46.499263Z] RETRIEVAL D8 requested=3 returned=3
+rank=1 source=EPA_LEAD chunk=EPA_LEAD:3830114fcc78:0014197-0014534 score=0.434756
+title=Protect Your Family From Lead in Your Home location=PDF page 12; PDF page 13
+ has the proper equipment to clean up thoroughly. • Certified contractors will employ qualified workers and follow strict safety rules set by their state or Tribe or by the federal government.
+
+Reducing Lead Hazards, continued
+
+If your home has had a lead abatement, dust cleanup activities must be conducted once the work is completed. 
+
+rank=2 source=EPA_LEAD chunk=EPA_LEAD:3830114fcc78:0000764-0001237 score=0.420077
+title=Protect Your Family From Lead in Your Home location=PDF page 2; PDF page 3
+ning statement about lead-based paint • Give buyers up to 10 days to have a certified inspector or risk assessor check for lead.
+
+If undertaking renovation, repair or painting (RRP) projects in your pre-1978 home or apartment: • Read EPA’s pamphlet, The Lead-Safe Certified Guide to Renovate Right, to learn about the lead-safe work practices that contractors are required to follow when working in your home (see page 12).
+
+Steps to Protect Your Family from Lead Hazards
+
+
+
+rank=3 source=EPA_LEAD chunk=EPA_LEAD:3830114fcc78:0001618-0002053 score=0.402996
+title=Protect Your Family From Lead in Your Home location=PDF page 3
+ndow sills and other surfaces using wet methods.
+
+• Take precautions to avoid exposure to lead dust when remodeling.
+
+• Hire only EPA-, Tribal- or state-approved Lead-Safe Certified renovation firms when renovating, repairing or painting. Find an EPA-certified firm using cdxapps.epa.gov/leadpro.
+
+• Have your home checked for lead-based paint by a certified inspector or risk assessor before buying, renting or renovating your home.
+
+
+

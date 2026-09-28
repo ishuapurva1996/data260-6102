@@ -1,0 +1,33 @@
+Traceback (most recent call last):
+  File "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part2-backend/src/retrieval/embedding.py", line 32, in load_embedding
+    local = snapshot_download(config['model_name'], revision=config['model_revision'],
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part2-backend/.venv-rag/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part2-backend/.venv-rag/lib/python3.12/site-packages/huggingface_hub/utils/_http.py", line 266, in _inner
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part2-backend/.venv-rag/lib/python3.12/site-packages/huggingface_hub/_snapshot_download.py", line 330, in snapshot_download
+    _raise_if_incomplete_snapshot(
+  File "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part2-backend/.venv-rag/lib/python3.12/site-packages/huggingface_hub/_snapshot_download.py", line 586, in _raise_if_incomplete_snapshot
+    raise IncompleteSnapshotError(
+huggingface_hub.errors.IncompleteSnapshotError: The cached snapshot for 'sentence-transformers/all-MiniLM-L6-v2' (revision '1110a243fdf4706b3f48f1d95db1a4f5529b4d41', commit 1110a243fdf4706b3f48f1d95db1a4f5529b4d41) is incomplete: 1 file(s) are missing (README.md). Outgoing traffic is disabled ('local_files_only=True'). Re-run the download with network access to complete the snapshot.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part2-backend/code/rag.py", line 29, in <module>
+    main()
+  File "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part2-backend/code/rag.py", line 25, in main
+    print(execute(args.command,args.output,args.config,args.embedding_cache))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part2-backend/src/rag/runner.py", line 241, in execute
+    embed,index,chunks,audit=build_corpus(config,manifest,out)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part2-backend/src/rag/runner.py", line 92, in build_corpus
+    embed = load_embedding(config, cache)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part2-backend/src/retrieval/embedding.py", line 36, in load_embedding
+    raise RuntimeError('Local model assets missing. Run code/retrieval_compare.py download-model first.') from exc
+RuntimeError: Local model assets missing. Run code/retrieval_compare.py download-model first.

@@ -1,0 +1,364 @@
+{
+  "evaluator": "Codex assistant; source-based manual development judgments, not independent student review",
+  "created_at": "2026-09-28T04:21:34.348160+00:00",
+  "retrieval_path": "reports/hw04/raw/part4/development-retrieval-03/retrievals.jsonl",
+  "retrieval_sha256": "8a8242c970c3c41efe4c4f778ced0bb1c391304f4c7609154beb7d1a687c7a61",
+  "candidate_annotations": [
+    {
+      "question_id": "D1",
+      "rank": 1,
+      "chunk_id": "EPA_LEAD:3830114fcc78:0018135-0018561",
+      "score": 0.6764455684148118,
+      "contains_requested_evidence": true,
+      "reason": "Contains at least one required development fact."
+    },
+    {
+      "question_id": "D1",
+      "rank": 2,
+      "chunk_id": "EPA_LEAD:3830114fcc78:0017714-0018185",
+      "score": 0.5782574455218806,
+      "contains_requested_evidence": true,
+      "reason": "Contains at least one required development fact."
+    },
+    {
+      "question_id": "D1",
+      "rank": 3,
+      "chunk_id": "EPA_LEAD:3830114fcc78:0018511-0018937",
+      "score": 0.5445473845363791,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D1",
+      "rank": 4,
+      "chunk_id": "EPA_LEAD:3830114fcc78:0017289-0017764",
+      "score": 0.5057179293060434,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D1",
+      "rank": 5,
+      "chunk_id": "EPA_LEAD:3830114fcc78:0012713-0013207",
+      "score": 0.4724451328616271,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D2",
+      "rank": 1,
+      "chunk_id": "HUD_FAIR:c47c156c57ea:0016808-0017294",
+      "score": 0.7540818540829807,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D2",
+      "rank": 2,
+      "chunk_id": "HUD_FAIR:c47c156c57ea:0016366-0016858",
+      "score": 0.7206596413182049,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D2",
+      "rank": 3,
+      "chunk_id": "HUD_FAIR:c47c156c57ea:0017470-0017870",
+      "score": 0.7028733227686856,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D2",
+      "rank": 4,
+      "chunk_id": "HUD_FAIR:c47c156c57ea:0008175-0008433",
+      "score": 0.6994738072168485,
+      "contains_requested_evidence": true,
+      "reason": "Contains at least one required development fact."
+    },
+    {
+      "question_id": "D2",
+      "rank": 5,
+      "chunk_id": "HUD_FAIR:c47c156c57ea:0011054-0011544",
+      "score": 0.6957517472064945,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D3",
+      "rank": 1,
+      "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0000000-0000496",
+      "score": 0.680738388852182,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D3",
+      "rank": 2,
+      "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0079284-0079725",
+      "score": 0.630363396987332,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D3",
+      "rank": 3,
+      "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0134756-0135239",
+      "score": 0.6130624901292527,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D3",
+      "rank": 4,
+      "chunk_id": "HUD_SELECTION:970dfc1f3a55:0106053-0106515",
+      "score": 0.6105482535388014,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D3",
+      "rank": 5,
+      "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0044535-0044997",
+      "score": 0.6079226301408694,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D4",
+      "rank": 1,
+      "chunk_id": "EPA_DISCLOSURE:38dd88cf9257:0004176-0004620",
+      "score": 0.512602289877302,
+      "contains_requested_evidence": true,
+      "reason": "Contains at least one required development fact."
+    },
+    {
+      "question_id": "D4",
+      "rank": 2,
+      "chunk_id": "HUD_SELECTION:970dfc1f3a55:0100185-0100577",
+      "score": 0.44505549923415805,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D4",
+      "rank": 3,
+      "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0129266-0129664",
+      "score": 0.4358201908484251,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D4",
+      "rank": 4,
+      "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0113999-0114483",
+      "score": 0.4284209489378645,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D4",
+      "rank": 5,
+      "chunk_id": "HUD_SELECTION:970dfc1f3a55:0079454-0079725",
+      "score": 0.42586052498698707,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D5",
+      "rank": 1,
+      "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0136302-0136748",
+      "score": 0.4866507358734005,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D5",
+      "rank": 2,
+      "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0134387-0134806",
+      "score": 0.47050674604663123,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D5",
+      "rank": 3,
+      "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0042686-0042989",
+      "score": 0.46896791685620237,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D5",
+      "rank": 4,
+      "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0144665-0145105",
+      "score": 0.4631671069152425,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D5",
+      "rank": 5,
+      "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0143833-0144273",
+      "score": 0.46040834233506367,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D6",
+      "rank": 1,
+      "chunk_id": "HUD_FAIR:c47c156c57ea:0005053-0005549",
+      "score": 0.17781318859321776,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D6",
+      "rank": 2,
+      "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0086061-0086488",
+      "score": 0.13782830051258588,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D6",
+      "rank": 3,
+      "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0089479-0089852",
+      "score": 0.11815364739967288,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D6",
+      "rank": 4,
+      "chunk_id": "EPA_LEAD:3830114fcc78:0002438-0002907",
+      "score": 0.11305839279736912,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D6",
+      "rank": 5,
+      "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0128130-0128548",
+      "score": 0.11081958833377459,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D7",
+      "rank": 1,
+      "chunk_id": "HUD_FAIR:c47c156c57ea:0017244-0017520",
+      "score": 0.536167491123994,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D7",
+      "rank": 2,
+      "chunk_id": "HUD_SELECTION:970dfc1f3a55:0141357-0141854",
+      "score": 0.48489503885179314,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D7",
+      "rank": 3,
+      "chunk_id": "HUD_SELECTION:970dfc1f3a55:0142427-0142918",
+      "score": 0.4668919226530987,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D7",
+      "rank": 4,
+      "chunk_id": "HUD_FAIR:c47c156c57ea:0013393-0013759",
+      "score": 0.44102213935250667,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D7",
+      "rank": 5,
+      "chunk_id": "HUD_FAIR:c47c156c57ea:0012954-0013443",
+      "score": 0.43907205754891926,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D8",
+      "rank": 1,
+      "chunk_id": "EPA_LEAD:3830114fcc78:0014197-0014534",
+      "score": 0.4347562686524777,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D8",
+      "rank": 2,
+      "chunk_id": "EPA_LEAD:3830114fcc78:0000764-0001237",
+      "score": 0.42007747634493947,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D8",
+      "rank": 3,
+      "chunk_id": "EPA_LEAD:3830114fcc78:0001618-0002053",
+      "score": 0.402995633779578,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D8",
+      "rank": 4,
+      "chunk_id": "EPA_LEAD:3830114fcc78:0016095-0016543",
+      "score": 0.39116661589431395,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D8",
+      "rank": 5,
+      "chunk_id": "EPA_LEAD:3830114fcc78:0013868-0014247",
+      "score": 0.38876609236510223,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    }
+  ],
+  "chosen_cutoff": 0.5,
+  "rationale": "0.50 retains the lowest-scoring useful development evidence (D4 at 0.513) and removes all D5 live-rent and D8 inspector-count hits, plus unrelated D6. It retains both water facts for D1. D2 wrong deadlines and D3 amount-free passages remain high scoring: a threshold cannot prove support. Chosen before scored retrieval/generation; same cutoff for every question and k.",
+  "tested_cutoffs": [
+    {
+      "cutoff": 0.4,
+      "useful_kept": 4,
+      "other_kept": 29
+    },
+    {
+      "cutoff": 0.45,
+      "useful_kept": 4,
+      "other_kept": 20
+    },
+    {
+      "cutoff": 0.5,
+      "useful_kept": 4,
+      "other_kept": 12
+    },
+    {
+      "cutoff": 0.55,
+      "useful_kept": 3,
+      "other_kept": 9
+    },
+    {
+      "cutoff": 0.6,
+      "useful_kept": 2,
+      "other_kept": 9
+    }
+  ],
+  "pilot_selection": {
+    "selected": "development-pilot-01 prompt",
+    "rejected": "development-pilot-02 prompt",
+    "reason": "The longer revision did not correct the ambiguous deadline or complaint/lawsuit confusion and introduced an unsupported $1,000 dependent deduction. Select the original concise prompt, which refused D3 and all three absent/unrelated development questions. Retain both actual pilots; ambiguity and similar-process confusion remain known model limitations.",
+    "selected_prompt_source_sha256": "4c593e99a75e243552b7c8c0b283e63e7bfa49a54d385278e4febbfd045c7708",
+    "frozen_at": "2026-09-28T04:23:41.325430+00:00"
+  }
+}

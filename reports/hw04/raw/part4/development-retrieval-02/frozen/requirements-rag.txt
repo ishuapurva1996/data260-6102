@@ -1,0 +1,10 @@
+# Dedicated Part 4 environment; based on the existing retrieval dependency pins.
+llama-index-core==0.14.24
+llama-index-embeddings-huggingface==0.8.0
+sentence-transformers==6.1.0
+transformers==5.17.0
+torch==2.14.0
+numpy==2.5.3
+PyYAML==6.0.3
+httpx==0.28.1
+pytest==9.1.1

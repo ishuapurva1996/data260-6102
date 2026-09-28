@@ -1,0 +1,79 @@
+"""Hybrid retrieval contracts using invented, non-homework source facts."""
+
+import copy
+import math
+
+import pytest
+
+from src.rag.hybrid import hybrid_rank
+
+
+def hit(identifier, text, score, start=0):
+    return dict(chunk_id=identifier, source_id="fixture", start=start,
+                text=text, score=score, metadata={"untouched": True})
+
+
+def test_rare_lexical_match_recovers_dense_topical_miss():
+    rows = [hit("broad", "The station offers transport services.", .92),
+            hit("related", "The railway provides passenger travel.", .88),
+            hit("specific", "Zephyr tickets require reservations.", .65)]
+    result = hybrid_rank("Which tickets require Zephyr reservations?", rows)
+    assert result[0]["chunk_id"] == "specific"
+    assert result[0]["dense_rank"] == 3 and result[0]["lexical_rank"] == 1
+    assert result[0]["score"] == .65  # C's threshold still sees actual cosine.
+    assert result[0]["fusion_score"] == pytest.approx(1 / 63 + 1 / 61)
+
+
+def test_ubiquitous_terms_remain_positive_and_ties_are_deterministic():
+    rows = [hit("z", "The ticket is refundable.", .7),
+            hit("a", "The ticket is refundable.", .7)]
+    result = hybrid_rank("refundable ticket", rows)
+    assert all(row["lexical_score"] > 0 for row in result)
+    assert [row["chunk_id"] for row in result] == ["a", "z"]
+    assert result == hybrid_rank("refundable ticket", list(reversed(rows)))
+    assert [row["fusion_rank"] for row in result] == [1, 2]
+
+
+def test_numbers_survive_tokenization_and_input_is_not_modified():
+    rows = [hit("thirty", "Tickets expire after 30 days.", .85),
+            hit("fourteen", "Tickets expire after 14 days.", .65)]
+    snapshot = copy.deepcopy(rows)
+    result = hybrid_rank("14", rows)
+    assert result[0]["chunk_id"] == "fourteen"
+    assert result[0]["lexical_score"] > 0
+    assert result[1]["lexical_score"] == 0 and result[1]["lexical_rank"] is None
+    assert rows == snapshot
+    assert all(row is not original for row in result for original in rows)
+
+
+@pytest.mark.parametrize("question", ["the and of", "", "unmatchedterm"])
+def test_empty_or_unmatched_query_preserves_dense_order(question):
+    rows = [hit("a", "ordinary passage", .3), hit("z", "", .9)]
+    result = hybrid_rank(question, rows)
+    assert [row["chunk_id"] for row in result] == ["z", "a"]
+    assert all(row["lexical_rank"] is None for row in result)
+    assert [row["fusion_score"] for row in result] == [1 / 61, 1 / 62]
+
+
+def test_stemming_retrieves_general_inflections_without_external_corpora():
+    from src.rag.hybrid import STEMMER
+    if STEMMER == "none":
+        pytest.skip("NLTK is optional; no download is performed")
+    result = hybrid_rank("reservations", [hit("other", "generic transport", .9),
+                                            hit("match", "Reserve ahead.", .7)])
+    assert result[0]["chunk_id"] == "match"
+
+
+def test_empty_corpus_and_empty_documents_are_finite():
+    assert hybrid_rank("anything", []) == []
+    result = hybrid_rank("anything", [hit("empty", "", .8), hit("stop", "the and", .7)])
+    assert all(math.isfinite(row["fusion_score"]) for row in result)
+    assert all(row["lexical_score"] == 0 for row in result)
+
+
+def test_duplicate_ids_and_nonfinite_dense_scores_are_rejected():
+    row = hit("same", "ordinary text", .8)
+    with pytest.raises(ValueError, match="unique"):
+        hybrid_rank("ordinary", [row, row])
+    with pytest.raises(ValueError, match="finite"):
+        hybrid_rank("ordinary", [hit("bad", "ordinary", float("nan"))])

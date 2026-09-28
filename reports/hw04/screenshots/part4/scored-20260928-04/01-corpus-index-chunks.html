@@ -1,0 +1,38 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Five documents, chunking, and the real vector index</title>
+<style>*{box-sizing:border-box}html{background:#edf1f5;color:#172434}body{margin:0;font:18px/1.5 Arial,sans-serif}main{width:1250px;padding:36px 42px 42px;margin:0 auto;background:#fff}h1{font-size:26px;line-height:1.25;margin:0 0 10px}h2{font-size:23px;line-height:1.3;margin:22px 0 10px}h3{font-size:19px;line-height:1.3;margin:18px 0 8px}p{margin:8px 0 14px}.eyebrow{color:#344a67;font-weight:700;font-size:17px}.notice{border-left:5px solid #426389;padding:10px 15px;background:#f2f5f9}.meta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:14px 0}.meta div{background:#f0f4f8;padding:9px 12px;overflow-wrap:anywhere;font-size:16px}.meta strong{display:block;font-size:15px;color:#40536b}pre{font:16px/1.48 ui-monospace,SFMono-Regular,Menlo,monospace;white-space:pre-wrap;overflow-wrap:anywhere;word-break:break-word;padding:15px 18px;margin:7px 0 16px;background:#f4f6f8;border:1px solid #d2dce6;border-radius:5px}pre.answer{font-size:18px;line-height:1.6;background:#f7fbf7;border-left:5px solid #477458}pre.code{font-size:16px;line-height:1.42;color:#eaf1fa;background:#19293b;border:none}.source{font-size:15px;color:#455c76;overflow-wrap:anywhere}.question{font-size:21px;line-height:1.45;font-weight:600}table{border-collapse:collapse;width:100%;table-layout:fixed;margin:12px 0 20px;font-size:16px;line-height:1.4}th,td{border:1px solid #bfcddc;text-align:left;vertical-align:top;padding:10px;overflow-wrap:anywhere}th{background:#dfe9f4}footer{border-top:1px solid #c8d3df;margin-top:26px;padding-top:12px;font-size:14px;color:#526275;overflow-wrap:anywhere}.pair{margin:18px 0}.raw-label{color:#2e583c}</style>
+<main><div class="eyebrow">HW4 · Part 4 · scored-20260928-04</div><h1>Saved local experiment output — browser capture</h1><p class="notice">This is a browser-rendered view of saved local experiment evidence. Model answers below are unedited. The page does not claim to be a live model interface.</p><h2>Five documents, chunking, and the real vector index</h2><table><thead><tr><th>Source ID</th><th>Document snapshot</th><th>SHA-256</th></tr></thead><tbody><tr><td>HUD_SELECTION</td><td>HUD Handbook 4350.3 REV-1, Chapter 4: Waiting List and Tenant Selection</td><td>970dfc1f3a5587184b737e1019bea26eaacc42d84ff12e05a387b8c34c2d3fa1</td></tr><tr><td>HUD_INCOME</td><td>HUD Handbook 4350.3 REV-1, Chapter 5: Determining Income and Calculating Rent</td><td>2efa6b7ef8ad15a2336b38929741b87e97ea25a996e8fed585e3cc3628612f5b</td></tr><tr><td>EPA_LEAD</td><td>Protect Your Family From Lead in Your Home</td><td>3830114fcc78a08e1624b394b68b1a6ae42b3376e9b9a8d41707db68e50d4cad</td></tr><tr><td>HUD_FAIR</td><td>Fair Housing: Equal Opportunity for All</td><td>c47c156c57eaaf0b84fb278f5096053548b90ff0cad5ff426c64190b51be7f5e</td></tr><tr><td>EPA_DISCLOSURE</td><td>Real Estate Disclosures about Potential Lead Hazards</td><td>38dd88cf9257ce74caf36972cddd4cf8a516ab18d7b0ebf9b387c1d339866280</td></tr></tbody></table><div class="meta"><div><strong>Chunk maximum</strong>500 characters</div><div><strong>Requested overlap</strong>50 characters</div><div><strong>Embedding model</strong>sentence-transformers/all-MiniLM-L6-v2</div><div><strong>Final-answer model (A/B/C)</strong>qwen2.5:3b</div><div><strong>Auxiliary clarification classifier</strong>qwen2.5:7b</div><div><strong>Retrieval method</strong>dense</div><div><strong>Saved final answers / routing calls / total local calls</strong>22 / 8 / 30</div></div><p>C uses a separate, evidence-blind local classifier call to select CLEAR or CLARIFY before the final-answer model generates its response. The classifier receives only the question and general routing instructions. Routing outputs are shown with each C response and are excluded from answer-quality scores.</p><section class="pair"><div class="source">Verbatim code excerpt · reports/hw04/raw/part4/scored-20260928-04/frozen/src/rag/pipeline.py:121–125</div><pre class="code"> 121      while start &lt; len(text):
+ 122          end = min(start + CHUNK_SIZE, len(text))
+ 123          if end &lt; len(text):
+ 124              end = _boundary(text, start, end)
+ 125          original_end = end</pre><h3>Saved chunk sample</h3><pre class="">{
+  &quot;chunk_id&quot;: &quot;EPA_DISCLOSURE:38dd88cf9257:0000000-0000475&quot;,
+  &quot;source_id&quot;: &quot;EPA_DISCLOSURE&quot;,
+  &quot;location&quot;: &quot;Real Estate Disclosures about Potential Lead Hazards&quot;,
+  &quot;characters&quot;: 475,
+  &quot;embedding_tokens&quot;: 107,
+  &quot;requested_overlap&quot;: 50,
+  &quot;actual_overlap&quot;: 0,
+  &quot;text&quot;: &quot;Real Estate Disclosures about Potential Lead Hazards\n\nInformation for homebuyers, renters, property managers, landlords, real estate agents and home sellers.\n\nThough lead-based paint for use in homes was banned in the U.S. in 1978, it is still present in millions of homes. Lead-based paint is usually not a hazard if it is in good condition. However, deteriorating (peeling, chipping, chalking, cracking, or damaged) lead-based paint is a hazard and needs prompt attention. &quot;
+}</pre></section><section class="pair"><div class="source">Verbatim code excerpt · reports/hw04/raw/part4/scored-20260928-04/frozen/src/rag/runner.py:115–119</div><pre class="code"> 115      index = build_index(nodes, embed)
+ 116      vectors = list(index.storage_context.vector_store.data.embedding_dict.values())
+ 117      shape = validate_vectors(vectors)
+ 118      for c in chunks:
+ 119          append_json(out / &#39;chunks.jsonl&#39;, c)</pre><h3>Actual index construction audit</h3><pre class="">{
+  &quot;chunk_count&quot;: 925,
+  &quot;source_count&quot;: 5,
+  &quot;vector_shape&quot;: [
+    925,
+    384
+  ],
+  &quot;max_characters&quot;: 500,
+  &quot;max_embedding_tokens&quot;: 194,
+  &quot;silent_truncations&quot;: 0,
+  &quot;overlap_counts&quot;: {
+    &quot;0&quot;: 5,
+    &quot;50&quot;: 920
+  },
+  &quot;deviations&quot;: [],
+  &quot;index_type&quot;: &quot;LlamaIndex VectorStoreIndex / SimpleVectorStore&quot;,
+  &quot;fingerprint&quot;: &quot;2f56960d698f2a3bea299c4459cb84d3091a730399e3c5e5c5e6918681c9a006&quot;,
+  &quot;build_seconds&quot;: 11.601222124998458
+}</pre></section><footer>Capture created from saved artifacts. Full source paths, SHA-256 hashes, browser version, rendering checks, and capture time are recorded in manifest.json.</footer></main></html>

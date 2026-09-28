@@ -1,0 +1,118 @@
+{
+  "started_at": "2026-09-28T04:27:02.921463+00:00",
+  "mode": "pilot",
+  "command": [
+    "code/rag.py",
+    "pilot",
+    "--output",
+    "reports/hw04/raw/part4/development-pilot-03-qwen4b"
+  ],
+  "python": "3.12.13 (main, Apr  7 2026, 21:09:58) [Clang 22.1.1 ]",
+  "platform": "macOS-15.7.4-arm64-arm-64bit",
+  "commit": "421c77ddca9ce998e5088dd305ea4da9bb714238",
+  "dirty_state": "?? code/rag.py\n?? docs/plans/2026-09-27-2104-feat-hw4-part4-rag-plan.md\n?? reports/hw04/part4/\n?? reports/hw04/raw/part4/\n?? requirements-rag.txt\n?? src/rag/\n?? tests/test_hw04_rag.py\n",
+  "config": {
+    "schema_version": 1,
+    "SID4": 6102,
+    "PORT_BASE": 8702,
+    "PREFIX": "s6102",
+    "seed": 6102,
+    "VERIFY_SEED": 266102,
+    "DOMAIN_ID": 6,
+    "model_name": "sentence-transformers/all-MiniLM-L6-v2",
+    "model_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "max_seq_length": 256,
+    "threads": 1,
+    "batch_size": 32,
+    "embedding_cache": ".cache/hw04-rag/embeddings",
+    "generator": "qwen3:4b",
+    "generator_digest": "359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7",
+    "ollama_url": "http://127.0.0.1:11434",
+    "options": {
+      "temperature": 0,
+      "seed": 6102,
+      "num_ctx": 4096,
+      "num_predict": 384
+    },
+    "think": false,
+    "timeout_seconds": 180,
+    "chunk_size": 500,
+    "chunk_overlap": 50,
+    "chunk_unit": "characters",
+    "k": 3,
+    "relevance_cutoff": 0.5,
+    "evidence_budget": 1800,
+    "generation_token_accounting": "Pinned Qwen3-4B tokenizer counts for exact evidence/prompt text, plus 128-token Ollama template margin; actual API counts independently checked",
+    "deduplication": "same-source normalized exact or conservative 5-word shingle overlap; preserve numeric/negation/scope differences",
+    "ordering": "descending similarity, source ID, start offset",
+    "calibration_status": "remediation_pilot",
+    "calibration_path": "reports/hw04/part4/calibration.json",
+    "calibration_sha256": "8c080b80e7b44ff3282c056c3e814a87b4023e45168d2b9c15eff50be7be5c90",
+    "frozen_at": "2026-09-28T04:23:41.325881+00:00",
+    "generator_tokenizer": {
+      "model": "Qwen/Qwen3-4B",
+      "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+      "cache": ".cache/hw04-rag/generator-tokenizer"
+    },
+    "model_assets_path": "reports/hw04/raw/part4/setup/model_assets_qwen4b.json"
+  },
+  "code_and_input_hashes": {
+    "reports/hw04/part4/CORPUS_MANIFEST.json": "6a4af0de7c0c5a5ac175c51f39f62878bcec3d3b245329b0fa7b319dd868f5c9",
+    "reports/hw04/part4/questions.yaml": "65bb280bc1618ded32be990a2742a71a849cb913ac74fa62ac179642f9821ea9",
+    "reports/hw04/part4/development_questions.yaml": "21ba5148a34d906b12fe10333d1c21b50a40d695e96245dc8a9e716f6191af6e",
+    "reports/hw04/part4/source_audit.json": "cdf708126893662fad32d88b030f40cc9d5a13a54d5cc0a9e2fa61235fe657c9",
+    "requirements-rag.txt": "9dafb63c5c67cce59fb9f18efe980ab76c0b2075bd7dc3fbc4716582af356048",
+    "code/rag.py": "a85b5ef7b8bee21b95b5445d9c9263f4dfa57f20be6f4aaf292646dd298f7a6f",
+    "src/retrieval/embedding.py": "ee8e7243c9327cb424f3830ea863a27073e8b0695cba2c98f8457df6b9cee23e",
+    "src/retrieval/indexing.py": "ff4211b2e87262095f55923d891265603073b43865628c6ca39affd2fdea4795",
+    "src/rag/__init__.py": "82cb2c09e2e8b87aa42a9ad5adfb8bce7653c735ffc9b61f4c94c47e5bb4157b",
+    "src/rag/pipeline.py": "6cd90a7e5cad89074838127205776cd13c44757472ce0eebeaabe7389fda7482",
+    "src/rag/runner.py": "1648bfce690c6b41fc7b81ac83b3bdbde1bbf7f4586ee05d7e34251d7e403822",
+    "reports/hw03/corpus/text/hud_tenant_selection.txt": "970dfc1f3a5587184b737e1019bea26eaacc42d84ff12e05a387b8c34c2d3fa1",
+    "reports/hw03/corpus/page_map.json": "52ac70239b571260bf5ceac9156a5e127b30f5546014e66fe1a8d0bd2e0aff5d",
+    "reports/hw03/corpus/text/hud_income_rent.txt": "2efa6b7ef8ad15a2336b38929741b87e97ea25a996e8fed585e3cc3628612f5b",
+    "reports/hw03/corpus/text/epa_lead_2026.txt": "3830114fcc78a08e1624b394b68b1a6ae42b3376e9b9a8d41707db68e50d4cad",
+    "reports/hw03/corpus/text/hud_fair_housing.txt": "c47c156c57eaaf0b84fb278f5096053548b90ff0cad5ff426c64190b51be7f5e",
+    "reports/hw04/part4/corpus/text/epa_disclosure_2026.txt": "38dd88cf9257ce74caf36972cddd4cf8a516ab18d7b0ebf9b387c1d339866280",
+    "reports/hw04/part4/corpus/section_map.json": "beb1f17fe83bed06e67681bccc747459becba078c219472f70a6657fecbb7598",
+    "reports/hw04/part4/calibration.json": "8c080b80e7b44ff3282c056c3e814a87b4023e45168d2b9c15eff50be7be5c90",
+    "reports/hw04/raw/part4/setup/model_assets_qwen4b.json": "fcef94aae9fce1f973353d958b77b9f561d89a228f6dc80232aaaaa7a08b5cb4",
+    "reports/hw04/raw/part4/setup/environment.json": "0a6c0f9cbf8e410e6ccba8a5f85c23a028adc4591d95b3d057172ee3d694cd5f",
+    "reports/hw04/raw/part4/setup/generator-tokenizer.json": "16a63da4db1298c0f572dab96fdf3f90ca3e318e9d50b27d48a50506f98c9d0d",
+    "experiment_config.json": "1c14c43eb910c85a4e29939ea959ac85d5f93d13c128504e737dc5567d2b45bc"
+  },
+  "generator_identity": {
+    "name": "qwen3:4b",
+    "model": "qwen3:4b",
+    "modified_at": "2026-09-27T21:26:27.247323053-07:00",
+    "size": 2497293931,
+    "digest": "359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7",
+    "details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "qwen3",
+      "families": [
+        "qwen3"
+      ],
+      "parameter_size": "4.0B",
+      "quantization_level": "Q4_K_M",
+      "context_length": 262144,
+      "embedding_length": 2560
+    },
+    "capabilities": [
+      "completion",
+      "tools",
+      "thinking"
+    ]
+  },
+  "ollama_version": {
+    "version": "0.33.0"
+  },
+  "finished_at": "2026-09-28T04:30:16.220484+00:00",
+  "status": "failed",
+  "index_fingerprint": "2f56960d698f2a3bea299c4459cb84d3091a730399e3c5e5c5e6918681c9a006",
+  "live_input_changes_during_run": [
+    "src/rag/runner.py"
+  ],
+  "error": "ValueError: Live code/inputs changed during run; frozen evidence preserved, select a new run"
+}

@@ -1,0 +1,15 @@
+{
+  "frozen/code/rag.py": "eb9e198708b74a2631b5a6554e55439c01fb95b895ce18a267f7d3600df2d626",
+  "frozen/experiment_config.json": "f045353987aa403e14b7fccddbdd56ee3332c8dfc49b98d6bf7faa701a1b9856",
+  "frozen/reports/hw04/part4/CORPUS_MANIFEST.json": "6a4af0de7c0c5a5ac175c51f39f62878bcec3d3b245329b0fa7b319dd868f5c9",
+  "frozen/reports/hw04/part4/development_questions.yaml": "21ba5148a34d906b12fe10333d1c21b50a40d695e96245dc8a9e716f6191af6e",
+  "frozen/reports/hw04/part4/questions.yaml": "3cf436309d44fa8845e5fa8f16e54d5c29b3b779537d42eeb49d93806b555625",
+  "frozen/reports/hw04/part4/source_audit.json": "cdf708126893662fad32d88b030f40cc9d5a13a54d5cc0a9e2fa61235fe657c9",
+  "frozen/requirements-rag.txt": "9dafb63c5c67cce59fb9f18efe980ab76c0b2075bd7dc3fbc4716582af356048",
+  "frozen/src/rag/__init__.py": "82cb2c09e2e8b87aa42a9ad5adfb8bce7653c735ffc9b61f4c94c47e5bb4157b",
+  "frozen/src/rag/pipeline.py": "3f68588daa051e4121060381570677653c249feb37fdd35d6936eef7dc3a2e98",
+  "frozen/src/rag/runner.py": "5533339d0c0f301e0539aaaf05e8da65d52438cc841f082ebd60347845928e3d",
+  "frozen/src/retrieval/embedding.py": "ee8e7243c9327cb424f3830ea863a27073e8b0695cba2c98f8457df6b9cee23e",
+  "frozen/src/retrieval/indexing.py": "ff4211b2e87262095f55923d891265603073b43865628c6ca39affd2fdea4795",
+  "run_metadata.json": "48d8d2730210f50372a116ea72c1b17235c42d4e8d0fc406ea264b5e75a47a73"
+}

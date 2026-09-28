@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "scope": "HW4 Part 4 local verification; not final whole-homework/tagged verification",
+  "run_id": "scored-20260928-03",
+  "run_path": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part2-backend/reports/hw04/raw/part4/scored-20260928-03",
+  "verified_at": "2026-09-28T04:47:25.542456+00:00",
+  "SID4": 6102,
+  "seed": 6102,
+  "VERIFY_SEED": 266102,
+  "network_calls": 0,
+  "model_calls": 0,
+  "database_calls": 0,
+  "checks": [
+    {
+      "name": "retained_generation_evidence_hashes",
+      "passed": true,
+      "detail": "33 retained evidence hashes match"
+    },
+    {
+      "name": "frozen_inputs_and_code",
+      "passed": true,
+      "detail": "23 frozen code/input hashes match; current newer code is allowed"
+    },
+    {
+      "name": "five_source_manifest_originals_and_snapshots",
+      "passed": true,
+      "detail": "Five frozen texts and unchanged repository snapshots/originals verified"
+    },
+    {
+      "name": "chunks_offsets_overlap_metadata_and_real_index",
+      "passed": true,
+      "detail": "925 chunks; actual vector shape [925, 384]; max 194 embedding tokens"
+    },
+    {
+      "name": "main_matrix_and_sweep_reuse",
+      "passed": true,
+      "detail": "Verified"
+    },
+    {
+      "name": "frozen_question_coverage_proof",
+      "passed": true,
+      "detail": "Recomputed full-corpus Q1/Q2/Q3 single-chunk coverage and Q2 pair; all gold quotes match frozen source spans"
+    },
+    {
+      "name": "authentic_records_prompts_retrieval_and_call_order",
+      "passed": true,
+      "detail": "Fresh fixed-setting requests, unedited answers, raw B/C candidates and pre-call retrieval logs verified"
+    },
+    {
+      "name": "all_required_calls_complete",
+      "passed": true,
+      "detail": "22 real generation calls completed without transport failure or token-limit stop"
+    },
+    {
+      "name": "complete_judgments_citations_and_recomputed_tables",
+      "passed": true,
+      "detail": {
+        "all_22_judgments_and_exports_reconcile": true,
+        "observed_invalid_citations": {},
+        "limit": "Semantic correctness/support is evaluator-authored; automation checks consistency and exact support quotes."
+      }
+    },
+    {
+      "name": "required_C_refusals_and_supported_answer",
+      "passed": false,
+      "detail": "C has no correct, supported, cited answer to an answerable question in the main comparison or sweep"
+    },
+    {
+      "name": "report_analysis_300_to_500_words",
+      "passed": true,
+      "detail": "417 analysis words"
+    },
+    {
+      "name": "genuine_screenshot_inventory",
+      "passed": true,
+      "detail": "25 hashed PNG captures cover all 22 outcomes and setup/retrieval/evaluation"
+    }
+  ],
+  "passed": 11,
+  "total": 12,
+  "overall_pass": false,
+  "limitations": [
+    "Semantic judgments were authored by the identified evaluator, not independently proven by this verifier.",
+    "PNG hashes establish retained files; genuine capture provenance/readability is documented in the capture manifest and reviewed separately."
+  ]
+}

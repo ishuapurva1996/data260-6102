@@ -1,0 +1,19 @@
+{
+  "chunk_count": 925,
+  "source_count": 5,
+  "vector_shape": [
+    925,
+    384
+  ],
+  "max_characters": 500,
+  "max_embedding_tokens": 194,
+  "silent_truncations": 0,
+  "overlap_counts": {
+    "0": 5,
+    "50": 920
+  },
+  "deviations": [],
+  "index_type": "LlamaIndex VectorStoreIndex / SimpleVectorStore",
+  "fingerprint": "2f56960d698f2a3bea299c4459cb84d3091a730399e3c5e5c5e6918681c9a006",
+  "build_seconds": 21.101751499983948
+}

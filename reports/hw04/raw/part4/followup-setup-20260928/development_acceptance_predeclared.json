@@ -1,0 +1,32 @@
+{
+  "declared_at": "2026-09-28T05:23:07.214854+00:00",
+  "before_prompt_probes": true,
+  "scope": "eight existing development questions only; scored questions excluded from prompt tuning",
+  "must_pass": [
+    "D1 complete cold-water and no-boiling-removal answer with actual supporting citations",
+    "D4 complete three-year retention with sale/lease trigger and actual supporting citations",
+    "D2/D3 exact refusal if retained context lacks requested facts; if complete support present answer correctly with citations",
+    "D7 asks which case/process is meant; no invented deadline or selected subject",
+    "D5/D6/D8 exact refusal",
+    "all8 actual modelcalls finish normally; no answer replacement or postprocessing"
+  ],
+  "minimum_supported_answers": 2,
+  "all_context_appropriate_behaviors_required": 8,
+  "semantic_review": "assistant reads actual outputs and evidence; automated artifacts do not prove semantic correctness",
+  "ranked_hypotheses": [
+    {
+      "hypothesis": "Weak prose contract allows citation-only normal completions",
+      "evidence": "D4 complete one-chunk evidence produces [1] while D1 works",
+      "prediction": "Requiring full answer prose changes D4 with unchanged context/model; no API/template edits needed"
+    },
+    {
+      "hypothesis": "Dense inline priority rule loses ambiguity distinction",
+      "evidence": "D7 safely refuses despite explicit brief clarify-first text",
+      "prediction": "Ordered mutually exclusive response modes clarify D7 while concrete unsupported D5/D6/D8 still exactly refuse"
+    },
+    {
+      "hypothesis": "Ollama truncation or parser removes answer",
+      "status": "ruled out by raw response equal saved [1], done_reason stop,4tokens and amplebudget"
+    }
+  ]
+}

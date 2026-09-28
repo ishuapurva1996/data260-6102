@@ -1,0 +1,121 @@
+LLM is explicitly disabled. Using MockLLM.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 5126.96it/s]
+LLM is explicitly disabled. Using MockLLM.
+[2026-09-28T04:30:29.093951Z] RETRIEVAL D1 requested=3 returned=3
+rank=1 source=EPA_LEAD chunk=EPA_LEAD:3830114fcc78:0018135-0018561 score=0.676446
+title=Protect Your Family From Lead in Your Home location=PDF page 15
+a. Boiling water does not remove lead from water. • Before drinking, flush your home’s pipes by running the tap, taking a shower, doing laundry or doing a load of dishes. • Regularly clean your faucet’s screen (also known as an aerator). • If you use a filter certified to remove lead, read the directions to learn when to change the cartridge. Using a filter after it has expired can make it less effective at removing lead. 
+
+rank=2 source=EPA_LEAD chunk=EPA_LEAD:3830114fcc78:0017714-0018185 score=0.578257
+title=Protect Your Family From Lead in Your Home location=PDF page 15
+ound in older cities and homes built before 1986. You can’t smell or taste lead in drinking water. To find out for certain if you have lead in drinking water, have your water tested (See below). Remember that older homes with a private well can also have plumbing materials that contain lead. Important Steps You Can Take to Reduce Lead in Drinking Water • Use only cold water for drinking, cooking and making baby formula. Boiling water does not remove lead from water. 
+
+rank=3 source=EPA_LEAD chunk=EPA_LEAD:3830114fcc78:0018511-0018937 score=0.544547
+title=Protect Your Family From Lead in Your Home location=PDF page 15
+ired can make it less effective at removing lead. Contact your water company to determine if the pipe that connects your home to the water main (called a service line) is made from lead. Your area’s water company can also provide information about the lead levels in your system’s drinking water. For more information about lead in drinking water, please use EPA’s Safe Drinking Water online form at epa.gov/safewaterhotline. 
+
+2026-09-28T04:30:29.094001+00:00 GENERATION START D1-C-k3
+D1-C-k3 incomplete: Hmm, the user wants me to answer a specific question about lead in water based solely on the provided evidence. They've given me clear instructions: if the question is underspecified, I need to ask one concise clarifying question; if the evidence doesn't answer it, I must reply with exactly "I cannot answer this question from the provided documents"; and for supported answers, I need to cite evidence numbers precisely.
+
+Looking at the question: "According to the EPA pamphlet, should water used to make baby formula be hot or cold, and does boiling remove lead?"
+
+I need to check the evidence carefully. The evidence has three chunks from the EPA pamphlet about lead in homes. Let me scan each one:
+
+Chunk [1] says: "Use only cold water for drinking, cooking and making baby formula." And "Boiling water does not remove lead from water."
+
+Chunk [2] also says: "Use only cold water for drinking, cooking and making baby formula." And "Boiling water does not remove lead from water."
+
+Chunk [3] mentions lead in pipes but doesn't directly address baby formula water temperature or boiling.
+
+The question has two parts: 
+1) Should water for baby formula be hot or cold?
+2) Does boiling remove lead?
+
+From the evidence, both chunks [1] and [2] explicitly state that water for baby formula should be cold, and both state that boiling water does not remove lead. This is consistent across the evidence. 
+
+I don't see any ambiguity here - the question is well-specified and the evidence directly answers both parts. The evidence doesn't contradict itself on this point. 
+
+For the answer, I need to be precise:
+- Water for baby formula should be cold (evidence [1] and [2])
+- Boiling does NOT remove lead (evidence [1] and [2])
+
+I'll cite both evidence numbers since they support
+[2026-09-28T04:30:56.322103Z] RETRIEVAL D2 requested=3 returned=3
+rank=1 source=HUD_FAIR chunk=HUD_FAIR:c47c156c57ea:0016808-0017294 score=0.754082
+title=Fair Housing: Equal Opportunity for All location=PDF page 18
+treet, SW, Room 5206, Washington, DC 20410-2000.
+
+In Addition
+
+You May File a Private Lawsuit: You may file a private civil lawsuit without first filing a complaint with HUD. You must file your lawsuit within two (2) years of the most recent date of alleged discriminatory action.
+
+If you do file a complaint with HUD and even if HUD dismisses your complaint, the Fair Housing Act gives you the right to file a private civil lawsuit against the respondent(s) in Federal District Court. 
+
+rank=2 source=HUD_FAIR chunk=HUD_FAIR:c47c156c57ea:0016366-0016858 score=0.720660
+title=Fair Housing: Equal Opportunity for All location=PDF page 18
+equest a copy of the Final Investigative Report.
+
+Reconsiderations of No Reasonable Cause Determinations: The Fair Housing Act provides no formal appeal process for complaints dismissed by HUD. However, if your complaint is dismissed with a Determination of No Reasonable Cause, you may submit a written request for a reconsideration review to: Director, FHEO Office of Enforcement, U.S. Department of Housing and Urban Development, 451 7th Street, SW, Room 5206, Washington, DC 20410-2000.
+
+
+
+rank=3 source=HUD_FAIR chunk=HUD_FAIR:c47c156c57ea:0017470-0017870 score=0.702873
+title=Fair Housing: Equal Opportunity for All location=PDF page 18; PDF page 19
+d an attorney, the Court may appoint one for you. Even if HUD is still processing your complaint, you may file a private civil lawsuit against the respondent, unless (1) you have already signed a HUD Conciliation Agreement to resolve your HUD complaint; or (2) a HUD Administrative Law Judge has commenced an Administrative Hearing for your complaint.
+
+Other Tools to Combat Housing Discrimination:
+
+
+
+2026-09-28T04:30:56.322191+00:00 GENERATION START D2-C-k3
+D2-C-k3 incomplete: Hmm, the user is asking about when a housing discrimination complaint must be filed with HUD according to the archived Fair Housing booklet. I need to carefully check the evidence provided to answer this question accurately.
+
+Looking at the evidence, I see three chunks from the same source (HUD_FAIR) on page 18-19 of what appears to be a Fair Housing booklet. 
+
+The key information about filing timelines is in chunk [1]. It states: "You may file a private civil lawsuit without first filing a complaint with HUD. You must file your lawsuit within two (2) years of the most recent date of alleged discriminatory action." This indicates that if you're going the lawsuit route, you don't need to file with HUD first, but you have a 2-year window from the discriminatory action.
+
+Chunk [2] mentions that if your complaint is dismissed with a "Determination of No Reasonable Cause," you can request reconsideration, but it doesn't specify filing deadlines.
+
+Chunk [3] talks about when you can file a private lawsuit after HUD processing, but again doesn't address the initial filing deadline with HUD.
+
+The question specifically asks when the complaint must be filed with HUD. The evidence doesn't explicitly state a deadline for filing with HUD itself - it only mentions that you can file a lawsuit without first filing with HUD (which implies HUD filing isn't mandatory), and that lawsuits must be filed within 2 years of the discriminatory action.
+
+I need to be precise here. The evidence shows that you don't have to file with HUD first if you want to go straight to court (as per chunk [1]), but it doesn't specify any deadline for filing with HUD. The 2-year window is for lawsuits, not for HUD complaints.
+
+Since the evidence doesn't answer when the complaint must be filed with HUD (it only says you can skip HUD filing), I should respond with the exact phrase
+[2026-09-28T04:31:25.990721Z] RETRIEVAL D3 requested=3 returned=3
+rank=1 source=HUD_INCOME chunk=HUD_INCOME:2efa6b7ef8ad:0000000-0000496 score=0.680738
+title=HUD Handbook 4350.3 REV-1, Chapter 5: Determining Income and Calculating Rent location=PDF page 1
+CHAPTER 5. DETERMINING INCOME AND CALCULATING RENT
+
+5-1 Introduction
+
+A. Owners must determine the amount of a family’s income before the family is allowed to move into assisted housing and at least annually thereafter. The amount of assistance paid on behalf of the family is calculated using the family’s annual income less allowable deductions. HUD program regulations specify the types and amounts of income and deductions to be included in the calculation of annual and adjusted income.
+
+B. 
+
+rank=2 source=HUD_INCOME chunk=HUD_INCOME:2efa6b7ef8ad:0079284-0079725 score=0.630363
+title=HUD Handbook 4350.3 REV-1, Chapter 5: Determining Income and Calculating Rent location=PDF page 41
+is generally the amount upon which rent is based. See Section 4 of this chapter for information about specific rent calculation methods. This section focuses on the calculation of annual adjusted income. Before rent is calculated, annual adjusted income is converted to monthly adjusted income.
+
+B. Of the five possible deductions, three are available to any assisted family, and two are permitted only for elderly or disabled families.
+
+1. 
+
+rank=3 source=HUD_INCOME chunk=HUD_INCOME:2efa6b7ef8ad:0134756-0135239 score=0.613062
+title=HUD Handbook 4350.3 REV-1, Chapter 5: Determining Income and Calculating Rent location=PDF page 67; PDF page 68
+ -$ 75 Tenant rent: $150
+
+B. Assistance Payments
+
+The assistance payment is the amount the owner bills HUD every month on behalf of the tenant. The assistance payment covers the difference between the TTP and the gross rent. It is the subsidy that HUD pays to the owner.
+
+1. Housing Assistance Payment (HAP) is the assistance payment made by HUD to owners with units receiving assistance from the Section 8 program.
+
+Example – Calculating HAP Gross rent $564 TTP - $175 HAP $389
+
+2. 
+
+2026-09-28T04:31:25.990800+00:00 GENERATION START D3-C-k3
+/Users/pragyaapurva/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/multiprocessing/resource_tracker.py:279: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

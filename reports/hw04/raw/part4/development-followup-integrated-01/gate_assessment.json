@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "run_id": "development-followup-integrated-01",
+  "assessed_at": "2026-09-28T05:47:48.212356+00:00",
+  "evaluator": "Independent Codex assistant agent followup_dev_review",
+  "method": "Assistant semantic review of the eight unedited final outputs, actual supplied contexts and eight question-only routing outputs under the unchanged predeclared gate. Programmatic checks establish exact refusal equality, support-quote membership, raw-answer equality, model identity strings, normal-stop status, call counts and recorded completion; they do not prove semantic correctness.",
+  "criteria_path": "reports/hw04/raw/part4/followup-setup-20260928/development_acceptance_predeclared.json",
+  "response_file_sha256": "aaff30a3b6e50072a41264d96440cee54c2a8ca8bb458cc6c56b061cabd3b7a8",
+  "routing_response_file_sha256": "7228e9e378baa3ccd8ec4b9ffc756aaea500c814582eb816d8e4543deb493cfe",
+  "all_eight_calls_complete_normally": true,
+  "all_eight_routing_decisions_correct": true,
+  "final_answer_model": "qwen2.5:3b",
+  "question_only_router": "qwen2.5:7b",
+  "supported_cited_answer_demonstrations": 2,
+  "required_supported_cited_demonstrations": 2,
+  "context_appropriate_behavior_count": 8,
+  "required_context_appropriate_behavior_count": 8,
+  "gate_passed": true,
+  "blocking_questions": [],
+  "judgments": [
+    {
+      "question_id": "D1",
+      "response_id": "D1-C-k3",
+      "passed": true,
+      "answer_unchanged": "According to the EPA pamphlet, water used to make baby formula should be cold [2]. Boiling water does not remove lead from water [1, 2].",
+      "normal_completion": true,
+      "semantic_reason": "Both requested facts are stated and supported by the actual cited chunks.",
+      "supported_cited_claims": [
+        {
+          "claim": "Water for baby formula should be cold.",
+          "citation": "2",
+          "quote": "Use only cold water for drinking, cooking and making baby formula.",
+          "chunk_id": "EPA_LEAD:3830114fcc78:0017714-0018185",
+          "supported": true
+        },
+        {
+          "claim": "Boiling does not remove lead from water.",
+          "citation": "1",
+          "quote": "Boiling water does not remove lead from water.",
+          "chunk_id": "EPA_LEAD:3830114fcc78:0018135-0018561",
+          "supported": true
+        }
+      ],
+      "exact_refusal": false,
+      "grounding": true
+    },
+    {
+      "question_id": "D2",
+      "response_id": "D2-C-k3",
+      "passed": true,
+      "answer_unchanged": "I cannot answer this question from the provided documents",
+      "normal_completion": true,
+      "semantic_reason": "The retained context does not supply the requested fact, so exact refusal is appropriate generation behavior. The corpus-answer and retrieval failure remain separate; refusal is not credited as a correct corpus answer.",
+      "supported_cited_claims": [],
+      "exact_refusal": true,
+      "grounding": null
+    },
+    {
+      "question_id": "D3",
+      "response_id": "D3-C-k3",
+      "passed": true,
+      "answer_unchanged": "I cannot answer this question from the provided documents",
+      "normal_completion": true,
+      "semantic_reason": "The retained context does not supply the requested fact, so exact refusal is appropriate generation behavior. The corpus-answer and retrieval failure remain separate; refusal is not credited as a correct corpus answer.",
+      "supported_cited_claims": [],
+      "exact_refusal": true,
+      "grounding": null
+    },
+    {
+      "question_id": "D4",
+      "response_id": "D4-C-k3",
+      "passed": true,
+      "answer_unchanged": "According to the EPA disclosure article, signed disclosures should be kept for three years after the sale is completed or the lease begins. [1]",
+      "normal_completion": true,
+      "semantic_reason": "The answer states the duration and both alternative triggers, with its supporting citation.",
+      "supported_cited_claims": [
+        {
+          "claim": "Keep signed disclosures for three years after sale completion or lease commencement.",
+          "citation": "1",
+          "quote": "Keep a signed copy of the disclosures for three years after the sale is completed or the lease begins.",
+          "chunk_id": "EPA_DISCLOSURE:38dd88cf9257:0004176-0004620",
+          "supported": true
+        }
+      ],
+      "exact_refusal": false,
+      "grounding": true
+    },
+    {
+      "question_id": "D5",
+      "response_id": "D5-C-k3",
+      "passed": true,
+      "answer_unchanged": "I cannot answer this question from the provided documents",
+      "normal_completion": true,
+      "semantic_reason": "The clear unsupported question receives the exact required refusal, with no added punctuation or explanation.",
+      "supported_cited_claims": [],
+      "exact_refusal": true,
+      "grounding": null
+    },
+    {
+      "question_id": "D6",
+      "response_id": "D6-C-k3",
+      "passed": true,
+      "answer_unchanged": "I cannot answer this question from the provided documents",
+      "normal_completion": true,
+      "semantic_reason": "The clear unsupported question receives the exact required refusal, with no added punctuation or explanation.",
+      "supported_cited_claims": [],
+      "exact_refusal": true,
+      "grounding": null
+    },
+    {
+      "question_id": "D7",
+      "response_id": "D7-C-k3",
+      "passed": true,
+      "answer_unchanged": "What is the process or document I need to check to find the deadline for my case?",
+      "normal_completion": true,
+      "semantic_reason": "The output asks the user to identify the process or document needed to determine the deadline. It selects no case type or deadline and makes no factual assertion. The first-person wording is awkward and could be clearer, but the question requests the missing process/document rather than answering a guessed case. This is a semantic judgment, not a question-mark or keyword check.",
+      "supported_cited_claims": [],
+      "exact_refusal": false,
+      "grounding": null
+    },
+    {
+      "question_id": "D8",
+      "response_id": "D8-C-k3",
+      "passed": true,
+      "answer_unchanged": "I cannot answer this question from the provided documents",
+      "normal_completion": true,
+      "semantic_reason": "The clear unsupported question receives the exact required refusal, with no added punctuation or explanation.",
+      "supported_cited_claims": [],
+      "exact_refusal": true,
+      "grounding": null
+    }
+  ],
+  "limitations": [
+    "Only eight repeatedly inspected development questions; success is not an independent reliability estimate.",
+    "D7 uses awkward first-person wording but asks for the missing process/document without choosing a deadline.",
+    "D2/D3 remain retrieval misses and corpus-answer failures despite appropriate abstention."
+  ],
+  "decision": "The integrated configuration meets the predeclared development gate. Freeze it before a complete new scored matrix; do not transfer development judgments to scored answers."
+}

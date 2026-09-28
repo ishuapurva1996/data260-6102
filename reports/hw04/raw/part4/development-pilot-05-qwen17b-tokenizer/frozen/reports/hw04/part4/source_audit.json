@@ -1,0 +1,261 @@
+{
+  "schema_version": 1,
+  "audited_at": "2026-09-28T04:16:43.859236Z",
+  "evaluator": "Codex assistant",
+  "source_count": 5,
+  "unique_source_ids": 5,
+  "unique_document_urls": 5,
+  "source_hash_checks": [
+    {
+      "source_id": "HUD_SELECTION",
+      "path": "reports/hw03/corpus/text/hud_tenant_selection.txt",
+      "bytes": 145418,
+      "expected_sha256": "970dfc1f3a5587184b737e1019bea26eaacc42d84ff12e05a387b8c34c2d3fa1",
+      "actual_sha256": "970dfc1f3a5587184b737e1019bea26eaacc42d84ff12e05a387b8c34c2d3fa1",
+      "unchanged": true,
+      "original_hash_matches": true
+    },
+    {
+      "source_id": "HUD_INCOME",
+      "path": "reports/hw03/corpus/text/hud_income_rent.txt",
+      "bytes": 160419,
+      "expected_sha256": "2efa6b7ef8ad15a2336b38929741b87e97ea25a996e8fed585e3cc3628612f5b",
+      "actual_sha256": "2efa6b7ef8ad15a2336b38929741b87e97ea25a996e8fed585e3cc3628612f5b",
+      "unchanged": true,
+      "original_hash_matches": true
+    },
+    {
+      "source_id": "EPA_LEAD",
+      "path": "reports/hw03/corpus/text/epa_lead_2026.txt",
+      "bytes": 21608,
+      "expected_sha256": "3830114fcc78a08e1624b394b68b1a6ae42b3376e9b9a8d41707db68e50d4cad",
+      "actual_sha256": "3830114fcc78a08e1624b394b68b1a6ae42b3376e9b9a8d41707db68e50d4cad",
+      "unchanged": true,
+      "original_hash_matches": true
+    },
+    {
+      "source_id": "HUD_FAIR",
+      "path": "reports/hw03/corpus/text/hud_fair_housing.txt",
+      "bytes": 18414,
+      "expected_sha256": "c47c156c57eaaf0b84fb278f5096053548b90ff0cad5ff426c64190b51be7f5e",
+      "actual_sha256": "c47c156c57eaaf0b84fb278f5096053548b90ff0cad5ff426c64190b51be7f5e",
+      "unchanged": true,
+      "original_hash_matches": true
+    },
+    {
+      "source_id": "EPA_DISCLOSURE",
+      "path": "reports/hw04/part4/corpus/text/epa_disclosure_2026.txt",
+      "bytes": 6703,
+      "expected_sha256": "38dd88cf9257ce74caf36972cddd4cf8a516ab18d7b0ebf9b387c1d339866280",
+      "actual_sha256": "38dd88cf9257ce74caf36972cddd4cf8a516ab18d7b0ebf9b387c1d339866280",
+      "unchanged": true,
+      "original_hash_matches": true
+    }
+  ],
+  "source_count_hash_check_pass": true,
+  "inherited_sources_unchanged": true,
+  "new_document_is_distinct": "EPA_DISCLOSURE is a distinct HTML publication, not an alternative format of EPA_LEAD. It links to the pamphlet and overlaps its disclosure topic.",
+  "gold_span_count": 11,
+  "all_gold_span_offsets_exact": true,
+  "six_question_types": [
+    "one_chunk",
+    "two_chunks",
+    "overlapping_sources",
+    "ambiguous",
+    "absent_answer",
+    "unrelated"
+  ],
+  "absent_answer_questions_have_empty_gold_evidence": true,
+  "absence_searches": {
+    "Q5": {
+      "terms": [
+        "Cedar Grove",
+        "Unit 4B",
+        "September 27, 2026"
+      ],
+      "matches": {
+        "HUD_SELECTION": {
+          "Cedar Grove": [],
+          "Unit 4B": [],
+          "September 27, 2026": []
+        },
+        "HUD_INCOME": {
+          "Cedar Grove": [],
+          "Unit 4B": [],
+          "September 27, 2026": []
+        },
+        "EPA_LEAD": {
+          "Cedar Grove": [],
+          "Unit 4B": [],
+          "September 27, 2026": []
+        },
+        "HUD_FAIR": {
+          "Cedar Grove": [],
+          "Unit 4B": [],
+          "September 27, 2026": []
+        },
+        "EPA_DISCLOSURE": {
+          "Cedar Grove": [],
+          "Unit 4B": [],
+          "September 27, 2026": []
+        }
+      },
+      "review": "All five allowlisted texts are general housing/lead documents. Exact proper-name/topic searches plus source reading show no requested listing price, sports result, astronaut identity, or current local inspector count. Absence is limited to these frozen snapshots, not a claim about all possible external sources."
+    },
+    "Q6": {
+      "terms": [
+        "FIFA",
+        "World Cup",
+        "Argentina",
+        "football",
+        "soccer"
+      ],
+      "matches": {
+        "HUD_SELECTION": {
+          "FIFA": [],
+          "World Cup": [],
+          "Argentina": [],
+          "football": [],
+          "soccer": []
+        },
+        "HUD_INCOME": {
+          "FIFA": [],
+          "World Cup": [],
+          "Argentina": [],
+          "football": [],
+          "soccer": []
+        },
+        "EPA_LEAD": {
+          "FIFA": [],
+          "World Cup": [],
+          "Argentina": [],
+          "football": [],
+          "soccer": []
+        },
+        "HUD_FAIR": {
+          "FIFA": [],
+          "World Cup": [],
+          "Argentina": [],
+          "football": [],
+          "soccer": []
+        },
+        "EPA_DISCLOSURE": {
+          "FIFA": [],
+          "World Cup": [],
+          "Argentina": [],
+          "football": [],
+          "soccer": []
+        }
+      },
+      "review": "All five allowlisted texts are general housing/lead documents. Exact proper-name/topic searches plus source reading show no requested listing price, sports result, astronaut identity, or current local inspector count. Absence is limited to these frozen snapshots, not a claim about all possible external sources."
+    },
+    "D5": {
+      "terms": [
+        "Willow Creek",
+        "Apartment 9C"
+      ],
+      "matches": {
+        "HUD_SELECTION": {
+          "Willow Creek": [],
+          "Apartment 9C": []
+        },
+        "HUD_INCOME": {
+          "Willow Creek": [],
+          "Apartment 9C": []
+        },
+        "EPA_LEAD": {
+          "Willow Creek": [],
+          "Apartment 9C": []
+        },
+        "HUD_FAIR": {
+          "Willow Creek": [],
+          "Apartment 9C": []
+        },
+        "EPA_DISCLOSURE": {
+          "Willow Creek": [],
+          "Apartment 9C": []
+        }
+      },
+      "review": "All five allowlisted texts are general housing/lead documents. Exact proper-name/topic searches plus source reading show no requested listing price, sports result, astronaut identity, or current local inspector count. Absence is limited to these frozen snapshots, not a claim about all possible external sources."
+    },
+    "D6": {
+      "terms": [
+        "Moon",
+        "Neil Armstrong"
+      ],
+      "matches": {
+        "HUD_SELECTION": {
+          "Moon": [],
+          "Neil Armstrong": []
+        },
+        "HUD_INCOME": {
+          "Moon": [],
+          "Neil Armstrong": []
+        },
+        "EPA_LEAD": {
+          "Moon": [],
+          "Neil Armstrong": []
+        },
+        "HUD_FAIR": {
+          "Moon": [],
+          "Neil Armstrong": []
+        },
+        "EPA_DISCLOSURE": {
+          "Moon": [],
+          "Neil Armstrong": []
+        }
+      },
+      "review": "All five allowlisted texts are general housing/lead documents. Exact proper-name/topic searches plus source reading show no requested listing price, sports result, astronaut identity, or current local inspector count. Absence is limited to these frozen snapshots, not a claim about all possible external sources."
+    },
+    "D8": {
+      "terms": [
+        "San Jose",
+        "certified lead inspectors"
+      ],
+      "matches": {
+        "HUD_SELECTION": {
+          "San Jose": [],
+          "certified lead inspectors": []
+        },
+        "HUD_INCOME": {
+          "San Jose": [],
+          "certified lead inspectors": []
+        },
+        "EPA_LEAD": {
+          "San Jose": [],
+          "certified lead inspectors": []
+        },
+        "HUD_FAIR": {
+          "San Jose": [],
+          "certified lead inspectors": []
+        },
+        "EPA_DISCLOSURE": {
+          "San Jose": [],
+          "certified lead inspectors": []
+        }
+      },
+      "review": "All five allowlisted texts are general housing/lead documents. Exact proper-name/topic searches plus source reading show no requested listing price, sports result, astronaut identity, or current local inspector count. Absence is limited to these frozen snapshots, not a claim about all possible external sources."
+    }
+  },
+  "pending": "U2 must map actual chunk IDs, prove Q1 complete in one chunk and Q2 complete in exactly a pair while no single full-corpus chunk is sufficient; freeze questions before scored generation.",
+  "extraction_reproduction": {
+    "command": "python3 reports/hw04/part4/corpus/extract_epa.py",
+    "passed": true,
+    "criterion": "Clean text and section-map SHA-256 values identical before/after independent rerun."
+  },
+  "absence_searches_all_zero_matches": true,
+  "q2_source_span_preflight": {
+    "inspection_range": [
+      9163,
+      9350
+    ],
+    "risk_assessment_range": [
+      9587,
+      9733
+    ],
+    "minimum_contiguous_characters_to_cover_both_complete_gold_spans": 570,
+    "maximum_chunk_characters": 500,
+    "a_single_500_character_EPA_LEAD_window_cannot_cover_both_complete_gold_spans": true,
+    "note": "This span-distance check is not final chunk-ID coverage proof. Final full-corpus chunk audit remains U2."
+  }
+}

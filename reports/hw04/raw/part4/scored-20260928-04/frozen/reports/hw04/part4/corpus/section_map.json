@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "source_id": "EPA_DISCLOSURE",
+  "offset_units": "Python Unicode characters; zero-based half-open [start,end)",
+  "text_sha256": "38dd88cf9257ce74caf36972cddd4cf8a516ab18d7b0ebf9b387c1d339866280",
+  "original_sha256": "e1c1dad371a3c2231996e86fe231762276b4f2e08b31623f6e6f071c76957120",
+  "sections": [
+    {
+      "title": "Real Estate Disclosures about Potential Lead Hazards",
+      "start_character": 0,
+      "end_character": 1853
+    },
+    {
+      "title": "Requirements Under the Disclosure Rule",
+      "start_character": 1853,
+      "end_character": 5550
+    },
+    {
+      "title": "What Happens if a Seller or Lessor Fails to Comply with These Regulations",
+      "start_character": 5550,
+      "end_character": 6335
+    },
+    {
+      "title": "For More Information",
+      "start_character": 6335,
+      "end_character": 6698
+    }
+  ]
+}

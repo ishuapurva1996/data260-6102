@@ -1,0 +1,1573 @@
+CHAPTER 4. WAITING LIST AND TENANT SELECTION
+
+4-1 Introduction
+
+A. This chapter describes requirements and makes suggestions regarding activities that occur during the marketing, application, waiting list, and tenant selection process. Owners may complete these activities before, concurrently with, or after the eligibility determination made in accordance with the requirements described in Chapter 3 of this handbook.
+
+B. This chapter is organized into four sections.
+
+• Section 1: Tenant Selection Plan describes the required and recommended contents of the HUD tenant selection plan.
+
+• Section 2: Marketing describes marketing and outreach activities to attract tenants with particular attention to Affirmative Fair Housing Marketing Plans.
+
+• Section 3: Waiting List Management includes information related to application taking, waiting lists, and record-keeping related to tenant applications.
+
+• Section 4: Selecting Tenants from the Waiting List covers tenant selection and screening criteria. It also discusses applicant interviews, and applicable requirements and procedures when applicants are found to be ineligible, including written notification to applicants of denial of assistance.
+
+C. All pre-occupancy activities must be undertaken in a manner that does not discriminate on the basis of race, color, national origin, sex, religion, disability, or familial status. See Chapter 2 for general civil rights requirements. This chapter does address some particular nondiscrimination and equal opportunity requirements for pre-occupancy activities.
+
+4-2 Key Terms
+
+A. There are a number of technical terms used in this chapter that have very specific definitions established by federal statute or regulations, or by HUD. These terms are listed in Figure 4-1 and their definitions can be found in the Glossary to this handbook. It is important to be familiar with these definitions when reading this chapter.
+
+B. The terms “disability” and “persons with disabilities” are used in two contexts – for civil rights protections, and for program eligibility purposes. Each use has specific definitions.
+
+1. When used in context of protection from discrimination or improving the accessibility of housing, the civil rights-related definitions apply.
+
+2. When used in the context of eligibility under multifamily subsidized housing programs, the program eligibility definitions apply.
+
+NOTE: See the Glossary for specific definitions and paragraph 2-23 for an explanation of this difference.
+
+Figure 4-1: Key Terms
+
+• Applicant • Preferences • Application • Preliminary application • Denial of tenancy or assistance • Residency preference • Displaced person • Screening • *Enterprise Income Verification (EIV)* • Tenant selection plan • Income-targeting • *Violence Against Women Act (VAWA)* • Market area • Waiting list
+
+Section 1: Tenant Selection Plan
+
+4-3 Key Regulations
+
+This paragraph identifies key regulatory citations pertaining to Section 1: Tenant Selection Plan. The citations and their titles (or topics) are listed below.
+
+A. Tenant Selection Plan
+
+1. 24 CFR 5.655 Owner Preferences in Selection for a Project or Unit
+
+2. 24 CFR 880.104, 881.104, 883.105, 884.118, 886.119, 886.318 (Applicability of 24 CFR, part 5, and responsibilities of the owner)
+
+3. 24 CFR 891.410, 891.610, 891.750 (Selection and admission of tenants)
+
+B. Income-Targeting
+
+These regulations are applicable only to the Section 8 project-based program except where otherwise noted.
+
+1. 24 CFR 5.653 Admission – Income-eligibility and income-targeting
+
+2. 24 CFR 5.601, 5.603 (Occupancy Requirements for Section 8 Project-Based Assistance)
+
+C. Preferences
+
+1. 24 CFR 5.655, 880.602, 881.601, 883.701, 884.214, 886.132, 886.321, 891.230, 891.750 (Owner preferences/requirements in selection for a project or unit)
+
+2. 24 CFR 236.715 Determination of Eligibility
+
+3. 24 CFR 880.612a, 881.601, 883.701, 884.223a, 886.329a (Preference for occupancy by elderly families)
+
+D. Required Criminal and Drug Screening Standards
+
+1. 24 CFR part 5, subpart I – Preventing Crime in Federally Assisted Housing – Denying Admission and Terminating Tenancy for Criminal Activity and Alcohol Abuse
+
+2. 24 CFR part 5, subpart J – Access to Criminal Records and Information
+
+E. *Social Security Number (SSN) Requirements1. 24 CFR 5.216 Disclosure and Verification of Social Security and Employer Identification Numbers
+
+2. 24 CFR 5.218 Penalties for failing to disclose and verify Social Security and Employer Identification Numbers*
+
+F. Screening for Suitability
+
+• 24 CFR 5.655 Owner Preferences in Selection for a Project or Unit
+
+G. Rejecting Applicants and Denial of Rental Assistance
+
+• 24 CFR 880.603, 881.601, 883.701, 884.214, 886.121 and 132, 886.321 and 329, 891.410, 891.610, 891.750 (Tenant selection and admission)
+
+H. Denial of Assistance to Noncitizens and DHS Appeal Process
+
+• 24 CFR part 5, subpart E – Restrictions on Assistance to Noncitizens *I. Mandatory Use of Enterprise Income Verification (EIV)
+
+• 24 CFR 5.233 Mandated Use of HUD’s Enterprise Income Verification (EIV) System *
+
+4-4 Tenant Selection Plan A. Key Requirements
+
+Owners must develop and make public written tenant selection policies and procedures that include descriptions of the eligibility requirements and income limits for admission. Figure 4-2 provides a sample outline of a tenant selection plan. The Tenant Selection Plan must include whether or not there is an elderly restriction or preference in the admission of tenants. The restriction or preference must cite the supporting documentation to ensure nondiscrimination in the selection of tenants. The contents of the plan also must be consistent with the purpose of improving housing opportunities and be reasonably related to program eligibility and an applicant’s ability to perform the obligations of the lease.
+
+B. HUD Review of the Tenant Selection Plan
+
+HUD does not approve tenant selection plans (except when owners wish to adopt local or residency preferences). However, if HUD staff becomes aware that a plan fails to comply with applicable requirements, the owner must modify the plan accordingly.
+
+Figure 4-2: Written Tenant Selection Plan - Topics
+
+A. Required Topics 1. Project eligibility requirements: • Project-specific requirements (see Chapter 3, Section 2); • Citizenship requirements (see Chapter 3, Section 1); and • Social security number requirements (see Chapter 3, Section 1). 2. Income limits (including economic mix requirements for Section 8 properties) (see Chapter 3, Section 1). 3. Procedures for accepting applications and selecting from the waiting list: • Procedures for accepting applications and pre-applications (see Chapter 4, Section 3); • Procedures for applying preferences (including income-targeting in Section 8 properties) (see Chapter 4, Sections 1 and 4); • Applicant screening criteria (see Chapter 4, Sections 1 and 4); - Required drug-related or criminal activity criteria *including State lifetime sex offender registration check in all states where applicant household members have resided or using a database that checks against all state registries, e.g., the Dru Sjodin National Sex Offender Database. - Procedures for using the EIV Existing Tenant Search;* - Other allowable screening criteria; and • Procedures for rejecting ineligible applicants (see Chapter 4, Section 1). 4. Occupancy standards (see Chapter 3, Section 2). 5. Unit transfer policies, including selection of in-place residents versus applicants from the waiting list when vacancies occur (see Chapter 7, Section 3). 6. Policies to comply with Section 504 of the Rehabilitation Act of 1973 and the Fair Housing Act and other relevant civil rights laws and statutes (see Chapter 2, Section 3). 7. Policy for opening and closing the waiting list for the property (see Chapter 4, Section 3). 8. Eligibility of students (see Chapter 3, Sections 1 and 3). 9. *Policies for applying Violence Against Women Act (VAWA) protections (Section 8 only).* B. Recommended Topics 1. Applicant notification and opportunity to supplement information already provided (see Chapter 4, Sections 1 and 4). 2. Procedures for identifying applicant needs for the features of accessible units or reasonable accommodations (see Chapter 2, Section 3). 3. Updating the waiting list (see Chapter 4, Section 3). 4. Policy for notifying applicants and potential applicants of changes in the tenant selection plan (see Chapter 4, Section 1). 5. Procedures for assigning units with originally constructed design features for persons with physical disabilities (see Chapter 2, Section 3). 6. Charges for facilities and services (see Chapter 6, Section 3). 7. Security deposit requirements (see Chapter 6, Section 2). 8. Unit inspections (see Chapter 6, Section 4). 9. Annual recertification requirements (see Chapter 7, Section 1). 10. Interim recertification reporting policies (see Chapter 7, Section 2). 11. Implementation of house rule changes (see Chapter 6, Section 1).
+
+C. Required Contents of the Tenant Selection Plan
+
+The tenant selection plan helps to ensure that tenants are selected for occupancy in accordance with HUD requirements and established management policies. HUD requires that the plan specify a number of procedures and policies, including the following items:
+
+1. Project eligibility requirements.
+
+a. Project specific requirements. If the property is designated for a special population, such as elderly or disabled, the owner must define population served.
+
+b. Citizenship/immigration status requirements. The owner must describe how citizenship/immigration requirements are implemented, including policies regarding verification of citizenship (if any).
+
+c. *Social security number (SSN) requirements. Requirements for disclosing and providing verification of SSNs.*
+
+2. Income limits (including economic mix for Section 8 properties). The income limit schedule used for the property must be identified (i.e., very low- or low-income. The specific maximum annual income amounts need not be included).
+
+3. Procedures for taking applications and selecting from the waiting list.
+
+a. Taking applications. The plan must include policies for taking pre-applications (if applicable) and applications.
+
+b. Preferences. The plan must define each preference adopted for use in the property and any rating, ranking, or combining of the preferences the owner has established that will affect the order in which applicants are selected from the waiting list. The plan should also describe the acceptable sources of information to verify the qualification for preferences.
+
+REMINDER: Owners implementing state, local, or residency preferences must have prior HUD approval.
+
+c. Income-targeting. For Section 8 properties only, the plan must describe the procedures used by the owner to meet the income-targeting requirements, if applicable. This description must explain how and when applicants will be “skipped over” in favor of housing an extremely low-income household and how their applications will be treated when they are skipped.
+
+d. Applicant screening criteria. The plan must describe the property’s standards used to screen for information on drug-related or criminal activity (including registration as a sex offender) *and use of the EIV Existing Tenant Search*, as well as the other screening activities implemented by the owner (e.g., rental history).
+
+e. Procedures for rejecting ineligible applicants. The plan must describe the circumstances under which the owner may reject an applicant for occupancy or assistance. If the owner establishes a policy to consider extenuating circumstances in cases when applicants would normally be rejected but have circumstances that indicate the family might be an acceptable future tenant, such a policy must also be described in the plan.
+
+4. Occupancy standards. Standards used by the owner to determine appropriate unit size, and procedures to place families on the lists for more than one unit size, must be included in the plan.
+
+5. Unit transfer policies, including procedures for selecting between applicants on the waiting list and current tenants who need:
+
+a. A unit transfer because of family size;
+
+b. A new unit because of changes in family composition;
+
+c. A deeper subsidy (Rent Supplement, RAP, or Section 8 assistance);
+
+d. A unit transfer for a medical reason certified by a doctor; or
+
+e. A unit transfer based on the need for an accessible unit.
+
+6. Policies to Comply with Section 504 of the Rehabilitation Act of 1973, The Fair Housing Act Amendments of 1988 and Title VI of the Civil Rights Act of 1964.
+
+a. Section 504 of the Rehabilitation Act of 1973 prohibits discrimination on the basis of disability in any program or activity receiving federal financial assistance from HUD.
+
+b. The Fair Housing Act prohibits discrimination in housing and housing related transactions based on race, color, religion, sex, national origin, disability and familial status. It applies to housing, regardless of the presence of federal financial assistance.
+
+c. Title VI of the Civil Rights Act of 1964 prohibits discrimination on the basis of race, color or national origin in any program or activity receiving federal financial assistance from HUD.
+
+7. Policy for opening and closing the waiting list. The methods of advertising used to announce opening and closing of the waiting list should be described.
+
+8. Eligibility of students. The plan must include the requirements for determining eligibility of students enrolled at an institution of higher education.
+
+9. *VAWA protections (applicable to the Section 8 program only). The plan, as well as House Rules where applicable, must include policies and procedures covering the VAWA protections. Owner policies must support or assist victims of domestic violence, dating violence or stalking and protect victims, as well as members of their family, from being denied housing or from losing their HUD assisted housing as a consequence of domestic violence, dating violence or stalking.
+
+(a) Owners must provide notice to Section 8 tenants of their rights and obligations under VAWA.
+
+(b) Certification of Domestic Violence, Dating Violence or Stalking.
+
+(1) Owners must provide tenants the option to complete the Certification of Domestic Violence, Dating Violence or Stalking, form HUD-91066. The certification form may be made available to all eligible families at the time of admission or, in the event of a termination or start of an eviction for cause proceeding, the certification may be enclosed with the appropriate notice, directing the family to complete, sign and return the form within fourteen (14) business days. The owner may extend this time period at his/her discretion.
+
+(2) Alternately, in lieu of the certification form or in addition to it, owners may accept:
+
+(i) A federal, state, tribal, territorial, or local police record or court record, or
+
+(ii) Documentation signed by an employee, agent, volunteer of a victim service provider, an attorney, or medical professional from whom the victim has sought assistance in addressing domestic violence, dating violence, or stalking or, the effects of the abuse in which the professional attests under penalty of perjury under 28 U.S.C 1746 to the professional’s belief that the incident or incidents are bona fide incidents of abuse, and the victim of domestic violence, dating violence or stalking has signed or attested to the documentation.
+
+(3) Owners are not required to demand that an individual produce official documentation or physical proof of an individual’s status as a victim of domestic violence, dating violence or stalking in order to receive the protections of the VAWA. Owners, at their discretion, may provide assistance to an individual based solely upon the individual’s statement or other corroborating evidence. Owners are encouraged to carefully evaluate abuse claims as to avoid conducting an eviction based on false or unsubstantiated accusations.
+
+(4) Owners should be mindful that the delivery of the certification form to the tenant via mail may place the victim at risk, e.g., the abuser may monitor the mail. Therefore, in order to mitigate risks, owners are encouraged to work with the tenant in making acceptable delivery arrangements, such as inviting them into the office to pick up the certification form or making other discreet arrangements.
+
+(c) Confidentiality of Information.
+
+The identity of the victim and all information provided to owners relating to the incident(s) of domestic violence, dating violence or stalking must be retained in confidence by the owner and must not be entered into any shared database or provided to a related entity, except to the extent that the disclosure is:
+
+(1) Requested or consented to by the individual in writing;
+
+(2) Required for use in an eviction proceeding; or
+
+(3) Otherwise required by applicable law.
+
+The HUD-approved certification form provides notice to the tenant of the confidentiality of the form and the limits thereof.
+
+(d) Retention of information.
+
+Owners must retain all documentation relating to an individual’s domestic violence, dating violence or stalking in a separate file that is kept in a separate secure location from other tenant files.
+
+(e) VAWA Lease Addendum.
+
+Owners must have tenants sign the VAWA lease addendum, form HUD-91067 (see Chapter 8 for requirements on issuance of modifications to the model lease).
+
+NOTE: See the Glossary for definitions for domestic violence, dating violence, stalking and immediate family member.*
+
+D. Additional Owner Policies and Practices
+
+1. General. In addition to the required content, owners are encouraged to incorporate their own policies and practices regarding the selection of tenants into the tenant selection plan. See Figure 4-2 for a list of recommended topics. By incorporating all policies and procedures in one plan, owners, applicants, and tenants will have one point of reference. Further, owners will have a single document to which they can direct applicants and tenants when questioned about policies and fairness of treatment.
+
+2. Notification of modification to the tenant selection plan. It is also good practice for owners to include a description of the process used to provide notification to applicants on the waiting list and other interested persons (potential applicants) of the implementation of any new or revised tenant selection plan or policies that may affect an application or tenancy.
+
+E. Modification of the Tenant Selection Plan
+
+Owners should review tenant selection plans at least annually to ensure that they reflect current operating practices, program priorities, and HUD requirements.
+
+F. Availability of the Tenant Selection Plan
+
+When requested, the owner must make the tenant selection plan available to the public.
+
+4-5 Income-Targeting – Applicable Only to the Section 8 Project-Based Program Except Where Otherwise Noted
+
+A. Key Requirements
+
+For each project assisted under a contract for project-based Section 8 assistance, the owner must lease not less than 40% of the dwelling units (assisted under the contract) that become available for occupancy in any project fiscal year to extremely low-income families. The methodology for income-targeting must be described in the tenant selection plan. (For information and guidance about income limit exceptions, see paragraph 3-7.)
+
+NOTE: Compliance with income targeting requires owners to count both move-ins and initial admissions to the Section 8 project based assistance program. For example, an initial certification processed to move a tenant from Section 236 assistance to Section 8 assistance is counted for income targeting.
+
+NOTE: Income targeting does not apply to the Section 202 PAC, Section 202 PRAC, Section 811 PRAC, RAP, Rent Supplement, Section 221(d)(3) BMIR or Section 236 programs.
+
+B. Methods to Comply with Income-Targeting Requirements
+
+HUD does not prescribe a method for achieving compliance with the income-targeting requirement. Before determining a specific method to achieve income-targeting requirements, it is a good practice for owners to evaluate the expected admissions based upon the current waiting list.
+
+1. First, owners should determine whether the composition of a property’s current waiting list enables the owner to achieve the income-targeting requirement by simply following the standard waiting list order with no additional procedures. If the current waiting list includes a significant number of extremely low-income applicants, an owner may be able to meet the 40% target with no additional procedures.
+
+NOTE: In such cases, it is important that owners periodically review the composition of admissions to confirm that the 40% target will be met for that fiscal year. If an owner’s periodic review reveals that admissions of extremely low-income applicants are below the 40% requirement, the owner may need to begin using additional procedures to ensure that the requirement is met by the end of the fiscal year. The owner’s Tenant Selection Plan must clearly describe what method will be used and what admission statistics will trigger implementation of the special selection method.
+
+2. If an owner determines that following the property’s waiting list in standard chronological order may not (or will not) achieve the admissions necessary to meet the income-targeting requirement, then the owner must implement procedures that will ensure compliance.
+
+a. To aid in determining the tenant selection procedures that will ensure compliance, HUD recommends that owners examine the volume of unit turnover and applicant admissions for at least the past two years and, based on this information, estimate the likely number of admissions for the coming fiscal year.
+
+b. Owners may choose any of the following methods, or may develop another method that is consistent with applicable civil rights requirements and does not result in disparate treatment of applicants with respect to any of the protected bases (see Chapter 2). Regardless of the method implemented by the owner, that method must be described in the Tenant Selection Plan.
+
+(1) Method 1 – Admit only extremely low-income families until the 40% target is met. In chronological order, owners select eligible applicants from the waiting list whose incomes are at or below the extremely low-income limit to fill the first 40% of expected vacancies in the property. Once this target has been reached, admit applicants in waiting list order.
+
+(2) Method 2 – Alternate between the first extremely low-income applicant on the waiting list and the applicant at the top of the waiting list. To implement this method, owners select the first extremely low-income applicant on the waiting list (which may mean "skipping over” some applicants with higher incomes) for the available unit, and then select the next eligible applicant currently at the top of the waiting list (regardless of income level) for the next available unit. As subsequent units become available, tenant selection continues to alternate between the next extremely low-income applicant and the eligible applicant at the top of the waiting list until the 40% target is reached.
+
+NOTE: It is possible that:
+
+ Selection of the "next extremely low-income applicant" may result in selecting the applicant at the top of the waiting list; or
+
+ Selection of the "eligible applicant at the top of the waiting list" may result in the selection of an extremely low-income family.
+
+(3) Method 3 - Alternate between the first extremely low-income applicant on the waiting list and the applicant at the top of the waiting list in groups of 10. In chronological order, owners admit the first 4 extremely low-income families from the waiting list and then admit the next 6 families from the top of the waiting list, regardless of income. This procedure results in 40% or more of admissions being extremely low-income. After filling the first 10 available units, owners again admit the first 4 extremely low-income families on the waiting list and then the next 6 families currently at the top of the waiting list.
+
+NOTE: For more information about meeting income-targeting requirements, and examples of selecting applicants properly from the waiting list, see paragraph 4-25 of this chapter.
+
+4-6 Preferences
+
+Assigning preferences to applicants who meet certain criteria is a method intended to provide housing opportunities to applicants based upon household circumstances.
+
+A. Key Requirements
+
+1. Applicants with preferences are selected from the waiting list and receive an opportunity for an available unit earlier than those who do not have a preference. Preferences affect only the order of applicants on the waiting list. They do not make anyone eligible who was not otherwise eligible,
+
+and they do not change an owner’s right to adopt and enforce tenant screening criteria.
+
+2. Owners must inform all applicants about available preferences and give all applicants an opportunity to show that they qualify for available preferences.
+
+3. If a property receives more than one type of subsidy, (e.g., insurance and assistance payments), the preference requirements of each program, if any, are applicable to the property.
+
+Example – Properties That Receive More Than One Type of Subsidy The owner of a 221(d)(3) BMIR property with Property Disposition Set-Aside must apply the statutory preference for displacement and has the option to apply owner-adopted preferences.
+
+In a 236 property with a Loan Management Set-Aside contract, the owner must apply the HUD regulatory preferences and has the option to apply owner-adopted preferences.
+
+4. Figure 4-3 below summarizes the preference requirements described in subparagraphs B through D below.
+
+B. Statutory, HUD, State, and Local Preferences
+
+Congress and HUD have established various types of preferences in an effort to provide housing to those most in need. HUD rules currently include four different kinds of preferences that apply to various programs. Owners must apply preferences to applicants based on the rules for the property subsidy type as well as any owner-adopted preferences. The following are types of preferences:
+
+1. Statutory preferences — displacement. Owners of Section 221(d)(4), 221(d)(3), and 221(d)(3) BMIR properties must give preference to applicants who have been displaced by government action or a presidentially declared disaster.
+
+2. HUD regulatory preferences.
+
+a. HUD regulations require that owners of Section 236 properties give preference to applicants who have been displaced by government action or a presidentially declared disaster.
+
+b. In Section 236 properties that also offer rental assistance through the RAP Program, owners must rank applicants according to the following criteria [24 CFR 236.715].
+
+NOTE: These ranking criteria are secondary to the preferences required above.
+
+Figure 4-3: Summary of Preference Requirements by Property Type
+
+Statutory HUD Owner-Preferences - Regulatory Adopted Program Displacement Preferences Preferences
+
+Section 221(d)(3)  Section 221(d)(3) BMIR  Section 221(d)(4) 
+
+Section 236 
+
+Section 8
+
+New Construction  Substantial Rehabilitation  State Housing Agency  New Construction or Sub  Rehab Rural Housing 515/8  Property Disposition  Set-Aside Section 202/8  Loan Management  Set-Aside (LMSA)
+
+(1) Applicants eligible for RAP assistance.
+
+(2) Applicants eligible to pay less than market rent under the Section 236 program.
+
+(3) Applicants with income sufficient to pay the market rent approved for the property. (See paragraph 3-8 for a discussion of the limitations on renting to over-income applicants. See Figure 4-4 for illustration.)
+
+3. State and local preferences. Owners may apply preferences required by state or local law only if they are consistent with HUD and applicable civil rights requirements. For example, some states have laws that require owners to provide a preference for housing to military veterans. Owners must receive HUD approval in order to apply this locally legislated requirement. Owners must submit a written request to the HUD Field Office, describing the state or local laws requiring such preferences, requesting HUD concurrence on the preferences.
+
+Figure 4-4: Example of Section 236 Ranking Preferences Based on Income and Rent
+
+Clear River Apartments is a Section 236 property with RAP assistance. The basic rent is $350, and the market rent is $500.
+
+Date of Application Applicant Name Estimated rent based Rank order for upon income reported selection based on on application form. estimated rent (assuming no other preference)
+
+6/15/2001 Joseph Jones $372 3
+
+8/1/2001 Marenka Salnikov $500 5
+
+8/15/2001 Donny Yee $312 1
+
+8/23/2001 Rebecca Green $225 2
+
+9/12/2001 Sastri Sharma $360 4
+
+C. Owner-Adopted Preferences
+
+Owners are permitted to establish other preferences for assisted properties as long as they are subordinate to any program-specific preferences discussed in subparagraph B above, and comply with applicable fair housing and civil rights statutes. Some of these owner-adopted preferences require prior HUD approval (as noted below) and some do not. The types of preferences that may be implemented by owners to serve unique groups of needy applicants include:
+
+1. Residency preferences. A residency preference provides applicants who live in a specific geographic area at the time of application a priority over nonresidents.
+
+a. Owners must never adopt a residency requirement (meaning the owner will not lease to any applicant who does not live in the defined jurisdiction or municipality).
+
+b. A residency preference *must be developed, implemented, and executed in accordance with the non-discrimination and equal opportunity requirements listed at 24 CFR 5.105(a).*
+
+c. HUD must approve residency preferences prior to use by the owner. HUD will approve residency preferences only if the preference does not result in discrimination or violate equal opportunity requirements.
+
+d. When an owner adopts residency preferences, HUD requires that the owner consider the following as residents:
+
+(1) Applicants who work in the jurisdiction;
+
+(2) Applicants who have been hired to work in the jurisdiction; or
+
+(3) Applicants who are expected to live in the jurisdiction as a result of planned employment.
+
+NOTE: “Planned employment” means bona fide offer to work in a municipality.
+
+e. The owner may treat graduates of, or active participants in, education and training programs located in a residency preference area as residents of the area if the education or training program is designed to prepare individuals for the job market.
+
+f. For Section 8 properties, an owner’s residency preference must be approved by HUD through a modification to the Affirmative Fair Housing Marketing Plan, in accordance with 24 CFR 108.
+
+g. Owners may not base a residency preference on the length of time an applicant has lived or worked in the area.
+
+h. If there are no eligible residents on the waiting list, owners cannot hold units open because of a residency preference. In this situation, owners must admit the next household on the waiting list.
+
+2. Working families. Owners may adopt a preference in selecting families from the waiting list for those families in which the head of household or spouse is employed. Even if the owner adopts such a preference, however, discrimination against persons unable to work is prohibited. Owners must not deny the preference to households in which the head or spouse is 62 or older, or to a person with disabilities.
+
+3. Disability. Owners may adopt a preference to select families that include a person with a disability. Owners may not create preferences for persons with a specific type of disability unless allowed in the controlling documents for the property. (See Chapter 3, Section 2.) Owners may not apply a preference for persons without disabilities.
+
+4. Victims of Domestic Violence, *Dating Violence or Stalking*. Owners may adopt a preference for admission of families that include victims of domestic violence, *dating violence or stalking*.
+
+5. Specific groups of single persons. Owners may adopt a preference for single persons who are elderly, displaced, homeless or persons with disabilities over other single persons.
+
+D. Determining the Relative Weight of Owner-Adopted Preferences
+
+Owners may decide to assign various importance to owner-adopted preferences. If the owner chooses to do so, a ranking, rating, or combination of preference circumstances must be identified in the Tenant Selection Plan and consistently used. For example, an owner may choose to provide the highest ranking to working families, though this ranking is subordinate to income targeting requirements and to statutory and regulatory preferences described in paragraphs 4-6 A and B above. Alternatively, an owner might choose to adopt a policy that provides top priority to an applicant who qualifies for the most preference categories (also known as combining preferences).
+
+4-7 Screening for Suitability
+
+Screening is used to help ensure that families admitted to a property will abide by the terms of the lease, pay rent on time, take care of the property and unit, and allow all residents to peacefully enjoy their homes. Information collected through the screening process enables owners to make informed and objective decisions to admit applicants who are most likely to comply with the terms of the lease. An effective screening policy will also ensure fair, consistent, and equal treatment of applicants. All screening criteria adopted by the owner must be described in the tenant selection plan and consistently applied to all applicants in a non-discriminatory fashion and in accordance with all applicable fair housing and civil rights laws.
+
+A. Screening Versus Determining Eligibility
+
+Screening for suitability of tenancy is not a determination of eligibility for the program.
+
+1. Eligibility is a determination that an applicant family meets all of the criteria for the type of subsidy in the property. To be eligible a family must meet the income limits and provide specific information and documentation of other family information (i.e., SSNs, and citizenship information). Eligibility is discussed in detail in Chapter 3.
+
+2. Screening is a determination that an otherwise eligible household has the ability to pay rent on time and to meet the requirements of the lease.
+
+B. Key Requirements
+
+1. Owners are permitted to establish and apply written screening criteria to determine whether applicants will be suitable tenants. If an owner's review of information about the applicant indicates that the applicant will not be a suitable tenant, the owner may reject the application for assistance or tenancy.
+
+2. Owners must establish written screening criteria to prohibit the admission of certain individuals who have engaged in drug-related criminal behavior, or are subject to a State lifetime sex offender registration program, or are individuals whose abuse or pattern of abuse of alcohol interferes with the health, safety, or right to peaceful enjoyment of the premises by other residents. Owners may choose to expand these requirements regarding prohibition of admission to certain applicants [24 CFR part 5, subpart I & J].
+
+3. *Owners must establish written procedures for using the EIV Existing Tenant Search. See D below.*
+
+4. Screening criteria must be included in the tenant selection plan. (See paragraph 4-4.C and Figure 4-2.)
+
+5. Owners must apply screening criteria uniformly to all applicants to prevent discrimination and avoid fair housing violations.
+
+6. The screening of live-in aides at initial occupancy and the screening of persons or live-in aides to be added to the tenant household after initial occupancy involve similar screening activities. Both live-in aides and new additions to the tenant household must be screened for drug abuse and other criminal activity, including *State lifetime registration as a sex offender*, by applying the same criteria established for screening other applicants. In addition, owners may apply any other owner established applicant screening criteria to new household members in order to establish suitability for tenancy. Owner established screening criteria may also be applied to live-in aides, except for the criterion regarding the ability to pay rent on time because live-in aides are not responsible for rental payments.
+
+7. Police officers and other security or management personnel that reside in subsidized units are subject to the same screening criteria as other applicants.
+
+8. The costs of screening must not be charged to applicants. Such costs may be charged against the project operating account. A variation on this rule applies to cooperatives.
+
+9. Certain types of screening are prohibited. See paragraph 4-8 below.
+
+C. Screening For Drug Abuse and Other Criminal Activity
+
+1. Tenant selection plans must contain screening criteria that include standards for prohibiting admission of those who have engaged in drug-related or criminal activity. The plan may, under certain circumstances, include additional provisions that deny admission to applicants for other drug and criminal activity.
+
+2. Owners must establish standards that prohibit admission of:
+
+a. Any household containing a member(s) who was evicted in the last three years from federally assisted housing for drug-related criminal activity. The owner may, but is not required to, consider two exceptions to this provision:
+
+(1) The evicted household member has successfully completed an approved, supervised drug rehabilitation program; or
+
+(2) The circumstances leading to the eviction no longer exist (e.g., the household member no longer resides with the applicant household).
+
+b. A household in which any member is currently engaged in illegal use of drugs or for which the owner has reasonable cause to believe that a member’s illegal use or pattern of illegal use of a drug may interfere with the health, safety, and right to peaceful enjoyment of the property by other residents;
+
+c. Any household member who is subject to a State sex offender lifetime registration requirement; and
+
+d. Any household member if there is reasonable cause to believe that member’s behavior, from abuse or pattern of abuse of alcohol, may interfere with the health, safety, and right to peaceful enjoyment by other residents. The screening standards must be based on behavior, not the condition of alcoholism or alcohol abuse.
+
+3. Owners may establish additional standards that prohibit admission if the owner determines that any household member is currently engaging in, or has engaged in, the following activities during a reasonable time before the admission decision:
+
+a. Drug-related criminal activity. The owner may include additional standards beyond the required standards that prohibit admission in the case of eviction from federally assisted housing for drug-related criminal activity and current drug use.
+
+b. Violent criminal activity.
+
+c. Other criminal activity that threatens the health, safety, and right to peaceful enjoyment of the property by other residents or the health and safety of the owner, employees, contractors, subcontractors, or agents of the owner.
+
+NOTE:. If an owner’s admission policy includes any of the activities above or similar restrictions that uses a standard regarding a household member’s current or recent actions, the owner may define the length of time prior to the admission decision during which the applicant must not have engaged in the criminal activity. The owner shall ensure that the relevant “reasonable” time period is uniformly applied to all applicants in a non-discriminatory manner and in accordance with applicable fair housing and civil rights laws.
+
+4. An owner’s screening criteria also may include the following provisions:
+
+a. Exclusion of culpable household members. An owner may require an applicant to exclude a household member when that member’s past or current actions would prevent the household from being eligible.
+
+b. Drug or alcohol rehabilitation. When screening applications, an owner may consider whether the appropriate household member has completed a supervised drug or alcohol rehabilitation program. The owner may require appropriate documentation of the successful completion of a rehabilitation program.
+
+c. Length of mandatory prohibition. The owner may set a period longer than required by the regulation (as described in subparagraph C.2 above) that prohibits admission to a property for disqualifying behavior. For those behaviors that would result in denial for a “reasonable time,” the owner must define a reasonable period in the tenant selection plan.
+
+d. Reconsideration of previously denied applicants. An owner may reconsider the application of a previously denied applicant if the owner has sufficient evidence that the members of the household are not and have not engaged in criminal activity for a reasonable period of time. The owner must define a reasonable period of time in the tenant selection plan. When the owner chooses to adopt this admission provision, the owner must require the household member to submit documentation to support the reconsideration of the decision which includes:
+
+(1) A certification that states that she or he is not currently engaged in such criminal activity and has not engaged in such criminal activity during the specified period.
+
+(2) Supporting information from such sources as a probation officer, a landlord, neighbors, social service agency worker or criminal record(s) that were verified by the owner.
+
+e. Consideration of the circumstances relevant to a particular case. In developing optional screening criteria for a property, and applying the criteria to specific cases, owners may consider all the circumstances relevant to a particular household’s case. Such considerations may not be applied to the required screening criteria described in subparagraph C.2 above. These types of circumstances include:
+
+(1) The seriousness of the offense;
+
+(2) The effect denying tenancy would have on the community or on the failure of the responsible entity to take action;
+
+(3) The degree of participation in the offending activity by the household member;
+
+(4) The effect denying tenancy would have on nonoffending household members;
+
+(5) The demand for assisted housing by persons who will adhere to lease responsibilities;
+
+(6) The extent to which the applicant household has taken responsibility and takes all reasonable steps to prevent or mitigate the offending action; and
+
+(7) The effect of the offending action on the program’s integrity.
+
+D. *Screening Using the EIV Existing Tenant Search
+
+Owners must establish procedures in their Tenant Selection Plan for using the EIV Existing Tenant Search to determine if the applicant or any member of the applicant’s household are being assisted under a HUD rental assistance program at another location See Chapter 9, Enterprise Income Verification (EIV) for information on using the Existing Tenant Search.*
+
+E. Considerations In Developing Screening Criteria
+
+Specific screening criteria will vary from property to property. In developing screening criteria, owners may want to consider the following factors:
+
+1. Length of the property’s waiting list. An owner of a property that has a long waiting list may consider establishing relatively restrictive screening standards, whereas an owner of a property with little or no waiting list may want to have less restrictive standards. *Regardless of standards established, the owner must screen for State lifetime sex offender
+
+registration in all states where the applicant, or members of the applicant’s household, have resided or using a database such as the Dru Sjodin National Sex Offender Database that searches all of the individual state sex offender registries. This searchable database is located at http://www.nsopw.gov.* Setting standards involves balancing the need to fill vacancies with the long-term effect of accepting higher risk tenants. Thorough screening often makes the project more attractive to applicants, thereby decreasing vacancies and turnover.
+
+2. Application and screening fees. Screening takes staff time and may require funds to pay for credit reports and other information.
+
+Rental housing. Owners may not charge application fees or require applicants to reimburse them for the cost of screening, including screening for criminal history. Therefore, owners will want to carefully weigh the cost of various screening activities against the benefits. Screening costs may be charged as an operating expense against the property operating account.
+
+a. Screening criteria for assisted units in cooperatives.
+
+(1) Application fees. Cooperatives may require prospective members to pay application fees if such fees are permissible under state and local laws. The cooperative's board of directors must approve the application fee. While the fee must be reasonable in amount and consistently applied, cooperatives need not submit the fee for Field Office approval. The cooperative must treat the application fee as an earnest money deposit. The application fee is not intended to cover the administrative expenses the cooperative incurs in processing applications. If the applicant is accepted for membership, the cooperative must apply the application fee to the purchase of the membership. If the applicant is rejected by the cooperative, the cooperative must refund the full application fee. The cooperative may retain the application fee only if the applicant backs out of the purchase transaction. While rental projects may not collect application fees, cooperatives may do so because application fees are traditional for homeownership transactions, and admission to a cooperative requires completion of more complicated paperwork than does admission to a rental. Collection of an earnest money deposit will minimize instances in which the cooperative spends time and money processing the application and then the applicant backs out.
+
+(2) Credit report fees. Cooperatives may charge applicants for the cost of credit reports. This fee is intended to cover the cooperative's out-of-pocket cost; these fees are not refundable and need not be applied to the applicant's purchase costs. Cooperatives are permitted to charge these costs to applicants because:
+
+ Such charges are standard industry practice for homeownership;
+
+ Costs of these reports for home purchase can be more expensive than those required for rental purposes; and
+
+ During initial occupancy, HUD requires cooperatives to obtain credit reports on all applicants, and many cooperatives have continued that policy as memberships are resold in later years.
+
+F. Permitted Screening Criteria Commonly Used by Owners
+
+1. Overview. Owners are permitted to screen applicants for suitability to help them to determine whether to accept or deny an applicant’s tenancy. Owners should consider at least developing screening criteria related to the following factors and may establish other criteria not specifically prohibited in paragraph 4-8 below. All screening criteria adopted by the owner must be described in the tenant selection plan and consistently applied to all applicants.
+
+2. Screening for credit history. Examining an applicant’s credit history is one of the most common screening activities. The purpose of reviewing an applicant’s credit history is to determine how well applicants meet their financial obligations. A credit check can help demonstrate whether an applicant has the ability to pay rent on time.
+
+a. Owners may reject an applicant for a poor credit history, but a lack of credit history is not sufficient grounds to reject an applicant.
+
+b. As part of their written screening criteria, and in order to ensure that all applicants are treated fairly, owners should describe the general criteria they will use for distinguishing between an acceptable and unacceptable credit rating. Owners are most often interested in an applicant’s credit history related to rent and utility payments. A requirement for applicants to have a perfect credit rating is generally too strict a standard.
+
+c. Owners may determine how far back to consider an applicant’s credit history. Owners generally focus on credit activity for the past three to five years. It is a good management practice to give priority to current activity over older activity.
+
+d. Owners may have to justify the basis for a determination to deny tenancy because of the applicant’s credit rating, so there should be a sound basis for the rejection.
+
+3. Minimum Income Requirement. Section 236 and Section 221(d)(3) BMIR applicants who receive no other form of assistance, such as Section 8, may be screened for the ability to pay the Section 236 basic rent or the BMIR rent. Owners may establish a reasonable minimum income requirement to assess the applicant’s ability to pay the rent. In the Section 8, RAP, and Rent Supplement programs, owners may not establish a minimum income requirement for applicants. (See paragraph 4-8.A.)
+
+4. Screening for rental history. In addition to determining whether applicants are likely to meet their financial obligations as tenants and pay rent on time, owners are also interested in whether applicants have the ability to meet the requirements of tenancy.
+
+a. Owners must not reject an applicant for lack of a rental history but may reject an applicant for a poor rental history.
+
+b. As part of their written screening criteria, and in order to ensure that all applicants are treated fairly, owners should describe the general criteria they will use for distinguishing between acceptable and unacceptable rental history.
+
+5. Screening for housekeeping habits. Owners may visit the applicant’s current dwelling to assess housekeeping habits.
+
+a. As part of their written screening criteria, and in order to ensure that all applicants are treated fairly, owners should describe the general criteria they will use for distinguishing between acceptable and unacceptable housekeeping practices.
+
+b. Owners must establish reasonable standards which can be consistently applied to all families. Messy living quarters are not the same as safety and health hazards.
+
+c. In defining the home visit standards, the owner should establish a geographic radius within which home visits are made, and outside of which home visits are not made. It is impractical to establish a policy requiring home visits for all applicants, which might require the owner to visit units many miles from the property. For example, an owner may determine that 50 miles is the maximum distance that can be traveled to visit an applicant at home.
+
+6. Consideration of extenuating circumstances in the screening process. Owners may consider extenuating circumstances in evaluating information obtained during the screening process to assist in determining the acceptability of an applicant for tenancy. If the applicant is a person
+
+with disabilities, the owner must consider extenuating circumstances where this would be required as a matter of reasonable accommodation.
+
+4-8 Prohibited Screening Criteria
+
+Owners are prohibited from establishing any of the following types of screening criteria.
+
+A. Criteria That Could Be Discriminatory
+
+Owners must comply with all applicable federal, state or local fair housing and civil rights laws and with all applicable civil rights related program requirements.
+
+1. Owners may not discriminate based on race, color, religion, sex, national origin, age, familial status, or disability.
+
+2. Owners may not discriminate against segments of the population (e.g., welfare recipients, single parent households) or against individuals who are not members of the sponsoring organization of the property. Owners may not require a specific minimum income, except as allowed by paragraph 4-7 E.3 of this Handbook.
+
+3. These prohibitions apply to (1) accepting and processing applications; (2) selecting tenants from among eligible applicants on the waiting list; (3) assigning units; (4) certifying and recertifying eligibility for assistance; and (5) all other aspects of continued occupancy.
+
+4. Complaints alleging violations of these prohibitions must be referred to HUD’s Regional Offices of Fair Housing and Equal Opportunity.
+
+B. Criteria That Require Medical Evaluation or Treatment
+
+1. Owners may not require applicants to undergo a physical exam or medical testing such as AIDS or TB testing as a condition of admission.
+
+2. Owners may not require pregnant women to undergo medical testing to determine whether she is pregnant in order to assign a unit with the appropriate number of bedrooms.
+
+3. Owners may uniformly require all applicants to provide evidence of an ability to meet the obligations of tenancy, but owners may not impose greater burdens on persons with disabilities. Persons with disabilities may meet the requirements of the lease with the assistance of others, including an assistance animal, a live-in aide, or with services provided by someone who does not live in the unit.
+
+C. Criteria That Require Meals and Other Services
+
+Owners may not require tenants to participate in a meals program that is not approved by HUD.
+
+NOTE: 24 CFR, part 278, prohibits HUD from approving new mandatory meals programs after April 1, 1987.
+
+D. Criteria That Require Donation or Contribution
+
+Owners must not require a donation, contribution, membership fee, application fee, or processing fee as a condition of admission. Cooperative housing projects may charge a membership fee. Owners may not require any payments that are not described in the lease.
+
+E. Criteria That Inquire about Disabled Status
+
+It is unlawful for an owner to make an inquiry to determine whether an applicant, or any person associated with the applicant, has a disability or to make an inquiry about the nature or severity of a disability. However, in accordance with paragraph 4-29, an owner may request supporting documentation in order to verify whether an individual is a qualified individual with a disability when an applicant requests an accessible unit or a reasonable accommodation/modification and must adhere to the guidelines as set forth in 2-31 F. (Refer to Chapter 2 for more information on fair housing requirements.)
+
+F. Criteria Prohibited by State and Local laws
+
+Owners must adhere to state and local laws that prohibit certain screening criteria.
+
+4-9 Rejecting Applicants and Denial of Rental Assistance
+
+A. Key Requirements
+
+1. Prohibition of discrimination in the denial of tenancy or rental assistance. Owners must not discriminate against an applicant based on race, color, religion, sex, national origin, familial status, or disability. (See Chapter 2 for additional information.)
+
+2. *Prohibition of denying assistance to victims of domestic violence, dating violence or stalking (applicable to the Section 8 program only). The VAWA protects victims of domestic violence, dating violence or stalking, as well as their immediate family members, from being denied housing assistance if an incident of violence is reported and confirmed. An applicant’s status as a victim of domestic violence, dating violence, or stalking is not a basis for denial of rental assistance or for denial of admission, if the applicant otherwise qualifies for assistance or admission. (See Chapter 4, Paragraph 4-4.C.9 and Chapter 6, Paragraph 6-5.G.1 for more information on the VAWA protections.)*
+
+3. Prompt notification. Owners must promptly notify the applicant in writing of the denial of admission or assistance.
+
+B. Conditions under Which Owners May Reject Applicants
+
+An owner may reject an applicant if the applicant:
+
+1. Is ineligible for occupancy in a particular unit or property (see Chapter 3, Sections 1 and 2 for eligibility requirements);
+
+2. *Is unable to disclose and provide verification of SSNs for all household members, except for those household members who do not contend eligible immigration status or tenants who were 62 or older on January 31, 2010, whose initial determination of eligibility was begun before January 31, 2010. *
+
+3. Does not sign and submit verification consent forms or the Authorization for Release of Information (forms HUD-9887 and HUD-9887-A);
+
+4. Has household characteristics that are not appropriate for the specific type of unit available at the time, or has a family of a size not appropriate for the unit sizes that are available;
+
+NOTE: In such cases, the owner may deny the applicant admission to a specific unit, but the applicant may continue to wait for another unit. See the example below.
+
+Example – Denial of Unit An owner could deny an applicant family a particular unit and place the family on the waiting list if the only available unit is an accessible unit and the following is true: (a) the applicant household does not include an individual requiring the features of the unit, and (b) there are either tenants in the property or applicants on the waiting list who desire such a unit and who have a member of the household requiring the features of the unit.
+
+NOTE: In some programs, eligibility is dependent on the head or spouse meeting particular eligibility criteria.
+
+5. Includes family members who did not declare citizenship or noncitizenship status, or sign a statement electing not to contend noncitizen status (see paragraph 4-31). However, an owner should permit families to revise their application to exclude proposed family members who do not declare citizenship or eligible noncitizen status; or
+
+6. Does not meet the owner’s tenant screening criteria.
+
+C. Notification of Applicant Rejection
+
+1. Rejection notices must be in writing
+
+2. The written rejection notice must include:
+
+a. The specifically stated reason(s) for the rejection;
+
+b. The applicant’s right to respond to the owner in writing or request a meeting within 14 days to dispute the rejection. and
+
+c. That persons with disabilities have the right to request reasonable accommodations to participate in the informal hearing process.
+
+D. Owner Meetings with Applicants to Discuss Rejection Notices
+
+1. Any meeting with the applicant to discuss the applicant’s rejection must be conducted by a member of the owner’s staff who was not involved in the initial decision to deny admission or assistance.
+
+2. Within 5 business days of the owner response or meeting, the owner must advise the applicant in writing of the final decision on eligibility.
+
+Section 2: Marketing
+
+4-10 Key Regulations
+
+This paragraph identifies key regulatory citations pertaining to Section 2: Marketing. The citations and their titles (or topics) are listed below.
+
+Affirmative Fair Housing Marketing and Fair Housing Poster
+
+1. *24 CFR 1.6 – Compliance information for Title VI of the Civil Rights Act (for projects that receive Federal financial assistance): maintenance and submission to HUD of information on the extent to which members of minority racial and ethnic groups are beneficiaries of and participants in HUD assisted programs
+
+2. 24 CFR 8.55 – Compliance information for Section 504 of the Rehabilitation Act of 1973 (for projects that receive Federal financial assistance): maintenance and submission to HUD of information on the extent to which individuals with disabilities are beneficiaries of HUD assistance programs
+
+3. 24 CFR 107.25 – Nondiscrimination provisions in legal instruments (per Executive Order 11063)
+
+4. 24 CFR 107.30 – Recordkeeping requirements (per Executive Order 11063): maintenance of racial, religious, national origin, and sex data in connection with HUD programs and activities, including applicants for and occupants of multifamily housing*
+
+5. 24 CFR 108.40 (Affirmative fair housing marketing compliance reviews)
+
+6. 24 CFR, part 110 – Fair Housing Poster
+
+7. *24 CFR 121.2 – Furnishing of data by program participants (per the Fair Housing Act): race, color, religion, sex, national origin, age, handicap, and family characteristics of persons and household applying for, participating in, or benefiting from HUD programs*
+
+8. 24 CFR part 200, subpart M – Affirmative Fair Housing Marketing Regulations
+
+9. 24 CFR 880.601, 881.601, 883.701 (Responsibilities of owner/borrower)
+
+10. 24 CFR 884.214, 886.121, 886.321 (Marketing)
+
+11. 24 CFR 891.400, 891.600 (Responsibilities of the owner/borrower)
+
+4-11 Summary of Key Requirements
+
+A. Affirmative Fair Housing Marketing Requirements
+
+Each multifamily property built or substantially rehabilitated since July 1972 must develop and carry out an Affirmative Fair Housing Marketing Plan (Form HUD-935.2A). Projects built or rehabilitated before February 1972 are not required to have a plan in the prescribed form, unless the plan is required by a housing assistance contract. However, Owners must affirmatively market their units to those least likely to apply.
+
+B. Fair Housing Poster
+
+Owners of HUD-subsidized multifamily housing must display the Equal Housing Opportunity poster (i.e., Fair Housing Poster) in accordance with HUD requirements.
+
+4-12 Affirmative Fair Housing Marketing
+
+This paragraph describes affirmative fair housing marketing activities and implementation of the Affirmative Fair Housing Marketing Plan (Form HUD-935.2A) approved for the property. It also discusses compliance and requirements for updating the Affirmative Fair Housing Marketing Plan.
+
+A. Key Requirements
+
+1. The marketing effort should attract a broad cross-section of the eligible population without regard to race, color, religion, sex, disability, familial status, or national origin.
+
+2. Whenever additional applicants are needed to fill available units, advertising must be carried out in accordance with the HUD-approved Affirmative Fair Housing Marketing Plan, or, in cases where no Affirmative Fair Housing Marketing Plan is required, marketing must be conducted in an affirmative manner.
+
+3. During compliance reviews, owners must be able to provide information documenting their compliance with affirmative fair housing marketing requirements and their approved plan.
+
+B. Affirmative Fair Housing Marketing Plan
+
+Owners must comply with the requirements of their HUD-approved Affirmative Fair Housing Marketing Plan, which is designed to promote equal housing choice for all prospective tenants regardless of race, color, religion, sex, disability, familial status, or national origin.
+
+1. The purpose of the plan is to ensure that eligible families of similar income levels will have a similar range of housing opportunities.
+
+2. The plan outlines marketing strategies the owner must use, including special efforts to attract persons who are least likely to apply because of such factors as the racial and ethnic composition of the neighborhood in which the property is located. Marketing should also seek to reach potential applicants outside the immediate neighborhood if marketing only within the neighborhood would create a disparate impact against certain classes (e.g., if the entire neighborhood includes no minorities).
+
+3. Owners must monitor the results of the marketing effort and adjust their marketing techniques as necessary.
+
+4. Owners may not require local residency as a prerequisite for admission. However, with HUD approval, owners may give preference to residents of the municipality in which the property is located. HUD will approve the use of local residency preferences only if such preferences are found to be consistent with nondiscrimination and equal opportunity requirements and the goals of the Affirmative Fair Housing Marketing Plan. See paragraph 4-6 C.1 for more information about residency preferences.
+
+5. HUD does not require subsidized multifamily projects built prior to February 1972 to have an Affirmative Fair Housing Marketing Plan, unless the property has been substantially rehabilitated subsequent to February 1972 or the plan is required by a housing assistance contract. However, owners of such properties are required to affirmatively market their units to those least likely to apply.
+
+C. Special Marketing Requirements
+
+1. All Section 8 units. Owners must target their marketing and outreach activities to attract applicants with incomes below the very low-income limit. Owners must also target their marketing and outreach activities to attract applicants with incomes at or below the extremely low-income limit to achieve the income targeting requirements (see paragraph 4-5).
+
+2. New construction and substantial rehabilitation units NOT designed for disabled or elderly persons (except previously HUD-owned properties).
+
+Before marketing to other prospective tenants, owners must market to nonelderly families, including those with disabilities, who are:
+
+a. Least likely to apply as identified in the Affirmative Fair Housing Marketing Plan; and
+
+b. Expected to reside in the community because of their current or planned employment.
+
+3. Section 202 PRAC and Section 811 PRAC properties - Supportive Housing for the Elderly and Supportive Housing for Persons with Disabilities.
+
+a. Owners must commence and continue diligent marketing activities not later than 90 days before the anticipated date of availability of the first unit or occupancy of the group home. Marketing activities must include the provision of notices on the availability of housing under the program to operators of temporary housing for the homeless in the same housing market.
+
+b. At the time of PRAC execution, the owner must submit to HUD a list of leased and unleased assisted units (or, in the case of a group home, leased and unleased residential spaces) with a justification for the unleased units or residential spaces in order to qualify for vacancy payments for these units or spaces.
+
+D. Advertising
+
+When a property is initially leased, or when available units cannot be filled from applicants on a waiting list, or no waiting list exists; the owner must advertise to attract eligible applicants in the market area who are least likely to apply. Advertising must be directed to all potential applicants regardless of race, color, religion, sex, disability, familial status, or national origin.
+
+1. An affirmative marketing program must be in effect for each multifamily project throughout the life of the mortgage. Such a program typically involves publicizing the availability of housing opportunities to all persons, regardless of race, color, religion, sex, disability, familial status, or national origin, in the media most likely to be used by the applicants, including minority publications or other minority outlets that are available in the housing market area.
+
+2. Owners must target advertising to groups other than the typical population of the neighborhood in which the property is located, reaching out to applicants who are least likely to apply because they are not the predominant racial or ethnic group in the neighborhood.
+
+3. All advertising must include either the HUD-approved Equal Housing Opportunity logo, slogan, or statement. All advertising depicting persons should depict members of all eligible protected classes including individuals from both majority and minority groups.
+
+4. The owner’s responsibility to market projects to those least likely to apply includes marketing to the LEP population in the community.
+
+E. Records
+
+During compliance reviews, owners must be able to provide documentation that marketing activities for the property have been consistent with affirmative fair housing marketing requirements and the approved plan for the property. Useful records for this purpose include copies of media and marketing materials, records of marketing activities conducted, and documentation of any special marketing activities conducted in accordance with the property’s plan.
+
+F. Updating the Marketing Plan
+
+1. The approved Affirmative Fair Housing Marketing Plan must be followed. It is the owner’s blueprint for marketing activity.
+
+2. Owners must review their Affirmative Fair Housing Marketing Plan every five years or when the local Community Development jurisdiction’s Consolidated Plan is updated.
+
+3. When reviewing the plan, the owner should look at the current demographics of the market area to determine if there have been demographic changes in the population in terms of race, ethnicity, religion, persons with disabilities and/or large families. The owner will then determine if the population least likely to apply for the housing is still the population identified in the Affirmative Fair Housing Marketing Plan, whether current advertising sources still exist, whether the advertising and publicity cited in the current Affirmative Fair Housing Marketing Plan are still the most applicable or whether advertising sources should be changed or expanded. Even if the demographics of the community have not changed, the owner should determine if the outreach currently being performed is reaching those it is intended to reach as measured by project occupancy. If not, the Affirmative Fair Housing Marketing Plan should be updated.
+
+4. The revised plan must be submitted to HUD for approval. HUD or the contract administrator will review whether affirmative marketing is actually being performed in accordance with the Affirmative Fair Housing Marketing Plan during an on-site monitoring review.
+
+5. If based on their review the owner determines the Affirmative Fair Housing Marketing Plan does not need to be revised, they should maintain a file documenting what was reviewed, what was found as a result of the review, and why no change is required. HUD or the contract administrator may review this documentation during a monitoring review.
+
+G. Fair Housing Poster
+
+1. Owners must post and maintain the required Equal Housing Opportunity poster.
+
+a. Owners may obtain copies of the poster from their HUD Field Office.
+
+b. Owners may use a facsimile of the poster if the facsimile and lettering are equivalent in size and legibility to the poster available from HUD.
+
+2. The Fair Housing Poster must be prominently displayed so it is readily apparent to all persons seeking housing.
+
+Section 3: Waiting List Management
+
+4-13 Key Regulations
+
+This paragraph identifies key regulatory citations pertaining to Section 3: Waiting List Management. The citations and their titles (or topics) are listed below.
+
+A. Taking Applications for Occupancy
+
+1. 24 CFR 5.659 Family Information and Verification
+
+2. 24 CFR 880.603, 881.601, 883.701, 884.214, 886.121, 886.321, 891.410, 891.610, 891.750 (Selection and admission of tenants)
+
+B. Creating and Maintaining Waiting Lists
+
+1. 24 CFR 5.655 Owner Preferences in Selection for a Project or Unit
+
+2. 24 CFR 880.603, 881.601, 883.701, 884.214, 886.121 and 132, 886.321 and 329, 891.410, 891.610, 891.750 (Tenant selection and admission)
+
+C. *Social Security Number (SSN) Requirements
+
+1. 24 CFR 5.216 Disclosure and Verification of Social Security and Employer Identification Numbers
+
+D. Record-Keeping
+
+1. 24 CFR 880.603, 881.601, 883.701, 884.214, 886.321, 886.329, 891.410, 891.610, 891.750 (Selection and admission of tenants)
+
+2. 24 CFR, part 1 – Nondiscrimination in Federally Assisted Programs.
+
+4-14 Taking Applications for Occupancy
+
+A. Key Requirements
+
+1. Application. Anyone who wishes to be admitted to an assisted property or placed on a property’s waiting list must complete an application. In addition to providing applicants the opportunity to complete applications at the project site, owners may also send out and receive applications by mail. Owners shall accommodate persons with disabilities who, as a result of their disabilities, cannot utilize the owner’s preferred application process by providing alternative methods of taking applications.
+
+2. Applicant certification. The application must include a signature from the applicant certifying the accuracy and completeness of information provided. See the discussion in Chapter 5, Section 3 for information about the Privacy Act and disclosure requirements.
+
+3. *Supplemental Information to Application for Assistance. The application must include as an attachment, form HUD-92006, Supplement to Application for Federally Assisted Housing. See D below for instructions on use of this form.*
+
+4. The applicant provides self-certification of their race and ethnicity for data collection by using form HUD-27061-H (Exhibit 4-3). Completing this form is optional and there is no penalty for not completing it. Owners should not complete the form on behalf of the tenant. When the applicant chooses not to self certify race or ethnicity, a notation that the applicant chose not to provide the race and ethnicity certification *may* be placed in their file.
+
+B. Contents of Application
+
+1. Although HUD does not prescribe an application format, a written application form used to initiate verification of eligibility factors should include the following data:
+
+a. Household characteristics – name, sex, age, disability status (only where necessary to establish eligibility) of each household member, need for an accessible unit, and race/ethnicity of head of household;
+
+b. General household contact information – address, phone number;
+
+c. Identification of the approved preferences, if HUD approval is required, for which the household qualifies (only if preferences are used at the property);
+
+d. Source(s) and estimate(s) of household’s anticipated annual income and assets;
+
+e. Citizenship declaration (see Exhibit 3-5) and verification consent forms (see Exhibit 3-6). (This is not required for 221(d)(3) BMIR (without Section 8 or any other assistance), 202 (without Section 8), 202 PAC, 202 PRAC, and 811 PRAC properties that have no other subsidy);
+
+f. Marketing information to understand how the applicant heard about the property; and
+
+g. Screening information – prior landlords, credit, and drug and criminal history, consistent with the property’s tenant selection policies.
+
+2. *The owner’s application must request the following information from applicants.
+
+a. Whether the applicant or any member of the applicant’s household, is subject to State lifetime sex offender registration in any state.
+
+b. Listing of states where the applicant and members of the applicant’s household have resided.
+
+c. Disclosure of SSNs for the applicant and for all members of the applicant’s household, except those household members who do not contend eligible immigration status.
+
+d. Information from applicants who were age 62 or older as of January 31, 2010, and who do not have a SSN, if they were receiving HUD rental assistance at another location on January 31, 2010. This information is needed in order for the owner to verify whether the applicant qualifies for the exemption from disclosing and providing verification of a SSN.
+
+3. The owner must include as an attachment to the application form HUD-92006, Supplement and Optional Contact Information for HUD-Assisted Housing Applicants, Supplement to Application for Federally Assisted Housing.*
+
+C. Types of Applications
+
+Owners may choose to use a "full" application form, requiring all the detailed information needed to make a determination of eligibility, or a shorter pre-application form.
+
+1. If an applicant will be placed on a waiting list, as opposed to being immediately offered a unit, the owner may use a pre-application (brief form of application), which provides the minimum information needed to determine if the applicant should be put on the waiting list.
+
+2. If only a preliminary application has been completed, a full application should be completed at the time a unit is available so that the owner has enough information to determine the applicant's eligibility completely.
+
+D. *Supplement to Application for Federally Assisted Housing
+
+Section 644 of the Housing and Community Development Act of 1992 requires owners to provide applicants, as a part of their application for housing, the option to include information on an individual or organization that may be contacted to assist in providing any delivery of services or special care to applicants who become tenants and to assist with resolving any tenancy issues arising during tenancy.
+
+1. At time of application:
+
+a. Owners must provide applicants the opportunity to complete the information on form HUD-92006, Supplement to Application for Federally Assisted Housing. This form gives applicants the option to identify an individual or organization that the owner may contact and the reason(s) the individual or organization may be contacted. The applicants, if they choose to provide the additional contact information, must complete, sign and date the form.
+
+b. Owners cannot require that applicants provide the contact information, as providing contact information is optional on the part of the applicant. Those applicants who choose not to provide the contact information should check the box indicating that they “choose not to provide the contact information” and sign and date the form.
+
+c. Owners should provide applicants the opportunity at time of admission to update, remove or change contact information provided at the time of application, particularly if a long period of time has elapsed between the time of application and actual admission.
+
+d. If the applicant chooses to have more than one contact person or organization, the applicant must make clear to the owner the reason each person or organization may be contacted. The owner should accommodate the applicant by allowing them to complete a form HUD-92006 for each contact and indicate the reason the owner may contact the individual or organization.
+
+For example, the applicant may choose to have a relative as a contact for emergency purposes and an advocacy organization for assistance for tenancy purposes.
+
+2. After admission:
+
+a. Owners should provide tenants who were not provided the opportunity to provide contact information at the time of
+
+application and admission, the option to complete form HUD-92006 and provide contact information at the time of their annual recertification.
+
+b. Owners cannot require tenants who have not provided contact information to provide the contact information, as providing this information is optional on the part of the individual or family.
+
+c. Tenants may request to update, remove or change the information provided on form HUD-92006 at any time and owners must honor this request.
+
+d. Owners should provide tenants who have provided contact information using form HUD-92006 the opportunity to update, remove or change the information at the time of annual recertification to ensure that current information is on file. This includes allowing tenants who originally chose not to provide contact information the opportunity to provide contact information if they request to do so. Remember, providing contact information is optional on the part of applicants and tenants.
+
+3. Owners use of the contact information.
+
+Owners will contact the individual or organization provided only for the use or uses indicated by the applicant or tenant on form HUD-92006. This contact information will assist the owner in providing the delivery of services or special care to the tenant and assist in any tenancy issues arising during the term of tenancy of the tenant.
+
+4. Retention and confidentiality of contact information.
+
+a. If the applicant does not become a tenant, the owner will retain the form HUD-92006 with the application for three years. (See Paragraph 4-22.B)
+
+b. If the applicant becomes a tenant, the owner will retain the form HUD-92006 with the application for the term of tenancy plus three years. (See Paragraph 4-22.C)
+
+c. Owners must keep the contact information confidential. Owners are allowed to release the information for the stated statutory purpose only: To assist the owners in providing services or special care for such tenants, and in resolving issues that may arise during the tenancy of such tenants.*
+
+4-15 Matching Applicants on the Waiting List to Available Units
+
+A. Overview
+
+Once unit size and preference order is determined, owners must select applicants from the waiting list in chronological order to fill vacancies. The owner
+
+then determines eligibility (if that has not already been done), performs tenant screening (see Section 4 of this chapter), and decides whether the applicant can be housed based on income-targeting requirements.
+
+B. Nondiscrimination When Matching Applicants to Available Units
+
+Although an owner may establish preferences to admit households with specific characteristics from the waiting list, the owner must never base applicant selection or denial of assistance upon:
+
+1. Membership in a socio-economic class (e.g., welfare recipients, single parent households) or lack of membership in the sponsoring organization;
+
+2. Familial status;
+
+3. Race, color, religion, sex, or national origin of household members;
+
+4. Whether the household has a member with a specific disability (unless restricted by program statute);
+
+5. Family size (However, if the family size requires a unit size that does not exist in the property, the family must be denied assistance. See paragraph 4-9.); and
+
+6. Age (unless restricted by program statute).
+
+C. Matching Family Characteristics with Available Units
+
+In selecting a family to occupy a particular unit, the owner may match certain family characteristics with the type of unit available.
+
+1. Matching families to units according to family size and number of bedrooms is not only acceptable but also necessary to comply with occupancy standards and local codes.
+
+2. Owners must first offer units with special accessibility features to families that include persons with disabilities requiring such features.
+
+D. Section 8 Units: Extremely Low-Income Targeting Requirements and Tenant Selection
+
+1. When an extremely low-income applicant is needed to achieve targeting requirements, and the next applicant on the waiting list has income above the extremely low-income limit, that applicant must be returned to the waiting list. When the owner is ready to house an applicant with income above the extremely low-income limit, this applicant can be served.
+
+2. A notation must be made on the waiting list indicating why this applicant has been returned to the list rather than housed or withdrawn. The owner will then look for the first extremely low-income applicant on the list needing the appropriate bedroom size and qualifying for the top-ranked preference, if preferences are used by the project.
+
+E. Restrictions on Applicant Selection Based on Income
+
+Owners may not select families for unit/property occupancy in an order inconsistent with the waiting list in order to house relatively higher-income families. However, an owner may select a family for occupancy of a property or unit based on its extremely low-income status in order to satisfy income-targeting requirements. (See paragraph 4-5 on income-targeting for details.)
+
+F. Matching Single Persons to Units
+
+Single persons are eligible families (if they meet all eligibility criteria for the property). However, single persons may not be placed on the two-bedroom waiting list or occupy a unit with two or more bedrooms except a person with a disability who needs the larger unit as a reasonable accommodation or an elderly person who has a verifiable need for a larger unit. Also a displaced person may be placed on the waiting lists for two-bedroom or larger units if no one-bedroom units are available. See paragraph 3-23.G for more information about assigning units larger than required.
+
+4-16 Creating and Maintaining Waiting Lists
+
+A. Key Requirements
+
+1. Receiving and recording the application. Upon receipt of an application for tenancy or assistance, the owner must indicate on the application the date and time received. This may be accomplished by either using a date and time stamp or by writing and initialing the date and time received. The owner must then either process the applicant for admission, place the applicant on the waiting list or, based on a preliminary eligibility determination, reject the applicant. Examples of applicants who might be rejected based upon a preliminary eligibility determination include a 35-year old individual applying for a unit in a Section 202 PRAC property, a household of eight applying to a property with only efficiency and one-bedroom units, and an applicant with income that is $7,000 over the income limit.
+
+2. Preferences. Owners must collect information about the preferences for which the applicant qualifies so that they are able to select applicants from the waiting list in accordance with preferences established for the property. (See paragraph 4-6 for additional information about preferences.)
+
+3. Providing notice. The owner must provide notice of closing of the waiting list.
+
+B. Opening and Closing the Waiting List
+
+Owners should monitor the vacancies in their properties and their waiting lists regularly to ensure that there are enough applicants to fill the vacancies. Furthermore, owners should monitor their waiting list to make sure that they do not become so long that the wait for a unit becomes excessive.
+
+1. Closing waiting lists.
+
+a. The waiting list may be closed for one or more unit sizes when the average wait is excessive (e.g., one year or more).
+
+b. When the owner closes the list, the owner must advise potential applicants that the waiting list is closed and refuse to take additional applications.
+
+c. When the owner decides to no longer accept applications, the owner must also publish a notice to that effect in a publication likely to be read by potential applicants. The notice must state the reasons for the owner’s refusal to accept additional applications.
+
+2. Opening waiting lists.
+
+a. When the owner agrees to accept applications again, the notice of this action must be announced in a publication likely to be read by potential applicants in the same manner (if possible, in the same publications) as the notification that the waiting list was closed. The notifications should be extensive, and the rules for applying and the order in which applications will be processed should be stated.
+
+b. Advertisements should include where and when to apply and should conform to the advertising and outreach activities described in the Affirmative Fair Housing Marketing Plan.
+
+C. Determining an Applicant’s Preliminary Eligibility
+
+1. Owners should make a preliminary eligibility determination before putting a household on the waiting list.
+
+a. The owner reviews the application to ensure that there are no obvious factors that would make the applicant ineligible.
+
+b. If a preliminary screening indicates that a family is eligible for tenancy, but units of appropriate size are not vacant, the owner must place the family on the waiting list for the property and notify the family when a suitable unit becomes available. A final eligibility determination is made at the time the unit is available. (See discussion of unit size determinations in paragraph 3-23.)
+
+c. Using this system, the owner avoids performing the eligibility determination twice before admitting the applicant to the property, but the result may be that applicants placed on the waiting list may ultimately be found to be ineligible.
+
+2. *If the preliminary screening indicates that a family is eligible for tenancy but SSNs have not been disclosed and verification of the SSN provided for the applicant and all of the applicant’s household members, the owner must place the family on the waiting list and notify the family when a suitable unit becomes available. However, the applicant must disclose and provide verification of a SSN for all household members before they can be admitted. See Chapter 3, Paragraph 3-9 for more information on disclosing and verifying SSNs.*
+
+3. Alternatively, owners may choose to place applicants on the waiting list after making a more in-depth eligibility determination. If a property’s waiting list is short, this approach can be a good practice to help place applicants quickly when they reach the top of the waiting list. However, if an applicant remains on the waiting list for an extended period of time, the owner will need to complete another full determination once the applicant reaches the top of the list.
+
+4. If an applicant is otherwise eligible for tenancy but no appropriate size unit exists in the property, the owner must reject the application. (See paragraph 4-9 for more information about rejecting applicants.)
+
+5. Applicants who are obviously not eligible for tenancy must be rejected. (See paragraph 4-9.)
+
+D. Creating Waiting Lists
+
+To ensure that applicants are appropriately and fairly selected for the next available unit, it is essential for owners to maintain waiting lists with appropriate information taken from the application for tenancy.
+
+1. Plan of list maintenance. In order to ensure that all applicants are treated fairly, the tenant selection plan must describe how the waiting list is maintained.
+
+2. Updates of waiting list. Keeping the waiting list as up-to-date as possible will help reduce errors and minimize the administrative resources expended on processing information regarding applicants who are ineligible or no longer interested in residing in the property.
+
+a. Owners may periodically update their waiting lists.
+
+b. Owners may require applicants to contact the property every six months in order to stay on the waiting lists.
+
+3. Data included on the waiting list. The waiting list must include the following data taken from the application:
+
+a. Date and time the applicant submitted an application;
+
+b. Name of head of household;
+
+c. Annual income level (used to estimate levels for income-targeting, i.e., extremely low-income, very low-income, and low-income) (See discussion of income limits in paragraph 3-6);
+
+d. Identification of the need for an accessible unit, including the need for accessible features;
+
+e. Preference status; and
+
+f. Unit size.
+
+NOTE: See Figure 4-5 for a sample waiting list format.
+
+4. Excluding data from the waiting list. While additional information, such as race/ethnicity, gender, and family size is collected on pre-applications and applications and retained in property files, it is good practice to avoid including these types of data on the property waiting list. This information
+
+is not directly relevant to tenant selection and might result in discrimination against some applicants.
+
+5. Applicant presence on multiple waiting lists. An applicant may be on multiple waiting lists (or waiting for more than one unit size). Based upon the application dates and times and qualification for preferences (if used), placement on these multiple lists may vary.
+
+Figure 4-5: Sample Waiting List Format
+
+Need for Com- Removed/ Income Move-in Preference Time of Head of Accessible ment/ Rejected Date of Applica- House- Unit Level Date Type Unit Contact Date Applica- Size tion hold ELI VLI LI Y N tion 10:30 AM Working family Mary 2 X X preference; 12/3/01 Tate Elderly preference 1:00 PM
+
+Hiroshi 2 X X 12/4/01 Kihara
+
+4-17 Placing Families with Disabled Family Members
+
+A. An owner must not skip over a family that has reached the top of the list and has indicated a need for certain unit accommodations because of a disability. If separate waiting lists are used for persons with disabilities, they must also be placed on the general waiting list and given the option of the next available unit if they come to the top of the list.
+
+B. The family must be given the opportunity to benefit from the program and decide for itself, in compliance with Section 504, whether a unit meets the needs of the family, based on size, location, or facilities. This means that the owner must notify the household whenever any unit becomes available, without regard to unit accessibility.
+
+C. The applicant may decide to accept a standard unit, particularly when units meeting the household’s needs are in short supply. The family may accept the unit and request some modification to the unit as a reasonable accommodation. (See further discussion of Section 504 requirements in Chapter 2, Section 3, Subsections 4 and 5.)
+
+D. Families who have a member who needs the accessibility feature of the unit take priority to occupy accessible units over families with no disabled family members.
+
+NOTE: See paragraph 2-32 for additional information on assigning accessible units.
+
+4-18 Documenting Changes to Waiting Lists
+
+A. Overview
+
+Whenever a change is made in the waiting list, an action is taken, or an activity specific to an applicant occurs, a notation must be made on the waiting list.
+
+B. Providing an Auditable Record of Changes to Waiting Lists
+
+The goal of the annotation is to provide an auditable record of applicant additions, selections, withdrawals, and rejections. Independent reviewers looking at the waiting list should be able to:
+
+1. Find an applicant on the waiting list;
+
+2. Readily confirm that an applicant was housed at the appropriate time based on unit size needs, preferences, and income-targeting; and
+
+3. Trace various actions taken with respect to a family’s application for tenancy.
+
+C. Maintaining Documentation of the Waiting Lists
+
+Owners must develop a method to maintain documentation of the waiting list composition, application status, and actions taken.
+
+1. The method adopted by an owner will vary based upon the level of automation used at the property.
+
+2. Owners should periodically analyze their waiting list policies and documentation procedures to determine whether an independent party reviewing the list and its supporting documentation could follow the actions taken, applicable preferences, and reasons why certain individuals may have been selected ahead of others on the waiting list. If not, the owner must make the waiting list format and associated practices more transparent.
+
+D. Maintaining Records of Manually Recorded Waiting Lists
+
+An owner may keep a manual property waiting list.
+
+1. Manually maintained waiting lists must be maintained as a permanent record.
+
+a. The list must not be “rewritten.” b. The list must be maintained in a manner that cannot easily be altered. c. The list must be kept in a manner that can be audited. 2. The manual waiting list must provide an easily viewable record of the date and time of application, and date and time of selection from the waiting list.
+
+E. Maintaining Records for Electronic Waiting Lists
+
+Owners may maintain an electronic waiting list (instead of a manual property waiting list).
+
+1. Electronic waiting lists must have a mechanism for maintaining the date and time of each applicant’s placement on or selection from the waiting list and a way to document changes made to the list. The following are examples of methods that owners might use to track inputs to the electronic waiting list and changes to it.
+
+a. Use a data backup function to record the time and date of entry of new applications and changes to existing records in the electronic waiting list.
+
+b. Print a record of the appearance of the waiting list as often as necessary (at least monthly) to show each applicant’s placement on and selection from the list. The time and the date of the printout should appear on the report. The owner can file this information in the tenant file and in a central waiting list selection file.
+
+c. Whenever status changes occur, such as changes in family composition and unit size, the change should be recorded with an explanation, and the re-sorted list should be printed.
+
+2. To the extent possible, the owner should use electronic safeguards, such as assigning waiting list password access only to individuals responsible for maintaining the system. Ideally, a system should record the user name and the time, date, and action entered whenever a record is changed or entered in the electronic waiting list.
+
+4-19 Updating Waiting List Information
+
+A. The owner should update the waiting lists annually or semi-annually to ensure that applicant information is current and that any names that should no longer be on the list are removed.
+
+B. If the household composition changes, the owner must update the waiting list information and decide whether the household needs the same or a different unit size. The owner’s written policy will determine if the family maintains the original application date or if the place on the waiting list is based on the date of the new determination of family composition.
+
+C. The owner must establish occupancy standards as part of the property’s tenant selection plan and consistently apply those standards in assigning unit size to applicants. (See paragraph 3-23 for more information about occupancy standards.)
+
+Example - Applicant Change in Household Composition The Chiu family applied to the Dogwood Apartments project on 5/12/01. They have been assigned to the two-bedroom waiting list. The family includes Liang and Jun Chiu and a 3-year-old daughter. On 2/21/02, Jun Chiu gives birth to twins. The family notifies Dogwood of this change in family composition on 2/25/02. The family is now in need of a three-bedroom unit.
+
+The owner's policy in the tenant selection plan for the property allows a family to have as many as two-persons per bedroom, but permits larger units based on the age differences between children and the relationships of adults.
+
+Because the family size now results in more than two persons per bedroom in a two-bedroom unit, the owner must now move the family to the three-bedroom waiting list, with an application date of 5/12/01. The owner’s written policy allows the applicant to retain the original application date.
+
+If there are no three-bedroom units in the property, the family must be notified that they are not eligible for the property and removed from further consideration on the waiting list. This action must be documented on the waiting list, and proper written notification must be provided to the family.
+
+D. If the applicant contact information changes, such as the address or phone number, the owner must note the new information and the date it was received
+
+on the application submitted by the family and must ensure that the waiting list (either manual or electronic) is accurately updated.
+
+4-20 Removing Names from the Waiting List
+
+The owner must document removal of any names from the waiting list with the time and date of the removal.
+
+A. The tenant selection plan must include a written policy that describes when applicant names will be removed from the waiting list. Examples of applicant removal policies an owner may adopt are:
+
+1. The applicant no longer meets the eligibility requirements for the property or program; 2. The applicant fails to respond to a written notice for an eligibility interview; 3. The applicant is offered and rejects two units in the property (or any number of unit offers as specified in the owner's written policies); 4. *The applicant fails to provide SSNs for all household members.*
+
+5. Mail sent to the applicant's address is returned as undeliverable; or 6. The unit that is needed – using family size as the basis – changes, and no appropriate size unit exists in the property. B. The owner must periodically print out electronic waiting lists or preserve backup copies showing how the waiting list appeared before and after the removal of each name.
+
+4-21 Reinstating Applicants to the Waiting List
+
+If an applicant is removed from the waiting list, and subsequently the owner determines that an error was made in removing the applicant (e.g., the incorrect address was used in sending mail to the applicant, the applicant did not respond to information or updates because of a disability), the applicant must be reinstated at the original place on the waiting list.
+
+4-22 Record-Keeping
+
+A. The owner must retain current applications as long as their status on the waiting list is active.
+
+B. Once the applicant is taken off the waiting list, the owner must retain the application, *form HUD-92006 completed by the applicant*, initial rejection notice, applicant reply, copy of the owner’s final response, and all documentation supporting the reason for removal from the list for three years.
+
+C. When an applicant moves in and begins to receive assistance, the application *and form HUD-92006 completed by the applicant* must be maintained in the tenant file for the duration of the tenancy and for three years after the tenant leaves the property.
+
+D. All files must be kept secure so that personal information remains confidential.
+
+E. The applicant’s or tenant’s file should be available for review by the applicant or tenant upon request or by a third party who provides signed authorization for access from the applicant or tenant. *EIV income data found in the tenant’s file has additional disclosure requirements (see paragraph 9-18).*
+
+F. The owner must dispose of applicant and tenant files and records in a manner that will prevent any unauthorized access to personal information, e.g., burn, pulverize, shred, etc.
+
+G. Owners must keep records and submit reports and information as required by HUD to enable HUD and the owner to ascertain whether the owner has complied, or is complying with, nondiscrimination requirements. (See Chapter 2.)
+
+Section 4: Selecting Tenants from the Waiting List
+
+4-23 General
+
+A. Once an owner has solicited applications and developed a waiting list for applicants for whom no unit is immediately available, the owner must select applicants from the waiting list and offer units in the order required by HUD rules and owner policies. This section describes options for the owner and provides guidance on how to carry out these activities.
+
+B. When a unit becomes vacant, the owner must select the next applicant from the waiting list based on the unit size available, preferences established for the property, income-targeting policies and requirements, *disclosure and verification of SSN(s)* and screening policies applied by the owner. The owner will select the first name on the waiting list for the appropriate unit size (or list of names for units reserved for disabled applicants) and make a final determination of eligibility and suitability for tenancy, using the criteria described in Chapter 3, Sections 1 and 2, and the procedures in this section.
+
+4-24 Applicant Interviews
+
+A. When an appropriate unit will be available in the near future, the owner must interview an applicant and obtain current information about the family’s circumstances. For documents that an owner may ask applicants to bring to the interview, see Exhibit 4-1.
+
+B. At the interview, the owner must:
+
+1. Confirm and update all information provided on the application. If a pre-application was submitted, complete a full application form and confirm and update the information.
+
+2. Explain program requirements, *including use of the information contained in the EIV system*, verification procedures, and penalties for false information. The penalties include eviction, loss of assistance, fines up to $10,000, and imprisonment up to five years.
+
+3. Obtain family income and composition information and other data needed to verify eligibility and compute the tenant’s share of the rent. (See Chapter 5.)
+
+4. Review the financial information on the application and specifically ask the tenant whether any member of the household:
+
+a. Receives any of the types of income listed in Chapter 5, Section 1 (e.g., self-employment income, unemployment compensation, income maintenance payments). If it appears likely that an applicant is receiving a form of income not reported on the application, ask the applicant about that source of income and document the applicant’s response in the file; and
+
+b. Has any assets. (See paragraph 5-7 for a description of assets.)
+
+5. Ask the head of household, spouse, or co-head, and household members age 18 and over to sign the release of information consent portion of the Authorization for Release of Information (Forms HUD 9887 and 9887-A) and any other necessary verification requests.
+
+6. Obtain declaration of citizenship (see Exhibit 3-5) and verification consent forms (see Exhibit 3-6) for verification from all household members as appropriate.
+
+7. Inform the applicant of the screening requirements used by the owner, *including use of the Existing Tenant Search in EIV for determining if the applicant, or a member of the applicant’s family, is receiving HUD’s rental assistance at another location.* (If the owner performs screening activities, a consent to check landlord or credit history should also be obtained).
+
+8. Require the head of household, spouse, or co-head to give a written certification as to whether any family member did/did not dispose of any assets for less than fair market value during the two years preceding the effective date of the certification/recertification.
+
+a. The certification must include a list of all assets disposed of for less than fair market value, the dates disposed of, the amount received, and the asset’s market value at the time of disposition.
+
+b. HUD does not prescribe a form for this certification. It may be part of an application form or a separate form.
+
+NOTE: Owners need not obtain this information if the family is being considered only for a unit in a BMIR project without rental
+
+assistance because the disposal of assets does not affect income and rent calculations for BMIR tenants who do not receive rental assistance.
+
+9. *Require disclosure and verification of SSNs for all household members, except those who do not contend eligible immigration status, and tenants age 62 or older as of January 31, 2010, whose initial determination of eligibility was begun before January 31, 2010, and provide verification of the complete and accurate SSN assigned to them. (See paragraph 3-9 for more information on SSN disclosure and verification requirements.)*
+
+10. Advise the family that HUD will compare the information supplied with information federal, state, or local agencies have on the family’s income and household composition. *This will include the employment and income information received from SSA’s and HHS’ NDNH databases through HUD’s Computer Matching Agreements with these agencies.*
+
+11. Tell the family that a final decision on eligibility cannot be made until all verifications are complete.
+
+12. Provide each *applicant* with a copy of the appropriate HUD fact sheet, which describes how the tenant's rent is calculated.
+
+13. *Provide each household with copies of the EIV & You and the Resident Rights and Responsibilities brochures.*
+
+14. Inform the family that federal laws prohibit the owner from discriminating against individuals with disabilities. In summary, owners have responsibilities for making reasonable accommodations in policies, providing auxiliary aids, making units and facilities accessible, and permitting disabled persons to use assistance animals when they may provide the tenant with equal housing opportunities.
+
+15. Inform all applicants of housing for the elderly or disabled about the rules on owning pets. (See paragraph 6-10.)
+
+C. Generally, owners may not require tenants to participate in congregate meals or other services. However, in properties for the elderly or disabled for which HUD approved a mandatory meals program before April 1, 1987, the owner must inform all applicants about:
+
+1. The requirement to execute a meals contract. A meal contract is a separate contract incorporated as part of the lease that states in part:
+
+a. Substantial failure by a tenant to comply with the mandatory meals agreement will be a violation of the lease and will subject the tenant to eviction procedures in accordance with the lease;
+
+b. The number of meals required to be purchased;
+
+c. The duration of the meals agreement;
+
+d. The charges for the meals at the time the agreement is signed; and
+
+e. The exemptions from purchasing meals and the requirements to obtain these exemptions.
+
+2. Exemptions from purchasing meals may be made due to:
+
+a. Medical conditions;
+
+b. A paying job that keeps the tenant away from the property at meal time;
+
+c. Other absence from the property;
+
+d. Permanent immobility; and/or
+
+e. Discretionary exemptions, such as dietary practices, financial reasons, or religious reasons.
+
+4-25 Applying Income Targeting Requirements in Section 8 Properties
+
+A. HUD does not prescribe a method to ensure compliance with income-targeting. Sample steps that an owner may want to follow are listed in Figure 4-6.
+
+Figure 4-6: Sample Steps Owners May Use to Implement Income-Targeting
+
+Step 1: Estimate annual turnover for the property based on turnover history.
+
+Step 2: Analyze the waiting list by income category, looking particularly at the top of the list, that is, those applicants who are likely to be offered units during the coming year.
+
+Step 3: Take no action if at least 40% of the applicants on the waiting list who are expected to be offered units during the year have incomes at or below the extremely low-income limit. Applicants may be admitted in order, and compliance with the income-targeting rules will likely be achieved. Monitor quarterly to confirm compliance.
+
+Step 4: If at least 40% of the applicants who are expected to be offered units in the next year do not have incomes at or below the extremely low-income limit, then the property must establish tenant selection procedures to ensure that the 40% requirement is met. Owners should also consider increasing their efforts to market to extremely low-income applicants to ensure that a sufficient number of applicants on the waiting list meet the income-targeting requirements.
+
+See the discussion and examples following this figure for methodologies designed to achieve the income targeting requirements.
+
+B. Owners may not select families for unit/property occupancy in an order inconsistent with the waiting list in order to house relatively higher-income
+
+families. However, an owner may select a family for occupancy of a property or unit based on its extremely low-income status in order to satisfy income-targeting requirements. (See paragraph 4-5 for an explanation of the income-targeting requirement.)
+
+C. Regardless of the method chosen to comply with the income-targeting rule, the results should be monitored quarterly and adjusted if necessary. The selected method must be stated in the property’s tenant selection plan.
+
+NOTE: Tracking initial admissions to the Section 8 project based assistance program is important to ensure accurate tracking. For example, an initial certification processed to move a tenant from Section 236 assistance to Section 8 assistance is counted for income targeting.
+
+Example A 100 unit Section 236 property with 50 Section 8 subsidy units is 100% occupied and has very little turnover. A Section 8 tenant moves out of the property. The manager would like to give the Section 8 assistance to a Section 236 very low-income family who qualifies for Section 8 assistance but must be sure that income targeting requirements will be met. If the owner determines that the income targeting requirement cannot be met by initially certifying a low-income tenant, the owner must fill the vacancy with an extremely low-income family from the waiting list.
+
+D. Occupancy records must be kept so that auditors and those performing management reviews can monitor for compliance with the income-targeting requirement. Reviewers will check the tenant selection plan for a written description of the process and then review the admissions to ensure that the process was followed and the results are in compliance. Both move-in and initial admissions records must be maintained for auditing purposes.
+
+E. If an owner actively markets to extremely low-income families but is unable to attract a sufficient number to lease 40% of available units during the year to extremely low-income families, the owner may rent to other eligible families after a reasonable marketing period.
+
+F. To market adequately the owner must, at a minimum, advertise in the locality and conduct outreach to local organizations serving the extremely low-income population for no less than 30 days. If, after that period of time (with documentation of the marketing efforts), the owner is unable to attract eligible extremely low-income applicants, the owner may admit other eligible families. The owner must continue to advertise to extremely low-income applicants. Both the initial and ongoing marketing must be in compliance with the Affirmative Fair Housing Marketing Plan.
+
+G. The owner must maintain records that demonstrate to HUD’s satisfaction that all reasonable steps were taken to fill these units with extremely low-income tenants.
+
+H. Whatever method is used by owners to meet the income targeting requirement for Section 8 properties, they must periodically monitor actual admissions to ensure that at least 40% of admissions are extremely low-income families.
+
+1. If an owner chooses to follow the waiting list chronologically and through monitoring determines that the income-targeting goal will not be met, a specific targeting methodology may be implemented during the year. (See Example 1 – Income-Targeting Method below.) In such circumstances, the owner must clearly document in property records the date of any revision to the property’s income targeting procedures. In addition, the owner must make the revised methodology very clear to any applicants who are selected from the waiting list after the change in methodology.
+
+2. If an owner uses a method other than the standard waiting list order, and the monitoring results show that more than 40% of admissions are extremely low-income families, the owner may revise the tenant selection procedure to follow the waiting list in chronological order for the remainder of the year. Again, if the method is changed mid-year, documentation must be kept indicating the reason and date of such change.
+
+3. An example of an admissions log is shown below. An owner can use this type of log to monitor the percentage of extremely low-income admissions to a property during the year. In the example below, assume that the owner's methodology is to alternate between the first extremely low-income applicant on the waiting list and the eligible applicant at the top of the waiting list.
+
+I. Owners of properties with project-based Section 8 must comply with TRACS income-reporting requirements that will permit HUD to maintain the data necessary to monitor compliance with income-targeting requirements.
+
+Example 1 – Income-Targeting Method Methodology: Select (at minimum) an extremely low-income applicant to be admitted to every other vacant unit. Happy Acres: 110 units – contains both efficiencies and 1-bedroom units Section 8 New Construction Property HAP Effective Date: 11/15/81 Anticipated annual turnover: 10%, or 11 units
+
+Waiting List
+
+Efficiency 1-Bedroom Alice Johnson (VLI) Phil Jones (VLI) Aiko Kihara (ELI) Maria Rodriguez (ELI) Tina Purcell (ELI) Elsa Anderson (ELI) Rita White (VLI) Bill Rogers (VLI) Betty Harvey (VLI) Uja Gupta (VLI) Jean Miller (ELI) Robert Johnson (VLI) Randy Lopez (ELI) Sam Sorenson (ELI)
+
+Analysis to determine whether a method other than following the waiting list in chronological order is needed:
+
+ 5 applicants with ELI must be admitted to the property
+
+ Of the top 14 applicants from the waiting list, seven (50%) have extremely low-incomes. It appears that by following the waiting list in chronological order, the property will meet the 40% requirement.
+
+ However, if the 11 vacancies occur in a mix of five efficiencies and six 1-bedroom units, then the percentage of those admitted with extremely low-incomes will be only 36% (4 units) following the order of the waiting list.
+
+ The owner may decide to monitor admission carefully and change policies mid-year if the targeting goal is not being achieved, or may develop another method to ensure compliance. Monitoring is essential.
+
+Owner Policy on Admissions: This owner has decided to follow the waiting list in chronological order. The Tenant Selection Plan states that: "Applicants will be selected based on waiting list order. Each quarter, the percentage of extremely low-income admissions for the year to date will be examined. An alternate tenant selection method will be implemented if extremely low-income admissions are:
+
+ Less than 30% after the first quarter of the fiscal year.  Less than 35% after the second quarter of the fiscal year.  Less than 40% after the third quarter of the fiscal year.
+
+This policy will ensure that, regardless of which bedroom size units become available, the owner will meet the income targeting requirements.
+
+Example 2 – Income-Targeting Method Methodology: Admit extremely low-income families to the first 40% of expected vacancies and then admit eligible applicants from the top of the list regardless of income. Friendship Heights: 80 units - contains both efficiencies and 1-bedroom units Section 8 New Construction Property HAP Effective Date: 3/27/80 Anticipated annual turnover: 10%, or 8 units
+
+Waiting List
+
+Efficiency 1-Bedroom
+
+Alice Johnson (VLI) Phil Jones (VLI) Aiko Kihara (ELI) Maria Rodriguez (ELI) James Johnson (VLI) Elsa Anderson (ELI) Rita White (VLI) Aretha Samuels (ELI) Betty Harvey (VLI) Uja Gupta (VLI) Jean Miller (ELI) Robert Johnson (VLI) Randy Lopez (ELI) Sam Sorenson (ELI)
+
+Analysis to determine whether a method other than following the waiting list in chronological order is needed: In this property, following the waiting list may not achieve the required results, depending on where the vacancies occur.
+
+• Four admissions must be extremely low-income applicants to achieve the targeting goal.
+
+• If there are five vacancies in the efficiencies and three in the 1-bedrooms, and the list is followed in chronological order, the owner will not achieve 40% ELI admissions. In order to comply, the owner will have to skip some of the applicants with higher incomes.
+
+Owner policy on admissions: The owner chooses to meet the target based on expected vacancies first, and then use the waiting list in chronological order. The Tenant Selection plan states that: "Extremely low-income applicants will be selected from the waiting list first to occupy 40% of the number of units expected to be filled during the year. Subsequently, families will be selected from the top of the waiting list, regardless of income." (I.e., if 6 vacant units are projected, the owner selects 3 extremely low-income families from the list first, then goes to the top of the list for eligible families regardless of income).
+
+Example Admissions Log to Track Income-Targeting Progress
+
+A: B: C: D: E: Type of Family Name Extremely Low- Very Low- or Percentage of Admission - Income Low-Income Total Based Upon Admissions Targeting (check if family (check if family That Are Methodology is ELI) is LI or VLI) Extremely Low-Income*
+
+Extremely Low Aiko Kihara X Income (ELI)
+
+Top of Waiting List Alice Johnson X (TOL)
+
+ELI Tina Purcell X
+
+TOL Rita White X
+
+ELI Jean Miller X
+
+TOL Betty Harvey X
+
+ELI Randy Lopez X
+
+Total 4 3 57%
+
+*NOTE: The percentage in Column E is calculated by dividing the number of extremely low-income families admitted (Column C) by the total number of families admitted (Column C plus Column D).
+
+4-26 Verification of Preferences
+
+A. Key Requirements
+
+Preferences claimed by applicants must be verified. Owners may:
+
+1. Verify qualifications for preferences at the time the application is submitted if the tenant is placed on the waiting list; or
+
+2. Verify qualifications for preferences when a unit becomes available.
+
+B. Acceptable Verification Methods
+
+1. Verification of displacement. The applicant must provide documentation of government displacement or displacement as a result of a presidentially declared disaster. Acceptable documentation includes
+
+copies of local government condemnation or displacement notices or government notices indicating that an applicant is eligible for disaster relief benefits. If these documents are not available, the owner may accept a letter (on appropriate letterhead) from a government organization confirming that the applicant is being displaced by government action or a presidentially declared disaster. If written documents cannot be obtained, the owner may verify the displacement by phone with the local government office, or a disaster relief office, and make a notation in the file as to the date of the oral verification.
+
+2. Verification of military status. The applicant may provide a current military identification card or a letter on appropriate letterhead confirming current military status. The owner must collect the documentation for the head of household, spouse, or co-head.
+
+3. Verification of income (to determine ranking status for a Section 236 project with RAP assistance). The owner must verify the family income as described in Chapter 5, Section 3, so the type of subsidy for which the family is eligible can be determined.
+
+4. Verification of other preferences.
+
+a. State and local preferences. Verification will depend on the type of preference that is adopted. For example, a preference for veterans may be verified with any of the following:
+
+(1) A letter from the Veterans Administration (VA);
+
+(2) A document indicating that the applicant receives VA benefits; or
+
+(3) Military discharge documents.
+
+b. Residency preferences. Documentation of the residential address within the municipality may be obtained from copies of utility bills (electricity or gas), lease agreements, or other documents that include a residential address and the name of the head of household, co-head, or spouse. Persons who are planning to live in the municipality as a result of current or planned employment may provide a letter from a current or future employer or a current work identification badge with the office address.
+
+c. Working families. Documentation of employment may include a letter from an employer or payroll check stubs.
+
+d. Disability. Documentation of disability must confirm only the existence of a disability and not the nature or extent of the disability. Verification of disability may be provided by form or letter, from a physician, psychologist, clinical social worker, or other licensed health care professional. In addition, verification of disability may also be provided by documentation verifying receipt
+
+of Social Security disability payments (i.e., award letter indicating disability payments are provided).
+
+e. Age. Documentation of age is used to confirm that applicants claiming an elderly preference are 62 years of age or older. Acceptable documentation may include birth certificates or social security or military documents that show the applicant’s birth date.
+
+4-27 Implementing Screening Reviews
+
+A. Timing for Conducting Screening Reviews
+
+All screening activities should occur prior to approval of tenancy. Screening generally occurs at the same time as, or immediately following, the full eligibility review but may occur earlier.
+
+B. Screening for Credit History
+
+1. Owners may reject an applicant for a poor credit history, but owners must not reject an applicant for lack of a credit history.
+
+2. There are two primary sources that owners use to determine credit history.
+
+a. Previous landlords. It is good practice to contact the applicant’s previous landlords to determine if the applicant paid rent on time.
+
+b. Credit report companies. There are a number of private companies that can provide owners with a credit report on an applicant. These private companies charge a fee for this service. Owners may use such services but may not pass on these fees to the applicant. At an additional cost, some companies can provide additional information by searching public databases for criminal records. Owners must be consistent in the use of credit reporting services.
+
+C. Screening for Rental History
+
+1. The most common method for assessing rental history is to ask for comments from the applicant’s current and former landlords. When collecting information from landlords, it is important to collect objective information. Figure 4-7 provides examples of objective questions that are appropriate to ask. It also includes examples of inappropriate or subjective questions that should not be asked.
+
+2. Information that an owner may learn from a landlord that may be grounds for rejecting an applicant includes:
+
+a. Failure to cooperate with recertification procedures;
+
+b. Violations of house rules;
+
+c. Violations of the lease;
+
+Figure 4-7: Questions for Current and Former Landlords
+
+Objective/Acceptable Questions
+
+• Was the tenant ever late with a rent payment? If yes, when and how many times was the tenant late?
+
+• Did other lease violations occur? If so, what were they? How frequently did each of the other lease violations occur?
+
+• Was the tenant ever cited for disturbing behavior? How often?
+
+• Did the tenant violate house rules? What rules were violated, and how many times did violations occur?
+
+• Was the tenant evicted?
+
+Inappropriate Questions
+
+• Did the tenant’s boyfriend/girlfriend visit often?
+
+• Did the tenant make lots of complaints to the owner?
+
+• What is the tenant’s reputation?
+
+d. History of disruptive behavior;
+
+e. Poor housekeeping practices;
+
+f. Previous evictions for lease violations;
+
+g. Termination of assistance for fraud; or
+
+h. Conviction for the illegal manufacture, distribution, or use of controlled substances.
+
+3. Owners may want to consider relying more heavily on former landlord references than on current landlord references. A current landlord may be tempted to provide a good reference for a bad tenant so that the tenant will voluntarily leave his/her property. Former landlords do not have this reason to provide misleading information, and, therefore, may provide more accurate references.
+
+D. Screening for Housekeeping
+
+1. Poor housekeeping habits might be described as those that create an unsafe or unhealthy environment, e.g., an uncontrolled accumulation of trash, which has led to roach infestation or poses a health danger to other residents.
+
+2. If visiting an applicant's current home is part of the owner’s screening practices, the owner must visit the homes of all applicants unless the owner has established a geographic radius within which home visits are made (see paragraph 4-7 E.5).
+
+3. If an applicant is living with someone else, and the housekeeping is out of control of the applicant, the owner must not deny admission to the applicant. The owner should evaluate only the living quarters over which the applicant has control.
+
+E. Screening for Drug Abuse and Other Criminal Activity
+
+1. HUD requires that owners develop tenant selection plans that contain prohibitions against the admission of applicants who are engaging or have engaged in drug abuse or criminal activity. The specific requirements for developing the plan are found in paragraph 4-7 C.
+
+2. Owners must require every adult member of an applicant household to sign a consent form allowing all relevant criminal information to be released.
+
+3. Owners are not required to conduct a background check on applicants applying for an unassisted unit or tenants living in an unassisted unit in a project-based property. Owners may conduct background checks on applicants for unassisted units if they wish.
+
+4. In order to meet the screening requirements, owners may need to obtain access to criminal records. Owners may choose from several sources to obtain the screening information:
+
+a. *An owner may use the local Public Housing Authority (PHA) to conduct the appropriate check of an applicant's criminal conviction history and to check if the applicant or any members of the applicant’s household are subject to a State lifetime sex offender registration and to make the screening determination.*
+
+b. The owner may use alternative sources, including private credit and screening services, to check available databases storing criminal history.
+
+5. *If the owner selects a PHA to obtain criminal conviction records, the PHA will use the criminal records and State sex offender registration record(s) received from the law enforcement agency along with the owner’s screening criteria to determine, on behalf of the owner, the suitability of
+
+the applicant for tenancy. If the owner uses the PHA to conduct the criminal background check, procedures to be used include:*
+
+a. Owners may request that the PHA in the jurisdiction of the property obtain criminal conviction records *and State sex offender registration record(s)* for screening purposes. The request must include a copy of the signed consent form(s) and the project standards for prohibiting admission.
+
+b. The PHA, upon receipt of the owner’s request, will request criminal conviction records *and State sex offender registration record(s)* from the law enforcement agency.
+
+c. The law enforcement agency must promptly release a certified copy of the record. National Crime Information Center (NCIC) records are provided in accordance with NCIC procedures.
+
+d. The PHA must determine whether criminal action by a household member, as shown by the conviction records *and State sex offender registration records*, may be a basis for screening out the applicant and notify the owner making the request.
+
+e. The PHA may charge the owner a reasonable fee for processing requests and may also require the owner to reimburse the PHA fees charged by law enforcement agencies.
+
+f. The PHA is required to maintain the criminal records *and State sex offender records* in a confidential manner and may not disclose the contents to the owner.
+
+g. *Owners must retain documentation in the tenant file showing the date, type and results of the criminal background check, including the State lifetime sex offender registration check, performed by the PHA.*
+
+6. The owner may deny admission to an applicant using his/her standard for admission screening if the criminal background check indicates the applicant provided false information. *The owner must deny admission if the State sex offender registration record indicates the applicant provided false information.* If the determination is made by either the PHA or owner to deny admission to the applicant, the entity making the determination must:
+
+a. Notify the applicant of the proposed denial of admission.
+
+b. Provide the subject of the record and the applicant with a copy of the information the action is based upon.
+
+c. Provide the applicant with an opportunity to dispute the accuracy and relevance of the information obtained from any law enforcement agency.
+
+7. If the owner uses alternative sources to screen for criminal activities, the owner may consider the following when identifying potential information sources:
+
+a. Obtain information from each city, county, and/or state where the applicant was a resident;
+
+b. Attempt to obtain information that includes an applicant's arrest record, in addition to the conviction record *and State sex offender registration record*; and
+
+c. Establish guidelines for "reasonable cause to believe" when screening for illegal drug use and abuse of alcohol that interferes with other residents’ health, safety, and right to peaceful enjoyment of the property.
+
+4-28 Ensuring That Screening Is Performed Consistently
+
+A. Procedures
+
+While owners have discretion in establishing screening criteria, they must apply the criteria consistently to all applicants. To ensure that applicants are treated consistently during the screening process, good practice suggests that owners should:
+
+1. Use consistent staffing. Have one or a limited number of staff conduct the screening to reduce inconsistencies that occur, because employees may interpret policies and procedures differently.
+
+2. Provide instructions. Develop step-by-step instructions for staff who are conducting screening activities to help to ensure consistency.
+
+3. Use standard forms. Whenever possible, use standard forms to document fair practices and to increase the likelihood that each applicant will receive the same consideration.
+
+4. Use objective criteria. For example, when interviewing an applicant’s former landlord about rent payment and rental history, the owner should ask fact-based questions. Owners must avoid subjective questions that ask for opinions or do not directly relate to the tenant's ability to meet the requirements of the lease. (See Figure 4-7 for examples of appropriate and inappropriate questions.)
+
+5. Follow a formal, written process for collecting information. Owners must not take into consideration informal information or “gossip” about an applicant. Such information may be discriminatory and will affect applicants inconsistently since the owner does not collect it for all applicants.
+
+B. Extenuating Circumstances
+
+An owner may have a policy to consider extenuating circumstances that would allow acceptance of an applicant whom the owner would normally reject, but an owner must not have a reverse policy to consider extenuating circumstances to reject an applicant who was determined to be eligible. If the applicant is a person with disabilities, the owner must consider extenuating circumstances where this would be required as a matter of reasonable accommodation (see Chapter 2, Subsection 4 for information on Reasonable Accommodation).
+
+Example – Extenuating Circumstances Through the screening process, an owner learns that Asad Bhatt was evicted from his last apartment for nonpayment of rent. The owner rejects Asad Bhatt’s application and informs him of the reason for the rejection. Asad explains that his failure to pay rent on time resulted from the need to purchase expensive medications for his seriously ill wife. His wife is now well, and his medical expenses have been paid. Asad asks for reconsideration of his application, because he believes he will be able to pay rent on time.
+
+If the owner has a policy of considering extenuating circumstances for any tenant, the owner would be required to consider the extenuating circumstances applicable to Asad. In evaluating whether to accept Asad as a tenant, the owner may verify that Asad paid rent on time prior to his wife's illness and that medical expenses have been paid. If the owner learns from a landlord reference that Asad’s rent had been chronically late prior to his wife's illness, the owner may deny admission to Asad in accordance with the owner’s written screening procedures. If the owner does not have a policy of considering extenuating circumstances, the owner may not consider such circumstances as described by Asad.
+
+4-29 Verifying the Need for Accessible Units
+
+When an applicant requests an accessible unit or a unit preference, such as a first floor unit, the owner may conduct inquiries to:
+
+A. Verify that the applicant is qualified for the unit, which is only available to persons with a disability or to persons with a particular type of disability. For example, an applicant with a physical disability who uses a wheelchair may not be eligible for a unit that is specifically designed and intended for a person with a visual disability.
+
+B. Verify that the applicant needs the features of the unit as an accommodation to his or her disability. For example, an individual with a psychiatric disability (assuming no physical disability) requests a unit with features designed to be accessible for individuals with mobility disabilities. In this situation, there is no relation between the individual’s psychiatric disability and the need for an accessible unit. Although an alternate accommodation may be required to accommodate the applicant’s psychiatric disability, the applicant would not be entitled to the accessible unit requested.
+
+NOTE: Owners may not request information about an applicant’s type of disability but may identify an applicant’s need for the features of accessible units or for a reasonable accommodation.
+
+C. Verify that the applicant is qualified to receive a priority on the waiting list available to persons with a disability or to persons with a particular type of disability. If the owner gives a priority to a class of persons, and an applicant indicates that he or she is qualified for the priority placement on the waiting list, the owner may screen to verify that the applicant qualifies for the priority placement.
+
+4-30 Addressing Requests for Reasonable Accommodations
+
+For guidance on reviewing requests for reasonable accommodations, refer to Chapter 2, Section 3, subsection 4.
+
+Example – Reasonable Accommodation
+
+As part of the screening process and before admission to the property, the owner of Poplar Court requires all applicants to come to a session to review the house rules. The owner holds these sessions on the last Monday of each month. An applicant, Karen Jackson, has a disability and requests a reasonable accommodation so that she can attend a session on a different day of the week because she has physical therapy on Mondays. Rescheduling the interview for Karen would be a reasonable accommodation.
+
+4-31 Denial of Assistance to Noncitizens
+
+This paragraph describes the conditions under which owners must deny assistance to noncitizens and the DHS appeals process that may be initiated by a family to challenge a denial. Owners should follow the HUD requirements provided within this paragraph to ensure that only U.S. citizens and eligible noncitizens receive federal housing assistance. This entire paragraph contains key regulatory requirements. Optional owner policies are noted in the text.
+
+NOTE: See Chapters 3, 7, and 8 for other citizenship and eligible immigration status requirements. (Restriction on assistance to noncitizens is addressed in paragraph 3-12, changes in subsidy are addressed in paragraph 7-11, and termination of assistance is addressed in paragraph 8-7.)
+
+A. Applicability
+
+As stated in paragraph 3-12, the restriction on assistance to noncitizens applies to all properties covered by this handbook, except the following:
+
+1. Section 221(d)(3) BMIR properties;
+
+2. Section 202 PAC;
+
+3. Section 202 PRAC; and
+
+4. Section 811 PRAC.
+
+5. Section 202 projects with units not receiving assistance under the Rent Supplement or Section 8 programs.
+
+B. Offering and Continuing Assistance
+
+An owner cannot deny assistance to applicants who submitted their immigration documentation in a timely manner, but for whom the DHS verification or appeals process has not been completed.
+
+1. If a unit is available, the family has come to the top of the waiting list, and at least one member of the family has submitted the required documentation in a timely manner and has been determined to be eligible, the owner must offer the family a unit, providing subsidy to those family members whose documents were received on time.
+
+2. However, until the owner has received and verified the immigration status of any remaining noncitizen family members, the owner must provide prorated assistance based on those family members who submitted their immigration documentation in a timely manner. See the Example – DHS Verification Process Delayed in Paragraph 3-12 K.
+
+C. Events Triggering Denial of Assistance
+
+An owner must deny assistance to an applicant upon the occurrence of any of the following:
+
+1. The applicant fails to submit evidence of citizenship (i.e., the declaration) and eligible immigration status by the date specified by the owner.
+
+2. The applicant submits evidence of citizenship and eligible immigration status on a timely basis, but DHS primary and secondary documentation does not verify eligible immigration status of a family member; and
+
+a. The family does not pursue a DHS appeal or informal hearing rights as provided in this section, or
+
+b. The family pursues a DHS appeal and informal hearing, but the final decision is against the family member.
+
+D. Required Notice
+
+The notice of denial or termination of assistance must advise the applicant family that:
+
+1. The owner will deny or terminate rental assistance and give reasons for this action;
+
+2. The family may be eligible for proration of assistance;
+
+3. Tenants – but not applicants – may be eligible to obtain relief under the provisions for preservation of families (i.e., they may be eligible for a temporary deferral of denial of assistance).
+
+4. The family has a right to request an appeal to the DHS of the results of secondary verification of immigration status and to submit additional documentation or a written explanation in support of the appeal;
+
+5. The family has a right to request an informal hearing with the owner either upon completion of the DHS appeal or in lieu of the DHS appeal (the family can take advantage of two types of appeal); and
+
+6. For applicants, the notice of denial must advise that if they have failed the primary and secondary verification and submitted an appeal to the DHS, but the DHS process has not been concluded, the applicant will receive assistance in a timely manner. (If the DHS decision is negative, the family’s assistance may then be terminated.) However, once the DHS appeal process is complete, and the family receives a negative decision on the DHS appeal, the owner may delay assistance while providing the family with an opportunity for an informal meeting to appeal the decision.
+
+E. DHS Appeal Process
+
+1. Submission of appeal request. When the owner receives notification from the DHS that secondary verification has failed to confirm eligible immigration status, the owner must notify the family of this result. The family has 30 days from the date of the owner's notification to request an appeal of the DHS results. The family must make the request in writing directly to the DHS and must provide the owner with a copy of the written request for appeal and proof of mailing.
+
+2. Documentation to be submitted as part of appeal to DHS. If the family has additional documentation or written explanation to support this appeal, the family must submit it directly to the DHS office. This material must include a copy of the DHS document verification request, Form DHS G-845S (used by the owner to process the secondary verification request), or any other form specified by the DHS, and a cover letter stating that the family is requesting an appeal of the DHS immigration status verification results. (See Exhibit 4-2, DHS Documentation Verification Request Form.)
+
+3. When decision will be issued by DHS. The DHS will issue a decision within 30 days of its receipt of documentation concerning the family's appeal of the verification of immigration status. The notice will be sent to the family, and a copy will be sent to the owner. If, for any reason, the DHS is unable to issue a decision within 30 days, the DHS will inform the family and owner of the reason for the delay.
+
+4. Notification of DHS decision and of informal hearing procedures. When the owner receives a copy of the DHS decision, the owner must notify the family of its right to request an informal hearing on the owner's ineligibility determination.
+
+5. No delay, denial, reduction, or termination of assistance until completion of DHS appeal process. Until any appeal made to the DHS is resolved, owners must not delay, deny, reduce, or terminate assistance on the basis of immigration status.
+
+6. When request for informal hearing is to be made. If the DHS decision will cause the applicant to be denied, or if the family chooses not to appeal to DHS, the family may request that the owner provide an informal hearing. The request for a hearing must be made either within 30 days of receiving the notice from the owner denying assistance, or within 30 days of receiving the DHS appeal decision.
+
+7. Retention of documents. The owner must retain for a minimum of 5 years the following documents that may have been submitted to the owner by the family, or provided to the owner as part of the DHS appeal or the informal hearing process:
+
+a. The application for financial assistance;
+
+b. The form completed by the family for income re-examination;
+
+c. Photocopies of any original documents (front and back), including original DHS documents;
+
+d. The signed verification consent form;
+
+e. The DHS verification results;
+
+f. The request for an DHS appeal;
+
+g. The final DHS determination;
+
+h. The request for an informal hearing; and
+
+i. The final informal hearing decision.
+
+Chapter 4 Exhibits
+
+4-1. Sample List of Records and Documents Owners May Ask Applicants to Bring to the Certification or Recertification Interview
+
+http://portal.hud.gov/hudportal/documents/huddoc?id=43503e4-1HSGH.pdf
+
+4-2. DHS Document Verification Request Form
+
+http://www.uscis.gov/portal/site/uscis/menuitem.5af9bb95919f35e66f614176543f6d1 a/?vgnextoid=149500df1a96b110VgnVCM1000004718190aRCRD&vgnextchannel= db029c7755cb9010VgnVCM10000045f3d6a1RCRD
+
+4-3. Form HUD-27061-H, Race and Ethnic Data Reporting Form
+
+http://www.hud.gov/offices/adm/hudclips/forms/files/27061-h.pdf

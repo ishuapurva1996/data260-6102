@@ -1,0 +1,41 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Retrieved chunks printed before generation</title>
+<style>*{box-sizing:border-box}html{background:#edf1f5;color:#172434}body{margin:0;font:18px/1.5 Arial,sans-serif}main{width:1250px;padding:36px 42px 42px;margin:0 auto;background:#fff}h1{font-size:26px;line-height:1.25;margin:0 0 10px}h2{font-size:23px;line-height:1.3;margin:22px 0 10px}h3{font-size:19px;line-height:1.3;margin:18px 0 8px}p{margin:8px 0 14px}.eyebrow{color:#344a67;font-weight:700;font-size:17px}.notice{border-left:5px solid #426389;padding:10px 15px;background:#f2f5f9}.meta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:14px 0}.meta div{background:#f0f4f8;padding:9px 12px;overflow-wrap:anywhere;font-size:16px}.meta strong{display:block;font-size:15px;color:#40536b}pre{font:16px/1.48 ui-monospace,SFMono-Regular,Menlo,monospace;white-space:pre-wrap;overflow-wrap:anywhere;word-break:break-word;padding:15px 18px;margin:7px 0 16px;background:#f4f6f8;border:1px solid #d2dce6;border-radius:5px}pre.answer{font-size:18px;line-height:1.6;background:#f7fbf7;border-left:5px solid #477458}pre.code{font-size:16px;line-height:1.42;color:#eaf1fa;background:#19293b;border:none}.source{font-size:15px;color:#455c76;overflow-wrap:anywhere}.question{font-size:21px;line-height:1.45;font-weight:600}table{border-collapse:collapse;width:100%;table-layout:fixed;margin:12px 0 20px;font-size:16px;line-height:1.4}th,td{border:1px solid #bfcddc;text-align:left;vertical-align:top;padding:10px;overflow-wrap:anywhere}th{background:#dfe9f4}footer{border-top:1px solid #c8d3df;margin-top:26px;padding-top:12px;font-size:14px;color:#526275;overflow-wrap:anywhere}.pair{margin:18px 0}.raw-label{color:#2e583c}</style>
+<main><div class="eyebrow">HW4 · Part 4 · scored-20260928-04</div><h1>Saved local experiment output — browser capture</h1><p class="notice">This is a browser-rendered view of saved local experiment evidence. Model answers below are unedited. The page does not claim to be a live model interface.</p><h2>Retrieved chunks printed before generation</h2><div class="meta"><div><strong>Response ID</strong>Q2-B-k3</div><div><strong>Question</strong>Q2</div><div><strong>Requested k</strong>3</div><div><strong>Retrieval method</strong>dense</div><div><strong>Full ranking audit rows</strong>0</div><div><strong>Returned candidates</strong>3</div></div><table><thead><tr><th>Returned rank</th><th>Chunk ID</th><th>Dense cosine</th><th>Dense rank</th><th>BM25 rank</th><th>Fusion score</th></tr></thead><tbody><tr><td>1</td><td>EPA_LEAD:3830114fcc78:0009535-0009993</td><td>0.8247753106075326</td><td>N/A</td><td>N/A</td><td>N/A</td></tr><tr><td>2</td><td>EPA_DISCLOSURE:38dd88cf9257:0003772-0004226</td><td>0.7925382893274128</td><td>N/A</td><td>N/A</td><td>N/A</td></tr><tr><td>3</td><td>EPA_LEAD:3830114fcc78:0009943-0010402</td><td>0.7858306534117743</td><td>N/A</td><td>N/A</td><td>N/A</td></tr></tbody></table><section class="pair"><div class="source">Verbatim code excerpt · reports/hw04/raw/part4/scored-20260928-04/frozen/src/rag/runner.py:245–255</div><pre class="code"> 245      # Durably save the exact request and retrieval printout BEFORE invoking the generator.
+ 246      row[&#39;request_saved_at&#39;] = now()
+ 247      append_json(out/&#39;requests.jsonl&#39;,row)
+ 248      if config_name != &#39;A&#39;:
+ 249          print_retrieval(q[&#39;id&#39;],k,hits,transcript)
+ 250          print_retrieval(q[&#39;id&#39;],k,hits,sys.stdout)
+ 251      transcript.write(f&quot;\n{now()} GENERATION START {response_id}\nPROMPT\n{package[&#39;prompt&#39;]}\n&quot;)
+ 252      transcript.flush()
+ 253      print(f&quot;{now()} GENERATION START {response_id}&quot;,flush=True)
+ 254      row[&#39;generation_started_at&#39;] = now()
+ 255      t=time.perf_counter()</pre><h3>Exact saved transcript excerpt</h3><p>The final line records the generation start after the printed retrieval block.</p><pre id="retrieval-transcript">[2026-09-28T05:49:08.925364Z] RETRIEVAL Q2 requested=3 returned=3
+rank=1 source=EPA_LEAD chunk=EPA_LEAD:3830114fcc78:0009535-0009993 score=0.824775
+title=Protect Your Family From Lead in Your Home location=PDF page 9
+o be tested in an EPA-recognized lead laboratory
+
+• A risk assessment tells you if your home currently has any lead hazards from paint, dust or soil, and what actions to take to address any hazards. A trained and certified lead-based paint risk assessor will: • Sample paint that is deteriorated on doors, windows, floors, stairs and walls • Sample dust near painted surfaces and sample bare soil in the yard • Get lab tests of paint, dust and soil samples
+
+
+
+rank=2 source=EPA_DISCLOSURE chunk=EPA_DISCLOSURE:38dd88cf9257:0003772-0004226 score=0.792538
+title=Real Estate Disclosures about Potential Lead Hazards location=Requirements Under the Disclosure Rule
+for lead-based paint or lead-based paint hazards. Parties may mutually agree, in writing, to lengthen or shorten the time period for inspection. Homebuyers may waive this inspection opportunity. If a homebuyer is a concerned about possible lead-based paint, they may hire a certified inspector to conduct a lead-based paint inspection before committing to buy. Use EPA’s Lead-Based Paint Professional Locator to find a certified inspector in your area.
+
+
+
+rank=3 source=EPA_LEAD chunk=EPA_LEAD:3830114fcc78:0009943-0010402 score=0.785831
+title=Protect Your Family From Lead in Your Home location=PDF page 9; PDF page 10
+ • Get lab tests of paint, dust and soil samples
+
+• A combination inspection and risk assessment tells you if your home has any lead-based paint, if it has any lead hazards and where both are located.
+
+Be sure to read the report provided to you after your inspection or risk assessment is completed and ask questions about anything you do not understand. Closely monitor areas that are known to have lead-based paint.
+
+Checking Your Home for Lead, continued
+
+
+
+
+2026-09-28T05:49:08.925423+00:00 GENERATION START Q2-B-k3</pre></section><footer>Capture created from saved artifacts. Full source paths, SHA-256 hashes, browser version, rendering checks, and capture time are recorded in manifest.json.</footer></main></html>

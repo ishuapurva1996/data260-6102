@@ -1,0 +1,570 @@
+{
+  "evaluator": "Codex assistant; source-based manual development judgments, not independent student review",
+  "created_at": "2026-09-28T04:21:34.348160+00:00",
+  "retrieval_path": "reports/hw04/raw/part4/development-retrieval-03/retrievals.jsonl",
+  "retrieval_sha256": "8a8242c970c3c41efe4c4f778ced0bb1c391304f4c7609154beb7d1a687c7a61",
+  "candidate_annotations": [
+    {
+      "question_id": "D1",
+      "rank": 1,
+      "chunk_id": "EPA_LEAD:3830114fcc78:0018135-0018561",
+      "score": 0.6764455684148118,
+      "contains_requested_evidence": true,
+      "reason": "Contains at least one required development fact."
+    },
+    {
+      "question_id": "D1",
+      "rank": 2,
+      "chunk_id": "EPA_LEAD:3830114fcc78:0017714-0018185",
+      "score": 0.5782574455218806,
+      "contains_requested_evidence": true,
+      "reason": "Contains at least one required development fact."
+    },
+    {
+      "question_id": "D1",
+      "rank": 3,
+      "chunk_id": "EPA_LEAD:3830114fcc78:0018511-0018937",
+      "score": 0.5445473845363791,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D1",
+      "rank": 4,
+      "chunk_id": "EPA_LEAD:3830114fcc78:0017289-0017764",
+      "score": 0.5057179293060434,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D1",
+      "rank": 5,
+      "chunk_id": "EPA_LEAD:3830114fcc78:0012713-0013207",
+      "score": 0.4724451328616271,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D2",
+      "rank": 1,
+      "chunk_id": "HUD_FAIR:c47c156c57ea:0016808-0017294",
+      "score": 0.7540818540829807,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D2",
+      "rank": 2,
+      "chunk_id": "HUD_FAIR:c47c156c57ea:0016366-0016858",
+      "score": 0.7206596413182049,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D2",
+      "rank": 3,
+      "chunk_id": "HUD_FAIR:c47c156c57ea:0017470-0017870",
+      "score": 0.7028733227686856,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D2",
+      "rank": 4,
+      "chunk_id": "HUD_FAIR:c47c156c57ea:0008175-0008433",
+      "score": 0.6994738072168485,
+      "contains_requested_evidence": true,
+      "reason": "Contains at least one required development fact."
+    },
+    {
+      "question_id": "D2",
+      "rank": 5,
+      "chunk_id": "HUD_FAIR:c47c156c57ea:0011054-0011544",
+      "score": 0.6957517472064945,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D3",
+      "rank": 1,
+      "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0000000-0000496",
+      "score": 0.680738388852182,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D3",
+      "rank": 2,
+      "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0079284-0079725",
+      "score": 0.630363396987332,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D3",
+      "rank": 3,
+      "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0134756-0135239",
+      "score": 0.6130624901292527,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D3",
+      "rank": 4,
+      "chunk_id": "HUD_SELECTION:970dfc1f3a55:0106053-0106515",
+      "score": 0.6105482535388014,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D3",
+      "rank": 5,
+      "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0044535-0044997",
+      "score": 0.6079226301408694,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D4",
+      "rank": 1,
+      "chunk_id": "EPA_DISCLOSURE:38dd88cf9257:0004176-0004620",
+      "score": 0.512602289877302,
+      "contains_requested_evidence": true,
+      "reason": "Contains at least one required development fact."
+    },
+    {
+      "question_id": "D4",
+      "rank": 2,
+      "chunk_id": "HUD_SELECTION:970dfc1f3a55:0100185-0100577",
+      "score": 0.44505549923415805,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D4",
+      "rank": 3,
+      "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0129266-0129664",
+      "score": 0.4358201908484251,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D4",
+      "rank": 4,
+      "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0113999-0114483",
+      "score": 0.4284209489378645,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D4",
+      "rank": 5,
+      "chunk_id": "HUD_SELECTION:970dfc1f3a55:0079454-0079725",
+      "score": 0.42586052498698707,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D5",
+      "rank": 1,
+      "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0136302-0136748",
+      "score": 0.4866507358734005,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D5",
+      "rank": 2,
+      "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0134387-0134806",
+      "score": 0.47050674604663123,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D5",
+      "rank": 3,
+      "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0042686-0042989",
+      "score": 0.46896791685620237,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D5",
+      "rank": 4,
+      "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0144665-0145105",
+      "score": 0.4631671069152425,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D5",
+      "rank": 5,
+      "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0143833-0144273",
+      "score": 0.46040834233506367,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D6",
+      "rank": 1,
+      "chunk_id": "HUD_FAIR:c47c156c57ea:0005053-0005549",
+      "score": 0.17781318859321776,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D6",
+      "rank": 2,
+      "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0086061-0086488",
+      "score": 0.13782830051258588,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D6",
+      "rank": 3,
+      "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0089479-0089852",
+      "score": 0.11815364739967288,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D6",
+      "rank": 4,
+      "chunk_id": "EPA_LEAD:3830114fcc78:0002438-0002907",
+      "score": 0.11305839279736912,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D6",
+      "rank": 5,
+      "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0128130-0128548",
+      "score": 0.11081958833377459,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D7",
+      "rank": 1,
+      "chunk_id": "HUD_FAIR:c47c156c57ea:0017244-0017520",
+      "score": 0.536167491123994,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D7",
+      "rank": 2,
+      "chunk_id": "HUD_SELECTION:970dfc1f3a55:0141357-0141854",
+      "score": 0.48489503885179314,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D7",
+      "rank": 3,
+      "chunk_id": "HUD_SELECTION:970dfc1f3a55:0142427-0142918",
+      "score": 0.4668919226530987,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D7",
+      "rank": 4,
+      "chunk_id": "HUD_FAIR:c47c156c57ea:0013393-0013759",
+      "score": 0.44102213935250667,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D7",
+      "rank": 5,
+      "chunk_id": "HUD_FAIR:c47c156c57ea:0012954-0013443",
+      "score": 0.43907205754891926,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D8",
+      "rank": 1,
+      "chunk_id": "EPA_LEAD:3830114fcc78:0014197-0014534",
+      "score": 0.4347562686524777,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D8",
+      "rank": 2,
+      "chunk_id": "EPA_LEAD:3830114fcc78:0000764-0001237",
+      "score": 0.42007747634493947,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D8",
+      "rank": 3,
+      "chunk_id": "EPA_LEAD:3830114fcc78:0001618-0002053",
+      "score": 0.402995633779578,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D8",
+      "rank": 4,
+      "chunk_id": "EPA_LEAD:3830114fcc78:0016095-0016543",
+      "score": 0.39116661589431395,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    },
+    {
+      "question_id": "D8",
+      "rank": 5,
+      "chunk_id": "EPA_LEAD:3830114fcc78:0013868-0014247",
+      "score": 0.38876609236510223,
+      "contains_requested_evidence": false,
+      "reason": "Does not establish the requested development fact; related topics/deadlines are insufficient."
+    }
+  ],
+  "chosen_cutoff": 0.5,
+  "rationale": "0.50 retains the lowest-scoring useful development evidence (D4 at 0.513) and removes all D5 live-rent and D8 inspector-count hits, plus unrelated D6. It retains both water facts for D1. D2 wrong deadlines and D3 amount-free passages remain high scoring: a threshold cannot prove support. Chosen before scored retrieval/generation; same cutoff for every question and k.",
+  "tested_cutoffs": [
+    {
+      "cutoff": 0.4,
+      "useful_kept": 4,
+      "other_kept": 29
+    },
+    {
+      "cutoff": 0.45,
+      "useful_kept": 4,
+      "other_kept": 20
+    },
+    {
+      "cutoff": 0.5,
+      "useful_kept": 4,
+      "other_kept": 12
+    },
+    {
+      "cutoff": 0.55,
+      "useful_kept": 3,
+      "other_kept": 9
+    },
+    {
+      "cutoff": 0.6,
+      "useful_kept": 2,
+      "other_kept": 9
+    }
+  ],
+  "pilot_selection": {
+    "selected": "development-pilot-01 prompt",
+    "rejected": "development-pilot-02 prompt",
+    "reason": "The longer revision did not correct the ambiguous deadline or complaint/lawsuit confusion and introduced an unsupported $1,000 dependent deduction. Select the original concise prompt, which refused D3 and all three absent/unrelated development questions. Retain both actual pilots; ambiguity and similar-process confusion remain known model limitations.",
+    "selected_prompt_source_sha256": "4c593e99a75e243552b7c8c0b283e63e7bfa49a54d385278e4febbfd045c7708",
+    "frozen_at": "2026-09-28T04:23:41.325430+00:00"
+  },
+  "remediation": {
+    "frozen_at": "2026-09-28T04:33:36.178398+00:00",
+    "selected_development_run": "development-pilot-05-qwen17b-tokenizer",
+    "generator": "qwen3:1.7b (original unchanged digest)",
+    "rejected_local_model": "qwen3:4b: no finished non-thinking development responses under the tested 384-token cap; preserve pilot03 and interrupted04, removed unused raw-template code",
+    "token_counting": "Pinned Qwen3-1.7B tokenizer replaces conservative byte bound. Eight actual development API prompt counts were each exactly text count +16 template tokens, below reserved128.",
+    "cutoff": 0.5,
+    "prompt": "Original concise C rules remain selected",
+    "answer_limit": 768,
+    "answer_limit_rationale": "Original scored baseline had two length stops at384. Separate D4/D7 A development calls at768 terminated normally with271 and378 tokens; reserve768 consistently for every final A/B/C call. Window remains4096. This is a documented capacity adjustment before the repeated frozen matrix.",
+    "known_development_failures": "D2 still confuses lawsuit and complaint deadlines; D7 still assumes an ambiguous case. Do not claim prompt guarantees correctness."
+  },
+  "final_local_fallback": {
+    "frozen_at": "2026-09-28T04:38:38.417154+00:00",
+    "development_run": "development-pilot-06-qwen25",
+    "model": "qwen2.5:3b",
+    "rationale": "A non-thinking instruction model avoids the rejected Qwen3 4B runtime issue. No filter, question, gold key or C rule changed. D1 gave a complete cited answer and all three unsupported development questions refused exactly; D2/D4 emitted citation-only nonanswers and D7 refused instead of clarifying. These limitations remain; this is the last bounded model attempt.",
+    "settings": "same 4096 window,768 answer cap,seed6102,temp0,k3 main and1/3/5sweep,cutoff0.50; matching pinned tokenizer"
+  },
+  "followup": {
+    "created_at": "2026-09-28T05:48:33.113320+00:00",
+    "criteria": {
+      "declared_at": "2026-09-28T05:23:07.214854+00:00",
+      "before_prompt_probes": true,
+      "scope": "eight existing development questions only; scored questions excluded from prompt tuning",
+      "must_pass": [
+        "D1 complete cold-water and no-boiling-removal answer with actual supporting citations",
+        "D4 complete three-year retention with sale/lease trigger and actual supporting citations",
+        "D2/D3 exact refusal if retained context lacks requested facts; if complete support present answer correctly with citations",
+        "D7 asks which case/process is meant; no invented deadline or selected subject",
+        "D5/D6/D8 exact refusal",
+        "all8 actual modelcalls finish normally; no answer replacement or postprocessing"
+      ],
+      "minimum_supported_answers": 2,
+      "all_context_appropriate_behaviors_required": 8,
+      "semantic_review": "assistant reads actual outputs and evidence; automated artifacts do not prove semantic correctness",
+      "ranked_hypotheses": [
+        {
+          "hypothesis": "Weak prose contract allows citation-only normal completions",
+          "evidence": "D4 complete one-chunk evidence produces [1] while D1 works",
+          "prediction": "Requiring full answer prose changes D4 with unchanged context/model; no API/template edits needed"
+        },
+        {
+          "hypothesis": "Dense inline priority rule loses ambiguity distinction",
+          "evidence": "D7 safely refuses despite explicit brief clarify-first text",
+          "prediction": "Ordered mutually exclusive response modes clarify D7 while concrete unsupported D5/D6/D8 still exactly refuse"
+        },
+        {
+          "hypothesis": "Ollama truncation or parser removes answer",
+          "status": "ruled out by raw response equal saved [1], done_reason stop,4tokens and amplebudget"
+        }
+      ]
+    },
+    "selected_development_run": "reports/hw04/raw/part4/development-followup-integrated-01",
+    "generation_hash_manifest_sha256": "43e0044b8a43515c576ad44e360a75212736f2bb265e66b9f948bcece635c0ee",
+    "gate_assessment": {
+      "schema_version": 1,
+      "run_id": "development-followup-integrated-01",
+      "assessed_at": "2026-09-28T05:47:48.212356+00:00",
+      "evaluator": "Independent Codex assistant agent followup_dev_review",
+      "method": "Assistant semantic review of the eight unedited final outputs, actual supplied contexts and eight question-only routing outputs under the unchanged predeclared gate. Programmatic checks establish exact refusal equality, support-quote membership, raw-answer equality, model identity strings, normal-stop status, call counts and recorded completion; they do not prove semantic correctness.",
+      "criteria_path": "reports/hw04/raw/part4/followup-setup-20260928/development_acceptance_predeclared.json",
+      "response_file_sha256": "aaff30a3b6e50072a41264d96440cee54c2a8ca8bb458cc6c56b061cabd3b7a8",
+      "routing_response_file_sha256": "7228e9e378baa3ccd8ec4b9ffc756aaea500c814582eb816d8e4543deb493cfe",
+      "all_eight_calls_complete_normally": true,
+      "all_eight_routing_decisions_correct": true,
+      "final_answer_model": "qwen2.5:3b",
+      "question_only_router": "qwen2.5:7b",
+      "supported_cited_answer_demonstrations": 2,
+      "required_supported_cited_demonstrations": 2,
+      "context_appropriate_behavior_count": 8,
+      "required_context_appropriate_behavior_count": 8,
+      "gate_passed": true,
+      "blocking_questions": [],
+      "judgments": [
+        {
+          "question_id": "D1",
+          "response_id": "D1-C-k3",
+          "passed": true,
+          "answer_unchanged": "According to the EPA pamphlet, water used to make baby formula should be cold [2]. Boiling water does not remove lead from water [1, 2].",
+          "normal_completion": true,
+          "semantic_reason": "Both requested facts are stated and supported by the actual cited chunks.",
+          "supported_cited_claims": [
+            {
+              "claim": "Water for baby formula should be cold.",
+              "citation": "2",
+              "quote": "Use only cold water for drinking, cooking and making baby formula.",
+              "chunk_id": "EPA_LEAD:3830114fcc78:0017714-0018185",
+              "supported": true
+            },
+            {
+              "claim": "Boiling does not remove lead from water.",
+              "citation": "1",
+              "quote": "Boiling water does not remove lead from water.",
+              "chunk_id": "EPA_LEAD:3830114fcc78:0018135-0018561",
+              "supported": true
+            }
+          ],
+          "exact_refusal": false,
+          "grounding": true
+        },
+        {
+          "question_id": "D2",
+          "response_id": "D2-C-k3",
+          "passed": true,
+          "answer_unchanged": "I cannot answer this question from the provided documents",
+          "normal_completion": true,
+          "semantic_reason": "The retained context does not supply the requested fact, so exact refusal is appropriate generation behavior. The corpus-answer and retrieval failure remain separate; refusal is not credited as a correct corpus answer.",
+          "supported_cited_claims": [],
+          "exact_refusal": true,
+          "grounding": null
+        },
+        {
+          "question_id": "D3",
+          "response_id": "D3-C-k3",
+          "passed": true,
+          "answer_unchanged": "I cannot answer this question from the provided documents",
+          "normal_completion": true,
+          "semantic_reason": "The retained context does not supply the requested fact, so exact refusal is appropriate generation behavior. The corpus-answer and retrieval failure remain separate; refusal is not credited as a correct corpus answer.",
+          "supported_cited_claims": [],
+          "exact_refusal": true,
+          "grounding": null
+        },
+        {
+          "question_id": "D4",
+          "response_id": "D4-C-k3",
+          "passed": true,
+          "answer_unchanged": "According to the EPA disclosure article, signed disclosures should be kept for three years after the sale is completed or the lease begins. [1]",
+          "normal_completion": true,
+          "semantic_reason": "The answer states the duration and both alternative triggers, with its supporting citation.",
+          "supported_cited_claims": [
+            {
+              "claim": "Keep signed disclosures for three years after sale completion or lease commencement.",
+              "citation": "1",
+              "quote": "Keep a signed copy of the disclosures for three years after the sale is completed or the lease begins.",
+              "chunk_id": "EPA_DISCLOSURE:38dd88cf9257:0004176-0004620",
+              "supported": true
+            }
+          ],
+          "exact_refusal": false,
+          "grounding": true
+        },
+        {
+          "question_id": "D5",
+          "response_id": "D5-C-k3",
+          "passed": true,
+          "answer_unchanged": "I cannot answer this question from the provided documents",
+          "normal_completion": true,
+          "semantic_reason": "The clear unsupported question receives the exact required refusal, with no added punctuation or explanation.",
+          "supported_cited_claims": [],
+          "exact_refusal": true,
+          "grounding": null
+        },
+        {
+          "question_id": "D6",
+          "response_id": "D6-C-k3",
+          "passed": true,
+          "answer_unchanged": "I cannot answer this question from the provided documents",
+          "normal_completion": true,
+          "semantic_reason": "The clear unsupported question receives the exact required refusal, with no added punctuation or explanation.",
+          "supported_cited_claims": [],
+          "exact_refusal": true,
+          "grounding": null
+        },
+        {
+          "question_id": "D7",
+          "response_id": "D7-C-k3",
+          "passed": true,
+          "answer_unchanged": "What is the process or document I need to check to find the deadline for my case?",
+          "normal_completion": true,
+          "semantic_reason": "The output asks the user to identify the process or document needed to determine the deadline. It selects no case type or deadline and makes no factual assertion. The first-person wording is awkward and could be clearer, but the question requests the missing process/document rather than answering a guessed case. This is a semantic judgment, not a question-mark or keyword check.",
+          "supported_cited_claims": [],
+          "exact_refusal": false,
+          "grounding": null
+        },
+        {
+          "question_id": "D8",
+          "response_id": "D8-C-k3",
+          "passed": true,
+          "answer_unchanged": "I cannot answer this question from the provided documents",
+          "normal_completion": true,
+          "semantic_reason": "The clear unsupported question receives the exact required refusal, with no added punctuation or explanation.",
+          "supported_cited_claims": [],
+          "exact_refusal": true,
+          "grounding": null
+        }
+      ],
+      "limitations": [
+        "Only eight repeatedly inspected development questions; success is not an independent reliability estimate.",
+        "D7 uses awkward first-person wording but asks for the missing process/document without choosing a deadline.",
+        "D2/D3 remain retrieval misses and corpus-answer failures despite appropriate abstention."
+      ],
+      "decision": "The integrated configuration meets the predeclared development gate. Freeze it before a complete new scored matrix; do not transfer development judgments to scored answers."
+    },
+    "gate_assessment_sha256": "d0cdd0cca3176177d026ae72b0cc9ef4849900bdcfa41c3aef0e6a056cf6b6c7",
+    "selection": "Keep dense retrieval and the original .50 cutoff. Final A/B/C answers all use Qwen2.5:3b with explicit complete-prose grounding prompt. C uses an evidence-free Qwen2.5:7b specificity classifier before final answering/clarification. Neither model receives gold or question IDs.",
+    "rejected_retrieval_variants": [
+      "hybrid_rrf: improves D3 but misses D2",
+      "cross-encoder/ms-marco-MiniLM-L6-v2 top20 RRF candidates: still misses D2, not adopted"
+    ],
+    "limitations": [
+      "Eight repeatedly inspected development questions only",
+      "D2/D3 safe refusals remain retrieval and corpus-answer failures",
+      "Auxiliary7B role adds time and model dependency; scored22finalanswers require8additionalroutingcalls"
+    ]
+  }
+}

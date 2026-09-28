@@ -1,0 +1,51 @@
+2026-09-28T04:32:45.914234+00:00 GENERATION START D4-A-k0
+D4-A-k0 complete: According to the **EPA Disclosure Article** (which refers to the **EPA's Privacy Rule** or the **EPA's Privacy Notice**), **signed disclosures should be kept for a minimum of 3 years** from the date of signing.
+
+This requirement is part of the **EPA's Privacy Rule**, which governs the handling of personal information collected by the Environmental Protection Agency (EPA). The rule applies to:
+
+- **Personal information** collected by the EPA, such as:
+  - Name, address, phone number, email address
+  - Social security number
+  - Medical information
+  - Financial information
+  - Other personal data
+
+The rule requires the EPA to:
+- **Keep personal information** for a minimum of **3 years** from the date of collection
+- **Destroy or securely dispose of** the information after that period, unless it is required to be retained for a longer period due to legal or regulatory requirements
+
+### Key Points:
+- **3 years** is the standard retention period for signed disclosures.
+- The rule applies to **all personal information** collected by the EPA.
+- The EPA is responsible for ensuring compliance with this rule.
+
+If you are referring to a specific article or section of the EPA's disclosure policy, the exact wording may vary slightly, but the general rule remains the same.
+2026-09-28T04:32:56.630231+00:00 GENERATION START D7-A-k0
+D7-A-k0 complete: To determine the deadline that applies to your case, I would need to know the **type of case** you're referring to (e.g., civil, criminal, family law, administrative, etc.), the **jurisdiction** (e.g., state, federal, court), and the **specific legal matter** (e.g., divorce, contract dispute, traffic violation, etc.).
+
+### Common Deadlines in Different Legal Contexts:
+1. **Civil Cases (e.g., divorce, contract, personal injury):**  
+   - **Divorce:** Typically has a 12-month deadline (e.g., 12 months from the date of filing).  
+   - **Personal Injury:** Often has a 2-year statute of limitations.  
+   - **Torts:** May vary by state and type of claim.
+
+2. **Criminal Cases:**  
+   - **Prosecution:** Usually has a **statute of limitations** (e.g., 3 years for most crimes, 10 years for certain serious crimes).  
+   - **Sentence:** Must be filed within the **statute of limitations**.
+
+3. **Administrative Cases (e.g., government agencies):**  
+   - **Appeals:** Often have a **10-day deadline** for filing an appeal.
+
+4. **Traffic Violations:**  
+   - **Reinstatement:** Typically has a **30-day deadline** for re-registering or reinstating a license.
+
+---
+
+### How to Find the Specific Deadline:
+- **Check the court’s website** or **case filing portal**.  
+- **Review the court’s rules** or **case summary**.  
+- **Consult a legal professional** or **law firm** for your jurisdiction.
+
+---
+
+If you provide more details (e.g., case type, jurisdiction, date of filing), I can help narrow it down!

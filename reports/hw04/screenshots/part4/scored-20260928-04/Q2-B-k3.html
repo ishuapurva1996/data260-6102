@@ -1,0 +1,37 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Q2 · Configuration B · k=3</title>
+<style>*{box-sizing:border-box}html{background:#edf1f5;color:#172434}body{margin:0;font:18px/1.5 Arial,sans-serif}main{width:1250px;padding:36px 42px 42px;margin:0 auto;background:#fff}h1{font-size:26px;line-height:1.25;margin:0 0 10px}h2{font-size:23px;line-height:1.3;margin:22px 0 10px}h3{font-size:19px;line-height:1.3;margin:18px 0 8px}p{margin:8px 0 14px}.eyebrow{color:#344a67;font-weight:700;font-size:17px}.notice{border-left:5px solid #426389;padding:10px 15px;background:#f2f5f9}.meta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:14px 0}.meta div{background:#f0f4f8;padding:9px 12px;overflow-wrap:anywhere;font-size:16px}.meta strong{display:block;font-size:15px;color:#40536b}pre{font:16px/1.48 ui-monospace,SFMono-Regular,Menlo,monospace;white-space:pre-wrap;overflow-wrap:anywhere;word-break:break-word;padding:15px 18px;margin:7px 0 16px;background:#f4f6f8;border:1px solid #d2dce6;border-radius:5px}pre.answer{font-size:18px;line-height:1.6;background:#f7fbf7;border-left:5px solid #477458}pre.code{font-size:16px;line-height:1.42;color:#eaf1fa;background:#19293b;border:none}.source{font-size:15px;color:#455c76;overflow-wrap:anywhere}.question{font-size:21px;line-height:1.45;font-weight:600}table{border-collapse:collapse;width:100%;table-layout:fixed;margin:12px 0 20px;font-size:16px;line-height:1.4}th,td{border:1px solid #bfcddc;text-align:left;vertical-align:top;padding:10px;overflow-wrap:anywhere}th{background:#dfe9f4}footer{border-top:1px solid #c8d3df;margin-top:26px;padding-top:12px;font-size:14px;color:#526275;overflow-wrap:anywhere}.pair{margin:18px 0}.raw-label{color:#2e583c}</style>
+<main><div class="eyebrow">HW4 · Part 4 · scored-20260928-04</div><h1>Saved local experiment output — browser capture</h1><p class="notice">This is a browser-rendered view of saved local experiment evidence. Model answers below are unedited. The page does not claim to be a live model interface.</p><h2>Q2 · Configuration B · k=3</h2><p class="question">According to the EPA pamphlet, what does a lead-based paint inspection locate, and what does a risk assessment identify about hazards and actions to take?</p><div class="meta"><div><strong>Response ID</strong>Q2-B-k3</div><div><strong>Configuration / phase</strong>B / main</div><div><strong>Requested k</strong>3</div><div><strong>Returned / retained chunks</strong>3 / 3</div><div><strong>Completion status</strong>complete; done=true; reason=stop</div><div><strong>Local model</strong>qwen2.5:3b</div><div><strong>Actual prompt / output tokens</strong>348 / 116</div><div><strong>Evidence / prompt token bound</strong>273 / 319</div><div><strong>Generation seconds</strong>3.659</div><div><strong>Generation started</strong>2026-09-28T05:49:08.925444+00:00</div><div><strong>Generation finished</strong>2026-09-28T05:49:12.585095+00:00</div><div><strong>Window / answer reserve</strong>4096 / 768</div><div><strong>Retrieval method</strong>dense</div><div><strong>Routing / final generation seconds</strong>0.000 / 3.659</div></div><section class="pair"><div class="source">Verbatim code excerpt · reports/hw04/raw/part4/scored-20260928-04/frozen/src/rag/pipeline.py:287–293</div><pre class="code"> 287      elif configuration == &quot;B&quot;:
+ 288          context = &quot;\n\n&quot;.join(hit[&quot;text&quot;] for hit in hits)
+ 289          prompt = f&quot;Answer the question using the supplied text.\n\nSupplied text:\n{context}\n\nQuestion: {question}\nAnswer:&quot;
+ 290      elif configuration == &quot;C&quot; and options.get(&#39;response_mode&#39;) == &#39;CLARIFY&#39;:
+ 291          if hits:
+ 292              raise ValueError(&#39;Clarification must not receive document evidence&#39;)
+ 293          context, prompt = &#39;&#39;, clarification_prompt(question)</pre><h3 class="raw-label">Unedited final model response</h3><pre class="answer" id="raw-answer">According to the EPA pamphlet, a lead-based paint inspection typically locates areas in a home that have lead-based paint, while a risk assessment identifies any lead hazards present, such as from paint, dust, or soil, and what actions are needed to address these hazards.
+
+Specifically:
+- A lead-based paint inspection can locate areas with lead-based paint, such as doors, windows, floors, stairs, and walls.
+- A risk assessment identifies any lead hazards, including from dust near painted surfaces and bare soil in the yard, and provides recommendations for addressing these hazards.</pre></section><h3>Source-number mapping supplied to the model</h3><p>No numbered source labels were supplied in this prompt.</p><h3>Exact saved application prompt</h3><pre id="raw-prompt">Answer the question using the supplied text.
+
+Supplied text:
+o be tested in an EPA-recognized lead laboratory
+
+• A risk assessment tells you if your home currently has any lead hazards from paint, dust or soil, and what actions to take to address any hazards. A trained and certified lead-based paint risk assessor will: • Sample paint that is deteriorated on doors, windows, floors, stairs and walls • Sample dust near painted surfaces and sample bare soil in the yard • Get lab tests of paint, dust and soil samples
+
+
+
+for lead-based paint or lead-based paint hazards. Parties may mutually agree, in writing, to lengthen or shorten the time period for inspection. Homebuyers may waive this inspection opportunity. If a homebuyer is a concerned about possible lead-based paint, they may hire a certified inspector to conduct a lead-based paint inspection before committing to buy. Use EPA’s Lead-Based Paint Professional Locator to find a certified inspector in your area.
+
+
+
+ • Get lab tests of paint, dust and soil samples
+
+• A combination inspection and risk assessment tells you if your home has any lead-based paint, if it has any lead hazards and where both are located.
+
+Be sure to read the report provided to you after your inspection or risk assessment is completed and ask questions about anything you do not understand. Closely monitor areas that are known to have lead-based paint.
+
+Checking Your Home for Lead, continued
+
+
+
+Question: According to the EPA pamphlet, what does a lead-based paint inspection locate, and what does a risk assessment identify about hazards and actions to take?
+Answer:</pre><p class="source">Token accounting method: Pinned Qwen2.5-3B tokenizer counts exact evidence/prompt text plus 128-token native-template margin; API counts checked. Runtime counts above come directly from the saved Ollama response.</p><footer>Capture created from saved artifacts. Full source paths, SHA-256 hashes, browser version, rendering checks, and capture time are recorded in manifest.json.</footer></main></html>

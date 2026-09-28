@@ -1,0 +1,3 @@
+Fetching 12 files:   0%|          | 0/12 [00:00<?, ?it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 12 files: 100%|██████████| 12/12 [00:00<00:00, 76.30it/s]Fetching 12 files: 100%|██████████| 12/12 [00:00<00:00, 75.97it/s]
+/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part2-backend/.cache/hw04-rag/embeddings/models--sentence-transformers--all-MiniLM-L6-v2/snapshots/1110a243fdf4706b3f48f1d95db1a4f5529b4d41

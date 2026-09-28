@@ -1,11 +1,18 @@
 # Rental Housing Listings
 
-A FastAPI application for managing rental listings, with cookie-based login and a protected dashboard. The repository also includes a local document-retrieval experiment and a LangGraph workflow for drafting and reviewing listing metadata.
+A React and FastAPI application for managing rental listings, with MySQL persistence and cookie-based login. HW4 also compares naive and fixed database queries and evaluates a local retrieval-augmented generation (RAG) pipeline.
+
+The current submission is the [79-page HW4 report](reports/hw04/report.pdf). The
+[HW4 evidence guide](reports/hw04/README.md) identifies its original screenshots,
+saved experiments, AI-use answers, and verification procedure. The upload copy,
+[Apurva_HW4.pdf](reports/hw04/Apurva_HW4.pdf), contains the same bytes.
 
 ## Features
 
 - Create, edit, delete, and search rental listings by title or address.
 - Log in and out with a server-managed session and a secure cookie.
+- Compare naive and joined MySQL list queries at page sizes 10, 50, and 200.
+- Compare No-RAG, Basic-RAG, and Context-RAG answers against five housing documents.
 - Compare token, semantic, and sentence-window chunking on a housing-document corpus.
 - Draft listing metadata with a Planner–Reviewer graph, schema validation, and a configurable limit on revision turns.
 
@@ -44,12 +51,25 @@ message. API errors stay JSON. Use one worker without reload for measurements.
 Do not stop another task's server or reset its database. Slot ownership lives in
 `HW4_coordination/part2.md` outside this checkout.
 
-[Foundation interfaces](reports/hw04/part2/FOUNDATION.md) and the
-[shared contract](docs/plans/2026-09-27-1715-hw4-shared-contract.md) describe
-how Parts 1–3 connect. [Part 2 evidence](reports/hw04/part2/REPORT_SECTION.md)
-distinguishes passing checks from pending screenshots. Local integration is
-tracked in [the partial write-up](reports/hw04/PARTS123.md); it is not a claim
-that the entire homework is complete.
+[Foundation interfaces](reports/hw04/part2/FOUNDATION.md) describe how Parts 1–3
+connect. The [HW4 reproduction guide](reports/hw04/REPRODUCIBLE_RUN_INSTRUCTIONS.md)
+covers the current package. Earlier part handoffs retain their original dates,
+scope, and implementation history.
+
+## HW4 RAG experiment
+
+[`code/rag.py`](code/rag.py) runs the local pipeline implemented in `src/rag/`.
+The selected experiment is
+[`scored-20260928-04`](reports/hw04/raw/part4/scored-20260928-04/): six questions
+under three configurations, plus four additional answers for the top-k sweep.
+All configurations use `qwen2.5:3b` for final answers; Context-RAG also uses
+`qwen2.5:7b` to check whether a question needs clarification. The five-document
+corpus and pinned configuration are included. Reported failures remain in the
+saved results.
+
+See the [reproduction guide](reports/hw04/REPRODUCIBLE_RUN_INSTRUCTIONS.md) for
+offline evidence checks and commands for a separate new experiment. Model
+downloads and a new run are not needed to inspect the submitted results.
 
 ## Compare document retrieval methods
 
@@ -106,7 +126,7 @@ Current HW4 tests use real MySQL when `HW4_TEST_DATABASE_URL` is explicitly set.
 Run them against a dedicated test instance, never concurrently with benchmarks:
 
 ```sh
-.venv/bin/python -m pytest tests/test_api.py tests/test_hw04*.py -q
+.venv/bin/pytest tests/test_api.py tests/test_hw04*.py -q
 .venv/bin/python scripts/hw04/part2/acceptance.py \
   --env-file /path/to/private/app.env --manage-server
 ```
@@ -115,8 +135,12 @@ The API acceptance script refuses an occupied port, restarts only its own server
 and cleans only its own test rows. Test fixtures use outer transactions and
 savepoints; auto-increment values may still be consumed. Unconfigured real-DB
 tests skip explicitly and do not count as MySQL proof. The partial integration
-verifier is `scripts/verify_hw04_parts123.py`; its per-check outcomes remain
-separate from final whole-homework verification.
+verifier is `scripts/verify_hw04_parts123.py`. The whole-homework verifier is
+`scripts/verify_hw04_submission.py`: `--prepare` checks saved evidence offline;
+`--tagged` checks the exact `hw4` checkout and runs an HTTPS smoke test using two
+explicit private environment files. See the
+[verification instructions](reports/hw04/REPRODUCIBLE_RUN_INSTRUCTIONS.md#submission-verification)
+before running either mode.
 
 After building React, the repeatable browser run checks CRUD, restart persistence,
 logout and controlled idle expiry. Preserve the original branch evidence by using
@@ -149,11 +173,13 @@ unchanged, and their separate environments still apply.
 ```text
 code/
   web_application/       MySQL models, authenticated FastAPI routes and React serving
+  rag.py                 HW4 local RAG experiment CLI
   retrieval_compare.py   Retrieval experiment runner
   retrieval_summarize.py  Saved-result checks and summary tables
   agents_graph.py        Planner–Reviewer CLI
   agents_demo.py         Planner, Reviewer, and Finalizer demo
 src/
+  rag/                   HW4 retrieval, context construction, generation and evaluation
   retrieval/             Chunking, indexing, scoring, and evaluation
   agent_graph/           Graph state, workers, and validation
   model_client.py        Shared local-model adapter
@@ -164,4 +190,8 @@ docs/                    Architecture and usage notes
 reports/                 Reports, source snapshots, and recorded results
 ```
 
-The [technical report](reports/hw03/report.pdf) covers authentication, session behavior, and the retrieval comparison. [Verification results](reports/hw03/verification.json) and the [run log](reports/hw03/RUN_LOG.txt) record the checks behind the published results.
+The [HW4 report](reports/hw04/report.pdf), [metrics](reports/hw04/METRICS.md),
+[run log](reports/hw04/RUN_LOG.txt), and [AI-use answers](reports/hw04/AI_USE.md)
+form the current submission. The [HW3 report](reports/hw03/report.pdf),
+[HW3 verification](reports/hw03/verification.json), and earlier homework tags
+preserve the previous implementations and their results.

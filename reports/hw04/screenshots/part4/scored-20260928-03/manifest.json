@@ -1,0 +1,1159 @@
+{
+  "schema_version": 1,
+  "run_id": "scored-20260928-03",
+  "method": "Playwright Chromium full-page screenshots of HTML rendered from saved raw JSON/transcript records, with verbatim source excerpts. No model calls, image reconstruction, or simulated terminal.",
+  "created_at": "2026-09-28T04:44:02.458Z",
+  "run_started_at": "2026-09-28T04:38:38.528073+00:00",
+  "captures": [
+    {
+      "path": "reports/hw04/screenshots/part4/scored-20260928-03/01-corpus-index-chunks.png",
+      "sha256": "9ebaa4eb5124516098c0fa99e71d15faaf92706db8a4f6076a4745900439993e",
+      "html_path": "reports/hw04/screenshots/part4/scored-20260928-03/01-corpus-index-chunks.html",
+      "html_sha256": "e7990420ba4ece47af64f1f9d3cd4ef33e94c96ad0a0963ab9e2efadc5435580",
+      "items": [
+        "R1",
+        "R8",
+        "corpus",
+        "index",
+        "chunk_setup"
+      ],
+      "response_ids": [],
+      "description": "Five documents, chunking, and the real vector index",
+      "source_files": [
+        "reports/hw04/raw/part4/scored-20260928-03/run_metadata.json",
+        "reports/hw04/raw/part4/scored-20260928-03/frozen/experiment_config.json",
+        "reports/hw04/raw/part4/scored-20260928-03/frozen/reports/hw04/part4/CORPUS_MANIFEST.json",
+        "reports/hw04/raw/part4/scored-20260928-03/chunks.jsonl",
+        "reports/hw04/raw/part4/scored-20260928-03/index_audit.json",
+        "reports/hw04/raw/part4/scored-20260928-03/frozen/src/rag/pipeline.py",
+        "reports/hw04/raw/part4/scored-20260928-03/frozen/src/rag/runner.py"
+      ],
+      "source_excerpts": [
+        {
+          "path": "reports/hw04/raw/part4/scored-20260928-03/frozen/src/rag/pipeline.py",
+          "start_line": 121,
+          "end_line": 125,
+          "sha256": "6cd90a7e5cad89074838127205776cd13c44757472ce0eebeaabe7389fda7482"
+        },
+        {
+          "path": "reports/hw04/raw/part4/scored-20260928-03/frozen/src/rag/runner.py",
+          "start_line": 114,
+          "end_line": 118,
+          "sha256": "949ef325c4c48e8abe7733904056dc764398076c510a0c3256b1ad6604d53a7d"
+        }
+      ],
+      "captured_at": "2026-09-28T04:44:02.880Z",
+      "width": 1250,
+      "height": 2130,
+      "browser_version": "151.0.7922.34",
+      "playwright_version": "1.62.1",
+      "render_checks": {
+        "viewport_width": 1250,
+        "document_width": 1250,
+        "document_height": 2130,
+        "overflow_elements": [],
+        "exact_raw_text_checks": 0,
+        "no_horizontal_clipping": true
+      }
+    },
+    {
+      "path": "reports/hw04/screenshots/part4/scored-20260928-03/Q1-A-k0.png",
+      "sha256": "877ceabfb67c7a5d8ff3dc84df9148bcf93acfe45e491382efbfc06b50e8e1ea",
+      "html_path": "reports/hw04/screenshots/part4/scored-20260928-03/Q1-A-k0.html",
+      "html_sha256": "978a8ea25e219087f944893a4213b7cbeadcf35f0a8abf912596aea52cda1913",
+      "items": [
+        "R3",
+        "R4",
+        "R8",
+        "Q1",
+        "configuration_A"
+      ],
+      "response_ids": [
+        "Q1-A-k0"
+      ],
+      "description": "Q1 · Configuration A · k=0",
+      "source_files": [
+        "reports/hw04/raw/part4/scored-20260928-03/responses.jsonl",
+        "reports/hw04/raw/part4/scored-20260928-03/frozen/src/rag/pipeline.py"
+      ],
+      "source_excerpts": [
+        {
+          "path": "reports/hw04/raw/part4/scored-20260928-03/frozen/src/rag/pipeline.py",
+          "start_line": 269,
+          "end_line": 270,
+          "sha256": "6cd90a7e5cad89074838127205776cd13c44757472ce0eebeaabe7389fda7482"
+        }
+      ],
+      "captured_at": "2026-09-28T04:44:02.995Z",
+      "width": 1250,
+      "height": 1490,
+      "browser_version": "151.0.7922.34",
+      "playwright_version": "1.62.1",
+      "render_checks": {
+        "viewport_width": 1250,
+        "document_width": 1250,
+        "document_height": 1490,
+        "overflow_elements": [],
+        "exact_raw_text_checks": 2,
+        "no_horizontal_clipping": true
+      }
+    },
+    {
+      "path": "reports/hw04/screenshots/part4/scored-20260928-03/Q1-B-k3.png",
+      "sha256": "28a67dbd13a159d961a773c407a9f85231e3b5fb97bf2de3a092cf6a34b0f38d",
+      "html_path": "reports/hw04/screenshots/part4/scored-20260928-03/Q1-B-k3.html",
+      "html_sha256": "c6437bfff28b9e71887a10811c40de9f67d56dd533431ea1adb2bb1a19857338",
+      "items": [
+        "R3",
+        "R4",
+        "R8",
+        "Q1",
+        "configuration_B"
+      ],
+      "response_ids": [
+        "Q1-B-k3"
+      ],
+      "description": "Q1 · Configuration B · k=3",
+      "source_files": [
+        "reports/hw04/raw/part4/scored-20260928-03/responses.jsonl",
+        "reports/hw04/raw/part4/scored-20260928-03/frozen/src/rag/pipeline.py"
+      ],
+      "source_excerpts": [
+        {
+          "path": "reports/hw04/raw/part4/scored-20260928-03/frozen/src/rag/pipeline.py",
+          "start_line": 271,
+          "end_line": 273,
+          "sha256": "6cd90a7e5cad89074838127205776cd13c44757472ce0eebeaabe7389fda7482"
+        }
+      ],
+      "captured_at": "2026-09-28T04:44:03.107Z",
+      "width": 1250,
+      "height": 1949,
+      "browser_version": "151.0.7922.34",
+      "playwright_version": "1.62.1",
+      "render_checks": {
+        "viewport_width": 1250,
+        "document_width": 1250,
+        "document_height": 1949,
+        "overflow_elements": [],
+        "exact_raw_text_checks": 2,
+        "no_horizontal_clipping": true
+      }
+    },
+    {
+      "path": "reports/hw04/screenshots/part4/scored-20260928-03/Q1-C-k3.png",
+      "sha256": "66e1d03d7fff37e4a2e4beffb947135dff50aa5fad6e67266cfcde3254b382a4",
+      "html_path": "reports/hw04/screenshots/part4/scored-20260928-03/Q1-C-k3.html",
+      "html_sha256": "0d61ecdaf23f44c04710b841238c3215709ae53e847c7b3f4a50f73dfd1cab30",
+      "items": [
+        "R3",
+        "R4",
+        "R8",
+        "Q1",
+        "configuration_C"
+      ],
+      "response_ids": [
+        "Q1-C-k3"
+      ],
+      "description": "Q1 · Configuration C · k=3",
+      "source_files": [
+        "reports/hw04/raw/part4/scored-20260928-03/responses.jsonl",
+        "reports/hw04/raw/part4/scored-20260928-03/frozen/src/rag/pipeline.py"
+      ],
+      "source_excerpts": [
+        {
+          "path": "reports/hw04/raw/part4/scored-20260928-03/frozen/src/rag/pipeline.py",
+          "start_line": 274,
+          "end_line": 289,
+          "sha256": "6cd90a7e5cad89074838127205776cd13c44757472ce0eebeaabe7389fda7482"
+        }
+      ],
+      "captured_at": "2026-09-28T04:44:03.261Z",
+      "width": 1250,
+      "height": 3361,
+      "browser_version": "151.0.7922.34",
+      "playwright_version": "1.62.1",
+      "render_checks": {
+        "viewport_width": 1250,
+        "document_width": 1250,
+        "document_height": 3361,
+        "overflow_elements": [],
+        "exact_raw_text_checks": 2,
+        "no_horizontal_clipping": true
+      }
+    },
+    {
+      "path": "reports/hw04/screenshots/part4/scored-20260928-03/Q2-A-k0.png",
+      "sha256": "d8a6f5c644610eeac746d94a97c5a287c4e7306682966d9298aaac0fe64c6230",
+      "html_path": "reports/hw04/screenshots/part4/scored-20260928-03/Q2-A-k0.html",
+      "html_sha256": "378a3db97f597a07fdd3c23a9e965444b4117d2187f3f6eb51565d166b30963a",
+      "items": [
+        "R3",
+        "R4",
+        "R8",
+        "Q2",
+        "configuration_A"
+      ],
+      "response_ids": [
+        "Q2-A-k0"
+      ],
+      "description": "Q2 · Configuration A · k=0",
+      "source_files": [
+        "reports/hw04/raw/part4/scored-20260928-03/responses.jsonl",
+        "reports/hw04/raw/part4/scored-20260928-03/frozen/src/rag/pipeline.py"
+      ],
+      "source_excerpts": [
+        {
+          "path": "reports/hw04/raw/part4/scored-20260928-03/frozen/src/rag/pipeline.py",
+          "start_line": 269,
+          "end_line": 270,
+          "sha256": "6cd90a7e5cad89074838127205776cd13c44757472ce0eebeaabe7389fda7482"
+        }
+      ],
+      "captured_at": "2026-09-28T04:44:03.391Z",
+      "width": 1250,
+      "height": 2815,
+      "browser_version": "151.0.7922.34",
+      "playwright_version": "1.62.1",
+      "render_checks": {
+        "viewport_width": 1250,
+        "document_width": 1250,
+        "document_height": 2815,
+        "overflow_elements": [],
+        "exact_raw_text_checks": 2,
+        "no_horizontal_clipping": true
+      }
+    },
+    {
+      "path": "reports/hw04/screenshots/part4/scored-20260928-03/Q2-B-k3.png",
+      "sha256": "942030f27d40b5279d1de7bc953fa341a0df297f1f17a74c5de9b673fabfb4a7",
+      "html_path": "reports/hw04/screenshots/part4/scored-20260928-03/Q2-B-k3.html",
+      "html_sha256": "d4797ee747b61831cef050701ce73b185148a2299504aa7421bc83d8ca190676",
+      "items": [
+        "R3",
+        "R4",
+        "R8",
+        "Q2",
+        "configuration_B",
+        "R5",
+        "sweep"
+      ],
+      "response_ids": [
+        "Q2-B-k3"
+      ],
+      "description": "Q2 · Configuration B · k=3",
+      "source_files": [
+        "reports/hw04/raw/part4/scored-20260928-03/responses.jsonl",
+        "reports/hw04/raw/part4/scored-20260928-03/frozen/src/rag/pipeline.py"
+      ],
+      "source_excerpts": [
+        {
+          "path": "reports/hw04/raw/part4/scored-20260928-03/frozen/src/rag/pipeline.py",
+          "start_line": 271,
+          "end_line": 273,
+          "sha256": "6cd90a7e5cad89074838127205776cd13c44757472ce0eebeaabe7389fda7482"
+        }
+      ],
+      "captured_at": "2026-09-28T04:44:03.512Z",
+      "width": 1250,
+      "height": 2235,
+      "browser_version": "151.0.7922.34",
+      "playwright_version": "1.62.1",
+      "render_checks": {
+        "viewport_width": 1250,
+        "document_width": 1250,
+        "document_height": 2235,
+        "overflow_elements": [],
+        "exact_raw_text_checks": 2,
+        "no_horizontal_clipping": true
+      }
+    },
+    {
+      "path": "reports/hw04/screenshots/part4/scored-20260928-03/Q2-C-k3.png",
+      "sha256": "07dd323045e57c822166543b856ba2391bbbd27633dfd4d73aa806eb1c44f374",
+      "html_path": "reports/hw04/screenshots/part4/scored-20260928-03/Q2-C-k3.html",
+      "html_sha256": "ac1dceb6d592ad24374ce50689f17e7ca99747d0bacb9fb4ff8c35cd78aba8f7",
+      "items": [
+        "R3",
+        "R4",
+        "R8",
+        "Q2",
+        "configuration_C",
+        "R5",
+        "sweep"
+      ],
+      "response_ids": [
+        "Q2-C-k3"
+      ],
+      "description": "Q2 · Configuration C · k=3",
+      "source_files": [
+        "reports/hw04/raw/part4/scored-20260928-03/responses.jsonl",
+        "reports/hw04/raw/part4/scored-20260928-03/frozen/src/rag/pipeline.py"
+      ],
+      "source_excerpts": [
+        {
+          "path": "reports/hw04/raw/part4/scored-20260928-03/frozen/src/rag/pipeline.py",
+          "start_line": 274,
+          "end_line": 289,
+          "sha256": "6cd90a7e5cad89074838127205776cd13c44757472ce0eebeaabe7389fda7482"
+        }
+      ],
+      "captured_at": "2026-09-28T04:44:03.680Z",
+      "width": 1250,
+      "height": 3584,
+      "browser_version": "151.0.7922.34",
+      "playwright_version": "1.62.1",
+      "render_checks": {
+        "viewport_width": 1250,
+        "document_width": 1250,
+        "document_height": 3584,
+        "overflow_elements": [],
+        "exact_raw_text_checks": 2,
+        "no_horizontal_clipping": true
+      }
+    },
+    {
+      "path": "reports/hw04/screenshots/part4/scored-20260928-03/Q3-A-k0.png",
+      "sha256": "39faccdd82362b192ba5658092fcaad43399b947f5d458393d98aa34eb4c333a",
+      "html_path": "reports/hw04/screenshots/part4/scored-20260928-03/Q3-A-k0.html",
+      "html_sha256": "455bb9306f40ac0461e315c44bdbf480913f372c30dcda08cf2881a905799dec",
+      "items": [
+        "R3",
+        "R4",
+        "R8",
+        "Q3",
+        "configuration_A"
+      ],
+      "response_ids": [
+        "Q3-A-k0"
+      ],
+      "description": "Q3 · Configuration A · k=0",
+      "source_files": [
+        "reports/hw04/raw/part4/scored-20260928-03/responses.jsonl",
+        "reports/hw04/raw/part4/scored-20260928-03/frozen/src/rag/pipeline.py"
+      ],
+      "source_excerpts": [
+        {
+          "path": "reports/hw04/raw/part4/scored-20260928-03/frozen/src/rag/pipeline.py",
+          "start_line": 269,
+          "end_line": 270,
+          "sha256": "6cd90a7e5cad89074838127205776cd13c44757472ce0eebeaabe7389fda7482"
+        }
+      ],
+      "captured_at": "2026-09-28T04:44:03.799Z",
+      "width": 1250,
+      "height": 2267,
+      "browser_version": "151.0.7922.34",
+      "playwright_version": "1.62.1",
+      "render_checks": {
+        "viewport_width": 1250,
+        "document_width": 1250,
+        "document_height": 2267,
+        "overflow_elements": [],
+        "exact_raw_text_checks": 2,
+        "no_horizontal_clipping": true
+      }
+    },
+    {
+      "path": "reports/hw04/screenshots/part4/scored-20260928-03/Q3-B-k3.png",
+      "sha256": "a0d7f1d2a11dcbbedc3dc59694bc276f6513a8b920b0a5d0f47f224524a121d4",
+      "html_path": "reports/hw04/screenshots/part4/scored-20260928-03/Q3-B-k3.html",
+      "html_sha256": "305fd42375bd10f15cf18ca71fde4fb026aa05f9e6ba66a94d01dabfa0f7bc97",
+      "items": [
+        "R3",
+        "R4",
+        "R8",
+        "Q3",
+        "configuration_B"
+      ],
+      "response_ids": [
+        "Q3-B-k3"
+      ],
+      "description": "Q3 · Configuration B · k=3",
+      "source_files": [
+        "reports/hw04/raw/part4/scored-20260928-03/responses.jsonl",
+        "reports/hw04/raw/part4/scored-20260928-03/frozen/src/rag/pipeline.py"
+      ],
+      "source_excerpts": [
+        {
+          "path": "reports/hw04/raw/part4/scored-20260928-03/frozen/src/rag/pipeline.py",
+          "start_line": 271,
+          "end_line": 273,
+          "sha256": "6cd90a7e5cad89074838127205776cd13c44757472ce0eebeaabe7389fda7482"
+        }
+      ],
+      "captured_at": "2026-09-28T04:44:03.931Z",
+      "width": 1250,
+      "height": 2244,
+      "browser_version": "151.0.7922.34",
+      "playwright_version": "1.62.1",
+      "render_checks": {
+        "viewport_width": 1250,
+        "document_width": 1250,
+        "document_height": 2244,
+        "overflow_elements": [],
+        "exact_raw_text_checks": 2,
+        "no_horizontal_clipping": true
+      }
+    },
+    {
+      "path": "reports/hw04/screenshots/part4/scored-20260928-03/Q3-C-k3.png",
+      "sha256": "83257aea8cbde8228cc02bb01ec94cebd46adee1df5ebfd384ce3df966672672",
+      "html_path": "reports/hw04/screenshots/part4/scored-20260928-03/Q3-C-k3.html",
+      "html_sha256": "2ddc14df9a9f6df4e9dc9508503e8fb5ff7a60c04a53e3559a59674ff5c3dc13",
+      "items": [
+        "R3",
+        "R4",
+        "R8",
+        "Q3",
+        "configuration_C"
+      ],
+      "response_ids": [
+        "Q3-C-k3"
+      ],
+      "description": "Q3 · Configuration C · k=3",
+      "source_files": [
+        "reports/hw04/raw/part4/scored-20260928-03/responses.jsonl",
+        "reports/hw04/raw/part4/scored-20260928-03/frozen/src/rag/pipeline.py"
+      ],
+      "source_excerpts": [
+        {
+          "path": "reports/hw04/raw/part4/scored-20260928-03/frozen/src/rag/pipeline.py",
+          "start_line": 274,
+          "end_line": 289,
+          "sha256": "6cd90a7e5cad89074838127205776cd13c44757472ce0eebeaabe7389fda7482"
+        }
+      ],
+      "captured_at": "2026-09-28T04:44:04.101Z",
+      "width": 1250,
+      "height": 3712,
+      "browser_version": "151.0.7922.34",
+      "playwright_version": "1.62.1",
+      "render_checks": {
+        "viewport_width": 1250,
+        "document_width": 1250,
+        "document_height": 3712,
+        "overflow_elements": [],
+        "exact_raw_text_checks": 2,
+        "no_horizontal_clipping": true
+      }
+    },
+    {
+      "path": "reports/hw04/screenshots/part4/scored-20260928-03/Q4-A-k0.png",
+      "sha256": "7e8d5b8e6b39f1b01cb21840c5ba1d765fa8d99c7699828b61ef6b0a47860924",
+      "html_path": "reports/hw04/screenshots/part4/scored-20260928-03/Q4-A-k0.html",
+      "html_sha256": "8f2539de62e58acae0724c9b42146e0262bf7803e79e6efcc16e7614ff53ba7f",
+      "items": [
+        "R3",
+        "R4",
+        "R8",
+        "Q4",
+        "configuration_A"
+      ],
+      "response_ids": [
+        "Q4-A-k0"
+      ],
+      "description": "Q4 · Configuration A · k=0",
+      "source_files": [
+        "reports/hw04/raw/part4/scored-20260928-03/responses.jsonl",
+        "reports/hw04/raw/part4/scored-20260928-03/frozen/src/rag/pipeline.py"
+      ],
+      "source_excerpts": [
+        {
+          "path": "reports/hw04/raw/part4/scored-20260928-03/frozen/src/rag/pipeline.py",
+          "start_line": 269,
+          "end_line": 270,
+          "sha256": "6cd90a7e5cad89074838127205776cd13c44757472ce0eebeaabe7389fda7482"
+        }
+      ],
+      "captured_at": "2026-09-28T04:44:04.204Z",
+      "width": 1250,
+      "height": 1205,
+      "browser_version": "151.0.7922.34",
+      "playwright_version": "1.62.1",
+      "render_checks": {
+        "viewport_width": 1250,
+        "document_width": 1250,
+        "document_height": 1205,
+        "overflow_elements": [],
+        "exact_raw_text_checks": 2,
+        "no_horizontal_clipping": true
+      }
+    },
+    {
+      "path": "reports/hw04/screenshots/part4/scored-20260928-03/Q4-B-k3.png",
+      "sha256": "36919753f2e5381ab6dc8a47a2d60513e079c42dd04f63914486efd239e0c1a6",
+      "html_path": "reports/hw04/screenshots/part4/scored-20260928-03/Q4-B-k3.html",
+      "html_sha256": "c869801a034752899f4f0943de73382c3839331a91a57b22cf58d812119fb029",
+      "items": [
+        "R3",
+        "R4",
+        "R8",
+        "Q4",
+        "configuration_B"
+      ],
+      "response_ids": [
+        "Q4-B-k3"
+      ],
+      "description": "Q4 · Configuration B · k=3",
+      "source_files": [
+        "reports/hw04/raw/part4/scored-20260928-03/responses.jsonl",
+        "reports/hw04/raw/part4/scored-20260928-03/frozen/src/rag/pipeline.py"
+      ],
+      "source_excerpts": [
+        {
+          "path": "reports/hw04/raw/part4/scored-20260928-03/frozen/src/rag/pipeline.py",
+          "start_line": 271,
+          "end_line": 273,
+          "sha256": "6cd90a7e5cad89074838127205776cd13c44757472ce0eebeaabe7389fda7482"
+        }
+      ],
+      "captured_at": "2026-09-28T04:44:04.320Z",
+      "width": 1250,
+      "height": 1942,
+      "browser_version": "151.0.7922.34",
+      "playwright_version": "1.62.1",
+      "render_checks": {
+        "viewport_width": 1250,
+        "document_width": 1250,
+        "document_height": 1942,
+        "overflow_elements": [],
+        "exact_raw_text_checks": 2,
+        "no_horizontal_clipping": true
+      }
+    },
+    {
+      "path": "reports/hw04/screenshots/part4/scored-20260928-03/Q4-C-k3.png",
+      "sha256": "b83fd84d05956d871741e1159aa5b8e588b96c05aec6222e2260064192fef1e9",
+      "html_path": "reports/hw04/screenshots/part4/scored-20260928-03/Q4-C-k3.html",
+      "html_sha256": "c6de47d2b1b009e0c821edefa671ea37fd3d55b33a54cb146c2695d919f4edcc",
+      "items": [
+        "R3",
+        "R4",
+        "R8",
+        "Q4",
+        "configuration_C"
+      ],
+      "response_ids": [
+        "Q4-C-k3"
+      ],
+      "description": "Q4 · Configuration C · k=3",
+      "source_files": [
+        "reports/hw04/raw/part4/scored-20260928-03/responses.jsonl",
+        "reports/hw04/raw/part4/scored-20260928-03/frozen/src/rag/pipeline.py"
+      ],
+      "source_excerpts": [
+        {
+          "path": "reports/hw04/raw/part4/scored-20260928-03/frozen/src/rag/pipeline.py",
+          "start_line": 274,
+          "end_line": 289,
+          "sha256": "6cd90a7e5cad89074838127205776cd13c44757472ce0eebeaabe7389fda7482"
+        }
+      ],
+      "captured_at": "2026-09-28T04:44:04.451Z",
+      "width": 1250,
+      "height": 2329,
+      "browser_version": "151.0.7922.34",
+      "playwright_version": "1.62.1",
+      "render_checks": {
+        "viewport_width": 1250,
+        "document_width": 1250,
+        "document_height": 2329,
+        "overflow_elements": [],
+        "exact_raw_text_checks": 2,
+        "no_horizontal_clipping": true
+      }
+    },
+    {
+      "path": "reports/hw04/screenshots/part4/scored-20260928-03/Q5-A-k0.png",
+      "sha256": "1cd2d0e31c5c4f0600007837b37d30222519f414d6fc86ed396247dec6188ba6",
+      "html_path": "reports/hw04/screenshots/part4/scored-20260928-03/Q5-A-k0.html",
+      "html_sha256": "145c6033cce669fdae47974cd3a2cc03506d0f7516b8d9d2d4d5390aedfb32a4",
+      "items": [
+        "R3",
+        "R4",
+        "R8",
+        "Q5",
+        "configuration_A"
+      ],
+      "response_ids": [
+        "Q5-A-k0"
+      ],
+      "description": "Q5 · Configuration A · k=0",
+      "source_files": [
+        "reports/hw04/raw/part4/scored-20260928-03/responses.jsonl",
+        "reports/hw04/raw/part4/scored-20260928-03/frozen/src/rag/pipeline.py"
+      ],
+      "source_excerpts": [
+        {
+          "path": "reports/hw04/raw/part4/scored-20260928-03/frozen/src/rag/pipeline.py",
+          "start_line": 269,
+          "end_line": 270,
+          "sha256": "6cd90a7e5cad89074838127205776cd13c44757472ce0eebeaabe7389fda7482"
+        }
+      ],
+      "captured_at": "2026-09-28T04:44:04.558Z",
+      "width": 1250,
+      "height": 1263,
+      "browser_version": "151.0.7922.34",
+      "playwright_version": "1.62.1",
+      "render_checks": {
+        "viewport_width": 1250,
+        "document_width": 1250,
+        "document_height": 1263,
+        "overflow_elements": [],
+        "exact_raw_text_checks": 2,
+        "no_horizontal_clipping": true
+      }
+    },
+    {
+      "path": "reports/hw04/screenshots/part4/scored-20260928-03/Q5-B-k3.png",
+      "sha256": "761f4e311606b3db8b6425fa0c48528281aa2d205293b28ec96b4ba67c4ca7be",
+      "html_path": "reports/hw04/screenshots/part4/scored-20260928-03/Q5-B-k3.html",
+      "html_sha256": "3bb516e5dae53e9a30e8171d60766e0fb29edc9ae686d986bd450377d19b7818",
+      "items": [
+        "R3",
+        "R4",
+        "R8",
+        "Q5",
+        "configuration_B"
+      ],
+      "response_ids": [
+        "Q5-B-k3"
+      ],
+      "description": "Q5 · Configuration B · k=3",
+      "source_files": [
+        "reports/hw04/raw/part4/scored-20260928-03/responses.jsonl",
+        "reports/hw04/raw/part4/scored-20260928-03/frozen/src/rag/pipeline.py"
+      ],
+      "source_excerpts": [
+        {
+          "path": "reports/hw04/raw/part4/scored-20260928-03/frozen/src/rag/pipeline.py",
+          "start_line": 271,
+          "end_line": 273,
+          "sha256": "6cd90a7e5cad89074838127205776cd13c44757472ce0eebeaabe7389fda7482"
+        }
+      ],
+      "captured_at": "2026-09-28T04:44:04.697Z",
+      "width": 1250,
+      "height": 2392,
+      "browser_version": "151.0.7922.34",
+      "playwright_version": "1.62.1",
+      "render_checks": {
+        "viewport_width": 1250,
+        "document_width": 1250,
+        "document_height": 2392,
+        "overflow_elements": [],
+        "exact_raw_text_checks": 2,
+        "no_horizontal_clipping": true
+      }
+    },
+    {
+      "path": "reports/hw04/screenshots/part4/scored-20260928-03/Q5-C-k3.png",
+      "sha256": "211c46a1899f311192f53c3c344dc0964d4876ec1ef6c32a344c1195547b64a1",
+      "html_path": "reports/hw04/screenshots/part4/scored-20260928-03/Q5-C-k3.html",
+      "html_sha256": "c5654935ea7609b8d300c4f171969df9588de678926dad89589bca7f1ee6916b",
+      "items": [
+        "R3",
+        "R4",
+        "R8",
+        "Q5",
+        "configuration_C"
+      ],
+      "response_ids": [
+        "Q5-C-k3"
+      ],
+      "description": "Q5 · Configuration C · k=3",
+      "source_files": [
+        "reports/hw04/raw/part4/scored-20260928-03/responses.jsonl",
+        "reports/hw04/raw/part4/scored-20260928-03/frozen/src/rag/pipeline.py"
+      ],
+      "source_excerpts": [
+        {
+          "path": "reports/hw04/raw/part4/scored-20260928-03/frozen/src/rag/pipeline.py",
+          "start_line": 274,
+          "end_line": 289,
+          "sha256": "6cd90a7e5cad89074838127205776cd13c44757472ce0eebeaabe7389fda7482"
+        }
+      ],
+      "captured_at": "2026-09-28T04:44:04.835Z",
+      "width": 1250,
+      "height": 2329,
+      "browser_version": "151.0.7922.34",
+      "playwright_version": "1.62.1",
+      "render_checks": {
+        "viewport_width": 1250,
+        "document_width": 1250,
+        "document_height": 2329,
+        "overflow_elements": [],
+        "exact_raw_text_checks": 2,
+        "no_horizontal_clipping": true
+      }
+    },
+    {
+      "path": "reports/hw04/screenshots/part4/scored-20260928-03/Q6-A-k0.png",
+      "sha256": "25ca8999e2940afd24242b4b2e2fb583d9fefe67f7c5017a484a2b3707ed432e",
+      "html_path": "reports/hw04/screenshots/part4/scored-20260928-03/Q6-A-k0.html",
+      "html_sha256": "547cf5435623bd2a8c443d958cdd1350cb0e55e2fd37f414f07e9b3619efcb9c",
+      "items": [
+        "R3",
+        "R4",
+        "R8",
+        "Q6",
+        "configuration_A"
+      ],
+      "response_ids": [
+        "Q6-A-k0"
+      ],
+      "description": "Q6 · Configuration A · k=0",
+      "source_files": [
+        "reports/hw04/raw/part4/scored-20260928-03/responses.jsonl",
+        "reports/hw04/raw/part4/scored-20260928-03/frozen/src/rag/pipeline.py"
+      ],
+      "source_excerpts": [
+        {
+          "path": "reports/hw04/raw/part4/scored-20260928-03/frozen/src/rag/pipeline.py",
+          "start_line": 269,
+          "end_line": 270,
+          "sha256": "6cd90a7e5cad89074838127205776cd13c44757472ce0eebeaabe7389fda7482"
+        }
+      ],
+      "captured_at": "2026-09-28T04:44:04.941Z",
+      "width": 1250,
+      "height": 1177,
+      "browser_version": "151.0.7922.34",
+      "playwright_version": "1.62.1",
+      "render_checks": {
+        "viewport_width": 1250,
+        "document_width": 1250,
+        "document_height": 1177,
+        "overflow_elements": [],
+        "exact_raw_text_checks": 2,
+        "no_horizontal_clipping": true
+      }
+    },
+    {
+      "path": "reports/hw04/screenshots/part4/scored-20260928-03/Q6-B-k3.png",
+      "sha256": "56bea6164198504bb85a74ab01d50dce675ecd9bb2e954547567c5c178bb455b",
+      "html_path": "reports/hw04/screenshots/part4/scored-20260928-03/Q6-B-k3.html",
+      "html_sha256": "7c079bb241179a089824ae9a77879b05efdc0dd2aa2b0c40f4192665800ccfc6",
+      "items": [
+        "R3",
+        "R4",
+        "R8",
+        "Q6",
+        "configuration_B"
+      ],
+      "response_ids": [
+        "Q6-B-k3"
+      ],
+      "description": "Q6 · Configuration B · k=3",
+      "source_files": [
+        "reports/hw04/raw/part4/scored-20260928-03/responses.jsonl",
+        "reports/hw04/raw/part4/scored-20260928-03/frozen/src/rag/pipeline.py"
+      ],
+      "source_excerpts": [
+        {
+          "path": "reports/hw04/raw/part4/scored-20260928-03/frozen/src/rag/pipeline.py",
+          "start_line": 271,
+          "end_line": 273,
+          "sha256": "6cd90a7e5cad89074838127205776cd13c44757472ce0eebeaabe7389fda7482"
+        }
+      ],
+      "captured_at": "2026-09-28T04:44:05.078Z",
+      "width": 1250,
+      "height": 2013,
+      "browser_version": "151.0.7922.34",
+      "playwright_version": "1.62.1",
+      "render_checks": {
+        "viewport_width": 1250,
+        "document_width": 1250,
+        "document_height": 2013,
+        "overflow_elements": [],
+        "exact_raw_text_checks": 2,
+        "no_horizontal_clipping": true
+      }
+    },
+    {
+      "path": "reports/hw04/screenshots/part4/scored-20260928-03/Q6-C-k3.png",
+      "sha256": "33236d6f08bc5c6b8aa079ebb1b046599bd86570721ba24a6aebe2326fe3ba48",
+      "html_path": "reports/hw04/screenshots/part4/scored-20260928-03/Q6-C-k3.html",
+      "html_sha256": "0ace06714863179ba2f08ae5802d8c37f7ea536b377f69536078647ca5c85d80",
+      "items": [
+        "R3",
+        "R4",
+        "R8",
+        "Q6",
+        "configuration_C"
+      ],
+      "response_ids": [
+        "Q6-C-k3"
+      ],
+      "description": "Q6 · Configuration C · k=3",
+      "source_files": [
+        "reports/hw04/raw/part4/scored-20260928-03/responses.jsonl",
+        "reports/hw04/raw/part4/scored-20260928-03/frozen/src/rag/pipeline.py"
+      ],
+      "source_excerpts": [
+        {
+          "path": "reports/hw04/raw/part4/scored-20260928-03/frozen/src/rag/pipeline.py",
+          "start_line": 274,
+          "end_line": 289,
+          "sha256": "6cd90a7e5cad89074838127205776cd13c44757472ce0eebeaabe7389fda7482"
+        }
+      ],
+      "captured_at": "2026-09-28T04:44:05.217Z",
+      "width": 1250,
+      "height": 2329,
+      "browser_version": "151.0.7922.34",
+      "playwright_version": "1.62.1",
+      "render_checks": {
+        "viewport_width": 1250,
+        "document_width": 1250,
+        "document_height": 2329,
+        "overflow_elements": [],
+        "exact_raw_text_checks": 2,
+        "no_horizontal_clipping": true
+      }
+    },
+    {
+      "path": "reports/hw04/screenshots/part4/scored-20260928-03/Q2-B-k1.png",
+      "sha256": "ef3ee68fa96d4ce8010d87915c705cb816f8fa6ff928cab74c926716d7d0c79b",
+      "html_path": "reports/hw04/screenshots/part4/scored-20260928-03/Q2-B-k1.html",
+      "html_sha256": "510776df7a2711add951f59234e89937433d3911855154f58a6765e1c7a5abad",
+      "items": [
+        "R3",
+        "R4",
+        "R8",
+        "Q2",
+        "configuration_B",
+        "R5",
+        "sweep"
+      ],
+      "response_ids": [
+        "Q2-B-k1"
+      ],
+      "description": "Q2 · Configuration B · k=1",
+      "source_files": [
+        "reports/hw04/raw/part4/scored-20260928-03/responses.jsonl",
+        "reports/hw04/raw/part4/scored-20260928-03/frozen/src/rag/pipeline.py"
+      ],
+      "source_excerpts": [
+        {
+          "path": "reports/hw04/raw/part4/scored-20260928-03/frozen/src/rag/pipeline.py",
+          "start_line": 271,
+          "end_line": 273,
+          "sha256": "6cd90a7e5cad89074838127205776cd13c44757472ce0eebeaabe7389fda7482"
+        }
+      ],
+      "captured_at": "2026-09-28T04:44:05.333Z",
+      "width": 1250,
+      "height": 1670,
+      "browser_version": "151.0.7922.34",
+      "playwright_version": "1.62.1",
+      "render_checks": {
+        "viewport_width": 1250,
+        "document_width": 1250,
+        "document_height": 1670,
+        "overflow_elements": [],
+        "exact_raw_text_checks": 2,
+        "no_horizontal_clipping": true
+      }
+    },
+    {
+      "path": "reports/hw04/screenshots/part4/scored-20260928-03/Q2-C-k1.png",
+      "sha256": "98bd8138cbdfee68c1bf5a9e90a6ab60285ac604fa9e03e3f48a2df20172de9d",
+      "html_path": "reports/hw04/screenshots/part4/scored-20260928-03/Q2-C-k1.html",
+      "html_sha256": "8afb0eed76981cf13c08dd7fc10aa1983f672a74ae6a044b852705d735e3c7d4",
+      "items": [
+        "R3",
+        "R4",
+        "R8",
+        "Q2",
+        "configuration_C",
+        "R5",
+        "sweep"
+      ],
+      "response_ids": [
+        "Q2-C-k1"
+      ],
+      "description": "Q2 · Configuration C · k=1",
+      "source_files": [
+        "reports/hw04/raw/part4/scored-20260928-03/responses.jsonl",
+        "reports/hw04/raw/part4/scored-20260928-03/frozen/src/rag/pipeline.py"
+      ],
+      "source_excerpts": [
+        {
+          "path": "reports/hw04/raw/part4/scored-20260928-03/frozen/src/rag/pipeline.py",
+          "start_line": 274,
+          "end_line": 289,
+          "sha256": "6cd90a7e5cad89074838127205776cd13c44757472ce0eebeaabe7389fda7482"
+        }
+      ],
+      "captured_at": "2026-09-28T04:44:05.476Z",
+      "width": 1250,
+      "height": 2506,
+      "browser_version": "151.0.7922.34",
+      "playwright_version": "1.62.1",
+      "render_checks": {
+        "viewport_width": 1250,
+        "document_width": 1250,
+        "document_height": 2506,
+        "overflow_elements": [],
+        "exact_raw_text_checks": 2,
+        "no_horizontal_clipping": true
+      }
+    },
+    {
+      "path": "reports/hw04/screenshots/part4/scored-20260928-03/Q2-B-k5.png",
+      "sha256": "79baddbdad08e395212526a6cbb6d85d80303490ee56d1e63d66654adc6e1310",
+      "html_path": "reports/hw04/screenshots/part4/scored-20260928-03/Q2-B-k5.html",
+      "html_sha256": "35f72efecd1a985ff33522a25e124a2a2647b9af66e20191c32c700d9e1f10ac",
+      "items": [
+        "R3",
+        "R4",
+        "R8",
+        "Q2",
+        "configuration_B",
+        "R5",
+        "sweep"
+      ],
+      "response_ids": [
+        "Q2-B-k5"
+      ],
+      "description": "Q2 · Configuration B · k=5",
+      "source_files": [
+        "reports/hw04/raw/part4/scored-20260928-03/responses.jsonl",
+        "reports/hw04/raw/part4/scored-20260928-03/frozen/src/rag/pipeline.py"
+      ],
+      "source_excerpts": [
+        {
+          "path": "reports/hw04/raw/part4/scored-20260928-03/frozen/src/rag/pipeline.py",
+          "start_line": 271,
+          "end_line": 273,
+          "sha256": "6cd90a7e5cad89074838127205776cd13c44757472ce0eebeaabe7389fda7482"
+        }
+      ],
+      "captured_at": "2026-09-28T04:44:05.606Z",
+      "width": 1250,
+      "height": 2517,
+      "browser_version": "151.0.7922.34",
+      "playwright_version": "1.62.1",
+      "render_checks": {
+        "viewport_width": 1250,
+        "document_width": 1250,
+        "document_height": 2517,
+        "overflow_elements": [],
+        "exact_raw_text_checks": 2,
+        "no_horizontal_clipping": true
+      }
+    },
+    {
+      "path": "reports/hw04/screenshots/part4/scored-20260928-03/Q2-C-k5.png",
+      "sha256": "1c69127fdb70d6968efd7e8714ecd3ba67dd115021ae30becfd5fb6c9458cc7f",
+      "html_path": "reports/hw04/screenshots/part4/scored-20260928-03/Q2-C-k5.html",
+      "html_sha256": "49b53020b99d1f8e34e054ee2dec0e599bf5c93eeb1f25a2b10598c1e5f717ea",
+      "items": [
+        "R3",
+        "R4",
+        "R8",
+        "Q2",
+        "configuration_C",
+        "R5",
+        "sweep"
+      ],
+      "response_ids": [
+        "Q2-C-k5"
+      ],
+      "description": "Q2 · Configuration C · k=5",
+      "source_files": [
+        "reports/hw04/raw/part4/scored-20260928-03/responses.jsonl",
+        "reports/hw04/raw/part4/scored-20260928-03/frozen/src/rag/pipeline.py"
+      ],
+      "source_excerpts": [
+        {
+          "path": "reports/hw04/raw/part4/scored-20260928-03/frozen/src/rag/pipeline.py",
+          "start_line": 274,
+          "end_line": 289,
+          "sha256": "6cd90a7e5cad89074838127205776cd13c44757472ce0eebeaabe7389fda7482"
+        }
+      ],
+      "captured_at": "2026-09-28T04:44:05.811Z",
+      "width": 1250,
+      "height": 4663,
+      "browser_version": "151.0.7922.34",
+      "playwright_version": "1.62.1",
+      "render_checks": {
+        "viewport_width": 1250,
+        "document_width": 1250,
+        "document_height": 4663,
+        "overflow_elements": [],
+        "exact_raw_text_checks": 2,
+        "no_horizontal_clipping": true
+      }
+    },
+    {
+      "path": "reports/hw04/screenshots/part4/scored-20260928-03/02-retrieval-before-generation.png",
+      "sha256": "61d4bc19ad9f6264680baf6fa6b74ae72b7b7ec58a3f353928d02300591f0b4e",
+      "html_path": "reports/hw04/screenshots/part4/scored-20260928-03/02-retrieval-before-generation.html",
+      "html_sha256": "41eb4bd249fb1958879d73dd6d955c2d8e7b4172bf028dfe255719b153fb2ae9",
+      "items": [
+        "R2",
+        "R8",
+        "pre_generation_retrieval"
+      ],
+      "response_ids": [
+        "Q2-B-k3"
+      ],
+      "description": "Retrieved chunks printed before generation",
+      "source_files": [
+        "reports/hw04/raw/part4/scored-20260928-03/RUN_LOG.txt",
+        "reports/hw04/raw/part4/scored-20260928-03/responses.jsonl",
+        "reports/hw04/raw/part4/scored-20260928-03/frozen/src/rag/runner.py"
+      ],
+      "source_excerpts": [
+        {
+          "path": "reports/hw04/raw/part4/scored-20260928-03/frozen/src/rag/runner.py",
+          "start_line": 193,
+          "end_line": 203,
+          "sha256": "949ef325c4c48e8abe7733904056dc764398076c510a0c3256b1ad6604d53a7d"
+        }
+      ],
+      "captured_at": "2026-09-28T04:44:05.923Z",
+      "width": 1250,
+      "height": 1737,
+      "browser_version": "151.0.7922.34",
+      "playwright_version": "1.62.1",
+      "render_checks": {
+        "viewport_width": 1250,
+        "document_width": 1250,
+        "document_height": 1737,
+        "overflow_elements": [],
+        "exact_raw_text_checks": 1,
+        "no_horizontal_clipping": true
+      }
+    },
+    {
+      "path": "reports/hw04/screenshots/part4/scored-20260928-03/03-evaluation-summary.png",
+      "sha256": "3b05a08b78d331624a9bc9ed470a551b069f01c154179c4cc6b57c68f779d05c",
+      "html_path": "reports/hw04/screenshots/part4/scored-20260928-03/03-evaluation-summary.html",
+      "html_sha256": "8bd9df6075e672192f6f3dabc6df6f486e0520e3ff1bd01b90cdb15f9c95ce61",
+      "items": [
+        "R6",
+        "R7",
+        "R8",
+        "evaluation"
+      ],
+      "response_ids": [
+        "Q1-A-k0",
+        "Q1-B-k3",
+        "Q1-C-k3",
+        "Q2-A-k0",
+        "Q2-B-k3",
+        "Q2-C-k3",
+        "Q3-A-k0",
+        "Q3-B-k3",
+        "Q3-C-k3",
+        "Q4-A-k0",
+        "Q4-B-k3",
+        "Q4-C-k3",
+        "Q5-A-k0",
+        "Q5-B-k3",
+        "Q5-C-k3",
+        "Q6-A-k0",
+        "Q6-B-k3",
+        "Q6-C-k3"
+      ],
+      "description": "Evaluation from saved semantic judgments",
+      "source_files": [
+        "reports/hw04/raw/part4/scored-20260928-03/summary.json",
+        "reports/hw04/screenshots/part4/scored-20260928-03/source_snapshots/evaluation.py"
+      ],
+      "source_excerpts": [
+        {
+          "path": "reports/hw04/screenshots/part4/scored-20260928-03/source_snapshots/evaluation.py",
+          "start_line": 187,
+          "end_line": 204,
+          "sha256": "63ade1b1018f20fe93b11e7bb99feaa7819836f984f43b0d022d8ee3f4e5c83d"
+        }
+      ],
+      "captured_at": "2026-09-28T04:44:06.041Z",
+      "width": 1250,
+      "height": 1820,
+      "browser_version": "151.0.7922.34",
+      "playwright_version": "1.62.1",
+      "render_checks": {
+        "viewport_width": 1250,
+        "document_width": 1250,
+        "document_height": 1820,
+        "overflow_elements": [],
+        "exact_raw_text_checks": 0,
+        "no_horizontal_clipping": true
+      }
+    }
+  ],
+  "sweep_references": [
+    {
+      "question_id": "Q2",
+      "configuration": "B",
+      "k": 1,
+      "response_id": "Q2-B-k1",
+      "reused_main": false,
+      "capture_path": "reports/hw04/screenshots/part4/scored-20260928-03/Q2-B-k1.png"
+    },
+    {
+      "question_id": "Q2",
+      "configuration": "B",
+      "k": 3,
+      "response_id": "Q2-B-k3",
+      "reused_main": true,
+      "capture_path": "reports/hw04/screenshots/part4/scored-20260928-03/Q2-B-k3.png"
+    },
+    {
+      "question_id": "Q2",
+      "configuration": "B",
+      "k": 5,
+      "response_id": "Q2-B-k5",
+      "reused_main": false,
+      "capture_path": "reports/hw04/screenshots/part4/scored-20260928-03/Q2-B-k5.png"
+    },
+    {
+      "question_id": "Q2",
+      "configuration": "C",
+      "k": 1,
+      "response_id": "Q2-C-k1",
+      "reused_main": false,
+      "capture_path": "reports/hw04/screenshots/part4/scored-20260928-03/Q2-C-k1.png"
+    },
+    {
+      "question_id": "Q2",
+      "configuration": "C",
+      "k": 3,
+      "response_id": "Q2-C-k3",
+      "reused_main": true,
+      "capture_path": "reports/hw04/screenshots/part4/scored-20260928-03/Q2-C-k3.png"
+    },
+    {
+      "question_id": "Q2",
+      "configuration": "C",
+      "k": 5,
+      "response_id": "Q2-C-k5",
+      "reused_main": false,
+      "capture_path": "reports/hw04/screenshots/part4/scored-20260928-03/Q2-C-k5.png"
+    }
+  ],
+  "source_hashes": {
+    "reports/hw04/raw/part4/scored-20260928-03/run_metadata.json": "3c50b00d57bfe136a473a42ad662084df6ab189ce2f53ecd861790041fe07402",
+    "reports/hw04/raw/part4/scored-20260928-03/frozen/experiment_config.json": "dd53fccc39c184167341e76c75cd5e039a1909b591d09f161ec4718fe498ab1a",
+    "reports/hw04/raw/part4/scored-20260928-03/frozen/reports/hw04/part4/CORPUS_MANIFEST.json": "6a4af0de7c0c5a5ac175c51f39f62878bcec3d3b245329b0fa7b319dd868f5c9",
+    "reports/hw04/raw/part4/scored-20260928-03/chunks.jsonl": "21a5467a06ba9a99cdcb8bfc2e7ce4e60e61e3286459fdefbcdee8e9ca030abc",
+    "reports/hw04/raw/part4/scored-20260928-03/index_audit.json": "f0ea4bb2f7b51c4b91e1a61c2657b545485e1e7ee5334b7f7ea1cf6720b5e3ae",
+    "reports/hw04/raw/part4/scored-20260928-03/responses.jsonl": "44dbb2d4c8e4ff2c6621f4f04421502c9ba617a9d0c4122d6e55b7fa8cebba94",
+    "reports/hw04/raw/part4/scored-20260928-03/RUN_LOG.txt": "d29be7cfd718a4c4da6232ba89686791a52525e858a7abe6fcd0158488687bea",
+    "reports/hw04/raw/part4/scored-20260928-03/summary.json": "410c1aada50374607643fb887a943022c4e78c0d0b189dfa4355c7dbc474b780",
+    "reports/hw04/screenshots/part4/scored-20260928-03/source_snapshots/evaluation.py": "63ade1b1018f20fe93b11e7bb99feaa7819836f984f43b0d022d8ee3f4e5c83d",
+    "reports/hw04/raw/part4/scored-20260928-03/frozen/src/rag/pipeline.py": "6cd90a7e5cad89074838127205776cd13c44757472ce0eebeaabe7389fda7482",
+    "reports/hw04/raw/part4/scored-20260928-03/frozen/src/rag/runner.py": "949ef325c4c48e8abe7733904056dc764398076c510a0c3256b1ad6604d53a7d"
+  },
+  "completed_at": "2026-09-28T04:44:06.064Z"
+}

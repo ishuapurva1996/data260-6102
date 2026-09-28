@@ -1,0 +1,1001 @@
+{
+  "created_at": "2026-09-28T05:42:32.560866+00:00",
+  "method": "Recompute general lexical variants from actual full dense rank audit; only eight development questions inspected; frozen chunks unchanged. No generation or gold-guided candidate insertion.",
+  "variants": {
+    "minimal": {
+      "stopwords": [
+        "a",
+        "an",
+        "and",
+        "are",
+        "as",
+        "at",
+        "be",
+        "by",
+        "for",
+        "from",
+        "in",
+        "is",
+        "it",
+        "of",
+        "on",
+        "or",
+        "that",
+        "the",
+        "this",
+        "to",
+        "was",
+        "were",
+        "with"
+      ],
+      "results": [
+        {
+          "question_id": "D1",
+          "top3": [
+            {
+              "chunk_id": "EPA_LEAD:3830114fcc78:0018135-0018561",
+              "score": 0.6764455684148118,
+              "dense_rank": 1,
+              "lexical_rank": 2
+            },
+            {
+              "chunk_id": "EPA_LEAD:3830114fcc78:0017714-0018185",
+              "score": 0.5782574455218806,
+              "dense_rank": 2,
+              "lexical_rank": 1
+            },
+            {
+              "chunk_id": "EPA_LEAD:3830114fcc78:0018511-0018937",
+              "score": 0.5445473845363791,
+              "dense_rank": 3,
+              "lexical_rank": 3
+            }
+          ],
+          "retained_coverage": {
+            "cold_water": true
+          }
+        },
+        {
+          "question_id": "D2",
+          "top3": [
+            {
+              "chunk_id": "HUD_FAIR:c47c156c57ea:0016808-0017294",
+              "score": 0.7540818540829807,
+              "dense_rank": 1,
+              "lexical_rank": 3
+            },
+            {
+              "chunk_id": "HUD_FAIR:c47c156c57ea:0009384-0009882",
+              "score": 0.688329575863233,
+              "dense_rank": 8,
+              "lexical_rank": 2
+            },
+            {
+              "chunk_id": "HUD_FAIR:c47c156c57ea:0017470-0017870",
+              "score": 0.7028733227686856,
+              "dense_rank": 3,
+              "lexical_rank": 7
+            }
+          ],
+          "retained_coverage": {
+            "complaint_deadline": false
+          }
+        },
+        {
+          "question_id": "D3",
+          "top3": [
+            {
+              "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0015226-0015625",
+              "score": 0.5987596616037336,
+              "dense_rank": 8,
+              "lexical_rank": 6
+            },
+            {
+              "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0080409-0080909",
+              "score": 0.5682127889000921,
+              "dense_rank": 14,
+              "lexical_rank": 3
+            },
+            {
+              "chunk_id": "HUD_SELECTION:970dfc1f3a55:0106053-0106515",
+              "score": 0.6105482535388014,
+              "dense_rank": 4,
+              "lexical_rank": 13
+            }
+          ],
+          "retained_coverage": {
+            "dependent_deduction": true
+          }
+        },
+        {
+          "question_id": "D4",
+          "top3": [
+            {
+              "chunk_id": "EPA_DISCLOSURE:38dd88cf9257:0004176-0004620",
+              "score": 0.512602289877302,
+              "dense_rank": 1,
+              "lexical_rank": 3
+            },
+            {
+              "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0130057-0130445",
+              "score": 0.42354941838170873,
+              "dense_rank": 6,
+              "lexical_rank": 7
+            },
+            {
+              "chunk_id": "EPA_DISCLOSURE:38dd88cf9257:0003412-0003822",
+              "score": 0.38504622697877244,
+              "dense_rank": 11,
+              "lexical_rank": 4
+            }
+          ],
+          "retained_coverage": {
+            "retention": true
+          }
+        },
+        {
+          "question_id": "D5",
+          "top3": [
+            {
+              "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0136302-0136748",
+              "score": 0.4866507358734005,
+              "dense_rank": 1,
+              "lexical_rank": 5
+            },
+            {
+              "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0143833-0144273",
+              "score": 0.46040834233506367,
+              "dense_rank": 5,
+              "lexical_rank": 3
+            },
+            {
+              "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0043295-0043795",
+              "score": 0.4573510504858237,
+              "dense_rank": 6,
+              "lexical_rank": 16
+            }
+          ],
+          "retained_coverage": {}
+        },
+        {
+          "question_id": "D6",
+          "top3": [
+            {
+              "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0087926-0088180",
+              "score": 0.07781802436286671,
+              "dense_rank": 19,
+              "lexical_rank": 7
+            },
+            {
+              "chunk_id": "HUD_FAIR:c47c156c57ea:0004732-0005103",
+              "score": 0.046339163117976256,
+              "dense_rank": 63,
+              "lexical_rank": 1
+            },
+            {
+              "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0070291-0070576",
+              "score": 0.08515976858665418,
+              "dense_rank": 12,
+              "lexical_rank": 39
+            }
+          ],
+          "retained_coverage": {}
+        },
+        {
+          "question_id": "D7",
+          "top3": [
+            {
+              "chunk_id": "HUD_FAIR:c47c156c57ea:0014922-0015417",
+              "score": 0.43794177119562633,
+              "dense_rank": 6,
+              "lexical_rank": 7
+            },
+            {
+              "chunk_id": "HUD_FAIR:c47c156c57ea:0013393-0013759",
+              "score": 0.44102213935250667,
+              "dense_rank": 4,
+              "lexical_rank": 26
+            },
+            {
+              "chunk_id": "HUD_FAIR:c47c156c57ea:0014097-0014522",
+              "score": 0.3854215428564753,
+              "dense_rank": 11,
+              "lexical_rank": 28
+            }
+          ],
+          "retained_coverage": {}
+        },
+        {
+          "question_id": "D8",
+          "top3": [
+            {
+              "chunk_id": "EPA_LEAD:3830114fcc78:0000764-0001237",
+              "score": 0.42007747634493947,
+              "dense_rank": 2,
+              "lexical_rank": 1
+            },
+            {
+              "chunk_id": "EPA_LEAD:3830114fcc78:0001618-0002053",
+              "score": 0.402995633779578,
+              "dense_rank": 3,
+              "lexical_rank": 4
+            },
+            {
+              "chunk_id": "EPA_LEAD:3830114fcc78:0016095-0016543",
+              "score": 0.39116661589431395,
+              "dense_rank": 4,
+              "lexical_rank": 7
+            }
+          ],
+          "retained_coverage": {}
+        }
+      ],
+      "complete_answerable": 3
+    },
+    "question_words_removed": {
+      "stopwords": [
+        "a",
+        "an",
+        "and",
+        "are",
+        "as",
+        "at",
+        "be",
+        "by",
+        "can",
+        "could",
+        "for",
+        "from",
+        "how",
+        "in",
+        "is",
+        "it",
+        "must",
+        "of",
+        "on",
+        "or",
+        "should",
+        "that",
+        "the",
+        "this",
+        "to",
+        "was",
+        "were",
+        "what",
+        "when",
+        "where",
+        "which",
+        "who",
+        "whom",
+        "whose",
+        "why",
+        "with",
+        "would"
+      ],
+      "results": [
+        {
+          "question_id": "D1",
+          "top3": [
+            {
+              "chunk_id": "EPA_LEAD:3830114fcc78:0018135-0018561",
+              "score": 0.6764455684148118,
+              "dense_rank": 1,
+              "lexical_rank": 2
+            },
+            {
+              "chunk_id": "EPA_LEAD:3830114fcc78:0017714-0018185",
+              "score": 0.5782574455218806,
+              "dense_rank": 2,
+              "lexical_rank": 1
+            },
+            {
+              "chunk_id": "EPA_LEAD:3830114fcc78:0018511-0018937",
+              "score": 0.5445473845363791,
+              "dense_rank": 3,
+              "lexical_rank": 3
+            }
+          ],
+          "retained_coverage": {
+            "cold_water": true
+          }
+        },
+        {
+          "question_id": "D2",
+          "top3": [
+            {
+              "chunk_id": "HUD_FAIR:c47c156c57ea:0016808-0017294",
+              "score": 0.7540818540829807,
+              "dense_rank": 1,
+              "lexical_rank": 3
+            },
+            {
+              "chunk_id": "HUD_FAIR:c47c156c57ea:0017470-0017870",
+              "score": 0.7028733227686856,
+              "dense_rank": 3,
+              "lexical_rank": 5
+            },
+            {
+              "chunk_id": "HUD_FAIR:c47c156c57ea:0009384-0009882",
+              "score": 0.688329575863233,
+              "dense_rank": 8,
+              "lexical_rank": 1
+            }
+          ],
+          "retained_coverage": {
+            "complaint_deadline": false
+          }
+        },
+        {
+          "question_id": "D3",
+          "top3": [
+            {
+              "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0015226-0015625",
+              "score": 0.5987596616037336,
+              "dense_rank": 8,
+              "lexical_rank": 4
+            },
+            {
+              "chunk_id": "HUD_SELECTION:970dfc1f3a55:0106053-0106515",
+              "score": 0.6105482535388014,
+              "dense_rank": 4,
+              "lexical_rank": 11
+            },
+            {
+              "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0080409-0080909",
+              "score": 0.5682127889000921,
+              "dense_rank": 14,
+              "lexical_rank": 2
+            }
+          ],
+          "retained_coverage": {
+            "dependent_deduction": true
+          }
+        },
+        {
+          "question_id": "D4",
+          "top3": [
+            {
+              "chunk_id": "EPA_DISCLOSURE:38dd88cf9257:0004176-0004620",
+              "score": 0.512602289877302,
+              "dense_rank": 1,
+              "lexical_rank": 5
+            },
+            {
+              "chunk_id": "EPA_DISCLOSURE:38dd88cf9257:0003412-0003822",
+              "score": 0.38504622697877244,
+              "dense_rank": 11,
+              "lexical_rank": 2
+            },
+            {
+              "chunk_id": "EPA_DISCLOSURE:38dd88cf9257:0006030-0006482",
+              "score": 0.36478966698624377,
+              "dense_rank": 16,
+              "lexical_rank": 1
+            }
+          ],
+          "retained_coverage": {
+            "retention": true
+          }
+        },
+        {
+          "question_id": "D5",
+          "top3": [
+            {
+              "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0136302-0136748",
+              "score": 0.4866507358734005,
+              "dense_rank": 1,
+              "lexical_rank": 3
+            },
+            {
+              "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0143833-0144273",
+              "score": 0.46040834233506367,
+              "dense_rank": 5,
+              "lexical_rank": 2
+            },
+            {
+              "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0043295-0043795",
+              "score": 0.4573510504858237,
+              "dense_rank": 6,
+              "lexical_rank": 14
+            }
+          ],
+          "retained_coverage": {}
+        },
+        {
+          "question_id": "D6",
+          "top3": [
+            {
+              "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0070291-0070576",
+              "score": 0.08515976858665418,
+              "dense_rank": 12,
+              "lexical_rank": 11
+            },
+            {
+              "chunk_id": "HUD_FAIR:c47c156c57ea:0004732-0005103",
+              "score": 0.046339163117976256,
+              "dense_rank": 63,
+              "lexical_rank": 3
+            },
+            {
+              "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0087926-0088180",
+              "score": 0.07781802436286671,
+              "dense_rank": 19,
+              "lexical_rank": 30
+            }
+          ],
+          "retained_coverage": {}
+        },
+        {
+          "question_id": "D7",
+          "top3": [
+            {
+              "chunk_id": "HUD_FAIR:c47c156c57ea:0014922-0015417",
+              "score": 0.43794177119562633,
+              "dense_rank": 6,
+              "lexical_rank": 4
+            },
+            {
+              "chunk_id": "HUD_FAIR:c47c156c57ea:0013393-0013759",
+              "score": 0.44102213935250667,
+              "dense_rank": 4,
+              "lexical_rank": 15
+            },
+            {
+              "chunk_id": "HUD_FAIR:c47c156c57ea:0014097-0014522",
+              "score": 0.3854215428564753,
+              "dense_rank": 11,
+              "lexical_rank": 17
+            }
+          ],
+          "retained_coverage": {}
+        },
+        {
+          "question_id": "D8",
+          "top3": [
+            {
+              "chunk_id": "EPA_LEAD:3830114fcc78:0000764-0001237",
+              "score": 0.42007747634493947,
+              "dense_rank": 2,
+              "lexical_rank": 1
+            },
+            {
+              "chunk_id": "EPA_LEAD:3830114fcc78:0001618-0002053",
+              "score": 0.402995633779578,
+              "dense_rank": 3,
+              "lexical_rank": 4
+            },
+            {
+              "chunk_id": "EPA_LEAD:3830114fcc78:0016095-0016543",
+              "score": 0.39116661589431395,
+              "dense_rank": 4,
+              "lexical_rank": 7
+            }
+          ],
+          "retained_coverage": {}
+        }
+      ],
+      "complete_answerable": 3
+    },
+    "standard_without_negation": {
+      "stopwords": [
+        "a",
+        "about",
+        "above",
+        "across",
+        "after",
+        "afterwards",
+        "again",
+        "against",
+        "all",
+        "almost",
+        "alone",
+        "along",
+        "already",
+        "also",
+        "although",
+        "always",
+        "am",
+        "among",
+        "amongst",
+        "amoungst",
+        "amount",
+        "an",
+        "and",
+        "another",
+        "any",
+        "anyhow",
+        "anyone",
+        "anything",
+        "anyway",
+        "anywhere",
+        "are",
+        "around",
+        "as",
+        "at",
+        "back",
+        "be",
+        "became",
+        "because",
+        "become",
+        "becomes",
+        "becoming",
+        "been",
+        "before",
+        "beforehand",
+        "behind",
+        "being",
+        "below",
+        "beside",
+        "besides",
+        "between",
+        "beyond",
+        "bill",
+        "both",
+        "bottom",
+        "but",
+        "by",
+        "call",
+        "can",
+        "cannot",
+        "cant",
+        "co",
+        "con",
+        "could",
+        "couldnt",
+        "cry",
+        "de",
+        "describe",
+        "detail",
+        "do",
+        "done",
+        "down",
+        "due",
+        "during",
+        "each",
+        "eg",
+        "eight",
+        "either",
+        "eleven",
+        "else",
+        "elsewhere",
+        "empty",
+        "enough",
+        "etc",
+        "even",
+        "ever",
+        "every",
+        "everyone",
+        "everything",
+        "everywhere",
+        "except",
+        "few",
+        "fifteen",
+        "fifty",
+        "fill",
+        "find",
+        "fire",
+        "first",
+        "five",
+        "for",
+        "former",
+        "formerly",
+        "forty",
+        "found",
+        "four",
+        "from",
+        "front",
+        "full",
+        "further",
+        "get",
+        "give",
+        "go",
+        "had",
+        "has",
+        "hasnt",
+        "have",
+        "he",
+        "hence",
+        "her",
+        "here",
+        "hereafter",
+        "hereby",
+        "herein",
+        "hereupon",
+        "hers",
+        "herself",
+        "him",
+        "himself",
+        "his",
+        "how",
+        "however",
+        "hundred",
+        "i",
+        "ie",
+        "if",
+        "in",
+        "inc",
+        "indeed",
+        "interest",
+        "into",
+        "is",
+        "it",
+        "its",
+        "itself",
+        "keep",
+        "last",
+        "latter",
+        "latterly",
+        "least",
+        "less",
+        "ltd",
+        "made",
+        "many",
+        "may",
+        "me",
+        "meanwhile",
+        "might",
+        "mill",
+        "mine",
+        "more",
+        "moreover",
+        "most",
+        "mostly",
+        "move",
+        "much",
+        "must",
+        "my",
+        "myself",
+        "name",
+        "namely",
+        "neither",
+        "nevertheless",
+        "next",
+        "nine",
+        "nobody",
+        "none",
+        "noone",
+        "nothing",
+        "now",
+        "nowhere",
+        "of",
+        "off",
+        "often",
+        "on",
+        "once",
+        "one",
+        "only",
+        "onto",
+        "or",
+        "other",
+        "others",
+        "otherwise",
+        "our",
+        "ours",
+        "ourselves",
+        "out",
+        "over",
+        "own",
+        "part",
+        "per",
+        "perhaps",
+        "please",
+        "put",
+        "rather",
+        "re",
+        "same",
+        "see",
+        "seem",
+        "seemed",
+        "seeming",
+        "seems",
+        "serious",
+        "several",
+        "she",
+        "should",
+        "show",
+        "side",
+        "since",
+        "sincere",
+        "six",
+        "sixty",
+        "so",
+        "some",
+        "somehow",
+        "someone",
+        "something",
+        "sometime",
+        "sometimes",
+        "somewhere",
+        "still",
+        "such",
+        "system",
+        "take",
+        "ten",
+        "than",
+        "that",
+        "the",
+        "their",
+        "them",
+        "themselves",
+        "then",
+        "thence",
+        "there",
+        "thereafter",
+        "thereby",
+        "therefore",
+        "therein",
+        "thereupon",
+        "these",
+        "they",
+        "thick",
+        "thin",
+        "third",
+        "this",
+        "those",
+        "though",
+        "three",
+        "through",
+        "throughout",
+        "thru",
+        "thus",
+        "to",
+        "together",
+        "too",
+        "top",
+        "toward",
+        "towards",
+        "twelve",
+        "twenty",
+        "two",
+        "un",
+        "under",
+        "until",
+        "up",
+        "upon",
+        "us",
+        "very",
+        "via",
+        "was",
+        "we",
+        "well",
+        "were",
+        "what",
+        "whatever",
+        "when",
+        "whence",
+        "whenever",
+        "where",
+        "whereafter",
+        "whereas",
+        "whereby",
+        "wherein",
+        "whereupon",
+        "wherever",
+        "whether",
+        "which",
+        "while",
+        "whither",
+        "who",
+        "whoever",
+        "whole",
+        "whom",
+        "whose",
+        "why",
+        "will",
+        "with",
+        "within",
+        "without",
+        "would",
+        "yet",
+        "you",
+        "your",
+        "yours",
+        "yourself",
+        "yourselves"
+      ],
+      "results": [
+        {
+          "question_id": "D1",
+          "top3": [
+            {
+              "chunk_id": "EPA_LEAD:3830114fcc78:0018135-0018561",
+              "score": 0.6764455684148118,
+              "dense_rank": 1,
+              "lexical_rank": 2
+            },
+            {
+              "chunk_id": "EPA_LEAD:3830114fcc78:0017714-0018185",
+              "score": 0.5782574455218806,
+              "dense_rank": 2,
+              "lexical_rank": 1
+            },
+            {
+              "chunk_id": "EPA_LEAD:3830114fcc78:0018511-0018937",
+              "score": 0.5445473845363791,
+              "dense_rank": 3,
+              "lexical_rank": 3
+            }
+          ],
+          "retained_coverage": {
+            "cold_water": true
+          }
+        },
+        {
+          "question_id": "D2",
+          "top3": [
+            {
+              "chunk_id": "HUD_FAIR:c47c156c57ea:0016808-0017294",
+              "score": 0.7540818540829807,
+              "dense_rank": 1,
+              "lexical_rank": 3
+            },
+            {
+              "chunk_id": "HUD_FAIR:c47c156c57ea:0017470-0017870",
+              "score": 0.7028733227686856,
+              "dense_rank": 3,
+              "lexical_rank": 2
+            },
+            {
+              "chunk_id": "HUD_FAIR:c47c156c57ea:0009384-0009882",
+              "score": 0.688329575863233,
+              "dense_rank": 8,
+              "lexical_rank": 1
+            }
+          ],
+          "retained_coverage": {
+            "complaint_deadline": false
+          }
+        },
+        {
+          "question_id": "D3",
+          "top3": [
+            {
+              "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0015226-0015625",
+              "score": 0.5987596616037336,
+              "dense_rank": 8,
+              "lexical_rank": 2
+            },
+            {
+              "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0000000-0000496",
+              "score": 0.680738388852182,
+              "dense_rank": 1,
+              "lexical_rank": 12
+            },
+            {
+              "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0080409-0080909",
+              "score": 0.5682127889000921,
+              "dense_rank": 14,
+              "lexical_rank": 3
+            }
+          ],
+          "retained_coverage": {
+            "dependent_deduction": true
+          }
+        },
+        {
+          "question_id": "D4",
+          "top3": [
+            {
+              "chunk_id": "EPA_DISCLOSURE:38dd88cf9257:0004176-0004620",
+              "score": 0.512602289877302,
+              "dense_rank": 1,
+              "lexical_rank": 5
+            },
+            {
+              "chunk_id": "EPA_DISCLOSURE:38dd88cf9257:0003412-0003822",
+              "score": 0.38504622697877244,
+              "dense_rank": 11,
+              "lexical_rank": 2
+            },
+            {
+              "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0130057-0130445",
+              "score": 0.42354941838170873,
+              "dense_rank": 6,
+              "lexical_rank": 8
+            }
+          ],
+          "retained_coverage": {
+            "retention": true
+          }
+        },
+        {
+          "question_id": "D5",
+          "top3": [
+            {
+              "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0136302-0136748",
+              "score": 0.4866507358734005,
+              "dense_rank": 1,
+              "lexical_rank": 4
+            },
+            {
+              "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0143833-0144273",
+              "score": 0.46040834233506367,
+              "dense_rank": 5,
+              "lexical_rank": 2
+            },
+            {
+              "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0043295-0043795",
+              "score": 0.4573510504858237,
+              "dense_rank": 6,
+              "lexical_rank": 17
+            }
+          ],
+          "retained_coverage": {}
+        },
+        {
+          "question_id": "D6",
+          "top3": [
+            {
+              "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0087926-0088180",
+              "score": 0.07781802436286671,
+              "dense_rank": 19,
+              "lexical_rank": 8
+            },
+            {
+              "chunk_id": "HUD_SELECTION:970dfc1f3a55:0032109-0032608",
+              "score": 0.05718271204806896,
+              "dense_rank": 44,
+              "lexical_rank": 5
+            },
+            {
+              "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0086061-0086488",
+              "score": 0.13782830051258588,
+              "dense_rank": 2,
+              "lexical_rank": 68
+            }
+          ],
+          "retained_coverage": {}
+        },
+        {
+          "question_id": "D7",
+          "top3": [
+            {
+              "chunk_id": "HUD_FAIR:c47c156c57ea:0014922-0015417",
+              "score": 0.43794177119562633,
+              "dense_rank": 6,
+              "lexical_rank": 3
+            },
+            {
+              "chunk_id": "HUD_FAIR:c47c156c57ea:0013393-0013759",
+              "score": 0.44102213935250667,
+              "dense_rank": 4,
+              "lexical_rank": 8
+            },
+            {
+              "chunk_id": "HUD_FAIR:c47c156c57ea:0015367-0015757",
+              "score": 0.36481234437987964,
+              "dense_rank": 19,
+              "lexical_rank": 5
+            }
+          ],
+          "retained_coverage": {}
+        },
+        {
+          "question_id": "D8",
+          "top3": [
+            {
+              "chunk_id": "EPA_LEAD:3830114fcc78:0000764-0001237",
+              "score": 0.42007747634493947,
+              "dense_rank": 2,
+              "lexical_rank": 1
+            },
+            {
+              "chunk_id": "EPA_LEAD:3830114fcc78:0001618-0002053",
+              "score": 0.402995633779578,
+              "dense_rank": 3,
+              "lexical_rank": 4
+            },
+            {
+              "chunk_id": "EPA_LEAD:3830114fcc78:0016095-0016543",
+              "score": 0.39116661589431395,
+              "dense_rank": 4,
+              "lexical_rank": 7
+            }
+          ],
+          "retained_coverage": {}
+        }
+      ],
+      "complete_answerable": 3
+    }
+  }
+}

@@ -1,0 +1,16 @@
+D1 ROUTE 'CLEAR'
+D1 complete According to the EPA pamphlet, water used to make baby formula should be cold [2]. Boiling water does not remove lead [1].
+D2 ROUTE 'CLEAR'
+D2 complete According to the archived Fair Housing booklet [1], you may file a private civil lawsuit without first filing a complaint with HUD. However, if you do file a complaint with HUD and it is dismissed, you still have the right to file a private civil lawsuit against the respondent(s) in Federal District Court, but this must be done within two (2) years of the most recent date of the alleged discriminatory action.
+D3 ROUTE 'CLEAR'
+D3 complete I cannot answer this question from the provided documents
+D4 ROUTE 'CLEAR'
+D4 complete According to the EPA disclosure article, signed disclosures should be kept for three years after the sale is completed or the lease begins [1].
+D5 ROUTE 'CLEAR'
+D5 complete I cannot answer this question from the provided documents.
+D6 ROUTE 'CLEAR'
+D6 complete I cannot answer this question from the provided documents
+D7 ROUTE 'CLARIFY'
+D7 complete Could you provide more details about the type of case you are referring to?
+D8 ROUTE 'CLEAR'
+D8 complete I cannot answer this question from the provided documents

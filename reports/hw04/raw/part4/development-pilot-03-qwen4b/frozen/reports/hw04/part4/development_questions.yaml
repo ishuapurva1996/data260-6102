@@ -1,0 +1,179 @@
+{
+  "schema_version": 1,
+  "purpose": "Development only: calibration and pilot; excluded from the six scored questions and 22 scored outputs. Gold spans were authored before retrieval and generation.",
+  "authored_at": "2026-09-28T04:16:43.859236Z",
+  "questions": [
+    {
+      "id": "D1",
+      "type": "answerable",
+      "question": "According to the EPA pamphlet, should water used to make baby formula be hot or cold, and does boiling remove lead?",
+      "expected_behavior": "answer",
+      "expected_answer": "Use cold water; boiling does not remove lead.",
+      "evidence_logic": "AND across evidence_groups; OR across each group alternatives",
+      "evidence_groups": [
+        {
+          "id": "cold_water",
+          "description": "Cold water and boiling limitation.",
+          "match": "any_alternative",
+          "alternatives": [
+            {
+              "source_id": "EPA_LEAD",
+              "start_character": 18071,
+              "end_character": 18184,
+              "quote": "Use only cold water for drinking, cooking and making baby formula. Boiling water does not remove lead from water.",
+              "location": "PDF page(s) 15"
+            }
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "EPA_LEAD",
+          "start_character": 18071,
+          "end_character": 18184,
+          "quote": "Use only cold water for drinking, cooking and making baby formula. Boiling water does not remove lead from water.",
+          "location": "PDF page(s) 15"
+        }
+      ]
+    },
+    {
+      "id": "D2",
+      "type": "answerable",
+      "question": "In the archived Fair Housing booklet, when must a housing discrimination complaint be filed with HUD?",
+      "expected_behavior": "answer",
+      "expected_answer": "Within one year after the alleged discrimination occurred or ended, preferably as soon as possible.",
+      "evidence_logic": "AND across evidence_groups; OR across each group alternatives",
+      "evidence_groups": [
+        {
+          "id": "complaint_deadline",
+          "description": "One-year complaint deadline.",
+          "match": "any_alternative",
+          "alternatives": [
+            {
+              "source_id": "HUD_FAIR",
+              "start_character": 8225,
+              "end_character": 8367,
+              "quote": "You have one year after the alleged discrimination occurred or ended to file a complaint with HUD, but you should file it as soon as possible.",
+              "location": "PDF page(s) 10"
+            }
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "HUD_FAIR",
+          "start_character": 8225,
+          "end_character": 8367,
+          "quote": "You have one year after the alleged discrimination occurred or ended to file a complaint with HUD, but you should file it as soon as possible.",
+          "location": "PDF page(s) 10"
+        }
+      ]
+    },
+    {
+      "id": "D3",
+      "type": "answerable",
+      "question": "What dollar deduction does the archived HUD rent handbook give for each eligible dependent?",
+      "expected_behavior": "answer",
+      "expected_answer": "The archived source gives $480 per eligible dependent.",
+      "evidence_logic": "AND across evidence_groups; OR across each group alternatives",
+      "evidence_groups": [
+        {
+          "id": "dependent_deduction",
+          "description": "Archived dependent deduction amount.",
+          "match": "any_alternative",
+          "alternatives": [
+            {
+              "source_id": "HUD_INCOME",
+              "start_character": 80459,
+              "end_character": 80572,
+              "quote": "A family receives a deduction of $480 for each family member *(except foster children and foster adults)* who is:",
+              "location": "PDF page(s) 41"
+            }
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "HUD_INCOME",
+          "start_character": 80459,
+          "end_character": 80572,
+          "quote": "A family receives a deduction of $480 for each family member *(except foster children and foster adults)* who is:",
+          "location": "PDF page(s) 41"
+        }
+      ]
+    },
+    {
+      "id": "D4",
+      "type": "answerable",
+      "question": "According to the EPA disclosure article, how long should signed disclosures be kept?",
+      "expected_behavior": "answer",
+      "expected_answer": "For three years after the sale completes or the lease begins.",
+      "evidence_logic": "AND across evidence_groups; OR across each group alternatives",
+      "evidence_groups": [
+        {
+          "id": "retention",
+          "description": "Three-year retention.",
+          "match": "any_alternative",
+          "alternatives": [
+            {
+              "source_id": "EPA_DISCLOSURE",
+              "start_character": 4226,
+              "end_character": 4328,
+              "quote": "Keep a signed copy of the disclosures for three years after the sale is completed or the lease begins.",
+              "location": "Requirements Under the Disclosure Rule"
+            }
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "EPA_DISCLOSURE",
+          "start_character": 4226,
+          "end_character": 4328,
+          "quote": "Keep a signed copy of the disclosures for three years after the sale is completed or the lease begins.",
+          "location": "Requirements Under the Disclosure Rule"
+        }
+      ]
+    },
+    {
+      "id": "D5",
+      "type": "absent_answer",
+      "question": "What is the current monthly rent for Apartment 9C at Willow Creek Towers?",
+      "expected_behavior": "refuse",
+      "expected_answer": "I cannot answer this question from the provided documents",
+      "evidence_logic": "AND across evidence_groups; OR across each group alternatives",
+      "evidence_groups": [],
+      "evidence": []
+    },
+    {
+      "id": "D6",
+      "type": "unrelated",
+      "question": "Who was the first person to walk on the Moon?",
+      "expected_behavior": "refuse",
+      "expected_answer": "I cannot answer this question from the provided documents",
+      "evidence_logic": "AND across evidence_groups; OR across each group alternatives",
+      "evidence_groups": [],
+      "evidence": []
+    },
+    {
+      "id": "D7",
+      "type": "ambiguous",
+      "question": "What deadline applies to my case?",
+      "expected_behavior": "clarify",
+      "expected_answer": "Ask which process or kind of case is meant; do not select a deadline without knowing it.",
+      "evidence_logic": "AND across evidence_groups; OR across each group alternatives",
+      "evidence_groups": [],
+      "evidence": []
+    },
+    {
+      "id": "D8",
+      "type": "absent_answer",
+      "question": "What is the exact number of certified lead inspectors working in San Jose today?",
+      "expected_behavior": "refuse",
+      "expected_answer": "I cannot answer this question from the provided documents",
+      "evidence_logic": "AND across evidence_groups; OR across each group alternatives",
+      "evidence_groups": [],
+      "evidence": []
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "run_id": "scored-20260928-04",
+  "captures": 25,
+  "response_captures": 22,
+  "sweep_references": 6,
+  "manifest": "reports/hw04/screenshots/part4/scored-20260928-04/manifest.json",
+  "all_render_checks_pass": true
+}

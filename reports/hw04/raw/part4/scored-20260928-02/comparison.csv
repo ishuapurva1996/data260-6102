@@ -1,0 +1,139 @@
+question_id,A_response_id,A_answer,A_correct,A_grounded,B_response_id,B_answer,B_correct,B_grounded,C_response_id,C_answer,C_correct,C_grounded
+Q1,Q1-A-k0,"According to the **HUD tenant-selection handbook**, an applicant has **10 days** to request a meeting to dispute a rejection.
+
+This provision is outlined in **HUD Regulation § 100.101**, which states:
+
+> ""An applicant may request a meeting with the housing authority within 10 days of receiving the rejection notice to discuss the matter.""
+
+This right is intended to provide applicants with an opportunity to address any concerns or disputes regarding the rejection of their application.",False,False,Q1-B-k3,"According to the archived HUD tenant-selection handbook, an applicant has **10 days** to request a meeting to dispute a rejection.",False,False,Q1-C-k3,I cannot answer this question from the provided documents,False,N/A
+Q2,Q2-A-k0,"According to the EPA pamphlet:
+
+- **A lead-based paint inspection** locates **lead-based paint** in a home or building. This includes identifying the presence of lead-based paint, its location, and the condition of the paint.
+
+- **A risk assessment** identifies **hazards** associated with lead-based paint, such as the potential for lead poisoning, and determines **actions to take**, such as removing or repairing the paint, sealing it, or monitoring children's exposure.
+
+These steps are part of the EPA's **Lead Paint Program** to protect public health and prevent lead poisoning.",False,False,Q2-B-k3,"According to the EPA pamphlet, a lead-based paint inspection locates lead-based paint and lead hazards, and a risk assessment identifies whether the home has any lead hazards from paint, dust, or soil, and what actions to take to address any hazards.",False,False,Q2-C-k3,"According to the EPA pamphlet, a lead-based paint inspection locates lead-based paint and lead hazards, and a risk assessment identifies whether the home has any lead hazards and what actions to take to address any hazards. [1][3]",False,False
+Q3,Q3-A-k0,"According to the **Uniformed Housing Code (UHC)** and the **Lead-Based Paint Hazard Assessment and Inspection Requirements**, a prospective renter of **covered pre-1978 housing** (i.e., housing constructed before 1978 and containing lead-based paint) must receive **specific information** before signing a lease. This information is intended to ensure the tenant is fully informed about potential lead-based paint hazards and the necessary precautions to take.
+
+### Key Information to Be Provided:
+
+1. **Notification of Lead-Based Paint Hazards:**
+   - The tenant must be informed that the property may contain lead-based paint.
+   - The tenant should be advised that lead-based paint can be a hazard, especially to children and pregnant women.
+
+2. **Request for a Lead-Based Paint Hazard Assessment:**
+   - The tenant should be asked to request a **lead-based paint hazard assessment** (i.e., a professional inspection).
+   - The tenant should be informed that the landlord is responsible for conducting this assessment and that the tenant may be required to pay for it if it is not already included in the lease.
+
+3. **Information About the Assessment:**
+   - The tenant should be informed about the **purpose of the assessment** (to identify whether lead-based paint is present and whether it poses a hazard).
+   - The tenant should be told that the assessment may involve **testing for lead levels** and may require **remediation** if lead is present.
+
+4. **Information About the Remediation Process:**
+   - If lead-based paint is found, the tenant should be informed about the **remediation process** (e.g., removal, encapsulation, or repair).
+   - The tenant should be told that the landlord is responsible for conducting the remediation and that the tenant may be responsible for the cost if the landlord does not cover it.
+
+5. **Information About the Tenant’s Rights:**
+   - The tenant should be informed of their **right to request a lead-based paint hazard assessment** and their **right to know** about the condition of the property.
+   - The tenant should be informed that if lead-based paint is found, the landlord is responsible for addressing the hazard.
+
+6. **Information About the Cost of the Assessment:**
+   - The tenant should be informed that the **cost of the assessment** may be borne by the tenant if the landlord does not cover it.
+
+---
+
+### Summary of Key Points:
+
+| Information | Description |
+|-------------|-------------|
+| **Lead-Based Paint Hazards** | The tenant is informed that the property may contain lead-based paint. |
+| **Request for Assessment** | The tenant is asked to request a lead-based paint hazard assessment. |
+| **Purpose of Assessment** | The tenant is informed about the purpose of the assessment (to identify lead presence and hazards). |
+| **Remediation Process** | The tenant is informed about the possible remediation process and its cost. |
+| **Tenant’s Rights** | The tenant is informed of their rights to request an assessment and to know about the property’s condition. |
+| **Cost of Assessment** | The tenant is informed about the potential cost of the assessment and who may bear it. |
+
+---
+
+This information is critical to ensure the tenant is fully informed and protected in the event of lead-based paint hazards. It is also in line with the **Uniformed Housing Code (UHC)** and the **Lead-Based Paint Hazard Assessment and Inspection Requirements**.",False,False,Q3-B-k3,"According to the supplied documents, a prospective renter of covered pre-1978 housing should receive **known information about the presence of lead-based paint or lead-based paint hazards** before signing a lease. This includes being informed of the presence or absence of such hazards, as required by federal law.",False,False,Q3-C-k3,"According to the supplied documents, a prospective renter of covered pre-1978 housing should receive information about the presence of lead-based paint or lead-based paint hazards before signing a lease. Specifically, the disclosure requires sellers, landlords, real estate agents, and property managers to disclose known information about the presence of lead-based paint or lead-based paint hazards [1].",False,False
+Q4,Q4-A-k0,"The **time you have to file your tax return** depends on when you **file** your return and **when the tax year ends**. Here's a general guideline:
+
+---
+
+### **1. Tax Year End**
+- **For most people**, the **tax year ends on April 15** (for the **2024 tax year**).
+- If you file **late**, you may still be able to file **within 2 years** of the tax year ending.
+
+---
+
+### **2. Filing Deadline**
+- **April 15, 2024** (for the 2023 tax year)
+- **June 15, 2024** (for the 2022 tax year)
+- **October 15, 2024** (for the 2023 tax year)
+- **December 15, 2024** (for the 2022 tax year)
+
+---
+
+### **3. Late Filing Penalty**
+- If you **file after the deadline**, you may be charged a **late-filing penalty** (usually 0.5% of the tax due per month, up to 5%).
+- This penalty **starts from the day after the deadline** and **ends on the day you file**.
+
+---
+
+### **4. Special Cases**
+- **If you're a student** or **have a disability**, you may have **extended deadlines**.
+- **If you're a non-resident alien**, you may have a **different deadline**.
+- **If you're a small business owner**, you may have a **different deadline**.
+
+---
+
+### **5. How to Know Your Deadline**
+- Check your **tax return form** (e.g., Form 1040).
+- Look at the **""Due Date""** section.
+- You can also check the IRS website: [irs.gov](https://www.irs.gov)
+
+---
+
+### **6. What If You Miss the Deadline?**
+- You can still file **within 2 years** of the tax year ending.
+- You may still be able to **claim refunds** if you file late, but you may lose some benefits (e.g., tax credits).
+
+---
+
+### **Summary**
+| Type of Return | Deadline |
+|----------------|----------|
+| 2023 tax year | April 15, 2024 |
+| 2022 tax year | June 15, 2024 |
+| 2024 tax year | October 15, 2024 |
+| 2023 tax year | December 15, 2024 |
+
+---
+
+### **Tip**
+- If you're unsure, you can **file electronically** (e-filing) and the IRS will let you know if you're late.
+- You can also use the **IRS Tax Code Search Tool** to find your specific deadline.
+
+Let me know if you'd like help with **e-filing** or **tax software**!",False,False,Q4-B-k3,"The answer is: **Three years.**
+
+This is stated in **Paragraph 4-22.B** of the supplied text, which says:  
+> ""All files must be kept secure so that personal information remains confidential.""  
+> ""The consent allows HUD or a public housing agency to verify information with the Internal Revenue Service (IRS), the Social Security Administration (SSA), the Department of Health and Human Services (HHS’) National Directory of New Hires (NDNH), and with state agencies that maintain wage and unemployment claim information (SWICAs). Owners must keep the original signed form in the tenant’s file and provide a copy to the family.""
+
+However, the key part relevant to the question **""How long do I have to file?""** is found in **Paragraph 4-22.B** again:  
+> ""The form HUD-92006 must be maintained in the tenant file for the duration of the tenancy and for three years after the tenant leaves the property.""
+
+Thus, the answer is: **Three years.**",False,False,Q4-C-k3,I cannot answer this question from the provided documents,False,N/A
+Q5,Q5-A-k0,"As of my knowledge cutoff in 2024, I don't have access to real-time data, including specific rental prices for units at Cedar Grove Apartments. The monthly rent for Unit 4B would typically be listed in the rental agreement, and it can vary based on factors like location, size, condition, and demand.
+
+To find the exact rent for Unit 4B on September 27, 2026, you would need to:
+
+1. Check the official website of Cedar Grove Apartments.
+2. Look for a ""Rental Information"" or ""Contact Us"" section.
+3. Search for Unit 4B and the specific date.
+4. Contact the management directly for the most accurate and up-to-date information.
+
+If you need help finding the rental information, I can guide you on how to look it up.",True,False,Q5-B-k3,"The question asks for the **monthly rent for Unit 4B at Cedar Grove Apartments on September 27, 2026**. However, **no specific information is provided** in the supplied text about the rent for Unit 4B or the date in question.
+
+Therefore, **the answer cannot be determined from the given text**. The text discusses rent calculations under specific subsidy programs (e.g., Section 202/8, BMIR), but it does not provide any details about the rent for Unit 4B at Cedar Grove Apartments.",True,False,Q5-C-k3,I cannot answer this question from the provided documents,True,N/A
+Q6,Q6-A-k0,"The 2022 FIFA World Cup was won by **Argentina**. They defeated France in the final with a score of **3-2** in a dramatic extra time period. This was Argentina's first World Cup title since 1986, and they became the first team in 66 years to win the tournament without a prior title.",False,False,Q6-B-k3,"The question asks, ""Who won the 2022 FIFA World Cup?"" However, the provided text does not contain any information about the 2022 FIFA World Cup or any individuals who won it. Therefore, based on the supplied text, the answer cannot be determined.",True,N/A,Q6-C-k3,I cannot answer this question from the provided documents,True,N/A

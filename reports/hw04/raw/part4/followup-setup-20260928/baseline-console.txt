@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part2-backend/reports/hw04/part4/experiments/followup_probe.py", line 7, in <module>
+    from src.rag.runner import Ollama,generation_counter,now,write_json,append_json,digest
+ModuleNotFoundError: No module named 'src'

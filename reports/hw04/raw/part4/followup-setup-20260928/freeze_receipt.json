@@ -1,0 +1,9 @@
+{
+  "frozen_at": "2026-09-28T05:48:33.114621+00:00",
+  "config_sha256": "bd048da9874805f492825b52d090ab3d56c6743cea5b9583f8569d68bdb43ddd",
+  "calibration_sha256": "a3cef9ff88512ff8df053b0077500ba6529dff3445c2067c31e76cc16c685ffb",
+  "development_gate_passed": true,
+  "development_gate_sha256": "d0cdd0cca3176177d026ae72b0cc9ef4849900bdcfa41c3aef0e6a056cf6b6c7",
+  "selected_run": "scored-20260928-04",
+  "no_new_scored_answers_before_freeze": true
+}

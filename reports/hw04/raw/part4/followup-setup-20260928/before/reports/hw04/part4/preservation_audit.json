@@ -1,0 +1,59 @@
+{
+  "audited_at": "2026-09-28T04:47:39.143616+00:00",
+  "checks": {
+    "head_unchanged": true,
+    "branch_unchanged": true,
+    "only_three_shared_tracked_files_changed": true,
+    "shared_changes_append_only": true,
+    "nothing_staged": true,
+    "parts123_receipt_byte_identical_to_HEAD": true,
+    "parts123_saved_pass_46_46": true,
+    "all_other_tracked_application_and_historical_files_unchanged": true,
+    "report_local_links_exist": true,
+    "all_png_html_hashes_match": true,
+    "exactly25_captures": true,
+    "all_exact_answer_blocks_in_report": true
+  },
+  "passed": 12,
+  "total": 12,
+  "tracked_changes": [
+    "reports/hw04/AI_USE.md",
+    "reports/hw04/METRICS.md",
+    "reports/hw04/RUN_LOG.txt"
+  ],
+  "append_only_comparisons": [
+    {
+      "path": "reports/hw04/AI_USE.md",
+      "prior_sha256": "e9c603a788e854227424bc3d5bcc18c10876a1b23cce634e9c365d9f5932664f",
+      "current_sha256": "d18669a5de03d384046445a8648661b8154deb11fa0784d941292053d8b96243",
+      "prior_bytes": 8631,
+      "new_bytes": 11266,
+      "existing_content_is_exact_prefix": true
+    },
+    {
+      "path": "reports/hw04/METRICS.md",
+      "prior_sha256": "ab957d17600db5d747bb267889b2dc0ad383e28d2e48ba81cef390ac6a5cb255",
+      "current_sha256": "b48b9435f4a945b460ef92c319cadd5adfbaf51c41aace15f48e0e6eb73b6398",
+      "prior_bytes": 9023,
+      "new_bytes": 11387,
+      "existing_content_is_exact_prefix": true
+    },
+    {
+      "path": "reports/hw04/RUN_LOG.txt",
+      "prior_sha256": "e61c28c44d1f00981cee7208e38038eb73e9f914989805b7e8968cabe99d9fd6",
+      "current_sha256": "75b0e781b3de6a9d0f952b8c6f55d603785423dc5be85012a3860f4183bd0334",
+      "prior_bytes": 20062,
+      "new_bytes": 22675,
+      "existing_content_is_exact_prefix": true
+    }
+  ],
+  "parts123_receipt_sha256": "12e42e2a5f1f899fc1948db22462db34b2dd6df5a95e4979ac36adc772b807c1",
+  "report_local_link_count": 49,
+  "git_status": " M reports/hw04/AI_USE.md\n M reports/hw04/METRICS.md\n M reports/hw04/RUN_LOG.txt\n?? code/rag.py\n?? docs/plans/2026-09-27-2104-feat-hw4-part4-rag-plan.md\n?? reports/hw04/part4/\n?? reports/hw04/raw/part4/\n?? reports/hw04/screenshots/part4/\n?? requirements-rag.txt\n?? scripts/capture_hw04_part4.cjs\n?? scripts/verify_hw04_part4.py\n?? src/rag/\n?? tests/test_hw04_rag.py\n?? tests/test_hw04_rag_evaluation.py\n",
+  "scope": "Filesystem/git preservation audit; no database/API/model calls and no fresh Parts1-3 tests. Database preservation is based on absence of database operations in this task, not a claimed fresh database query.",
+  "parts123_readback": {
+    "status": "pass",
+    "passed": 46,
+    "total": 46
+  }
+}

@@ -1,0 +1,924 @@
+{
+  "schema_version": 1,
+  "run_id": "scored-20260928-03",
+  "evaluator": "Codex assistant (semantic evaluation subagent; not an independent student review)",
+  "method": "Offline manual reading of every unedited answer against the frozen six-question key and actual prompt/context/citation mapping. All 22 prompts and context hit records were checked byte-for-byte equal to the previously fully read run 02; every new answer was independently read. No evaluator model calls. Distinct factual propositions are counted once; restated questions and repeated wording are not added to the denominator. Epistemic inability-to-answer statements and clarification requests are nonanswers, but independent assertions about document topics, procedures, source attribution, or deadlines count. Partial support does not credit a whole proposition. True full-corpus facts are not counted faithful unless the actual supplied chunks support their standalone meaning. A has N/A context faithfulness. Citation syntax is separate from citation-supported grounding; omission of an essential fact makes accuracy false even if emitted claims are otherwise correct. Exact refusal format is separate from whether abstention was appropriate; Q4 requires clarification. Citation-only output is a nonanswer, not a grounded answer. Raw and final evidence coverage were recomputed from frozen source offsets with evidence_span_coverage. Historical document evaluation is not current legal advice.",
+  "completion_demonstration": {
+    "correct_supported_cited_C_response_ids": [],
+    "required_C_refusals_exact": true,
+    "overall": "incomplete: no correct, fully supported, cited C answer among the 22 measured responses"
+  },
+  "responses": [
+    {
+      "response_id": "Q1-A-k0",
+      "correct_retrieval": null,
+      "final_context_coverage": null,
+      "correct_answer": false,
+      "grounded": false,
+      "refused_when_needed": null,
+      "semantic_refusal": true,
+      "exact_refusal": false,
+      "supported_claims": null,
+      "total_claims": null,
+      "format_compliance": false,
+      "reasons": {
+        "retrieval": "N/A: configuration A supplies no retrieval or evidence.",
+        "answer": "Incorrect for this answerable corpus question: does not provide the archived 14-day deadline.",
+        "grounding": "No supplied context. The response additionally asserts where such information is typically found, so this is not a purely no-claim refusal; grounding is false and A faithfulness remains N/A.",
+        "refusal": "Unnecessary semantic refusal to an answerable question; refused_when_needed is N/A.",
+        "format": "Does not answer with source citations or use the prescribed refusal sentence."
+      },
+      "claims": [],
+      "raw_evidence_groups": null,
+      "final_evidence_groups": null
+    },
+    {
+      "response_id": "Q1-B-k3",
+      "correct_retrieval": false,
+      "final_context_coverage": false,
+      "correct_answer": false,
+      "grounded": false,
+      "refused_when_needed": null,
+      "semantic_refusal": true,
+      "exact_refusal": false,
+      "supported_claims": 1,
+      "total_claims": 1,
+      "format_compliance": false,
+      "reasons": {
+        "retrieval": "Frozen evidence-group coverage, recomputed from actual source offsets: raw={'rejection_deadline': False}; supplied final context={'rejection_deadline': False}. A source-name match alone is not credited.",
+        "answer": "Incorrect for the answerable corpus question: abstains and omits the 14-day deadline because raw retrieval missed it.",
+        "grounding": "The one independent factual description is supported somewhere in context, but no source-number citation is supplied. Statements that the deadline cannot be determined are epistemic refusal explanations.",
+        "refusal": "Unnecessary semantic refusal to an answerable corpus question; required-refusal metric is N/A.",
+        "format": "Neither a cited factual answer nor the exact prescribed refusal is provided."
+      },
+      "claims": [
+        {
+          "claim": "The supplied text covers tenant-selection plans, reconsideration of denied applicants, and form retention.",
+          "answer_quote": "The text discusses tenant selection plans, reconsideration of previously denied applicants, and retention of forms",
+          "supported": true,
+          "reason": "This document-topic description is a factual assertion, separate from the epistemic inability to determine the deadline. Each named topic appears in the supplied text.",
+          "support": [
+            {
+              "chunk_id": "HUD_SELECTION:970dfc1f3a55:0040563-0041038",
+              "quote": "the owner must define a reasonable period in the tenant selection plan."
+            },
+            {
+              "chunk_id": "HUD_SELECTION:970dfc1f3a55:0040563-0041038",
+              "quote": "Reconsideration of previously denied applicants."
+            },
+            {
+              "chunk_id": "HUD_SELECTION:970dfc1f3a55:0079454-0079725",
+              "quote": "the owner will retain the form HUD-92006 with the application for the term of tenancy plus three years."
+            }
+          ]
+        }
+      ],
+      "raw_evidence_groups": {
+        "rejection_deadline": false
+      },
+      "final_evidence_groups": {
+        "rejection_deadline": false
+      }
+    },
+    {
+      "response_id": "Q1-C-k3",
+      "correct_retrieval": false,
+      "final_context_coverage": false,
+      "correct_answer": false,
+      "grounded": null,
+      "refused_when_needed": null,
+      "semantic_refusal": true,
+      "exact_refusal": true,
+      "supported_claims": 0,
+      "total_claims": 0,
+      "format_compliance": true,
+      "reasons": {
+        "retrieval": "Frozen evidence-group coverage, recomputed from actual source offsets: raw={'rejection_deadline': False}; supplied final context={'rejection_deadline': False}. A source-name match alone is not credited.",
+        "answer": "Incorrect for the answerable corpus question: refuses after retrieval missed the 14-day deadline. Appropriate evidence caution does not repair answer accuracy.",
+        "grounding": "N/A: the exact refusal contains no factual claim.",
+        "refusal": "Semantic refusal with no supplied answer; exact required sentence.",
+        "format": "Uses the prescribed refusal sentence exactly; format is separate from whether refusing was appropriate."
+      },
+      "claims": [],
+      "raw_evidence_groups": {
+        "rejection_deadline": false
+      },
+      "final_evidence_groups": {
+        "rejection_deadline": false
+      }
+    },
+    {
+      "response_id": "Q2-A-k0",
+      "correct_retrieval": null,
+      "final_context_coverage": null,
+      "correct_answer": false,
+      "grounded": false,
+      "refused_when_needed": null,
+      "semantic_refusal": false,
+      "exact_refusal": false,
+      "supported_claims": null,
+      "total_claims": null,
+      "format_compliance": false,
+      "reasons": {
+        "retrieval": "N/A: configuration A supplies no retrieval or evidence.",
+        "answer": "Incorrect: adds procedural claims not established by the frozen pamphlet and blurs paint inspection with dust/soil assessment. The answer treats deteriorated/chipped/peeling appearance as signs of lead-based paint, while the saved pamphlet describes XRF or laboratory paint testing for inspection and separate paint/dust/soil sampling for risk assessment. It does not preserve that distinction.",
+        "grounding": "No supplied context: this long substantive answer cannot demonstrate corpus grounding; faithfulness remains N/A.",
+        "refusal": "Not a required-refusal question.",
+        "format": "Factual assertions have no valid supplied-source citations."
+      },
+      "claims": [],
+      "raw_evidence_groups": null,
+      "final_evidence_groups": null
+    },
+    {
+      "response_id": "Q2-B-k3",
+      "correct_retrieval": false,
+      "final_context_coverage": false,
+      "correct_answer": true,
+      "grounded": false,
+      "refused_when_needed": null,
+      "semantic_refusal": false,
+      "exact_refusal": false,
+      "supported_claims": 2,
+      "total_claims": 3,
+      "format_compliance": false,
+      "reasons": {
+        "retrieval": "Frozen evidence-group coverage, recomputed from actual source offsets: raw={'inspection_definition': False, 'risk_assessment_definition': True}; supplied final context={'inspection_definition': False, 'risk_assessment_definition': True}. A source-name match alone is not credited.",
+        "answer": "Correct against the frozen answer key: distinguishes paint presence/location from current hazards and actions. The added surface examples do not change that distinction. Accuracy can be true while actual-context faithfulness fails.",
+        "grounding": "Two risk-assessment claims are supported, but the standalone inspection-location claim lacks support in the actual retrieved context. There are also no source-number citations.",
+        "refusal": "Not a required-refusal question.",
+        "format": "No valid supplied-source citations are given."
+      },
+      "claims": [
+        {
+          "claim": "A paint inspection locates lead-based paint, including on the listed home surfaces.",
+          "answer_quote": "A lead-based paint inspection can locate areas with lead-based paint, such as doors, windows, floors, stairs, and walls.",
+          "supported": false,
+          "reason": "The repeated inspection-location proposition is counted once. It matches the full frozen source distinction, but the actual retrieved standalone-inspection definition is absent. The supplied list of surfaces belongs to risk-assessor sampling, and the combined-procedure passage does not establish attribution to inspection alone.",
+          "support": []
+        },
+        {
+          "claim": "A risk assessment identifies current lead hazards from paint, dust, and soil, including the described dust/soil sampling settings.",
+          "answer_quote": "A risk assessment identifies any lead hazards, including from dust near painted surfaces and bare soil in the yard",
+          "supported": true,
+          "reason": "Supported by the risk-assessment definition and sampling passage; the repeated first-paragraph statement is the same proposition.",
+          "support": [
+            {
+              "chunk_id": "EPA_LEAD:3830114fcc78:0009535-0009993",
+              "quote": "A risk assessment tells you if your home currently has any lead hazards from paint, dust or soil, and what actions to take to address any hazards."
+            },
+            {
+              "chunk_id": "EPA_LEAD:3830114fcc78:0009535-0009993",
+              "quote": "Sample dust near painted surfaces and sample bare soil in the yard"
+            }
+          ]
+        },
+        {
+          "claim": "A risk assessment identifies actions to address the hazards.",
+          "answer_quote": "provides recommendations for addressing these hazards",
+          "supported": true,
+          "reason": "Explicit in the supplied risk definition; repeated wording about actions is counted once.",
+          "support": [
+            {
+              "chunk_id": "EPA_LEAD:3830114fcc78:0009535-0009993",
+              "quote": "A risk assessment tells you if your home currently has any lead hazards from paint, dust or soil, and what actions to take to address any hazards."
+            }
+          ]
+        }
+      ],
+      "raw_evidence_groups": {
+        "inspection_definition": false,
+        "risk_assessment_definition": true
+      },
+      "final_evidence_groups": {
+        "inspection_definition": false,
+        "risk_assessment_definition": true
+      }
+    },
+    {
+      "response_id": "Q2-C-k3",
+      "correct_retrieval": false,
+      "final_context_coverage": false,
+      "correct_answer": false,
+      "grounded": false,
+      "refused_when_needed": null,
+      "semantic_refusal": false,
+      "exact_refusal": false,
+      "supported_claims": 3,
+      "total_claims": 5,
+      "format_compliance": true,
+      "reasons": {
+        "retrieval": "Frozen evidence-group coverage, recomputed from actual source offsets: raw={'inspection_definition': False, 'risk_assessment_definition': True}; supplied final context={'inspection_definition': False, 'risk_assessment_definition': True}. A source-name match alone is not credited.",
+        "answer": "Incorrect under the full-qualification rubric: the inspection sentence imports ambiguous \"where both are located\" wording from a combination procedure and does not preserve the standalone inspection/risk-assessment distinction. Its risk-assessment clause is correct.",
+        "grounding": "Only the certification and two risk-assessment claims are supported somewhere in actual context. The standalone inspection claims are not, and certification relies on uncited [2].",
+        "refusal": "Not a required-refusal question.",
+        "format": "Numbers [1] and [3] resolve to supplied sources; factual support and attribution are assessed separately."
+      },
+      "claims": [
+        {
+          "claim": "A certified inspector can conduct a lead-based paint inspection.",
+          "answer_quote": "A lead-based paint inspection by a certified inspector",
+          "supported": true,
+          "reason": "Supported by supplied chunk [2], but the answer cites only [3] for the inspection sentence.",
+          "support": [
+            {
+              "chunk_id": "EPA_DISCLOSURE:38dd88cf9257:0003772-0004226",
+              "quote": "they may hire a certified inspector to conduct a lead-based paint inspection before committing to buy."
+            }
+          ]
+        },
+        {
+          "claim": "A standalone paint inspection tells whether the home has lead-based paint.",
+          "answer_quote": "tells you if your home has any lead-based paint",
+          "supported": false,
+          "reason": "This fact is in the full corpus key, but the actual supplied chunk [3] describes a combination inspection and risk assessment; it does not separately establish what a standalone inspection tells.",
+          "support": []
+        },
+        {
+          "claim": "A standalone paint inspection locates both items described by the combined-procedure evidence.",
+          "answer_quote": "and where both are located [3]",
+          "supported": false,
+          "reason": "Unsupported/ambiguous: the response copies the combination procedure’s \"both\" language without two clear antecedents, attributing combined paint/hazard location to standalone inspection. It does not give a clean qualified inspection definition.",
+          "support": []
+        },
+        {
+          "claim": "A risk assessment identifies current lead hazards from paint, dust, or soil.",
+          "answer_quote": "A lead-based paint risk assessment identifies if your home currently has any lead hazards from paint, dust or soil",
+          "supported": true,
+          "reason": "Explicitly supported by cited chunk [1].",
+          "support": [
+            {
+              "chunk_id": "EPA_LEAD:3830114fcc78:0009535-0009993",
+              "quote": "A risk assessment tells you if your home currently has any lead hazards from paint, dust or soil, and what actions to take to address any hazards."
+            }
+          ]
+        },
+        {
+          "claim": "A risk assessment identifies actions to address hazards.",
+          "answer_quote": "what actions to take to address any hazards [1]",
+          "supported": true,
+          "reason": "Explicitly supported by cited chunk [1].",
+          "support": [
+            {
+              "chunk_id": "EPA_LEAD:3830114fcc78:0009535-0009993",
+              "quote": "A risk assessment tells you if your home currently has any lead hazards from paint, dust or soil, and what actions to take to address any hazards."
+            }
+          ]
+        }
+      ],
+      "raw_evidence_groups": {
+        "inspection_definition": false,
+        "risk_assessment_definition": true
+      },
+      "final_evidence_groups": {
+        "inspection_definition": false,
+        "risk_assessment_definition": true
+      }
+    },
+    {
+      "response_id": "Q3-A-k0",
+      "correct_retrieval": null,
+      "final_context_coverage": null,
+      "correct_answer": false,
+      "grounded": false,
+      "refused_when_needed": null,
+      "semantic_refusal": false,
+      "exact_refusal": false,
+      "supported_claims": null,
+      "total_claims": null,
+      "format_compliance": false,
+      "reasons": {
+        "retrieval": "N/A: configuration A supplies no retrieval or evidence.",
+        "answer": "Incorrect: invents a standardized LP-HIN form and several disclosure duties not in the frozen source; does not clearly require all available records/reports. General known-hazard wording does not satisfy the full key.",
+        "grounding": "No supplied context: the substantive duties/source-form claims cannot demonstrate corpus grounding.",
+        "refusal": "Not a required-refusal question.",
+        "format": "No valid supplied-source citations are given."
+      },
+      "claims": [],
+      "raw_evidence_groups": null,
+      "final_evidence_groups": null
+    },
+    {
+      "response_id": "Q3-B-k3",
+      "correct_retrieval": true,
+      "final_context_coverage": true,
+      "correct_answer": true,
+      "grounded": false,
+      "refused_when_needed": null,
+      "semantic_refusal": false,
+      "exact_refusal": false,
+      "supported_claims": 3,
+      "total_claims": 3,
+      "format_compliance": false,
+      "reasons": {
+        "retrieval": "Frozen evidence-group coverage, recomputed from actual source offsets: raw={'known_information': True, 'available_records': True}; supplied final context={'known_information': True, 'available_records': True}. A source-name match alone is not credited.",
+        "answer": "Correct: includes both essential known-information and available-record/report groups, adds a supported warning statement, and preserves covered-housing scope from the question without inventing a renter inspection right.",
+        "grounding": "All three distinct claims are supported in supplied text, but no source numbers are cited, so strict citation grounding fails.",
+        "refusal": "Not a required-refusal question.",
+        "format": "Factual answer contains no valid supplied-source citations."
+      },
+      "claims": [
+        {
+          "claim": "The covered renter receives known lead-paint/hazard information, or a statement that none is known.",
+          "answer_quote": "the renter should receive a disclosure of known information about the presence of lead-based paint or lead-based paint hazards, or be informed that there are none.",
+          "supported": true,
+          "reason": "Explicit in the supplied pamphlet. The introductory known-information sentence repeats this fact and is not counted again.",
+          "support": [
+            {
+              "chunk_id": "EPA_LEAD:3830114fcc78:0000314-0000814",
+              "quote": "Disclose known information about the presence of lead-based paint or lead-based paint hazards (or state there is none)"
+            }
+          ]
+        },
+        {
+          "claim": "The renter receives all available lead-paint/hazard records and reports, or a statement there are none.",
+          "answer_quote": "They should also receive all available records and reports on lead-based paint and lead-based paint hazards, or be informed that there are none.",
+          "supported": true,
+          "reason": "Explicit in the same supplied pamphlet chunk.",
+          "support": [
+            {
+              "chunk_id": "EPA_LEAD:3830114fcc78:0000314-0000814",
+              "quote": "Provide all available records and reports on lead-based paint and lead-based paint hazards (or state there are none)"
+            }
+          ]
+        },
+        {
+          "claim": "A specific lead-based-paint warning statement is included.",
+          "answer_quote": "a specific warning statement about lead-based paint should be included.",
+          "supported": true,
+          "reason": "Explicit in the supplied pamphlet chunk.",
+          "support": [
+            {
+              "chunk_id": "EPA_LEAD:3830114fcc78:0000314-0000814",
+              "quote": "Include a specific warning statement about lead-based paint"
+            }
+          ]
+        }
+      ],
+      "raw_evidence_groups": {
+        "known_information": true,
+        "available_records": true
+      },
+      "final_evidence_groups": {
+        "known_information": true,
+        "available_records": true
+      }
+    },
+    {
+      "response_id": "Q3-C-k3",
+      "correct_retrieval": true,
+      "final_context_coverage": true,
+      "correct_answer": false,
+      "grounded": null,
+      "refused_when_needed": null,
+      "semantic_refusal": false,
+      "exact_refusal": false,
+      "supported_claims": 0,
+      "total_claims": 0,
+      "format_compliance": false,
+      "reasons": {
+        "retrieval": "Frozen evidence-group coverage, recomputed from actual source offsets: raw={'known_information': True, 'available_records': True}; supplied final context={'known_information': True, 'available_records': True}. A source-name match alone is not credited.",
+        "answer": "Incorrect: the entire unedited answer is only [1], with no answer to either required information group.",
+        "grounding": "N/A: a citation-only nonanswer asserts no factual proposition; zero claims is not perfect faithfulness or successful grounding.",
+        "refusal": "Not a required-refusal question.",
+        "format": "Although [1] resolves, citation syntax alone is not an answer or a compliant refusal/clarification."
+      },
+      "claims": [],
+      "raw_evidence_groups": {
+        "known_information": true,
+        "available_records": true
+      },
+      "final_evidence_groups": {
+        "known_information": true,
+        "available_records": true
+      }
+    },
+    {
+      "response_id": "Q4-A-k0",
+      "correct_retrieval": null,
+      "final_context_coverage": null,
+      "correct_answer": true,
+      "grounded": null,
+      "refused_when_needed": null,
+      "semantic_refusal": false,
+      "exact_refusal": false,
+      "supported_claims": null,
+      "total_claims": null,
+      "format_compliance": true,
+      "reasons": {
+        "retrieval": "N/A: configuration A supplies no retrieval or evidence.",
+        "answer": "Correct: asks what filing means and offers possible processes as questions rather than asserting a deadline.",
+        "grounding": "N/A: this is a clarification request with no independent domain factual claim. The observation that the word needs context is ambiguity handling, not a factual answer.",
+        "refusal": "Not a required-refusal question.",
+        "format": "Asks a clarifying question and invents no deadline or missing process."
+      },
+      "claims": [],
+      "raw_evidence_groups": null,
+      "final_evidence_groups": null
+    },
+    {
+      "response_id": "Q4-B-k3",
+      "correct_retrieval": null,
+      "final_context_coverage": null,
+      "correct_answer": false,
+      "grounded": false,
+      "refused_when_needed": null,
+      "semantic_refusal": true,
+      "exact_refusal": false,
+      "supported_claims": 1,
+      "total_claims": 1,
+      "format_compliance": false,
+      "reasons": {
+        "retrieval": "N/A: this ambiguity/refusal question has no required answer span; nearby retrieved passages do not make it answerable.",
+        "answer": "Incorrect: recognizes it cannot give a deadline but never asks what action or process the user means. Q4 requires clarification, not only refusal.",
+        "grounding": "The one document-topic claim is supported but not cited; lack-of-evidence statements are epistemic explanations, not extra facts.",
+        "refusal": "Unnecessary semantic refusal: Q4 requires a clarification question, so refused_when_needed is N/A.",
+        "format": "Does not ask the required clarifying question and lacks source-number citations for the factual context description."
+      },
+      "claims": [
+        {
+          "claim": "The supplied text discusses tenant files, confidentiality, and document retention.",
+          "answer_quote": "The text discusses various aspects of tenant files, confidentiality, and retention periods for documents",
+          "supported": true,
+          "reason": "The document-topic statement is independently factual, unlike the epistemic lack-of-deadline statement. Actual context supports all named topics.",
+          "support": [
+            {
+              "chunk_id": "HUD_SELECTION:970dfc1f3a55:0100185-0100577",
+              "quote": "must be maintained in the tenant file for the duration of the tenancy and for three years after the tenant leaves the property."
+            },
+            {
+              "chunk_id": "HUD_SELECTION:970dfc1f3a55:0100185-0100577",
+              "quote": "All files must be kept secure so that personal information remains confidential."
+            }
+          ]
+        }
+      ],
+      "raw_evidence_groups": null,
+      "final_evidence_groups": null
+    },
+    {
+      "response_id": "Q4-C-k3",
+      "correct_retrieval": null,
+      "final_context_coverage": null,
+      "correct_answer": false,
+      "grounded": null,
+      "refused_when_needed": null,
+      "semantic_refusal": true,
+      "exact_refusal": true,
+      "supported_claims": 0,
+      "total_claims": 0,
+      "format_compliance": false,
+      "reasons": {
+        "retrieval": "N/A: this ambiguity/refusal question has no required answer span; nearby retrieved passages do not make it answerable.",
+        "answer": "Incorrect: refuses rather than following the ambiguity-precedence rule and asking which process is meant.",
+        "grounding": "N/A: the exact refusal contains no independent factual claim.",
+        "refusal": "Unnecessary semantic/exact refusal; required-refusal metric is N/A for Q4.",
+        "format": "Q4 requires a clarifying question; exact refusal wording alone does not satisfy that requirement."
+      },
+      "claims": [],
+      "raw_evidence_groups": null,
+      "final_evidence_groups": null
+    },
+    {
+      "response_id": "Q5-A-k0",
+      "correct_retrieval": null,
+      "final_context_coverage": null,
+      "correct_answer": true,
+      "grounded": false,
+      "refused_when_needed": true,
+      "semantic_refusal": true,
+      "exact_refusal": false,
+      "supported_claims": null,
+      "total_claims": null,
+      "format_compliance": false,
+      "reasons": {
+        "retrieval": "N/A: configuration A supplies no retrieval or evidence.",
+        "answer": "Correct handling: declines to supply the missing rent amount and directs the user to the property.",
+        "grounding": "No supplied context. The added assertion that the property would have the most accurate current rates is an independent factual assertion; grounding is false, while A faithfulness remains N/A.",
+        "refusal": "Semantic refusal: no rent value is supplied.",
+        "format": "Semantic refusal differs from the exact required sentence."
+      },
+      "claims": [],
+      "raw_evidence_groups": null,
+      "final_evidence_groups": null
+    },
+    {
+      "response_id": "Q5-B-k3",
+      "correct_retrieval": null,
+      "final_context_coverage": null,
+      "correct_answer": true,
+      "grounded": false,
+      "refused_when_needed": true,
+      "semantic_refusal": true,
+      "exact_refusal": false,
+      "supported_claims": 1,
+      "total_claims": 1,
+      "format_compliance": false,
+      "reasons": {
+        "retrieval": "N/A: this ambiguity/refusal question has no required answer span; nearby retrieved passages do not make it answerable.",
+        "answer": "Correct handling: does not invent a rent amount and explicitly says the specific property/date fact is unavailable.",
+        "grounding": "The one factual context-description claim is supported but uncited; therefore grounding is false rather than N/A.",
+        "refusal": "Semantic refusal succeeds: no rent amount is supplied.",
+        "format": "Semantic refusal is not the exact required sentence."
+      },
+      "claims": [
+        {
+          "claim": "The supplied text discusses housing subsidies and rents.",
+          "answer_quote": "It discusses various housing subsidy and rent-related topics",
+          "supported": true,
+          "reason": "This context-description fact is supported, while the repeated inability to determine the specific unit rent is an epistemic nonanswer.",
+          "support": [
+            {
+              "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0152437-0152929",
+              "quote": "Section 221(d)(3) BMIR\n\n• At initial certification, the tenant pays the BMIR rent."
+            },
+            {
+              "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0144223-0144715",
+              "quote": "In Section 202/8 group homes, the contract rent for a room shared by two occupants is split between the two tenants."
+            }
+          ]
+        }
+      ],
+      "raw_evidence_groups": null,
+      "final_evidence_groups": null
+    },
+    {
+      "response_id": "Q5-C-k3",
+      "correct_retrieval": null,
+      "final_context_coverage": null,
+      "correct_answer": true,
+      "grounded": null,
+      "refused_when_needed": true,
+      "semantic_refusal": true,
+      "exact_refusal": true,
+      "supported_claims": 0,
+      "total_claims": 0,
+      "format_compliance": true,
+      "reasons": {
+        "retrieval": "N/A: this ambiguity/refusal question has no required answer span; nearby retrieved passages do not make it answerable.",
+        "answer": "Correct handling: gives no absent/unrelated answer and uses the required exact refusal.",
+        "grounding": "N/A: the exact refusal makes no factual answer claim.",
+        "refusal": "Semantic refusal with no supplied answer; exact required sentence.",
+        "format": "Matches the required refusal sentence exactly, with no added answer."
+      },
+      "claims": [],
+      "raw_evidence_groups": null,
+      "final_evidence_groups": null
+    },
+    {
+      "response_id": "Q6-A-k0",
+      "correct_retrieval": null,
+      "final_context_coverage": null,
+      "correct_answer": false,
+      "grounded": false,
+      "refused_when_needed": false,
+      "semantic_refusal": false,
+      "exact_refusal": false,
+      "supported_claims": null,
+      "total_claims": null,
+      "format_compliance": false,
+      "reasons": {
+        "retrieval": "N/A: configuration A supplies no retrieval or evidence.",
+        "answer": "Incorrect handling: supplies a remembered winner and extra match/title claims instead of refusing this unsupported sports question.",
+        "grounding": "No supplied context: a remembered sports answer is not corpus grounding.",
+        "refusal": "Required refusal fails because a winner is supplied, regardless of whether the remembered winner is true.",
+        "format": "No exact required refusal or valid supplied-source citations."
+      },
+      "claims": [],
+      "raw_evidence_groups": null,
+      "final_evidence_groups": null
+    },
+    {
+      "response_id": "Q6-B-k3",
+      "correct_retrieval": null,
+      "final_context_coverage": null,
+      "correct_answer": false,
+      "grounded": false,
+      "refused_when_needed": false,
+      "semantic_refusal": false,
+      "exact_refusal": false,
+      "supported_claims": 1,
+      "total_claims": 2,
+      "format_compliance": false,
+      "reasons": {
+        "retrieval": "N/A: this ambiguity/refusal question has no required answer span; nearby retrieved passages do not make it answerable.",
+        "answer": "Incorrect handling: supplies Argentina after saying the text cannot answer. The final recalled answer defeats refusal regardless of the winner’s truth.",
+        "grounding": "One context-description claim is supported, but the winner claim is unsupported. Model statements about inability to access sports news are epistemic capability disclaimers, not additional factual answer claims.",
+        "refusal": "Required refusal fails: an answer after a lack-of-evidence disclaimer still counts as answering from memory.",
+        "format": "Does not use the required exact refusal and provides no source-number citations."
+      },
+      "claims": [
+        {
+          "claim": "The supplied text discusses financial/legal scenarios about assets, income, and trusts.",
+          "answer_quote": "The text discusses various financial and legal scenarios related to assets, income, and trusts.",
+          "supported": true,
+          "reason": "The topic statement is supported by the examples and trust rule actually supplied.",
+          "support": [
+            {
+              "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0069860-0070341",
+              "quote": "Examples – Lump Sum Additions to Family Assets (One-Time Payment)"
+            },
+            {
+              "chunk_id": "HUD_INCOME:2efa6b7ef8ad:0060362-0060802",
+              "quote": "When a tenant places an asset in a nonrevocable trust but continues to receive income from the trust, the income is added to annual income"
+            }
+          ]
+        },
+        {
+          "claim": "Argentina won the 2022 FIFA World Cup.",
+          "answer_quote": "the winner of the 2022 FIFA World Cup was Argentina.",
+          "supported": false,
+          "reason": "Unsupported by every supplied chunk: the model explicitly answers from prior knowledge after acknowledging that no sports evidence was provided.",
+          "support": []
+        }
+      ],
+      "raw_evidence_groups": null,
+      "final_evidence_groups": null
+    },
+    {
+      "response_id": "Q6-C-k3",
+      "correct_retrieval": null,
+      "final_context_coverage": null,
+      "correct_answer": true,
+      "grounded": null,
+      "refused_when_needed": true,
+      "semantic_refusal": true,
+      "exact_refusal": true,
+      "supported_claims": 0,
+      "total_claims": 0,
+      "format_compliance": true,
+      "reasons": {
+        "retrieval": "N/A: this ambiguity/refusal question has no required answer span; nearby retrieved passages do not make it answerable.",
+        "answer": "Correct handling: gives no absent/unrelated answer and uses the required exact refusal.",
+        "grounding": "N/A: the exact refusal makes no factual answer claim.",
+        "refusal": "Semantic refusal with no supplied answer; exact required sentence.",
+        "format": "Matches the required refusal sentence exactly, with no added answer."
+      },
+      "claims": [],
+      "raw_evidence_groups": null,
+      "final_evidence_groups": null
+    },
+    {
+      "response_id": "Q2-B-k1",
+      "correct_retrieval": false,
+      "final_context_coverage": false,
+      "correct_answer": false,
+      "grounded": false,
+      "refused_when_needed": null,
+      "semantic_refusal": false,
+      "exact_refusal": false,
+      "supported_claims": 2,
+      "total_claims": 3,
+      "format_compliance": false,
+      "reasons": {
+        "retrieval": "Frozen evidence-group coverage, recomputed from actual source offsets: raw={'inspection_definition': False, 'risk_assessment_definition': True}; supplied final context={'inspection_definition': False, 'risk_assessment_definition': True}. A source-name match alone is not credited.",
+        "answer": "Incorrect: treats inspection as hazard assessment and uses risk-assessor sampling targets as its definition.",
+        "grounding": "Two risk-assessment claims are supported; the inspection/hazard claim is not.",
+        "refusal": "Not a required-refusal question.",
+        "format": "No supplied-source citations are present."
+      },
+      "claims": [
+        {
+          "claim": "A paint inspection locates lead hazards, focusing on the listed deteriorated surfaces.",
+          "answer_quote": "a lead-based paint inspection locates any lead hazards in a home, specifically focusing on deteriorated paint on doors, windows, floors, stairs, and walls.",
+          "supported": false,
+          "reason": "Unsupported role transfer: supplied text attributes deteriorated-paint sampling to the risk assessor, and does not define inspection.",
+          "support": []
+        },
+        {
+          "claim": "A risk assessment identifies home lead hazards, including dust near paint and yard soil.",
+          "answer_quote": "a risk assessment identifies any lead hazards in a home, including those from dust near painted surfaces and bare soil in the yard.",
+          "supported": true,
+          "reason": "Supported by the definition and sampling passage in the sole supplied chunk.",
+          "support": [
+            {
+              "chunk_id": "EPA_LEAD:3830114fcc78:0009535-0009993",
+              "quote": "A risk assessment tells you if your home currently has any lead hazards from paint, dust or soil, and what actions to take to address any hazards."
+            },
+            {
+              "chunk_id": "EPA_LEAD:3830114fcc78:0009535-0009993",
+              "quote": "Sample dust near painted surfaces and sample bare soil in the yard"
+            }
+          ]
+        },
+        {
+          "claim": "A risk assessment identifies actions to address hazards.",
+          "answer_quote": "A risk assessment also identifies what actions need to be taken to address any identified hazards.",
+          "supported": true,
+          "reason": "Explicitly supported by the sole supplied definition.",
+          "support": [
+            {
+              "chunk_id": "EPA_LEAD:3830114fcc78:0009535-0009993",
+              "quote": "A risk assessment tells you if your home currently has any lead hazards from paint, dust or soil, and what actions to take to address any hazards."
+            }
+          ]
+        }
+      ],
+      "raw_evidence_groups": {
+        "inspection_definition": false,
+        "risk_assessment_definition": true
+      },
+      "final_evidence_groups": {
+        "inspection_definition": false,
+        "risk_assessment_definition": true
+      }
+    },
+    {
+      "response_id": "Q2-C-k1",
+      "correct_retrieval": false,
+      "final_context_coverage": false,
+      "correct_answer": false,
+      "grounded": false,
+      "refused_when_needed": null,
+      "semantic_refusal": false,
+      "exact_refusal": false,
+      "supported_claims": 2,
+      "total_claims": 3,
+      "format_compliance": false,
+      "reasons": {
+        "retrieval": "Frozen evidence-group coverage, recomputed from actual source offsets: raw={'inspection_definition': False, 'risk_assessment_definition': True}; supplied final context={'inspection_definition': False, 'risk_assessment_definition': True}. A source-name match alone is not credited.",
+        "answer": "Incorrect: transfers a risk-assessment sampling task to inspection instead of answering paint presence/location.",
+        "grounding": "Only the two risk-assessment claims are supported, and no citation numbers are emitted.",
+        "refusal": "Not a required-refusal question.",
+        "format": "Fails the C factual-answer citation format: no source-number citation appears."
+      },
+      "claims": [
+        {
+          "claim": "A paint inspection locates deteriorated paint on the listed surfaces.",
+          "answer_quote": "a lead-based paint inspection locates deteriorated paint on doors, windows, floors, stairs, and walls.",
+          "supported": false,
+          "reason": "Unsupported: the supplied passage assigns sampling those surfaces to the risk assessor; the standalone inspection definition is absent.",
+          "support": []
+        },
+        {
+          "claim": "A risk assessment identifies current home lead hazards from paint, dust, or soil.",
+          "answer_quote": "A risk assessment identifies if the home currently has any lead hazards from paint, dust, or soil",
+          "supported": true,
+          "reason": "Explicitly supported by the supplied definition.",
+          "support": [
+            {
+              "chunk_id": "EPA_LEAD:3830114fcc78:0009535-0009993",
+              "quote": "A risk assessment tells you if your home currently has any lead hazards from paint, dust or soil, and what actions to take to address any hazards."
+            }
+          ]
+        },
+        {
+          "claim": "A risk assessment identifies actions to address hazards.",
+          "answer_quote": "what actions to take to address any hazards.",
+          "supported": true,
+          "reason": "Explicitly supported by the same definition.",
+          "support": [
+            {
+              "chunk_id": "EPA_LEAD:3830114fcc78:0009535-0009993",
+              "quote": "A risk assessment tells you if your home currently has any lead hazards from paint, dust or soil, and what actions to take to address any hazards."
+            }
+          ]
+        }
+      ],
+      "raw_evidence_groups": {
+        "inspection_definition": false,
+        "risk_assessment_definition": true
+      },
+      "final_evidence_groups": {
+        "inspection_definition": false,
+        "risk_assessment_definition": true
+      }
+    },
+    {
+      "response_id": "Q2-B-k5",
+      "correct_retrieval": false,
+      "final_context_coverage": false,
+      "correct_answer": false,
+      "grounded": false,
+      "refused_when_needed": null,
+      "semantic_refusal": false,
+      "exact_refusal": false,
+      "supported_claims": 2,
+      "total_claims": 5,
+      "format_compliance": false,
+      "reasons": {
+        "retrieval": "Frozen evidence-group coverage, recomputed from actual source offsets: raw={'inspection_definition': False, 'risk_assessment_definition': True}; supplied final context={'inspection_definition': False, 'risk_assessment_definition': True}. A source-name match alone is not credited.",
+        "answer": "Incorrect: conflates inspection with hazard assessment and imports surface-condition disclosure material as an inspection definition.",
+        "grounding": "Only the two risk-assessment claims are supported by actual context.",
+        "refusal": "Not a required-refusal question.",
+        "format": "No valid supplied-source citations are present."
+      },
+      "claims": [
+        {
+          "claim": "A paint inspection locates lead hazards in the home/building.",
+          "answer_quote": "a lead-based paint inspection typically locates lead-based paint hazards in the home or building",
+          "supported": false,
+          "reason": "Unsupported conflation: actual evidence distinguishes risk-assessment hazards from combination procedures.",
+          "support": []
+        },
+        {
+          "claim": "A paint inspection locates lead-based paint.",
+          "answer_quote": "including the location of the lead-based paint",
+          "supported": false,
+          "reason": "This is a full-corpus fact, but the standalone inspection definition is absent from supplied context. The location text in chunk 5 is disclosure information, not an inspection definition.",
+          "support": []
+        },
+        {
+          "claim": "A paint inspection identifies painted-surface condition.",
+          "answer_quote": "and the condition of the painted surfaces.",
+          "supported": false,
+          "reason": "Unsupported attribution: chunk 5 says known disclosure information may include surface condition; it does not attribute that information to an inspection.",
+          "support": []
+        },
+        {
+          "claim": "A risk assessment identifies home lead hazards.",
+          "answer_quote": "a risk assessment identifies any lead hazards in the home or building",
+          "supported": true,
+          "reason": "Supported by the supplied risk-assessment definition.",
+          "support": [
+            {
+              "chunk_id": "EPA_LEAD:3830114fcc78:0009535-0009993",
+              "quote": "A risk assessment tells you if your home currently has any lead hazards from paint, dust or soil, and what actions to take to address any hazards."
+            }
+          ]
+        },
+        {
+          "claim": "A risk assessment identifies actions to address hazards.",
+          "answer_quote": "what actions need to be taken to address these hazards.",
+          "supported": true,
+          "reason": "Supported by the same definition.",
+          "support": [
+            {
+              "chunk_id": "EPA_LEAD:3830114fcc78:0009535-0009993",
+              "quote": "A risk assessment tells you if your home currently has any lead hazards from paint, dust or soil, and what actions to take to address any hazards."
+            }
+          ]
+        }
+      ],
+      "raw_evidence_groups": {
+        "inspection_definition": false,
+        "risk_assessment_definition": true
+      },
+      "final_evidence_groups": {
+        "inspection_definition": false,
+        "risk_assessment_definition": true
+      }
+    },
+    {
+      "response_id": "Q2-C-k5",
+      "correct_retrieval": false,
+      "final_context_coverage": false,
+      "correct_answer": false,
+      "grounded": false,
+      "refused_when_needed": null,
+      "semantic_refusal": false,
+      "exact_refusal": false,
+      "supported_claims": 2,
+      "total_claims": 3,
+      "format_compliance": true,
+      "reasons": {
+        "retrieval": "Frozen evidence-group coverage, recomputed from actual source offsets: raw={'inspection_definition': False, 'risk_assessment_definition': True}; supplied final context={'inspection_definition': False, 'risk_assessment_definition': True}. A source-name match alone is not credited.",
+        "answer": "Incomplete: omits the requested location of lead-based paint from the inspection definition. Its risk-assessment clause is correct.",
+        "grounding": "Only the two risk-assessment claims are supported somewhere in actual context; both rely on uncited [1]. The only cited [3] does not support the full response.",
+        "refusal": "Not a required-refusal question.",
+        "format": "Citation [3] resolves to supplied context; wrong/incomplete support is assessed separately under grounding."
+      },
+      "claims": [
+        {
+          "claim": "A paint inspection identifies presence of lead-based paint.",
+          "answer_quote": "A lead-based paint inspection tells you if your home has any lead-based paint",
+          "supported": false,
+          "reason": "True in the full frozen key, but the only actual cited chunk [3] defines the combination inspection/risk assessment, not standalone inspection. The standalone definition was not retrieved.",
+          "support": []
+        },
+        {
+          "claim": "A risk assessment identifies current hazards from paint, dust, or soil.",
+          "answer_quote": "a risk assessment identifies if your home currently has any lead hazards from paint, dust or soil",
+          "supported": true,
+          "reason": "Supported by supplied chunk [1], but the response cites only [3].",
+          "support": [
+            {
+              "chunk_id": "EPA_LEAD:3830114fcc78:0009535-0009993",
+              "quote": "A risk assessment tells you if your home currently has any lead hazards from paint, dust or soil, and what actions to take to address any hazards."
+            }
+          ]
+        },
+        {
+          "claim": "A risk assessment identifies actions to address hazards.",
+          "answer_quote": "what actions to take to address any hazards. [3]",
+          "supported": true,
+          "reason": "Supported by supplied chunk [1], but the response cites only [3], which does not state actions to take.",
+          "support": [
+            {
+              "chunk_id": "EPA_LEAD:3830114fcc78:0009535-0009993",
+              "quote": "A risk assessment tells you if your home currently has any lead hazards from paint, dust or soil, and what actions to take to address any hazards."
+            }
+          ]
+        }
+      ],
+      "raw_evidence_groups": {
+        "inspection_definition": false,
+        "risk_assessment_definition": true
+      },
+      "final_evidence_groups": {
+        "inspection_definition": false,
+        "risk_assessment_definition": true
+      }
+    }
+  ]
+}

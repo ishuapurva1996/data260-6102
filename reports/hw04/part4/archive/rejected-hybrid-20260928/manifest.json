@@ -1,0 +1,22 @@
+{
+  "archived_at": "2026-09-28T06:03:07.659008+00:00",
+  "status": "Rejected experiment; not used by selected dense pipeline",
+  "selected_run": "scored-20260928-04",
+  "entries": [
+    {
+      "former_live_path": "src/rag/hybrid.py",
+      "archive_path": "reports/hw04/raw/part4/scored-20260928-04/frozen/src/rag/hybrid.py",
+      "sha256": "db0958a0f738297870cadac8263409ce3d07e5ce69ecf9183b7c204a82162c8f",
+      "bytes": 4378,
+      "reused_existing_frozen_snapshot": true
+    },
+    {
+      "former_live_path": "tests/test_hw04_rag_hybrid.py",
+      "archive_path": "reports/hw04/part4/archive/rejected-hybrid-20260928/test_hw04_rag_hybrid.py.txt",
+      "sha256": "0755295bee17d73a707f562af302b057c691f9edb5eb5d3a13330018db1481d1",
+      "bytes": 3522,
+      "reused_existing_frozen_snapshot": false,
+      "extension_note": ".txt avoids automatic test collection; bytes are identical to the original Python test file"
+    }
+  ]
+}

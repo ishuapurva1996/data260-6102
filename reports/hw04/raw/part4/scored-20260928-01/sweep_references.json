@@ -1,0 +1,44 @@
+[
+  {
+    "question_id": "Q2",
+    "configuration": "B",
+    "k": 1,
+    "response_id": "Q2-B-k1",
+    "reused_main": false
+  },
+  {
+    "question_id": "Q2",
+    "configuration": "B",
+    "k": 3,
+    "response_id": "Q2-B-k3",
+    "reused_main": true
+  },
+  {
+    "question_id": "Q2",
+    "configuration": "B",
+    "k": 5,
+    "response_id": "Q2-B-k5",
+    "reused_main": false
+  },
+  {
+    "question_id": "Q2",
+    "configuration": "C",
+    "k": 1,
+    "response_id": "Q2-C-k1",
+    "reused_main": false
+  },
+  {
+    "question_id": "Q2",
+    "configuration": "C",
+    "k": 3,
+    "response_id": "Q2-C-k3",
+    "reused_main": true
+  },
+  {
+    "question_id": "Q2",
+    "configuration": "C",
+    "k": 5,
+    "response_id": "Q2-C-k5",
+    "reused_main": false
+  }
+]

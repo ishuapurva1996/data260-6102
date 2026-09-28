@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "scope": "HW4 Part 4 local verification; not final whole-homework/tagged verification",
+  "run_id": "scored-20260928-04",
+  "run_path": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part2-backend/reports/hw04/raw/part4/scored-20260928-04",
+  "verified_at": "2026-09-28T06:05:12.348387+00:00",
+  "SID4": 6102,
+  "seed": 6102,
+  "VERIFY_SEED": 266102,
+  "network_calls": 0,
+  "model_calls": 0,
+  "database_calls": 0,
+  "checks": [
+    {
+      "name": "retained_generation_evidence_hashes",
+      "assessment": "automated_evidence_consistency",
+      "passed": true,
+      "detail": "38 retained evidence hashes match"
+    },
+    {
+      "name": "frozen_inputs_and_code",
+      "assessment": "automated_evidence_consistency",
+      "passed": true,
+      "detail": {
+        "frozen_hashes_match": 26,
+        "development_gate": {
+          "run_id": "development-followup-integrated-01",
+          "assessed_at": "2026-09-28T05:47:48.212356+00:00",
+          "frozen_at": "2026-09-28T05:48:33.114621+00:00",
+          "recorded_supported_cited_answers": 2,
+          "recorded_context_appropriate_behaviors": 8,
+          "gate_file_present": true,
+          "local_calls": 16,
+          "assessment": "Automated chronology/integrity checks of an assistant semantic assessment; semantic truth is not independently verified."
+        },
+        "current_newer_code_allowed": true
+      }
+    },
+    {
+      "name": "five_source_manifest_originals_and_snapshots",
+      "assessment": "automated_evidence_consistency",
+      "passed": true,
+      "detail": "Five frozen texts and unchanged repository snapshots/originals verified"
+    },
+    {
+      "name": "chunks_offsets_overlap_metadata_and_real_index",
+      "assessment": "automated_evidence_consistency",
+      "passed": true,
+      "detail": "925 chunks; actual vector shape [925, 384]; max 194 embedding tokens"
+    },
+    {
+      "name": "main_matrix_and_sweep_reuse",
+      "assessment": "automated_evidence_consistency",
+      "passed": true,
+      "detail": "Verified"
+    },
+    {
+      "name": "frozen_question_coverage_proof",
+      "assessment": "automated_evidence_consistency",
+      "passed": true,
+      "detail": "Recomputed full-corpus Q1/Q2/Q3 single-chunk coverage and Q2 pair; all gold quotes match frozen source spans"
+    },
+    {
+      "name": "authentic_records_prompts_retrieval_and_call_order",
+      "assessment": "automated_evidence_consistency",
+      "passed": true,
+      "detail": "Fresh fixed-setting requests, unedited answers, raw B/C candidates and pre-call retrieval logs verified"
+    },
+    {
+      "name": "auxiliary_question_routing_integrity_and_timing",
+      "assessment": "automated_evidence_consistency",
+      "passed": true,
+      "detail": {
+        "final_answer_calls": 22,
+        "auxiliary_routing_calls": 8,
+        "total_local_generation_calls": 30,
+        "answer_generator": "qwen2.5:3b",
+        "routing_generator": "qwen2.5:7b",
+        "routing_generator_digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+        "limit": "Route/output integrity is automated; whether clarification was appropriate remains semantic evaluation."
+      }
+    },
+    {
+      "name": "all_required_calls_complete",
+      "assessment": "automated_evidence_consistency",
+      "passed": true,
+      "detail": "22 final-answer generation calls completed without transport failure or token-limit stop; auxiliary calls audited separately when enabled"
+    },
+    {
+      "name": "complete_judgments_citations_and_recomputed_tables",
+      "assessment": "automated_evidence_consistency",
+      "passed": true,
+      "detail": {
+        "all_22_judgments_and_exports_reconcile": true,
+        "observed_invalid_citations": {},
+        "limit": "Semantic correctness/support is evaluator-authored; automation checks consistency and exact support quotes."
+      }
+    },
+    {
+      "name": "plan_C_supported_answer_and_required_refusals",
+      "assessment": "plan_completion_using_semantic_judgments",
+      "passed": true,
+      "detail": {
+        "exact_refusals": [
+          "Q5",
+          "Q6"
+        ],
+        "refusal_scope": "main comparison",
+        "refusal_basis": "Assignment refusal goal, exercised by the frozen Q5/Q6 cases and exact refusal protocol",
+        "correct_supported_answers": [
+          "Q3-C-k3"
+        ],
+        "supported_answer_scope": "main comparison or sweep",
+        "supported_answer_basis": "Reviewed implementation plan completion criterion; not an explicit assignment minimum",
+        "semantic_basis": "Saved evaluator judgments; not independently proven by this verifier"
+      }
+    },
+    {
+      "name": "report_analysis_300_to_500_words",
+      "assessment": "automated_evidence_consistency",
+      "passed": true,
+      "detail": "413 analysis words"
+    },
+    {
+      "name": "genuine_screenshot_inventory",
+      "assessment": "automated_evidence_consistency",
+      "passed": true,
+      "detail": "25 hashed PNG captures cover all 22 outcomes and setup/retrieval/evaluation"
+    }
+  ],
+  "passed": 13,
+  "total": 13,
+  "overall_pass": true,
+  "assessment_summary": {
+    "automated_evidence_consistency": {
+      "passed": 12,
+      "total": 12
+    },
+    "plan_completion_using_semantic_judgments": {
+      "passed": 1,
+      "total": 1
+    }
+  },
+  "semantic_evaluation": {
+    "source": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part2-backend/reports/hw04/raw/part4/scored-20260928-04/judgments.json",
+    "evaluator": "Codex assistant followup_dev_review; independent semantic review, not a human grading claim",
+    "method": "Fresh offline reading of all 22 unedited answers, actual prompts/contexts/citation maps and frozen six-question key. No evaluator model calls. Distinct factual propositions are counted once; repeated wording and examples modifying the same proposition do not add denominator units. Independent document-topic assertions count; epistemic inability statements and clarification requests do not. Partial support does not credit a whole proposition. Full-corpus correctness is distinct from actual-context faithfulness. A context faithfulness is N/A. Grounding requires support for every factual claim in actually cited chunks. Citation syntax is scored separately from attribution and semantic completeness. Q4 needs clarification; Q5/Q6 require semantic refusal, with exact string assessed separately. After fresh review, identical prior-run answer/context pairs were checked for consistent valid claim granularity; no scoring definition or denominator was relaxed. Raw/final coverage is independently recomputed from frozen source offsets. Automated validation checks structure and quote membership, not semantic correctness.",
+    "independently_verified_truth": false
+  },
+  "generation_call_inventory": {
+    "final_answer_calls": 22,
+    "auxiliary_routing_calls": 8,
+    "total_local_generation_calls": 30
+  },
+  "limitations": [
+    "Semantic judgments were authored by the identified evaluator, not independently proven by this verifier.",
+    "A correct supported cited C answer is the reviewed plan's completion criterion, not an explicit assignment minimum.",
+    "PNG hashes establish retained files; genuine capture provenance/readability is documented in the capture manifest and reviewed separately."
+  ]
+}
