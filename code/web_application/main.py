@@ -1,180 +1,83 @@
-"""The shared rental housing app, served locally on the SID-derived port 8702.
-
-Records live in one process: refreshing the browser retains them, while restarting
-the server restores the two seeds. Run one Uvicorn worker for this assignment.
-"""
-
-from collections.abc import Callable
-import importlib.util
-import os
+"""The shared HW4 service: MySQL API and same-origin React application."""
+from datetime import datetime, timezone
+import math
 from pathlib import Path
-import secrets
-from time import monotonic
-from typing import Literal
+import sys
 
-from fastapi import FastAPI, HTTPException, Response, status
+from fastapi import FastAPI
+from fastapi.exceptions import RequestValidationError
+from fastapi.responses import FileResponse, HTMLResponse, RedirectResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
-from pydantic import BaseModel, ConfigDict, EmailStr, Field, StrictBool, field_validator
-from starlette.middleware.sessions import SessionMiddleware
 
+# `code` is also a stdlib module. Use web_application as the package; support
+# existing arbitrary-name main.py imports without importing `code` itself.
+if not __package__:
+    sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
+from web_application.database import SessionLocal
+from web_application.routers import auth, rentals
 
 PORT_BASE = 8702
-APP_DIRECTORY = Path(__file__).resolve().parent
-STATIC_DIRECTORY = APP_DIRECTORY / "static"
+ROOT = Path(__file__).resolve().parents[2]
 
 
-def _load_local_module(name: str, relative_path: str):
-    """Support direct launch, app-dir, Docker, and arbitrary-name test imports.
-
-    Loading from this file's directory avoids both the stdlib `code` module and
-    changing the process-wide import search path for other apps or worktrees.
-    """
-    spec = importlib.util.spec_from_file_location(name, APP_DIRECTORY / relative_path)
-    module = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(module)
-    return module
+def utc_now():
+    """MySQL DATETIME values represent UTC without a timezone suffix."""
+    return datetime.now(timezone.utc).replace(tzinfo=None)
 
 
-auth = _load_local_module("rental_auth_routes", "routers/auth.py")
-SessionStore = _load_local_module("rental_session_store", "session_store.py").SessionStore
+def create_app(*, session_factory=None, clock=utc_now, idle_timeout=300,
+               frontend_dist=None) -> FastAPI:
+    if not math.isfinite(idle_timeout) or idle_timeout <= 0:
+        raise ValueError("idle timeout must be positive and finite")
+    app = FastAPI(title="Rental Housing Listings", version="4.0.0")
+    app.state.session_factory = session_factory or SessionLocal
+    app.state.clock = clock
+    app.state.idle_timeout = idle_timeout
 
+    @app.exception_handler(RequestValidationError)
+    async def validation_error(request, exc):
+        # Pydantic's `input` can contain a submitted password. Keep useful
+        # field locations/messages while never echoing submitted credentials.
+        detail = [{key: error[key] for key in ("type", "loc", "msg") if key in error}
+                  for error in exc.errors()]
+        return JSONResponse(status_code=422, content={"detail": detail})
 
-class RentalUpdate(BaseModel):
-    """An update may change only the domain's primary and secondary fields."""
-
-    model_config = ConfigDict(str_strip_whitespace=True, extra="forbid")
-
-    listingTitle: str = Field(min_length=1)
-    propertyAddress: str = Field(min_length=1)
-
-
-class RentalCreate(RentalUpdate):
-    """The complete create form; the server alone assigns its ID."""
-
-    submitterEmail: EmailStr
-    description: str = Field(min_length=26)
-    propertyType: Literal["apartment", "house", "condo", "townhouse"]
-    termsAccepted: StrictBool = Field(description="Must be true to accept the terms.")
-
-    @field_validator("termsAccepted")
-    @classmethod
-    def require_accepted_terms(cls, accepted: bool) -> bool:
-        if not accepted:
-            raise ValueError("Please agree to the terms and conditions.")
-        return accepted
-
-
-class Rental(RentalCreate):
-    """A stored record and API response, including its server-owned ID."""
-
-    id: int
-
-
-def seed_rentals() -> list[Rental]:
-    """Create fresh seed objects so different app instances do not share state."""
-    return [
-        Rental(
-            id=1,
-            listingTitle="Sunny Downtown Apartment",
-            propertyAddress="123 San Carlos Street, San Jose, CA",
-            submitterEmail="downtown@example.com",
-            description="A bright apartment close to campus, shops, and public transit.",
-            propertyType="apartment",
-            termsAccepted=True,
-        ),
-        Rental(
-            id=2,
-            listingTitle="Spacious Garden House",
-            propertyAddress="456 Willow Street, San Jose, CA",
-            submitterEmail="garden@example.com",
-            description="A comfortable house with a private garden and a sunny living room.",
-            propertyType="house",
-            termsAccepted=True,
-        ),
-    ]
-
-
-def create_app(
-    initial_rentals: list[Rental | dict] | None = None,
-    *,
-    secret_key: str | None = None,
-    idle_timeout: float | None = None,
-    clock: Callable[[], float] = monotonic,
-) -> FastAPI:
-    """Build an independent app, optionally with a test's own initial records."""
-    app = FastAPI(title="Rental Housing Listings", version="3.0.0")
-    timeout = float(os.environ.get("IDLE_TIMEOUT_SECONDS", "300")) if idle_timeout is None else idle_timeout
-    app.state.session_store = SessionStore(idle_timeout=timeout, clock=clock)
-    app.add_middleware(
-        SessionMiddleware,
-        secret_key=secret_key or os.environ.get("SECRET_KEY") or secrets.token_urlsafe(32),
-        session_cookie="session",
-        max_age=3600,
-        same_site="lax",
-        https_only=True,
-    )
     app.include_router(auth.router)
-    rentals = (
-        seed_rentals()
-        if initial_rentals is None
-        else [Rental.model_validate(record).model_copy(deep=True) for record in initial_rentals]
-    )
+    # Part 3 registers its literal /naive and /fixed paths here, BEFORE rentals.
+    app.include_router(rentals.router)
 
-    def rental_index(rental_id: int) -> int:
-        for index, rental in enumerate(rentals):
-            if rental.id == rental_id:
-                return index
-        raise HTTPException(status_code=404, detail=f"Rental listing ID {rental_id} was not found.")
+    @app.middleware("http")
+    async def no_store_api(request, call_next):
+        response = await call_next(request)
+        if request.url.path.startswith("/api/"):
+            response.headers["Cache-Control"] = "no-store"
+        return response
 
-    def delete_record(rental_id: int) -> Response:
-        del rentals[rental_index(rental_id)]
-        return Response(status_code=status.HTTP_204_NO_CONTENT)
+    @app.get("/api/health")
+    def health():
+        return {"status": "ok", "service": "Rental Housing Listings"}
 
-    @app.get("/api/rentals", response_model=list[Rental])
-    async def list_rentals(response: Response, q: str | None = None):
-        response.headers["Cache-Control"] = "no-store"
-        query = (q or "").strip().casefold()
-        return [
-            rental for rental in rentals
-            if not query
-            or query in rental.listingTitle.casefold()
-            or query in rental.propertyAddress.casefold()
-        ]
+    dist = Path(frontend_dist) if frontend_dist is not None else ROOT / "frontend/dist"
+    if (dist / "assets").is_dir():
+        app.mount("/assets", StaticFiles(directory=dist / "assets"), name="assets")
 
-    # These async handlers do not await between reading and changing the store,
-    # so each mutation completes together on the single worker's event loop.
-    @app.post("/api/rentals", response_model=Rental, status_code=status.HTTP_201_CREATED)
-    async def create_rental(payload: RentalCreate):
-        next_id = max((rental.id for rental in rentals), default=0) + 1
-        rental = Rental(id=next_id, **payload.model_dump())
-        rentals.append(rental)
-        return rental
+    def frontend():
+        if not (dist / "index.html").is_file():
+            return HTMLResponse(
+                "<h1>React build is missing</h1><p>Run npm ci and npm run build "
+                "inside frontend/, then restart the server. The API is available at /docs.</p>",
+                status_code=503, headers={"Cache-Control": "no-store"})
+        return FileResponse(dist / "index.html", headers={"Cache-Control": "no-store"})
 
-    @app.put("/api/rentals/{rental_id}", response_model=Rental)
-    async def update_rental(rental_id: int, payload: RentalUpdate):
-        index = rental_index(rental_id)
-        rentals[index] = rentals[index].model_copy(update=payload.model_dump())
-        return rentals[index]
+    for route in ("/", "/login", "/create", "/update", "/delete"):
+        app.add_api_route(route, frontend, methods=["GET"], include_in_schema=False)
 
-    # Register this literal path before the integer-ID delete route.
-    @app.delete("/api/rentals/highest", status_code=status.HTTP_204_NO_CONTENT)
-    async def delete_highest_rental():
-        if not rentals:
-            raise HTTPException(status_code=404, detail="There are no rental listings to delete.")
-        return delete_record(max(rental.id for rental in rentals))
+    @app.get("/dashboard", include_in_schema=False)
+    def old_dashboard():
+        return RedirectResponse("/", status_code=303)
 
-    @app.delete("/api/rentals/{rental_id}", status_code=status.HTTP_204_NO_CONTENT)
-    async def delete_rental(rental_id: int):
-        return delete_record(rental_id)
-
-    app.mount("/static", StaticFiles(directory=STATIC_DIRECTORY), name="static")
     return app
 
 
 app = create_app()
-
-
-if __name__ == "__main__":
-    import uvicorn
-
-    uvicorn.run(app, host="127.0.0.1", port=PORT_BASE, workers=1)
