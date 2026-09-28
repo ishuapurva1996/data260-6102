@@ -1,0 +1,40 @@
+{
+  "checked_at": "2026-09-28T01:11:19.317213+00:00",
+  "status": "pass",
+  "source_hashes_match": [
+    "interrupted/check.json",
+    "success/real-browser.json",
+    "success/expiry-browser.json",
+    "success/runtime.json"
+  ],
+  "private_secrets_found": false,
+  "exact_test_ids_absent": [
+    11,
+    12,
+    13
+  ],
+  "remaining_rental_count": 2,
+  "recorded_owned_processes_absent": [
+    74447,
+    74450,
+    74451,
+    74458,
+    74459,
+    74460,
+    74462,
+    74724,
+    74727,
+    74730,
+    74737,
+    74738,
+    74739,
+    74740,
+    74842,
+    74843,
+    74911,
+    74914,
+    74916,
+    74919
+  ],
+  "port_8712_bindable": true
+}

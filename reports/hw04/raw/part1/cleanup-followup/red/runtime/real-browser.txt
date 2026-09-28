@@ -1,0 +1,15 @@
+PASS [REAL] Signed-out direct visits hide protected records
+PASS [REAL] Unauthenticated CRUD APIs reject requests; unknown API remains JSON
+PASS [REAL] Invalid credentials stay rejected
+PASS [REAL] Valid HTTPS login sets an opaque HTTP-only secure cookie
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+422 !== 201
+
+    at /Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tests/browser_hw04_part1.cjs:590:14
+    at runNextTicks (node:internal/process/task_queues:65:5)
+    at process.processImmediate (node:internal/timers:502:9)
+    at async check (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tests/browser_hw04_part1.cjs:47:22)
+    at async realFlow (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tests/browser_hw04_part1.cjs:582:5)
+    at async main (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tests/browser_hw04_part1.cjs:759:10)
+Evidence: reports/hw04/raw/part1/cleanup-followup/red/runtime/real-browser.json (fail)

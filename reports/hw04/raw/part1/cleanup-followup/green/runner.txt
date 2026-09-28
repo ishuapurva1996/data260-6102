@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tests/browser_hw04_part1_runtime.py", line 284, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tests/browser_hw04_part1_runtime.py", line 102, in main
+    with journal.open('x', opener=lambda name, flags: os.open(name, flags, 0o600)) as output:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Path.open() got an unexpected keyword argument 'opener'
