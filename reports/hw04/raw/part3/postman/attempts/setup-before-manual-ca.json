@@ -1,0 +1,18 @@
+{
+  "recorded_at_utc": "2026-09-28T01:45:54.280944+00:00",
+  "status": "awaiting_manual_ca_selection",
+  "postman_version": "12.29.5",
+  "running_app_path": "/Applications/Postman.app",
+  "other_registered_app_path": "/Users/pragyaapurva/Downloads/Postman.app",
+  "server_revision": "4f8390b84752d861ea6b47c5ac8615680192d841",
+  "uvicorn_pid": 79647,
+  "port": 8702,
+  "ssl_verification": "enabled through Postman General settings; public CA selection pending",
+  "ca_public_file": "/private/tmp/hw4-part3-localhost-ca.pem",
+  "credentials_accessed": false,
+  "postman_requests_sent": 0,
+  "successful_primary_captures": 0,
+  "smallest_user_action": "Select the public CA PEM in the native Postman picker and reply Done. Do not disable SSL verification.",
+  "native_ui_blocker": "Open remained disabled after certificate selection; Return/Escape reverted the Go To prompt to slash; clipboard operation timed out. No tool denial bypass attempted.",
+  "benchmark_policy": "Original selected timings, seed and index artifacts retained unchanged; new Postman requests will be functional evidence only."
+}

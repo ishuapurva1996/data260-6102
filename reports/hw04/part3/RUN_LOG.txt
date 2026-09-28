@@ -301,3 +301,28 @@ exit_code=0
 Completed source-review receipt copied verbatim to reports/hw04/part3/REVIEW.json; reviewed revision 4cec543, one confirmed P2 resolved in df4d1a0.
 Bounded independent handoff/report consistency review: no material inconsistencies; all six Postman images explicitly pending.
 Source/prose whitespace check passed; original raw console failure traces preserved including original whitespace.
+
+2026-09-28 POSTMAN FOLLOW-UP (original benchmark retained)
+Part2 released exclusive HTTPS8702 and Postman UI at2026-09-28T01:39:49Z.
+Capture source:4f8390b84752d861ea6b47c5ac8615680192d841; only new Part3 evidence files dirty during capture.
+$ .venv/bin/python scripts/run_hw04_web.py --env-file .env --port 8702
+Owned UvicornPID79647; oneworker/no reload; real dedicated MySQL8.4.11 at127.0.0.1:33363/s6102_rel.
+Read-only preflight verified5000rentals/200managers, exact retained dataset hashes, migrations001+003, listing-title index PRESENT.
+Postman12.29.5 at/Applications/Postman.app. SSL verification and cookie jar enabled. User completed the native publicCA picker; Certificates visibly listed hw4-part3-localhost-ca.pem. No verification bypass.
+2026-09-28T01:53:31Z normal LOCAL functional Collection Runner, one iteration: login then naive/fixed10,50,200.
+Observed7requests all200;53passed,0failed,3skipped,0errors;56tests total. All3fixed payload-equality assertions passed; naive first-of-pair skips expected. Duration828ms; average56ms. These are NOT benchmark samples.
+Then six additional individual Send requests were captured; all200 and8passed+1expected run-local equality skip each. Naive total/data13/11,53/51,203/201; fixed3/1 at every size.
+Six primary bodies, six headers, six tests and five TLS/Runner support images passed independent visual audit, with no secret values visible. Capture timestamps and displayed timings in raw/part3/postman/manifest.json.
+2026-09-28T02:07:07.440Z temporary local email/password collection values cleared and both empty cells verified after revisiting Variables. No shared values/export used.
+Postflight attempt1 failed because sandboxed docker inspect was unavailable; ownership guard refused before DB work. Approved read-only retry reached MySQL. Attempt2 compared live datetime objects with serialized journal strings and failed only schema_migrations equality. After JSON normalization all6 comparisons passed. No schema/data edits occurred. Separate failure record:raw/part3/postman/attempts/postflight-check-failures.json.
+Read-only postflight:server,indexes,schema_migrations,dataset,results,result_sha256 all unchanged;5000rentals/200managers retained.
+Owned execsession13814 receivedCtrl-C. Uvicorn:Shutting down;Waiting for application shutdown;Application shutdown complete;Finished server process[79647]. Launcher exited130 with KeyboardInterrupt from intentional Ctrl-C.
+$ lsof -nP -iTCP:8702 -sTCP:LISTEN
+(no output;exit_code=1, no listener)
+2026-09-28T02:08:42Z port8702 and Postman UI explicitly released to Part2; parent notified. Dedicated33363 database remains running for inspection.
+Image validation caught nativeJPEG bytes saved under requested.png names; initial PNG assertion failed. All23original API byte streams preserved under raw/part3/postman/native-captures/*.jpg. Bundled Pillow losslessly encoded true PNG files and compared mode, dimensions and every decoded pixel:all23identical. No crop, resize, annotations, compositing or changed content. Full hashes in image-format-check.json.
+$ .venv/bin/python tmp/part3-runtime/verify_evidence.py
+{"automated_checks_passed":20,"selected_http_requests":180,"postman_screenshots":"6/6 complete;17support images;23nativeoriginals retained"}
+exit_code=0
+No application/generator/benchmark/index source changed in this capture follow-up; original52focused tests remain the implementation test result. This follow-up verified20artifact checks plus23image visual checks instead of rerunning the benchmark or mutating data.
+Relative document links: PASS. Exact private runtime-value scan across17text/evidence files: PASS (no values printed). git diff --check: PASS. Application/source diff from4f8390b: empty. Main checkout still has only its original modified.gitignore and untracked docs/plans; untouched. hw3^{commit} reverified5742b2aadbafee5ba208311723ea470c09811dc5.

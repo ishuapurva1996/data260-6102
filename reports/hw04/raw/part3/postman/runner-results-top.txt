@@ -1,0 +1,274 @@
+Window: "DATA260 HW4 Part 3 — real MySQL N+1 evidence - Pragya Apurva's Workspace", App: Postman.
+0 standard window DATA260 HW4 Part 3 — real MySQL N+1 evidence - Pragya Apurva's Workspace, Secondary Actions: Raise
+	1 DATA260 HW4 Part 3 — real MySQL N+1 evidence - Pragya Apurva's Workspace, URL: desktop.postman.com/?desktopVersion=12.29.5&userId=58564524&teamId=43366561&region=us
+		2 container
+			3 container Filter panels Input field Create new Collections Collections Environments Documents Specs Mocks Datasets Toolsets Flows 25 Create new request Search tabs
+				4 container
+					5 button Go back (⌘[)
+					6 button (disabled) Go forward (⌘])
+					7 pop up button Navigation menu
+					8 pop up button Team Workspace Pragya Apurva's Workspace
+						9 image Team Workspace
+						10 text Pragya Apurva's Workspace
+						11 image
+					12 container Open search
+						13 container
+							14 image
+							15 text Search ( ⌘K )
+					16 toolbar Toolbar
+						17 image
+						18 button Invite
+						19 button Upgrade
+						20 button Notifications
+						21 pop up button Settings
+						22 pop up button Manage accounts
+							23 button Manage accounts
+								24 container
+									25 container Pragya Apurva profile picture
+										26 image
+									27 image Pragya Apurva's Team team logo
+				28 container
+					29 container
+						30 tab group
+							31 tab (selected) Description: Items, Value: 1
+							32 tab (settable, integer) Description: Services, Value: 0
+							33 tab (settable, integer) Description: History, Value: 0
+							34 tab (settable, integer) Description: Local Files, Value: 0
+						35 pop up button Filter panels
+						36 text field (settable) Input field
+						37 pop up button Create new
+						38 button
+						39 pop up button
+						40 container
+							41 button Collections
+								42 text COLLECTIONS
+							43 container Collections
+								44 outline Collections
+									45 container
+										46 row Collapse DATA260 HW4 Part 3 — real MySQL N+1 evidence View more actions
+											47 button Collapse
+											48 text DATA260 HW4 Part 3 — real MySQL N+1 evidence
+											49 button
+											50 button
+											51 button View more actions
+										52 row POST 00 Login — POST /api/auth/login (private email/password)
+											53 text POST
+											54 text 00 Login — POST /api/auth/login (private email/password)
+										55 row GET GET /api/rentals/fixed — fixed, page_size=10, offset=0
+											56 text GET
+											57 text GET /api/rentals/fixed — fixed, page_size=10, offset=0
+										58 row GET GET /api/rentals/naive — naive, page_size=10, offset=0
+											59 text GET
+											60 text GET /api/rentals/naive — naive, page_size=10, offset=0
+										61 row GET GET /api/rentals/fixed — fixed, page_size=200, offset=0
+											62 text GET
+											63 text GET /api/rentals/fixed — fixed, page_size=200, offset=0
+										64 row GET GET /api/rentals/naive — naive, page_size=50, offset=0
+											65 text GET
+											66 text GET /api/rentals/naive — naive, page_size=50, offset=0
+										67 row GET GET /api/rentals/naive — naive, page_size=200, offset=0
+											68 text GET
+											69 text GET /api/rentals/naive — naive, page_size=200, offset=0
+										70 row GET GET /api/rentals/fixed — fixed, page_size=50, offset=0
+											71 text GET
+											72 text GET /api/rentals/fixed — fixed, page_size=50, offset=0
+										73 row Expand My Collection
+											74 button Expand
+											75 text My Collection
+							76 button Environments
+								77 text ENVIRONMENTS
+							78 button Documents
+								79 text DOCUMENTS
+							80 button Specs
+								81 text SPECS
+							82 button Mocks
+								83 text MOCKS
+							84 button Datasets
+								85 text DATASETS
+							86 button Toolsets
+								87 text TOOLSETS
+							88 button Flows
+								89 text FLOWS
+					90 splitter 25
+					91 container
+						92 container
+							93 container
+								94 image Request
+								95 text Overview
+								96 container
+									97 image collection
+									98 text DATA260 HW4 Part 3 — real MySQL N+1 evidence
+								99 image Request
+								100 text Runner
+								101 image Request
+								102 text DATA260 HW4 Part 3 — real MySQL N+1 evidence
+							103 button Create new request
+							104 button Search tabs
+								105 image Search tabs
+							106 combo box (settable) Environment No Environment, Value: Environment No Environment Select Environment
+								107 text Environment
+								108 container
+									109 text No Environment
+									110 image Select Environment
+							111 button
+							112 container
+								113 container Breadcrumb navigation
+									114 content list
+										115 link DATA260 HW4 Part 3 — real M... - Run results
+											116 text DATA260 HW4 Part 3 — real M... - Run results
+								117 toolbar Run actions
+									118 button Rerun
+										119 text Rerun
+									120 button New Run
+										121 text New Run
+									122 button Schedule
+										123 text Schedule
+									124 button Postman CLI
+										125 text Postman CLI
+									126 button Configure CI/CD
+										127 text Configure CI/CD
+									128 container
+										129 button Share
+										130 button Copy Link
+									131 pop up button View more actions
+								132 image
+								133 text Ran today at 06:53:31 PM
+								134 button View all runs
+								135 text Source
+								136 heading Runner, Value: 4
+									137 text Runner
+								138 text Environment
+								139 heading none, Value: 4
+									140 text none
+								141 text Iterations
+								142 heading 1, Value: 4
+									143 text 1
+								144 text Duration
+								145 heading 828ms, Value: 4
+									146 text 828ms
+								147 text All tests
+								148 heading 56, Value: 4
+									149 text 56
+								150 text Errors
+								151 heading 0, Value: 4
+									152 text 0
+								153 text Avg. Resp. Time
+								154 heading 56 ms, Value: 4
+									155 text 56 ms
+								156 tab group
+									157 tab (selected) All, Value: 1
+									158 tab (settable, integer) Passed, Value: 0
+									159 tab (settable, integer) Failed, Value: 0
+									160 tab (settable, integer) Skipped, Value: 0
+									161 tab (settable, integer) Errors, Value: 0
+									162 tab (settable, integer) Console log, Value: 0
+								163 tab group
+									164 tab (selected) List, Value: 1
+									165 tab (settable, integer) Grid, Value: 0
+								166 container
+									167 container
+										168 heading Iteration 1, Value: 6
+											169 text Iteration 1
+										170 container
+											171 text POST
+											172 container Breadcrumb navigation
+												173 content list
+													174 link 00 Login — POST /api/auth/login (private email/password)
+														175 text 00 Login — POST /api/auth/login (private email/password)
+											176 text https://localhost:8702/api/auth/login
+											177 text 200
+											178 text 137 ms 347 B 2 PASS Login returns HTTP 200 PASS Login returns a user object
+										179 container
+											180 text GET
+											181 container Breadcrumb navigation
+												182 content list
+													183 link GET /api/rentals/naive — naive, page_size=10, offset=0
+														184 text GET /api/rentals/naive — naive, page_size=10, offset=0
+											185 text https://localhost:8702/api/rentals/naive?page_size=10&offset=0
+											186 text 200
+											187 text 32 ms 4.032 KB 8 1 PASS HTTP 200 PASS Response is a JSON array PASS Exactly 10 rental rows PASS Rental ids are positive and ordered ascending PASS Every seeded rental includes manager id and name PASS X-SQL-Statements = 13 (executed total, including auth) PASS X-Data-SQL-Statements = 11 (executed data queries) PASS Total SQL count is at least the data count SKIP Pair equality pending: run login and both versions in the same Collection Runner run
+										188 container
+											189 text GET
+											190 container Breadcrumb navigation
+												191 content list
+													192 link GET /api/rentals/fixed — fixed, page_size=10, offset=0
+														193 text GET /api/rentals/fixed — fixed, page_size=10, offset=0
+											194 text https://localhost:8702/api/rentals/fixed?page_size=10&offset=0
+											195 text 200
+											196 text 9 ms 4.03 KB 9 PASS HTTP 200 PASS Response is a JSON array PASS Exactly 10 rental rows PASS Rental ids are positive and ordered ascending PASS Every seeded rental includes manager id and name PASS X-SQL-Statements = 3 (executed total, including auth) PASS X-Data-SQL-Statements = 1 (executed data queries) PASS Total SQL count is at least the data count PASS Payload equals naive at page_size=10
+										197 container
+											198 text GET
+											199 container Breadcrumb navigation
+												200 content list
+													201 link GET /api/rentals/naive — naive, page_size=50, offset=0
+														202 text GET /api/rentals/naive — naive, page_size=50, offset=0
+											203 text https://localhost:8702/api/rentals/naive?page_size=50&offset=0
+											204 text 200
+											205 text 31 ms 19.489 KB 8 1 PASS HTTP 200 PASS Response is a JSON array PASS Exactly 50 rental rows PASS Rental ids are positive and ordered ascending PASS Every seeded rental includes manager id and name PASS X-SQL-Statements = 53 (executed total, including auth) PASS X-Data-SQL-Statements = 51 (executed data queries) PASS Total SQL count is at least the data count SKIP Pair equality pending: run login and both versions in the same Collection Runner run
+										206 container
+											207 text GET
+											208 container Breadcrumb navigation
+												209 content list
+													210 link GET /api/rentals/fixed — fixed, page_size=50, offset=0
+														211 text GET /api/rentals/fixed — fixed, page_size=50, offset=0
+											212 text https://localhost:8702/api/rentals/fixed?page_size=50&offset=0
+											213 text 200
+											214 text 10 ms 19.487 KB 9 PASS HTTP 200 PASS Response is a JSON array PASS Exactly 50 rental rows PASS Rental ids are positive and ordered ascending PASS Every seeded rental includes manager id and name PASS X-SQL-Statements = 3 (executed total, including auth) PASS X-Data-SQL-Statements = 1 (executed data queries) PASS Total SQL count is at least the data count PASS Payload equals naive at page_size=50
+									215 text 1
+								216 container
+									217 container Breadcrumb navigation
+										218 content list
+											219 link
+									220 button
+									221 container
+										222 tab group
+											223 tab (selected) Response, Value: 1
+											224 tab (settable, integer) Headers, Value: 0
+											225 tab (settable, integer) Request, Value: 0
+										226 container Response
+											227 heading 3
+											228 text This response doesn't have a body.
+						229 splitter 85
+					230 splitter 64
+				231 container
+					232 button
+					233 pop up button Open Folder
+						234 text Open Folder
+					235 button Terminal
+					236 button Console
+					237 container
+						238 text 1 Import Complete
+					239 pop up button Standing by for launch
+						240 text Standing by for launch
+					241 button Globals
+					242 button Vault
+					243 pop up button Tools
+					244 pop up button
+					245 button
+			246 list Typeahead menu
+			247 list Typeahead menu
+			248 list Typeahead menu
+			249 list Typeahead menu
+			250 list Typeahead menu
+			251 list Typeahead menu
+			252 list Typeahead menu
+			253 list Typeahead menu
+			254 list Typeahead menu
+			255 list Typeahead menu
+			256 list Typeahead menu
+			257 list Typeahead menu
+			258 list Typeahead menu
+			259 list Typeahead menu
+			260 list Typeahead menu
+	261 close button
+	262 full screen button Help: this button also has an action to zoom the window, Secondary Actions: zoom the window
+	263 minimize button
+264 menu bar
+	265 Postman
+	266 File
+	267 Edit
+	268 View
+	269 Window
+	270 Help
+
+The focused UI element is 3 container Filter panels Input field Create new Collections Collections Environments Documents Specs Mocks Datasets Toolsets Flows 25 Create new request Search tabs

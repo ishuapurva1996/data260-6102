@@ -1,0 +1,28 @@
+{
+  "recorded_at_utc": "2026-09-28T02:10:51.112797+00:00",
+  "all_unchanged": true,
+  "matches_before": {
+    "reports/hw04/raw/part3/attempts/20260928T003859.945761Z-cd277c20/requests.jsonl": true,
+    "reports/hw04/raw/part3/attempts/20260928T003859.945761Z-cd277c20/requests.csv": true,
+    "reports/hw04/part3/metrics.json": true,
+    "reports/hw04/part3/METRICS.md": true,
+    "reports/hw04/raw/part3/seed_manifest.json": true,
+    "reports/hw04/raw/part3/index/20260928T004453-df40d32d/before.json": true,
+    "reports/hw04/raw/part3/index/20260928T004453-df40d32d/after.json": true,
+    "reports/hw04/raw/part3/index/20260928T004453-df40d32d/comparison.json": true,
+    "reports/hw04/raw/part3/selected_run.json": true,
+    "reports/hw04/raw/part3/selected_index.json": true
+  },
+  "sha256": {
+    "reports/hw04/raw/part3/attempts/20260928T003859.945761Z-cd277c20/requests.jsonl": "de93e1f8d771805807a32928e69a0af230944d41038e9b6403825cc7af9e1dd8",
+    "reports/hw04/raw/part3/attempts/20260928T003859.945761Z-cd277c20/requests.csv": "bc55e20ebfd637fa7cf2126dd590307f2e11d4fcce9a5dcdd7c711be7a09de10",
+    "reports/hw04/part3/metrics.json": "c740a608ec2417bdae84f64297596120dac79a80b5bd9ba7148224248e6f09aa",
+    "reports/hw04/part3/METRICS.md": "2e9a30e4c88cca9adb6c19f0b33e0945ab7ea1099694f566e00a4f322ebf8204",
+    "reports/hw04/raw/part3/seed_manifest.json": "86acc81f45a3e564bbd0ed575213d17f68b7a84747cda8e4e24bac720d790e09",
+    "reports/hw04/raw/part3/index/20260928T004453-df40d32d/before.json": "773881d80ba12782fb794c41f27cd8b457f33f303b4ef1a53fb88541dc5bd09c",
+    "reports/hw04/raw/part3/index/20260928T004453-df40d32d/after.json": "2bd98d36ba58c377403eefdfb7d1035e0575d428b687db9075d1d387c8d1ef1b",
+    "reports/hw04/raw/part3/index/20260928T004453-df40d32d/comparison.json": "838b4869e15c9ffc6e35d0339babfbe8a76feafd6befc62282f32e70aea66bc3",
+    "reports/hw04/raw/part3/selected_run.json": "4c72d80efdcf1e631db9e6d982f91ad88ed182486b8405f657152f821e34889c",
+    "reports/hw04/raw/part3/selected_index.json": "b21ea976871f1597fc6234b04272a0fc82bf4e92c474d01ecdfa2dea27b2a64c"
+  }
+}

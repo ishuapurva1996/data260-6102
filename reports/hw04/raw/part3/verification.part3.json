@@ -4,9 +4,9 @@
   "SID4": 6102,
   "SEED": 6102,
   "VERIFY_SEED": 266102,
-  "timestamp_utc": "2026-09-28T00:50:03.902977+00:00",
+  "timestamp_utc": "2026-09-28T02:12:52.657693+00:00",
   "measured_revision": "9860a20342072168ed68a8d41eb16d9bfecf7729",
-  "current_head_at_check": "62117550e2e2a253ea754152d2bb1007cc6b1f9a",
+  "current_head_at_check": "4f8390b84752d861ea6b47c5ac8615680192d841",
   "scope": "Part3 evidence only; not whole-homework/tagged verification",
   "checks": [
     {
@@ -83,13 +83,47 @@
       "name": "Final scoped tests",
       "passed": true,
       "detail": "52 passed after seed output guard; real MySQL plus foundation access gate; dependency warnings retained"
+    },
+    {
+      "name": "Postman original captures and PNG hashes",
+      "passed": true,
+      "detail": "23 native JPEG originals and23 lossless PNG copies; decoded pixel identity separately checked with Pillow, image-format-check.json"
+    },
+    {
+      "name": "Six successful Postman endpoint captures",
+      "passed": true,
+      "detail": "Actual UI counts in body/header/test evidence; independent visual review confirms six endpoint slots"
+    },
+    {
+      "name": "Postman paired payload equality",
+      "passed": true,
+      "detail": "Three equality assertions in preserved real Runner AX observations;53passed0failed3expectedskips"
+    },
+    {
+      "name": "Original benchmark and index evidence preserved",
+      "passed": true,
+      "detail": "10 original selected raw/metrics/seed/index/selector hashes unchanged"
+    },
+    {
+      "name": "Postman database unchanged",
+      "passed": true,
+      "detail": "Read-only ownership/seed verification; server/index/journal/dataset/results/result hash match preflight"
     }
   ],
   "postman_screenshots": {
-    "status": "pending_manual_access",
+    "status": "complete",
     "required": 6,
-    "captured": 0,
-    "capture_steps": "reports/hw04/screenshots/part3/README.md"
+    "captured": 6,
+    "support_images": 17,
+    "native_originals_retained": 23,
+    "manifest": "reports/hw04/raw/part3/postman/manifest.json",
+    "visual_audit": {
+      "reviewer": "capture_evidence_audit",
+      "images_reviewed": 23,
+      "passed": true,
+      "secrets_visible": false,
+      "notes": "Every primary has endpoint/size/offset/200 and populated manager JSON; matching headers and tests readable. Runner screenshot shows 53/0/3; size-200 equality visible in image, size10/50 equality retained in actual AX run observations."
+    }
   },
   "all_automated_checks_passed": true
 }

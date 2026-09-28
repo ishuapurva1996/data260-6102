@@ -1,0 +1,136 @@
+{
+  "captured_at_utc": "2026-09-28T01:41:20.952811+00:00",
+  "server_revision": "4f8390b84752d861ea6b47c5ac8615680192d841",
+  "postman_version": "12.29.5",
+  "purpose": "Real Postman functional screenshot evidence only; not benchmark measurements",
+  "ownership": {
+    "format_version": 1,
+    "purpose": "hw04-part3-performance",
+    "disposable": true,
+    "host": "127.0.0.1",
+    "port": 33363,
+    "database": "s6102_rel",
+    "server_uuid": "3d515eaf-bad3-11f1-8b89-0ecd67fb62d4",
+    "docker_container_id": "5d65145f0fa1ff2e2d9304470e0ba70734a4bd00e7cd9d2f644569520a9318ad",
+    "docker_container_name": "hw4-part3-mysql-6102"
+  },
+  "database_snapshot": {
+    "captured_at_utc": "2026-09-28T01:41:20.940202Z",
+    "query": "SELECT id,listing_title FROM rentals WHERE listing_title=:title ORDER BY id",
+    "parameters": {
+      "title": "HW4-6102-00001 Condo in Rose Garden"
+    },
+    "server": {
+      "version": "8.4.11",
+      "server_uuid": "3d515eaf-bad3-11f1-8b89-0ecd67fb62d4",
+      "database_name": "s6102_rel"
+    },
+    "indexes": [
+      {
+        "Table": "rentals",
+        "Non_unique": 0,
+        "Key_name": "PRIMARY",
+        "Seq_in_index": 1,
+        "Column_name": "id",
+        "Collation": "A",
+        "Cardinality": 4868,
+        "Sub_part": null,
+        "Packed": null,
+        "Null": "",
+        "Index_type": "BTREE",
+        "Comment": "",
+        "Index_comment": "",
+        "Visible": "YES",
+        "Expression": null
+      },
+      {
+        "Table": "rentals",
+        "Non_unique": 1,
+        "Key_name": "ix_rentals_manager_id",
+        "Seq_in_index": 1,
+        "Column_name": "manager_id",
+        "Collation": "A",
+        "Cardinality": 200,
+        "Sub_part": null,
+        "Packed": null,
+        "Null": "YES",
+        "Index_type": "BTREE",
+        "Comment": "",
+        "Index_comment": "",
+        "Visible": "YES",
+        "Expression": null
+      },
+      {
+        "Table": "rentals",
+        "Non_unique": 1,
+        "Key_name": "ix_rentals_listing_title",
+        "Seq_in_index": 1,
+        "Column_name": "listing_title",
+        "Collation": "A",
+        "Cardinality": 4868,
+        "Sub_part": null,
+        "Packed": null,
+        "Null": "",
+        "Index_type": "BTREE",
+        "Comment": "",
+        "Index_comment": "",
+        "Visible": "YES",
+        "Expression": null
+      }
+    ],
+    "schema_migrations": [
+      {
+        "version": 1,
+        "name": "001_initial.sql",
+        "checksum": "d738249ea390692161830c653d0ad8b75fb3e1ee5a8aace23a760413c9ab181f",
+        "applied_at": "2026-09-28 00:31:22.542197"
+      },
+      {
+        "version": 3,
+        "name": "003_listing_title_index.sql",
+        "checksum": "f0278ae79cceb26a33367762ef37f7749a602bcc7cbd2632dcb0bc7052f37ab7",
+        "applied_at": "2026-09-28 00:44:53.221587"
+      }
+    ],
+    "dataset": {
+      "stored_dataset_sha256": "9513ac766ab94f7c23c9257536d8e0f623c8bcbf530f6881e3c354cc7ced1b78",
+      "physical_rows_sha256": "0bdee7bbc69b260905cecc69f0ffb9b7b4628ec61fb11cacd1640902571f7e3d",
+      "counts": {
+        "rentals": 5000,
+        "property_managers": 200,
+        "associated_rentals": 5000,
+        "distinct_managers": 200,
+        "unique_listing_titles": 5000
+      },
+      "rental_id_range": {
+        "min": 1,
+        "max": 5000
+      }
+    },
+    "results": [
+      {
+        "id": 1,
+        "listing_title": "HW4-6102-00001 Condo in Rose Garden"
+      }
+    ],
+    "result_sha256": "08a9e04c383c00283a084c95bfaa507d93e4aac314a0778e6fce77a3e3b92e3e",
+    "explain_traditional": [
+      {
+        "id": 1,
+        "select_type": "SIMPLE",
+        "table": "rentals",
+        "partitions": null,
+        "type": "ref",
+        "possible_keys": "ix_rentals_listing_title",
+        "key": "ix_rentals_listing_title",
+        "key_len": "1022",
+        "ref": "const",
+        "rows": 1,
+        "filtered": 100.0,
+        "Extra": "Using index"
+      }
+    ],
+    "explain_format_json_raw": "{\n  \"query_block\": {\n    \"select_id\": 1,\n    \"cost_info\": {\n      \"query_cost\": \"1.05\"\n    },\n    \"ordering_operation\": {\n      \"using_filesort\": false,\n      \"table\": {\n        \"table_name\": \"rentals\",\n        \"access_type\": \"ref\",\n        \"possible_keys\": [\n          \"ix_rentals_listing_title\"\n        ],\n        \"key\": \"ix_rentals_listing_title\",\n        \"used_key_parts\": [\n          \"listing_title\"\n        ],\n        \"key_length\": \"1022\",\n        \"ref\": [\n          \"const\"\n        ],\n        \"rows_examined_per_scan\": 1,\n        \"rows_produced_per_join\": 1,\n        \"filtered\": \"100.00\",\n        \"using_index\": true,\n        \"cost_info\": {\n          \"read_cost\": \"0.95\",\n          \"eval_cost\": \"0.10\",\n          \"prefix_cost\": \"1.05\",\n          \"data_read_per_join\": \"3K\"\n        },\n        \"used_columns\": [\n          \"id\",\n          \"listing_title\"\n        ]\n      }\n    }\n  }\n}"
+  },
+  "certificate_sha256": "d05c5cf1ebc2a3f5962c8c71d3953fe73648e4c6fef53d63b98ffc4ab1f5c4e9"
+}

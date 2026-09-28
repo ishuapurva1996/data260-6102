@@ -1,0 +1,28 @@
+{
+  "recorded_at_utc": "2026-09-28T02:10:51.113942+00:00",
+  "scope": "Postflight verification only; neither attempt sent HTTP or changed database state",
+  "attempts": [
+    {
+      "sequence": 1,
+      "status": "failed",
+      "exit_code": 1,
+      "reason": "Sandboxed docker inspect failed; ownership guard refused to proceed.",
+      "message": "OwnershipError: Cannot verify the owned Docker instance and published MySQL port"
+    },
+    {
+      "sequence": 2,
+      "status": "failed",
+      "exit_code": 1,
+      "reason": "Compared live Python datetime journal values with saved JSON strings before normalizing serialization.",
+      "checks": {
+        "server": true,
+        "indexes": true,
+        "schema_migrations": false,
+        "dataset": true,
+        "results": true,
+        "result_sha256": true
+      },
+      "resolution": "Normalized snapshot through json.dumps(default=str) then json.loads before comparison; all six checks passed. No schema change occurred."
+    }
+  ]
+}

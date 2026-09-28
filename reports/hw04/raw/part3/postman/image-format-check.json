@@ -1,0 +1,212 @@
+{
+  "reason": "CUA native getScreenshot returned JPEG bytes despite chosen .png filenames. Original API bytes retained separately; required PNG files use lossless format conversion only. No crop, resize, annotations, compositing or changed pixel values.",
+  "images": [
+    {
+      "source": "reports/hw04/raw/part3/postman/native-captures/collection-run-configuration.jpg",
+      "source_sha256": "bcd5f83d43b85c0e9a2c2377014904e677b51c3918d9ad9957754f339680e64a",
+      "png": "reports/hw04/screenshots/part3/collection-run-configuration.png",
+      "png_sha256": "e629a69e0cc3129358f93bb5a589f21ac2f46206961dd112b0ffd1521cfe7b80",
+      "width": 2560,
+      "height": 1600,
+      "decoded_pixels_identical": true
+    },
+    {
+      "source": "reports/hw04/raw/part3/postman/native-captures/collection-run-summary.jpg",
+      "source_sha256": "2f0d8ca6dab07bfe5ab6433dfbba90a68f7fd927288adce904cac6f07102ca4d",
+      "png": "reports/hw04/screenshots/part3/collection-run-summary.png",
+      "png_sha256": "899500956c54fb1e2799c08e4b271776c7eac6fe73b694bd37897412c9e3bc2d",
+      "width": 2560,
+      "height": 1600,
+      "decoded_pixels_identical": true
+    },
+    {
+      "source": "reports/hw04/raw/part3/postman/native-captures/fixed-10-headers.jpg",
+      "source_sha256": "9de163650454edabd73f018fb66764b9e950a6b9e4412e8098f3de0bdeb3c0ac",
+      "png": "reports/hw04/screenshots/part3/fixed-10-headers.png",
+      "png_sha256": "bda22f0ab7af589076b98a974a75e5b6a9c86586213411c52a47e0b5dfc5a1d4",
+      "width": 2560,
+      "height": 1600,
+      "decoded_pixels_identical": true
+    },
+    {
+      "source": "reports/hw04/raw/part3/postman/native-captures/fixed-10-tests.jpg",
+      "source_sha256": "d93c5f036d23189ad9f68e993702b823627ace1295e8a57b464a8b73122122fb",
+      "png": "reports/hw04/screenshots/part3/fixed-10-tests.png",
+      "png_sha256": "f292f33a06bf121fa5c8c359330a3888674b4f31f466e55c884b957247f8f84f",
+      "width": 2560,
+      "height": 1600,
+      "decoded_pixels_identical": true
+    },
+    {
+      "source": "reports/hw04/raw/part3/postman/native-captures/fixed-10.jpg",
+      "source_sha256": "e0ec6ff0f9f0e894fe61d8cfc7d40ce2958f791afc5662b3cd963b8b77f87e2e",
+      "png": "reports/hw04/screenshots/part3/fixed-10.png",
+      "png_sha256": "680deb72af25bcdc54beb295eba950f22cd7835dc5cc491164c1d8ece2760705",
+      "width": 2560,
+      "height": 1600,
+      "decoded_pixels_identical": true
+    },
+    {
+      "source": "reports/hw04/raw/part3/postman/native-captures/fixed-200-headers.jpg",
+      "source_sha256": "335827c73cac9a0e62b6da1b708b7fd7737c6cff219122135b9e0c0f0008fea7",
+      "png": "reports/hw04/screenshots/part3/fixed-200-headers.png",
+      "png_sha256": "a81daee5e44244acfa7e02053a6d7340c37463999f526bd3a9e77d8969909391",
+      "width": 2560,
+      "height": 1600,
+      "decoded_pixels_identical": true
+    },
+    {
+      "source": "reports/hw04/raw/part3/postman/native-captures/fixed-200-tests.jpg",
+      "source_sha256": "72558a765fd866799a4acc65f8b67e318f29d2b01363c0d20e4c6e051d770d0a",
+      "png": "reports/hw04/screenshots/part3/fixed-200-tests.png",
+      "png_sha256": "f49b21a22f06e76c1d0566fdd03310d6d505e56451fd3b98b48f73779341a871",
+      "width": 2560,
+      "height": 1600,
+      "decoded_pixels_identical": true
+    },
+    {
+      "source": "reports/hw04/raw/part3/postman/native-captures/fixed-200.jpg",
+      "source_sha256": "142d6b9490a0bdf56461a25f097b918562aabe9baa4fb5c22e3fb9eaad417b91",
+      "png": "reports/hw04/screenshots/part3/fixed-200.png",
+      "png_sha256": "e3585a1e74272157f6540e0699baf2d5501bbfe85fa08229b155c37c1811b7a7",
+      "width": 2560,
+      "height": 1600,
+      "decoded_pixels_identical": true
+    },
+    {
+      "source": "reports/hw04/raw/part3/postman/native-captures/fixed-50-headers.jpg",
+      "source_sha256": "8a9793e728d488f4f7184e0532df352597303dcbcb69a522867c1dcd908eb5d2",
+      "png": "reports/hw04/screenshots/part3/fixed-50-headers.png",
+      "png_sha256": "b4285ee5ddc63945a8eb9df103b848ed8fc7108498af4283ceaace889abf9eb6",
+      "width": 2560,
+      "height": 1600,
+      "decoded_pixels_identical": true
+    },
+    {
+      "source": "reports/hw04/raw/part3/postman/native-captures/fixed-50-tests.jpg",
+      "source_sha256": "6dce5933116af20263f0d12b42b9867e1944a80bbf844b42d1fc98b1654a1651",
+      "png": "reports/hw04/screenshots/part3/fixed-50-tests.png",
+      "png_sha256": "716861b63bef8d797a7433503fffcd508c1767a29a943c17b8cb2891b1c395d1",
+      "width": 2560,
+      "height": 1600,
+      "decoded_pixels_identical": true
+    },
+    {
+      "source": "reports/hw04/raw/part3/postman/native-captures/fixed-50.jpg",
+      "source_sha256": "a3a7f3f3f5440875b48784aa311939a86c937c1b660eb6d1ecd6eab10f8208db",
+      "png": "reports/hw04/screenshots/part3/fixed-50.png",
+      "png_sha256": "42831ffe72043e49d62cbd3e8d2600b37d49e934ae1d4e8e7dc3220872a1de89",
+      "width": 2560,
+      "height": 1600,
+      "decoded_pixels_identical": true
+    },
+    {
+      "source": "reports/hw04/raw/part3/postman/native-captures/naive-10-headers.jpg",
+      "source_sha256": "b6f7b5ed36841a5d07e3971526822d893a063885368fe6322a04c2ab5abed62d",
+      "png": "reports/hw04/screenshots/part3/naive-10-headers.png",
+      "png_sha256": "c49ad9770b0296723906490b4a3a8184b3ba05cafe409aa7708f1d0989664d54",
+      "width": 2560,
+      "height": 1600,
+      "decoded_pixels_identical": true
+    },
+    {
+      "source": "reports/hw04/raw/part3/postman/native-captures/naive-10-tests.jpg",
+      "source_sha256": "1ce09c5346e5a132d480ec3122c12aac478bc9634cd5591f29898e8d32b3ad4d",
+      "png": "reports/hw04/screenshots/part3/naive-10-tests.png",
+      "png_sha256": "a2dde959a3fe566ccdff5042a49779798e00db563905aa8e6d2302461d983e2f",
+      "width": 2560,
+      "height": 1600,
+      "decoded_pixels_identical": true
+    },
+    {
+      "source": "reports/hw04/raw/part3/postman/native-captures/naive-10.jpg",
+      "source_sha256": "56379077acd8fc351b92b139870429619a2763ee2b03a9c2e8593d2141e6791b",
+      "png": "reports/hw04/screenshots/part3/naive-10.png",
+      "png_sha256": "13a6cbe79b0f12c9e1247ecb1065f19ad2b3c56535e08899ecbc71b1cad77ba2",
+      "width": 2560,
+      "height": 1600,
+      "decoded_pixels_identical": true
+    },
+    {
+      "source": "reports/hw04/raw/part3/postman/native-captures/naive-200-headers.jpg",
+      "source_sha256": "cd6f6674546347e962368a9543b6aa83025c5d2ebc47c53bee9d1a46c222afef",
+      "png": "reports/hw04/screenshots/part3/naive-200-headers.png",
+      "png_sha256": "ed28c9c6eff40ffd65e580381a6b9d8939ab5491a6de55b3d4b5d38a2b018925",
+      "width": 2560,
+      "height": 1600,
+      "decoded_pixels_identical": true
+    },
+    {
+      "source": "reports/hw04/raw/part3/postman/native-captures/naive-200-tests.jpg",
+      "source_sha256": "f7698289519bf54558e4158a6ebe8a9db63206ecba2e4b918a8ba4f9b193387a",
+      "png": "reports/hw04/screenshots/part3/naive-200-tests.png",
+      "png_sha256": "156d126cae05eea9c6b7d500f88d36b4ce981cc46172857e3cd863dcf6139a56",
+      "width": 2560,
+      "height": 1600,
+      "decoded_pixels_identical": true
+    },
+    {
+      "source": "reports/hw04/raw/part3/postman/native-captures/naive-200.jpg",
+      "source_sha256": "dfb909a2df9af8defcb135778f6f10d5043ced496b21e25fdb9c14d16468ec31",
+      "png": "reports/hw04/screenshots/part3/naive-200.png",
+      "png_sha256": "f61a9774392faced3f98be693df6a171ca9dd8f3f8a432183db664e43be316ec",
+      "width": 2560,
+      "height": 1600,
+      "decoded_pixels_identical": true
+    },
+    {
+      "source": "reports/hw04/raw/part3/postman/native-captures/naive-50-headers.jpg",
+      "source_sha256": "e92e5e82ac8d3258877c5a59b8506a83ef90fdae35ec7db3a1ef549ddd378d84",
+      "png": "reports/hw04/screenshots/part3/naive-50-headers.png",
+      "png_sha256": "712c03d24317525c2e216a1b51ddbbca191bc8caffc336b405ff1702504c59ba",
+      "width": 2560,
+      "height": 1600,
+      "decoded_pixels_identical": true
+    },
+    {
+      "source": "reports/hw04/raw/part3/postman/native-captures/naive-50-tests.jpg",
+      "source_sha256": "e4d7ffcfd52e7610c7d8c06394d27b96cc1ec6de6a759367bf3ffaba4ed34bab",
+      "png": "reports/hw04/screenshots/part3/naive-50-tests.png",
+      "png_sha256": "938b54b4f62802f15b7f0b5b8c4961a5c67980e9de5a013a53b4211574ce66da",
+      "width": 2560,
+      "height": 1600,
+      "decoded_pixels_identical": true
+    },
+    {
+      "source": "reports/hw04/raw/part3/postman/native-captures/naive-50.jpg",
+      "source_sha256": "f9f51741305adaf01b74dddc0406c6f528d61f0b07c536568577d66de41c5a9c",
+      "png": "reports/hw04/screenshots/part3/naive-50.png",
+      "png_sha256": "a1895dc2adba02a777092c3bfdde7be705af6e946b67f90254777b2d8b05ff6d",
+      "width": 2560,
+      "height": 1600,
+      "decoded_pixels_identical": true
+    },
+    {
+      "source": "reports/hw04/raw/part3/postman/native-captures/payload-equality-200.jpg",
+      "source_sha256": "0c9c12325088ac787988a498e1c7ff2c3f2acb931fc43d8b5d4f02b9f3feffef",
+      "png": "reports/hw04/screenshots/part3/payload-equality-200.png",
+      "png_sha256": "65d101149e11acfddceaa6f030a3ccf32595e6681203389e2570fb906aa4bd3e",
+      "width": 2560,
+      "height": 1600,
+      "decoded_pixels_identical": true
+    },
+    {
+      "source": "reports/hw04/raw/part3/postman/native-captures/tls-ca.jpg",
+      "source_sha256": "e8101e7cfe35997b15103ab21c3c820bc69c61e95bf1a0edc7bdcda493054908",
+      "png": "reports/hw04/screenshots/part3/tls-ca.png",
+      "png_sha256": "77b8e8cc85cb8be5d67af9b0193faa3f07cdc7faa4651bf96df7af985ca5976d",
+      "width": 2560,
+      "height": 1600,
+      "decoded_pixels_identical": true
+    },
+    {
+      "source": "reports/hw04/raw/part3/postman/native-captures/tls-verification.jpg",
+      "source_sha256": "35fafe580b18c3a13bc4b524d02550e82011dc879d44b1b502da64ca5bd90a58",
+      "png": "reports/hw04/screenshots/part3/tls-verification.png",
+      "png_sha256": "512d93bcf0afd9cd9752e0bf163fe189d028d8a2ee4e28acc413d586c55f3fa3",
+      "width": 2560,
+      "height": 1600,
+      "decoded_pixels_identical": true
+    }
+  ]
+}
