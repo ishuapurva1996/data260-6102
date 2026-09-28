@@ -1,0 +1,34 @@
+{
+  "timestamp_utc": "2026-09-28T20:19:12.475104+00:00",
+  "tagged_submission_commit": "5f85f06c7b9e48678284211b21b69e86b25ce4e7",
+  "code_tag": "hw4-code",
+  "code_commit": "e9b254f8f949897061f7d202c67b5e0c6ed04221",
+  "tagged_smoke": {
+    "passed": 31,
+    "total": 31,
+    "receipt": "verification.json",
+    "fresh_model_calls": 0,
+    "fresh_benchmark_requests": 0
+  },
+  "focused_test_run": {
+    "command": ".venv-rag/bin/python -m pytest tests/test_hw04_rag.py tests/test_hw04_rag_evaluation.py tests/test_hw04_submission_verifier.py -q",
+    "result": "77 passed in 2.12s"
+  },
+  "frontend_build": "pass",
+  "pdf": {
+    "pages": 79,
+    "sha256": "f32be34d0f60830729e55445505e90e206a33837dd377d6ebfc8c2ae6c54ddff",
+    "copy_identical": true,
+    "all_122_original_source_image_hashes_verified": true
+  },
+  "publication_scope": "main and codex/hw4-integration include verification receipts in a child commit; immutable hw4 identifies exact tested code/report snapshot",
+  "collaborator_access_check": {
+    "repository": "ishuapurva1996/data260-6102",
+    "authentication_available": false,
+    "collaborators": {},
+    "limitation": "No existing HTTPS credential was available; Git SSH access is verified separately."
+  },
+  "previous_collaborator_evidence": "reports/hw03/raw/integration/github-access.json",
+  "private_config_value_scan": "No matches in 993 candidate submission files; no private env/key files staged.",
+  "whitespace_note": "Original corpus HTTP headers, document extracts and frozen run files retain their exact recorded whitespace."
+}
