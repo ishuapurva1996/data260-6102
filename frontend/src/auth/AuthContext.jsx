@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
-import { request } from "../api/client.js";
+import { advanceAuthEpoch, request } from "../api/client.js";
 
 const AuthContext = createContext(null);
 export const useAuth = () => useContext(AuthContext);
@@ -9,7 +9,10 @@ export function AuthProvider({ children }) {
   const [attempt, setAttempt] = useState(0);
   useEffect(() => {
     const controller = new AbortController();
-    const expired = () => setAuth({ status: "expired", user: null });
+    const expired = () => {
+      advanceAuthEpoch();
+      setAuth({ status: "expired", user: null });
+    };
     window.addEventListener("session-expired", expired);
     request("/auth/me", {
       signal: controller.signal,
@@ -33,6 +36,7 @@ export function AuthProvider({ children }) {
     };
   }, [attempt]);
   async function login(email, password) {
+    advanceAuthEpoch();
     const { user } = await request("/auth/login", {
       method: "POST",
       body: { email, password },
@@ -41,6 +45,7 @@ export function AuthProvider({ children }) {
     setAuth({ status: "authenticated", user });
   }
   async function logout() {
+    advanceAuthEpoch();
     await request("/auth/logout", { method: "POST" });
     setAuth({ status: "anonymous", user: null });
   }

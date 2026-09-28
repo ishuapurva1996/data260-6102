@@ -168,6 +168,8 @@ async function installMock(context, state) {
       if (fault.abort) { entry.status = 'network-abort'; return route.abort('failed'); }
       if (fault.status) return respond(fault.status, fault.payload);
     }
+    if (pathname === '/api/auth/me' && state.failMe) return respond(503, { detail: 'Temporary identity failure' });
+    if (pathname === '/api/rentals' && method === 'GET' && state.failList) return respond(503, { detail: 'Temporary list failure' });
     if (pathname === '/api/auth/me') return respond(state.auth ? 200 : 401, state.auth ? { user: state.user } : { detail: 'Login required' });
     if (pathname === '/api/auth/login') {
       if (body?.email !== EMAIL || body?.password !== PASSWORD) return respond(401, { detail: 'Invalid email or password' });
@@ -245,6 +247,24 @@ async function mockFlow(browser) {
       await cardFor(page, fixture().listingTitle).waitFor();
       return snapshot(page, 'home');
     }, page);
+    await check('Identity and listing failures hide data and recover on retry', async () => {
+      state.failMe = true;
+      await page.reload();
+      await page.getByRole('heading', { name: 'Unable to check your session' }).waitFor();
+      assert.equal(await page.getByRole('article').count(), 0);
+      state.failMe = false;
+      await page.getByRole('button', { name: 'Try again' }).click();
+      await waitHome(page);
+      state.failList = true;
+      await page.reload();
+      await page.getByRole('alert').filter({ hasText: 'Temporary list failure' }).waitFor();
+      assert.equal(await page.getByRole('article').count(), 0);
+      state.failList = false;
+      await page.getByRole('button', { name: 'Try again' }).click();
+      await waitHome(page);
+      await cardFor(page, fixture().listingTitle).waitFor();
+      return { identity_retry: true, list_retry: true };
+    }, page);
     await check('Empty authenticated listing state', async () => {
       state.records = [];
       await page.reload();
@@ -267,6 +287,31 @@ async function mockFlow(browser) {
 
     const created = { ...fixture(), listingTitle: 'Mock contract test listing', propertyAddress: '9317 Contract Avenue' };
     delete created.id;
+    await check('Client rejects invalid fields and accepts 26-character description boundary', async () => {
+      await page.goto(`${BASE}/create`);
+      const invalidCases = [
+        ['Listing title', ''], ['Listing title', '   '],
+        ['Property address', ''], ['Property address', '   '],
+        ['Landlord Email', 'invalid-email'], ['Description', 'a'.repeat(25)],
+        ['I accept the terms', false],
+      ];
+      const before = state.requests.filter(item => item.method === 'POST' && item.path === '/api/rentals').length;
+      for (const [field, value] of invalidCases) {
+        await fillRental(page, created);
+        if (value === false) await page.getByLabel(field, { exact: true }).uncheck();
+        else await page.getByLabel(field, { exact: true }).fill(value);
+        await page.getByRole('button', { name: 'Add listing', exact: true }).click();
+        await delay(50);
+        assert.equal(state.requests.filter(item => item.method === 'POST' && item.path === '/api/rentals').length, before);
+        assert.equal(new URL(page.url()).pathname, '/create');
+        if (value === false) assert.equal(await page.getByLabel(field, { exact: true }).isChecked(), false);
+        else assert.equal(await page.getByLabel(field, { exact: true }).inputValue(), value);
+      }
+      // Native validity at the exact boundary, without consuming the contract-test ID.
+      await fillRental(page, { ...created, description: 'a'.repeat(26) });
+      assert.equal(await page.locator('form').evaluate(form => form.checkValidity()), true);
+      return { invalid_cases: invalidCases.length, post_requests: 0, valid_description_length: 26 };
+    }, page);
     await check('422 validation detail preserves all create values', async () => {
       await page.goto(`${BASE}/create`);
       await page.getByRole('heading', { name: 'Add a rental listing', exact: true }).waitFor();
@@ -303,6 +348,7 @@ async function mockFlow(browser) {
         await delay(100);
         assert.equal(state.requests.filter((item) => item.method === 'POST' && item.path === '/api/rentals').length - before, 1);
         assert.equal(await page.locator('form button[type="submit"]').isDisabled(), true);
+        assert.equal(await page.getByRole('link', { name: 'Cancel', exact: true }).count(), 0, 'Cancel must not imply a pending write can be canceled');
         await snapshot(page, 'create-pending');
       } finally { gate.resolve(); }
       await waitHome(page);
@@ -333,6 +379,42 @@ async function mockFlow(browser) {
       assert.deepEqual(request.body, update);
       assert.equal(state.records[0].description, created.description);
       return { sent_body: request.body, screenshot: await snapshot(page, 'updated-home') };
+    }, page);
+    await check('Home refreshes when a write succeeds after leaving its form', async () => {
+      await page.goto(`${BASE}/create`);
+      const another = { ...created, listingTitle: 'Late success listing' };
+      await fillRental(page, another);
+      const gate = deferred(), entered = deferred();
+      state.faults.push({ method: 'POST', path: '/api/rentals', gate, entered });
+      await page.getByRole('button', { name: 'Add listing', exact: true }).click();
+      await entered.promise;
+      await page.getByRole('navigation').getByRole('link', { name: 'Home', exact: true }).click();
+      await waitHome(page);
+      assert.equal(await cardFor(page, another.listingTitle).count(), 0);
+      gate.resolve();
+      await cardFor(page, another.listingTitle).waitFor();
+      // Mock fixture cleanup only; realFlow separately deletes its own database row.
+      state.records = state.records.filter(record => record.listingTitle !== another.listingTitle);
+      await page.reload();
+      await waitHome(page);
+      return { refetched_after_unmounted_mutation: true };
+    }, page);
+    await check('Delayed old-session 401 cannot clear a fresh login', async () => {
+      await page.goto(`${BASE}/create`);
+      await fillRental(page, created);
+      const gate = deferred(), entered = deferred();
+      state.faults.push({ method: 'POST', path: '/api/rentals', gate, entered, status: 401, payload: { detail: 'Old session expired' } });
+      await page.getByRole('button', { name: 'Add listing', exact: true }).click();
+      await entered.promise;
+      await page.getByRole('button', { name: 'Log out', exact: true }).click();
+      await page.waitForURL(`${BASE}/login`);
+      await login(page);
+      await waitHome(page);
+      gate.resolve();
+      await delay(250);
+      assert.equal(new URL(page.url()).pathname, '/');
+      assert.equal(await page.getByRole('button', { name: 'Log out', exact: true }).count(), 1);
+      return { fresh_login_retained: true };
     }, page);
     await check('Route change ignores an obsolete detail response', async () => {
       const gate = deferred();
@@ -616,7 +698,6 @@ async function expiryFlow(browser) {
     await check('Real login before controlled idle expiry', async () => {
       assert.equal((await login(page)).status(), 200);
       await waitHome(page);
-      await page.getByRole('article').first().waitFor();
       return { idle_timeout_seconds: 2, screenshot: await snapshot(page, 'before-idle') };
     }, page);
     await check('Expired MySQL session clears records and returns to login', async () => {

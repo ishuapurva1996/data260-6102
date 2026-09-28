@@ -109,7 +109,13 @@ export function FormActions({ pending, label, danger = false }) {
       >
         {pending ? "Saving…" : label}
       </button>
-      <Link to="/">Cancel</Link>
+      <span>
+        {pending ? (
+          <span aria-disabled="true">Cancel unavailable while saving</span>
+        ) : (
+          <Link to="/">Cancel</Link>
+        )}
+      </span>
     </div>
   );
 }

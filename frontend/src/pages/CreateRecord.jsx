@@ -56,15 +56,15 @@ export default function CreateRecord({ onAdd }) {
             />
           </label>
           <label htmlFor="description">Description</label>
-            <textarea
-              id="description"
-              name="description"
-              required
-              minLength={26}
-              aria-describedby="description-hint"
-              value={values.description}
-              onChange={change}
-            />
+          <textarea
+            id="description"
+            name="description"
+            required
+            minLength={26}
+            aria-describedby="description-hint"
+            value={values.description}
+            onChange={change}
+          />
           <p className="hint" id="description-hint">
             Use at least 26 characters to describe the rental.
           </p>

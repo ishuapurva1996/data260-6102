@@ -353,5 +353,10 @@ footer {
   }
 }
 
-label[for="description"], label[for="propertyType"] { margin-bottom: 7px; }
-#description { margin-bottom: 20px; }
+label[for="description"],
+label[for="propertyType"] {
+  margin-bottom: 7px;
+}
+#description {
+  margin-bottom: 20px;
+}

@@ -10,6 +10,11 @@ export default function Home() {
   const [attempt, setAttempt] = useState(0);
   const [state, setState] = useState({ loading: true, records: [] });
   useEffect(() => {
+    const refresh = () => setAttempt((value) => value + 1);
+    window.addEventListener("rentals-changed", refresh);
+    return () => window.removeEventListener("rentals-changed", refresh);
+  }, []);
+  useEffect(() => {
     const controller = new AbortController();
     setState({ loading: true, records: [] });
     rentals

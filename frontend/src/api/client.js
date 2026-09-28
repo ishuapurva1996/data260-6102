@@ -24,10 +24,17 @@ export class ApiError extends Error {
   }
 }
 
+// A generation counter identifies UI sessions, never a credential or token.
+let authEpoch = 0;
+export function advanceAuthEpoch() {
+  authEpoch += 1;
+}
+
 export async function request(
   path,
   { body, notifyUnauthorized = true, ...options } = {},
 ) {
+  const requestEpoch = authEpoch;
   let response;
   try {
     response = await fetch(`/api${path}`, {
@@ -46,7 +53,11 @@ export async function request(
   if (response.status === 204) return undefined;
   const data = await response.json().catch(() => null);
   if (!response.ok) {
-    if (response.status === 401 && notifyUnauthorized)
+    if (
+      response.status === 401 &&
+      notifyUnauthorized &&
+      requestEpoch === authEpoch
+    )
       window.dispatchEvent(new Event("session-expired"));
     throw new ApiError(response.status, data?.detail);
   }
@@ -57,13 +68,20 @@ export async function request(
   return data;
 }
 
+async function mutate(path, options) {
+  const result = await request(path, options);
+  // A completed write also refreshes a Home that mounted while it was pending.
+  window.dispatchEvent(new Event("rentals-changed"));
+  return result;
+}
+
 export const rentals = {
   list: (query = "", signal) =>
     request(`/rentals${query ? `?q=${encodeURIComponent(query)}` : ""}`, {
       signal,
     }),
   get: (id, signal) => request(`/rentals/${id}`, { signal }),
-  create: (body) => request("/rentals", { method: "POST", body }),
-  update: (id, body) => request(`/rentals/${id}`, { method: "PUT", body }),
-  remove: (id) => request(`/rentals/${id}`, { method: "DELETE" }),
+  create: (body) => mutate("/rentals", { method: "POST", body }),
+  update: (id, body) => mutate(`/rentals/${id}`, { method: "PUT", body }),
+  remove: (id) => mutate(`/rentals/${id}`, { method: "DELETE" }),
 };

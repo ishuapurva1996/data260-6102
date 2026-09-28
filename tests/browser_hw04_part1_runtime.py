@@ -8,6 +8,7 @@ at a preinstalled Playwright package; otherwise use the root npm dependencies.
 import argparse
 from datetime import datetime, timezone
 import json
+from hashlib import sha256
 import os
 from pathlib import Path
 import signal
@@ -38,6 +39,7 @@ def main():
     raw.mkdir(parents=True, exist_ok=True)
     evidence = {'started_at': datetime.now(timezone.utc).isoformat(),
                 'revision': subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip(),
+                'source_sha256': {str(Path(__file__).relative_to(ROOT)): sha256(Path(__file__).read_bytes()).hexdigest()},
                 'status': 'running', 'base_url': f'https://127.0.0.1:{args.port}',
                 'production_idle_seconds': 300, 'absolute_seconds': 3600,
                 'expiry_demonstration_idle_seconds': 2, 'processes': [], 'checks': []}
@@ -104,6 +106,13 @@ def main():
             evidence['processes'][-1]['stopped_at'] = datetime.now(timezone.utc).isoformat()
         process = None
 
+    def interrupted(signum, _frame):
+        evidence['status'] = 'interrupted'
+        evidence['signal'] = signum
+        raise SystemExit(128 + signum)
+
+    signal.signal(signal.SIGTERM, interrupted)
+    signal.signal(signal.SIGINT, interrupted)
     try:
         port_free()
         subprocess.run([sys.executable, str(ROOT / 'scripts/run_hw04_web.py'), '--prepare-cert'], check=True, cwd=ROOT)
