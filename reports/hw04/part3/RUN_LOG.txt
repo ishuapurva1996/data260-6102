@@ -132,3 +132,29 @@ tests/test_hw04_foundation_gate.py: 1 warning
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
 50 passed, 15 warnings in 1.82s
 exit_code=0
+
+2026-09-28T00:36:29.615863+00:00
+$ .venv/bin/python tmp/part3-runtime/snapshot.py
+Verified unchanged5000/200 dataset and title-index absence; recorded runtime/configuration/source hashes.
+{"mysql": "8.4.11", "hardware": {"machdep.cpu.brand_string": "Apple M4", "hw.memsize": "25769803776", "hw.ncpu": "10"}, "dataset_sha256": "9513ac766ab94f7c23c9257536d8e0f623c8bcbf530f6881e3c354cc7ced1b78"}
+exit_code=0
+
+2026-09-28T00:37:08.980480+00:00
+$ .venv/bin/python scripts/hw04/part3/seed_data.py --ownership-manifest /private/tmp/hw4-part3-ownership.json --schema-revision 001_initial.sql --output reports/hw04/raw/part3/reseed_refused.json
+Traceback (most recent call last):
+  File "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part3-performance/scripts/hw04/part3/seed_data.py", line 207, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part3-performance/scripts/hw04/part3/seed_data.py", line 193, in main
+    evidence = seed_owned_database(
+        engine=db_session_basede26, session_factory=SessionLocal,
+        rental_model=Rental, manager_model=PropertyManager,
+        ownership_manifest=args.ownership_manifest, schema_revision=args.schema_revision,
+    )
+  File "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part3-performance/scripts/hw04/part3/seed_data.py", line 124, in seed_owned_database
+    assert_empty_seed_target(rental_count, manager_count)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part3-performance/scripts/hw04/part3/seed_data.py", line 91, in assert_empty_seed_target
+    raise OwnershipError("Refusing seed: rentals and property_managers must both be empty; no reset/delete/drop is supported")
+ownership.OwnershipError: Refusing seed: rentals and property_managers must both be empty; no reset/delete/drop is supported
+exit_code=1
