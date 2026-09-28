@@ -1,0 +1,682 @@
+{
+  "info": {
+    "name": "DATA260 HW4 Part 3 \u2014 real MySQL N+1 evidence",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Manual Postman UI capture support for HW4 Part 3. Requires the real shared-foundation application, dedicated s6102_rel dataset (5000 rentals/200 managers), and coordinated HTTPS port 8702. Set email/password privately in local Postman variables; both are intentionally absent from this export. Use the cookie jar and trusted local TLS certificate. Run login followed by the six requests once in normal functional Collection Runner for ephemeral payload equality. Collection results do not replace six real Postman screenshots, and Postman response times do not belong to the separate selected 180-request benchmark. See ../screenshots/part3/README.md for capture steps and pending evidence. No stored response examples or credentials."
+  },
+  "auth": {
+    "type": "noauth"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://localhost:8702",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "00 Login \u2014 POST /api/auth/login (private email/password)",
+      "description": "Use private local email/password variables. Postman receives the secure HTTPOnly session cookie in its automatic cookie jar. No token variable or Authorization header is used. Do not screenshot the login request, cookies, or Set-Cookie.",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const email = pm.variables.get(\"email\");",
+              "const password = pm.variables.get(\"password\");",
+              "if (!email || !password) {",
+              "    throw new Error(\"Set private local email and password variables before running this collection.\");",
+              "}",
+              "pm.variables.set(\"hw4_login_body\", JSON.stringify({email, password}));",
+              "for (const size of [10, 50, 200]) {",
+              "    pm.variables.unset(\"hw4_part3_naive_\" + size);",
+              "    pm.variables.unset(\"hw4_part3_fixed_\" + size);",
+              "}"
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Login returns HTTP 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "pm.test(\"Login returns a user object\", function () {",
+              "    const body = pm.response.json();",
+              "    pm.expect(body.user).to.be.an(\"object\");",
+              "    pm.expect(body.user.id).to.be.a(\"number\");",
+              "    pm.expect(body.user.name).to.be.a(\"string\");",
+              "    pm.expect(body.user.email).to.be.a(\"string\");",
+              "});",
+              "pm.variables.unset(\"hw4_login_body\");"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{{hw4_login_body}}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "{{baseUrl}}/api/auth/login"
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/rentals/naive \u2014 naive, page_size=10, offset=0",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const size = 10;",
+              "const version = \"naive\";",
+              "const pair = \"fixed\";",
+              "let rows;",
+              "pm.test(\"HTTP 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "pm.test(\"Response is a JSON array\", function () {",
+              "    rows = pm.response.json();",
+              "    pm.expect(rows).to.be.an(\"array\");",
+              "});",
+              "pm.test(\"Exactly \" + size + \" rental rows\", function () {",
+              "    pm.expect(rows).to.be.an(\"array\").with.lengthOf(size);",
+              "});",
+              "pm.test(\"Rental ids are positive and ordered ascending\", function () {",
+              "    pm.expect(rows).to.be.an(\"array\");",
+              "    rows.forEach(function (row, index) {",
+              "        pm.expect(Number.isInteger(row.id) && row.id > 0).to.eql(true);",
+              "        if (index > 0) pm.expect(row.id).to.be.above(rows[index - 1].id);",
+              "    });",
+              "});",
+              "pm.test(\"Every seeded rental includes manager id and name\", function () {",
+              "    pm.expect(rows).to.be.an(\"array\");",
+              "    rows.forEach(function (row) {",
+              "        pm.expect(row.manager).to.be.an(\"object\");",
+              "        pm.expect(row.manager).to.have.all.keys(\"id\", \"name\");",
+              "        pm.expect(Number.isInteger(row.manager.id) && row.manager.id > 0).to.eql(true);",
+              "        pm.expect(row.manager.name).to.be.a(\"string\").and.not.empty;",
+              "    });",
+              "});",
+              "const total = pm.response.headers.get(\"X-SQL-Statements\");",
+              "const data = pm.response.headers.get(\"X-Data-SQL-Statements\");",
+              "pm.test(\"X-SQL-Statements = \" + total + \" (executed total, including auth)\", function () {",
+              "    pm.expect(total).to.be.a(\"string\").and.match(/^\\d+$/);",
+              "});",
+              "pm.test(\"X-Data-SQL-Statements = \" + data + \" (executed data queries)\", function () {",
+              "    pm.expect(data).to.be.a(\"string\").and.match(/^\\d+$/);",
+              "});",
+              "pm.test(\"Total SQL count is at least the data count\", function () {",
+              "    pm.expect(total).to.be.a(\"string\").and.match(/^\\d+$/);",
+              "    pm.expect(data).to.be.a(\"string\").and.match(/^\\d+$/);",
+              "    pm.expect(Number(total)).to.be.at.least(Number(data));",
+              "});",
+              "const pairKey = \"hw4_part3_\" + pair + \"_\" + size;",
+              "if (Array.isArray(rows) && pm.response.code === 200) {",
+              "    pm.variables.set(\"hw4_part3_\" + version + \"_\" + size, JSON.stringify(rows));",
+              "    const pairedBody = pm.variables.get(pairKey);",
+              "    if (pairedBody !== undefined) {",
+              "        pm.test(\"Payload equals \" + pair + \" at page_size=\" + size, function () {",
+              "            pm.expect(rows).to.deep.eql(JSON.parse(pairedBody));",
+              "        });",
+              "    } else {",
+              "        pm.test.skip(\"Pair equality pending: run login and both versions in the same Collection Runner run\", function () {});",
+              "    }",
+              "}"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/rentals/naive?page_size=10&offset=0",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "rentals",
+            "naive"
+          ],
+          "query": [
+            {
+              "key": "page_size",
+              "value": "10"
+            },
+            {
+              "key": "offset",
+              "value": "0"
+            }
+          ]
+        },
+        "description": "Capture the real Postman response as naive-10.png. Use the authenticated dedicated seeded experiment server. Header test names display observed counts; they do not derive SQL counts from page size. Individual Send checks the current response. Run all requests once in listed order in the functional Collection Runner for paired-payload equality. These capture requests are outside the selected 180-request benchmark."
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/rentals/fixed \u2014 fixed, page_size=10, offset=0",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const size = 10;",
+              "const version = \"fixed\";",
+              "const pair = \"naive\";",
+              "let rows;",
+              "pm.test(\"HTTP 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "pm.test(\"Response is a JSON array\", function () {",
+              "    rows = pm.response.json();",
+              "    pm.expect(rows).to.be.an(\"array\");",
+              "});",
+              "pm.test(\"Exactly \" + size + \" rental rows\", function () {",
+              "    pm.expect(rows).to.be.an(\"array\").with.lengthOf(size);",
+              "});",
+              "pm.test(\"Rental ids are positive and ordered ascending\", function () {",
+              "    pm.expect(rows).to.be.an(\"array\");",
+              "    rows.forEach(function (row, index) {",
+              "        pm.expect(Number.isInteger(row.id) && row.id > 0).to.eql(true);",
+              "        if (index > 0) pm.expect(row.id).to.be.above(rows[index - 1].id);",
+              "    });",
+              "});",
+              "pm.test(\"Every seeded rental includes manager id and name\", function () {",
+              "    pm.expect(rows).to.be.an(\"array\");",
+              "    rows.forEach(function (row) {",
+              "        pm.expect(row.manager).to.be.an(\"object\");",
+              "        pm.expect(row.manager).to.have.all.keys(\"id\", \"name\");",
+              "        pm.expect(Number.isInteger(row.manager.id) && row.manager.id > 0).to.eql(true);",
+              "        pm.expect(row.manager.name).to.be.a(\"string\").and.not.empty;",
+              "    });",
+              "});",
+              "const total = pm.response.headers.get(\"X-SQL-Statements\");",
+              "const data = pm.response.headers.get(\"X-Data-SQL-Statements\");",
+              "pm.test(\"X-SQL-Statements = \" + total + \" (executed total, including auth)\", function () {",
+              "    pm.expect(total).to.be.a(\"string\").and.match(/^\\d+$/);",
+              "});",
+              "pm.test(\"X-Data-SQL-Statements = \" + data + \" (executed data queries)\", function () {",
+              "    pm.expect(data).to.be.a(\"string\").and.match(/^\\d+$/);",
+              "});",
+              "pm.test(\"Total SQL count is at least the data count\", function () {",
+              "    pm.expect(total).to.be.a(\"string\").and.match(/^\\d+$/);",
+              "    pm.expect(data).to.be.a(\"string\").and.match(/^\\d+$/);",
+              "    pm.expect(Number(total)).to.be.at.least(Number(data));",
+              "});",
+              "const pairKey = \"hw4_part3_\" + pair + \"_\" + size;",
+              "if (Array.isArray(rows) && pm.response.code === 200) {",
+              "    pm.variables.set(\"hw4_part3_\" + version + \"_\" + size, JSON.stringify(rows));",
+              "    const pairedBody = pm.variables.get(pairKey);",
+              "    if (pairedBody !== undefined) {",
+              "        pm.test(\"Payload equals \" + pair + \" at page_size=\" + size, function () {",
+              "            pm.expect(rows).to.deep.eql(JSON.parse(pairedBody));",
+              "        });",
+              "    } else {",
+              "        pm.test.skip(\"Pair equality pending: run login and both versions in the same Collection Runner run\", function () {});",
+              "    }",
+              "}"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/rentals/fixed?page_size=10&offset=0",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "rentals",
+            "fixed"
+          ],
+          "query": [
+            {
+              "key": "page_size",
+              "value": "10"
+            },
+            {
+              "key": "offset",
+              "value": "0"
+            }
+          ]
+        },
+        "description": "Capture the real Postman response as fixed-10.png. Use the authenticated dedicated seeded experiment server. Header test names display observed counts; they do not derive SQL counts from page size. Individual Send checks the current response. Run all requests once in listed order in the functional Collection Runner for paired-payload equality. These capture requests are outside the selected 180-request benchmark."
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/rentals/naive \u2014 naive, page_size=50, offset=0",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const size = 50;",
+              "const version = \"naive\";",
+              "const pair = \"fixed\";",
+              "let rows;",
+              "pm.test(\"HTTP 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "pm.test(\"Response is a JSON array\", function () {",
+              "    rows = pm.response.json();",
+              "    pm.expect(rows).to.be.an(\"array\");",
+              "});",
+              "pm.test(\"Exactly \" + size + \" rental rows\", function () {",
+              "    pm.expect(rows).to.be.an(\"array\").with.lengthOf(size);",
+              "});",
+              "pm.test(\"Rental ids are positive and ordered ascending\", function () {",
+              "    pm.expect(rows).to.be.an(\"array\");",
+              "    rows.forEach(function (row, index) {",
+              "        pm.expect(Number.isInteger(row.id) && row.id > 0).to.eql(true);",
+              "        if (index > 0) pm.expect(row.id).to.be.above(rows[index - 1].id);",
+              "    });",
+              "});",
+              "pm.test(\"Every seeded rental includes manager id and name\", function () {",
+              "    pm.expect(rows).to.be.an(\"array\");",
+              "    rows.forEach(function (row) {",
+              "        pm.expect(row.manager).to.be.an(\"object\");",
+              "        pm.expect(row.manager).to.have.all.keys(\"id\", \"name\");",
+              "        pm.expect(Number.isInteger(row.manager.id) && row.manager.id > 0).to.eql(true);",
+              "        pm.expect(row.manager.name).to.be.a(\"string\").and.not.empty;",
+              "    });",
+              "});",
+              "const total = pm.response.headers.get(\"X-SQL-Statements\");",
+              "const data = pm.response.headers.get(\"X-Data-SQL-Statements\");",
+              "pm.test(\"X-SQL-Statements = \" + total + \" (executed total, including auth)\", function () {",
+              "    pm.expect(total).to.be.a(\"string\").and.match(/^\\d+$/);",
+              "});",
+              "pm.test(\"X-Data-SQL-Statements = \" + data + \" (executed data queries)\", function () {",
+              "    pm.expect(data).to.be.a(\"string\").and.match(/^\\d+$/);",
+              "});",
+              "pm.test(\"Total SQL count is at least the data count\", function () {",
+              "    pm.expect(total).to.be.a(\"string\").and.match(/^\\d+$/);",
+              "    pm.expect(data).to.be.a(\"string\").and.match(/^\\d+$/);",
+              "    pm.expect(Number(total)).to.be.at.least(Number(data));",
+              "});",
+              "const pairKey = \"hw4_part3_\" + pair + \"_\" + size;",
+              "if (Array.isArray(rows) && pm.response.code === 200) {",
+              "    pm.variables.set(\"hw4_part3_\" + version + \"_\" + size, JSON.stringify(rows));",
+              "    const pairedBody = pm.variables.get(pairKey);",
+              "    if (pairedBody !== undefined) {",
+              "        pm.test(\"Payload equals \" + pair + \" at page_size=\" + size, function () {",
+              "            pm.expect(rows).to.deep.eql(JSON.parse(pairedBody));",
+              "        });",
+              "    } else {",
+              "        pm.test.skip(\"Pair equality pending: run login and both versions in the same Collection Runner run\", function () {});",
+              "    }",
+              "}"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/rentals/naive?page_size=50&offset=0",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "rentals",
+            "naive"
+          ],
+          "query": [
+            {
+              "key": "page_size",
+              "value": "50"
+            },
+            {
+              "key": "offset",
+              "value": "0"
+            }
+          ]
+        },
+        "description": "Capture the real Postman response as naive-50.png. Use the authenticated dedicated seeded experiment server. Header test names display observed counts; they do not derive SQL counts from page size. Individual Send checks the current response. Run all requests once in listed order in the functional Collection Runner for paired-payload equality. These capture requests are outside the selected 180-request benchmark."
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/rentals/fixed \u2014 fixed, page_size=50, offset=0",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const size = 50;",
+              "const version = \"fixed\";",
+              "const pair = \"naive\";",
+              "let rows;",
+              "pm.test(\"HTTP 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "pm.test(\"Response is a JSON array\", function () {",
+              "    rows = pm.response.json();",
+              "    pm.expect(rows).to.be.an(\"array\");",
+              "});",
+              "pm.test(\"Exactly \" + size + \" rental rows\", function () {",
+              "    pm.expect(rows).to.be.an(\"array\").with.lengthOf(size);",
+              "});",
+              "pm.test(\"Rental ids are positive and ordered ascending\", function () {",
+              "    pm.expect(rows).to.be.an(\"array\");",
+              "    rows.forEach(function (row, index) {",
+              "        pm.expect(Number.isInteger(row.id) && row.id > 0).to.eql(true);",
+              "        if (index > 0) pm.expect(row.id).to.be.above(rows[index - 1].id);",
+              "    });",
+              "});",
+              "pm.test(\"Every seeded rental includes manager id and name\", function () {",
+              "    pm.expect(rows).to.be.an(\"array\");",
+              "    rows.forEach(function (row) {",
+              "        pm.expect(row.manager).to.be.an(\"object\");",
+              "        pm.expect(row.manager).to.have.all.keys(\"id\", \"name\");",
+              "        pm.expect(Number.isInteger(row.manager.id) && row.manager.id > 0).to.eql(true);",
+              "        pm.expect(row.manager.name).to.be.a(\"string\").and.not.empty;",
+              "    });",
+              "});",
+              "const total = pm.response.headers.get(\"X-SQL-Statements\");",
+              "const data = pm.response.headers.get(\"X-Data-SQL-Statements\");",
+              "pm.test(\"X-SQL-Statements = \" + total + \" (executed total, including auth)\", function () {",
+              "    pm.expect(total).to.be.a(\"string\").and.match(/^\\d+$/);",
+              "});",
+              "pm.test(\"X-Data-SQL-Statements = \" + data + \" (executed data queries)\", function () {",
+              "    pm.expect(data).to.be.a(\"string\").and.match(/^\\d+$/);",
+              "});",
+              "pm.test(\"Total SQL count is at least the data count\", function () {",
+              "    pm.expect(total).to.be.a(\"string\").and.match(/^\\d+$/);",
+              "    pm.expect(data).to.be.a(\"string\").and.match(/^\\d+$/);",
+              "    pm.expect(Number(total)).to.be.at.least(Number(data));",
+              "});",
+              "const pairKey = \"hw4_part3_\" + pair + \"_\" + size;",
+              "if (Array.isArray(rows) && pm.response.code === 200) {",
+              "    pm.variables.set(\"hw4_part3_\" + version + \"_\" + size, JSON.stringify(rows));",
+              "    const pairedBody = pm.variables.get(pairKey);",
+              "    if (pairedBody !== undefined) {",
+              "        pm.test(\"Payload equals \" + pair + \" at page_size=\" + size, function () {",
+              "            pm.expect(rows).to.deep.eql(JSON.parse(pairedBody));",
+              "        });",
+              "    } else {",
+              "        pm.test.skip(\"Pair equality pending: run login and both versions in the same Collection Runner run\", function () {});",
+              "    }",
+              "}"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/rentals/fixed?page_size=50&offset=0",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "rentals",
+            "fixed"
+          ],
+          "query": [
+            {
+              "key": "page_size",
+              "value": "50"
+            },
+            {
+              "key": "offset",
+              "value": "0"
+            }
+          ]
+        },
+        "description": "Capture the real Postman response as fixed-50.png. Use the authenticated dedicated seeded experiment server. Header test names display observed counts; they do not derive SQL counts from page size. Individual Send checks the current response. Run all requests once in listed order in the functional Collection Runner for paired-payload equality. These capture requests are outside the selected 180-request benchmark."
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/rentals/naive \u2014 naive, page_size=200, offset=0",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const size = 200;",
+              "const version = \"naive\";",
+              "const pair = \"fixed\";",
+              "let rows;",
+              "pm.test(\"HTTP 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "pm.test(\"Response is a JSON array\", function () {",
+              "    rows = pm.response.json();",
+              "    pm.expect(rows).to.be.an(\"array\");",
+              "});",
+              "pm.test(\"Exactly \" + size + \" rental rows\", function () {",
+              "    pm.expect(rows).to.be.an(\"array\").with.lengthOf(size);",
+              "});",
+              "pm.test(\"Rental ids are positive and ordered ascending\", function () {",
+              "    pm.expect(rows).to.be.an(\"array\");",
+              "    rows.forEach(function (row, index) {",
+              "        pm.expect(Number.isInteger(row.id) && row.id > 0).to.eql(true);",
+              "        if (index > 0) pm.expect(row.id).to.be.above(rows[index - 1].id);",
+              "    });",
+              "});",
+              "pm.test(\"Every seeded rental includes manager id and name\", function () {",
+              "    pm.expect(rows).to.be.an(\"array\");",
+              "    rows.forEach(function (row) {",
+              "        pm.expect(row.manager).to.be.an(\"object\");",
+              "        pm.expect(row.manager).to.have.all.keys(\"id\", \"name\");",
+              "        pm.expect(Number.isInteger(row.manager.id) && row.manager.id > 0).to.eql(true);",
+              "        pm.expect(row.manager.name).to.be.a(\"string\").and.not.empty;",
+              "    });",
+              "});",
+              "const total = pm.response.headers.get(\"X-SQL-Statements\");",
+              "const data = pm.response.headers.get(\"X-Data-SQL-Statements\");",
+              "pm.test(\"X-SQL-Statements = \" + total + \" (executed total, including auth)\", function () {",
+              "    pm.expect(total).to.be.a(\"string\").and.match(/^\\d+$/);",
+              "});",
+              "pm.test(\"X-Data-SQL-Statements = \" + data + \" (executed data queries)\", function () {",
+              "    pm.expect(data).to.be.a(\"string\").and.match(/^\\d+$/);",
+              "});",
+              "pm.test(\"Total SQL count is at least the data count\", function () {",
+              "    pm.expect(total).to.be.a(\"string\").and.match(/^\\d+$/);",
+              "    pm.expect(data).to.be.a(\"string\").and.match(/^\\d+$/);",
+              "    pm.expect(Number(total)).to.be.at.least(Number(data));",
+              "});",
+              "const pairKey = \"hw4_part3_\" + pair + \"_\" + size;",
+              "if (Array.isArray(rows) && pm.response.code === 200) {",
+              "    pm.variables.set(\"hw4_part3_\" + version + \"_\" + size, JSON.stringify(rows));",
+              "    const pairedBody = pm.variables.get(pairKey);",
+              "    if (pairedBody !== undefined) {",
+              "        pm.test(\"Payload equals \" + pair + \" at page_size=\" + size, function () {",
+              "            pm.expect(rows).to.deep.eql(JSON.parse(pairedBody));",
+              "        });",
+              "    } else {",
+              "        pm.test.skip(\"Pair equality pending: run login and both versions in the same Collection Runner run\", function () {});",
+              "    }",
+              "}"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/rentals/naive?page_size=200&offset=0",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "rentals",
+            "naive"
+          ],
+          "query": [
+            {
+              "key": "page_size",
+              "value": "200"
+            },
+            {
+              "key": "offset",
+              "value": "0"
+            }
+          ]
+        },
+        "description": "Capture the real Postman response as naive-200.png. Use the authenticated dedicated seeded experiment server. Header test names display observed counts; they do not derive SQL counts from page size. Individual Send checks the current response. Run all requests once in listed order in the functional Collection Runner for paired-payload equality. These capture requests are outside the selected 180-request benchmark."
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/rentals/fixed \u2014 fixed, page_size=200, offset=0",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const size = 200;",
+              "const version = \"fixed\";",
+              "const pair = \"naive\";",
+              "let rows;",
+              "pm.test(\"HTTP 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "pm.test(\"Response is a JSON array\", function () {",
+              "    rows = pm.response.json();",
+              "    pm.expect(rows).to.be.an(\"array\");",
+              "});",
+              "pm.test(\"Exactly \" + size + \" rental rows\", function () {",
+              "    pm.expect(rows).to.be.an(\"array\").with.lengthOf(size);",
+              "});",
+              "pm.test(\"Rental ids are positive and ordered ascending\", function () {",
+              "    pm.expect(rows).to.be.an(\"array\");",
+              "    rows.forEach(function (row, index) {",
+              "        pm.expect(Number.isInteger(row.id) && row.id > 0).to.eql(true);",
+              "        if (index > 0) pm.expect(row.id).to.be.above(rows[index - 1].id);",
+              "    });",
+              "});",
+              "pm.test(\"Every seeded rental includes manager id and name\", function () {",
+              "    pm.expect(rows).to.be.an(\"array\");",
+              "    rows.forEach(function (row) {",
+              "        pm.expect(row.manager).to.be.an(\"object\");",
+              "        pm.expect(row.manager).to.have.all.keys(\"id\", \"name\");",
+              "        pm.expect(Number.isInteger(row.manager.id) && row.manager.id > 0).to.eql(true);",
+              "        pm.expect(row.manager.name).to.be.a(\"string\").and.not.empty;",
+              "    });",
+              "});",
+              "const total = pm.response.headers.get(\"X-SQL-Statements\");",
+              "const data = pm.response.headers.get(\"X-Data-SQL-Statements\");",
+              "pm.test(\"X-SQL-Statements = \" + total + \" (executed total, including auth)\", function () {",
+              "    pm.expect(total).to.be.a(\"string\").and.match(/^\\d+$/);",
+              "});",
+              "pm.test(\"X-Data-SQL-Statements = \" + data + \" (executed data queries)\", function () {",
+              "    pm.expect(data).to.be.a(\"string\").and.match(/^\\d+$/);",
+              "});",
+              "pm.test(\"Total SQL count is at least the data count\", function () {",
+              "    pm.expect(total).to.be.a(\"string\").and.match(/^\\d+$/);",
+              "    pm.expect(data).to.be.a(\"string\").and.match(/^\\d+$/);",
+              "    pm.expect(Number(total)).to.be.at.least(Number(data));",
+              "});",
+              "const pairKey = \"hw4_part3_\" + pair + \"_\" + size;",
+              "if (Array.isArray(rows) && pm.response.code === 200) {",
+              "    pm.variables.set(\"hw4_part3_\" + version + \"_\" + size, JSON.stringify(rows));",
+              "    const pairedBody = pm.variables.get(pairKey);",
+              "    if (pairedBody !== undefined) {",
+              "        pm.test(\"Payload equals \" + pair + \" at page_size=\" + size, function () {",
+              "            pm.expect(rows).to.deep.eql(JSON.parse(pairedBody));",
+              "        });",
+              "    } else {",
+              "        pm.test.skip(\"Pair equality pending: run login and both versions in the same Collection Runner run\", function () {});",
+              "    }",
+              "}"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/rentals/fixed?page_size=200&offset=0",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "rentals",
+            "fixed"
+          ],
+          "query": [
+            {
+              "key": "page_size",
+              "value": "200"
+            },
+            {
+              "key": "offset",
+              "value": "0"
+            }
+          ]
+        },
+        "description": "Capture the real Postman response as fixed-200.png. Use the authenticated dedicated seeded experiment server. Header test names display observed counts; they do not derive SQL counts from page size. Individual Send checks the current response. Run all requests once in listed order in the functional Collection Runner for paired-payload equality. These capture requests are outside the selected 180-request benchmark."
+      },
+      "response": []
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+HW4 Part 3 run log
+Actual command outputs below. Initial preparation notes are labeled notes rather than reconstructed console output.
+
+Preparation notes (2026-09-27 local):
+- Verified hw3^{commit} = 5742b2aadbafee5ba208311723ea470c09811dc5.
+- Created codex/hw4-part3-performance worktree at that baseline; main checkout and sibling worktrees untouched.
+- Dedicated Docker MySQL8.4.11: hw4-part3-mysql-6102, host127.0.0.1:33363, serverUUID3d515eaf-bad3-11f1-8b89-0ecd67fb62d4, database s6102_rel. No shared database changes.
+- First dependency installation in sandbox failed DNS; escalated isolated uv install succeeded.
+- python -m pytest from repo root hit legacy code/__init__.py shadowing stdlib code in pdb. Use .venv/bin/pytest instead (no source workaround).
+- Instrumentation proof-first: tests/test_hw04_part3.py initially failed with ModuleNotFoundError web_application.query_metrics; after implementation, 2 passed.
+- Postman UI inventory: native apps and /Applications plus ~/Applications show no Postman; screenshots pending manual access.
+
+2026-09-28T00:29:02.779614+00:00
+$ .venv/bin/pytest tests/test_hw04_part3.py -q
+..                                                                       [100%]
+2 passed in 0.05s
+exit_code=0
+
+2026-09-28T00:29:38.694665+00:00
+$ .venv/bin/pytest tests/test_hw04_part3.py tests/test_hw04_part3_seed.py -q
+............                                                             [100%]
+12 passed in 0.19s
+exit_code=0
+
+2026-09-28T00:30:14.814834+00:00
+$ .venv/bin/pytest tests/test_hw04_part3.py tests/test_hw04_part3_seed.py tests/test_hw04_part3_measurement.py -q
+.................................                                        [100%]
+33 passed in 0.45s
+exit_code=0
