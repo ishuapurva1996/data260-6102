@@ -1,0 +1,20 @@
+PASS [MOCK] Signed-out protected routes hide records and mutations
+PASS [MOCK] Invalid login remains rejected; valid login loads records
+PASS [MOCK] Identity and listing failures hide data and recover on retry
+PASS [MOCK] Empty authenticated listing state
+PASS [MOCK] Missing or invalid selected IDs show a safe error
+PASS [MOCK] Missing server record reports 404 safely
+PASS [MOCK] Client rejects invalid fields and accepts 26-character description boundary
+PASS [MOCK] 422 validation detail preserves all create values
+PASS [MOCK] Network failure retains input and never reports success
+PASS [MOCK] Pending submit sends one six-field create; home uses server ID
+PASS [MOCK] Update deep link survives refresh and sends only two fields
+PASS [MOCK] Home refreshes when a write succeeds after leaving its form
+PASS [MOCK] Delayed old-session 401 cannot clear a fresh login
+PASS [MOCK] Route change ignores an obsolete detail response
+PASS [MOCK] Narrow viewport supports required record screens
+PASS [MOCK] Delete confirmation supports Cancel and empty 204 success
+PASS [MOCK] 401 during mutation clears stale authenticated interface
+PASS [MOCK] Refresh checks the server identity; logout rejects later navigation
+PASS [MOCK] No uncaught browser JavaScript errors
+Evidence: reports/hw04/raw/part1/mock-browser.json (pass)

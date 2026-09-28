@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "mode": "MOCK",
+  "started_at": "2026-09-28T00:29:13.590Z",
+  "status": "fail",
+  "command": "node tests/browser_hw04_part1.cjs --mock",
+  "base_url": "http://127.0.0.1:5173",
+  "cwd": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react",
+  "checks": [
+    {
+      "name": "Signed-out protected routes hide records and mutations",
+      "status": "fail",
+      "started_at": "2026-09-28T00:29:14.967Z",
+      "error": "locator.waitFor: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByText(/Login required/) to be visible\u001b[22m\n\n    at signedOutRoutes (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tests/browser_hw04_part1.cjs:205:44)\n    at async check (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tests/browser_hw04_part1.cjs:47:22)\n    at async mockFlow (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tests/browser_hw04_part1.cjs:235:5)\n    at async main (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tests/browser_hw04_part1.cjs:629:26)",
+      "finished_at": "2026-09-28T00:29:27.024Z",
+      "actual_url": "http://127.0.0.1:5173/"
+    }
+  ],
+  "screenshots": [],
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/src/api/client.js",
+      "query": "",
+      "at": "2026-09-28T00:29:15.019Z",
+      "status": 401
+    }
+  ],
+  "limitations": [
+    "MOCK ONLY: intercepted HTTP responses validate React behavior, not authentication security, MySQL storage, or final port 8702."
+  ],
+  "git_revision": "5742b2aadbafee5ba208311723ea470c09811dc5",
+  "source_sha256": {
+    "frontend/src/App.jsx": "80583237c51737ad5b16b3dde747bab8927afa6888efad1ae1ccb198a6f0f401",
+    "frontend/src/api/client.js": "2303d887a085847dab1b36972636df858ef83daf4dba59a2ef8bd7e354aeb220",
+    "frontend/src/auth/AuthContext.jsx": "8712bb2c283cf770db30dec8bccd38fe29d231d18e24ce2cb6b1e5558dbce626",
+    "frontend/src/components/forms.jsx": "fc03869af6c2668475009c9c2e9faa3e4afd085a508e20003084565965d710d7",
+    "frontend/src/main.jsx": "aeed20704feafc4575ed1331a627f5ad61c7e51c5c0364b6b0395236f3dedcd2",
+    "frontend/src/pages/CreateRecord.jsx": "0b9269235783cc0b006f949c45b8aa67b6a85918ee9563e5e194dc91838c9d87",
+    "frontend/src/pages/DeleteRecord.jsx": "f482bfb4eaa536a9fe4f687a0d6b1936f05cd0e051a013d1755bc376b728d638",
+    "frontend/src/pages/Home.jsx": "b53d964157dd3ba75b11d01bce18852a2cd92f455387b4b6ffe959563116a4e4",
+    "frontend/src/pages/Login.jsx": "afba2e55dfb6d899b27ffe78326e344cc6dbe0544e884534ab3d644d2d64bae4",
+    "frontend/src/pages/UpdateRecord.jsx": "7b1c6bf6892e9f76c3cc1fdb0dbef47762fef3807ad20bb77008f81c262a3ab8",
+    "frontend/src/styles.css": "10004c1f75732ad19dd4ebd05ae2035c4f560ce38054b35379ec497c989997a0",
+    "frontend/package.json": "2b0998bce1f60414e81008524e848abe0bd9151b24ed24210aa1f28188998af5",
+    "frontend/package-lock.json": "68c01a3da7ac965f5f8d9d305eef7aa973014a813d32760e8cbf94c4e3970969",
+    "frontend/vite.config.js": "0b75fbb7432ba5deb903565ce41202fc59e655faa7b533cb8475bfd9939a606f",
+    "tests/browser_hw04_part1.cjs": "b4030cb0b1653418a9793c4dd5f741c716d0dfd2bcdfe140f5152f22c3500357"
+  },
+  "error": "locator.waitFor: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByText(/Login required/) to be visible\u001b[22m\n\n    at signedOutRoutes (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tests/browser_hw04_part1.cjs:205:44)\n    at async check (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tests/browser_hw04_part1.cjs:47:22)\n    at async mockFlow (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tests/browser_hw04_part1.cjs:235:5)\n    at async main (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tests/browser_hw04_part1.cjs:629:26)",
+  "finished_at": "2026-09-28T00:29:27.052Z",
+  "passed_checks": 0,
+  "failed_checks": 1
+}

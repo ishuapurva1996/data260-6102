@@ -1,0 +1,29 @@
+{
+  "started_at": "2026-09-28T00:45:27.876960+00:00",
+  "revision": "fe5dcf1c8c89bf887983fc09cc6659571195e9ca",
+  "source_sha256": {
+    "tests/browser_hw04_part1_runtime.py": "9ffddaa9282f3681781e7ecbb0fcc69a725ee95490366e0b5068c779c2d89fb6"
+  },
+  "status": "interrupted",
+  "base_url": "https://127.0.0.1:8702",
+  "production_idle_seconds": 300,
+  "absolute_seconds": 3600,
+  "expiry_demonstration_idle_seconds": 2,
+  "processes": [
+    {
+      "pid": 68579,
+      "idle_timeout_seconds": 300,
+      "started_at": "2026-09-28T00:45:27.959773+00:00",
+      "stopped_at": "2026-09-28T00:45:28.550818+00:00"
+    }
+  ],
+  "checks": [
+    {
+      "name": "MySQL evidence database is s6102_rel",
+      "passed": true
+    }
+  ],
+  "mysql_version": "8.4.11",
+  "signal": 15,
+  "finished_at": "2026-09-28T00:45:28.550850+00:00"
+}

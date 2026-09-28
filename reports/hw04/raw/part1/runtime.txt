@@ -1,0 +1,7 @@
+Certificate ready: /Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tmp/https/cert.pem
+PASS [RUNTIME] MySQL evidence database is s6102_rel
+PASS [RUNTIME] Backend restarted during browser workflow
+PASS [RUNTIME] Real browser suite passed
+PASS [RUNTIME] Login after second restart
+PASS [RUNTIME] Deleted rental stays absent after second restart
+PASS [RUNTIME] Real browser idle expiry suite passed

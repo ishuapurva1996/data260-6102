@@ -1,0 +1,433 @@
+{
+  "schema_version": 1,
+  "mode": "MOCK",
+  "started_at": "2026-09-28T00:30:32.678Z",
+  "status": "fail",
+  "command": "node tests/browser_hw04_part1.cjs --mock",
+  "base_url": "http://127.0.0.1:5173",
+  "cwd": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react",
+  "checks": [
+    {
+      "name": "Signed-out protected routes hide records and mutations",
+      "status": "pass",
+      "started_at": "2026-09-28T00:30:33.035Z",
+      "details": {
+        "file": "reports/hw04/screenshots/part1/mock-signed-out.png",
+        "mode": "MOCK",
+        "captured_at": "2026-09-28T00:30:33.300Z",
+        "actual_url": "http://127.0.0.1:5173/delete?id=17",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "dimensions": {
+          "viewport_width": 1280,
+          "document_width": 1280,
+          "body_width": 1280
+        }
+      },
+      "finished_at": "2026-09-28T00:30:33.300Z",
+      "actual_url": "http://127.0.0.1:5173/delete?id=17"
+    },
+    {
+      "name": "Invalid login remains rejected; valid login loads records",
+      "status": "pass",
+      "started_at": "2026-09-28T00:30:33.300Z",
+      "details": {
+        "file": "reports/hw04/screenshots/part1/mock-home.png",
+        "mode": "MOCK",
+        "captured_at": "2026-09-28T00:30:33.601Z",
+        "actual_url": "http://127.0.0.1:5173/",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "dimensions": {
+          "viewport_width": 1280,
+          "document_width": 1280,
+          "body_width": 1280
+        }
+      },
+      "finished_at": "2026-09-28T00:30:33.601Z",
+      "actual_url": "http://127.0.0.1:5173/"
+    },
+    {
+      "name": "Empty authenticated listing state",
+      "status": "pass",
+      "started_at": "2026-09-28T00:30:33.601Z",
+      "details": {
+        "file": "reports/hw04/screenshots/part1/mock-empty.png",
+        "mode": "MOCK",
+        "captured_at": "2026-09-28T00:30:33.664Z",
+        "actual_url": "http://127.0.0.1:5173/",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "dimensions": {
+          "viewport_width": 1280,
+          "document_width": 1280,
+          "body_width": 1280
+        }
+      },
+      "finished_at": "2026-09-28T00:30:33.664Z",
+      "actual_url": "http://127.0.0.1:5173/"
+    },
+    {
+      "name": "Missing or invalid selected IDs show a safe error",
+      "status": "pass",
+      "started_at": "2026-09-28T00:30:33.664Z",
+      "details": [
+        {
+          "path": "/update",
+          "message": "Choose a listing from the home page to update. A valid positive listing ID is required."
+        },
+        {
+          "path": "/delete",
+          "message": "Choose a listing from the home page to delete. A valid positive listing ID is required."
+        },
+        {
+          "path": "/update?id=invalid",
+          "message": "Choose a listing from the home page to update. A valid positive listing ID is required."
+        },
+        {
+          "path": "/delete?id=-1",
+          "message": "Choose a listing from the home page to delete. A valid positive listing ID is required."
+        }
+      ],
+      "finished_at": "2026-09-28T00:30:33.815Z",
+      "actual_url": "http://127.0.0.1:5173/delete?id=-1"
+    },
+    {
+      "name": "Missing server record reports 404 safely",
+      "status": "pass",
+      "started_at": "2026-09-28T00:30:33.815Z",
+      "details": {
+        "file": "reports/hw04/screenshots/part1/mock-missing-record.png",
+        "mode": "MOCK",
+        "captured_at": "2026-09-28T00:30:33.894Z",
+        "actual_url": "http://127.0.0.1:5173/update?id=99999",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "dimensions": {
+          "viewport_width": 1280,
+          "document_width": 1280,
+          "body_width": 1280
+        }
+      },
+      "finished_at": "2026-09-28T00:30:33.894Z",
+      "actual_url": "http://127.0.0.1:5173/update?id=99999"
+    },
+    {
+      "name": "422 validation detail preserves all create values",
+      "status": "fail",
+      "started_at": "2026-09-28T00:30:33.894Z",
+      "error": "locator.inputValue: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('Description', { exact: true })\u001b[22m\n\n    at assertValues (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tests/browser_hw04_part1.cjs:125:72)\n    at async /Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tests/browser_hw04_part1.cjs:276:7\n    at async check (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tests/browser_hw04_part1.cjs:47:22)\n    at async mockFlow (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tests/browser_hw04_part1.cjs:269:5)\n    at async main (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tests/browser_hw04_part1.cjs:629:26)",
+      "finished_at": "2026-09-28T00:30:46.030Z",
+      "actual_url": "http://127.0.0.1:5173/create"
+    }
+  ],
+  "screenshots": [
+    {
+      "file": "reports/hw04/screenshots/part1/mock-signed-out.png",
+      "mode": "MOCK",
+      "captured_at": "2026-09-28T00:30:33.300Z",
+      "actual_url": "http://127.0.0.1:5173/delete?id=17",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "dimensions": {
+        "viewport_width": 1280,
+        "document_width": 1280,
+        "body_width": 1280
+      }
+    },
+    {
+      "file": "reports/hw04/screenshots/part1/mock-invalid-login.png",
+      "mode": "MOCK",
+      "captured_at": "2026-09-28T00:30:33.462Z",
+      "actual_url": "http://127.0.0.1:5173/login",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "dimensions": {
+        "viewport_width": 1280,
+        "document_width": 1280,
+        "body_width": 1280
+      }
+    },
+    {
+      "file": "reports/hw04/screenshots/part1/mock-home.png",
+      "mode": "MOCK",
+      "captured_at": "2026-09-28T00:30:33.601Z",
+      "actual_url": "http://127.0.0.1:5173/",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "dimensions": {
+        "viewport_width": 1280,
+        "document_width": 1280,
+        "body_width": 1280
+      }
+    },
+    {
+      "file": "reports/hw04/screenshots/part1/mock-empty.png",
+      "mode": "MOCK",
+      "captured_at": "2026-09-28T00:30:33.664Z",
+      "actual_url": "http://127.0.0.1:5173/",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "dimensions": {
+        "viewport_width": 1280,
+        "document_width": 1280,
+        "body_width": 1280
+      }
+    },
+    {
+      "file": "reports/hw04/screenshots/part1/mock-missing-record.png",
+      "mode": "MOCK",
+      "captured_at": "2026-09-28T00:30:33.894Z",
+      "actual_url": "http://127.0.0.1:5173/update?id=99999",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "dimensions": {
+        "viewport_width": 1280,
+        "document_width": 1280,
+        "body_width": 1280
+      }
+    }
+  ],
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": "",
+      "at": "2026-09-28T00:30:33.133Z",
+      "status": 401
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": "",
+      "at": "2026-09-28T00:30:33.193Z",
+      "status": 401
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": "",
+      "at": "2026-09-28T00:30:33.227Z",
+      "status": 401
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": "",
+      "at": "2026-09-28T00:30:33.227Z",
+      "status": 401
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": "",
+      "at": "2026-09-28T00:30:33.267Z",
+      "status": 401
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": "",
+      "at": "2026-09-28T00:30:33.330Z",
+      "status": 401
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": "",
+      "at": "2026-09-28T00:30:33.330Z",
+      "status": 401
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/login",
+      "query": "",
+      "at": "2026-09-28T00:30:33.430Z",
+      "status": 401
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": "",
+      "at": "2026-09-28T00:30:33.489Z",
+      "status": 401
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/login",
+      "query": "",
+      "at": "2026-09-28T00:30:33.539Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals",
+      "query": "",
+      "at": "2026-09-28T00:30:33.554Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals",
+      "query": "",
+      "at": "2026-09-28T00:30:33.554Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": "",
+      "at": "2026-09-28T00:30:33.631Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals",
+      "query": "",
+      "at": "2026-09-28T00:30:33.639Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals",
+      "query": "",
+      "at": "2026-09-28T00:30:33.639Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": "",
+      "at": "2026-09-28T00:30:33.694Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": "",
+      "at": "2026-09-28T00:30:33.694Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": "",
+      "at": "2026-09-28T00:30:33.732Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": "",
+      "at": "2026-09-28T00:30:33.732Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": "",
+      "at": "2026-09-28T00:30:33.770Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": "",
+      "at": "2026-09-28T00:30:33.770Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": "",
+      "at": "2026-09-28T00:30:33.808Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": "",
+      "at": "2026-09-28T00:30:33.842Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals/99999",
+      "query": "",
+      "at": "2026-09-28T00:30:33.847Z",
+      "status": 404
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals/99999",
+      "query": "",
+      "at": "2026-09-28T00:30:33.847Z",
+      "status": 404
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": "",
+      "at": "2026-09-28T00:30:33.920Z",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/rentals",
+      "query": "",
+      "at": "2026-09-28T00:30:34.004Z",
+      "body": {
+        "listingTitle": "Mock contract test listing",
+        "propertyAddress": "9317 Contract Avenue",
+        "submitterEmail": "landlord@example.com",
+        "description": "A spacious apartment with a sunny living room and quiet study area.",
+        "propertyType": "apartment",
+        "termsAccepted": true
+      },
+      "status": 422
+    }
+  ],
+  "limitations": [
+    "MOCK ONLY: intercepted HTTP responses validate React behavior, not authentication security, MySQL storage, or final port 8702."
+  ],
+  "git_revision": "5742b2aadbafee5ba208311723ea470c09811dc5",
+  "source_sha256": {
+    "frontend/src/App.jsx": "80583237c51737ad5b16b3dde747bab8927afa6888efad1ae1ccb198a6f0f401",
+    "frontend/src/api/client.js": "2303d887a085847dab1b36972636df858ef83daf4dba59a2ef8bd7e354aeb220",
+    "frontend/src/auth/AuthContext.jsx": "8712bb2c283cf770db30dec8bccd38fe29d231d18e24ce2cb6b1e5558dbce626",
+    "frontend/src/components/forms.jsx": "fc03869af6c2668475009c9c2e9faa3e4afd085a508e20003084565965d710d7",
+    "frontend/src/main.jsx": "93668184b2c20d7e6c18dbd2ea0ca8f55bcba9603dcf74217f4d430a33301417",
+    "frontend/src/pages/CreateRecord.jsx": "f3ec0b2292a3ab74417de8113ae38db7c98526febeec1adabf572ec585d72c14",
+    "frontend/src/pages/DeleteRecord.jsx": "f482bfb4eaa536a9fe4f687a0d6b1936f05cd0e051a013d1755bc376b728d638",
+    "frontend/src/pages/Home.jsx": "b53d964157dd3ba75b11d01bce18852a2cd92f455387b4b6ffe959563116a4e4",
+    "frontend/src/pages/Login.jsx": "afba2e55dfb6d899b27ffe78326e344cc6dbe0544e884534ab3d644d2d64bae4",
+    "frontend/src/pages/UpdateRecord.jsx": "7b1c6bf6892e9f76c3cc1fdb0dbef47762fef3807ad20bb77008f81c262a3ab8",
+    "frontend/src/styles.css": "10004c1f75732ad19dd4ebd05ae2035c4f560ce38054b35379ec497c989997a0",
+    "frontend/package.json": "2b0998bce1f60414e81008524e848abe0bd9151b24ed24210aa1f28188998af5",
+    "frontend/package-lock.json": "68c01a3da7ac965f5f8d9d305eef7aa973014a813d32760e8cbf94c4e3970969",
+    "frontend/vite.config.js": "0b75fbb7432ba5deb903565ce41202fc59e655faa7b533cb8475bfd9939a606f",
+    "tests/browser_hw04_part1.cjs": "08b93ed0df484de4f0e61ea55e83223f59b6514d8d3f92d583506ca42cfd5a3c"
+  },
+  "error": "locator.inputValue: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('Description', { exact: true })\u001b[22m\n\n    at assertValues (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tests/browser_hw04_part1.cjs:125:72)\n    at async /Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tests/browser_hw04_part1.cjs:276:7\n    at async check (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tests/browser_hw04_part1.cjs:47:22)\n    at async mockFlow (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tests/browser_hw04_part1.cjs:269:5)\n    at async main (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tests/browser_hw04_part1.cjs:629:26)",
+  "finished_at": "2026-09-28T00:30:46.078Z",
+  "passed_checks": 5,
+  "failed_checks": 1
+}

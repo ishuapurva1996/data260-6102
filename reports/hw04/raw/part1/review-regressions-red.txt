@@ -1,0 +1,18 @@
+PASS [MOCK] Signed-out protected routes hide records and mutations
+PASS [MOCK] Invalid login remains rejected; valid login loads records
+PASS [MOCK] Identity and listing failures hide data and recover on retry
+PASS [MOCK] Empty authenticated listing state
+PASS [MOCK] Missing or invalid selected IDs show a safe error
+PASS [MOCK] Missing server record reports 404 safely
+PASS [MOCK] Client rejects invalid fields and accepts 26-character description boundary
+PASS [MOCK] 422 validation detail preserves all create values
+PASS [MOCK] Network failure retains input and never reports success
+AssertionError [ERR_ASSERTION]: Cancel must not imply a pending write can be canceled
+
+1 !== 0
+
+    at /Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tests/browser_hw04_part1.cjs:351:16
+    at async check (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tests/browser_hw04_part1.cjs:47:22)
+    at async mockFlow (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tests/browser_hw04_part1.cjs:335:5)
+    at async main (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tests/browser_hw04_part1.cjs:742:26)
+Evidence: reports/hw04/raw/part1/mock-browser.json (fail)
