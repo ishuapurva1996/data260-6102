@@ -206,15 +206,62 @@ Actual query output was identical before and after:
 
 The normalized dataset checksum, physical-row checksum, result checksum and row counts all remained equal. Full traditional and JSON EXPLAIN, index inventories, journal entries and snapshots are preserved under `raw/part3/index/20260928T004453-df40d32d/`. Configuration records actual revision `62117550e2e2a253ea754152d2bb1007cc6b1f9a` and dirty=true because only evidence/prose files were pending; the executed code and migration were unchanged. An intentional repeat is retained separately at `raw/part3/index/20260928T004504-a87ff5a9/`, failed at preflight with `ddl_attempted: false`. A subsequent shared migration run reported none applied/already current.
 
-## 3.9: Postman evidence and remaining capture
+## 3.9: Completed Postman evidence
 
-The collection `reports/hw04/part3/postman_collection.json` has private-variable login and six real requests. For example:
+All six required endpoint/size screenshots were captured in **Postman 12.29.5** against server revision `4f8390b84752d861ea6b47c5ac8615680192d841` at `https://localhost:8702`. Part 2 assigned an exclusive capture slot. The dedicated `s6102_rel` database at port 33363 still contained exactly 5,000 rentals and 200 managers, with migrations 001/003 and the listing-title index present. The [capture manifest](../raw/part3/postman/manifest.json) records timestamps, image hashes and configuration.
+
+The unchanged [collection](postman_collection.json) ran one local functional iteration at **2026-09-28 01:53:31 UTC**: login followed by six GET requests. Postman reported **53 passed, 0 failed, 3 skipped and 0 errors**. All three fixed payloads equaled their naive counterpart; each earlier naive equality check was skipped until that counterpart was available. The [runner summary](../screenshots/part3/collection-run-summary.png), [size-200 equality screenshot](../screenshots/part3/payload-equality-200.png), and [runner text, top](../raw/part3/postman/runner-results-top.txt)/[bottom](../raw/part3/postman/runner-results-bottom.txt) preserve the results. The [configuration screenshot](../screenshots/part3/collection-run-configuration.png) shows one local functional iteration.
+
+Each request below was then sent individually to capture its response. Its matching test image shows eight passing checks for status, JSON type, exact row count, ascending IDs, manager data and observed SQL headers. The equality check is skipped in these individual sends because its comparison values live only within one Collection Runner run; the completed run above supplies the equality evidence.
 
 ```http
 GET https://localhost:8702/api/rentals/naive?page_size=10&offset=0
+```
+
+![Postman naive response, 10 rentals](../screenshots/part3/naive-10.png)
+
+[Observed response headers](../screenshots/part3/naive-10-headers.png) show **13 total SQL statements**, including auth, and **11 data statements**. [Passing tests](../screenshots/part3/naive-10-tests.png) confirm exactly 10 rows and populated manager data.
+
+```http
 GET https://localhost:8702/api/rentals/fixed?page_size=10&offset=0
 ```
 
-Equivalent pairs for 50 and 200 are included, with tests for status, row count, ordering, related manager fields and numeric SQL headers. Existing real HTTP outputs and SQL evidence are preserved above, but they do not replace the assignment's Postman screenshots.
+![Postman fixed response, 10 rentals](../screenshots/part3/fixed-10.png)
 
-**All six screenshots are PENDING manual Postman access.** Postman was absent from the native app inventory and local Applications directories. `reports/hw04/screenshots/part3/README.md` gives exact login/TLS/cookie/request/capture steps and target filenames. Place each actual screenshot directly below its matching request/code excerpt in the final combined PDF. Do not display credentials or cookie values. Screenshot response timings are separate functional examples and must not be substituted for the selected 180 measurements.
+[Observed response headers](../screenshots/part3/fixed-10-headers.png) show **3 total SQL statements**, including auth, and **1 data statements**. [Passing tests](../screenshots/part3/fixed-10-tests.png) confirm exactly 10 rows and populated manager data.
+
+```http
+GET https://localhost:8702/api/rentals/naive?page_size=50&offset=0
+```
+
+![Postman naive response, 50 rentals](../screenshots/part3/naive-50.png)
+
+[Observed response headers](../screenshots/part3/naive-50-headers.png) show **53 total SQL statements**, including auth, and **51 data statements**. [Passing tests](../screenshots/part3/naive-50-tests.png) confirm exactly 50 rows and populated manager data.
+
+```http
+GET https://localhost:8702/api/rentals/fixed?page_size=50&offset=0
+```
+
+![Postman fixed response, 50 rentals](../screenshots/part3/fixed-50.png)
+
+[Observed response headers](../screenshots/part3/fixed-50-headers.png) show **3 total SQL statements**, including auth, and **1 data statements**. [Passing tests](../screenshots/part3/fixed-50-tests.png) confirm exactly 50 rows and populated manager data.
+
+```http
+GET https://localhost:8702/api/rentals/naive?page_size=200&offset=0
+```
+
+![Postman naive response, 200 rentals](../screenshots/part3/naive-200.png)
+
+[Observed response headers](../screenshots/part3/naive-200-headers.png) show **203 total SQL statements**, including auth, and **201 data statements**. [Passing tests](../screenshots/part3/naive-200-tests.png) confirm exactly 200 rows and populated manager data.
+
+```http
+GET https://localhost:8702/api/rentals/fixed?page_size=200&offset=0
+```
+
+![Postman fixed response, 200 rentals](../screenshots/part3/fixed-200.png)
+
+[Observed response headers](../screenshots/part3/fixed-200-headers.png) show **3 total SQL statements**, including auth, and **1 data statements**. [Passing tests](../screenshots/part3/fixed-200-tests.png) confirm exactly 200 rows and populated manager data.
+
+[SSL verification remained enabled](../screenshots/part3/tls-verification.png), with the [custom public CA loaded](../screenshots/part3/tls-ca.png) with user assistance. Credentials stayed in unshared local values and were cleared afterward; the [clearing record](../raw/part3/postman/local-values-cleared.json) records UI verification at 2026-09-28 02:07:07.440 UTC. No credentials or cookie values are visible in these images. The [capture inventory and procedure](../screenshots/part3/README.md) links all 23 visually reviewed captures. The native tool emitted JPEG bytes; the exact [native originals](../raw/part3/postman/native-captures/) are retained, and the displayed PNGs are lossless conversions with identical decoded pixels and dimensions. No crop, resize, annotation or composite was applied ([format verification](../raw/part3/postman/image-format-check.json)).
+
+These are functional screenshot requests after the index experiment. Their visible response times do not replace the selected 180-request dataset or its percentiles. The original timing rows, metrics, seed manifest, index snapshots and measured source bytes remain unchanged; [preservation evidence](../raw/part3/postman/preservation_after.json) and the [database postflight](../raw/part3/postman/postflight.json) record those checks. Place these real screenshots beside their matching requests and the §3.3/3.5 query code in the combined report.
