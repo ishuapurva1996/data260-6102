@@ -1,0 +1,301 @@
+{
+  "info": {
+    "name": "DATA260 HW4 Part 2 - Rental CRUD",
+    "description": "Prepared capture collection; not executed in Postman in this session. Reserve exclusive port 8702 and coordinate the evidence database before running. Set local email/password environment variables; never export a populated environment. Run in order. Each rental mutation acts only on the row created by this run. See MANUAL_CAPTURES.md.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://127.0.0.1:8702",
+      "type": "string"
+    },
+    {
+      "key": "email",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "password",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "rentalId",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "createdRental",
+      "value": "",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/auth/login",
+        "description": "Set local environment variables email/password. Postman cookie jar handles s6102_session. Do not export credentials or capture login bodies/cookie values.",
+        "body": {
+          "mode": "raw",
+          "raw": "{{loginPayload}}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const email = pm.variables.get('email');",
+              "const password = pm.variables.get('password');",
+              "if (!email || !password) { throw new Error('Set local email and password environment variables before login.'); }",
+              "pm.variables.set('loginPayload', JSON.stringify({email, password}));"
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Login returns 200', () => pm.response.to.have.status(200));",
+              "if (pm.response.code === 200) {",
+              "  const user = pm.response.json().user;",
+              "  pm.test('Only public user fields returned', () => pm.expect(Object.keys(user).sort()).to.eql(['email', 'id', 'name']));",
+              "}"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Create rental",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/rentals",
+        "description": "Creates one capture-only rental and remembers its returned ID. Save screenshot 01-post-create.png.",
+        "body": {
+          "mode": "raw",
+          "raw": "{{createPayload}}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const payload = { listingTitle: 'HW4 Postman capture ' + Date.now(), propertyAddress: '260 Capture Lane, San Jose, CA', submitterEmail: 'capture@example.com', description: 'A rental created only for the HW4 Postman evidence capture.', propertyType: 'apartment', termsAccepted: true };",
+              "pm.variables.set('createPayload', JSON.stringify(payload));"
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Create returns 201', () => pm.response.to.have.status(201));",
+              "if (pm.response.code === 201) {",
+              "  const row = pm.response.json();",
+              "  pm.test('Generated ID is a positive integer', () => { pm.expect(Number.isInteger(row.id)).to.be.true; pm.expect(row.id).to.be.above(0); });",
+              "  pm.test('Six create fields match request', () => { const sent = JSON.parse(pm.variables.get('createPayload')); Object.keys(sent).forEach(key => pm.expect(row[key]).to.eql(sent[key])); });",
+              "  pm.collectionVariables.set('rentalId', String(row.id));",
+              "  pm.collectionVariables.set('createdRental', JSON.stringify(row));",
+              "}"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "List rentals",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/api/rentals",
+        "description": "Unfiltered record list. Save screenshot 02-get-list.png."
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "if (!pm.collectionVariables.get('rentalId')) { throw new Error('Run Create rental first.'); }"
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('List returns 200', () => pm.response.to.have.status(200));",
+              "if (pm.response.code === 200) { const rows = pm.response.json(); pm.test('Unfiltered array includes created ID', () => { pm.expect(rows).to.be.an('array'); pm.expect(rows.some(row => row.id === Number(pm.collectionVariables.get('rentalId')))).to.be.true; }); }"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Read created rental",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/api/rentals/{{rentalId}}",
+        "description": "Run before Update. Save screenshot 03-get-by-id.png."
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "if (!pm.collectionVariables.get('rentalId')) { throw new Error('Run Create rental first.'); }"
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('ID read returns 200', () => pm.response.to.have.status(200));",
+              "if (pm.response.code === 200) {",
+              "  const original = JSON.parse(pm.collectionVariables.get('createdRental'));",
+              "  pm.test('ID read matches original create', () => pm.expect(pm.response.json()).to.deep.equal(original));",
+              "}"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Update created rental",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/rentals/{{rentalId}}",
+        "description": "Sends only listingTitle/propertyAddress. Save 04-put-update.png and capture the database row before Delete.",
+        "body": {
+          "mode": "raw",
+          "raw": "{{updatePayload}}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "if (!pm.collectionVariables.get('rentalId')) { throw new Error('Run Create rental first.'); }",
+              "const original = JSON.parse(pm.collectionVariables.get('createdRental'));",
+              "pm.variables.set('updatePayload', JSON.stringify({listingTitle: original.listingTitle + ' updated', propertyAddress: '261 Capture Lane, San Jose, CA'}));"
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Update returns 200', () => pm.response.to.have.status(200));",
+              "if (pm.response.code === 200) {",
+              "  const row = pm.response.json(); const original = JSON.parse(pm.collectionVariables.get('createdRental')); const sent = JSON.parse(pm.variables.get('updatePayload'));",
+              "  pm.test('ID unchanged and two fields updated', () => { pm.expect(row.id).to.eql(original.id); pm.expect(row.listingTitle).to.eql(sent.listingTitle); pm.expect(row.propertyAddress).to.eql(sent.propertyAddress); });",
+              "  pm.test('Other four stored fields preserved', () => ['submitterEmail', 'description', 'propertyType', 'termsAccepted'].forEach(key => pm.expect(row[key]).to.eql(original[key])));",
+              "}"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Delete created rental",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": "{{baseUrl}}/api/rentals/{{rentalId}}",
+        "description": "Deletes only the ID created by this collection. Save 05-delete.png. A manual GET of the retained rentalId should now return 404."
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "if (!pm.collectionVariables.get('rentalId')) { throw new Error('Run Create rental first.'); }"
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Delete returns 204', () => pm.response.to.have.status(204));",
+              "pm.test('Delete body is empty', () => pm.expect(pm.response.text()).to.equal(''));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Logout",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": "{{baseUrl}}/api/auth/logout",
+        "description": "Revokes this login session and clears its cookie. Do not display reusable cookie values."
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Logout returns 204', () => pm.response.to.have.status(204));",
+              "pm.test('Logout body is empty', () => pm.expect(pm.response.text()).to.equal(''));"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

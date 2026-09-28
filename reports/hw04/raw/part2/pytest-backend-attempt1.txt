@@ -1,0 +1,1119 @@
+........................................................................ [ 63%]
+.............FFFF.........................                               [100%]
+=================================== FAILURES ===================================
+_____________ test_mysql_enforces_required_rental_values[changes2] _____________
+
+self = <sqlalchemy.engine.base.Connection object at 0x108941d90>
+dialect = <sqlalchemy.dialects.mysql.pymysql.MySQLDialect_pymysql object at 0x1085a0f50>
+context = <sqlalchemy.dialects.mysql.mysqldb.MySQLExecutionContext_mysqldb object at 0x108941460>
+statement = <sqlalchemy.dialects.mysql.mysqldb.MySQLCompiler_mysqldb object at 0x108647da0>
+parameters = [{'description': 'A bright rental home with a spacious living room.', 'listing_title': ' ', 'manager_id': None, 'property_address': '10 Orchard Avenue, San Jose, CA', ...}]
+
+    def _exec_single_context(
+        self,
+        dialect: Dialect,
+        context: ExecutionContext,
+        statement: Union[str, Compiled],
+        parameters: Optional[_AnyMultiExecuteParams],
+    ) -> CursorResult[Any]:
+        """continue the _execute_context() method for a single DBAPI
+        cursor.execute() or cursor.executemany() call.
+    
+        """
+        if dialect.bind_typing is BindTyping.SETINPUTSIZES:
+            generic_setinputsizes = context._prepare_set_input_sizes()
+    
+            if generic_setinputsizes:
+                try:
+                    dialect.do_set_input_sizes(
+                        context.cursor, generic_setinputsizes, context
+                    )
+                except BaseException as e:
+                    self._handle_dbapi_exception(
+                        e, str(statement), parameters, None, context
+                    )
+    
+        cursor, str_statement, parameters = (
+            context.cursor,
+            context.statement,
+            context.parameters,
+        )
+    
+        effective_parameters: Optional[_AnyExecuteParams]
+    
+        if not context.executemany:
+            effective_parameters = parameters[0]
+        else:
+            effective_parameters = parameters
+    
+        if self._has_events or self.engine._has_events:
+            for fn in self.dispatch.before_cursor_execute:
+                str_statement, effective_parameters = fn(
+                    self,
+                    cursor,
+                    str_statement,
+                    effective_parameters,
+                    context,
+                    context.executemany,
+                )
+    
+        if self._echo:
+            self._log_info(str_statement)
+    
+            stats = context._get_cache_stats()
+    
+            if not self.engine.hide_parameters:
+                self._log_info(
+                    "[%s] %r",
+                    stats,
+                    sql_util._repr_params(
+                        effective_parameters,
+                        batches=10,
+                        ismulti=context.executemany,
+                    ),
+                )
+            else:
+                self._log_info(
+                    "[%s] [SQL parameters hidden due to hide_parameters=True]",
+                    stats,
+                )
+    
+        evt_handled: bool = False
+        try:
+            if context.execute_style is ExecuteStyle.EXECUTEMANY:
+                effective_parameters = cast(
+                    "_CoreMultiExecuteParams", effective_parameters
+                )
+                if self.dialect._has_events:
+                    for fn in self.dialect.dispatch.do_executemany:
+                        if fn(
+                            cursor,
+                            str_statement,
+                            effective_parameters,
+                            context,
+                        ):
+                            evt_handled = True
+                            break
+                if not evt_handled:
+                    self.dialect.do_executemany(
+                        cursor,
+                        str_statement,
+                        effective_parameters,
+                        context,
+                    )
+            elif not effective_parameters and context.no_parameters:
+                if self.dialect._has_events:
+                    for fn in self.dialect.dispatch.do_execute_no_params:
+                        if fn(cursor, str_statement, context):
+                            evt_handled = True
+                            break
+                if not evt_handled:
+                    self.dialect.do_execute_no_params(
+                        cursor, str_statement, context
+                    )
+            else:
+                effective_parameters = cast(
+                    "_CoreSingleExecuteParams", effective_parameters
+                )
+                if self.dialect._has_events:
+                    for fn in self.dialect.dispatch.do_execute:
+                        if fn(
+                            cursor,
+                            str_statement,
+                            effective_parameters,
+                            context,
+                        ):
+                            evt_handled = True
+                            break
+                if not evt_handled:
+>                   self.dialect.do_execute(
+                        cursor, str_statement, effective_parameters, context
+                    )
+
+.venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py:1967: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py:951: in do_execute
+    cursor.execute(statement, parameters)
+.venv/lib/python3.12/site-packages/pymysql/cursors.py:153: in execute
+    result = self._query(query)
+.venv/lib/python3.12/site-packages/pymysql/cursors.py:322: in _query
+    conn.query(q)
+.venv/lib/python3.12/site-packages/pymysql/connections.py:575: in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+.venv/lib/python3.12/site-packages/pymysql/connections.py:826: in _read_query_result
+    result.read()
+.venv/lib/python3.12/site-packages/pymysql/connections.py:1203: in read
+    first_packet = self.connection._read_packet()
+.venv/lib/python3.12/site-packages/pymysql/connections.py:782: in _read_packet
+    packet.raise_for_error()
+.venv/lib/python3.12/site-packages/pymysql/protocol.py:219: in raise_for_error
+    err.raise_mysql_exception(self._data)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+data = b"\xff\xeb\x0e#HY000Check constraint 'ck_rentals_title' is violated."
+
+    def raise_mysql_exception(data):
+        errno = struct.unpack("<h", data[1:3])[0]
+        # https://dev.mysql.com/doc/dev/mysql-server/latest/page_protocol_basic_err_packet.html
+        # Error packet has optional sqlstate that is 5 bytes and starts with '#'.
+        if data[3] == 0x23:  # '#'
+            # sqlstate = data[4:9].decode()
+            # TODO: Append (sqlstate) in the error message. This will be come in next minor release.
+            errval = data[9:].decode("utf-8", "replace")
+        else:
+            errval = data[3:].decode("utf-8", "replace")
+        errorclass = error_map.get(errno)
+        if errorclass is None:
+            errorclass = InternalError if errno < 1000 else OperationalError
+>       raise errorclass(errno, errval)
+E       pymysql.err.OperationalError: (3819, "Check constraint 'ck_rentals_title' is violated.")
+
+.venv/lib/python3.12/site-packages/pymysql/err.py:150: OperationalError
+
+The above exception was the direct cause of the following exception:
+
+hw4_session_factory = sessionmaker(class_='Session', join_transaction_mode='create_savepoint', bind=<sqlalchemy.engine.base.Connection object at 0x108941d90>, autoflush=True, expire_on_commit=False)
+rental_payload = {'description': 'A bright rental home with a spacious living room.', 'listingTitle': 'Test rental c9ae3bc54e01471f963529891586b130', 'propertyAddress': '10 Orchard Avenue, San Jose, CA', 'propertyType': 'apartment', ...}
+changes = {'listing_title': ' '}
+
+    @pytest.mark.parametrize("changes", [
+        {"listing_title": None}, {"property_address": None}, {"listing_title": " "},
+        {"description": "too short"}, {"property_type": "castle"}, {"terms_accepted": False},
+    ])
+    def test_mysql_enforces_required_rental_values(hw4_session_factory, rental_payload, changes):
+        values = {**rental_values(rental_payload), **changes}
+        with hw4_session_factory() as db:
+            before = list(db.scalars(select(Rental.id).order_by(Rental.id)))
+            db.add(Rental(**values))
+            with pytest.raises(IntegrityError):
+>               db.commit()
+
+tests/test_hw04_database.py:77: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py:2032: in commit
+    trans.commit(_to_root=True)
+<string>:2: in commit
+    ???
+.venv/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py:137: in _go
+    ret_value = fn(self, *arg, **kw)
+.venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py:1313: in commit
+    self._prepare_impl()
+<string>:2: in _prepare_impl
+    ???
+.venv/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py:137: in _go
+    ret_value = fn(self, *arg, **kw)
+.venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py:1288: in _prepare_impl
+    self.session.flush()
+.venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py:4345: in flush
+    self._flush(objects)
+.venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py:4480: in _flush
+    with util.safe_reraise():
+.venv/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py:224: in __exit__
+    raise exc_value.with_traceback(exc_tb)
+.venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py:4441: in _flush
+    flush_context.execute()
+.venv/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py:466: in execute
+    rec.execute(self)
+.venv/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py:642: in execute
+    util.preloaded.orm_persistence.save_obj(
+.venv/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py:93: in save_obj
+    _emit_insert_statements(
+.venv/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py:1233: in _emit_insert_statements
+    result = connection.execute(
+.venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py:1419: in execute
+    return meth(
+.venv/lib/python3.12/site-packages/sqlalchemy/sql/elements.py:526: in _execute_on_connection
+    return connection._execute_clauseelement(
+.venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py:1641: in _execute_clauseelement
+    ret = self._execute_context(
+.venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py:1846: in _execute_context
+    return self._exec_single_context(
+.venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py:1986: in _exec_single_context
+    self._handle_dbapi_exception(
+.venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py:2355: in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+.venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py:1967: in _exec_single_context
+    self.dialect.do_execute(
+.venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py:951: in do_execute
+    cursor.execute(statement, parameters)
+.venv/lib/python3.12/site-packages/pymysql/cursors.py:153: in execute
+    result = self._query(query)
+.venv/lib/python3.12/site-packages/pymysql/cursors.py:322: in _query
+    conn.query(q)
+.venv/lib/python3.12/site-packages/pymysql/connections.py:575: in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+.venv/lib/python3.12/site-packages/pymysql/connections.py:826: in _read_query_result
+    result.read()
+.venv/lib/python3.12/site-packages/pymysql/connections.py:1203: in read
+    first_packet = self.connection._read_packet()
+.venv/lib/python3.12/site-packages/pymysql/connections.py:782: in _read_packet
+    packet.raise_for_error()
+.venv/lib/python3.12/site-packages/pymysql/protocol.py:219: in raise_for_error
+    err.raise_mysql_exception(self._data)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+data = b"\xff\xeb\x0e#HY000Check constraint 'ck_rentals_title' is violated."
+
+    def raise_mysql_exception(data):
+        errno = struct.unpack("<h", data[1:3])[0]
+        # https://dev.mysql.com/doc/dev/mysql-server/latest/page_protocol_basic_err_packet.html
+        # Error packet has optional sqlstate that is 5 bytes and starts with '#'.
+        if data[3] == 0x23:  # '#'
+            # sqlstate = data[4:9].decode()
+            # TODO: Append (sqlstate) in the error message. This will be come in next minor release.
+            errval = data[9:].decode("utf-8", "replace")
+        else:
+            errval = data[3:].decode("utf-8", "replace")
+        errorclass = error_map.get(errno)
+        if errorclass is None:
+            errorclass = InternalError if errno < 1000 else OperationalError
+>       raise errorclass(errno, errval)
+E       sqlalchemy.exc.OperationalError: (pymysql.err.OperationalError) (3819, "Check constraint 'ck_rentals_title' is violated.")
+E       [SQL: INSERT INTO rentals (listing_title, property_address, submitter_email, description, property_type, terms_accepted, manager_id) VALUES (%(listing_title)s, %(property_address)s, %(submitter_email)s, %(description)s, %(property_type)s, %(terms_accepted)s, %(manager_id)s)]
+E       [SQL parameters hidden due to hide_parameters=True]
+E       (Background on this error at: https://sqlalche.me/e/20/e3q8)
+
+.venv/lib/python3.12/site-packages/pymysql/err.py:150: OperationalError
+_____________ test_mysql_enforces_required_rental_values[changes3] _____________
+
+self = <sqlalchemy.engine.base.Connection object at 0x10896f110>
+dialect = <sqlalchemy.dialects.mysql.pymysql.MySQLDialect_pymysql object at 0x1085a0f50>
+context = <sqlalchemy.dialects.mysql.mysqldb.MySQLExecutionContext_mysqldb object at 0x108727d10>
+statement = <sqlalchemy.dialects.mysql.mysqldb.MySQLCompiler_mysqldb object at 0x108647da0>
+parameters = [{'description': 'too short', 'listing_title': 'Test rental 76f75801b56e4024aeaa63e05d7223cf', 'manager_id': None, 'property_address': '10 Orchard Avenue, San Jose, CA', ...}]
+
+    def _exec_single_context(
+        self,
+        dialect: Dialect,
+        context: ExecutionContext,
+        statement: Union[str, Compiled],
+        parameters: Optional[_AnyMultiExecuteParams],
+    ) -> CursorResult[Any]:
+        """continue the _execute_context() method for a single DBAPI
+        cursor.execute() or cursor.executemany() call.
+    
+        """
+        if dialect.bind_typing is BindTyping.SETINPUTSIZES:
+            generic_setinputsizes = context._prepare_set_input_sizes()
+    
+            if generic_setinputsizes:
+                try:
+                    dialect.do_set_input_sizes(
+                        context.cursor, generic_setinputsizes, context
+                    )
+                except BaseException as e:
+                    self._handle_dbapi_exception(
+                        e, str(statement), parameters, None, context
+                    )
+    
+        cursor, str_statement, parameters = (
+            context.cursor,
+            context.statement,
+            context.parameters,
+        )
+    
+        effective_parameters: Optional[_AnyExecuteParams]
+    
+        if not context.executemany:
+            effective_parameters = parameters[0]
+        else:
+            effective_parameters = parameters
+    
+        if self._has_events or self.engine._has_events:
+            for fn in self.dispatch.before_cursor_execute:
+                str_statement, effective_parameters = fn(
+                    self,
+                    cursor,
+                    str_statement,
+                    effective_parameters,
+                    context,
+                    context.executemany,
+                )
+    
+        if self._echo:
+            self._log_info(str_statement)
+    
+            stats = context._get_cache_stats()
+    
+            if not self.engine.hide_parameters:
+                self._log_info(
+                    "[%s] %r",
+                    stats,
+                    sql_util._repr_params(
+                        effective_parameters,
+                        batches=10,
+                        ismulti=context.executemany,
+                    ),
+                )
+            else:
+                self._log_info(
+                    "[%s] [SQL parameters hidden due to hide_parameters=True]",
+                    stats,
+                )
+    
+        evt_handled: bool = False
+        try:
+            if context.execute_style is ExecuteStyle.EXECUTEMANY:
+                effective_parameters = cast(
+                    "_CoreMultiExecuteParams", effective_parameters
+                )
+                if self.dialect._has_events:
+                    for fn in self.dialect.dispatch.do_executemany:
+                        if fn(
+                            cursor,
+                            str_statement,
+                            effective_parameters,
+                            context,
+                        ):
+                            evt_handled = True
+                            break
+                if not evt_handled:
+                    self.dialect.do_executemany(
+                        cursor,
+                        str_statement,
+                        effective_parameters,
+                        context,
+                    )
+            elif not effective_parameters and context.no_parameters:
+                if self.dialect._has_events:
+                    for fn in self.dialect.dispatch.do_execute_no_params:
+                        if fn(cursor, str_statement, context):
+                            evt_handled = True
+                            break
+                if not evt_handled:
+                    self.dialect.do_execute_no_params(
+                        cursor, str_statement, context
+                    )
+            else:
+                effective_parameters = cast(
+                    "_CoreSingleExecuteParams", effective_parameters
+                )
+                if self.dialect._has_events:
+                    for fn in self.dialect.dispatch.do_execute:
+                        if fn(
+                            cursor,
+                            str_statement,
+                            effective_parameters,
+                            context,
+                        ):
+                            evt_handled = True
+                            break
+                if not evt_handled:
+>                   self.dialect.do_execute(
+                        cursor, str_statement, effective_parameters, context
+                    )
+
+.venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py:1967: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py:951: in do_execute
+    cursor.execute(statement, parameters)
+.venv/lib/python3.12/site-packages/pymysql/cursors.py:153: in execute
+    result = self._query(query)
+.venv/lib/python3.12/site-packages/pymysql/cursors.py:322: in _query
+    conn.query(q)
+.venv/lib/python3.12/site-packages/pymysql/connections.py:575: in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+.venv/lib/python3.12/site-packages/pymysql/connections.py:826: in _read_query_result
+    result.read()
+.venv/lib/python3.12/site-packages/pymysql/connections.py:1203: in read
+    first_packet = self.connection._read_packet()
+.venv/lib/python3.12/site-packages/pymysql/connections.py:782: in _read_packet
+    packet.raise_for_error()
+.venv/lib/python3.12/site-packages/pymysql/protocol.py:219: in raise_for_error
+    err.raise_mysql_exception(self._data)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+data = b"\xff\xeb\x0e#HY000Check constraint 'ck_rentals_description' is violated."
+
+    def raise_mysql_exception(data):
+        errno = struct.unpack("<h", data[1:3])[0]
+        # https://dev.mysql.com/doc/dev/mysql-server/latest/page_protocol_basic_err_packet.html
+        # Error packet has optional sqlstate that is 5 bytes and starts with '#'.
+        if data[3] == 0x23:  # '#'
+            # sqlstate = data[4:9].decode()
+            # TODO: Append (sqlstate) in the error message. This will be come in next minor release.
+            errval = data[9:].decode("utf-8", "replace")
+        else:
+            errval = data[3:].decode("utf-8", "replace")
+        errorclass = error_map.get(errno)
+        if errorclass is None:
+            errorclass = InternalError if errno < 1000 else OperationalError
+>       raise errorclass(errno, errval)
+E       pymysql.err.OperationalError: (3819, "Check constraint 'ck_rentals_description' is violated.")
+
+.venv/lib/python3.12/site-packages/pymysql/err.py:150: OperationalError
+
+The above exception was the direct cause of the following exception:
+
+hw4_session_factory = sessionmaker(class_='Session', join_transaction_mode='create_savepoint', bind=<sqlalchemy.engine.base.Connection object at 0x10896f110>, autoflush=True, expire_on_commit=False)
+rental_payload = {'description': 'A bright rental home with a spacious living room.', 'listingTitle': 'Test rental 76f75801b56e4024aeaa63e05d7223cf', 'propertyAddress': '10 Orchard Avenue, San Jose, CA', 'propertyType': 'apartment', ...}
+changes = {'description': 'too short'}
+
+    @pytest.mark.parametrize("changes", [
+        {"listing_title": None}, {"property_address": None}, {"listing_title": " "},
+        {"description": "too short"}, {"property_type": "castle"}, {"terms_accepted": False},
+    ])
+    def test_mysql_enforces_required_rental_values(hw4_session_factory, rental_payload, changes):
+        values = {**rental_values(rental_payload), **changes}
+        with hw4_session_factory() as db:
+            before = list(db.scalars(select(Rental.id).order_by(Rental.id)))
+            db.add(Rental(**values))
+            with pytest.raises(IntegrityError):
+>               db.commit()
+
+tests/test_hw04_database.py:77: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py:2032: in commit
+    trans.commit(_to_root=True)
+<string>:2: in commit
+    ???
+.venv/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py:137: in _go
+    ret_value = fn(self, *arg, **kw)
+.venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py:1313: in commit
+    self._prepare_impl()
+<string>:2: in _prepare_impl
+    ???
+.venv/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py:137: in _go
+    ret_value = fn(self, *arg, **kw)
+.venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py:1288: in _prepare_impl
+    self.session.flush()
+.venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py:4345: in flush
+    self._flush(objects)
+.venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py:4480: in _flush
+    with util.safe_reraise():
+.venv/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py:224: in __exit__
+    raise exc_value.with_traceback(exc_tb)
+.venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py:4441: in _flush
+    flush_context.execute()
+.venv/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py:466: in execute
+    rec.execute(self)
+.venv/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py:642: in execute
+    util.preloaded.orm_persistence.save_obj(
+.venv/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py:93: in save_obj
+    _emit_insert_statements(
+.venv/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py:1233: in _emit_insert_statements
+    result = connection.execute(
+.venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py:1419: in execute
+    return meth(
+.venv/lib/python3.12/site-packages/sqlalchemy/sql/elements.py:526: in _execute_on_connection
+    return connection._execute_clauseelement(
+.venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py:1641: in _execute_clauseelement
+    ret = self._execute_context(
+.venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py:1846: in _execute_context
+    return self._exec_single_context(
+.venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py:1986: in _exec_single_context
+    self._handle_dbapi_exception(
+.venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py:2355: in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+.venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py:1967: in _exec_single_context
+    self.dialect.do_execute(
+.venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py:951: in do_execute
+    cursor.execute(statement, parameters)
+.venv/lib/python3.12/site-packages/pymysql/cursors.py:153: in execute
+    result = self._query(query)
+.venv/lib/python3.12/site-packages/pymysql/cursors.py:322: in _query
+    conn.query(q)
+.venv/lib/python3.12/site-packages/pymysql/connections.py:575: in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+.venv/lib/python3.12/site-packages/pymysql/connections.py:826: in _read_query_result
+    result.read()
+.venv/lib/python3.12/site-packages/pymysql/connections.py:1203: in read
+    first_packet = self.connection._read_packet()
+.venv/lib/python3.12/site-packages/pymysql/connections.py:782: in _read_packet
+    packet.raise_for_error()
+.venv/lib/python3.12/site-packages/pymysql/protocol.py:219: in raise_for_error
+    err.raise_mysql_exception(self._data)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+data = b"\xff\xeb\x0e#HY000Check constraint 'ck_rentals_description' is violated."
+
+    def raise_mysql_exception(data):
+        errno = struct.unpack("<h", data[1:3])[0]
+        # https://dev.mysql.com/doc/dev/mysql-server/latest/page_protocol_basic_err_packet.html
+        # Error packet has optional sqlstate that is 5 bytes and starts with '#'.
+        if data[3] == 0x23:  # '#'
+            # sqlstate = data[4:9].decode()
+            # TODO: Append (sqlstate) in the error message. This will be come in next minor release.
+            errval = data[9:].decode("utf-8", "replace")
+        else:
+            errval = data[3:].decode("utf-8", "replace")
+        errorclass = error_map.get(errno)
+        if errorclass is None:
+            errorclass = InternalError if errno < 1000 else OperationalError
+>       raise errorclass(errno, errval)
+E       sqlalchemy.exc.OperationalError: (pymysql.err.OperationalError) (3819, "Check constraint 'ck_rentals_description' is violated.")
+E       [SQL: INSERT INTO rentals (listing_title, property_address, submitter_email, description, property_type, terms_accepted, manager_id) VALUES (%(listing_title)s, %(property_address)s, %(submitter_email)s, %(description)s, %(property_type)s, %(terms_accepted)s, %(manager_id)s)]
+E       [SQL parameters hidden due to hide_parameters=True]
+E       (Background on this error at: https://sqlalche.me/e/20/e3q8)
+
+.venv/lib/python3.12/site-packages/pymysql/err.py:150: OperationalError
+_____________ test_mysql_enforces_required_rental_values[changes4] _____________
+
+self = <sqlalchemy.engine.base.Connection object at 0x108653260>
+dialect = <sqlalchemy.dialects.mysql.pymysql.MySQLDialect_pymysql object at 0x1085a0f50>
+context = <sqlalchemy.dialects.mysql.mysqldb.MySQLExecutionContext_mysqldb object at 0x10893ab70>
+statement = <sqlalchemy.dialects.mysql.mysqldb.MySQLCompiler_mysqldb object at 0x108647da0>
+parameters = [{'description': 'A bright rental home with a spacious living room.', 'listing_title': 'Test rental 11a3c54420a248e5941784104b19ba13', 'manager_id': None, 'property_address': '10 Orchard Avenue, San Jose, CA', ...}]
+
+    def _exec_single_context(
+        self,
+        dialect: Dialect,
+        context: ExecutionContext,
+        statement: Union[str, Compiled],
+        parameters: Optional[_AnyMultiExecuteParams],
+    ) -> CursorResult[Any]:
+        """continue the _execute_context() method for a single DBAPI
+        cursor.execute() or cursor.executemany() call.
+    
+        """
+        if dialect.bind_typing is BindTyping.SETINPUTSIZES:
+            generic_setinputsizes = context._prepare_set_input_sizes()
+    
+            if generic_setinputsizes:
+                try:
+                    dialect.do_set_input_sizes(
+                        context.cursor, generic_setinputsizes, context
+                    )
+                except BaseException as e:
+                    self._handle_dbapi_exception(
+                        e, str(statement), parameters, None, context
+                    )
+    
+        cursor, str_statement, parameters = (
+            context.cursor,
+            context.statement,
+            context.parameters,
+        )
+    
+        effective_parameters: Optional[_AnyExecuteParams]
+    
+        if not context.executemany:
+            effective_parameters = parameters[0]
+        else:
+            effective_parameters = parameters
+    
+        if self._has_events or self.engine._has_events:
+            for fn in self.dispatch.before_cursor_execute:
+                str_statement, effective_parameters = fn(
+                    self,
+                    cursor,
+                    str_statement,
+                    effective_parameters,
+                    context,
+                    context.executemany,
+                )
+    
+        if self._echo:
+            self._log_info(str_statement)
+    
+            stats = context._get_cache_stats()
+    
+            if not self.engine.hide_parameters:
+                self._log_info(
+                    "[%s] %r",
+                    stats,
+                    sql_util._repr_params(
+                        effective_parameters,
+                        batches=10,
+                        ismulti=context.executemany,
+                    ),
+                )
+            else:
+                self._log_info(
+                    "[%s] [SQL parameters hidden due to hide_parameters=True]",
+                    stats,
+                )
+    
+        evt_handled: bool = False
+        try:
+            if context.execute_style is ExecuteStyle.EXECUTEMANY:
+                effective_parameters = cast(
+                    "_CoreMultiExecuteParams", effective_parameters
+                )
+                if self.dialect._has_events:
+                    for fn in self.dialect.dispatch.do_executemany:
+                        if fn(
+                            cursor,
+                            str_statement,
+                            effective_parameters,
+                            context,
+                        ):
+                            evt_handled = True
+                            break
+                if not evt_handled:
+                    self.dialect.do_executemany(
+                        cursor,
+                        str_statement,
+                        effective_parameters,
+                        context,
+                    )
+            elif not effective_parameters and context.no_parameters:
+                if self.dialect._has_events:
+                    for fn in self.dialect.dispatch.do_execute_no_params:
+                        if fn(cursor, str_statement, context):
+                            evt_handled = True
+                            break
+                if not evt_handled:
+                    self.dialect.do_execute_no_params(
+                        cursor, str_statement, context
+                    )
+            else:
+                effective_parameters = cast(
+                    "_CoreSingleExecuteParams", effective_parameters
+                )
+                if self.dialect._has_events:
+                    for fn in self.dialect.dispatch.do_execute:
+                        if fn(
+                            cursor,
+                            str_statement,
+                            effective_parameters,
+                            context,
+                        ):
+                            evt_handled = True
+                            break
+                if not evt_handled:
+>                   self.dialect.do_execute(
+                        cursor, str_statement, effective_parameters, context
+                    )
+
+.venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py:1967: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py:951: in do_execute
+    cursor.execute(statement, parameters)
+.venv/lib/python3.12/site-packages/pymysql/cursors.py:153: in execute
+    result = self._query(query)
+.venv/lib/python3.12/site-packages/pymysql/cursors.py:322: in _query
+    conn.query(q)
+.venv/lib/python3.12/site-packages/pymysql/connections.py:575: in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+.venv/lib/python3.12/site-packages/pymysql/connections.py:826: in _read_query_result
+    result.read()
+.venv/lib/python3.12/site-packages/pymysql/connections.py:1203: in read
+    first_packet = self.connection._read_packet()
+.venv/lib/python3.12/site-packages/pymysql/connections.py:782: in _read_packet
+    packet.raise_for_error()
+.venv/lib/python3.12/site-packages/pymysql/protocol.py:219: in raise_for_error
+    err.raise_mysql_exception(self._data)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+data = b"\xff\xeb\x0e#HY000Check constraint 'ck_rentals_property_type' is violated."
+
+    def raise_mysql_exception(data):
+        errno = struct.unpack("<h", data[1:3])[0]
+        # https://dev.mysql.com/doc/dev/mysql-server/latest/page_protocol_basic_err_packet.html
+        # Error packet has optional sqlstate that is 5 bytes and starts with '#'.
+        if data[3] == 0x23:  # '#'
+            # sqlstate = data[4:9].decode()
+            # TODO: Append (sqlstate) in the error message. This will be come in next minor release.
+            errval = data[9:].decode("utf-8", "replace")
+        else:
+            errval = data[3:].decode("utf-8", "replace")
+        errorclass = error_map.get(errno)
+        if errorclass is None:
+            errorclass = InternalError if errno < 1000 else OperationalError
+>       raise errorclass(errno, errval)
+E       pymysql.err.OperationalError: (3819, "Check constraint 'ck_rentals_property_type' is violated.")
+
+.venv/lib/python3.12/site-packages/pymysql/err.py:150: OperationalError
+
+The above exception was the direct cause of the following exception:
+
+hw4_session_factory = sessionmaker(class_='Session', join_transaction_mode='create_savepoint', bind=<sqlalchemy.engine.base.Connection object at 0x108653260>, autoflush=True, expire_on_commit=False)
+rental_payload = {'description': 'A bright rental home with a spacious living room.', 'listingTitle': 'Test rental 11a3c54420a248e5941784104b19ba13', 'propertyAddress': '10 Orchard Avenue, San Jose, CA', 'propertyType': 'apartment', ...}
+changes = {'property_type': 'castle'}
+
+    @pytest.mark.parametrize("changes", [
+        {"listing_title": None}, {"property_address": None}, {"listing_title": " "},
+        {"description": "too short"}, {"property_type": "castle"}, {"terms_accepted": False},
+    ])
+    def test_mysql_enforces_required_rental_values(hw4_session_factory, rental_payload, changes):
+        values = {**rental_values(rental_payload), **changes}
+        with hw4_session_factory() as db:
+            before = list(db.scalars(select(Rental.id).order_by(Rental.id)))
+            db.add(Rental(**values))
+            with pytest.raises(IntegrityError):
+>               db.commit()
+
+tests/test_hw04_database.py:77: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py:2032: in commit
+    trans.commit(_to_root=True)
+<string>:2: in commit
+    ???
+.venv/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py:137: in _go
+    ret_value = fn(self, *arg, **kw)
+.venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py:1313: in commit
+    self._prepare_impl()
+<string>:2: in _prepare_impl
+    ???
+.venv/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py:137: in _go
+    ret_value = fn(self, *arg, **kw)
+.venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py:1288: in _prepare_impl
+    self.session.flush()
+.venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py:4345: in flush
+    self._flush(objects)
+.venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py:4480: in _flush
+    with util.safe_reraise():
+.venv/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py:224: in __exit__
+    raise exc_value.with_traceback(exc_tb)
+.venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py:4441: in _flush
+    flush_context.execute()
+.venv/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py:466: in execute
+    rec.execute(self)
+.venv/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py:642: in execute
+    util.preloaded.orm_persistence.save_obj(
+.venv/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py:93: in save_obj
+    _emit_insert_statements(
+.venv/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py:1233: in _emit_insert_statements
+    result = connection.execute(
+.venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py:1419: in execute
+    return meth(
+.venv/lib/python3.12/site-packages/sqlalchemy/sql/elements.py:526: in _execute_on_connection
+    return connection._execute_clauseelement(
+.venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py:1641: in _execute_clauseelement
+    ret = self._execute_context(
+.venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py:1846: in _execute_context
+    return self._exec_single_context(
+.venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py:1986: in _exec_single_context
+    self._handle_dbapi_exception(
+.venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py:2355: in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+.venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py:1967: in _exec_single_context
+    self.dialect.do_execute(
+.venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py:951: in do_execute
+    cursor.execute(statement, parameters)
+.venv/lib/python3.12/site-packages/pymysql/cursors.py:153: in execute
+    result = self._query(query)
+.venv/lib/python3.12/site-packages/pymysql/cursors.py:322: in _query
+    conn.query(q)
+.venv/lib/python3.12/site-packages/pymysql/connections.py:575: in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+.venv/lib/python3.12/site-packages/pymysql/connections.py:826: in _read_query_result
+    result.read()
+.venv/lib/python3.12/site-packages/pymysql/connections.py:1203: in read
+    first_packet = self.connection._read_packet()
+.venv/lib/python3.12/site-packages/pymysql/connections.py:782: in _read_packet
+    packet.raise_for_error()
+.venv/lib/python3.12/site-packages/pymysql/protocol.py:219: in raise_for_error
+    err.raise_mysql_exception(self._data)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+data = b"\xff\xeb\x0e#HY000Check constraint 'ck_rentals_property_type' is violated."
+
+    def raise_mysql_exception(data):
+        errno = struct.unpack("<h", data[1:3])[0]
+        # https://dev.mysql.com/doc/dev/mysql-server/latest/page_protocol_basic_err_packet.html
+        # Error packet has optional sqlstate that is 5 bytes and starts with '#'.
+        if data[3] == 0x23:  # '#'
+            # sqlstate = data[4:9].decode()
+            # TODO: Append (sqlstate) in the error message. This will be come in next minor release.
+            errval = data[9:].decode("utf-8", "replace")
+        else:
+            errval = data[3:].decode("utf-8", "replace")
+        errorclass = error_map.get(errno)
+        if errorclass is None:
+            errorclass = InternalError if errno < 1000 else OperationalError
+>       raise errorclass(errno, errval)
+E       sqlalchemy.exc.OperationalError: (pymysql.err.OperationalError) (3819, "Check constraint 'ck_rentals_property_type' is violated.")
+E       [SQL: INSERT INTO rentals (listing_title, property_address, submitter_email, description, property_type, terms_accepted, manager_id) VALUES (%(listing_title)s, %(property_address)s, %(submitter_email)s, %(description)s, %(property_type)s, %(terms_accepted)s, %(manager_id)s)]
+E       [SQL parameters hidden due to hide_parameters=True]
+E       (Background on this error at: https://sqlalche.me/e/20/e3q8)
+
+.venv/lib/python3.12/site-packages/pymysql/err.py:150: OperationalError
+_____________ test_mysql_enforces_required_rental_values[changes5] _____________
+
+self = <sqlalchemy.engine.base.Connection object at 0x108645a90>
+dialect = <sqlalchemy.dialects.mysql.pymysql.MySQLDialect_pymysql object at 0x1085a0f50>
+context = <sqlalchemy.dialects.mysql.mysqldb.MySQLExecutionContext_mysqldb object at 0x1089439e0>
+statement = <sqlalchemy.dialects.mysql.mysqldb.MySQLCompiler_mysqldb object at 0x108647da0>
+parameters = [{'description': 'A bright rental home with a spacious living room.', 'listing_title': 'Test rental 4e0fef9da4414947b21ec77847ebbdaa', 'manager_id': None, 'property_address': '10 Orchard Avenue, San Jose, CA', ...}]
+
+    def _exec_single_context(
+        self,
+        dialect: Dialect,
+        context: ExecutionContext,
+        statement: Union[str, Compiled],
+        parameters: Optional[_AnyMultiExecuteParams],
+    ) -> CursorResult[Any]:
+        """continue the _execute_context() method for a single DBAPI
+        cursor.execute() or cursor.executemany() call.
+    
+        """
+        if dialect.bind_typing is BindTyping.SETINPUTSIZES:
+            generic_setinputsizes = context._prepare_set_input_sizes()
+    
+            if generic_setinputsizes:
+                try:
+                    dialect.do_set_input_sizes(
+                        context.cursor, generic_setinputsizes, context
+                    )
+                except BaseException as e:
+                    self._handle_dbapi_exception(
+                        e, str(statement), parameters, None, context
+                    )
+    
+        cursor, str_statement, parameters = (
+            context.cursor,
+            context.statement,
+            context.parameters,
+        )
+    
+        effective_parameters: Optional[_AnyExecuteParams]
+    
+        if not context.executemany:
+            effective_parameters = parameters[0]
+        else:
+            effective_parameters = parameters
+    
+        if self._has_events or self.engine._has_events:
+            for fn in self.dispatch.before_cursor_execute:
+                str_statement, effective_parameters = fn(
+                    self,
+                    cursor,
+                    str_statement,
+                    effective_parameters,
+                    context,
+                    context.executemany,
+                )
+    
+        if self._echo:
+            self._log_info(str_statement)
+    
+            stats = context._get_cache_stats()
+    
+            if not self.engine.hide_parameters:
+                self._log_info(
+                    "[%s] %r",
+                    stats,
+                    sql_util._repr_params(
+                        effective_parameters,
+                        batches=10,
+                        ismulti=context.executemany,
+                    ),
+                )
+            else:
+                self._log_info(
+                    "[%s] [SQL parameters hidden due to hide_parameters=True]",
+                    stats,
+                )
+    
+        evt_handled: bool = False
+        try:
+            if context.execute_style is ExecuteStyle.EXECUTEMANY:
+                effective_parameters = cast(
+                    "_CoreMultiExecuteParams", effective_parameters
+                )
+                if self.dialect._has_events:
+                    for fn in self.dialect.dispatch.do_executemany:
+                        if fn(
+                            cursor,
+                            str_statement,
+                            effective_parameters,
+                            context,
+                        ):
+                            evt_handled = True
+                            break
+                if not evt_handled:
+                    self.dialect.do_executemany(
+                        cursor,
+                        str_statement,
+                        effective_parameters,
+                        context,
+                    )
+            elif not effective_parameters and context.no_parameters:
+                if self.dialect._has_events:
+                    for fn in self.dialect.dispatch.do_execute_no_params:
+                        if fn(cursor, str_statement, context):
+                            evt_handled = True
+                            break
+                if not evt_handled:
+                    self.dialect.do_execute_no_params(
+                        cursor, str_statement, context
+                    )
+            else:
+                effective_parameters = cast(
+                    "_CoreSingleExecuteParams", effective_parameters
+                )
+                if self.dialect._has_events:
+                    for fn in self.dialect.dispatch.do_execute:
+                        if fn(
+                            cursor,
+                            str_statement,
+                            effective_parameters,
+                            context,
+                        ):
+                            evt_handled = True
+                            break
+                if not evt_handled:
+>                   self.dialect.do_execute(
+                        cursor, str_statement, effective_parameters, context
+                    )
+
+.venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py:1967: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py:951: in do_execute
+    cursor.execute(statement, parameters)
+.venv/lib/python3.12/site-packages/pymysql/cursors.py:153: in execute
+    result = self._query(query)
+.venv/lib/python3.12/site-packages/pymysql/cursors.py:322: in _query
+    conn.query(q)
+.venv/lib/python3.12/site-packages/pymysql/connections.py:575: in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+.venv/lib/python3.12/site-packages/pymysql/connections.py:826: in _read_query_result
+    result.read()
+.venv/lib/python3.12/site-packages/pymysql/connections.py:1203: in read
+    first_packet = self.connection._read_packet()
+.venv/lib/python3.12/site-packages/pymysql/connections.py:782: in _read_packet
+    packet.raise_for_error()
+.venv/lib/python3.12/site-packages/pymysql/protocol.py:219: in raise_for_error
+    err.raise_mysql_exception(self._data)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+data = b"\xff\xeb\x0e#HY000Check constraint 'ck_rentals_terms' is violated."
+
+    def raise_mysql_exception(data):
+        errno = struct.unpack("<h", data[1:3])[0]
+        # https://dev.mysql.com/doc/dev/mysql-server/latest/page_protocol_basic_err_packet.html
+        # Error packet has optional sqlstate that is 5 bytes and starts with '#'.
+        if data[3] == 0x23:  # '#'
+            # sqlstate = data[4:9].decode()
+            # TODO: Append (sqlstate) in the error message. This will be come in next minor release.
+            errval = data[9:].decode("utf-8", "replace")
+        else:
+            errval = data[3:].decode("utf-8", "replace")
+        errorclass = error_map.get(errno)
+        if errorclass is None:
+            errorclass = InternalError if errno < 1000 else OperationalError
+>       raise errorclass(errno, errval)
+E       pymysql.err.OperationalError: (3819, "Check constraint 'ck_rentals_terms' is violated.")
+
+.venv/lib/python3.12/site-packages/pymysql/err.py:150: OperationalError
+
+The above exception was the direct cause of the following exception:
+
+hw4_session_factory = sessionmaker(class_='Session', join_transaction_mode='create_savepoint', bind=<sqlalchemy.engine.base.Connection object at 0x108645a90>, autoflush=True, expire_on_commit=False)
+rental_payload = {'description': 'A bright rental home with a spacious living room.', 'listingTitle': 'Test rental 4e0fef9da4414947b21ec77847ebbdaa', 'propertyAddress': '10 Orchard Avenue, San Jose, CA', 'propertyType': 'apartment', ...}
+changes = {'terms_accepted': False}
+
+    @pytest.mark.parametrize("changes", [
+        {"listing_title": None}, {"property_address": None}, {"listing_title": " "},
+        {"description": "too short"}, {"property_type": "castle"}, {"terms_accepted": False},
+    ])
+    def test_mysql_enforces_required_rental_values(hw4_session_factory, rental_payload, changes):
+        values = {**rental_values(rental_payload), **changes}
+        with hw4_session_factory() as db:
+            before = list(db.scalars(select(Rental.id).order_by(Rental.id)))
+            db.add(Rental(**values))
+            with pytest.raises(IntegrityError):
+>               db.commit()
+
+tests/test_hw04_database.py:77: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py:2032: in commit
+    trans.commit(_to_root=True)
+<string>:2: in commit
+    ???
+.venv/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py:137: in _go
+    ret_value = fn(self, *arg, **kw)
+.venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py:1313: in commit
+    self._prepare_impl()
+<string>:2: in _prepare_impl
+    ???
+.venv/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py:137: in _go
+    ret_value = fn(self, *arg, **kw)
+.venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py:1288: in _prepare_impl
+    self.session.flush()
+.venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py:4345: in flush
+    self._flush(objects)
+.venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py:4480: in _flush
+    with util.safe_reraise():
+.venv/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py:224: in __exit__
+    raise exc_value.with_traceback(exc_tb)
+.venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py:4441: in _flush
+    flush_context.execute()
+.venv/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py:466: in execute
+    rec.execute(self)
+.venv/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py:642: in execute
+    util.preloaded.orm_persistence.save_obj(
+.venv/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py:93: in save_obj
+    _emit_insert_statements(
+.venv/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py:1233: in _emit_insert_statements
+    result = connection.execute(
+.venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py:1419: in execute
+    return meth(
+.venv/lib/python3.12/site-packages/sqlalchemy/sql/elements.py:526: in _execute_on_connection
+    return connection._execute_clauseelement(
+.venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py:1641: in _execute_clauseelement
+    ret = self._execute_context(
+.venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py:1846: in _execute_context
+    return self._exec_single_context(
+.venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py:1986: in _exec_single_context
+    self._handle_dbapi_exception(
+.venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py:2355: in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+.venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py:1967: in _exec_single_context
+    self.dialect.do_execute(
+.venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py:951: in do_execute
+    cursor.execute(statement, parameters)
+.venv/lib/python3.12/site-packages/pymysql/cursors.py:153: in execute
+    result = self._query(query)
+.venv/lib/python3.12/site-packages/pymysql/cursors.py:322: in _query
+    conn.query(q)
+.venv/lib/python3.12/site-packages/pymysql/connections.py:575: in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+.venv/lib/python3.12/site-packages/pymysql/connections.py:826: in _read_query_result
+    result.read()
+.venv/lib/python3.12/site-packages/pymysql/connections.py:1203: in read
+    first_packet = self.connection._read_packet()
+.venv/lib/python3.12/site-packages/pymysql/connections.py:782: in _read_packet
+    packet.raise_for_error()
+.venv/lib/python3.12/site-packages/pymysql/protocol.py:219: in raise_for_error
+    err.raise_mysql_exception(self._data)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+data = b"\xff\xeb\x0e#HY000Check constraint 'ck_rentals_terms' is violated."
+
+    def raise_mysql_exception(data):
+        errno = struct.unpack("<h", data[1:3])[0]
+        # https://dev.mysql.com/doc/dev/mysql-server/latest/page_protocol_basic_err_packet.html
+        # Error packet has optional sqlstate that is 5 bytes and starts with '#'.
+        if data[3] == 0x23:  # '#'
+            # sqlstate = data[4:9].decode()
+            # TODO: Append (sqlstate) in the error message. This will be come in next minor release.
+            errval = data[9:].decode("utf-8", "replace")
+        else:
+            errval = data[3:].decode("utf-8", "replace")
+        errorclass = error_map.get(errno)
+        if errorclass is None:
+            errorclass = InternalError if errno < 1000 else OperationalError
+>       raise errorclass(errno, errval)
+E       sqlalchemy.exc.OperationalError: (pymysql.err.OperationalError) (3819, "Check constraint 'ck_rentals_terms' is violated.")
+E       [SQL: INSERT INTO rentals (listing_title, property_address, submitter_email, description, property_type, terms_accepted, manager_id) VALUES (%(listing_title)s, %(property_address)s, %(submitter_email)s, %(description)s, %(property_type)s, %(terms_accepted)s, %(manager_id)s)]
+E       [SQL parameters hidden due to hide_parameters=True]
+E       (Background on this error at: https://sqlalche.me/e/20/e3q8)
+
+.venv/lib/python3.12/site-packages/pymysql/err.py:150: OperationalError
+=============================== warnings summary ===============================
+.venv/lib/python3.12/site-packages/starlette/formparsers.py:10
+  /Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part2-backend/.venv/lib/python3.12/site-packages/starlette/formparsers.py:10: PendingDeprecationWarning: Please use `import python_multipart` instead.
+    import multipart
+
+.venv/lib/python3.12/site-packages/starlette/testclient.py:31
+  /Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part2-backend/.venv/lib/python3.12/site-packages/starlette/testclient.py:31: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    [], typing.ContextManager[anyio.abc.BlockingPortal]
+
+tests/test_api.py: 42 warnings
+tests/test_hw04_auth.py: 38 warnings
+tests/test_hw04_database.py: 1 warning
+tests/test_hw04_serving.py: 14 warnings
+tests/test_hw04_foundation_gate.py: 1 warning
+  /Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part2-backend/.venv/lib/python3.12/site-packages/httpx/_client.py:690: DeprecationWarning: The 'app' shortcut is now deprecated. Use the explicit style 'transport=WSGITransport(app=...)' instead.
+    warnings.warn(message, DeprecationWarning)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_hw04_database.py::test_mysql_enforces_required_rental_values[changes2]
+FAILED tests/test_hw04_database.py::test_mysql_enforces_required_rental_values[changes3]
+FAILED tests/test_hw04_database.py::test_mysql_enforces_required_rental_values[changes4]
+FAILED tests/test_hw04_database.py::test_mysql_enforces_required_rental_values[changes5]
+4 failed, 110 passed, 98 warnings in 4.77s

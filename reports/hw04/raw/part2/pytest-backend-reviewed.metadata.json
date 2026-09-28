@@ -1,0 +1,31 @@
+{
+  "started_at": "2026-09-28T00:40:49.868831+00:00",
+  "finished_at": "2026-09-28T00:40:54.393706+00:00",
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "tests/test_api.py",
+    "tests/test_hw03_auth.py",
+    "tests/test_hw03_integration.py",
+    "tests/test_hw04_acceptance_cleanup.py",
+    "tests/test_hw04_auth.py",
+    "tests/test_hw04_database.py",
+    "tests/test_hw04_fixture_isolation.py",
+    "tests/test_hw04_foundation_gate.py",
+    "tests/test_hw04_search_regression.py",
+    "tests/test_hw04_serving.py",
+    "tests/test_hw04_verifier.py",
+    "-q",
+    "--tb=short"
+  ],
+  "exit_code": 0,
+  "real_mysql": true,
+  "mysql_version": "8.4.11",
+  "database": "s6102_rel",
+  "host": "127.0.0.1",
+  "port": 3363,
+  "revision": "f29e7cc85baf52bea30bd4bb3209d1bd79b22051",
+  "dirty": true,
+  "output_sha256": "e219a40cd85d91137e269cef85974dd280c3ce5f5896a54929e0c0f805c0a548"
+}

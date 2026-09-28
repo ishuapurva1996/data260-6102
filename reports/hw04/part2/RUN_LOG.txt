@@ -1,0 +1,125 @@
+HW4 Part 2 run log
+Scope: foundation MySQL/authentication/CRUD and selected web tests.
+Task: 01a0e563-f790-7aa0-8dd0-e0d6c24fff71
+Branch: codex/hw4-part2-backend
+Worktree: /Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part2-backend
+Baseline: 5742b2aadbafee5ba208311723ea470c09811dc5
+Foundation B: f29e7cc85baf52bea30bd4bb3209d1bd79b22051
+
+Timestamps below are copied from saved artifacts or the shared coordination note.
+An omitted timestamp means the source output did not record one. No wall-clock
+time has been inferred from file modification times. Commands labeled
+"reproduction" are instructions, not an invented console transcript.
+
+[2026-09-28T00:28:24.807662+00:00] First real HTTPS/MySQL acceptance attempt
+Source: reports/hw04/raw/part2/api-acceptance-attempt1.json
+Base URL: https://127.0.0.1:8702
+MySQL: 8.4.11; database: s6102_rel; evidence host port: 3362
+Revision in artifact: 5742b2aadbafee5ba208311723ea470c09811dc5
+working_tree_dirty: true
+Saved result:
+  "error": "ConnectError"
+  "status": "fail"
+The first attempt completed CRUD, restart-persistence and logout checks before
+the harness failed during the restart sequence. It is retained as a failed run.
+The harness was corrected to close/recreate its HTTP client and verify owned
+server readiness around restart.
+
+[2026-09-28T00:28:47.592877+00:00] Foundation acceptance rerun
+Source: reports/hw04/raw/part2/api-acceptance.json
+Base URL: https://127.0.0.1:8702
+MySQL: 8.4.11; database: s6102_rel
+Revision in artifact: 5742b2aadbafee5ba208311723ea470c09811dc5
+working_tree_dirty: true
+Result: all 23 checks passed; "status": "pass".
+Actual saved operation statuses:
+  POST /api/rentals: 201, returned id 4
+  GET /api/rentals?q=HW4 acceptance 20a5a6cf67: 200
+  GET /api/rentals/4: 200
+  PUT /api/rentals/4: 200
+  DELETE /api/rentals/4: 204, response null
+Other passing checks include anonymous/bad-login denial, cookie attributes,
+other fields preserved on update, invalid write rejected, real process restart
+retains login and rental, copied-token rejection after logout, database-token
+removal, idle expiry, absolute expiry, JSON API 404, and docs availability.
+Cookie attributes only, without token:
+  HttpOnly; Max-Age=3600; Path=/; SameSite=lax; Secure
+
+[timestamp not recorded] Repeat schema migration and demo seed
+Source: reports/hw04/raw/part2/schema-smoke.json
+Actual saved values:
+  "repeat_migration_applied": []
+  "repeat_seed_inserted": 0
+  "rows_preserved": true
+  "rental_count": 2
+Saved SHOW CREATE TABLE output records auto-increment IDs, unique users.email,
+sessions.user_id and rentals.manager_id foreign keys, and rental CHECK rules.
+No import of former live HW3 process-memory data is claimed.
+
+[2026-09-28T00:33Z] Foundation released locally and runtime handed off
+Source: /Users/pragyaapurva/Documents/SJSU/DATA 260/HW4_coordination/part2.md
+Foundation: f29e7cc85baf52bea30bd4bb3209d1bd79b22051
+Part 2's owned acceptance process was stopped. Port 8702 and the evidence
+database data260-hw4-mysql on 127.0.0.1:3362 were released to Part 1.
+Part 2 further database tests use a separate instance on 3363.
+Sibling sessions must merge the foundation, not cherry-pick it.
+
+[2026-09-28T00:33:10.848027+00:00] Project path inventory
+Source: reports/hw04/raw/part2/project-structure.json
+Actual source paths saved; generated environments excluded.
+The frontend path list is empty in this pre-integration backend snapshot.
+This is an inventory, not the required project-folder screenshot.
+
+[timestamp not recorded] First selected backend pytest run
+Source: reports/hw04/raw/part2/pytest-backend-attempt1.txt
+Actual result: 4 failed, 110 passed.
+Four tests expected IntegrityError for a MySQL CHECK violation. PyMySQL raised
+OperationalError with MySQL errno 3819. The tests were changed to catch
+DBAPIError and assert errno 1048 or 3819 as appropriate, retaining the rollback
+and unchanged-row checks. No database constraint was removed.
+
+[timestamp not recorded] Successful selected backend pytest run
+Source: reports/hw04/raw/part2/pytest-backend.txt
+Database: s6102_rel; MySQL 8.4.11; dedicated container
+data260-hw4-part2-tests on host port 3363.
+Actual selected command:
+  .venv/bin/python -m pytest tests/test_api.py tests/test_hw03_auth.py tests/test_hw03_integration.py tests/test_hw04_auth.py tests/test_hw04_database.py tests/test_hw04_serving.py tests/test_hw04_foundation_gate.py -q --tb=short
+A Python wrapper loaded private tests.env with dotenv and set
+HW4_TEST_DATABASE_URL from HW4_DATABASE_URL, then captured subprocess stdout
+and stderr. The wrapper did not print private configuration values.
+Actual final console line:
+122 passed, 98 warnings in 4.31s
+No skips. Includes 114 current web tests and eight unchanged HW3 aggregate
+verifier tests. Warnings concern python_multipart, AnyIO BlockingPortal, and
+HTTPX TestClient shortcut deprecations.
+
+[timestamp not recorded] Part 2 artifact checks
+The bundled Node executable parsed the collection JSON and compiled each
+embedded JavaScript script without executing any requests. Actual output:
+Collection JSON parsed; 7 requests; 13 embedded JavaScript scripts parsed; credential defaults blank. No requests executed.
+The report and handoff local Markdown links were also checked. Actual output:
+REPORT_SECTION.md: all local Markdown links resolve
+HANDOFF.md: all local Markdown links resolve
+Report foundation count matches 23 passing checks in raw evidence.
+
+Reproduction commands (run from the worktree with its Python environment):
+  python scripts/hw04/db_setup.py --migrate --seed-demo --seed-account
+  python scripts/run_hw04_web.py --env-file /path/to/private/app.env
+  python scripts/hw04/part2/acceptance.py --env-file /path/to/private/app.env --manage-server
+The setup CLI reads exported environment variables; load the private dotenv
+file without printing its contents before invoking setup. --manage-server
+requires exclusive ownership of port 8702 and refuses an occupied port.
+Do not run this reproduction while Part 1 or Part 3 owns the evidence slot.
+
+Pending: five actual Postman CRUD screenshots, database screenshot, project
+structure screenshot; completed sibling commits and combined integration.
+Part 4, final whole-homework PDF, collaborator checks, hw4 tag, and final
+tagged-commit verification remain outside this Part 2 log.
+
+SOURCE: subsequent review fixes (raw artifacts carry exact run timestamps)
+- Reproduced Unicode q search regression on realMySQL3363: Straße missing from STRASSE search.
+- Restored HW3 casefold substring behavior in ordinary CRUD list search. Performance routes/auth/schema/serialization unchanged.
+- Acceptance resource cleanup now attempts owned-server shutdown and log writing after DB cleanup errors.
+- Lazy HW4 fixture imports preserve separate retrieval/agent test-environment collection.
+- Expanded reviewed suite:130passed,99deprecation warnings,no skips,4.31s.
+  Evidence:raw/part2/pytest-backend-reviewed.txt and matching.metadata.json.

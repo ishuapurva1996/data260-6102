@@ -22,6 +22,26 @@ from sqlalchemy import create_engine, text
 ROOT = Path(__file__).resolve().parents[3]
 
 
+def cleanup_owned_resources(engine, created_id, token, stop, client):
+    """Attempt every cleanup even when MySQL or an earlier cleanup is down."""
+    def rows():
+        if created_id is None and not token:
+            return
+        with engine.begin() as connection:
+            if created_id is not None:
+                connection.execute(text('DELETE FROM rentals WHERE id=:id'), {'id': created_id})
+            if token:
+                connection.execute(text('DELETE FROM sessions WHERE id=:id'), {'id': token})
+    failures = []
+    for resource, action in [('database test rows', rows), ('owned server', stop),
+                             ('HTTP client', client.close), ('database engine', engine.dispose)]:
+        try:
+            action()
+        except Exception as exc:
+            failures.append({'resource': resource, 'error_type': type(exc).__name__})
+    return failures
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--env-file', type=Path, required=True)
@@ -144,20 +164,17 @@ def main():
                 else:
                     connection.execute(text('UPDATE sessions SET expires_at=:t WHERE id=:id'),{'t':now-timedelta(seconds=1),'id':token})
             check(expiry+' expiry denied',client.get('/api/auth/me').status_code==401)
-        check('unknown API stays JSON 404',client.get('/api/not-a-route').status_code==404 and client.get('/api/not-a-route').headers['content-type'].startswith('application/json'))
+        unknown = client.get('/api/not-a-route')
+        check('unknown API stays JSON 404',unknown.status_code==404 and unknown.headers['content-type'].startswith('application/json'))
         check('docs available',client.get('/docs').status_code==200)
     except Exception as exc:
         result['error'] = type(exc).__name__  # Exceptions may contain credentials; never serialize them.
         result['checks'].append({'name':'acceptance completed','passed':False,'error_type':type(exc).__name__})
     finally:
-        with engine.begin() as connection:
-            if created_id is not None:
-                connection.execute(text('DELETE FROM rentals WHERE id=:id'),{'id':created_id})
-            if token:
-                connection.execute(text('DELETE FROM sessions WHERE id=:id'),{'id':token})
-        stop()
-        client.close()
-        engine.dispose()
+        failures = cleanup_owned_resources(engine, created_id, token, stop, client)
+        if failures:
+            result['checks'].append({'name': 'owned resources cleaned', 'passed': False,
+                                     'failures': failures})
         result['status'] = 'pass' if result['checks'] and all(c['passed'] for c in result['checks']) else 'fail'
         args.output.parent.mkdir(parents=True,exist_ok=True)
         args.output.write_text(json.dumps(result,indent=2)+'\n')

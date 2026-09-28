@@ -1,241 +1,170 @@
-"""Part 2 rental API behavior, with a fresh in-memory app for every test."""
-
-import importlib.util
-from pathlib import Path
-
+"""Current rental API contract against real MySQL (supersedes HW3 memory tests)."""
 import pytest
+from sqlalchemy import delete
+
+from web_application.models import Rental
 
 
-APP_PATH = Path(__file__).resolve().parents[1] / "code/web_application/main.py"
-spec = importlib.util.spec_from_file_location("rental_web_app", APP_PATH)
-web_app = importlib.util.module_from_spec(spec)
-spec.loader.exec_module(web_app)
-
-from fastapi.testclient import TestClient
+def create(client, payload):
+    response = client.post("/api/rentals", json=payload)
+    assert response.status_code == 201, response.text
+    return response.json()
 
 
-@pytest.fixture
-def payload():
-    return {
-        "listingTitle": "Bright Studio",
-        "propertyAddress": "700 Market Street, San Jose, CA",
-        "submitterEmail": "owner@example.com",
-        "description": "A quiet studio with natural light and nearby transit.",
-        "propertyType": "apartment",
-        "termsAccepted": True,
-    }
+def missing_id(client):
+    return max((row["id"] for row in client.get("/api/rentals").json()), default=0) + 1
 
 
-@pytest.fixture
-def client():
-    with TestClient(web_app.create_app()) as client:
-        yield client
-
-
-def test_seed_collection_is_valid_and_not_cached(client):
+def test_create_list_read_and_database_assigned_id(hw4_logged_in, rental_payload):
+    client = hw4_logged_in
+    row = create(client, rental_payload)
+    assert isinstance(row["id"], int) and row["id"] > 0
+    assert row == {**rental_payload, "id": row["id"]}
+    assert client.get(f'/api/rentals/{row["id"]}').json() == row
     response = client.get("/api/rentals")
     assert response.status_code == 200
     assert response.headers["cache-control"] == "no-store"
-    rentals = response.json()
-    assert [rental["id"] for rental in rentals] == [1, 2]
-    for rental in rentals:
-        assert type(rental["id"]) is int
-        assert set(rental) == {
-            "id", "listingTitle", "propertyAddress", "submitterEmail",
-            "description", "propertyType", "termsAccepted",
-        }
-        assert rental["termsAccepted"] is True
-        assert len(rental["description"].strip()) >= 26
+    assert row in response.json()
+    ids = [item["id"] for item in response.json()]
+    assert ids == sorted(ids)
 
 
-def test_home_and_assets_work_from_another_directory(monkeypatch, tmp_path):
-    monkeypatch.chdir(tmp_path)
-    isolated_spec = importlib.util.spec_from_file_location("rental_other_cwd", APP_PATH)
-    isolated_module = importlib.util.module_from_spec(isolated_spec)
-    isolated_spec.loader.exec_module(isolated_module)
-    with TestClient(isolated_module.create_app()) as client:
-        home = client.get("/")
-        assert home.status_code == 200
-        assert "text/html" in home.headers["content-type"]
-        assert "/static/styles.css" in home.text
-        assert "/static/app.js" in home.text
-        for asset, content_type in (("styles.css", "text/css"), ("app.js", "javascript")):
-            response = client.get(f"/static/{asset}")
-            assert response.status_code == 200
-            assert content_type in response.headers["content-type"]
-
-
-def test_create_assigns_id_and_survives_home_reload(client, payload):
-    response = client.post("/api/rentals", json=payload)
-    assert response.status_code == 201
-    assert response.json() == {"id": 3, **payload}
-    assert client.get("/").status_code == 200
-    assert client.get("/api/rentals").json()[-1] == response.json()
-
-
-def test_create_trims_text_and_accepts_26_character_description(client, payload):
-    payload.update(
-        listingTitle="  Café près du parc  ",
-        propertyAddress="  123 José Street  ",
-        description="  " + "x" * 26 + "  ",
-    )
-    response = client.post("/api/rentals", json=payload)
-    assert response.status_code == 201
-    assert response.json()["listingTitle"] == "Café près du parc"
-    assert response.json()["propertyAddress"] == "123 José Street"
-    assert response.json()["description"] == "x" * 26
-
-
-@pytest.mark.parametrize("field,value", [
-    ("listingTitle", " \t\n "),
-    ("propertyAddress", " \t "),
-    ("submitterEmail", "not-an-email"),
-    ("description", " " + "x" * 25 + " "),
-    ("propertyType", "castle"),
-    ("termsAccepted", False),
-    ("termsAccepted", 1),
-    ("termsAccepted", "true"),
+@pytest.mark.parametrize("changes", [
+    {"listingTitle": " "}, {"listingTitle": "x" * 256},
+    {"propertyAddress": "\t"}, {"propertyAddress": "x" * 256},
+    {"submitterEmail": "not-an-email"}, {"description": "x" * 25},
+    {"propertyType": "castle"}, {"termsAccepted": False},
+    {"termsAccepted": "true"}, {"termsAccepted": 1},
+    {"id": 9000}, {"unexpected": "value"},
 ])
-def test_invalid_create_does_not_mutate_store(client, payload, field, value):
+def test_invalid_create_returns_422_without_a_rental_write(hw4_logged_in, rental_payload, changes):
+    client = hw4_logged_in
     before = client.get("/api/rentals").json()
-    payload[field] = value
-    response = client.post("/api/rentals", json=payload)
-    assert response.status_code == 422
-    assert any(error["loc"][-1] == field for error in response.json()["detail"])
-    assert client.get("/api/rentals").json() == before
-
-
-def test_create_rejects_client_assigned_id(client, payload):
-    response = client.post("/api/rentals", json={**payload, "id": 9000})
-    assert response.status_code == 422
-    assert client.post("/api/rentals", json=payload).json()["id"] == 3
-
-
-def test_malformed_json_returns_validation_error_without_mutation(client):
-    before = client.get("/api/rentals").json()
-    response = client.post(
-        "/api/rentals", content='{"listingTitle":', headers={"Content-Type": "application/json"},
-    )
+    response = client.post("/api/rentals", json={**rental_payload, **changes})
     assert response.status_code == 422
     assert isinstance(response.json()["detail"], list)
     assert client.get("/api/rentals").json() == before
 
 
-def test_create_uses_current_maximum_and_starts_at_one_when_empty(payload):
-    seeds = [{**payload, "id": rental_id} for rental_id in [7, 1, 3]]
-    with TestClient(web_app.create_app(seeds)) as client:
-        assert client.post("/api/rentals", json=payload).json()["id"] == 8
-    with TestClient(web_app.create_app([])) as client:
-        assert client.post("/api/rentals", json=payload).json()["id"] == 1
+@pytest.mark.parametrize("field", ["listingTitle", "propertyAddress", "submitterEmail", "description",
+                                   "propertyType", "termsAccepted"])
+def test_create_requires_all_six_fields(hw4_logged_in, rental_payload, field):
+    before = hw4_logged_in.get("/api/rentals").json()
+    del rental_payload[field]
+    assert hw4_logged_in.post("/api/rentals", json=rental_payload).status_code == 422
+    assert hw4_logged_in.get("/api/rentals").json() == before
 
 
-@pytest.mark.parametrize("rental_id", [1, 2])
-def test_update_selected_id_changes_only_title_and_address(client, rental_id):
-    before = client.get("/api/rentals").json()
-    response = client.put(f"/api/rentals/{rental_id}", json={
-        "listingTitle": "  Updated downtown rental  ",
-        "propertyAddress": "  42 New Street  ",
-    })
-    expected = {
-        **before[rental_id - 1], "listingTitle": "Updated downtown rental", "propertyAddress": "42 New Street",
-    }
+def test_malformed_json_does_not_write(hw4_logged_in):
+    before = hw4_logged_in.get("/api/rentals").json()
+    response = hw4_logged_in.post("/api/rentals", content='{"listingTitle":',
+                                 headers={"Content-Type": "application/json"})
+    assert response.status_code == 422
+    assert hw4_logged_in.get("/api/rentals").json() == before
+
+
+def test_two_field_update_trims_text_and_preserves_other_values(hw4_logged_in, rental_payload):
+    row = create(hw4_logged_in, rental_payload)
+    response = hw4_logged_in.put(f'/api/rentals/{row["id"]}', json={
+        "listingTitle": "  Updated downtown rental  ", "propertyAddress": "  42 New Street  "})
+    expected = {**row, "listingTitle": "Updated downtown rental", "propertyAddress": "42 New Street"}
     assert response.status_code == 200
     assert response.json() == expected
-    assert client.get("/api/rentals").json() == [
-        expected if rental["id"] == rental_id else rental for rental in before
-    ]
+    assert hw4_logged_in.get(f'/api/rentals/{row["id"]}').json() == expected
 
 
 @pytest.mark.parametrize("changes", [
     {"listingTitle": " ", "propertyAddress": "42 New Street"},
     {"listingTitle": "New title", "propertyAddress": "\t"},
-    {"listingTitle": "New title"},
+    {"listingTitle": "New title"}, {"propertyAddress": "42 New Street"},
     {"listingTitle": "New title", "propertyAddress": "42 New Street", "termsAccepted": False},
+    {"listingTitle": "New title", "propertyAddress": "42 New Street", "id": 1},
 ])
-def test_invalid_update_keeps_existing_record(client, changes):
-    before = client.get("/api/rentals").json()
-    assert client.put("/api/rentals/1", json=changes).status_code == 422
-    assert client.get("/api/rentals").json() == before
+def test_invalid_update_preserves_record(hw4_logged_in, rental_payload, changes):
+    row = create(hw4_logged_in, rental_payload)
+    assert hw4_logged_in.put(f'/api/rentals/{row["id"]}', json=changes).status_code == 422
+    assert hw4_logged_in.get(f'/api/rentals/{row["id"]}').json() == row
 
 
-def test_unknown_update_returns_404_without_mutation(client):
-    before = client.get("/api/rentals").json()
-    response = client.put("/api/rentals/999", json={
-        "listingTitle": "Unknown rental", "propertyAddress": "42 New Street",
-    })
+@pytest.mark.parametrize("method", ["get", "put", "delete"])
+def test_missing_record_returns_json_404(hw4_logged_in, method):
+    before = hw4_logged_in.get("/api/rentals").json()
+    kwargs = {"json": {"listingTitle": "Unknown rental", "propertyAddress": "42 New Street"}} if method == "put" else {}
+    response = hw4_logged_in.request(method, f"/api/rentals/{missing_id(hw4_logged_in)}", **kwargs)
     assert response.status_code == 404
     assert isinstance(response.json()["detail"], str)
-    assert client.get("/api/rentals").json() == before
+    assert hw4_logged_in.get("/api/rentals").json() == before
 
 
-def test_highest_deletion_uses_global_max_not_order_or_search(payload):
-    seeds = [{**payload, "id": rental_id, "listingTitle": f"Rental {rental_id}"}
-             for rental_id in [7, 1, 3]]
-    with TestClient(web_app.create_app(seeds)) as client:
-        assert [r["id"] for r in client.get("/api/rentals?q=Rental%201").json()] == [1]
-        response = client.delete("/api/rentals/highest")
-        assert response.status_code == 204
-        assert response.content == b""
-        assert [r["id"] for r in client.get("/api/rentals").json()] == [1, 3]
+@pytest.mark.parametrize("rental_id", [0, -1, "not-an-id"])
+def test_invalid_record_ids_return_422(hw4_logged_in, rental_id):
+    assert hw4_logged_in.get(f"/api/rentals/{rental_id}").status_code == 422
 
 
-def test_chosen_deletion_removes_only_requested_id(payload):
-    seeds = [{**payload, "id": rental_id} for rental_id in [1, 3, 7]]
-    with TestClient(web_app.create_app(seeds)) as client:
-        response = client.delete("/api/rentals/3")
-        assert response.status_code == 204
-        assert response.content == b""
-        assert [r["id"] for r in client.get("/api/rentals").json()] == [1, 7]
+def test_delete_selected_record_and_do_not_reuse_its_id(hw4_logged_in, rental_payload):
+    first = create(hw4_logged_in, rental_payload)
+    second = create(hw4_logged_in, rental_payload)
+    response = hw4_logged_in.delete(f'/api/rentals/{second["id"]}')
+    assert response.status_code == 204 and response.content == b""
+    assert hw4_logged_in.get(f'/api/rentals/{second["id"]}').status_code == 404
+    assert hw4_logged_in.get(f'/api/rentals/{first["id"]}').json() == first
+    third = create(hw4_logged_in, rental_payload)
+    assert third["id"] > second["id"]
 
 
-def test_missing_delete_returns_404_without_mutation(client):
-    before = client.get("/api/rentals").json()
-    assert client.delete("/api/rentals/999").status_code == 404
-    assert client.get("/api/rentals").json() == before
+def test_highest_deletion_uses_global_max_and_returns_empty_204(hw4_logged_in, rental_payload):
+    create(hw4_logged_in, rental_payload)
+    create(hw4_logged_in, rental_payload)
+    before = hw4_logged_in.get("/api/rentals").json()
+    highest = max(row["id"] for row in before)
+    # Any changed row, including a pre-existing row, is restored by outer rollback.
+    assert hw4_logged_in.get("/api/rentals", params={"q": "no-such-title-6102"}).json() == []
+    response = hw4_logged_in.delete("/api/rentals/highest")
+    assert response.status_code == 204 and response.content == b""
+    assert hw4_logged_in.get("/api/rentals").json() == [row for row in before if row["id"] != highest]
 
 
-def test_empty_store_highest_delete_is_404_not_path_validation_error():
-    with TestClient(web_app.create_app([])) as client:
-        assert client.get("/api/rentals").json() == []
-        response = client.delete("/api/rentals/highest")
-        assert response.status_code == 404
-        assert isinstance(response.json()["detail"], str)
+def test_highest_on_empty_table_is_404_not_dynamic_path_422(hw4_logged_in, hw4_session_factory):
+    # This deletion lives only inside this test's outer transaction and is undone.
+    with hw4_session_factory() as db:
+        db.execute(delete(Rental))
+        db.commit()
+    response = hw4_logged_in.delete("/api/rentals/highest")
+    assert response.status_code == 404
+    assert isinstance(response.json()["detail"], str)
 
 
 @pytest.mark.parametrize("query", [None, "", " \t\n "])
-def test_blank_search_returns_all_records(client, query):
-    expected = client.get("/api/rentals").json()
+def test_blank_search_returns_every_record(hw4_logged_in, query):
+    expected = hw4_logged_in.get("/api/rentals").json()
     params = {} if query is None else {"q": query}
-    response = client.get("/api/rentals", params=params)
-    assert response.status_code == 200
-    assert response.json() == expected
+    assert hw4_logged_in.get("/api/rentals", params=params).json() == expected
 
 
-@pytest.mark.parametrize("query,expected_ids", [
-    ("  strasse  ", [5]),
-    ("mArKeT", [2]),
-    ("garden", [5, 2]),
-    ("no-such-rental", []),
-    ("owner@example.com", []),
-])
-def test_search_matches_title_or_address_case_insensitively(payload, query, expected_ids):
-    seeds = [
-        {**payload, "id": 5, "listingTitle": "Straße Garden Flat", "propertyAddress": "10 Oak Road"},
-        {**payload, "id": 2, "listingTitle": "City Studio", "propertyAddress": "20 Garden Market Road"},
-    ]
-    with TestClient(web_app.create_app(seeds)) as client:
-        response = client.get("/api/rentals", params={"q": query})
-        assert response.status_code == 200
-        assert response.headers["cache-control"] == "no-store"
-        assert [rental["id"] for rental in response.json()] == expected_ids
-        assert len(client.get("/api/rentals").json()) == 2
+def test_search_matches_title_or_address_case_insensitively_in_id_order(hw4_logged_in, rental_payload):
+    marker = rental_payload["listingTitle"]
+    first = create(hw4_logged_in, {**rental_payload, "listingTitle": f"{marker} Garden"})
+    second = create(hw4_logged_in, {**rental_payload, "listingTitle": "City studio",
+                                    "propertyAddress": f"{marker} Market Road"})
+    result = hw4_logged_in.get("/api/rentals", params={"q": f"  {marker.upper()}  "})
+    assert result.status_code == 200
+    assert result.json() == [first, second]
+    email_matches = hw4_logged_in.get("/api/rentals", params={"q": "owner@example.com"}).json()
+    assert not ({first["id"], second["id"]} & {row["id"] for row in email_matches})
 
 
-def test_openapi_separates_client_fields_from_server_id(client):
-    schema = client.get("/openapi.json").json()
+def test_search_treats_sql_wildcards_as_literal_text(hw4_logged_in, rental_payload):
+    marker = rental_payload["listingTitle"]
+    literal = create(hw4_logged_in, {**rental_payload, "listingTitle": f"{marker}%_"})
+    create(hw4_logged_in, {**rental_payload, "listingTitle": f"{marker}XX"})
+    assert hw4_logged_in.get("/api/rentals", params={"q": f"{marker}%_"}).json() == [literal]
+
+
+def test_openapi_separates_create_update_and_response_fields(hw4_logged_in):
+    schema = hw4_logged_in.get("/openapi.json").json()
     models = schema["components"]["schemas"]
     assert "id" not in models["RentalCreate"]["properties"]
     assert set(models["RentalUpdate"]["properties"]) == {"listingTitle", "propertyAddress"}
-    assert models["Rental"]["properties"]["id"]["type"] == "integer"
+    assert models["RentalResponse"]["properties"]["id"]["type"] == "integer"
     assert "201" in schema["paths"]["/api/rentals"]["post"]["responses"]
     assert "204" in schema["paths"]["/api/rentals/highest"]["delete"]["responses"]

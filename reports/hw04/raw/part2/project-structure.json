@@ -1,0 +1,66 @@
+{
+  "timestamp_utc": "2026-09-28T00:33:10.848027+00:00",
+  "note": "Actual tracked/untracked source paths; screenshot still pending. Environments ignored.",
+  "paths": {
+    "code/web_application": [
+      "code/web_application/README.md",
+      "code/web_application/__init__.py",
+      "code/web_application/database.py",
+      "code/web_application/main.py",
+      "code/web_application/migrations/001_initial.sql",
+      "code/web_application/models.py",
+      "code/web_application/routers/__init__.py",
+      "code/web_application/routers/auth.py",
+      "code/web_application/routers/rentals.py",
+      "code/web_application/schemas.py",
+      "code/web_application/session_store.py",
+      "code/web_application/static/app.js",
+      "code/web_application/static/bootstrap.LICENSE.txt",
+      "code/web_application/static/bootstrap.min.css",
+      "code/web_application/static/styles.css",
+      "code/web_application/templates/base.html",
+      "code/web_application/templates/dashboard.html",
+      "code/web_application/templates/index.html",
+      "code/web_application/templates/login.html"
+    ],
+    "frontend": [],
+    "scripts/hw04": [
+      "scripts/hw04/db_setup.py",
+      "scripts/hw04/part2/acceptance.py"
+    ],
+    "reports/hw04": [
+      "reports/hw04/part2/FOUNDATION.md",
+      "reports/hw04/raw/part2/api-acceptance-attempt1.json",
+      "reports/hw04/raw/part2/api-acceptance.json",
+      "reports/hw04/raw/part2/pytest-backend-attempt1.txt",
+      "reports/hw04/raw/part2/pytest-backend.txt",
+      "reports/hw04/raw/part2/schema-smoke.json"
+    ],
+    "tests": [
+      "tests/agent_graph/test_cli.py",
+      "tests/agent_graph/test_evaluation.py",
+      "tests/agent_graph/test_experiments.py",
+      "tests/agent_graph/test_nodes.py",
+      "tests/agent_graph/test_verify_part4.py",
+      "tests/agent_graph/test_workflow.py",
+      "tests/browser_hw03_auth.cjs",
+      "tests/browser_part2.cjs",
+      "tests/conftest.py",
+      "tests/retrieval/test_chunking.py",
+      "tests/retrieval/test_corpus_and_questions.py",
+      "tests/retrieval/test_embedding_contract.py",
+      "tests/retrieval/test_metrics.py",
+      "tests/retrieval/test_retrieval_records.py",
+      "tests/retrieval/test_verification.py",
+      "tests/test_api.py",
+      "tests/test_hw03_auth.py",
+      "tests/test_hw03_integration.py",
+      "tests/test_hw04_auth.py",
+      "tests/test_hw04_database.py",
+      "tests/test_hw04_foundation_gate.py",
+      "tests/test_hw04_serving.py",
+      "tests/test_refresh_hw02_artifacts.py",
+      "tests/test_verify_hw02.py"
+    ]
+  }
+}

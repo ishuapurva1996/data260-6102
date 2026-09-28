@@ -9,26 +9,47 @@ A FastAPI application for managing rental listings, with cookie-based login and 
 - Compare token, semantic, and sentence-window chunking on a housing-document corpus.
 - Draft listing metadata with a Planner–Reviewer graph, schema validation, and a configurable limit on revision turns.
 
-The web interface uses Jinja templates and locally bundled Bootstrap 5.3.2. Listings and sessions are stored in memory. Restarting the server restores the seed listings and ends active sessions. Run one server worker for this setup.
+The current HW4 web interface uses React, FastAPI and MySQL. Rental records and
+login sessions persist across server restarts. Every rental endpoint requires a
+valid login; the browser holds an opaque, HTTP-only cookie. The historical HW3
+report remains unchanged and describes the earlier in-memory implementation.
 
-## Run the web application
+## Run the HW4 application locally
 
-Use Python 3.12 and run these commands from the repository root:
+Use Python 3.12, Node.js and a dedicated MySQL 8 instance containing `s6102_rel`.
+Keep your connection and teaching-account values outside tracked source; see
+[database setup](docs/HW4_DATABASE.md) and [.env.hw04.example](.env.hw04.example).
 
-```bash
-python3.12 -m venv .venv-web
-.venv-web/bin/python -m pip install -r requirements.txt
-.venv-web/bin/python scripts/run_hw03_web.py --prepare-cert
-.venv-web/bin/python scripts/run_hw03_web.py --host ::1 --port 8702
+```sh
+python3.12 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+# Export HW4_DATABASE_URL and HW4_SEED_NAME/EMAIL/PASSWORD privately.
+.venv/bin/python scripts/hw04/db_setup.py --migrate --seed-demo --seed-account
+cd frontend
+npm ci
+npm run build
+cd ..
+.venv/bin/python scripts/run_hw04_web.py --env-file /path/to/private/app.env
 ```
 
-Open [the application](https://[::1]:8702/) or [the API documentation](https://[::1]:8702/docs). The local certificate is self-signed, so the browser displays a certificate warning.
+Open [the application](https://127.0.0.1:8702/) or [API documentation](https://127.0.0.1:8702/docs).
+The launcher creates a local self-signed certificate without changing OS trust.
+Accept the local certificate warning in your browser. Login uses the seeded
+email/password; there is no hardcoded account or registration flow. Sessions
+expire after 300 seconds idle or 3600 seconds total. Logout revokes the stored token.
 
-The demo login is `admin` / `password`. Sessions expire after 300 seconds of inactivity. Logging out revokes the session on the server. The session cookie uses `HttpOnly`, `Secure`, and `SameSite=lax`, so login requires HTTPS.
+The same HTTPS service serves `/`, `/login`, `/create`, `/update?id=N` and
+`/delete?id=N`. Build before starting; a missing build returns an explicit 503
+message. API errors stay JSON. Use one worker without reload for measurements.
+Do not stop another task's server or reset its database. Slot ownership lives in
+`HW4_coordination/part2.md` outside this checkout.
 
-The dashboard requires login; the rental-listing API remains public. Stop the server with `Control-C` before starting another process on port 8702.
-
-See the [web application guide](code/web_application/README.md) for routes, Docker usage, and browser checks, and the [domain schema](DOMAIN_SCHEMA.md) for listing fields.
+[Foundation interfaces](reports/hw04/part2/FOUNDATION.md) and the
+[shared contract](docs/plans/2026-09-27-1715-hw4-shared-contract.md) describe
+how Parts 1–3 connect. [Part 2 evidence](reports/hw04/part2/REPORT_SECTION.md)
+distinguishes passing checks from pending screenshots. Local integration is
+tracked in [the partial write-up](reports/hw04/PARTS123.md); it is not a claim
+that the entire homework is complete.
 
 ## Compare document retrieval methods
 
@@ -81,33 +102,32 @@ See the [graph architecture and usage guide](docs/agent_graph.md) for response v
 
 ## Tests and verification
 
-Run the web and authentication tests:
+Current HW4 tests use real MySQL when `HW4_TEST_DATABASE_URL` is explicitly set.
+Run them against a dedicated test instance, never concurrently with benchmarks:
 
-```bash
-.venv-web/bin/python -m pytest \
-  tests/test_api.py tests/test_hw03_auth.py tests/test_hw03_integration.py
+```sh
+.venv/bin/python -m pytest tests/test_api.py tests/test_hw04*.py -q
+.venv/bin/python scripts/hw04/part2/acceptance.py \
+  --env-file /path/to/private/app.env --manage-server
 ```
 
-Run the retrieval tests:
+The API acceptance script refuses an occupied port, restarts only its own server,
+and cleans only its own test rows. Test fixtures use outer transactions and
+savepoints; auto-increment values may still be consumed. Unconfigured real-DB
+tests skip explicitly and do not count as MySQL proof. The partial integration
+verifier is `scripts/verify_hw04_parts123.py`; its per-check outcomes remain
+separate from final whole-homework verification.
 
-```bash
-.venv-retrieval/bin/python -m pytest tests/retrieval -q
-```
-
-With both environments installed, run the combined verifier:
-
-```bash
-python3 scripts/verify_hw03.py --require-report \
-  --run-dir reports/hw03/raw/part2/manual-screenshots-20260921
-```
-
-The verifier checks the saved results, source versions, and report build hashes. It reruns the web/API tests and writes updated verification records under `reports/hw03/`. The [reproduction guide](reports/hw03/REPRODUCIBLE_RUN_INSTRUCTIONS.md) includes browser-test setup and an optional check using the cached embedding model.
+Historical HW3 reports and verifier scripts are preserved for reference. Their
+old public-API/signed-cookie/Jinja expectations do not describe the current app;
+do not regenerate their evidence from HW4. Retrieval and agent source remain
+unchanged, and their separate environments still apply.
 
 ## Repository layout
 
 ```text
 code/
-  web_application/       FastAPI app, templates, and static assets
+  web_application/       MySQL models, authenticated FastAPI routes and React serving
   retrieval_compare.py   Retrieval experiment runner
   retrieval_summarize.py  Saved-result checks and summary tables
   agents_graph.py        Planner–Reviewer CLI
@@ -116,6 +136,7 @@ src/
   retrieval/             Chunking, indexing, scoring, and evaluation
   agent_graph/           Graph state, workers, and validation
   model_client.py        Shared local-model adapter
+frontend/                React application (build output is ignored)
 tests/                   API, browser, retrieval, and graph tests
 scripts/                 Launch and verification tools
 docs/                    Architecture and usage notes

@@ -1,7 +1,7 @@
 """Ordinary authenticated CRUD; database-generated IDs survive restarts."""
 from typing import Annotated
 from fastapi import APIRouter, Depends, HTTPException, Path, Response
-from sqlalchemy import or_, select
+from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from ..database import get_db
@@ -23,11 +23,13 @@ def find_rental(db, rental_id):
 @router.get("", response_model=list[RentalResponse])
 def list_rentals(q: str | None = None, db: Session = Depends(get_db)):
     statement = select(Rental).order_by(Rental.id)
-    query = (q or "").strip()
-    if query:
-        statement = statement.where(or_(Rental.listing_title.contains(query, autoescape=True),
-                                       Rental.property_address.contains(query, autoescape=True)))
-    return [rental_json(row) for row in db.scalars(statement)]
+    query = (q or "").strip().casefold()
+    # Preserve HW3 Unicode substring semantics (e.g. Straße matches strasse).
+    # MySQL LIKE does not implement Python casefold expansions. This ordinary
+    # listing route retains its unpaginated contract; Part3 queries are separate.
+    return [rental_json(row) for row in db.scalars(statement)
+            if not query or query in row.listing_title.casefold()
+            or query in row.property_address.casefold()]
 
 
 @router.post("", response_model=RentalResponse, status_code=201)

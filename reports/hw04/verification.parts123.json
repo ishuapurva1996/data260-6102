@@ -1,0 +1,175 @@
+{
+  "scope": "HW4 Parts1\u20133 only; not final whole-homework verification",
+  "timestamp_utc": "2026-09-28T00:43:03.803258+00:00",
+  "revision": "f29e7cc85baf52bea30bd4bb3209d1bd79b22051",
+  "seed": 6102,
+  "verify_seed": 266102,
+  "database": "s6102_rel",
+  "port": 8702,
+  "measured_revision": null,
+  "checks": [
+    {
+      "name": "hw3_baseline_unchanged",
+      "passed": true
+    },
+    {
+      "name": "foundation_commit_integrated",
+      "passed": true,
+      "commit": "f29e7cc85baf52bea30bd4bb3209d1bd79b22051"
+    },
+    {
+      "name": "part1_commit_integrated",
+      "passed": false,
+      "commit": null
+    },
+    {
+      "name": "part3_commit_integrated",
+      "passed": false,
+      "commit": null
+    },
+    {
+      "name": "historical_reports_and_unrelated_code_preserved",
+      "passed": true,
+      "changed_paths": []
+    },
+    {
+      "name": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part2-backend/reports/hw04/raw/part2/api-acceptance.json:overall_pass",
+      "passed": true
+    },
+    {
+      "name": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part2-backend/reports/hw04/raw/part2/api-acceptance.json:individual_checks",
+      "passed": true
+    },
+    {
+      "name": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part2-backend/reports/hw04/raw/part1/real-browser.json:readable",
+      "passed": false
+    },
+    {
+      "name": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part2-backend/reports/hw04/raw/part2/integration-smoke.json:readable",
+      "passed": false
+    },
+    {
+      "name": "integration_matches_current_sources",
+      "passed": false
+    },
+    {
+      "name": "real_mysql_pytest_passed",
+      "passed": true,
+      "test_count": 130,
+      "artifact": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part2-backend/reports/hw04/raw/part2/pytest-backend-reviewed.txt"
+    },
+    {
+      "name": "benchmark_180_validated_requests",
+      "passed": false,
+      "error_type": "ValueError"
+    },
+    {
+      "name": "index_before_after_verified",
+      "passed": false
+    },
+    {
+      "name": "manual_capture:part2/postman-create",
+      "passed": false,
+      "category": "manual_evidence",
+      "file": null,
+      "reason": "Postman application unavailable; collection/API output is not a screenshot substitute."
+    },
+    {
+      "name": "manual_capture:part2/postman-list",
+      "passed": false,
+      "category": "manual_evidence",
+      "file": null,
+      "reason": "Postman application unavailable; collection/API output is not a screenshot substitute."
+    },
+    {
+      "name": "manual_capture:part2/postman-id",
+      "passed": false,
+      "category": "manual_evidence",
+      "file": null,
+      "reason": "Postman application unavailable; collection/API output is not a screenshot substitute."
+    },
+    {
+      "name": "manual_capture:part2/postman-update",
+      "passed": false,
+      "category": "manual_evidence",
+      "file": null,
+      "reason": "Postman application unavailable; collection/API output is not a screenshot substitute."
+    },
+    {
+      "name": "manual_capture:part2/postman-delete",
+      "passed": false,
+      "category": "manual_evidence",
+      "file": null,
+      "reason": "Postman application unavailable; collection/API output is not a screenshot substitute."
+    },
+    {
+      "name": "manual_capture:part2/database",
+      "passed": false,
+      "category": "manual_evidence",
+      "file": null,
+      "reason": "Native Terminal UI capture denied; schema/query JSON remains available."
+    },
+    {
+      "name": "manual_capture:part2/project-structure",
+      "passed": false,
+      "category": "manual_evidence",
+      "file": null,
+      "reason": "Finder capture planned after integration."
+    },
+    {
+      "name": "manual_capture:part3/postman-naive-10",
+      "passed": false,
+      "category": "manual_evidence",
+      "file": null,
+      "reason": "Postman application unavailable; collection/API output is not a screenshot substitute."
+    },
+    {
+      "name": "manual_capture:part3/postman-naive-50",
+      "passed": false,
+      "category": "manual_evidence",
+      "file": null,
+      "reason": "Postman application unavailable; collection/API output is not a screenshot substitute."
+    },
+    {
+      "name": "manual_capture:part3/postman-naive-200",
+      "passed": false,
+      "category": "manual_evidence",
+      "file": null,
+      "reason": "Postman application unavailable; collection/API output is not a screenshot substitute."
+    },
+    {
+      "name": "manual_capture:part3/postman-fixed-10",
+      "passed": false,
+      "category": "manual_evidence",
+      "file": null,
+      "reason": "Postman application unavailable; collection/API output is not a screenshot substitute."
+    },
+    {
+      "name": "manual_capture:part3/postman-fixed-50",
+      "passed": false,
+      "category": "manual_evidence",
+      "file": null,
+      "reason": "Postman application unavailable; collection/API output is not a screenshot substitute."
+    },
+    {
+      "name": "manual_capture:part3/postman-fixed-200",
+      "passed": false,
+      "category": "manual_evidence",
+      "file": null,
+      "reason": "Postman application unavailable; collection/API output is not a screenshot substitute."
+    },
+    {
+      "name": "verifier_did_not_modify_application_source",
+      "passed": true
+    }
+  ],
+  "automated_status": "fail",
+  "status": "incomplete",
+  "outside_scope": [
+    "Part4",
+    "final whole-homework PDF",
+    "collaborator checks",
+    "hw4 tag",
+    "tagged verification.json"
+  ]
+}

@@ -1,0 +1,80 @@
+[
+  {
+    "name": "part2/postman-create",
+    "captured": false,
+    "file": null,
+    "reason": "Postman application unavailable; collection/API output is not a screenshot substitute."
+  },
+  {
+    "name": "part2/postman-list",
+    "captured": false,
+    "file": null,
+    "reason": "Postman application unavailable; collection/API output is not a screenshot substitute."
+  },
+  {
+    "name": "part2/postman-id",
+    "captured": false,
+    "file": null,
+    "reason": "Postman application unavailable; collection/API output is not a screenshot substitute."
+  },
+  {
+    "name": "part2/postman-update",
+    "captured": false,
+    "file": null,
+    "reason": "Postman application unavailable; collection/API output is not a screenshot substitute."
+  },
+  {
+    "name": "part2/postman-delete",
+    "captured": false,
+    "file": null,
+    "reason": "Postman application unavailable; collection/API output is not a screenshot substitute."
+  },
+  {
+    "name": "part2/database",
+    "captured": false,
+    "file": null,
+    "reason": "Native Terminal UI capture denied; schema/query JSON remains available."
+  },
+  {
+    "name": "part2/project-structure",
+    "captured": false,
+    "file": null,
+    "reason": "Finder capture planned after integration."
+  },
+  {
+    "name": "part3/postman-naive-10",
+    "captured": false,
+    "file": null,
+    "reason": "Postman application unavailable; collection/API output is not a screenshot substitute."
+  },
+  {
+    "name": "part3/postman-naive-50",
+    "captured": false,
+    "file": null,
+    "reason": "Postman application unavailable; collection/API output is not a screenshot substitute."
+  },
+  {
+    "name": "part3/postman-naive-200",
+    "captured": false,
+    "file": null,
+    "reason": "Postman application unavailable; collection/API output is not a screenshot substitute."
+  },
+  {
+    "name": "part3/postman-fixed-10",
+    "captured": false,
+    "file": null,
+    "reason": "Postman application unavailable; collection/API output is not a screenshot substitute."
+  },
+  {
+    "name": "part3/postman-fixed-50",
+    "captured": false,
+    "file": null,
+    "reason": "Postman application unavailable; collection/API output is not a screenshot substitute."
+  },
+  {
+    "name": "part3/postman-fixed-200",
+    "captured": false,
+    "file": null,
+    "reason": "Postman application unavailable; collection/API output is not a screenshot substitute."
+  }
+]
