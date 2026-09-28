@@ -116,7 +116,9 @@ def test_fingerprints():
                         *sorted((ROOT/'scripts/hw04').rglob('*.py')),
                         *sorted((ROOT/'tests').glob('test_hw04*.py')),
                         *[ROOT/p for p in ('tests/conftest.py','tests/test_api.py','tests/test_hw03_auth.py',
-                                           'tests/test_hw03_integration.py','scripts/verify_hw04_parts123.py')]])
+                                           'tests/test_hw03_integration.py','tests/browser_hw04_part1.cjs',
+                                           'tests/browser_hw04_part1_runtime.py','tests/check_hw04_part1_interruption.py',
+                                           'scripts/verify_hw04_parts123.py')]])
 
 
 def main(argv=None):

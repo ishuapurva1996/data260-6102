@@ -94,3 +94,14 @@ def test_invalid_screenshots_fail_without_crashing(monkeypatch,tmp_path):
     screenshot_checks=[c for c in checks if c['name'].startswith('browser_screenshot:')]
     assert len(screenshot_checks)==len(filenames)
     assert not any(c['passed'] for c in screenshot_checks)
+
+
+def test_test_provenance_includes_cleanup_runtime(monkeypatch,tmp_path):
+    monkeypatch.setattr(verifier,'ROOT',tmp_path)
+    source=tmp_path/'tests/browser_hw04_part1_runtime.py'
+    source.parent.mkdir(parents=True)
+    source.write_text('original cleanup')
+    before=verifier.test_fingerprints()
+    source.write_text('changed cleanup')
+    assert 'tests/browser_hw04_part1_runtime.py' in before
+    assert verifier.test_fingerprints()!=before
