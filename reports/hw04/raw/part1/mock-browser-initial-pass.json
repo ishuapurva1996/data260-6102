@@ -1,0 +1,1161 @@
+{
+  "schema_version": 1,
+  "mode": "MOCK",
+  "started_at": "2026-09-28T00:31:13.824Z",
+  "status": "pass",
+  "command": "node tests/browser_hw04_part1.cjs --mock",
+  "base_url": "http://127.0.0.1:5173",
+  "cwd": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react",
+  "checks": [
+    {
+      "name": "Signed-out protected routes hide records and mutations",
+      "status": "pass",
+      "started_at": "2026-09-28T00:31:14.240Z",
+      "details": {
+        "file": "reports/hw04/screenshots/part1/mock-signed-out.png",
+        "mode": "MOCK",
+        "captured_at": "2026-09-28T00:31:14.532Z",
+        "actual_url": "http://127.0.0.1:5173/delete?id=17",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "dimensions": {
+          "viewport_width": 1280,
+          "document_width": 1280,
+          "body_width": 1280
+        }
+      },
+      "finished_at": "2026-09-28T00:31:14.532Z",
+      "actual_url": "http://127.0.0.1:5173/delete?id=17"
+    },
+    {
+      "name": "Invalid login remains rejected; valid login loads records",
+      "status": "pass",
+      "started_at": "2026-09-28T00:31:14.532Z",
+      "details": {
+        "file": "reports/hw04/screenshots/part1/mock-home.png",
+        "mode": "MOCK",
+        "captured_at": "2026-09-28T00:31:14.832Z",
+        "actual_url": "http://127.0.0.1:5173/",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "dimensions": {
+          "viewport_width": 1280,
+          "document_width": 1280,
+          "body_width": 1280
+        }
+      },
+      "finished_at": "2026-09-28T00:31:14.832Z",
+      "actual_url": "http://127.0.0.1:5173/"
+    },
+    {
+      "name": "Empty authenticated listing state",
+      "status": "pass",
+      "started_at": "2026-09-28T00:31:14.832Z",
+      "details": {
+        "file": "reports/hw04/screenshots/part1/mock-empty.png",
+        "mode": "MOCK",
+        "captured_at": "2026-09-28T00:31:14.897Z",
+        "actual_url": "http://127.0.0.1:5173/",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "dimensions": {
+          "viewport_width": 1280,
+          "document_width": 1280,
+          "body_width": 1280
+        }
+      },
+      "finished_at": "2026-09-28T00:31:14.897Z",
+      "actual_url": "http://127.0.0.1:5173/"
+    },
+    {
+      "name": "Missing or invalid selected IDs show a safe error",
+      "status": "pass",
+      "started_at": "2026-09-28T00:31:14.897Z",
+      "details": [
+        {
+          "path": "/update",
+          "message": "Choose a listing from the home page to update. A valid positive listing ID is required."
+        },
+        {
+          "path": "/delete",
+          "message": "Choose a listing from the home page to delete. A valid positive listing ID is required."
+        },
+        {
+          "path": "/update?id=invalid",
+          "message": "Choose a listing from the home page to update. A valid positive listing ID is required."
+        },
+        {
+          "path": "/delete?id=-1",
+          "message": "Choose a listing from the home page to delete. A valid positive listing ID is required."
+        }
+      ],
+      "finished_at": "2026-09-28T00:31:15.053Z",
+      "actual_url": "http://127.0.0.1:5173/delete?id=-1"
+    },
+    {
+      "name": "Missing server record reports 404 safely",
+      "status": "pass",
+      "started_at": "2026-09-28T00:31:15.053Z",
+      "details": {
+        "file": "reports/hw04/screenshots/part1/mock-missing-record.png",
+        "mode": "MOCK",
+        "captured_at": "2026-09-28T00:31:15.129Z",
+        "actual_url": "http://127.0.0.1:5173/update?id=99999",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "dimensions": {
+          "viewport_width": 1280,
+          "document_width": 1280,
+          "body_width": 1280
+        }
+      },
+      "finished_at": "2026-09-28T00:31:15.129Z",
+      "actual_url": "http://127.0.0.1:5173/update?id=99999"
+    },
+    {
+      "name": "422 validation detail preserves all create values",
+      "status": "pass",
+      "started_at": "2026-09-28T00:31:15.129Z",
+      "details": {
+        "file": "reports/hw04/screenshots/part1/mock-create-validation.png",
+        "mode": "MOCK",
+        "captured_at": "2026-09-28T00:31:15.335Z",
+        "actual_url": "http://127.0.0.1:5173/create",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "dimensions": {
+          "viewport_width": 1280,
+          "document_width": 1280,
+          "body_width": 1280
+        }
+      },
+      "finished_at": "2026-09-28T00:31:15.335Z",
+      "actual_url": "http://127.0.0.1:5173/create"
+    },
+    {
+      "name": "Network failure retains input and never reports success",
+      "status": "pass",
+      "started_at": "2026-09-28T00:31:15.335Z",
+      "details": {
+        "file": "reports/hw04/screenshots/part1/mock-network-error.png",
+        "mode": "MOCK",
+        "captured_at": "2026-09-28T00:31:15.451Z",
+        "actual_url": "http://127.0.0.1:5173/create",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "dimensions": {
+          "viewport_width": 1280,
+          "document_width": 1280,
+          "body_width": 1280
+        }
+      },
+      "finished_at": "2026-09-28T00:31:15.452Z",
+      "actual_url": "http://127.0.0.1:5173/create"
+    },
+    {
+      "name": "Pending submit sends one six-field create; home uses server ID",
+      "status": "pass",
+      "started_at": "2026-09-28T00:31:15.452Z",
+      "details": {
+        "sent_body": {
+          "listingTitle": "Mock contract test listing",
+          "propertyAddress": "9317 Contract Avenue",
+          "submitterEmail": "landlord@example.com",
+          "description": "A spacious apartment with a sunny living room and quiet study area.",
+          "propertyType": "apartment",
+          "termsAccepted": true
+        },
+        "server_id": 9317,
+        "screenshot": {
+          "file": "reports/hw04/screenshots/part1/mock-created-home.png",
+          "mode": "MOCK",
+          "captured_at": "2026-09-28T00:31:15.698Z",
+          "actual_url": "http://127.0.0.1:5173/",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "dimensions": {
+            "viewport_width": 1280,
+            "document_width": 1280,
+            "body_width": 1280
+          }
+        }
+      },
+      "finished_at": "2026-09-28T00:31:15.698Z",
+      "actual_url": "http://127.0.0.1:5173/"
+    },
+    {
+      "name": "Update deep link survives refresh and sends only two fields",
+      "status": "pass",
+      "started_at": "2026-09-28T00:31:15.698Z",
+      "details": {
+        "sent_body": {
+          "listingTitle": "Updated mock listing",
+          "propertyAddress": "42 Revised Avenue"
+        },
+        "screenshot": {
+          "file": "reports/hw04/screenshots/part1/mock-updated-home.png",
+          "mode": "MOCK",
+          "captured_at": "2026-09-28T00:31:15.915Z",
+          "actual_url": "http://127.0.0.1:5173/",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "dimensions": {
+            "viewport_width": 1280,
+            "document_width": 1280,
+            "body_width": 1280
+          }
+        }
+      },
+      "finished_at": "2026-09-28T00:31:15.915Z",
+      "actual_url": "http://127.0.0.1:5173/"
+    },
+    {
+      "name": "Route change ignores an obsolete detail response",
+      "status": "pass",
+      "started_at": "2026-09-28T00:31:15.915Z",
+      "details": {
+        "obsolete_record_id": 9317,
+        "route_after_delayed_response": "/"
+      },
+      "finished_at": "2026-09-28T00:31:16.126Z",
+      "actual_url": "http://127.0.0.1:5173/"
+    },
+    {
+      "name": "Narrow viewport supports required record screens",
+      "status": "pass",
+      "started_at": "2026-09-28T00:31:16.126Z",
+      "details": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "screenshots": 4
+      },
+      "finished_at": "2026-09-28T00:31:16.425Z",
+      "actual_url": "http://127.0.0.1:5173/delete?id=9317"
+    },
+    {
+      "name": "Delete confirmation supports Cancel and empty 204 success",
+      "status": "pass",
+      "started_at": "2026-09-28T00:31:16.425Z",
+      "details": {
+        "response_status": 204,
+        "response_body": "",
+        "screenshot": {
+          "file": "reports/hw04/screenshots/part1/mock-deleted-home.png",
+          "mode": "MOCK",
+          "captured_at": "2026-09-28T00:31:16.662Z",
+          "actual_url": "http://127.0.0.1:5173/",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "dimensions": {
+            "viewport_width": 1280,
+            "document_width": 1280,
+            "body_width": 1280
+          }
+        }
+      },
+      "finished_at": "2026-09-28T00:31:16.662Z",
+      "actual_url": "http://127.0.0.1:5173/"
+    },
+    {
+      "name": "401 during mutation clears stale authenticated interface",
+      "status": "pass",
+      "started_at": "2026-09-28T00:31:16.662Z",
+      "details": {
+        "file": "reports/hw04/screenshots/part1/mock-session-expired.png",
+        "mode": "MOCK",
+        "captured_at": "2026-09-28T00:31:16.812Z",
+        "actual_url": "http://127.0.0.1:5173/login",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "dimensions": {
+          "viewport_width": 1280,
+          "document_width": 1280,
+          "body_width": 1280
+        }
+      },
+      "finished_at": "2026-09-28T00:31:16.812Z",
+      "actual_url": "http://127.0.0.1:5173/login"
+    },
+    {
+      "name": "Refresh checks the server identity; logout rejects later navigation",
+      "status": "pass",
+      "started_at": "2026-09-28T00:31:16.812Z",
+      "details": {
+        "identity_rechecked": true,
+        "logout_status": 204
+      },
+      "finished_at": "2026-09-28T00:31:16.993Z",
+      "actual_url": "http://127.0.0.1:5173/login"
+    },
+    {
+      "name": "No uncaught browser JavaScript errors",
+      "status": "pass",
+      "started_at": "2026-09-28T00:31:16.993Z",
+      "details": {
+        "uncaught_errors": []
+      },
+      "finished_at": "2026-09-28T00:31:16.993Z",
+      "actual_url": "http://127.0.0.1:5173/login"
+    }
+  ],
+  "screenshots": [
+    {
+      "file": "reports/hw04/screenshots/part1/mock-signed-out.png",
+      "mode": "MOCK",
+      "captured_at": "2026-09-28T00:31:14.532Z",
+      "actual_url": "http://127.0.0.1:5173/delete?id=17",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "dimensions": {
+        "viewport_width": 1280,
+        "document_width": 1280,
+        "body_width": 1280
+      }
+    },
+    {
+      "file": "reports/hw04/screenshots/part1/mock-invalid-login.png",
+      "mode": "MOCK",
+      "captured_at": "2026-09-28T00:31:14.695Z",
+      "actual_url": "http://127.0.0.1:5173/login",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "dimensions": {
+        "viewport_width": 1280,
+        "document_width": 1280,
+        "body_width": 1280
+      }
+    },
+    {
+      "file": "reports/hw04/screenshots/part1/mock-home.png",
+      "mode": "MOCK",
+      "captured_at": "2026-09-28T00:31:14.832Z",
+      "actual_url": "http://127.0.0.1:5173/",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "dimensions": {
+        "viewport_width": 1280,
+        "document_width": 1280,
+        "body_width": 1280
+      }
+    },
+    {
+      "file": "reports/hw04/screenshots/part1/mock-empty.png",
+      "mode": "MOCK",
+      "captured_at": "2026-09-28T00:31:14.897Z",
+      "actual_url": "http://127.0.0.1:5173/",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "dimensions": {
+        "viewport_width": 1280,
+        "document_width": 1280,
+        "body_width": 1280
+      }
+    },
+    {
+      "file": "reports/hw04/screenshots/part1/mock-missing-record.png",
+      "mode": "MOCK",
+      "captured_at": "2026-09-28T00:31:15.129Z",
+      "actual_url": "http://127.0.0.1:5173/update?id=99999",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "dimensions": {
+        "viewport_width": 1280,
+        "document_width": 1280,
+        "body_width": 1280
+      }
+    },
+    {
+      "file": "reports/hw04/screenshots/part1/mock-create-validation.png",
+      "mode": "MOCK",
+      "captured_at": "2026-09-28T00:31:15.335Z",
+      "actual_url": "http://127.0.0.1:5173/create",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "dimensions": {
+        "viewport_width": 1280,
+        "document_width": 1280,
+        "body_width": 1280
+      }
+    },
+    {
+      "file": "reports/hw04/screenshots/part1/mock-network-error.png",
+      "mode": "MOCK",
+      "captured_at": "2026-09-28T00:31:15.451Z",
+      "actual_url": "http://127.0.0.1:5173/create",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "dimensions": {
+        "viewport_width": 1280,
+        "document_width": 1280,
+        "body_width": 1280
+      }
+    },
+    {
+      "file": "reports/hw04/screenshots/part1/mock-create-pending.png",
+      "mode": "MOCK",
+      "captured_at": "2026-09-28T00:31:15.650Z",
+      "actual_url": "http://127.0.0.1:5173/create",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "dimensions": {
+        "viewport_width": 1280,
+        "document_width": 1280,
+        "body_width": 1280
+      }
+    },
+    {
+      "file": "reports/hw04/screenshots/part1/mock-created-home.png",
+      "mode": "MOCK",
+      "captured_at": "2026-09-28T00:31:15.698Z",
+      "actual_url": "http://127.0.0.1:5173/",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "dimensions": {
+        "viewport_width": 1280,
+        "document_width": 1280,
+        "body_width": 1280
+      }
+    },
+    {
+      "file": "reports/hw04/screenshots/part1/mock-update-form.png",
+      "mode": "MOCK",
+      "captured_at": "2026-09-28T00:31:15.829Z",
+      "actual_url": "http://127.0.0.1:5173/update?id=9317",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "dimensions": {
+        "viewport_width": 1280,
+        "document_width": 1280,
+        "body_width": 1280
+      }
+    },
+    {
+      "file": "reports/hw04/screenshots/part1/mock-updated-home.png",
+      "mode": "MOCK",
+      "captured_at": "2026-09-28T00:31:15.915Z",
+      "actual_url": "http://127.0.0.1:5173/",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "dimensions": {
+        "viewport_width": 1280,
+        "document_width": 1280,
+        "body_width": 1280
+      }
+    },
+    {
+      "file": "reports/hw04/screenshots/part1/mock-mobile-home.png",
+      "mode": "MOCK",
+      "captured_at": "2026-09-28T00:31:16.175Z",
+      "actual_url": "http://127.0.0.1:5173/",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "dimensions": {
+        "viewport_width": 390,
+        "document_width": 390,
+        "body_width": 390
+      }
+    },
+    {
+      "file": "reports/hw04/screenshots/part1/mock-mobile-create.png",
+      "mode": "MOCK",
+      "captured_at": "2026-09-28T00:31:16.241Z",
+      "actual_url": "http://127.0.0.1:5173/create",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "dimensions": {
+        "viewport_width": 390,
+        "document_width": 390,
+        "body_width": 390
+      }
+    },
+    {
+      "file": "reports/hw04/screenshots/part1/mock-mobile-update.png",
+      "mode": "MOCK",
+      "captured_at": "2026-09-28T00:31:16.339Z",
+      "actual_url": "http://127.0.0.1:5173/update?id=9317",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "dimensions": {
+        "viewport_width": 390,
+        "document_width": 390,
+        "body_width": 390
+      }
+    },
+    {
+      "file": "reports/hw04/screenshots/part1/mock-mobile-delete.png",
+      "mode": "MOCK",
+      "captured_at": "2026-09-28T00:31:16.424Z",
+      "actual_url": "http://127.0.0.1:5173/delete?id=9317",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "dimensions": {
+        "viewport_width": 390,
+        "document_width": 390,
+        "body_width": 390
+      }
+    },
+    {
+      "file": "reports/hw04/screenshots/part1/mock-delete-confirmation.png",
+      "mode": "MOCK",
+      "captured_at": "2026-09-28T00:31:16.598Z",
+      "actual_url": "http://127.0.0.1:5173/delete?id=9317",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "dimensions": {
+        "viewport_width": 1280,
+        "document_width": 1280,
+        "body_width": 1280
+      }
+    },
+    {
+      "file": "reports/hw04/screenshots/part1/mock-deleted-home.png",
+      "mode": "MOCK",
+      "captured_at": "2026-09-28T00:31:16.662Z",
+      "actual_url": "http://127.0.0.1:5173/",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "dimensions": {
+        "viewport_width": 1280,
+        "document_width": 1280,
+        "body_width": 1280
+      }
+    },
+    {
+      "file": "reports/hw04/screenshots/part1/mock-session-expired.png",
+      "mode": "MOCK",
+      "captured_at": "2026-09-28T00:31:16.812Z",
+      "actual_url": "http://127.0.0.1:5173/login",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "dimensions": {
+        "viewport_width": 1280,
+        "document_width": 1280,
+        "body_width": 1280
+      }
+    }
+  ],
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": "",
+      "at": "2026-09-28T00:31:14.361Z",
+      "status": 401
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": "",
+      "at": "2026-09-28T00:31:14.418Z",
+      "status": 401
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": "",
+      "at": "2026-09-28T00:31:14.418Z",
+      "status": 401
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": "",
+      "at": "2026-09-28T00:31:14.453Z",
+      "status": 401
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": "",
+      "at": "2026-09-28T00:31:14.453Z",
+      "status": 401
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": "",
+      "at": "2026-09-28T00:31:14.496Z",
+      "status": 401
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": "",
+      "at": "2026-09-28T00:31:14.560Z",
+      "status": 401
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": "",
+      "at": "2026-09-28T00:31:14.560Z",
+      "status": 401
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/login",
+      "query": "",
+      "at": "2026-09-28T00:31:14.663Z",
+      "status": 401
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": "",
+      "at": "2026-09-28T00:31:14.721Z",
+      "status": 401
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/login",
+      "query": "",
+      "at": "2026-09-28T00:31:14.771Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals",
+      "query": "",
+      "at": "2026-09-28T00:31:14.788Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals",
+      "query": "",
+      "at": "2026-09-28T00:31:14.789Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": "",
+      "at": "2026-09-28T00:31:14.860Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals",
+      "query": "",
+      "at": "2026-09-28T00:31:14.868Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": "",
+      "at": "2026-09-28T00:31:14.926Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": "",
+      "at": "2026-09-28T00:31:14.926Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": "",
+      "at": "2026-09-28T00:31:14.966Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": "",
+      "at": "2026-09-28T00:31:15.003Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": "",
+      "at": "2026-09-28T00:31:15.003Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": "",
+      "at": "2026-09-28T00:31:15.042Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": "",
+      "at": "2026-09-28T00:31:15.042Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": "",
+      "at": "2026-09-28T00:31:15.080Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals/99999",
+      "query": "",
+      "at": "2026-09-28T00:31:15.087Z",
+      "status": 404
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals/99999",
+      "query": "",
+      "at": "2026-09-28T00:31:15.087Z",
+      "status": 404
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": "",
+      "at": "2026-09-28T00:31:15.165Z",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/rentals",
+      "query": "",
+      "at": "2026-09-28T00:31:15.253Z",
+      "body": {
+        "listingTitle": "Mock contract test listing",
+        "propertyAddress": "9317 Contract Avenue",
+        "submitterEmail": "landlord@example.com",
+        "description": "A spacious apartment with a sunny living room and quiet study area.",
+        "propertyType": "apartment",
+        "termsAccepted": true
+      },
+      "status": 422
+    },
+    {
+      "method": "POST",
+      "path": "/api/rentals",
+      "query": "",
+      "at": "2026-09-28T00:31:15.369Z",
+      "body": {
+        "listingTitle": "Mock contract test listing",
+        "propertyAddress": "9317 Contract Avenue",
+        "submitterEmail": "landlord@example.com",
+        "description": "A spacious apartment with a sunny living room and quiet study area.",
+        "propertyType": "apartment",
+        "termsAccepted": true
+      },
+      "status": "network-abort"
+    },
+    {
+      "method": "POST",
+      "path": "/api/rentals",
+      "query": "",
+      "at": "2026-09-28T00:31:15.487Z",
+      "body": {
+        "listingTitle": "Mock contract test listing",
+        "propertyAddress": "9317 Contract Avenue",
+        "submitterEmail": "landlord@example.com",
+        "description": "A spacious apartment with a sunny living room and quiet study area.",
+        "propertyType": "apartment",
+        "termsAccepted": true
+      },
+      "status": 201
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals",
+      "query": "",
+      "at": "2026-09-28T00:31:15.654Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals",
+      "query": "",
+      "at": "2026-09-28T00:31:15.654Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": "",
+      "at": "2026-09-28T00:31:15.768Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": "",
+      "at": "2026-09-28T00:31:15.769Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals/9317",
+      "query": "",
+      "at": "2026-09-28T00:31:15.776Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals/9317",
+      "query": "",
+      "at": "2026-09-28T00:31:15.777Z",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "path": "/api/rentals/9317",
+      "query": "",
+      "at": "2026-09-28T00:31:15.853Z",
+      "body": {
+        "listingTitle": "Updated mock listing",
+        "propertyAddress": "42 Revised Avenue"
+      },
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals",
+      "query": "",
+      "at": "2026-09-28T00:31:15.870Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals",
+      "query": "",
+      "at": "2026-09-28T00:31:15.870Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals/9317",
+      "query": "",
+      "at": "2026-09-28T00:31:15.969Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals/9317",
+      "query": "",
+      "at": "2026-09-28T00:31:15.969Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals",
+      "query": "",
+      "at": "2026-09-28T00:31:15.972Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals",
+      "query": "",
+      "at": "2026-09-28T00:31:15.972Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": "",
+      "at": "2026-09-28T00:31:16.202Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": "",
+      "at": "2026-09-28T00:31:16.202Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": "",
+      "at": "2026-09-28T00:31:16.269Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals/9317",
+      "query": "",
+      "at": "2026-09-28T00:31:16.274Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": "",
+      "at": "2026-09-28T00:31:16.364Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals/9317",
+      "query": "",
+      "at": "2026-09-28T00:31:16.371Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals/9317",
+      "query": "",
+      "at": "2026-09-28T00:31:16.371Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": "",
+      "at": "2026-09-28T00:31:16.455Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": "",
+      "at": "2026-09-28T00:31:16.456Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals/9317",
+      "query": "",
+      "at": "2026-09-28T00:31:16.462Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals/9317",
+      "query": "",
+      "at": "2026-09-28T00:31:16.462Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals",
+      "query": "",
+      "at": "2026-09-28T00:31:16.520Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals",
+      "query": "",
+      "at": "2026-09-28T00:31:16.520Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals/9317",
+      "query": "",
+      "at": "2026-09-28T00:31:16.569Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals/9317",
+      "query": "",
+      "at": "2026-09-28T00:31:16.570Z",
+      "status": 200
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/rentals/9317",
+      "query": "",
+      "at": "2026-09-28T00:31:16.620Z",
+      "status": 204
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals",
+      "query": "",
+      "at": "2026-09-28T00:31:16.636Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals",
+      "query": "",
+      "at": "2026-09-28T00:31:16.636Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": "",
+      "at": "2026-09-28T00:31:16.690Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": "",
+      "at": "2026-09-28T00:31:16.690Z",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/rentals",
+      "query": "",
+      "at": "2026-09-28T00:31:16.770Z",
+      "body": {
+        "listingTitle": "Mock contract test listing",
+        "propertyAddress": "9317 Contract Avenue",
+        "submitterEmail": "landlord@example.com",
+        "description": "A spacious apartment with a sunny living room and quiet study area.",
+        "propertyType": "apartment",
+        "termsAccepted": true
+      },
+      "status": 401
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": "",
+      "at": "2026-09-28T00:31:16.838Z",
+      "status": 401
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/login",
+      "query": "",
+      "at": "2026-09-28T00:31:16.887Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals",
+      "query": "",
+      "at": "2026-09-28T00:31:16.903Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals",
+      "query": "",
+      "at": "2026-09-28T00:31:16.903Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": "",
+      "at": "2026-09-28T00:31:16.935Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": "",
+      "at": "2026-09-28T00:31:16.935Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals",
+      "query": "",
+      "at": "2026-09-28T00:31:16.944Z",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals",
+      "query": "",
+      "at": "2026-09-28T00:31:16.944Z",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/logout",
+      "query": "",
+      "at": "2026-09-28T00:31:16.970Z",
+      "status": 204
+    }
+  ],
+  "limitations": [
+    "MOCK ONLY: intercepted HTTP responses validate React behavior, not authentication security, MySQL storage, or final port 8702."
+  ],
+  "git_revision": "5742b2aadbafee5ba208311723ea470c09811dc5",
+  "source_sha256": {
+    "frontend/src/App.jsx": "c53234691d418cf00f6f0111d61f432f0e55b7cf2d774c9e6f374c0e10a37986",
+    "frontend/src/api/client.js": "ad9f34187c65051f50bdcf38f8b41743840ab2b9efadfc6d3c0fe44c45b96c74",
+    "frontend/src/auth/AuthContext.jsx": "3e5b278852638b50895295a7d363992a8385797ce7613705d87c29750a529072",
+    "frontend/src/components/forms.jsx": "63d9a514ff92b5580fdb053788b8836c9cff602cbd126a20dd4479fac5be96ec",
+    "frontend/src/main.jsx": "9caa0ca3ee8cbe0c9c052134346ac7dca26c0584cd929c07cd5b485940acfb88",
+    "frontend/src/pages/CreateRecord.jsx": "1e10124985a37b863dcbf836b8076a960bdaf72ebc068ab5ac2d6cec82df98a5",
+    "frontend/src/pages/DeleteRecord.jsx": "382eb88c8506346ac81cbc9cc06e0689903570b95fcee42afd81f5ec89909e49",
+    "frontend/src/pages/Home.jsx": "b7bd82f7edea3d56159293951630467c6332f54c4fc163d26a06c07648844fd3",
+    "frontend/src/pages/Login.jsx": "99c97544645656a30212e8d79f5417b572f4b5671c6d4b84f71b5c9b721bebb0",
+    "frontend/src/pages/UpdateRecord.jsx": "b1837f0376d7e90873127e5fac2271c2f5e748335b75be002de568b416f5233d",
+    "frontend/src/styles.css": "56a592a752fe527d9e5a52fa07ea01620cf5ee57ae9d89222bc89b09631e1ce8",
+    "frontend/package.json": "c475bf47a063a7498f1978b8056220babbf7fc85d46b0052bbaa33c99d00e708",
+    "frontend/package-lock.json": "68c01a3da7ac965f5f8d9d305eef7aa973014a813d32760e8cbf94c4e3970969",
+    "frontend/vite.config.js": "e0074b500074eb549063648ead9567ffffb125325eb0a0a9b1a29a12bce3837f",
+    "tests/browser_hw04_part1.cjs": "08b93ed0df484de4f0e61ea55e83223f59b6514d8d3f92d583506ca42cfd5a3c"
+  },
+  "finished_at": "2026-09-28T00:31:17.021Z",
+  "passed_checks": 15,
+  "failed_checks": 0
+}

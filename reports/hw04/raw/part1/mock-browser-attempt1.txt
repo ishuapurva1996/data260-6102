@@ -1,0 +1,9 @@
+locator.waitFor: Timeout 12000ms exceeded.
+Call log:
+[2m  - waiting for getByText(/Login required/) to be visible[22m
+
+    at signedOutRoutes (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tests/browser_hw04_part1.cjs:205:44)
+    at async check (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tests/browser_hw04_part1.cjs:47:22)
+    at async mockFlow (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tests/browser_hw04_part1.cjs:235:5)
+    at async main (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tests/browser_hw04_part1.cjs:629:26)
+Evidence: reports/hw04/raw/part1/mock-browser.json (fail)

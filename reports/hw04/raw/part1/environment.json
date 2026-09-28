@@ -1,0 +1,13 @@
+{
+  "os": "macOS 15.7.4 (24G517)",
+  "architecture": "arm64",
+  "node": "24.19.0",
+  "react": "18.3.1",
+  "react_dom": "18.3.1",
+  "react_router_dom": "6.30.6",
+  "vite": "7.3.6",
+  "playwright": "1.62.1",
+  "mysql": "8.4.11",
+  "cpu_and_memory": "Not collected: default sandbox denied sysctl hardware query.",
+  "local_language_model": "Not used by Part1 runtime."
+}

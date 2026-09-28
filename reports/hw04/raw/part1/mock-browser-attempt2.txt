@@ -1,0 +1,15 @@
+PASS [MOCK] Signed-out protected routes hide records and mutations
+PASS [MOCK] Invalid login remains rejected; valid login loads records
+PASS [MOCK] Empty authenticated listing state
+PASS [MOCK] Missing or invalid selected IDs show a safe error
+PASS [MOCK] Missing server record reports 404 safely
+locator.selectOption: Timeout 12000ms exceeded.
+Call log:
+[2m  - waiting for getByLabel('Property type', { exact: true })[22m
+
+    at fillRental (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tests/browser_hw04_part1.cjs:115:61)
+    at async /Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tests/browser_hw04_part1.cjs:272:7
+    at async check (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tests/browser_hw04_part1.cjs:47:22)
+    at async mockFlow (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tests/browser_hw04_part1.cjs:269:5)
+    at async main (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tests/browser_hw04_part1.cjs:629:26)
+Evidence: reports/hw04/raw/part1/mock-browser.json (fail)

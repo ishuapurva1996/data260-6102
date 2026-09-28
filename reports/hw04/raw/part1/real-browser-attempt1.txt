@@ -1,0 +1,17 @@
+PASS [REAL] Signed-out direct visits hide protected records
+PASS [REAL] Unauthenticated CRUD APIs reject requests; unknown API remains JSON
+PASS [REAL] Invalid credentials stay rejected
+PASS [REAL] Valid HTTPS login sets an opaque HTTP-only secure cookie
+PASS [REAL] Create sends six fields and renders the database-assigned ID
+PASS [REAL] Update direct URL and refresh retain selection; two fields persist
+RESTART READY: /private/tmp/hw4-part1-restart-ready.json
+PASS [REAL] Updated rental and authentication survive owner-controlled backend restart
+PASS [REAL] Real missing/invalid ID routes remain safe
+PASS [REAL] Narrow real browser shows persisted records without horizontal overflow
+response.text: Protocol error (Network.getResponseBody): No data found for resource with given identifier
+Response body is not available for a response that was navigated away from. Read response.body() before triggering any navigation.
+    at /Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tests/browser_hw04_part1.cjs:567:35
+    at async check (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tests/browser_hw04_part1.cjs:47:22)
+    at async realFlow (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tests/browser_hw04_part1.cjs:556:5)
+    at async main (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tests/browser_hw04_part1.cjs:630:10)
+Evidence: reports/hw04/raw/part1/real-browser.json (fail)

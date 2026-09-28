@@ -1,0 +1,7 @@
+PASS [REAL] Signed-out direct visits hide protected records
+PASS [REAL] Unauthenticated CRUD APIs reject requests; unknown API remains JSON
+PASS [REAL] Invalid credentials stay rejected
+PASS [REAL] Valid HTTPS login sets an opaque HTTP-only secure cookie
+PASS [REAL] Create sends six fields and renders the database-assigned ID
+PASS [REAL] Update direct URL and refresh retain selection; two fields persist
+RESTART READY: /var/folders/pj/9dp_jz_d5llfnj6rv0yglfn00000gn/T/hw4-part1-xs8ulb9y/ready.json

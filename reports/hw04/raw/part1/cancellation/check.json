@@ -1,0 +1,9 @@
+{
+  "checked_at": "2026-09-28T00:45:28.609553+00:00",
+  "signal": "SIGTERM",
+  "exit_code": 143,
+  "port_released": true,
+  "runtime_status": "interrupted",
+  "all_owned_servers_stopped": true,
+  "passed": true
+}

@@ -1,0 +1,35 @@
+{
+  "checked_at": "2026-09-28T00:47:15.164118+00:00",
+  "code_revision": "0c4906dfafde4cbe15e3ff6b7da4c8537814c6d1",
+  "checks": [
+    {
+      "name": "mock-browser",
+      "passed": true,
+      "check_count": 19,
+      "revision": "0c4906dfafde4cbe15e3ff6b7da4c8537814c6d1",
+      "source_hashes_match": true
+    },
+    {
+      "name": "real-browser",
+      "passed": true,
+      "check_count": 12,
+      "revision": "0c4906dfafde4cbe15e3ff6b7da4c8537814c6d1",
+      "source_hashes_match": true
+    },
+    {
+      "name": "expiry-browser",
+      "passed": true,
+      "check_count": 2,
+      "revision": "0c4906dfafde4cbe15e3ff6b7da4c8537814c6d1",
+      "source_hashes_match": true
+    },
+    {
+      "name": "runtime",
+      "passed": true,
+      "check_count": 6,
+      "revision": "0c4906dfafde4cbe15e3ff6b7da4c8537814c6d1",
+      "source_hashes_match": true
+    }
+  ],
+  "passed": true
+}

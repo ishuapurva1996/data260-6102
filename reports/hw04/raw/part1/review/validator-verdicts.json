@@ -1,0 +1,40 @@
+{
+  "verdicts": [
+    {
+      "#": 1,
+      "status": "confirmed",
+      "protected_subject": "authorization-authentication",
+      "reason": "If an old rental mutation returns 401 after logout and a fresh login, new client.js:48-50 unconditionally emits session-expired and AuthContext.jsx:12 clears the newly authenticated user set at :41; mutation calls at client.js:66-68 have no abort signal or session identity guard, and App.jsx:103-106 permits logout while a form write is pending, making the ordering reachable, although incidence was not measured."
+    },
+    {
+      "#": 2,
+      "status": "confirmed",
+      "protected_subject": "data-loss",
+      "reason": "During a pending delete, new forms.jsx:108 disables only Submit while :112 still exposes Cancel, DeleteRecord.jsx:12-14 has already issued the deletion, and forms.jsx:49-50 and :60-67 only suppress subsequent component updates rather than canceling that request, so Cancel can navigate away before the destructive write finishes; the source establishes reachability, but incidence was not measured."
+    },
+    {
+      "#": 3,
+      "status": "confirmed",
+      "protected_subject": "concurrency",
+      "reason": "If a new mutation finishes after Cancel or App.jsx:97-99 Home navigation and Home's initial GET, forms.jsx:50 and :62 suppress its only success action after unmount, client.js:66-68 publish no completion notification, and Home.jsx:12-25 subscribes only to query and attempt changes, so the already loaded list remains stale; this allowed navigation and response ordering is established in source, but incidence was not measured."
+    },
+    {
+      "#": 4,
+      "status": "confirmed",
+      "protected_subject": null,
+      "reason": "The new mockFlow at browser_hw04_part1.cjs:223-414 uses valid create values and tests injected POST 422/network errors at :269-287, but has no invalid-input submissions or failed auth/me/list GET followed by Try again, leaving CreateRecord.jsx:27-28 and :49-89 validation and AuthContext.jsx:22-28/:47-49 plus Home.jsx:20-25/:85 retry behavior untested under those explicit inputs and failures; this confirms the coverage gap, not a demonstrated implementation failure."
+    },
+    {
+      "#": 5,
+      "status": "confirmed",
+      "protected_subject": null,
+      "reason": "For an otherwise empty rentals database, new realFlow deletes its only created row at browser_hw04_part1.cjs:563-576 before runtime.py:147-151 starts expiry mode, Home.jsx:96-105 renders an empty state without any article, and expiryFlow's unconditional article wait at :616 therefore times out before its expiry check; the empty state is explicitly supported by Home and the mock case at :247-252, though this real-database incidence was not measured."
+    },
+    {
+      "#": 6,
+      "status": "confirmed",
+      "protected_subject": "concurrency",
+      "reason": "If SIGTERM targets the new runtime runner while an owned child is alive, runtime.py:79-80/:119-120/:149-150 places children in separate sessions, while the complete runner installs no SIGTERM handler and reaches process-group shutdown only through its finally block at :159-169, so default signal termination bypasses cleanup and can leave the server or browser alive; the process ownership and signal precondition are established by source, but incidence was not measured."
+    }
+  ]
+}

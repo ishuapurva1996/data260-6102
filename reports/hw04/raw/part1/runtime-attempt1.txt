@@ -1,0 +1,21 @@
+Certificate ready: /Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tmp/https/cert.pem
+PASS [RUNTIME] MySQL evidence database is s6102_rel
+FAIL [RUNTIME] OSError; inspect the sanitized browser logs.
+Traceback (most recent call last):
+  File "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tests/browser_hw04_part1_runtime.py", line 153, in main
+    raise SystemExit(1) from None
+SystemExit: 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tests/browser_hw04_part1_runtime.py", line 164, in <module>
+    main()
+  File "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tests/browser_hw04_part1_runtime.py", line 157, in main
+    browser.wait(timeout=10)
+  File "/Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/subprocess.py", line 1264, in wait
+    return self._wait(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/subprocess.py", line 2045, in _wait
+    raise TimeoutExpired(self.args, timeout)
+subprocess.TimeoutExpired: Command '['/Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node', 'tests/browser_hw04_part1.cjs', '--real']' timed out after 10 seconds

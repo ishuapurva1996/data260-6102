@@ -1,0 +1,307 @@
+{
+  "run_id": "20260927-part1-fstj_ill",
+  "findings": [
+    {
+      "#": 1,
+      "autofix_class": "gated_auto",
+      "confidence": 75,
+      "evidence": [
+        "frontend/src/api/client.js:50:       window.dispatchEvent(new Event(\"session-expired\"));",
+        "frontend/src/api/client.js:66:   create: (body) => request(\"/rentals\", { method: \"POST\", body }),",
+        "frontend/src/auth/AuthContext.jsx:12:     const expired = () => setAuth({ status: \"expired\", user: null });",
+        "frontend/src/auth/AuthContext.jsx:41:     setAuth({ status: \"authenticated\", user });"
+      ],
+      "file": "frontend/src/api/client.js",
+      "first_evidence": "frontend/src/api/client.js:50:       window.dispatchEvent(new Event(\"session-expired\"));",
+      "independent_reviewers": [
+        "julik-frontend-races"
+      ],
+      "line": 50,
+      "owner": "downstream-resolver",
+      "pre_existing": false,
+      "requires_verification": true,
+      "reviewers": [
+        "julik-frontend-races"
+      ],
+      "severity": "P2",
+      "suggested_fix": "Tie unauthorized notifications to the auth session that started each request. Increment a session epoch on login and logout; capture it when a rental request starts, and dispatch session-expired only if the epoch still matches when the 401 arrives. Verify with a delayed old-session 401 returned after a fresh login.",
+      "title": "Late unauthorized response can expire a new login",
+      "why_it_matters": "A rental request started under an old session can return 401 after the user logs out and logs in again. Its unconditional global event then clears the newly authenticated user and redirects back to login. The route cleanup aborts list/get reads, but create/update/delete requests do not accept a signal and can still finish late."
+    },
+    {
+      "#": 2,
+      "autofix_class": "gated_auto",
+      "confidence": 75,
+      "evidence": [
+        "frontend/src/components/forms.jsx:112:       <Link to=\"/\">Cancel</Link>",
+        "frontend/src/components/forms.jsx:60:       await action();",
+        "frontend/src/components/forms.jsx:62:       if (mounted.current) navigate(\"/\", { state: { notice: successMessage } });",
+        "frontend/src/pages/DeleteRecord.jsx:30:         <FormActions pending={pending} label=\"Delete listing\" danger />"
+      ],
+      "file": "frontend/src/components/forms.jsx",
+      "first_evidence": "frontend/src/components/forms.jsx:112:       <Link to=\"/\">Cancel</Link>",
+      "independent_reviewers": [
+        "julik-frontend-races"
+      ],
+      "line": 112,
+      "owner": "downstream-resolver",
+      "pre_existing": false,
+      "requires_verification": true,
+      "reviewers": [
+        "julik-frontend-races"
+      ],
+      "severity": "P2",
+      "suggested_fix": "While pending, render Cancel as disabled text or suppress the link; allow navigation after the write settles. Keep the existing synchronous submit lock. Add a delayed-response browser case that attempts Cancel during delete and verifies the user cannot leave under a misleading cancellation.",
+      "title": "Cancel leaves an in-flight write running",
+      "why_it_matters": "After submitting a create, update, or delete, the user can click Cancel while the request is still pending. The form unmounts, but the server write continues. Home can load before that write finishes, showing stale listings; a later write can complete without any success notice. For delete, a listing can disappear after the user chose Cancel."
+    },
+    {
+      "#": 3,
+      "autofix_class": "manual",
+      "confidence": 75,
+      "evidence": [
+        "frontend/src/components/forms.jsx:62 -- if (mounted.current) navigate(\"/\", { state: { notice: successMessage } });",
+        "frontend/src/components/forms.jsx:112 -- <Link to=\"/\">Cancel</Link>; this remains actionable while the submit button is disabled by pending at line 108.",
+        "frontend/src/components/forms.jsx:49-50 -- the effect cleanup sets mounted.current = false when navigation unmounts the form; line 60 still awaits action(), so the database write continues.",
+        "frontend/src/pages/Home.jsx:12-25 -- Home loads rentals.list(query, controller.signal) on mount and reruns only for [query, attempt]; neither changes when a previously mounted form's write completes.",
+        "Constructed sequence: hold a POST or DELETE before commit, click the still-active Cancel link, let Home's GET return the old list, then let the write finish successfully. The mounted guard suppresses the only completion action and the new Home receives no invalidation, leaving the old list rendered. The same sequence is reachable through App.jsx:97-99's Home navigation.",
+        "frontend/src/components/forms.jsx:112 -- <Link to=\"/\">Cancel</Link>",
+        "frontend/src/components/forms.jsx:50 -- mounted.current = false;",
+        "frontend/src/pages/Home.jsx:25 -- }, [query, attempt]);",
+        "The effect at Home.jsx:12-25 requests the list on Home mount; neither query nor attempt changes when a mutation from the unmounted form later succeeds. A delayed request can therefore commit after that list response with no subsequent refresh."
+      ],
+      "file": "frontend/src/components/forms.jsx",
+      "first_evidence": "frontend/src/components/forms.jsx:62 -- if (mounted.current) navigate(\"/\", { state: { notice: successMessage } });",
+      "independent_reviewers": [
+        "adversarial",
+        "correctness"
+      ],
+      "line": 62,
+      "owner": "downstream-resolver",
+      "pre_existing": false,
+      "requires_verification": true,
+      "reviewers": [
+        "adversarial",
+        "correctness"
+      ],
+      "severity": "P2",
+      "suggested_fix": "Have successful rental create/update/delete callbacks publish a shared rental revision or rentals-changed event, and have Home refetch when that revision/event changes even if the submitting form has unmounted. Retain the mounted guard for form state and navigation. Disable or relabel Cancel while pending so it does not imply that an already-issued write will be canceled. Verify by delaying a mutation until after navigation to Home and its initial list response, then resolving the mutation and checking that Home refreshes.",
+      "title": "Leaving a pending mutation keeps Home stale",
+      "why_it_matters": "If a user submits a slow create or delete and clicks Cancel or Home while it is saving, Home can fetch the list before the write commits. The successful mutation then does nothing because the form has unmounted, and Home has no mutation-completion subscription, so a created listing stays missing or a deleted listing remains visible until another refresh. Publishing successful rental mutations independently of the form lifetime lets the mounted Home reload the actual saved data without navigating the user away from their current screen."
+    },
+    {
+      "#": 4,
+      "autofix_class": "gated_auto",
+      "confidence": 75,
+      "evidence": [
+        "frontend/src/pages/CreateRecord.jsx:27:     if (!values.listingTitle.trim() || !values.propertyAddress.trim())",
+        "frontend/src/pages/CreateRecord.jsx:63:               minLength={26}",
+        "tests/browser_hw04_part1.cjs:272:       await fillRental(page, created);",
+        "tests/browser_hw04_part1.cjs:273:       state.faults.push({ method: 'POST', path: '/api/rentals', status: 422, payload: { detail: [{ loc: ['body', 'listingTitle'], msg: 'Title rejected by mock validation', type: 'value_error' }] } });",
+        "frontend/src/auth/AuthContext.jsx:25:       .catch((error) => {",
+        "frontend/src/auth/AuthContext.jsx:28:           status: error.status === 401 ? \"anonymous\" : \"error\",",
+        "frontend/src/App.jsx:126:         ) : auth.status === \"error\" ? (",
+        "tests/browser_hw04_part1.cjs:170:     if (pathname === '/api/auth/me') return respond(state.auth ? 200 : 401, state.auth ? { user: state.user } : { detail: 'Login required' });",
+        "frontend/src/pages/Home.jsx:20:       .catch((error) => {",
+        "frontend/src/pages/Home.jsx:85:           <button onClick={() => setAttempt((value) => value + 1)}>",
+        "tests/browser_hw04_part1.cjs:247:     await check('Empty authenticated listing state', async () => {"
+      ],
+      "file": "frontend/src/pages/CreateRecord.jsx",
+      "first_evidence": "frontend/src/pages/CreateRecord.jsx:27:     if (!values.listingTitle.trim() || !values.propertyAddress.trim())",
+      "independent_reviewers": [
+        "testing"
+      ],
+      "line": 27,
+      "owner": "downstream-resolver",
+      "pre_existing": false,
+      "requires_verification": true,
+      "reviewers": [
+        "testing"
+      ],
+      "severity": "P2",
+      "suggested_fix": "Extend the mock browser suite with blank and whitespace-only title/address, malformed email, a 25-character description and unchecked terms; assert no POST, preserved inputs and a valid boundary submission. Inject one-shot failed GET /api/auth/me and GET /api/rentals responses, verify protected or stale content remains hidden, and prove Try again issues a successful fresh request. These are one client coverage umbrella, not three independent implementation defects.",
+      "title": "Cover invalid create input and failed-load retry paths",
+      "why_it_matters": "The mock browser suite verifies valid submissions, server 422 errors and mutation network rejection but never exercises invalid client input or failures during the session/list reads. It could therefore pass after required-field or description-length validation breaks, or after startup/list retry no longer recovers. These missing checks concern the new client validation and error-state behavior required by R3/R6; they do not assert that the currently implemented branches are broken."
+    },
+    {
+      "#": 5,
+      "autofix_class": "gated_auto",
+      "confidence": 75,
+      "evidence": [
+        "tests/browser_hw04_part1.cjs:616:       await page.getByRole('article').first().waitFor();",
+        "tests/browser_hw04_part1.cjs:575-576: realFlow sets createdId = undefined after deleting its created listing; tests/browser_hw04_part1_runtime.py:147-151 starts expiry mode after real mode completes.",
+        "tests/browser_hw04_part1.cjs:576:       createdId = undefined;",
+        "tests/browser_hw04_part1_runtime.py:4: Uses an existing migrated MySQL database. Never seeds/resets data, prints secrets,"
+      ],
+      "file": "tests/browser_hw04_part1.cjs",
+      "first_evidence": "tests/browser_hw04_part1.cjs:616:       await page.getByRole('article').first().waitFor();",
+      "independent_reviewers": [
+        "reliability",
+        "testing"
+      ],
+      "line": 616,
+      "owner": "downstream-resolver",
+      "pre_existing": false,
+      "requires_verification": true,
+      "reviewers": [
+        "reliability",
+        "testing"
+      ],
+      "severity": "P2",
+      "suggested_fix": "Remove the article wait from expiryFlow and wait for the home page to finish its listing fetch (for example, a GET /api/rentals response or result-count/empty state) before starting the idle delay. Then run the expiry test against an otherwise empty database.",
+      "title": "Expiry check fails when the database is empty",
+      "why_it_matters": "The real suite creates and deletes its own listing before the expiry suite runs. If the database has no other listings, login succeeds and the home page loads, but this unrelated article assertion times out before the idle-expiry behavior is tested. The runtime guard then reports a failed expiry check for a valid empty database."
+    },
+    {
+      "#": 6,
+      "autofix_class": "gated_auto",
+      "confidence": 75,
+      "evidence": [
+        "tests/browser_hw04_part1_runtime.py:80:                                    stderr=subprocess.DEVNULL, start_new_session=True)",
+        "Browser Popen likewise uses start_new_session=True at tests/browser_hw04_part1_runtime.py:120 and :150; group cleanup is reached only in finally at lines 159-169, with no SIGTERM handler in the runner."
+      ],
+      "file": "tests/browser_hw04_part1_runtime.py",
+      "first_evidence": "tests/browser_hw04_part1_runtime.py:80:                                    stderr=subprocess.DEVNULL, start_new_session=True)",
+      "independent_reviewers": [
+        "reliability"
+      ],
+      "line": 80,
+      "owner": "downstream-resolver",
+      "pre_existing": false,
+      "requires_verification": true,
+      "reviewers": [
+        "reliability"
+      ],
+      "severity": "P2",
+      "suggested_fix": "Install a SIGTERM handler before launching owned subprocesses that raises a controlled termination exception or sets a cancellation flag, so Python executes the existing finally cleanup. Verify by signaling the runner during a waiting checkpoint and checking that its child process groups and listening port are gone.",
+      "title": "Terminate owned processes when runner receives SIGTERM",
+      "why_it_matters": "The runner starts the server and browsers in independent sessions. A SIGTERM sent to the runner, as by a job timeout or cancellation, terminates Python without executing its finally block, leaving the owned server or browser running and the port occupied. The existing group cleanup covers Python exceptions and normal exit only."
+    }
+  ],
+  "primary_count": 6,
+  "pre_existing_findings": [],
+  "residual_risks": [],
+  "testing_gaps": [],
+  "triage_groups": [
+    {
+      "title": "Pending rental writes",
+      "findings": [
+        2,
+        3
+      ],
+      "kind": "apply-queue",
+      "context": "A form can unmount while its submitted write remains active.",
+      "preferred_resolution": "Handle #2 to remove misleading Cancel behavior, then #3 to refresh Home when a write completes after navigation.",
+      "why": "Disabling Cancel alone does not cover Home navigation, and refreshing Home alone does not make cancellation truthful."
+    },
+    {
+      "title": "Browser evidence runner reliability",
+      "findings": [
+        5,
+        6
+      ],
+      "kind": "apply-queue",
+      "context": "The runner must work with an empty database and release its owned port on termination.",
+      "preferred_resolution": "Fix the expiry readiness assertion in #5 and subprocess cleanup in #6, then verify both runner branches.",
+      "why": "These failures can invalidate evidence collection or leave port 8702 occupied for sibling tasks."
+    }
+  ],
+  "suppressed_by_confidence": {},
+  "malformed_findings": 0,
+  "malformed_returns": 0,
+  "first_evidence_backfilled": 0,
+  "first_evidence_demoted": 0,
+  "mode_aware_demotions": 0,
+  "settled_conflicts_suppressed": 0,
+  "semantic_merges": 2,
+  "testing_umbrella_consolidated": 3,
+  "rejected_claims": [
+    {
+      "title": "Runtime evidence omits its own source fingerprint",
+      "reason": "Refuted by reviewed snapshot tests/browser_hw04_part1.cjs:646: sourceMetadata already includes tests/browser_hw04_part1_runtime.py in the SHA-256 manifest. The prior reviewer quote omits that final element."
+    },
+    {
+      "title": "Bound API requests so loading can recover",
+      "reason": "The request helper reports fetch rejection and caller aborts, while the plan specifies no response deadline. No stalled local-backend trigger or observed inability to recover is established. A configurable timeout is an optional resilience enhancement, not an evidenced defect under this scope."
+    }
+  ],
+  "peer": {
+    "selected": true,
+    "target": "claude",
+    "route": "claude",
+    "preference_source": "default",
+    "outcome": "in-process-fallback",
+    "artifact": null,
+    "coverage": "Cross-model pass not run: automatic approval review rejected external source-code egress to Claude under the local-only scope. No peer job started; local adversarial fallback supplies this lens."
+  },
+  "coverage_notes": [
+    "Review depth: full, required by 300 executable production lines.",
+    "Scope: frozen frontend and browser runner snapshot against HW3 baseline; sibling backend changes and pending report/evidence artifacts are excluded.",
+    "Project standards: not run (no applicable criteria files).",
+    "Untracked reports/hw04/ excluded.",
+    "Parent reported 15 mock browser checks passed after label fixes, but reviewer has not independently rerun them.",
+    "No external peer job is outstanding.",
+    "At parent request, added staged tests/browser_hw04_part1_runtime.py and refreshed CJS snapshot for output-directory flags, restart and expiry orchestration; targeted testing and reliability reviewers inspect the delta without running8702.",
+    "Cross-model pass not run: automatic approval review rejected external source-code egress to Claude under the local-only scope. No peer job started; local adversarial fallback supplies this lens.",
+    "Semantic reconciliation merged two duplicate pairs: departed-mutation refresh and empty-database expiry. Cancel labeling remains a separate finding because refreshing Home does not repair misleading cancellation behavior.",
+    "Three absence-of-coverage claims were consolidated into one frontend client test umbrella.",
+    "Two claims were rejected after source inspection: the runtime orchestrator is already included in the browser source hash manifest, and a response deadline was not an established project contract or observed failure.",
+    "Confidence suppression: 0. Malformed findings/returns: 0/0. Missing-quote demotions: 0. first_evidence_backfilled: 0. Mode-aware soft-bucket demotions: 0.",
+    "No validator shortcut applies: 0 quote-anchored cross-model-corroborated findings; all 6 remaining actionable P2 findings require the single validator batch.",
+    "No settled-decision conflicts or unrequested behavior rules found within the reviewed client and runner scope. R7 and real U3 execution remain intentional coverage limits, not missing implementation findings.",
+    "This merge stage used read-only frozen source inspection; it did not run the browser, start a server, or change application/database state."
+  ],
+  "requirements_completeness": [
+    {
+      "id": "R1",
+      "status": "met",
+      "notes": "Login delegates email/password through the shared credentialed request helper; actual HTTP-only cookie proof is outside this source snapshot."
+    },
+    {
+      "id": "R2",
+      "status": "met",
+      "notes": "Home and mutation routes are guarded by resolved backend identity."
+    },
+    {
+      "id": "R3",
+      "status": "met",
+      "notes": "Create receives onAdd, sends all six fields, and fetches server records after success; #2/#3 cover navigation races."
+    },
+    {
+      "id": "R4",
+      "status": "met",
+      "notes": "Update receives a callback and sends title/address only for the selected server ID."
+    },
+    {
+      "id": "R5",
+      "status": "met",
+      "notes": "Delete shows selected identity and invokes its callback; #2/#3 cover pending write behavior."
+    },
+    {
+      "id": "R6",
+      "status": "met",
+      "notes": "Router/hooks and loading, empty, error and expiry UI are present; #1 covers an old-session response race and #4 covers untested branches."
+    },
+    {
+      "id": "R7",
+      "status": "outside reviewed snapshot",
+      "notes": "Reports, real evidence and AI-use records are parent-owned work in progress, intentionally excluded."
+    },
+    {
+      "id": "U1",
+      "status": "met",
+      "notes": "React application, routes and navigation are present."
+    },
+    {
+      "id": "U2",
+      "status": "met",
+      "notes": "Forms, callbacks, error handling and stale-read guards are present, with scoped findings above."
+    },
+    {
+      "id": "U3",
+      "status": "partially addressed",
+      "notes": "Browser runner source reviewed; sibling foundation, actual MySQL browser execution and report artifacts are outside this snapshot."
+    }
+  ],
+  "unrequested_behavior_rules": []
+}

@@ -1,0 +1,490 @@
+{
+  "schema_version": 1,
+  "mode": "REAL",
+  "started_at": "2026-09-28T00:32:18.291Z",
+  "status": "fail",
+  "command": "node tests/browser_hw04_part1.cjs --real",
+  "base_url": "https://127.0.0.1:8702",
+  "cwd": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react",
+  "checks": [
+    {
+      "name": "Signed-out direct visits hide protected records",
+      "status": "pass",
+      "started_at": "2026-09-28T00:32:18.696Z",
+      "details": {
+        "file": "reports/hw04/screenshots/part1/real-signed-out.png",
+        "mode": "REAL",
+        "captured_at": "2026-09-28T00:32:18.899Z",
+        "actual_url": "https://127.0.0.1:8702/delete?id=17",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "dimensions": {
+          "viewport_width": 1280,
+          "document_width": 1280,
+          "body_width": 1280
+        }
+      },
+      "finished_at": "2026-09-28T00:32:18.900Z",
+      "actual_url": "https://127.0.0.1:8702/delete?id=17"
+    },
+    {
+      "name": "Unauthenticated CRUD APIs reject requests; unknown API remains JSON",
+      "status": "pass",
+      "started_at": "2026-09-28T00:32:18.900Z",
+      "details": {
+        "unauthenticated": [
+          {
+            "method": "GET",
+            "path": "/api/rentals",
+            "status": 401
+          },
+          {
+            "method": "GET",
+            "path": "/api/rentals/1",
+            "status": 401
+          },
+          {
+            "method": "POST",
+            "path": "/api/rentals",
+            "status": 401
+          },
+          {
+            "method": "PUT",
+            "path": "/api/rentals/1",
+            "status": 401
+          },
+          {
+            "method": "DELETE",
+            "path": "/api/rentals/1",
+            "status": 401
+          }
+        ],
+        "unknown_api": {
+          "status": 404,
+          "content_type": "application/json"
+        }
+      },
+      "finished_at": "2026-09-28T00:32:18.914Z",
+      "actual_url": "https://127.0.0.1:8702/delete?id=17"
+    },
+    {
+      "name": "Invalid credentials stay rejected",
+      "status": "pass",
+      "started_at": "2026-09-28T00:32:18.914Z",
+      "details": {
+        "response_status": 401,
+        "screenshot": {
+          "file": "reports/hw04/screenshots/part1/real-invalid-login.png",
+          "mode": "REAL",
+          "captured_at": "2026-09-28T00:32:19.127Z",
+          "actual_url": "https://127.0.0.1:8702/login",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "dimensions": {
+            "viewport_width": 1280,
+            "document_width": 1280,
+            "body_width": 1280
+          }
+        }
+      },
+      "finished_at": "2026-09-28T00:32:19.127Z",
+      "actual_url": "https://127.0.0.1:8702/login"
+    },
+    {
+      "name": "Valid HTTPS login sets an opaque HTTP-only secure cookie",
+      "status": "pass",
+      "started_at": "2026-09-28T00:32:19.127Z",
+      "details": {
+        "status": 200,
+        "cookie": {
+          "name": "s6102_session",
+          "value": "[REDACTED]",
+          "httpOnly": true,
+          "secure": true,
+          "sameSite": "Lax",
+          "path": "/"
+        },
+        "captured_set_cookie_headers": [
+          {
+            "name": "set-cookie",
+            "value": "s6102_session=[REDACTED]; HttpOnly; Max-Age=3600; Path=/; SameSite=lax; Secure"
+          }
+        ],
+        "javascript_cannot_read_cookie": true,
+        "screenshot": {
+          "file": "reports/hw04/screenshots/part1/real-authenticated-home.png",
+          "mode": "REAL",
+          "captured_at": "2026-09-28T00:32:19.248Z",
+          "actual_url": "https://127.0.0.1:8702/",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "dimensions": {
+            "viewport_width": 1280,
+            "document_width": 1280,
+            "body_width": 1280
+          }
+        }
+      },
+      "finished_at": "2026-09-28T00:32:19.249Z",
+      "actual_url": "https://127.0.0.1:8702/"
+    },
+    {
+      "name": "Create sends six fields and renders the database-assigned ID",
+      "status": "pass",
+      "started_at": "2026-09-28T00:32:19.249Z",
+      "details": {
+        "server_id": 5,
+        "sent_body": {
+          "listingTitle": "HW4 browser verification 1790555538696",
+          "propertyAddress": "6102 Verification Avenue",
+          "submitterEmail": "landlord@example.com",
+          "description": "A spacious apartment with a sunny living room and quiet study area.",
+          "propertyType": "apartment",
+          "termsAccepted": true
+        },
+        "status": 201,
+        "screenshot": {
+          "file": "reports/hw04/screenshots/part1/real-created-home.png",
+          "mode": "REAL",
+          "captured_at": "2026-09-28T00:32:19.520Z",
+          "actual_url": "https://127.0.0.1:8702/",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "dimensions": {
+            "viewport_width": 1280,
+            "document_width": 1280,
+            "body_width": 1280
+          }
+        }
+      },
+      "finished_at": "2026-09-28T00:32:19.520Z",
+      "actual_url": "https://127.0.0.1:8702/"
+    },
+    {
+      "name": "Update direct URL and refresh retain selection; two fields persist",
+      "status": "pass",
+      "started_at": "2026-09-28T00:32:19.520Z",
+      "details": {
+        "sent_body": {
+          "listingTitle": "HW4 browser verification 1790555538696 revised",
+          "propertyAddress": "8702 Persistent Record Road"
+        },
+        "unchanged_extra_fields": true,
+        "screenshot": {
+          "file": "reports/hw04/screenshots/part1/real-updated-home.png",
+          "mode": "REAL",
+          "captured_at": "2026-09-28T00:32:19.722Z",
+          "actual_url": "https://127.0.0.1:8702/",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "dimensions": {
+            "viewport_width": 1280,
+            "document_width": 1280,
+            "body_width": 1280
+          }
+        }
+      },
+      "finished_at": "2026-09-28T00:32:19.722Z",
+      "actual_url": "https://127.0.0.1:8702/"
+    },
+    {
+      "name": "Updated rental and authentication survive owner-controlled backend restart",
+      "status": "pass",
+      "started_at": "2026-09-28T00:32:19.722Z",
+      "details": {
+        "record_id": 5,
+        "restart_acknowledged": true,
+        "session_survived": true,
+        "screenshot": {
+          "file": "reports/hw04/screenshots/part1/real-after-backend-restart.png",
+          "mode": "REAL",
+          "captured_at": "2026-09-28T00:32:54.569Z",
+          "actual_url": "https://127.0.0.1:8702/",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "dimensions": {
+            "viewport_width": 1280,
+            "document_width": 1280,
+            "body_width": 1280
+          }
+        }
+      },
+      "finished_at": "2026-09-28T00:32:54.570Z",
+      "actual_url": "https://127.0.0.1:8702/"
+    },
+    {
+      "name": "Real missing/invalid ID routes remain safe",
+      "status": "pass",
+      "started_at": "2026-09-28T00:32:54.570Z",
+      "details": [
+        {
+          "path": "/update",
+          "message": "Choose a listing from the home page to update. A valid positive listing ID is required."
+        },
+        {
+          "path": "/delete",
+          "message": "Choose a listing from the home page to delete. A valid positive listing ID is required."
+        },
+        {
+          "path": "/update?id=invalid",
+          "message": "Choose a listing from the home page to update. A valid positive listing ID is required."
+        },
+        {
+          "path": "/delete?id=-1",
+          "message": "Choose a listing from the home page to delete. A valid positive listing ID is required."
+        }
+      ],
+      "finished_at": "2026-09-28T00:32:54.681Z",
+      "actual_url": "https://127.0.0.1:8702/delete?id=-1"
+    },
+    {
+      "name": "Narrow real browser shows persisted records without horizontal overflow",
+      "status": "pass",
+      "started_at": "2026-09-28T00:32:54.681Z",
+      "details": {
+        "file": "reports/hw04/screenshots/part1/real-mobile-home.png",
+        "mode": "REAL",
+        "captured_at": "2026-09-28T00:32:54.762Z",
+        "actual_url": "https://127.0.0.1:8702/",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "dimensions": {
+          "viewport_width": 390,
+          "document_width": 390,
+          "body_width": 390
+        }
+      },
+      "finished_at": "2026-09-28T00:32:54.763Z",
+      "actual_url": "https://127.0.0.1:8702/"
+    },
+    {
+      "name": "Delete direct URL confirms selected record, then handles empty 204",
+      "status": "fail",
+      "started_at": "2026-09-28T00:32:54.763Z",
+      "error": "response.text: Protocol error (Network.getResponseBody): No data found for resource with given identifier\nResponse body is not available for a response that was navigated away from. Read response.body() before triggering any navigation.\n    at /Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tests/browser_hw04_part1.cjs:567:35\n    at async check (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tests/browser_hw04_part1.cjs:47:22)\n    at async realFlow (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tests/browser_hw04_part1.cjs:556:5)\n    at async main (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tests/browser_hw04_part1.cjs:630:10)",
+      "finished_at": "2026-09-28T00:32:54.868Z",
+      "actual_url": "https://127.0.0.1:8702/"
+    }
+  ],
+  "screenshots": [
+    {
+      "file": "reports/hw04/screenshots/part1/real-signed-out.png",
+      "mode": "REAL",
+      "captured_at": "2026-09-28T00:32:18.899Z",
+      "actual_url": "https://127.0.0.1:8702/delete?id=17",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "dimensions": {
+        "viewport_width": 1280,
+        "document_width": 1280,
+        "body_width": 1280
+      }
+    },
+    {
+      "file": "reports/hw04/screenshots/part1/real-invalid-login.png",
+      "mode": "REAL",
+      "captured_at": "2026-09-28T00:32:19.127Z",
+      "actual_url": "https://127.0.0.1:8702/login",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "dimensions": {
+        "viewport_width": 1280,
+        "document_width": 1280,
+        "body_width": 1280
+      }
+    },
+    {
+      "file": "reports/hw04/screenshots/part1/real-authenticated-home.png",
+      "mode": "REAL",
+      "captured_at": "2026-09-28T00:32:19.248Z",
+      "actual_url": "https://127.0.0.1:8702/",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "dimensions": {
+        "viewport_width": 1280,
+        "document_width": 1280,
+        "body_width": 1280
+      }
+    },
+    {
+      "file": "reports/hw04/screenshots/part1/real-create-form.png",
+      "mode": "REAL",
+      "captured_at": "2026-09-28T00:32:19.399Z",
+      "actual_url": "https://127.0.0.1:8702/create",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "dimensions": {
+        "viewport_width": 1280,
+        "document_width": 1280,
+        "body_width": 1280
+      }
+    },
+    {
+      "file": "reports/hw04/screenshots/part1/real-created-home.png",
+      "mode": "REAL",
+      "captured_at": "2026-09-28T00:32:19.520Z",
+      "actual_url": "https://127.0.0.1:8702/",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "dimensions": {
+        "viewport_width": 1280,
+        "document_width": 1280,
+        "body_width": 1280
+      }
+    },
+    {
+      "file": "reports/hw04/screenshots/part1/real-update-form.png",
+      "mode": "REAL",
+      "captured_at": "2026-09-28T00:32:19.594Z",
+      "actual_url": "https://127.0.0.1:8702/update?id=5",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "dimensions": {
+        "viewport_width": 1280,
+        "document_width": 1280,
+        "body_width": 1280
+      }
+    },
+    {
+      "file": "reports/hw04/screenshots/part1/real-updated-home.png",
+      "mode": "REAL",
+      "captured_at": "2026-09-28T00:32:19.722Z",
+      "actual_url": "https://127.0.0.1:8702/",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "dimensions": {
+        "viewport_width": 1280,
+        "document_width": 1280,
+        "body_width": 1280
+      }
+    },
+    {
+      "file": "reports/hw04/screenshots/part1/real-after-backend-restart.png",
+      "mode": "REAL",
+      "captured_at": "2026-09-28T00:32:54.569Z",
+      "actual_url": "https://127.0.0.1:8702/",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "dimensions": {
+        "viewport_width": 1280,
+        "document_width": 1280,
+        "body_width": 1280
+      }
+    },
+    {
+      "file": "reports/hw04/screenshots/part1/real-mobile-home.png",
+      "mode": "REAL",
+      "captured_at": "2026-09-28T00:32:54.762Z",
+      "actual_url": "https://127.0.0.1:8702/",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "dimensions": {
+        "viewport_width": 390,
+        "document_width": 390,
+        "body_width": 390
+      }
+    },
+    {
+      "file": "reports/hw04/screenshots/part1/real-delete-confirmation.png",
+      "mode": "REAL",
+      "captured_at": "2026-09-28T00:32:54.826Z",
+      "actual_url": "https://127.0.0.1:8702/delete?id=5",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "dimensions": {
+        "viewport_width": 1280,
+        "document_width": 1280,
+        "body_width": 1280
+      }
+    }
+  ],
+  "requests": [
+    {
+      "method": "POST",
+      "path": "/api/rentals",
+      "body": {
+        "listingTitle": "HW4 browser verification 1790555538696",
+        "propertyAddress": "6102 Verification Avenue",
+        "submitterEmail": "landlord@example.com",
+        "description": "A spacious apartment with a sunny living room and quiet study area.",
+        "propertyType": "apartment",
+        "termsAccepted": true
+      },
+      "status": 201,
+      "returned_id": 5
+    },
+    {
+      "method": "PUT",
+      "path": "/api/rentals/5",
+      "body": {
+        "listingTitle": "HW4 browser verification 1790555538696 revised",
+        "propertyAddress": "8702 Persistent Record Road"
+      },
+      "status": 200
+    }
+  ],
+  "limitations": [
+    "The owner supplies the running HTTPS/MySQL service and credentials. The runner never resets a database.",
+    "Idle-expiry capture needs an explicitly configured short-timeout service; this runner does not change server settings."
+  ],
+  "git_revision": "47299ad67ed6e956f7da171bf2396ec2f961688f",
+  "source_sha256": {
+    "frontend/src/App.jsx": "c53234691d418cf00f6f0111d61f432f0e55b7cf2d774c9e6f374c0e10a37986",
+    "frontend/src/api/client.js": "ad9f34187c65051f50bdcf38f8b41743840ab2b9efadfc6d3c0fe44c45b96c74",
+    "frontend/src/auth/AuthContext.jsx": "3e5b278852638b50895295a7d363992a8385797ce7613705d87c29750a529072",
+    "frontend/src/components/forms.jsx": "63d9a514ff92b5580fdb053788b8836c9cff602cbd126a20dd4479fac5be96ec",
+    "frontend/src/main.jsx": "9caa0ca3ee8cbe0c9c052134346ac7dca26c0584cd929c07cd5b485940acfb88",
+    "frontend/src/pages/CreateRecord.jsx": "1e10124985a37b863dcbf836b8076a960bdaf72ebc068ab5ac2d6cec82df98a5",
+    "frontend/src/pages/DeleteRecord.jsx": "382eb88c8506346ac81cbc9cc06e0689903570b95fcee42afd81f5ec89909e49",
+    "frontend/src/pages/Home.jsx": "b7bd82f7edea3d56159293951630467c6332f54c4fc163d26a06c07648844fd3",
+    "frontend/src/pages/Login.jsx": "99c97544645656a30212e8d79f5417b572f4b5671c6d4b84f71b5c9b721bebb0",
+    "frontend/src/pages/UpdateRecord.jsx": "b1837f0376d7e90873127e5fac2271c2f5e748335b75be002de568b416f5233d",
+    "frontend/src/styles.css": "56a592a752fe527d9e5a52fa07ea01620cf5ee57ae9d89222bc89b09631e1ce8",
+    "frontend/package.json": "c475bf47a063a7498f1978b8056220babbf7fc85d46b0052bbaa33c99d00e708",
+    "frontend/package-lock.json": "68c01a3da7ac965f5f8d9d305eef7aa973014a813d32760e8cbf94c4e3970969",
+    "frontend/vite.config.js": "e0074b500074eb549063648ead9567ffffb125325eb0a0a9b1a29a12bce3837f",
+    "tests/browser_hw04_part1.cjs": "08b93ed0df484de4f0e61ea55e83223f59b6514d8d3f92d583506ca42cfd5a3c"
+  },
+  "failure_cleanup": {
+    "record_id": 5,
+    "delete_status": 404
+  },
+  "error": "response.text: Protocol error (Network.getResponseBody): No data found for resource with given identifier\nResponse body is not available for a response that was navigated away from. Read response.body() before triggering any navigation.\n    at /Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tests/browser_hw04_part1.cjs:567:35\n    at async check (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tests/browser_hw04_part1.cjs:47:22)\n    at async realFlow (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tests/browser_hw04_part1.cjs:556:5)\n    at async main (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW4/worktrees/part1-react/tests/browser_hw04_part1.cjs:630:10)",
+  "finished_at": "2026-09-28T00:32:54.901Z",
+  "passed_checks": 9,
+  "failed_checks": 1
+}
