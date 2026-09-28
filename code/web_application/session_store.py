@@ -1,58 +1,74 @@
-"""App-local, revocable sessions for the single-worker homework demonstration."""
+"""Persistent authentication-session helpers using UTC-naive database times.
 
-from collections.abc import Callable
-import math
+SQLAlchemy sessions are units of database work; ``SessionToken`` records are
+browser logins. The request's database session is supplied by ``get_db``. Nothing
+in this module creates an engine, writes seed data, or keeps login state in memory.
+"""
+
+from datetime import datetime, timedelta
 import secrets
-from time import monotonic
+
+from sqlalchemy import delete, select
+from sqlalchemy.orm import Session
+
+from .models import SessionToken, User
 
 
-class SessionStore:
-    """Keep the authoritative user and last activity outside the signed cookie.
+COOKIE_NAME = "s6102_session"
+IDLE_TIMEOUT_SECONDS = 300
+ABSOLUTE_TIMEOUT_SECONDS = 3600
 
-    A process restart drops this registry, so previously issued cookies cannot
-    restore a login. Auth routes are its only callers: rental API requests and
-    static assets deliberately do not extend the idle deadline.
+
+def create_session(db: Session, user_id: int, now: datetime) -> SessionToken:
+    """Stage an opaque login token; the caller commits its login transaction."""
+    token = SessionToken(
+        id=secrets.token_urlsafe(32),
+        user_id=user_id,
+        created_at=now,
+        expires_at=now + timedelta(seconds=ABSOLUTE_TIMEOUT_SECONDS),
+        last_activity_at=now,
+    )
+    db.add(token)
+    return token
+
+
+def revoke_session(db: Session, token_id: str | None) -> None:
+    """Stage deletion of a cookie token, including unknown or expired tokens."""
+    if token_id:
+        db.execute(delete(SessionToken).where(SessionToken.id == token_id))
+
+
+def authenticate_session(
+    db: Session,
+    token_id: str | None,
+    now: datetime,
+    idle_timeout: float = IDLE_TIMEOUT_SECONDS,
+) -> User | None:
+    """Check one joined login/user lookup and commit accepted activity.
+
+    The activity commit intentionally precedes the endpoint's work: a valid
+    authenticated request counts as activity even if its payload is invalid or
+    the endpoint later rolls back. ``get_db`` uses ``expire_on_commit=False``,
+    keeping the loaded user available without a second user SELECT.
     """
-
-    def __init__(self, idle_timeout: float = 300, clock: Callable[[], float] = monotonic):
-        if not math.isfinite(idle_timeout) or idle_timeout <= 0:
-            raise ValueError("idle timeout must be a positive, finite number of seconds")
-        self.idle_timeout = idle_timeout
-        self.clock = clock
-        self._sessions: dict[str, tuple[str, float]] = {}
-
-    def __len__(self) -> int:
-        return len(self._sessions)
-
-    def cleanup(self, now: float | None = None) -> None:
-        """Expire at the boundary, before any request can renew activity."""
-        now = self.clock() if now is None else now
-        expired = [
-            sid for sid, (_, last_activity) in self._sessions.items()
-            if now - last_activity >= self.idle_timeout
-        ]
-        for sid in expired:
-            del self._sessions[sid]
-
-    def create(self, user: str) -> str:
-        now = self.clock()
-        self.cleanup(now)
-        sid = secrets.token_urlsafe(32)
-        self._sessions[sid] = (user, now)
-        return sid
-
-    def authenticate(self, sid: object, user: object) -> str | None:
-        now = self.clock()
-        self.cleanup(now)
-        if not isinstance(sid, str) or not isinstance(user, str):
-            return None
-        session = self._sessions.get(sid)
-        if session is None or session[0] != user:
-            return None
-        self._sessions[sid] = (user, now)
-        return user
-
-    def revoke(self, sid: object) -> None:
-        self.cleanup()
-        if isinstance(sid, str):
-            self._sessions.pop(sid, None)
+    if not token_id:
+        return None
+    row = db.execute(
+        select(SessionToken, User).join(User, SessionToken.user_id == User.id).where(
+            SessionToken.id == token_id
+        )
+    ).first()
+    if row is None:
+        return None
+    token, user = row
+    if (
+        now >= token.expires_at
+        or now - token.created_at >= timedelta(seconds=ABSOLUTE_TIMEOUT_SECONDS)
+        or now - token.last_activity_at >= timedelta(seconds=idle_timeout)
+    ):
+        db.delete(token)
+        db.commit()
+        return None
+    token.last_activity_at = now
+    db.commit()
+    return user
