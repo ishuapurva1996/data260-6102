@@ -1,4 +1,6 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { deleteRental } from "../features/rentals/rentalsSlice.js";
 import {
   ErrorNotice,
   FormActions,
@@ -7,10 +9,12 @@ import {
   useSubmission,
 } from "../components/forms.jsx";
 
-export default function DeleteRecord({ id, onDelete }) {
+export default function DeleteRecord({ id }) {
+  const dispatch = useDispatch();
+  const saving = useSelector((state) => state.rentals.mutations[`record:${id}`]?.status === "pending");
   const state = useSelectedRental(id);
   const { pending, error, submit } = useSubmission(
-    () => onDelete(id),
+    () => dispatch(deleteRental(id)).unwrap(),
     "Listing deleted.",
   );
   if (!state.record) return <RecordState {...state} />;
@@ -27,7 +31,7 @@ export default function DeleteRecord({ id, onDelete }) {
       </div>
       <form onSubmit={submit}>
         <ErrorNotice error={error} />
-        <FormActions pending={pending} label="Delete listing" danger />
+        <FormActions pending={pending || saving} label="Delete listing" danger />
       </form>
     </section>
   );

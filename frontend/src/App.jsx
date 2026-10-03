@@ -8,7 +8,6 @@ import {
   useNavigate,
   useSearchParams,
 } from "react-router-dom";
-import { rentals } from "./api/client.js";
 import { useAuth } from "./auth/AuthContext.jsx";
 import { ErrorNotice } from "./components/forms.jsx";
 import Home from "./pages/Home.jsx";
@@ -48,9 +47,9 @@ function SelectedRecord({ kind }) {
       </section>
     );
   return kind === "update" ? (
-    <UpdateRecord key={id} id={id} onUpdate={rentals.update} />
+    <UpdateRecord key={id} id={id} />
   ) : (
-    <DeleteRecord key={id} id={id} onDelete={rentals.remove} />
+    <DeleteRecord key={id} id={id} />
   );
 }
 
@@ -144,7 +143,7 @@ export default function App() {
               path="/create"
               element={
                 <RequireAuth>
-                  <CreateRecord onAdd={rentals.create} />
+                  <CreateRecord />
                 </RequireAuth>
               }
             />

@@ -1,12 +1,19 @@
 import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { createRental } from "../features/rentals/rentalsSlice.js";
 import {
   ErrorNotice,
   FormActions,
-  TitleFields,
+  RentalFields,
+  rentalFields,
+  useManagers,
   useSubmission,
 } from "../components/forms.jsx";
 
-export default function CreateRecord({ onAdd }) {
+export default function CreateRecord() {
+  const dispatch = useDispatch();
+  const managers = useManagers();
+  const saving = useSelector((state) => state.rentals.mutations.create?.status === "pending");
   const [values, setValues] = useState({
     listingTitle: "",
     propertyAddress: "",
@@ -14,6 +21,9 @@ export default function CreateRecord({ onAdd }) {
     description: "",
     propertyType: "apartment",
     termsAccepted: false,
+    listingCode: "",
+    availableUnits: "1",
+    managerId: "",
   });
   const change = (event) =>
     setValues((previous) => ({
@@ -24,26 +34,26 @@ export default function CreateRecord({ onAdd }) {
           : event.target.value,
     }));
   const { pending, error, submit } = useSubmission(() => {
-    if (!values.listingTitle.trim() || !values.propertyAddress.trim())
-      throw new Error("Listing title and property address cannot be blank.");
-    return onAdd({
-      ...values,
-      listingTitle: values.listingTitle.trim(),
-      propertyAddress: values.propertyAddress.trim(),
+    const fields = rentalFields(values, true);
+    return dispatch(createRental({
+      ...fields,
       submitterEmail: values.submitterEmail.trim(),
-    });
+      description: values.description,
+      propertyType: values.propertyType,
+      termsAccepted: values.termsAccepted,
+    })).unwrap();
   }, "Listing added.");
   return (
     <section className="panel form-panel">
       <p className="eyebrow">NEW RENTAL</p>
       <h1>Add a rental listing</h1>
       <p>
-        Share the details that help someone find their next home. All fields are
+        Share the details that help someone find their next home. All fields except the listing code are
         required.
       </p>
       <form onSubmit={submit}>
-        <fieldset disabled={pending}>
-          <TitleFields values={values} onChange={change} />
+        <fieldset disabled={pending || saving}>
+          <RentalFields values={values} onChange={change} managers={managers} creating />
           <label>
             Landlord Email
             <input
@@ -92,7 +102,7 @@ export default function CreateRecord({ onAdd }) {
           </label>
         </fieldset>
         <ErrorNotice error={error} />
-        <FormActions pending={pending} label="Add listing" />
+        <FormActions pending={pending || saving} disabled={managers.loading || !!managers.error || !managers.records.length} label="Add listing" />
       </form>
     </section>
   );

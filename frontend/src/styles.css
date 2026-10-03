@@ -360,3 +360,11 @@ label[for="propertyType"] {
 #description {
   margin-bottom: 20px;
 }
+
+.pagination {
+  margin-top: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.pagination label { margin: 0; }
+.listing-details { font-size: 13px; color: #59685d; }

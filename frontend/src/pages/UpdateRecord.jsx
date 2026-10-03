@@ -1,35 +1,40 @@
 import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { updateRental } from "../features/rentals/rentalsSlice.js";
 import {
   ErrorNotice,
   FormActions,
   RecordState,
-  TitleFields,
+  RentalFields,
+  rentalFields,
+  useManagers,
   useSelectedRental,
   useSubmission,
 } from "../components/forms.jsx";
 
-function UpdateForm({ record, onUpdate }) {
+function UpdateForm({ record }) {
+  const dispatch = useDispatch();
+  const managers = useManagers();
+  const saving = useSelector((state) => state.rentals.mutations[`record:${record.id}`]?.status === "pending");
   const [values, setValues] = useState({
     listingTitle: record.listingTitle,
     propertyAddress: record.propertyAddress,
+    listingCode: record.listingCode,
+    availableUnits: String(record.availableUnits),
+    managerId: record.managerId == null ? "" : String(record.managerId),
   });
   const { pending, error, submit } = useSubmission(() => {
-    const fields = {
-      listingTitle: values.listingTitle.trim(),
-      propertyAddress: values.propertyAddress.trim(),
-    };
-    if (!fields.listingTitle || !fields.propertyAddress)
-      throw new Error("Listing title and property address cannot be blank.");
-    return onUpdate(record.id, fields);
+    return dispatch(updateRental({ id: record.id, fields: rentalFields(values) })).unwrap();
   }, "Listing updated.");
   return (
     <section className="panel form-panel">
       <p className="eyebrow">RENTAL #{record.id}</p>
       <h1>Update listing</h1>
-      <p>Edit the title and address. The other rental details stay saved.</p>
+      <p>Edit the title, address, listing code, available units, and manager.</p>
       <form onSubmit={submit}>
-        <fieldset disabled={pending}>
-          <TitleFields
+        <fieldset disabled={pending || saving}>
+          <RentalFields
+            managers={managers}
             values={values}
             onChange={(event) =>
               setValues((previous) => ({
@@ -40,19 +45,18 @@ function UpdateForm({ record, onUpdate }) {
           />
         </fieldset>
         <ErrorNotice error={error} />
-        <FormActions pending={pending} label="Save changes" />
+        <FormActions pending={pending || saving} disabled={managers.loading || !!managers.error || !managers.records.length} label="Save changes" />
       </form>
     </section>
   );
 }
 
-export default function UpdateRecord({ id, onUpdate }) {
+export default function UpdateRecord({ id }) {
   const state = useSelectedRental(id);
   return state.record ? (
     <UpdateForm
       key={state.record.id}
       record={state.record}
-      onUpdate={onUpdate}
     />
   ) : (
     <RecordState {...state} />
