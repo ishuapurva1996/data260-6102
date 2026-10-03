@@ -1,0 +1,72 @@
+[
+  {
+    "label": "2A-01-search-meals",
+    "screenshot": "reports/hw05/screenshots/part2/2A-01-search-meals.jpg",
+    "screenshot_sha256": "2b2d5a25b746601e4cfe1b58e54b527504caf7b85fcda096bc9126e18d3fb720",
+    "gui_json": "reports/hw05/raw/part2/inspector/2A-01-search-meals.json",
+    "gui_json_sha256": "8973ac60a7f807bde75767664f1527f5708c08714287464bced0286bec9f59fb"
+  },
+  {
+    "label": "2A-02-ingredient",
+    "screenshot": "reports/hw05/screenshots/part2/2A-02-ingredient.jpg",
+    "screenshot_sha256": "7ce7b0afb67ae744ed8d11e9da89d51ca277d11196c5f8ff6975707c433b22ee",
+    "gui_json": "reports/hw05/raw/part2/inspector/2A-02-ingredient.json",
+    "gui_json_sha256": "33228ab631383eac92faf1404d04cda245c5b9a6f8f83cdd549bf7e6e2024c68"
+  },
+  {
+    "label": "2A-03-random-meal",
+    "screenshot": "reports/hw05/screenshots/part2/2A-03-random-meal.jpg",
+    "screenshot_sha256": "4b73a61d1809288f99668ce8a87e01ff2a88d561cac2819ed9610e880d2a0558",
+    "gui_json": "reports/hw05/raw/part2/inspector/2A-03-random-meal.json",
+    "gui_json_sha256": "5c5e38ee654475c992e1523d79ddef78c6a07d5cab602fce2471628206175bfb"
+  },
+  {
+    "label": "2A-04-meal-details",
+    "screenshot": "reports/hw05/screenshots/part2/2A-04-meal-details.jpg",
+    "screenshot_sha256": "871bc59bec9adab4841ae4845685d17741cc2ab57e10c61a80edadcf8d762adc",
+    "gui_json": "reports/hw05/raw/part2/inspector/2A-04-meal-details.json",
+    "gui_json_sha256": "cf3ab4caba85f685fec9a450da518c3cc2f59fc026a5c7c3757ab016e7079817"
+  },
+  {
+    "label": "2B-01-search-success",
+    "screenshot": "reports/hw05/screenshots/part2/2B-01-search-success-mysql3308.jpg",
+    "screenshot_sha256": "ee77455784e426ef1048728d603eaf170f6d2131b76c65bfcd925288caa96d70",
+    "gui_json": "reports/hw05/raw/part2/inspector/2B-01-search-success.json",
+    "gui_json_sha256": "e4bdaec4fe20960b69c8fe0b9a4ba293a449159345208a813ebe6051e09631ea"
+  },
+  {
+    "label": "2B-02-search-rejected",
+    "screenshot": "reports/hw05/screenshots/part2/2B-02-search-rejected-mysql3308.jpg",
+    "screenshot_sha256": "3ba9080393244124b1be2d9d09fcba455f156a418fb742631754cddd36d84a96",
+    "gui_json": "reports/hw05/raw/part2/inspector/2B-02-search-rejected.json",
+    "gui_json_sha256": "66eaf49b9b622714f32c8c1760891bb028ef37ac8fe202c742793c3cab7f877f"
+  },
+  {
+    "label": "2B-03-detail-success",
+    "screenshot": "reports/hw05/screenshots/part2/2B-03-detail-success-mysql3308.jpg",
+    "screenshot_sha256": "c8db5cc38947d5b26ebc180970171cee6305c4b52e2b095d0bf76e8388a17a71",
+    "gui_json": "reports/hw05/raw/part2/inspector/2B-03-detail-success.json",
+    "gui_json_sha256": "bf428c05e537d0d2fbf939b1f4aaa45ee6eb9fa325e375b38f304ddbc8c68629"
+  },
+  {
+    "label": "2B-04-detail-rejected",
+    "screenshot": "reports/hw05/screenshots/part2/2B-04-detail-rejected-mysql3308.jpg",
+    "screenshot_sha256": "01a31c54f9fc06e473d5d19b7728a9275ef0f122ff3bbd3c69f18f00d84c26af",
+    "gui_json": "reports/hw05/raw/part2/inspector/2B-04-detail-rejected.json",
+    "gui_json_sha256": "1e2ab23fa48f7fa10cd6bcfcb7b4ab7deb45ee36c0578c4da9d14e66f0312d67"
+  },
+  {
+    "label": "2B-05-count-success",
+    "screenshot": "reports/hw05/screenshots/part2/2B-05-count-success-mysql3308.jpg",
+    "screenshot_sha256": "18421bec0a50cd57d5a40f02acf7cbe3e1ef813a24c0937a8b00290a58dd1a62",
+    "gui_json": "reports/hw05/raw/part2/inspector/2B-05-count-success.json",
+    "gui_json_sha256": "a895b6be380a8fa742d1d0cf22e43ca10a20f2d083f122d31730daee172f2608"
+  },
+  {
+    "label": "2B-06-count-rejected",
+    "screenshot": "reports/hw05/screenshots/part2/2B-06-count-rejected-mysql3308.jpg",
+    "screenshot_sha256": "45196abaac530d9da158a7731abf971bab0e7568f7c6e03324d53f4752479c6e",
+    "gui_json": "reports/hw05/raw/part2/inspector/2B-06-count-rejected.json",
+    "gui_json_sha256": "76256b32a2dd123f5d3e58d5396b0984ee9a85441de0057cb30552ca10a62f13"
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "inspector": "1.0.2",
+  "inspector-cli": "1.0.2",
+  "inspector-client": "1.0.2",
+  "inspector-server": "1.0.2",
+  "node": "v24.19.0",
+  "inspector_node_engine": ">=22.7.5",
+  "python": "Python 3.12.13",
+  "inspector_lock_sha256": "2e7fdd4dbd5b820430d8399b2e9c68fc12999e41bea83920f3ba08c9156f3637",
+  "UI_port": 6274,
+  "proxy_port": 6277,
+  "authentication": "enabled",
+  "mysql_port": 3308,
+  "database": "s6102_rel"
+}

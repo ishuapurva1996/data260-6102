@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-10-03T08:25:33.090169+00:00",
+  "source": "owned MySQL synthetic evidence fixture",
+  "host": "127.0.0.1",
+  "port": 3308,
+  "database": "s6102_rel",
+  "mysql_version": "8.4.11",
+  "rentals": 7,
+  "managers": 3,
+  "empty_manager_id": 3,
+  "runtime_user": "hw5_reader",
+  "runtime_privileges": [
+    "GRANT USAGE ON *.* TO `hw5_reader`@`%`",
+    "GRANT SELECT (`id`, `name`) ON `s6102_rel`.`property_managers` TO `hw5_reader`@`%`",
+    "GRANT SELECT (`description`, `id`, `listing_title`, `manager_id`, `property_address`, `property_type`) ON `s6102_rel`.`rentals` TO `hw5_reader`@`%`"
+  ],
+  "baseline": "code/web_application/migrations/001_initial.sql",
+  "baseline_sha256": "d738249ea390692161830c653d0ad8b75fb3e1ee5a8aace23a760413c9ab181f",
+  "data_note": "Synthetic records from explicit Part 2 setup; no copied user data. Initial setup reached grants then failed on DBAPI percent formatting; granted columns explicitly after changing grant execution to SQLAlchemy text. Existing seeded rows preserved.",
+  "container_name": "data260-hw5-part2-mysql",
+  "container_id": "599d4ad3da4698bc6ff5fed0ce9e84a879b27467729348aeea1c4bf1dcc600cf",
+  "image_tag": "mysql:8.4",
+  "image_id": "sha256:0a2cc5e121fa5b68ec0965ea6d4f533d4c7f23b3216e788b1479857c377aae66"
+}

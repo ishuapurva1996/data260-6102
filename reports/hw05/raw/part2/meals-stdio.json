@@ -1,0 +1,273 @@
+{
+  "captured_at_utc": "2026-10-03T08:38:09.995368+00:00",
+  "client": "official Python MCP SDK ClientSession over real STDIO",
+  "revision": "8f24f44b87f83f813a7a60281bfcd523ab141fa1",
+  "source": {
+    "kind": "live public API",
+    "base": "https://www.themealdb.com/api/json/v1/1/"
+  },
+  "calls": [
+    {
+      "request": {
+        "method": "tools/call",
+        "params": {
+          "name": "search_meals_by_name",
+          "arguments": {
+            "query": "Arrabiata",
+            "limit": 5
+          }
+        }
+      },
+      "result": {
+        "meta": null,
+        "content": [
+          {
+            "type": "text",
+            "text": "[{\"id\": \"52771\", \"name\": \"Spicy Arrabiata Penne\", \"thumb\": \"https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg\", \"area\": \"Italian\", \"category\": \"Vegetarian\"}]",
+            "annotations": null,
+            "meta": null
+          }
+        ],
+        "structuredContent": null,
+        "isError": false
+      }
+    },
+    {
+      "request": {
+        "method": "tools/call",
+        "params": {
+          "name": "meals_by_ingredient",
+          "arguments": {
+            "ingredient": "chicken",
+            "limit": 3
+          }
+        }
+      },
+      "result": {
+        "meta": null,
+        "content": [
+          {
+            "type": "text",
+            "text": "[{\"id\": \"52940\", \"name\": \"Brown Stew Chicken\", \"thumb\": \"https://www.themealdb.com/images/media/meals/sypxpx1515365095.jpg\"}, {\"id\": \"53161\", \"name\": \"Chicken & chorizo rice pot\", \"thumb\": \"https://www.themealdb.com/images/media/meals/fk80jp1763280767.jpg\"}, {\"id\": \"52846\", \"name\": \"Chicken & mushroom Hotpot\", \"thumb\": \"https://www.themealdb.com/images/media/meals/uuuspp1511297945.jpg\"}]",
+            "annotations": null,
+            "meta": null
+          }
+        ],
+        "structuredContent": null,
+        "isError": false
+      }
+    },
+    {
+      "request": {
+        "method": "tools/call",
+        "params": {
+          "name": "random_meal",
+          "arguments": {}
+        }
+      },
+      "result": {
+        "meta": null,
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"id\": \"53551\", \"name\": \"Old-fashioned Danish Apple Trifle\", \"category\": \"Dessert\", \"area\": null, \"instructions\": \"Peel and cut the apples into cubes. Discard the cores. Transfer apple cubes to a saucepan with water, vanilla and lemon juice. Bring apples to a boil, cover and reduce heat to medium-low.\\r\\nAdd the sugar to taste after the apples release their juices. The amount of sugar depends on the tartness of the apples and your preferred level of sweetness. Remember that the breadcrumb mixture and whipped cream are also sweet, so it is okay if the apple sauce is still a bit tart.\\r\\nCook the apples for about 15 minutes until you have a coarse apple sauce. If you prefer, cook the apples longer for a finer consistency.\\r\\nRefrigerate the applesauce.\\r\\nBreadcrumbs mixture:\\r\\n\\r\\nMelt butter in a pan. The butter must not brown. Add breadcrumbs and sugar and stir to combine.\\r\\nSlowly toast the mixture as you stir with a spatula. Do not heat the mixture for too long – it only takes a short time to make.\\r\\nOnce the breadcrumbs are lightly golden, remove from the pan and cool on a sheet of baking paper.\\r\\nAssembling the apple trifle:\\r\\n\\r\\n\\r\\n\\r\\nDo not assemble the trifle until right before serving. Otherwise, the rasp will become soggy. Serve the trifle in individual small glasses or a large glass bowl.\\r\\nLightly whip the double cream.\\r\\nLayer the ingredients in the glasses or bowl, starting with breadcrumbs in the bottom, followed by chilled apple sauce and breadcrumbs again. You can make several layers of breadcrumbs and apple sauce, then top with a generous layer of whipped cream. Serve immediately.\", \"image\": \"https://www.themealdb.com/images/media/meals/6aj3wy1784661564.jpg\", \"source\": \"https://denmark.dk/people-and-culture/recipes/danish-apple-trifle/\", \"youtube\": \"\", \"ingredients\": [{\"name\": \"Cooking Apples\", \"measure\": \"800g\"}, {\"name\": \"Water\", \"measure\": \"1/4 cup\"}, {\"name\": \"Vanilla Powder\", \"measure\": \"1 tsp\"}, {\"name\": \"Lemon Juice\", \"measure\": \"1 tablespoon\"}, {\"name\": \"Sugar\", \"measure\": \"4 tablespoons\"}, {\"name\": \"Butter\", \"measure\": \"50g\"}, {\"name\": \"Breadcrumbs\", \"measure\": \"100g \"}, {\"name\": \"Sugar\", \"measure\": \"50g\"}, {\"name\": \"Double Cream\", \"measure\": \"3/4 cup\"}]}",
+            "annotations": null,
+            "meta": null
+          }
+        ],
+        "structuredContent": null,
+        "isError": false
+      }
+    },
+    {
+      "request": {
+        "method": "tools/call",
+        "params": {
+          "name": "meal_details",
+          "arguments": {
+            "id": "52771"
+          }
+        }
+      },
+      "result": {
+        "meta": null,
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"id\": \"52771\", \"name\": \"Spicy Arrabiata Penne\", \"category\": \"Vegetarian\", \"area\": \"Italian\", \"instructions\": \"Bring a large pot of water to a boil. Add kosher salt to the boiling water, then add the pasta. Cook according to the package instructions, about 9 minutes.\\r\\nIn a large skillet over medium-high heat, add the olive oil and heat until the oil starts to shimmer. Add the garlic and cook, stirring, until fragrant, 1 to 2 minutes. Add the chopped tomatoes, red chile flakes, Italian seasoning and salt and pepper to taste. Bring to a boil and cook for 5 minutes. Remove from the heat and add the chopped basil.\\r\\nDrain the pasta and add it to the sauce. Garnish with Parmigiano-Reggiano flakes and more basil and serve warm.\", \"image\": \"https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg\", \"source\": null, \"youtube\": \"https://www.youtube.com/watch?v=1IszT_guI08\", \"ingredients\": [{\"name\": \"penne rigate\", \"measure\": \"1 pound\"}, {\"name\": \"olive oil\", \"measure\": \"1/4 cup\"}, {\"name\": \"garlic\", \"measure\": \"3 cloves\"}, {\"name\": \"chopped tomatoes\", \"measure\": \"1 tin \"}, {\"name\": \"red chilli flakes\", \"measure\": \"1/2 teaspoon\"}, {\"name\": \"italian seasoning\", \"measure\": \"1/2 teaspoon\"}, {\"name\": \"basil\", \"measure\": \"6 leaves\"}, {\"name\": \"Parmigiano-Reggiano\", \"measure\": \"sprinkling\"}]}",
+            "annotations": null,
+            "meta": null
+          }
+        ],
+        "structuredContent": null,
+        "isError": false
+      }
+    }
+  ],
+  "initialize": {
+    "meta": null,
+    "protocolVersion": "2025-11-25",
+    "capabilities": {
+      "experimental": {},
+      "logging": null,
+      "prompts": {
+        "listChanged": false
+      },
+      "resources": {
+        "subscribe": false,
+        "listChanged": false
+      },
+      "tools": {
+        "listChanged": false
+      },
+      "completions": null,
+      "tasks": null
+    },
+    "serverInfo": {
+      "name": "meals",
+      "title": null,
+      "version": "1.28.1",
+      "websiteUrl": null,
+      "icons": null
+    },
+    "instructions": null
+  },
+  "tools_list": {
+    "meta": null,
+    "nextCursor": null,
+    "tools": [
+      {
+        "name": "search_meals_by_name",
+        "title": null,
+        "description": "Search TheMealDB by meal name; return id, name, area, category, and thumb.",
+        "inputSchema": {
+          "properties": {
+            "query": {
+              "minLength": 1,
+              "title": "Query",
+              "type": "string"
+            },
+            "limit": {
+              "default": 5,
+              "maximum": 25,
+              "minimum": 1,
+              "title": "Limit",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "query"
+          ],
+          "title": "search_meals_by_nameArguments",
+          "type": "object"
+        },
+        "outputSchema": null,
+        "icons": null,
+        "annotations": {
+          "title": null,
+          "readOnlyHint": true,
+          "destructiveHint": false,
+          "idempotentHint": null,
+          "openWorldHint": true
+        },
+        "meta": null,
+        "execution": null
+      },
+      {
+        "name": "meals_by_ingredient",
+        "title": null,
+        "description": "Find meals by one main ingredient; return id, name, and thumb.",
+        "inputSchema": {
+          "properties": {
+            "ingredient": {
+              "minLength": 1,
+              "title": "Ingredient",
+              "type": "string"
+            },
+            "limit": {
+              "default": 12,
+              "minimum": 1,
+              "title": "Limit",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "ingredient"
+          ],
+          "title": "meals_by_ingredientArguments",
+          "type": "object"
+        },
+        "outputSchema": null,
+        "icons": null,
+        "annotations": {
+          "title": null,
+          "readOnlyHint": true,
+          "destructiveHint": false,
+          "idempotentHint": null,
+          "openWorldHint": true
+        },
+        "meta": null,
+        "execution": null
+      },
+      {
+        "name": "random_meal",
+        "title": null,
+        "description": "Return one random full recipe, including its ingredient measurements.",
+        "inputSchema": {
+          "properties": {},
+          "title": "random_mealArguments",
+          "type": "object"
+        },
+        "outputSchema": null,
+        "icons": null,
+        "annotations": {
+          "title": null,
+          "readOnlyHint": true,
+          "destructiveHint": false,
+          "idempotentHint": null,
+          "openWorldHint": true
+        },
+        "meta": null,
+        "execution": null
+      },
+      {
+        "name": "meal_details",
+        "title": null,
+        "description": "Look up a positive meal ID and return the full recipe.",
+        "inputSchema": {
+          "properties": {
+            "id": {
+              "anyOf": [
+                {
+                  "pattern": "^[0-9]*[1-9][0-9]*$",
+                  "type": "string"
+                },
+                {
+                  "exclusiveMinimum": 0,
+                  "type": "integer"
+                }
+              ],
+              "title": "Id"
+            }
+          },
+          "required": [
+            "id"
+          ],
+          "title": "meal_detailsArguments",
+          "type": "object"
+        },
+        "outputSchema": null,
+        "icons": null,
+        "annotations": {
+          "title": null,
+          "readOnlyHint": true,
+          "destructiveHint": false,
+          "idempotentHint": null,
+          "openWorldHint": true
+        },
+        "meta": null,
+        "execution": null
+      }
+    ]
+  }
+}

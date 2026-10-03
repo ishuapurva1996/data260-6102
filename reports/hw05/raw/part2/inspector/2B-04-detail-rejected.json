@@ -1,0 +1,32 @@
+{
+  "captured_at_utc": "2026-10-03T08:36:10.300Z",
+  "client": "MCP Inspector 1.0.2 GUI history clipboard",
+  "source": "owned MySQL8.4.11 s6102_rel at127.0.0.1:3308 synthetic fixture; ID8 confirmed absent",
+  "request": {
+    "method": "tools/call",
+    "params": {
+      "name": "get_rental",
+      "arguments": {
+        "rental_id": 8
+      },
+      "_meta": {
+        "progressToken": 8,
+        "source": "MySQL3308/s6102_rel synthetic"
+      }
+    }
+  },
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"ok\": false,\n  \"data\": null,\n  \"error\": \"Rental 8 was not found.\"\n}"
+      }
+    ],
+    "structuredContent": {
+      "ok": false,
+      "data": null,
+      "error": "Rental 8 was not found."
+    },
+    "isError": false
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "timestamp_utc": "2026-10-03T08:40:12.597845+00:00",
+  "inspector_launcher_pid": 44210,
+  "inspector_process_group_SIGTERM_sent": true,
+  "source": "PID recorded at owned start, command verified before signal",
+  "verified_at_utc": "2026-10-03T08:40:50.051367+00:00",
+  "owned_mysql_container_stopped": true,
+  "ports_no_longer_listening": {
+    "3308": true,
+    "6274": true,
+    "6277": true
+  },
+  "preserved": "Worktree, branch, Docker container and dedicated data directory remain intact."
+}

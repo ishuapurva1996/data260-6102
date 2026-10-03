@@ -1,0 +1,20 @@
+{
+  "requirements-mcp.txt": "30fa369c88f67546629fe097d8e466fa9bc8719c7c81acf9a77ce8f2202f25b6",
+  "src/mcp_servers/__init__.py": "db797db70798c2f5537731073693a8f4fb30ae67dd058a34d37ef5d5e57ec15a",
+  "src/mcp_servers/meals.py": "ca596337b4a4859256983270522a94f4ff2917a7ea74863d0ef61f3e3b1a0203",
+  "src/mcp_servers/meals_client.py": "c1f371b7c9eca3856333b81c8e24dc8fa36621e558d1385d1d08a61d7b3b36f7",
+  "src/mcp_servers/rentals.py": "82ff4a07dff19489cf6e4bae693335968979200736bb0e811c8c31454c674371",
+  "src/rental_tools/__init__.py": "820e66fc061d560f2553a5041dd69fdd761e33bf960579985643ed21fe20d877",
+  "src/rental_tools/contracts.py": "9e2bd2345dc95aeba6c4285a9adea01a747cdad5894cb981ab7cb7fd746c9377",
+  "src/rental_tools/reader.py": "b3aff457b5ca5e18a377221487431da920f3a0080385c2ded6a8f07cc57d078d",
+  "src/rental_tools/registry.py": "a6a4cfc5648837c65ad0a884b790c7a003eb269a66d5890f0c3a35f982a38efa",
+  "src/rental_tools/service.py": "5b4cb6695be78e93c149e732f1aef7bca38e1049be41b8effdd787211720b341",
+  "scripts/hw05/part2/capture_stdio.py": "422d3835d0dfac7bae51b553cf494ed3b6b29d2239a50de8ccdeb1705021d879",
+  "scripts/hw05/part2/run_domain.py": "921b5fe78faaa7a0a19c17a9da2ce824a9a54cf89c9b7f9443c9bedcb4db833a",
+  "scripts/hw05/part2/run_meals.py": "7af07a17b62905bc90af9409a3e7cc65801152fa38bf441f81d452a88973aaed",
+  "scripts/hw05/part2/setup_fixture.py": "4598b72c2c85c84b4e6a4a8aca65397e0ac4198b2838df3236eed73bf48007d9",
+  "tests/hw05_stdio_fixture.py": "245a24196debf24d9d2c7eb374b2e881ee1a6b673f3f331ef60d2db3e27472a5",
+  "tests/test_hw05_domain_tools.py": "acd5294d9ccd38173a381fb525cea799fa437d5a322f287f2033c4fe06e238f3",
+  "tests/test_hw05_mcp_stdio.py": "fe5843d0c8659bc2e8d0eae55be3c128fe793a408311d23937676c659d461240",
+  "tests/test_hw05_meals.py": "cca261203ed64facb0951125e88076e7f393d941e70739f9fd4b226b15e16548"
+}
