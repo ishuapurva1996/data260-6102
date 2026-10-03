@@ -1,0 +1,257 @@
+{
+  "student": "Pragya Apurva",
+  "part": 4,
+  "unit": "U6b",
+  "recorded_at_utc": "2026-10-03T22:42:22.170997+00:00",
+  "timezone": "America/Los_Angeles",
+  "base_revision": "158e946bb1e3ca647236fc72961e45da008c05f9",
+  "code_revision": "c70bb92be1d0f2b0accfec51de462005e4aaf20a",
+  "branch": "codex/hw5-part4-executor",
+  "worktree": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part4-executor",
+  "source_tree_clean_before_capture": true,
+  "python": "3.12.13",
+  "python_executable": "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part4/venv/bin/python",
+  "packages": {
+    "mcp": "1.28.1",
+    "httpx": "0.28.1",
+    "pydantic": "2.12.5",
+    "SQLAlchemy": "2.0.48",
+    "PyMySQL": "1.1.2",
+    "cryptography": "46.0.5",
+    "pytest": "8.4.2"
+  },
+  "environment": {
+    "policy": "minimal subprocess environment with no DSN, database/model configuration, or API key",
+    "keys": [
+      "LANG",
+      "PATH",
+      "PIP_NO_CACHE_DIR",
+      "PYTHONDONTWRITEBYTECODE",
+      "PYTHONNOUSERSITE"
+    ]
+  },
+  "commands": [
+    {
+      "label": "pytest-focused",
+      "command": [
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part4/venv/bin/python",
+        "-m",
+        "pytest",
+        "-p",
+        "no:cacheprovider",
+        "tests/test_hw05_executor.py",
+        "tests/test_hw05_offline_runner.py",
+        "-q"
+      ],
+      "cwd": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part4-executor",
+      "started_at_utc": "2026-10-03T22:42:17.947795+00:00",
+      "started_at_local": "2026-10-03T15:42:17.947795-07:00",
+      "completed_at_utc": "2026-10-03T22:42:20.309900+00:00",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "expectation_met": true,
+      "stdout_path": "reports/hw05/raw/part4/pytest-focused.txt",
+      "stderr_empty": true,
+      "evidence_kind": "unit doubles, fixture assertions, real Python subprocesses; no live database"
+    },
+    {
+      "label": "pytest-domain",
+      "command": [
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part4/venv/bin/python",
+        "-m",
+        "pytest",
+        "-p",
+        "no:cacheprovider",
+        "tests/test_hw05_domain_tools.py",
+        "-q"
+      ],
+      "cwd": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part4-executor",
+      "started_at_utc": "2026-10-03T22:42:20.310011+00:00",
+      "started_at_local": "2026-10-03T15:42:20.310011-07:00",
+      "completed_at_utc": "2026-10-03T22:42:20.896681+00:00",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "expectation_met": true,
+      "stdout_path": "reports/hw05/raw/part4/pytest-domain.txt",
+      "stderr_empty": true,
+      "evidence_kind": "inherited pure domain contracts and SQL construction doubles"
+    },
+    {
+      "label": "pip-check",
+      "command": [
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part4/venv/bin/python",
+        "-m",
+        "pip",
+        "--disable-pip-version-check",
+        "check"
+      ],
+      "cwd": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part4-executor",
+      "started_at_utc": "2026-10-03T22:42:20.896748+00:00",
+      "started_at_local": "2026-10-03T15:42:20.896748-07:00",
+      "completed_at_utc": "2026-10-03T22:42:21.048725+00:00",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "expectation_met": true,
+      "stdout_path": "reports/hw05/raw/part4/pip-check.txt",
+      "stderr_empty": true,
+      "evidence_kind": "installed environment consistency"
+    },
+    {
+      "label": "offline-run-1",
+      "command": [
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part4/venv/bin/python",
+        "scripts/hw05/run_offline_tests.py"
+      ],
+      "cwd": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part4-executor",
+      "started_at_utc": "2026-10-03T22:42:21.048795+00:00",
+      "started_at_local": "2026-10-03T15:42:21.048795-07:00",
+      "completed_at_utc": "2026-10-03T22:42:21.163169+00:00",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "expectation_met": true,
+      "stdout_path": "reports/hw05/raw/part4/offline-run-1.txt",
+      "stderr_empty": true,
+      "evidence_kind": "offline controlled fixture"
+    },
+    {
+      "label": "offline-run-2",
+      "command": [
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part4/venv/bin/python",
+        "scripts/hw05/run_offline_tests.py"
+      ],
+      "cwd": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part4-executor",
+      "started_at_utc": "2026-10-03T22:42:21.163233+00:00",
+      "started_at_local": "2026-10-03T15:42:21.163233-07:00",
+      "completed_at_utc": "2026-10-03T22:42:21.281145+00:00",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "expectation_met": true,
+      "stdout_path": "reports/hw05/raw/part4/offline-run-2.txt",
+      "stderr_empty": true,
+      "evidence_kind": "offline controlled fixture"
+    },
+    {
+      "label": "intentional-failure",
+      "command": [
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part4/venv/bin/python",
+        "-c",
+        "from scripts.hw05 import run_offline_tests as runner\n\ndef deliberate_failure():\n    assert False, \"intentionally failing test injection\"\n\nraise SystemExit(runner.main(cases=((\"deliberate_failure\", deliberate_failure), *runner.CASES)))\n"
+      ],
+      "cwd": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part4-executor",
+      "started_at_utc": "2026-10-03T22:42:21.281220+00:00",
+      "started_at_local": "2026-10-03T15:42:21.281220-07:00",
+      "completed_at_utc": "2026-10-03T22:42:21.398228+00:00",
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "expectation_met": true,
+      "stdout_path": "reports/hw05/raw/part4/intentional-failure.txt",
+      "stderr_empty": true,
+      "evidence_kind": "deliberately injected assertion failure; expected nonzero control check"
+    },
+    {
+      "label": "optimized-rejected",
+      "command": [
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part4/venv/bin/python",
+        "-O",
+        "scripts/hw05/run_offline_tests.py"
+      ],
+      "cwd": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part4-executor",
+      "started_at_utc": "2026-10-03T22:42:21.398301+00:00",
+      "started_at_local": "2026-10-03T15:42:21.398301-07:00",
+      "completed_at_utc": "2026-10-03T22:42:21.873470+00:00",
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "expectation_met": true,
+      "stdout_path": "reports/hw05/raw/part4/optimized-rejected.txt",
+      "stderr_empty": false,
+      "evidence_kind": "optimization rejection control check"
+    },
+    {
+      "label": "default-runtime-unavailable",
+      "command": [
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part4/venv/bin/python",
+        "-c",
+        "from src.rental_tools.executor import execute_tool; print(execute_tool(\"get_rental\", {\"rental_id\": 1}))"
+      ],
+      "cwd": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part4-executor",
+      "started_at_utc": "2026-10-03T22:42:21.873535+00:00",
+      "started_at_local": "2026-10-03T15:42:21.873535-07:00",
+      "completed_at_utc": "2026-10-03T22:42:21.993076+00:00",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "expectation_met": true,
+      "stdout_path": "reports/hw05/raw/part4/default-runtime-unavailable.txt",
+      "stderr_empty": true,
+      "evidence_kind": "actual Part 2-based branch with absent runtime; not live/default runtime success"
+    },
+    {
+      "label": "requirements-resolved",
+      "command": [
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part4/venv/bin/python",
+        "-m",
+        "pip",
+        "--disable-pip-version-check",
+        "freeze"
+      ],
+      "cwd": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part4-executor",
+      "started_at_utc": "2026-10-03T22:42:21.993189+00:00",
+      "started_at_local": "2026-10-03T15:42:21.993189-07:00",
+      "completed_at_utc": "2026-10-03T22:42:22.098644+00:00",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "expectation_met": true,
+      "stdout_path": "reports/hw05/raw/part4/requirements-resolved.txt",
+      "stderr_empty": true,
+      "evidence_kind": "installed package versions"
+    }
+  ],
+  "focused_tests_passed": 83,
+  "inherited_tests_passed": 51,
+  "skipped_tests": 0,
+  "offline_assertion_count": 6,
+  "offline_runs_byte_identical": true,
+  "canonical_errors_match_historical_inspector_results": true,
+  "source_sha256": {
+    "src/rental_tools/executor.py": "bed459e41b5251d5623f6b0019f54c52124d93f29251c4a8d99523fd02b1e70b",
+    "scripts/hw05/run_offline_tests.py": "ad0a7a944dc8206539db5273655693b06d5968229e90fe10e7c0aa0f365fe109",
+    "scripts/hw05/part4/fixture.py": "69749d8c74c6f8f133e4a1b13e3013568b1fe214ff4df5b62bcf0767fb01d0e0",
+    "tests/test_hw05_executor.py": "9a34921b1cbae901c8d61c9d021225b4712cd666d6bcf4f39668f0cab0ec90e0",
+    "tests/test_hw05_offline_runner.py": "381a2b5f54e7b7ff18d5e7c5e9a8a5982c21dd32ed009fad943b432a48802e21",
+    "docs/HW5_PART4.md": "976022b9eeafbda49718450794803a231c8d1bb357acf434ef3df9bdfca97009",
+    "src/rental_tools/contracts.py": "9e2bd2345dc95aeba6c4285a9adea01a747cdad5894cb981ab7cb7fd746c9377",
+    "src/rental_tools/reader.py": "b3aff457b5ca5e18a377221487431da920f3a0080385c2ded6a8f07cc57d078d",
+    "src/rental_tools/service.py": "5b4cb6695be78e93c149e732f1aef7bca38e1049be41b8effdd787211720b341",
+    "src/rental_tools/registry.py": "a6a4cfc5648837c65ad0a884b790c7a003eb269a66d5890f0c3a35f982a38efa",
+    "src/mcp_servers/rentals.py": "5bac7ea36c5b406b60f276fb45e8f402f06146ae8b32c433d764741468083229",
+    "tests/test_hw05_domain_tools.py": "acd5294d9ccd38173a381fb525cea799fa437d5a322f287f2033c4fe06e238f3",
+    "requirements-mcp.txt": "30fa369c88f67546629fe097d8e466fa9bc8719c7c81acf9a77ce8f2202f25b6",
+    "reports/hw05/raw/part2/rejected-cases.json": "8ecbe595872ba1c57d34b31e169cb9daa3aba43da02c7b32771ee4f903de0f09",
+    "reports/hw05/raw/part2/review-fixes/rentals-inspector-tools-list.json": "7f054661ba14f7877a5d98bdc760528215ce4e8b665a1cd3c495a2f3b59943c5"
+  },
+  "evidence_sha256": {
+    "reports/hw05/raw/part4/canonical-cases.json": "3c3cc94266e96c16f03fbdf023027d4905a4d11a5b4bf2f03c7e2fd1166899bf",
+    "reports/hw05/raw/part4/default-runtime-unavailable.txt": "96ee1dc405dcbbe85732dbd608f1b057d728a04f5a437448d482e0807c755fd6",
+    "reports/hw05/raw/part4/intentional-failure.txt": "89879e50f6a0e5ce8ebe4d6f5392ee548c0501bf3b68fc7d83fcd7261128fc5e",
+    "reports/hw05/raw/part4/offline-run-1.txt": "94a739abdf5cba47a64447360d79a5fd0dc89e4271971abb2774ab3e79c82449",
+    "reports/hw05/raw/part4/offline-run-2.txt": "94a739abdf5cba47a64447360d79a5fd0dc89e4271971abb2774ab3e79c82449",
+    "reports/hw05/raw/part4/optimized-rejected.txt": "a1d61dfe4256acb34562ef89816d2683091d80c7250f96a46cd52d08470fa77a",
+    "reports/hw05/raw/part4/pip-check.txt": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09",
+    "reports/hw05/raw/part4/pytest-domain.txt": "41e66876c066b949004fd0f6137e16c3d2b43c78e07f8440e1ef66fab887c7a9",
+    "reports/hw05/raw/part4/pytest-focused.txt": "e13e1d974c656fe92f4791d2a2b7de8c6a8bb38ef4d3a764e9bd473d2caf0aab",
+    "reports/hw05/raw/part4/requirements-resolved.txt": "992545c9dbf7b81777243f1883957ba8ae1004a4eba74167c7351b05a607c515"
+  },
+  "terminal_screenshot": {
+    "status": "pending: native terminal capture unavailable in this chat",
+    "path": "reports/hw05/screenshots/part4/4-01-offline-tests-terminal.png",
+    "sha256": null,
+    "captured_at_utc": null,
+    "reviewed": false
+  },
+  "combined_runtime": {
+    "status": "pending coordinator U6c",
+    "actual_part3_runtime_present": false,
+    "live_mysql_exercised": false,
+    "retry_behavior_exercised": false,
+    "lifecycle_tests": "isolated module doubles only"
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "evidence_kind": "deterministic offline fixture through real executor/service",
+  "code_revision": "c70bb92be1d0f2b0accfec51de462005e4aaf20a",
+  "recorded_at_utc": "2026-10-03T22:42:22.170719+00:00",
+  "cases": [
+    {
+      "tool": "search_rentals",
+      "inputs": {
+        "query": "garden",
+        "limit": 5
+      },
+      "return_type": "str",
+      "json_string": "{\"ok\": true, \"data\": {\"items\": [{\"id\": 1, \"listingTitle\": \"Garden Apartment\", \"propertyAddress\": \"101 Oak Avenue\", \"propertyType\": \"apartment\", \"managerId\": 1}, {\"id\": 2, \"listingTitle\": \"Garden House\", \"propertyAddress\": \"202 Pine Street\", \"propertyType\": \"house\", \"managerId\": 1}], \"returnedCount\": 2, \"limit\": 5}, \"error\": null}",
+      "result": {
+        "ok": true,
+        "data": {
+          "items": [
+            {
+              "id": 1,
+              "listingTitle": "Garden Apartment",
+              "propertyAddress": "101 Oak Avenue",
+              "propertyType": "apartment",
+              "managerId": 1
+            },
+            {
+              "id": 2,
+              "listingTitle": "Garden House",
+              "propertyAddress": "202 Pine Street",
+              "propertyType": "house",
+              "managerId": 1
+            }
+          ],
+          "returnedCount": 2,
+          "limit": 5
+        },
+        "error": null
+      },
+      "reader_calls": [
+        [
+          "search",
+          "garden",
+          5
+        ]
+      ]
+    },
+    {
+      "tool": "search_rentals",
+      "inputs": {
+        "query": "   ",
+        "limit": 5
+      },
+      "return_type": "str",
+      "json_string": "{\"ok\": false, \"data\": null, \"error\": \"Invalid input: query: Value error, query must contain non-whitespace characters\"}",
+      "result": {
+        "ok": false,
+        "data": null,
+        "error": "Invalid input: query: Value error, query must contain non-whitespace characters"
+      },
+      "reader_calls": []
+    },
+    {
+      "tool": "get_rental",
+      "inputs": {
+        "rental_id": 1
+      },
+      "return_type": "str",
+      "json_string": "{\"ok\": true, \"data\": {\"id\": 1, \"listingTitle\": \"Garden Apartment\", \"propertyAddress\": \"101 Oak Avenue\", \"propertyType\": \"apartment\", \"managerId\": 1, \"description\": \"A bright apartment beside the community garden.\"}, \"error\": null}",
+      "result": {
+        "ok": true,
+        "data": {
+          "id": 1,
+          "listingTitle": "Garden Apartment",
+          "propertyAddress": "101 Oak Avenue",
+          "propertyType": "apartment",
+          "managerId": 1,
+          "description": "A bright apartment beside the community garden."
+        },
+        "error": null
+      },
+      "reader_calls": [
+        [
+          "get",
+          1
+        ]
+      ]
+    },
+    {
+      "tool": "get_rental",
+      "inputs": {
+        "rental_id": 8
+      },
+      "return_type": "str",
+      "json_string": "{\"ok\": false, \"data\": null, \"error\": \"Rental 8 was not found.\"}",
+      "result": {
+        "ok": false,
+        "data": null,
+        "error": "Rental 8 was not found."
+      },
+      "reader_calls": [
+        [
+          "get",
+          8
+        ]
+      ]
+    },
+    {
+      "tool": "count_rentals",
+      "inputs": {
+        "manager_id": 1
+      },
+      "return_type": "str",
+      "json_string": "{\"ok\": true, \"data\": {\"managerId\": 1, \"managerName\": \"Alex Morgan\", \"count\": 2}, \"error\": null}",
+      "result": {
+        "ok": true,
+        "data": {
+          "managerId": 1,
+          "managerName": "Alex Morgan",
+          "count": 2
+        },
+        "error": null
+      },
+      "reader_calls": [
+        [
+          "count",
+          1
+        ]
+      ]
+    },
+    {
+      "tool": "count_rentals",
+      "inputs": {
+        "manager_id": 4
+      },
+      "return_type": "str",
+      "json_string": "{\"ok\": false, \"data\": null, \"error\": \"Property manager 4 was not found.\"}",
+      "result": {
+        "ok": false,
+        "data": null,
+        "error": "Property manager 4 was not found."
+      },
+      "reader_calls": [
+        [
+          "count",
+          4
+        ]
+      ]
+    }
+  ]
+}
