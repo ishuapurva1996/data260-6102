@@ -4,7 +4,8 @@ import { getAuthEpoch, rentals } from "../../api/client.js";
 const initialState = () => ({
   epoch: getAuthEpoch(), revision: 0, records: [], total: 0,
   listStatus: "idle", listError: "", listRequestId: null,
-  selected: null, detailId: null, detailStatus: "idle", detailError: "", detailRequestId: null,
+  selected: null, detailId: null, detailVisitId: null,
+  detailStatus: "idle", detailError: "", detailRequestId: null,
   mutations: {}, lastMutation: null,
 });
 
@@ -16,7 +17,7 @@ async function runRequest(operation, { getState, signal, rejectWithValue }) {
 
 export const fetchRentals = createAsyncThunk("rentals/fetch", (params, api) =>
   runRequest((signal) => rentals.list(params, signal), api));
-export const fetchRental = createAsyncThunk("rentals/detail", (id, api) =>
+export const fetchRental = createAsyncThunk("rentals/detail", ({ id }, api) =>
   runRequest((signal) => rentals.get(id, signal), api));
 
 // Conditions run synchronously, so even two dispatches before a render send one write.
@@ -51,10 +52,11 @@ const slice = createSlice({
         state.listRequestId = null;
       })
       .addCase(fetchRental.pending, (state, action) => {
-        // Keep the same-ID form mounted during a post-write background refresh,
-        // so its completed submission can finish navigation. A new ID starts empty.
-        if (state.detailId !== action.meta.arg) state.selected = null;
-        state.detailId = action.meta.arg;
+        const { id, visitId } = action.meta.arg;
+        // A new visit initializes from its own completed GET. Same-visit refreshes
+        // keep local edits and the submitting form mounted until navigation ends.
+        if (state.detailId !== id || state.detailVisitId !== visitId) state.selected = null;
+        state.detailId = id; state.detailVisitId = visitId;
         state.detailStatus = "pending"; state.detailError = "";
         state.detailRequestId = action.meta.requestId;
       })

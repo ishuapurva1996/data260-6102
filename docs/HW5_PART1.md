@@ -131,6 +131,13 @@ responses from restoring records. Completed writes and subsequent list refresh
 failures are separate outcomes, so a refresh failure does not invite a duplicate
 creation. Form edits remain component-local.
 
+Login and logout requests run in order because the browser applies their cookie
+headers before JavaScript handles the responses. Logout clears visible rental
+data and opens Login immediately; a new login waits for the earlier logout to
+settle. Each new editor visit initializes from its own fresh detail response and
+waits for an earlier visit's pending write. Refreshing the current editor keeps
+its local edits and completed-save navigation intact.
+
 Run the existing launcher with explicit external certificate/key files:
 
 ```sh

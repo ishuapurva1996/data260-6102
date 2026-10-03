@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useId, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { listManagers } from "../api/client.js";
@@ -74,15 +74,22 @@ export function useSubmission(action, successMessage) {
 
 export function useSelectedRental(id) {
   const dispatch = useDispatch();
+  const visitId = useId();
   const state = useSelector((store) => store.rentals);
+  const isCurrentVisit = state.detailId === id && state.detailVisitId === visitId;
+  // A reopened editor must read after a write from the previous visit settles.
+  // The already initialized editor stays mounted while its own write completes.
+  const waitingForPriorMutation = !isCurrentVisit &&
+    state.mutations[`record:${id}`]?.status === "pending";
   useEffect(() => {
-    const operation = dispatch(fetchRental(id));
+    if (waitingForPriorMutation) return;
+    const operation = dispatch(fetchRental({ id, visitId }));
     return () => operation.abort();
-  }, [dispatch, id, state.revision]);
+  }, [dispatch, id, visitId, state.revision, waitingForPriorMutation]);
   return {
-    record: state.detailId === id ? state.selected : null,
-    loading: state.detailId !== id || ["idle", "pending"].includes(state.detailStatus),
-    error: state.detailId === id ? state.detailError : "",
+    record: isCurrentVisit ? state.selected : null,
+    loading: !isCurrentVisit || ["idle", "pending"].includes(state.detailStatus),
+    error: isCurrentVisit ? state.detailError : "",
   };
 }
 

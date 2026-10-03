@@ -73,8 +73,9 @@ export default function App() {
     setLoggingOut(true);
     setError("");
     try {
-      await auth.logout();
+      const operation = auth.logout();
       navigate("/login");
+      await operation;
     } catch (failure) {
       setError(failure.message);
     } finally {

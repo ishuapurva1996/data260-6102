@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useState } from "react";
+import React, { createContext, useContext, useEffect, useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import { advanceAuthEpoch, getAuthEpoch, request } from "../api/client.js";
 import { clearRentals } from "../features/rentals/rentalsSlice.js";
@@ -10,6 +10,14 @@ export function AuthProvider({ children }) {
   const dispatch = useDispatch();
   const [auth, setAuth] = useState({ status: "checking", user: null });
   const [attempt, setAttempt] = useState(0);
+  const cookieRequests = useRef(Promise.resolve());
+  // The browser applies Set-Cookie before JavaScript handles the response.
+  // Serialize both auth writes so an older response cannot replace a newer cookie.
+  function changeCookie(operation) {
+    const result = cookieRequests.current.then(operation);
+    cookieRequests.current = result.catch(() => {});
+    return result;
+  }
   function resetSession() {
     const epoch = advanceAuthEpoch();
     dispatch(clearRentals());
@@ -41,16 +49,16 @@ export function AuthProvider({ children }) {
   }, [attempt, dispatch]);
   async function login(email, password) {
     const epoch = resetSession();
-    const { user } = await request("/auth/login", {
+    const { user } = await changeCookie(() => request("/auth/login", {
       method: "POST", body: { email, password }, notifyUnauthorized: false,
-    });
+    }));
     if (epoch !== getAuthEpoch()) throw new Error("This login was superseded. Please try again.");
     setAuth({ status: "authenticated", user });
   }
   async function logout() {
     const epoch = resetSession();
     setAuth({ status: "anonymous", user: null });
-    try { await request("/auth/logout", { method: "POST", notifyUnauthorized: false }); }
+    try { await changeCookie(() => request("/auth/logout", { method: "POST", notifyUnauthorized: false })); }
     catch (error) {
       if (epoch === getAuthEpoch()) throw new Error(`Local data cleared, but logout could not be confirmed. ${error.message}`);
     }

@@ -3,6 +3,7 @@
 // NODE_PATH must include Playwright if it is provided by the bundled runtime.
 // HW5_BASE_URL=https://localhost:8702 HW5_RAW_DIR=<explicit evidence directory>
 // node tests/browser_hw05_part1.cjs --mock|--real
+// --mock --regression logout-cookie|same-id-revisit|pending-update-reopen runs one review regression.
 // Real mode needs private HW4_SEED_EMAIL/HW4_SEED_PASSWORD (or HW5_ equivalents).
 // HW5_SCREENSHOTS_DIR is optional; screenshots are genuine UI only, not paired Redux frames.
 const assert = require('node:assert/strict');
@@ -13,6 +14,7 @@ const { execFileSync } = require('node:child_process');
 const { chromium } = require('playwright');
 const ROOT = path.resolve(__dirname, '..');
 const MODE = process.argv.includes('--mock') ? 'mock' : 'real';
+const REGRESSION = process.argv.includes('--regression') ? process.argv[process.argv.indexOf('--regression') + 1] : null;
 const BASE = (process.env.HW5_BASE_URL || 'https://localhost:8702').replace(/\/$/, '');
 const RAW = process.env.HW5_RAW_DIR;
 const SHOTS = process.env.HW5_SCREENSHOTS_DIR;
@@ -24,6 +26,7 @@ const report = { mode: MODE, status: 'running', started_at: now(), base_url: BAS
   MODE === 'mock' ? 'Mock HTTP responses prove UI behavior only; no MySQL/authentication security evidence.' : 'Live HTTPS/MySQL service supplied by owner; this test creates and deletes only uniquely marked test data.',
   'UI screenshots do not substitute for the required source-snippet/UI Redux frames or Postman evidence.',
 ] };
+if (REGRESSION) report.regression = REGRESSION;
 const redact = (value) => String(value).replaceAll(PASSWORD || '\0', '[REDACTED]').replace(/(s6102_session=)[^;\s]+/gi, '$1[REDACTED]');
 const match = (method, pathname) => (response) => response.request().method() === method && new URL(response.url()).pathname === pathname;
 const card = (page, id) => page.locator(`article[data-record-id="${id}"]`);
@@ -111,8 +114,19 @@ async function mockRoutes(context, state) {
     const body = method === 'GET' ? undefined : request.postDataJSON();
     const entry = { method, path: pathname, query: url.search }; state.requests.push(entry);
     if (pathname.startsWith('/api/rentals') && body) entry.body = body;
-    const respond = (status, data, total) => route.fulfill({ status, contentType: 'application/json',
-      headers: total === undefined ? {} : { 'X-Total-Count': String(total) }, body: status === 204 ? '' : JSON.stringify(data) });
+    const respond = (status, data, total, headers = {}) => {
+      if (headers['Set-Cookie']) entry.response_cookie_action = /Max-Age=0/i.test(headers['Set-Cookie']) ? 'delete' : 'set';
+      return route.fulfill({ status, contentType: 'application/json',
+        headers: { ...(total === undefined ? {} : { 'X-Total-Count': String(total) }), ...headers },
+        body: status === 204 ? '' : JSON.stringify(data) });
+    };
+    // Optional cookie-backed auth is deliberately separate from the lightweight
+    // Boolean fixture. Chromium processes these actual Secure/HttpOnly response
+    // cookies, including a delayed logout's Set-Cookie deletion.
+    const cookie = state.cookieSessions
+      ? (await request.allHeaders()).cookie?.split('; ').find((value) => value.startsWith('s6102_session='))?.slice('s6102_session='.length)
+      : undefined;
+    if (state.cookieSessions && pathname === '/api/auth/logout') state.cookieSessions.delete(cookie);
     const index = state.faults.findIndex((fault) => fault.method === method && fault.path === pathname && (!fault.query || fault.query === url.searchParams.get('q')));
     if (index >= 0) {
       const fault = state.faults.splice(index, 1)[0];
@@ -121,10 +135,22 @@ async function mockRoutes(context, state) {
       if (fault.abort) return route.abort('failed');
       if (fault.status) return respond(fault.status, fault.data, fault.total);
     }
-    if (pathname === '/api/auth/me') return respond(state.auth ? 200 : 401, state.auth ? { user: state.user } : { detail: 'Login required' });
-    if (pathname === '/api/auth/login') { state.auth = true; return respond(200, { user: state.user }); }
-    if (pathname === '/api/auth/logout') { state.auth = false; return respond(204); }
-    if (!state.auth) return respond(401, { detail: 'Login required' });
+    const authenticated = state.cookieSessions ? state.cookieSessions.has(cookie) : state.auth;
+    if (pathname === '/api/auth/me') return respond(authenticated ? 200 : 401, authenticated ? { user: state.user } : { detail: 'Login required' });
+    if (pathname === '/api/auth/login') {
+      if (state.cookieSessions) {
+        const token = `browser-session-${++state.loginCount}`; state.cookieSessions.add(token);
+        return respond(200, { user: state.user }, undefined,
+          { 'Set-Cookie': `s6102_session=${token}; Path=/; HttpOnly; Secure; SameSite=Lax` });
+      }
+      state.auth = true; return respond(200, { user: state.user });
+    }
+    if (pathname === '/api/auth/logout') {
+      if (state.cookieSessions) return respond(204, undefined, undefined,
+        { 'Set-Cookie': 's6102_session=; Path=/; Max-Age=0; Expires=Thu, 01 Jan 1970 00:00:00 GMT; HttpOnly; Secure; SameSite=Lax' });
+      state.auth = false; return respond(204);
+    }
+    if (!authenticated) return respond(401, { detail: 'Login required' });
     if (pathname === '/api/property-managers') {
       const offset = Number(url.searchParams.get('offset') || 0), limit = Number(url.searchParams.get('limit') || 50);
       return respond(200, state.managers.slice(offset, offset + limit), state.managers.length);
@@ -333,6 +359,150 @@ async function mockFlow(browser) {
     await context.close();
   }
 }
+async function reviewRegressionFlow(browser) {
+  const scenarios = {
+    'logout-cookie': ['Delayed logout cookie deletion cannot erase a subsequent login', async (page, context, state, details) => {
+      state.cookieSessions = new Set(); state.loginCount = 0;
+      await login(page);
+      const firstCookie = (await context.cookies(BASE)).find((item) => item.name === 's6102_session');
+      assert(firstCookie?.secure && firstCookie?.httpOnly);
+      assert.equal(await page.evaluate(() => document.cookie.includes('s6102_session')), false);
+      const logout = { method: 'POST', path: '/api/auth/logout', gate: gate(), entered: gate() };
+      state.faults.push(logout);
+      const logoutResponse = page.waitForResponse(match('POST', '/api/auth/logout'));
+      await page.getByRole('button', { name: 'Log out', exact: true }).click();
+      await logout.entered.wait('cookie-changing logout entered');
+      await page.getByRole('navigation', { name: 'Main navigation' }).getByRole('link', { name: 'Log in', exact: true }).click();
+      await page.getByLabel('Email', { exact: true }).fill(EMAIL);
+      await page.getByLabel('Password', { exact: true }).fill(PASSWORD);
+      // A disabled button may block this attempt, or AuthProvider may queue it.
+      // Neither strategy may send the cookie-changing login before logout settles.
+      await page.getByRole('button', { name: 'Log in', exact: true }).evaluate((button) => button.click());
+      await delay(150);
+      details.login_requests_before_logout_release = state.requests.filter((item) => item.path === '/api/auth/login').length;
+      details.replacement_cookie_before_logout_release = (await context.cookies(BASE)).some((item) => item.name === 's6102_session' && item.value !== firstCookie.value);
+      logout.gate.resolve();
+      const deletion = await logoutResponse; await deletion.finished();
+      details.logout_status = deletion.status();
+      // Playwright may omit Set-Cookie from fulfilled response.allHeaders();
+      // record the configured wire action and independently inspect Chromium's jar.
+      details.logout_response_cookie_action = state.requests.find((item) => item.path === '/api/auth/logout').response_cookie_action;
+      await delay(150);
+      // If the pending transition disabled the attempt, make the now-allowed login.
+      if (state.requests.filter((item) => item.path === '/api/auth/login').length === 1) await login(page, false);
+      await delay(100);
+      const replacementCookie = (await context.cookies(BASE)).find((item) => item.name === 's6102_session');
+      details.replacement_cookie_survived_logout_release = !!replacementCookie && replacementCookie.value !== firstCookie.value;
+      details.path_after_logout_release = new URL(page.url()).pathname;
+      details.api_status_after_logout_release = await page.evaluate(async () => {
+        const result = {};
+        for (const route of ['/api/auth/me', '/api/rentals']) result[route] = (await fetch(route, { credentials: 'include' })).status;
+        return result;
+      });
+      await page.reload();
+      await delay(150);
+      details.path_after_reload = new URL(page.url()).pathname;
+      details.api_status_after_reload = await page.evaluate(async () => {
+        const result = {};
+        for (const route of ['/api/auth/me', '/api/rentals']) result[route] = (await fetch(route, { credentials: 'include' })).status;
+        return result;
+      });
+      details.auth_cookie_properties = replacementCookie ? { secure: replacementCookie.secure, httpOnly: replacementCookie.httpOnly } : null;
+      // Assert after collecting cookie/API evidence so the original defect's
+      // destructive Set-Cookie ordering is visible even when serialization fails.
+      assert.equal(details.login_requests_before_logout_release, 1, `Login raced pending logout: ${JSON.stringify(details)}`);
+      assert.equal(details.logout_status, 204); assert.equal(details.logout_response_cookie_action, 'delete');
+      assert.equal(details.replacement_cookie_survived_logout_release, true, JSON.stringify(details));
+      assert.deepEqual(details.api_status_after_logout_release, { '/api/auth/me': 200, '/api/rentals': 200 });
+      assert.deepEqual(details.api_status_after_reload, { '/api/auth/me': 200, '/api/rentals': 200 });
+      assert.deepEqual(details.auth_cookie_properties, { secure: true, httpOnly: true });
+      await home(page); await card(page, 1).waitFor();
+      state.faults.push({ method: 'POST', path: '/api/auth/logout', status: 503, data: { detail: 'Temporary logout failure' } });
+      const failedLogout = page.waitForResponse(match('POST', '/api/auth/logout'));
+      await page.getByRole('button', { name: 'Log out', exact: true }).click();
+      details.failed_logout_status = (await failedLogout).status();
+      await page.waitForURL(`${BASE}/login`); await login(page, false);
+      details.login_after_failed_logout = (await context.cookies(BASE)).some((item) => item.name === 's6102_session' && item.secure && item.httpOnly);
+      await page.reload(); await home(page);
+      details.api_status_after_failed_logout_recovery = await page.evaluate(async () => {
+        const result = {};
+        for (const route of ['/api/auth/me', '/api/rentals']) result[route] = (await fetch(route, { credentials: 'include' })).status;
+        return result;
+      });
+      assert.equal(details.failed_logout_status, 503);
+      assert.equal(details.login_after_failed_logout, true, 'A failed logout must not poison the queued login');
+      assert.deepEqual(details.api_status_after_failed_logout_recovery, { '/api/auth/me': 200, '/api/rentals': 200 });
+    }],
+    'same-id-revisit': ['Same-ID editor revisit displays and submits refreshed server fields', async (page, context, state, details) => {
+      await login(page);
+      await card(page, 1).getByRole('link', { name: 'Update', exact: true }).click();
+      await page.getByRole('heading', { name: 'Update listing', exact: true }).waitFor();
+      assert.equal(await page.getByLabel('Listing title', { exact: true }).inputValue(), fixture(1).listingTitle);
+      await page.getByRole('navigation', { name: 'Main navigation' }).getByRole('link', { name: 'Home', exact: true }).click(); await home(page);
+      const fresh = { listingTitle: 'New server title after first visit', propertyAddress: '42 Fresh Server Road', listingCode: 'S6102-R-41001', availableUnits: 7, managerId: 2 };
+      state.records[0] = { ...state.records[0], ...fresh, updatedAt: '2026-10-03T01:00:00Z' };
+      const refresh = { method: 'GET', path: '/api/rentals/1', gate: gate(), entered: gate() }; state.faults.push(refresh);
+      const refreshed = page.waitForResponse(match('GET', '/api/rentals/1'));
+      await card(page, 1).getByRole('link', { name: 'Update', exact: true }).click(); await refresh.entered.wait('same-ID revisit refresh entered');
+      refresh.gate.resolve(); await (await refreshed).finished();
+      await page.getByRole('heading', { name: 'Update listing', exact: true }).waitFor(); await delay(100);
+      details.expected_server_fields = fresh; details.displayed_after_refresh = await editValues(page);
+      const saved = page.waitForResponse(match('PUT', '/api/rentals/1'));
+      await page.getByRole('button', { name: 'Save changes', exact: true }).click(); assert.equal((await saved).status(), 200); await home(page);
+      details.submitted_fields = state.requests.filter((item) => item.method === 'PUT' && item.path === '/api/rentals/1').at(-1).body;
+      assert.deepEqual(details.displayed_after_refresh, fresh, `Reopened editor retained stale inputs: ${JSON.stringify(details)}`);
+      assert.deepEqual(details.submitted_fields, fresh, 'Saving refreshed editor must not revert server fields');
+    }],
+    'pending-update-reopen': ['Editor reopened during a pending PUT keeps completed fields on the next save', async (page, context, state, details) => {
+      await login(page);
+      await card(page, 1).getByRole('link', { name: 'Update', exact: true }).click();
+      const updated = { listingTitle: 'Completed delayed update', propertyAddress: '82 Delayed Update Road', listingCode: 'S6102-R-42001', availableUnits: 4, managerId: 2 };
+      await fill(page, updated);
+      const write = { method: 'PUT', path: '/api/rentals/1', gate: gate(), entered: gate() }; state.faults.push(write);
+      const written = page.waitForResponse(match('PUT', '/api/rentals/1'));
+      await page.getByRole('button', { name: 'Save changes', exact: true }).click(); await write.entered.wait('delayed update entered');
+      await page.getByRole('navigation', { name: 'Main navigation' }).getByRole('link', { name: 'Home', exact: true }).click(); await home(page);
+      await card(page, 1).getByRole('link', { name: 'Update', exact: true }).click(); await page.waitForURL(`${BASE}/update?id=1`);
+      await delay(100);
+      details.editor_reopened_before_put_release = true;
+      const visibleSave = page.getByRole('button', { name: 'Save changes', exact: true });
+      if (await visibleSave.count()) assert.equal(await visibleSave.isDisabled(), true, 'Reopened editor must block a second mutation while the first is pending');
+      write.gate.resolve(); assert.equal((await written).status(), 200);
+      await page.getByRole('heading', { name: 'Update listing', exact: true }).waitFor(); await delay(150);
+      details.first_completed_fields = updated; details.displayed_after_put_release = await editValues(page);
+      const saved = page.waitForResponse(match('PUT', '/api/rentals/1'));
+      await page.getByRole('button', { name: 'Save changes', exact: true }).click(); assert.equal((await saved).status(), 200); await home(page);
+      details.second_submitted_fields = state.requests.filter((item) => item.method === 'PUT' && item.path === '/api/rentals/1').at(-1).body;
+      details.server_fields_after_second_save = Object.fromEntries(Object.keys(updated).map((key) => [key, state.records[0][key]]));
+      assert.deepEqual(details.displayed_after_put_release, updated, `Reopened editor did not adopt completed PUT: ${JSON.stringify(details)}`);
+      assert.deepEqual(details.second_submitted_fields, updated, 'Second save must preserve completed first update');
+      assert.deepEqual(details.server_fields_after_second_save, updated);
+    }],
+  };
+  if (REGRESSION) assert(Object.hasOwn(scenarios, REGRESSION), `Unknown --regression value: ${REGRESSION}`);
+  for (const [key, [name, scenario]] of Object.entries(scenarios)) {
+    if (REGRESSION && REGRESSION !== key) continue;
+    const context = await browser.newContext({ ignoreHTTPSErrors: true, viewport: { width: 1280, height: 900 } });
+    const state = { auth: false, records: [fixture(1), fixture(2)], nextId: 801, requests: [], faults: [],
+      managers: [1, 2].map((id) => ({ id, name: `Manager ${id}`, company: 'Browser Homes', email: `manager${id}@example.com` })),
+      user: { id: 1, name: 'Cookie regression user', email: EMAIL } };
+    await mockRoutes(context, state); const page = await context.newPage(); page.setDefaultTimeout(15000);
+    const details = {}; (report.regression_observations ||= {})[key] = details;
+    try { await check(name, async () => { await scenario(page, context, state, details); return details; }); }
+    finally {
+      details.requests = state.requests;
+      for (const release of heldGates) release();
+      await context.close();
+    }
+  }
+}
+async function editValues(page) {
+  return { listingTitle: await page.getByLabel('Listing title', { exact: true }).inputValue(),
+    propertyAddress: await page.getByLabel('Property address', { exact: true }).inputValue(),
+    listingCode: await page.locator('[name=listingCode]').inputValue(),
+    availableUnits: Number(await page.getByLabel('Available units', { exact: true }).inputValue()),
+    managerId: Number(await page.getByLabel('Property manager', { exact: true }).inputValue()) };
+}
 async function realFlow(browser) {
   assert(EMAIL && PASSWORD, 'Real mode requires private HW5/HW4_SEED_EMAIL and SEED_PASSWORD');
   assert(BASE.startsWith('https://'), 'Real Secure-cookie verification requires HTTPS');
@@ -388,6 +558,31 @@ async function realFlow(browser) {
       await home(page); await search(page, `${run} revised`); await card(page, created.id).waitFor();
       return { id: created.id, preserved_original_fields: true, screenshot: await snapshot(page, 'updated-home') };
     });
+    await check('Real same-ID revisit displays and saves a newer server update', async () => {
+      await card(page, created.id).getByRole('link', { name: 'Update', exact: true }).click();
+      await page.getByRole('heading', { name: 'Update listing', exact: true }).waitFor();
+      await page.getByRole('navigation', { name: 'Main navigation' }).getByRole('link', { name: 'Home', exact: true }).click();
+      await home(page); await search(page, `${run} revised`);
+      const fresh = { listingTitle: `${run} revised`, propertyAddress: '99 Fresh Real Server Road',
+        listingCode: created.listingCode, availableUnits: 5, managerId };
+      const changed = await context.request.put(`${BASE}/api/rentals/${created.id}`, { data: fresh });
+      assert.equal(changed.status(), 200); const server = await changed.json();
+      const refreshed = page.waitForResponse(match('GET', `/api/rentals/${created.id}`));
+      await card(page, created.id).getByRole('link', { name: 'Update', exact: true }).click();
+      await (await refreshed).finished(); await page.getByRole('heading', { name: 'Update listing', exact: true }).waitFor(); await delay(100);
+      const displayed = await editValues(page);
+      assert.deepEqual(displayed, fresh, 'A real same-ID revisit must display the latest persisted fields');
+      const saved = page.waitForResponse(match('PUT', `/api/rentals/${created.id}`));
+      await page.getByRole('button', { name: 'Save changes', exact: true }).click();
+      const response = await saved; assert.equal(response.status(), 200);
+      assert.deepEqual(response.request().postDataJSON(), fresh);
+      const result = await response.json();
+      for (const key of ['description', 'submitterEmail', 'propertyType', 'termsAccepted', 'createdAt']) assert.equal(result[key], server[key]);
+      const persisted = await context.request.get(`${BASE}/api/rentals/${created.id}`);
+      assert.equal(persisted.status(), 200); assert.deepEqual(await persisted.json(), result);
+      await home(page); await search(page, `${run} revised`); await card(page, created.id).waitFor();
+      return { id: created.id, newer_fields_displayed_and_submitted: true, old_fields_preserved: true, availableUnits: result.availableUnits };
+    });
     await check('Real empty result and responsive Home', async () => {
       await search(page, `${run}-no-match`); await page.getByRole('heading', { name: 'No listings found' }).waitFor();
       await search(page, `${run} revised`); await page.setViewportSize({ width: 390, height: 844 });
@@ -405,7 +600,9 @@ async function realFlow(browser) {
       return { deleted_id: created.id, screenshot: await snapshot(page, 'deleted-home') };
     });
     await check('Real logout clears visible data and API access', async () => {
+      const settledLogout = page.waitForResponse(match('POST', '/api/auth/logout'));
       await page.getByRole('button', { name: 'Log out', exact: true }).click(); await page.waitForURL(`${BASE}/login`);
+      const response = await settledLogout; assert.equal(response.status(), 204); await response.finished();
       assert.equal(await page.locator('article').count(), 0); assert.equal((await context.request.get(`${BASE}/api/rentals`)).status(), 401);
       assert.deepEqual(errors, []);
     });
@@ -435,6 +632,7 @@ async function realFlow(browser) {
   }
 }
 async function main() {
+  assert(!REGRESSION || MODE === 'mock', '--regression requires --mock; it uses controlled HTTP responses and Chromium cookie processing');
   assert(RAW && path.isAbsolute(RAW), 'HW5_RAW_DIR must be an explicit absolute selected-evidence or external scratch directory');
   if (SHOTS) { assert(path.isAbsolute(SHOTS)); await fs.mkdir(SHOTS, { recursive: true }); }
   await fs.mkdir(RAW, { recursive: true });
@@ -446,7 +644,15 @@ async function main() {
   }
   for (const name of ['frontend/src', 'frontend/package.json', 'frontend/package-lock.json', 'tests/browser_hw05_part1.cjs']) await hash(path.join(ROOT, name));
   let browser;
-  try { browser = await chromium.launch({ headless: true }); await (MODE === 'mock' ? mockFlow : realFlow)(browser); report.status = 'pass'; }
+  try {
+    browser = await chromium.launch({ headless: true });
+    if (REGRESSION) await reviewRegressionFlow(browser);
+    else {
+      await (MODE === 'mock' ? mockFlow : realFlow)(browser);
+      if (MODE === 'mock') await reviewRegressionFlow(browser);
+    }
+    report.status = 'pass';
+  }
   catch (error) { report.status = 'fail'; report.error = redact(error.stack); console.error(report.error); process.exitCode = 1; }
   finally {
     if (browser) await browser.close(); report.finished_at = now();
