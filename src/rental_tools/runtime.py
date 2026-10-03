@@ -1,6 +1,6 @@
 """Shared lazy service construction for MCP and the later executor."""
 from .reader import MySQLRentalReader
-from .reliability import RetryPolicy, RetryingRentalReader
+from .reliability import RetryingRentalReader
 from .service import RentalService
 
 

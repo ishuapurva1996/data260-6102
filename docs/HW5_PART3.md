@@ -131,9 +131,9 @@ The default policy is:
 | `backoff_multiplier` | 2.0 | Multiplies the previous delay. |
 | `max_backoff_s` | 0.2 | Caps each delay. |
 
-There is no baseline jitter, which means there is no random variation added to the delays. Three transient failures cause three reads and exactly two sleeps: 0.1 and 0.2 seconds. There is no sleep after success or the final attempt. Policy values must be finite and sensible; Boolean attempt counts are invalid.
+There is no baseline jitter, which means there is no random variation added to the delays. Three transient failures cause three reads and exactly two sleeps: 0.1 and 0.2 seconds. There is no sleep after success or the final attempt. Policy values must be finite. Attempts must be an integer from 1 through 10 (not Boolean); delays satisfy `0 <= initial <= maximum <= 60` seconds, and the multiplier is between 1 and 100. These local bounds keep even customized policies bounded.
 
-Only an explicit allowlist of temporary I/O failures and the experiment's dedicated transient exception are eligible for retry. Authentication, permissions, bad configuration, invalid database/schema/SQL, input validation, and programmer errors are permanent. An `OperationalError` class alone does not make an error temporary. Exhaustion passes the final exception to the service's existing sanitization.
+The classifier accepts the dedicated `InjectedTransientError`, socket timeout/reset/aborted/broken-pipe exceptions, SQLAlchemy pool timeouts, and PyMySQL `OperationalError` codes 1205 (lock wait), 1213 (deadlock), 2006/2013 (connection loss, including socket timeouts), and 3024 (SELECT timeout). SQLAlchemy DBAPI errors are unwrapped through `orig`. Code 2003 is deliberately excluded because a connection setup failure alone does not establish a temporary cause. Installed PyMySQL 1.1.2 source and constants were checked; the [MySQL error reference](https://dev.mysql.com/doc/mysql-errors/8.4/en/server-error-reference.html) describes the server codes. Authentication, permissions, bad configuration, invalid database/schema/SQL, input validation, and programmer errors are permanent. An `OperationalError` class alone does not make an error temporary. Exhaustion passes the final exception to the service's existing sanitization.
 
 Attempt observers receive only safe attempt metadata. An observer failure cannot alter a result or trigger another storage read. An already wrapped reader is reused when the requested overrides do not conflict; conflicting overrides are rejected instead of nesting retries. The wrapper's `close()` is idempotent and forwards an available underlying `close()` at most once. Callers own service cleanup.
 
@@ -141,7 +141,7 @@ Part 4's default executor is a later integration consumer of this factory. It wi
 
 ## What the timeout controls bound
 
-The required settings are the existing PyMySQL connect/read/write controls of 5/10/10 seconds, plus an explicit SQLAlchemy pool acquisition timeout of 5 seconds.
+The implementation retains PyMySQL connect/read/write controls of 5/10/10 seconds and adds an explicit SQLAlchemy pool acquisition timeout of 5 seconds. `MySQLRentalReader` accepts positive finite keyword arguments `connect_timeout_s`, `read_timeout_s`, `write_timeout_s`, and `pool_timeout_s`; connection timeout also respects the installed driver maximum of 31,536,000 seconds. See the [PyMySQL connection documentation](https://pymysql.readthedocs.io/en/latest/modules/connections.html) and [SQLAlchemy engine documentation](https://docs.sqlalchemy.org/en/20/core/engines.html).
 
 | Control | Default seconds | Wait covered |
 |---|---:|---|
@@ -187,8 +187,21 @@ Its stdout is reserved for MCP protocol messages. The lazy MySQL reader requires
 The focused checks cover the four Part 3 suites and relevant inherited domain/STDIO behavior:
 
 ```bash
-python -m pytest tests/test_hw05_reliability.py tests/test_hw05_runtime.py tests/test_hw05_fault_experiment.py tests/test_hw05_timeouts.py tests/test_hw05_domain_tools.py tests/test_hw05_mcp_stdio.py
+python -m pytest tests/test_hw05_reliability.py tests/test_hw05_runtime.py tests/test_hw05_fault_experiment.py tests/test_hw05_timeouts.py tests/test_hw05_domain_tools.py tests/test_hw05_mcp_stdio.py -k "not meals"
 python -m pip check
 ```
+
+The single deselected test is the inherited Meals transport fixture; this Part 3 gate exercises rental domain behavior only. For fresh output directories, run:
+
+```bash
+python -m scripts.hw05.part3.run_retry_demos --output-dir <demos>
+python -m scripts.hw05.part3.run_fault_experiment --output-dir <selected> --label selected
+python scripts/hw05/part3/recompute_metrics.py --selected-dir <selected> --output <audit.json>
+python -m scripts.hw05.part3.run_fault_experiment --output-dir <replay> --label replay --compare-to <selected>/rows.jsonl
+python scripts/hw05/part3/probe_driver_timeout.py --read-timeout-s 0.2
+python scripts/hw05/part3/capture_live_stdio.py <live-receipt.json>
+```
+
+The experiment fixture contains rental 1 (`Campus apartment`, `100 Campus Way, San Jose`, type `apartment`, manager 1, public description `A one-bedroom apartment near campus.`) and manager 1 (`Campus Homes`) with a count of 1. It is a frozen mapping; reads return detached copies. This fixture differs from the seven-row synthetic MySQL fixture used for the separate live gate. The CLI uses real sleeping and elapsed time; Python-only test hooks replace sleep/clock in explicitly labeled unit tests.
 
 **Evidence pending:** This initial operating guide records source contracts and the required experiment design. It does not yet claim that the new implementation, actual-driver probe, demonstrations, 150-call measured run, replay, or live MySQL STDIO gate has passed. Final commands, measured results, source provenance, and any remaining gaps must be recorded under `reports/hw05/part3/` and linked here after verification. U5/U6c combined integration is a separate coordinator gate.

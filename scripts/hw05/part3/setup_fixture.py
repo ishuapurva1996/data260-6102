@@ -9,6 +9,7 @@ import hashlib
 import json
 import os
 from pathlib import Path
+import sys
 
 from sqlalchemy import create_engine, text
 from sqlalchemy.engine import make_url
@@ -74,4 +75,8 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except Exception:
+        print("Part 3 fixture setup failed; check the owned instance and private configuration.", file=sys.stderr)
+        raise SystemExit(1) from None
