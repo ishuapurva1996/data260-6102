@@ -1,0 +1,905 @@
+{
+  "started_at": "2026-10-03T08:32:06.033332+00:00",
+  "revision": "f57d20fd5588589fcf6e6c8792b0d912277da9f0",
+  "transport": "real HTTPS + MySQL",
+  "source_dirty": true,
+  "checks": [
+    {
+      "label": "Manager create",
+      "timestamp": "2026-10-03T08:32:06.214058+00:00",
+      "method": "POST",
+      "path": "/api/property-managers",
+      "input": {
+        "name": "HW5 Evidence Manager",
+        "company": "Updated Orchard Test Homes",
+        "email": "hw5-ceb4aa478c5445aaa9763a9a05c999af@example.com"
+      },
+      "expected_status": 201,
+      "status": 201,
+      "total_count": null,
+      "output": {
+        "name": "HW5 Evidence Manager",
+        "company": "Orchard Test Homes",
+        "email": "hw5-ceb4aa478c5445aaa9763a9a05c999af@example.com",
+        "id": 89,
+        "createdAt": "2026-10-03T08:32:06.209815Z",
+        "updatedAt": "2026-10-03T08:32:06.209815Z"
+      },
+      "pass": true
+    },
+    {
+      "label": "Manager list pagination",
+      "timestamp": "2026-10-03T08:32:06.223395+00:00",
+      "method": "GET",
+      "path": "/api/property-managers?limit=1&offset=0",
+      "input": null,
+      "expected_status": 200,
+      "status": 200,
+      "total_count": "3",
+      "output": [
+        {
+          "name": "Orchard Homes",
+          "company": "Legacy import",
+          "email": "legacy-manager-1@example.com",
+          "id": 1,
+          "createdAt": "2026-10-03T08:26:22.263633Z",
+          "updatedAt": "2026-10-03T08:26:22.263633Z"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "label": "Manager detail",
+      "timestamp": "2026-10-03T08:32:06.230252+00:00",
+      "method": "GET",
+      "path": "/api/property-managers/89",
+      "input": null,
+      "expected_status": 200,
+      "status": 200,
+      "total_count": null,
+      "output": {
+        "name": "HW5 Evidence Manager",
+        "company": "Orchard Test Homes",
+        "email": "hw5-ceb4aa478c5445aaa9763a9a05c999af@example.com",
+        "id": 89,
+        "createdAt": "2026-10-03T08:32:06.209815Z",
+        "updatedAt": "2026-10-03T08:32:06.209815Z"
+      },
+      "pass": true
+    },
+    {
+      "label": "Manager unique email conflict",
+      "timestamp": "2026-10-03T08:32:06.237454+00:00",
+      "method": "POST",
+      "path": "/api/property-managers",
+      "input": {
+        "name": "HW5 Evidence Manager",
+        "company": "Updated Orchard Test Homes",
+        "email": "hw5-ceb4aa478c5445aaa9763a9a05c999af@example.com"
+      },
+      "expected_status": 409,
+      "status": 409,
+      "total_count": null,
+      "output": {
+        "detail": "A property manager with this email already exists."
+      },
+      "pass": true
+    },
+    {
+      "label": "Manager update",
+      "timestamp": "2026-10-03T08:32:06.242755+00:00",
+      "method": "PUT",
+      "path": "/api/property-managers/89",
+      "input": {
+        "name": "HW5 Evidence Manager",
+        "company": "Updated Orchard Test Homes",
+        "email": "hw5-ceb4aa478c5445aaa9763a9a05c999af@example.com"
+      },
+      "expected_status": 200,
+      "status": 200,
+      "total_count": null,
+      "output": {
+        "name": "HW5 Evidence Manager",
+        "company": "Updated Orchard Test Homes",
+        "email": "hw5-ceb4aa478c5445aaa9763a9a05c999af@example.com",
+        "id": 89,
+        "createdAt": "2026-10-03T08:32:06.209815Z",
+        "updatedAt": "2026-10-03T08:32:06.241052Z"
+      },
+      "pass": true
+    },
+    {
+      "label": "Empty relationship",
+      "timestamp": "2026-10-03T08:32:06.248078+00:00",
+      "method": "GET",
+      "path": "/api/property-managers/89/rentals",
+      "input": null,
+      "expected_status": 200,
+      "status": 200,
+      "total_count": "0",
+      "output": [],
+      "pass": true
+    },
+    {
+      "label": "Rental create generated code",
+      "timestamp": "2026-10-03T08:32:06.254975+00:00",
+      "method": "POST",
+      "path": "/api/rentals",
+      "input": {
+        "listingTitle": "HW5 Live Acceptance Home",
+        "propertyAddress": "6102 Evidence Lane, San Jose, CA",
+        "submitterEmail": "evidence-owner@example.com",
+        "description": "A sunny rental home used only for the owned acceptance checks.",
+        "propertyType": "house",
+        "termsAccepted": true,
+        "managerId": 89,
+        "availableUnits": 2
+      },
+      "expected_status": 201,
+      "status": 201,
+      "total_count": null,
+      "output": {
+        "listingTitle": "HW5 Live Acceptance Home",
+        "propertyAddress": "6102 Evidence Lane, San Jose, CA",
+        "listingCode": "S6102-R-263",
+        "availableUnits": 2,
+        "managerId": 89,
+        "submitterEmail": "evidence-owner@example.com",
+        "description": "A sunny rental home used only for the owned acceptance checks.",
+        "propertyType": "house",
+        "termsAccepted": true,
+        "id": 263,
+        "createdAt": "2026-10-03T08:32:06.251529Z",
+        "updatedAt": "2026-10-03T08:32:06.251529Z"
+      },
+      "pass": true
+    },
+    {
+      "label": "Rental list pagination",
+      "timestamp": "2026-10-03T08:32:06.260653+00:00",
+      "method": "GET",
+      "path": "/api/rentals?limit=2&offset=1",
+      "input": null,
+      "expected_status": 200,
+      "status": 200,
+      "total_count": "56",
+      "output": [
+        {
+          "listingTitle": "San Jose Rental 02",
+          "propertyAddress": "102 Orchard Avenue, San Jose, CA",
+          "listingCode": "S6102-R-2",
+          "availableUnits": 1,
+          "managerId": 2,
+          "submitterEmail": "demo-owner@example.com",
+          "description": "A bright rental home close to campus and public transportation.",
+          "propertyType": "apartment",
+          "termsAccepted": true,
+          "id": 2,
+          "createdAt": "2026-10-03T08:26:22.263633Z",
+          "updatedAt": "2026-10-03T08:26:22.263633Z"
+        },
+        {
+          "listingTitle": "San Jose Rental 03",
+          "propertyAddress": "103 Orchard Avenue, San Jose, CA",
+          "listingCode": "S6102-R-3",
+          "availableUnits": 1,
+          "managerId": 1,
+          "submitterEmail": "demo-owner@example.com",
+          "description": "A bright rental home close to campus and public transportation.",
+          "propertyType": "apartment",
+          "termsAccepted": true,
+          "id": 3,
+          "createdAt": "2026-10-03T08:26:22.263633Z",
+          "updatedAt": "2026-10-03T08:26:22.263633Z"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "label": "Rental detail",
+      "timestamp": "2026-10-03T08:32:06.265965+00:00",
+      "method": "GET",
+      "path": "/api/rentals/263",
+      "input": null,
+      "expected_status": 200,
+      "status": 200,
+      "total_count": null,
+      "output": {
+        "listingTitle": "HW5 Live Acceptance Home",
+        "propertyAddress": "6102 Evidence Lane, San Jose, CA",
+        "listingCode": "S6102-R-263",
+        "availableUnits": 2,
+        "managerId": 89,
+        "submitterEmail": "evidence-owner@example.com",
+        "description": "A sunny rental home used only for the owned acceptance checks.",
+        "propertyType": "house",
+        "termsAccepted": true,
+        "id": 263,
+        "createdAt": "2026-10-03T08:32:06.251529Z",
+        "updatedAt": "2026-10-03T08:32:06.251529Z"
+      },
+      "pass": true
+    },
+    {
+      "label": "Relationship query",
+      "timestamp": "2026-10-03T08:32:06.272083+00:00",
+      "method": "GET",
+      "path": "/api/property-managers/89/rentals?limit=1&offset=0",
+      "input": null,
+      "expected_status": 200,
+      "status": 200,
+      "total_count": "1",
+      "output": [
+        {
+          "listingTitle": "HW5 Live Acceptance Home",
+          "propertyAddress": "6102 Evidence Lane, San Jose, CA",
+          "listingCode": "S6102-R-263",
+          "availableUnits": 2,
+          "managerId": 89,
+          "submitterEmail": "evidence-owner@example.com",
+          "description": "A sunny rental home used only for the owned acceptance checks.",
+          "propertyType": "house",
+          "termsAccepted": true,
+          "id": 263,
+          "createdAt": "2026-10-03T08:32:06.251529Z",
+          "updatedAt": "2026-10-03T08:32:06.251529Z"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "label": "Referenced manager delete restricted",
+      "timestamp": "2026-10-03T08:32:06.278903+00:00",
+      "method": "DELETE",
+      "path": "/api/property-managers/89",
+      "input": null,
+      "expected_status": 409,
+      "status": 409,
+      "total_count": null,
+      "output": {
+        "detail": "This property manager still has rental listings and cannot be deleted."
+      },
+      "pass": true
+    },
+    {
+      "label": "Rental unique code conflict",
+      "timestamp": "2026-10-03T08:32:06.283889+00:00",
+      "method": "POST",
+      "path": "/api/rentals",
+      "input": {
+        "listingTitle": "HW5 Live Acceptance Home",
+        "propertyAddress": "6102 Evidence Lane, San Jose, CA",
+        "submitterEmail": "evidence-owner@example.com",
+        "description": "A sunny rental home used only for the owned acceptance checks.",
+        "propertyType": "house",
+        "termsAccepted": true,
+        "managerId": 89,
+        "availableUnits": 2,
+        "listingCode": "S6102-R-263"
+      },
+      "expected_status": 409,
+      "status": 409,
+      "total_count": null,
+      "output": {
+        "detail": "A rental with this listing code already exists."
+      },
+      "pass": true
+    },
+    {
+      "label": "Negative units invalid",
+      "timestamp": "2026-10-03T08:32:06.288758+00:00",
+      "method": "PUT",
+      "path": "/api/rentals/263",
+      "input": {
+        "listingTitle": "HW5 Live Acceptance Home",
+        "propertyAddress": "6102 Evidence Lane, San Jose, CA",
+        "availableUnits": -1
+      },
+      "expected_status": 422,
+      "status": 422,
+      "total_count": null,
+      "output": {
+        "detail": [
+          {
+            "type": "greater_than_equal",
+            "loc": [
+              "body",
+              "availableUnits"
+            ],
+            "msg": "Input should be greater than or equal to 0"
+          }
+        ]
+      },
+      "pass": true
+    },
+    {
+      "label": "Malformed listing code invalid",
+      "timestamp": "2026-10-03T08:32:06.291759+00:00",
+      "method": "POST",
+      "path": "/api/rentals",
+      "input": {
+        "listingTitle": "HW5 Live Acceptance Home",
+        "propertyAddress": "6102 Evidence Lane, San Jose, CA",
+        "submitterEmail": "evidence-owner@example.com",
+        "description": "A sunny rental home used only for the owned acceptance checks.",
+        "propertyType": "house",
+        "termsAccepted": true,
+        "managerId": 89,
+        "availableUnits": 2,
+        "listingCode": "INVALID"
+      },
+      "expected_status": 422,
+      "status": 422,
+      "total_count": null,
+      "output": {
+        "detail": [
+          {
+            "type": "string_pattern_mismatch",
+            "loc": [
+              "body",
+              "listingCode"
+            ],
+            "msg": "String should match pattern '^S6102-R-[1-9][0-9]*$'"
+          }
+        ]
+      },
+      "pass": true
+    },
+    {
+      "label": "Malformed manager email invalid",
+      "timestamp": "2026-10-03T08:32:06.294783+00:00",
+      "method": "POST",
+      "path": "/api/property-managers",
+      "input": {
+        "name": "HW5 Evidence Manager",
+        "company": "Updated Orchard Test Homes",
+        "email": "invalid"
+      },
+      "expected_status": 422,
+      "status": 422,
+      "total_count": null,
+      "output": {
+        "detail": [
+          {
+            "type": "value_error",
+            "loc": [
+              "body",
+              "email"
+            ],
+            "msg": "value is not a valid email address: An email address must have an @-sign."
+          }
+        ]
+      },
+      "pass": true
+    },
+    {
+      "label": "Invalid pagination",
+      "timestamp": "2026-10-03T08:32:06.297401+00:00",
+      "method": "GET",
+      "path": "/api/rentals?limit=0",
+      "input": null,
+      "expected_status": 422,
+      "status": 422,
+      "total_count": null,
+      "output": {
+        "detail": [
+          {
+            "type": "greater_than_equal",
+            "loc": [
+              "query",
+              "limit"
+            ],
+            "msg": "Input should be greater than or equal to 1"
+          }
+        ]
+      },
+      "pass": true
+    },
+    {
+      "label": "Missing manager invalid FK",
+      "timestamp": "2026-10-03T08:32:06.308348+00:00",
+      "method": "POST",
+      "path": "/api/rentals",
+      "input": {
+        "listingTitle": "HW5 Live Acceptance Home",
+        "propertyAddress": "6102 Evidence Lane, San Jose, CA",
+        "submitterEmail": "evidence-owner@example.com",
+        "description": "A sunny rental home used only for the owned acceptance checks.",
+        "propertyType": "house",
+        "termsAccepted": true,
+        "managerId": 2147483647,
+        "availableUnits": 2
+      },
+      "expected_status": 422,
+      "status": 422,
+      "total_count": null,
+      "output": {
+        "detail": "The supplied property manager does not exist."
+      },
+      "pass": true
+    },
+    {
+      "label": "Missing manager detail",
+      "timestamp": "2026-10-03T08:32:06.312481+00:00",
+      "method": "GET",
+      "path": "/api/property-managers/2147483647",
+      "input": null,
+      "expected_status": 404,
+      "status": 404,
+      "total_count": null,
+      "output": {
+        "detail": "Property manager ID 2147483647 was not found."
+      },
+      "pass": true
+    },
+    {
+      "label": "Rental update",
+      "timestamp": "2026-10-03T08:32:06.318670+00:00",
+      "method": "PUT",
+      "path": "/api/rentals/263",
+      "input": {
+        "listingTitle": "Updated HW5 Live Home",
+        "propertyAddress": "6102 Evidence Lane, San Jose, CA",
+        "availableUnits": 3
+      },
+      "expected_status": 200,
+      "status": 200,
+      "total_count": null,
+      "output": {
+        "listingTitle": "Updated HW5 Live Home",
+        "propertyAddress": "6102 Evidence Lane, San Jose, CA",
+        "listingCode": "S6102-R-263",
+        "availableUnits": 3,
+        "managerId": 89,
+        "submitterEmail": "evidence-owner@example.com",
+        "description": "A sunny rental home used only for the owned acceptance checks.",
+        "propertyType": "house",
+        "termsAccepted": true,
+        "id": 263,
+        "createdAt": "2026-10-03T08:32:06.251529Z",
+        "updatedAt": "2026-10-03T08:32:06.316323Z"
+      },
+      "pass": true
+    },
+    {
+      "label": "Rental delete",
+      "timestamp": "2026-10-03T08:32:06.332346+00:00",
+      "method": "DELETE",
+      "path": "/api/rentals/263",
+      "input": null,
+      "expected_status": 204,
+      "status": 204,
+      "total_count": null,
+      "output": null,
+      "pass": true
+    },
+    {
+      "label": "Deleted rental absent",
+      "timestamp": "2026-10-03T08:32:06.337638+00:00",
+      "method": "GET",
+      "path": "/api/rentals/263",
+      "input": null,
+      "expected_status": 404,
+      "status": 404,
+      "total_count": null,
+      "output": {
+        "detail": "Rental listing ID 263 was not found."
+      },
+      "pass": true
+    },
+    {
+      "label": "Manager delete after child removed",
+      "timestamp": "2026-10-03T08:32:06.343352+00:00",
+      "method": "DELETE",
+      "path": "/api/property-managers/89",
+      "input": null,
+      "expected_status": 204,
+      "status": 204,
+      "total_count": null,
+      "output": null,
+      "pass": true
+    },
+    {
+      "label": "Deleted manager absent",
+      "timestamp": "2026-10-03T08:32:06.347263+00:00",
+      "method": "GET",
+      "path": "/api/property-managers/89",
+      "input": null,
+      "expected_status": 404,
+      "status": 404,
+      "total_count": null,
+      "output": {
+        "detail": "Property manager ID 89 was not found."
+      },
+      "pass": true
+    },
+    {
+      "label": "Legacy performance naive serialization",
+      "timestamp": "2026-10-03T08:32:06.356380+00:00",
+      "method": "GET",
+      "path": "/api/rentals/naive?page_size=10&offset=0",
+      "input": null,
+      "expected_status": 200,
+      "status": 200,
+      "total_count": null,
+      "output": [
+        {
+          "listingTitle": "San Jose Rental 01",
+          "propertyAddress": "101 Orchard Avenue, San Jose, CA",
+          "listingCode": "S6102-R-1",
+          "availableUnits": 1,
+          "managerId": 1,
+          "submitterEmail": "demo-owner@example.com",
+          "description": "A bright rental home close to campus and public transportation.",
+          "propertyType": "apartment",
+          "termsAccepted": true,
+          "id": 1,
+          "createdAt": "2026-10-03T08:26:22.263633Z",
+          "updatedAt": "2026-10-03T08:26:22.263633Z",
+          "manager": {
+            "id": 1,
+            "name": "Orchard Homes"
+          }
+        },
+        {
+          "listingTitle": "San Jose Rental 02",
+          "propertyAddress": "102 Orchard Avenue, San Jose, CA",
+          "listingCode": "S6102-R-2",
+          "availableUnits": 1,
+          "managerId": 2,
+          "submitterEmail": "demo-owner@example.com",
+          "description": "A bright rental home close to campus and public transportation.",
+          "propertyType": "apartment",
+          "termsAccepted": true,
+          "id": 2,
+          "createdAt": "2026-10-03T08:26:22.263633Z",
+          "updatedAt": "2026-10-03T08:26:22.263633Z",
+          "manager": {
+            "id": 2,
+            "name": "Campus Rentals"
+          }
+        },
+        {
+          "listingTitle": "San Jose Rental 03",
+          "propertyAddress": "103 Orchard Avenue, San Jose, CA",
+          "listingCode": "S6102-R-3",
+          "availableUnits": 1,
+          "managerId": 1,
+          "submitterEmail": "demo-owner@example.com",
+          "description": "A bright rental home close to campus and public transportation.",
+          "propertyType": "apartment",
+          "termsAccepted": true,
+          "id": 3,
+          "createdAt": "2026-10-03T08:26:22.263633Z",
+          "updatedAt": "2026-10-03T08:26:22.263633Z",
+          "manager": {
+            "id": 1,
+            "name": "Orchard Homes"
+          }
+        },
+        {
+          "listingTitle": "San Jose Rental 04",
+          "propertyAddress": "104 Orchard Avenue, San Jose, CA",
+          "listingCode": "S6102-R-4",
+          "availableUnits": 1,
+          "managerId": 2,
+          "submitterEmail": "demo-owner@example.com",
+          "description": "A bright rental home close to campus and public transportation.",
+          "propertyType": "apartment",
+          "termsAccepted": true,
+          "id": 4,
+          "createdAt": "2026-10-03T08:26:22.263633Z",
+          "updatedAt": "2026-10-03T08:26:22.263633Z",
+          "manager": {
+            "id": 2,
+            "name": "Campus Rentals"
+          }
+        },
+        {
+          "listingTitle": "San Jose Rental 05",
+          "propertyAddress": "105 Orchard Avenue, San Jose, CA",
+          "listingCode": "S6102-R-5",
+          "availableUnits": 1,
+          "managerId": 1,
+          "submitterEmail": "demo-owner@example.com",
+          "description": "A bright rental home close to campus and public transportation.",
+          "propertyType": "apartment",
+          "termsAccepted": true,
+          "id": 5,
+          "createdAt": "2026-10-03T08:26:22.263633Z",
+          "updatedAt": "2026-10-03T08:26:22.263633Z",
+          "manager": {
+            "id": 1,
+            "name": "Orchard Homes"
+          }
+        },
+        {
+          "listingTitle": "San Jose Rental 06",
+          "propertyAddress": "106 Orchard Avenue, San Jose, CA",
+          "listingCode": "S6102-R-6",
+          "availableUnits": 1,
+          "managerId": 2,
+          "submitterEmail": "demo-owner@example.com",
+          "description": "A bright rental home close to campus and public transportation.",
+          "propertyType": "apartment",
+          "termsAccepted": true,
+          "id": 6,
+          "createdAt": "2026-10-03T08:26:22.263633Z",
+          "updatedAt": "2026-10-03T08:26:22.263633Z",
+          "manager": {
+            "id": 2,
+            "name": "Campus Rentals"
+          }
+        },
+        {
+          "listingTitle": "San Jose Rental 07",
+          "propertyAddress": "107 Orchard Avenue, San Jose, CA",
+          "listingCode": "S6102-R-7",
+          "availableUnits": 1,
+          "managerId": 1,
+          "submitterEmail": "demo-owner@example.com",
+          "description": "A bright rental home close to campus and public transportation.",
+          "propertyType": "apartment",
+          "termsAccepted": true,
+          "id": 7,
+          "createdAt": "2026-10-03T08:26:22.263633Z",
+          "updatedAt": "2026-10-03T08:26:22.263633Z",
+          "manager": {
+            "id": 1,
+            "name": "Orchard Homes"
+          }
+        },
+        {
+          "listingTitle": "San Jose Rental 08",
+          "propertyAddress": "108 Orchard Avenue, San Jose, CA",
+          "listingCode": "S6102-R-8",
+          "availableUnits": 1,
+          "managerId": 2,
+          "submitterEmail": "demo-owner@example.com",
+          "description": "A bright rental home close to campus and public transportation.",
+          "propertyType": "apartment",
+          "termsAccepted": true,
+          "id": 8,
+          "createdAt": "2026-10-03T08:26:22.263633Z",
+          "updatedAt": "2026-10-03T08:26:22.263633Z",
+          "manager": {
+            "id": 2,
+            "name": "Campus Rentals"
+          }
+        },
+        {
+          "listingTitle": "San Jose Rental 09",
+          "propertyAddress": "109 Orchard Avenue, San Jose, CA",
+          "listingCode": "S6102-R-9",
+          "availableUnits": 1,
+          "managerId": 1,
+          "submitterEmail": "demo-owner@example.com",
+          "description": "A bright rental home close to campus and public transportation.",
+          "propertyType": "apartment",
+          "termsAccepted": true,
+          "id": 9,
+          "createdAt": "2026-10-03T08:26:22.263633Z",
+          "updatedAt": "2026-10-03T08:26:22.263633Z",
+          "manager": {
+            "id": 1,
+            "name": "Orchard Homes"
+          }
+        },
+        {
+          "listingTitle": "San Jose Rental 10",
+          "propertyAddress": "110 Orchard Avenue, San Jose, CA",
+          "listingCode": "S6102-R-10",
+          "availableUnits": 1,
+          "managerId": 2,
+          "submitterEmail": "demo-owner@example.com",
+          "description": "A bright rental home close to campus and public transportation.",
+          "propertyType": "apartment",
+          "termsAccepted": true,
+          "id": 10,
+          "createdAt": "2026-10-03T08:26:22.263633Z",
+          "updatedAt": "2026-10-03T08:26:22.263633Z",
+          "manager": {
+            "id": 2,
+            "name": "Campus Rentals"
+          }
+        }
+      ],
+      "pass": true
+    },
+    {
+      "label": "Legacy performance fixed serialization",
+      "timestamp": "2026-10-03T08:32:06.362004+00:00",
+      "method": "GET",
+      "path": "/api/rentals/fixed?page_size=10&offset=0",
+      "input": null,
+      "expected_status": 200,
+      "status": 200,
+      "total_count": null,
+      "output": [
+        {
+          "listingTitle": "San Jose Rental 01",
+          "propertyAddress": "101 Orchard Avenue, San Jose, CA",
+          "listingCode": "S6102-R-1",
+          "availableUnits": 1,
+          "managerId": 1,
+          "submitterEmail": "demo-owner@example.com",
+          "description": "A bright rental home close to campus and public transportation.",
+          "propertyType": "apartment",
+          "termsAccepted": true,
+          "id": 1,
+          "createdAt": "2026-10-03T08:26:22.263633Z",
+          "updatedAt": "2026-10-03T08:26:22.263633Z",
+          "manager": {
+            "id": 1,
+            "name": "Orchard Homes"
+          }
+        },
+        {
+          "listingTitle": "San Jose Rental 02",
+          "propertyAddress": "102 Orchard Avenue, San Jose, CA",
+          "listingCode": "S6102-R-2",
+          "availableUnits": 1,
+          "managerId": 2,
+          "submitterEmail": "demo-owner@example.com",
+          "description": "A bright rental home close to campus and public transportation.",
+          "propertyType": "apartment",
+          "termsAccepted": true,
+          "id": 2,
+          "createdAt": "2026-10-03T08:26:22.263633Z",
+          "updatedAt": "2026-10-03T08:26:22.263633Z",
+          "manager": {
+            "id": 2,
+            "name": "Campus Rentals"
+          }
+        },
+        {
+          "listingTitle": "San Jose Rental 03",
+          "propertyAddress": "103 Orchard Avenue, San Jose, CA",
+          "listingCode": "S6102-R-3",
+          "availableUnits": 1,
+          "managerId": 1,
+          "submitterEmail": "demo-owner@example.com",
+          "description": "A bright rental home close to campus and public transportation.",
+          "propertyType": "apartment",
+          "termsAccepted": true,
+          "id": 3,
+          "createdAt": "2026-10-03T08:26:22.263633Z",
+          "updatedAt": "2026-10-03T08:26:22.263633Z",
+          "manager": {
+            "id": 1,
+            "name": "Orchard Homes"
+          }
+        },
+        {
+          "listingTitle": "San Jose Rental 04",
+          "propertyAddress": "104 Orchard Avenue, San Jose, CA",
+          "listingCode": "S6102-R-4",
+          "availableUnits": 1,
+          "managerId": 2,
+          "submitterEmail": "demo-owner@example.com",
+          "description": "A bright rental home close to campus and public transportation.",
+          "propertyType": "apartment",
+          "termsAccepted": true,
+          "id": 4,
+          "createdAt": "2026-10-03T08:26:22.263633Z",
+          "updatedAt": "2026-10-03T08:26:22.263633Z",
+          "manager": {
+            "id": 2,
+            "name": "Campus Rentals"
+          }
+        },
+        {
+          "listingTitle": "San Jose Rental 05",
+          "propertyAddress": "105 Orchard Avenue, San Jose, CA",
+          "listingCode": "S6102-R-5",
+          "availableUnits": 1,
+          "managerId": 1,
+          "submitterEmail": "demo-owner@example.com",
+          "description": "A bright rental home close to campus and public transportation.",
+          "propertyType": "apartment",
+          "termsAccepted": true,
+          "id": 5,
+          "createdAt": "2026-10-03T08:26:22.263633Z",
+          "updatedAt": "2026-10-03T08:26:22.263633Z",
+          "manager": {
+            "id": 1,
+            "name": "Orchard Homes"
+          }
+        },
+        {
+          "listingTitle": "San Jose Rental 06",
+          "propertyAddress": "106 Orchard Avenue, San Jose, CA",
+          "listingCode": "S6102-R-6",
+          "availableUnits": 1,
+          "managerId": 2,
+          "submitterEmail": "demo-owner@example.com",
+          "description": "A bright rental home close to campus and public transportation.",
+          "propertyType": "apartment",
+          "termsAccepted": true,
+          "id": 6,
+          "createdAt": "2026-10-03T08:26:22.263633Z",
+          "updatedAt": "2026-10-03T08:26:22.263633Z",
+          "manager": {
+            "id": 2,
+            "name": "Campus Rentals"
+          }
+        },
+        {
+          "listingTitle": "San Jose Rental 07",
+          "propertyAddress": "107 Orchard Avenue, San Jose, CA",
+          "listingCode": "S6102-R-7",
+          "availableUnits": 1,
+          "managerId": 1,
+          "submitterEmail": "demo-owner@example.com",
+          "description": "A bright rental home close to campus and public transportation.",
+          "propertyType": "apartment",
+          "termsAccepted": true,
+          "id": 7,
+          "createdAt": "2026-10-03T08:26:22.263633Z",
+          "updatedAt": "2026-10-03T08:26:22.263633Z",
+          "manager": {
+            "id": 1,
+            "name": "Orchard Homes"
+          }
+        },
+        {
+          "listingTitle": "San Jose Rental 08",
+          "propertyAddress": "108 Orchard Avenue, San Jose, CA",
+          "listingCode": "S6102-R-8",
+          "availableUnits": 1,
+          "managerId": 2,
+          "submitterEmail": "demo-owner@example.com",
+          "description": "A bright rental home close to campus and public transportation.",
+          "propertyType": "apartment",
+          "termsAccepted": true,
+          "id": 8,
+          "createdAt": "2026-10-03T08:26:22.263633Z",
+          "updatedAt": "2026-10-03T08:26:22.263633Z",
+          "manager": {
+            "id": 2,
+            "name": "Campus Rentals"
+          }
+        },
+        {
+          "listingTitle": "San Jose Rental 09",
+          "propertyAddress": "109 Orchard Avenue, San Jose, CA",
+          "listingCode": "S6102-R-9",
+          "availableUnits": 1,
+          "managerId": 1,
+          "submitterEmail": "demo-owner@example.com",
+          "description": "A bright rental home close to campus and public transportation.",
+          "propertyType": "apartment",
+          "termsAccepted": true,
+          "id": 9,
+          "createdAt": "2026-10-03T08:26:22.263633Z",
+          "updatedAt": "2026-10-03T08:26:22.263633Z",
+          "manager": {
+            "id": 1,
+            "name": "Orchard Homes"
+          }
+        },
+        {
+          "listingTitle": "San Jose Rental 10",
+          "propertyAddress": "110 Orchard Avenue, San Jose, CA",
+          "listingCode": "S6102-R-10",
+          "availableUnits": 1,
+          "managerId": 2,
+          "submitterEmail": "demo-owner@example.com",
+          "description": "A bright rental home close to campus and public transportation.",
+          "propertyType": "apartment",
+          "termsAccepted": true,
+          "id": 10,
+          "createdAt": "2026-10-03T08:26:22.263633Z",
+          "updatedAt": "2026-10-03T08:26:22.263633Z",
+          "manager": {
+            "id": 2,
+            "name": "Campus Rentals"
+          }
+        }
+      ],
+      "pass": true
+    }
+  ],
+  "pass": true,
+  "finished_at": "2026-10-03T08:32:06.364694+00:00"
+}

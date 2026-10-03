@@ -152,7 +152,8 @@ python -m pytest tests/test_hw05_api.py tests/test_api.py tests/test_hw04_auth.p
   tests/test_hw04_search_regression.py tests/test_hw04_database.py \
   tests/test_hw04_serving.py -q -p no:cacheprovider
 python scripts/hw05/part1/live_acceptance.py --output /absolute/evidence/api.json
-node tests/browser_hw05_part1.cjs
+HW5_RAW_DIR=/absolute/evidence/browser node tests/browser_hw05_part1.cjs --mock
+HW5_RAW_DIR=/absolute/evidence/browser node tests/browser_hw05_part1.cjs --real
 ```
 
 The live API runner requires private `HW4_SEED_EMAIL`, `HW4_SEED_PASSWORD`, and

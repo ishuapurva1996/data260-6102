@@ -1,0 +1,58 @@
+{
+  "revision": "f6091d0fe9171fec999b3fe57357f784ad1a24e6",
+  "captured_at": "2026-10-03T08:40:14.202Z",
+  "source_dirty": true,
+  "source_sha256": {
+    "frontend/src/features/rentals/rentalsSlice.js": "e258915bfa8a0d56220ff24eac9c411f99fceb8f0e58971e8beb47d401856772",
+    "frontend/src/pages/CreateRecord.jsx": "5b93267fcce1dee3977b6b9a7a660a3e7dea9011949189ebbb3308c7f3525415",
+    "frontend/src/pages/UpdateRecord.jsx": "19d50ed9f37476c2eb8818e0a781987181212a2754e40afeeee030c4f9b5f432",
+    "frontend/src/pages/Home.jsx": "14b57d19a219b6f56286a5c87a5cd6e1ea0c8cfca3b6cba15390ae5c32c32a60",
+    "frontend/src/components/forms.jsx": "5540154c6e241db8ea6207c9ed5afb1217fd9eaacdc3afb9348a57ac5bf9caf4",
+    "scripts/hw05/part1/capture_features.cjs": "1f17680eb03bb523b194f427e0012187f9583e58198c6433219073f86e3550c6"
+  },
+  "provenance": "Single browser screenshots of a source viewer reading repository files and an embedded live HTTPS application. No screenshot compositing, response interception, or reconstructed app UI.",
+  "captures": [
+    {
+      "feature": "Home",
+      "file": "reports/hw05/screenshots/part1/redux-home.png",
+      "captured_at": "2026-10-03T08:40:13.166Z",
+      "live_url": "https://localhost:8702/",
+      "source_file": "frontend/src/features/rentals/rentalsSlice.js",
+      "original_capture_file": "../../../../../../code/agent_outputs/data260-hw5/sessions/part1/feature-final/home.png",
+      "sha256": "b0b087a9c3f79c9ad5812ac2c3ab2f9f14f1c1ce4784922c594541fad9e0d85e"
+    },
+    {
+      "feature": "Create",
+      "file": "reports/hw05/screenshots/part1/redux-create.png",
+      "captured_at": "2026-10-03T08:40:13.728Z",
+      "live_url": "https://localhost:8702/",
+      "source_file": "frontend/src/features/rentals/rentalsSlice.js",
+      "original_capture_file": "../../../../../../code/agent_outputs/data260-hw5/sessions/part1/feature-final/create.png",
+      "sha256": "01df8ecb29d983e1d5b439ee9466702f83f0a018022889fe5be7ea223b57e7a5"
+    },
+    {
+      "feature": "Update",
+      "file": "reports/hw05/screenshots/part1/redux-update.png",
+      "captured_at": "2026-10-03T08:40:14.026Z",
+      "live_url": "https://localhost:8702/",
+      "source_file": "frontend/src/features/rentals/rentalsSlice.js",
+      "original_capture_file": "../../../../../../code/agent_outputs/data260-hw5/sessions/part1/feature-final/update.png",
+      "sha256": "633e521d05c92cb550a5e767f696a75bfafa319f0692815e94434c1ac5a30ea4"
+    },
+    {
+      "feature": "Delete",
+      "file": "reports/hw05/screenshots/part1/redux-delete.png",
+      "captured_at": "2026-10-03T08:40:14.190Z",
+      "live_url": "https://localhost:8702/",
+      "source_file": "frontend/src/features/rentals/rentalsSlice.js",
+      "original_capture_file": "../../../../../../code/agent_outputs/data260-hw5/sessions/part1/feature-final/delete.png",
+      "sha256": "f73013641c0ca63aebcf7f055768fdd30f12d1696ebea538e43d525167e60d3d"
+    }
+  ],
+  "packaging": {
+    "packaged_at": "2026-10-03T08:45:02.562831+00:00",
+    "code_commit": "8837b307257f34689bd5606d45abc5fc5b954aad",
+    "source_hashes_match_committed_files": true,
+    "image_bytes_unchanged": true
+  }
+}

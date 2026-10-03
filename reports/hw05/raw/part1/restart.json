@@ -1,0 +1,9 @@
+{
+  "timestamp": "2026-10-03T08:33:32.456152+00:00",
+  "old_launcher_pid": 45280,
+  "new_launcher_pid": 45596,
+  "record_id": 1,
+  "same_record_after_process_restart": true,
+  "secure_cookie_session_survived_process_restart": true,
+  "credentials_recorded": false
+}

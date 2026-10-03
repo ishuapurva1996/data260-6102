@@ -1,0 +1,582 @@
+{
+  "mode": "mock",
+  "status": "pass",
+  "started_at": "2026-10-03T08:40:27.084Z",
+  "base_url": "https://localhost:8702",
+  "checks": [
+    {
+      "name": "Protected routes, login, paginated Home and obsolete shortcut removal",
+      "started_at": "2026-10-03T08:40:27.501Z",
+      "details": {
+        "total": 12,
+        "page_size": 5
+      },
+      "status": "pass",
+      "finished_at": "2026-10-03T08:40:27.818Z"
+    },
+    {
+      "name": "Empty, loading and recoverable list-error states",
+      "started_at": "2026-10-03T08:40:27.818Z",
+      "status": "pass",
+      "finished_at": "2026-10-03T08:40:28.027Z"
+    },
+    {
+      "name": "Invalid and missing IDs show safe errors without mutation controls",
+      "started_at": "2026-10-03T08:40:28.027Z",
+      "status": "pass",
+      "finished_at": "2026-10-03T08:40:28.149Z"
+    },
+    {
+      "name": "Manager failure recovers; no managers prevents saving",
+      "started_at": "2026-10-03T08:40:28.149Z",
+      "status": "pass",
+      "finished_at": "2026-10-03T08:40:28.258Z"
+    },
+    {
+      "name": "All manager pages load; invalid units/code/manager cannot submit",
+      "started_at": "2026-10-03T08:40:28.258Z",
+      "status": "pass",
+      "finished_at": "2026-10-03T08:40:28.582Z"
+    },
+    {
+      "name": "Write validation and network errors preserve local form input",
+      "started_at": "2026-10-03T08:40:28.582Z",
+      "status": "pass",
+      "finished_at": "2026-10-03T08:40:28.689Z"
+    },
+    {
+      "name": "Synchronous double submit sends one write; failed refresh still shows success",
+      "started_at": "2026-10-03T08:40:28.689Z",
+      "details": {
+        "server_assigned_id": 801,
+        "duplicate_write_count": 0
+      },
+      "status": "pass",
+      "finished_at": "2026-10-03T08:40:28.817Z"
+    },
+    {
+      "name": "Direct-ID update survives refresh and persists all HW5 fields",
+      "started_at": "2026-10-03T08:40:28.817Z",
+      "status": "pass",
+      "finished_at": "2026-10-03T08:40:29.069Z"
+    },
+    {
+      "name": "Per-row delete handles 204; narrow layout remains usable",
+      "started_at": "2026-10-03T08:40:29.069Z",
+      "status": "pass",
+      "finished_at": "2026-10-03T08:40:29.238Z"
+    },
+    {
+      "name": "Late detail cannot overwrite a newer selected listing",
+      "started_at": "2026-10-03T08:40:29.238Z",
+      "status": "pass",
+      "finished_at": "2026-10-03T08:40:29.542Z"
+    },
+    {
+      "name": "Failed same-ID refresh removes the cached edit form",
+      "started_at": "2026-10-03T08:40:29.542Z",
+      "status": "pass",
+      "finished_at": "2026-10-03T08:40:29.643Z"
+    },
+    {
+      "name": "Late pre-mutation list cannot replace the post-mutation refresh",
+      "started_at": "2026-10-03T08:40:29.643Z",
+      "status": "pass",
+      "finished_at": "2026-10-03T08:40:30.001Z"
+    },
+    {
+      "name": "New search results remain after an obsolete search response arrives",
+      "started_at": "2026-10-03T08:40:30.001Z",
+      "status": "pass",
+      "finished_at": "2026-10-03T08:40:30.188Z"
+    },
+    {
+      "name": "Old-session 401 cannot expire a fresh login",
+      "started_at": "2026-10-03T08:40:30.188Z",
+      "status": "pass",
+      "finished_at": "2026-10-03T08:40:30.527Z"
+    },
+    {
+      "name": "Logout clears rentals and ignores an old-session successful write",
+      "started_at": "2026-10-03T08:40:30.527Z",
+      "status": "pass",
+      "finished_at": "2026-10-03T08:40:30.894Z"
+    },
+    {
+      "name": "Current-session expiry clears visible records and blocks routes",
+      "started_at": "2026-10-03T08:40:30.894Z",
+      "status": "pass",
+      "finished_at": "2026-10-03T08:40:30.937Z"
+    }
+  ],
+  "screenshots": [
+    {
+      "file": "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/browser-finalized/screenshots/mock-mobile-home.png",
+      "actual_url": "https://localhost:8702/",
+      "mode": "mock",
+      "captured_at": "2026-10-03T08:40:29.237Z",
+      "dimensions": {
+        "viewport": 390,
+        "document": 390,
+        "body": 390
+      }
+    }
+  ],
+  "limitations": [
+    "Mock HTTP responses prove UI behavior only; no MySQL/authentication security evidence.",
+    "UI screenshots do not substitute for the required source-snippet/UI Redux frames or Postman evidence."
+  ],
+  "git_revision": "f6091d0fe9171fec999b3fe57357f784ad1a24e6",
+  "source_sha256": {
+    "frontend/src/App.jsx": "19ca1497d90dcf09eaa739fa4e02275bbff972b5d0bc84b23827993362b7819d",
+    "frontend/src/api/client.js": "d5cfc717bd195f6af11ba2ef6fda12df3eaab86b411e1b02700664f7f500a3b6",
+    "frontend/src/auth/AuthContext.jsx": "30344cb8aabc0e0cf89c33e103fc4d64b23910b09736708e96ee7a0700cb4356",
+    "frontend/src/components/forms.jsx": "5540154c6e241db8ea6207c9ed5afb1217fd9eaacdc3afb9348a57ac5bf9caf4",
+    "frontend/src/features/rentals/rentalsSlice.js": "e258915bfa8a0d56220ff24eac9c411f99fceb8f0e58971e8beb47d401856772",
+    "frontend/src/main.jsx": "2e17c70f9bc0b8f9db08ab26c4f10ccd0efb765d327a4347246c1430471e0359",
+    "frontend/src/pages/CreateRecord.jsx": "5b93267fcce1dee3977b6b9a7a660a3e7dea9011949189ebbb3308c7f3525415",
+    "frontend/src/pages/DeleteRecord.jsx": "1910d108d6f58c9fe7d332ef260e8ea0314519fdfb515a0d9bea7c99fbbb910f",
+    "frontend/src/pages/Home.jsx": "14b57d19a219b6f56286a5c87a5cd6e1ea0c8cfca3b6cba15390ae5c32c32a60",
+    "frontend/src/pages/Login.jsx": "99c97544645656a30212e8d79f5417b572f4b5671c6d4b84f71b5c9b721bebb0",
+    "frontend/src/pages/UpdateRecord.jsx": "19d50ed9f37476c2eb8818e0a781987181212a2754e40afeeee030c4f9b5f432",
+    "frontend/src/store/store.js": "4ed583fc1180809d4f9c279386e199950a8ac95bbfc92688fa49c27ef1e41d10",
+    "frontend/src/styles.css": "5ecf3f7d0238bc8635b5389fef5dc2c55f92713dfc13eabcc9e50033c0d2c959",
+    "frontend/package.json": "a815561544d0ab84ef2e13e9d2ed4b73530e50ea88d8a19264955c6e760f4bc9",
+    "frontend/package-lock.json": "a37333024872060cfee915cb5dbe1cf6b3b417071d6614ba1c0f2ba89ca8ede0",
+    "tests/browser_hw05_part1.cjs": "696f58052c272b449bd0da2eace21e39cd72dae7d50fbce51887f40d58cab523"
+  },
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": ""
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": ""
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/login",
+      "query": ""
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals",
+      "query": "?q=&limit=10&offset=0"
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals",
+      "query": "?q=&limit=10&offset=10"
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals",
+      "query": "?q=&limit=5&offset=0"
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals",
+      "query": "?q=nothing-matches&limit=5&offset=0"
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals",
+      "query": "?q=&limit=5&offset=0"
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals",
+      "query": "?q=&limit=5&offset=0"
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals",
+      "query": "?q=&limit=5&offset=0"
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": ""
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": ""
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": ""
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": ""
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals/99999",
+      "query": ""
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": ""
+    },
+    {
+      "method": "GET",
+      "path": "/api/property-managers",
+      "query": "?limit=100&offset=0"
+    },
+    {
+      "method": "GET",
+      "path": "/api/property-managers",
+      "query": "?limit=100&offset=0"
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": ""
+    },
+    {
+      "method": "GET",
+      "path": "/api/property-managers",
+      "query": "?limit=100&offset=0"
+    },
+    {
+      "method": "GET",
+      "path": "/api/property-managers",
+      "query": "?limit=100&offset=100"
+    },
+    {
+      "method": "POST",
+      "path": "/api/rentals",
+      "query": "",
+      "body": {
+        "listingTitle": "Mock Redux created",
+        "propertyAddress": "8702 Browser Lane",
+        "availableUnits": 2,
+        "managerId": 101,
+        "submitterEmail": "browser-owner@example.com",
+        "description": "A sunny rental with room to study and a private garden.",
+        "propertyType": "apartment",
+        "termsAccepted": true
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/rentals",
+      "query": "",
+      "body": {
+        "listingTitle": "Mock Redux created",
+        "propertyAddress": "8702 Browser Lane",
+        "availableUnits": 2,
+        "managerId": 101,
+        "submitterEmail": "browser-owner@example.com",
+        "description": "A sunny rental with room to study and a private garden.",
+        "propertyType": "apartment",
+        "termsAccepted": true
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/rentals",
+      "query": "",
+      "body": {
+        "listingTitle": "Mock Redux created",
+        "propertyAddress": "8702 Browser Lane",
+        "availableUnits": 2,
+        "managerId": 101,
+        "submitterEmail": "browser-owner@example.com",
+        "description": "A sunny rental with room to study and a private garden.",
+        "propertyType": "apartment",
+        "termsAccepted": true
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals",
+      "query": "?q=&limit=10&offset=0"
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals",
+      "query": "?q=&limit=10&offset=0"
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals",
+      "query": "?q=Mock+Redux+created&limit=10&offset=0"
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "query": ""
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals/801",
+      "query": ""
+    },
+    {
+      "method": "GET",
+      "path": "/api/property-managers",
+      "query": "?limit=100&offset=0"
+    },
+    {
+      "method": "GET",
+      "path": "/api/property-managers",
+      "query": "?limit=100&offset=100"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/rentals/801",
+      "query": "",
+      "body": {
+        "listingTitle": "Updated Redux rental",
+        "propertyAddress": "42 Revised Way",
+        "availableUnits": 0,
+        "managerId": 1,
+        "listingCode": "S6102-R-9801"
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/api/rentals/801",
+      "query": "",
+      "body": {
+        "listingTitle": "Updated Redux rental",
+        "propertyAddress": "42 Revised Way",
+        "availableUnits": 0,
+        "managerId": 1,
+        "listingCode": "S6102-R-9801"
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals/801",
+      "query": ""
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals",
+      "query": "?q=&limit=10&offset=0"
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals",
+      "query": "?q=Updated+Redux+rental&limit=10&offset=0"
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals",
+      "query": "?q=Updated+Redux+rental&limit=10&offset=0"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/rentals/801",
+      "query": ""
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/rentals/801",
+      "query": ""
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals",
+      "query": "?q=Updated+Redux+rental&limit=10&offset=0"
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals",
+      "query": "?q=&limit=10&offset=0"
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals/1",
+      "query": ""
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals",
+      "query": "?q=&limit=10&offset=0"
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals/2",
+      "query": ""
+    },
+    {
+      "method": "GET",
+      "path": "/api/property-managers",
+      "query": "?limit=100&offset=0"
+    },
+    {
+      "method": "GET",
+      "path": "/api/property-managers",
+      "query": "?limit=100&offset=100"
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals",
+      "query": "?q=&limit=10&offset=0"
+    },
+    {
+      "method": "GET",
+      "path": "/api/property-managers",
+      "query": "?limit=100&offset=0"
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals/2",
+      "query": ""
+    },
+    {
+      "method": "GET",
+      "path": "/api/property-managers",
+      "query": "?limit=100&offset=100"
+    },
+    {
+      "method": "GET",
+      "path": "/api/property-managers",
+      "query": "?limit=100&offset=0"
+    },
+    {
+      "method": "GET",
+      "path": "/api/property-managers",
+      "query": "?limit=100&offset=100"
+    },
+    {
+      "method": "POST",
+      "path": "/api/rentals",
+      "query": "",
+      "body": {
+        "listingTitle": "Late successful rental",
+        "propertyAddress": "8702 Browser Lane",
+        "availableUnits": 2,
+        "managerId": 1,
+        "submitterEmail": "browser-owner@example.com",
+        "description": "A sunny rental with room to study and a private garden.",
+        "propertyType": "apartment",
+        "termsAccepted": true
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals",
+      "query": "?q=&limit=10&offset=0"
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals",
+      "query": "?q=&limit=10&offset=0"
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals",
+      "query": "?q=Late+successful+rental&limit=10&offset=0"
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals",
+      "query": "?q=Quiet+rental+1&limit=10&offset=0"
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals",
+      "query": "?q=Late+successful+rental&limit=10&offset=0"
+    },
+    {
+      "method": "GET",
+      "path": "/api/property-managers",
+      "query": "?limit=100&offset=0"
+    },
+    {
+      "method": "GET",
+      "path": "/api/property-managers",
+      "query": "?limit=100&offset=100"
+    },
+    {
+      "method": "POST",
+      "path": "/api/rentals",
+      "query": "",
+      "body": {
+        "listingTitle": "Old session write",
+        "propertyAddress": "8702 Browser Lane",
+        "availableUnits": 2,
+        "managerId": 1,
+        "submitterEmail": "browser-owner@example.com",
+        "description": "A sunny rental with room to study and a private garden.",
+        "propertyType": "apartment",
+        "termsAccepted": true
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/logout",
+      "query": ""
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/login",
+      "query": ""
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals",
+      "query": "?q=&limit=10&offset=0"
+    },
+    {
+      "method": "GET",
+      "path": "/api/property-managers",
+      "query": "?limit=100&offset=0"
+    },
+    {
+      "method": "GET",
+      "path": "/api/property-managers",
+      "query": "?limit=100&offset=100"
+    },
+    {
+      "method": "POST",
+      "path": "/api/rentals",
+      "query": "",
+      "body": {
+        "listingTitle": "Stale success",
+        "propertyAddress": "8702 Browser Lane",
+        "availableUnits": 2,
+        "managerId": 1,
+        "submitterEmail": "browser-owner@example.com",
+        "description": "A sunny rental with room to study and a private garden.",
+        "propertyType": "apartment",
+        "termsAccepted": true
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/logout",
+      "query": ""
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/login",
+      "query": ""
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals",
+      "query": "?q=&limit=10&offset=0"
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals",
+      "query": "?q=&limit=10&offset=0"
+    }
+  ],
+  "finished_at": "2026-10-03T08:40:30.959Z",
+  "passed_checks": 16,
+  "failed_checks": 0
+}
