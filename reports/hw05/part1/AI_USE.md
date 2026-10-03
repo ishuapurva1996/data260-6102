@@ -8,3 +8,9 @@ These notes cover only the work recorded in this session and are intended for la
 4. **What changed, and why does it work now?** The detail reducer keeps the selected record during a background refresh of the same ID, while clearing it for another ID or a failed detail response. This keeps the current form mounted through the successful mutation/navigation. The final browser tests prove both successful update navigation and rejection of stale or failed detail data. Seven real-browser and 16 controlled-browser scenarios passed. Separate API and migration tests, plus process-restart checks, verified persistence and database rules.
 
 The final evidence is still incomplete: no Postman or native database-client screenshots were obtained. The collection and raw SQL results are reproducible supporting inputs/results, not claims that those GUI applications were used. No later homework parts or final report were generated in this session.
+
+## Review follow-up
+
+The coordinator's independent code review found two additional AI-produced frontend defects after the initial checks: a delayed logout response could delete a newer login cookie, and reopening the same editor could submit cached fields over newer server data. The old Boolean auth fixture did not exercise real cookie headers; its coverage was incomplete.
+
+Codex reproduced the failures with Chromium cookie processing and repeated-visit tests before fixing them. Login/logout HTTP requests now run in order, and each new editor visit waits for a fresh detail response after prior pending writes. The final controlled suite passed 19 scenarios and the real HTTPS/MySQL browser suite passed 8, including a persisted-field revisit check. These were automated agent-run checks, not independent manual student testing. The native Postman and database captures still need completion.

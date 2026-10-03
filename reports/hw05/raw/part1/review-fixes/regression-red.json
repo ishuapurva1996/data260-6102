@@ -1,0 +1,345 @@
+[
+  {
+    "scenario": "red-logout-cookie-v2",
+    "command_record": {
+      "command": [
+        "/Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "tests/browser_hw05_part1.cjs",
+        "--mock",
+        "--regression",
+        "logout-cookie"
+      ],
+      "started_at": "2026-10-03T19:47:05.960700+00:00",
+      "served_build": "Unmodified frontend bundle from29468a7; Auth/App source edits exist but parent has not rebuilt.",
+      "ended_at": "2026-10-03T19:47:07.509363+00:00",
+      "exit_code": 1
+    },
+    "status": "fail",
+    "observations": {
+      "logout-cookie": {
+        "login_requests_before_logout_release": 2,
+        "replacement_cookie_before_logout_release": true,
+        "logout_status": 204,
+        "logout_response_cookie_action": "delete",
+        "replacement_cookie_survived_logout_release": false,
+        "path_after_logout_release": "/login",
+        "api_status_after_logout_release": {
+          "/api/auth/me": 401,
+          "/api/rentals": 401
+        },
+        "path_after_reload": "/login",
+        "api_status_after_reload": {
+          "/api/auth/me": 401,
+          "/api/rentals": 401
+        },
+        "auth_cookie_properties": null,
+        "requests": [
+          {
+            "method": "GET",
+            "path": "/api/auth/me",
+            "query": ""
+          },
+          {
+            "method": "POST",
+            "path": "/api/auth/login",
+            "query": "",
+            "response_cookie_action": "set"
+          },
+          {
+            "method": "GET",
+            "path": "/api/rentals",
+            "query": "?q=&limit=10&offset=0"
+          },
+          {
+            "method": "POST",
+            "path": "/api/auth/logout",
+            "query": "",
+            "response_cookie_action": "delete"
+          },
+          {
+            "method": "POST",
+            "path": "/api/auth/login",
+            "query": "",
+            "response_cookie_action": "set"
+          },
+          {
+            "method": "GET",
+            "path": "/api/rentals",
+            "query": "?q=&limit=10&offset=0"
+          },
+          {
+            "method": "GET",
+            "path": "/api/rentals",
+            "query": "?q=&limit=10&offset=0"
+          },
+          {
+            "method": "GET",
+            "path": "/api/auth/me",
+            "query": ""
+          },
+          {
+            "method": "GET",
+            "path": "/api/rentals",
+            "query": ""
+          },
+          {
+            "method": "GET",
+            "path": "/api/auth/me",
+            "query": ""
+          },
+          {
+            "method": "GET",
+            "path": "/api/auth/me",
+            "query": ""
+          },
+          {
+            "method": "GET",
+            "path": "/api/rentals",
+            "query": ""
+          }
+        ]
+      }
+    },
+    "failure": "AssertionError [ERR_ASSERTION]: Login raced pending logout: {\"login_requests_before_logout_release\":2,\"replacement_cookie_before_logout_release\":true,\"logout_status\":204,\"logout_response_cookie_action\":\"delete\",\"replacement_cookie_survived_logout_release\":false,\"path_after_logout_release\":\"/login\",\"api_status_after_logout_release\":{\"/api/auth/me\":401,\"/api/rentals\":401},\"path_after_reload\":\"/login\",\"api_status_after_reload\":{\"/api/auth/me\":401,\"/api/rentals\":401},\"auth_cookie_properties\":null}\n\n2 !== 1\n\n    at scenarios.logout-cookie (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part1-application/tests/browser_hw05_part1.cjs:413:14)\n    at async /Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part1-application/tests/browser_hw05_part1.cjs:491:43\n    at async bounded (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part1-application/tests/browser_hw05_part1.cjs:37:12)\n    at async check (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part1-application/tests/browser_hw05_part1.cjs:53:25)\n    at async reviewRegressionFlow (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part1-application/tests/browser_hw05_part1.cjs:491:11)\n    at async main (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part1-application/tests/browser_hw05_part1.cjs:649:21)",
+    "served_build_note": "Unmodified frontend bundle from 29468a7. The cookie-v2 probe corrected diagnostic header metadata after Auth/App source editing but before rebuilding; it still exercised the old bundle."
+  },
+  {
+    "scenario": "red-same-id-revisit",
+    "command_record": {
+      "command": [
+        "/Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "tests/browser_hw05_part1.cjs",
+        "--mock",
+        "--regression",
+        "same-id-revisit"
+      ],
+      "started_at": "2026-10-03T19:45:50.102989+00:00",
+      "ended_at": "2026-10-03T19:45:51.465046+00:00",
+      "exit_code": 1
+    },
+    "status": "fail",
+    "observations": {
+      "same-id-revisit": {
+        "expected_server_fields": {
+          "listingTitle": "New server title after first visit",
+          "propertyAddress": "42 Fresh Server Road",
+          "listingCode": "S6102-R-41001",
+          "availableUnits": 7,
+          "managerId": 2
+        },
+        "displayed_after_refresh": {
+          "listingTitle": "Quiet rental 1",
+          "propertyAddress": "1 Browser Lane",
+          "listingCode": "S6102-R-1",
+          "availableUnits": 1,
+          "managerId": 1
+        },
+        "submitted_fields": {
+          "listingTitle": "Quiet rental 1",
+          "propertyAddress": "1 Browser Lane",
+          "availableUnits": 1,
+          "managerId": 1,
+          "listingCode": "S6102-R-1"
+        },
+        "requests": [
+          {
+            "method": "GET",
+            "path": "/api/auth/me",
+            "query": ""
+          },
+          {
+            "method": "POST",
+            "path": "/api/auth/login",
+            "query": ""
+          },
+          {
+            "method": "GET",
+            "path": "/api/rentals",
+            "query": "?q=&limit=10&offset=0"
+          },
+          {
+            "method": "GET",
+            "path": "/api/rentals/1",
+            "query": ""
+          },
+          {
+            "method": "GET",
+            "path": "/api/property-managers",
+            "query": "?limit=100&offset=0"
+          },
+          {
+            "method": "GET",
+            "path": "/api/rentals",
+            "query": "?q=&limit=10&offset=0"
+          },
+          {
+            "method": "GET",
+            "path": "/api/property-managers",
+            "query": "?limit=100&offset=0"
+          },
+          {
+            "method": "GET",
+            "path": "/api/rentals/1",
+            "query": ""
+          },
+          {
+            "method": "PUT",
+            "path": "/api/rentals/1",
+            "query": "",
+            "body": {
+              "listingTitle": "Quiet rental 1",
+              "propertyAddress": "1 Browser Lane",
+              "availableUnits": 1,
+              "managerId": 1,
+              "listingCode": "S6102-R-1"
+            }
+          },
+          {
+            "method": "GET",
+            "path": "/api/rentals/1",
+            "query": ""
+          },
+          {
+            "method": "GET",
+            "path": "/api/rentals",
+            "query": "?q=&limit=10&offset=0"
+          }
+        ]
+      }
+    },
+    "failure": "AssertionError [ERR_ASSERTION]: Reopened editor retained stale inputs: {\"expected_server_fields\":{\"listingTitle\":\"New server title after first visit\",\"propertyAddress\":\"42 Fresh Server Road\",\"listingCode\":\"S6102-R-41001\",\"availableUnits\":7,\"managerId\":2},\"displayed_after_refresh\":{\"listingTitle\":\"Quiet rental 1\",\"propertyAddress\":\"1 Browser Lane\",\"listingCode\":\"S6102-R-1\",\"availableUnits\":1,\"managerId\":1},\"submitted_fields\":{\"listingTitle\":\"Quiet rental 1\",\"propertyAddress\":\"1 Browser Lane\",\"availableUnits\":1,\"managerId\":1,\"listingCode\":\"S6102-R-1\"}}\n+ actual - expected\n\n  {\n+   availableUnits: 1,\n+   listingCode: 'S6102-R-1',\n+   listingTitle: 'Quiet rental 1',\n+   managerId: 1,\n+   propertyAddress: '1 Browser Lane'\n-   availableUnits: 7,\n-   listingCode: 'S6102-R-41001',\n-   listingTitle: 'New server title after first visit',\n-   managerId: 2,\n-   propertyAddress: '42 Fresh Server Road'\n  }\n\n    at scenarios.same-id-revisit (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part1-application/tests/browser_hw05_part1.cjs:433:14)\n    at async /Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part1-application/tests/browser_hw05_part1.cjs:471:43\n    at async bounded (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part1-application/tests/browser_hw05_part1.cjs:37:12)\n    at async check (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part1-application/tests/browser_hw05_part1.cjs:53:25)\n    at async reviewRegressionFlow (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part1-application/tests/browser_hw05_part1.cjs:471:11)\n    at async main (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part1-application/tests/browser_hw05_part1.cjs:602:21)",
+    "served_build_note": "Unmodified frontend bundle from 29468a7. The cookie-v2 probe corrected diagnostic header metadata after Auth/App source editing but before rebuilding; it still exercised the old bundle."
+  },
+  {
+    "scenario": "red-pending-update-reopen",
+    "command_record": {
+      "command": [
+        "/Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "tests/browser_hw05_part1.cjs",
+        "--mock",
+        "--regression",
+        "pending-update-reopen"
+      ],
+      "started_at": "2026-10-03T19:45:50.102826+00:00",
+      "ended_at": "2026-10-03T19:45:51.682135+00:00",
+      "exit_code": 1
+    },
+    "status": "fail",
+    "observations": {
+      "pending-update-reopen": {
+        "editor_reopened_before_put_release": true,
+        "first_completed_fields": {
+          "listingTitle": "Completed delayed update",
+          "propertyAddress": "82 Delayed Update Road",
+          "listingCode": "S6102-R-42001",
+          "availableUnits": 4,
+          "managerId": 2
+        },
+        "displayed_after_put_release": {
+          "listingTitle": "Quiet rental 1",
+          "propertyAddress": "1 Browser Lane",
+          "listingCode": "S6102-R-1",
+          "availableUnits": 1,
+          "managerId": 1
+        },
+        "second_submitted_fields": {
+          "listingTitle": "Quiet rental 1",
+          "propertyAddress": "1 Browser Lane",
+          "availableUnits": 1,
+          "managerId": 1,
+          "listingCode": "S6102-R-1"
+        },
+        "server_fields_after_second_save": {
+          "listingTitle": "Quiet rental 1",
+          "propertyAddress": "1 Browser Lane",
+          "listingCode": "S6102-R-1",
+          "availableUnits": 1,
+          "managerId": 1
+        },
+        "requests": [
+          {
+            "method": "GET",
+            "path": "/api/auth/me",
+            "query": ""
+          },
+          {
+            "method": "POST",
+            "path": "/api/auth/login",
+            "query": ""
+          },
+          {
+            "method": "GET",
+            "path": "/api/rentals",
+            "query": "?q=&limit=10&offset=0"
+          },
+          {
+            "method": "GET",
+            "path": "/api/rentals/1",
+            "query": ""
+          },
+          {
+            "method": "GET",
+            "path": "/api/property-managers",
+            "query": "?limit=100&offset=0"
+          },
+          {
+            "method": "PUT",
+            "path": "/api/rentals/1",
+            "query": "",
+            "body": {
+              "listingTitle": "Completed delayed update",
+              "propertyAddress": "82 Delayed Update Road",
+              "availableUnits": 4,
+              "managerId": 2,
+              "listingCode": "S6102-R-42001"
+            }
+          },
+          {
+            "method": "GET",
+            "path": "/api/rentals",
+            "query": "?q=&limit=10&offset=0"
+          },
+          {
+            "method": "GET",
+            "path": "/api/property-managers",
+            "query": "?limit=100&offset=0"
+          },
+          {
+            "method": "GET",
+            "path": "/api/rentals/1",
+            "query": ""
+          },
+          {
+            "method": "GET",
+            "path": "/api/rentals/1",
+            "query": ""
+          },
+          {
+            "method": "PUT",
+            "path": "/api/rentals/1",
+            "query": "",
+            "body": {
+              "listingTitle": "Quiet rental 1",
+              "propertyAddress": "1 Browser Lane",
+              "availableUnits": 1,
+              "managerId": 1,
+              "listingCode": "S6102-R-1"
+            }
+          },
+          {
+            "method": "GET",
+            "path": "/api/rentals/1",
+            "query": ""
+          },
+          {
+            "method": "GET",
+            "path": "/api/rentals",
+            "query": "?q=&limit=10&offset=0"
+          }
+        ]
+      }
+    },
+    "failure": "AssertionError [ERR_ASSERTION]: Reopened editor did not adopt completed PUT: {\"editor_reopened_before_put_release\":true,\"first_completed_fields\":{\"listingTitle\":\"Completed delayed update\",\"propertyAddress\":\"82 Delayed Update Road\",\"listingCode\":\"S6102-R-42001\",\"availableUnits\":4,\"managerId\":2},\"displayed_after_put_release\":{\"listingTitle\":\"Quiet rental 1\",\"propertyAddress\":\"1 Browser Lane\",\"listingCode\":\"S6102-R-1\",\"availableUnits\":1,\"managerId\":1},\"second_submitted_fields\":{\"listingTitle\":\"Quiet rental 1\",\"propertyAddress\":\"1 Browser Lane\",\"availableUnits\":1,\"managerId\":1,\"listingCode\":\"S6102-R-1\"},\"server_fields_after_second_save\":{\"listingTitle\":\"Quiet rental 1\",\"propertyAddress\":\"1 Browser Lane\",\"listingCode\":\"S6102-R-1\",\"availableUnits\":1,\"managerId\":1}}\n+ actual - expected\n\n  {\n+   availableUnits: 1,\n+   listingCode: 'S6102-R-1',\n+   listingTitle: 'Quiet rental 1',\n+   managerId: 1,\n+   propertyAddress: '1 Browser Lane'\n-   availableUnits: 4,\n-   listingCode: 'S6102-R-42001',\n-   listingTitle: 'Completed delayed update',\n-   managerId: 2,\n-   propertyAddress: '82 Delayed Update Road'\n  }\n\n    at scenarios.pending-update-reopen (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part1-application/tests/browser_hw05_part1.cjs:457:14)\n    at async /Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part1-application/tests/browser_hw05_part1.cjs:471:43\n    at async bounded (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part1-application/tests/browser_hw05_part1.cjs:37:12)\n    at async check (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part1-application/tests/browser_hw05_part1.cjs:53:25)\n    at async reviewRegressionFlow (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part1-application/tests/browser_hw05_part1.cjs:471:11)\n    at async main (/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part1-application/tests/browser_hw05_part1.cjs:602:21)",
+    "served_build_note": "Unmodified frontend bundle from 29468a7. The cookie-v2 probe corrected diagnostic header metadata after Auth/App source editing but before rebuilding; it still exercised the old bundle."
+  }
+]

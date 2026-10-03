@@ -2,6 +2,25 @@
 
 Code and live verification are complete. Required evidence is **incomplete**: genuine Postman action/error screenshots and a database-client screenshot remain. The available computer-use surface exposed browser tabs but no native Postman or database-client control. No fabricated GUI evidence is included.
 
+## Current verification after review fixes
+
+Tested code revision: `9bcb7cd39a08157aa1fc6203dfd3ef5ca3eb53e8`. The two confirmed frontend defects are fixed: login/logout cookie-writing requests now run in order, and a reopened editor waits for its own fresh detail read after any earlier pending write. An old logout no longer redirects a later login. Local form values remain stable during the current visit's save.
+
+| Check | Current selected evidence under `../raw/part1/review-fixes/` | Result |
+| --- | --- | --- |
+| Controlled browser suite | `browser-mock.json` | 19 passed, zero failures/skips. The delayed-logout test uses actual Chromium Secure/HttpOnly cookie processing with controlled HTTP responses; it also verifies login after a failed logout. Both stale-editor regressions check displayed and submitted fields |
+| Real HTTPS/MySQL browser suite | `browser-real.json` | 8 passed, zero failures/skips, including a same-ID revisit after an independently issued real server update |
+| Real API smoke | `live-api.json` | 25 passed |
+| Build and red-to-green evidence | `runs.json`, `regression-red.json` | Production build and all three isolated regressions passed; retained red observations show cookie deletion and stale-field submissions on the old build |
+| Four current Redux frames | `redux-captures.json` and `../screenshots/part1/review-fixes/redux-*.png` | Exactly four currently selected frames (Home/Create/Update/Delete), captured at the clean tested revision and visually reviewed |
+| Runtime cleanup | `shutdown.json` | Owned app and MySQL stopped, original 55 rentals/2 managers remain, data retained; ports 8702/8703/3307/3309 free |
+
+`provenance.json` records matching committed-source hashes. The current four Redux frames supersede the earlier frames for report selection; earlier files remain unchanged as historical evidence. Source line positions changed, so all four frames were refreshed. The controlled cookie test proves browser response-cookie ordering, while the real suite proves unchanged Secure-cookie integration with the owned FastAPI/MySQL service.
+
+The 160 backend and 11 migration tests below are earlier passing evidence. This frontend-only follow-up did not rerun them; backend and migration source remained unchanged. Genuine Postman/database captures are still pending, with the existing checklist and collection unchanged.
+
+## Initial implementation evidence (preserved)
+
 Configuration: Rental Housing Listings; `SID4=6102`, `PORT_BASE=8702`, `PREFIX=s6102`, `SEED=6102`, `VERIFY_SEED=266102`, `DOMAIN_ID=6`; MySQL database `s6102_rel`. The owned MySQL instance used port 3307 and the HTTPS application used port 8702; migration tests used disposable MySQL port 3309.
 
 | Requirement | Selected evidence | Actual outcome |

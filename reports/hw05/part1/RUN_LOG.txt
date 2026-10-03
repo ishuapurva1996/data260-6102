@@ -343,3 +343,269 @@ No final tests were skipped: backend160, migration11, controlled-browser16, live
 }
 
 No Postman execution or native database screenshot was possible through the exposed tooling. These required captures remain pending.
+
+=== Review follow-up: committed frontend fixes ===
+Tested code revision: 9bcb7cd39a08157aa1fc6203dfd3ef5ca3eb53e8
+Original evidence above is preserved; backend/migration source did not change and their 171 tests were not rerun in this follow-up.
+Three isolated regressions first failed against the original served 29468a7 frontend. The cookie-v2 diagnostic corrected missing header metadata and still used the old bundle; its actual cookie jar and 401 results prove the defect.
+Full final controlled browser 19, real browser 8 and real API 25 all passed at the clean code revision; zero failures/skips.
+The four new Redux frames are the current selected set; original frames remain as historical evidence.
+
+Expected RED: red-logout-cookie-v2
+Started: 2026-10-03T19:47:05.960700+00:00
+Ended: 2026-10-03T19:47:07.509363+00:00
+Command: /Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node tests/browser_hw05_part1.cjs --mock --regression logout-cookie
+Exit code: 1
+Observed: AssertionError [ERR_ASSERTION]: Login raced pending logout: {"login_requests_before_logout_release":2,"replacement_cookie_before_logout_release":true,"logout_status":204,"logout_response_cookie_action":"delete","replacement_cookie_survived_logout_release":false,"path_after_logout_release":"/login","api_status_after_logout_release":{"/api/auth/me":401,"/api/rentals":401},"path_after_reload":"/login","api_status_after_reload":{"/api/auth/me":401,"/api/rentals":401},"auth_cookie_properties":null}
+
+Expected RED: red-same-id-revisit
+Started: 2026-10-03T19:45:50.102989+00:00
+Ended: 2026-10-03T19:45:51.465046+00:00
+Command: /Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node tests/browser_hw05_part1.cjs --mock --regression same-id-revisit
+Exit code: 1
+Observed: AssertionError [ERR_ASSERTION]: Reopened editor retained stale inputs: {"expected_server_fields":{"listingTitle":"New server title after first visit","propertyAddress":"42 Fresh Server Road","listingCode":"S6102-R-41001","availableUnits":7,"managerId":2},"displayed_after_refresh":{"listingTitle":"Quiet rental 1","propertyAddress":"1 Browser Lane","listingCode":"S6102-R-1","availableUnits":1,"managerId":1},"submitted_fields":{"listingTitle":"Quiet rental 1","propertyAddress":"1 Browser Lane","availableUnits":1,"managerId":1,"listingCode":"S6102-R-1"}}
+
+Expected RED: red-pending-update-reopen
+Started: 2026-10-03T19:45:50.102826+00:00
+Ended: 2026-10-03T19:45:51.682135+00:00
+Command: /Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node tests/browser_hw05_part1.cjs --mock --regression pending-update-reopen
+Exit code: 1
+Observed: AssertionError [ERR_ASSERTION]: Reopened editor did not adopt completed PUT: {"editor_reopened_before_put_release":true,"first_completed_fields":{"listingTitle":"Completed delayed update","propertyAddress":"82 Delayed Update Road","listingCode":"S6102-R-42001","availableUnits":4,"managerId":2},"displayed_after_put_release":{"listingTitle":"Quiet rental 1","propertyAddress":"1 Browser Lane","listingCode":"S6102-R-1","availableUnits":1,"managerId":1},"second_submitted_fields":{"listingTitle":"Quiet rental 1","propertyAddress":"1 Browser Lane","availableUnits":1,"managerId":1,"listingCode":"S6102-R-1"},"server_fields_after_second_save":{"listingTitle":"Quiet rental 1","propertyAddress":"1 Browser Lane","listingCode":"S6102-R-1","availableUnits":1,"managerId":1}}
+
+=== review-fix-build ===
+Started: 2026-10-03T19:47:35.230628+00:00
+Ended: 2026-10-03T19:47:35.942240+00:00
+HEAD: 29468a73cf70e2514ef447ae941da70802165897
+CWD: /Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part1-application/frontend
+Command: /Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/runtime/npm/package/bin/npm-cli.js run build
+Exit code: 0
+vite v7.3.6 building client environment for production...
+transforming...
+✓ 102 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.46 kB │ gzip:  0.29 kB
+dist/assets/index-BdkfMsrp.css    4.55 kB │ gzip:  1.64 kB
+dist/assets/index-nFXyTrfK.js   266.26 kB │ gzip: 89.48 kB
+✓ built in 400ms
+npm notice run s6102-rental-client@1.0.0 build
+npm notice run vite build
+
+=== review-fix-green-logout-cookie ===
+Started: 2026-10-03T19:47:35.968790+00:00
+Ended: 2026-10-03T19:47:37.427196+00:00
+HEAD: 29468a73cf70e2514ef447ae941da70802165897
+CWD: /Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part1-application
+Command: /Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node tests/browser_hw05_part1.cjs --mock --regression logout-cookie
+Exit code: 0
+RUN [mock] Delayed logout cookie deletion cannot erase a subsequent login
+CONTROL entered POST /api/auth/logout
+PASS [mock] Delayed logout cookie deletion cannot erase a subsequent login
+Evidence: /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/review-fixes/green-logout-cookie/mock-browser.json (pass)
+
+=== review-fix-green-same-id-revisit ===
+Started: 2026-10-03T19:47:37.453480+00:00
+Ended: 2026-10-03T19:47:38.274651+00:00
+HEAD: 29468a73cf70e2514ef447ae941da70802165897
+CWD: /Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part1-application
+Command: /Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node tests/browser_hw05_part1.cjs --mock --regression same-id-revisit
+Exit code: 0
+RUN [mock] Same-ID editor revisit displays and submits refreshed server fields
+CONTROL entered GET /api/rentals/1
+PASS [mock] Same-ID editor revisit displays and submits refreshed server fields
+Evidence: /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/review-fixes/green-same-id-revisit/mock-browser.json (pass)
+
+=== review-fix-green-pending-update-reopen ===
+Started: 2026-10-03T19:47:38.300928+00:00
+Ended: 2026-10-03T19:47:39.272761+00:00
+HEAD: 29468a73cf70e2514ef447ae941da70802165897
+CWD: /Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part1-application
+Command: /Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node tests/browser_hw05_part1.cjs --mock --regression pending-update-reopen
+Exit code: 0
+RUN [mock] Editor reopened during a pending PUT keeps completed fields on the next save
+CONTROL entered PUT /api/rentals/1
+PASS [mock] Editor reopened during a pending PUT keeps completed fields on the next save
+Evidence: /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/review-fixes/green-pending-update-reopen/mock-browser.json (pass)
+
+=== review-fix-final-real ===
+Started: 2026-10-03T19:48:47.352080+00:00
+Ended: 2026-10-03T19:48:50.667311+00:00
+HEAD: 9bcb7cd39a08157aa1fc6203dfd3ef5ca3eb53e8
+CWD: /Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part1-application
+Command: /Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node tests/browser_hw05_part1.cjs --real
+Exit code: 0
+RUN [real] Real HTTPS login uses Secure HttpOnly cookie
+PASS [real] Real HTTPS login uses Secure HttpOnly cookie
+RUN [real] Real pagination matches API total and stable IDs
+PASS [real] Real pagination matches API total and stable IDs
+RUN [real] UI create persists generated code, units and explicit manager
+PASS [real] UI create persists generated code, units and explicit manager
+RUN [real] UI direct-ID update persists changed fields and preserves old fields
+PASS [real] UI direct-ID update persists changed fields and preserves old fields
+RUN [real] Real same-ID revisit displays and saves a newer server update
+PASS [real] Real same-ID revisit displays and saves a newer server update
+RUN [real] Real empty result and responsive Home
+PASS [real] Real empty result and responsive Home
+RUN [real] UI per-row delete returns 204 and remains absent after reload
+PASS [real] UI per-row delete returns 204 and remains absent after reload
+RUN [real] Real logout clears visible data and API access
+PASS [real] Real logout clears visible data and API access
+Evidence: /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/review-fixes/final-real/real-browser.json (pass)
+
+=== review-fix-final-mock ===
+Started: 2026-10-03T19:48:50.136831+00:00
+Ended: 2026-10-03T19:48:56.035281+00:00
+HEAD: 9bcb7cd39a08157aa1fc6203dfd3ef5ca3eb53e8
+CWD: /Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part1-application
+Command: /Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node tests/browser_hw05_part1.cjs --mock
+Exit code: 0
+RUN [mock] Protected routes, login, paginated Home and obsolete shortcut removal
+PASS [mock] Protected routes, login, paginated Home and obsolete shortcut removal
+RUN [mock] Empty, loading and recoverable list-error states
+CONTROL entered GET /api/rentals
+PASS [mock] Empty, loading and recoverable list-error states
+RUN [mock] Invalid and missing IDs show safe errors without mutation controls
+PASS [mock] Invalid and missing IDs show safe errors without mutation controls
+RUN [mock] Manager failure recovers; no managers prevents saving
+PASS [mock] Manager failure recovers; no managers prevents saving
+RUN [mock] All manager pages load; invalid units/code/manager cannot submit
+PASS [mock] All manager pages load; invalid units/code/manager cannot submit
+RUN [mock] Write validation and network errors preserve local form input
+PASS [mock] Write validation and network errors preserve local form input
+RUN [mock] Synchronous double submit sends one write; failed refresh still shows success
+CONTROL entered POST /api/rentals
+PASS [mock] Synchronous double submit sends one write; failed refresh still shows success
+RUN [mock] Direct-ID update survives refresh and persists all HW5 fields
+PASS [mock] Direct-ID update survives refresh and persists all HW5 fields
+RUN [mock] Per-row delete handles 204; narrow layout remains usable
+CONTROL entered DELETE /api/rentals/801
+PASS [mock] Per-row delete handles 204; narrow layout remains usable
+RUN [mock] Late detail cannot overwrite a newer selected listing
+CONTROL entered GET /api/rentals/1
+PASS [mock] Late detail cannot overwrite a newer selected listing
+RUN [mock] Failed same-ID refresh removes the cached edit form
+CONTROL entered GET /api/rentals/2
+PASS [mock] Failed same-ID refresh removes the cached edit form
+RUN [mock] Late pre-mutation list cannot replace the post-mutation refresh
+CONTROL entered POST /api/rentals
+CONTROL entered GET /api/rentals
+PASS [mock] Late pre-mutation list cannot replace the post-mutation refresh
+RUN [mock] New search results remain after an obsolete search response arrives
+CONTROL entered GET /api/rentals
+PASS [mock] New search results remain after an obsolete search response arrives
+RUN [mock] Old-session 401 cannot expire a fresh login
+CONTROL entered POST /api/rentals
+PASS [mock] Old-session 401 cannot expire a fresh login
+RUN [mock] Logout clears rentals and ignores an old-session successful write
+CONTROL entered POST /api/rentals
+PASS [mock] Logout clears rentals and ignores an old-session successful write
+RUN [mock] Current-session expiry clears visible records and blocks routes
+PASS [mock] Current-session expiry clears visible records and blocks routes
+RUN [mock] Delayed logout cookie deletion cannot erase a subsequent login
+CONTROL entered POST /api/auth/logout
+PASS [mock] Delayed logout cookie deletion cannot erase a subsequent login
+RUN [mock] Same-ID editor revisit displays and submits refreshed server fields
+CONTROL entered GET /api/rentals/1
+PASS [mock] Same-ID editor revisit displays and submits refreshed server fields
+RUN [mock] Editor reopened during a pending PUT keeps completed fields on the next save
+CONTROL entered PUT /api/rentals/1
+PASS [mock] Editor reopened during a pending PUT keeps completed fields on the next save
+Evidence: /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/review-fixes/final-mock/mock-browser.json (pass)
+
+=== review-fix-live-api ===
+Started: 2026-10-03T19:49:07.674121+00:00
+Ended: 2026-10-03T19:49:08.025133+00:00
+HEAD: 9bcb7cd39a08157aa1fc6203dfd3ef5ca3eb53e8
+CWD: /Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part1-application
+Command: /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/runtime/venv/bin/python scripts/hw05/part1/live_acceptance.py --output /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/review-fixes/live-api.json
+Exit code: 0
+PASS Manager create: HTTP 201
+PASS Manager list pagination: HTTP 200
+PASS Manager detail: HTTP 200
+PASS Manager unique email conflict: HTTP 409
+PASS Manager update: HTTP 200
+PASS Empty relationship: HTTP 200
+PASS Rental create generated code: HTTP 201
+PASS Rental list pagination: HTTP 200
+PASS Rental detail: HTTP 200
+PASS Relationship query: HTTP 200
+PASS Referenced manager delete restricted: HTTP 409
+PASS Rental unique code conflict: HTTP 409
+PASS Negative units invalid: HTTP 422
+PASS Malformed listing code invalid: HTTP 422
+PASS Malformed manager email invalid: HTTP 422
+PASS Invalid pagination: HTTP 422
+PASS Missing manager invalid FK: HTTP 422
+PASS Missing manager detail: HTTP 404
+PASS Rental update: HTTP 200
+PASS Rental delete: HTTP 204
+PASS Deleted rental absent: HTTP 404
+PASS Manager delete after child removed: HTTP 204
+PASS Deleted manager absent: HTTP 404
+PASS Legacy performance naive serialization: HTTP 200
+PASS Legacy performance fixed serialization: HTTP 200
+
+=== review-fix-redux-captures ===
+Started: 2026-10-03T19:49:08.050387+00:00
+Ended: 2026-10-03T19:49:09.929003+00:00
+HEAD: 9bcb7cd39a08157aa1fc6203dfd3ef5ca3eb53e8
+CWD: /Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part1-application
+Command: /Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node scripts/hw05/part1/capture_features.cjs
+Exit code: 0
+CAPTURED Home: genuine browser source + live UI frame
+CAPTURED Create: genuine browser source + live UI frame
+CAPTURED Update: genuine browser source + live UI frame
+CAPTURED Delete: genuine browser source + live UI frame
+
+Owned runtime cleanup:
+{
+  "started_at": "2026-10-03T19:49:35.562525+00:00",
+  "revision": "9bcb7cd39a08157aa1fc6203dfd3ef5ca3eb53e8",
+  "actions": [
+    {
+      "action": "SIGTERM owned app process group",
+      "pid": 56235,
+      "command": "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/runtime/venv/bin/python scripts/run_hw04_web.py --port 8702 --env-file /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/runtime/app.env --cert /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/runtime/cert.pem --key /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/runtime/key.pem"
+    },
+    {
+      "command": [
+        "docker",
+        "stop",
+        "--timeout",
+        "10",
+        "data260-hw5-part1-mysql"
+      ],
+      "exit_code": 0,
+      "output": "data260-hw5-part1-mysql"
+    }
+  ],
+  "final_application_row_counts": {
+    "rentals": 55,
+    "property_managers": 2
+  },
+  "containers": {
+    "data260-hw5-part1-mysql": "exited",
+    "data260-hw5-part1-migration-mysql": "exited"
+  },
+  "ports": {
+    "8702": {
+      "listening": false
+    },
+    "8703": {
+      "listening": false
+    },
+    "3307": {
+      "listening": false
+    },
+    "3309": {
+      "listening": false
+    }
+  },
+  "ended_at": "2026-10-03T19:49:39.144121+00:00",
+  "status": "pass",
+  "data_preserved": true,
+  "migration_container_started": false,
+  "unrelated_services_touched": false
+}
+
+Postman/database screenshots remain pending; no substitute or fabricated evidence.
