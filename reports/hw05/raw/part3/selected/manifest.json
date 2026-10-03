@@ -1,0 +1,97 @@
+{
+  "artifacts_sha256": {
+    "metrics.json": "b2a8e5c0d700452613e12f0c26128a18021649ae366168c0ddc89ed58412b69a",
+    "rows.jsonl": "400868b67d4916a3e87acfbfaa9e20e98f11578dc917c0a05a3e9610aafefb73"
+  },
+  "call_cycle": [
+    {
+      "inputs": {
+        "limit": 5,
+        "query": "campus"
+      },
+      "tool": "search_rentals"
+    },
+    {
+      "inputs": {
+        "rental_id": 1
+      },
+      "tool": "get_rental"
+    },
+    {
+      "inputs": {
+        "manager_id": 1
+      },
+      "tool": "count_rentals"
+    }
+  ],
+  "calls_per_rate": 50,
+  "command": "'/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part3-reliability/.venv-part3/bin/python' -m scripts.hw05.part3.run_fault_experiment --output-dir /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part3/final-evidence/selected --label selected",
+  "completed_at_utc": "2026-10-03T22:47:04.959362+00:00",
+  "evidence_kind": "controlled immutable fixture; real sleeps and elapsed time",
+  "fixture": {
+    "manager": {
+      "manager_id": 1,
+      "manager_name": "Campus Homes"
+    },
+    "rental": {
+      "description": "A one-bedroom apartment near campus.",
+      "id": 1,
+      "listing_title": "Campus apartment",
+      "manager_id": 1,
+      "property_address": "100 Campus Way, San Jose",
+      "property_type": "apartment"
+    }
+  },
+  "fixture_sha256": "4a53c7103f07336cb6cb98073ff541bb9ed23834178042dd9c942b63a0aba271",
+  "label": "selected",
+  "latency_rule": "perf_counter around each full service call, including failures and real retry sleeps.",
+  "p99_rule": "Nearest rank ceil(0.99 * 50), therefore maximum of all 50 durations.",
+  "policy": {
+    "backoff_multiplier": 2.0,
+    "initial_backoff_s": 0.1,
+    "max_attempts": 3,
+    "max_backoff_s": 0.2
+  },
+  "rates": [
+    0.0,
+    0.2,
+    0.5
+  ],
+  "rng_rule": "New random.Random(seed) per rate; one draw per storage attempt including rate zero; inject iff draw < rate.",
+  "run_id": "622fd52a-cf01-45bf-b1f7-35292fda8160",
+  "schema_version": 1,
+  "seed": 266102,
+  "source": {
+    "dirty": false,
+    "git_revision": "ca4641778c34cf14c1ed07aea63be20374d5306f",
+    "sha256": {
+      "scripts/hw05/part3/capture_live_stdio.py": "1790568595eeb068c62e6350c63c822da0c74f435e7897c01774bb8f161fc269",
+      "scripts/hw05/part3/fixture.py": "fdcaf2f153e573579999eafc653d988649efc59e6f701f7fa8a4a525be4679b1",
+      "scripts/hw05/part3/probe_driver_timeout.py": "dc1eb1258e5073edf2352f9f04a607f59d63ea3e5d0a6558ff7345c0bcf36a2d",
+      "scripts/hw05/part3/provenance.py": "ecbbfd35bf9b3e3a5b48781d01dade45a423d265e3a1cda247f99e8da8446c2d",
+      "scripts/hw05/part3/recompute_metrics.py": "899850967670eb94e0ba636f9c5b6e523e2684c34d0f1f22d21de4444dc4b732",
+      "scripts/hw05/part3/run_fault_experiment.py": "3b69d050993b77937830ec1a5ffe5a77458260a68b961a8afee462e1d0f193ff",
+      "scripts/hw05/part3/run_retry_demos.py": "71869d54037650340d84df8332ff36d7e23b55ede6130699040c9e4820dfb0bd",
+      "scripts/hw05/part3/setup_fixture.py": "92c2f87b5b7c736805d4a013a170d4ef7a64fb0c5708ccdc3ce67e80220a3062",
+      "src/mcp_servers/rentals.py": "b2f0634c5d523101dea0347ec2665839d2dfc6e4cc650ca00495404e1a20a7a1",
+      "src/rental_tools/__init__.py": "820e66fc061d560f2553a5041dd69fdd761e33bf960579985643ed21fe20d877",
+      "src/rental_tools/contracts.py": "9e2bd2345dc95aeba6c4285a9adea01a747cdad5894cb981ab7cb7fd746c9377",
+      "src/rental_tools/reader.py": "6aea8b933dc5c13e216bab21f5476a0016d1110fffd38c3fec2a536e69eeef66",
+      "src/rental_tools/registry.py": "a6a4cfc5648837c65ad0a884b790c7a003eb269a66d5890f0c3a35f982a38efa",
+      "src/rental_tools/reliability.py": "3c0a81441da2e982a0c136f2a8c9b17c09086178966d9de8997b117a007dc611",
+      "src/rental_tools/runtime.py": "703fb0629fbc63fdfea2edb1b611ee8d19eb8c79bb49f6048e2bb3ab75dd5e92",
+      "src/rental_tools/service.py": "5b4cb6695be78e93c149e732f1aef7bca38e1049be41b8effdd787211720b341"
+    }
+  },
+  "started_at_utc": "2026-10-03T22:46:58.423208+00:00",
+  "student": "Pragya Apurva",
+  "versions": {
+    "PyMySQL": "1.1.2",
+    "SQLAlchemy": "2.0.48",
+    "mcp": "1.28.1",
+    "platform": "macOS-15.7.4-arm64-arm-64bit",
+    "pydantic": "2.12.5",
+    "python": "3.12.13"
+  },
+  "working_directory": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part3-reliability"
+}

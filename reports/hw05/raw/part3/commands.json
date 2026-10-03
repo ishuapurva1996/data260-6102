@@ -1,0 +1,96 @@
+[
+  {
+    "name": "selected-experiment",
+    "command": [
+      "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part3-reliability/.venv-part3/bin/python",
+      "-m",
+      "scripts.hw05.part3.run_fault_experiment",
+      "--output-dir",
+      "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part3/final-evidence/selected",
+      "--label",
+      "selected"
+    ],
+    "started_utc": "2026-10-03T22:46:58.257007+00:00",
+    "finished_utc": "2026-10-03T22:47:05.009556+00:00",
+    "exit_code": 0
+  },
+  {
+    "name": "scripted-demos",
+    "command": [
+      "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part3-reliability/.venv-part3/bin/python",
+      "-m",
+      "scripts.hw05.part3.run_retry_demos",
+      "--output-dir",
+      "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part3/final-evidence/demos"
+    ],
+    "started_utc": "2026-10-03T22:47:05.009882+00:00",
+    "finished_utc": "2026-10-03T22:47:05.617420+00:00",
+    "exit_code": 0
+  },
+  {
+    "name": "independent-recomputation",
+    "command": [
+      "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part3-reliability/.venv-part3/bin/python",
+      "scripts/hw05/part3/recompute_metrics.py",
+      "--selected-dir",
+      "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part3/final-evidence/selected",
+      "--output",
+      "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part3/final-evidence/independent-recomputation.json"
+    ],
+    "started_utc": "2026-10-03T22:47:05.617857+00:00",
+    "finished_utc": "2026-10-03T22:47:05.645509+00:00",
+    "exit_code": 0
+  },
+  {
+    "name": "replay",
+    "command": [
+      "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part3-reliability/.venv-part3/bin/python",
+      "-m",
+      "scripts.hw05.part3.run_fault_experiment",
+      "--output-dir",
+      "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part3/final-evidence/replay",
+      "--label",
+      "replay",
+      "--compare-to",
+      "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part3/final-evidence/selected/rows.jsonl"
+    ],
+    "started_utc": "2026-10-03T22:47:05.645785+00:00",
+    "finished_utc": "2026-10-03T22:47:12.328666+00:00",
+    "exit_code": 0
+  },
+  {
+    "name": "driver-timeout",
+    "command": [
+      "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part3-reliability/.venv-part3/bin/python",
+      "scripts/hw05/part3/probe_driver_timeout.py",
+      "--read-timeout-s",
+      "0.2"
+    ],
+    "started_utc": "2026-10-03T22:47:12.329322+00:00",
+    "finished_utc": "2026-10-03T22:47:12.673321+00:00",
+    "exit_code": 0
+  },
+  {
+    "name": "live-stdio",
+    "command": [
+      "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part3-reliability/.venv-part3/bin/python",
+      "scripts/hw05/part3/capture_live_stdio.py",
+      "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part3/final-evidence/live-stdio.json"
+    ],
+    "started_utc": "2026-10-03T22:47:12.674557+00:00",
+    "finished_utc": "2026-10-03T22:47:13.341274+00:00",
+    "exit_code": 0
+  },
+  {
+    "name": "pip-check",
+    "command": [
+      "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part3-reliability/.venv-part3/bin/python",
+      "-m",
+      "pip",
+      "check"
+    ],
+    "started_utc": "2026-10-03T22:47:13.341583+00:00",
+    "finished_utc": "2026-10-03T22:47:13.483325+00:00",
+    "exit_code": 0
+  }
+]

@@ -1,0 +1,128 @@
+Pragya Apurva
+Started UTC: 2026-10-03T22:45:58.873761+00:00
+Command: ['/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part3-reliability/.venv-part3/bin/python', '-m', 'pytest', '-q', '-p', 'no:cacheprovider', '--basetemp', '/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part3/pytest-complete', 'tests/test_hw05_reliability.py', 'tests/test_hw05_runtime.py', 'tests/test_hw05_fault_experiment.py', 'tests/test_hw05_timeouts.py', 'tests/test_hw05_domain_tools.py', 'tests/test_hw05_mcp_stdio.py', '-k', 'not meals']
+........................................................................ [ 37%]
+........................................................................ [ 74%]
+..................................................                       [100%]
+194 passed, 1 deselected in 2.91s
+
+Exit: 0
+Finished UTC: 2026-10-03T22:46:02.057187+00:00
+
+Pragya Apurva
+Started UTC: 2026-10-03T22:46:58.257007+00:00
+Command: ['/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part3-reliability/.venv-part3/bin/python', '-m', 'scripts.hw05.part3.run_fault_experiment', '--output-dir', '/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part3/final-evidence/selected', '--label', 'selected']
+Pragya Apurva — Part 3 controlled fixture experiment
+Label: selected; 150 logical calls; seed 266102; real retry sleeps
+rate=0% successes=50/50 mean_ms=0.009701 p99_ms=0.323083 attempts=50
+rate=20% successes=50/50 mean_ms=20.548434 p99_ms=302.708542 attempts=59
+rate=50% successes=46/50 mean_ms=109.071352 p99_ms=310.386083 attempts=90
+Evidence: /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part3/final-evidence/selected
+
+Exit: 0
+Finished UTC: 2026-10-03T22:47:05.009556+00:00
+
+Pragya Apurva
+Started UTC: 2026-10-03T22:47:05.009882+00:00
+Command: ['/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part3-reliability/.venv-part3/bin/python', '-m', 'scripts.hw05.part3.run_retry_demos', '--output-dir', '/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part3/final-evidence/demos']
+Pragya Apurva — Part 3 explicitly scripted retry demonstrations
+immediate_success: ok=True attempts=1 sleeps=[] elapsed_ms=0.062417
+  envelope={"data": {"description": "A one-bedroom apartment near campus.", "id": 1, "listingTitle": "Campus apartment", "managerId": 1, "propertyAddress": "100 Campus Way, San Jose", "propertyType": "apartment"}, "error": null, "ok": true}
+  trace=[{"attempt": 1, "injected": false, "outcome": "success", "sleep_s": 0}]
+transient_then_success: ok=True attempts=2 sleeps=[0.1] elapsed_ms=105.077667
+  envelope={"data": {"description": "A one-bedroom apartment near campus.", "id": 1, "listingTitle": "Campus apartment", "managerId": 1, "propertyAddress": "100 Campus Way, San Jose", "propertyType": "apartment"}, "error": null, "ok": true}
+  trace=[{"attempt": 1, "injected": true, "outcome": "transient_error", "sleep_s": 0.1}, {"attempt": 2, "injected": false, "outcome": "success", "sleep_s": 0}]
+retry_exhaustion: ok=False attempts=3 sleeps=[0.1, 0.2] elapsed_ms=305.498792
+  envelope={"data": null, "error": "Rental data is temporarily unavailable.", "ok": false}
+  trace=[{"attempt": 1, "injected": true, "outcome": "transient_error", "sleep_s": 0.1}, {"attempt": 2, "injected": true, "outcome": "transient_error", "sleep_s": 0.2}, {"attempt": 3, "injected": true, "outcome": "transient_error", "sleep_s": 0}]
+Evidence: /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part3/final-evidence/demos
+
+Exit: 0
+Finished UTC: 2026-10-03T22:47:05.617420+00:00
+
+Pragya Apurva
+Started UTC: 2026-10-03T22:47:05.617857+00:00
+Command: ['/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part3-reliability/.venv-part3/bin/python', 'scripts/hw05/part3/recompute_metrics.py', '--selected-dir', '/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part3/final-evidence/selected', '--output', '/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part3/final-evidence/independent-recomputation.json']
+Pragya Apurva — independent raw-record audit PASS: 150 rows, every RNG decision, and all 3 metrics rows.
+0%: 50/50; mean=0.009701 ms; p99=0.323083 ms; attempts=50
+20%: 50/50; mean=20.548434 ms; p99=302.708542 ms; attempts=59
+50%: 46/50; mean=109.071352 ms; p99=310.386083 ms; attempts=90
+
+Exit: 0
+Finished UTC: 2026-10-03T22:47:05.645509+00:00
+
+Pragya Apurva
+Started UTC: 2026-10-03T22:47:05.645785+00:00
+Command: ['/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part3-reliability/.venv-part3/bin/python', '-m', 'scripts.hw05.part3.run_fault_experiment', '--output-dir', '/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part3/final-evidence/replay', '--label', 'replay', '--compare-to', '/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part3/final-evidence/selected/rows.jsonl']
+Pragya Apurva — Part 3 controlled fixture experiment
+Label: replay; 150 logical calls; seed 266102; real retry sleeps
+rate=0% successes=50/50 mean_ms=0.005162 p99_ms=0.085875 attempts=50
+rate=20% successes=50/50 mean_ms=20.679369 p99_ms=308.795792 attempts=59
+rate=50% successes=46/50 mean_ms=108.759823 p99_ms=310.292000 attempts=90
+Deterministic replay: PASS
+Evidence: /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part3/final-evidence/replay
+
+Exit: 0
+Finished UTC: 2026-10-03T22:47:12.328666+00:00
+
+Pragya Apurva
+Started UTC: 2026-10-03T22:47:12.329322+00:00
+Command: ['/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part3-reliability/.venv-part3/bin/python', 'scripts/hw05/part3/probe_driver_timeout.py', '--read-timeout-s', '0.2']
+{
+  "accepted_socket_closed": true,
+  "command": [
+    "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part3-reliability/.venv-part3/bin/python",
+    "scripts/hw05/part3/probe_driver_timeout.py",
+    "--read-timeout-s",
+    "0.2"
+  ],
+  "connect_timeout_s": 1,
+  "connection_accepted": true,
+  "control_proved": "PyMySQL read_timeout during stalled server greeting",
+  "driver_error_code": 2013,
+  "driver_exception_type": "pymysql.err.OperationalError",
+  "elapsed_bounds_ms": [
+    150.00000000000003,
+    1700.0
+  ],
+  "elapsed_ms": 218.34591700462624,
+  "elapsed_within_bounds": true,
+  "exception_type": "sqlalchemy.exc.OperationalError",
+  "finished_utc": "2026-10-03T22:47:12.624946+00:00",
+  "limitations": "Stalled greeting only; not live MySQL, other timeout controls, or a whole-call deadline.",
+  "listener_closed": true,
+  "passed": true,
+  "pool_timeout_s": 1,
+  "read_timeout_s": 0.2,
+  "server_error_types": [],
+  "server_hold_expired": false,
+  "server_thread_stopped": true,
+  "started_utc": "2026-10-03T22:47:12.405853+00:00",
+  "student": "Pragya Apurva",
+  "versions": {
+    "PyMySQL": "1.1.2",
+    "SQLAlchemy": "2.0.48"
+  },
+  "write_timeout_s": 1
+}
+
+Exit: 0
+Finished UTC: 2026-10-03T22:47:12.673321+00:00
+
+Pragya Apurva
+Started UTC: 2026-10-03T22:47:12.674557+00:00
+Command: ['/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part3-reliability/.venv-part3/bin/python', 'scripts/hw05/part3/capture_live_stdio.py', '/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part3/final-evidence/live-stdio.json']
+Pragya Apurva
+PASS: exact current inventory/schemas; 8 application outcomes; 3 native schema rejections.
+PASS: actual MySQL on owned port 3310; STDIO subprocess exited; no private fields returned.
+
+Exit: 0
+Finished UTC: 2026-10-03T22:47:13.341274+00:00
+
+Pragya Apurva
+Started UTC: 2026-10-03T22:47:13.341583+00:00
+Command: ['/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part3-reliability/.venv-part3/bin/python', '-m', 'pip', 'check']
+No broken requirements found.
+
+Exit: 0
+Finished UTC: 2026-10-03T22:47:13.483325+00:00

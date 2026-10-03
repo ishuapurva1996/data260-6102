@@ -1,0 +1,91 @@
+{
+  "student": "Pragya Apurva",
+  "scope": "Part 3 / U6a only",
+  "created_utc": "2026-10-03T22:48:26.664021+00:00",
+  "tested_code_revision": "ca4641778c34cf14c1ed07aea63be20374d5306f",
+  "experiment_source_dirty": false,
+  "selected_dataset": "reports/hw05/raw/part3/selected/rows.jsonl",
+  "selected_logical_calls": 150,
+  "replay_dataset": "reports/hw05/raw/part3/replay/rows.jsonl",
+  "replay_note": "Separate replay; not included in the selected table.",
+  "checks": {
+    "focused_tests": {
+      "passed": 194,
+      "failed": 0,
+      "skipped": 0,
+      "deselected": 1,
+      "note": "One unrelated Meals STDIO test deselected. Tests ran immediately before code commit on identical code/test bytes; documentation was updated afterward."
+    },
+    "pip_check": true,
+    "independent_metrics_and_rng_audit": true,
+    "deterministic_replay": true,
+    "actual_driver_read_timeout": true,
+    "live_mysql_stdio": true
+  },
+  "runtime": {
+    "container": "data260-hw5-part3-mysql3310",
+    "ownership_label": "data260.owner=hw5-part3",
+    "host": "127.0.0.1",
+    "port": 3310,
+    "database": "s6102_rel",
+    "mysql_version": "8.4.11",
+    "runtime_privileges": "public-column SELECT only",
+    "running": false,
+    "cleanup_receipt": "reports/hw05/raw/part3/runtime-cleanup.json"
+  },
+  "screenshots": {
+    "status": "pending",
+    "reason": "Native Terminal window capture failed; display capture omitted application windows. Screen Recording user action requested; no synthetic screenshots substituted."
+  },
+  "pending_integration": [
+    "U5: integrate/retest against Part 1 upgraded schema",
+    "U6c: actual default executor through factory, cleanup, strict schemas and live output parity"
+  ],
+  "artifact_sha256": {
+    "reports/hw05/part3/RESULTS.md": "8b59ab1a1c03150a5df79aac0d797a964c88338de6cf911dbbefcc04d647e9f2",
+    "reports/hw05/part3/RUN_LOG.txt": "36978e2f0565912c47cdbcb15851d009bba7dac26edddbba2b0ae679bbfd0bf9",
+    "reports/hw05/part3/installed-versions.txt": "992545c9dbf7b81777243f1883957ba8ae1004a4eba74167c7351b05a607c515",
+    "reports/hw05/part3/tests.txt": "cd8f54e11e51ddc78d2fa1e6fa2c8fecb6e69abdeb48e9ad5d79dba35ecee40d",
+    "reports/hw05/raw/part3/commands.json": "a7bf39c665b2ea1878a7695cfd41bcb159a530ef2bf5f3642622e7cea5e5ea76",
+    "reports/hw05/raw/part3/demos/demonstrations.json": "7c6a28b3768bd200cacc2e316121242f1852b02c1a55d02d4d37eb2f848fb68c",
+    "reports/hw05/raw/part3/demos/manifest.json": "8c7b91400b5a0b38f79d0aeaf9512e00d3b7ecedf5ac43e6ff007f8754687cda",
+    "reports/hw05/raw/part3/driver-timeout.json": "b5938c1a6fbacfdbec5a0db56e7cdfae5b1e9c2d922beaa6253578ab7fdeac62",
+    "reports/hw05/raw/part3/independent-recomputation.json": "2300b73dbb2337446751358ea0fa3038fb9b3413983afe696c1bdd74fa824c2f",
+    "reports/hw05/raw/part3/live-stdio.json": "9c7d22a4b5f2412460935a9fc9496c809d578696d52bfb7967b99d7d14528503",
+    "reports/hw05/raw/part3/mysql-fixture.json": "619e38671f712f6c95dccda1e2f27a02d21ab8174652972d370a65df76e6802d",
+    "reports/hw05/raw/part3/replay/manifest.json": "309e8fa066bf479344327adcbbc90e08c224564ee8188ce928bb5a49e936c624",
+    "reports/hw05/raw/part3/replay/metrics.json": "bd9d2a430337ebcaa1707a43c506209ab6d8760eddf96b9b4c638cda7e5ee97c",
+    "reports/hw05/raw/part3/replay/replay-comparison.json": "e1aea559d325b53fdb658d6884f39746a3d49998c0cf859ed7af31ffdf236af6",
+    "reports/hw05/raw/part3/replay/rows.jsonl": "05565f62fed46083c0f7bb6de1d0e097b0099b690c7039477dc523776aae31e7",
+    "reports/hw05/raw/part3/runtime-cleanup.json": "d3c00cd9f3b5bf1651020a252866b6487dadaa76b1e42d79bbce932adc095547",
+    "reports/hw05/raw/part3/selected/manifest.json": "58ed9ebfb492b9dc6b95e6495ba1cd36abecea2fc34d372b749a0c967d1b9277",
+    "reports/hw05/raw/part3/selected/metrics.json": "b2a8e5c0d700452613e12f0c26128a18021649ae366168c0ddc89ed58412b69a",
+    "reports/hw05/raw/part3/selected/rows.jsonl": "400868b67d4916a3e87acfbfaa9e20e98f11578dc917c0a05a3e9610aafefb73"
+  },
+  "verification_source_sha256": {
+    "scripts/hw05/part3/capture_live_stdio.py": "1790568595eeb068c62e6350c63c822da0c74f435e7897c01774bb8f161fc269",
+    "scripts/hw05/part3/fixture.py": "fdcaf2f153e573579999eafc653d988649efc59e6f701f7fa8a4a525be4679b1",
+    "scripts/hw05/part3/probe_driver_timeout.py": "dc1eb1258e5073edf2352f9f04a607f59d63ea3e5d0a6558ff7345c0bcf36a2d",
+    "scripts/hw05/part3/provenance.py": "ecbbfd35bf9b3e3a5b48781d01dade45a423d265e3a1cda247f99e8da8446c2d",
+    "scripts/hw05/part3/recompute_metrics.py": "899850967670eb94e0ba636f9c5b6e523e2684c34d0f1f22d21de4444dc4b732",
+    "scripts/hw05/part3/run_fault_experiment.py": "3b69d050993b77937830ec1a5ffe5a77458260a68b961a8afee462e1d0f193ff",
+    "scripts/hw05/part3/run_retry_demos.py": "71869d54037650340d84df8332ff36d7e23b55ede6130699040c9e4820dfb0bd",
+    "scripts/hw05/part3/setup_fixture.py": "92c2f87b5b7c736805d4a013a170d4ef7a64fb0c5708ccdc3ce67e80220a3062",
+    "src/mcp_servers/rentals.py": "b2f0634c5d523101dea0347ec2665839d2dfc6e4cc650ca00495404e1a20a7a1",
+    "src/rental_tools/__init__.py": "820e66fc061d560f2553a5041dd69fdd761e33bf960579985643ed21fe20d877",
+    "src/rental_tools/contracts.py": "9e2bd2345dc95aeba6c4285a9adea01a747cdad5894cb981ab7cb7fd746c9377",
+    "src/rental_tools/reader.py": "6aea8b933dc5c13e216bab21f5476a0016d1110fffd38c3fec2a536e69eeef66",
+    "src/rental_tools/registry.py": "a6a4cfc5648837c65ad0a884b790c7a003eb269a66d5890f0c3a35f982a38efa",
+    "src/rental_tools/reliability.py": "3c0a81441da2e982a0c136f2a8c9b17c09086178966d9de8997b117a007dc611",
+    "src/rental_tools/runtime.py": "703fb0629fbc63fdfea2edb1b611ee8d19eb8c79bb49f6048e2bb3ab75dd5e92",
+    "src/rental_tools/service.py": "5b4cb6695be78e93c149e732f1aef7bca38e1049be41b8effdd787211720b341",
+    "tests/test_hw05_domain_tools.py": "acd5294d9ccd38173a381fb525cea799fa437d5a322f287f2033c4fe06e238f3",
+    "tests/test_hw05_fault_experiment.py": "42436a9521dcf8bb3f319ad8028aee141ecdf363e869e65ad70f4da9a29e6222",
+    "tests/test_hw05_fixture_setup.py": "70692dc5b868020226210ec57968574e9f790c641d0fad2a1ed91c3f6f35e4df",
+    "tests/test_hw05_mcp_stdio.py": "d3d8187fb94a2d2f85ebbc35d633bdd7f335af6f5aacb88492113e48ed8b9b53",
+    "tests/test_hw05_meals.py": "cca261203ed64facb0951125e88076e7f393d941e70739f9fd4b226b15e16548",
+    "tests/test_hw05_reliability.py": "56023f4c17eef1783ff6c65d3507bafe8fa1c9bffde9f3a86b4040b3e4727abf",
+    "tests/test_hw05_runtime.py": "2ad7cd12b91ca6762f8160845a83eba79c4ffbc9e5725366bea86c86c46f7daf",
+    "tests/test_hw05_timeouts.py": "2a8faab2c5d3414a0a641dd2190569e81cfdc1a0d45778d85d0db0c7aa70d958"
+  }
+}

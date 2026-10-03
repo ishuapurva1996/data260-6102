@@ -1,0 +1,474 @@
+{
+  "student": "Pragya Apurva",
+  "started_utc": "2026-10-03T22:47:12.942523+00:00",
+  "kind": "Actual MySQL public-column SELECT through real MCP STDIO subprocess",
+  "host": "127.0.0.1",
+  "port": 3310,
+  "database": "s6102_rel",
+  "runtime_user": "hw5_part3_reader",
+  "command": [
+    "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part3-reliability/.venv-part3/bin/python",
+    "scripts/hw05/part3/capture_live_stdio.py",
+    "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part3/final-evidence/live-stdio.json"
+  ],
+  "revision": "ca4641778c34cf14c1ed07aea63be20374d5306f",
+  "working_tree_dirty": false,
+  "source_sha256": {
+    "src/rental_tools/__init__.py": "820e66fc061d560f2553a5041dd69fdd761e33bf960579985643ed21fe20d877",
+    "src/rental_tools/contracts.py": "9e2bd2345dc95aeba6c4285a9adea01a747cdad5894cb981ab7cb7fd746c9377",
+    "src/rental_tools/reader.py": "6aea8b933dc5c13e216bab21f5476a0016d1110fffd38c3fec2a536e69eeef66",
+    "src/rental_tools/registry.py": "a6a4cfc5648837c65ad0a884b790c7a003eb269a66d5890f0c3a35f982a38efa",
+    "src/rental_tools/reliability.py": "3c0a81441da2e982a0c136f2a8c9b17c09086178966d9de8997b117a007dc611",
+    "src/rental_tools/runtime.py": "703fb0629fbc63fdfea2edb1b611ee8d19eb8c79bb49f6048e2bb3ab75dd5e92",
+    "src/rental_tools/service.py": "5b4cb6695be78e93c149e732f1aef7bca38e1049be41b8effdd787211720b341",
+    "src/mcp_servers/rentals.py": "b2f0634c5d523101dea0347ec2665839d2dfc6e4cc650ca00495404e1a20a7a1",
+    "scripts/hw05/part3/capture_live_stdio.py": "1790568595eeb068c62e6350c63c822da0c74f435e7897c01774bb8f161fc269"
+  },
+  "versions": {
+    "mcp": "1.28.1",
+    "SQLAlchemy": "2.0.48",
+    "PyMySQL": "1.1.2",
+    "pydantic": "2.12.5"
+  },
+  "calls": [
+    {
+      "tool": "search_rentals",
+      "input": {
+        "query": "campus",
+        "limit": 5
+      },
+      "result": {
+        "meta": null,
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"ok\": true,\n  \"data\": {\n    \"items\": [\n      {\n        \"id\": 1,\n        \"listingTitle\": \"Sunny Downtown Apartment\",\n        \"propertyAddress\": \"1 Campus Way, San Jose, CA\",\n        \"propertyType\": \"apartment\",\n        \"managerId\": 1\n      },\n      {\n        \"id\": 2,\n        \"listingTitle\": \"Spacious Garden House\",\n        \"propertyAddress\": \"2 Campus Way, San Jose, CA\",\n        \"propertyType\": \"house\",\n        \"managerId\": 2\n      },\n      {\n        \"id\": 3,\n        \"listingTitle\": \"100% Calm_Studio\",\n        \"propertyAddress\": \"3 Campus Way, San Jose, CA\",\n        \"propertyType\": \"apartment\",\n        \"managerId\": 1\n      },\n      {\n        \"id\": 4,\n        \"listingTitle\": \"Stra\\u00dfe Caf\\u00e9\",\n        \"propertyAddress\": \"4 Campus Way, San Jose, CA\",\n        \"propertyType\": \"apartment\",\n        \"managerId\": 1\n      },\n      {\n        \"id\": 5,\n        \"listingTitle\": \"Caf\\u00e9 Apartment\",\n        \"propertyAddress\": \"5 Campus Way, San Jose, CA\",\n        \"propertyType\": \"apartment\",\n        \"managerId\": 1\n      }\n    ],\n    \"returnedCount\": 5,\n    \"limit\": 5\n  },\n  \"error\": null\n}",
+            "annotations": null,
+            "meta": null
+          }
+        ],
+        "structuredContent": {
+          "ok": true,
+          "data": {
+            "items": [
+              {
+                "id": 1,
+                "listingTitle": "Sunny Downtown Apartment",
+                "propertyAddress": "1 Campus Way, San Jose, CA",
+                "propertyType": "apartment",
+                "managerId": 1
+              },
+              {
+                "id": 2,
+                "listingTitle": "Spacious Garden House",
+                "propertyAddress": "2 Campus Way, San Jose, CA",
+                "propertyType": "house",
+                "managerId": 2
+              },
+              {
+                "id": 3,
+                "listingTitle": "100% Calm_Studio",
+                "propertyAddress": "3 Campus Way, San Jose, CA",
+                "propertyType": "apartment",
+                "managerId": 1
+              },
+              {
+                "id": 4,
+                "listingTitle": "Straße Café",
+                "propertyAddress": "4 Campus Way, San Jose, CA",
+                "propertyType": "apartment",
+                "managerId": 1
+              },
+              {
+                "id": 5,
+                "listingTitle": "Café Apartment",
+                "propertyAddress": "5 Campus Way, San Jose, CA",
+                "propertyType": "apartment",
+                "managerId": 1
+              }
+            ],
+            "returnedCount": 5,
+            "limit": 5
+          },
+          "error": null
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "get_rental",
+      "input": {
+        "rental_id": 1
+      },
+      "result": {
+        "meta": null,
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"ok\": true,\n  \"data\": {\n    \"id\": 1,\n    \"listingTitle\": \"Sunny Downtown Apartment\",\n    \"propertyAddress\": \"1 Campus Way, San Jose, CA\",\n    \"propertyType\": \"apartment\",\n    \"managerId\": 1,\n    \"description\": \"Synthetic HW5 evidence listing with a spacious living room.\"\n  },\n  \"error\": null\n}",
+            "annotations": null,
+            "meta": null
+          }
+        ],
+        "structuredContent": {
+          "ok": true,
+          "data": {
+            "id": 1,
+            "listingTitle": "Sunny Downtown Apartment",
+            "propertyAddress": "1 Campus Way, San Jose, CA",
+            "propertyType": "apartment",
+            "managerId": 1,
+            "description": "Synthetic HW5 evidence listing with a spacious living room."
+          },
+          "error": null
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "count_rentals",
+      "input": {
+        "manager_id": 1
+      },
+      "result": {
+        "meta": null,
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"ok\": true,\n  \"data\": {\n    \"managerId\": 1,\n    \"managerName\": \"Campus Homes\",\n    \"count\": 5\n  },\n  \"error\": null\n}",
+            "annotations": null,
+            "meta": null
+          }
+        ],
+        "structuredContent": {
+          "ok": true,
+          "data": {
+            "managerId": 1,
+            "managerName": "Campus Homes",
+            "count": 5
+          },
+          "error": null
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "search_rentals",
+      "input": {
+        "query": "   ",
+        "limit": 5
+      },
+      "result": {
+        "meta": null,
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"ok\": false,\n  \"data\": null,\n  \"error\": \"Invalid input: query: Value error, query must contain non-whitespace characters\"\n}",
+            "annotations": null,
+            "meta": null
+          }
+        ],
+        "structuredContent": {
+          "ok": false,
+          "data": null,
+          "error": "Invalid input: query: Value error, query must contain non-whitespace characters"
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "get_rental",
+      "input": {
+        "rental_id": 8
+      },
+      "result": {
+        "meta": null,
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"ok\": false,\n  \"data\": null,\n  \"error\": \"Rental 8 was not found.\"\n}",
+            "annotations": null,
+            "meta": null
+          }
+        ],
+        "structuredContent": {
+          "ok": false,
+          "data": null,
+          "error": "Rental 8 was not found."
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "count_rentals",
+      "input": {
+        "manager_id": 4
+      },
+      "result": {
+        "meta": null,
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"ok\": false,\n  \"data\": null,\n  \"error\": \"Property manager 4 was not found.\"\n}",
+            "annotations": null,
+            "meta": null
+          }
+        ],
+        "structuredContent": {
+          "ok": false,
+          "data": null,
+          "error": "Property manager 4 was not found."
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "search_rentals",
+      "input": {
+        "query": "no-such-listing-part3"
+      },
+      "result": {
+        "meta": null,
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"ok\": true,\n  \"data\": {\n    \"items\": [],\n    \"returnedCount\": 0,\n    \"limit\": 5\n  },\n  \"error\": null\n}",
+            "annotations": null,
+            "meta": null
+          }
+        ],
+        "structuredContent": {
+          "ok": true,
+          "data": {
+            "items": [],
+            "returnedCount": 0,
+            "limit": 5
+          },
+          "error": null
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "count_rentals",
+      "input": {
+        "manager_id": 3
+      },
+      "result": {
+        "meta": null,
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"ok\": true,\n  \"data\": {\n    \"managerId\": 3,\n    \"managerName\": \"Empty Portfolio\",\n    \"count\": 0\n  },\n  \"error\": null\n}",
+            "annotations": null,
+            "meta": null
+          }
+        ],
+        "structuredContent": {
+          "ok": true,
+          "data": {
+            "managerId": 3,
+            "managerName": "Empty Portfolio",
+            "count": 0
+          },
+          "error": null
+        },
+        "isError": false
+      }
+    }
+  ],
+  "native_schema_rejections": [
+    {
+      "tool": "search_rentals",
+      "result": {
+        "meta": null,
+        "content": [
+          {
+            "type": "text",
+            "text": "Input validation error: Additional properties are not allowed ('unexpected' was unexpected)",
+            "annotations": null,
+            "meta": null
+          }
+        ],
+        "structuredContent": null,
+        "isError": true
+      }
+    },
+    {
+      "tool": "get_rental",
+      "result": {
+        "meta": null,
+        "content": [
+          {
+            "type": "text",
+            "text": "Input validation error: Additional properties are not allowed ('unexpected' was unexpected)",
+            "annotations": null,
+            "meta": null
+          }
+        ],
+        "structuredContent": null,
+        "isError": true
+      }
+    },
+    {
+      "tool": "count_rentals",
+      "result": {
+        "meta": null,
+        "content": [
+          {
+            "type": "text",
+            "text": "Input validation error: Additional properties are not allowed ('unexpected' was unexpected)",
+            "annotations": null,
+            "meta": null
+          }
+        ],
+        "structuredContent": null,
+        "isError": true
+      }
+    }
+  ],
+  "initialize": {
+    "meta": null,
+    "protocolVersion": "2025-11-25",
+    "capabilities": {
+      "experimental": {},
+      "logging": null,
+      "prompts": null,
+      "resources": null,
+      "tools": {
+        "listChanged": false
+      },
+      "completions": null,
+      "tasks": null
+    },
+    "serverInfo": {
+      "name": "rentals",
+      "title": null,
+      "version": "1.28.1",
+      "websiteUrl": null,
+      "icons": null
+    },
+    "instructions": null
+  },
+  "tools_list": {
+    "meta": null,
+    "nextCursor": null,
+    "tools": [
+      {
+        "name": "search_rentals",
+        "title": null,
+        "description": "Search public rental titles and addresses using literal case-insensitive text; return IDs in ascending order.",
+        "inputSchema": {
+          "additionalProperties": false,
+          "properties": {
+            "query": {
+              "maxLength": 255,
+              "minLength": 1,
+              "title": "Query",
+              "type": "string"
+            },
+            "limit": {
+              "default": 5,
+              "maximum": 25,
+              "minimum": 1,
+              "title": "Limit",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "query"
+          ],
+          "title": "SearchRentalsInput",
+          "type": "object"
+        },
+        "outputSchema": {
+          "additionalProperties": true,
+          "type": "object",
+          "title": "search_rentalsDictOutput"
+        },
+        "icons": null,
+        "annotations": {
+          "title": null,
+          "readOnlyHint": true,
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "meta": null,
+        "execution": null
+      },
+      {
+        "name": "get_rental",
+        "title": null,
+        "description": "Get the public details of one rental by its positive integer ID.",
+        "inputSchema": {
+          "additionalProperties": false,
+          "properties": {
+            "rental_id": {
+              "exclusiveMinimum": 0,
+              "title": "Rental Id",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "rental_id"
+          ],
+          "title": "GetRentalInput",
+          "type": "object"
+        },
+        "outputSchema": {
+          "additionalProperties": true,
+          "type": "object",
+          "title": "get_rentalDictOutput"
+        },
+        "icons": null,
+        "annotations": {
+          "title": null,
+          "readOnlyHint": true,
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "meta": null,
+        "execution": null
+      },
+      {
+        "name": "count_rentals",
+        "title": null,
+        "description": "Count rentals assigned to an existing property manager, including a count of zero.",
+        "inputSchema": {
+          "additionalProperties": false,
+          "properties": {
+            "manager_id": {
+              "exclusiveMinimum": 0,
+              "title": "Manager Id",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "manager_id"
+          ],
+          "title": "CountRentalsInput",
+          "type": "object"
+        },
+        "outputSchema": {
+          "additionalProperties": true,
+          "type": "object",
+          "title": "count_rentalsDictOutput"
+        },
+        "icons": null,
+        "annotations": {
+          "title": null,
+          "readOnlyHint": true,
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "meta": null,
+        "execution": null
+      }
+    ]
+  },
+  "passed": true,
+  "finished_utc": "2026-10-03T22:47:13.297852+00:00"
+}

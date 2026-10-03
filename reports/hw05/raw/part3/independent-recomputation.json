@@ -1,0 +1,51 @@
+{
+  "student": "Pragya Apurva",
+  "passed": true,
+  "rows_checked": 150,
+  "verified_utc": "2026-10-03T22:47:05.642001+00:00",
+  "rows_sha256": "400868b67d4916a3e87acfbfaa9e20e98f11578dc917c0a05a3e9610aafefb73",
+  "independent_method": "Standalone standard-library audit; fmean over all 50 durations and max for nearest-rank p99; rebuild every RNG draw.",
+  "metrics": [
+    {
+      "rate": 0.0,
+      "logical_calls": 50,
+      "successes": 50,
+      "success_rate": 1.0,
+      "mean_latency_ms": 0.009700861410237849,
+      "p99_latency_ms": 0.32308301888406277,
+      "total_attempts": 50,
+      "first_attempt_successes": 50,
+      "recovered_calls": 0
+    },
+    {
+      "rate": 0.2,
+      "logical_calls": 50,
+      "successes": 50,
+      "success_rate": 1.0,
+      "mean_latency_ms": 20.548434197553433,
+      "p99_latency_ms": 302.70854200352915,
+      "total_attempts": 59,
+      "first_attempt_successes": 42,
+      "recovered_calls": 8
+    },
+    {
+      "rate": 0.5,
+      "logical_calls": 50,
+      "successes": 46,
+      "success_rate": 0.92,
+      "mean_latency_ms": 109.07135164132342,
+      "p99_latency_ms": 310.3860830015037,
+      "total_attempts": 90,
+      "first_attempt_successes": 23,
+      "recovered_calls": 23
+    }
+  ],
+  "command": [
+    "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part3-reliability/.venv-part3/bin/python",
+    "scripts/hw05/part3/recompute_metrics.py",
+    "--selected-dir",
+    "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part3/final-evidence/selected",
+    "--output",
+    "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part3/final-evidence/independent-recomputation.json"
+  ]
+}
