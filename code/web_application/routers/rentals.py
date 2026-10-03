@@ -1,12 +1,16 @@
-"""Ordinary authenticated CRUD; database-generated IDs survive restarts."""
+"""Authenticated rental CRUD, stable pagination, and literal Unicode search."""
 from typing import Annotated
-from fastapi import APIRouter, Depends, HTTPException, Path, Response
-from sqlalchemy import select
+from uuid import uuid4
+
+from fastapi import APIRouter, Depends, HTTPException, Path, Query, Response
+from sqlalchemy import func, select
+from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
 from ..database import get_db
-from ..models import Rental
+from ..models import PropertyManager, Rental, utc_now
 from ..schemas import RentalCreate, RentalUpdate, RentalResponse, rental_json
+from ..write_errors import raise_write_conflict
 from .auth import require_user
 
 router = APIRouter(prefix="/api/rentals", tags=["rentals"], dependencies=[Depends(require_user)])
@@ -20,25 +24,51 @@ def find_rental(db, rental_id):
     return row
 
 
+def validate_manager(db, manager_id):
+    if manager_id is not None and db.get(PropertyManager, manager_id) is None:
+        raise HTTPException(422, "The supplied property manager does not exist.")
+
+
 @router.get("", response_model=list[RentalResponse])
-def list_rentals(q: str | None = None, db: Session = Depends(get_db)):
+def list_rentals(response: Response, q: str | None = None,
+                 limit: int = Query(50, ge=1, le=100), offset: int = Query(0, ge=0),
+                 db: Session = Depends(get_db)):
     statement = select(Rental).order_by(Rental.id)
     query = (q or "").strip().casefold()
-    # Preserve HW3 Unicode substring semantics (e.g. Straße matches strasse).
-    # MySQL LIKE does not implement Python casefold expansions. This ordinary
-    # listing route retains its unpaginated contract; Part3 queries are separate.
-    return [rental_json(row) for row in db.scalars(statement)
-            if not query or query in row.listing_title.casefold()
-            or query in row.property_address.casefold()]
+    if query:
+        # Python casefold intentionally preserves Straße/strasse expansion and
+        # treats SQL wildcards as ordinary text. Filter before count/pagination.
+        matches = [row for row in db.scalars(statement)
+                   if query in row.listing_title.casefold() or query in row.property_address.casefold()]
+        total, rows = len(matches), matches[offset:offset + limit]
+    else:
+        total = db.scalar(select(func.count()).select_from(Rental))
+        rows = db.scalars(statement.limit(limit).offset(offset)).all()
+    response.headers["X-Total-Count"] = str(total)
+    return [rental_json(row) for row in rows]
 
 
 @router.post("", response_model=RentalResponse, status_code=201)
 def create_rental(payload: RentalCreate, db: Session = Depends(get_db)):
+    validate_manager(db, payload.managerId)
+    now = utc_now()
     row = Rental(listing_title=payload.listingTitle, property_address=payload.propertyAddress,
                  submitter_email=str(payload.submitterEmail), description=payload.description,
-                 property_type=payload.propertyType, terms_accepted=payload.termsAccepted)
-    db.add(row)
-    db.commit()
+                 property_type=payload.propertyType, terms_accepted=payload.termsAccepted,
+                 manager_id=payload.managerId, available_units=payload.availableUnits,
+                 listing_code=payload.listingCode or f"pending-{uuid4().hex}",
+                 created_at=now, updated_at=now)
+    try:
+        db.add(row)
+        db.flush()
+        if payload.listingCode is None:
+            # Reserve the auto-increment ID, then complete its code in the same
+            # transaction. Concurrent requests never depend on SELECT MAX(id).
+            row.listing_code = f"S6102-R-{row.id}"
+            row.updated_at = now
+        db.commit()
+    except IntegrityError as error:
+        raise_write_conflict(db, error, "A rental with this listing code already exists.")
     return rental_json(row)
 
 
@@ -60,8 +90,19 @@ def get_rental(rental_id: RecordId, db: Session = Depends(get_db)):
 @router.put("/{rental_id}", response_model=RentalResponse)
 def update_rental(rental_id: RecordId, payload: RentalUpdate, db: Session = Depends(get_db)):
     row = find_rental(db, rental_id)
-    row.listing_title, row.property_address = payload.listingTitle, payload.propertyAddress
-    db.commit()
+    if "managerId" in payload.model_fields_set:
+        validate_manager(db, payload.managerId)
+    columns = {"listingTitle": "listing_title", "propertyAddress": "property_address",
+               "submitterEmail": "submitter_email", "description": "description",
+               "propertyType": "property_type", "termsAccepted": "terms_accepted",
+               "listingCode": "listing_code", "availableUnits": "available_units", "managerId": "manager_id"}
+    for key, value in payload.model_dump(exclude_unset=True).items():
+        setattr(row, columns[key], value)
+    row.updated_at = utc_now()
+    try:
+        db.commit()
+    except IntegrityError as error:
+        raise_write_conflict(db, error, "A rental with this listing code already exists.")
     return rental_json(row)
 
 
