@@ -1,0 +1,1 @@
+domain: exact inventory and 6 STDIO calls verified; saved reports/hw05/raw/part2/review-fixes/domain-stdio.json

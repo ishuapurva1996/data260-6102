@@ -1,7 +1,8 @@
 # HW5 Part 2: Meals and Rental MCP servers
 
-Part 2 provides two independent servers using the official Python MCP SDK's
-`FastMCP` interface and STDIO transport. A client starts the Python process and
+Part 2 provides two independent servers using the official Python MCP SDK and
+STDIO transport. Meals uses `FastMCP`; rentals uses the public low-level `Server`
+API so the SDK validates the shared strict schemas before dispatch. A client starts the Python process and
 exchanges MCP messages through its standard input and output. Neither server
 needs the FastAPI application on port 8702. Standard output is reserved for MCP
 traffic; diagnostics go to standard error.
@@ -153,8 +154,23 @@ Native SDK validation is a separate boundary. The recorded STDIO calls with
 `{"rental_id":"1"}` all return `isError: true`, native validation text, and
 `structuredContent: null`. In particular, the string `"1"` is not coerced into
 an integer by the tested rental server. Do not expect an application envelope
-for these requests. Shared input models also forbid extra fields; clients should
-send only the named contract fields.
+for these requests. All three published input schemas come directly from the
+shared models and include `additionalProperties: false`. An unexpected field
+such as `bogus` produces a native SDK error before the handler or reader runs.
+Arguments remain flat objects with the same named fields and defaults.
+
+The domain wrapper uses public `Server.list_tools`, `Server.call_tool` with
+`validate_input=True`, and `stdio_server` APIs. FastMCP 1.28.1 silently discarded
+unexpected fields before its handlers; the low-level API validates the original
+arguments. No private SDK state is patched. The broad dictionary output schemas,
+public result projection, and application envelopes remain unchanged.
+
+JSON Schema treats `1.0` as an integer. It therefore reaches the shared strict
+Pydantic model, which rejects it with an application failure before reader access.
+It is never coerced into an accepted ID or limit. Whitespace-only queries likewise
+remain application failures. Actual STDIO tests verify these boundaries and use
+a subprocess reader access log, with valid control calls, to prove rejected
+extra fields and integral floats do not reach the reader.
 
 Database/configuration failures return sanitized application envelopes. Raw
 SQL, dependency exception messages, and connection credentials are omitted.
@@ -201,6 +217,10 @@ Administrative setup is separate from both server launchers:
 ```bash
 .venv-mcp/bin/python scripts/hw05/part2/setup_fixture.py
 ```
+
+The administrative connection uses finite connect/read/write socket timeouts
+of 5/10/10 seconds, matching the reader. An offline test checks the effective
+PyMySQL connection options before any network access or database setup.
 
 The script applies the existing `code/web_application/migrations/001_initial.sql`
 baseline, inserts seven synthetic rentals and three managers, and creates
@@ -290,7 +310,8 @@ Run the focused tests from the dedicated environment:
 .venv-mcp/bin/python -m pytest \
   tests/test_hw05_meals.py \
   tests/test_hw05_domain_tools.py \
-  tests/test_hw05_mcp_stdio.py
+  tests/test_hw05_mcp_stdio.py \
+  tests/test_hw05_fixture_setup.py
 ```
 
 These tests use controlled upstream responses and injected readers. They check
@@ -313,7 +334,9 @@ The script overwrites its chosen output path; choose a new filename to preserve
 an earlier run. Record uncommitted source changes separately when interpreting
 the revision. The current saved live records contain four successful Meals
 calls and six domain calls with the expected success/failure envelopes. The
-domain capture additionally records the four native SDK validation errors.
+domain capture additionally records four native SDK validation errors and one
+unexpected-field rejection per rental tool. Captures also record whether the
+worktree was dirty; use accompanying source hashes to identify uncommitted code.
 
 The domain capture reads a real existing rental and manager, determines IDs
 above each current maximum, verifies those IDs are absent, and uses them for the

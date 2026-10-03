@@ -22,7 +22,10 @@ def main():
             or url.host != "127.0.0.1" or url.port != 3308):
         raise SystemExit("Fixture setup requires the owned localhost:3308/s6102_rel instance.")
     password = os.environ["HW5_FIXTURE_READER_PASSWORD"]
-    engine = create_engine(url, hide_parameters=True, connect_args={"charset": "utf8mb4"})
+    engine = create_engine(
+        url, hide_parameters=True,
+        connect_args={"charset": "utf8mb4", "connect_timeout": 5, "read_timeout": 10, "write_timeout": 10},
+    )
     source = ROOT / "code/web_application/migrations/001_initial.sql"
     sql = source.read_text()
     try:

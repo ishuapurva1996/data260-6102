@@ -59,6 +59,8 @@ async def capture(server, destination):
     record = {"captured_at_utc": datetime.now(timezone.utc).isoformat(),
               "client": "official Python MCP SDK ClientSession over real STDIO",
               "revision": subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT,text=True).strip(),
+              "working_tree_dirty": bool(subprocess.check_output(
+                  ["git", "status", "--porcelain"], cwd=ROOT, text=True).strip()),
               "source": source, "calls": []}
     params = StdioServerParameters(command=sys.executable,
         args=[str(ROOT / "scripts/hw05/part2" / launcher)], cwd=str(ROOT), env=environment)
@@ -77,7 +79,16 @@ async def capture(server, destination):
                 record["native_sdk_errors"] = []
                 for arguments in [{}, {"rental_id": False}, {"rental_id": 0}, {"rental_id": "1"}]:
                     result = await session.call_tool("get_rental", arguments)
+                    assert result.isError and result.structuredContent is None
                     record["native_sdk_errors"].append({"arguments": arguments,
+                        "result": result.model_dump(mode="json")})
+                record["unexpected_field_errors"] = []
+                for name, arguments in [calls[0], calls[2], calls[4]]:
+                    arguments = {**arguments, "bogus": True}
+                    result = await session.call_tool(name, arguments)
+                    assert result.isError and result.structuredContent is None
+                    record["unexpected_field_errors"].append({"request": {"method": "tools/call",
+                        "params": {"name": name, "arguments": arguments}},
                         "result": result.model_dump(mode="json")})
     destination.parent.mkdir(parents=True, exist_ok=True)
     destination.write_text(json.dumps(record, ensure_ascii=False, indent=2)+"\n")

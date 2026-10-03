@@ -2,7 +2,22 @@
 
 Implementation, live verification, and the required Inspector evidence are complete for **Parts 2A and 2B only**. The coordinator still owns review, Part 1 integration, later parts, and the final report. Nothing was pushed or submitted.
 
-Tested code revision: `8f24f44b87f83f813a7a60281bfcd523ab141fa1`, branch `codex/hw5-part2-mcp`, based on `f57d20fd5588589fcf6e6c8792b0d912277da9f0`. The source hashes in `../raw/part2/verified-source-sha256.json` identify the tested implementation. GUI captures were taken from that same source before the local code commit; final live STDIO captures identify the code commit directly.
+Original capture revision: `8f24f44b87f83f813a7a60281bfcd523ab141fa1`, branch `codex/hw5-part2-mcp`, based on `f57d20fd5588589fcf6e6c8792b0d912277da9f0`. The original source hashes in `../raw/part2/verified-source-sha256.json` identify that implementation. GUI captures were taken from the same source before the original local code commit. The original evidence was committed in `9658abe26d9f421968cb895bd1a34a197ff1e3fd`.
+
+## Review fixes and refreshed verification
+
+Coordinator review found that FastMCP 1.28.1 discarded unexpected rental-tool arguments before shared validation. The domain transport now uses the official SDK's public low-level `Server` API and publishes the shared input models directly. All three schemas enforce `additionalProperties: false`. Flat arguments, defaults, output schemas, public fields, and the three semantic failure envelopes are preserved. Meals is unchanged. The fixture helper now has finite connect/read/write timeouts of 5/10/10 seconds; its populated database was not reinitialized.
+
+The fix was verified from a working-tree snapshot above `9658abe26d9f421968cb895bd1a34a197ff1e3fd`, before its focused local commit. [Current source hashes](../raw/part2/review-fixes/verified-source-sha256.json) identify the exact tested files; the refreshed STDIO record explicitly marks `working_tree_dirty: true`. [Integrity and provenance](../raw/part2/review-fixes/evidence-integrity.json) bind the new evidence to that snapshot and confirm the original artifacts were preserved.
+
+- **108 tests passed**, including three real STDIO tests with valid controls and reader access logs proving extra fields are rejected before reader access; [output](../raw/part2/review-fixes/pytest.txt).
+- The fixture timeout test intercepted SQLAlchemy's effective PyMySQL connection options before driver/network access. No fixture setup was performed on the retained database.
+- [Refreshed live rental calls](../raw/part2/review-fixes/domain-stdio.json) preserve all six original requests and application envelopes, plus four native malformed/type/range errors and three extra-field errors.
+- [Refreshed Inspector CLI discovery](../raw/part2/review-fixes/rentals-inspector-tools-list.json) matches the shared schemas and Python STDIO discovery for exactly three tools. This is CLI evidence, not a new GUI capture.
+
+Extra fields, missing IDs, Boolean/string IDs, and zero IDs return native `isError:true` results with no application envelope. JSON Schema accepts an integral float such as `1.0`; the strict shared model rejects it with an application envelope before reader access. Whitespace-only queries and absent positive IDs remain the prescribed semantic application failures.
+
+The ten screenshots, original schemas/raw results, and `rejected-cases.json` below remain historical proof from `8f24f44`; they have not been relabeled as captures of the fix. No additional GUI screenshots or Meals API calls were needed for these scoped fixes. The owned MySQL instance was restarted for read-only rental capture, then stopped again.
 
 ## Capture mapping
 
@@ -36,10 +51,10 @@ Python **3.12.13**, official MCP SDK **1.28.1**, and all four Inspector packages
 | Verification | Actual outcome and evidence |
 | --- | --- |
 | Dedicated dependencies | `pip check`: no broken requirements |
-| Focused tests | **104 passed**, no skips; [pytest output](../raw/part2/pytest.txt) |
+| Focused tests | Original **104 passed**; current **108 passed**, no skips; [current output](../raw/part2/review-fixes/pytest.txt) |
 | Meals STDIO | Initialization, exact four-tool inventory, and all four live calls passed; [record](../raw/part2/meals-stdio.json) |
-| Domain STDIO | Initialization, exact three-tool inventory, three successes and three semantic failures passed; [record](../raw/part2/domain-stdio.json) |
-| Inspector discovery | Exact published schemas and inventories: [Meals](../raw/part2/meals-inspector-tools-list.json), [rentals](../raw/part2/rentals-mysql3308-inspector-tools-list.json) |
+| Domain STDIO | Initialization, exact three-tool inventory, unchanged semantic envelopes and strict extra-field rejection; [current record](../raw/part2/review-fixes/domain-stdio.json) |
+| Inspector discovery | Exact published schemas and inventories: [Meals](../raw/part2/meals-inspector-tools-list.json), [current rentals](../raw/part2/review-fixes/rentals-inspector-tools-list.json) |
 | Live MySQL behavior | Twelve literal/Unicode cases, zero-count manager, nullable manager, and private-column denial passed; [checks](../raw/part2/mysql-checks.json) |
 | GUI evidence | Four Meals and six domain screenshots, each visually reviewed and paired with its real GUI JSON; [hash manifest](../raw/part2/capture-manifest.json) |
 
@@ -49,7 +64,7 @@ The one test warning is a `pydantic_settings` unresolved `lifespan` forward-refe
 
 ## Rejected cases preserved for Part 3
 
-[rejected-cases.json](../raw/part2/rejected-cases.json) contains the actual GUI requests, published input schemas, and results:
+[rejected-cases.json](../raw/part2/rejected-cases.json) preserves the actual original GUI requests, original published input schemas, and results. Use the refreshed discovery above for current strict input schemas. The same requests still produce the same envelopes:
 
 ```text
 search_rentals({"query":"   ","limit":5})

@@ -11,13 +11,24 @@ class Reader:
            "property_type": "apartment", "manager_id": 1,
            "submitter_email": "PRIVATE_SENTINEL@example.com"}
 
+    def __init__(self, audit_path=None):
+        self.audit_path = audit_path
+
+    def record_access(self, operation):
+        if self.audit_path is not None:
+            with self.audit_path.open("a") as audit:
+                audit.write(operation + "\n")
+
     def search_rentals(self, query, limit):
+        self.record_access("search_rentals")
         return [self.row] if query.lower() in "campus apartment 1 campus way" else []
 
     def get_rental(self, rental_id):
+        self.record_access("get_rental")
         return self.row if rental_id == 1 else None
 
     def count_rentals(self, manager_id):
+        self.record_access("count_rentals")
         return {"manager_id": manager_id, "manager_name": "Offline Manager",
                 "count": 1 if manager_id == 1 else 0} if manager_id in (1, 2) else None
 
@@ -39,8 +50,10 @@ def main():
 
         create_server(client=MealsClient(transport=httpx.MockTransport(respond))).run(transport="stdio")
     else:
-        from src.mcp_servers.rentals import create_server
-        create_server(reader=Reader()).run(transport="stdio")
+        import anyio
+        from src.mcp_servers.rentals import create_server, run_stdio
+        audit_path = Path(sys.argv[2]) if len(sys.argv) > 2 else None
+        anyio.run(run_stdio, create_server(reader=Reader(audit_path)))
 
 
 if __name__ == "__main__":

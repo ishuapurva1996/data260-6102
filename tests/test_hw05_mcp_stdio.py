@@ -6,10 +6,12 @@ import subprocess
 import sys
 
 import anyio
+import pytest
 from mcp import ClientSession, StdioServerParameters
 from mcp.client.stdio import stdio_client
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
 
 
 def data(result):
@@ -73,6 +75,45 @@ def test_domain_stdio_inventory_envelopes_and_sdk_boundary():
                 for args in [{}, {"rental_id": False}, {"rental_id": 0}]:
                     invalid = await session.call_tool("get_rental", args)
                     assert invalid.isError  # native SDK validation precedes handler
+    anyio.run(scenario)
+
+
+@pytest.mark.parametrize("name,arguments", [
+    ("search_rentals", {"query": "campus"}),
+    ("get_rental", {"rental_id": 1}),
+    ("count_rentals", {"manager_id": 1}),
+])
+def test_domain_stdio_rejects_extra_arguments_before_reader_access(tmp_path, name, arguments):
+    from src.rental_tools.registry import TOOL_REGISTRY
+
+    audit_path = tmp_path / "reader-access.txt"
+
+    async def scenario():
+        params = StdioServerParameters(command=sys.executable,
+            args=[str(ROOT / "tests/hw05_stdio_fixture.py"), "domain", str(audit_path)], cwd=str(ROOT))
+        with anyio.fail_after(20):
+            async with stdio_client(params) as (read, write), ClientSession(read, write) as session:
+                await session.initialize()
+                tools = {tool.name: tool for tool in (await session.list_tools()).tools}
+                # A valid control proves that this subprocess reader records real accesses.
+                valid = await session.call_tool(name, arguments)
+                assert not valid.isError and data(valid)["ok"]
+                assert audit_path.read_text() == name + "\n"
+                rejected = await session.call_tool(name, {**arguments, "bogus": True})
+                assert rejected.isError and rejected.structuredContent is None
+                assert "Additional properties" in rejected.content[0].text
+                assert audit_path.read_text() == name + "\n"
+                # JSON Schema accepts 1.0 as an integer; strict shared models
+                # still reject it before I/O, using the application envelope.
+                key = "limit" if name == "search_rentals" else next(iter(arguments))
+                fractional_type = await session.call_tool(name, {**arguments, key: 1.0})
+                assert not fractional_type.isError and not data(fractional_type)["ok"]
+                assert audit_path.read_text() == name + "\n"
+                for tool_name, tool in tools.items():
+                    assert tool.inputSchema == TOOL_REGISTRY[tool_name].input_model.model_json_schema()
+                    assert tool.inputSchema["additionalProperties"] is False
+                    assert tool.outputSchema == {"type": "object", "additionalProperties": True,
+                                                 "title": tool_name + "DictOutput"}
     anyio.run(scenario)
 
 

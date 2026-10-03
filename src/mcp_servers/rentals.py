@@ -1,37 +1,55 @@
 """Thin STDIO transport for the three shared rental operations."""
 
-from mcp.server.fastmcp import FastMCP
-from mcp.types import ToolAnnotations
+from typing import Any
 
-from src.rental_tools.contracts import PositiveId, SearchLimit, SearchQuery, ToolResult
+import anyio
+from mcp.server.lowlevel import Server
+from mcp.server.stdio import stdio_server
+from mcp.types import Tool, ToolAnnotations
+from pydantic import TypeAdapter
+
+from src.rental_tools.contracts import ToolResult
 from src.rental_tools.reader import MySQLRentalReader, RentalReader
 from src.rental_tools.registry import TOOL_REGISTRY
 from src.rental_tools.service import RentalService
 
 
-def create_server(reader: RentalReader | None = None) -> FastMCP:
-    server = FastMCP("rentals", log_level="WARNING")
+def create_server(reader: RentalReader | None = None) -> Server:
+    server = Server("rentals")
     service = RentalService(reader if reader is not None else MySQLRentalReader())
     read_only = ToolAnnotations(readOnlyHint=True, destructiveHint=False,
                                 idempotentHint=True, openWorldHint=False)
 
-    @server.tool(description=TOOL_REGISTRY["search_rentals"].description, annotations=read_only)
-    def search_rentals(query: SearchQuery, limit: SearchLimit = 5) -> ToolResult:
-        return service.search_rentals(query=query, limit=limit)
+    @server.list_tools()
+    async def list_tools() -> list[Tool]:
+        return [Tool(
+            name=name,
+            description=definition.description,
+            inputSchema=definition.input_model.model_json_schema(),
+            # Retain the original broad dictionary output schema and envelope.
+            outputSchema={**TypeAdapter(ToolResult).json_schema(), "title": name + "DictOutput"},
+            annotations=read_only,
+        ) for name, definition in TOOL_REGISTRY.items()]
 
-    @server.tool(description=TOOL_REGISTRY["get_rental"].description, annotations=read_only)
-    def get_rental(rental_id: PositiveId) -> ToolResult:
-        return service.get_rental(rental_id=rental_id)
-
-    @server.tool(description=TOOL_REGISTRY["count_rentals"].description, annotations=read_only)
-    def count_rentals(manager_id: PositiveId) -> ToolResult:
-        return service.count_rentals(manager_id=manager_id)
+    # FastMCP 1.28.1 drops extra fields before handler validation. The public
+    # low-level API validates our shared schema against the original arguments.
+    @server.call_tool(validate_input=True)
+    async def call_tool(name: str, arguments: dict[str, Any]) -> ToolResult:
+        definition = TOOL_REGISTRY.get(name)
+        if definition is None:
+            raise ValueError("Unknown rental tool.")
+        return definition.handler(service, **arguments)
 
     return server
 
 
+async def run_stdio(server: Server) -> None:
+    async with stdio_server() as (read, write):
+        await server.run(read, write, server.create_initialization_options())
+
+
 def main() -> None:
-    create_server().run(transport="stdio")
+    anyio.run(run_stdio, create_server())
 
 
 if __name__ == "__main__":
