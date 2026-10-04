@@ -1,0 +1,3 @@
+
+[stderr]
+ERROR: Python optimization disables assertions; run without -O.

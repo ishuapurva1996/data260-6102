@@ -1,0 +1,9 @@
+Pragya Apurva - HW5 Part 4 offline assertions
+FAIL deliberate_failure (AssertionError)
+PASS valid_search
+PASS whitespace_search_rejected
+PASS valid_rental_detail
+PASS missing_rental_8_rejected
+PASS valid_manager_count
+PASS missing_manager_4_rejected
+6/7 passed
