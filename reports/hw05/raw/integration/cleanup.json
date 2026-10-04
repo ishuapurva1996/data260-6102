@@ -1,0 +1,48 @@
+{
+  "started_at_utc": "2026-10-04T03:44:19.178596+00:00",
+  "owner": "hw5-integration",
+  "services": [
+    {
+      "kind": "HTTPS",
+      "pid": 89691,
+      "process_group": 89691,
+      "port": 8702,
+      "identity_checked": true,
+      "termination": "SIGTERM to identified owned process group"
+    },
+    {
+      "kind": "MySQL",
+      "role": "app",
+      "id": "28deedcbeb9baf8c07f40f47447a8f5e5227afb6c57378cada0f0369c5d131e9",
+      "name": "data260-hw5-integration-app-3311",
+      "port": 3311,
+      "labels": {
+        "data260.owner": "hw5-integration",
+        "data260.role": "app"
+      },
+      "stopped": true,
+      "data_preserved": true
+    },
+    {
+      "kind": "MySQL",
+      "role": "migration",
+      "id": "b81781a62107220479d0bd2bce9044123246080f68cb646db174cd13eabcda3a",
+      "name": "data260-hw5-integration-migration-3312",
+      "port": 3312,
+      "labels": {
+        "data260.owner": "hw5-integration",
+        "data260.role": "migration"
+      },
+      "stopped": true,
+      "data_preserved": true
+    }
+  ],
+  "ports_closed": [
+    3311,
+    3312,
+    8702
+  ],
+  "unrelated_services_touched": false,
+  "finished_at_utc": "2026-10-04T03:44:23.756211+00:00",
+  "passed": true
+}

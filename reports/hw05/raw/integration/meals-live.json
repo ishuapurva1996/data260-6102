@@ -1,0 +1,274 @@
+{
+  "captured_at_utc": "2026-10-04T03:41:45.482796+00:00",
+  "client": "official Python MCP SDK ClientSession over real STDIO",
+  "revision": "f95597f91be0b5f81c800a6a5f2d7c039eb37665",
+  "working_tree_dirty": false,
+  "source": {
+    "kind": "live public API",
+    "base": "https://www.themealdb.com/api/json/v1/1/"
+  },
+  "calls": [
+    {
+      "request": {
+        "method": "tools/call",
+        "params": {
+          "name": "search_meals_by_name",
+          "arguments": {
+            "query": "Arrabiata",
+            "limit": 5
+          }
+        }
+      },
+      "result": {
+        "meta": null,
+        "content": [
+          {
+            "type": "text",
+            "text": "[{\"id\": \"52771\", \"name\": \"Spicy Arrabiata Penne\", \"thumb\": \"https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg\", \"area\": \"Italian\", \"category\": \"Vegetarian\"}]",
+            "annotations": null,
+            "meta": null
+          }
+        ],
+        "structuredContent": null,
+        "isError": false
+      }
+    },
+    {
+      "request": {
+        "method": "tools/call",
+        "params": {
+          "name": "meals_by_ingredient",
+          "arguments": {
+            "ingredient": "chicken",
+            "limit": 3
+          }
+        }
+      },
+      "result": {
+        "meta": null,
+        "content": [
+          {
+            "type": "text",
+            "text": "[{\"id\": \"52940\", \"name\": \"Brown Stew Chicken\", \"thumb\": \"https://www.themealdb.com/images/media/meals/sypxpx1515365095.jpg\"}, {\"id\": \"53161\", \"name\": \"Chicken & chorizo rice pot\", \"thumb\": \"https://www.themealdb.com/images/media/meals/fk80jp1763280767.jpg\"}, {\"id\": \"52846\", \"name\": \"Chicken & mushroom Hotpot\", \"thumb\": \"https://www.themealdb.com/images/media/meals/uuuspp1511297945.jpg\"}]",
+            "annotations": null,
+            "meta": null
+          }
+        ],
+        "structuredContent": null,
+        "isError": false
+      }
+    },
+    {
+      "request": {
+        "method": "tools/call",
+        "params": {
+          "name": "random_meal",
+          "arguments": {}
+        }
+      },
+      "result": {
+        "meta": null,
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"id\": \"53576\", \"name\": \"Carrot and Bean Fritters\", \"category\": \"Vegetarian\", \"area\": null, \"instructions\": \"Pour the beans into the sieve, remove liquid.\\r\\nGrate carrots and add beans, Mix and mash together. Season with garlic, thyme, salt and pepper.\\r\\nForm the dough into round buns, dip them slightly into the bread crumbs, and press the fritters.\\r\\nFry fritters in hot oil for a short time until the fritters are browned.  Place on the greased or /baking paper-lined oven plate and bake at 200C for 10 minutes.\", \"image\": \"https://www.themealdb.com/images/media/meals/xjii2g1784836867.jpg\", \"source\": \"https://estoniancuisine.com/2021/01/15/carrot-and-bean-fritters-porgandi-oakotletid/#more-12384\", \"youtube\": \"\", \"ingredients\": [{\"name\": \"Carrots\", \"measure\": \"400g\"}, {\"name\": \"Canned Beans\", \"measure\": \"200g\"}, {\"name\": \"Garlic\", \"measure\": \"4 cloves\"}, {\"name\": \"Flour\", \"measure\": \"1 tablespoon\"}, {\"name\": \"Breadcrumbs\", \"measure\": \"1 cup\"}, {\"name\": \"Thyme\", \"measure\": \"Pinch\"}, {\"name\": \"Parsley\", \"measure\": \"Pinch\"}, {\"name\": \"Salt\", \"measure\": \"Pinch\"}, {\"name\": \"Pepper\", \"measure\": \"Pinch\"}, {\"name\": \"Thyme\", \"measure\": \"Pinch\"}, {\"name\": \"Oil\", \"measure\": \"Splash\"}]}",
+            "annotations": null,
+            "meta": null
+          }
+        ],
+        "structuredContent": null,
+        "isError": false
+      }
+    },
+    {
+      "request": {
+        "method": "tools/call",
+        "params": {
+          "name": "meal_details",
+          "arguments": {
+            "id": "52771"
+          }
+        }
+      },
+      "result": {
+        "meta": null,
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"id\": \"52771\", \"name\": \"Spicy Arrabiata Penne\", \"category\": \"Vegetarian\", \"area\": \"Italian\", \"instructions\": \"Bring a large pot of water to a boil. Add kosher salt to the boiling water, then add the pasta. Cook according to the package instructions, about 9 minutes.\\r\\nIn a large skillet over medium-high heat, add the olive oil and heat until the oil starts to shimmer. Add the garlic and cook, stirring, until fragrant, 1 to 2 minutes. Add the chopped tomatoes, red chile flakes, Italian seasoning and salt and pepper to taste. Bring to a boil and cook for 5 minutes. Remove from the heat and add the chopped basil.\\r\\nDrain the pasta and add it to the sauce. Garnish with Parmigiano-Reggiano flakes and more basil and serve warm.\", \"image\": \"https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg\", \"source\": null, \"youtube\": \"https://www.youtube.com/watch?v=1IszT_guI08\", \"ingredients\": [{\"name\": \"penne rigate\", \"measure\": \"1 pound\"}, {\"name\": \"olive oil\", \"measure\": \"1/4 cup\"}, {\"name\": \"garlic\", \"measure\": \"3 cloves\"}, {\"name\": \"chopped tomatoes\", \"measure\": \"1 tin \"}, {\"name\": \"red chilli flakes\", \"measure\": \"1/2 teaspoon\"}, {\"name\": \"italian seasoning\", \"measure\": \"1/2 teaspoon\"}, {\"name\": \"basil\", \"measure\": \"6 leaves\"}, {\"name\": \"Parmigiano-Reggiano\", \"measure\": \"sprinkling\"}]}",
+            "annotations": null,
+            "meta": null
+          }
+        ],
+        "structuredContent": null,
+        "isError": false
+      }
+    }
+  ],
+  "initialize": {
+    "meta": null,
+    "protocolVersion": "2025-11-25",
+    "capabilities": {
+      "experimental": {},
+      "logging": null,
+      "prompts": {
+        "listChanged": false
+      },
+      "resources": {
+        "subscribe": false,
+        "listChanged": false
+      },
+      "tools": {
+        "listChanged": false
+      },
+      "completions": null,
+      "tasks": null
+    },
+    "serverInfo": {
+      "name": "meals",
+      "title": null,
+      "version": "1.28.1",
+      "websiteUrl": null,
+      "icons": null
+    },
+    "instructions": null
+  },
+  "tools_list": {
+    "meta": null,
+    "nextCursor": null,
+    "tools": [
+      {
+        "name": "search_meals_by_name",
+        "title": null,
+        "description": "Search TheMealDB by meal name; return id, name, area, category, and thumb.",
+        "inputSchema": {
+          "properties": {
+            "query": {
+              "minLength": 1,
+              "title": "Query",
+              "type": "string"
+            },
+            "limit": {
+              "default": 5,
+              "maximum": 25,
+              "minimum": 1,
+              "title": "Limit",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "query"
+          ],
+          "title": "search_meals_by_nameArguments",
+          "type": "object"
+        },
+        "outputSchema": null,
+        "icons": null,
+        "annotations": {
+          "title": null,
+          "readOnlyHint": true,
+          "destructiveHint": false,
+          "idempotentHint": null,
+          "openWorldHint": true
+        },
+        "meta": null,
+        "execution": null
+      },
+      {
+        "name": "meals_by_ingredient",
+        "title": null,
+        "description": "Find meals by one main ingredient; return id, name, and thumb.",
+        "inputSchema": {
+          "properties": {
+            "ingredient": {
+              "minLength": 1,
+              "title": "Ingredient",
+              "type": "string"
+            },
+            "limit": {
+              "default": 12,
+              "minimum": 1,
+              "title": "Limit",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "ingredient"
+          ],
+          "title": "meals_by_ingredientArguments",
+          "type": "object"
+        },
+        "outputSchema": null,
+        "icons": null,
+        "annotations": {
+          "title": null,
+          "readOnlyHint": true,
+          "destructiveHint": false,
+          "idempotentHint": null,
+          "openWorldHint": true
+        },
+        "meta": null,
+        "execution": null
+      },
+      {
+        "name": "random_meal",
+        "title": null,
+        "description": "Return one random full recipe, including its ingredient measurements.",
+        "inputSchema": {
+          "properties": {},
+          "title": "random_mealArguments",
+          "type": "object"
+        },
+        "outputSchema": null,
+        "icons": null,
+        "annotations": {
+          "title": null,
+          "readOnlyHint": true,
+          "destructiveHint": false,
+          "idempotentHint": null,
+          "openWorldHint": true
+        },
+        "meta": null,
+        "execution": null
+      },
+      {
+        "name": "meal_details",
+        "title": null,
+        "description": "Look up a positive meal ID and return the full recipe.",
+        "inputSchema": {
+          "properties": {
+            "id": {
+              "anyOf": [
+                {
+                  "pattern": "^[0-9]*[1-9][0-9]*$",
+                  "type": "string"
+                },
+                {
+                  "exclusiveMinimum": 0,
+                  "type": "integer"
+                }
+              ],
+              "title": "Id"
+            }
+          },
+          "required": [
+            "id"
+          ],
+          "title": "meal_detailsArguments",
+          "type": "object"
+        },
+        "outputSchema": null,
+        "icons": null,
+        "annotations": {
+          "title": null,
+          "readOnlyHint": true,
+          "destructiveHint": false,
+          "idempotentHint": null,
+          "openWorldHint": true
+        },
+        "meta": null,
+        "execution": null
+      }
+    ]
+  }
+}

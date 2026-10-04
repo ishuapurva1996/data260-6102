@@ -1,0 +1,14 @@
+........................................................................ [ 19%]
+........................................................................ [ 38%]
+........................................................................ [ 57%]
+........................................................................ [ 77%]
+........................................................................ [ 96%]
+.............                                                            [100%]
+=============================== warnings summary ===============================
+tests/test_hw05_meals.py::test_mcp_inventory_and_published_input_schemas
+  /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/mcp-venv/lib/python3.12/site-packages/pydantic_settings/sources/utils.py:47: IncompleteFieldDefinitionWarning: Field 'lifespan' has an incomplete definition: its annotation contains an unresolved forward reference, so settings sources may fail to correctly resolve its value. Call `model_rebuild()` on the model where the field is defined, once all the referenced types are defined.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/checks/mcp-full.xml -
+373 passed, 1 warning in 9.73s

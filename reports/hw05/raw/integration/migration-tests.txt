@@ -1,0 +1,9 @@
+...........                                                              [100%]
+=============================== warnings summary ===============================
+../../../../../../code/agent_outputs/data260-hw5/sessions/integration/runtime/web-venv/lib/python3.12/site-packages/starlette/formparsers.py:10
+  /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/web-venv/lib/python3.12/site-packages/starlette/formparsers.py:10: PendingDeprecationWarning: Please use `import python_multipart` instead.
+    import multipart
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/checks/migration-tests.xml -
+11 passed, 1 warning in 4.30s

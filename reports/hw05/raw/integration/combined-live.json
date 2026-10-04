@@ -1,0 +1,1163 @@
+{
+  "started_at_utc": "2026-10-04T03:43:56.418584+00:00",
+  "revision": "f95597f91be0b5f81c800a6a5f2d7c039eb37665",
+  "source_dirty": false,
+  "classification": "actual merged default runtime + real upgraded MySQL + real STDIO + verified HTTPS",
+  "source_sha256": {
+    "src/rental_tools/executor.py": "bed459e41b5251d5623f6b0019f54c52124d93f29251c4a8d99523fd02b1e70b",
+    "src/rental_tools/runtime.py": "703fb0629fbc63fdfea2edb1b611ee8d19eb8c79bb49f6048e2bb3ab75dd5e92",
+    "src/rental_tools/reader.py": "6aea8b933dc5c13e216bab21f5476a0016d1110fffd38c3fec2a536e69eeef66",
+    "src/rental_tools/reliability.py": "3c0a81441da2e982a0c136f2a8c9b17c09086178966d9de8997b117a007dc611",
+    "src/rental_tools/service.py": "5b4cb6695be78e93c149e732f1aef7bca38e1049be41b8effdd787211720b341",
+    "src/rental_tools/contracts.py": "9e2bd2345dc95aeba6c4285a9adea01a747cdad5894cb981ab7cb7fd746c9377",
+    "src/rental_tools/registry.py": "a6a4cfc5648837c65ad0a884b790c7a003eb269a66d5890f0c3a35f982a38efa",
+    "src/mcp_servers/rentals.py": "b2f0634c5d523101dea0347ec2665839d2dfc6e4cc650ca00495404e1a20a7a1",
+    "scripts/hw05/part2/run_domain.py": "921b5fe78faaa7a0a19c17a9da2ce824a9a54cf89c9b7f9443c9bedcb4db833a"
+  },
+  "harness_sha256": "9da4fec33d94a4ca60142856a322c6a22cebd841e575bb09a452ec9463220042",
+  "versions": {
+    "python": "3.12.14",
+    "mcp": "1.28.1",
+    "SQLAlchemy": "2.0.48",
+    "pydantic": "2.12.5",
+    "PyMySQL": "1.1.2",
+    "httpx": "0.28.1"
+  },
+  "pass": true,
+  "limits": [
+    "No live outage injected; real driver timeout and controlled fault checks are separate receipts.",
+    "Serialization failures and cleanup exceptions use separate controlled integration tests.",
+    "SQLAlchemy application-statement events exclude internal driver setup statements; no SQL text captured.",
+    "Browser UI and Meals live upstream checks are separate receipts.",
+    "API and MCP search share this ASCII query; their documented Unicode casefold/lower differences are retained."
+  ],
+  "stage": "complete",
+  "merged_source_origin_verified": true,
+  "fixture": {
+    "database": "s6102_rel",
+    "port": 3311,
+    "classification": "owned populated HW4 baseline migrated to HW5",
+    "rental_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "manager_ids": [
+      1,
+      2,
+      3
+    ],
+    "max_rental_id": 12,
+    "max_manager_id": 3,
+    "missing_rental_id": 10012,
+    "missing_manager_id": 10003,
+    "missing_ids_proven_absent_above_maxima": true,
+    "existing_empty_manager_id": 3,
+    "fixture_probe_engine_disposed": true
+  },
+  "api_cleanup": {
+    "logout_status": 204,
+    "http_client_closed_on_exit": true,
+    "mutations": "authentication session only; no domain rows changed"
+  },
+  "api": {
+    "transport": "real HTTPS localhost:8702 + same upgraded MySQL fixture",
+    "certificate_verified": true,
+    "secure_cookie_verified": true,
+    "records": [
+      {
+        "id": "search_success",
+        "path": "/api/rentals?q=Integration%20Campus&limit=5&offset=0",
+        "public_data": [
+          {
+            "id": 1,
+            "listingTitle": "Integration Campus Rental 1",
+            "propertyAddress": "6101 Integration Avenue, San Jose, CA",
+            "propertyType": "apartment",
+            "managerId": 1
+          },
+          {
+            "id": 2,
+            "listingTitle": "Integration Campus Rental 2",
+            "propertyAddress": "6102 Integration Avenue, San Jose, CA",
+            "propertyType": "house",
+            "managerId": 1
+          },
+          {
+            "id": 3,
+            "listingTitle": "Integration Campus Rental 3",
+            "propertyAddress": "6103 Integration Avenue, San Jose, CA",
+            "propertyType": "apartment",
+            "managerId": 1
+          },
+          {
+            "id": 4,
+            "listingTitle": "Integration Campus Rental 4",
+            "propertyAddress": "6104 Integration Avenue, San Jose, CA",
+            "propertyType": "house",
+            "managerId": 1
+          },
+          {
+            "id": 5,
+            "listingTitle": "Integration Campus Rental 5",
+            "propertyAddress": "6105 Integration Avenue, San Jose, CA",
+            "propertyType": "apartment",
+            "managerId": 1
+          }
+        ]
+      },
+      {
+        "id": "detail_success",
+        "path": "/api/rentals/1",
+        "public_data": {
+          "id": 1,
+          "listingTitle": "Integration Campus Rental 1",
+          "propertyAddress": "6101 Integration Avenue, San Jose, CA",
+          "propertyType": "apartment",
+          "managerId": 1,
+          "description": "A preserved baseline rental with a quiet study room and garden."
+        }
+      },
+      {
+        "id": "count_success",
+        "path": "/api/property-managers/1/rentals?limit=100&offset=0",
+        "public_data": {
+          "managerId": 1,
+          "managerName": "Integration Campus Manager",
+          "count": 7
+        }
+      },
+      {
+        "id": "count_zero",
+        "path": "/api/property-managers/3/rentals",
+        "public_data": {
+          "managerId": 3,
+          "managerName": "Integration Empty Manager",
+          "count": 0
+        }
+      },
+      {
+        "id": "search_empty",
+        "path": "/api/rentals?q=HW5integrationNoMatches6102ZZZ",
+        "public_data": []
+      },
+      {
+        "id": "detail_missing",
+        "path": "/api/rentals/10012",
+        "status": 404
+      },
+      {
+        "id": "count_missing",
+        "path": "/api/property-managers/10003",
+        "status": 404
+      }
+    ],
+    "privacy": "Only public overlapping fields persisted; no auth body, cookies or private row fields"
+  },
+  "executor": [
+    {
+      "id": "search_success",
+      "tool": "search_rentals",
+      "inputs": {
+        "query": "Integration Campus",
+        "limit": 5
+      },
+      "envelope": {
+        "ok": true,
+        "data": {
+          "items": [
+            {
+              "id": 1,
+              "listingTitle": "Integration Campus Rental 1",
+              "propertyAddress": "6101 Integration Avenue, San Jose, CA",
+              "propertyType": "apartment",
+              "managerId": 1
+            },
+            {
+              "id": 2,
+              "listingTitle": "Integration Campus Rental 2",
+              "propertyAddress": "6102 Integration Avenue, San Jose, CA",
+              "propertyType": "house",
+              "managerId": 1
+            },
+            {
+              "id": 3,
+              "listingTitle": "Integration Campus Rental 3",
+              "propertyAddress": "6103 Integration Avenue, San Jose, CA",
+              "propertyType": "apartment",
+              "managerId": 1
+            },
+            {
+              "id": 4,
+              "listingTitle": "Integration Campus Rental 4",
+              "propertyAddress": "6104 Integration Avenue, San Jose, CA",
+              "propertyType": "house",
+              "managerId": 1
+            },
+            {
+              "id": 5,
+              "listingTitle": "Integration Campus Rental 5",
+              "propertyAddress": "6105 Integration Avenue, San Jose, CA",
+              "propertyType": "apartment",
+              "managerId": 1
+            }
+          ],
+          "returnedCount": 5,
+          "limit": 5
+        },
+        "error": null
+      },
+      "real_default_factory": true,
+      "reader_constructions": 1,
+      "retry_wrapper_constructions": 1,
+      "connects": 1,
+      "disposals": 1,
+      "application_statements": 1,
+      "owned_cleanup_verified": true,
+      "stdout_empty": true,
+      "stderr_empty": true,
+      "strict_json_string": true,
+      "pass": true
+    },
+    {
+      "id": "search_trimmed",
+      "tool": "search_rentals",
+      "inputs": {
+        "query": "  Integration Campus  ",
+        "limit": 5
+      },
+      "envelope": {
+        "ok": true,
+        "data": {
+          "items": [
+            {
+              "id": 1,
+              "listingTitle": "Integration Campus Rental 1",
+              "propertyAddress": "6101 Integration Avenue, San Jose, CA",
+              "propertyType": "apartment",
+              "managerId": 1
+            },
+            {
+              "id": 2,
+              "listingTitle": "Integration Campus Rental 2",
+              "propertyAddress": "6102 Integration Avenue, San Jose, CA",
+              "propertyType": "house",
+              "managerId": 1
+            },
+            {
+              "id": 3,
+              "listingTitle": "Integration Campus Rental 3",
+              "propertyAddress": "6103 Integration Avenue, San Jose, CA",
+              "propertyType": "apartment",
+              "managerId": 1
+            },
+            {
+              "id": 4,
+              "listingTitle": "Integration Campus Rental 4",
+              "propertyAddress": "6104 Integration Avenue, San Jose, CA",
+              "propertyType": "house",
+              "managerId": 1
+            },
+            {
+              "id": 5,
+              "listingTitle": "Integration Campus Rental 5",
+              "propertyAddress": "6105 Integration Avenue, San Jose, CA",
+              "propertyType": "apartment",
+              "managerId": 1
+            }
+          ],
+          "returnedCount": 5,
+          "limit": 5
+        },
+        "error": null
+      },
+      "real_default_factory": true,
+      "reader_constructions": 1,
+      "retry_wrapper_constructions": 1,
+      "connects": 1,
+      "disposals": 1,
+      "application_statements": 1,
+      "owned_cleanup_verified": true,
+      "stdout_empty": true,
+      "stderr_empty": true,
+      "strict_json_string": true,
+      "pass": true
+    },
+    {
+      "id": "detail_success",
+      "tool": "get_rental",
+      "inputs": {
+        "rental_id": 1
+      },
+      "envelope": {
+        "ok": true,
+        "data": {
+          "id": 1,
+          "listingTitle": "Integration Campus Rental 1",
+          "propertyAddress": "6101 Integration Avenue, San Jose, CA",
+          "propertyType": "apartment",
+          "managerId": 1,
+          "description": "A preserved baseline rental with a quiet study room and garden."
+        },
+        "error": null
+      },
+      "real_default_factory": true,
+      "reader_constructions": 1,
+      "retry_wrapper_constructions": 1,
+      "connects": 1,
+      "disposals": 1,
+      "application_statements": 1,
+      "owned_cleanup_verified": true,
+      "stdout_empty": true,
+      "stderr_empty": true,
+      "strict_json_string": true,
+      "pass": true
+    },
+    {
+      "id": "count_success",
+      "tool": "count_rentals",
+      "inputs": {
+        "manager_id": 1
+      },
+      "envelope": {
+        "ok": true,
+        "data": {
+          "managerId": 1,
+          "managerName": "Integration Campus Manager",
+          "count": 7
+        },
+        "error": null
+      },
+      "real_default_factory": true,
+      "reader_constructions": 1,
+      "retry_wrapper_constructions": 1,
+      "connects": 1,
+      "disposals": 1,
+      "application_statements": 1,
+      "owned_cleanup_verified": true,
+      "stdout_empty": true,
+      "stderr_empty": true,
+      "strict_json_string": true,
+      "pass": true
+    },
+    {
+      "id": "search_empty",
+      "tool": "search_rentals",
+      "inputs": {
+        "query": "HW5integrationNoMatches6102ZZZ"
+      },
+      "envelope": {
+        "ok": true,
+        "data": {
+          "items": [],
+          "returnedCount": 0,
+          "limit": 5
+        },
+        "error": null
+      },
+      "real_default_factory": true,
+      "reader_constructions": 1,
+      "retry_wrapper_constructions": 1,
+      "connects": 1,
+      "disposals": 1,
+      "application_statements": 1,
+      "owned_cleanup_verified": true,
+      "stdout_empty": true,
+      "stderr_empty": true,
+      "strict_json_string": true,
+      "pass": true
+    },
+    {
+      "id": "count_zero",
+      "tool": "count_rentals",
+      "inputs": {
+        "manager_id": 3
+      },
+      "envelope": {
+        "ok": true,
+        "data": {
+          "managerId": 3,
+          "managerName": "Integration Empty Manager",
+          "count": 0
+        },
+        "error": null
+      },
+      "real_default_factory": true,
+      "reader_constructions": 1,
+      "retry_wrapper_constructions": 1,
+      "connects": 1,
+      "disposals": 1,
+      "application_statements": 1,
+      "owned_cleanup_verified": true,
+      "stdout_empty": true,
+      "stderr_empty": true,
+      "strict_json_string": true,
+      "pass": true
+    },
+    {
+      "id": "detail_missing",
+      "tool": "get_rental",
+      "inputs": {
+        "rental_id": 10012
+      },
+      "envelope": {
+        "ok": false,
+        "data": null,
+        "error": "Rental 10012 was not found."
+      },
+      "real_default_factory": true,
+      "reader_constructions": 1,
+      "retry_wrapper_constructions": 1,
+      "connects": 1,
+      "disposals": 1,
+      "application_statements": 1,
+      "owned_cleanup_verified": true,
+      "stdout_empty": true,
+      "stderr_empty": true,
+      "strict_json_string": true,
+      "pass": true
+    },
+    {
+      "id": "count_missing",
+      "tool": "count_rentals",
+      "inputs": {
+        "manager_id": 10003
+      },
+      "envelope": {
+        "ok": false,
+        "data": null,
+        "error": "Property manager 10003 was not found."
+      },
+      "real_default_factory": true,
+      "reader_constructions": 1,
+      "retry_wrapper_constructions": 1,
+      "connects": 1,
+      "disposals": 1,
+      "application_statements": 1,
+      "owned_cleanup_verified": true,
+      "stdout_empty": true,
+      "stderr_empty": true,
+      "strict_json_string": true,
+      "pass": true
+    },
+    {
+      "id": "whitespace",
+      "tool": "search_rentals",
+      "inputs": {
+        "query": "   "
+      },
+      "envelope": {
+        "ok": false,
+        "data": null,
+        "error": "Invalid input: query: Value error, query must contain non-whitespace characters"
+      },
+      "real_default_factory": false,
+      "reader_constructions": 0,
+      "retry_wrapper_constructions": 0,
+      "connects": 0,
+      "disposals": 0,
+      "application_statements": 0,
+      "owned_cleanup_verified": false,
+      "stdout_empty": true,
+      "stderr_empty": true,
+      "strict_json_string": true,
+      "pass": true
+    },
+    {
+      "id": "extra_search_rentals",
+      "tool": "search_rentals",
+      "inputs": {
+        "query": "Integration Campus",
+        "bogus": true
+      },
+      "envelope": {
+        "ok": false,
+        "data": null,
+        "error": "Invalid input: unexpected_field: Extra inputs are not permitted"
+      },
+      "real_default_factory": false,
+      "reader_constructions": 0,
+      "retry_wrapper_constructions": 0,
+      "connects": 0,
+      "disposals": 0,
+      "application_statements": 0,
+      "owned_cleanup_verified": false,
+      "stdout_empty": true,
+      "stderr_empty": true,
+      "strict_json_string": true,
+      "pass": true
+    },
+    {
+      "id": "extra_get_rental",
+      "tool": "get_rental",
+      "inputs": {
+        "rental_id": 1,
+        "bogus": true
+      },
+      "envelope": {
+        "ok": false,
+        "data": null,
+        "error": "Invalid input: unexpected_field: Extra inputs are not permitted"
+      },
+      "real_default_factory": false,
+      "reader_constructions": 0,
+      "retry_wrapper_constructions": 0,
+      "connects": 0,
+      "disposals": 0,
+      "application_statements": 0,
+      "owned_cleanup_verified": false,
+      "stdout_empty": true,
+      "stderr_empty": true,
+      "strict_json_string": true,
+      "pass": true
+    },
+    {
+      "id": "extra_count_rentals",
+      "tool": "count_rentals",
+      "inputs": {
+        "manager_id": 1,
+        "bogus": true
+      },
+      "envelope": {
+        "ok": false,
+        "data": null,
+        "error": "Invalid input: unexpected_field: Extra inputs are not permitted"
+      },
+      "real_default_factory": false,
+      "reader_constructions": 0,
+      "retry_wrapper_constructions": 0,
+      "connects": 0,
+      "disposals": 0,
+      "application_statements": 0,
+      "owned_cleanup_verified": false,
+      "stdout_empty": true,
+      "stderr_empty": true,
+      "strict_json_string": true,
+      "pass": true
+    },
+    {
+      "id": "type_string_id",
+      "tool": "get_rental",
+      "inputs": {
+        "rental_id": "1"
+      },
+      "envelope": {
+        "ok": false,
+        "data": null,
+        "error": "Invalid input: rental_id: Input should be a valid integer"
+      },
+      "real_default_factory": false,
+      "reader_constructions": 0,
+      "retry_wrapper_constructions": 0,
+      "connects": 0,
+      "disposals": 0,
+      "application_statements": 0,
+      "owned_cleanup_verified": false,
+      "stdout_empty": true,
+      "stderr_empty": true,
+      "strict_json_string": true,
+      "pass": true
+    },
+    {
+      "id": "type_bool_id",
+      "tool": "count_rentals",
+      "inputs": {
+        "manager_id": true
+      },
+      "envelope": {
+        "ok": false,
+        "data": null,
+        "error": "Invalid input: manager_id: Input should be a valid integer"
+      },
+      "real_default_factory": false,
+      "reader_constructions": 0,
+      "retry_wrapper_constructions": 0,
+      "connects": 0,
+      "disposals": 0,
+      "application_statements": 0,
+      "owned_cleanup_verified": false,
+      "stdout_empty": true,
+      "stderr_empty": true,
+      "strict_json_string": true,
+      "pass": true
+    },
+    {
+      "id": "type_float_id",
+      "tool": "get_rental",
+      "inputs": {
+        "rental_id": 1.0
+      },
+      "envelope": {
+        "ok": false,
+        "data": null,
+        "error": "Invalid input: rental_id: Input should be a valid integer"
+      },
+      "real_default_factory": false,
+      "reader_constructions": 0,
+      "retry_wrapper_constructions": 0,
+      "connects": 0,
+      "disposals": 0,
+      "application_statements": 0,
+      "owned_cleanup_verified": false,
+      "stdout_empty": true,
+      "stderr_empty": true,
+      "strict_json_string": true,
+      "pass": true
+    },
+    {
+      "id": "type_float_limit",
+      "tool": "search_rentals",
+      "inputs": {
+        "query": "Integration Campus",
+        "limit": 1.0
+      },
+      "envelope": {
+        "ok": false,
+        "data": null,
+        "error": "Invalid input: limit: Input should be a valid integer"
+      },
+      "real_default_factory": false,
+      "reader_constructions": 0,
+      "retry_wrapper_constructions": 0,
+      "connects": 0,
+      "disposals": 0,
+      "application_statements": 0,
+      "owned_cleanup_verified": false,
+      "stdout_empty": true,
+      "stderr_empty": true,
+      "strict_json_string": true,
+      "pass": true
+    },
+    {
+      "id": "missing_required",
+      "tool": "get_rental",
+      "inputs": {},
+      "envelope": {
+        "ok": false,
+        "data": null,
+        "error": "Invalid input: rental_id: Field required"
+      },
+      "real_default_factory": false,
+      "reader_constructions": 0,
+      "retry_wrapper_constructions": 0,
+      "connects": 0,
+      "disposals": 0,
+      "application_statements": 0,
+      "owned_cleanup_verified": false,
+      "stdout_empty": true,
+      "stderr_empty": true,
+      "strict_json_string": true,
+      "pass": true
+    },
+    {
+      "id": "out_of_range",
+      "tool": "count_rentals",
+      "inputs": {
+        "manager_id": 0
+      },
+      "envelope": {
+        "ok": false,
+        "data": null,
+        "error": "Invalid input: manager_id: Input should be greater than 0"
+      },
+      "real_default_factory": false,
+      "reader_constructions": 0,
+      "retry_wrapper_constructions": 0,
+      "connects": 0,
+      "disposals": 0,
+      "application_statements": 0,
+      "owned_cleanup_verified": false,
+      "stdout_empty": true,
+      "stderr_empty": true,
+      "strict_json_string": true,
+      "pass": true
+    },
+    {
+      "id": "unknown",
+      "tool": "unknown_tool",
+      "inputs": {},
+      "envelope": {
+        "ok": false,
+        "data": null,
+        "error": "Unknown rental tool."
+      },
+      "real_default_factory": false,
+      "reader_constructions": 0,
+      "retry_wrapper_constructions": 0,
+      "connects": 0,
+      "disposals": 0,
+      "application_statements": 0,
+      "owned_cleanup_verified": false,
+      "stdout_empty": true,
+      "stderr_empty": true,
+      "strict_json_string": true,
+      "pass": true
+    },
+    {
+      "id": "malformed_raw_inputs",
+      "tool": "get_rental",
+      "inputs": "{bad json",
+      "envelope": {
+        "ok": false,
+        "data": null,
+        "error": "Invalid input: expected a dictionary with string keys."
+      },
+      "real_default_factory": false,
+      "reader_constructions": 0,
+      "retry_wrapper_constructions": 0,
+      "connects": 0,
+      "disposals": 0,
+      "application_statements": 0,
+      "owned_cleanup_verified": false,
+      "stdout_empty": true,
+      "stderr_empty": true,
+      "strict_json_string": true,
+      "pass": true
+    }
+  ],
+  "stdio": {
+    "server_command": [
+      "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/mcp-venv/bin/python",
+      "scripts/hw05/part2/run_domain.py"
+    ],
+    "calls": [
+      {
+        "id": "search_success",
+        "boundary": "application semantic envelope",
+        "isError": false,
+        "envelope": {
+          "ok": true,
+          "data": {
+            "items": [
+              {
+                "id": 1,
+                "listingTitle": "Integration Campus Rental 1",
+                "propertyAddress": "6101 Integration Avenue, San Jose, CA",
+                "propertyType": "apartment",
+                "managerId": 1
+              },
+              {
+                "id": 2,
+                "listingTitle": "Integration Campus Rental 2",
+                "propertyAddress": "6102 Integration Avenue, San Jose, CA",
+                "propertyType": "house",
+                "managerId": 1
+              },
+              {
+                "id": 3,
+                "listingTitle": "Integration Campus Rental 3",
+                "propertyAddress": "6103 Integration Avenue, San Jose, CA",
+                "propertyType": "apartment",
+                "managerId": 1
+              },
+              {
+                "id": 4,
+                "listingTitle": "Integration Campus Rental 4",
+                "propertyAddress": "6104 Integration Avenue, San Jose, CA",
+                "propertyType": "house",
+                "managerId": 1
+              },
+              {
+                "id": 5,
+                "listingTitle": "Integration Campus Rental 5",
+                "propertyAddress": "6105 Integration Avenue, San Jose, CA",
+                "propertyType": "apartment",
+                "managerId": 1
+              }
+            ],
+            "returnedCount": 5,
+            "limit": 5
+          },
+          "error": null
+        },
+        "exact_executor_parity": true,
+        "pass": true
+      },
+      {
+        "id": "search_trimmed",
+        "boundary": "application semantic envelope",
+        "isError": false,
+        "envelope": {
+          "ok": true,
+          "data": {
+            "items": [
+              {
+                "id": 1,
+                "listingTitle": "Integration Campus Rental 1",
+                "propertyAddress": "6101 Integration Avenue, San Jose, CA",
+                "propertyType": "apartment",
+                "managerId": 1
+              },
+              {
+                "id": 2,
+                "listingTitle": "Integration Campus Rental 2",
+                "propertyAddress": "6102 Integration Avenue, San Jose, CA",
+                "propertyType": "house",
+                "managerId": 1
+              },
+              {
+                "id": 3,
+                "listingTitle": "Integration Campus Rental 3",
+                "propertyAddress": "6103 Integration Avenue, San Jose, CA",
+                "propertyType": "apartment",
+                "managerId": 1
+              },
+              {
+                "id": 4,
+                "listingTitle": "Integration Campus Rental 4",
+                "propertyAddress": "6104 Integration Avenue, San Jose, CA",
+                "propertyType": "house",
+                "managerId": 1
+              },
+              {
+                "id": 5,
+                "listingTitle": "Integration Campus Rental 5",
+                "propertyAddress": "6105 Integration Avenue, San Jose, CA",
+                "propertyType": "apartment",
+                "managerId": 1
+              }
+            ],
+            "returnedCount": 5,
+            "limit": 5
+          },
+          "error": null
+        },
+        "exact_executor_parity": true,
+        "pass": true
+      },
+      {
+        "id": "detail_success",
+        "boundary": "application semantic envelope",
+        "isError": false,
+        "envelope": {
+          "ok": true,
+          "data": {
+            "id": 1,
+            "listingTitle": "Integration Campus Rental 1",
+            "propertyAddress": "6101 Integration Avenue, San Jose, CA",
+            "propertyType": "apartment",
+            "managerId": 1,
+            "description": "A preserved baseline rental with a quiet study room and garden."
+          },
+          "error": null
+        },
+        "exact_executor_parity": true,
+        "pass": true
+      },
+      {
+        "id": "count_success",
+        "boundary": "application semantic envelope",
+        "isError": false,
+        "envelope": {
+          "ok": true,
+          "data": {
+            "managerId": 1,
+            "managerName": "Integration Campus Manager",
+            "count": 7
+          },
+          "error": null
+        },
+        "exact_executor_parity": true,
+        "pass": true
+      },
+      {
+        "id": "search_empty",
+        "boundary": "application semantic envelope",
+        "isError": false,
+        "envelope": {
+          "ok": true,
+          "data": {
+            "items": [],
+            "returnedCount": 0,
+            "limit": 5
+          },
+          "error": null
+        },
+        "exact_executor_parity": true,
+        "pass": true
+      },
+      {
+        "id": "count_zero",
+        "boundary": "application semantic envelope",
+        "isError": false,
+        "envelope": {
+          "ok": true,
+          "data": {
+            "managerId": 3,
+            "managerName": "Integration Empty Manager",
+            "count": 0
+          },
+          "error": null
+        },
+        "exact_executor_parity": true,
+        "pass": true
+      },
+      {
+        "id": "detail_missing",
+        "boundary": "application semantic envelope",
+        "isError": false,
+        "envelope": {
+          "ok": false,
+          "data": null,
+          "error": "Rental 10012 was not found."
+        },
+        "exact_executor_parity": true,
+        "pass": true
+      },
+      {
+        "id": "count_missing",
+        "boundary": "application semantic envelope",
+        "isError": false,
+        "envelope": {
+          "ok": false,
+          "data": null,
+          "error": "Property manager 10003 was not found."
+        },
+        "exact_executor_parity": true,
+        "pass": true
+      },
+      {
+        "id": "whitespace",
+        "boundary": "application semantic envelope",
+        "isError": false,
+        "envelope": {
+          "ok": false,
+          "data": null,
+          "error": "Invalid input: query: Value error, query must contain non-whitespace characters"
+        },
+        "exact_executor_parity": true,
+        "pass": true
+      },
+      {
+        "id": "extra_search_rentals",
+        "boundary": "server SDK native tool error",
+        "isError": true,
+        "structuredContent": null,
+        "executor_failure_envelope": true,
+        "pass": true
+      },
+      {
+        "id": "extra_get_rental",
+        "boundary": "server SDK native tool error",
+        "isError": true,
+        "structuredContent": null,
+        "executor_failure_envelope": true,
+        "pass": true
+      },
+      {
+        "id": "extra_count_rentals",
+        "boundary": "server SDK native tool error",
+        "isError": true,
+        "structuredContent": null,
+        "executor_failure_envelope": true,
+        "pass": true
+      },
+      {
+        "id": "type_string_id",
+        "boundary": "server SDK native tool error",
+        "isError": true,
+        "structuredContent": null,
+        "executor_failure_envelope": true,
+        "pass": true
+      },
+      {
+        "id": "type_bool_id",
+        "boundary": "server SDK native tool error",
+        "isError": true,
+        "structuredContent": null,
+        "executor_failure_envelope": true,
+        "pass": true
+      },
+      {
+        "id": "type_float_id",
+        "boundary": "application semantic envelope",
+        "isError": false,
+        "envelope": {
+          "ok": false,
+          "data": null,
+          "error": "Invalid input: rental_id: Input should be a valid integer"
+        },
+        "exact_executor_parity": true,
+        "pass": true
+      },
+      {
+        "id": "type_float_limit",
+        "boundary": "application semantic envelope",
+        "isError": false,
+        "envelope": {
+          "ok": false,
+          "data": null,
+          "error": "Invalid input: limit: Input should be a valid integer"
+        },
+        "exact_executor_parity": true,
+        "pass": true
+      },
+      {
+        "id": "missing_required",
+        "boundary": "server SDK native tool error",
+        "isError": true,
+        "structuredContent": null,
+        "executor_failure_envelope": true,
+        "pass": true
+      },
+      {
+        "id": "out_of_range",
+        "boundary": "server SDK native tool error",
+        "isError": true,
+        "structuredContent": null,
+        "executor_failure_envelope": true,
+        "pass": true
+      },
+      {
+        "id": "unknown",
+        "boundary": "server SDK native tool error",
+        "isError": true,
+        "structuredContent": null,
+        "executor_failure_envelope": true,
+        "pass": true
+      },
+      {
+        "id": "malformed_raw_inputs",
+        "boundary": "client SDK request validation before transport",
+        "exception_type": "ValidationError",
+        "executor_failure_envelope": true,
+        "pass": true
+      }
+    ],
+    "transport": "actual merged entry point, SDK subprocess pipes; no fixture server",
+    "inventory": [
+      {
+        "name": "search_rentals",
+        "description": "Search public rental titles and addresses using literal case-insensitive text; return IDs in ascending order.",
+        "inputSchema": {
+          "additionalProperties": false,
+          "properties": {
+            "query": {
+              "maxLength": 255,
+              "minLength": 1,
+              "title": "Query",
+              "type": "string"
+            },
+            "limit": {
+              "default": 5,
+              "maximum": 25,
+              "minimum": 1,
+              "title": "Limit",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "query"
+          ],
+          "title": "SearchRentalsInput",
+          "type": "object"
+        },
+        "outputSchema": {
+          "additionalProperties": true,
+          "type": "object",
+          "title": "search_rentalsDictOutput"
+        },
+        "annotations": {
+          "readOnlyHint": true,
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "get_rental",
+        "description": "Get the public details of one rental by its positive integer ID.",
+        "inputSchema": {
+          "additionalProperties": false,
+          "properties": {
+            "rental_id": {
+              "exclusiveMinimum": 0,
+              "title": "Rental Id",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "rental_id"
+          ],
+          "title": "GetRentalInput",
+          "type": "object"
+        },
+        "outputSchema": {
+          "additionalProperties": true,
+          "type": "object",
+          "title": "get_rentalDictOutput"
+        },
+        "annotations": {
+          "readOnlyHint": true,
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "count_rentals",
+        "description": "Count rentals assigned to an existing property manager, including a count of zero.",
+        "inputSchema": {
+          "additionalProperties": false,
+          "properties": {
+            "manager_id": {
+              "exclusiveMinimum": 0,
+              "title": "Manager Id",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "manager_id"
+          ],
+          "title": "CountRentalsInput",
+          "type": "object"
+        },
+        "outputSchema": {
+          "additionalProperties": true,
+          "type": "object",
+          "title": "count_rentalsDictOutput"
+        },
+        "annotations": {
+          "readOnlyHint": true,
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": false
+        }
+      }
+    ],
+    "stdout_protocol_only": {
+      "verified": true,
+      "method": "SDK JSON-RPC parsing and full initialize/list/call exchange",
+      "parser_error_count": 0,
+      "raw_stdout_stored": false
+    },
+    "stderr": {
+      "lines": 1,
+      "unexpected_lines_redacted": 0,
+      "sanitized_file": "domain-stdio-stderr.sanitized.log"
+    },
+    "cleanup": "SDK stdio context closed streams and awaited owned subprocess exit",
+    "parser_diagnostics": [],
+    "stderr_line_count": 1,
+    "stderr_unexpected_redacted": 0
+  },
+  "summary": {
+    "executor_calls_passed": 20,
+    "stdio_calls_passed": 20,
+    "exact_envelope_parity_cases": 11,
+    "real_reads_with_single_statement_and_disposal": 8,
+    "invalid_calls_with_zero_construction_and_io": 12,
+    "api_overlap_cases": 7
+  },
+  "finished_at_utc": "2026-10-04T03:43:56.987103+00:00",
+  "cleanup": "All owned executor readers, fixture-probe engine, HTTPS client/session and STDIO context cleaned by finally/context managers."
+}

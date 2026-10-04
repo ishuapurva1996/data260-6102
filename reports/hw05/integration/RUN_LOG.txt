@@ -1,0 +1,383 @@
+Pragya Apurva — HW5 Parts 1–4 integration
+Selected genuine verification output; expected negative exits are identified in verification.json.
+
+[2026-10-04T03:40:11.108224+00:00] web-dependencies
+Command argv: ["/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/web-venv/bin/python", "-m", "pip", "check"]
+Environment profile: offline; private values omitted
+Code: d4fdd54585c546e02b7f4d51776dacd79d43f565
+Exit: 0; finished 2026-10-04T03:40:11.298447+00:00
+No broken requirements found.
+
+
+[2026-10-04T03:40:11.319788+00:00] mcp-dependencies
+Command argv: ["/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/mcp-venv/bin/python", "-m", "pip", "check"]
+Environment profile: offline; private values omitted
+Code: d4fdd54585c546e02b7f4d51776dacd79d43f565
+Exit: 0; finished 2026-10-04T03:40:11.491931+00:00
+No broken requirements found.
+
+
+[2026-10-04T03:40:24.661461+00:00] backend-tests
+Command argv: ["/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/web-venv/bin/python", "-m", "pytest", "tests/test_hw05_api.py", "tests/test_api.py", "tests/test_hw04_database.py", "tests/test_hw04_search_regression.py", "tests/test_hw04_auth.py", "tests/test_hw04_serving.py", "tests/test_hw04_fixture_isolation.py", "tests/test_hw04_part3.py::test_request_context_survives_threads_and_serialization_and_does_not_leak", "tests/test_hw04_part3.py::test_non_experiment_routes_do_not_expose_sql_counters", "-q", "-p", "no:cacheprovider", "--basetemp", "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/checks/pytest-backend-001", "--junitxml", "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/checks/backend-tests.xml"]
+Environment profile: app; private values omitted
+Code: d4fdd54585c546e02b7f4d51776dacd79d43f565
+Exit: 0; finished 2026-10-04T03:40:31.892655+00:00
+........................................................................ [ 45%]
+........................................................................ [ 90%]
+................                                                         [100%]
+=============================== warnings summary ===============================
+../../../../../../code/agent_outputs/data260-hw5/sessions/integration/runtime/web-venv/lib/python3.12/site-packages/starlette/formparsers.py:10
+  /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/web-venv/lib/python3.12/site-packages/starlette/formparsers.py:10: PendingDeprecationWarning: Please use `import python_multipart` instead.
+    import multipart
+
+../../../../../../code/agent_outputs/data260-hw5/sessions/integration/runtime/web-venv/lib/python3.12/site-packages/starlette/testclient.py:31
+  /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/web-venv/lib/python3.12/site-packages/starlette/testclient.py:31: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    [], typing.ContextManager[anyio.abc.BlockingPortal]
+
+tests/test_hw05_api.py: 44 warnings
+tests/test_api.py: 42 warnings
+tests/test_hw04_database.py: 1 warning
+tests/test_hw04_search_regression.py: 1 warning
+tests/test_hw04_auth.py: 38 warnings
+tests/test_hw04_serving.py: 14 warnings
+  /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/web-venv/lib/python3.12/site-packages/httpx/_client.py:690: DeprecationWarning: The 'app' shortcut is now deprecated. Use the explicit style 'transport=WSGITransport(app=...)' instead.
+    warnings.warn(message, DeprecationWarning)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/checks/backend-tests.xml -
+160 passed, 142 warnings in 6.95s
+
+
+[2026-10-04T03:40:27.288960+00:00] migration-tests
+Command argv: ["/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/web-venv/bin/python", "-m", "pytest", "tests/test_hw05_database.py", "-q", "-p", "no:cacheprovider", "--basetemp", "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/checks/pytest-migration-001", "--junitxml", "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/checks/migration-tests.xml"]
+Environment profile: migration; private values omitted
+Code: d4fdd54585c546e02b7f4d51776dacd79d43f565
+Exit: 0; finished 2026-10-04T03:40:31.831812+00:00
+...........                                                              [100%]
+=============================== warnings summary ===============================
+../../../../../../code/agent_outputs/data260-hw5/sessions/integration/runtime/web-venv/lib/python3.12/site-packages/starlette/formparsers.py:10
+  /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/web-venv/lib/python3.12/site-packages/starlette/formparsers.py:10: PendingDeprecationWarning: Please use `import python_multipart` instead.
+    import multipart
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/checks/migration-tests.xml -
+11 passed, 1 warning in 4.30s
+
+
+[2026-10-04T03:40:09.393406+00:00] npm-ci
+Command argv: ["/Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node", "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/npm/package/bin/npm-cli.js", "ci", "--cache", "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/npm-cache"]
+Environment profile: offline; private values omitted
+Code: d4fdd54585c546e02b7f4d51776dacd79d43f565
+Exit: 0; finished 2026-10-04T03:40:11.110172+00:00
+
+added 59 packages, and audited 60 packages in 1s
+
+12 packages are looking for funding
+  run `npm fund` for details
+
+2 moderate severity vulnerabilities
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+npm warn install-scripts 2 packages had install scripts blocked because they are not covered by allowScripts:
+npm warn install-scripts   esbuild@0.28.2 (postinstall: node install.js)
+npm warn install-scripts   fsevents@2.3.3 (install: (install scripts present))
+npm warn install-scripts
+npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
+
+
+[2026-10-04T03:40:36.939538+00:00] npm-build
+Command argv: ["/Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node", "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/npm/package/bin/npm-cli.js", "run", "build"]
+Environment profile: offline; private values omitted
+Code: d4fdd54585c546e02b7f4d51776dacd79d43f565
+Exit: 0; finished 2026-10-04T03:40:38.383144+00:00
+vite v7.3.6 building client environment for production...
+transforming...
+✓ 102 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.46 kB │ gzip:  0.29 kB
+dist/assets/index-BdkfMsrp.css    4.55 kB │ gzip:  1.64 kB
+dist/assets/index-nFXyTrfK.js   266.26 kB │ gzip: 89.48 kB
+✓ built in 422ms
+npm notice run s6102-rental-client@1.0.0 build
+npm notice run vite build
+
+
+[2026-10-04T03:41:10.142076+00:00] mcp-full
+Command argv: ["/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/mcp-venv/bin/python", "-m", "pytest", "tests/test_hw05_meals.py", "tests/test_hw05_domain_tools.py", "tests/test_hw05_mcp_stdio.py", "tests/test_hw05_fixture_setup.py", "tests/test_hw05_reliability.py", "tests/test_hw05_runtime.py", "tests/test_hw05_fault_experiment.py", "tests/test_hw05_timeouts.py", "tests/test_hw05_executor.py", "tests/test_hw05_offline_runner.py", "tests/test_hw05_executor_integration.py", "-q", "-p", "no:cacheprovider", "--basetemp", "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/checks/pytest-mcp-001", "--junitxml", "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/checks/mcp-full.xml"]
+Environment profile: offline; private values omitted
+Code: f95597f91be0b5f81c800a6a5f2d7c039eb37665
+Exit: 0; finished 2026-10-04T03:41:20.183747+00:00
+........................................................................ [ 19%]
+........................................................................ [ 38%]
+........................................................................ [ 57%]
+........................................................................ [ 77%]
+........................................................................ [ 96%]
+.............                                                            [100%]
+=============================== warnings summary ===============================
+tests/test_hw05_meals.py::test_mcp_inventory_and_published_input_schemas
+  /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/mcp-venv/lib/python3.12/site-packages/pydantic_settings/sources/utils.py:47: IncompleteFieldDefinitionWarning: Field 'lifespan' has an incomplete definition: its annotation contains an unresolved forward reference, so settings sources may fail to correctly resolve its value. Call `model_rebuild()` on the model where the field is defined, once all the referenced types are defined.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/checks/mcp-full.xml -
+373 passed, 1 warning in 9.73s
+
+
+[2026-10-04T03:41:23.647590+00:00] browser-controlled
+Command argv: ["/Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node", "tests/browser_hw05_part1.cjs", "--mock"]
+Environment profile: app; private values omitted
+Code: f95597f91be0b5f81c800a6a5f2d7c039eb37665
+Exit: 0; finished 2026-10-04T03:41:29.946490+00:00
+RUN [mock] Protected routes, login, paginated Home and obsolete shortcut removal
+PASS [mock] Protected routes, login, paginated Home and obsolete shortcut removal
+RUN [mock] Empty, loading and recoverable list-error states
+CONTROL entered GET /api/rentals
+PASS [mock] Empty, loading and recoverable list-error states
+RUN [mock] Invalid and missing IDs show safe errors without mutation controls
+PASS [mock] Invalid and missing IDs show safe errors without mutation controls
+RUN [mock] Manager failure recovers; no managers prevents saving
+PASS [mock] Manager failure recovers; no managers prevents saving
+RUN [mock] All manager pages load; invalid units/code/manager cannot submit
+PASS [mock] All manager pages load; invalid units/code/manager cannot submit
+RUN [mock] Write validation and network errors preserve local form input
+PASS [mock] Write validation and network errors preserve local form input
+RUN [mock] Synchronous double submit sends one write; failed refresh still shows success
+CONTROL entered POST /api/rentals
+PASS [mock] Synchronous double submit sends one write; failed refresh still shows success
+RUN [mock] Direct-ID update survives refresh and persists all HW5 fields
+PASS [mock] Direct-ID update survives refresh and persists all HW5 fields
+RUN [mock] Per-row delete handles 204; narrow layout remains usable
+CONTROL entered DELETE /api/rentals/801
+PASS [mock] Per-row delete handles 204; narrow layout remains usable
+RUN [mock] Late detail cannot overwrite a newer selected listing
+CONTROL entered GET /api/rentals/1
+PASS [mock] Late detail cannot overwrite a newer selected listing
+RUN [mock] Failed same-ID refresh removes the cached edit form
+CONTROL entered GET /api/rentals/2
+PASS [mock] Failed same-ID refresh removes the cached edit form
+RUN [mock] Late pre-mutation list cannot replace the post-mutation refresh
+CONTROL entered POST /api/rentals
+CONTROL entered GET /api/rentals
+PASS [mock] Late pre-mutation list cannot replace the post-mutation refresh
+RUN [mock] New search results remain after an obsolete search response arrives
+CONTROL entered GET /api/rentals
+PASS [mock] New search results remain after an obsolete search response arrives
+RUN [mock] Old-session 401 cannot expire a fresh login
+CONTROL entered POST /api/rentals
+PASS [mock] Old-session 401 cannot expire a fresh login
+RUN [mock] Logout clears rentals and ignores an old-session successful write
+CONTROL entered POST /api/rentals
+PASS [mock] Logout clears rentals and ignores an old-session successful write
+RUN [mock] Current-session expiry clears visible records and blocks routes
+PASS [mock] Current-session expiry clears visible records and blocks routes
+RUN [mock] Delayed logout cookie deletion cannot erase a subsequent login
+CONTROL entered POST /api/auth/logout
+PASS [mock] Delayed logout cookie deletion cannot erase a subsequent login
+RUN [mock] Same-ID editor revisit displays and submits refreshed server fields
+CONTROL entered GET /api/rentals/1
+PASS [mock] Same-ID editor revisit displays and submits refreshed server fields
+RUN [mock] Editor reopened during a pending PUT keeps completed fields on the next save
+CONTROL entered PUT /api/rentals/1
+PASS [mock] Editor reopened during a pending PUT keeps completed fields on the next save
+Evidence: /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/checks/browser/mock-browser.json (pass)
+
+
+[2026-10-04T03:41:26.839391+00:00] browser-real
+Command argv: ["/Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node", "tests/browser_hw05_part1.cjs", "--real"]
+Environment profile: app; private values omitted
+Code: f95597f91be0b5f81c800a6a5f2d7c039eb37665
+Exit: 0; finished 2026-10-04T03:41:29.444270+00:00
+RUN [real] Real HTTPS login uses Secure HttpOnly cookie
+PASS [real] Real HTTPS login uses Secure HttpOnly cookie
+RUN [real] Real pagination matches API total and stable IDs
+PASS [real] Real pagination matches API total and stable IDs
+RUN [real] UI create persists generated code, units and explicit manager
+PASS [real] UI create persists generated code, units and explicit manager
+RUN [real] UI direct-ID update persists changed fields and preserves old fields
+PASS [real] UI direct-ID update persists changed fields and preserves old fields
+RUN [real] Real same-ID revisit displays and saves a newer server update
+PASS [real] Real same-ID revisit displays and saves a newer server update
+RUN [real] Real empty result and responsive Home
+PASS [real] Real empty result and responsive Home
+RUN [real] UI per-row delete returns 204 and remains absent after reload
+PASS [real] UI per-row delete returns 204 and remains absent after reload
+RUN [real] Real logout clears visible data and API access
+PASS [real] Real logout clears visible data and API access
+Evidence: /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/checks/browser/real-browser.json (pass)
+
+
+[2026-10-04T03:41:14.293270+00:00] live-api
+Command argv: ["/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/web-venv/bin/python", "scripts/hw05/part1/live_acceptance.py", "--base-url", "https://localhost:8702", "--output", "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/checks/live-api.json"]
+Environment profile: app; private values omitted
+Code: f95597f91be0b5f81c800a6a5f2d7c039eb37665
+Exit: 0; finished 2026-10-04T03:41:14.627443+00:00
+PASS Manager create: HTTP 201
+PASS Manager list pagination: HTTP 200
+PASS Manager detail: HTTP 200
+PASS Manager unique email conflict: HTTP 409
+PASS Manager update: HTTP 200
+PASS Empty relationship: HTTP 200
+PASS Rental create generated code: HTTP 201
+PASS Rental list pagination: HTTP 200
+PASS Rental detail: HTTP 200
+PASS Relationship query: HTTP 200
+PASS Referenced manager delete restricted: HTTP 409
+PASS Rental unique code conflict: HTTP 409
+PASS Negative units invalid: HTTP 422
+PASS Malformed listing code invalid: HTTP 422
+PASS Malformed manager email invalid: HTTP 422
+PASS Invalid pagination: HTTP 422
+PASS Missing manager invalid FK: HTTP 422
+PASS Missing manager detail: HTTP 404
+PASS Rental update: HTTP 200
+PASS Rental delete: HTTP 204
+PASS Deleted rental absent: HTTP 404
+PASS Manager delete after child removed: HTTP 204
+PASS Deleted manager absent: HTTP 404
+PASS Legacy performance naive serialization: HTTP 200
+PASS Legacy performance fixed serialization: HTTP 200
+
+
+[2026-10-04T03:41:29.251911+00:00] offline-1
+Command argv: ["/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/mcp-venv/bin/python", "scripts/hw05/run_offline_tests.py"]
+Environment profile: offline; private values omitted
+Code: f95597f91be0b5f81c800a6a5f2d7c039eb37665
+Exit: 0; finished 2026-10-04T03:41:29.445680+00:00
+Pragya Apurva - HW5 Part 4 offline assertions
+PASS valid_search
+PASS whitespace_search_rejected
+PASS valid_rental_detail
+PASS missing_rental_8_rejected
+PASS valid_manager_count
+PASS missing_manager_4_rejected
+6/6 passed
+
+
+[2026-10-04T03:41:29.469841+00:00] offline-2
+Command argv: ["/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/mcp-venv/bin/python", "scripts/hw05/run_offline_tests.py"]
+Environment profile: offline; private values omitted
+Code: f95597f91be0b5f81c800a6a5f2d7c039eb37665
+Exit: 0; finished 2026-10-04T03:41:29.604615+00:00
+Pragya Apurva - HW5 Part 4 offline assertions
+PASS valid_search
+PASS whitespace_search_rejected
+PASS valid_rental_detail
+PASS missing_rental_8_rejected
+PASS valid_manager_count
+PASS missing_manager_4_rejected
+6/6 passed
+
+
+[2026-10-04T03:42:13.800641+00:00] offline-deliberate-failure
+Command argv: ["/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/mcp-venv/bin/python", "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/negative_offline.py"]
+Environment profile: offline; private values omitted
+Code: f95597f91be0b5f81c800a6a5f2d7c039eb37665
+Exit: 1; finished 2026-10-04T03:42:13.978836+00:00
+Pragya Apurva - HW5 Part 4 offline assertions
+FAIL deliberate_failure (AssertionError)
+PASS valid_search
+PASS whitespace_search_rejected
+PASS valid_rental_detail
+PASS missing_rental_8_rejected
+PASS valid_manager_count
+PASS missing_manager_4_rejected
+6/7 passed
+
+
+[2026-10-04T03:42:13.998127+00:00] offline-optimized-rejected
+Command argv: ["/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/mcp-venv/bin/python", "-O", "scripts/hw05/run_offline_tests.py"]
+Environment profile: offline; private values omitted
+Code: f95597f91be0b5f81c800a6a5f2d7c039eb37665
+Exit: 2; finished 2026-10-04T03:42:14.530459+00:00
+ERROR: Python optimization disables assertions; run without -O.
+
+
+[2026-10-04T03:42:14.549624+00:00] live-capture-optimized-rejected
+Command argv: ["/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/mcp-venv/bin/python", "-O", "scripts/hw05/part3/capture_live_stdio.py", "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/checks/MUST_NOT_EXIST.json"]
+Environment profile: offline; private values omitted
+Code: f95597f91be0b5f81c800a6a5f2d7c039eb37665
+Exit: 1; finished 2026-10-04T03:42:15.522283+00:00
+Live STDIO verification failed; no passing receipt produced.
+
+
+[2026-10-04T03:42:30.340775+00:00] driver-timeout
+Command argv: ["/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/mcp-venv/bin/python", "scripts/hw05/part3/probe_driver_timeout.py", "--read-timeout-s", "0.2"]
+Environment profile: offline; private values omitted
+Code: f95597f91be0b5f81c800a6a5f2d7c039eb37665
+Exit: 0; finished 2026-10-04T03:42:30.734771+00:00
+{
+  "accepted_socket_closed": true,
+  "command": [
+    "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/mcp-venv/bin/python",
+    "scripts/hw05/part3/probe_driver_timeout.py",
+    "--read-timeout-s",
+    "0.2"
+  ],
+  "connect_timeout_s": 1,
+  "connection_accepted": true,
+  "control_proved": "PyMySQL read_timeout during stalled server greeting",
+  "driver_error_code": 2013,
+  "driver_exception_type": "pymysql.err.OperationalError",
+  "elapsed_bounds_ms": [
+    150.00000000000003,
+    1700.0
+  ],
+  "elapsed_ms": 233.531750011025,
+  "elapsed_within_bounds": true,
+  "exception_type": "sqlalchemy.exc.OperationalError",
+  "finished_utc": "2026-10-04T03:42:30.690767+00:00",
+  "limitations": "Stalled greeting only; not live MySQL, other timeout controls, or a whole-call deadline.",
+  "listener_closed": true,
+  "passed": true,
+  "pool_timeout_s": 1,
+  "read_timeout_s": 0.2,
+  "server_error_types": [],
+  "server_hold_expired": false,
+  "server_thread_stopped": true,
+  "started_utc": "2026-10-04T03:42:30.456478+00:00",
+  "student": "Pragya Apurva",
+  "versions": {
+    "PyMySQL": "1.1.2",
+    "SQLAlchemy": "2.0.48"
+  },
+  "write_timeout_s": 1
+}
+
+
+[2026-10-04T03:41:44.836363+00:00] meals-live
+Command argv: ["/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/mcp-venv/bin/python", "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/capture_meals.py"]
+Environment profile: offline; private values omitted
+Code: f95597f91be0b5f81c800a6a5f2d7c039eb37665
+Exit: 0; finished 2026-10-04T03:41:46.872507+00:00
+meals: exact inventory and 4 STDIO calls verified; saved /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/checks/meals-live.json
+All four live public-upstream tool calls returned prescribed nonempty shapes
+/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/mcp-venv/lib/python3.12/site-packages/pydantic_settings/sources/utils.py:47: IncompleteFieldDefinitionWarning: Field 'lifespan' has an incomplete definition: its annotation contains an unresolved forward reference, so settings sources may fail to correctly resolve its value. Call `model_rebuild()` on the model where the field is defined, once all the referenced types are defined.
+  warnings.warn(
+
+
+[2026-10-04T03:43:56.072230+00:00] combined-live
+Command argv: ["/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/mcp-venv/bin/python", "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/live_parity.py"]
+Environment profile: app,domain; private values omitted
+Code: f95597f91be0b5f81c800a6a5f2d7c039eb37665
+Exit: 0; finished 2026-10-04T03:43:57.043441+00:00
+{"pass": true, "summary": {"executor_calls_passed": 20, "stdio_calls_passed": 20, "exact_envelope_parity_cases": 11, "real_reads_with_single_statement_and_disposal": 8, "invalid_calls_with_zero_construction_and_io": 12, "api_overlap_cases": 7}, "failure_type": null}
+
+
+[2026-10-04T03:42:32.514969+00:00] ui-api-parity
+Command argv: ["/Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node", "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/ui_parity.cjs"]
+Environment profile: app; private values omitted
+Code: f95597f91be0b5f81c800a6a5f2d7c039eb37665
+Exit: 0; finished 2026-10-04T03:42:34.065068+00:00
+Live rendered UI/API parity: PASS
+
+
+[2026-10-04T03:42:56.560253+00:00] fixture-preservation
+Command argv: ["/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/web-venv/bin/python", "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/verify_fixture.py"]
+Environment profile: app,domain; private values omitted
+Code: f95597f91be0b5f81c800a6a5f2d7c039eb37665
+Exit: 0; finished 2026-10-04T03:42:56.803719+00:00
+Baseline domain/authentication data preserved; read-only account cannot read contacts or write

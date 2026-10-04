@@ -1,0 +1,25 @@
+PASS Manager create: HTTP 201
+PASS Manager list pagination: HTTP 200
+PASS Manager detail: HTTP 200
+PASS Manager unique email conflict: HTTP 409
+PASS Manager update: HTTP 200
+PASS Empty relationship: HTTP 200
+PASS Rental create generated code: HTTP 201
+PASS Rental list pagination: HTTP 200
+PASS Rental detail: HTTP 200
+PASS Relationship query: HTTP 200
+PASS Referenced manager delete restricted: HTTP 409
+PASS Rental unique code conflict: HTTP 409
+PASS Negative units invalid: HTTP 422
+PASS Malformed listing code invalid: HTTP 422
+PASS Malformed manager email invalid: HTTP 422
+PASS Invalid pagination: HTTP 422
+PASS Missing manager invalid FK: HTTP 422
+PASS Missing manager detail: HTTP 404
+PASS Rental update: HTTP 200
+PASS Rental delete: HTTP 204
+PASS Deleted rental absent: HTTP 404
+PASS Manager delete after child removed: HTTP 204
+PASS Deleted manager absent: HTTP 404
+PASS Legacy performance naive serialization: HTTP 200
+PASS Legacy performance fixed serialization: HTTP 200

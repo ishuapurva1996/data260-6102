@@ -1,0 +1,37 @@
+{
+  "accepted_socket_closed": true,
+  "command": [
+    "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/mcp-venv/bin/python",
+    "scripts/hw05/part3/probe_driver_timeout.py",
+    "--read-timeout-s",
+    "0.2"
+  ],
+  "connect_timeout_s": 1,
+  "connection_accepted": true,
+  "control_proved": "PyMySQL read_timeout during stalled server greeting",
+  "driver_error_code": 2013,
+  "driver_exception_type": "pymysql.err.OperationalError",
+  "elapsed_bounds_ms": [
+    150.00000000000003,
+    1700.0
+  ],
+  "elapsed_ms": 233.531750011025,
+  "elapsed_within_bounds": true,
+  "exception_type": "sqlalchemy.exc.OperationalError",
+  "finished_utc": "2026-10-04T03:42:30.690767+00:00",
+  "limitations": "Stalled greeting only; not live MySQL, other timeout controls, or a whole-call deadline.",
+  "listener_closed": true,
+  "passed": true,
+  "pool_timeout_s": 1,
+  "read_timeout_s": 0.2,
+  "server_error_types": [],
+  "server_hold_expired": false,
+  "server_thread_stopped": true,
+  "started_utc": "2026-10-04T03:42:30.456478+00:00",
+  "student": "Pragya Apurva",
+  "versions": {
+    "PyMySQL": "1.1.2",
+    "SQLAlchemy": "2.0.48"
+  },
+  "write_timeout_s": 1
+}

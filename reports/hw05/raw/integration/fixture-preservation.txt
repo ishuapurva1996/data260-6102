@@ -1,0 +1,1 @@
+Baseline domain/authentication data preserved; read-only account cannot read contacts or write

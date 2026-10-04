@@ -1,0 +1,52 @@
+RUN [mock] Protected routes, login, paginated Home and obsolete shortcut removal
+PASS [mock] Protected routes, login, paginated Home and obsolete shortcut removal
+RUN [mock] Empty, loading and recoverable list-error states
+CONTROL entered GET /api/rentals
+PASS [mock] Empty, loading and recoverable list-error states
+RUN [mock] Invalid and missing IDs show safe errors without mutation controls
+PASS [mock] Invalid and missing IDs show safe errors without mutation controls
+RUN [mock] Manager failure recovers; no managers prevents saving
+PASS [mock] Manager failure recovers; no managers prevents saving
+RUN [mock] All manager pages load; invalid units/code/manager cannot submit
+PASS [mock] All manager pages load; invalid units/code/manager cannot submit
+RUN [mock] Write validation and network errors preserve local form input
+PASS [mock] Write validation and network errors preserve local form input
+RUN [mock] Synchronous double submit sends one write; failed refresh still shows success
+CONTROL entered POST /api/rentals
+PASS [mock] Synchronous double submit sends one write; failed refresh still shows success
+RUN [mock] Direct-ID update survives refresh and persists all HW5 fields
+PASS [mock] Direct-ID update survives refresh and persists all HW5 fields
+RUN [mock] Per-row delete handles 204; narrow layout remains usable
+CONTROL entered DELETE /api/rentals/801
+PASS [mock] Per-row delete handles 204; narrow layout remains usable
+RUN [mock] Late detail cannot overwrite a newer selected listing
+CONTROL entered GET /api/rentals/1
+PASS [mock] Late detail cannot overwrite a newer selected listing
+RUN [mock] Failed same-ID refresh removes the cached edit form
+CONTROL entered GET /api/rentals/2
+PASS [mock] Failed same-ID refresh removes the cached edit form
+RUN [mock] Late pre-mutation list cannot replace the post-mutation refresh
+CONTROL entered POST /api/rentals
+CONTROL entered GET /api/rentals
+PASS [mock] Late pre-mutation list cannot replace the post-mutation refresh
+RUN [mock] New search results remain after an obsolete search response arrives
+CONTROL entered GET /api/rentals
+PASS [mock] New search results remain after an obsolete search response arrives
+RUN [mock] Old-session 401 cannot expire a fresh login
+CONTROL entered POST /api/rentals
+PASS [mock] Old-session 401 cannot expire a fresh login
+RUN [mock] Logout clears rentals and ignores an old-session successful write
+CONTROL entered POST /api/rentals
+PASS [mock] Logout clears rentals and ignores an old-session successful write
+RUN [mock] Current-session expiry clears visible records and blocks routes
+PASS [mock] Current-session expiry clears visible records and blocks routes
+RUN [mock] Delayed logout cookie deletion cannot erase a subsequent login
+CONTROL entered POST /api/auth/logout
+PASS [mock] Delayed logout cookie deletion cannot erase a subsequent login
+RUN [mock] Same-ID editor revisit displays and submits refreshed server fields
+CONTROL entered GET /api/rentals/1
+PASS [mock] Same-ID editor revisit displays and submits refreshed server fields
+RUN [mock] Editor reopened during a pending PUT keeps completed fields on the next save
+CONTROL entered PUT /api/rentals/1
+PASS [mock] Editor reopened during a pending PUT keeps completed fields on the next save
+Evidence: /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/checks/browser/mock-browser.json (pass)

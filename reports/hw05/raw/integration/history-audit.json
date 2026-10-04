@@ -1,0 +1,1737 @@
+{
+  "audit_kind": "Read-only historical evidence and historical source identity audit; no tests or captures rerun",
+  "completed_at_utc": "2026-10-04T03:43:33.619716+00:00",
+  "integration_worktree": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/integration",
+  "combined_head_at_audit": "f95597f91be0b5f81c800a6a5f2d7c039eb37665",
+  "baseline_path": "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/historical-evidence-before.json",
+  "baseline_sha256": "d6316d67e3d56b8ff4797faee688f942a8a0c58c6aad3e980dbaa69b1b85bdce",
+  "baseline_value_semantics": "SHA-256 of file bytes, keyed by accepted_commit:path; not Git blob object IDs",
+  "baseline_entries": 9872,
+  "baseline_key_coverage_matches_four_report_trees": true,
+  "distinct_historical_report_paths": 2533,
+  "four_head_report_preservation": [
+    {
+      "part": "part1",
+      "accepted_head": "f0b1a303991126cbb90579f1d6bc935296021145",
+      "ancestor_of_combined_head": true,
+      "historical_report_files": 2450,
+      "combined_tree_blob_mismatches": [],
+      "working_bytes_blob_mismatches": [],
+      "baseline_content_sha256_mismatches": [],
+      "passed": true
+    },
+    {
+      "part": "part2",
+      "accepted_head": "158e946bb1e3ca647236fc72961e45da008c05f9",
+      "ancestor_of_combined_head": true,
+      "historical_report_files": 2461,
+      "combined_tree_blob_mismatches": [],
+      "working_bytes_blob_mismatches": [],
+      "baseline_content_sha256_mismatches": [],
+      "passed": true
+    },
+    {
+      "part": "part3",
+      "accepted_head": "8ecb03ee4747af1ddc56c19b90767eb6242d9a39",
+      "ancestor_of_combined_head": true,
+      "historical_report_files": 2488,
+      "combined_tree_blob_mismatches": [],
+      "working_bytes_blob_mismatches": [],
+      "baseline_content_sha256_mismatches": [],
+      "passed": true
+    },
+    {
+      "part": "part4",
+      "accepted_head": "0318a2859acc722481a57afb933970d4851f4466",
+      "ancestor_of_combined_head": true,
+      "historical_report_files": 2473,
+      "combined_tree_blob_mismatches": [],
+      "working_bytes_blob_mismatches": [],
+      "baseline_content_sha256_mismatches": [],
+      "passed": true
+    }
+  ],
+  "historical_source_manifests": [
+    {
+      "manifest": "reports/hw05/raw/part1/review-fixes/provenance.json",
+      "resolved_historical_revision": "9bcb7cd39a08157aa1fc6203dfd3ef5ca3eb53e8",
+      "resolution_note": "Revision explicitly recorded in this manifest.",
+      "count": 17,
+      "passed": true,
+      "files": [
+        {
+          "path": "frontend/src/App.jsx",
+          "recorded_sha256": "3f22477cec5c55759f07a605d353037de36b000720fc025cc1cefaccc3b521be",
+          "historical_commit_sha256": "3f22477cec5c55759f07a605d353037de36b000720fc025cc1cefaccc3b521be",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "frontend/src/api/client.js",
+          "recorded_sha256": "d5cfc717bd195f6af11ba2ef6fda12df3eaab86b411e1b02700664f7f500a3b6",
+          "historical_commit_sha256": "d5cfc717bd195f6af11ba2ef6fda12df3eaab86b411e1b02700664f7f500a3b6",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "frontend/src/auth/AuthContext.jsx",
+          "recorded_sha256": "d05b73deeed86020dfbd0f671ded019cb9ad9cc06100943dd7ff8b24d82bec5e",
+          "historical_commit_sha256": "d05b73deeed86020dfbd0f671ded019cb9ad9cc06100943dd7ff8b24d82bec5e",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "frontend/src/components/forms.jsx",
+          "recorded_sha256": "655e2405639133efb99fefb043adbb55dca81d4075b9779b1e16a4edee54880d",
+          "historical_commit_sha256": "655e2405639133efb99fefb043adbb55dca81d4075b9779b1e16a4edee54880d",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "frontend/src/features/rentals/rentalsSlice.js",
+          "recorded_sha256": "1a2c40e1a240624a679e6185415f137fa3e7ac1dfb5d8057d46a11024b3f5324",
+          "historical_commit_sha256": "1a2c40e1a240624a679e6185415f137fa3e7ac1dfb5d8057d46a11024b3f5324",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "frontend/src/main.jsx",
+          "recorded_sha256": "2e17c70f9bc0b8f9db08ab26c4f10ccd0efb765d327a4347246c1430471e0359",
+          "historical_commit_sha256": "2e17c70f9bc0b8f9db08ab26c4f10ccd0efb765d327a4347246c1430471e0359",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "frontend/src/pages/CreateRecord.jsx",
+          "recorded_sha256": "5b93267fcce1dee3977b6b9a7a660a3e7dea9011949189ebbb3308c7f3525415",
+          "historical_commit_sha256": "5b93267fcce1dee3977b6b9a7a660a3e7dea9011949189ebbb3308c7f3525415",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "frontend/src/pages/DeleteRecord.jsx",
+          "recorded_sha256": "1910d108d6f58c9fe7d332ef260e8ea0314519fdfb515a0d9bea7c99fbbb910f",
+          "historical_commit_sha256": "1910d108d6f58c9fe7d332ef260e8ea0314519fdfb515a0d9bea7c99fbbb910f",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "frontend/src/pages/Home.jsx",
+          "recorded_sha256": "14b57d19a219b6f56286a5c87a5cd6e1ea0c8cfca3b6cba15390ae5c32c32a60",
+          "historical_commit_sha256": "14b57d19a219b6f56286a5c87a5cd6e1ea0c8cfca3b6cba15390ae5c32c32a60",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "frontend/src/pages/Login.jsx",
+          "recorded_sha256": "99c97544645656a30212e8d79f5417b572f4b5671c6d4b84f71b5c9b721bebb0",
+          "historical_commit_sha256": "99c97544645656a30212e8d79f5417b572f4b5671c6d4b84f71b5c9b721bebb0",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "frontend/src/pages/UpdateRecord.jsx",
+          "recorded_sha256": "19d50ed9f37476c2eb8818e0a781987181212a2754e40afeeee030c4f9b5f432",
+          "historical_commit_sha256": "19d50ed9f37476c2eb8818e0a781987181212a2754e40afeeee030c4f9b5f432",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "frontend/src/store/store.js",
+          "recorded_sha256": "4ed583fc1180809d4f9c279386e199950a8ac95bbfc92688fa49c27ef1e41d10",
+          "historical_commit_sha256": "4ed583fc1180809d4f9c279386e199950a8ac95bbfc92688fa49c27ef1e41d10",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "frontend/src/styles.css",
+          "recorded_sha256": "5ecf3f7d0238bc8635b5389fef5dc2c55f92713dfc13eabcc9e50033c0d2c959",
+          "historical_commit_sha256": "5ecf3f7d0238bc8635b5389fef5dc2c55f92713dfc13eabcc9e50033c0d2c959",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "frontend/package.json",
+          "recorded_sha256": "a815561544d0ab84ef2e13e9d2ed4b73530e50ea88d8a19264955c6e760f4bc9",
+          "historical_commit_sha256": "a815561544d0ab84ef2e13e9d2ed4b73530e50ea88d8a19264955c6e760f4bc9",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "frontend/package-lock.json",
+          "recorded_sha256": "a37333024872060cfee915cb5dbe1cf6b3b417071d6614ba1c0f2ba89ca8ede0",
+          "historical_commit_sha256": "a37333024872060cfee915cb5dbe1cf6b3b417071d6614ba1c0f2ba89ca8ede0",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "tests/browser_hw05_part1.cjs",
+          "recorded_sha256": "01194f9b897de00ae03d1f1ef58a70bdca569eb6aeda6cea0f321c717b2e58eb",
+          "historical_commit_sha256": "01194f9b897de00ae03d1f1ef58a70bdca569eb6aeda6cea0f321c717b2e58eb",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "scripts/hw05/part1/capture_features.cjs",
+          "recorded_sha256": "1f17680eb03bb523b194f427e0012187f9583e58198c6433219073f86e3550c6",
+          "historical_commit_sha256": "1f17680eb03bb523b194f427e0012187f9583e58198c6433219073f86e3550c6",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        }
+      ]
+    },
+    {
+      "manifest": "reports/hw05/raw/part1/review-fixes/redux-captures.json",
+      "resolved_historical_revision": "9bcb7cd39a08157aa1fc6203dfd3ef5ca3eb53e8",
+      "resolution_note": "Revision explicitly recorded in this manifest.",
+      "count": 6,
+      "passed": true,
+      "files": [
+        {
+          "path": "frontend/src/features/rentals/rentalsSlice.js",
+          "recorded_sha256": "1a2c40e1a240624a679e6185415f137fa3e7ac1dfb5d8057d46a11024b3f5324",
+          "historical_commit_sha256": "1a2c40e1a240624a679e6185415f137fa3e7ac1dfb5d8057d46a11024b3f5324",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "frontend/src/pages/CreateRecord.jsx",
+          "recorded_sha256": "5b93267fcce1dee3977b6b9a7a660a3e7dea9011949189ebbb3308c7f3525415",
+          "historical_commit_sha256": "5b93267fcce1dee3977b6b9a7a660a3e7dea9011949189ebbb3308c7f3525415",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "frontend/src/pages/UpdateRecord.jsx",
+          "recorded_sha256": "19d50ed9f37476c2eb8818e0a781987181212a2754e40afeeee030c4f9b5f432",
+          "historical_commit_sha256": "19d50ed9f37476c2eb8818e0a781987181212a2754e40afeeee030c4f9b5f432",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "frontend/src/pages/Home.jsx",
+          "recorded_sha256": "14b57d19a219b6f56286a5c87a5cd6e1ea0c8cfca3b6cba15390ae5c32c32a60",
+          "historical_commit_sha256": "14b57d19a219b6f56286a5c87a5cd6e1ea0c8cfca3b6cba15390ae5c32c32a60",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "frontend/src/components/forms.jsx",
+          "recorded_sha256": "655e2405639133efb99fefb043adbb55dca81d4075b9779b1e16a4edee54880d",
+          "historical_commit_sha256": "655e2405639133efb99fefb043adbb55dca81d4075b9779b1e16a4edee54880d",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "scripts/hw05/part1/capture_features.cjs",
+          "recorded_sha256": "1f17680eb03bb523b194f427e0012187f9583e58198c6433219073f86e3550c6",
+          "historical_commit_sha256": "1f17680eb03bb523b194f427e0012187f9583e58198c6433219073f86e3550c6",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        }
+      ]
+    },
+    {
+      "manifest": "reports/hw05/raw/part2/verified-source-sha256.json",
+      "resolved_historical_revision": "8f24f44b87f83f813a7a60281bfcd523ab141fa1",
+      "resolution_note": "Revision explicitly recorded in sibling original evidence-integrity.json.",
+      "count": 18,
+      "passed": true,
+      "files": [
+        {
+          "path": "requirements-mcp.txt",
+          "recorded_sha256": "30fa369c88f67546629fe097d8e466fa9bc8719c7c81acf9a77ce8f2202f25b6",
+          "historical_commit_sha256": "30fa369c88f67546629fe097d8e466fa9bc8719c7c81acf9a77ce8f2202f25b6",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "src/mcp_servers/__init__.py",
+          "recorded_sha256": "db797db70798c2f5537731073693a8f4fb30ae67dd058a34d37ef5d5e57ec15a",
+          "historical_commit_sha256": "db797db70798c2f5537731073693a8f4fb30ae67dd058a34d37ef5d5e57ec15a",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "src/mcp_servers/meals.py",
+          "recorded_sha256": "ca596337b4a4859256983270522a94f4ff2917a7ea74863d0ef61f3e3b1a0203",
+          "historical_commit_sha256": "ca596337b4a4859256983270522a94f4ff2917a7ea74863d0ef61f3e3b1a0203",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "src/mcp_servers/meals_client.py",
+          "recorded_sha256": "c1f371b7c9eca3856333b81c8e24dc8fa36621e558d1385d1d08a61d7b3b36f7",
+          "historical_commit_sha256": "c1f371b7c9eca3856333b81c8e24dc8fa36621e558d1385d1d08a61d7b3b36f7",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "src/mcp_servers/rentals.py",
+          "recorded_sha256": "82ff4a07dff19489cf6e4bae693335968979200736bb0e811c8c31454c674371",
+          "historical_commit_sha256": "82ff4a07dff19489cf6e4bae693335968979200736bb0e811c8c31454c674371",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": true
+        },
+        {
+          "path": "src/rental_tools/__init__.py",
+          "recorded_sha256": "820e66fc061d560f2553a5041dd69fdd761e33bf960579985643ed21fe20d877",
+          "historical_commit_sha256": "820e66fc061d560f2553a5041dd69fdd761e33bf960579985643ed21fe20d877",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "src/rental_tools/contracts.py",
+          "recorded_sha256": "9e2bd2345dc95aeba6c4285a9adea01a747cdad5894cb981ab7cb7fd746c9377",
+          "historical_commit_sha256": "9e2bd2345dc95aeba6c4285a9adea01a747cdad5894cb981ab7cb7fd746c9377",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "src/rental_tools/reader.py",
+          "recorded_sha256": "b3aff457b5ca5e18a377221487431da920f3a0080385c2ded6a8f07cc57d078d",
+          "historical_commit_sha256": "b3aff457b5ca5e18a377221487431da920f3a0080385c2ded6a8f07cc57d078d",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": true
+        },
+        {
+          "path": "src/rental_tools/registry.py",
+          "recorded_sha256": "a6a4cfc5648837c65ad0a884b790c7a003eb269a66d5890f0c3a35f982a38efa",
+          "historical_commit_sha256": "a6a4cfc5648837c65ad0a884b790c7a003eb269a66d5890f0c3a35f982a38efa",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "src/rental_tools/service.py",
+          "recorded_sha256": "5b4cb6695be78e93c149e732f1aef7bca38e1049be41b8effdd787211720b341",
+          "historical_commit_sha256": "5b4cb6695be78e93c149e732f1aef7bca38e1049be41b8effdd787211720b341",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "scripts/hw05/part2/capture_stdio.py",
+          "recorded_sha256": "422d3835d0dfac7bae51b553cf494ed3b6b29d2239a50de8ccdeb1705021d879",
+          "historical_commit_sha256": "422d3835d0dfac7bae51b553cf494ed3b6b29d2239a50de8ccdeb1705021d879",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": true
+        },
+        {
+          "path": "scripts/hw05/part2/run_domain.py",
+          "recorded_sha256": "921b5fe78faaa7a0a19c17a9da2ce824a9a54cf89c9b7f9443c9bedcb4db833a",
+          "historical_commit_sha256": "921b5fe78faaa7a0a19c17a9da2ce824a9a54cf89c9b7f9443c9bedcb4db833a",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "scripts/hw05/part2/run_meals.py",
+          "recorded_sha256": "7af07a17b62905bc90af9409a3e7cc65801152fa38bf441f81d452a88973aaed",
+          "historical_commit_sha256": "7af07a17b62905bc90af9409a3e7cc65801152fa38bf441f81d452a88973aaed",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "scripts/hw05/part2/setup_fixture.py",
+          "recorded_sha256": "4598b72c2c85c84b4e6a4a8aca65397e0ac4198b2838df3236eed73bf48007d9",
+          "historical_commit_sha256": "4598b72c2c85c84b4e6a4a8aca65397e0ac4198b2838df3236eed73bf48007d9",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": true
+        },
+        {
+          "path": "tests/hw05_stdio_fixture.py",
+          "recorded_sha256": "245a24196debf24d9d2c7eb374b2e881ee1a6b673f3f331ef60d2db3e27472a5",
+          "historical_commit_sha256": "245a24196debf24d9d2c7eb374b2e881ee1a6b673f3f331ef60d2db3e27472a5",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": true
+        },
+        {
+          "path": "tests/test_hw05_domain_tools.py",
+          "recorded_sha256": "acd5294d9ccd38173a381fb525cea799fa437d5a322f287f2033c4fe06e238f3",
+          "historical_commit_sha256": "acd5294d9ccd38173a381fb525cea799fa437d5a322f287f2033c4fe06e238f3",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "tests/test_hw05_mcp_stdio.py",
+          "recorded_sha256": "fe5843d0c8659bc2e8d0eae55be3c128fe793a408311d23937676c659d461240",
+          "historical_commit_sha256": "fe5843d0c8659bc2e8d0eae55be3c128fe793a408311d23937676c659d461240",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": true
+        },
+        {
+          "path": "tests/test_hw05_meals.py",
+          "recorded_sha256": "cca261203ed64facb0951125e88076e7f393d941e70739f9fd4b226b15e16548",
+          "historical_commit_sha256": "cca261203ed64facb0951125e88076e7f393d941e70739f9fd4b226b15e16548",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        }
+      ]
+    },
+    {
+      "manifest": "reports/hw05/raw/part2/review-fixes/verified-source-sha256.json",
+      "resolved_historical_revision": "158e946bb1e3ca647236fc72961e45da008c05f9",
+      "resolution_note": "Snapshot was captured with working_tree_dirty:true at parent 9658abe26d9f421968cb895bd1a34a197ff1e3fd. The Part 2 handoff and coordinator acceptance bind these 19 source hashes to final 158e946bb1e3ca647236fc72961e45da008c05f9. The dirty parent is not treated as the source snapshot.",
+      "count": 19,
+      "passed": true,
+      "files": [
+        {
+          "path": "requirements-mcp.txt",
+          "recorded_sha256": "30fa369c88f67546629fe097d8e466fa9bc8719c7c81acf9a77ce8f2202f25b6",
+          "historical_commit_sha256": "30fa369c88f67546629fe097d8e466fa9bc8719c7c81acf9a77ce8f2202f25b6",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "scripts/hw05/part2/capture_stdio.py",
+          "recorded_sha256": "aa1eb589f8a6580ba015ba07061e64980a4c3f17e1e93f5a5f7621c4cbde8fbc",
+          "historical_commit_sha256": "aa1eb589f8a6580ba015ba07061e64980a4c3f17e1e93f5a5f7621c4cbde8fbc",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "scripts/hw05/part2/run_domain.py",
+          "recorded_sha256": "921b5fe78faaa7a0a19c17a9da2ce824a9a54cf89c9b7f9443c9bedcb4db833a",
+          "historical_commit_sha256": "921b5fe78faaa7a0a19c17a9da2ce824a9a54cf89c9b7f9443c9bedcb4db833a",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "scripts/hw05/part2/run_meals.py",
+          "recorded_sha256": "7af07a17b62905bc90af9409a3e7cc65801152fa38bf441f81d452a88973aaed",
+          "historical_commit_sha256": "7af07a17b62905bc90af9409a3e7cc65801152fa38bf441f81d452a88973aaed",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "scripts/hw05/part2/setup_fixture.py",
+          "recorded_sha256": "4209ba43a13fb8afda32158744ac8bc05fe0099b1e5bfd688274c24c312c0a23",
+          "historical_commit_sha256": "4209ba43a13fb8afda32158744ac8bc05fe0099b1e5bfd688274c24c312c0a23",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "src/mcp_servers/__init__.py",
+          "recorded_sha256": "db797db70798c2f5537731073693a8f4fb30ae67dd058a34d37ef5d5e57ec15a",
+          "historical_commit_sha256": "db797db70798c2f5537731073693a8f4fb30ae67dd058a34d37ef5d5e57ec15a",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "src/mcp_servers/meals.py",
+          "recorded_sha256": "ca596337b4a4859256983270522a94f4ff2917a7ea74863d0ef61f3e3b1a0203",
+          "historical_commit_sha256": "ca596337b4a4859256983270522a94f4ff2917a7ea74863d0ef61f3e3b1a0203",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "src/mcp_servers/meals_client.py",
+          "recorded_sha256": "c1f371b7c9eca3856333b81c8e24dc8fa36621e558d1385d1d08a61d7b3b36f7",
+          "historical_commit_sha256": "c1f371b7c9eca3856333b81c8e24dc8fa36621e558d1385d1d08a61d7b3b36f7",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "src/mcp_servers/rentals.py",
+          "recorded_sha256": "5bac7ea36c5b406b60f276fb45e8f402f06146ae8b32c433d764741468083229",
+          "historical_commit_sha256": "5bac7ea36c5b406b60f276fb45e8f402f06146ae8b32c433d764741468083229",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": true
+        },
+        {
+          "path": "src/rental_tools/__init__.py",
+          "recorded_sha256": "820e66fc061d560f2553a5041dd69fdd761e33bf960579985643ed21fe20d877",
+          "historical_commit_sha256": "820e66fc061d560f2553a5041dd69fdd761e33bf960579985643ed21fe20d877",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "src/rental_tools/contracts.py",
+          "recorded_sha256": "9e2bd2345dc95aeba6c4285a9adea01a747cdad5894cb981ab7cb7fd746c9377",
+          "historical_commit_sha256": "9e2bd2345dc95aeba6c4285a9adea01a747cdad5894cb981ab7cb7fd746c9377",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "src/rental_tools/reader.py",
+          "recorded_sha256": "b3aff457b5ca5e18a377221487431da920f3a0080385c2ded6a8f07cc57d078d",
+          "historical_commit_sha256": "b3aff457b5ca5e18a377221487431da920f3a0080385c2ded6a8f07cc57d078d",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": true
+        },
+        {
+          "path": "src/rental_tools/registry.py",
+          "recorded_sha256": "a6a4cfc5648837c65ad0a884b790c7a003eb269a66d5890f0c3a35f982a38efa",
+          "historical_commit_sha256": "a6a4cfc5648837c65ad0a884b790c7a003eb269a66d5890f0c3a35f982a38efa",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "src/rental_tools/service.py",
+          "recorded_sha256": "5b4cb6695be78e93c149e732f1aef7bca38e1049be41b8effdd787211720b341",
+          "historical_commit_sha256": "5b4cb6695be78e93c149e732f1aef7bca38e1049be41b8effdd787211720b341",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "tests/hw05_stdio_fixture.py",
+          "recorded_sha256": "865aef2b3847431d384b5738e1bc71e44430332917abe354f99335fb22553ca5",
+          "historical_commit_sha256": "865aef2b3847431d384b5738e1bc71e44430332917abe354f99335fb22553ca5",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "tests/test_hw05_domain_tools.py",
+          "recorded_sha256": "acd5294d9ccd38173a381fb525cea799fa437d5a322f287f2033c4fe06e238f3",
+          "historical_commit_sha256": "acd5294d9ccd38173a381fb525cea799fa437d5a322f287f2033c4fe06e238f3",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "tests/test_hw05_fixture_setup.py",
+          "recorded_sha256": "70692dc5b868020226210ec57968574e9f790c641d0fad2a1ed91c3f6f35e4df",
+          "historical_commit_sha256": "70692dc5b868020226210ec57968574e9f790c641d0fad2a1ed91c3f6f35e4df",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "tests/test_hw05_mcp_stdio.py",
+          "recorded_sha256": "d3d8187fb94a2d2f85ebbc35d633bdd7f335af6f5aacb88492113e48ed8b9b53",
+          "historical_commit_sha256": "d3d8187fb94a2d2f85ebbc35d633bdd7f335af6f5aacb88492113e48ed8b9b53",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "tests/test_hw05_meals.py",
+          "recorded_sha256": "cca261203ed64facb0951125e88076e7f393d941e70739f9fd4b226b15e16548",
+          "historical_commit_sha256": "cca261203ed64facb0951125e88076e7f393d941e70739f9fd4b226b15e16548",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        }
+      ]
+    },
+    {
+      "manifest": "reports/hw05/raw/part3/selected/manifest.json",
+      "resolved_historical_revision": "ca4641778c34cf14c1ed07aea63be20374d5306f",
+      "resolution_note": "Revision explicitly recorded in this manifest.",
+      "count": 16,
+      "passed": true,
+      "files": [
+        {
+          "path": "scripts/hw05/part3/capture_live_stdio.py",
+          "recorded_sha256": "1790568595eeb068c62e6350c63c822da0c74f435e7897c01774bb8f161fc269",
+          "historical_commit_sha256": "1790568595eeb068c62e6350c63c822da0c74f435e7897c01774bb8f161fc269",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": true
+        },
+        {
+          "path": "scripts/hw05/part3/fixture.py",
+          "recorded_sha256": "fdcaf2f153e573579999eafc653d988649efc59e6f701f7fa8a4a525be4679b1",
+          "historical_commit_sha256": "fdcaf2f153e573579999eafc653d988649efc59e6f701f7fa8a4a525be4679b1",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "scripts/hw05/part3/probe_driver_timeout.py",
+          "recorded_sha256": "dc1eb1258e5073edf2352f9f04a607f59d63ea3e5d0a6558ff7345c0bcf36a2d",
+          "historical_commit_sha256": "dc1eb1258e5073edf2352f9f04a607f59d63ea3e5d0a6558ff7345c0bcf36a2d",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "scripts/hw05/part3/provenance.py",
+          "recorded_sha256": "ecbbfd35bf9b3e3a5b48781d01dade45a423d265e3a1cda247f99e8da8446c2d",
+          "historical_commit_sha256": "ecbbfd35bf9b3e3a5b48781d01dade45a423d265e3a1cda247f99e8da8446c2d",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "scripts/hw05/part3/recompute_metrics.py",
+          "recorded_sha256": "899850967670eb94e0ba636f9c5b6e523e2684c34d0f1f22d21de4444dc4b732",
+          "historical_commit_sha256": "899850967670eb94e0ba636f9c5b6e523e2684c34d0f1f22d21de4444dc4b732",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "scripts/hw05/part3/run_fault_experiment.py",
+          "recorded_sha256": "3b69d050993b77937830ec1a5ffe5a77458260a68b961a8afee462e1d0f193ff",
+          "historical_commit_sha256": "3b69d050993b77937830ec1a5ffe5a77458260a68b961a8afee462e1d0f193ff",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "scripts/hw05/part3/run_retry_demos.py",
+          "recorded_sha256": "71869d54037650340d84df8332ff36d7e23b55ede6130699040c9e4820dfb0bd",
+          "historical_commit_sha256": "71869d54037650340d84df8332ff36d7e23b55ede6130699040c9e4820dfb0bd",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "scripts/hw05/part3/setup_fixture.py",
+          "recorded_sha256": "92c2f87b5b7c736805d4a013a170d4ef7a64fb0c5708ccdc3ce67e80220a3062",
+          "historical_commit_sha256": "92c2f87b5b7c736805d4a013a170d4ef7a64fb0c5708ccdc3ce67e80220a3062",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "src/mcp_servers/rentals.py",
+          "recorded_sha256": "b2f0634c5d523101dea0347ec2665839d2dfc6e4cc650ca00495404e1a20a7a1",
+          "historical_commit_sha256": "b2f0634c5d523101dea0347ec2665839d2dfc6e4cc650ca00495404e1a20a7a1",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "src/rental_tools/__init__.py",
+          "recorded_sha256": "820e66fc061d560f2553a5041dd69fdd761e33bf960579985643ed21fe20d877",
+          "historical_commit_sha256": "820e66fc061d560f2553a5041dd69fdd761e33bf960579985643ed21fe20d877",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "src/rental_tools/contracts.py",
+          "recorded_sha256": "9e2bd2345dc95aeba6c4285a9adea01a747cdad5894cb981ab7cb7fd746c9377",
+          "historical_commit_sha256": "9e2bd2345dc95aeba6c4285a9adea01a747cdad5894cb981ab7cb7fd746c9377",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "src/rental_tools/reader.py",
+          "recorded_sha256": "6aea8b933dc5c13e216bab21f5476a0016d1110fffd38c3fec2a536e69eeef66",
+          "historical_commit_sha256": "6aea8b933dc5c13e216bab21f5476a0016d1110fffd38c3fec2a536e69eeef66",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "src/rental_tools/registry.py",
+          "recorded_sha256": "a6a4cfc5648837c65ad0a884b790c7a003eb269a66d5890f0c3a35f982a38efa",
+          "historical_commit_sha256": "a6a4cfc5648837c65ad0a884b790c7a003eb269a66d5890f0c3a35f982a38efa",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "src/rental_tools/reliability.py",
+          "recorded_sha256": "3c0a81441da2e982a0c136f2a8c9b17c09086178966d9de8997b117a007dc611",
+          "historical_commit_sha256": "3c0a81441da2e982a0c136f2a8c9b17c09086178966d9de8997b117a007dc611",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "src/rental_tools/runtime.py",
+          "recorded_sha256": "703fb0629fbc63fdfea2edb1b611ee8d19eb8c79bb49f6048e2bb3ab75dd5e92",
+          "historical_commit_sha256": "703fb0629fbc63fdfea2edb1b611ee8d19eb8c79bb49f6048e2bb3ab75dd5e92",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "src/rental_tools/service.py",
+          "recorded_sha256": "5b4cb6695be78e93c149e732f1aef7bca38e1049be41b8effdd787211720b341",
+          "historical_commit_sha256": "5b4cb6695be78e93c149e732f1aef7bca38e1049be41b8effdd787211720b341",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        }
+      ]
+    },
+    {
+      "manifest": "reports/hw05/part3/EVIDENCE_MANIFEST.json",
+      "resolved_historical_revision": "ca4641778c34cf14c1ed07aea63be20374d5306f",
+      "resolution_note": "Revision explicitly recorded in this manifest.",
+      "count": 24,
+      "passed": true,
+      "files": [
+        {
+          "path": "scripts/hw05/part3/capture_live_stdio.py",
+          "recorded_sha256": "1790568595eeb068c62e6350c63c822da0c74f435e7897c01774bb8f161fc269",
+          "historical_commit_sha256": "1790568595eeb068c62e6350c63c822da0c74f435e7897c01774bb8f161fc269",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": true
+        },
+        {
+          "path": "scripts/hw05/part3/fixture.py",
+          "recorded_sha256": "fdcaf2f153e573579999eafc653d988649efc59e6f701f7fa8a4a525be4679b1",
+          "historical_commit_sha256": "fdcaf2f153e573579999eafc653d988649efc59e6f701f7fa8a4a525be4679b1",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "scripts/hw05/part3/probe_driver_timeout.py",
+          "recorded_sha256": "dc1eb1258e5073edf2352f9f04a607f59d63ea3e5d0a6558ff7345c0bcf36a2d",
+          "historical_commit_sha256": "dc1eb1258e5073edf2352f9f04a607f59d63ea3e5d0a6558ff7345c0bcf36a2d",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "scripts/hw05/part3/provenance.py",
+          "recorded_sha256": "ecbbfd35bf9b3e3a5b48781d01dade45a423d265e3a1cda247f99e8da8446c2d",
+          "historical_commit_sha256": "ecbbfd35bf9b3e3a5b48781d01dade45a423d265e3a1cda247f99e8da8446c2d",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "scripts/hw05/part3/recompute_metrics.py",
+          "recorded_sha256": "899850967670eb94e0ba636f9c5b6e523e2684c34d0f1f22d21de4444dc4b732",
+          "historical_commit_sha256": "899850967670eb94e0ba636f9c5b6e523e2684c34d0f1f22d21de4444dc4b732",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "scripts/hw05/part3/run_fault_experiment.py",
+          "recorded_sha256": "3b69d050993b77937830ec1a5ffe5a77458260a68b961a8afee462e1d0f193ff",
+          "historical_commit_sha256": "3b69d050993b77937830ec1a5ffe5a77458260a68b961a8afee462e1d0f193ff",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "scripts/hw05/part3/run_retry_demos.py",
+          "recorded_sha256": "71869d54037650340d84df8332ff36d7e23b55ede6130699040c9e4820dfb0bd",
+          "historical_commit_sha256": "71869d54037650340d84df8332ff36d7e23b55ede6130699040c9e4820dfb0bd",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "scripts/hw05/part3/setup_fixture.py",
+          "recorded_sha256": "92c2f87b5b7c736805d4a013a170d4ef7a64fb0c5708ccdc3ce67e80220a3062",
+          "historical_commit_sha256": "92c2f87b5b7c736805d4a013a170d4ef7a64fb0c5708ccdc3ce67e80220a3062",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "src/mcp_servers/rentals.py",
+          "recorded_sha256": "b2f0634c5d523101dea0347ec2665839d2dfc6e4cc650ca00495404e1a20a7a1",
+          "historical_commit_sha256": "b2f0634c5d523101dea0347ec2665839d2dfc6e4cc650ca00495404e1a20a7a1",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "src/rental_tools/__init__.py",
+          "recorded_sha256": "820e66fc061d560f2553a5041dd69fdd761e33bf960579985643ed21fe20d877",
+          "historical_commit_sha256": "820e66fc061d560f2553a5041dd69fdd761e33bf960579985643ed21fe20d877",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "src/rental_tools/contracts.py",
+          "recorded_sha256": "9e2bd2345dc95aeba6c4285a9adea01a747cdad5894cb981ab7cb7fd746c9377",
+          "historical_commit_sha256": "9e2bd2345dc95aeba6c4285a9adea01a747cdad5894cb981ab7cb7fd746c9377",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "src/rental_tools/reader.py",
+          "recorded_sha256": "6aea8b933dc5c13e216bab21f5476a0016d1110fffd38c3fec2a536e69eeef66",
+          "historical_commit_sha256": "6aea8b933dc5c13e216bab21f5476a0016d1110fffd38c3fec2a536e69eeef66",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "src/rental_tools/registry.py",
+          "recorded_sha256": "a6a4cfc5648837c65ad0a884b790c7a003eb269a66d5890f0c3a35f982a38efa",
+          "historical_commit_sha256": "a6a4cfc5648837c65ad0a884b790c7a003eb269a66d5890f0c3a35f982a38efa",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "src/rental_tools/reliability.py",
+          "recorded_sha256": "3c0a81441da2e982a0c136f2a8c9b17c09086178966d9de8997b117a007dc611",
+          "historical_commit_sha256": "3c0a81441da2e982a0c136f2a8c9b17c09086178966d9de8997b117a007dc611",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "src/rental_tools/runtime.py",
+          "recorded_sha256": "703fb0629fbc63fdfea2edb1b611ee8d19eb8c79bb49f6048e2bb3ab75dd5e92",
+          "historical_commit_sha256": "703fb0629fbc63fdfea2edb1b611ee8d19eb8c79bb49f6048e2bb3ab75dd5e92",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "src/rental_tools/service.py",
+          "recorded_sha256": "5b4cb6695be78e93c149e732f1aef7bca38e1049be41b8effdd787211720b341",
+          "historical_commit_sha256": "5b4cb6695be78e93c149e732f1aef7bca38e1049be41b8effdd787211720b341",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "tests/test_hw05_domain_tools.py",
+          "recorded_sha256": "acd5294d9ccd38173a381fb525cea799fa437d5a322f287f2033c4fe06e238f3",
+          "historical_commit_sha256": "acd5294d9ccd38173a381fb525cea799fa437d5a322f287f2033c4fe06e238f3",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "tests/test_hw05_fault_experiment.py",
+          "recorded_sha256": "42436a9521dcf8bb3f319ad8028aee141ecdf363e869e65ad70f4da9a29e6222",
+          "historical_commit_sha256": "42436a9521dcf8bb3f319ad8028aee141ecdf363e869e65ad70f4da9a29e6222",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "tests/test_hw05_fixture_setup.py",
+          "recorded_sha256": "70692dc5b868020226210ec57968574e9f790c641d0fad2a1ed91c3f6f35e4df",
+          "historical_commit_sha256": "70692dc5b868020226210ec57968574e9f790c641d0fad2a1ed91c3f6f35e4df",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "tests/test_hw05_mcp_stdio.py",
+          "recorded_sha256": "d3d8187fb94a2d2f85ebbc35d633bdd7f335af6f5aacb88492113e48ed8b9b53",
+          "historical_commit_sha256": "d3d8187fb94a2d2f85ebbc35d633bdd7f335af6f5aacb88492113e48ed8b9b53",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "tests/test_hw05_meals.py",
+          "recorded_sha256": "cca261203ed64facb0951125e88076e7f393d941e70739f9fd4b226b15e16548",
+          "historical_commit_sha256": "cca261203ed64facb0951125e88076e7f393d941e70739f9fd4b226b15e16548",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "tests/test_hw05_reliability.py",
+          "recorded_sha256": "56023f4c17eef1783ff6c65d3507bafe8fa1c9bffde9f3a86b4040b3e4727abf",
+          "historical_commit_sha256": "56023f4c17eef1783ff6c65d3507bafe8fa1c9bffde9f3a86b4040b3e4727abf",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "tests/test_hw05_runtime.py",
+          "recorded_sha256": "2ad7cd12b91ca6762f8160845a83eba79c4ffbc9e5725366bea86c86c46f7daf",
+          "historical_commit_sha256": "2ad7cd12b91ca6762f8160845a83eba79c4ffbc9e5725366bea86c86c46f7daf",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": true
+        },
+        {
+          "path": "tests/test_hw05_timeouts.py",
+          "recorded_sha256": "2a8faab2c5d3414a0a641dd2190569e81cfdc1a0d45778d85d0db0c7aa70d958",
+          "historical_commit_sha256": "2a8faab2c5d3414a0a641dd2190569e81cfdc1a0d45778d85d0db0c7aa70d958",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        }
+      ]
+    },
+    {
+      "manifest": "reports/hw05/raw/part3/review-fixes/capture-guard/manifest.json",
+      "resolved_historical_revision": "f21006d06d925c8062f58bf59811310da737aaaa",
+      "resolution_note": "Revision explicitly recorded in this manifest.",
+      "count": 2,
+      "passed": true,
+      "files": [
+        {
+          "path": "scripts/hw05/part3/capture_live_stdio.py",
+          "recorded_sha256": "fc322ff66b54d472a211de2ac78409de1f93c34c341caef37cd21b0a18540c96",
+          "historical_commit_sha256": "fc322ff66b54d472a211de2ac78409de1f93c34c341caef37cd21b0a18540c96",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "tests/test_hw05_runtime.py",
+          "recorded_sha256": "ab9cc52f29cda6eab2e52f576ac892b882e272d523855d3520a5bf45a95ea110",
+          "historical_commit_sha256": "ab9cc52f29cda6eab2e52f576ac892b882e272d523855d3520a5bf45a95ea110",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        }
+      ]
+    },
+    {
+      "manifest": "reports/hw05/raw/part3/review-fixes/capture-guard/live-stdio.json",
+      "resolved_historical_revision": "f21006d06d925c8062f58bf59811310da737aaaa",
+      "resolution_note": "Revision explicitly recorded in this manifest.",
+      "count": 9,
+      "passed": true,
+      "files": [
+        {
+          "path": "src/rental_tools/__init__.py",
+          "recorded_sha256": "820e66fc061d560f2553a5041dd69fdd761e33bf960579985643ed21fe20d877",
+          "historical_commit_sha256": "820e66fc061d560f2553a5041dd69fdd761e33bf960579985643ed21fe20d877",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "src/rental_tools/contracts.py",
+          "recorded_sha256": "9e2bd2345dc95aeba6c4285a9adea01a747cdad5894cb981ab7cb7fd746c9377",
+          "historical_commit_sha256": "9e2bd2345dc95aeba6c4285a9adea01a747cdad5894cb981ab7cb7fd746c9377",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "src/rental_tools/reader.py",
+          "recorded_sha256": "6aea8b933dc5c13e216bab21f5476a0016d1110fffd38c3fec2a536e69eeef66",
+          "historical_commit_sha256": "6aea8b933dc5c13e216bab21f5476a0016d1110fffd38c3fec2a536e69eeef66",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "src/rental_tools/registry.py",
+          "recorded_sha256": "a6a4cfc5648837c65ad0a884b790c7a003eb269a66d5890f0c3a35f982a38efa",
+          "historical_commit_sha256": "a6a4cfc5648837c65ad0a884b790c7a003eb269a66d5890f0c3a35f982a38efa",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "src/rental_tools/reliability.py",
+          "recorded_sha256": "3c0a81441da2e982a0c136f2a8c9b17c09086178966d9de8997b117a007dc611",
+          "historical_commit_sha256": "3c0a81441da2e982a0c136f2a8c9b17c09086178966d9de8997b117a007dc611",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "src/rental_tools/runtime.py",
+          "recorded_sha256": "703fb0629fbc63fdfea2edb1b611ee8d19eb8c79bb49f6048e2bb3ab75dd5e92",
+          "historical_commit_sha256": "703fb0629fbc63fdfea2edb1b611ee8d19eb8c79bb49f6048e2bb3ab75dd5e92",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "src/rental_tools/service.py",
+          "recorded_sha256": "5b4cb6695be78e93c149e732f1aef7bca38e1049be41b8effdd787211720b341",
+          "historical_commit_sha256": "5b4cb6695be78e93c149e732f1aef7bca38e1049be41b8effdd787211720b341",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "src/mcp_servers/rentals.py",
+          "recorded_sha256": "b2f0634c5d523101dea0347ec2665839d2dfc6e4cc650ca00495404e1a20a7a1",
+          "historical_commit_sha256": "b2f0634c5d523101dea0347ec2665839d2dfc6e4cc650ca00495404e1a20a7a1",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "scripts/hw05/part3/capture_live_stdio.py",
+          "recorded_sha256": "fc322ff66b54d472a211de2ac78409de1f93c34c341caef37cd21b0a18540c96",
+          "historical_commit_sha256": "fc322ff66b54d472a211de2ac78409de1f93c34c341caef37cd21b0a18540c96",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        }
+      ]
+    },
+    {
+      "manifest": "reports/hw05/raw/part4/verification.json",
+      "resolved_historical_revision": "c70bb92be1d0f2b0accfec51de462005e4aaf20a",
+      "resolution_note": "Revision explicitly recorded in this manifest.",
+      "count": 15,
+      "passed": true,
+      "files": [
+        {
+          "path": "src/rental_tools/executor.py",
+          "recorded_sha256": "bed459e41b5251d5623f6b0019f54c52124d93f29251c4a8d99523fd02b1e70b",
+          "historical_commit_sha256": "bed459e41b5251d5623f6b0019f54c52124d93f29251c4a8d99523fd02b1e70b",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "scripts/hw05/run_offline_tests.py",
+          "recorded_sha256": "ad0a7a944dc8206539db5273655693b06d5968229e90fe10e7c0aa0f365fe109",
+          "historical_commit_sha256": "ad0a7a944dc8206539db5273655693b06d5968229e90fe10e7c0aa0f365fe109",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "scripts/hw05/part4/fixture.py",
+          "recorded_sha256": "69749d8c74c6f8f133e4a1b13e3013568b1fe214ff4df5b62bcf0767fb01d0e0",
+          "historical_commit_sha256": "69749d8c74c6f8f133e4a1b13e3013568b1fe214ff4df5b62bcf0767fb01d0e0",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "tests/test_hw05_executor.py",
+          "recorded_sha256": "9a34921b1cbae901c8d61c9d021225b4712cd666d6bcf4f39668f0cab0ec90e0",
+          "historical_commit_sha256": "9a34921b1cbae901c8d61c9d021225b4712cd666d6bcf4f39668f0cab0ec90e0",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "tests/test_hw05_offline_runner.py",
+          "recorded_sha256": "381a2b5f54e7b7ff18d5e7c5e9a8a5982c21dd32ed009fad943b432a48802e21",
+          "historical_commit_sha256": "381a2b5f54e7b7ff18d5e7c5e9a8a5982c21dd32ed009fad943b432a48802e21",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "docs/HW5_PART4.md",
+          "recorded_sha256": "976022b9eeafbda49718450794803a231c8d1bb357acf434ef3df9bdfca97009",
+          "historical_commit_sha256": "976022b9eeafbda49718450794803a231c8d1bb357acf434ef3df9bdfca97009",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "src/rental_tools/contracts.py",
+          "recorded_sha256": "9e2bd2345dc95aeba6c4285a9adea01a747cdad5894cb981ab7cb7fd746c9377",
+          "historical_commit_sha256": "9e2bd2345dc95aeba6c4285a9adea01a747cdad5894cb981ab7cb7fd746c9377",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "src/rental_tools/reader.py",
+          "recorded_sha256": "b3aff457b5ca5e18a377221487431da920f3a0080385c2ded6a8f07cc57d078d",
+          "historical_commit_sha256": "b3aff457b5ca5e18a377221487431da920f3a0080385c2ded6a8f07cc57d078d",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": true
+        },
+        {
+          "path": "src/rental_tools/service.py",
+          "recorded_sha256": "5b4cb6695be78e93c149e732f1aef7bca38e1049be41b8effdd787211720b341",
+          "historical_commit_sha256": "5b4cb6695be78e93c149e732f1aef7bca38e1049be41b8effdd787211720b341",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "src/rental_tools/registry.py",
+          "recorded_sha256": "a6a4cfc5648837c65ad0a884b790c7a003eb269a66d5890f0c3a35f982a38efa",
+          "historical_commit_sha256": "a6a4cfc5648837c65ad0a884b790c7a003eb269a66d5890f0c3a35f982a38efa",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "src/mcp_servers/rentals.py",
+          "recorded_sha256": "5bac7ea36c5b406b60f276fb45e8f402f06146ae8b32c433d764741468083229",
+          "historical_commit_sha256": "5bac7ea36c5b406b60f276fb45e8f402f06146ae8b32c433d764741468083229",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": true
+        },
+        {
+          "path": "tests/test_hw05_domain_tools.py",
+          "recorded_sha256": "acd5294d9ccd38173a381fb525cea799fa437d5a322f287f2033c4fe06e238f3",
+          "historical_commit_sha256": "acd5294d9ccd38173a381fb525cea799fa437d5a322f287f2033c4fe06e238f3",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "requirements-mcp.txt",
+          "recorded_sha256": "30fa369c88f67546629fe097d8e466fa9bc8719c7c81acf9a77ce8f2202f25b6",
+          "historical_commit_sha256": "30fa369c88f67546629fe097d8e466fa9bc8719c7c81acf9a77ce8f2202f25b6",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "reports/hw05/raw/part2/rejected-cases.json",
+          "recorded_sha256": "8ecbe595872ba1c57d34b31e169cb9daa3aba43da02c7b32771ee4f903de0f09",
+          "historical_commit_sha256": "8ecbe595872ba1c57d34b31e169cb9daa3aba43da02c7b32771ee4f903de0f09",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        },
+        {
+          "path": "reports/hw05/raw/part2/review-fixes/rentals-inspector-tools-list.json",
+          "recorded_sha256": "7f054661ba14f7877a5d98bdc760528215ce4e8b665a1cd3c495a2f3b59943c5",
+          "historical_commit_sha256": "7f054661ba14f7877a5d98bdc760528215ce4e8b665a1cd3c495a2f3b59943c5",
+          "passed": true,
+          "current_source_differs_from_historical_snapshot": false
+        }
+      ]
+    }
+  ],
+  "historical_source_hash_checks": 126,
+  "recorded_artifact_manifests": [
+    {
+      "manifest": "reports/hw05/raw/part1/review-fixes/redux-captures.json",
+      "count": 4,
+      "passed": true,
+      "files": [
+        {
+          "path": "reports/hw05/screenshots/part1/review-fixes/redux-home.png",
+          "recorded_sha256": "5922f09316f58ea598fca42c934603889f0b4387cd53c20d4906fc922f31121a",
+          "actual_sha256": "5922f09316f58ea598fca42c934603889f0b4387cd53c20d4906fc922f31121a",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/screenshots/part1/review-fixes/redux-create.png",
+          "recorded_sha256": "8c87b7041b0f257004e3ac504de3357386999fd086c792488b95499ce5420439",
+          "actual_sha256": "8c87b7041b0f257004e3ac504de3357386999fd086c792488b95499ce5420439",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/screenshots/part1/review-fixes/redux-update.png",
+          "recorded_sha256": "8e12b26b238e649f411663a2a8f419c76a0654f1937103c47e92decfadf67055",
+          "actual_sha256": "8e12b26b238e649f411663a2a8f419c76a0654f1937103c47e92decfadf67055",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/screenshots/part1/review-fixes/redux-delete.png",
+          "recorded_sha256": "b6d1a3a8c8038b6c84482fb487b83a963b31c548d9522ae223fde4a04131f6cf",
+          "actual_sha256": "b6d1a3a8c8038b6c84482fb487b83a963b31c548d9522ae223fde4a04131f6cf",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "manifest": "reports/hw05/raw/part2/capture-manifest.json",
+      "count": 20,
+      "passed": true,
+      "files": [
+        {
+          "path": "reports/hw05/screenshots/part2/2A-01-search-meals.jpg",
+          "recorded_sha256": "2b2d5a25b746601e4cfe1b58e54b527504caf7b85fcda096bc9126e18d3fb720",
+          "actual_sha256": "2b2d5a25b746601e4cfe1b58e54b527504caf7b85fcda096bc9126e18d3fb720",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part2/inspector/2A-01-search-meals.json",
+          "recorded_sha256": "8973ac60a7f807bde75767664f1527f5708c08714287464bced0286bec9f59fb",
+          "actual_sha256": "8973ac60a7f807bde75767664f1527f5708c08714287464bced0286bec9f59fb",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/screenshots/part2/2A-02-ingredient.jpg",
+          "recorded_sha256": "7ce7b0afb67ae744ed8d11e9da89d51ca277d11196c5f8ff6975707c433b22ee",
+          "actual_sha256": "7ce7b0afb67ae744ed8d11e9da89d51ca277d11196c5f8ff6975707c433b22ee",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part2/inspector/2A-02-ingredient.json",
+          "recorded_sha256": "33228ab631383eac92faf1404d04cda245c5b9a6f8f83cdd549bf7e6e2024c68",
+          "actual_sha256": "33228ab631383eac92faf1404d04cda245c5b9a6f8f83cdd549bf7e6e2024c68",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/screenshots/part2/2A-03-random-meal.jpg",
+          "recorded_sha256": "4b73a61d1809288f99668ce8a87e01ff2a88d561cac2819ed9610e880d2a0558",
+          "actual_sha256": "4b73a61d1809288f99668ce8a87e01ff2a88d561cac2819ed9610e880d2a0558",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part2/inspector/2A-03-random-meal.json",
+          "recorded_sha256": "5c5e38ee654475c992e1523d79ddef78c6a07d5cab602fce2471628206175bfb",
+          "actual_sha256": "5c5e38ee654475c992e1523d79ddef78c6a07d5cab602fce2471628206175bfb",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/screenshots/part2/2A-04-meal-details.jpg",
+          "recorded_sha256": "871bc59bec9adab4841ae4845685d17741cc2ab57e10c61a80edadcf8d762adc",
+          "actual_sha256": "871bc59bec9adab4841ae4845685d17741cc2ab57e10c61a80edadcf8d762adc",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part2/inspector/2A-04-meal-details.json",
+          "recorded_sha256": "cf3ab4caba85f685fec9a450da518c3cc2f59fc026a5c7c3757ab016e7079817",
+          "actual_sha256": "cf3ab4caba85f685fec9a450da518c3cc2f59fc026a5c7c3757ab016e7079817",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/screenshots/part2/2B-01-search-success-mysql3308.jpg",
+          "recorded_sha256": "ee77455784e426ef1048728d603eaf170f6d2131b76c65bfcd925288caa96d70",
+          "actual_sha256": "ee77455784e426ef1048728d603eaf170f6d2131b76c65bfcd925288caa96d70",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part2/inspector/2B-01-search-success.json",
+          "recorded_sha256": "e4bdaec4fe20960b69c8fe0b9a4ba293a449159345208a813ebe6051e09631ea",
+          "actual_sha256": "e4bdaec4fe20960b69c8fe0b9a4ba293a449159345208a813ebe6051e09631ea",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/screenshots/part2/2B-02-search-rejected-mysql3308.jpg",
+          "recorded_sha256": "3ba9080393244124b1be2d9d09fcba455f156a418fb742631754cddd36d84a96",
+          "actual_sha256": "3ba9080393244124b1be2d9d09fcba455f156a418fb742631754cddd36d84a96",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part2/inspector/2B-02-search-rejected.json",
+          "recorded_sha256": "66eaf49b9b622714f32c8c1760891bb028ef37ac8fe202c742793c3cab7f877f",
+          "actual_sha256": "66eaf49b9b622714f32c8c1760891bb028ef37ac8fe202c742793c3cab7f877f",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/screenshots/part2/2B-03-detail-success-mysql3308.jpg",
+          "recorded_sha256": "c8db5cc38947d5b26ebc180970171cee6305c4b52e2b095d0bf76e8388a17a71",
+          "actual_sha256": "c8db5cc38947d5b26ebc180970171cee6305c4b52e2b095d0bf76e8388a17a71",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part2/inspector/2B-03-detail-success.json",
+          "recorded_sha256": "bf428c05e537d0d2fbf939b1f4aaa45ee6eb9fa325e375b38f304ddbc8c68629",
+          "actual_sha256": "bf428c05e537d0d2fbf939b1f4aaa45ee6eb9fa325e375b38f304ddbc8c68629",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/screenshots/part2/2B-04-detail-rejected-mysql3308.jpg",
+          "recorded_sha256": "01a31c54f9fc06e473d5d19b7728a9275ef0f122ff3bbd3c69f18f00d84c26af",
+          "actual_sha256": "01a31c54f9fc06e473d5d19b7728a9275ef0f122ff3bbd3c69f18f00d84c26af",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part2/inspector/2B-04-detail-rejected.json",
+          "recorded_sha256": "1e2ab23fa48f7fa10cd6bcfcb7b4ab7deb45ee36c0578c4da9d14e66f0312d67",
+          "actual_sha256": "1e2ab23fa48f7fa10cd6bcfcb7b4ab7deb45ee36c0578c4da9d14e66f0312d67",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/screenshots/part2/2B-05-count-success-mysql3308.jpg",
+          "recorded_sha256": "18421bec0a50cd57d5a40f02acf7cbe3e1ef813a24c0937a8b00290a58dd1a62",
+          "actual_sha256": "18421bec0a50cd57d5a40f02acf7cbe3e1ef813a24c0937a8b00290a58dd1a62",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part2/inspector/2B-05-count-success.json",
+          "recorded_sha256": "a895b6be380a8fa742d1d0cf22e43ca10a20f2d083f122d31730daee172f2608",
+          "actual_sha256": "a895b6be380a8fa742d1d0cf22e43ca10a20f2d083f122d31730daee172f2608",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/screenshots/part2/2B-06-count-rejected-mysql3308.jpg",
+          "recorded_sha256": "45196abaac530d9da158a7731abf971bab0e7568f7c6e03324d53f4752479c6e",
+          "actual_sha256": "45196abaac530d9da158a7731abf971bab0e7568f7c6e03324d53f4752479c6e",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part2/inspector/2B-06-count-rejected.json",
+          "recorded_sha256": "76256b32a2dd123f5d3e58d5396b0984ee9a85441de0057cb30552ca10a62f13",
+          "actual_sha256": "76256b32a2dd123f5d3e58d5396b0984ee9a85441de0057cb30552ca10a62f13",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "manifest": "reports/hw05/raw/part2/review-fixes/evidence-integrity.json",
+      "count": 6,
+      "passed": true,
+      "files": [
+        {
+          "path": "reports/hw05/raw/part2/review-fixes/domain-stdio-command.txt",
+          "recorded_sha256": "6f7adc61896ffa191d914123731b0ee6261a696a06fb4cddb42c20cfbfc7faa5",
+          "actual_sha256": "6f7adc61896ffa191d914123731b0ee6261a696a06fb4cddb42c20cfbfc7faa5",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part2/review-fixes/domain-stdio.json",
+          "recorded_sha256": "10859012622396a734f1ae5a6e945a21f53a890311e0e974edfb49cea1b351ac",
+          "actual_sha256": "10859012622396a734f1ae5a6e945a21f53a890311e0e974edfb49cea1b351ac",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part2/review-fixes/pip-check.txt",
+          "recorded_sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09",
+          "actual_sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part2/review-fixes/pytest.txt",
+          "recorded_sha256": "c4a4940f74ea523ab8258b841261d3bf368dfa6985ead9597d39acd5dd5b351f",
+          "actual_sha256": "c4a4940f74ea523ab8258b841261d3bf368dfa6985ead9597d39acd5dd5b351f",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part2/review-fixes/rentals-inspector-tools-list.json",
+          "recorded_sha256": "7f054661ba14f7877a5d98bdc760528215ce4e8b665a1cd3c495a2f3b59943c5",
+          "actual_sha256": "7f054661ba14f7877a5d98bdc760528215ce4e8b665a1cd3c495a2f3b59943c5",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part2/review-fixes/verified-source-sha256.json",
+          "recorded_sha256": "a52cdde89ec480fc8340c0d648fc9949928623386861e3f2e116ba5a0b891e05",
+          "actual_sha256": "a52cdde89ec480fc8340c0d648fc9949928623386861e3f2e116ba5a0b891e05",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "manifest": "reports/hw05/raw/part3/selected/manifest.json",
+      "count": 2,
+      "passed": true,
+      "files": [
+        {
+          "path": "reports/hw05/raw/part3/selected/metrics.json",
+          "recorded_sha256": "b2a8e5c0d700452613e12f0c26128a18021649ae366168c0ddc89ed58412b69a",
+          "actual_sha256": "b2a8e5c0d700452613e12f0c26128a18021649ae366168c0ddc89ed58412b69a",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part3/selected/rows.jsonl",
+          "recorded_sha256": "400868b67d4916a3e87acfbfaa9e20e98f11578dc917c0a05a3e9610aafefb73",
+          "actual_sha256": "400868b67d4916a3e87acfbfaa9e20e98f11578dc917c0a05a3e9610aafefb73",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "manifest": "reports/hw05/part3/EVIDENCE_MANIFEST.json",
+      "count": 19,
+      "passed": true,
+      "files": [
+        {
+          "path": "reports/hw05/part3/RESULTS.md",
+          "recorded_sha256": "8b59ab1a1c03150a5df79aac0d797a964c88338de6cf911dbbefcc04d647e9f2",
+          "actual_sha256": "8b59ab1a1c03150a5df79aac0d797a964c88338de6cf911dbbefcc04d647e9f2",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/part3/RUN_LOG.txt",
+          "recorded_sha256": "36978e2f0565912c47cdbcb15851d009bba7dac26edddbba2b0ae679bbfd0bf9",
+          "actual_sha256": "36978e2f0565912c47cdbcb15851d009bba7dac26edddbba2b0ae679bbfd0bf9",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/part3/installed-versions.txt",
+          "recorded_sha256": "992545c9dbf7b81777243f1883957ba8ae1004a4eba74167c7351b05a607c515",
+          "actual_sha256": "992545c9dbf7b81777243f1883957ba8ae1004a4eba74167c7351b05a607c515",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/part3/tests.txt",
+          "recorded_sha256": "cd8f54e11e51ddc78d2fa1e6fa2c8fecb6e69abdeb48e9ad5d79dba35ecee40d",
+          "actual_sha256": "cd8f54e11e51ddc78d2fa1e6fa2c8fecb6e69abdeb48e9ad5d79dba35ecee40d",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part3/commands.json",
+          "recorded_sha256": "a7bf39c665b2ea1878a7695cfd41bcb159a530ef2bf5f3642622e7cea5e5ea76",
+          "actual_sha256": "a7bf39c665b2ea1878a7695cfd41bcb159a530ef2bf5f3642622e7cea5e5ea76",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part3/demos/demonstrations.json",
+          "recorded_sha256": "7c6a28b3768bd200cacc2e316121242f1852b02c1a55d02d4d37eb2f848fb68c",
+          "actual_sha256": "7c6a28b3768bd200cacc2e316121242f1852b02c1a55d02d4d37eb2f848fb68c",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part3/demos/manifest.json",
+          "recorded_sha256": "8c7b91400b5a0b38f79d0aeaf9512e00d3b7ecedf5ac43e6ff007f8754687cda",
+          "actual_sha256": "8c7b91400b5a0b38f79d0aeaf9512e00d3b7ecedf5ac43e6ff007f8754687cda",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part3/driver-timeout.json",
+          "recorded_sha256": "b5938c1a6fbacfdbec5a0db56e7cdfae5b1e9c2d922beaa6253578ab7fdeac62",
+          "actual_sha256": "b5938c1a6fbacfdbec5a0db56e7cdfae5b1e9c2d922beaa6253578ab7fdeac62",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part3/independent-recomputation.json",
+          "recorded_sha256": "2300b73dbb2337446751358ea0fa3038fb9b3413983afe696c1bdd74fa824c2f",
+          "actual_sha256": "2300b73dbb2337446751358ea0fa3038fb9b3413983afe696c1bdd74fa824c2f",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part3/live-stdio.json",
+          "recorded_sha256": "9c7d22a4b5f2412460935a9fc9496c809d578696d52bfb7967b99d7d14528503",
+          "actual_sha256": "9c7d22a4b5f2412460935a9fc9496c809d578696d52bfb7967b99d7d14528503",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part3/mysql-fixture.json",
+          "recorded_sha256": "619e38671f712f6c95dccda1e2f27a02d21ab8174652972d370a65df76e6802d",
+          "actual_sha256": "619e38671f712f6c95dccda1e2f27a02d21ab8174652972d370a65df76e6802d",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part3/replay/manifest.json",
+          "recorded_sha256": "309e8fa066bf479344327adcbbc90e08c224564ee8188ce928bb5a49e936c624",
+          "actual_sha256": "309e8fa066bf479344327adcbbc90e08c224564ee8188ce928bb5a49e936c624",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part3/replay/metrics.json",
+          "recorded_sha256": "bd9d2a430337ebcaa1707a43c506209ab6d8760eddf96b9b4c638cda7e5ee97c",
+          "actual_sha256": "bd9d2a430337ebcaa1707a43c506209ab6d8760eddf96b9b4c638cda7e5ee97c",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part3/replay/replay-comparison.json",
+          "recorded_sha256": "e1aea559d325b53fdb658d6884f39746a3d49998c0cf859ed7af31ffdf236af6",
+          "actual_sha256": "e1aea559d325b53fdb658d6884f39746a3d49998c0cf859ed7af31ffdf236af6",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part3/replay/rows.jsonl",
+          "recorded_sha256": "05565f62fed46083c0f7bb6de1d0e097b0099b690c7039477dc523776aae31e7",
+          "actual_sha256": "05565f62fed46083c0f7bb6de1d0e097b0099b690c7039477dc523776aae31e7",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part3/runtime-cleanup.json",
+          "recorded_sha256": "d3c00cd9f3b5bf1651020a252866b6487dadaa76b1e42d79bbce932adc095547",
+          "actual_sha256": "d3c00cd9f3b5bf1651020a252866b6487dadaa76b1e42d79bbce932adc095547",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part3/selected/manifest.json",
+          "recorded_sha256": "58ed9ebfb492b9dc6b95e6495ba1cd36abecea2fc34d372b749a0c967d1b9277",
+          "actual_sha256": "58ed9ebfb492b9dc6b95e6495ba1cd36abecea2fc34d372b749a0c967d1b9277",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part3/selected/metrics.json",
+          "recorded_sha256": "b2a8e5c0d700452613e12f0c26128a18021649ae366168c0ddc89ed58412b69a",
+          "actual_sha256": "b2a8e5c0d700452613e12f0c26128a18021649ae366168c0ddc89ed58412b69a",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part3/selected/rows.jsonl",
+          "recorded_sha256": "400868b67d4916a3e87acfbfaa9e20e98f11578dc917c0a05a3e9610aafefb73",
+          "actual_sha256": "400868b67d4916a3e87acfbfaa9e20e98f11578dc917c0a05a3e9610aafefb73",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "manifest": "reports/hw05/raw/part3/review-fixes/capture-guard/manifest.json#preserved_historical_evidence_sha256",
+      "count": 20,
+      "passed": true,
+      "files": [
+        {
+          "path": "reports/hw05/part3/EVIDENCE_MANIFEST.json",
+          "recorded_sha256": "f75eec95ae6e0ae2ed10f97b397c801a3278c0dc579a0d47dd7b5e1d1ff24e49",
+          "actual_sha256": "f75eec95ae6e0ae2ed10f97b397c801a3278c0dc579a0d47dd7b5e1d1ff24e49",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/part3/RESULTS.md",
+          "recorded_sha256": "8b59ab1a1c03150a5df79aac0d797a964c88338de6cf911dbbefcc04d647e9f2",
+          "actual_sha256": "8b59ab1a1c03150a5df79aac0d797a964c88338de6cf911dbbefcc04d647e9f2",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/part3/RUN_LOG.txt",
+          "recorded_sha256": "36978e2f0565912c47cdbcb15851d009bba7dac26edddbba2b0ae679bbfd0bf9",
+          "actual_sha256": "36978e2f0565912c47cdbcb15851d009bba7dac26edddbba2b0ae679bbfd0bf9",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/part3/installed-versions.txt",
+          "recorded_sha256": "992545c9dbf7b81777243f1883957ba8ae1004a4eba74167c7351b05a607c515",
+          "actual_sha256": "992545c9dbf7b81777243f1883957ba8ae1004a4eba74167c7351b05a607c515",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/part3/tests.txt",
+          "recorded_sha256": "cd8f54e11e51ddc78d2fa1e6fa2c8fecb6e69abdeb48e9ad5d79dba35ecee40d",
+          "actual_sha256": "cd8f54e11e51ddc78d2fa1e6fa2c8fecb6e69abdeb48e9ad5d79dba35ecee40d",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part3/commands.json",
+          "recorded_sha256": "a7bf39c665b2ea1878a7695cfd41bcb159a530ef2bf5f3642622e7cea5e5ea76",
+          "actual_sha256": "a7bf39c665b2ea1878a7695cfd41bcb159a530ef2bf5f3642622e7cea5e5ea76",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part3/demos/demonstrations.json",
+          "recorded_sha256": "7c6a28b3768bd200cacc2e316121242f1852b02c1a55d02d4d37eb2f848fb68c",
+          "actual_sha256": "7c6a28b3768bd200cacc2e316121242f1852b02c1a55d02d4d37eb2f848fb68c",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part3/demos/manifest.json",
+          "recorded_sha256": "8c7b91400b5a0b38f79d0aeaf9512e00d3b7ecedf5ac43e6ff007f8754687cda",
+          "actual_sha256": "8c7b91400b5a0b38f79d0aeaf9512e00d3b7ecedf5ac43e6ff007f8754687cda",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part3/driver-timeout.json",
+          "recorded_sha256": "b5938c1a6fbacfdbec5a0db56e7cdfae5b1e9c2d922beaa6253578ab7fdeac62",
+          "actual_sha256": "b5938c1a6fbacfdbec5a0db56e7cdfae5b1e9c2d922beaa6253578ab7fdeac62",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part3/independent-recomputation.json",
+          "recorded_sha256": "2300b73dbb2337446751358ea0fa3038fb9b3413983afe696c1bdd74fa824c2f",
+          "actual_sha256": "2300b73dbb2337446751358ea0fa3038fb9b3413983afe696c1bdd74fa824c2f",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part3/live-stdio.json",
+          "recorded_sha256": "9c7d22a4b5f2412460935a9fc9496c809d578696d52bfb7967b99d7d14528503",
+          "actual_sha256": "9c7d22a4b5f2412460935a9fc9496c809d578696d52bfb7967b99d7d14528503",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part3/mysql-fixture.json",
+          "recorded_sha256": "619e38671f712f6c95dccda1e2f27a02d21ab8174652972d370a65df76e6802d",
+          "actual_sha256": "619e38671f712f6c95dccda1e2f27a02d21ab8174652972d370a65df76e6802d",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part3/replay/manifest.json",
+          "recorded_sha256": "309e8fa066bf479344327adcbbc90e08c224564ee8188ce928bb5a49e936c624",
+          "actual_sha256": "309e8fa066bf479344327adcbbc90e08c224564ee8188ce928bb5a49e936c624",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part3/replay/metrics.json",
+          "recorded_sha256": "bd9d2a430337ebcaa1707a43c506209ab6d8760eddf96b9b4c638cda7e5ee97c",
+          "actual_sha256": "bd9d2a430337ebcaa1707a43c506209ab6d8760eddf96b9b4c638cda7e5ee97c",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part3/replay/replay-comparison.json",
+          "recorded_sha256": "e1aea559d325b53fdb658d6884f39746a3d49998c0cf859ed7af31ffdf236af6",
+          "actual_sha256": "e1aea559d325b53fdb658d6884f39746a3d49998c0cf859ed7af31ffdf236af6",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part3/replay/rows.jsonl",
+          "recorded_sha256": "05565f62fed46083c0f7bb6de1d0e097b0099b690c7039477dc523776aae31e7",
+          "actual_sha256": "05565f62fed46083c0f7bb6de1d0e097b0099b690c7039477dc523776aae31e7",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part3/runtime-cleanup.json",
+          "recorded_sha256": "d3c00cd9f3b5bf1651020a252866b6487dadaa76b1e42d79bbce932adc095547",
+          "actual_sha256": "d3c00cd9f3b5bf1651020a252866b6487dadaa76b1e42d79bbce932adc095547",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part3/selected/manifest.json",
+          "recorded_sha256": "58ed9ebfb492b9dc6b95e6495ba1cd36abecea2fc34d372b749a0c967d1b9277",
+          "actual_sha256": "58ed9ebfb492b9dc6b95e6495ba1cd36abecea2fc34d372b749a0c967d1b9277",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part3/selected/metrics.json",
+          "recorded_sha256": "b2a8e5c0d700452613e12f0c26128a18021649ae366168c0ddc89ed58412b69a",
+          "actual_sha256": "b2a8e5c0d700452613e12f0c26128a18021649ae366168c0ddc89ed58412b69a",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part3/selected/rows.jsonl",
+          "recorded_sha256": "400868b67d4916a3e87acfbfaa9e20e98f11578dc917c0a05a3e9610aafefb73",
+          "actual_sha256": "400868b67d4916a3e87acfbfaa9e20e98f11578dc917c0a05a3e9610aafefb73",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "manifest": "reports/hw05/raw/part3/review-fixes/capture-guard/manifest.json#artifact_sha256",
+      "count": 6,
+      "passed": true,
+      "files": [
+        {
+          "path": "reports/hw05/raw/part3/review-fixes/capture-guard/cleanup.json",
+          "recorded_sha256": "5c7ccf6e4cf964838b56b367df53981000581e9d9cdcdd9dd63beda50b2054a7",
+          "actual_sha256": "5c7ccf6e4cf964838b56b367df53981000581e9d9cdcdd9dd63beda50b2054a7",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part3/review-fixes/capture-guard/live-stdio.json",
+          "recorded_sha256": "69c2018c1c59a6174a9cf12a43b6ea63959bc38794729b8cc0f13fb7e4ffd5d5",
+          "actual_sha256": "69c2018c1c59a6174a9cf12a43b6ea63959bc38794729b8cc0f13fb7e4ffd5d5",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part3/review-fixes/capture-guard/optimization-rejections.json",
+          "recorded_sha256": "28c613fef1b84438f694eb2281a3335b84b02135db0bf3e1324cc273707709ac",
+          "actual_sha256": "28c613fef1b84438f694eb2281a3335b84b02135db0bf3e1324cc273707709ac",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/part3/review-fixes/CAPTURE_GUARD.md",
+          "recorded_sha256": "366101b63c93c442e9ddb69cf34a15edf0e476dc4687301f2fb553a31c3a8a4c",
+          "actual_sha256": "366101b63c93c442e9ddb69cf34a15edf0e476dc4687301f2fb553a31c3a8a4c",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/part3/review-fixes/capture-guard-live.txt",
+          "recorded_sha256": "ec1769c1f231d74c4a0939f5cd0f7813851e2d8aaa4568d3d6029692820c4465",
+          "actual_sha256": "ec1769c1f231d74c4a0939f5cd0f7813851e2d8aaa4568d3d6029692820c4465",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/part3/review-fixes/capture-guard-tests.txt",
+          "recorded_sha256": "6bc585d92e078d2d6a7ffd31774f069e39fce1cc5f11d5ed12994268c4b69d1c",
+          "actual_sha256": "6bc585d92e078d2d6a7ffd31774f069e39fce1cc5f11d5ed12994268c4b69d1c",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "manifest": "reports/hw05/raw/part4/verification.json",
+      "count": 10,
+      "passed": true,
+      "files": [
+        {
+          "path": "reports/hw05/raw/part4/canonical-cases.json",
+          "recorded_sha256": "3c3cc94266e96c16f03fbdf023027d4905a4d11a5b4bf2f03c7e2fd1166899bf",
+          "actual_sha256": "3c3cc94266e96c16f03fbdf023027d4905a4d11a5b4bf2f03c7e2fd1166899bf",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part4/default-runtime-unavailable.txt",
+          "recorded_sha256": "96ee1dc405dcbbe85732dbd608f1b057d728a04f5a437448d482e0807c755fd6",
+          "actual_sha256": "96ee1dc405dcbbe85732dbd608f1b057d728a04f5a437448d482e0807c755fd6",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part4/intentional-failure.txt",
+          "recorded_sha256": "89879e50f6a0e5ce8ebe4d6f5392ee548c0501bf3b68fc7d83fcd7261128fc5e",
+          "actual_sha256": "89879e50f6a0e5ce8ebe4d6f5392ee548c0501bf3b68fc7d83fcd7261128fc5e",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part4/offline-run-1.txt",
+          "recorded_sha256": "94a739abdf5cba47a64447360d79a5fd0dc89e4271971abb2774ab3e79c82449",
+          "actual_sha256": "94a739abdf5cba47a64447360d79a5fd0dc89e4271971abb2774ab3e79c82449",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part4/offline-run-2.txt",
+          "recorded_sha256": "94a739abdf5cba47a64447360d79a5fd0dc89e4271971abb2774ab3e79c82449",
+          "actual_sha256": "94a739abdf5cba47a64447360d79a5fd0dc89e4271971abb2774ab3e79c82449",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part4/optimized-rejected.txt",
+          "recorded_sha256": "a1d61dfe4256acb34562ef89816d2683091d80c7250f96a46cd52d08470fa77a",
+          "actual_sha256": "a1d61dfe4256acb34562ef89816d2683091d80c7250f96a46cd52d08470fa77a",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part4/pip-check.txt",
+          "recorded_sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09",
+          "actual_sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part4/pytest-domain.txt",
+          "recorded_sha256": "41e66876c066b949004fd0f6137e16c3d2b43c78e07f8440e1ef66fab887c7a9",
+          "actual_sha256": "41e66876c066b949004fd0f6137e16c3d2b43c78e07f8440e1ef66fab887c7a9",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part4/pytest-focused.txt",
+          "recorded_sha256": "e13e1d974c656fe92f4791d2a2b7de8c6a8bb38ef4d3a764e9bd473d2caf0aab",
+          "actual_sha256": "e13e1d974c656fe92f4791d2a2b7de8c6a8bb38ef4d3a764e9bd473d2caf0aab",
+          "passed": true
+        },
+        {
+          "path": "reports/hw05/raw/part4/requirements-resolved.txt",
+          "recorded_sha256": "992545c9dbf7b81777243f1883957ba8ae1004a4eba74167c7351b05a607c515",
+          "actual_sha256": "992545c9dbf7b81777243f1883957ba8ae1004a4eba74167c7351b05a607c515",
+          "passed": true
+        }
+      ]
+    }
+  ],
+  "recorded_artifact_hash_checks": 87,
+  "distinct_historical_hw5_sha256": {
+    "reports/hw05/part1/AI_USE.md": "29ea0a16abeaa3cf53bad5221a91e587f4372f3ee1d1e9dd0bd453b37e575d5e",
+    "reports/hw05/part1/EVIDENCE.md": "0721a275d949b26e7d75d3844b5a994799d85c82b4e628d8ddafa460b689880f",
+    "reports/hw05/part1/RUN_LOG.txt": "8c6496352d088beda3e292e6798599c90e8c8e2c34a71cd9fb9e02852f70c75f",
+    "reports/hw05/part2/AI_USE.md": "34868a3f7a0a6cc5a814bd3974cd5c1cf1cdada3d26ecc8facad4531c3166f53",
+    "reports/hw05/part2/EVIDENCE.md": "0592e3bd3b9abaf3dc8628b314d5ee9ee63571911943a562d91a9212597293b9",
+    "reports/hw05/part2/RUN_LOG.txt": "65f2d2484d1fdf2b7c733c43a477e25811dda831506e66679463dead6d83afb6",
+    "reports/hw05/part3/EVIDENCE_MANIFEST.json": "f75eec95ae6e0ae2ed10f97b397c801a3278c0dc579a0d47dd7b5e1d1ff24e49",
+    "reports/hw05/part3/RESULTS.md": "8b59ab1a1c03150a5df79aac0d797a964c88338de6cf911dbbefcc04d647e9f2",
+    "reports/hw05/part3/RUN_LOG.txt": "36978e2f0565912c47cdbcb15851d009bba7dac26edddbba2b0ae679bbfd0bf9",
+    "reports/hw05/part3/installed-versions.txt": "992545c9dbf7b81777243f1883957ba8ae1004a4eba74167c7351b05a607c515",
+    "reports/hw05/part3/review-fixes/CAPTURE_GUARD.md": "366101b63c93c442e9ddb69cf34a15edf0e476dc4687301f2fb553a31c3a8a4c",
+    "reports/hw05/part3/review-fixes/capture-guard-live.txt": "ec1769c1f231d74c4a0939f5cd0f7813851e2d8aaa4568d3d6029692820c4465",
+    "reports/hw05/part3/review-fixes/capture-guard-tests.txt": "6bc585d92e078d2d6a7ffd31774f069e39fce1cc5f11d5ed12994268c4b69d1c",
+    "reports/hw05/part3/tests.txt": "cd8f54e11e51ddc78d2fa1e6fa2c8fecb6e69abdeb48e9ad5d79dba35ecee40d",
+    "reports/hw05/part4/EVIDENCE.md": "d4a7d2ab223f531b871351a3afcd277937fccb4c0cc4f6005515c53865c6937b",
+    "reports/hw05/raw/part1/backend-tests.xml": "b41b951373659c8ab65ddd5cfb0c46b60cedaab28671d42f51249a539664ddbf",
+    "reports/hw05/raw/part1/browser-mock.json": "d0e479a553da3407d37d6605aae529c22a5ee1c177cccf6589fa9bfe7b7e3b2e",
+    "reports/hw05/raw/part1/browser-real.json": "d7e4a6fc54d25698031e887b9221142dd57c61b0aff8483b8baa89f7b481d04e",
+    "reports/hw05/raw/part1/database.json": "84f452a3eb5e1d3fdf39a9cd856d9ee9d7552f7a95d3e19d498bb4f347896b73",
+    "reports/hw05/raw/part1/database_checks.sql": "7fe1c0c5c15c259b5bc19c64ba441ed5242a2811124f6e2aa8b0931bbdad3d88",
+    "reports/hw05/raw/part1/live-api.json": "2673547def519a38b6fd68ea2213086ccd8db855470ba05d984de928fa9b1407",
+    "reports/hw05/raw/part1/migration-tests.xml": "efc66ff9cd5b6d8bddd3ca784788922fc836a7c0129f5f99c31e8f7f17a12d6c",
+    "reports/hw05/raw/part1/postman_collection.json": "3069f86fafe5a8fb20766b6b84e88227ea315b39fbf2df5da17a94a1c58c1b63",
+    "reports/hw05/raw/part1/preservation.json": "3c6b9daf5fb2a7848634fee02878187f158ad1aa7e5b68a251dc9eda76c7f80f",
+    "reports/hw05/raw/part1/provenance.json": "cb251d322ab78331e9ea276ded7368ced9698178c817d3fa1b2ee498efc35e9d",
+    "reports/hw05/raw/part1/redux-captures.json": "90b091d1a877c7f84504fc148b4a05d7de01f27e0798b1056b35f94c5e55cb85",
+    "reports/hw05/raw/part1/restart.json": "fe75120f2f712f3e8019f6b9afc7ed26b91f7bd2a4b2a36bfbb042eadae83c05",
+    "reports/hw05/raw/part1/review-fixes/browser-mock.json": "ca3bd5c1bdb80cb1436a15bf9ca57dc39dda04c0ae00d93fad6eb2e24ea2f197",
+    "reports/hw05/raw/part1/review-fixes/browser-real.json": "b5d36c52f7f5a9fdae067e01891d7e7f03434fd2912d91aa907b6e40d1a510bc",
+    "reports/hw05/raw/part1/review-fixes/live-api.json": "4b112deab6645446936a24906139cf4730534f9759697a8db7764baf2872b035",
+    "reports/hw05/raw/part1/review-fixes/provenance.json": "fde1ae6dc37604f2bad402bb36d5c790bf774a791049a4e6dfb5df2715f2129f",
+    "reports/hw05/raw/part1/review-fixes/redux-captures.json": "613816a3329d467f78c9291ad55d0081943a5e90533d39b2e8af645625da1591",
+    "reports/hw05/raw/part1/review-fixes/regression-red.json": "9a2f658a6110850af017b6ff51519b19a4de4d9cd8638afd699fe8ec1a00d8d4",
+    "reports/hw05/raw/part1/review-fixes/runs.json": "9cda603e9d57ae243413ec53ab2523764dc1b231e882c1b09b617d8deee370f7",
+    "reports/hw05/raw/part1/review-fixes/shutdown.json": "2f6a963c119afba48bb150a3e973c1223de6f5ad1804138780f04c21fec0da96",
+    "reports/hw05/raw/part1/runs.json": "61108c1af1a4a65588b92e16362f9516b3d75bec1c0a3a88e98fb6e5ac2c17f7",
+    "reports/hw05/raw/part1/shutdown.json": "90332696d801f8e46a1580d3ef4bcb851c6feba857245eb2358994a85e83c199",
+    "reports/hw05/raw/part2/capture-manifest.json": "b14e05a1d7bbd0241eeb48706a55851923726418d6e7a8024b1814634612b6ad",
+    "reports/hw05/raw/part2/database-fixture.json": "07d030cc03353a0179a6101a18cd1cea7e1c4f455cd58bd4c84b934dd5e1f7cf",
+    "reports/hw05/raw/part2/domain-stdio.json": "d13b2065dccc5cdb5d9cc4ed290bfd4c2526834dde61e333d18410e53802d461",
+    "reports/hw05/raw/part2/evidence-integrity.json": "7a0e9a271d4019c4557bfdc012c925e6074ca491271ca3e7da95bbb2befd0854",
+    "reports/hw05/raw/part2/inspector/2A-01-search-meals.json": "8973ac60a7f807bde75767664f1527f5708c08714287464bced0286bec9f59fb",
+    "reports/hw05/raw/part2/inspector/2A-02-ingredient.json": "33228ab631383eac92faf1404d04cda245c5b9a6f8f83cdd549bf7e6e2024c68",
+    "reports/hw05/raw/part2/inspector/2A-03-random-meal.json": "5c5e38ee654475c992e1523d79ddef78c6a07d5cab602fce2471628206175bfb",
+    "reports/hw05/raw/part2/inspector/2A-04-meal-details.json": "cf3ab4caba85f685fec9a450da518c3cc2f59fc026a5c7c3757ab016e7079817",
+    "reports/hw05/raw/part2/inspector/2B-01-search-success.json": "e4bdaec4fe20960b69c8fe0b9a4ba293a449159345208a813ebe6051e09631ea",
+    "reports/hw05/raw/part2/inspector/2B-02-search-rejected.json": "66eaf49b9b622714f32c8c1760891bb028ef37ac8fe202c742793c3cab7f877f",
+    "reports/hw05/raw/part2/inspector/2B-03-detail-success.json": "bf428c05e537d0d2fbf939b1f4aaa45ee6eb9fa325e375b38f304ddbc8c68629",
+    "reports/hw05/raw/part2/inspector/2B-04-detail-rejected.json": "1e2ab23fa48f7fa10cd6bcfcb7b4ab7deb45ee36c0578c4da9d14e66f0312d67",
+    "reports/hw05/raw/part2/inspector/2B-05-count-success.json": "a895b6be380a8fa742d1d0cf22e43ca10a20f2d083f122d31730daee172f2608",
+    "reports/hw05/raw/part2/inspector/2B-06-count-rejected.json": "76256b32a2dd123f5d3e58d5396b0984ee9a85441de0057cb30552ca10a62f13",
+    "reports/hw05/raw/part2/meals-inspector-tools-list.json": "276086a5b3f7548cba13e88ba67cbf72d64f482885071f872701a97c350eb86b",
+    "reports/hw05/raw/part2/meals-stdio.json": "80b2c887c45cdf5f7a499820acba8a435dac0023a5e9eb3dfe0c1a3a1b818697",
+    "reports/hw05/raw/part2/mysql-checks.json": "8b7733db2ceae61fbf61c320fff90df46be8550b984deae10a8b52bfbadb57fc",
+    "reports/hw05/raw/part2/pytest.txt": "f85e6132266749cf26949bf6b029f32d8355c30a6c042f0ebd1972c170541b58",
+    "reports/hw05/raw/part2/rejected-cases.json": "8ecbe595872ba1c57d34b31e169cb9daa3aba43da02c7b32771ee4f903de0f09",
+    "reports/hw05/raw/part2/rentals-mysql3308-inspector-tools-list.json": "76731b4d5e0a35b1f0cf4859d8ac26a974326a2adc1b6c91411595b357e67492",
+    "reports/hw05/raw/part2/requirements-resolved.txt": "992545c9dbf7b81777243f1883957ba8ae1004a4eba74167c7351b05a607c515",
+    "reports/hw05/raw/part2/review-fixes/domain-stdio-command.txt": "6f7adc61896ffa191d914123731b0ee6261a696a06fb4cddb42c20cfbfc7faa5",
+    "reports/hw05/raw/part2/review-fixes/domain-stdio.json": "10859012622396a734f1ae5a6e945a21f53a890311e0e974edfb49cea1b351ac",
+    "reports/hw05/raw/part2/review-fixes/evidence-integrity.json": "95e16895f36739591672e02eb47ece5c817b1d058368d927672954f180dd9328",
+    "reports/hw05/raw/part2/review-fixes/pip-check.txt": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09",
+    "reports/hw05/raw/part2/review-fixes/pytest.txt": "c4a4940f74ea523ab8258b841261d3bf368dfa6985ead9597d39acd5dd5b351f",
+    "reports/hw05/raw/part2/review-fixes/rentals-inspector-tools-list.json": "7f054661ba14f7877a5d98bdc760528215ce4e8b665a1cd3c495a2f3b59943c5",
+    "reports/hw05/raw/part2/review-fixes/verified-source-sha256.json": "a52cdde89ec480fc8340c0d648fc9949928623386861e3f2e116ba5a0b891e05",
+    "reports/hw05/raw/part2/runtime-cleanup.json": "fa5c5bbf6714725334b469833843bc4051ee9d0044612881256d6dc45d4f5635",
+    "reports/hw05/raw/part2/runtime-versions.json": "54605df977a52854e135bca9662663c0688a86bc7b5206c46f4d3e018bac9417",
+    "reports/hw05/raw/part2/verified-source-sha256.json": "39f37e8b276d86d047956ea97a0fd19a032457954ce911025308b5079bbe1532",
+    "reports/hw05/raw/part3/commands.json": "a7bf39c665b2ea1878a7695cfd41bcb159a530ef2bf5f3642622e7cea5e5ea76",
+    "reports/hw05/raw/part3/demos/demonstrations.json": "7c6a28b3768bd200cacc2e316121242f1852b02c1a55d02d4d37eb2f848fb68c",
+    "reports/hw05/raw/part3/demos/manifest.json": "8c7b91400b5a0b38f79d0aeaf9512e00d3b7ecedf5ac43e6ff007f8754687cda",
+    "reports/hw05/raw/part3/driver-timeout.json": "b5938c1a6fbacfdbec5a0db56e7cdfae5b1e9c2d922beaa6253578ab7fdeac62",
+    "reports/hw05/raw/part3/independent-recomputation.json": "2300b73dbb2337446751358ea0fa3038fb9b3413983afe696c1bdd74fa824c2f",
+    "reports/hw05/raw/part3/live-stdio.json": "9c7d22a4b5f2412460935a9fc9496c809d578696d52bfb7967b99d7d14528503",
+    "reports/hw05/raw/part3/mysql-fixture.json": "619e38671f712f6c95dccda1e2f27a02d21ab8174652972d370a65df76e6802d",
+    "reports/hw05/raw/part3/replay/manifest.json": "309e8fa066bf479344327adcbbc90e08c224564ee8188ce928bb5a49e936c624",
+    "reports/hw05/raw/part3/replay/metrics.json": "bd9d2a430337ebcaa1707a43c506209ab6d8760eddf96b9b4c638cda7e5ee97c",
+    "reports/hw05/raw/part3/replay/replay-comparison.json": "e1aea559d325b53fdb658d6884f39746a3d49998c0cf859ed7af31ffdf236af6",
+    "reports/hw05/raw/part3/replay/rows.jsonl": "05565f62fed46083c0f7bb6de1d0e097b0099b690c7039477dc523776aae31e7",
+    "reports/hw05/raw/part3/review-fixes/capture-guard/cleanup.json": "5c7ccf6e4cf964838b56b367df53981000581e9d9cdcdd9dd63beda50b2054a7",
+    "reports/hw05/raw/part3/review-fixes/capture-guard/live-stdio.json": "69c2018c1c59a6174a9cf12a43b6ea63959bc38794729b8cc0f13fb7e4ffd5d5",
+    "reports/hw05/raw/part3/review-fixes/capture-guard/manifest.json": "9396832a9d90bef1da9ee96e8a6ae76a2aa1ee6240d10a202b98e883981ef144",
+    "reports/hw05/raw/part3/review-fixes/capture-guard/optimization-rejections.json": "28c613fef1b84438f694eb2281a3335b84b02135db0bf3e1324cc273707709ac",
+    "reports/hw05/raw/part3/runtime-cleanup.json": "d3c00cd9f3b5bf1651020a252866b6487dadaa76b1e42d79bbce932adc095547",
+    "reports/hw05/raw/part3/selected/manifest.json": "58ed9ebfb492b9dc6b95e6495ba1cd36abecea2fc34d372b749a0c967d1b9277",
+    "reports/hw05/raw/part3/selected/metrics.json": "b2a8e5c0d700452613e12f0c26128a18021649ae366168c0ddc89ed58412b69a",
+    "reports/hw05/raw/part3/selected/rows.jsonl": "400868b67d4916a3e87acfbfaa9e20e98f11578dc917c0a05a3e9610aafefb73",
+    "reports/hw05/raw/part4/canonical-cases.json": "3c3cc94266e96c16f03fbdf023027d4905a4d11a5b4bf2f03c7e2fd1166899bf",
+    "reports/hw05/raw/part4/default-runtime-unavailable.txt": "96ee1dc405dcbbe85732dbd608f1b057d728a04f5a437448d482e0807c755fd6",
+    "reports/hw05/raw/part4/intentional-failure.txt": "89879e50f6a0e5ce8ebe4d6f5392ee548c0501bf3b68fc7d83fcd7261128fc5e",
+    "reports/hw05/raw/part4/offline-run-1.txt": "94a739abdf5cba47a64447360d79a5fd0dc89e4271971abb2774ab3e79c82449",
+    "reports/hw05/raw/part4/offline-run-2.txt": "94a739abdf5cba47a64447360d79a5fd0dc89e4271971abb2774ab3e79c82449",
+    "reports/hw05/raw/part4/optimized-rejected.txt": "a1d61dfe4256acb34562ef89816d2683091d80c7250f96a46cd52d08470fa77a",
+    "reports/hw05/raw/part4/pip-check.txt": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09",
+    "reports/hw05/raw/part4/pytest-domain.txt": "41e66876c066b949004fd0f6137e16c3d2b43c78e07f8440e1ef66fab887c7a9",
+    "reports/hw05/raw/part4/pytest-focused.txt": "e13e1d974c656fe92f4791d2a2b7de8c6a8bb38ef4d3a764e9bd473d2caf0aab",
+    "reports/hw05/raw/part4/requirements-resolved.txt": "992545c9dbf7b81777243f1883957ba8ae1004a4eba74167c7351b05a607c515",
+    "reports/hw05/raw/part4/verification.json": "40a4b1fb3f17bf24c23b2f11eecf4cfc67e2859821cc5aecb84225ee5bdc4a63",
+    "reports/hw05/screenshots/part1/redux-create.png": "01df8ecb29d983e1d5b439ee9466702f83f0a018022889fe5be7ea223b57e7a5",
+    "reports/hw05/screenshots/part1/redux-delete.png": "f73013641c0ca63aebcf7f055768fdd30f12d1696ebea538e43d525167e60d3d",
+    "reports/hw05/screenshots/part1/redux-home.png": "b0b087a9c3f79c9ad5812ac2c3ab2f9f14f1c1ce4784922c594541fad9e0d85e",
+    "reports/hw05/screenshots/part1/redux-update.png": "633e521d05c92cb550a5e767f696a75bfafa319f0692815e94434c1ac5a30ea4",
+    "reports/hw05/screenshots/part1/review-fixes/redux-create.png": "8c87b7041b0f257004e3ac504de3357386999fd086c792488b95499ce5420439",
+    "reports/hw05/screenshots/part1/review-fixes/redux-delete.png": "b6d1a3a8c8038b6c84482fb487b83a963b31c548d9522ae223fde4a04131f6cf",
+    "reports/hw05/screenshots/part1/review-fixes/redux-home.png": "5922f09316f58ea598fca42c934603889f0b4387cd53c20d4906fc922f31121a",
+    "reports/hw05/screenshots/part1/review-fixes/redux-update.png": "8e12b26b238e649f411663a2a8f419c76a0654f1937103c47e92decfadf67055",
+    "reports/hw05/screenshots/part2/2A-01-search-meals.jpg": "2b2d5a25b746601e4cfe1b58e54b527504caf7b85fcda096bc9126e18d3fb720",
+    "reports/hw05/screenshots/part2/2A-02-ingredient.jpg": "7ce7b0afb67ae744ed8d11e9da89d51ca277d11196c5f8ff6975707c433b22ee",
+    "reports/hw05/screenshots/part2/2A-03-random-meal.jpg": "4b73a61d1809288f99668ce8a87e01ff2a88d561cac2819ed9610e880d2a0558",
+    "reports/hw05/screenshots/part2/2A-04-meal-details.jpg": "871bc59bec9adab4841ae4845685d17741cc2ab57e10c61a80edadcf8d762adc",
+    "reports/hw05/screenshots/part2/2B-01-search-success-mysql3308.jpg": "ee77455784e426ef1048728d603eaf170f6d2131b76c65bfcd925288caa96d70",
+    "reports/hw05/screenshots/part2/2B-02-search-rejected-mysql3308.jpg": "3ba9080393244124b1be2d9d09fcba455f156a418fb742631754cddd36d84a96",
+    "reports/hw05/screenshots/part2/2B-03-detail-success-mysql3308.jpg": "c8db5cc38947d5b26ebc180970171cee6305c4b52e2b095d0bf76e8388a17a71",
+    "reports/hw05/screenshots/part2/2B-04-detail-rejected-mysql3308.jpg": "01a31c54f9fc06e473d5d19b7728a9275ef0f122ff3bbd3c69f18f00d84c26af",
+    "reports/hw05/screenshots/part2/2B-05-count-success-mysql3308.jpg": "18421bec0a50cd57d5a40f02acf7cbe3e1ef813a24c0937a8b00290a58dd1a62",
+    "reports/hw05/screenshots/part2/2B-06-count-rejected-mysql3308.jpg": "45196abaac530d9da158a7731abf971bab0e7568f7c6e03324d53f4752479c6e"
+  },
+  "selected_part3_dataset": {
+    "path": "reports/hw05/raw/part3/selected/rows.jsonl",
+    "rows": 150,
+    "sha256": "400868b67d4916a3e87acfbfaa9e20e98f11578dc917c0a05a3e9610aafefb73",
+    "started_at_utc": "2026-10-03T22:46:58.423208+00:00",
+    "completed_at_utc": "2026-10-03T22:47:04.959362+00:00",
+    "same_bytes_as_accepted_part3_head": true,
+    "measurements_not_replayed_or_pooled": true
+  },
+  "limitations": [
+    "This establishes byte/source provenance, not a rerun of historical tests, live endpoints, screenshots, or the selected controlled-fault experiment.",
+    "Historical source checks are against their explicitly recorded or acceptance-bound historical commits. Differences in newer combined source are informational and not treated as corruption.",
+    "All inherited reports/ files from all four accepted heads are checked, including earlier homework evidence; repeated entries across prior heads are counted separately in the baseline.",
+    "No Git, service, application source, sibling worktree, or historical evidence mutations were performed. Only this external audit report was written.",
+    "The audited combined revision may precede later authorized integration code/evidence commits; root should perform the final preservation check at final HEAD."
+  ],
+  "issues": [],
+  "passed": true
+}

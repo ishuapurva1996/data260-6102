@@ -1,0 +1,516 @@
+{
+  "scope": [
+    "U5",
+    "U6c"
+  ],
+  "recorded_at_utc": "2026-10-04T03:45:52.636213+00:00",
+  "tested_code_revision": "f95597f91be0b5f81c800a6a5f2d7c039eb37665",
+  "earlier_web_and_migration_checkpoint": "d4fdd54585c546e02b7f4d51776dacd79d43f565",
+  "executable_source_identical_between_checkpoints": true,
+  "only_code_checkpoint_delta": "new cross-module tests; no production changes",
+  "four_reviewed_ancestors": {
+    "f0b1a303991126cbb90579f1d6bc935296021145": true,
+    "158e946bb1e3ca647236fc72961e45da008c05f9": true,
+    "8ecb03ee4747af1ddc56c19b90767eb6242d9a39": true,
+    "0318a2859acc722481a57afb933970d4851f4466": true
+  },
+  "merge_conflicts": [],
+  "test_counts": {
+    "backend-tests": {
+      "tests": 160,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "migration-tests": {
+      "tests": 11,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "mcp-full": {
+      "tests": 373,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "unique_selected_pytest_total": 544,
+  "browser": {
+    "controlled_mock_http": 19,
+    "real_https_mysql": 8,
+    "failures": 0,
+    "skips": 0
+  },
+  "live_api_checks": 25,
+  "offline": {
+    "each_run_passes": 6,
+    "byte_identical": true,
+    "configuration": "database/model variables excluded; guarded connection/import tests in MCP suite",
+    "deliberate_failure_expected_exit": 1,
+    "optimized_runner_expected_exit": 2,
+    "optimized_live_capture_expected_exit": 1,
+    "optimized_live_receipt_not_created": true
+  },
+  "combined": {
+    "executor_calls_passed": 20,
+    "stdio_calls_passed": 20,
+    "exact_envelope_parity_cases": 11,
+    "real_reads_with_single_statement_and_disposal": 8,
+    "invalid_calls_with_zero_construction_and_io": 12,
+    "api_overlap_cases": 7
+  },
+  "meals": {
+    "real_public_upstream_calls": 4,
+    "exact_inventory": 4,
+    "passed": true
+  },
+  "driver_timeout": {
+    "accepted_socket_closed": true,
+    "command": [
+      "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/mcp-venv/bin/python",
+      "scripts/hw05/part3/probe_driver_timeout.py",
+      "--read-timeout-s",
+      "0.2"
+    ],
+    "connect_timeout_s": 1,
+    "connection_accepted": true,
+    "control_proved": "PyMySQL read_timeout during stalled server greeting",
+    "driver_error_code": 2013,
+    "driver_exception_type": "pymysql.err.OperationalError",
+    "elapsed_bounds_ms": [
+      150.00000000000003,
+      1700.0
+    ],
+    "elapsed_ms": 233.531750011025,
+    "elapsed_within_bounds": true,
+    "exception_type": "sqlalchemy.exc.OperationalError",
+    "finished_utc": "2026-10-04T03:42:30.690767+00:00",
+    "limitations": "Stalled greeting only; not live MySQL, other timeout controls, or a whole-call deadline.",
+    "listener_closed": true,
+    "passed": true,
+    "pool_timeout_s": 1,
+    "read_timeout_s": 0.2,
+    "server_error_types": [],
+    "server_hold_expired": false,
+    "server_thread_stopped": true,
+    "started_utc": "2026-10-04T03:42:30.456478+00:00",
+    "student": "Pragya Apurva",
+    "versions": {
+      "PyMySQL": "1.1.2",
+      "SQLAlchemy": "2.0.48"
+    },
+    "write_timeout_s": 1
+  },
+  "history": {
+    "passed": true,
+    "baseline_entries": 9872,
+    "distinct_report_paths": 2533,
+    "historical_source_hash_checks": 126,
+    "artifact_hash_checks": 87
+  },
+  "attempts_not_selected_as_passes": [
+    {
+      "check": "combined-live initial harness attempt",
+      "exit": 1,
+      "classification": "diagnostic harness assertion",
+      "cause": "Expected SDK warning for intentional unknown_tool call was not in stderr allowlist. All 20 call outcomes were correct.",
+      "resolution": "Inspected pinned SDK source, accepted only its exact safe warning, reran focused check successfully. No application change.",
+      "original_diagnostic_preserved_externally": true
+    }
+  ],
+  "junit_redaction": "Synthetic DSNs in parametrized test IDs removed from selected XML copies; original XML preserved externally; test counts/results unchanged.",
+  "warnings": [
+    "Inherited Python dependency deprecations and MCP lifespan forward-reference warning.",
+    "npm ci reports two existing moderate advisories; pinned dependencies retained.",
+    "npm12 blocked esbuild/fsevents install scripts; production build passed."
+  ],
+  "missing_genuine_evidence": [
+    "Part 1 Postman action/error screenshots",
+    "Part 1 database-client screenshot",
+    "Part 3 terminal demonstration/metrics images",
+    "Part 4 named offline terminal image"
+  ],
+  "limits": [
+    "Controlled faults do not prove a live MySQL outage.",
+    "Driver probe proves read timeout during stalled greeting, not a whole-call deadline or every timeout control.",
+    "Historical Part 3 selected latency dataset is unchanged; no new measured dataset is substituted.",
+    "Independent coordinator acceptance remains required before Part 5 launch."
+  ],
+  "combined_code_live_ready": true,
+  "commands": [
+    {
+      "label": "web-dependencies",
+      "command": [
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/web-venv/bin/python",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "cwd": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/integration",
+      "environment_profile": "offline",
+      "started_at_utc": "2026-10-04T03:40:11.108224+00:00",
+      "code_revision": "d4fdd54585c546e02b7f4d51776dacd79d43f565",
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-04T03:40:11.298447+00:00"
+    },
+    {
+      "label": "mcp-dependencies",
+      "command": [
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/mcp-venv/bin/python",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "cwd": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/integration",
+      "environment_profile": "offline",
+      "started_at_utc": "2026-10-04T03:40:11.319788+00:00",
+      "code_revision": "d4fdd54585c546e02b7f4d51776dacd79d43f565",
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-04T03:40:11.491931+00:00"
+    },
+    {
+      "label": "backend-tests",
+      "command": [
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/web-venv/bin/python",
+        "-m",
+        "pytest",
+        "tests/test_hw05_api.py",
+        "tests/test_api.py",
+        "tests/test_hw04_database.py",
+        "tests/test_hw04_search_regression.py",
+        "tests/test_hw04_auth.py",
+        "tests/test_hw04_serving.py",
+        "tests/test_hw04_fixture_isolation.py",
+        "tests/test_hw04_part3.py::test_request_context_survives_threads_and_serialization_and_does_not_leak",
+        "tests/test_hw04_part3.py::test_non_experiment_routes_do_not_expose_sql_counters",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "--basetemp",
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/checks/pytest-backend-001",
+        "--junitxml",
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/checks/backend-tests.xml"
+      ],
+      "cwd": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/integration",
+      "environment_profile": "app",
+      "started_at_utc": "2026-10-04T03:40:24.661461+00:00",
+      "code_revision": "d4fdd54585c546e02b7f4d51776dacd79d43f565",
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-04T03:40:31.892655+00:00"
+    },
+    {
+      "label": "migration-tests",
+      "command": [
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/web-venv/bin/python",
+        "-m",
+        "pytest",
+        "tests/test_hw05_database.py",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "--basetemp",
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/checks/pytest-migration-001",
+        "--junitxml",
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/checks/migration-tests.xml"
+      ],
+      "cwd": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/integration",
+      "environment_profile": "migration",
+      "started_at_utc": "2026-10-04T03:40:27.288960+00:00",
+      "code_revision": "d4fdd54585c546e02b7f4d51776dacd79d43f565",
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-04T03:40:31.831812+00:00"
+    },
+    {
+      "label": "npm-ci",
+      "command": [
+        "/Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/npm/package/bin/npm-cli.js",
+        "ci",
+        "--cache",
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/npm-cache"
+      ],
+      "cwd": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/integration/frontend",
+      "environment_profile": "offline",
+      "started_at_utc": "2026-10-04T03:40:09.393406+00:00",
+      "code_revision": "d4fdd54585c546e02b7f4d51776dacd79d43f565",
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-04T03:40:11.110172+00:00"
+    },
+    {
+      "label": "npm-build",
+      "command": [
+        "/Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/npm/package/bin/npm-cli.js",
+        "run",
+        "build"
+      ],
+      "cwd": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/integration/frontend",
+      "environment_profile": "offline",
+      "started_at_utc": "2026-10-04T03:40:36.939538+00:00",
+      "code_revision": "d4fdd54585c546e02b7f4d51776dacd79d43f565",
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-04T03:40:38.383144+00:00"
+    },
+    {
+      "label": "mcp-full",
+      "command": [
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/mcp-venv/bin/python",
+        "-m",
+        "pytest",
+        "tests/test_hw05_meals.py",
+        "tests/test_hw05_domain_tools.py",
+        "tests/test_hw05_mcp_stdio.py",
+        "tests/test_hw05_fixture_setup.py",
+        "tests/test_hw05_reliability.py",
+        "tests/test_hw05_runtime.py",
+        "tests/test_hw05_fault_experiment.py",
+        "tests/test_hw05_timeouts.py",
+        "tests/test_hw05_executor.py",
+        "tests/test_hw05_offline_runner.py",
+        "tests/test_hw05_executor_integration.py",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "--basetemp",
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/checks/pytest-mcp-001",
+        "--junitxml",
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/checks/mcp-full.xml"
+      ],
+      "cwd": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/integration",
+      "environment_profile": "offline",
+      "started_at_utc": "2026-10-04T03:41:10.142076+00:00",
+      "code_revision": "f95597f91be0b5f81c800a6a5f2d7c039eb37665",
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-04T03:41:20.183747+00:00"
+    },
+    {
+      "label": "browser-controlled",
+      "command": [
+        "/Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "tests/browser_hw05_part1.cjs",
+        "--mock"
+      ],
+      "cwd": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/integration",
+      "environment_profile": "app",
+      "started_at_utc": "2026-10-04T03:41:23.647590+00:00",
+      "code_revision": "f95597f91be0b5f81c800a6a5f2d7c039eb37665",
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-04T03:41:29.946490+00:00"
+    },
+    {
+      "label": "browser-real",
+      "command": [
+        "/Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "tests/browser_hw05_part1.cjs",
+        "--real"
+      ],
+      "cwd": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/integration",
+      "environment_profile": "app",
+      "started_at_utc": "2026-10-04T03:41:26.839391+00:00",
+      "code_revision": "f95597f91be0b5f81c800a6a5f2d7c039eb37665",
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-04T03:41:29.444270+00:00"
+    },
+    {
+      "label": "live-api",
+      "command": [
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/web-venv/bin/python",
+        "scripts/hw05/part1/live_acceptance.py",
+        "--base-url",
+        "https://localhost:8702",
+        "--output",
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/checks/live-api.json"
+      ],
+      "cwd": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/integration",
+      "environment_profile": "app",
+      "started_at_utc": "2026-10-04T03:41:14.293270+00:00",
+      "code_revision": "f95597f91be0b5f81c800a6a5f2d7c039eb37665",
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-04T03:41:14.627443+00:00"
+    },
+    {
+      "label": "offline-1",
+      "command": [
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/mcp-venv/bin/python",
+        "scripts/hw05/run_offline_tests.py"
+      ],
+      "cwd": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/integration",
+      "environment_profile": "offline",
+      "started_at_utc": "2026-10-04T03:41:29.251911+00:00",
+      "code_revision": "f95597f91be0b5f81c800a6a5f2d7c039eb37665",
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-04T03:41:29.445680+00:00"
+    },
+    {
+      "label": "offline-2",
+      "command": [
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/mcp-venv/bin/python",
+        "scripts/hw05/run_offline_tests.py"
+      ],
+      "cwd": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/integration",
+      "environment_profile": "offline",
+      "started_at_utc": "2026-10-04T03:41:29.469841+00:00",
+      "code_revision": "f95597f91be0b5f81c800a6a5f2d7c039eb37665",
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-04T03:41:29.604615+00:00"
+    },
+    {
+      "label": "offline-deliberate-failure",
+      "command": [
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/mcp-venv/bin/python",
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/negative_offline.py"
+      ],
+      "cwd": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/integration",
+      "environment_profile": "offline",
+      "started_at_utc": "2026-10-04T03:42:13.800641+00:00",
+      "code_revision": "f95597f91be0b5f81c800a6a5f2d7c039eb37665",
+      "exit_code": 1,
+      "finished_at_utc": "2026-10-04T03:42:13.978836+00:00"
+    },
+    {
+      "label": "offline-optimized-rejected",
+      "command": [
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/mcp-venv/bin/python",
+        "-O",
+        "scripts/hw05/run_offline_tests.py"
+      ],
+      "cwd": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/integration",
+      "environment_profile": "offline",
+      "started_at_utc": "2026-10-04T03:42:13.998127+00:00",
+      "code_revision": "f95597f91be0b5f81c800a6a5f2d7c039eb37665",
+      "exit_code": 2,
+      "finished_at_utc": "2026-10-04T03:42:14.530459+00:00"
+    },
+    {
+      "label": "live-capture-optimized-rejected",
+      "command": [
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/mcp-venv/bin/python",
+        "-O",
+        "scripts/hw05/part3/capture_live_stdio.py",
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/checks/MUST_NOT_EXIST.json"
+      ],
+      "cwd": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/integration",
+      "environment_profile": "offline",
+      "started_at_utc": "2026-10-04T03:42:14.549624+00:00",
+      "code_revision": "f95597f91be0b5f81c800a6a5f2d7c039eb37665",
+      "exit_code": 1,
+      "finished_at_utc": "2026-10-04T03:42:15.522283+00:00"
+    },
+    {
+      "label": "driver-timeout",
+      "command": [
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/mcp-venv/bin/python",
+        "scripts/hw05/part3/probe_driver_timeout.py",
+        "--read-timeout-s",
+        "0.2"
+      ],
+      "cwd": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/integration",
+      "environment_profile": "offline",
+      "started_at_utc": "2026-10-04T03:42:30.340775+00:00",
+      "code_revision": "f95597f91be0b5f81c800a6a5f2d7c039eb37665",
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-04T03:42:30.734771+00:00"
+    },
+    {
+      "label": "meals-live",
+      "command": [
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/mcp-venv/bin/python",
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/capture_meals.py"
+      ],
+      "cwd": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/integration",
+      "environment_profile": "offline",
+      "started_at_utc": "2026-10-04T03:41:44.836363+00:00",
+      "code_revision": "f95597f91be0b5f81c800a6a5f2d7c039eb37665",
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-04T03:41:46.872507+00:00"
+    },
+    {
+      "label": "combined-live",
+      "command": [
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/mcp-venv/bin/python",
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/live_parity.py"
+      ],
+      "cwd": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/integration",
+      "environment_profile": "app,domain",
+      "started_at_utc": "2026-10-04T03:43:56.072230+00:00",
+      "code_revision": "f95597f91be0b5f81c800a6a5f2d7c039eb37665",
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-04T03:43:57.043441+00:00"
+    },
+    {
+      "label": "ui-api-parity",
+      "command": [
+        "/Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/ui_parity.cjs"
+      ],
+      "cwd": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/integration",
+      "environment_profile": "app",
+      "started_at_utc": "2026-10-04T03:42:32.514969+00:00",
+      "code_revision": "f95597f91be0b5f81c800a6a5f2d7c039eb37665",
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-04T03:42:34.065068+00:00"
+    },
+    {
+      "label": "fixture-preservation",
+      "command": [
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/web-venv/bin/python",
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/verify_fixture.py"
+      ],
+      "cwd": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/integration",
+      "environment_profile": "app,domain",
+      "started_at_utc": "2026-10-04T03:42:56.560253+00:00",
+      "code_revision": "f95597f91be0b5f81c800a6a5f2d7c039eb37665",
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-04T03:42:56.803719+00:00"
+    }
+  ],
+  "cleanup": {
+    "started_at_utc": "2026-10-04T03:44:19.178596+00:00",
+    "owner": "hw5-integration",
+    "services": [
+      {
+        "kind": "HTTPS",
+        "pid": 89691,
+        "process_group": 89691,
+        "port": 8702,
+        "identity_checked": true,
+        "termination": "SIGTERM to identified owned process group"
+      },
+      {
+        "kind": "MySQL",
+        "role": "app",
+        "id": "28deedcbeb9baf8c07f40f47447a8f5e5227afb6c57378cada0f0369c5d131e9",
+        "name": "data260-hw5-integration-app-3311",
+        "port": 3311,
+        "labels": {
+          "data260.owner": "hw5-integration",
+          "data260.role": "app"
+        },
+        "stopped": true,
+        "data_preserved": true
+      },
+      {
+        "kind": "MySQL",
+        "role": "migration",
+        "id": "b81781a62107220479d0bd2bce9044123246080f68cb646db174cd13eabcda3a",
+        "name": "data260-hw5-integration-migration-3312",
+        "port": 3312,
+        "labels": {
+          "data260.owner": "hw5-integration",
+          "data260.role": "migration"
+        },
+        "stopped": true,
+        "data_preserved": true
+      }
+    ],
+    "ports_closed": [
+      3311,
+      3312,
+      8702
+    ],
+    "unrelated_services_touched": false,
+    "finished_at_utc": "2026-10-04T03:44:23.756211+00:00",
+    "passed": true
+  }
+}

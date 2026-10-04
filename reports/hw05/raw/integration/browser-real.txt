@@ -1,0 +1,17 @@
+RUN [real] Real HTTPS login uses Secure HttpOnly cookie
+PASS [real] Real HTTPS login uses Secure HttpOnly cookie
+RUN [real] Real pagination matches API total and stable IDs
+PASS [real] Real pagination matches API total and stable IDs
+RUN [real] UI create persists generated code, units and explicit manager
+PASS [real] UI create persists generated code, units and explicit manager
+RUN [real] UI direct-ID update persists changed fields and preserves old fields
+PASS [real] UI direct-ID update persists changed fields and preserves old fields
+RUN [real] Real same-ID revisit displays and saves a newer server update
+PASS [real] Real same-ID revisit displays and saves a newer server update
+RUN [real] Real empty result and responsive Home
+PASS [real] Real empty result and responsive Home
+RUN [real] UI per-row delete returns 204 and remains absent after reload
+PASS [real] UI per-row delete returns 204 and remains absent after reload
+RUN [real] Real logout clears visible data and API access
+PASS [real] Real logout clears visible data and API access
+Evidence: /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/checks/browser/real-browser.json (pass)

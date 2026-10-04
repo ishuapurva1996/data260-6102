@@ -1,0 +1,1 @@
+{"pass": true, "summary": {"executor_calls_passed": 20, "stdio_calls_passed": 20, "exact_envelope_parity_cases": 11, "real_reads_with_single_statement_and_disposal": 8, "invalid_calls_with_zero_construction_and_io": 12, "api_overlap_cases": 7}, "failure_type": null}

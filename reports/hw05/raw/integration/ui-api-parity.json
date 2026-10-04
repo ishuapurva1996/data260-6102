@@ -1,0 +1,19 @@
+{
+  "started_at_utc": "2026-10-04T03:42:32.814Z",
+  "code_revision": "f95597f91be0b5f81c800a6a5f2d7c039eb37665",
+  "checks": [
+    {
+      "name": "Rendered baseline row matches authenticated API",
+      "passed": true,
+      "id": 1,
+      "public_fields": {
+        "listingTitle": "Integration Campus Rental 1",
+        "propertyAddress": "6101 Integration Avenue, San Jose, CA",
+        "description": "A preserved baseline rental with a quiet study room and garden.",
+        "managerId": 1
+      }
+    }
+  ],
+  "passed": true,
+  "finished_at_utc": "2026-10-04T03:42:33.779Z"
+}
