@@ -1,0 +1,27 @@
+{
+  "captured_at_utc": "2026-10-03T08:31:59.585Z",
+  "client": "MCP Inspector 1.0.2 GUI history clipboard",
+  "source": "TheMealDB public V1 API",
+  "request": {
+    "method": "tools/call",
+    "params": {
+      "name": "search_meals_by_name",
+      "arguments": {
+        "query": "Arrabiata",
+        "limit": 5
+      },
+      "_meta": {
+        "progressToken": 0
+      }
+    }
+  },
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "[{\"id\": \"52771\", \"name\": \"Spicy Arrabiata Penne\", \"thumb\": \"https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg\", \"area\": \"Italian\", \"category\": \"Vegetarian\"}]"
+      }
+    ],
+    "isError": false
+  }
+}

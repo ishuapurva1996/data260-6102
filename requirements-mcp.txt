@@ -1,0 +1,8 @@
+# Dedicated Python 3.12 environment; do not merge with web requirements.
+mcp[cli]==1.28.1
+httpx==0.28.1
+pydantic==2.12.5
+SQLAlchemy==2.0.48
+PyMySQL==1.1.2
+cryptography==46.0.5
+pytest==8.4.2

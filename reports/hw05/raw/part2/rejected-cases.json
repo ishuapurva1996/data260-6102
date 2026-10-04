@@ -1,0 +1,149 @@
+[
+  {
+    "tool": "search_rentals",
+    "published_input_schema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "maxLength": 255,
+          "minLength": 1,
+          "title": "Query",
+          "type": "string"
+        },
+        "limit": {
+          "default": 5,
+          "maximum": 25,
+          "minimum": 1,
+          "title": "Limit",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "query"
+      ],
+      "title": "search_rentalsArguments"
+    },
+    "request": {
+      "method": "tools/call",
+      "params": {
+        "name": "search_rentals",
+        "arguments": {
+          "query": "   ",
+          "limit": 5
+        },
+        "_meta": {
+          "progressToken": 6,
+          "source": "MySQL3308/s6102_rel synthetic"
+        }
+      }
+    },
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"ok\": false,\n  \"data\": null,\n  \"error\": \"Invalid input: query: Value error, query must contain non-whitespace characters\"\n}"
+        }
+      ],
+      "structuredContent": {
+        "ok": false,
+        "data": null,
+        "error": "Invalid input: query: Value error, query must contain non-whitespace characters"
+      },
+      "isError": false
+    },
+    "source_capture": "reports/hw05/raw/part2/inspector/2B-02-search-rejected.json",
+    "note": "Schema-valid semantic rejection; isError=false; application ok=false."
+  },
+  {
+    "tool": "get_rental",
+    "published_input_schema": {
+      "type": "object",
+      "properties": {
+        "rental_id": {
+          "exclusiveMinimum": 0,
+          "title": "Rental Id",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "rental_id"
+      ],
+      "title": "get_rentalArguments"
+    },
+    "request": {
+      "method": "tools/call",
+      "params": {
+        "name": "get_rental",
+        "arguments": {
+          "rental_id": 8
+        },
+        "_meta": {
+          "progressToken": 8,
+          "source": "MySQL3308/s6102_rel synthetic"
+        }
+      }
+    },
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"ok\": false,\n  \"data\": null,\n  \"error\": \"Rental 8 was not found.\"\n}"
+        }
+      ],
+      "structuredContent": {
+        "ok": false,
+        "data": null,
+        "error": "Rental 8 was not found."
+      },
+      "isError": false
+    },
+    "source_capture": "reports/hw05/raw/part2/inspector/2B-04-detail-rejected.json",
+    "note": "Schema-valid semantic rejection; isError=false; application ok=false."
+  },
+  {
+    "tool": "count_rentals",
+    "published_input_schema": {
+      "type": "object",
+      "properties": {
+        "manager_id": {
+          "exclusiveMinimum": 0,
+          "title": "Manager Id",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "manager_id"
+      ],
+      "title": "count_rentalsArguments"
+    },
+    "request": {
+      "method": "tools/call",
+      "params": {
+        "name": "count_rentals",
+        "arguments": {
+          "manager_id": 4
+        },
+        "_meta": {
+          "progressToken": 10,
+          "source": "MySQL3308/s6102_rel synthetic"
+        }
+      }
+    },
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"ok\": false,\n  \"data\": null,\n  \"error\": \"Property manager 4 was not found.\"\n}"
+        }
+      ],
+      "structuredContent": {
+        "ok": false,
+        "data": null,
+        "error": "Property manager 4 was not found."
+      },
+      "isError": false
+    },
+    "source_capture": "reports/hw05/raw/part2/inspector/2B-06-count-rejected.json",
+    "note": "Schema-valid semantic rejection; isError=false; application ok=false."
+  }
+]

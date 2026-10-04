@@ -1,0 +1,47 @@
+{
+  "timestamp_utc": "2026-10-03T09:17:01.975352+00:00",
+  "capture_parent_revision": "9658abe26d9f421968cb895bd1a34a197ff1e3fd",
+  "working_tree_dirty_at_capture": true,
+  "source_snapshot": "verified-source-sha256.json",
+  "source_files_verified": 19,
+  "focused_tests": {
+    "passed": 108,
+    "skipped": 0,
+    "warnings": 1
+  },
+  "reader_access_counts_after_valid_plus_extra_and_integral_float": {
+    "get_rental": 1,
+    "search_rentals": 1,
+    "count_rentals": 1
+  },
+  "fixture_timeout_seconds": {
+    "connect": 5,
+    "read": 10,
+    "write": 10
+  },
+  "fixture_timeout_verification": "Effective SQLAlchemy do_connect driver options intercepted offline before networking; setup was not rerun on retained database.",
+  "original_evidence_revision": "8f24f44b87f83f813a7a60281bfcd523ab141fa1",
+  "original_evidence_files_unchanged": 34,
+  "original_gui_pairs_verified": 10,
+  "original_rejected_cases_unchanged": true,
+  "gui_recaptured": false,
+  "live_domain_semantic_requests_and_envelopes_match_original": 6,
+  "live_native_extra_field_rejections": 3,
+  "inspector_cli_and_python_schemas_match_shared_models": true,
+  "credential_scan_passed": true,
+  "owned_container_state": "599d4ad3da4698bc6ff5fed0ce9e84a879b27467729348aeea1c4bf1dcc600cf exited",
+  "owned_runtime_ports_closed": {
+    "3308": true,
+    "6274": true,
+    "6277": true
+  },
+  "artifact_sha256": {
+    "domain-stdio-command.txt": "6f7adc61896ffa191d914123731b0ee6261a696a06fb4cddb42c20cfbfc7faa5",
+    "domain-stdio.json": "10859012622396a734f1ae5a6e945a21f53a890311e0e974edfb49cea1b351ac",
+    "pip-check.txt": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09",
+    "pytest.txt": "c4a4940f74ea523ab8258b841261d3bf368dfa6985ead9597d39acd5dd5b351f",
+    "rentals-inspector-tools-list.json": "7f054661ba14f7877a5d98bdc760528215ce4e8b665a1cd3c495a2f3b59943c5",
+    "verified-source-sha256.json": "a52cdde89ec480fc8340c0d648fc9949928623386861e3f2e116ba5a0b891e05"
+  },
+  "scope": "Part 2 review fixes only; Part 1 integration and Parts 3-5 remain out of scope"
+}

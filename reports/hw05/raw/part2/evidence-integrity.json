@@ -1,0 +1,14 @@
+{
+  "timestamp_utc": "2026-10-03T08:40:50.276118+00:00",
+  "code_revision": "8f24f44b87f83f813a7a60281bfcd523ab141fa1",
+  "test_source_matches_committed_blobs": true,
+  "gui_pairs_verified": 10,
+  "preserved_rejections": 3,
+  "credential_scan_passed": true,
+  "owned_runtime_ports_closed": {
+    "3308": true,
+    "6274": true,
+    "6277": true
+  },
+  "scope": "Part2A and Part2B only; not final homework verification"
+}

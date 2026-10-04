@@ -1,0 +1,108 @@
+{
+  "tools": [
+    {
+      "name": "search_meals_by_name",
+      "description": "Search TheMealDB by meal name; return id, name, area, category, and thumb.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "minLength": 1,
+            "title": "Query",
+            "type": "string"
+          },
+          "limit": {
+            "default": 5,
+            "maximum": 25,
+            "minimum": 1,
+            "title": "Limit",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "query"
+        ],
+        "title": "search_meals_by_nameArguments"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": true
+      }
+    },
+    {
+      "name": "meals_by_ingredient",
+      "description": "Find meals by one main ingredient; return id, name, and thumb.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "ingredient": {
+            "minLength": 1,
+            "title": "Ingredient",
+            "type": "string"
+          },
+          "limit": {
+            "default": 12,
+            "minimum": 1,
+            "title": "Limit",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "ingredient"
+        ],
+        "title": "meals_by_ingredientArguments"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": true
+      }
+    },
+    {
+      "name": "random_meal",
+      "description": "Return one random full recipe, including its ingredient measurements.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "title": "random_mealArguments"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": true
+      }
+    },
+    {
+      "name": "meal_details",
+      "description": "Look up a positive meal ID and return the full recipe.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "anyOf": [
+              {
+                "pattern": "^[0-9]*[1-9][0-9]*$",
+                "type": "string"
+              },
+              {
+                "exclusiveMinimum": 0,
+                "type": "integer"
+              }
+            ],
+            "title": "Id"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "title": "meal_detailsArguments"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": true
+      }
+    }
+  ]
+}

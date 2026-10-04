@@ -1,0 +1,494 @@
+Pragya Apurva — HW5 Part2 local verification
+All timestamps generated during execution; private credentials omitted.
+
+2026-10-03T08:37:09.206347+00:00 / 2026-10-03T01:37:09.206347-07:00
+revision before local commits
+$ git rev-parse HEAD
+f57d20fd5588589fcf6e6c8792b0d912277da9f0
+exit=0
+
+2026-10-03T08:37:09.220982+00:00 / 2026-10-03T01:37:09.220982-07:00
+dependency consistency
+$ /Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part2-mcp/.venv-mcp/bin/python -m pip check
+No broken requirements found.
+WARNING: The directory '/Users/pragyaapurva/Library/Caches/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+exit=0
+
+2026-10-03T08:37:09.402039+00:00 / 2026-10-03T01:37:09.402039-07:00
+focused tests
+$ /Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part2-mcp/.venv-mcp/bin/python -m pytest -p no:cacheprovider tests/test_hw05_meals.py tests/test_hw05_domain_tools.py tests/test_hw05_mcp_stdio.py -q
+........................................................................ [ 69%]
+................................                                         [100%]
+=============================== warnings summary ===============================
+tests/test_hw05_meals.py::test_mcp_inventory_and_published_input_schemas
+  /Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part2-mcp/.venv-mcp/lib/python3.12/site-packages/pydantic_settings/sources/utils.py:47: IncompleteFieldDefinitionWarning: Field 'lifespan' has an incomplete definition: its annotation contains an unresolved forward reference, so settings sources may fail to correctly resolve its value. Call `model_rebuild()` on the model where the field is defined, once all the referenced types are defined.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+104 passed, 1 warning in 1.61s
+exit=0
+
+2026-10-03T08:37:11.406969+00:00 / 2026-10-03T01:37:11.406969-07:00
+resolved Python packages
+$ /Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part2-mcp/.venv-mcp/bin/python -m pip freeze
+annotated-doc==0.0.5
+annotated-types==0.8.0
+anyio==4.15.1
+attrs==26.1.0
+certifi==2026.7.22
+cffi==2.1.1
+click==8.5.0
+cryptography==46.0.5
+h11==0.16.0
+httpcore==1.0.9
+httpx==0.28.1
+httpx-sse==0.4.3
+idna==3.20
+iniconfig==2.3.0
+jsonschema==4.26.0
+jsonschema-specifications==2025.9.1
+markdown-it-py==4.2.0
+mcp==1.28.1
+mdurl==0.1.2
+packaging==26.3
+pluggy==1.6.0
+pycparser==3.0
+pydantic==2.12.5
+pydantic-settings==2.15.0
+pydantic_core==2.41.5
+Pygments==2.21.0
+PyJWT==2.15.1
+PyMySQL==1.1.2
+pytest==8.4.2
+python-dotenv==1.2.4
+python-multipart==0.0.32
+referencing==0.37.0
+rich==15.0.0
+rpds-py==2026.6.3
+shellingham==1.5.4
+SQLAlchemy==2.0.48
+sse-starlette==3.5.0
+starlette==1.7.0
+typer==0.27.2
+typing-inspection==0.4.4
+typing_extensions==4.16.0
+uvicorn==0.54.0
+WARNING: The directory '/Users/pragyaapurva/Library/Caches/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+exit=0
+
+Validated code committed as 8f24f44b87f83f813a7a60281bfcd523ab141fa1
+Source hashes in verified-source-sha256.json identify the exact tested working tree, now committed.
+
+2026-10-03T08:38:09.627990+00:00
+meals live STDIO
+$ /Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part2-mcp/.venv-mcp/bin/python scripts/hw05/part2/capture_stdio.py meals reports/hw05/raw/part2/meals-stdio.json
+meals: exact inventory and 4 STDIO calls verified; saved reports/hw05/raw/part2/meals-stdio.json
+/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part2-mcp/.venv-mcp/lib/python3.12/site-packages/pydantic_settings/sources/utils.py:47: IncompleteFieldDefinitionWarning: Field 'lifespan' has an incomplete definition: its annotation contains an unresolved forward reference, so settings sources may fail to correctly resolve its value. Call `model_rebuild()` on the model where the field is defined, once all the referenced types are defined.
+  warnings.warn(
+exit=0
+
+2026-10-03T08:38:11.935705+00:00
+domain live STDIO
+$ /Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part2-mcp/.venv-mcp/bin/python scripts/hw05/part2/capture_stdio.py domain reports/hw05/raw/part2/domain-stdio.json
+domain: exact inventory and 6 STDIO calls verified; saved reports/hw05/raw/part2/domain-stdio.json
+/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part2-mcp/.venv-mcp/lib/python3.12/site-packages/pydantic_settings/sources/utils.py:47: IncompleteFieldDefinitionWarning: Field 'lifespan' has an incomplete definition: its annotation contains an unresolved forward reference, so settings sources may fail to correctly resolve its value. Call `model_rebuild()` on the model where the field is defined, once all the referenced types are defined.
+  warnings.warn(
+exit=0
+
+2026-10-03T08:38:12.761175+00:00
+meals Inspector CLI inventory
+$ /Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part2/inspector/node_modules/@modelcontextprotocol/inspector/cli/build/cli.js --cli --config /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part2/inspector-config.json --server meals --method tools/list
+{
+  "tools": [
+    {
+      "name": "search_meals_by_name",
+      "description": "Search TheMealDB by meal name; return id, name, area, category, and thumb.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "minLength": 1,
+            "title": "Query",
+            "type": "string"
+          },
+          "limit": {
+            "default": 5,
+            "maximum": 25,
+            "minimum": 1,
+            "title": "Limit",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "query"
+        ],
+        "title": "search_meals_by_nameArguments"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": true
+      }
+    },
+    {
+      "name": "meals_by_ingredient",
+      "description": "Find meals by one main ingredient; return id, name, and thumb.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "ingredient": {
+            "minLength": 1,
+            "title": "Ingredient",
+            "type": "string"
+          },
+          "limit": {
+            "default": 12,
+            "minimum": 1,
+            "title": "Limit",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "ingredient"
+        ],
+        "title": "meals_by_ingredientArguments"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": true
+      }
+    },
+    {
+      "name": "random_meal",
+      "description": "Return one random full recipe, including its ingredient measurements.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "title": "random_mealArguments"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": true
+      }
+    },
+    {
+      "name": "meal_details",
+      "description": "Look up a positive meal ID and return the full recipe.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "anyOf": [
+              {
+                "pattern": "^[0-9]*[1-9][0-9]*$",
+                "type": "string"
+              },
+              {
+                "exclusiveMinimum": 0,
+                "type": "integer"
+              }
+            ],
+            "title": "Id"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "title": "meal_detailsArguments"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": true
+      }
+    }
+  ]
+}
+⚠️  @modelcontextprotocol/inspector v1 is deprecated.
+    Upgrade:  npx @modelcontextprotocol/inspector@latest
+    v1 receives security fixes only.
+
+exit=0
+
+2026-10-03T08:38:13.414195+00:00
+rentals-mysql3308 Inspector CLI inventory
+$ /Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part2/inspector/node_modules/@modelcontextprotocol/inspector/cli/build/cli.js --cli --config /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part2/inspector-config.json --server rentals-mysql3308 --method tools/list
+{
+  "tools": [
+    {
+      "name": "search_rentals",
+      "description": "Search public rental titles and addresses using literal case-insensitive text; return IDs in ascending order.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "maxLength": 255,
+            "minLength": 1,
+            "title": "Query",
+            "type": "string"
+          },
+          "limit": {
+            "default": 5,
+            "maximum": 25,
+            "minimum": 1,
+            "title": "Limit",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "query"
+        ],
+        "title": "search_rentalsArguments"
+      },
+      "outputSchema": {
+        "type": "object",
+        "additionalProperties": true,
+        "title": "search_rentalsDictOutput"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "get_rental",
+      "description": "Get the public details of one rental by its positive integer ID.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "rental_id": {
+            "exclusiveMinimum": 0,
+            "title": "Rental Id",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "rental_id"
+        ],
+        "title": "get_rentalArguments"
+      },
+      "outputSchema": {
+        "type": "object",
+        "additionalProperties": true,
+        "title": "get_rentalDictOutput"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "count_rentals",
+      "description": "Count rentals assigned to an existing property manager, including a count of zero.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "manager_id": {
+            "exclusiveMinimum": 0,
+            "title": "Manager Id",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "manager_id"
+        ],
+        "title": "count_rentalsArguments"
+      },
+      "outputSchema": {
+        "type": "object",
+        "additionalProperties": true,
+        "title": "count_rentalsDictOutput"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    }
+  ]
+}
+⚠️  @modelcontextprotocol/inspector v1 is deprecated.
+    Upgrade:  npx @modelcontextprotocol/inspector@latest
+    v1 receives security fixes only.
+
+exit=0
+
+2026-10-03T08:40:12.597845+00:00
+Verified source hashes unchanged after code commit; ten GUI screenshot/JSON pairs and three rejected cases verified.
+Stopped owned Inspector process group 44210 after verifying its command.
+
+2026-10-03T08:40:50.276118+00:00
+$ docker stop data260-hw5-part2-mysql
+data260-hw5-part2-mysql
+exit=0
+PASS: owned ports3308/6274/6277 closed; code source hashes equal committed blobs; ten screenshot/GUI JSON pairs match their SHA256 manifest; selected evidence contains none of the private runtime credentials.
+
+Part 2 review fixes: captured from uncommitted working-tree source above 9658abe26d9f421968cb895bd1a34a197ff1e3fd; exact hashes in raw/part2/review-fixes/verified-source-sha256.json. Original evidence is retained unchanged.
+
+2026-10-03T09:14:30.518414+00:00
+dependency consistency
+$ "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part2-mcp/.venv-mcp/bin/python" -m pip check
+No broken requirements found.
+
+exit=0
+
+2026-10-03T09:14:30.691045+00:00
+domain live STDIO with strict schemas
+$ "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part2-mcp/.venv-mcp/bin/python" scripts/hw05/part2/capture_stdio.py domain reports/hw05/raw/part2/review-fixes/domain-stdio.json
+domain: exact inventory and 6 STDIO calls verified; saved reports/hw05/raw/part2/review-fixes/domain-stdio.json
+
+exit=0
+
+2026-10-03T09:14:31.535933+00:00
+rental Inspector CLI schema refresh
+$ /Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part2/inspector/node_modules/@modelcontextprotocol/inspector/cli/build/cli.js --cli --config /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part2/inspector-config.json --server rentals-mysql3308 --method tools/list
+
+⚠️  @modelcontextprotocol/inspector v1 is deprecated.
+    Upgrade:  npx @modelcontextprotocol/inspector@latest
+    v1 receives security fixes only.
+
+
+spawn node ENOENT
+
+exit=1
+
+2026-10-03T09:14:55.597084+00:00
+Inspector CLI retry with pinned Node bin directory prepended to PATH (initial child node lookup failed).
+$ /Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part2/inspector/node_modules/@modelcontextprotocol/inspector/cli/build/cli.js --cli --config /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part2/inspector-config.json --server rentals-mysql3308 --method tools/list
+{
+  "tools": [
+    {
+      "name": "search_rentals",
+      "description": "Search public rental titles and addresses using literal case-insensitive text; return IDs in ascending order.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "maxLength": 255,
+            "minLength": 1,
+            "title": "Query",
+            "type": "string"
+          },
+          "limit": {
+            "default": 5,
+            "maximum": 25,
+            "minimum": 1,
+            "title": "Limit",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "query"
+        ],
+        "additionalProperties": false,
+        "title": "SearchRentalsInput"
+      },
+      "outputSchema": {
+        "type": "object",
+        "additionalProperties": true,
+        "title": "search_rentalsDictOutput"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "get_rental",
+      "description": "Get the public details of one rental by its positive integer ID.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "rental_id": {
+            "exclusiveMinimum": 0,
+            "title": "Rental Id",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "rental_id"
+        ],
+        "additionalProperties": false,
+        "title": "GetRentalInput"
+      },
+      "outputSchema": {
+        "type": "object",
+        "additionalProperties": true,
+        "title": "get_rentalDictOutput"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "count_rentals",
+      "description": "Count rentals assigned to an existing property manager, including a count of zero.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "manager_id": {
+            "exclusiveMinimum": 0,
+            "title": "Manager Id",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "manager_id"
+        ],
+        "additionalProperties": false,
+        "title": "CountRentalsInput"
+      },
+      "outputSchema": {
+        "type": "object",
+        "additionalProperties": true,
+        "title": "count_rentalsDictOutput"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    }
+  ]
+}
+⚠️  @modelcontextprotocol/inspector v1 is deprecated.
+    Upgrade:  npx @modelcontextprotocol/inspector@latest
+    v1 receives security fixes only.
+
+
+exit=0
+
+2026-10-03T09:15:29.232398+00:00
+Final source snapshot verification with scratch test files outside Git.
+$ "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part2-mcp/.venv-mcp/bin/python" -m pytest -p no:cacheprovider --basetemp=/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part2/pytest-review-fixes-0918 tests/test_hw05_meals.py tests/test_hw05_domain_tools.py tests/test_hw05_mcp_stdio.py tests/test_hw05_fixture_setup.py -q
+........................................................................ [ 66%]
+....................................                                     [100%]
+=============================== warnings summary ===============================
+tests/test_hw05_meals.py::test_mcp_inventory_and_published_input_schemas
+  /Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part2-mcp/.venv-mcp/lib/python3.12/site-packages/pydantic_settings/sources/utils.py:47: IncompleteFieldDefinitionWarning: Field 'lifespan' has an incomplete definition: its annotation contains an unresolved forward reference, so settings sources may fail to correctly resolve its value. Call `model_rebuild()` on the model where the field is defined, once all the referenced types are defined.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+108 passed, 1 warning in 2.34s
+
+exit=0
+
+2026-10-03T09:17:01.975352+00:00
+Verified current source hashes, unchanged original evidence blobs and ten GUI pairs; new schemas match shared models; all six live semantic requests/envelopes match original. Read-only extra-field calls return native errors. Selected files contain no private runtime credentials.
+$ docker stop data260-hw5-part2-mysql
+data260-hw5-part2-mysql
+exit=0
+Verified owned container exited and ports3308/6274/6277 closed. Fixture was not reseeded.

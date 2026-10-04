@@ -1,0 +1,24 @@
+{
+  "captured_at_utc": "2026-10-03T08:33:03.329Z",
+  "client": "MCP Inspector 1.0.2 GUI history clipboard",
+  "source": "TheMealDB public V1 API",
+  "request": {
+    "method": "tools/call",
+    "params": {
+      "name": "random_meal",
+      "arguments": {},
+      "_meta": {
+        "progressToken": 2
+      }
+    }
+  },
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"id\": \"53105\", \"name\": \"Spiced smoky barbecued chicken\", \"category\": \"Chicken\", \"area\": \"Australian\", \"instructions\": \"step 1\\r\\nMake the marinade. Smash the garlic with a little salt using a pestle and mortar. Add the lemon zest and juice, the spice mix, chilli, oil and a good grinding of black pepper. Mix to a paste. This can be done in a mini food processor.\\r\\n\\r\\nstep 2\\r\\nToss the chicken in the marinade and set aside while you light the barbecue. When the barbecue’s hot, lay the bunches of herbs on the grid and put the chicken, skin side up, on top. Close the lid, if your barbecue has one, and cook the chicken on the smouldering herbs for about 10 minutes until the meat starts to colour. Turn the chicken and continue to cook for a further 20-30 minutes, turning as necessary, until it is slightly charred from the burnt herbs and cooked through to the bone.\", \"image\": \"https://www.themealdb.com/images/media/meals/a08uqk1761848682.jpg\", \"source\": \"https://www.bbcgoodfood.com/recipes/spiced-smoky-barbecued-chicken\", \"youtube\": \"\", \"ingredients\": [{\"name\": \"Garlic\", \"measure\": \"2 cloves\"}, {\"name\": \"Lemon\", \"measure\": \"Juice/zest of one\"}, {\"name\": \"Curry Powder\", \"measure\": \"2 tblsp\"}, {\"name\": \"Chilli Flakes\", \"measure\": \"Pinch\"}, {\"name\": \"Olive Oil\", \"measure\": \"3  tablespoons\"}, {\"name\": \"Chicken Thighs\", \"measure\": \"12\"}, {\"name\": \"Rosemary\", \"measure\": \"Bunch\"}, {\"name\": \"Rosemary\", \"measure\": \"Bunch\"}, {\"name\": \"Thyme\", \"measure\": \"Bunch\"}, {\"name\": \"Thyme\", \"measure\": \"Bunch\"}, {\"name\": \"Bay Leaves\", \"measure\": \"2\"}]}"
+      }
+    ],
+    "isError": false
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "captured_at_utc": "2026-10-03T08:29:35.960735+00:00",
+  "source": "MySQL 8.4.11, owned synthetic s6102_rel on127.0.0.1:3308, hw5_reader",
+  "search_cases": [
+    {
+      "query": "%",
+      "expected_ids": [
+        3
+      ],
+      "actual_ids": [
+        3
+      ],
+      "passed": true
+    },
+    {
+      "query": "_",
+      "expected_ids": [
+        3
+      ],
+      "actual_ids": [
+        3
+      ],
+      "passed": true
+    },
+    {
+      "query": "'",
+      "expected_ids": [
+        6
+      ],
+      "actual_ids": [
+        6
+      ],
+      "passed": true
+    },
+    {
+      "query": "\\",
+      "expected_ids": [
+        6
+      ],
+      "actual_ids": [
+        6
+      ],
+      "passed": true
+    },
+    {
+      "query": "! ",
+      "expected_ids": [],
+      "actual_ids": [],
+      "passed": true
+    },
+    {
+      "query": "CAFÉ",
+      "expected_ids": [
+        4,
+        5
+      ],
+      "actual_ids": [
+        4,
+        5
+      ],
+      "passed": true
+    },
+    {
+      "query": "cafe",
+      "expected_ids": [],
+      "actual_ids": [],
+      "passed": true
+    },
+    {
+      "query": "STRASSE",
+      "expected_ids": [],
+      "actual_ids": [],
+      "passed": true
+    },
+    {
+      "query": "straße",
+      "expected_ids": [
+        4
+      ],
+      "actual_ids": [
+        4
+      ],
+      "passed": true
+    },
+    {
+      "query": "café",
+      "expected_ids": [],
+      "actual_ids": [],
+      "passed": true
+    },
+    {
+      "query": "Campus",
+      "expected_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "actual_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "passed": true
+    },
+    {
+      "query": "' OR 1=1 --",
+      "expected_ids": [],
+      "actual_ids": [],
+      "passed": true
+    }
+  ],
+  "empty_manager_count_zero": true,
+  "nullable_manager_preserved": true,
+  "private_column_read_denied": {
+    "passed": true,
+    "exception_class": "OperationalError",
+    "raw_exception_omitted": true
+  }
+}

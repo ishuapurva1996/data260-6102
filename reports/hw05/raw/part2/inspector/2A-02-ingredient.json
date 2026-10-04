@@ -1,0 +1,27 @@
+{
+  "captured_at_utc": "2026-10-03T08:32:39.784Z",
+  "client": "MCP Inspector 1.0.2 GUI history clipboard",
+  "source": "TheMealDB public V1 API",
+  "request": {
+    "method": "tools/call",
+    "params": {
+      "name": "meals_by_ingredient",
+      "arguments": {
+        "ingredient": "chicken",
+        "limit": 1
+      },
+      "_meta": {
+        "progressToken": 1
+      }
+    }
+  },
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "[{\"id\": \"52940\", \"name\": \"Brown Stew Chicken\", \"thumb\": \"https://www.themealdb.com/images/media/meals/sypxpx1515365095.jpg\"}]"
+      }
+    ],
+    "isError": false
+  }
+}

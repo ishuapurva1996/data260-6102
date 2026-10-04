@@ -1,0 +1,45 @@
+{
+  "captured_at_utc": "2026-10-03T08:34:48.067Z",
+  "client": "MCP Inspector 1.0.2 GUI history clipboard",
+  "source": "owned MySQL8.4.11 s6102_rel at127.0.0.1:3308 synthetic fixture",
+  "request": {
+    "method": "tools/call",
+    "params": {
+      "name": "search_rentals",
+      "arguments": {
+        "query": "Sunny Downtown Apartment",
+        "limit": 5
+      },
+      "_meta": {
+        "progressToken": 5,
+        "source": "MySQL3308/s6102_rel synthetic"
+      }
+    }
+  },
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"ok\": true,\n  \"data\": {\n    \"items\": [\n      {\n        \"id\": 1,\n        \"listingTitle\": \"Sunny Downtown Apartment\",\n        \"propertyAddress\": \"1 Campus Way, San Jose, CA\",\n        \"propertyType\": \"apartment\",\n        \"managerId\": 1\n      }\n    ],\n    \"returnedCount\": 1,\n    \"limit\": 5\n  },\n  \"error\": null\n}"
+      }
+    ],
+    "structuredContent": {
+      "ok": true,
+      "data": {
+        "items": [
+          {
+            "id": 1,
+            "listingTitle": "Sunny Downtown Apartment",
+            "propertyAddress": "1 Campus Way, San Jose, CA",
+            "propertyType": "apartment",
+            "managerId": 1
+          }
+        ],
+        "returnedCount": 1,
+        "limit": 5
+      },
+      "error": null
+    },
+    "isError": false
+  }
+}

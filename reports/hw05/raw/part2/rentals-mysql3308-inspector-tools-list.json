@@ -1,0 +1,99 @@
+{
+  "tools": [
+    {
+      "name": "search_rentals",
+      "description": "Search public rental titles and addresses using literal case-insensitive text; return IDs in ascending order.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "maxLength": 255,
+            "minLength": 1,
+            "title": "Query",
+            "type": "string"
+          },
+          "limit": {
+            "default": 5,
+            "maximum": 25,
+            "minimum": 1,
+            "title": "Limit",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "query"
+        ],
+        "title": "search_rentalsArguments"
+      },
+      "outputSchema": {
+        "type": "object",
+        "additionalProperties": true,
+        "title": "search_rentalsDictOutput"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "get_rental",
+      "description": "Get the public details of one rental by its positive integer ID.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "rental_id": {
+            "exclusiveMinimum": 0,
+            "title": "Rental Id",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "rental_id"
+        ],
+        "title": "get_rentalArguments"
+      },
+      "outputSchema": {
+        "type": "object",
+        "additionalProperties": true,
+        "title": "get_rentalDictOutput"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "count_rentals",
+      "description": "Count rentals assigned to an existing property manager, including a count of zero.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "manager_id": {
+            "exclusiveMinimum": 0,
+            "title": "Manager Id",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "manager_id"
+        ],
+        "title": "count_rentalsArguments"
+      },
+      "outputSchema": {
+        "type": "object",
+        "additionalProperties": true,
+        "title": "count_rentalsDictOutput"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    }
+  ]
+}
