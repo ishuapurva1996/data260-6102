@@ -1,0 +1,201 @@
+{
+  "utc": "2026-10-04T04:06:08.327224+00:00",
+  "purpose": "runtime preparation only; authoritative code evidence is captured separately at committed revision",
+  "python": "3.12.14",
+  "executable": "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part5/runtime/agent-venv/bin/python",
+  "mysql": "8.4.11",
+  "pip_check_exit": 0,
+  "packages": {
+    "PyJWT": "2.15.1",
+    "PyMySQL": "1.1.2",
+    "PyYAML": "6.0.3",
+    "Pygments": "2.21.0",
+    "SQLAlchemy": "2.0.48",
+    "annotated-doc": "0.0.5",
+    "annotated-types": "0.8.0",
+    "anyio": "4.15.1",
+    "attrs": "26.1.0",
+    "certifi": "2026.7.22",
+    "cffi": "2.1.1",
+    "charset-normalizer": "3.5.2",
+    "click": "8.5.0",
+    "cryptography": "46.0.5",
+    "distro": "1.9.0",
+    "h11": "0.16.0",
+    "httpcore": "1.0.9",
+    "httpcore2": "2.13.1",
+    "httpx": "0.28.1",
+    "httpx-sse": "0.4.3",
+    "httpx2": "2.13.1",
+    "idna": "3.20",
+    "iniconfig": "2.3.0",
+    "jsonpatch": "1.33",
+    "jsonpointer": "3.1.1",
+    "jsonschema": "4.26.0",
+    "jsonschema-specifications": "2025.9.1",
+    "langchain-core": "1.6.6",
+    "langchain-ollama": "1.1.0",
+    "langchain-protocol": "0.0.19",
+    "langsmith": "0.14.4",
+    "markdown-it-py": "4.2.0",
+    "mcp": "1.28.1",
+    "mdurl": "0.1.2",
+    "ollama": "0.6.3",
+    "orjson": "3.12.0",
+    "packaging": "26.3",
+    "pip": "25.0.1",
+    "pluggy": "1.6.0",
+    "pycparser": "3.0",
+    "pydantic": "2.12.5",
+    "pydantic-settings": "2.15.0",
+    "pydantic_core": "2.41.5",
+    "pytest": "8.4.2",
+    "python-dotenv": "1.2.4",
+    "python-multipart": "0.0.32",
+    "referencing": "0.37.0",
+    "requests": "2.34.2",
+    "requests-toolbelt": "1.0.0",
+    "rich": "15.0.0",
+    "rpds-py": "2026.6.3",
+    "shellingham": "1.5.4",
+    "sniffio": "1.3.1",
+    "sse-starlette": "3.5.0",
+    "starlette": "1.7.0",
+    "tenacity": "9.1.4",
+    "truststore": "0.10.4",
+    "typer": "0.27.2",
+    "typing-inspection": "0.4.4",
+    "typing_extensions": "4.16.0",
+    "urllib3": "2.8.0",
+    "uuid_utils": "0.17.1",
+    "uvicorn": "0.54.0",
+    "websockets": "17.2",
+    "xxhash": "4.0.1",
+    "zstandard": "0.25.0"
+  },
+  "reader_username": "hw5_part5_reader",
+  "host": "127.0.0.1",
+  "port": 3313,
+  "database": "s6102_rel",
+  "grants": [
+    "GRANT USAGE ON *.* TO `hw5_part5_reader`@`%`",
+    "GRANT SELECT (`id`, `name`) ON `s6102_rel`.`property_managers` TO `hw5_part5_reader`@`%`",
+    "GRANT SELECT (`description`, `id`, `listing_title`, `manager_id`, `property_address`, `property_type`) ON `s6102_rel`.`rentals` TO `hw5_part5_reader`@`%`"
+  ],
+  "forbidden_queries_denied": {
+    "submitter_contact": true,
+    "manager_contact": true,
+    "authentication": true,
+    "write": true
+  },
+  "public_executor_probes": [
+    {
+      "tool": "search_rentals",
+      "inputs": {
+        "query": "Part5 Campus",
+        "limit": 3
+      },
+      "result": {
+        "ok": true,
+        "data": {
+          "items": [
+            {
+              "id": 1,
+              "listingTitle": "Part5 Campus Rental 1",
+              "propertyAddress": "6101 Part5 Avenue, San Jose, CA",
+              "propertyType": "apartment",
+              "managerId": 1
+            },
+            {
+              "id": 2,
+              "listingTitle": "Part5 Campus Rental 2",
+              "propertyAddress": "6102 Part5 Avenue, San Jose, CA",
+              "propertyType": "house",
+              "managerId": 1
+            },
+            {
+              "id": 3,
+              "listingTitle": "Part5 Campus Rental 3",
+              "propertyAddress": "6103 Part5 Avenue, San Jose, CA",
+              "propertyType": "apartment",
+              "managerId": 1
+            }
+          ],
+          "returnedCount": 3,
+          "limit": 3
+        },
+        "error": null
+      }
+    },
+    {
+      "tool": "get_rental",
+      "inputs": {
+        "rental_id": 1
+      },
+      "result": {
+        "ok": true,
+        "data": {
+          "id": 1,
+          "listingTitle": "Part5 Campus Rental 1",
+          "propertyAddress": "6101 Part5 Avenue, San Jose, CA",
+          "propertyType": "apartment",
+          "managerId": 1,
+          "description": "A preserved baseline rental with a quiet study room and garden."
+        },
+        "error": null
+      }
+    },
+    {
+      "tool": "count_rentals",
+      "inputs": {
+        "manager_id": 1
+      },
+      "result": {
+        "ok": true,
+        "data": {
+          "managerId": 1,
+          "managerName": "Part5 Campus Manager",
+          "count": 7
+        },
+        "error": null
+      }
+    },
+    {
+      "tool": "count_rentals",
+      "inputs": {
+        "manager_id": 2
+      },
+      "result": {
+        "ok": true,
+        "data": {
+          "managerId": 2,
+          "managerName": "Part5 Garden Manager",
+          "count": 4
+        },
+        "error": null
+      }
+    },
+    {
+      "tool": "count_rentals",
+      "inputs": {
+        "manager_id": 3
+      },
+      "result": {
+        "ok": true,
+        "data": {
+          "managerId": 3,
+          "managerName": "Part5 Empty Manager",
+          "count": 0
+        },
+        "error": null
+      }
+    }
+  ],
+  "source_sha256": {
+    "requirements-agent.txt": "220ff24361dd86645fe180cf1b477524e5ca6a9af355b2b010248a8661a724c6",
+    "requirements-mcp.txt": "30fa369c88f67546629fe097d8e466fa9bc8719c7c81acf9a77ce8f2202f25b6",
+    "reports/hw01/requirements-part2.txt": "52483275933d1845eb7cd68ea57626476f278251eea36691ff3f6a3be1db7885",
+    "src/rental_tools/reader.py": "6aea8b933dc5c13e216bab21f5476a0016d1110fffd38c3fec2a536e69eeef66",
+    "src/rental_tools/executor.py": "893637f76d063563645c218158257e19a6ef5d24c1707965cf05f33c6f1c809c"
+  }
+}

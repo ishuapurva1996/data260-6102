@@ -1,0 +1,10 @@
+Pragya Apurva - HW5 Parts 4/5 offline assertions
+PASS valid_search
+PASS whitespace_search_rejected
+PASS valid_rental_detail
+PASS missing_rental_8_rejected
+PASS valid_manager_count
+PASS missing_manager_4_rejected
+PASS private_contact_blocked
+PASS mock_model_max_steps
+8/8 passed

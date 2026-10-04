@@ -1,0 +1,18 @@
+{
+  "utc": "2026-10-04T04:12:01.530926+00:00",
+  "action": "stop",
+  "mysql_id": "2fa6b0f7fdeaba97d95fff89a7cfeca88aa63ee4632bcdb585fd2f990db6a721",
+  "mysql_labels": {
+    "data260.owner": "hw5-part5",
+    "data260.role": "agent-fixture"
+  },
+  "mysql_running": false,
+  "ollama_pid": 92562,
+  "ollama_owned_process_running": false,
+  "ports": {
+    "3313": false,
+    "11434": false
+  },
+  "mysql_data_retained": true,
+  "no_other_services_targeted": true
+}

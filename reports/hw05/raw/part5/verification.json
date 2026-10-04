@@ -1,0 +1,180 @@
+{
+  "student": "Pragya Apurva",
+  "tested_code_sha": "c7dc13ef214234fc0e34294b68e3cd74c76b2a73",
+  "pytest": {
+    "tests": 473,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "offline": {
+    "passes": 8,
+    "total": 8,
+    "runs": 2,
+    "byte_identical": true
+  },
+  "real_scenarios": 5,
+  "commands": [
+    {
+      "label": "authoritative-tests",
+      "command": [
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part5/runtime/agent-venv/bin/python",
+        "-m",
+        "pytest",
+        "tests/test_hw05_meals.py",
+        "tests/test_hw05_domain_tools.py",
+        "tests/test_hw05_mcp_stdio.py",
+        "tests/test_hw05_fixture_setup.py",
+        "tests/test_hw05_reliability.py",
+        "tests/test_hw05_runtime.py",
+        "tests/test_hw05_fault_experiment.py",
+        "tests/test_hw05_timeouts.py",
+        "tests/test_hw05_executor.py",
+        "tests/test_hw05_offline_runner.py",
+        "tests/test_hw05_executor_integration.py",
+        "tests/test_hw05_agent.py",
+        "reports/hw01/tests/test_model_client.py",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "--basetemp",
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part5/checks/pytest-authoritative",
+        "--junitxml",
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part5/checks/authoritative-tests.xml"
+      ],
+      "cwd": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part5-agent",
+      "started_at_utc": "2026-10-04T04:10:56.970275+00:00",
+      "code_revision": "c7dc13ef214234fc0e34294b68e3cd74c76b2a73",
+      "environment_profile": "offline-minimal",
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-04T04:11:10.485913+00:00",
+      "expected_exit_code": 0,
+      "expected_outcome_verified": true
+    },
+    {
+      "label": "offline-1",
+      "command": [
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part5/runtime/agent-venv/bin/python",
+        "scripts/hw05/run_offline_tests.py"
+      ],
+      "cwd": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part5-agent",
+      "started_at_utc": "2026-10-04T04:11:07.756486+00:00",
+      "code_revision": "c7dc13ef214234fc0e34294b68e3cd74c76b2a73",
+      "environment_profile": "offline-minimal",
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-04T04:11:07.981325+00:00",
+      "expected_exit_code": 0,
+      "expected_outcome_verified": true
+    },
+    {
+      "label": "offline-2",
+      "command": [
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part5/runtime/agent-venv/bin/python",
+        "scripts/hw05/run_offline_tests.py"
+      ],
+      "cwd": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part5-agent",
+      "started_at_utc": "2026-10-04T04:11:10.637305+00:00",
+      "code_revision": "c7dc13ef214234fc0e34294b68e3cd74c76b2a73",
+      "environment_profile": "offline-minimal",
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-04T04:11:11.010207+00:00",
+      "expected_exit_code": 0,
+      "expected_outcome_verified": true
+    },
+    {
+      "label": "dependencies",
+      "command": [
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part5/runtime/agent-venv/bin/python",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "cwd": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part5-agent",
+      "started_at_utc": "2026-10-04T04:11:08.434471+00:00",
+      "code_revision": "c7dc13ef214234fc0e34294b68e3cd74c76b2a73",
+      "environment_profile": "offline-minimal",
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-04T04:11:08.782484+00:00",
+      "expected_exit_code": 0,
+      "expected_outcome_verified": true
+    },
+    {
+      "label": "genuine-scenarios",
+      "command": [
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part5/runtime/agent-venv/bin/python",
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part5/collect_live.py",
+        "selected-001"
+      ],
+      "cwd": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part5-agent",
+      "started_at_utc": "2026-10-04T04:10:54.199051+00:00",
+      "code_revision": "c7dc13ef214234fc0e34294b68e3cd74c76b2a73",
+      "environment_profile": "offline-minimal",
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-04T04:11:15.463460+00:00",
+      "expected_exit_code": 0,
+      "expected_outcome_verified": true,
+      "environment_note": "Launcher used minimal environment; collector privately loaded the dedicated read-only runtime/domain.env before live calls."
+    },
+    {
+      "label": "live-cli-budget",
+      "command": [
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part5/runtime/agent-venv/bin/python",
+        "scripts/hw05/run_agent.py",
+        "Count rentals for property manager 1 using count_rentals.",
+        "--model",
+        "qwen2.5:7b",
+        "--max-steps",
+        "1",
+        "--timeout",
+        "60",
+        "--log-path",
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part5/live/cli-budget.jsonl"
+      ],
+      "cwd": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part5-agent",
+      "started_at_utc": "2026-10-04T04:11:39.045602+00:00",
+      "code_revision": "c7dc13ef214234fc0e34294b68e3cd74c76b2a73",
+      "environment_profile": "domain",
+      "exit_code": 1,
+      "finished_at_utc": "2026-10-04T04:11:40.906405+00:00",
+      "expected_exit_code": 1,
+      "expected_outcome_verified": true
+    },
+    {
+      "label": "offline-optimized",
+      "command": [
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part5/runtime/agent-venv/bin/python",
+        "-O",
+        "scripts/hw05/run_offline_tests.py"
+      ],
+      "cwd": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part5-agent",
+      "started_at_utc": "2026-10-04T04:11:39.880847+00:00",
+      "code_revision": "c7dc13ef214234fc0e34294b68e3cd74c76b2a73",
+      "environment_profile": "offline-minimal",
+      "exit_code": 2,
+      "finished_at_utc": "2026-10-04T04:11:40.492626+00:00",
+      "expected_exit_code": 2,
+      "expected_outcome_verified": true
+    },
+    {
+      "label": "offline-intentional-failure",
+      "command": [
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part5/runtime/agent-venv/bin/python",
+        "-c",
+        "from scripts.hw05 import run_offline_tests as r; failing=lambda: (_ for _ in ()).throw(AssertionError(\"synthetic failure\")); raise SystemExit(r.main(cases=((\"intentional_failure\",failing),*r.CASES)))"
+      ],
+      "cwd": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part5-agent",
+      "started_at_utc": "2026-10-04T04:11:37.643044+00:00",
+      "code_revision": "c7dc13ef214234fc0e34294b68e3cd74c76b2a73",
+      "environment_profile": "offline-minimal",
+      "exit_code": 1,
+      "finished_at_utc": "2026-10-04T04:11:37.865197+00:00",
+      "expected_exit_code": 1,
+      "expected_outcome_verified": true
+    }
+  ],
+  "reflection_word_count": 253,
+  "junit_synthetic_dsn_names_redacted": 2,
+  "preparation_evidence_labeled": true,
+  "screenshots_deferred": true,
+  "full_submission_complete": false
+}

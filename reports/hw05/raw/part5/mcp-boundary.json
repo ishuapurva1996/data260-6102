@@ -1,0 +1,46 @@
+{
+  "code_revision": "c7dc13ef214234fc0e34294b68e3cd74c76b2a73",
+  "route": "real STDIO -> service -> read-only MySQL3313",
+  "calls": [
+    {
+      "inputs": {
+        "rental_id": 1,
+        "include_contact": false
+      },
+      "envelope": {
+        "ok": true,
+        "data": {
+          "id": 1,
+          "listingTitle": "Part5 Campus Rental 1",
+          "propertyAddress": "6101 Part5 Avenue, San Jose, CA",
+          "propertyType": "apartment",
+          "managerId": 1,
+          "description": "A preserved baseline rental with a quiet study room and garden."
+        },
+        "error": null
+      },
+      "isError": false
+    },
+    {
+      "inputs": {
+        "rental_id": 1,
+        "include_contact": true
+      },
+      "envelope": {
+        "ok": true,
+        "data": {
+          "id": 1,
+          "listingTitle": "Part5 Campus Rental 1",
+          "propertyAddress": "6101 Part5 Avenue, San Jose, CA",
+          "propertyType": "apartment",
+          "managerId": 1,
+          "description": "A preserved baseline rental with a quiet study room and garden."
+        },
+        "error": null
+      },
+      "isError": false
+    }
+  ],
+  "executor_policy_applies": false,
+  "public_projection_only": true
+}

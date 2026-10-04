@@ -1,0 +1,12 @@
+{
+  "code_revision": "c7dc13ef214234fc0e34294b68e3cd74c76b2a73",
+  "model": "qwen2.5:7b",
+  "temperature": 0.0,
+  "num_ctx": 4096,
+  "timeout_seconds": 60,
+  "max_steps": 4,
+  "native_protocol": true,
+  "finished_at_utc": "2026-10-04T04:11:15.327359+00:00",
+  "real_mysql_port": 3313,
+  "all_scenarios_returned": true
+}

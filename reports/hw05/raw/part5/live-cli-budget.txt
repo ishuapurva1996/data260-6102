@@ -1,0 +1,2 @@
+run_id=b205c9278a9b4da195a36a58a10aa91d stop_reason=max_steps steps=1 tool_calls=1
+The response budget was reached before a final model answer.

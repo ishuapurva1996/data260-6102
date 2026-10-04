@@ -1,0 +1,69 @@
+[
+  {
+    "label": "allowed-omitted",
+    "started_at_utc": "2026-10-04T04:10:54.484842+00:00",
+    "name": "get_rental",
+    "inputs": {
+      "rental_id": 1
+    },
+    "raw_json": "{\"ok\": true, \"data\": {\"id\": 1, \"listingTitle\": \"Part5 Campus Rental 1\", \"propertyAddress\": \"6101 Part5 Avenue, San Jose, CA\", \"propertyType\": \"apartment\", \"managerId\": 1, \"description\": \"A preserved baseline rental with a quiet study room and garden.\"}, \"error\": null}",
+    "result": {
+      "ok": true,
+      "data": {
+        "id": 1,
+        "listingTitle": "Part5 Campus Rental 1",
+        "propertyAddress": "6101 Part5 Avenue, San Jose, CA",
+        "propertyType": "apartment",
+        "managerId": 1,
+        "description": "A preserved baseline rental with a quiet study room and garden."
+      },
+      "error": null
+    },
+    "factory_constructions": 1,
+    "code_revision": "c7dc13ef214234fc0e34294b68e3cd74c76b2a73",
+    "actual_default_executor": true
+  },
+  {
+    "label": "allowed-false",
+    "started_at_utc": "2026-10-04T04:10:54.512030+00:00",
+    "name": "get_rental",
+    "inputs": {
+      "rental_id": 1,
+      "include_contact": false
+    },
+    "raw_json": "{\"ok\": true, \"data\": {\"id\": 1, \"listingTitle\": \"Part5 Campus Rental 1\", \"propertyAddress\": \"6101 Part5 Avenue, San Jose, CA\", \"propertyType\": \"apartment\", \"managerId\": 1, \"description\": \"A preserved baseline rental with a quiet study room and garden.\"}, \"error\": null}",
+    "result": {
+      "ok": true,
+      "data": {
+        "id": 1,
+        "listingTitle": "Part5 Campus Rental 1",
+        "propertyAddress": "6101 Part5 Avenue, San Jose, CA",
+        "propertyType": "apartment",
+        "managerId": 1,
+        "description": "A preserved baseline rental with a quiet study room and garden."
+      },
+      "error": null
+    },
+    "factory_constructions": 1,
+    "code_revision": "c7dc13ef214234fc0e34294b68e3cd74c76b2a73",
+    "actual_default_executor": true
+  },
+  {
+    "label": "blocked",
+    "started_at_utc": "2026-10-04T04:10:54.517896+00:00",
+    "name": "get_rental",
+    "inputs": {
+      "rental_id": 1,
+      "include_contact": true
+    },
+    "raw_json": "{\"ok\": false, \"data\": null, \"error\": \"Safety block: rental submitter contact information is private.\"}",
+    "result": {
+      "ok": false,
+      "data": null,
+      "error": "Safety block: rental submitter contact information is private."
+    },
+    "factory_constructions": 0,
+    "code_revision": "c7dc13ef214234fc0e34294b68e3cd74c76b2a73",
+    "actual_default_executor": true
+  }
+]

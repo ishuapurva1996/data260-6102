@@ -1,0 +1,28 @@
+{
+  "probe_only": true,
+  "elapsed_seconds": 6.124026625009719,
+  "raw_type": "langchain_core.messages.ai.AIMessage",
+  "content": "",
+  "tool_calls": [
+    {
+      "name": "count_rentals",
+      "args": {
+        "manager_id": 1
+      },
+      "id": "e7c72a7b-2012-4fc2-8887-ba316d6c8071",
+      "type": "tool_call"
+    }
+  ],
+  "invalid_tool_calls": [],
+  "usage": {
+    "input_tokens": 166,
+    "output_tokens": 22,
+    "total_tokens": 188
+  },
+  "options": {
+    "temperature": 0.0,
+    "timeout": 60.0,
+    "num_ctx": 4096,
+    "reasoning": false
+  }
+}

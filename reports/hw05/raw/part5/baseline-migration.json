@@ -1,0 +1,194 @@
+{
+  "utc": "2026-10-04T04:05:21.720294+00:00",
+  "fixture": "owned synthetic populated HW4 schema through 003; original SQL columns only",
+  "port": 3313,
+  "database": "s6102_rel",
+  "counts": {
+    "rentals": 12,
+    "property_managers": 3,
+    "users": 1,
+    "sessions": 1
+  },
+  "baseline_rental_ids": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "manager_ids": [
+    1,
+    2,
+    3
+  ],
+  "zero_count_manager_id": 3,
+  "unassigned_rental_id": 12,
+  "legacy_rows_and_auth_preserved": true,
+  "legacy_indexes_preserved": true,
+  "password_hash_verified": true,
+  "upgrade_applied": [
+    "004_hw5_related_entities"
+  ],
+  "rerun_applied": [],
+  "rerun_full_rows_identical": true,
+  "old_columns_sha256": "0381db90cd3517706d1a48852edb0a57a4f59a65e8cc0b14c2fc4a43c0899831",
+  "old_indexes": [
+    [
+      "property_managers",
+      "PRIMARY",
+      0,
+      1,
+      "id"
+    ],
+    [
+      "rentals",
+      "ix_rentals_listing_title",
+      1,
+      1,
+      "listing_title"
+    ],
+    [
+      "rentals",
+      "ix_rentals_manager_id",
+      1,
+      1,
+      "manager_id"
+    ],
+    [
+      "rentals",
+      "PRIMARY",
+      0,
+      1,
+      "id"
+    ],
+    [
+      "schema_migrations",
+      "PRIMARY",
+      0,
+      1,
+      "version"
+    ],
+    [
+      "sessions",
+      "ix_sessions_user_id",
+      1,
+      1,
+      "user_id"
+    ],
+    [
+      "sessions",
+      "PRIMARY",
+      0,
+      1,
+      "id"
+    ],
+    [
+      "users",
+      "PRIMARY",
+      0,
+      1,
+      "id"
+    ],
+    [
+      "users",
+      "uq_users_email",
+      0,
+      1,
+      "email"
+    ]
+  ],
+  "new_indexes": [
+    [
+      "hw05_migration_progress",
+      "PRIMARY",
+      0,
+      1,
+      "version"
+    ],
+    [
+      "property_managers",
+      "PRIMARY",
+      0,
+      1,
+      "id"
+    ],
+    [
+      "property_managers",
+      "uq_property_managers_email",
+      0,
+      1,
+      "email"
+    ],
+    [
+      "rentals",
+      "ix_rentals_listing_title",
+      1,
+      1,
+      "listing_title"
+    ],
+    [
+      "rentals",
+      "ix_rentals_manager_id",
+      1,
+      1,
+      "manager_id"
+    ],
+    [
+      "rentals",
+      "PRIMARY",
+      0,
+      1,
+      "id"
+    ],
+    [
+      "rentals",
+      "uq_rentals_listing_code",
+      0,
+      1,
+      "listing_code"
+    ],
+    [
+      "schema_migrations",
+      "PRIMARY",
+      0,
+      1,
+      "version"
+    ],
+    [
+      "sessions",
+      "ix_sessions_user_id",
+      1,
+      1,
+      "user_id"
+    ],
+    [
+      "sessions",
+      "PRIMARY",
+      0,
+      1,
+      "id"
+    ],
+    [
+      "users",
+      "PRIMARY",
+      0,
+      1,
+      "id"
+    ],
+    [
+      "users",
+      "uq_users_email",
+      0,
+      1,
+      "email"
+    ]
+  ],
+  "baseline_domain_full_sha256": "803d8dca0bdc5e5d066ec989681089edc9234807facdce1917cef5b0f80a271e"
+}
