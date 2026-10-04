@@ -1,4 +1,4 @@
-"""The shared HW4 service: MySQL API and same-origin React application."""
+"""The shared homework service: MySQL API and same-origin React application."""
 from datetime import datetime, timezone
 import math
 from pathlib import Path
@@ -15,7 +15,7 @@ if not __package__:
     sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from web_application.database import SessionLocal
-from web_application.routers import auth, rentals, performance
+from web_application.routers import auth, rentals, performance, property_managers
 from web_application.query_metrics import QueryMetricsMiddleware, install_query_counter
 
 PORT_BASE = 8702
@@ -31,7 +31,7 @@ def create_app(*, session_factory=None, clock=utc_now, idle_timeout=300,
                frontend_dist=None) -> FastAPI:
     if not math.isfinite(idle_timeout) or idle_timeout <= 0:
         raise ValueError("idle timeout must be positive and finite")
-    app = FastAPI(title="Rental Housing Listings", version="4.0.0")
+    app = FastAPI(title="Rental Housing Listings", version="5.0.0")
     app.state.session_factory = session_factory or SessionLocal
     app.state.clock = clock
     app.state.idle_timeout = idle_timeout
@@ -50,6 +50,7 @@ def create_app(*, session_factory=None, clock=utc_now, idle_timeout=300,
     app.add_middleware(QueryMetricsMiddleware)
     app.include_router(performance.router)
     app.include_router(rentals.router)
+    app.include_router(property_managers.router)
 
     @app.middleware("http")
     async def no_store_api(request, call_next):

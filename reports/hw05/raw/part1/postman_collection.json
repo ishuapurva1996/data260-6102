@@ -1,0 +1,533 @@
+{
+  "info": {
+    "name": "DATA260 HW5 Part1 - Pragya Apurva",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Reproducible inputs, not proof of a Postman run. Use local private email/password environment values and the secure-cookie jar. Trust the supplied local CA through Postman settings; do not expose credentials in screenshots. Execute in order; only run-created rows are deleted."
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://localhost:8702"
+    }
+  ],
+  "item": [
+    {
+      "name": "00 Login (do not screenshot credentials)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/auth/login",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"{{email}}\",\n  \"password\": \"{{password}}\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"HTTP 200\", () => pm.response.to.have.status(200));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "01 Manager create",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/property-managers",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Postman Evidence Manager\",\n  \"company\": \"Orchard Homes\",\n  \"email\": \"{{managerEmail}}\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.collectionVariables.set('managerEmail', 'postman-'+Date.now()+'@example.com');"
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"HTTP 201\", () => pm.response.to.have.status(201));",
+              "pm.collectionVariables.set('managerId',pm.response.json().id);"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "02 Manager paginated list",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/api/property-managers?limit=10&offset=0"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"HTTP 200\", () => pm.response.to.have.status(200));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "03 Manager detail",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/api/property-managers/{{managerId}}"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"HTTP 200\", () => pm.response.to.have.status(200));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "04 Manager update",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/property-managers/{{managerId}}",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Postman Evidence Manager\",\n  \"company\": \"Updated Orchard Homes\",\n  \"email\": \"{{managerEmail}}\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"HTTP 200\", () => pm.response.to.have.status(200));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "05 Rental create",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/rentals",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"listingTitle\": \"Postman Rental Evidence\",\n  \"propertyAddress\": \"6102 Orchard Lane, San Jose, CA\",\n  \"submitterEmail\": \"owner@example.com\",\n  \"description\": \"A bright rental home with comfortable rooms near the university.\",\n  \"propertyType\": \"apartment\",\n  \"termsAccepted\": true,\n  \"managerId\": {{managerId}},\n  \"availableUnits\": 2\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"HTTP 201\", () => pm.response.to.have.status(201));",
+              "pm.collectionVariables.set('rentalId',pm.response.json().id);",
+              "pm.collectionVariables.set('listingCode',pm.response.json().listingCode);"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "06 Rental paginated list",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/api/rentals?limit=10&offset=0"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"HTTP 200\", () => pm.response.to.have.status(200));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "07 Rental detail",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/api/rentals/{{rentalId}}"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"HTTP 200\", () => pm.response.to.have.status(200));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "08 Rental update",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/rentals/{{rentalId}}",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"listingTitle\": \"Updated Postman Rental\",\n  \"propertyAddress\": \"6102 Orchard Lane, San Jose, CA\",\n  \"availableUnits\": 3,\n  \"managerId\": {{managerId}}\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"HTTP 200\", () => pm.response.to.have.status(200));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "09 Relationship query",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/api/property-managers/{{managerId}}/rentals?limit=10&offset=0"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"HTTP 200\", () => pm.response.to.have.status(200));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "10 Referenced manager deletion conflict",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": "{{baseUrl}}/api/property-managers/{{managerId}}"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"HTTP 409\", () => pm.response.to.have.status(409));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "11 Duplicate email conflict",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/property-managers",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Postman Evidence Manager\",\n  \"company\": \"Orchard Homes\",\n  \"email\": \"{{managerEmail}}\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"HTTP 409\", () => pm.response.to.have.status(409));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "12 Duplicate listing code conflict",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/rentals",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"listingTitle\": \"Postman Rental Evidence\",\n  \"propertyAddress\": \"6102 Orchard Lane, San Jose, CA\",\n  \"submitterEmail\": \"owner@example.com\",\n  \"description\": \"A bright rental home with comfortable rooms near the university.\",\n  \"propertyType\": \"apartment\",\n  \"termsAccepted\": true,\n  \"managerId\": {{managerId}},\n  \"availableUnits\": 2,\n  \"listingCode\": \"{{listingCode}}\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"HTTP 409\", () => pm.response.to.have.status(409));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "13 Invalid available units",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/rentals",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"listingTitle\": \"Postman Rental Evidence\",\n  \"propertyAddress\": \"6102 Orchard Lane, San Jose, CA\",\n  \"submitterEmail\": \"owner@example.com\",\n  \"description\": \"A bright rental home with comfortable rooms near the university.\",\n  \"propertyType\": \"apartment\",\n  \"termsAccepted\": true,\n  \"managerId\": {{managerId}},\n  \"availableUnits\": -1\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"HTTP 422\", () => pm.response.to.have.status(422));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "14 Invalid unique code format",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/rentals",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"listingTitle\": \"Postman Rental Evidence\",\n  \"propertyAddress\": \"6102 Orchard Lane, San Jose, CA\",\n  \"submitterEmail\": \"owner@example.com\",\n  \"description\": \"A bright rental home with comfortable rooms near the university.\",\n  \"propertyType\": \"apartment\",\n  \"termsAccepted\": true,\n  \"managerId\": {{managerId}},\n  \"availableUnits\": 2,\n  \"listingCode\": \"bad-code\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"HTTP 422\", () => pm.response.to.have.status(422));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "15 Rental delete",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": "{{baseUrl}}/api/rentals/{{rentalId}}"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"HTTP 204\", () => pm.response.to.have.status(204));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "16 Rental missing after delete",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/api/rentals/{{rentalId}}"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"HTTP 404\", () => pm.response.to.have.status(404));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "17 Manager delete",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": "{{baseUrl}}/api/property-managers/{{managerId}}"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"HTTP 204\", () => pm.response.to.have.status(204));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "18 Manager missing after delete",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/api/property-managers/{{managerId}}"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"HTTP 404\", () => pm.response.to.have.status(404));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "19 Logout",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": "{{baseUrl}}/api/auth/logout"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"HTTP 204\", () => pm.response.to.have.status(204));"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

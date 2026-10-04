@@ -1,0 +1,611 @@
+DATA 260 HW5 Part 1 — Pragya Apurva
+All recorded times are UTC. Only Part 1 was executed.
+Base: f57d20fd5588589fcf6e6c8792b0d912277da9f0
+Backend commit: f6091d0fe9171fec999b3fe57357f784ad1a24e6
+Frontend commit: 8837b307257f34689bd5606d45abc5fc5b954aad
+Tests ran on implementation working files before commits. Log HEAD values are retained honestly.
+Browser/capture source hashes match the frontend commit; no application changes followed final tests.
+Private environment values were loaded from external files and redacted by the logging runner.
+Migration tests used separate disposable MySQL3309; other live checks used owned MySQL3307 and HTTPS8702.
+
+=== baseline-hw4-schema ===
+Started: 2026-10-03T08:24:10.865879+00:00
+Ended: 2026-10-03T08:24:11.881381+00:00
+HEAD at recording: f57d20fd5588589fcf6e6c8792b0d912277da9f0
+CWD: /Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part1-application
+Command: /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/runtime/venv/bin/python scripts/hw04/db_setup.py --create-database --migrate --through 3 --seed-account
+Exit code: 0
+Database s6102_rel is available; existing data was preserved.
+Applied migrations: 001_initial.sql, 003_listing_title_index.sql
+Teaching account created.
+
+=== baseline-populated ===
+Started: 2026-10-03T08:24:31.943889+00:00
+Ended: 2026-10-03T08:24:32.146121+00:00
+HEAD at recording: f57d20fd5588589fcf6e6c8792b0d912277da9f0
+CWD: /Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part1-application
+Command: /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/runtime/venv/bin/python /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/seed_baseline.py
+Exit code: 0
+Seeded 55 HW4-shaped rentals and 2 managers; saved original-field hashes including auth preservation baseline without credentials.
+
+=== application-migration ===
+Started: 2026-10-03T08:26:21.931533+00:00
+Ended: 2026-10-03T08:26:22.519449+00:00
+HEAD at recording: f57d20fd5588589fcf6e6c8792b0d912277da9f0
+CWD: /Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part1-application
+Command: /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/runtime/venv/bin/python scripts/hw05/part1/db_setup.py --migrate
+Exit code: 0
+Applied migrations: 004_hw5_related_entities
+
+=== application-preservation ===
+Started: 2026-10-03T08:26:49.858405+00:00
+Ended: 2026-10-03T08:26:50.031936+00:00
+HEAD at recording: f57d20fd5588589fcf6e6c8792b0d912277da9f0
+CWD: /Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part1-application
+Command: /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/runtime/venv/bin/python /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/check_preservation.py
+Exit code: 0
+PASS: all original fields, IDs, associations and password hashes preserved; manager FK RESTRICT; indexes retained.
+
+=== migration-tests-final ===
+Started: 2026-10-03T08:28:47.973716+00:00
+Ended: 2026-10-03T08:28:51.307075+00:00
+HEAD at recording: f57d20fd5588589fcf6e6c8792b0d912277da9f0
+CWD: /Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part1-application
+Command: /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/runtime/venv/bin/python -m pytest tests/test_hw05_database.py -q -p no:cacheprovider --basetemp /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/pytest-migration-final2 --junitxml /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/migration-tests-final.xml
+Exit code: 0
+...........                                                              [100%]
+=============================== warnings summary ===============================
+../../../../../../code/agent_outputs/data260-hw5/sessions/part1/runtime/venv/lib/python3.12/site-packages/starlette/formparsers.py:10
+  /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/runtime/venv/lib/python3.12/site-packages/starlette/formparsers.py:10: PendingDeprecationWarning: Please use `import python_multipart` instead.
+    import multipart
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/migration-tests-final.xml -
+11 passed, 1 warning in 3.16s
+
+=== web-dependencies ===
+Started: 2026-10-03T08:28:51.461620+00:00
+Ended: 2026-10-03T08:28:51.620615+00:00
+HEAD at recording: f57d20fd5588589fcf6e6c8792b0d912277da9f0
+CWD: /Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part1-application
+Command: /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/runtime/venv/bin/python -m pip check
+Exit code: 0
+No broken requirements found.
+
+=== frontend-install ===
+Started: 2026-10-03T08:29:57.509485+00:00
+Ended: 2026-10-03T08:29:58.908179+00:00
+HEAD at recording: f57d20fd5588589fcf6e6c8792b0d912277da9f0
+CWD: /Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part1-application/frontend
+Command: /Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/runtime/npm/package/bin/npm-cli.js ci --cache /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/runtime/npm-cache
+Exit code: 0
+
+added 59 packages, and audited 60 packages in 1s
+
+12 packages are looking for funding
+  run `npm fund` for details
+
+2 moderate severity vulnerabilities
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+npm warn install-scripts 2 packages had install scripts blocked because they are not covered by allowScripts:
+npm warn install-scripts   esbuild@0.28.2 (postinstall: node install.js)
+npm warn install-scripts   fsevents@2.3.3 (install: (install scripts present))
+npm warn install-scripts
+npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
+
+=== backend-final ===
+Started: 2026-10-03T08:30:11.265266+00:00
+Ended: 2026-10-03T08:30:18.913218+00:00
+HEAD at recording: f57d20fd5588589fcf6e6c8792b0d912277da9f0
+CWD: /Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part1-application
+Command: /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/runtime/venv/bin/python -m pytest tests/test_hw05_api.py tests/test_api.py tests/test_hw04_database.py tests/test_hw04_search_regression.py tests/test_hw04_auth.py tests/test_hw04_serving.py tests/test_hw04_fixture_isolation.py tests/test_hw04_part3.py::test_request_context_survives_threads_and_serialization_and_does_not_leak tests/test_hw04_part3.py::test_non_experiment_routes_do_not_expose_sql_counters -q -p no:cacheprovider --basetemp /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/pytest-backend-final --junitxml /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/backend-final.xml
+Exit code: 0
+........................................................................ [ 45%]
+........................................................................ [ 90%]
+................                                                         [100%]
+=============================== warnings summary ===============================
+../../../../../../code/agent_outputs/data260-hw5/sessions/part1/runtime/venv/lib/python3.12/site-packages/starlette/formparsers.py:10
+  /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/runtime/venv/lib/python3.12/site-packages/starlette/formparsers.py:10: PendingDeprecationWarning: Please use `import python_multipart` instead.
+    import multipart
+
+../../../../../../code/agent_outputs/data260-hw5/sessions/part1/runtime/venv/lib/python3.12/site-packages/starlette/testclient.py:31
+  /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/runtime/venv/lib/python3.12/site-packages/starlette/testclient.py:31: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    [], typing.ContextManager[anyio.abc.BlockingPortal]
+
+tests/test_hw05_api.py: 44 warnings
+tests/test_api.py: 42 warnings
+tests/test_hw04_database.py: 1 warning
+tests/test_hw04_search_regression.py: 1 warning
+tests/test_hw04_auth.py: 38 warnings
+tests/test_hw04_serving.py: 14 warnings
+  /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/runtime/venv/lib/python3.12/site-packages/httpx/_client.py:690: DeprecationWarning: The 'app' shortcut is now deprecated. Use the explicit style 'transport=WSGITransport(app=...)' instead.
+    warnings.warn(message, DeprecationWarning)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/backend-final.xml -
+160 passed, 142 warnings in 7.43s
+
+=== live-api ===
+Started: 2026-10-03T08:32:05.964694+00:00
+Ended: 2026-10-03T08:32:06.389045+00:00
+HEAD at recording: f57d20fd5588589fcf6e6c8792b0d912277da9f0
+CWD: /Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part1-application
+Command: /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/runtime/venv/bin/python scripts/hw05/part1/live_acceptance.py --output /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/live-api.json
+Exit code: 0
+PASS Manager create: HTTP 201
+PASS Manager list pagination: HTTP 200
+PASS Manager detail: HTTP 200
+PASS Manager unique email conflict: HTTP 409
+PASS Manager update: HTTP 200
+PASS Empty relationship: HTTP 200
+PASS Rental create generated code: HTTP 201
+PASS Rental list pagination: HTTP 200
+PASS Rental detail: HTTP 200
+PASS Relationship query: HTTP 200
+PASS Referenced manager delete restricted: HTTP 409
+PASS Rental unique code conflict: HTTP 409
+PASS Negative units invalid: HTTP 422
+PASS Malformed listing code invalid: HTTP 422
+PASS Malformed manager email invalid: HTTP 422
+PASS Invalid pagination: HTTP 422
+PASS Missing manager invalid FK: HTTP 422
+PASS Missing manager detail: HTTP 404
+PASS Rental update: HTTP 200
+PASS Rental delete: HTTP 204
+PASS Deleted rental absent: HTTP 404
+PASS Manager delete after child removed: HTTP 204
+PASS Deleted manager absent: HTTP 404
+PASS Legacy performance naive serialization: HTTP 200
+PASS Legacy performance fixed serialization: HTTP 200
+
+=== live-restart ===
+Started: 2026-10-03T08:33:31.729955+00:00
+Ended: 2026-10-03T08:33:32.480725+00:00
+HEAD at recording: f6091d0fe9171fec999b3fe57357f784ad1a24e6
+CWD: /Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part1-application
+Command: /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/runtime/venv/bin/python /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/check_restart.py
+Exit code: 0
+PASS: rental fields and authenticated secure-cookie session persisted across actual owned web process restart.
+
+=== frontend-build-notice-fix ===
+Started: 2026-10-03T08:40:09.295628+00:00
+Ended: 2026-10-03T08:40:10.034958+00:00
+HEAD at recording: f6091d0fe9171fec999b3fe57357f784ad1a24e6
+CWD: /Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part1-application/frontend
+Command: /Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/runtime/npm/package/bin/npm-cli.js run build
+Exit code: 0
+vite v7.3.6 building client environment for production...
+transforming...
+✓ 102 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.46 kB │ gzip:  0.29 kB
+dist/assets/index-BdkfMsrp.css    4.55 kB │ gzip:  1.64 kB
+dist/assets/index-CL39KU_f.js   265.95 kB │ gzip: 89.36 kB
+✓ built in 450ms
+npm notice run s6102-rental-client@1.0.0 build
+npm notice run vite build
+
+=== redux-feature-final ===
+Started: 2026-10-03T08:40:12.368781+00:00
+Ended: 2026-10-03T08:40:14.296161+00:00
+HEAD at recording: f6091d0fe9171fec999b3fe57357f784ad1a24e6
+CWD: /Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part1-application
+Command: /Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node scripts/hw05/part1/capture_features.cjs
+Exit code: 0
+CAPTURED Home: genuine browser source + live UI frame
+CAPTURED Create: genuine browser source + live UI frame
+CAPTURED Update: genuine browser source + live UI frame
+CAPTURED Delete: genuine browser source + live UI frame
+
+=== browser-mock-finalized ===
+Started: 2026-10-03T08:40:26.789394+00:00
+Ended: 2026-10-03T08:40:30.982270+00:00
+HEAD at recording: f6091d0fe9171fec999b3fe57357f784ad1a24e6
+CWD: /Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part1-application
+Command: /Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node tests/browser_hw05_part1.cjs --mock
+Exit code: 0
+RUN [mock] Protected routes, login, paginated Home and obsolete shortcut removal
+PASS [mock] Protected routes, login, paginated Home and obsolete shortcut removal
+RUN [mock] Empty, loading and recoverable list-error states
+CONTROL entered GET /api/rentals
+PASS [mock] Empty, loading and recoverable list-error states
+RUN [mock] Invalid and missing IDs show safe errors without mutation controls
+PASS [mock] Invalid and missing IDs show safe errors without mutation controls
+RUN [mock] Manager failure recovers; no managers prevents saving
+PASS [mock] Manager failure recovers; no managers prevents saving
+RUN [mock] All manager pages load; invalid units/code/manager cannot submit
+PASS [mock] All manager pages load; invalid units/code/manager cannot submit
+RUN [mock] Write validation and network errors preserve local form input
+PASS [mock] Write validation and network errors preserve local form input
+RUN [mock] Synchronous double submit sends one write; failed refresh still shows success
+CONTROL entered POST /api/rentals
+PASS [mock] Synchronous double submit sends one write; failed refresh still shows success
+RUN [mock] Direct-ID update survives refresh and persists all HW5 fields
+PASS [mock] Direct-ID update survives refresh and persists all HW5 fields
+RUN [mock] Per-row delete handles 204; narrow layout remains usable
+CONTROL entered DELETE /api/rentals/801
+PASS [mock] Per-row delete handles 204; narrow layout remains usable
+RUN [mock] Late detail cannot overwrite a newer selected listing
+CONTROL entered GET /api/rentals/1
+PASS [mock] Late detail cannot overwrite a newer selected listing
+RUN [mock] Failed same-ID refresh removes the cached edit form
+CONTROL entered GET /api/rentals/2
+PASS [mock] Failed same-ID refresh removes the cached edit form
+RUN [mock] Late pre-mutation list cannot replace the post-mutation refresh
+CONTROL entered POST /api/rentals
+CONTROL entered GET /api/rentals
+PASS [mock] Late pre-mutation list cannot replace the post-mutation refresh
+RUN [mock] New search results remain after an obsolete search response arrives
+CONTROL entered GET /api/rentals
+PASS [mock] New search results remain after an obsolete search response arrives
+RUN [mock] Old-session 401 cannot expire a fresh login
+CONTROL entered POST /api/rentals
+PASS [mock] Old-session 401 cannot expire a fresh login
+RUN [mock] Logout clears rentals and ignores an old-session successful write
+CONTROL entered POST /api/rentals
+PASS [mock] Logout clears rentals and ignores an old-session successful write
+RUN [mock] Current-session expiry clears visible records and blocks routes
+PASS [mock] Current-session expiry clears visible records and blocks routes
+Evidence: /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/browser-finalized/mock-browser.json (pass)
+
+=== browser-live-finalized ===
+Started: 2026-10-03T08:40:28.069328+00:00
+Ended: 2026-10-03T08:40:30.409610+00:00
+HEAD at recording: f6091d0fe9171fec999b3fe57357f784ad1a24e6
+CWD: /Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part1-application
+Command: /Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node tests/browser_hw05_part1.cjs --real
+Exit code: 0
+RUN [real] Real HTTPS login uses Secure HttpOnly cookie
+PASS [real] Real HTTPS login uses Secure HttpOnly cookie
+RUN [real] Real pagination matches API total and stable IDs
+PASS [real] Real pagination matches API total and stable IDs
+RUN [real] UI create persists generated code, units and explicit manager
+PASS [real] UI create persists generated code, units and explicit manager
+RUN [real] UI direct-ID update persists changed fields and preserves old fields
+PASS [real] UI direct-ID update persists changed fields and preserves old fields
+RUN [real] Real empty result and responsive Home
+PASS [real] Real empty result and responsive Home
+RUN [real] UI per-row delete returns 204 and remains absent after reload
+PASS [real] UI per-row delete returns 204 and remains absent after reload
+RUN [real] Real logout clears visible data and API access
+PASS [real] Real logout clears visible data and API access
+Evidence: /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/browser-finalized/real-browser.json (pass)
+
+=== Earlier development failures and incomplete runs (not final passes) ===
+Browser initial mock run: manager select was not found by its exact accessible label. Explicit label/id fixed the control.
+Earlier mock/live update runs: successful update triggered detail refresh that cleared the selected record and unmounted the form before navigation. Preserve the selected record during same-ID refresh; final real and controlled checks pass.
+An intermediate controlled run was interrupted after nine passes while awaiting an unreleased route gate. Although its wrapper recorded exit 0, it had no completed result JSON and is NOT counted as a pass. Bounded gates and destination-heading synchronization were added.
+A later capture exposed a stale update notice after deletion. Route notice now matches the current mutation kind; final frames and tests pass.
+Backend development also caught create timestamp drift during generated-code assignment; explicit timestamps fixed it.
+Migration development corrected a reflection assertion that compared backend-specific type strings instead of type/length.
+Earlier full diagnostic outputs remain outside the submission tree; the selected final receipts above supersede those failed runs.
+No final tests were skipped: backend160, migration11, controlled-browser16, live-browser7, live-API25.
+
+=== Owned runtime cleanup ===
+{
+  "started_at": "2026-10-03T08:43:30.042895+00:00",
+  "revision": "8837b307257f34689bd5606d45abc5fc5b954aad",
+  "actions": [
+    {
+      "action": "SIGTERM owned app process group",
+      "pid": 45596,
+      "command": "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/runtime/venv/bin/python scripts/run_hw04_web.py --port 8702 --env-file /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/runtime/app.env --cert /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/runtime/cert.pem --key /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/runtime/key.pem"
+    },
+    {
+      "command": [
+        "docker",
+        "stop",
+        "--time",
+        "10",
+        "data260-hw5-part1-mysql"
+      ],
+      "exit_code": 0,
+      "output": "Flag --time has been deprecated, use --timeout instead\ndata260-hw5-part1-mysql",
+      "final_state": "exited"
+    },
+    {
+      "command": [
+        "docker",
+        "stop",
+        "--time",
+        "10",
+        "data260-hw5-part1-migration-mysql"
+      ],
+      "exit_code": 0,
+      "output": "Flag --time has been deprecated, use --timeout instead\ndata260-hw5-part1-migration-mysql",
+      "final_state": "exited"
+    }
+  ],
+  "final_application_row_counts": {
+    "rentals": 55,
+    "property_managers": 2
+  },
+  "ports": {
+    "8702": {
+      "listening": false
+    },
+    "3307": {
+      "listening": false
+    },
+    "3309": {
+      "listening": false
+    }
+  },
+  "ended_at": "2026-10-03T08:43:35.139859+00:00",
+  "status": "pass",
+  "data_preserved": true,
+  "unrelated_services_touched": false
+}
+
+No Postman execution or native database screenshot was possible through the exposed tooling. These required captures remain pending.
+
+=== Review follow-up: committed frontend fixes ===
+Tested code revision: 9bcb7cd39a08157aa1fc6203dfd3ef5ca3eb53e8
+Original evidence above is preserved; backend/migration source did not change and their 171 tests were not rerun in this follow-up.
+Three isolated regressions first failed against the original served 29468a7 frontend. The cookie-v2 diagnostic corrected missing header metadata and still used the old bundle; its actual cookie jar and 401 results prove the defect.
+Full final controlled browser 19, real browser 8 and real API 25 all passed at the clean code revision; zero failures/skips.
+The four new Redux frames are the current selected set; original frames remain as historical evidence.
+
+Expected RED: red-logout-cookie-v2
+Started: 2026-10-03T19:47:05.960700+00:00
+Ended: 2026-10-03T19:47:07.509363+00:00
+Command: /Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node tests/browser_hw05_part1.cjs --mock --regression logout-cookie
+Exit code: 1
+Observed: AssertionError [ERR_ASSERTION]: Login raced pending logout: {"login_requests_before_logout_release":2,"replacement_cookie_before_logout_release":true,"logout_status":204,"logout_response_cookie_action":"delete","replacement_cookie_survived_logout_release":false,"path_after_logout_release":"/login","api_status_after_logout_release":{"/api/auth/me":401,"/api/rentals":401},"path_after_reload":"/login","api_status_after_reload":{"/api/auth/me":401,"/api/rentals":401},"auth_cookie_properties":null}
+
+Expected RED: red-same-id-revisit
+Started: 2026-10-03T19:45:50.102989+00:00
+Ended: 2026-10-03T19:45:51.465046+00:00
+Command: /Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node tests/browser_hw05_part1.cjs --mock --regression same-id-revisit
+Exit code: 1
+Observed: AssertionError [ERR_ASSERTION]: Reopened editor retained stale inputs: {"expected_server_fields":{"listingTitle":"New server title after first visit","propertyAddress":"42 Fresh Server Road","listingCode":"S6102-R-41001","availableUnits":7,"managerId":2},"displayed_after_refresh":{"listingTitle":"Quiet rental 1","propertyAddress":"1 Browser Lane","listingCode":"S6102-R-1","availableUnits":1,"managerId":1},"submitted_fields":{"listingTitle":"Quiet rental 1","propertyAddress":"1 Browser Lane","availableUnits":1,"managerId":1,"listingCode":"S6102-R-1"}}
+
+Expected RED: red-pending-update-reopen
+Started: 2026-10-03T19:45:50.102826+00:00
+Ended: 2026-10-03T19:45:51.682135+00:00
+Command: /Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node tests/browser_hw05_part1.cjs --mock --regression pending-update-reopen
+Exit code: 1
+Observed: AssertionError [ERR_ASSERTION]: Reopened editor did not adopt completed PUT: {"editor_reopened_before_put_release":true,"first_completed_fields":{"listingTitle":"Completed delayed update","propertyAddress":"82 Delayed Update Road","listingCode":"S6102-R-42001","availableUnits":4,"managerId":2},"displayed_after_put_release":{"listingTitle":"Quiet rental 1","propertyAddress":"1 Browser Lane","listingCode":"S6102-R-1","availableUnits":1,"managerId":1},"second_submitted_fields":{"listingTitle":"Quiet rental 1","propertyAddress":"1 Browser Lane","availableUnits":1,"managerId":1,"listingCode":"S6102-R-1"},"server_fields_after_second_save":{"listingTitle":"Quiet rental 1","propertyAddress":"1 Browser Lane","listingCode":"S6102-R-1","availableUnits":1,"managerId":1}}
+
+=== review-fix-build ===
+Started: 2026-10-03T19:47:35.230628+00:00
+Ended: 2026-10-03T19:47:35.942240+00:00
+HEAD: 29468a73cf70e2514ef447ae941da70802165897
+CWD: /Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part1-application/frontend
+Command: /Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/runtime/npm/package/bin/npm-cli.js run build
+Exit code: 0
+vite v7.3.6 building client environment for production...
+transforming...
+✓ 102 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.46 kB │ gzip:  0.29 kB
+dist/assets/index-BdkfMsrp.css    4.55 kB │ gzip:  1.64 kB
+dist/assets/index-nFXyTrfK.js   266.26 kB │ gzip: 89.48 kB
+✓ built in 400ms
+npm notice run s6102-rental-client@1.0.0 build
+npm notice run vite build
+
+=== review-fix-green-logout-cookie ===
+Started: 2026-10-03T19:47:35.968790+00:00
+Ended: 2026-10-03T19:47:37.427196+00:00
+HEAD: 29468a73cf70e2514ef447ae941da70802165897
+CWD: /Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part1-application
+Command: /Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node tests/browser_hw05_part1.cjs --mock --regression logout-cookie
+Exit code: 0
+RUN [mock] Delayed logout cookie deletion cannot erase a subsequent login
+CONTROL entered POST /api/auth/logout
+PASS [mock] Delayed logout cookie deletion cannot erase a subsequent login
+Evidence: /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/review-fixes/green-logout-cookie/mock-browser.json (pass)
+
+=== review-fix-green-same-id-revisit ===
+Started: 2026-10-03T19:47:37.453480+00:00
+Ended: 2026-10-03T19:47:38.274651+00:00
+HEAD: 29468a73cf70e2514ef447ae941da70802165897
+CWD: /Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part1-application
+Command: /Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node tests/browser_hw05_part1.cjs --mock --regression same-id-revisit
+Exit code: 0
+RUN [mock] Same-ID editor revisit displays and submits refreshed server fields
+CONTROL entered GET /api/rentals/1
+PASS [mock] Same-ID editor revisit displays and submits refreshed server fields
+Evidence: /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/review-fixes/green-same-id-revisit/mock-browser.json (pass)
+
+=== review-fix-green-pending-update-reopen ===
+Started: 2026-10-03T19:47:38.300928+00:00
+Ended: 2026-10-03T19:47:39.272761+00:00
+HEAD: 29468a73cf70e2514ef447ae941da70802165897
+CWD: /Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part1-application
+Command: /Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node tests/browser_hw05_part1.cjs --mock --regression pending-update-reopen
+Exit code: 0
+RUN [mock] Editor reopened during a pending PUT keeps completed fields on the next save
+CONTROL entered PUT /api/rentals/1
+PASS [mock] Editor reopened during a pending PUT keeps completed fields on the next save
+Evidence: /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/review-fixes/green-pending-update-reopen/mock-browser.json (pass)
+
+=== review-fix-final-real ===
+Started: 2026-10-03T19:48:47.352080+00:00
+Ended: 2026-10-03T19:48:50.667311+00:00
+HEAD: 9bcb7cd39a08157aa1fc6203dfd3ef5ca3eb53e8
+CWD: /Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part1-application
+Command: /Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node tests/browser_hw05_part1.cjs --real
+Exit code: 0
+RUN [real] Real HTTPS login uses Secure HttpOnly cookie
+PASS [real] Real HTTPS login uses Secure HttpOnly cookie
+RUN [real] Real pagination matches API total and stable IDs
+PASS [real] Real pagination matches API total and stable IDs
+RUN [real] UI create persists generated code, units and explicit manager
+PASS [real] UI create persists generated code, units and explicit manager
+RUN [real] UI direct-ID update persists changed fields and preserves old fields
+PASS [real] UI direct-ID update persists changed fields and preserves old fields
+RUN [real] Real same-ID revisit displays and saves a newer server update
+PASS [real] Real same-ID revisit displays and saves a newer server update
+RUN [real] Real empty result and responsive Home
+PASS [real] Real empty result and responsive Home
+RUN [real] UI per-row delete returns 204 and remains absent after reload
+PASS [real] UI per-row delete returns 204 and remains absent after reload
+RUN [real] Real logout clears visible data and API access
+PASS [real] Real logout clears visible data and API access
+Evidence: /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/review-fixes/final-real/real-browser.json (pass)
+
+=== review-fix-final-mock ===
+Started: 2026-10-03T19:48:50.136831+00:00
+Ended: 2026-10-03T19:48:56.035281+00:00
+HEAD: 9bcb7cd39a08157aa1fc6203dfd3ef5ca3eb53e8
+CWD: /Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part1-application
+Command: /Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node tests/browser_hw05_part1.cjs --mock
+Exit code: 0
+RUN [mock] Protected routes, login, paginated Home and obsolete shortcut removal
+PASS [mock] Protected routes, login, paginated Home and obsolete shortcut removal
+RUN [mock] Empty, loading and recoverable list-error states
+CONTROL entered GET /api/rentals
+PASS [mock] Empty, loading and recoverable list-error states
+RUN [mock] Invalid and missing IDs show safe errors without mutation controls
+PASS [mock] Invalid and missing IDs show safe errors without mutation controls
+RUN [mock] Manager failure recovers; no managers prevents saving
+PASS [mock] Manager failure recovers; no managers prevents saving
+RUN [mock] All manager pages load; invalid units/code/manager cannot submit
+PASS [mock] All manager pages load; invalid units/code/manager cannot submit
+RUN [mock] Write validation and network errors preserve local form input
+PASS [mock] Write validation and network errors preserve local form input
+RUN [mock] Synchronous double submit sends one write; failed refresh still shows success
+CONTROL entered POST /api/rentals
+PASS [mock] Synchronous double submit sends one write; failed refresh still shows success
+RUN [mock] Direct-ID update survives refresh and persists all HW5 fields
+PASS [mock] Direct-ID update survives refresh and persists all HW5 fields
+RUN [mock] Per-row delete handles 204; narrow layout remains usable
+CONTROL entered DELETE /api/rentals/801
+PASS [mock] Per-row delete handles 204; narrow layout remains usable
+RUN [mock] Late detail cannot overwrite a newer selected listing
+CONTROL entered GET /api/rentals/1
+PASS [mock] Late detail cannot overwrite a newer selected listing
+RUN [mock] Failed same-ID refresh removes the cached edit form
+CONTROL entered GET /api/rentals/2
+PASS [mock] Failed same-ID refresh removes the cached edit form
+RUN [mock] Late pre-mutation list cannot replace the post-mutation refresh
+CONTROL entered POST /api/rentals
+CONTROL entered GET /api/rentals
+PASS [mock] Late pre-mutation list cannot replace the post-mutation refresh
+RUN [mock] New search results remain after an obsolete search response arrives
+CONTROL entered GET /api/rentals
+PASS [mock] New search results remain after an obsolete search response arrives
+RUN [mock] Old-session 401 cannot expire a fresh login
+CONTROL entered POST /api/rentals
+PASS [mock] Old-session 401 cannot expire a fresh login
+RUN [mock] Logout clears rentals and ignores an old-session successful write
+CONTROL entered POST /api/rentals
+PASS [mock] Logout clears rentals and ignores an old-session successful write
+RUN [mock] Current-session expiry clears visible records and blocks routes
+PASS [mock] Current-session expiry clears visible records and blocks routes
+RUN [mock] Delayed logout cookie deletion cannot erase a subsequent login
+CONTROL entered POST /api/auth/logout
+PASS [mock] Delayed logout cookie deletion cannot erase a subsequent login
+RUN [mock] Same-ID editor revisit displays and submits refreshed server fields
+CONTROL entered GET /api/rentals/1
+PASS [mock] Same-ID editor revisit displays and submits refreshed server fields
+RUN [mock] Editor reopened during a pending PUT keeps completed fields on the next save
+CONTROL entered PUT /api/rentals/1
+PASS [mock] Editor reopened during a pending PUT keeps completed fields on the next save
+Evidence: /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/review-fixes/final-mock/mock-browser.json (pass)
+
+=== review-fix-live-api ===
+Started: 2026-10-03T19:49:07.674121+00:00
+Ended: 2026-10-03T19:49:08.025133+00:00
+HEAD: 9bcb7cd39a08157aa1fc6203dfd3ef5ca3eb53e8
+CWD: /Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part1-application
+Command: /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/runtime/venv/bin/python scripts/hw05/part1/live_acceptance.py --output /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/review-fixes/live-api.json
+Exit code: 0
+PASS Manager create: HTTP 201
+PASS Manager list pagination: HTTP 200
+PASS Manager detail: HTTP 200
+PASS Manager unique email conflict: HTTP 409
+PASS Manager update: HTTP 200
+PASS Empty relationship: HTTP 200
+PASS Rental create generated code: HTTP 201
+PASS Rental list pagination: HTTP 200
+PASS Rental detail: HTTP 200
+PASS Relationship query: HTTP 200
+PASS Referenced manager delete restricted: HTTP 409
+PASS Rental unique code conflict: HTTP 409
+PASS Negative units invalid: HTTP 422
+PASS Malformed listing code invalid: HTTP 422
+PASS Malformed manager email invalid: HTTP 422
+PASS Invalid pagination: HTTP 422
+PASS Missing manager invalid FK: HTTP 422
+PASS Missing manager detail: HTTP 404
+PASS Rental update: HTTP 200
+PASS Rental delete: HTTP 204
+PASS Deleted rental absent: HTTP 404
+PASS Manager delete after child removed: HTTP 204
+PASS Deleted manager absent: HTTP 404
+PASS Legacy performance naive serialization: HTTP 200
+PASS Legacy performance fixed serialization: HTTP 200
+
+=== review-fix-redux-captures ===
+Started: 2026-10-03T19:49:08.050387+00:00
+Ended: 2026-10-03T19:49:09.929003+00:00
+HEAD: 9bcb7cd39a08157aa1fc6203dfd3ef5ca3eb53e8
+CWD: /Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part1-application
+Command: /Users/pragyaapurva/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node scripts/hw05/part1/capture_features.cjs
+Exit code: 0
+CAPTURED Home: genuine browser source + live UI frame
+CAPTURED Create: genuine browser source + live UI frame
+CAPTURED Update: genuine browser source + live UI frame
+CAPTURED Delete: genuine browser source + live UI frame
+
+Owned runtime cleanup:
+{
+  "started_at": "2026-10-03T19:49:35.562525+00:00",
+  "revision": "9bcb7cd39a08157aa1fc6203dfd3ef5ca3eb53e8",
+  "actions": [
+    {
+      "action": "SIGTERM owned app process group",
+      "pid": 56235,
+      "command": "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/runtime/venv/bin/python scripts/run_hw04_web.py --port 8702 --env-file /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/runtime/app.env --cert /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/runtime/cert.pem --key /Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part1/runtime/key.pem"
+    },
+    {
+      "command": [
+        "docker",
+        "stop",
+        "--timeout",
+        "10",
+        "data260-hw5-part1-mysql"
+      ],
+      "exit_code": 0,
+      "output": "data260-hw5-part1-mysql"
+    }
+  ],
+  "final_application_row_counts": {
+    "rentals": 55,
+    "property_managers": 2
+  },
+  "containers": {
+    "data260-hw5-part1-mysql": "exited",
+    "data260-hw5-part1-migration-mysql": "exited"
+  },
+  "ports": {
+    "8702": {
+      "listening": false
+    },
+    "8703": {
+      "listening": false
+    },
+    "3307": {
+      "listening": false
+    },
+    "3309": {
+      "listening": false
+    }
+  },
+  "ended_at": "2026-10-03T19:49:39.144121+00:00",
+  "status": "pass",
+  "data_preserved": true,
+  "migration_container_started": false,
+  "unrelated_services_touched": false
+}
+
+Postman/database screenshots remain pending; no substitute or fabricated evidence.

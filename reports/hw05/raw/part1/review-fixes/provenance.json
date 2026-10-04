@@ -1,0 +1,51 @@
+{
+  "packaged_at": "2026-10-03T19:50:51.448620+00:00",
+  "reviewed_revision": "29468a73cf70e2514ef447ae941da70802165897",
+  "tested_code_revision": "9bcb7cd39a08157aa1fc6203dfd3ef5ca3eb53e8",
+  "code_revision_tests": {
+    "controlled_browser": {
+      "passed": 19,
+      "failed": 0,
+      "skipped": 0
+    },
+    "real_browser": {
+      "passed": 8,
+      "failed": 0,
+      "skipped": 0
+    },
+    "real_https_api": {
+      "passed": 25,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "precommit_checks": "Production build and three isolated regressions passed immediately before the code commit; full browser/API suites and captures then ran at the exact clean code revision.",
+  "backend_tests": "Backend and migrations were unchanged by these fixes. Initial 160+11 passing tests remain historical evidence; they were not rerun in this follow-up.",
+  "source_sha256": {
+    "frontend/src/App.jsx": "3f22477cec5c55759f07a605d353037de36b000720fc025cc1cefaccc3b521be",
+    "frontend/src/api/client.js": "d5cfc717bd195f6af11ba2ef6fda12df3eaab86b411e1b02700664f7f500a3b6",
+    "frontend/src/auth/AuthContext.jsx": "d05b73deeed86020dfbd0f671ded019cb9ad9cc06100943dd7ff8b24d82bec5e",
+    "frontend/src/components/forms.jsx": "655e2405639133efb99fefb043adbb55dca81d4075b9779b1e16a4edee54880d",
+    "frontend/src/features/rentals/rentalsSlice.js": "1a2c40e1a240624a679e6185415f137fa3e7ac1dfb5d8057d46a11024b3f5324",
+    "frontend/src/main.jsx": "2e17c70f9bc0b8f9db08ab26c4f10ccd0efb765d327a4347246c1430471e0359",
+    "frontend/src/pages/CreateRecord.jsx": "5b93267fcce1dee3977b6b9a7a660a3e7dea9011949189ebbb3308c7f3525415",
+    "frontend/src/pages/DeleteRecord.jsx": "1910d108d6f58c9fe7d332ef260e8ea0314519fdfb515a0d9bea7c99fbbb910f",
+    "frontend/src/pages/Home.jsx": "14b57d19a219b6f56286a5c87a5cd6e1ea0c8cfca3b6cba15390ae5c32c32a60",
+    "frontend/src/pages/Login.jsx": "99c97544645656a30212e8d79f5417b572f4b5671c6d4b84f71b5c9b721bebb0",
+    "frontend/src/pages/UpdateRecord.jsx": "19d50ed9f37476c2eb8818e0a781987181212a2754e40afeeee030c4f9b5f432",
+    "frontend/src/store/store.js": "4ed583fc1180809d4f9c279386e199950a8ac95bbfc92688fa49c27ef1e41d10",
+    "frontend/src/styles.css": "5ecf3f7d0238bc8635b5389fef5dc2c55f92713dfc13eabcc9e50033c0d2c959",
+    "frontend/package.json": "a815561544d0ab84ef2e13e9d2ed4b73530e50ea88d8a19264955c6e760f4bc9",
+    "frontend/package-lock.json": "a37333024872060cfee915cb5dbe1cf6b3b417071d6614ba1c0f2ba89ca8ede0",
+    "tests/browser_hw05_part1.cjs": "01194f9b897de00ae03d1f1ef58a70bdca569eb6aeda6cea0f321c717b2e58eb",
+    "scripts/hw05/part1/capture_features.cjs": "1f17680eb03bb523b194f427e0012187f9583e58198c6433219073f86e3550c6"
+  },
+  "selected_current_redux_frames": [
+    "reports/hw05/screenshots/part1/review-fixes/redux-home.png",
+    "reports/hw05/screenshots/part1/review-fixes/redux-create.png",
+    "reports/hw05/screenshots/part1/review-fixes/redux-update.png",
+    "reports/hw05/screenshots/part1/review-fixes/redux-delete.png"
+  ],
+  "historical_evidence_preserved": true,
+  "postman_database_capture_status": "pending"
+}

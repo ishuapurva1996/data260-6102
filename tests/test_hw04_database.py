@@ -17,7 +17,8 @@ from web_application.models import PropertyManager, Rental, SessionToken, User
 def rental_values(payload):
     return {"listing_title": payload["listingTitle"], "property_address": payload["propertyAddress"],
             "submitter_email": payload["submitterEmail"], "description": payload["description"],
-            "property_type": payload["propertyType"], "terms_accepted": payload["termsAccepted"]}
+            "property_type": payload["propertyType"], "terms_accepted": payload["termsAccepted"],
+            "listing_code": f"S6102-R-{uuid4().int}"}
 
 
 def test_required_engine_name_and_factory_binding():
@@ -116,7 +117,8 @@ def test_manager_foreign_key_rejects_missing_manager(hw4_session_factory, rental
 
 def test_manager_relation_round_trips_and_ordinary_rental_can_be_unassigned(hw4_session_factory, rental_payload):
     with hw4_session_factory() as db:
-        manager = PropertyManager(name=f"Fixture manager {uuid4().hex}")
+        manager = PropertyManager(name=f"Fixture manager {uuid4().hex}", company="Test Homes",
+                                  email=f"fixture-{uuid4().hex}@example.com")
         assigned = Rental(**rental_values(rental_payload), manager=manager)
         unassigned = Rental(**rental_values(rental_payload))
         db.add_all([assigned, unassigned])

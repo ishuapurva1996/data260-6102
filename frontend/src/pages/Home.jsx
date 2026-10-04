@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { rentals } from "../api/client.js";
+import { useDispatch, useSelector } from "react-redux";
+import { deleteRental, fetchRentals } from "../features/rentals/rentalsSlice.js";
 import { ErrorNotice } from "../components/forms.jsx";
 
 export default function Home() {
@@ -8,30 +9,19 @@ export default function Home() {
   const [search, setSearch] = useState("");
   const [query, setQuery] = useState("");
   const [attempt, setAttempt] = useState(0);
-  const [state, setState] = useState({ loading: true, records: [] });
+  const [limit, setLimit] = useState(10);
+  const [offset, setOffset] = useState(0);
+  const dispatch = useDispatch();
+  const state = useSelector((store) => store.rentals);
+  const loading = ["idle", "pending"].includes(state.listStatus);
   useEffect(() => {
-    const refresh = () => setAttempt((value) => value + 1);
-    window.addEventListener("rentals-changed", refresh);
-    return () => window.removeEventListener("rentals-changed", refresh);
-  }, []);
+    const operation = dispatch(fetchRentals({ query, limit, offset }));
+    return () => operation.abort();
+  }, [dispatch, query, limit, offset, attempt, state.revision]);
   useEffect(() => {
-    const controller = new AbortController();
-    setState({ loading: true, records: [] });
-    rentals
-      .list(query, controller.signal)
-      .then((records) => {
-        if (!controller.signal.aborted) setState({ records, loading: false });
-      })
-      .catch((error) => {
-        if (!controller.signal.aborted)
-          setState({ records: [], loading: false, error: error.message });
-      });
-    return () => controller.abort();
-  }, [query, attempt]);
-  const highest = state.records.reduce(
-    (max, row) => (row.id > (max?.id || 0) ? row : max),
-    null,
-  );
+    if (state.listStatus === "succeeded" && offset > 0 && offset >= state.total)
+      setOffset(Math.max(0, Math.floor((state.total - 1) / limit) * limit));
+  }, [state.listStatus, state.total, offset, limit]);
   return (
     <section>
       <div className="page-heading">
@@ -44,16 +34,29 @@ export default function Home() {
           Add listing
         </Link>
       </div>
-      {location.state?.notice && (
+      {location.state?.notice && (!state.lastMutation || location.state.notice === {
+        Added: "Listing added.", Updated: "Listing updated.", Deleted: "Listing deleted.",
+      }[state.lastMutation.kind]) && (
         <p className="notice" role="status">
           {location.state.notice}
         </p>
+      )}
+      {state.lastMutation && (
+        <aside className="notice" role="status" data-mutation-result>
+          <strong>{state.lastMutation.kind} listing #{state.lastMutation.id}</strong>
+          {state.lastMutation.record && <>
+            <p>{state.lastMutation.record.listingTitle} · {state.lastMutation.record.propertyAddress}</p>
+            <p>{state.lastMutation.record.listingCode} · {state.lastMutation.record.availableUnits} available units · Manager #{state.lastMutation.record.managerId}</p>
+            <Link to={`/update?id=${state.lastMutation.id}`}>Update this listing</Link>
+          </>}
+        </aside>
       )}
       <form
         className="search"
         onSubmit={(event) => {
           event.preventDefault();
           setQuery(search.trim());
+          setOffset(0);
           setAttempt((value) => value + 1);
         }}
       >
@@ -74,19 +77,20 @@ export default function Home() {
             onClick={() => {
               setSearch("");
               setQuery("");
+              setOffset(0);
             }}
           >
             Clear search
           </button>
         )}
       </form>
-      {state.loading ? (
+      {loading ? (
         <p role="status" className="panel">
           Loading listings…
         </p>
-      ) : state.error ? (
+      ) : state.listError ? (
         <div className="panel">
-          <ErrorNotice error={state.error} />
+          <ErrorNotice error={state.listError} />
           <button onClick={() => setAttempt((value) => value + 1)}>
             Try again
           </button>
@@ -94,8 +98,8 @@ export default function Home() {
       ) : (
         <>
           <p className="result-count">
-            {state.records.length}{" "}
-            {state.records.length === 1 ? "listing" : "listings"}
+            {state.total} {state.total === 1 ? "listing" : "listings"}
+            {state.total > 0 ? ` · Showing ${offset + 1}–${Math.min(offset + state.records.length, state.total)}` : ""}
             {query ? ` matching “${query}”` : ""}
           </p>
           {state.records.length === 0 ? (
@@ -120,6 +124,7 @@ export default function Home() {
                     <span>#{record.id}</span>
                   </div>
                   <h2>{record.listingTitle}</h2>
+                  <p className="listing-details">{record.listingCode} · {record.availableUnits} available units · {record.managerId == null ? "No manager assigned" : `Manager #${record.managerId}`}</p>
                   <p className="address">{record.propertyAddress}</p>
                   <p>{record.description}</p>
                   <p className="contact">
@@ -130,25 +135,27 @@ export default function Home() {
                   </p>
                   <div className="actions">
                     <Link to={`/update?id=${record.id}`}>Update</Link>
-                    <Link
-                      className="danger-link"
-                      to={`/delete?id=${record.id}`}
-                    >
-                      Delete
-                    </Link>
+                    <button className="danger" disabled={state.mutations[`record:${record.id}`]?.status === "pending"}
+                      onClick={() => dispatch(deleteRental(record.id))}>
+                      {state.mutations[`record:${record.id}`]?.status === "pending" ? "Deleting…" : "Delete"}
+                    </button>
+                    <Link className="danger-link" to={`/delete?id=${record.id}`}>Review deletion</Link>
                   </div>
+                  <ErrorNotice error={state.mutations[`record:${record.id}`]?.error} />
                 </article>
               ))}
             </div>
           )}
-          {!query && highest && (
-            <div className="utility">
-              <Link className="danger-link" to={`/delete?id=${highest.id}`}>
-                Delete highest ID (#{highest.id})
-              </Link>
-              <span>Review the listing before deleting.</span>
-            </div>
-          )}
+          <nav className="pagination" aria-label="Listing pages">
+            <button className="secondary" disabled={offset === 0} onClick={() => setOffset(Math.max(0, offset - limit))}>Previous page</button>
+            <span>Page {Math.floor(offset / limit) + 1} of {Math.max(1, Math.ceil(state.total / limit))}</span>
+            <button className="secondary" disabled={offset + limit >= state.total} onClick={() => setOffset(offset + limit)}>Next page</button>
+            <label>Listings per page
+              <select value={limit} onChange={(event) => { setLimit(Number(event.target.value)); setOffset(0); }}>
+                {[5, 10, 25, 50].map((size) => <option key={size} value={size}>{size}</option>)}
+              </select>
+            </label>
+          </nav>
         </>
       )}
     </section>

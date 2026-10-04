@@ -11,17 +11,30 @@ def create(client, payload):
     return response.json()
 
 
+def all_rentals(client):
+    rows = []
+    while True:
+        response = client.get("/api/rentals", params={"limit": 100, "offset": len(rows)})
+        assert response.status_code == 200
+        rows.extend(response.json())
+        if len(rows) >= int(response.headers["X-Total-Count"]):
+            return rows
+
+
 def missing_id(client):
-    return max((row["id"] for row in client.get("/api/rentals").json()), default=0) + 1
+    return max((row["id"] for row in all_rentals(client)), default=0) + 1
 
 
 def test_create_list_read_and_database_assigned_id(hw4_logged_in, rental_payload):
     client = hw4_logged_in
     row = create(client, rental_payload)
     assert isinstance(row["id"], int) and row["id"] > 0
-    assert row == {**rental_payload, "id": row["id"]}
+    assert {field: row[field] for field in rental_payload} == rental_payload
+    assert row["listingCode"] == f'S6102-R-{row["id"]}'
+    assert row["availableUnits"] == 1 and row["managerId"] is None
+    assert set(row) == {*rental_payload, "id", "listingCode", "availableUnits", "managerId", "createdAt", "updatedAt"}
     assert client.get(f'/api/rentals/{row["id"]}').json() == row
-    response = client.get("/api/rentals")
+    response = client.get("/api/rentals", params={"q": rental_payload["listingTitle"]})
     assert response.status_code == 200
     assert response.headers["cache-control"] == "no-store"
     assert row in response.json()
@@ -67,8 +80,10 @@ def test_two_field_update_trims_text_and_preserves_other_values(hw4_logged_in, r
     row = create(hw4_logged_in, rental_payload)
     response = hw4_logged_in.put(f'/api/rentals/{row["id"]}', json={
         "listingTitle": "  Updated downtown rental  ", "propertyAddress": "  42 New Street  "})
-    expected = {**row, "listingTitle": "Updated downtown rental", "propertyAddress": "42 New Street"}
     assert response.status_code == 200
+    assert response.json()["updatedAt"] > row["updatedAt"]
+    expected = {**row, "listingTitle": "Updated downtown rental", "propertyAddress": "42 New Street",
+                "updatedAt": response.json()["updatedAt"]}
     assert response.json() == expected
     assert hw4_logged_in.get(f'/api/rentals/{row["id"]}').json() == expected
 
@@ -115,13 +130,13 @@ def test_delete_selected_record_and_do_not_reuse_its_id(hw4_logged_in, rental_pa
 def test_highest_deletion_uses_global_max_and_returns_empty_204(hw4_logged_in, rental_payload):
     create(hw4_logged_in, rental_payload)
     create(hw4_logged_in, rental_payload)
-    before = hw4_logged_in.get("/api/rentals").json()
+    before = all_rentals(hw4_logged_in)
     highest = max(row["id"] for row in before)
     # Any changed row, including a pre-existing row, is restored by outer rollback.
     assert hw4_logged_in.get("/api/rentals", params={"q": "no-such-title-6102"}).json() == []
     response = hw4_logged_in.delete("/api/rentals/highest")
     assert response.status_code == 204 and response.content == b""
-    assert hw4_logged_in.get("/api/rentals").json() == [row for row in before if row["id"] != highest]
+    assert all_rentals(hw4_logged_in) == [row for row in before if row["id"] != highest]
 
 
 def test_highest_on_empty_table_is_404_not_dynamic_path_422(hw4_logged_in, hw4_session_factory):
@@ -164,7 +179,11 @@ def test_openapi_separates_create_update_and_response_fields(hw4_logged_in):
     schema = hw4_logged_in.get("/openapi.json").json()
     models = schema["components"]["schemas"]
     assert "id" not in models["RentalCreate"]["properties"]
-    assert set(models["RentalUpdate"]["properties"]) == {"listingTitle", "propertyAddress"}
+    assert set(models["RentalUpdate"]["required"]) == {"listingTitle", "propertyAddress"}
+    assert set(models["RentalUpdate"]["properties"]) == {
+        "listingTitle", "propertyAddress", "listingCode", "availableUnits", "managerId",
+        "submitterEmail", "description", "propertyType", "termsAccepted"}
+    assert "createdAt" not in models["RentalCreate"]["properties"]
     assert models["RentalResponse"]["properties"]["id"]["type"] == "integer"
     assert "201" in schema["paths"]["/api/rentals"]["post"]["responses"]
     assert "204" in schema["paths"]["/api/rentals/highest"]["delete"]["responses"]

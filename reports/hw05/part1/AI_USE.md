@@ -1,0 +1,16 @@
+# Part 1 AI-use notes
+
+These notes cover only the work recorded in this session and are intended for later consolidation. They do not claim that the student independently performed the automated checks.
+
+1. **What was AI used for, and what did the student do?** The student supplied the assignment, personal configuration, approved scope and execution prompt. Codex and its delegated coding agents inspected the repository, implemented the migration/API/Redux changes, wrote tests and capture helpers, ran the recorded checks, reviewed the four browser frames, and prepared local commits and these notes. The session contains no evidence of separate manual student testing; the student/coordinator still needs to review the work and obtain the missing GUI captures.
+2. **What AI-produced output was wrong or unsuitable?** An initial frontend implementation cleared the selected rental when a same-ID refresh began after a successful update. That unmounted the edit form before it could navigate back to Home. The stored database update succeeded, but the UI did not complete the expected transition.
+3. **How was the problem detected?** Real HTTPS and controlled browser checks timed out while waiting for the successful update to return to Home. The agent traced the Redux pending transition and form lifecycle. These were actual failing runs, not a hypothetical example. Final JSON receipts and the run log distinguish later passes from the failed and interrupted development runs.
+4. **What changed, and why does it work now?** The detail reducer keeps the selected record during a background refresh of the same ID, while clearing it for another ID or a failed detail response. This keeps the current form mounted through the successful mutation/navigation. The final browser tests prove both successful update navigation and rejection of stale or failed detail data. Seven real-browser and 16 controlled-browser scenarios passed. Separate API and migration tests, plus process-restart checks, verified persistence and database rules.
+
+The final evidence is still incomplete: no Postman or native database-client screenshots were obtained. The collection and raw SQL results are reproducible supporting inputs/results, not claims that those GUI applications were used. No later homework parts or final report were generated in this session.
+
+## Review follow-up
+
+The coordinator's independent code review found two additional AI-produced frontend defects after the initial checks: a delayed logout response could delete a newer login cookie, and reopening the same editor could submit cached fields over newer server data. The old Boolean auth fixture did not exercise real cookie headers; its coverage was incomplete.
+
+Codex reproduced the failures with Chromium cookie processing and repeated-visit tests before fixing them. Login/logout HTTP requests now run in order, and each new editor visit waits for a fresh detail response after prior pending writes. The final controlled suite passed 19 scenarios and the real HTTPS/MySQL browser suite passed 8, including a persisted-field revisit check. These were automated agent-run checks, not independent manual student testing. The native Postman and database captures still need completion.
