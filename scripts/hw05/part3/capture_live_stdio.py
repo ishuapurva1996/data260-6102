@@ -24,6 +24,8 @@ from src.rental_tools.registry import TOOL_REGISTRY
 
 
 async def capture(destination: Path):
+    if not __debug__:
+        raise RuntimeError("Live STDIO verification requires enabled assertions.")
     if destination.exists():
         raise ValueError("Refusing to overwrite a live receipt.")
     url = make_url(os.environ["HW5_MCP_DATABASE_URL"])

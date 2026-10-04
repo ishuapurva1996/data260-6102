@@ -1,4 +1,5 @@
 """Factory ownership, wrapping, and no-I/O construction contract."""
+import os
 import subprocess
 import sys
 from pathlib import Path
@@ -63,3 +64,101 @@ service.reader.close()
     result = subprocess.run([sys.executable, "-B", "-c", code], cwd=ROOT, capture_output=True, text=True, timeout=15)
     assert result.returncode == 0, result.stderr
     assert result.stdout == ""
+
+
+@pytest.mark.parametrize("flags,optimize", [(["-O"], None), (["-OO"], None), ([], "1"), ([], "2")])
+def test_live_capture_rejects_optimization_before_environment_or_stdio(tmp_path, flags, optimize):
+    """Real optimized interpreters must fail closed before any capture side effect."""
+    output = tmp_path / "receipt.json"
+    accessed = tmp_path / "capture-access.txt"
+    code = '''
+from pathlib import Path
+from types import SimpleNamespace
+import sys
+import scripts.hw05.part3.capture_live_stdio as capture_module
+
+destination, marker = sys.argv[1:]
+
+class ForbiddenEnvironment:
+    def __getitem__(self, key):
+        Path(marker).write_text('environment accessed')
+        raise RuntimeError('PRIVATE_SENTINEL')
+
+def forbidden_stdio(*args, **kwargs):
+    Path(marker).write_text('STDIO started')
+    raise RuntimeError('PRIVATE_SENTINEL')
+
+capture_module.os = SimpleNamespace(environ=ForbiddenEnvironment())
+capture_module.stdio_client = forbidden_stdio
+sys.argv = ['capture_live_stdio.py', destination]
+raise SystemExit(capture_module.main())
+'''
+    env = {key: value for key, value in os.environ.items()
+           if key not in {"PYTHONOPTIMIZE", "HW5_MCP_DATABASE_URL"}}
+    env["PYTHONDONTWRITEBYTECODE"] = "1"
+    if optimize is not None:
+        env["PYTHONOPTIMIZE"] = optimize
+    result = subprocess.run([sys.executable, *flags, "-c", code, str(output), str(accessed)],
+                            cwd=ROOT, env=env, capture_output=True, text=True, timeout=15)
+    assert result.returncode != 0
+    assert result.stdout == ""
+    assert result.stderr == "Live STDIO verification failed; no passing receipt produced.\n"
+    assert not output.exists()
+    assert not accessed.exists(), "Disabled assertions must be rejected before environment/STDIO access"
+
+
+@pytest.mark.parametrize("failure", ["empty_inventory", "transport_error"])
+def test_live_capture_normal_mode_rejects_failing_responses(tmp_path, failure):
+    """Protocol doubles test verifier failures; they are not live MySQL proof."""
+    output = tmp_path / "receipt.json"
+    observed = tmp_path / "observed.txt"
+    code = '''
+from contextlib import asynccontextmanager
+from pathlib import Path
+from types import SimpleNamespace
+import os
+import sys
+import scripts.hw05.part3.capture_live_stdio as capture_module
+
+destination, observation, failure = sys.argv[1:]
+os.environ['HW5_MCP_DATABASE_URL'] = 'mysql+pymysql://hw5_part3_reader:unused@127.0.0.1:3310/s6102_rel'
+
+@asynccontextmanager
+async def fake_stdio(*args, **kwargs):
+    yield None, None
+
+class FakeSession:
+    def __init__(self, *args):
+        pass
+    async def __aenter__(self):
+        return self
+    async def __aexit__(self, *args):
+        pass
+    async def initialize(self):
+        return SimpleNamespace(model_dump=lambda **kwargs: {})
+    async def list_tools(self):
+        Path(observation).write_text('list_tools')
+        tools = [] if failure == 'empty_inventory' else [
+            SimpleNamespace(name=name, inputSchema=definition.input_model.model_json_schema())
+            for name, definition in capture_module.TOOL_REGISTRY.items()]
+        return SimpleNamespace(tools=tools, model_dump=lambda **kwargs: {})
+    async def call_tool(self, *args):
+        Path(observation).write_text('call_tool')
+        return SimpleNamespace(isError=True, structuredContent=None,
+                               model_dump=lambda **kwargs: {'isError': True, 'structuredContent': None})
+
+capture_module.stdio_client = fake_stdio
+capture_module.ClientSession = FakeSession
+sys.argv = ['capture_live_stdio.py', destination]
+raise SystemExit(capture_module.main())
+'''
+    env = {key: value for key, value in os.environ.items()
+           if key not in {"PYTHONOPTIMIZE", "HW5_MCP_DATABASE_URL"}}
+    env["PYTHONDONTWRITEBYTECODE"] = "1"
+    result = subprocess.run([sys.executable, "-c", code, str(output), str(observed), failure],
+                            cwd=ROOT, env=env, capture_output=True, text=True, timeout=15)
+    assert result.returncode != 0
+    assert result.stdout == ""
+    assert result.stderr == "Live STDIO verification failed; no passing receipt produced.\n"
+    assert not output.exists()
+    assert observed.read_text() == ("list_tools" if failure == "empty_inventory" else "call_tool")
