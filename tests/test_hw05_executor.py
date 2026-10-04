@@ -94,6 +94,10 @@ def test_inputs_require_dict_and_string_keys(monkeypatch, inputs):
                                              ("count_rentals", "manager_id")]
       for n in [False, "1", 1.0, 0, -1, None]],
     ("get_rental", {}), ("count_rentals", {}),
+    *[("get_rental", {"rental_id": 1, "include_contact": value})
+      for value in ["true", "false", 1, 0, 1.0, None, [], {}]],
+    ("get_rental", {"rental_id": 0, "include_contact": True}),
+    ("get_rental", {"rental_id": 1, "include_contact": True, "extra": "secret"}),
     ("get_rental", {"rental_id": 1, "extra": "secret"}),
     ("search_rentals", {"query": "x", "sql": "secret"}),
     ("count_rentals", {"manager_id": 1, "extra": "secret"}),
@@ -123,12 +127,27 @@ def test_validation_does_not_echo_secret_values_or_extra_keys(service, capsys):
     assert capsys.readouterr() == ("", "")
 
 
-def test_valid_dispatch_and_projection_use_static_handler(service, monkeypatch):
+@pytest.mark.parametrize("flag", [{}, {"include_contact": False}])
+def test_valid_dispatch_and_projection_use_static_handler(service, monkeypatch, flag):
     monkeypatch.setattr(service, "get_rental", lambda **kw: pytest.fail("arbitrary instance dispatch"))
-    assert decoded(executor.execute_tool("get_rental", {"rental_id": 1}, service=service)) == success({
+    assert decoded(executor.execute_tool("get_rental", {"rental_id": 1, **flag}, service=service)) == success({
         "id": 1, "listingTitle": "Garden Home", "propertyAddress": "1 Garden Lane",
         "propertyType": "house", "managerId": 1, "description": "Near the park."})
     assert service.reader.calls == [("get", 1)]
+    assert service.reader.closes == 0
+
+
+def test_contact_policy_blocks_valid_request_before_factory_and_injected_read(monkeypatch, service):
+    runtime_double(monkeypatch, lambda: pytest.fail("blocked requests must not construct a service"))
+    inputs = {"rental_id": 1, "include_contact": True}
+    before = copy.deepcopy(inputs)
+    expected = failure("Safety block: rental submitter contact information is private.")
+    for provided in [None, service]:
+        raw = executor.execute_tool("get_rental", inputs, service=provided)
+        assert decoded(raw) == expected
+        assert "private@example.invalid" not in raw and "password_hash" not in raw
+    assert inputs == before
+    assert service.reader.calls == []
     assert service.reader.closes == 0
 
 

@@ -21,7 +21,8 @@ TOOL_REGISTRY: Mapping[str, ToolDefinition] = MappingProxyType({
         SearchRentalsInput, RentalService.search_rentals,
     ),
     "get_rental": ToolDefinition(
-        "Get the public details of one rental by its positive integer ID.",
+        "Get public rental details by positive integer ID. Submitter contact information is private; "
+        "the assistant executor blocks include_contact=true. Direct service/MCP calls remain public-only.",
         GetRentalInput, RentalService.get_rental,
     ),
     "count_rentals": ToolDefinition(

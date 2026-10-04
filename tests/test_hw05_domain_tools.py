@@ -10,7 +10,7 @@ from sqlalchemy.dialects import mysql
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from src.rental_tools.contracts import SearchRentalsInput
+from src.rental_tools.contracts import GetRentalInput, SearchRentalsInput
 from src.rental_tools.reader import MySQLRentalReader, RentalReaderConfigurationError
 from src.rental_tools.registry import TOOL_REGISTRY
 from src.rental_tools.service import RentalService
@@ -105,11 +105,21 @@ def test_search_boundary_inputs(service, reader):
     assert reader.calls[-1] == ("search", "x", 1)
 
 
-def test_detail_projection_and_missing(service):
-    assert service.get_rental(rental_id=9) == {"ok": True, "error": None, "data": {
+@pytest.mark.parametrize("flag", [{}, {"include_contact": False}, {"include_contact": True}])
+def test_detail_projection_and_missing(service, flag):
+    # The MCP service accepts the additive flag but always selects public fields.
+    # Only execute_tool enforces the assistant contact-request policy.
+    assert service.get_rental(rental_id=9, **flag) == {"ok": True, "error": None, "data": {
         "id": 9, "listingTitle": "Straße Garden", "propertyAddress": "École Road",
         "description": "A quiet apartment near the garden.", "propertyType": "apartment", "managerId": 1}}
-    assert service.get_rental(rental_id=10) == {"ok": False, "data": None, "error": "Rental 10 was not found."}
+    assert service.get_rental(rental_id=10, **flag) == {"ok": False, "data": None, "error": "Rental 10 was not found."}
+
+
+@pytest.mark.parametrize("flag", ["true", "false", 1, 0, 1.0, None, [], {}])
+def test_detail_contact_flag_is_strict_before_reader_access(service, reader, flag):
+    result = service.get_rental(rental_id=9, include_contact=flag)
+    assert not result["ok"] and result["error"].startswith("Invalid input: include_contact:")
+    assert reader.calls == []
 
 
 def test_manager_count_existing_empty_and_missing(service):
@@ -127,7 +137,7 @@ def test_id_types_and_ranges(service, reader, name, key, value):
 
 
 @pytest.mark.parametrize("name,inputs", [("get_rental", {}), ("count_rentals", {}),
-    ("get_rental", {"rental_id": 1, "include_contact": True}),
+    ("get_rental", {"rental_id": 1, "unknown_contact": True}),
     ("count_rentals", {"manager_id": 1, "sql": "SELECT password_hash FROM users"})])
 def test_core_rejects_missing_and_extra_arguments(service, reader, name, inputs):
     assert getattr(service, name)(**inputs)["ok"] is False
@@ -151,6 +161,12 @@ def test_registry_and_schemas_are_shared():
     assert schema["required"] == ["query"]
     assert schema["properties"]["query"]["maxLength"] == 255
     assert schema["properties"]["limit"]["maximum"] == 25
+    detail = GetRentalInput.model_json_schema()
+    assert detail["required"] == ["rental_id"]
+    assert set(detail["properties"]) == {"rental_id", "include_contact"}
+    assert detail["properties"]["include_contact"]["type"] == "boolean"
+    assert detail["properties"]["include_contact"]["default"] is False
+    assert TOOL_REGISTRY["get_rental"].input_model is GetRentalInput
 
 
 class FakeResult:

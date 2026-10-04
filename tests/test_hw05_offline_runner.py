@@ -1,4 +1,4 @@
-"""Process-level checks for the deterministic Part 4 fixture assertion runner."""
+"""Process-level checks for the deterministic Parts 4/5 fixture assertion runner."""
 
 import os
 from pathlib import Path
@@ -17,11 +17,13 @@ CASE_NAMES = (
     "missing_rental_8_rejected",
     "valid_manager_count",
     "missing_manager_4_rejected",
+    "private_contact_blocked",
+    "mock_model_max_steps",
 )
 EXPECTED_OUTPUT = "\n".join((
-    "Pragya Apurva - HW5 Part 4 offline assertions",
+    "Pragya Apurva - HW5 Parts 4/5 offline assertions",
     *(f"PASS {name}" for name in CASE_NAMES),
-    "6/6 passed",
+    "8/8 passed",
     "",
 ))
 
@@ -40,7 +42,7 @@ def run_python(*arguments):
     )
 
 
-def test_six_required_cases_run_repeatably_without_live_configuration():
+def test_eight_required_cases_run_repeatably_without_live_configuration():
     first = run_python(SCRIPT)
     second = run_python(SCRIPT)
     for result in (first, second):
@@ -61,10 +63,10 @@ raise SystemExit(runner.main(cases=(("injected_failure", fail), *runner.CASES)))
 """)
     assert result.returncode == 1, result.stderr
     assert result.stdout.splitlines() == [
-        "Pragya Apurva - HW5 Part 4 offline assertions",
+        "Pragya Apurva - HW5 Parts 4/5 offline assertions",
         f"FAIL injected_failure ({exception})",
         *(f"PASS {name}" for name in CASE_NAMES),
-        "6/7 passed",
+        "8/9 passed",
     ]
     assert result.stderr == ""
 
@@ -104,7 +106,7 @@ def forbidden(*args, **kwargs):
 
 class NoRuntime(importlib.abc.MetaPathFinder):
     def find_spec(self, fullname, path=None, target=None):
-        if fullname == "src.rental_tools.runtime":
+        if fullname in {"src.rental_tools.runtime", "langchain_ollama", "ollama"}:
             forbidden()
         return None
 

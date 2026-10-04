@@ -134,6 +134,8 @@ def assert_owned_reader_closed_once(probe):
      success({"items": [], "returnedCount": 0, "limit": 5})),
     ("get_rental", {"rental_id": 41}, (41,), ROW,
      success({**LISTING, "description": "Near the park."})),
+    ("get_rental", {"rental_id": 41, "include_contact": False}, (41,), ROW,
+     success({**LISTING, "description": "Near the park."})),
     ("get_rental", {"rental_id": 99}, (99,), None,
      failure("Rental 99 was not found.")),
     ("count_rentals", {"manager_id": 21}, (21,), COUNT_ROW,
@@ -172,6 +174,25 @@ def test_invalid_default_calls_construct_nothing_and_perform_no_read(storage_pro
     assert decoded(executor.execute_tool(name, inputs))["ok"] is False
     assert storage_probe.readers == storage_probe.wrappers == storage_probe.engines == []
     assert storage_probe.calls == storage_probe.events == storage_probe.sleeps == []
+
+
+def test_contact_policy_blocks_before_real_default_construction(storage_probe):
+    assert decoded(executor.execute_tool("get_rental", {"rental_id": 41, "include_contact": True})) == failure(
+        "Safety block: rental submitter contact information is private.")
+    assert storage_probe.readers == storage_probe.wrappers == storage_probe.engines == []
+    assert storage_probe.calls == storage_probe.events == storage_probe.sleeps == []
+
+
+def test_contact_policy_keeps_injected_real_runtime_service_caller_owned(storage_probe):
+    service = runtime.build_service()
+    assert decoded(executor.execute_tool("get_rental", {"rental_id": 41, "include_contact": True},
+                                        service=service)) == failure(
+        "Safety block: rental submitter contact information is private.")
+    assert storage_probe.calls == storage_probe.events == storage_probe.sleeps == []
+    assert not service.reader._closed
+    assert storage_probe.engines[0].disposals == 0
+    service.reader.close()
+    assert_owned_reader_closed_once(storage_probe)
 
 
 @pytest.mark.parametrize("name,inputs,args,outcome", OPERATIONS)

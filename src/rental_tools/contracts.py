@@ -2,7 +2,7 @@
 
 from typing import Annotated, Any
 
-from pydantic import BaseModel, ConfigDict, Field, StrictInt, StringConstraints, field_validator
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StringConstraints, field_validator
 
 SearchQuery = Annotated[str, StringConstraints(strict=True, min_length=1, max_length=255)]
 SearchLimit = Annotated[StrictInt, Field(ge=1, le=25)]
@@ -30,6 +30,11 @@ class SearchRentalsInput(ToolInput):
 
 class GetRentalInput(ToolInput):
     rental_id: PositiveId
+    include_contact: StrictBool = Field(
+        default=False,
+        description=("Request private submitter contact information. The assistant executor blocks true; "
+                     "direct service/MCP calls always return public fields."),
+    )
 
 
 class CountRentalsInput(ToolInput):

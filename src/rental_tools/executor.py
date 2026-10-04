@@ -1,7 +1,8 @@
 """Single JSON-string entry point for the three public rental tools.
 
 The injected service stays caller-owned. The default Part 3 runtime is imported
-only after input validation, and its per-call reader is always closed.
+only after input validation and contact policy, and its per-call reader is always
+closed. Direct service/MCP calls do not pass through this policy boundary.
 """
 
 import json
@@ -15,6 +16,7 @@ from .registry import TOOL_REGISTRY
 from .service import RentalService, _error
 
 _INVALID_RESULT = '{"ok":false,"data":null,"error":"Rental tool returned an invalid result."}'
+SAFETY_BLOCK_ERROR = "Safety block: rental submitter contact information is private."
 
 
 def _serialize(result: Any) -> str:
@@ -37,7 +39,7 @@ def _serialize(result: Any) -> str:
 
 
 def execute_tool(name: str, inputs: dict[str, Any], *, service: RentalService | None = None) -> str:
-    """Validate raw arguments, call one allowlisted handler, and return JSON."""
+    """Validate arguments and policy, call one allowlisted handler, and return JSON."""
     owned_service = None
     try:
         if not isinstance(name, str) or name not in TOOL_REGISTRY:
@@ -58,6 +60,9 @@ def execute_tool(name: str, inputs: dict[str, Any], *, service: RentalService | 
                         error["loc"] = ("unexpected_field",)
                 exc = ValidationError.from_exception_data(exc.title, details)
             return _serialize(_error(exc))
+
+        if name == "get_rental" and arguments.include_contact:
+            return _serialize(failure(SAFETY_BLOCK_ERROR))
 
         if service is None:
             try:

@@ -57,9 +57,15 @@ def test_domain_stdio_inventory_envelopes_and_sdk_boundary():
                 tools = {tool.name: tool for tool in (await session.list_tools()).tools}
                 assert set(tools) == {"search_rentals", "get_rental", "count_rentals"}
                 assert tools["search_rentals"].inputSchema["properties"]["query"]["minLength"] == 1
+                detail_schema = tools["get_rental"].inputSchema
+                assert detail_schema["required"] == ["rental_id"]
+                assert detail_schema["properties"]["include_contact"]["type"] == "boolean"
+                assert detail_schema["properties"]["include_contact"]["default"] is False
                 cases = [("search_rentals", {"query": "campus"}, True),
                          ("search_rentals", {"query": "   "}, False),
                          ("get_rental", {"rental_id": 1}, True),
+                         ("get_rental", {"rental_id": 1, "include_contact": False}, True),
+                         ("get_rental", {"rental_id": 1, "include_contact": True}, True),
                          ("get_rental", {"rental_id": 99}, False),
                          ("count_rentals", {"manager_id": 1}, True),
                          ("count_rentals", {"manager_id": 99}, False)]
@@ -72,7 +78,9 @@ def test_domain_stdio_inventory_envelopes_and_sdk_boundary():
                     assert "PRIVATE_SENTINEL" not in result.model_dump_json()
                 zero = data(await session.call_tool("count_rentals", {"manager_id": 2}))
                 assert zero["ok"] and zero["data"]["count"] == 0
-                for args in [{}, {"rental_id": False}, {"rental_id": 0}]:
+                for args in [{}, {"rental_id": False}, {"rental_id": 0},
+                             *[{"rental_id": 1, "include_contact": value}
+                               for value in ["true", 1, None]]]:
                     invalid = await session.call_tool("get_rental", args)
                     assert invalid.isError  # native SDK validation precedes handler
     anyio.run(scenario)

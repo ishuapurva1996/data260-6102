@@ -1,0 +1,4 @@
+# Dedicated Python 3.12 environment for the HW5 local tool agent.
+# Keep this separate from the web environment.
+-r requirements-mcp.txt
+-r reports/hw01/requirements-part2.txt

@@ -43,6 +43,7 @@ class RentalService:
             return _error(exc)
 
     def get_rental(self, **inputs: Any) -> ToolResult:
+        """Return public fields for either valid flag; executor owns request policy."""
         try:
             args = GetRentalInput.model_validate(inputs)
             row = self.reader.get_rental(args.rental_id)
