@@ -1,0 +1,62 @@
+{
+  "student": "Pragya Apurva",
+  "kind": "Scoped review follow-up; assertion-disabled live verification rejection",
+  "created_utc": "2026-10-04T01:05:41.580112+00:00",
+  "reviewed_revision": "0c748aa206404e1f1242f0b6c4fa4910610fcb82",
+  "fixed_code_revision": "f21006d06d925c8062f58bf59811310da737aaaa",
+  "code_source_sha256": {
+    "scripts/hw05/part3/capture_live_stdio.py": "fc322ff66b54d472a211de2ac78409de1f93c34c341caef37cd21b0a18540c96",
+    "tests/test_hw05_runtime.py": "ab9cc52f29cda6eab2e52f576ac892b882e272d523855d3520a5bf45a95ea110"
+  },
+  "verification": {
+    "pre_fix_new_tests": "4 failed, 2 passed, 3 deselected; expected environment-access failures",
+    "post_fix_runtime_suite": "9 passed in 4.90s; no failures/skips",
+    "optimized_real_cli_modes": [
+      "-O",
+      "-OO",
+      "PYTHONOPTIMIZE=1",
+      "PYTHONOPTIMIZE=2"
+    ],
+    "optimized_exit_codes": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "optimized_receipts_created": false,
+    "optimized_PASS_printed": false,
+    "normal_live_capture": "passed: 8 application outcomes and 3 native schema rejections",
+    "fault_experiment_rerun": false,
+    "screenshots_retried": false
+  },
+  "preserved_historical_evidence_sha256": {
+    "reports/hw05/part3/EVIDENCE_MANIFEST.json": "f75eec95ae6e0ae2ed10f97b397c801a3278c0dc579a0d47dd7b5e1d1ff24e49",
+    "reports/hw05/part3/RESULTS.md": "8b59ab1a1c03150a5df79aac0d797a964c88338de6cf911dbbefcc04d647e9f2",
+    "reports/hw05/part3/RUN_LOG.txt": "36978e2f0565912c47cdbcb15851d009bba7dac26edddbba2b0ae679bbfd0bf9",
+    "reports/hw05/part3/installed-versions.txt": "992545c9dbf7b81777243f1883957ba8ae1004a4eba74167c7351b05a607c515",
+    "reports/hw05/part3/tests.txt": "cd8f54e11e51ddc78d2fa1e6fa2c8fecb6e69abdeb48e9ad5d79dba35ecee40d",
+    "reports/hw05/raw/part3/commands.json": "a7bf39c665b2ea1878a7695cfd41bcb159a530ef2bf5f3642622e7cea5e5ea76",
+    "reports/hw05/raw/part3/demos/demonstrations.json": "7c6a28b3768bd200cacc2e316121242f1852b02c1a55d02d4d37eb2f848fb68c",
+    "reports/hw05/raw/part3/demos/manifest.json": "8c7b91400b5a0b38f79d0aeaf9512e00d3b7ecedf5ac43e6ff007f8754687cda",
+    "reports/hw05/raw/part3/driver-timeout.json": "b5938c1a6fbacfdbec5a0db56e7cdfae5b1e9c2d922beaa6253578ab7fdeac62",
+    "reports/hw05/raw/part3/independent-recomputation.json": "2300b73dbb2337446751358ea0fa3038fb9b3413983afe696c1bdd74fa824c2f",
+    "reports/hw05/raw/part3/live-stdio.json": "9c7d22a4b5f2412460935a9fc9496c809d578696d52bfb7967b99d7d14528503",
+    "reports/hw05/raw/part3/mysql-fixture.json": "619e38671f712f6c95dccda1e2f27a02d21ab8174652972d370a65df76e6802d",
+    "reports/hw05/raw/part3/replay/manifest.json": "309e8fa066bf479344327adcbbc90e08c224564ee8188ce928bb5a49e936c624",
+    "reports/hw05/raw/part3/replay/metrics.json": "bd9d2a430337ebcaa1707a43c506209ab6d8760eddf96b9b4c638cda7e5ee97c",
+    "reports/hw05/raw/part3/replay/replay-comparison.json": "e1aea559d325b53fdb658d6884f39746a3d49998c0cf859ed7af31ffdf236af6",
+    "reports/hw05/raw/part3/replay/rows.jsonl": "05565f62fed46083c0f7bb6de1d0e097b0099b690c7039477dc523776aae31e7",
+    "reports/hw05/raw/part3/runtime-cleanup.json": "d3c00cd9f3b5bf1651020a252866b6487dadaa76b1e42d79bbce932adc095547",
+    "reports/hw05/raw/part3/selected/manifest.json": "58ed9ebfb492b9dc6b95e6495ba1cd36abecea2fc34d372b749a0c967d1b9277",
+    "reports/hw05/raw/part3/selected/metrics.json": "b2a8e5c0d700452613e12f0c26128a18021649ae366168c0ddc89ed58412b69a",
+    "reports/hw05/raw/part3/selected/rows.jsonl": "400868b67d4916a3e87acfbfaa9e20e98f11578dc917c0a05a3e9610aafefb73"
+  },
+  "artifact_sha256": {
+    "reports/hw05/raw/part3/review-fixes/capture-guard/cleanup.json": "5c7ccf6e4cf964838b56b367df53981000581e9d9cdcdd9dd63beda50b2054a7",
+    "reports/hw05/raw/part3/review-fixes/capture-guard/live-stdio.json": "69c2018c1c59a6174a9cf12a43b6ea63959bc38794729b8cc0f13fb7e4ffd5d5",
+    "reports/hw05/raw/part3/review-fixes/capture-guard/optimization-rejections.json": "28c613fef1b84438f694eb2281a3335b84b02135db0bf3e1324cc273707709ac",
+    "reports/hw05/part3/review-fixes/CAPTURE_GUARD.md": "366101b63c93c442e9ddb69cf34a15edf0e476dc4687301f2fb553a31c3a8a4c",
+    "reports/hw05/part3/review-fixes/capture-guard-live.txt": "ec1769c1f231d74c4a0939f5cd0f7813851e2d8aaa4568d3d6029692820c4465",
+    "reports/hw05/part3/review-fixes/capture-guard-tests.txt": "6bc585d92e078d2d6a7ffd31774f069e39fce1cc5f11d5ed12994268c4b69d1c"
+  }
+}

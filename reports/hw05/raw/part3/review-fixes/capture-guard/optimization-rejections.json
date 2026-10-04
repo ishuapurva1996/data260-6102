@@ -1,0 +1,72 @@
+{
+  "student": "Pragya Apurva",
+  "code_revision": "f21006d06d925c8062f58bf59811310da737aaaa",
+  "started_utc": "2026-10-04T01:04:54.384263+00:00",
+  "finished_utc": "2026-10-04T01:04:59.933701+00:00",
+  "kind": "Actual optimized Python CLI invocations with valid private config and ready owned MySQL; all rejected before capture. Separate tests prove zero environment/STDIO access.",
+  "passed": true,
+  "checks": [
+    {
+      "label": "flag-O",
+      "command": [
+        "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part3-reliability/.venv-part3/bin/python",
+        "-O",
+        "scripts/hw05/part3/capture_live_stdio.py",
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part3/capture-guard-fix/flag-O-must-not-exist.json"
+      ],
+      "PYTHONOPTIMIZE": null,
+      "started_utc": "2026-10-04T01:04:55.488170+00:00",
+      "finished_utc": "2026-10-04T01:04:56.474984+00:00",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Live STDIO verification failed; no passing receipt produced.\n",
+      "receipt_created": false
+    },
+    {
+      "label": "flag-OO",
+      "command": [
+        "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part3-reliability/.venv-part3/bin/python",
+        "-OO",
+        "scripts/hw05/part3/capture_live_stdio.py",
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part3/capture-guard-fix/flag-OO-must-not-exist.json"
+      ],
+      "PYTHONOPTIMIZE": null,
+      "started_utc": "2026-10-04T01:04:56.475157+00:00",
+      "finished_utc": "2026-10-04T01:04:57.420579+00:00",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Live STDIO verification failed; no passing receipt produced.\n",
+      "receipt_created": false
+    },
+    {
+      "label": "env-1",
+      "command": [
+        "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part3-reliability/.venv-part3/bin/python",
+        "scripts/hw05/part3/capture_live_stdio.py",
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part3/capture-guard-fix/env-1-must-not-exist.json"
+      ],
+      "PYTHONOPTIMIZE": "1",
+      "started_utc": "2026-10-04T01:04:57.420769+00:00",
+      "finished_utc": "2026-10-04T01:04:58.340952+00:00",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Live STDIO verification failed; no passing receipt produced.\n",
+      "receipt_created": false
+    },
+    {
+      "label": "env-2",
+      "command": [
+        "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW5/worktrees/part3-reliability/.venv-part3/bin/python",
+        "scripts/hw05/part3/capture_live_stdio.py",
+        "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part3/capture-guard-fix/env-2-must-not-exist.json"
+      ],
+      "PYTHONOPTIMIZE": "2",
+      "started_utc": "2026-10-04T01:04:58.341111+00:00",
+      "finished_utc": "2026-10-04T01:04:59.225200+00:00",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Live STDIO verification failed; no passing receipt produced.\n",
+      "receipt_created": false
+    }
+  ]
+}

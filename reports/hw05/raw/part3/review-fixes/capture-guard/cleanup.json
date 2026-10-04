@@ -1,0 +1,9 @@
+{
+  "container": "data260-hw5-part3-mysql3310",
+  "container_id": "f62a252c9a51efb7c9166ad1cdb300d168e47bdf6eac00749a459bcc7c3dc7b5",
+  "ownership_label": "data260.owner=hw5-part3",
+  "running": false,
+  "stopped_utc": "2026-10-04T01:05:00.668794833Z",
+  "checked_utc": "2026-10-04T01:05:00.897640+00:00",
+  "note": "Restarted only for capture-guard follow-up; same data/config retained, no reseed or migration."
+}
