@@ -6,6 +6,7 @@ composed/decomposed Unicode. MySQL's LOWER mappings define Unicode case behavior
 Python casefold is not used and is not an equivalent search specification.
 """
 
+import math
 import os
 from collections.abc import Mapping, Sequence
 from typing import Any, Protocol
@@ -24,6 +25,19 @@ class RentalReaderConfigurationError(ValueError):
     """Configuration messages deliberately contain no connection URL."""
 
 
+def _positive_timeout(name: str, value: float) -> float:
+    message = f"{name} must be a positive finite number of seconds."
+    if isinstance(value, bool) or not isinstance(value, (int, float)):
+        raise RentalReaderConfigurationError(message)
+    try:
+        seconds = float(value)
+    except OverflowError:
+        raise RentalReaderConfigurationError(message) from None
+    if not math.isfinite(seconds) or seconds <= 0:
+        raise RentalReaderConfigurationError(message)
+    return seconds
+
+
 # Describe only the stable HW4 public columns; never reflect or create schema.
 metadata = MetaData()
 rentals = Table(
@@ -38,9 +52,23 @@ property_managers = Table(
 
 
 class MySQLRentalReader:
-    """No connection or environment access until the first requested read."""
+    """Lazy connection with finite socket and pool waits, not a whole-call deadline."""
 
-    def __init__(self, database_url: str | None = None):
+    def __init__(
+        self, database_url: str | None = None, *, connect_timeout_s: float = 5,
+        read_timeout_s: float = 10, write_timeout_s: float = 10,
+        pool_timeout_s: float = 5,
+    ):
+        # Validate local options only: no environment access until the first read.
+        self._connect_args = {
+            "charset": "utf8mb4",
+            "connect_timeout": _positive_timeout("connect_timeout_s", connect_timeout_s),
+            "read_timeout": _positive_timeout("read_timeout_s", read_timeout_s),
+            "write_timeout": _positive_timeout("write_timeout_s", write_timeout_s),
+        }
+        if self._connect_args["connect_timeout"] > 31536000:
+            raise RentalReaderConfigurationError("connect_timeout_s must be at most 31536000 seconds.")
+        self._pool_timeout_s = _positive_timeout("pool_timeout_s", pool_timeout_s)
         self._database_url = database_url
         self._engine: Engine | None = None
 
@@ -56,7 +84,7 @@ class MySQLRentalReader:
                 raise RentalReaderConfigurationError(message)
             self._engine = create_engine(
                 url, hide_parameters=True,
-                connect_args={"charset": "utf8mb4", "connect_timeout": 5, "read_timeout": 10, "write_timeout": 10},
+                connect_args=self._connect_args, pool_timeout=self._pool_timeout_s,
             )
         return self._engine
 

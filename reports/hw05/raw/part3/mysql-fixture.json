@@ -1,0 +1,15 @@
+{
+  "source": "owned MySQL synthetic evidence fixture",
+  "host": "127.0.0.1",
+  "port": 3310,
+  "database": "s6102_rel",
+  "mysql_version": "8.4.11",
+  "baseline": "code/web_application/migrations/001_initial.sql",
+  "baseline_sha256": "d738249ea390692161830c653d0ad8b75fb3e1ee5a8aace23a760413c9ab181f",
+  "rentals": 7,
+  "managers": 3,
+  "empty_manager_id": 3,
+  "runtime_user": "hw5_part3_reader",
+  "runtime_privileges": "public-column SELECT only",
+  "data_note": "Synthetic records created explicitly for Part 3; no copied user data."
+}

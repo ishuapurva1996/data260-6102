@@ -9,14 +9,14 @@ from mcp.types import Tool, ToolAnnotations
 from pydantic import TypeAdapter
 
 from src.rental_tools.contracts import ToolResult
-from src.rental_tools.reader import MySQLRentalReader, RentalReader
+from src.rental_tools.reader import RentalReader
 from src.rental_tools.registry import TOOL_REGISTRY
-from src.rental_tools.service import RentalService
+from src.rental_tools.runtime import build_service
 
 
 def create_server(reader: RentalReader | None = None) -> Server:
     server = Server("rentals")
-    service = RentalService(reader if reader is not None else MySQLRentalReader())
+    service = build_service(reader=reader)
     read_only = ToolAnnotations(readOnlyHint=True, destructiveHint=False,
                                 idempotentHint=True, openWorldHint=False)
 

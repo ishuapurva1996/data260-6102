@@ -1,0 +1,38 @@
+[
+  {
+    "injected_attempts": 0,
+    "logical_calls": 50,
+    "maximum_latency_ms": 0.32308301888406277,
+    "mean_latency_ms": 0.009700861410237849,
+    "p99_latency_ms": 0.32308301888406277,
+    "rate": 0.0,
+    "recovered_calls": 0,
+    "success_rate": 1.0,
+    "successes": 50,
+    "total_attempts": 50
+  },
+  {
+    "injected_attempts": 9,
+    "logical_calls": 50,
+    "maximum_latency_ms": 302.70854200352915,
+    "mean_latency_ms": 20.548434197553433,
+    "p99_latency_ms": 302.70854200352915,
+    "rate": 0.2,
+    "recovered_calls": 8,
+    "success_rate": 1.0,
+    "successes": 50,
+    "total_attempts": 59
+  },
+  {
+    "injected_attempts": 44,
+    "logical_calls": 50,
+    "maximum_latency_ms": 310.3860830015037,
+    "mean_latency_ms": 109.07135164132342,
+    "p99_latency_ms": 310.3860830015037,
+    "rate": 0.5,
+    "recovered_calls": 23,
+    "success_rate": 0.92,
+    "successes": 46,
+    "total_attempts": 90
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "compared": "rate, call order, inputs, envelopes, attempts, RNG draws, injection, outcomes, backoff",
+  "excluded": "run IDs, UTC timestamps, logical-call and attempt elapsed times",
+  "logical_calls_compared": 150,
+  "matched": true,
+  "mismatched_row_numbers": [],
+  "selected_rows_path": "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/part3/final-evidence/selected/rows.jsonl",
+  "selected_rows_sha256": "400868b67d4916a3e87acfbfaa9e20e98f11578dc917c0a05a3e9610aafefb73"
+}
