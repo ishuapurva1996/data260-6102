@@ -1,10 +1,37 @@
 # Rental Housing Listings
 
-A React and FastAPI application for managing rental listings, with MySQL persistence and cookie-based login. HW4 also compares naive and fixed database queries and evaluates a local retrieval-augmented generation (RAG) pipeline.
+A React and FastAPI application for managing rental listings, with MySQL persistence and cookie-based login. HW5 adds Redux state management, MCP tools, bounded retries, and a local rental assistant.
 
-The current submission is the [79-page HW4 report](reports/hw04/report.pdf). The
-[HW4 evidence guide](reports/hw04/README.md) identifies its original screenshots,
-saved experiments, AI-use answers, and verification procedure. The upload copy,
+## Homework 5
+
+The [final HW5 report](reports/hw05/Apurva_HW5.pdf) contains the labeled screenshots,
+results, reflection, and AI-use statement. An [editable Word copy](reports/hw05/Apurva_HW5.docx),
+[reflection](reports/hw05/REFLECTION.md), and [AI-use answers](reports/hw05/AI_USE.md)
+are included.
+
+| Part | Implementation and usage guide |
+| --- | --- |
+| 1 | [Rental and manager APIs, database migration, and Redux UI](docs/HW5_PART1.md) |
+| 2 | [Meals and rental MCP servers](docs/HW5_PART2.md) |
+| 3 | [Validation, retries, timeouts, and measured results](docs/HW5_PART3.md) |
+| 4 | [Tool executor and offline tests](docs/HW5_PART4.md) |
+| 5 | [Bounded local agent, safety rule, and run logs](docs/HW5_PART5.md) |
+
+Run the eight offline checks in the configured HW5 Python environment:
+
+```sh
+python scripts/hw05/run_offline_tests.py
+```
+
+These checks need no database or model server. The part guides describe dependencies,
+live setup, and the saved evidence under `reports/hw05/`. Earlier reports remain
+historical records; the application instructions below describe the HW4 foundation.
+
+## Earlier homework
+
+The [79-page HW4 report](reports/hw04/report.pdf) and
+[HW4 evidence guide](reports/hw04/README.md) preserve its original screenshots,
+experiments, AI-use answers, and verification procedure. The upload copy,
 [Apurva_HW4.pdf](reports/hw04/Apurva_HW4.pdf), contains the same bytes.
 
 ## Features
@@ -192,6 +219,6 @@ reports/                 Reports, source snapshots, and recorded results
 
 The [HW4 report](reports/hw04/report.pdf), [metrics](reports/hw04/METRICS.md),
 [run log](reports/hw04/RUN_LOG.txt), and [AI-use answers](reports/hw04/AI_USE.md)
-form the current submission. The [HW3 report](reports/hw03/report.pdf),
+form the previous HW4 submission. The [HW3 report](reports/hw03/report.pdf),
 [HW3 verification](reports/hw03/verification.json), and earlier homework tags
 preserve the previous implementations and their results.
