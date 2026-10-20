@@ -23,6 +23,8 @@ before/after counts, raw model attempts, per-key conflict decisions, final memor
 and trigger state before/after. Invalid proposals return an error and attempts;
 the original is preserved. `/dream` returns added_entries, evidence provenance,
 raw extraction and counts; it keeps the last-consolidated timestamp unchanged.
+Extracted entries persist their supporting user quote and source-message ID in
+the runtime file, so a restart retains who stated the fact and what they said.
 Normal replies include memory_state and any auto_compact result. A validation
 error is observable and must not be treated as a successful answer. CLI emits
 one JSON object per input and exits nonzero if any input failed.
@@ -50,6 +52,8 @@ remaining counts and organize files explicitly if required.
 Structured one-line facts use `- [F01] key: value`. A correction adds
 ` | corrects=F00`; multiple source IDs and correction IDs are comma separated.
 Reserved separator ` | ` and newline characters cannot occur in extracted values.
+Evidence quotes are JSON strings with newlines and pipes escaped, on the same
+physical line; they survive parsing and subsequent compaction.
 Exact duplicate key/value pairs merge their source IDs. Conflict groups are
 different values with the same key. Every value and source ID survives, with
 current/superseded/unresolved status tags. Only explicit correction links reaching

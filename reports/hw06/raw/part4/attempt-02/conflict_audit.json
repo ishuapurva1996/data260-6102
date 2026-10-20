@@ -1,0 +1,120 @@
+{
+  "audit_method": "Independent direct inspection against precommitted pair outcomes; no model judge",
+  "source_coverage_complete": true,
+  "original_claims_unchanged": true,
+  "original_source_ids": 54,
+  "final_source_ids": 54,
+  "counts": {
+    "original_physical_lines": 55,
+    "final_physical_lines": 28,
+    "final_counted_lines": 27
+  },
+  "conflicts": [
+    {
+      "key": "budget",
+      "pair": [
+        "F01",
+        "F02"
+      ],
+      "status": "resolved",
+      "winner": "F02",
+      "reason": "F02 explicitly corrects F01; retain 2200 USD as superseded history.",
+      "observed_lines": [
+        "- [F01] budget: 2200 USD | status=superseded | by=F02",
+        "- [F02] budget: 2400 USD | corrects=F01 | status=current"
+      ],
+      "correct": true,
+      "errors": []
+    },
+    {
+      "key": "move_in",
+      "pair": [
+        "F03",
+        "F04"
+      ],
+      "status": "resolved",
+      "winner": "F04",
+      "reason": "F04 explicitly corrects F03; retain original date as superseded history.",
+      "observed_lines": [
+        "- [F03] move_in: 2026-11-01 | status=superseded | by=F04",
+        "- [F04] move_in: 2026-12-01 | corrects=F03 | status=current"
+      ],
+      "correct": true,
+      "errors": []
+    },
+    {
+      "key": "parking",
+      "pair": [
+        "F05",
+        "F06"
+      ],
+      "status": "unresolved",
+      "winner": null,
+      "reason": "Neither claim corrects the other; IDs/order are not recency evidence.",
+      "observed_lines": [
+        "- [F05] parking: required | status=unresolved",
+        "- [F06] parking: unnecessary | status=unresolved"
+      ],
+      "correct": true,
+      "errors": []
+    }
+  ],
+  "duplicates": [
+    {
+      "ids": [
+        "F07",
+        "F08",
+        "F09",
+        "F10",
+        "F11",
+        "F12",
+        "F13",
+        "F14",
+        "F15",
+        "F16"
+      ],
+      "key": "neighborhood",
+      "value": "Willow Glen",
+      "merged": true
+    },
+    {
+      "ids": [
+        "F17",
+        "F18",
+        "F19",
+        "F20",
+        "F21",
+        "F22",
+        "F23",
+        "F24",
+        "F25",
+        "F26"
+      ],
+      "key": "pet",
+      "value": "one cat",
+      "merged": true
+    },
+    {
+      "ids": [
+        "F27",
+        "F28",
+        "F29",
+        "F30",
+        "F31",
+        "F32",
+        "F33",
+        "F34",
+        "F35",
+        "F36"
+      ],
+      "key": "access",
+      "value": "step-free entry",
+      "merged": true
+    }
+  ],
+  "incorrectly_resolved_contradictions": 0,
+  "incorrect_pairs": [],
+  "original_sha256": "3046c96ccbe1390ce4e7c72efccc7a6add861f063f74c2fc972d07fe2670bbe2",
+  "final_sha256": "79e75eba7a8010beea2dc3efba31aa01de998ebe194f5146ab808d0853cc0120",
+  "passed": true
+}

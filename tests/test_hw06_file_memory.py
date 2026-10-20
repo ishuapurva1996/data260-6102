@@ -128,6 +128,8 @@ def test_dream_uses_user_evidence_and_keeps_timestamp(tmp_path):
     result = s.handle('/dream', recent_messages=recent)
     assert result['added_entries'] == 1
     assert 'one cat' in path.read_text() and 'dog' not in path.read_text()
+    assert 'evidence="I have one cat."' in path.read_text()
+    assert 'source_message=u1' in path.read_text()
     assert path.read_text().startswith(old)
     assert 'You have a dog.' not in model.prompts[0][-1]['content']
 
@@ -207,3 +209,21 @@ def test_independent_audit_detects_wrong_resolution():
     report = audit(original, bad, EXPECTED)
     assert ['F05','F06'] in report['incorrect_pairs']
     assert not report['passed']
+
+
+def test_dream_evidence_survives_compaction_and_reopen(tmp_path):
+    quote = 'I require an induction stove.\nThis is my requirement | not a listing. <!-- quote -->'
+    answer = {'facts':[{'key':'stove','value':'induction stove','source_id':'u1',
+                       'evidence':quote,'corrects':[]}]}
+    s, model, path = service(tmp_path, stamp(), json.dumps(answer))
+    result = s.handle('/dream', recent_messages=[{'id':'u1','role':'user','content':quote}])
+    assert result['added_entries'] == 1
+    assert len(path.read_text().splitlines()) == 2
+    assert s.handle('/compact')['after']['entries'] == 1
+    restarted = FileMemoryService(agent_path=s.agent_path, memory_path=path,
+                                  model=Model('induction stove'),clock=lambda:NOW)
+    assert 'USER quote' in restarted.system_prompt(path.read_text())
+    assert restarted.handle('What stove?')['reply'] == 'induction stove'
+    from src.hw06_memory_files.service import parse_entries
+    entry = parse_entries(path.read_text())[0]
+    assert entry.evidence == quote and entry.source_message == 'u1'
