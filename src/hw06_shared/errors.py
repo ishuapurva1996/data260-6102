@@ -21,6 +21,12 @@ class ModelUnavailable(HW6Error):
     public_message = "The local model is unavailable."
 
 
+class ModelOutputLimitExceeded(HW6Error):
+    status_code = 503
+    code = "model_output_limit_exceeded"
+    public_message = "The local model stopped before completing its response."
+
+
 class ContextLimitExceeded(HW6Error):
     status_code = 422
     code = "context_limit_exceeded"

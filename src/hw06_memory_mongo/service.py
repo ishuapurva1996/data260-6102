@@ -10,7 +10,8 @@ from pymongo.errors import PyMongoError
 from src.hw06_shared.contracts import (
     AggregateResponse, ChatResponse, MemorySnapshot, MemoryUsed)
 from src.hw06_shared.errors import (
-    ContextLimitExceeded, HW6Error, ModelUnavailable, StorageUnavailable)
+    ContextLimitExceeded, HW6Error, ModelOutputLimitExceeded, ModelUnavailable,
+    StorageUnavailable)
 from src.hw06_shared.models import usage_counts
 from src.hw06_shared.serialization import new_id, utc_now, json_value
 from src.hw06_shared.telemetry import CallEvent, NullTelemetry, RequestContext, TokenComponents
@@ -57,6 +58,8 @@ class MongoMemoryService:
         return result
 
     def _validate_result(self, result, counts):
+        if counts.get('finish_reason') in ('length', 'max_tokens'):
+            raise ModelOutputLimitExceeded()
         if not isinstance(result.content, str) or not result.content.strip():
             raise ModelUnavailable()
         if counts.get('prompt_tokens') is not None and (

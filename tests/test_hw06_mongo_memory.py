@@ -476,6 +476,34 @@ def test_empty_model_reply_keeps_real_usage_but_does_not_save_assistant(rig):
     assert r.sink.events[-1].status == 'error'
 
 
+@pytest.mark.parametrize('operation', ['main', 'session_summary'])
+def test_output_cutoff_fails_turn_and_does_not_save_partial_generation(rig, operation):
+    r = rig(summarize_every_user_msgs=1)
+    original = r.model.complete
+    def complete(messages):
+        result = original(messages)
+        is_cutoff = (operation == 'main' and 'Rental housing' in messages[0][1]) or (
+            operation == 'session_summary' and 'Summarize the supplied' in messages[0][1])
+        if is_cutoff:
+            return CompletionResult(result.content, TokenUsage(100, 512, 612),
+                SimpleNamespace(response_metadata={'done_reason': 'length'}))
+        return result
+    r.model.complete = complete
+    with make_client(r.service) as client:
+        response = client.post('/api/chat', json={'user_id': '7', 'message': 'I need an elevator.'})
+    assert response.status_code == 503
+    assert response.json()['code'] == 'model_output_limit_exceeded'
+    assert len(r.db['messages'].rows) == (1 if operation == 'main' else 2)
+    assert r.db['summaries'].rows == []
+    failures = [e for e in r.sink.events if e.error_code == 'model_output_limit_exceeded']
+    assert failures[-1].operation == 'chat'
+    assert failures[-1].completion_tokens == (512 if operation == 'main' else 8)
+    if operation == 'session_summary':
+        assert failures[0].operation == 'session_summary'
+        assert failures[0].finish_reason == 'length'
+        assert failures[0].completion_tokens == 512
+
+
 def test_router_accepts_chat_service_protocol_without_config_attribute(rig):
     r = rig()
     service = SimpleNamespace(chat=r.service.chat, memory=r.service.memory, aggregate=r.service.aggregate)
