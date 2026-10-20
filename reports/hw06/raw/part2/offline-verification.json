@@ -1,0 +1,66 @@
+{
+  "student": "Pragya Apurva",
+  "kind": "offline_engineering_verification",
+  "mocked_dependencies": [
+    "in-memory Mongo query fixture",
+    "generation model",
+    "embedder",
+    "text token counter"
+  ],
+  "live_homework_evidence": false,
+  "timestamp_utc": "2026-10-20T06:15:10.708352+00:00",
+  "tested_code_commit": "8a67a4c68fd74e100052c1ae3717f546e958aec7",
+  "command": [
+    "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/runtime/venv/bin/python",
+    "-B",
+    "-m",
+    "pytest",
+    "tests/test_hw06_mongo_memory.py",
+    "tests/test_hw06_foundation.py",
+    "reports/hw01/tests/test_model_client.py",
+    "reports/hw01/tests/test_hw1_client.py",
+    "reports/hw01/tests/test_agents_demo.py",
+    "tests/test_hw04_serving.py",
+    "tests/test_hw05_api.py",
+    "tests/test_hw05_agent.py",
+    "-q",
+    "-p",
+    "no:cacheprovider"
+  ],
+  "checks": {
+    "pytest": {
+      "exit_code": 0,
+      "passed": 159,
+      "skipped": 45,
+      "skip_reason": "Existing SQL-dependent tests lack a configured real database"
+    },
+    "ast": {
+      "ok": true,
+      "files": 8
+    },
+    "diff_check": {
+      "ok": true,
+      "output": ""
+    },
+    "lint_typecheck": {
+      "status": "not_configured",
+      "scope": "No project command found in foundation; AST/diff checks used"
+    }
+  },
+  "source_sha256": {
+    "src/hw06_memory_mongo/service.py": "be9fa556a096faedafe0c5387ed61243a28bef591916ae8b9a2380fb5a2ba970",
+    "src/hw06_memory_mongo/__init__.py": "7b6c621072189615cbeb645be3a4eb9bc861316a06d59c09a81dd316e7cb6864",
+    "src/hw06_memory_mongo/logic.py": "04063d66077372c2ed83c7611dbe858bd87efabe65c6a5a409e6e6d7c738e782",
+    "src/hw06_memory_mongo/storage.py": "55b9ae457ea0ac38647d95f6fb507c88e3d3a40f38420191fb32dd80fb7cb948",
+    "scripts/hw06/part2/__init__.py": "aff81828a468fef8d3c391fe6934a7e2cf8a5c8976bb3f7d94398504d8fc3112",
+    "scripts/hw06/part2/live_demo.py": "e1ccec28c191c5c2e8e93fdf823a511838f0ae4073aa1ce9e9b2a337e5768650",
+    "code/web_application/routers/chat.py": "04d88880ed5921652302fc1264644f685b09aabfdbed01a9708fb3d0516423ac",
+    "tests/test_hw06_mongo_memory.py": "e330383e4b3bbdafa4b85c8862167171d7937e3080fadfbc03b0a180637bda19"
+  },
+  "source_trees": {
+    "src/hw06_memory_mongo": "a8cd39e2a7c98e91a2f5f061e3ac8ed675b111c9",
+    "code/web_application/routers/chat.py": "9dabc7ccd46ccef9356562d1713385cd353a027c",
+    "scripts/hw06/part2": "4d00a88a101e026c32fa541d016cf1af18cd5b34",
+    "tests/test_hw06_mongo_memory.py": "ccdeeb5d97d2dc604eb092ecc9f11b6b0c81aaa5"
+  }
+}
