@@ -1,0 +1,55 @@
+<!-- last_consolidated_utc: 2026-10-19T06:00:00+00:00 -->
+- [F01] budget: 2200 USD
+- [F02] budget: 2400 USD | corrects=F01
+- [F03] move_in: 2026-11-01
+- [F04] move_in: 2026-12-01 | corrects=F03
+- [F05] parking: required
+- [F06] parking: unnecessary
+- [F07] neighborhood: Willow Glen
+- [F08] neighborhood: Willow Glen
+- [F09] neighborhood: Willow Glen
+- [F10] neighborhood: Willow Glen
+- [F11] neighborhood: Willow Glen
+- [F12] neighborhood: Willow Glen
+- [F13] neighborhood: Willow Glen
+- [F14] neighborhood: Willow Glen
+- [F15] neighborhood: Willow Glen
+- [F16] neighborhood: Willow Glen
+- [F17] pet: one cat
+- [F18] pet: one cat
+- [F19] pet: one cat
+- [F20] pet: one cat
+- [F21] pet: one cat
+- [F22] pet: one cat
+- [F23] pet: one cat
+- [F24] pet: one cat
+- [F25] pet: one cat
+- [F26] pet: one cat
+- [F27] access: step-free entry
+- [F28] access: step-free entry
+- [F29] access: step-free entry
+- [F30] access: step-free entry
+- [F31] access: step-free entry
+- [F32] access: step-free entry
+- [F33] access: step-free entry
+- [F34] access: step-free entry
+- [F35] access: step-free entry
+- [F36] access: step-free entry
+- [F37] bedrooms: two
+- [F38] lease: 12 months
+- [F39] smoking: non-smoking
+- [F40] laundry: in unit
+- [F41] commute: under 30 minutes
+- [F42] tour: Saturday morning
+- [F43] contact: email
+- [F44] deposit: at most one month rent
+- [F45] utilities: ask for itemization
+- [F46] noise: quiet evenings
+- [F47] floor: ground floor or elevator
+- [F48] bike: secure storage
+- [F49] documents: rental application checklist
+- [F50] listing_status: verify before touring
+- [F51] transit: near bus stop
+- [F52] workspace: desk space
+- [F53] sunlight: natural light
+- [F54] internet: reliable connection

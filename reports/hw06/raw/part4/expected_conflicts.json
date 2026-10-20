@@ -1,0 +1,90 @@
+{
+  "declared_before_consolidation": true,
+  "synthetic_fixture": true,
+  "original_physical_lines": 55,
+  "original_counted_lines": 54,
+  "expected_final_physical_lines": 28,
+  "expected_final_counted_lines": 27,
+  "duplicates": [
+    {
+      "ids": [
+        "F07",
+        "F08",
+        "F09",
+        "F10",
+        "F11",
+        "F12",
+        "F13",
+        "F14",
+        "F15",
+        "F16"
+      ],
+      "key": "neighborhood",
+      "value": "Willow Glen"
+    },
+    {
+      "ids": [
+        "F17",
+        "F18",
+        "F19",
+        "F20",
+        "F21",
+        "F22",
+        "F23",
+        "F24",
+        "F25",
+        "F26"
+      ],
+      "key": "pet",
+      "value": "one cat"
+    },
+    {
+      "ids": [
+        "F27",
+        "F28",
+        "F29",
+        "F30",
+        "F31",
+        "F32",
+        "F33",
+        "F34",
+        "F35",
+        "F36"
+      ],
+      "key": "access",
+      "value": "step-free entry"
+    }
+  ],
+  "conflicts": [
+    {
+      "key": "budget",
+      "pair": [
+        "F01",
+        "F02"
+      ],
+      "status": "resolved",
+      "winner": "F02",
+      "reason": "F02 explicitly corrects F01; retain 2200 USD as superseded history."
+    },
+    {
+      "key": "move_in",
+      "pair": [
+        "F03",
+        "F04"
+      ],
+      "status": "resolved",
+      "winner": "F04",
+      "reason": "F04 explicitly corrects F03; retain original date as superseded history."
+    },
+    {
+      "key": "parking",
+      "pair": [
+        "F05",
+        "F06"
+      ],
+      "status": "unresolved",
+      "winner": null,
+      "reason": "Neither claim corrects the other; IDs/order are not recency evidence."
+    }
+  ]
+}
