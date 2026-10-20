@@ -1,0 +1,85 @@
+{
+  "schema_version": "hw06.part3.preparation.v1",
+  "evidence_kind": "offline_engineering",
+  "student": "Pragya Apurva",
+  "foundation_commit": "51cfd410400683acf7cf9f7bb88a9581ba3834bb",
+  "verification": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 /Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/runtime/venv/bin/python -m pytest tests/test_hw06_experiments.py tests/test_hw06_experiments_policy.py tests/test_hw06_experiments_live.py tests/test_hw06_foundation.py -q -p no:cacheprovider --basetemp=/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/d-prepare-checks/pytest",
+    "exit_code": 0,
+    "passed": 46,
+    "failed": 0,
+    "skipped": 0,
+    "warnings": 3,
+    "elapsed_seconds": 8.22,
+    "warning_summary": [
+      "Starlette python_multipart pending deprecation",
+      "AnyIO BlockingPortal alias deprecation",
+      "HTTPX app shortcut deprecation"
+    ],
+    "live_model_calls": 0,
+    "measured_studies": 0,
+    "notes": "Final selected check output observed in Session D. Test fixtures are not assignment measurements."
+  },
+  "static_check": {
+    "check": "offline_syntax_design_model_tokenizer",
+    "parsed_python_files": 13,
+    "submitted_messages": 30,
+    "fixed_probes": 5,
+    "input_hashes": {
+      "scripts/hw06/part3/conversation.json": "5c726de2de6fe7f4c3b02b589ebcedd2d31def81fb47797eccd950c5f1f2067c",
+      "memory_probes.yaml": "ca2333eb6804256107267a9994c7b033230778f4e094d13deaeadf7217571a3d"
+    },
+    "tokenizer_identity": "Qwen2.5/tokenizer.json:sha256:c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+    "policy_budget_satisfied": true,
+    "model_calls": 0,
+    "file_hashes": {
+      "scripts/hw06/part3/export.py": "86a9556b7e24ca36ebe03dd61c687a5bcbdc08ab25d299f794a40976890bc64f",
+      "scripts/hw06/part3/run.py": "92949faf5b31d150a22e4503c71af6cac7c0950ed0c5c3daa1140d20ce510c8d",
+      "scripts/hw06/part3/serve.py": "5a845900859f294eb2ef194049a8df88a37e4af757ffe47531246598eee74895",
+      "src/hw06_experiments/__init__.py": "90ced0a619afb47193c13d07a26490240bc80939fefa8a1b31b527f6277f6155",
+      "src/hw06_experiments/design.py": "b004d65876b102d0368bd974afe9f5f4edfbb22e82d86aac8fc6cd5cb45441f2",
+      "src/hw06_experiments/live.py": "1180ffac21914017c5ee17327179f07e77e8ade6192b5a714e19d6e31a6fb490",
+      "src/hw06_experiments/metrics.py": "6f8f397f3522c12982d3e5b35c96dfd7049e25da141882535fa9f2183af5695d",
+      "src/hw06_experiments/policy.py": "d6a2ceac410e3ef4e39a31a74a27616e65479c3afa68981213dff42cf05700d5",
+      "src/hw06_experiments/runner.py": "dc58a1c9e679d67a65c852ed67d94ae9ef282b61f6ea81599026f04eaf0e4756",
+      "src/hw06_experiments/validation.py": "8e0ef0a547760d9514ea59e84a1d7bfc925dcc126e1ab351700912e691be2aab",
+      "tests/test_hw06_experiments.py": "20318a097742ba12798b9091d41ec288f0ac2bd33a1ba783b6a6c586e951612a",
+      "tests/test_hw06_experiments_live.py": "f46fa7ffc9b33709ec2f66694e41ad166a12ec364fa245cbad8c76a0d2a505f6",
+      "tests/test_hw06_experiments_policy.py": "123a8aba3eea9e6fc2d34884d445449e37768a6c5853f1a5892adba953b6f84b"
+    }
+  },
+  "cli_help_checks": [
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 /Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/runtime/venv/bin/python -B -m scripts.hw06.part3.run --help",
+      "exit_code": 0
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 /Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/runtime/venv/bin/python -B -m scripts.hw06.part3.export --help",
+      "exit_code": 0
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 /Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/runtime/venv/bin/python -B -m scripts.hw06.part3.serve --help",
+      "exit_code": 0
+    }
+  ],
+  "proof_first_observations": [
+    {
+      "test": "tests/test_hw06_experiments_policy.py",
+      "result": "Expected collection failure: src.hw06_experiments absent, before implementation."
+    },
+    {
+      "test": "tests/test_hw06_experiments_live.py",
+      "result": "Expected collection failure: src.hw06_experiments.live absent, before live boundary implementation."
+    }
+  ],
+  "not_performed": [
+    "Live /api/chat calls",
+    "Measured model comparisons",
+    "MongoDB or SQL/auth live checks",
+    "N30 pilot",
+    "Filled measured result tables",
+    "Screenshots",
+    "Final report editing",
+    "Push, tag, upload or publication"
+  ]
+}
