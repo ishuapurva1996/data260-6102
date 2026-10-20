@@ -1,0 +1,270 @@
+{
+  "mode": "real",
+  "status": "pass",
+  "started_at": "2026-10-20T06:49:54.624Z",
+  "base_url": "https://localhost:8702",
+  "checks": [
+    {
+      "name": "Real HTTPS login uses Secure HttpOnly cookie",
+      "started_at": "2026-10-20T06:49:55.003Z",
+      "details": {
+        "secure": true,
+        "httpOnly": true,
+        "sameSite": "Lax"
+      },
+      "status": "pass",
+      "finished_at": "2026-10-20T06:49:55.242Z"
+    },
+    {
+      "name": "Real pagination matches API total and stable IDs",
+      "started_at": "2026-10-20T06:49:55.584Z",
+      "details": {
+        "first": [
+          1,
+          42,
+          43,
+          44,
+          45
+        ],
+        "second": [
+          46,
+          47
+        ],
+        "total": 7,
+        "screenshot": {
+          "file": "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/integration/browser-02/screenshots/real-home.png",
+          "actual_url": "https://localhost:8702/",
+          "mode": "real",
+          "captured_at": "2026-10-20T06:49:55.770Z",
+          "dimensions": {
+            "viewport": 1280,
+            "document": 1280,
+            "body": 1280
+          }
+        }
+      },
+      "status": "pass",
+      "finished_at": "2026-10-20T06:49:55.771Z"
+    },
+    {
+      "name": "UI create persists generated code, units and explicit manager",
+      "started_at": "2026-10-20T06:49:55.771Z",
+      "details": {
+        "id": 48,
+        "listingCode": "S6102-R-48",
+        "managerId": 21,
+        "screenshot": {
+          "file": "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/integration/browser-02/screenshots/real-created-home.png",
+          "actual_url": "https://localhost:8702/",
+          "mode": "real",
+          "captured_at": "2026-10-20T06:49:56.082Z",
+          "dimensions": {
+            "viewport": 1280,
+            "document": 1280,
+            "body": 1280
+          }
+        }
+      },
+      "status": "pass",
+      "finished_at": "2026-10-20T06:49:56.082Z"
+    },
+    {
+      "name": "UI direct-ID update persists changed fields and preserves old fields",
+      "started_at": "2026-10-20T06:49:56.082Z",
+      "details": {
+        "id": 48,
+        "preserved_original_fields": true,
+        "screenshot": {
+          "file": "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/integration/browser-02/screenshots/real-updated-home.png",
+          "actual_url": "https://localhost:8702/",
+          "mode": "real",
+          "captured_at": "2026-10-20T06:49:56.398Z",
+          "dimensions": {
+            "viewport": 1280,
+            "document": 1280,
+            "body": 1280
+          }
+        }
+      },
+      "status": "pass",
+      "finished_at": "2026-10-20T06:49:56.398Z"
+    },
+    {
+      "name": "Real same-ID revisit displays and saves a newer server update",
+      "started_at": "2026-10-20T06:49:56.398Z",
+      "details": {
+        "id": 48,
+        "newer_fields_displayed_and_submitted": true,
+        "old_fields_preserved": true,
+        "availableUnits": 5
+      },
+      "status": "pass",
+      "finished_at": "2026-10-20T06:49:56.937Z"
+    },
+    {
+      "name": "Real empty result and responsive Home",
+      "started_at": "2026-10-20T06:49:56.937Z",
+      "details": {
+        "file": "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/integration/browser-02/screenshots/real-mobile-home.png",
+        "actual_url": "https://localhost:8702/",
+        "mode": "real",
+        "captured_at": "2026-10-20T06:49:57.074Z",
+        "dimensions": {
+          "viewport": 390,
+          "document": 390,
+          "body": 390
+        }
+      },
+      "status": "pass",
+      "finished_at": "2026-10-20T06:49:57.075Z"
+    },
+    {
+      "name": "UI per-row delete returns 204 and remains absent after reload",
+      "started_at": "2026-10-20T06:49:57.075Z",
+      "details": {
+        "deleted_id": 48,
+        "screenshot": {
+          "file": "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/integration/browser-02/screenshots/real-deleted-home.png",
+          "actual_url": "https://localhost:8702/",
+          "mode": "real",
+          "captured_at": "2026-10-20T06:49:57.467Z",
+          "dimensions": {
+            "viewport": 1280,
+            "document": 1280,
+            "body": 1280
+          }
+        }
+      },
+      "status": "pass",
+      "finished_at": "2026-10-20T06:49:57.467Z"
+    },
+    {
+      "name": "Real logout clears visible data and API access",
+      "started_at": "2026-10-20T06:49:57.467Z",
+      "status": "pass",
+      "finished_at": "2026-10-20T06:49:57.521Z"
+    }
+  ],
+  "screenshots": [
+    {
+      "file": "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/integration/browser-02/screenshots/real-home.png",
+      "actual_url": "https://localhost:8702/",
+      "mode": "real",
+      "captured_at": "2026-10-20T06:49:55.770Z",
+      "dimensions": {
+        "viewport": 1280,
+        "document": 1280,
+        "body": 1280
+      }
+    },
+    {
+      "file": "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/integration/browser-02/screenshots/real-create-form.png",
+      "actual_url": "https://localhost:8702/create",
+      "mode": "real",
+      "captured_at": "2026-10-20T06:49:55.918Z",
+      "dimensions": {
+        "viewport": 1280,
+        "document": 1280,
+        "body": 1280
+      }
+    },
+    {
+      "file": "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/integration/browser-02/screenshots/real-created-home.png",
+      "actual_url": "https://localhost:8702/",
+      "mode": "real",
+      "captured_at": "2026-10-20T06:49:56.082Z",
+      "dimensions": {
+        "viewport": 1280,
+        "document": 1280,
+        "body": 1280
+      }
+    },
+    {
+      "file": "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/integration/browser-02/screenshots/real-update-form.png",
+      "actual_url": "https://localhost:8702/update?id=48",
+      "mode": "real",
+      "captured_at": "2026-10-20T06:49:56.163Z",
+      "dimensions": {
+        "viewport": 1280,
+        "document": 1280,
+        "body": 1280
+      }
+    },
+    {
+      "file": "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/integration/browser-02/screenshots/real-updated-home.png",
+      "actual_url": "https://localhost:8702/",
+      "mode": "real",
+      "captured_at": "2026-10-20T06:49:56.398Z",
+      "dimensions": {
+        "viewport": 1280,
+        "document": 1280,
+        "body": 1280
+      }
+    },
+    {
+      "file": "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/integration/browser-02/screenshots/real-mobile-home.png",
+      "actual_url": "https://localhost:8702/",
+      "mode": "real",
+      "captured_at": "2026-10-20T06:49:57.074Z",
+      "dimensions": {
+        "viewport": 390,
+        "document": 390,
+        "body": 390
+      }
+    },
+    {
+      "file": "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/integration/browser-02/screenshots/real-delete-confirmation.png",
+      "actual_url": "https://localhost:8702/delete?id=48",
+      "mode": "real",
+      "captured_at": "2026-10-20T06:49:57.161Z",
+      "dimensions": {
+        "viewport": 1280,
+        "document": 1280,
+        "body": 1280
+      }
+    },
+    {
+      "file": "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/integration/browser-02/screenshots/real-deleted-home.png",
+      "actual_url": "https://localhost:8702/",
+      "mode": "real",
+      "captured_at": "2026-10-20T06:49:57.467Z",
+      "dimensions": {
+        "viewport": 1280,
+        "document": 1280,
+        "body": 1280
+      }
+    }
+  ],
+  "limitations": [
+    "Live HTTPS/MySQL service supplied by owner; this test creates and deletes only uniquely marked test data.",
+    "UI screenshots do not substitute for the required source-snippet/UI Redux frames or Postman evidence."
+  ],
+  "git_revision": "2ef081a3a5ba23dee54d1b6835d2c862f0dc09d3",
+  "source_sha256": {
+    "frontend/src/App.jsx": "3f22477cec5c55759f07a605d353037de36b000720fc025cc1cefaccc3b521be",
+    "frontend/src/api/client.js": "d5cfc717bd195f6af11ba2ef6fda12df3eaab86b411e1b02700664f7f500a3b6",
+    "frontend/src/auth/AuthContext.jsx": "d05b73deeed86020dfbd0f671ded019cb9ad9cc06100943dd7ff8b24d82bec5e",
+    "frontend/src/components/forms.jsx": "655e2405639133efb99fefb043adbb55dca81d4075b9779b1e16a4edee54880d",
+    "frontend/src/features/rentals/rentalsSlice.js": "1a2c40e1a240624a679e6185415f137fa3e7ac1dfb5d8057d46a11024b3f5324",
+    "frontend/src/main.jsx": "2e17c70f9bc0b8f9db08ab26c4f10ccd0efb765d327a4347246c1430471e0359",
+    "frontend/src/pages/CreateRecord.jsx": "5b93267fcce1dee3977b6b9a7a660a3e7dea9011949189ebbb3308c7f3525415",
+    "frontend/src/pages/DeleteRecord.jsx": "1910d108d6f58c9fe7d332ef260e8ea0314519fdfb515a0d9bea7c99fbbb910f",
+    "frontend/src/pages/Home.jsx": "14b57d19a219b6f56286a5c87a5cd6e1ea0c8cfca3b6cba15390ae5c32c32a60",
+    "frontend/src/pages/Login.jsx": "99c97544645656a30212e8d79f5417b572f4b5671c6d4b84f71b5c9b721bebb0",
+    "frontend/src/pages/UpdateRecord.jsx": "19d50ed9f37476c2eb8818e0a781987181212a2754e40afeeee030c4f9b5f432",
+    "frontend/src/store/store.js": "4ed583fc1180809d4f9c279386e199950a8ac95bbfc92688fa49c27ef1e41d10",
+    "frontend/src/styles.css": "5ecf3f7d0238bc8635b5389fef5dc2c55f92713dfc13eabcc9e50033c0d2c959",
+    "frontend/package.json": "a815561544d0ab84ef2e13e9d2ed4b73530e50ea88d8a19264955c6e760f4bc9",
+    "frontend/package-lock.json": "a37333024872060cfee915cb5dbe1cf6b3b417071d6614ba1c0f2ba89ca8ede0",
+    "tests/browser_hw05_part1.cjs": "01194f9b897de00ae03d1f1ef58a70bdca569eb6aeda6cea0f321c717b2e58eb"
+  },
+  "cleanup": [
+    {
+      "manager_id": 21,
+      "status": 204
+    }
+  ],
+  "finished_at": "2026-10-20T06:49:57.608Z",
+  "passed_checks": 8,
+  "failed_checks": 0
+}

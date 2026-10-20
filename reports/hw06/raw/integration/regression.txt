@@ -1,0 +1,30 @@
+........................................................................ [ 16%]
+........................................................................ [ 32%]
+........................................................................ [ 48%]
+........................................................................ [ 64%]
+................................................sssssssssss............. [ 80%]
+........................................................................ [ 97%]
+.............                                                            [100%]
+=============================== warnings summary ===============================
+../../../../../../code/agent_outputs/data260-hw6/parallel-prompts/runtime/venv/lib/python3.12/site-packages/starlette/formparsers.py:10
+  /Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/runtime/venv/lib/python3.12/site-packages/starlette/formparsers.py:10: PendingDeprecationWarning: Please use `import python_multipart` instead.
+    import multipart
+
+../../../../../../code/agent_outputs/data260-hw6/parallel-prompts/runtime/venv/lib/python3.12/site-packages/starlette/testclient.py:31
+  /Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/runtime/venv/lib/python3.12/site-packages/starlette/testclient.py:31: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    [], typing.ContextManager[anyio.abc.BlockingPortal]
+
+tests/test_hw06_documents.py: 86 warnings
+tests/test_hw06_documents_edges.py: 1 warning
+tests/test_hw06_mongo_memory.py: 8 warnings
+tests/test_hw06_foundation.py: 1 warning
+tests/test_hw06_integration.py: 2 warnings
+tests/test_hw04_serving.py: 14 warnings
+tests/test_hw04_auth.py: 38 warnings
+tests/test_hw04_database.py: 1 warning
+tests/test_hw05_api.py: 44 warnings
+  /Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/runtime/venv/lib/python3.12/site-packages/httpx/_client.py:690: DeprecationWarning: The 'app' shortcut is now deprecated. Use the explicit style 'transport=WSGITransport(app=...)' instead.
+    warnings.warn(message, DeprecationWarning)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+434 passed, 11 skipped, 197 warnings in 14.50s

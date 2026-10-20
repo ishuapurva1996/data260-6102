@@ -1,0 +1,23 @@
+[
+  {
+    "name": "document",
+    "url": "https://localhost:8702/api/doc-rentals",
+    "status": 200,
+    "file": "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/integration/api-captures-02/document.png",
+    "captured_at": "2026-10-20T07:52:27.426Z"
+  },
+  {
+    "name": "memory",
+    "url": "https://localhost:8702/api/memory/1:hw6:A-acceptance:0d8ef079923f4ae8bbbd2131f4601169?session_id=1%3Ahw6%3AA-acceptance%3A0d8ef079923f4ae8bbbd2131f4601169%3Atwo",
+    "status": 200,
+    "file": "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/integration/api-captures-02/memory.png",
+    "captured_at": "2026-10-20T07:52:28.210Z"
+  },
+  {
+    "name": "aggregate",
+    "url": "https://localhost:8702/api/aggregate/1:hw6:A-acceptance:0d8ef079923f4ae8bbbd2131f4601169",
+    "status": 200,
+    "file": "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/integration/api-captures-02/aggregate.png",
+    "captured_at": "2026-10-20T07:52:28.980Z"
+  }
+]

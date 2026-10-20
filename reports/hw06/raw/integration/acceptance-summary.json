@@ -1,0 +1,153 @@
+{
+  "kind": "integrated_acceptance_not_final_homework",
+  "student": "Pragya Apurva",
+  "tested_code_commit": "e08241887636514df6da5124984539659c1ffc46",
+  "application_source_sha256": "baf6ed1a45eb00e121b0c2091bb5c4f0fbc62c0469d386696fab381056543eba",
+  "part1": {
+    "five_operations": true,
+    "defaults": true,
+    "utc_dates": true,
+    "server_timestamps": true,
+    "created_at_preserved": true,
+    "invalid_create_and_put": true,
+    "malformed_id": true,
+    "missing_record": true,
+    "stored_validation": true
+  },
+  "part2": {
+    "32_messages": true,
+    "session_summaries_2_plus_1": true,
+    "lifetime_summary": true,
+    "lifetime_used": true,
+    "episodes_saved": true,
+    "different_namespace_empty": true,
+    "other_owner_denied": true,
+    "mongo_restart_persistence": true
+  },
+  "two_authenticated_users": {
+    "first_owner_denied_second_memory": true,
+    "second_owner_denied_first_memory": true,
+    "second_owner_can_read_own": true
+  },
+  "file": {
+    "independent_audit": true,
+    "counts": {
+      "entries": 27,
+      "physical_lines": 28,
+      "counted_lines": 27
+    },
+    "restart": true
+  },
+  "comparison": {
+    "mongo_current_correction_and_facts": true,
+    "file_current_correction_and_facts": true
+  },
+  "policy": {
+    "configured_policy": true,
+    "budget": true,
+    "evicted": true,
+    "history_preserved": true,
+    "source_capture_unchanged": true
+  },
+  "unscored_pilot": {
+    "35_correlated_main_events": true,
+    "all_events_successful": true,
+    "model_usage_reported": true,
+    "context_fits": true,
+    "no_output_cutoff": true,
+    "N30_reached": true,
+    "components_recomputed": true,
+    "residuals_correct": true,
+    "current_message_once": true,
+    "auxiliary_extraction_and_query": true,
+    "summary_cadence": true
+  },
+  "pilot_max_prompt_tokens": 2356,
+  "pilot_max_completion_tokens": 342,
+  "browser_checks_passed": 8,
+  "regression": "434 passed, 11 destructive migration DDL checks skipped; 151 focused checks passed after output-limit rejection and concise-summary refinement",
+  "smoke": [
+    {
+      "name": "mongodb_reachable",
+      "passed": true
+    },
+    {
+      "name": "https_health_on_8702",
+      "passed": true
+    },
+    {
+      "name": "existing_real_login",
+      "passed": true
+    },
+    {
+      "name": "document_create",
+      "passed": true
+    },
+    {
+      "name": "document_read",
+      "passed": true
+    },
+    {
+      "name": "document_update",
+      "passed": true
+    },
+    {
+      "name": "invalid_document_rejected",
+      "passed": true
+    },
+    {
+      "name": "document_delete",
+      "passed": true
+    },
+    {
+      "name": "chat_http_success",
+      "passed": true
+    },
+    {
+      "name": "chat_reply_and_memory_shape",
+      "passed": true
+    },
+    {
+      "name": "memory_endpoint",
+      "passed": true
+    },
+    {
+      "name": "aggregate_endpoint",
+      "passed": true
+    },
+    {
+      "name": "other_user_denied",
+      "passed": true
+    },
+    {
+      "name": "file_memory_load_commands",
+      "passed": true
+    },
+    {
+      "name": "application_source_unchanged",
+      "passed": true
+    }
+  ],
+  "source_substantiation": {
+    "core_tested_code_commit": "e08241887636514df6da5124984539659c1ffc46",
+    "core_API_source_hashes_match": true,
+    "file_implementation_source_hashes_match": true,
+    "file_substantiation": "E file service and helper source hashes unchanged since successful integrated file-02 capture; file outputs stayed below the former 512-token cap",
+    "file_branch_implementation": "unchanged E service/helper source; live integrated rerun captured"
+  },
+  "historical_attempts": {
+    "pilot_01": "Stopped unscored before freeze after long main replies",
+    "pilot_02": "Completed N30 but failed acceptance: two session summaries hit the former 512-token cap",
+    "policy_03": "Transient query embedding 503 before policy selection; fresh policy-04 passed",
+    "file_01": "Dream returned invalid empty model output; file preserved and corrected acceptance followed"
+  },
+  "part1_database_capture": "Genuine mongosh BSON sample, validator and collections; Compass GUI was unavailable",
+  "measured_sweep_run": false,
+  "final_report_complete": false,
+  "remaining_final_evidence": [
+    "D four-condition measured study, manual scoring and regenerated cost tables",
+    "Final terminal/Compass screenshots and concise code/output pairs; genuine mongosh BSON/validator output and browser API captures are already preserved",
+    "Final report assembly, evidence aggregation, and eventual tagged submission verification"
+  ],
+  "background_load_limit": "Unrelated Docker services remain running; automatic approval review rejected pausing them. The shared HW6 lease reserves model/app/shared-database jobs during D measurement."
+}

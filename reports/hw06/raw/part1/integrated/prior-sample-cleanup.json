@@ -1,0 +1,22 @@
+{
+  "student": "Pragya Apurva",
+  "receipts": [
+    {
+      "run": "core-01",
+      "sample_id": "6ad70d361d230ebbccc0262e",
+      "previous_title": "HW6-B-fd72a3915c65 Compass sample",
+      "delete_status": 204,
+      "get_after_status": 404,
+      "passed": true
+    },
+    {
+      "run": "core-02",
+      "sample_id": "6ad711ba24494f98b6af5e7e",
+      "previous_title": "HW6-B-ec3dd04aa4c2 Compass sample",
+      "delete_status": 204,
+      "get_after_status": 404,
+      "passed": true
+    }
+  ],
+  "passed": true
+}

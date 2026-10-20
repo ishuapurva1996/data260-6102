@@ -1,0 +1,9 @@
+{
+  "kind": "real_two_authenticated_SQL_users_and_Mongo_fixture",
+  "checks": {
+    "first_owner_denied_second_memory": true,
+    "second_owner_denied_first_memory": true,
+    "second_owner_can_read_own": true
+  },
+  "passed": true
+}

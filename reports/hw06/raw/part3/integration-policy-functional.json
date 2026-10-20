@@ -1,0 +1,63 @@
+{
+  "kind": "single_functional_policy_check_not_benchmark",
+  "source_commit": "e08241887636514df6da5124984539659c1ffc46",
+  "seeded_history": "12 records copied from genuine integrated session-two capture into a fresh fixture namespace",
+  "response_status": 200,
+  "response": {
+    "user_id": "1:hw6:A-policy:25d3f334cb01480cb928018e9650fd3c",
+    "session_id": "1:hw6:A-policy:25d3f334cb01480cb928018e9650fd3c:session",
+    "request_id": "4af6993a1955428a9bbb7faadf36ab92",
+    "reply": "You're seeking a one-bedroom apartment in Japantown, San Jose, with a maximum monthly rent of $2400, cat-friendly options, secure bicycle storage, and an annual lease starting January 15, 2027.",
+    "memory_used": {
+      "short_term_count": 4,
+      "short_term_messages": [
+        {
+          "id": "6ad7b78961aafb269a7acae0",
+          "user_id": "1:hw6:A-policy:25d3f334cb01480cb928018e9650fd3c",
+          "session_id": "1:hw6:A-policy:25d3f334cb01480cb928018e9650fd3c:session",
+          "role": "user",
+          "content": "Please summarize my current rental requirements across our sessions.",
+          "created_at": "2026-10-20T07:49:51.707000Z"
+        },
+        {
+          "id": "6ad7b78961aafb269a7acae1",
+          "user_id": "1:hw6:A-policy:25d3f334cb01480cb928018e9650fd3c",
+          "session_id": "1:hw6:A-policy:25d3f334cb01480cb928018e9650fd3c:session",
+          "role": "assistant",
+          "content": "You're searching for a one-bedroom apartment in Japantown, San Jose, with a maximum monthly rent of $2400, cat-friendly options, a secure bicycle storage area, and an annual lease starting January 15, 2027.",
+          "created_at": "2026-10-20T07:49:59.914000Z"
+        },
+        {
+          "id": "6ad7b78961aafb269a7acae2",
+          "user_id": "1:hw6:A-policy:25d3f334cb01480cb928018e9650fd3c",
+          "session_id": "1:hw6:A-policy:25d3f334cb01480cb928018e9650fd3c:session",
+          "role": "user",
+          "content": "What do you remember from both sessions, including my earlier budget and cat?",
+          "created_at": "2026-10-20T07:51:11.532000Z"
+        },
+        {
+          "id": "6ad7b78961aafb269a7acae3",
+          "user_id": "1:hw6:A-policy:25d3f334cb01480cb928018e9650fd3c",
+          "session_id": "1:hw6:A-policy:25d3f334cb01480cb928018e9650fd3c:session",
+          "role": "assistant",
+          "content": "You're looking for a one-bedroom apartment in Japantown, San Jose, with a maximum monthly rent of $2400, cat-friendly options, a secure bicycle storage area, and an annual lease starting January 15, 2027.",
+          "created_at": "2026-10-20T07:51:25.443000Z"
+        }
+      ],
+      "session_summary": null,
+      "lifetime_summary": null,
+      "episodes": [],
+      "policy": "token_budget"
+    }
+  },
+  "window_tokens": 143,
+  "retained_messages": 4,
+  "checks": {
+    "configured_policy": true,
+    "budget": true,
+    "evicted": true,
+    "history_preserved": true,
+    "source_capture_unchanged": true
+  },
+  "passed": true
+}

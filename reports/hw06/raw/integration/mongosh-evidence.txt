@@ -1,0 +1,178 @@
+Pragya Apurva | HW6 final-source integrated mongosh evidence
+MongoDB version: 8.0.16
+Rental sample:
+{
+  _id: ObjectId('6ad71c9fc78ef56b6819c9f1'),
+  listingTitle: 'HW6-B-32e808974a92 Compass sample',
+  description: 'HW6-B-32e808974a92',
+  status: 'available',
+  propertyType: 'apartment',
+  availableFrom: ISODate('2026-11-01T16:00:00.000Z'),
+  created_at: ISODate('2026-10-20T07:47:43.069Z'),
+  updated_at: ISODate('2026-10-20T07:47:43.069Z')
+}
+Collection options:
+{
+  validator: {
+    '$jsonSchema': {
+      bsonType: 'object',
+      title: 'Rental listing',
+      additionalProperties: false,
+      required: [
+        'listingTitle',
+        'status',
+        'propertyType',
+        'availableFrom',
+        'created_at',
+        'updated_at'
+      ],
+      properties: {
+        _id: {
+          bsonType: 'objectId'
+        },
+        listingTitle: {
+          bsonType: 'string',
+          minLength: 1,
+          maxLength: 100,
+          pattern: '\\A[^\\x09-\\x0d\\x1c-\\x20\x85   -     　](?:[\\s\\S]*[^\\x09-\\x0d\\x1c-\\x20\x85   -     　])?(?![\\s\\S])',
+          description: 'Required trimmed nonblank title, at most 100 characters'
+        },
+        description: {
+          bsonType: [
+            'string',
+            'null'
+          ],
+          maxLength: 5000
+        },
+        status: {
+          bsonType: 'string',
+          enum: [
+            'available',
+            'reserved',
+            'rented'
+          ]
+        },
+        propertyType: {
+          bsonType: 'string',
+          enum: [
+            'apartment',
+            'house',
+            'condo',
+            'townhouse'
+          ]
+        },
+        availableFrom: {
+          bsonType: 'date'
+        },
+        created_at: {
+          bsonType: 'date'
+        },
+        updated_at: {
+          bsonType: 'date'
+        }
+      }
+    }
+  },
+  validationLevel: 'strict',
+  validationAction: 'error'
+}
+messages documents: 32
+[
+  {
+    _id: ObjectId('6ad71d7dc78ef56b6819ca1d'),
+    user_id: '1:hw6:A-acceptance:0d8ef079923f4ae8bbbd2131f4601169',
+    session_id: '1:hw6:A-acceptance:0d8ef079923f4ae8bbbd2131f4601169:two',
+    role: 'assistant',
+    content: "You're looking for a one-bedroom apartment in Japantown, San Jose, with a maximum monthly rent of $2400, cat-friendly options, a secure bicycle storage area, and an annual lease starting January 15, 2027.",
+    created_at: ISODate('2026-10-20T07:51:25.443Z')
+  },
+  {
+    _id: ObjectId('6ad71d6fc78ef56b6819ca1c'),
+    user_id: '1:hw6:A-acceptance:0d8ef079923f4ae8bbbd2131f4601169',
+    session_id: '1:hw6:A-acceptance:0d8ef079923f4ae8bbbd2131f4601169:two',
+    role: 'user',
+    content: 'What do you remember from both sessions, including my earlier budget and cat?',
+    created_at: ISODate('2026-10-20T07:51:11.532Z')
+  }
+]
+summaries documents: 4
+[
+  {
+    _id: ObjectId('6ad71d6fc78ef56b6819ca1b'),
+    user_id: '1:hw6:A-acceptance:0d8ef079923f4ae8bbbd2131f4601169',
+    session_id: null,
+    scope: 'user',
+    text: '- Set a $2400 monthly rent cap for a San Jose rental.\n' +
+      '- Targeted Japantown, cat-friendly, and step-free access.\n' +
+      '- Planned move-in date is January 15, 2027.\n' +
+      '- Prioritized pet-friendliness, accessibility, and specific neighborhood.\n' +
+      '- Inquired about pet policies, rent, utilities, accessibility features, and safety.\n' +
+      '- Wanted to check lease deposit amount, refundability, and conditions.\n' +
+      '- Compared laundry facilities, including costs and hours.\n' +
+      '- Prepared ID, income proof, rental history, and pet information for applications.\n' +
+      '- Preferred a one-bedroom apartment with bicycle storage in Japantown.\n' +
+      '- Focused on utility billing and annual lease starting January 15, 2027.',
+    created_at: ISODate('2026-10-20T07:51:11.506Z'),
+    source_summary_ids: [
+      '6ad71cfbc78ef56b6819ca0c',
+      '6ad71d51c78ef56b6819ca1a'
+    ]
+  },
+  {
+    _id: ObjectId('6ad71d51c78ef56b6819ca1a'),
+    user_id: '1:hw6:A-acceptance:0d8ef079923f4ae8bbbd2131f4601169',
+    session_id: '1:hw6:A-acceptance:0d8ef079923f4ae8bbbd2131f4601169:two',
+    scope: 'session',
+    text: '- User prefers a one-bedroom apartment in Japantown, San Jose.\n' +
+      '- Maximum monthly rent is $2400.\n' +
+      '- Requires cat-friendly options and a secure bicycle storage area.\n' +
+      '- Prefers an annual lease starting January 15, 2027.\n' +
+      '- Asked about utility billing, focusing on included utilities and additional charges.\n' +
+      '- Summarized rental requirements across sessions.',
+    created_at: ISODate('2026-10-20T07:50:41.876Z'),
+    user_message_count: 5,
+    through_message: {
+      id: '6ad71d27c78ef56b6819ca19',
+      created_at: ISODate('2026-10-20T07:49:59.914Z')
+    }
+  }
+]
+episodes documents: 10
+[
+  {
+    _id: ObjectId('6ad71d84c78ef56b6819ca1f'),
+    user_id: '1:hw6:A-acceptance:0d8ef079923f4ae8bbbd2131f4601169',
+    session_id: '1:hw6:A-acceptance:0d8ef079923f4ae8bbbd2131f4601169:two',
+    fact: 'The user mentioned their cat',
+    importance: 0.8,
+    embedding: [
+      0.029316032,
+      0.04283774,
+      -0.13656682,
+      -0.07000887,
+      0.089841016,
+      0.034908645,
+      -0.049960695,
+      -0.001856737
+    ],
+    created_at: ISODate('2026-10-20T07:51:32.554Z')
+  },
+  {
+    _id: ObjectId('6ad71d84c78ef56b6819ca1e'),
+    user_id: '1:hw6:A-acceptance:0d8ef079923f4ae8bbbd2131f4601169',
+    session_id: '1:hw6:A-acceptance:0d8ef079923f4ae8bbbd2131f4601169:two',
+    fact: 'The user mentioned their earlier budget',
+    importance: 0.8,
+    embedding: [
+      0.03382295,
+      0.040793095,
+      -0.1747962,
+      -0.012615987,
+      0.028454022,
+      0.0061247787,
+      0.046904612,
+      -0.026537897
+    ],
+    created_at: ISODate('2026-10-20T07:51:32.529Z')
+  }
+]
