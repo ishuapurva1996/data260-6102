@@ -1,0 +1,21 @@
+{
+  "outcome": "rejected; no write",
+  "incorrect_model_proposals": 1,
+  "incorrect_proposed_pair": [
+    "F05",
+    "F06"
+  ],
+  "proposed": {
+    "status": "resolved",
+    "winner": "F06",
+    "reason": "F06 corrects F05"
+  },
+  "expected": {
+    "status": "unresolved",
+    "winner": null
+  },
+  "incorrectly_persisted_resolutions": 0,
+  "runtime_byte_identical_to_original": true,
+  "original_sha256": "3046c96ccbe1390ce4e7c72efccc7a6add861f063f74c2fc972d07fe2670bbe2",
+  "explanation": "The model inferred a correction absent from the source. The validator rejected all changes. The next code revision makes the literal correction arrays, including empty arrays, explicit."
+}

@@ -227,10 +227,14 @@ class FileMemoryService:
                     continue
                 request = ('Consolidate ONLY this same-key conflict. Return a JSON object with '
                            'status (resolved or unresolved), winner (source ID or null), reason (string). '
-                           'Resolve ONLY with explicit corrects links covering every alternative; '
-                           'otherwise unresolved with null winner. Return ONLY JSON, without Markdown fences. '
-                           'Retain history. Claims:\n' +
-                           '\n'.join(entry.line() for entry in claims))
+                           'The corrects arrays below are the ONLY correction evidence. An empty array '
+                           'means NO correction evidence. Do not infer a correction from ordering, IDs, '
+                           'plausibility, or opposite values. Resolve ONLY when explicit corrects links '
+                           'reach every alternative. If all corrects arrays are empty, you MUST return '
+                           'status unresolved and winner null. Return ONLY JSON without Markdown fences. '
+                           'Retain history. Claims:\n' + json.dumps([
+                               {'ids':list(entry.ids), 'key':entry.key, 'value':entry.value,
+                                'corrects':list(entry.corrects)} for entry in claims]))
                 raw = self._complete([{'role':'system','content':self.system_prompt(original)},
                                       {'role':'user','content':request}], context, 'session_summary')
                 attempts.append({'key':key, 'raw':raw})

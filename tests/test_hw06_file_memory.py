@@ -195,3 +195,15 @@ def test_cli_read_commands_need_no_model_lease(tmp_path):
     assert [r['command'] for r in results] == ['/help','/memory']
     assert results[1]['reply'] == path.read_text()
     assert not (tmp_path/'runtime').exists()
+
+
+def test_independent_audit_detects_wrong_resolution():
+    from scripts.hw06.part4.audit import audit
+    from scripts.hw06.part4.fixture import original_memory, EXPECTED
+    original = original_memory()
+    # Keep every original claim but assign the ambiguous pair an unjustified winner.
+    bad = original.replace('parking: required', 'parking: required | status=superseded | by=F06')
+    bad = bad.replace('parking: unnecessary', 'parking: unnecessary | status=current')
+    report = audit(original, bad, EXPECTED)
+    assert ['F05','F06'] in report['incorrect_pairs']
+    assert not report['passed']
