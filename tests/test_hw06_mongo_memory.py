@@ -474,3 +474,12 @@ def test_empty_model_reply_keeps_real_usage_but_does_not_save_assistant(rig):
     assert len(r.db['messages'].rows) == 1
     assert r.sink.events[-1].prompt_tokens == 15
     assert r.sink.events[-1].status == 'error'
+
+
+def test_router_accepts_chat_service_protocol_without_config_attribute(rig):
+    r = rig()
+    service = SimpleNamespace(chat=r.service.chat, memory=r.service.memory, aggregate=r.service.aggregate)
+    with make_client(service) as client:
+        response = client.post('/api/chat', json={'user_id': '7', 'message': 'I need an elevator.'})
+    assert response.status_code == 200
+    assert r.sink.events[-1].context.source_commit == 'server-sha'

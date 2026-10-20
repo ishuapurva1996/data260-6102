@@ -10,6 +10,7 @@ from .auth import require_user
 
 def create_router(service, *, current_user_dependency=require_user):
     router = APIRouter(prefix='/api', tags=['conversation memory'])
+    config = getattr(service, 'config', None)
 
     @router.post('/chat', response_model=ChatResponse)
     def chat(payload: ChatRequest, request: Request, response: Response,
@@ -17,7 +18,7 @@ def create_router(service, *, current_user_dependency=require_user):
         authorize_memory_user(payload.user_id, principal)
         try:
             context = request_context_from_headers(request.headers,
-                source_commit=service.config.source_commit)
+                source_commit=getattr(config, 'source_commit', None))
         except ValidationError:
             raise HTTPException(422, 'Invalid HW6 experiment headers.') from None
         response.headers['Cache-Control'] = 'no-store'
