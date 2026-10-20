@@ -1,0 +1,22 @@
+Pragya Apurva | HW6 Part 3 real measurement
+Measured source commit: 4c0bd7c2dd0bedeab73d6a31d9f5c3a83a84e961
+Application-source SHA256: baf6ed1a45eb00e121b0c2091bb5c4f0fbc62c0469d386696fab381056543eba
+Started: 2026-10-20T19:10:47.067692+00:00
+Ended: 2026-10-20T20:07:23.020583+00:00
+Study command exit: 0
+Full actual argv: reports/hw06/raw/part3/run-receipt.json
+Integrated offline checks: 224 passed, 102 dependency deprecation warnings, no failures/skips.
+Real study: 120 primary + 20 probes; 140 successful requests, 0 failures, 0 reruns.
+Events: 140 request/chat + 168 auxiliary generation + 212 embedding = 520.
+Every namespace: initially empty; final 70 messages / 7 summaries / 18 episodes.
+All selected windows and component estimates recomputed with frozen Qwen tokenizer.
+D maximum window: 157/160 tokens; durable history preserved.
+All 308 generation finishes: stop; no output cap touched; contexts fit.
+Scored 20 answers against frozen rubric; no criterion values or answers edited.
+Original export CLI failed with ValueError: Scoring design changed (JSON rubric key types).
+Documented postprocessing key-type adapter used; no measured source change.
+Independent raw arithmetic: passed. Seven regenerated exports: byte-identical.
+Model identities and source/input hashes unchanged after study.
+Owned app stopped; lease released; port 8702 free.
+Background limitation: unrelated Docker services remained running as declared by A.
+No push, tag, publication, upload or canonical report modification.

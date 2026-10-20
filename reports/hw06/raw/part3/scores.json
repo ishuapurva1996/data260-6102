@@ -1,0 +1,679 @@
+{
+  "schema_version": "hw06.scores.v1",
+  "run_id": "s6102-D-194d3e097b294115aefb49652326058d",
+  "evidence_kind": "measured_http",
+  "input_hashes": {
+    "scripts/hw06/part3/conversation.json": "5c726de2de6fe7f4c3b02b589ebcedd2d31def81fb47797eccd950c5f1f2067c",
+    "memory_probes.yaml": "ca2333eb6804256107267a9994c7b033230778f4e094d13deaeadf7217571a3d"
+  },
+  "rubric": {
+    "1": "Incorrect essential fact, missing answer, refusal, or unsupported guess.",
+    "2": "Relevant fragment but major error or contradiction prevents a correct answer.",
+    "3": "Partly correct with an important omission; no contradictory essential claim.",
+    "4": "Correct essential fact with only the question-specific minor omission.",
+    "5": "All criteria correct, current, explicit, and without contradictory additions."
+  },
+  "essential_fact_rule": "Any incorrect essential fact makes the setting ineligible regardless of mean score. Missing or uncertain essential facts score at most 3. An incorrect essential claim scores at most 2. Assess the entire answer, including contradictory additions.",
+  "rows": [
+    {
+      "condition": "A",
+      "probe_id": "budget",
+      "request_id": "790fb3283e8f49fb950d516203ea1de9",
+      "answer": "Your current maximum monthly rent is $2,400, which has replaced the earlier amount of $2,200.",
+      "answer_sha256": "634868805a11034d26984d054fca8382cd772a07df21f772aaa179179af3830a",
+      "expected_answer": "Current maximum monthly base rent is $2,400; it replaced the earlier $2,200 limit.",
+      "essential": [
+        {
+          "criterion": "Current maximum is exactly $2400 per month",
+          "assessment": "correct",
+          "explanation": "States the current maximum as $2,400 monthly."
+        },
+        {
+          "criterion": "Never presents $2200 as the current maximum",
+          "assessment": "correct",
+          "explanation": "Identifies $2,200 only as the earlier replaced amount."
+        }
+      ],
+      "full_credit": [
+        {
+          "criterion": "Explicitly identifies $2200 as superseded by $2400",
+          "assessment": "correct",
+          "explanation": "Explicitly says $2,400 replaced $2,200."
+        }
+      ],
+      "score": 5,
+      "explanation": "Both the current amount and the superseded amount are explicit and correct.",
+      "scorer": "Codex Session D (criterion-by-criterion reading; no judge-model API)",
+      "scored_at": "2026-10-20T19:22:47.345034+00:00"
+    },
+    {
+      "condition": "A",
+      "probe_id": "neighborhood",
+      "request_id": "b4b0b67cd7c04fc992b12feabae287e9",
+      "answer": "You are targeting the Willow Glen neighborhood in San Jose for your rental search.",
+      "answer_sha256": "1b5ae1a607e5cbad904159799d5b7c45d2fd30374cceeb7e934d8a4d36a8f681",
+      "expected_answer": "Willow Glen in San Jose.",
+      "essential": [
+        {
+          "criterion": "Willow Glen is the single target neighborhood",
+          "assessment": "correct",
+          "explanation": "Names Willow Glen as the target neighborhood."
+        }
+      ],
+      "full_credit": [
+        {
+          "criterion": "Locates Willow Glen in San Jose",
+          "assessment": "correct",
+          "explanation": "Explicitly locates it in San Jose."
+        },
+        {
+          "criterion": "Does not offer another neighborhood as my target",
+          "assessment": "correct",
+          "explanation": "Names no alternative target neighborhood."
+        }
+      ],
+      "score": 5,
+      "explanation": "Recalls the exact neighborhood and city without a contradictory target.",
+      "scorer": "Codex Session D (criterion-by-criterion reading; no judge-model API)",
+      "scored_at": "2026-10-20T19:22:47.345523+00:00"
+    },
+    {
+      "condition": "A",
+      "probe_id": "pet",
+      "request_id": "a0feea3d156245868af0aa92efc077c1",
+      "answer": "You need pet-friendly accommodation that allows at least one indoor cat. Make sure to confirm this directly with the landlord or property manager.",
+      "answer_sha256": "cd770bfa829554533f53bf9774d5251f002da30642ec5b4bba92bbbf1f048ba6",
+      "expected_answer": "Explicit permission for one indoor cat named Juniper; no dog.",
+      "essential": [
+        {
+          "criterion": "Permission for one indoor cat",
+          "assessment": "correct",
+          "explanation": "Says accommodation must allow at least one indoor cat."
+        },
+        {
+          "criterion": "Does not substitute a dog or a no-pet rental",
+          "assessment": "correct",
+          "explanation": "Does not substitute a dog or a no-pet rental."
+        }
+      ],
+      "full_credit": [
+        {
+          "criterion": "Names the cat Juniper",
+          "assessment": "missing",
+          "explanation": "Juniper is not named."
+        },
+        {
+          "criterion": "Explicit permission is required",
+          "assessment": "correct",
+          "explanation": "Requires cat permission and directs confirmation with the landlord or manager."
+        }
+      ],
+      "score": 4,
+      "explanation": "The accommodation for one indoor cat is correct; omitting Juniper is the frozen score-4 minor omission.",
+      "scorer": "Codex Session D (criterion-by-criterion reading; no judge-model API)",
+      "scored_at": "2026-10-20T19:22:47.345528+00:00"
+    },
+    {
+      "condition": "A",
+      "probe_id": "move_in",
+      "request_id": "957712a97a20478e955dc5593baeecfa",
+      "answer": "You want to move in on January 15, 2027.",
+      "answer_sha256": "721cd47885f726c5d956b4f366dddc3fe0e2656c51f35064e6ecf05d506a1848",
+      "expected_answer": "January 15, 2027 (2027-01-15).",
+      "essential": [
+        {
+          "criterion": "January 15 with year 2027",
+          "assessment": "correct",
+          "explanation": "States January 15, 2027."
+        },
+        {
+          "criterion": "No different date asserted",
+          "assessment": "correct",
+          "explanation": "Asserts no other date."
+        }
+      ],
+      "full_credit": [
+        {
+          "criterion": "States the full unambiguous date",
+          "assessment": "correct",
+          "explanation": "Gives day, month and year unambiguously."
+        }
+      ],
+      "score": 5,
+      "explanation": "The exact full move-in date matches the script.",
+      "scorer": "Codex Session D (criterion-by-criterion reading; no judge-model API)",
+      "scored_at": "2026-10-20T19:22:47.345530+00:00"
+    },
+    {
+      "condition": "A",
+      "probe_id": "accessibility",
+      "request_id": "621b73e60d434d2aa9c5bf29f2341f30",
+      "answer": "For units above ground level, a working elevator is essential. Ensure the elevator is operational to meet your step-free access requirement.",
+      "answer_sha256": "d02e8cae213e083a372e44532b4fbfc72cdd7de3a74292a5c06197c8abe069de",
+      "expected_answer": "A step-free route from the building entrance into the unit; an above-ground unit must have a working elevator and cannot rely on stairs alone.",
+      "essential": [
+        {
+          "criterion": "Step-free route all the way into the unit",
+          "assessment": "missing",
+          "explanation": "Mentions step-free access but does not state a continuous route all the way into the unit; elevator operation alone does not establish that route."
+        },
+        {
+          "criterion": "Working elevator required for above-ground unit",
+          "assessment": "correct",
+          "explanation": "Requires a working elevator for above-ground units."
+        },
+        {
+          "criterion": "Stairs alone unacceptable",
+          "assessment": "correct",
+          "explanation": "The above-ground working-elevator requirement rules out stairs as the sole access."
+        }
+      ],
+      "full_credit": [
+        {
+          "criterion": "Explicitly mentions building entrance as the route origin",
+          "assessment": "missing",
+          "explanation": "The building entrance is not given as the route origin."
+        }
+      ],
+      "score": 3,
+      "explanation": "Correctly recalls the conditional working elevator and mentions step-free access, but omits the essential continuous route into the unit and its entrance origin. This is an important omission, so score 3 rather than the score-4 minor omission.",
+      "scorer": "Codex Session D (criterion-by-criterion reading; no judge-model API)",
+      "scored_at": "2026-10-20T19:22:47.345533+00:00"
+    },
+    {
+      "condition": "B",
+      "probe_id": "budget",
+      "request_id": "7c9e510535284b8d975534bf544ce2d5",
+      "answer": "Your current maximum monthly rent is $2,400, which has replaced the earlier amount of $2,200.",
+      "answer_sha256": "634868805a11034d26984d054fca8382cd772a07df21f772aaa179179af3830a",
+      "expected_answer": "Current maximum monthly base rent is $2,400; it replaced the earlier $2,200 limit.",
+      "essential": [
+        {
+          "criterion": "Current maximum is exactly $2400 per month",
+          "assessment": "correct",
+          "explanation": "States the current maximum as $2,400 monthly."
+        },
+        {
+          "criterion": "Never presents $2200 as the current maximum",
+          "assessment": "correct",
+          "explanation": "Identifies $2,200 only as the earlier replaced amount."
+        }
+      ],
+      "full_credit": [
+        {
+          "criterion": "Explicitly identifies $2200 as superseded by $2400",
+          "assessment": "correct",
+          "explanation": "Explicitly says $2,400 replaced $2,200."
+        }
+      ],
+      "score": 5,
+      "explanation": "Both the current amount and the superseded amount are explicit and correct.",
+      "scorer": "Codex Session D (criterion-by-criterion reading; no judge-model API)",
+      "scored_at": "2026-10-20T19:35:54.036546+00:00"
+    },
+    {
+      "condition": "B",
+      "probe_id": "neighborhood",
+      "request_id": "8a67e6692491413f98becdb6079deca8",
+      "answer": "You are targeting the Willow Glen neighborhood in San Jose for your rental search.",
+      "answer_sha256": "1b5ae1a607e5cbad904159799d5b7c45d2fd30374cceeb7e934d8a4d36a8f681",
+      "expected_answer": "Willow Glen in San Jose.",
+      "essential": [
+        {
+          "criterion": "Willow Glen is the single target neighborhood",
+          "assessment": "correct",
+          "explanation": "Names Willow Glen as the target neighborhood."
+        }
+      ],
+      "full_credit": [
+        {
+          "criterion": "Locates Willow Glen in San Jose",
+          "assessment": "correct",
+          "explanation": "Explicitly locates it in San Jose."
+        },
+        {
+          "criterion": "Does not offer another neighborhood as my target",
+          "assessment": "correct",
+          "explanation": "Names no alternative target neighborhood."
+        }
+      ],
+      "score": 5,
+      "explanation": "Recalls the exact neighborhood and city without a contradictory target.",
+      "scorer": "Codex Session D (criterion-by-criterion reading; no judge-model API)",
+      "scored_at": "2026-10-20T19:35:54.036862+00:00"
+    },
+    {
+      "condition": "B",
+      "probe_id": "pet",
+      "request_id": "33a798cb9b39497cbd272515c4d1522f",
+      "answer": "You need the rental to permit one indoor cat.",
+      "answer_sha256": "79bd6446bc5bc52810fd62ff0ee059c33b82a2225fecd9f617c878b871a7fff4",
+      "expected_answer": "Explicit permission for one indoor cat named Juniper; no dog.",
+      "essential": [
+        {
+          "criterion": "Permission for one indoor cat",
+          "assessment": "correct",
+          "explanation": "Explicitly says the rental must permit one indoor cat."
+        },
+        {
+          "criterion": "Does not substitute a dog or a no-pet rental",
+          "assessment": "correct",
+          "explanation": "Does not substitute a dog or a no-pet rental."
+        }
+      ],
+      "full_credit": [
+        {
+          "criterion": "Names the cat Juniper",
+          "assessment": "missing",
+          "explanation": "Juniper is not named."
+        },
+        {
+          "criterion": "Explicit permission is required",
+          "assessment": "correct",
+          "explanation": "Uses the explicit permission requirement: the rental must permit the cat."
+        }
+      ],
+      "score": 4,
+      "explanation": "The accommodation for one indoor cat is correct; omitting Juniper is the frozen score-4 minor omission.",
+      "scorer": "Codex Session D (criterion-by-criterion reading; no judge-model API)",
+      "scored_at": "2026-10-20T19:35:54.036869+00:00"
+    },
+    {
+      "condition": "B",
+      "probe_id": "move_in",
+      "request_id": "0e2d7e198c8042a4bd8b500663c9fffe",
+      "answer": "You want to move in on January 15, 2027.",
+      "answer_sha256": "721cd47885f726c5d956b4f366dddc3fe0e2656c51f35064e6ecf05d506a1848",
+      "expected_answer": "January 15, 2027 (2027-01-15).",
+      "essential": [
+        {
+          "criterion": "January 15 with year 2027",
+          "assessment": "correct",
+          "explanation": "States January 15, 2027."
+        },
+        {
+          "criterion": "No different date asserted",
+          "assessment": "correct",
+          "explanation": "Asserts no other date."
+        }
+      ],
+      "full_credit": [
+        {
+          "criterion": "States the full unambiguous date",
+          "assessment": "correct",
+          "explanation": "Gives day, month and year unambiguously."
+        }
+      ],
+      "score": 5,
+      "explanation": "The exact full move-in date matches the script.",
+      "scorer": "Codex Session D (criterion-by-criterion reading; no judge-model API)",
+      "scored_at": "2026-10-20T19:35:54.036890+00:00"
+    },
+    {
+      "condition": "B",
+      "probe_id": "accessibility",
+      "request_id": "5d49c7e72718405ca57cd4695d1bf86b",
+      "answer": "A step-free route is essential, and for units above ground level, a working elevator is also required.",
+      "answer_sha256": "310c237c90707d092f67a1ba7b2d03a2e07c4fb81ce0a01ce2fe7e54e0d98dab",
+      "expected_answer": "A step-free route from the building entrance into the unit; an above-ground unit must have a working elevator and cannot rely on stairs alone.",
+      "essential": [
+        {
+          "criterion": "Step-free route all the way into the unit",
+          "assessment": "missing",
+          "explanation": "States a step-free route, but does not state that it must continue all the way into the unit; the route endpoint is missing."
+        },
+        {
+          "criterion": "Working elevator required for above-ground unit",
+          "assessment": "correct",
+          "explanation": "Requires a working elevator for units above ground level."
+        },
+        {
+          "criterion": "Stairs alone unacceptable",
+          "assessment": "correct",
+          "explanation": "Requiring the working elevator for an above-ground unit rules out relying on stairs alone."
+        }
+      ],
+      "full_credit": [
+        {
+          "criterion": "Explicitly mentions building entrance as the route origin",
+          "assessment": "missing",
+          "explanation": "Does not identify the building entrance as the route origin."
+        }
+      ],
+      "score": 3,
+      "explanation": "The step-free route and conditional working elevator are recalled, but the required continuous route into the unit is not specified and the entrance origin is absent. Treat the missing essential endpoint consistently with A: important omission, score 3.",
+      "scorer": "Codex Session D (criterion-by-criterion reading; no judge-model API)",
+      "scored_at": "2026-10-20T19:35:54.036899+00:00"
+    },
+    {
+      "condition": "C",
+      "probe_id": "budget",
+      "request_id": "f0130144f4cd444f97e639b4c49b59a4",
+      "answer": "Your current maximum monthly rent is $2,400, which has replaced the initial maximum monthly rent of $2,200.",
+      "answer_sha256": "ac293fcfc8f6e71a4f9214e6594d50329dfecae781b5bec31a52a7de003e7e3a",
+      "expected_answer": "Current maximum monthly base rent is $2,400; it replaced the earlier $2,200 limit.",
+      "essential": [
+        {
+          "criterion": "Current maximum is exactly $2400 per month",
+          "assessment": "correct",
+          "explanation": "States the current maximum as $2,400 monthly."
+        },
+        {
+          "criterion": "Never presents $2200 as the current maximum",
+          "assessment": "correct",
+          "explanation": "Identifies $2,200 only as the earlier replaced amount."
+        }
+      ],
+      "full_credit": [
+        {
+          "criterion": "Explicitly identifies $2200 as superseded by $2400",
+          "assessment": "correct",
+          "explanation": "Explicitly says $2,400 replaced $2,200."
+        }
+      ],
+      "score": 5,
+      "explanation": "Both the current amount and the superseded amount are explicit and correct.",
+      "scorer": "Codex Session D (criterion-by-criterion reading; no judge-model API)",
+      "scored_at": "2026-10-20T19:54:06.612597+00:00"
+    },
+    {
+      "condition": "C",
+      "probe_id": "neighborhood",
+      "request_id": "39fad60cc4e94936ac3a4e942f16b73f",
+      "answer": "You are targeting the Willow Glen neighborhood in San Jose for your rental search.",
+      "answer_sha256": "1b5ae1a607e5cbad904159799d5b7c45d2fd30374cceeb7e934d8a4d36a8f681",
+      "expected_answer": "Willow Glen in San Jose.",
+      "essential": [
+        {
+          "criterion": "Willow Glen is the single target neighborhood",
+          "assessment": "correct",
+          "explanation": "Names Willow Glen as the target neighborhood."
+        }
+      ],
+      "full_credit": [
+        {
+          "criterion": "Locates Willow Glen in San Jose",
+          "assessment": "correct",
+          "explanation": "Explicitly locates it in San Jose."
+        },
+        {
+          "criterion": "Does not offer another neighborhood as my target",
+          "assessment": "correct",
+          "explanation": "Names no alternative target neighborhood."
+        }
+      ],
+      "score": 5,
+      "explanation": "Recalls the exact neighborhood and city without a contradictory target.",
+      "scorer": "Codex Session D (criterion-by-criterion reading; no judge-model API)",
+      "scored_at": "2026-10-20T19:54:06.612869+00:00"
+    },
+    {
+      "condition": "C",
+      "probe_id": "pet",
+      "request_id": "d2fef8551a674de691363e3457cf9cf1",
+      "answer": "You need a pet-friendly policy that allows one indoor cat. Make sure to confirm this with the listing agents during your tours.",
+      "answer_sha256": "8fc7b1bf64ac0c9915b126e5cb3ddadd0e1a7e77c905ddc7ffc61e34050ee6b3",
+      "expected_answer": "Explicit permission for one indoor cat named Juniper; no dog.",
+      "essential": [
+        {
+          "criterion": "Permission for one indoor cat",
+          "assessment": "correct",
+          "explanation": "Requires a policy allowing one indoor cat."
+        },
+        {
+          "criterion": "Does not substitute a dog or a no-pet rental",
+          "assessment": "correct",
+          "explanation": "Does not substitute a dog or a no-pet rental."
+        }
+      ],
+      "full_credit": [
+        {
+          "criterion": "Names the cat Juniper",
+          "assessment": "missing",
+          "explanation": "Juniper is not named."
+        },
+        {
+          "criterion": "Explicit permission is required",
+          "assessment": "correct",
+          "explanation": "Requires permission and directs confirmation with listing agents."
+        }
+      ],
+      "score": 4,
+      "explanation": "The accommodation for one indoor cat is correct; omitting Juniper is the frozen score-4 minor omission.",
+      "scorer": "Codex Session D (criterion-by-criterion reading; no judge-model API)",
+      "scored_at": "2026-10-20T19:54:06.612873+00:00"
+    },
+    {
+      "condition": "C",
+      "probe_id": "move_in",
+      "request_id": "919da0e584d145e68748dfad6a0e5cff",
+      "answer": "You want to move in on January 15, 2027.",
+      "answer_sha256": "721cd47885f726c5d956b4f366dddc3fe0e2656c51f35064e6ecf05d506a1848",
+      "expected_answer": "January 15, 2027 (2027-01-15).",
+      "essential": [
+        {
+          "criterion": "January 15 with year 2027",
+          "assessment": "correct",
+          "explanation": "States January 15, 2027."
+        },
+        {
+          "criterion": "No different date asserted",
+          "assessment": "correct",
+          "explanation": "Asserts no other date."
+        }
+      ],
+      "full_credit": [
+        {
+          "criterion": "States the full unambiguous date",
+          "assessment": "correct",
+          "explanation": "Gives day, month and year unambiguously."
+        }
+      ],
+      "score": 5,
+      "explanation": "The exact full move-in date matches the script.",
+      "scorer": "Codex Session D (criterion-by-criterion reading; no judge-model API)",
+      "scored_at": "2026-10-20T19:54:06.612876+00:00"
+    },
+    {
+      "condition": "C",
+      "probe_id": "accessibility",
+      "request_id": "c75233ed775c4e16a3257a6734a0c56a",
+      "answer": "A working elevator is essential for units above ground level. Additionally, a step-free route from the building entrance to your unit is required.",
+      "answer_sha256": "7702d5166fc9b625cf0bc2316a8ff95e935b40b3dc024cbf09a7d1073f57f755",
+      "expected_answer": "A step-free route from the building entrance into the unit; an above-ground unit must have a working elevator and cannot rely on stairs alone.",
+      "essential": [
+        {
+          "criterion": "Step-free route all the way into the unit",
+          "assessment": "correct",
+          "explanation": "Specifies a step-free route from the building entrance to the unit."
+        },
+        {
+          "criterion": "Working elevator required for above-ground unit",
+          "assessment": "correct",
+          "explanation": "Requires a working elevator for units above ground level."
+        },
+        {
+          "criterion": "Stairs alone unacceptable",
+          "assessment": "correct",
+          "explanation": "The required working elevator for above-ground units excludes stairs-only access."
+        }
+      ],
+      "full_credit": [
+        {
+          "criterion": "Explicitly mentions building entrance as the route origin",
+          "assessment": "correct",
+          "explanation": "Explicitly gives the building entrance as the route origin."
+        }
+      ],
+      "score": 5,
+      "explanation": "Recalls the continuous entrance-to-unit route and conditional working-elevator requirement, with no contradictory addition.",
+      "scorer": "Codex Session D (criterion-by-criterion reading; no judge-model API)",
+      "scored_at": "2026-10-20T19:54:06.612878+00:00"
+    },
+    {
+      "condition": "D",
+      "probe_id": "budget",
+      "request_id": "5549df9853f74fbaaed5b15e2a84c87f",
+      "answer": "Your current maximum monthly rent is $2,400, which replaced an earlier amount of $2,200.",
+      "answer_sha256": "502728d2da8a9650a26b76bb0a183d1c2f318e29f536593bbaa7c377b4197be3",
+      "expected_answer": "Current maximum monthly base rent is $2,400; it replaced the earlier $2,200 limit.",
+      "essential": [
+        {
+          "criterion": "Current maximum is exactly $2400 per month",
+          "assessment": "correct",
+          "explanation": "States the current maximum as $2,400 monthly."
+        },
+        {
+          "criterion": "Never presents $2200 as the current maximum",
+          "assessment": "correct",
+          "explanation": "Identifies $2,200 only as the earlier replaced amount."
+        }
+      ],
+      "full_credit": [
+        {
+          "criterion": "Explicitly identifies $2200 as superseded by $2400",
+          "assessment": "correct",
+          "explanation": "Explicitly says $2,400 replaced $2,200."
+        }
+      ],
+      "score": 5,
+      "explanation": "Both the current amount and the superseded amount are explicit and correct.",
+      "scorer": "Codex Session D (criterion-by-criterion reading; no judge-model API)",
+      "scored_at": "2026-10-20T20:08:02.173830+00:00"
+    },
+    {
+      "condition": "D",
+      "probe_id": "neighborhood",
+      "request_id": "daf768ffee5e4d52a3aa1cb16489de6f",
+      "answer": "You are targeting the Willow Glen neighborhood in San Jose for your rental search.",
+      "answer_sha256": "1b5ae1a607e5cbad904159799d5b7c45d2fd30374cceeb7e934d8a4d36a8f681",
+      "expected_answer": "Willow Glen in San Jose.",
+      "essential": [
+        {
+          "criterion": "Willow Glen is the single target neighborhood",
+          "assessment": "correct",
+          "explanation": "Names Willow Glen as the target neighborhood."
+        }
+      ],
+      "full_credit": [
+        {
+          "criterion": "Locates Willow Glen in San Jose",
+          "assessment": "correct",
+          "explanation": "Explicitly locates it in San Jose."
+        },
+        {
+          "criterion": "Does not offer another neighborhood as my target",
+          "assessment": "correct",
+          "explanation": "Names no alternative target neighborhood."
+        }
+      ],
+      "score": 5,
+      "explanation": "Recalls the exact neighborhood and city without a contradictory target.",
+      "scorer": "Codex Session D (criterion-by-criterion reading; no judge-model API)",
+      "scored_at": "2026-10-20T20:08:02.173836+00:00"
+    },
+    {
+      "condition": "D",
+      "probe_id": "pet",
+      "request_id": "922de7611a50435f86bef485a3670b57",
+      "answer": "You need a pet-friendly rental that permits one indoor cat.",
+      "answer_sha256": "733762078c820dddbb6abf5547186a5f2a913c9e71506a75ff42317fda9fc5d9",
+      "expected_answer": "Explicit permission for one indoor cat named Juniper; no dog.",
+      "essential": [
+        {
+          "criterion": "Permission for one indoor cat",
+          "assessment": "correct",
+          "explanation": "Requires a rental permitting one indoor cat."
+        },
+        {
+          "criterion": "Does not substitute a dog or a no-pet rental",
+          "assessment": "correct",
+          "explanation": "Does not substitute a dog or a no-pet rental."
+        }
+      ],
+      "full_credit": [
+        {
+          "criterion": "Names the cat Juniper",
+          "assessment": "missing",
+          "explanation": "Juniper is not named."
+        },
+        {
+          "criterion": "Explicit permission is required",
+          "assessment": "correct",
+          "explanation": "Explicitly states that the rental must permit the cat."
+        }
+      ],
+      "score": 4,
+      "explanation": "The accommodation for one indoor cat is correct; omitting Juniper is the frozen score-4 minor omission.",
+      "scorer": "Codex Session D (criterion-by-criterion reading; no judge-model API)",
+      "scored_at": "2026-10-20T20:08:02.173838+00:00"
+    },
+    {
+      "condition": "D",
+      "probe_id": "move_in",
+      "request_id": "d1411d8996cd45f79863b642a6ba2deb",
+      "answer": "You want to move in on January 15, 2027.",
+      "answer_sha256": "721cd47885f726c5d956b4f366dddc3fe0e2656c51f35064e6ecf05d506a1848",
+      "expected_answer": "January 15, 2027 (2027-01-15).",
+      "essential": [
+        {
+          "criterion": "January 15 with year 2027",
+          "assessment": "correct",
+          "explanation": "States January 15, 2027."
+        },
+        {
+          "criterion": "No different date asserted",
+          "assessment": "correct",
+          "explanation": "Asserts no other date."
+        }
+      ],
+      "full_credit": [
+        {
+          "criterion": "States the full unambiguous date",
+          "assessment": "correct",
+          "explanation": "Gives day, month and year unambiguously."
+        }
+      ],
+      "score": 5,
+      "explanation": "The exact full move-in date matches the script.",
+      "scorer": "Codex Session D (criterion-by-criterion reading; no judge-model API)",
+      "scored_at": "2026-10-20T20:08:02.173839+00:00"
+    },
+    {
+      "condition": "D",
+      "probe_id": "accessibility",
+      "request_id": "86793ff493094dd6954dea927390bb34",
+      "answer": "A working elevator is essential for units above ground level, and a step-free route is required from the building entrance to your unit.",
+      "answer_sha256": "f16abe79739f64fb7efb6e1097aa245c749cb77d399c429ab68b07cfc2c051bd",
+      "expected_answer": "A step-free route from the building entrance into the unit; an above-ground unit must have a working elevator and cannot rely on stairs alone.",
+      "essential": [
+        {
+          "criterion": "Step-free route all the way into the unit",
+          "assessment": "correct",
+          "explanation": "Specifies a step-free route from the building entrance to the unit."
+        },
+        {
+          "criterion": "Working elevator required for above-ground unit",
+          "assessment": "correct",
+          "explanation": "Requires a working elevator for units above ground level."
+        },
+        {
+          "criterion": "Stairs alone unacceptable",
+          "assessment": "correct",
+          "explanation": "The required working elevator for above-ground units excludes stairs-only access."
+        }
+      ],
+      "full_credit": [
+        {
+          "criterion": "Explicitly mentions building entrance as the route origin",
+          "assessment": "correct",
+          "explanation": "Explicitly gives the building entrance as the route origin."
+        }
+      ],
+      "score": 5,
+      "explanation": "Recalls the continuous entrance-to-unit route and conditional working-elevator requirement, with no contradictory addition.",
+      "scorer": "Codex Session D (criterion-by-criterion reading; no judge-model API)",
+      "scored_at": "2026-10-20T20:08:02.173840+00:00"
+    }
+  ]
+}

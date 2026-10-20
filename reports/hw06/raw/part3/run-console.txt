@@ -1,0 +1,1 @@
+Collected 120 primary and 20 probe requests; validate events and manually score before export.

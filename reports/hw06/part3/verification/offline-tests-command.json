@@ -1,0 +1,24 @@
+{
+  "command": [
+    "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/runtime/venv/bin/python",
+    "-B",
+    "-m",
+    "pytest",
+    "tests/test_hw06_documents.py",
+    "tests/test_hw06_documents_edges.py",
+    "tests/test_hw06_experiments.py",
+    "tests/test_hw06_experiments_live.py",
+    "tests/test_hw06_experiments_policy.py",
+    "tests/test_hw06_file_memory.py",
+    "tests/test_hw06_foundation.py",
+    "tests/test_hw06_integration.py",
+    "tests/test_hw06_mongo_memory.py",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp=/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/d-measure-checks/pytest"
+  ],
+  "started_at": "2026-10-20T19:10:13.299713+00:00",
+  "ended_at": "2026-10-20T19:10:23.437297+00:00",
+  "exit_code": 0
+}

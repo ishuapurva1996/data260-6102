@@ -1,0 +1,32 @@
+{
+  "sid4": 6102,
+  "port": 8702,
+  "prefix": "s6102",
+  "seed": 6102,
+  "verify_seed": 266102,
+  "domain_id": 6,
+  "database_name": "s6102_doc",
+  "mongo_timeout_ms": 2000,
+  "model": "qwen2.5:7b",
+  "model_digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+  "source_commit": "4c0bd7c2dd0bedeab73d6a31d9f5c3a83a84e961",
+  "ollama_url": "http://127.0.0.1:11434",
+  "temperature": 0.0,
+  "context_window": 8192,
+  "output_limit": 1024,
+  "model_timeout": 180.0,
+  "short_term_n": 4,
+  "summarize_every_user_msgs": 5,
+  "top_k": 3,
+  "policy": "baseline",
+  "token_budget": 160,
+  "embedding_model": "nomic-embed-text:v1.5",
+  "embedding_digest": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+  "embedding_dimension": 768,
+  "tokenizer_path": "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/runtime/qwen2.5-tokenizer.json",
+  "tokenizer_sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+  "cors_origins": [
+    "https://localhost:8702",
+    "https://127.0.0.1:8702"
+  ]
+}

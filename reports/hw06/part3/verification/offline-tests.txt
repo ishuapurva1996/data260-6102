@@ -1,0 +1,23 @@
+........................................................................ [ 32%]
+........................................................................ [ 64%]
+........................................................................ [ 96%]
+........                                                                 [100%]
+=============================== warnings summary ===============================
+../../../../../../code/agent_outputs/data260-hw6/parallel-prompts/runtime/venv/lib/python3.12/site-packages/starlette/formparsers.py:10
+  /Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/runtime/venv/lib/python3.12/site-packages/starlette/formparsers.py:10: PendingDeprecationWarning: Please use `import python_multipart` instead.
+    import multipart
+
+../../../../../../code/agent_outputs/data260-hw6/parallel-prompts/runtime/venv/lib/python3.12/site-packages/starlette/testclient.py:31
+  /Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/runtime/venv/lib/python3.12/site-packages/starlette/testclient.py:31: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    [], typing.ContextManager[anyio.abc.BlockingPortal]
+
+tests/test_hw06_documents.py: 86 warnings
+tests/test_hw06_documents_edges.py: 1 warning
+tests/test_hw06_foundation.py: 1 warning
+tests/test_hw06_integration.py: 2 warnings
+tests/test_hw06_mongo_memory.py: 10 warnings
+  /Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/runtime/venv/lib/python3.12/site-packages/httpx/_client.py:690: DeprecationWarning: The 'app' shortcut is now deprecated. Use the explicit style 'transport=WSGITransport(app=...)' instead.
+    warnings.warn(message, DeprecationWarning)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+224 passed, 102 warnings in 9.62s

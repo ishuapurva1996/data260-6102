@@ -1,0 +1,72 @@
+{
+  "status": "passed",
+  "independent_raw_arithmetic": true,
+  "byte_identical_regenerated_exports": [
+    "auxiliary_generation.json",
+    "embeddings.json",
+    "memory_cost.csv",
+    "memory_cost.md",
+    "metrics.json",
+    "per_turn.csv",
+    "scores.json"
+  ],
+  "conditions": [
+    {
+      "condition": "A",
+      "prompt": 14800,
+      "completion": 1135,
+      "auxiliary_prompt": 16897,
+      "auxiliary_completion": 2113,
+      "mean_quality": "4.4",
+      "main_cost": "204.75",
+      "total_generative_cost": "479.37"
+    },
+    {
+      "condition": "B",
+      "prompt": 22617,
+      "completion": 1199,
+      "auxiliary_prompt": 16957,
+      "auxiliary_completion": 2139,
+      "mean_quality": "4.4",
+      "main_cost": "286.12",
+      "total_generative_cost": "562.64"
+    },
+    {
+      "condition": "C",
+      "prompt": 36033,
+      "completion": 1425,
+      "auxiliary_prompt": 17083,
+      "auxiliary_completion": 2132,
+      "mean_quality": "4.8",
+      "main_cost": "431.58",
+      "total_generative_cost": "709.01"
+    },
+    {
+      "condition": "D",
+      "prompt": 16194,
+      "completion": 1127,
+      "auxiliary_prompt": 16664,
+      "auxiliary_completion": 2436,
+      "mean_quality": "4.8",
+      "main_cost": "218.29",
+      "total_generative_cost": "506.73"
+    }
+  ],
+  "exact_quality_change": "0.4",
+  "total_generative_savings_usd": "55.91",
+  "total_generative_savings_percent": "9.937082326176596047206028722",
+  "source_sha256": "baf6ed1a45eb00e121b0c2091bb5c4f0fbc62c0469d386696fab381056543eba",
+  "lease_released": true,
+  "port_8702_free": true,
+  "serialization_workaround": {
+    "measured_source_changed": false,
+    "criteria_values_changed": false,
+    "description": "Postprocessing adapter converts the JSON rubric key strings 1..5 back to YAML integer keys before the original validator; all actual answers, criteria, assigned scores and arithmetic remain unchanged.",
+    "adapter_sha256": "aebc9eaa4f0e155cad79c6b5486030b3f5893e3676ec0bd27e97f9dac74a4381"
+  },
+  "initial_export_failure": {
+    "exit_code": 1,
+    "error": "ValueError: Scoring design changed",
+    "measured_requests_affected": 0
+  }
+}

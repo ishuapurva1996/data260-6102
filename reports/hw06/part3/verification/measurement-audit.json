@@ -1,0 +1,117 @@
+{
+  "status": "passed",
+  "evidence_kind": "measured_http",
+  "source_commit": "4c0bd7c2dd0bedeab73d6a31d9f5c3a83a84e961",
+  "source_sha256": "baf6ed1a45eb00e121b0c2091bb5c4f0fbc62c0469d386696fab381056543eba",
+  "input_hashes": {
+    "scripts/hw06/part3/conversation.json": "5c726de2de6fe7f4c3b02b589ebcedd2d31def81fb47797eccd950c5f1f2067c",
+    "memory_probes.yaml": "ca2333eb6804256107267a9994c7b033230778f4e094d13deaeadf7217571a3d"
+  },
+  "conditions": [
+    {
+      "condition": "A",
+      "initial_memory_empty": true,
+      "primary_calls": 30,
+      "probe_calls": 5,
+      "operations": {
+        "chat": 35,
+        "extraction": 35,
+        "query": 35,
+        "fact": 18,
+        "session_summary": 7
+      },
+      "finish_reasons": {
+        "stop": 77
+      },
+      "persisted_counts": {
+        "messages": 70,
+        "summaries": 7,
+        "episodes": 18
+      },
+      "selection_recomputed_from_actual_history": true,
+      "max_prompt_tokens": 671,
+      "max_completion_tokens": 67,
+      "max_window_tokens": 166
+    },
+    {
+      "condition": "B",
+      "initial_memory_empty": true,
+      "primary_calls": 30,
+      "probe_calls": 5,
+      "operations": {
+        "chat": 35,
+        "extraction": 35,
+        "query": 35,
+        "fact": 18,
+        "session_summary": 7
+      },
+      "finish_reasons": {
+        "stop": 77
+      },
+      "persisted_counts": {
+        "messages": 70,
+        "summaries": 7,
+        "episodes": 18
+      },
+      "selection_recomputed_from_actual_history": true,
+      "max_prompt_tokens": 1031,
+      "max_completion_tokens": 134,
+      "max_window_tokens": 540
+    },
+    {
+      "condition": "C",
+      "initial_memory_empty": true,
+      "primary_calls": 30,
+      "probe_calls": 5,
+      "operations": {
+        "chat": 35,
+        "extraction": 35,
+        "query": 35,
+        "fact": 18,
+        "session_summary": 7
+      },
+      "finish_reasons": {
+        "stop": 77
+      },
+      "persisted_counts": {
+        "messages": 70,
+        "summaries": 7,
+        "episodes": 18
+      },
+      "selection_recomputed_from_actual_history": true,
+      "max_prompt_tokens": 1788,
+      "max_completion_tokens": 134,
+      "max_window_tokens": 1185
+    },
+    {
+      "condition": "D",
+      "initial_memory_empty": true,
+      "primary_calls": 30,
+      "probe_calls": 5,
+      "operations": {
+        "chat": 35,
+        "extraction": 35,
+        "query": 35,
+        "fact": 18,
+        "session_summary": 7
+      },
+      "finish_reasons": {
+        "stop": 77
+      },
+      "persisted_counts": {
+        "messages": 70,
+        "summaries": 7,
+        "episodes": 18
+      },
+      "selection_recomputed_from_actual_history": true,
+      "max_prompt_tokens": 852,
+      "max_completion_tokens": 68,
+      "max_window_tokens": 157
+    }
+  ],
+  "primary_total": 120,
+  "probe_total": 20,
+  "all_requests_successful": true,
+  "source_and_inputs_unchanged": true,
+  "policy_durable_history_preserved": true
+}

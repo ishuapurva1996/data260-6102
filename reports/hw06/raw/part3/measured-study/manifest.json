@@ -1,0 +1,1464 @@
+{
+  "schema_version": "hw06.study.v1",
+  "run_id": "s6102-D-194d3e097b294115aefb49652326058d",
+  "evidence_kind": "measured_http",
+  "status": "collected_unvalidated_unscored",
+  "input_hashes": {
+    "scripts/hw06/part3/conversation.json": "5c726de2de6fe7f4c3b02b589ebcedd2d31def81fb47797eccd950c5f1f2067c",
+    "memory_probes.yaml": "ca2333eb6804256107267a9994c7b033230778f4e094d13deaeadf7217571a3d"
+  },
+  "counting_convention": "30 submitted user messages, each normally receiving one assistant reply: normally 60 stored records before five additional probe requests. N counts previous stored user/assistant records, excluding the current user message.",
+  "base_config": {
+    "sid4": 6102,
+    "port": 8702,
+    "prefix": "s6102",
+    "seed": 6102,
+    "verify_seed": 266102,
+    "domain_id": 6,
+    "database_name": "s6102_doc",
+    "mongo_timeout_ms": 2000,
+    "model": "qwen2.5:7b",
+    "model_digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+    "source_commit": "4c0bd7c2dd0bedeab73d6a31d9f5c3a83a84e961",
+    "ollama_url": "http://127.0.0.1:11434",
+    "temperature": 0.0,
+    "context_window": 8192,
+    "output_limit": 1024,
+    "model_timeout": 180.0,
+    "short_term_n": 12,
+    "summarize_every_user_msgs": 5,
+    "top_k": 3,
+    "policy": "baseline",
+    "token_budget": 160,
+    "embedding_model": "nomic-embed-text:v1.5",
+    "embedding_digest": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+    "embedding_dimension": 768,
+    "tokenizer_path": "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/runtime/qwen2.5-tokenizer.json",
+    "tokenizer_sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+    "cors_origins": [
+      "https://localhost:8702",
+      "https://127.0.0.1:8702"
+    ]
+  },
+  "source_commit": "4c0bd7c2dd0bedeab73d6a31d9f5c3a83a84e961",
+  "provenance": {
+    "source_commit": "4c0bd7c2dd0bedeab73d6a31d9f5c3a83a84e961",
+    "source_sha256": "baf6ed1a45eb00e121b0c2091bb5c4f0fbc62c0469d386696fab381056543eba",
+    "source_hashes": {
+      "AGENT.md": "e58ae979423150ebadb2da9221a8ef0240c021995f178f9c9e747e13fc5e959f",
+      "MEMORY.md": "fa2985d39aa362a7ca119f68ba594510e47f374f428438a76f2097c99d68e505",
+      "Makefile": "693b74d87f37d734fee224d5cf98ed5d44925d825f61b933e8f617e4894d0bc9",
+      "code/web_application/README.md": "68958c6e4f7cdcdb2242ce2405417f6a2b8cf050e649d9715994abcb10ebdde9",
+      "code/web_application/__init__.py": "c21952d0fad8998e1f7ea98009cd118016a8afb4ca15cc9d10379d31d6b6248e",
+      "code/web_application/database.py": "f0cf148e7578ff959085fa99eec9749a4b7ef903ec86f03aa3553c6a0bc30271",
+      "code/web_application/main.py": "fdb1f13d1d74c05178191d45404582fb9b5b636a5990f9f6d9ec3e2d0ecce5f4",
+      "code/web_application/migrations/001_initial.sql": "d738249ea390692161830c653d0ad8b75fb3e1ee5a8aace23a760413c9ab181f",
+      "code/web_application/migrations/003_listing_title_index.sql": "f0278ae79cceb26a33367762ef37f7749a602bcc7cbd2632dcb0bc7052f37ab7",
+      "code/web_application/models.py": "9895b8ccbac23e19f49d764aa551745ececd69ea96b3a979081c78f033fa87f2",
+      "code/web_application/query_metrics.py": "9d41e0d87eebfd4dbc6a0b1b562b2e77c58be2031ed7accfde6fd27398ea9f5a",
+      "code/web_application/routers/__init__.py": "e940586d67bb15ff7ea19688e0c562dc2232bfcc48fc7db009ed383b06c5f672",
+      "code/web_application/routers/auth.py": "8fd3ba7c91de610d1da10586eb93eea2ef3c3a80ba2e10ad0a1b843bdb759e67",
+      "code/web_application/routers/chat.py": "04d88880ed5921652302fc1264644f685b09aabfdbed01a9708fb3d0516423ac",
+      "code/web_application/routers/doc_rentals.py": "911d12dc4fb44f6f0921dc4591f94ff2e729d0b835e153b5fd629f57dff4b057",
+      "code/web_application/routers/performance.py": "2a95eb6ae6cb492f5e087c26fbe0962405a83e1bd19001beadafe30aeb52f8f8",
+      "code/web_application/routers/property_managers.py": "eede1207611b53146d49f5189552035cd902420cd730490cb1062594e31fa2f2",
+      "code/web_application/routers/rentals.py": "45c8183deff9f00b52e900a10efb17cc5b483e1ebc164f511a3dd1c4cd3b6a96",
+      "code/web_application/schemas.py": "48efe5b72e1bfc139734c68b001b31eee9fde7a2c0e7ccbf5f9e11683a7c829c",
+      "code/web_application/session_store.py": "3ba70c03ebb54f9f6b8d1936f1ae7d61f60e20b8479ccf7b4314df4c41e80ba4",
+      "code/web_application/static/app.js": "eda37f2102208b8ad74c3157699b7558c6b324d515f7648ad9915ed3173d04aa",
+      "code/web_application/static/bootstrap.LICENSE.txt": "3d0b0c88216e4752b9afd3d24e36faaf27873b5a45a61458bb3c83e794c26832",
+      "code/web_application/static/bootstrap.min.css": "3017df4a76db5f01c2b99b603d88b03106df13bcfe18e67b7c13c2341d3a67df",
+      "code/web_application/static/styles.css": "8a7a5f932739672ea6bbcc8013e6c0096f4eaa92c630f79273cba89e2f2437f5",
+      "code/web_application/templates/base.html": "2275d263e6a20c528d14c1eaa343d71e7505458d4941f4cd92bbd7a9cdcbf757",
+      "code/web_application/templates/dashboard.html": "f1d556cebc976752bbffaa595c58f75f88a71b79ef6f183a9cb83b183c4180a9",
+      "code/web_application/templates/index.html": "036d66065f80809d8f3edfd9ee77502635811d948c01f191d63237cf267baa80",
+      "code/web_application/templates/login.html": "a8a745b06695762d4f9fc75792c47d02efdb62cbd1ab86bfbd7a7838ce1ae353",
+      "code/web_application/write_errors.py": "ed5f2beda3859a3449554797a8eaec9ab08407d6005a4835b54d1a8490a750ae",
+      "memory_probes.yaml": "ca2333eb6804256107267a9994c7b033230778f4e094d13deaeadf7217571a3d",
+      "requirements-hw06.lock.txt": "8fd1a751b9f755bf8758d06dff2ea64d33e5a6ccbbeed2a5cf5e6e91889badd7",
+      "requirements-hw06.txt": "33dc62be8861e19de10a22a858fc8a1cedaf950b66d668e0145b38b3f27159da",
+      "scripts/build_hw02_report.py": "c1b4fe8c73a16b4a4e51186af91e48025861e2c7a5e17cfa7de4fbef88ec8744",
+      "scripts/build_hw03_report.py": "69ee95823912387f1e79cbb732d49b6251fe31270dd6fd4b0b0008753d0724d1",
+      "scripts/capture_hw03_auth_report.cjs": "8cdb0717ce62c0adbdb31c37b63433792b43e68a6c02f0c44e1b8678a4cf2d29",
+      "scripts/capture_hw03_report_evidence.mjs": "491e04b77b9c2490aa4054aaf62260c3a26f82de2743d09faa74bfc1c4ca5d72",
+      "scripts/capture_hw04_part4.cjs": "34fda8689a5fdb1d38d5a873547ba4511e809d1ec796b8e6664e10703204f731",
+      "scripts/capture_hw2_final_panels.cjs": "daea55d47b43e4ce52a555c75f6492a5dc15f0f2c627cbba7969acd0460a36bb",
+      "scripts/capture_part12.cjs": "5503fc15d09d053fc56addf2f512cb7b8d436f977ae16125985023ccbcb50ecf",
+      "scripts/capture_part12_portproof.cjs": "8bb16895c09b60bd2391b0d57ed71d24d59b22fbe5ad7ede7799bfa57cdd058c",
+      "scripts/hw04/db_setup.py": "e046981202f3a9bf7e6e4ed47e2b49f60e0695f335951e1e2ca68b51732916bf",
+      "scripts/hw04/part2/acceptance.py": "c27e46cb045c85c0782cbb428e107d7cd21041b0a932b3b0bb0789ee238d01ed",
+      "scripts/hw04/part2/integration_smoke.py": "2ad0e62b267cfe983e9139d722311f1d1bf7434e09be564e6883aacfb4e214ef",
+      "scripts/hw04/part3/README.md": "130eb638a63903deb6b3e4efc439435030cf0034f23cb7908d4813f38eef18fc",
+      "scripts/hw04/part3/benchmark.py": "72c134c956016140e4eeeb19d8801bf16658d05ce49ed35a21e4627535383658",
+      "scripts/hw04/part3/index_experiment.py": "1a96da7eed1af2ebb2974d15785723a1d7d589c5609420c48fae478dc849f2dc",
+      "scripts/hw04/part3/ownership.py": "a89d8a4094dce745bbbc1a39031c01d50b9ab02fa192c672d8c3257e45c68b0d",
+      "scripts/hw04/part3/seed_data.py": "ffac4fa498462c034ac8ffbeb16fbb1d249697519abe44dcb5d396bbc98e8661",
+      "scripts/hw04/part3/summarize.py": "b61703ab7421c9e01f5e8f1f8fd01bc3f4688942d8e91721547bf1d9307a5ced",
+      "scripts/hw05/part1/capture_features.cjs": "1f17680eb03bb523b194f427e0012187f9583e58198c6433219073f86e3550c6",
+      "scripts/hw05/part1/db_setup.py": "7536e714271dccfa968f7d98c4dc33ac298b732198a2170ab6a985540e101e8e",
+      "scripts/hw05/part1/live_acceptance.py": "4f9fe9507b0d110c3d34939cf7f354cb5936aaf80eb38894a71ffbf313a6d46a",
+      "scripts/hw05/part1/migration_004.py": "f19ed9d783838736cc3fee67fb2df78ef65299d578525cdcbf307decae35068d",
+      "scripts/hw05/part2/capture_stdio.py": "aa1eb589f8a6580ba015ba07061e64980a4c3f17e1e93f5a5f7621c4cbde8fbc",
+      "scripts/hw05/part2/run_domain.py": "921b5fe78faaa7a0a19c17a9da2ce824a9a54cf89c9b7f9443c9bedcb4db833a",
+      "scripts/hw05/part2/run_meals.py": "7af07a17b62905bc90af9409a3e7cc65801152fa38bf441f81d452a88973aaed",
+      "scripts/hw05/part2/setup_fixture.py": "4209ba43a13fb8afda32158744ac8bc05fe0099b1e5bfd688274c24c312c0a23",
+      "scripts/hw05/part3/capture_live_stdio.py": "fc322ff66b54d472a211de2ac78409de1f93c34c341caef37cd21b0a18540c96",
+      "scripts/hw05/part3/fixture.py": "fdcaf2f153e573579999eafc653d988649efc59e6f701f7fa8a4a525be4679b1",
+      "scripts/hw05/part3/probe_driver_timeout.py": "dc1eb1258e5073edf2352f9f04a607f59d63ea3e5d0a6558ff7345c0bcf36a2d",
+      "scripts/hw05/part3/provenance.py": "ecbbfd35bf9b3e3a5b48781d01dade45a423d265e3a1cda247f99e8da8446c2d",
+      "scripts/hw05/part3/recompute_metrics.py": "899850967670eb94e0ba636f9c5b6e523e2684c34d0f1f22d21de4444dc4b732",
+      "scripts/hw05/part3/run_fault_experiment.py": "3b69d050993b77937830ec1a5ffe5a77458260a68b961a8afee462e1d0f193ff",
+      "scripts/hw05/part3/run_retry_demos.py": "71869d54037650340d84df8332ff36d7e23b55ede6130699040c9e4820dfb0bd",
+      "scripts/hw05/part3/setup_fixture.py": "92c2f87b5b7c736805d4a013a170d4ef7a64fb0c5708ccdc3ce67e80220a3062",
+      "scripts/hw05/part4/fixture.py": "69749d8c74c6f8f133e4a1b13e3013568b1fe214ff4df5b62bcf0767fb01d0e0",
+      "scripts/hw05/run_agent.py": "5f9a91d33d62f1b851623641eef099112d78ed5517110b6a7753a915fec89b46",
+      "scripts/hw05/run_offline_tests.py": "7eb1e1d419ae56863edb8c4bfe1d206c20c38d065df060f4535b41ef5e9dedbf",
+      "scripts/hw06/acceptance.py": "6467f35722333f5d507ddc0fa7b8d16f1c2b9ad2752876ffcd6b201255d38ebe",
+      "scripts/hw06/live_support.py": "762d021bf85d7bbb048604699cb1422c104e07da4f8758be2bb37abd2cd40b0c",
+      "scripts/hw06/part1/README.md": "dc3ff63e61935c5b2b70d220844fcdcde47e477beb918854abb2df5c48796be2",
+      "scripts/hw06/part1/__init__.py": "a824a4b3690d95a599489a6b5a604d13c3a2cce5ad6763da6a2c5a03d8b21a2f",
+      "scripts/hw06/part1/verify.py": "01970f4bcdd976607e1277e0fbe03640da24a5ee3399f4aaa4f352eaae258d1c",
+      "scripts/hw06/part2/__init__.py": "aff81828a468fef8d3c391fe6934a7e2cf8a5c8976bb3f7d94398504d8fc3112",
+      "scripts/hw06/part2/live_demo.py": "e1ccec28c191c5c2e8e93fdf823a511838f0ae4073aa1ce9e9b2a337e5768650",
+      "scripts/hw06/part3/README.md": "6c78c6dacc839e6cc7394fe3c947624b2ec23e2da462ed8f38c6657acb3c731b",
+      "scripts/hw06/part3/conversation.json": "5c726de2de6fe7f4c3b02b589ebcedd2d31def81fb47797eccd950c5f1f2067c",
+      "scripts/hw06/part3/export.py": "86a9556b7e24ca36ebe03dd61c687a5bcbdc08ab25d299f794a40976890bc64f",
+      "scripts/hw06/part3/run.py": "92949faf5b31d150a22e4503c71af6cac7c0950ed0c5c3daa1140d20ce510c8d",
+      "scripts/hw06/part3/serve.py": "5a845900859f294eb2ef194049a8df88a37e4af757ffe47531246598eee74895",
+      "scripts/hw06/part4/audit.py": "b07e55a39ed4a3fe04aab2fbf0a3dedf06f5cafac0b22d07b0b6bd0705aced4d",
+      "scripts/hw06/part4/cli.py": "c6a9e58280c4758fb7fa86b71a4698b60d8b00c643b1313961e2ff5ca24a7d32",
+      "scripts/hw06/part4/fixture.py": "112080951272c63c0784b86b1aad36b1d68b2e9409a6e2b9cd7734222b37181a",
+      "scripts/hw06/runtime_lease.py": "ad9a6598df78acda6781607f200ffb425b54e92dff88d22effb6536c3e439fe7",
+      "scripts/refresh_hw02_artifacts.py": "db918f895fe6a89f80a91f7f690ea02facb6b2dd96e977aea22d767b1c354ff1",
+      "scripts/report_part4.py": "7822122b0234399967ca35cf1e80c1f526ddd5a0cba40d913ec049e2894a238b",
+      "scripts/run_hw03_web.py": "144906135c9ff8ab52caf04539fdd42b06413cce11c483537a218900c2e7bcd6",
+      "scripts/run_hw04_web.py": "af488a74b8ce835b9e176eb313ea5f4b86eaf3eb7081a5ff924b864222190c31",
+      "scripts/run_hw06_web.py": "9d727931e56442166ededd7d2ba78ff00331e4b0ee69451bd8a7e44052f51d74",
+      "scripts/verify_hw02.py": "80443fce491086bf0e4a252c7d750f3dda802cd6a853a9ef0fdbe99c13776032",
+      "scripts/verify_hw03.py": "695df90653ed178bc6fea2f9ea43eae9c54c27d0b0dab188b81371fcdc2f9f5d",
+      "scripts/verify_hw03_part1.py": "2265781d43ac0231849b9b4a383e7c2edfa8828deb0ec16467c2d2df09ca6762",
+      "scripts/verify_hw03_part2.py": "df123c80091aa7b60b8c6cae62fd3e90ac330a06dadd969f0ac3e16511dfcedd",
+      "scripts/verify_hw04_part4.py": "e79de2402e66aa9bc075ea0d4410d9724914633722fc1657e8e481b81d189cec",
+      "scripts/verify_hw04_parts123.py": "8b7595e3de126752745c8b1a1bb6cdc888ad02df1a29188edf967fc7ff90ed13",
+      "scripts/verify_hw04_submission.py": "2db66241ea2b005966859fd57915a2ae44159f28216a60307f06cbffc9edb15d",
+      "scripts/verify_hw06.py": "c5cc37ccb491c6ae51590704a6694e548594ceb3a58fdd93fdd2f0e2af29720f",
+      "scripts/verify_part3.py": "29a2f7714bed4995fdaabd8b4f6e807ab87750f3818ec238f7b32e033bed83ff",
+      "scripts/verify_part4.py": "bbeebe8dfe27d3f12c1bd6d8112818a586e48cf29f7631dda4c607b6d5eb69b3",
+      "src/__init__.py": "cd4ebcb99e6fe8ecbe589ade30604cb27ecbaaae64378c3863cdd85e73a8f9a3",
+      "src/agent_graph/__init__.py": "8230833e4dac07fb013f0a896f5e93c4105988f059b80851ca28bf54c7a5a1c0",
+      "src/agent_graph/contracts.py": "472cb6b472948016da09239f48752172ee9ff7f2778bdc334ba420689d3bb25e",
+      "src/agent_graph/evaluation.py": "1ea0afaf21ce22f09952b1ffe6082069a4d406f875233b0ad4124a3cc9876516",
+      "src/agent_graph/nodes.py": "f71cb8caff198e1b35845e8327d6bb75c0f6f83e24b79f53cbe41ebf569dd43f",
+      "src/agent_graph/router.py": "cfeb3b8886bde94ad5c19dfa0c7097924711aab2ea3fd12fe6e0502b89f05cb7",
+      "src/agent_graph/state.py": "4f21e720abd1321f553759a8b9d9f654f0a31c97233366c81a241cda058891de",
+      "src/agent_graph/workflow.py": "e91f09c9cafdfb8a5f485722b3ac1193a310b01d7a5fecd1315c8b3d53cf4420",
+      "src/hw06_documents/__init__.py": "722a58fe24196163ca686a456ff893185148e00e01b936c1d576f6f1dc937ddd",
+      "src/hw06_documents/schemas.py": "612f75882d313effdc1650adc1e9303088b3265268a047e6e89e38a9afc34c3b",
+      "src/hw06_documents/service.py": "0e37c8c3d86caa5242a37232a8be9e24514f15cce02a9f9821db16f43156b541",
+      "src/hw06_documents/validation.py": "a349a8ed43243b8f7b007639b058d8987402f635b75b8d0e85299643f69d5ee9",
+      "src/hw06_experiments/__init__.py": "90ced0a619afb47193c13d07a26490240bc80939fefa8a1b31b527f6277f6155",
+      "src/hw06_experiments/design.py": "b004d65876b102d0368bd974afe9f5f4edfbb22e82d86aac8fc6cd5cb45441f2",
+      "src/hw06_experiments/live.py": "c75ba25c1df464024056ac1e6eef79511dc9e62477b799379f909ec3f5643da6",
+      "src/hw06_experiments/metrics.py": "6f8f397f3522c12982d3e5b35c96dfd7049e25da141882535fa9f2183af5695d",
+      "src/hw06_experiments/policy.py": "d6a2ceac410e3ef4e39a31a74a27616e65479c3afa68981213dff42cf05700d5",
+      "src/hw06_experiments/runner.py": "dc58a1c9e679d67a65c852ed67d94ae9ef282b61f6ea81599026f04eaf0e4756",
+      "src/hw06_experiments/validation.py": "8e0ef0a547760d9514ea59e84a1d7bfc925dcc126e1ab351700912e691be2aab",
+      "src/hw06_memory_files/__init__.py": "3a0217f9bcd2e08c9da1f0069495b04f4b07ac743702afb9a2c250bcd61f4a44",
+      "src/hw06_memory_files/service.py": "0ea08a5332027b78f79fb5a1f0ad0ea1d9ed036255b9a2e2c01b4a615cf39c20",
+      "src/hw06_memory_mongo/__init__.py": "7b6c621072189615cbeb645be3a4eb9bc861316a06d59c09a81dd316e7cb6864",
+      "src/hw06_memory_mongo/logic.py": "dd017db3878fbdb51d4fa3e8fa0153b5725acefaf6e70ac347294ae172fea6c4",
+      "src/hw06_memory_mongo/service.py": "f560531a6b631a6acb9b0da9bcbfe1f729f3b911fc6dd77b89504a17c3c0bcbd",
+      "src/hw06_memory_mongo/storage.py": "55b9ae457ea0ac38647d95f6fb507c88e3d3a40f38420191fb32dd80fb7cb948",
+      "src/hw06_shared/__init__.py": "7a400ad51029239d30cb66d59fd53b58d426c6c91fa3f9474da9d12a11999074",
+      "src/hw06_shared/config.py": "de9bc156d28413ad351c580844321f197f95b0fb063c86c5fbeecfc7aef5c150",
+      "src/hw06_shared/contracts.py": "221610f6668d98fcda96db41f4ac0a9bf1ae7f1ae7ecfb06d79bf87715f38e42",
+      "src/hw06_shared/database.py": "6154ed68d1d39c3af1941002531857f74e124cf9cc76aa09846156ac8cfc8016",
+      "src/hw06_shared/errors.py": "fe64aed372eff410795c82790302c8b48449171bf4b2c1e90af4bd3159759ce5",
+      "src/hw06_shared/models.py": "c6c287e270a33ec931d7b7ea5b9263cd674e6cb8fe91c60af2a34b606f9f1b8f",
+      "src/hw06_shared/runtime.py": "05d109f3f6ead5bfbd409a74011e87027e4130744c47f3801b65be21e7723f37",
+      "src/hw06_shared/serialization.py": "c325bf74c812b0a30f24a084939b66c1f4f38e99bce3cb457ccaf0889e20ae69",
+      "src/hw06_shared/telemetry.py": "1efa5a66e1e0c824105d3b1500f97ff93ab9dab62e2aaf9df893656147bdecff",
+      "src/mcp_servers/__init__.py": "db797db70798c2f5537731073693a8f4fb30ae67dd058a34d37ef5d5e57ec15a",
+      "src/mcp_servers/meals.py": "ca596337b4a4859256983270522a94f4ff2917a7ea74863d0ef61f3e3b1a0203",
+      "src/mcp_servers/meals_client.py": "c1f371b7c9eca3856333b81c8e24dc8fa36621e558d1385d1d08a61d7b3b36f7",
+      "src/mcp_servers/rentals.py": "b2f0634c5d523101dea0347ec2665839d2dfc6e4cc650ca00495404e1a20a7a1",
+      "src/model_client.py": "b4c3df9db89310c7c5861bdbd0d3603551cd388ca179ff99e29ed79fe6b1581f",
+      "src/rag/__init__.py": "82cb2c09e2e8b87aa42a9ad5adfb8bce7653c735ffc9b61f4c94c47e5bb4157b",
+      "src/rag/evaluation.py": "63ade1b1018f20fe93b11e7bb99feaa7819836f984f43b0d022d8ee3f4e5c83d",
+      "src/rag/pipeline.py": "c98f152500a3faa577f6a35f79a947d61e194c2ef24fe6212432f62721adf826",
+      "src/rag/runner.py": "00044d2da7d8144d48a00173544c97e716a163ee0eb205123318c2f144c8829c",
+      "src/rental_tools/__init__.py": "820e66fc061d560f2553a5041dd69fdd761e33bf960579985643ed21fe20d877",
+      "src/rental_tools/contracts.py": "1a5244c3a420e6b5b6ea5f5f3b0ff5ebafeb2a6a4801b5ddeff3aebc10de04aa",
+      "src/rental_tools/executor.py": "893637f76d063563645c218158257e19a6ef5d24c1707965cf05f33c6f1c809c",
+      "src/rental_tools/reader.py": "6aea8b933dc5c13e216bab21f5476a0016d1110fffd38c3fec2a536e69eeef66",
+      "src/rental_tools/registry.py": "bb5364745a6508cba4ea79aa43dc8444fe2893dcb676252f0daa72bb3625336e",
+      "src/rental_tools/reliability.py": "3c0a81441da2e982a0c136f2a8c9b17c09086178966d9de8997b117a007dc611",
+      "src/rental_tools/runtime.py": "703fb0629fbc63fdfea2edb1b611ee8d19eb8c79bb49f6048e2bb3ab75dd5e92",
+      "src/rental_tools/service.py": "0e689c8926848354eb690df74b81a323bf64db3cd2dd12b7e8055a8a03a830c4",
+      "src/retrieval/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "src/retrieval/artifacts.py": "6eaba819601eec28141b6a6f0a8d3a46656a7e1a9e00c2107888cf10b802eabe",
+      "src/retrieval/chunking.py": "49ea05a9ade6ec956a56cfb7f7c4516893d76d94b4bcc411110ae1b333842394",
+      "src/retrieval/config.py": "86f19d00ccaf22fd00bd115239df56abeac679354aa1c684c3d78d8f4f1322ea",
+      "src/retrieval/corpus.py": "d91e7b9ea009846ea2c5968068f87df60c670912ee2b0fe87bc4bfcc99fdf6ff",
+      "src/retrieval/embedding.py": "ee8e7243c9327cb424f3830ea863a27073e8b0695cba2c98f8457df6b9cee23e",
+      "src/retrieval/evaluation.py": "a93f0aa4d8087db4eb5e4bd5bf12ea21014f5bfb9142abb15b3e58acc7775f58",
+      "src/retrieval/indexing.py": "ff4211b2e87262095f55923d891265603073b43865628c6ca39affd2fdea4795",
+      "src/retrieval/metrics.py": "2a75b26793114f2059986669bfb8ed0bcaa1ef4b979b4174f4cc83b6b5d287a9",
+      "src/tool_agent/__init__.py": "3bed97da8b05c238249cfea800dc9de12a68d711b7176f53af804f3bd1f9ae68",
+      "src/tool_agent/logging.py": "d88d32c5da349ebc657e11a9bf3c0961e99a891690d5696b8012adcd8c0ad1dd",
+      "src/tool_agent/loop.py": "1410c0c77113d73c9052db5332fd74779ec2673c39dca2659a63e73eaf3d793a",
+      "tests/agent_graph/test_cli.py": "79265f1719e05751406680df7baf81f73930b120f13f28434a298ca07afe26a8",
+      "tests/agent_graph/test_evaluation.py": "654bb750edc7bf53d50a9e407867b8b33575343347d184cc1a8aa935fba1b8a5",
+      "tests/agent_graph/test_experiments.py": "caa9797a84d28e128ede20a77e641c849ec96e0604d684b8e840168ef532dbde",
+      "tests/agent_graph/test_nodes.py": "42d9bcde4c273af875eedffecdb67faa842c2a6c6297ae9d646ceb8c5d61613a",
+      "tests/agent_graph/test_verify_part4.py": "57e0eb87aad54a8afcac3afa101a161f601d26a1886afc025aa62b374168a4e6",
+      "tests/agent_graph/test_workflow.py": "4635d503a6d78d255e3cf8300c72b3aa576803d0f9fb21adae15e6fabc7d1501",
+      "tests/browser_hw03_auth.cjs": "d39715a7209d87a77f09f960abf29961540d7630d944e88a99a451b53cd23a34",
+      "tests/browser_hw04_part1.cjs": "9bb7544454300d0da34c283468406d8797ccdffd2da9f17328682041458c227e",
+      "tests/browser_hw04_part1_runtime.py": "076f2374c18f2211de1b045e50abae6aa086b3fd91fedd2001925892bd3802f7",
+      "tests/browser_hw05_part1.cjs": "01194f9b897de00ae03d1f1ef58a70bdca569eb6aeda6cea0f321c717b2e58eb",
+      "tests/browser_part2.cjs": "49d7206af9a76aa526927b1cb5cd91ef9c764d749efa1e1fd55da1998287f153",
+      "tests/check_hw04_part1_interruption.py": "2209243dc821bd47294f06264e4dd8442f93e67d6cf77250be35a39894be3e80",
+      "tests/conftest.py": "f48a0d5c11aaa04cd0fa05f4a0ffb1313af1a5c3ac19ad7a796a1d4277f402fa",
+      "tests/hw05_stdio_fixture.py": "865aef2b3847431d384b5738e1bc71e44430332917abe354f99335fb22553ca5",
+      "tests/retrieval/test_chunking.py": "d1d4d4898d8ddde1da89517ddc78e767ed97a08dacb40381320db6a1926dd9dd",
+      "tests/retrieval/test_corpus_and_questions.py": "524a1256266866f92d2825ff78e5c7fcee9a787c7b56c50bdfe89bcd0683f273",
+      "tests/retrieval/test_embedding_contract.py": "5f06f6fac36f07ccc1a33f51008503447a0803d87812be61210480b80328d604",
+      "tests/retrieval/test_metrics.py": "64c6284fabbe5186ef09519044f876c53fdf078eb89e89ebbec85658f633eba8",
+      "tests/retrieval/test_retrieval_records.py": "29f47b18d605233e4dc145b28bf6064252de2ce130d81cbe32d1fb49a8a8a356",
+      "tests/retrieval/test_verification.py": "68030270bc6a4193fdfd03ff217bcdd55f8ae96bd792e761f496b0c32342141a",
+      "tests/test_api.py": "e4ee1d186299e90ec477ac4716cc9e5117849b3b6f9700ad6ca2a7d78551ce5a",
+      "tests/test_hw03_auth.py": "349f02f6a1af2e456ce02001e96abb2b366461950c5b37eb446c353c237ae8dc",
+      "tests/test_hw03_integration.py": "1c67ec926e6f8ab787c5cb1fa0239a5abfebbdb572d9706ad51efda2317b8e30",
+      "tests/test_hw04_acceptance_cleanup.py": "f68062c3123d88ad1a6a73d26d7085407c31c780043eeaf74058587786d8020a",
+      "tests/test_hw04_auth.py": "ed1baefbe2198958fedc33a388aa80c19a0e38b8d7e9369fa780f95c18fc07ed",
+      "tests/test_hw04_database.py": "af2e5577b3d701dc3f0a0620665feef61190159025ccfe925efdfe283a5cff95",
+      "tests/test_hw04_fixture_isolation.py": "a37179267deaf0bb6b674c3a4c1769ff8a060f1c78a6a2f3fa671fe013c21b90",
+      "tests/test_hw04_foundation_gate.py": "84e4a7e1cad7b9243dc7f2771e2ca957387ee31276b659cade81d90baf5c65c1",
+      "tests/test_hw04_part1_cleanup.py": "f5a64f0f249cd718e82f04174a9268d997f2a1259ecee761c29aea14d61ae552",
+      "tests/test_hw04_part3.py": "382de5260623449ba1b410434fc76ad8bf71b757f1aeea7c56f3c23a467d1dd3",
+      "tests/test_hw04_part3_index.py": "929e1ba9fe84e148ae0abd5ea8ae7d5f7248e1b10c8ba0602cfcd3c3bb3f694a",
+      "tests/test_hw04_part3_measurement.py": "16423eb638938d4932f288948ea28016bb8b76f0cb11901e7bc6d2ef74aac658",
+      "tests/test_hw04_part3_seed.py": "1790a417dbccf37fc710ae78580805edbc04af512a14ad8f74739e219da162cc",
+      "tests/test_hw04_rag.py": "c8d7d630f2a3637bd3de99f2657aba6cf77c07d525a9bb2744984351e0fa8b16",
+      "tests/test_hw04_rag_evaluation.py": "b8571470a7bf809d1ca2787056a07d5303e6a19e20adb2b980f2d76992a6015b",
+      "tests/test_hw04_search_regression.py": "3489cde3183067efb89a1c274f49d70c616926e340a0688442f781b7f7673e98",
+      "tests/test_hw04_serving.py": "139efbe8bcf2aa9343b9032cff0edaaa0e4e2651d51f191072a0e9d72109ead5",
+      "tests/test_hw04_submission_verifier.py": "87d30953ceb0e37b1513420991be573cd342064340743c68fc0a6400e009a808",
+      "tests/test_hw04_verifier.py": "44b7209d66cc2af02dc0900088bcd8318949535179e75ac38ec7dd3a5d08af1a",
+      "tests/test_hw05_agent.py": "54c4b68bb782205ffa5167780e6242976388c798fe31cf937ee9bbfb6b47467f",
+      "tests/test_hw05_api.py": "9e9fa707a902f704ea200ae6386654db7dcd5cad01e443511f3797146e230d9d",
+      "tests/test_hw05_database.py": "6bb2653f7a691f0ee8b5ea4831b515af65f5169aff47b98a06aebe6e0333a5fe",
+      "tests/test_hw05_domain_tools.py": "02907d693e5a558a9cfdc797f7f4cf0500142c67ac4322541c952bbad0af8b28",
+      "tests/test_hw05_executor.py": "f4cf117fbb1af55c979271a0d9ede99c28bb4d6ef7f321a65ff074f08984e60c",
+      "tests/test_hw05_executor_integration.py": "dac35d68108e65f8e71bb8261dc681a35a6eb9eeea252aa4a065b1de7dab3f92",
+      "tests/test_hw05_fault_experiment.py": "42436a9521dcf8bb3f319ad8028aee141ecdf363e869e65ad70f4da9a29e6222",
+      "tests/test_hw05_fixture_setup.py": "70692dc5b868020226210ec57968574e9f790c641d0fad2a1ed91c3f6f35e4df",
+      "tests/test_hw05_mcp_stdio.py": "3ab21a5f2d18a695e90a86fe9c796f6d8c445906527836f295d4879bb0d7c999",
+      "tests/test_hw05_meals.py": "cca261203ed64facb0951125e88076e7f393d941e70739f9fd4b226b15e16548",
+      "tests/test_hw05_offline_runner.py": "4dee8a29328215882e5eb299aeecff7c337856b04ed8dab2ed6f06b4bd3f7fe4",
+      "tests/test_hw05_reliability.py": "56023f4c17eef1783ff6c65d3507bafe8fa1c9bffde9f3a86b4040b3e4727abf",
+      "tests/test_hw05_runtime.py": "ab9cc52f29cda6eab2e52f576ac892b882e272d523855d3520a5bf45a95ea110",
+      "tests/test_hw05_timeouts.py": "2a8faab2c5d3414a0a641dd2190569e81cfdc1a0d45778d85d0db0c7aa70d958",
+      "tests/test_hw06_documents.py": "ecfb10e68d6fb5cae8fe99b7a084b9ee4435b308d1014aa1c5d78631f14a60bf",
+      "tests/test_hw06_documents_edges.py": "2111dfacb3dd3c3c1b9a026f5d92e2f0494a8cf22120bc3ecf1990a7c7a153fb",
+      "tests/test_hw06_experiments.py": "20318a097742ba12798b9091d41ec288f0ac2bd33a1ba783b6a6c586e951612a",
+      "tests/test_hw06_experiments_live.py": "f46fa7ffc9b33709ec2f66694e41ad166a12ec364fa245cbad8c76a0d2a505f6",
+      "tests/test_hw06_experiments_policy.py": "123a8aba3eea9e6fc2d34884d445449e37768a6c5853f1a5892adba953b6f84b",
+      "tests/test_hw06_file_memory.py": "5b8f33874475a65e98b517adeb76c736857dfa81202e61202a2da9dd01c742d6",
+      "tests/test_hw06_foundation.py": "663e09952f9f34e7e26dca60cc11cdd550b4f19e12ae9219468eb2afd9f52e7e",
+      "tests/test_hw06_integration.py": "61bbda0bdf5ec7415a832e2c27fce593ea24779449b019ccbdd717b802a325aa",
+      "tests/test_hw06_mongo_memory.py": "7e5eb4f1ad53016ae927ad4c79575081c9fd4057d8b4abda33b47b111a417dad",
+      "tests/test_refresh_hw02_artifacts.py": "b62b1b9ee32295a298473135135586d6ff46c3114a0e85ed1e39c0985203002e",
+      "tests/test_verify_hw02.py": "2a7f3bee6e11b340228d3aeac3e34129b5ec504222a22046b602f2ba3a8345e6"
+    },
+    "lock_sha256": "8fd1a751b9f755bf8758d06dff2ea64d33e5a6ccbbeed2a5cf5e6e91889badd7",
+    "gate_sha256": "423ffc00ea503babb461d50dc22f5ba6a67a8b2d68c5767f028324cc6228a0c5",
+    "gate": {
+      "schema_version": "hw06.integration.v1",
+      "created_at": "2026-10-20T19:02:03.040998+00:00",
+      "live_integrated_ready": true,
+      "integration_ready": true,
+      "foundation_commit": "51cfd410400683acf7cf9f7bb88a9581ba3834bb",
+      "integrated_commit": "4c0bd7c2dd0bedeab73d6a31d9f5c3a83a84e961",
+      "source_commit": "4c0bd7c2dd0bedeab73d6a31d9f5c3a83a84e961",
+      "source_sha256": "baf6ed1a45eb00e121b0c2091bb5c4f0fbc62c0469d386696fab381056543eba",
+      "source_hashes": {
+        "AGENT.md": "e58ae979423150ebadb2da9221a8ef0240c021995f178f9c9e747e13fc5e959f",
+        "MEMORY.md": "fa2985d39aa362a7ca119f68ba594510e47f374f428438a76f2097c99d68e505",
+        "Makefile": "693b74d87f37d734fee224d5cf98ed5d44925d825f61b933e8f617e4894d0bc9",
+        "code/web_application/README.md": "68958c6e4f7cdcdb2242ce2405417f6a2b8cf050e649d9715994abcb10ebdde9",
+        "code/web_application/__init__.py": "c21952d0fad8998e1f7ea98009cd118016a8afb4ca15cc9d10379d31d6b6248e",
+        "code/web_application/database.py": "f0cf148e7578ff959085fa99eec9749a4b7ef903ec86f03aa3553c6a0bc30271",
+        "code/web_application/main.py": "fdb1f13d1d74c05178191d45404582fb9b5b636a5990f9f6d9ec3e2d0ecce5f4",
+        "code/web_application/migrations/001_initial.sql": "d738249ea390692161830c653d0ad8b75fb3e1ee5a8aace23a760413c9ab181f",
+        "code/web_application/migrations/003_listing_title_index.sql": "f0278ae79cceb26a33367762ef37f7749a602bcc7cbd2632dcb0bc7052f37ab7",
+        "code/web_application/models.py": "9895b8ccbac23e19f49d764aa551745ececd69ea96b3a979081c78f033fa87f2",
+        "code/web_application/query_metrics.py": "9d41e0d87eebfd4dbc6a0b1b562b2e77c58be2031ed7accfde6fd27398ea9f5a",
+        "code/web_application/routers/__init__.py": "e940586d67bb15ff7ea19688e0c562dc2232bfcc48fc7db009ed383b06c5f672",
+        "code/web_application/routers/auth.py": "8fd3ba7c91de610d1da10586eb93eea2ef3c3a80ba2e10ad0a1b843bdb759e67",
+        "code/web_application/routers/chat.py": "04d88880ed5921652302fc1264644f685b09aabfdbed01a9708fb3d0516423ac",
+        "code/web_application/routers/doc_rentals.py": "911d12dc4fb44f6f0921dc4591f94ff2e729d0b835e153b5fd629f57dff4b057",
+        "code/web_application/routers/performance.py": "2a95eb6ae6cb492f5e087c26fbe0962405a83e1bd19001beadafe30aeb52f8f8",
+        "code/web_application/routers/property_managers.py": "eede1207611b53146d49f5189552035cd902420cd730490cb1062594e31fa2f2",
+        "code/web_application/routers/rentals.py": "45c8183deff9f00b52e900a10efb17cc5b483e1ebc164f511a3dd1c4cd3b6a96",
+        "code/web_application/schemas.py": "48efe5b72e1bfc139734c68b001b31eee9fde7a2c0e7ccbf5f9e11683a7c829c",
+        "code/web_application/session_store.py": "3ba70c03ebb54f9f6b8d1936f1ae7d61f60e20b8479ccf7b4314df4c41e80ba4",
+        "code/web_application/static/app.js": "eda37f2102208b8ad74c3157699b7558c6b324d515f7648ad9915ed3173d04aa",
+        "code/web_application/static/bootstrap.LICENSE.txt": "3d0b0c88216e4752b9afd3d24e36faaf27873b5a45a61458bb3c83e794c26832",
+        "code/web_application/static/bootstrap.min.css": "3017df4a76db5f01c2b99b603d88b03106df13bcfe18e67b7c13c2341d3a67df",
+        "code/web_application/static/styles.css": "8a7a5f932739672ea6bbcc8013e6c0096f4eaa92c630f79273cba89e2f2437f5",
+        "code/web_application/templates/base.html": "2275d263e6a20c528d14c1eaa343d71e7505458d4941f4cd92bbd7a9cdcbf757",
+        "code/web_application/templates/dashboard.html": "f1d556cebc976752bbffaa595c58f75f88a71b79ef6f183a9cb83b183c4180a9",
+        "code/web_application/templates/index.html": "036d66065f80809d8f3edfd9ee77502635811d948c01f191d63237cf267baa80",
+        "code/web_application/templates/login.html": "a8a745b06695762d4f9fc75792c47d02efdb62cbd1ab86bfbd7a7838ce1ae353",
+        "code/web_application/write_errors.py": "ed5f2beda3859a3449554797a8eaec9ab08407d6005a4835b54d1a8490a750ae",
+        "memory_probes.yaml": "ca2333eb6804256107267a9994c7b033230778f4e094d13deaeadf7217571a3d",
+        "requirements-hw06.lock.txt": "8fd1a751b9f755bf8758d06dff2ea64d33e5a6ccbbeed2a5cf5e6e91889badd7",
+        "requirements-hw06.txt": "33dc62be8861e19de10a22a858fc8a1cedaf950b66d668e0145b38b3f27159da",
+        "scripts/build_hw02_report.py": "c1b4fe8c73a16b4a4e51186af91e48025861e2c7a5e17cfa7de4fbef88ec8744",
+        "scripts/build_hw03_report.py": "69ee95823912387f1e79cbb732d49b6251fe31270dd6fd4b0b0008753d0724d1",
+        "scripts/capture_hw03_auth_report.cjs": "8cdb0717ce62c0adbdb31c37b63433792b43e68a6c02f0c44e1b8678a4cf2d29",
+        "scripts/capture_hw03_report_evidence.mjs": "491e04b77b9c2490aa4054aaf62260c3a26f82de2743d09faa74bfc1c4ca5d72",
+        "scripts/capture_hw04_part4.cjs": "34fda8689a5fdb1d38d5a873547ba4511e809d1ec796b8e6664e10703204f731",
+        "scripts/capture_hw2_final_panels.cjs": "daea55d47b43e4ce52a555c75f6492a5dc15f0f2c627cbba7969acd0460a36bb",
+        "scripts/capture_part12.cjs": "5503fc15d09d053fc56addf2f512cb7b8d436f977ae16125985023ccbcb50ecf",
+        "scripts/capture_part12_portproof.cjs": "8bb16895c09b60bd2391b0d57ed71d24d59b22fbe5ad7ede7799bfa57cdd058c",
+        "scripts/hw04/db_setup.py": "e046981202f3a9bf7e6e4ed47e2b49f60e0695f335951e1e2ca68b51732916bf",
+        "scripts/hw04/part2/acceptance.py": "c27e46cb045c85c0782cbb428e107d7cd21041b0a932b3b0bb0789ee238d01ed",
+        "scripts/hw04/part2/integration_smoke.py": "2ad0e62b267cfe983e9139d722311f1d1bf7434e09be564e6883aacfb4e214ef",
+        "scripts/hw04/part3/README.md": "130eb638a63903deb6b3e4efc439435030cf0034f23cb7908d4813f38eef18fc",
+        "scripts/hw04/part3/benchmark.py": "72c134c956016140e4eeeb19d8801bf16658d05ce49ed35a21e4627535383658",
+        "scripts/hw04/part3/index_experiment.py": "1a96da7eed1af2ebb2974d15785723a1d7d589c5609420c48fae478dc849f2dc",
+        "scripts/hw04/part3/ownership.py": "a89d8a4094dce745bbbc1a39031c01d50b9ab02fa192c672d8c3257e45c68b0d",
+        "scripts/hw04/part3/seed_data.py": "ffac4fa498462c034ac8ffbeb16fbb1d249697519abe44dcb5d396bbc98e8661",
+        "scripts/hw04/part3/summarize.py": "b61703ab7421c9e01f5e8f1f8fd01bc3f4688942d8e91721547bf1d9307a5ced",
+        "scripts/hw05/part1/capture_features.cjs": "1f17680eb03bb523b194f427e0012187f9583e58198c6433219073f86e3550c6",
+        "scripts/hw05/part1/db_setup.py": "7536e714271dccfa968f7d98c4dc33ac298b732198a2170ab6a985540e101e8e",
+        "scripts/hw05/part1/live_acceptance.py": "4f9fe9507b0d110c3d34939cf7f354cb5936aaf80eb38894a71ffbf313a6d46a",
+        "scripts/hw05/part1/migration_004.py": "f19ed9d783838736cc3fee67fb2df78ef65299d578525cdcbf307decae35068d",
+        "scripts/hw05/part2/capture_stdio.py": "aa1eb589f8a6580ba015ba07061e64980a4c3f17e1e93f5a5f7621c4cbde8fbc",
+        "scripts/hw05/part2/run_domain.py": "921b5fe78faaa7a0a19c17a9da2ce824a9a54cf89c9b7f9443c9bedcb4db833a",
+        "scripts/hw05/part2/run_meals.py": "7af07a17b62905bc90af9409a3e7cc65801152fa38bf441f81d452a88973aaed",
+        "scripts/hw05/part2/setup_fixture.py": "4209ba43a13fb8afda32158744ac8bc05fe0099b1e5bfd688274c24c312c0a23",
+        "scripts/hw05/part3/capture_live_stdio.py": "fc322ff66b54d472a211de2ac78409de1f93c34c341caef37cd21b0a18540c96",
+        "scripts/hw05/part3/fixture.py": "fdcaf2f153e573579999eafc653d988649efc59e6f701f7fa8a4a525be4679b1",
+        "scripts/hw05/part3/probe_driver_timeout.py": "dc1eb1258e5073edf2352f9f04a607f59d63ea3e5d0a6558ff7345c0bcf36a2d",
+        "scripts/hw05/part3/provenance.py": "ecbbfd35bf9b3e3a5b48781d01dade45a423d265e3a1cda247f99e8da8446c2d",
+        "scripts/hw05/part3/recompute_metrics.py": "899850967670eb94e0ba636f9c5b6e523e2684c34d0f1f22d21de4444dc4b732",
+        "scripts/hw05/part3/run_fault_experiment.py": "3b69d050993b77937830ec1a5ffe5a77458260a68b961a8afee462e1d0f193ff",
+        "scripts/hw05/part3/run_retry_demos.py": "71869d54037650340d84df8332ff36d7e23b55ede6130699040c9e4820dfb0bd",
+        "scripts/hw05/part3/setup_fixture.py": "92c2f87b5b7c736805d4a013a170d4ef7a64fb0c5708ccdc3ce67e80220a3062",
+        "scripts/hw05/part4/fixture.py": "69749d8c74c6f8f133e4a1b13e3013568b1fe214ff4df5b62bcf0767fb01d0e0",
+        "scripts/hw05/run_agent.py": "5f9a91d33d62f1b851623641eef099112d78ed5517110b6a7753a915fec89b46",
+        "scripts/hw05/run_offline_tests.py": "7eb1e1d419ae56863edb8c4bfe1d206c20c38d065df060f4535b41ef5e9dedbf",
+        "scripts/hw06/acceptance.py": "6467f35722333f5d507ddc0fa7b8d16f1c2b9ad2752876ffcd6b201255d38ebe",
+        "scripts/hw06/live_support.py": "762d021bf85d7bbb048604699cb1422c104e07da4f8758be2bb37abd2cd40b0c",
+        "scripts/hw06/part1/README.md": "dc3ff63e61935c5b2b70d220844fcdcde47e477beb918854abb2df5c48796be2",
+        "scripts/hw06/part1/__init__.py": "a824a4b3690d95a599489a6b5a604d13c3a2cce5ad6763da6a2c5a03d8b21a2f",
+        "scripts/hw06/part1/verify.py": "01970f4bcdd976607e1277e0fbe03640da24a5ee3399f4aaa4f352eaae258d1c",
+        "scripts/hw06/part2/__init__.py": "aff81828a468fef8d3c391fe6934a7e2cf8a5c8976bb3f7d94398504d8fc3112",
+        "scripts/hw06/part2/live_demo.py": "e1ccec28c191c5c2e8e93fdf823a511838f0ae4073aa1ce9e9b2a337e5768650",
+        "scripts/hw06/part3/README.md": "6c78c6dacc839e6cc7394fe3c947624b2ec23e2da462ed8f38c6657acb3c731b",
+        "scripts/hw06/part3/conversation.json": "5c726de2de6fe7f4c3b02b589ebcedd2d31def81fb47797eccd950c5f1f2067c",
+        "scripts/hw06/part3/export.py": "86a9556b7e24ca36ebe03dd61c687a5bcbdc08ab25d299f794a40976890bc64f",
+        "scripts/hw06/part3/run.py": "92949faf5b31d150a22e4503c71af6cac7c0950ed0c5c3daa1140d20ce510c8d",
+        "scripts/hw06/part3/serve.py": "5a845900859f294eb2ef194049a8df88a37e4af757ffe47531246598eee74895",
+        "scripts/hw06/part4/audit.py": "b07e55a39ed4a3fe04aab2fbf0a3dedf06f5cafac0b22d07b0b6bd0705aced4d",
+        "scripts/hw06/part4/cli.py": "c6a9e58280c4758fb7fa86b71a4698b60d8b00c643b1313961e2ff5ca24a7d32",
+        "scripts/hw06/part4/fixture.py": "112080951272c63c0784b86b1aad36b1d68b2e9409a6e2b9cd7734222b37181a",
+        "scripts/hw06/runtime_lease.py": "ad9a6598df78acda6781607f200ffb425b54e92dff88d22effb6536c3e439fe7",
+        "scripts/refresh_hw02_artifacts.py": "db918f895fe6a89f80a91f7f690ea02facb6b2dd96e977aea22d767b1c354ff1",
+        "scripts/report_part4.py": "7822122b0234399967ca35cf1e80c1f526ddd5a0cba40d913ec049e2894a238b",
+        "scripts/run_hw03_web.py": "144906135c9ff8ab52caf04539fdd42b06413cce11c483537a218900c2e7bcd6",
+        "scripts/run_hw04_web.py": "af488a74b8ce835b9e176eb313ea5f4b86eaf3eb7081a5ff924b864222190c31",
+        "scripts/run_hw06_web.py": "9d727931e56442166ededd7d2ba78ff00331e4b0ee69451bd8a7e44052f51d74",
+        "scripts/verify_hw02.py": "80443fce491086bf0e4a252c7d750f3dda802cd6a853a9ef0fdbe99c13776032",
+        "scripts/verify_hw03.py": "695df90653ed178bc6fea2f9ea43eae9c54c27d0b0dab188b81371fcdc2f9f5d",
+        "scripts/verify_hw03_part1.py": "2265781d43ac0231849b9b4a383e7c2edfa8828deb0ec16467c2d2df09ca6762",
+        "scripts/verify_hw03_part2.py": "df123c80091aa7b60b8c6cae62fd3e90ac330a06dadd969f0ac3e16511dfcedd",
+        "scripts/verify_hw04_part4.py": "e79de2402e66aa9bc075ea0d4410d9724914633722fc1657e8e481b81d189cec",
+        "scripts/verify_hw04_parts123.py": "8b7595e3de126752745c8b1a1bb6cdc888ad02df1a29188edf967fc7ff90ed13",
+        "scripts/verify_hw04_submission.py": "2db66241ea2b005966859fd57915a2ae44159f28216a60307f06cbffc9edb15d",
+        "scripts/verify_hw06.py": "c5cc37ccb491c6ae51590704a6694e548594ceb3a58fdd93fdd2f0e2af29720f",
+        "scripts/verify_part3.py": "29a2f7714bed4995fdaabd8b4f6e807ab87750f3818ec238f7b32e033bed83ff",
+        "scripts/verify_part4.py": "bbeebe8dfe27d3f12c1bd6d8112818a586e48cf29f7631dda4c607b6d5eb69b3",
+        "src/__init__.py": "cd4ebcb99e6fe8ecbe589ade30604cb27ecbaaae64378c3863cdd85e73a8f9a3",
+        "src/agent_graph/__init__.py": "8230833e4dac07fb013f0a896f5e93c4105988f059b80851ca28bf54c7a5a1c0",
+        "src/agent_graph/contracts.py": "472cb6b472948016da09239f48752172ee9ff7f2778bdc334ba420689d3bb25e",
+        "src/agent_graph/evaluation.py": "1ea0afaf21ce22f09952b1ffe6082069a4d406f875233b0ad4124a3cc9876516",
+        "src/agent_graph/nodes.py": "f71cb8caff198e1b35845e8327d6bb75c0f6f83e24b79f53cbe41ebf569dd43f",
+        "src/agent_graph/router.py": "cfeb3b8886bde94ad5c19dfa0c7097924711aab2ea3fd12fe6e0502b89f05cb7",
+        "src/agent_graph/state.py": "4f21e720abd1321f553759a8b9d9f654f0a31c97233366c81a241cda058891de",
+        "src/agent_graph/workflow.py": "e91f09c9cafdfb8a5f485722b3ac1193a310b01d7a5fecd1315c8b3d53cf4420",
+        "src/hw06_documents/__init__.py": "722a58fe24196163ca686a456ff893185148e00e01b936c1d576f6f1dc937ddd",
+        "src/hw06_documents/schemas.py": "612f75882d313effdc1650adc1e9303088b3265268a047e6e89e38a9afc34c3b",
+        "src/hw06_documents/service.py": "0e37c8c3d86caa5242a37232a8be9e24514f15cce02a9f9821db16f43156b541",
+        "src/hw06_documents/validation.py": "a349a8ed43243b8f7b007639b058d8987402f635b75b8d0e85299643f69d5ee9",
+        "src/hw06_experiments/__init__.py": "90ced0a619afb47193c13d07a26490240bc80939fefa8a1b31b527f6277f6155",
+        "src/hw06_experiments/design.py": "b004d65876b102d0368bd974afe9f5f4edfbb22e82d86aac8fc6cd5cb45441f2",
+        "src/hw06_experiments/live.py": "c75ba25c1df464024056ac1e6eef79511dc9e62477b799379f909ec3f5643da6",
+        "src/hw06_experiments/metrics.py": "6f8f397f3522c12982d3e5b35c96dfd7049e25da141882535fa9f2183af5695d",
+        "src/hw06_experiments/policy.py": "d6a2ceac410e3ef4e39a31a74a27616e65479c3afa68981213dff42cf05700d5",
+        "src/hw06_experiments/runner.py": "dc58a1c9e679d67a65c852ed67d94ae9ef282b61f6ea81599026f04eaf0e4756",
+        "src/hw06_experiments/validation.py": "8e0ef0a547760d9514ea59e84a1d7bfc925dcc126e1ab351700912e691be2aab",
+        "src/hw06_memory_files/__init__.py": "3a0217f9bcd2e08c9da1f0069495b04f4b07ac743702afb9a2c250bcd61f4a44",
+        "src/hw06_memory_files/service.py": "0ea08a5332027b78f79fb5a1f0ad0ea1d9ed036255b9a2e2c01b4a615cf39c20",
+        "src/hw06_memory_mongo/__init__.py": "7b6c621072189615cbeb645be3a4eb9bc861316a06d59c09a81dd316e7cb6864",
+        "src/hw06_memory_mongo/logic.py": "dd017db3878fbdb51d4fa3e8fa0153b5725acefaf6e70ac347294ae172fea6c4",
+        "src/hw06_memory_mongo/service.py": "f560531a6b631a6acb9b0da9bcbfe1f729f3b911fc6dd77b89504a17c3c0bcbd",
+        "src/hw06_memory_mongo/storage.py": "55b9ae457ea0ac38647d95f6fb507c88e3d3a40f38420191fb32dd80fb7cb948",
+        "src/hw06_shared/__init__.py": "7a400ad51029239d30cb66d59fd53b58d426c6c91fa3f9474da9d12a11999074",
+        "src/hw06_shared/config.py": "de9bc156d28413ad351c580844321f197f95b0fb063c86c5fbeecfc7aef5c150",
+        "src/hw06_shared/contracts.py": "221610f6668d98fcda96db41f4ac0a9bf1ae7f1ae7ecfb06d79bf87715f38e42",
+        "src/hw06_shared/database.py": "6154ed68d1d39c3af1941002531857f74e124cf9cc76aa09846156ac8cfc8016",
+        "src/hw06_shared/errors.py": "fe64aed372eff410795c82790302c8b48449171bf4b2c1e90af4bd3159759ce5",
+        "src/hw06_shared/models.py": "c6c287e270a33ec931d7b7ea5b9263cd674e6cb8fe91c60af2a34b606f9f1b8f",
+        "src/hw06_shared/runtime.py": "05d109f3f6ead5bfbd409a74011e87027e4130744c47f3801b65be21e7723f37",
+        "src/hw06_shared/serialization.py": "c325bf74c812b0a30f24a084939b66c1f4f38e99bce3cb457ccaf0889e20ae69",
+        "src/hw06_shared/telemetry.py": "1efa5a66e1e0c824105d3b1500f97ff93ab9dab62e2aaf9df893656147bdecff",
+        "src/mcp_servers/__init__.py": "db797db70798c2f5537731073693a8f4fb30ae67dd058a34d37ef5d5e57ec15a",
+        "src/mcp_servers/meals.py": "ca596337b4a4859256983270522a94f4ff2917a7ea74863d0ef61f3e3b1a0203",
+        "src/mcp_servers/meals_client.py": "c1f371b7c9eca3856333b81c8e24dc8fa36621e558d1385d1d08a61d7b3b36f7",
+        "src/mcp_servers/rentals.py": "b2f0634c5d523101dea0347ec2665839d2dfc6e4cc650ca00495404e1a20a7a1",
+        "src/model_client.py": "b4c3df9db89310c7c5861bdbd0d3603551cd388ca179ff99e29ed79fe6b1581f",
+        "src/rag/__init__.py": "82cb2c09e2e8b87aa42a9ad5adfb8bce7653c735ffc9b61f4c94c47e5bb4157b",
+        "src/rag/evaluation.py": "63ade1b1018f20fe93b11e7bb99feaa7819836f984f43b0d022d8ee3f4e5c83d",
+        "src/rag/pipeline.py": "c98f152500a3faa577f6a35f79a947d61e194c2ef24fe6212432f62721adf826",
+        "src/rag/runner.py": "00044d2da7d8144d48a00173544c97e716a163ee0eb205123318c2f144c8829c",
+        "src/rental_tools/__init__.py": "820e66fc061d560f2553a5041dd69fdd761e33bf960579985643ed21fe20d877",
+        "src/rental_tools/contracts.py": "1a5244c3a420e6b5b6ea5f5f3b0ff5ebafeb2a6a4801b5ddeff3aebc10de04aa",
+        "src/rental_tools/executor.py": "893637f76d063563645c218158257e19a6ef5d24c1707965cf05f33c6f1c809c",
+        "src/rental_tools/reader.py": "6aea8b933dc5c13e216bab21f5476a0016d1110fffd38c3fec2a536e69eeef66",
+        "src/rental_tools/registry.py": "bb5364745a6508cba4ea79aa43dc8444fe2893dcb676252f0daa72bb3625336e",
+        "src/rental_tools/reliability.py": "3c0a81441da2e982a0c136f2a8c9b17c09086178966d9de8997b117a007dc611",
+        "src/rental_tools/runtime.py": "703fb0629fbc63fdfea2edb1b611ee8d19eb8c79bb49f6048e2bb3ab75dd5e92",
+        "src/rental_tools/service.py": "0e689c8926848354eb690df74b81a323bf64db3cd2dd12b7e8055a8a03a830c4",
+        "src/retrieval/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "src/retrieval/artifacts.py": "6eaba819601eec28141b6a6f0a8d3a46656a7e1a9e00c2107888cf10b802eabe",
+        "src/retrieval/chunking.py": "49ea05a9ade6ec956a56cfb7f7c4516893d76d94b4bcc411110ae1b333842394",
+        "src/retrieval/config.py": "86f19d00ccaf22fd00bd115239df56abeac679354aa1c684c3d78d8f4f1322ea",
+        "src/retrieval/corpus.py": "d91e7b9ea009846ea2c5968068f87df60c670912ee2b0fe87bc4bfcc99fdf6ff",
+        "src/retrieval/embedding.py": "ee8e7243c9327cb424f3830ea863a27073e8b0695cba2c98f8457df6b9cee23e",
+        "src/retrieval/evaluation.py": "a93f0aa4d8087db4eb5e4bd5bf12ea21014f5bfb9142abb15b3e58acc7775f58",
+        "src/retrieval/indexing.py": "ff4211b2e87262095f55923d891265603073b43865628c6ca39affd2fdea4795",
+        "src/retrieval/metrics.py": "2a75b26793114f2059986669bfb8ed0bcaa1ef4b979b4174f4cc83b6b5d287a9",
+        "src/tool_agent/__init__.py": "3bed97da8b05c238249cfea800dc9de12a68d711b7176f53af804f3bd1f9ae68",
+        "src/tool_agent/logging.py": "d88d32c5da349ebc657e11a9bf3c0961e99a891690d5696b8012adcd8c0ad1dd",
+        "src/tool_agent/loop.py": "1410c0c77113d73c9052db5332fd74779ec2673c39dca2659a63e73eaf3d793a",
+        "tests/agent_graph/test_cli.py": "79265f1719e05751406680df7baf81f73930b120f13f28434a298ca07afe26a8",
+        "tests/agent_graph/test_evaluation.py": "654bb750edc7bf53d50a9e407867b8b33575343347d184cc1a8aa935fba1b8a5",
+        "tests/agent_graph/test_experiments.py": "caa9797a84d28e128ede20a77e641c849ec96e0604d684b8e840168ef532dbde",
+        "tests/agent_graph/test_nodes.py": "42d9bcde4c273af875eedffecdb67faa842c2a6c6297ae9d646ceb8c5d61613a",
+        "tests/agent_graph/test_verify_part4.py": "57e0eb87aad54a8afcac3afa101a161f601d26a1886afc025aa62b374168a4e6",
+        "tests/agent_graph/test_workflow.py": "4635d503a6d78d255e3cf8300c72b3aa576803d0f9fb21adae15e6fabc7d1501",
+        "tests/browser_hw03_auth.cjs": "d39715a7209d87a77f09f960abf29961540d7630d944e88a99a451b53cd23a34",
+        "tests/browser_hw04_part1.cjs": "9bb7544454300d0da34c283468406d8797ccdffd2da9f17328682041458c227e",
+        "tests/browser_hw04_part1_runtime.py": "076f2374c18f2211de1b045e50abae6aa086b3fd91fedd2001925892bd3802f7",
+        "tests/browser_hw05_part1.cjs": "01194f9b897de00ae03d1f1ef58a70bdca569eb6aeda6cea0f321c717b2e58eb",
+        "tests/browser_part2.cjs": "49d7206af9a76aa526927b1cb5cd91ef9c764d749efa1e1fd55da1998287f153",
+        "tests/check_hw04_part1_interruption.py": "2209243dc821bd47294f06264e4dd8442f93e67d6cf77250be35a39894be3e80",
+        "tests/conftest.py": "f48a0d5c11aaa04cd0fa05f4a0ffb1313af1a5c3ac19ad7a796a1d4277f402fa",
+        "tests/hw05_stdio_fixture.py": "865aef2b3847431d384b5738e1bc71e44430332917abe354f99335fb22553ca5",
+        "tests/retrieval/test_chunking.py": "d1d4d4898d8ddde1da89517ddc78e767ed97a08dacb40381320db6a1926dd9dd",
+        "tests/retrieval/test_corpus_and_questions.py": "524a1256266866f92d2825ff78e5c7fcee9a787c7b56c50bdfe89bcd0683f273",
+        "tests/retrieval/test_embedding_contract.py": "5f06f6fac36f07ccc1a33f51008503447a0803d87812be61210480b80328d604",
+        "tests/retrieval/test_metrics.py": "64c6284fabbe5186ef09519044f876c53fdf078eb89e89ebbec85658f633eba8",
+        "tests/retrieval/test_retrieval_records.py": "29f47b18d605233e4dc145b28bf6064252de2ce130d81cbe32d1fb49a8a8a356",
+        "tests/retrieval/test_verification.py": "68030270bc6a4193fdfd03ff217bcdd55f8ae96bd792e761f496b0c32342141a",
+        "tests/test_api.py": "e4ee1d186299e90ec477ac4716cc9e5117849b3b6f9700ad6ca2a7d78551ce5a",
+        "tests/test_hw03_auth.py": "349f02f6a1af2e456ce02001e96abb2b366461950c5b37eb446c353c237ae8dc",
+        "tests/test_hw03_integration.py": "1c67ec926e6f8ab787c5cb1fa0239a5abfebbdb572d9706ad51efda2317b8e30",
+        "tests/test_hw04_acceptance_cleanup.py": "f68062c3123d88ad1a6a73d26d7085407c31c780043eeaf74058587786d8020a",
+        "tests/test_hw04_auth.py": "ed1baefbe2198958fedc33a388aa80c19a0e38b8d7e9369fa780f95c18fc07ed",
+        "tests/test_hw04_database.py": "af2e5577b3d701dc3f0a0620665feef61190159025ccfe925efdfe283a5cff95",
+        "tests/test_hw04_fixture_isolation.py": "a37179267deaf0bb6b674c3a4c1769ff8a060f1c78a6a2f3fa671fe013c21b90",
+        "tests/test_hw04_foundation_gate.py": "84e4a7e1cad7b9243dc7f2771e2ca957387ee31276b659cade81d90baf5c65c1",
+        "tests/test_hw04_part1_cleanup.py": "f5a64f0f249cd718e82f04174a9268d997f2a1259ecee761c29aea14d61ae552",
+        "tests/test_hw04_part3.py": "382de5260623449ba1b410434fc76ad8bf71b757f1aeea7c56f3c23a467d1dd3",
+        "tests/test_hw04_part3_index.py": "929e1ba9fe84e148ae0abd5ea8ae7d5f7248e1b10c8ba0602cfcd3c3bb3f694a",
+        "tests/test_hw04_part3_measurement.py": "16423eb638938d4932f288948ea28016bb8b76f0cb11901e7bc6d2ef74aac658",
+        "tests/test_hw04_part3_seed.py": "1790a417dbccf37fc710ae78580805edbc04af512a14ad8f74739e219da162cc",
+        "tests/test_hw04_rag.py": "c8d7d630f2a3637bd3de99f2657aba6cf77c07d525a9bb2744984351e0fa8b16",
+        "tests/test_hw04_rag_evaluation.py": "b8571470a7bf809d1ca2787056a07d5303e6a19e20adb2b980f2d76992a6015b",
+        "tests/test_hw04_search_regression.py": "3489cde3183067efb89a1c274f49d70c616926e340a0688442f781b7f7673e98",
+        "tests/test_hw04_serving.py": "139efbe8bcf2aa9343b9032cff0edaaa0e4e2651d51f191072a0e9d72109ead5",
+        "tests/test_hw04_submission_verifier.py": "87d30953ceb0e37b1513420991be573cd342064340743c68fc0a6400e009a808",
+        "tests/test_hw04_verifier.py": "44b7209d66cc2af02dc0900088bcd8318949535179e75ac38ec7dd3a5d08af1a",
+        "tests/test_hw05_agent.py": "54c4b68bb782205ffa5167780e6242976388c798fe31cf937ee9bbfb6b47467f",
+        "tests/test_hw05_api.py": "9e9fa707a902f704ea200ae6386654db7dcd5cad01e443511f3797146e230d9d",
+        "tests/test_hw05_database.py": "6bb2653f7a691f0ee8b5ea4831b515af65f5169aff47b98a06aebe6e0333a5fe",
+        "tests/test_hw05_domain_tools.py": "02907d693e5a558a9cfdc797f7f4cf0500142c67ac4322541c952bbad0af8b28",
+        "tests/test_hw05_executor.py": "f4cf117fbb1af55c979271a0d9ede99c28bb4d6ef7f321a65ff074f08984e60c",
+        "tests/test_hw05_executor_integration.py": "dac35d68108e65f8e71bb8261dc681a35a6eb9eeea252aa4a065b1de7dab3f92",
+        "tests/test_hw05_fault_experiment.py": "42436a9521dcf8bb3f319ad8028aee141ecdf363e869e65ad70f4da9a29e6222",
+        "tests/test_hw05_fixture_setup.py": "70692dc5b868020226210ec57968574e9f790c641d0fad2a1ed91c3f6f35e4df",
+        "tests/test_hw05_mcp_stdio.py": "3ab21a5f2d18a695e90a86fe9c796f6d8c445906527836f295d4879bb0d7c999",
+        "tests/test_hw05_meals.py": "cca261203ed64facb0951125e88076e7f393d941e70739f9fd4b226b15e16548",
+        "tests/test_hw05_offline_runner.py": "4dee8a29328215882e5eb299aeecff7c337856b04ed8dab2ed6f06b4bd3f7fe4",
+        "tests/test_hw05_reliability.py": "56023f4c17eef1783ff6c65d3507bafe8fa1c9bffde9f3a86b4040b3e4727abf",
+        "tests/test_hw05_runtime.py": "ab9cc52f29cda6eab2e52f576ac892b882e272d523855d3520a5bf45a95ea110",
+        "tests/test_hw05_timeouts.py": "2a8faab2c5d3414a0a641dd2190569e81cfdc1a0d45778d85d0db0c7aa70d958",
+        "tests/test_hw06_documents.py": "ecfb10e68d6fb5cae8fe99b7a084b9ee4435b308d1014aa1c5d78631f14a60bf",
+        "tests/test_hw06_documents_edges.py": "2111dfacb3dd3c3c1b9a026f5d92e2f0494a8cf22120bc3ecf1990a7c7a153fb",
+        "tests/test_hw06_experiments.py": "20318a097742ba12798b9091d41ec288f0ac2bd33a1ba783b6a6c586e951612a",
+        "tests/test_hw06_experiments_live.py": "f46fa7ffc9b33709ec2f66694e41ad166a12ec364fa245cbad8c76a0d2a505f6",
+        "tests/test_hw06_experiments_policy.py": "123a8aba3eea9e6fc2d34884d445449e37768a6c5853f1a5892adba953b6f84b",
+        "tests/test_hw06_file_memory.py": "5b8f33874475a65e98b517adeb76c736857dfa81202e61202a2da9dd01c742d6",
+        "tests/test_hw06_foundation.py": "663e09952f9f34e7e26dca60cc11cdd550b4f19e12ae9219468eb2afd9f52e7e",
+        "tests/test_hw06_integration.py": "61bbda0bdf5ec7415a832e2c27fce593ea24779449b019ccbdd717b802a325aa",
+        "tests/test_hw06_mongo_memory.py": "7e5eb4f1ad53016ae927ad4c79575081c9fd4057d8b4abda33b47b111a417dad",
+        "tests/test_refresh_hw02_artifacts.py": "b62b1b9ee32295a298473135135586d6ff46c3114a0e85ed1e39c0985203002e",
+        "tests/test_verify_hw02.py": "2a7f3bee6e11b340228d3aeac3e34129b5ec504222a22046b602f2ba3a8345e6"
+      },
+      "lock_sha256": "8fd1a751b9f755bf8758d06dff2ea64d33e5a6ccbbeed2a5cf5e6e91889badd7",
+      "source_path_set": [
+        "src",
+        "code/web_application",
+        "scripts",
+        "tests",
+        "memory_probes.yaml",
+        "requirements-hw06.txt",
+        "requirements-hw06.lock.txt",
+        "AGENT.md",
+        "MEMORY.md",
+        "Makefile"
+      ],
+      "source_hash_definition": "SHA256 of canonical JSON sorted relative-file-to-SHA256 map; generated report/evidence data and external runtime/workflow files excluded.",
+      "config": {
+        "sid4": 6102,
+        "port": 8702,
+        "prefix": "s6102",
+        "seed": 6102,
+        "verify_seed": 266102,
+        "domain_id": 6,
+        "database_name": "s6102_doc",
+        "mongo_timeout_ms": 2000,
+        "model": "qwen2.5:7b",
+        "model_digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+        "source_commit": "4c0bd7c2dd0bedeab73d6a31d9f5c3a83a84e961",
+        "ollama_url": "http://127.0.0.1:11434",
+        "temperature": 0.0,
+        "context_window": 8192,
+        "output_limit": 1024,
+        "model_timeout": 180.0,
+        "short_term_n": 12,
+        "summarize_every_user_msgs": 5,
+        "top_k": 3,
+        "policy": "baseline",
+        "token_budget": 160,
+        "embedding_model": "nomic-embed-text:v1.5",
+        "embedding_digest": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+        "embedding_dimension": 768,
+        "tokenizer_path": "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/runtime/qwen2.5-tokenizer.json",
+        "tokenizer_sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+        "cors_origins": [
+          "https://localhost:8702",
+          "https://127.0.0.1:8702"
+        ]
+      },
+      "config_sha256": "520e8dbbff3bc8c51a77c7a096e0d4171b0f6bae2ba0c27186461ac76daf86f6",
+      "input_hashes": {
+        "scripts/hw06/part3/conversation.json": "5c726de2de6fe7f4c3b02b589ebcedd2d31def81fb47797eccd950c5f1f2067c",
+        "memory_probes.yaml": "ca2333eb6804256107267a9994c7b033230778f4e094d13deaeadf7217571a3d"
+      },
+      "frozen_artifact_hashes": {
+        "memory_probes.yaml": "ca2333eb6804256107267a9994c7b033230778f4e094d13deaeadf7217571a3d",
+        "scripts/hw06/part3/conversation.json": "5c726de2de6fe7f4c3b02b589ebcedd2d31def81fb47797eccd950c5f1f2067c",
+        "src/hw06_experiments/policy.py": "d6a2ceac410e3ef4e39a31a74a27616e65479c3afa68981213dff42cf05700d5",
+        "src/hw06_experiments/metrics.py": "6f8f397f3522c12982d3e5b35c96dfd7049e25da141882535fa9f2183af5695d",
+        "src/hw06_experiments/validation.py": "8e0ef0a547760d9514ea59e84a1d7bfc925dcc126e1ab351700912e691be2aab",
+        "src/hw06_experiments/runner.py": "dc58a1c9e679d67a65c852ed67d94ae9ef282b61f6ea81599026f04eaf0e4756",
+        "src/hw06_memory_mongo/logic.py": "dd017db3878fbdb51d4fa3e8fa0153b5725acefaf6e70ac347294ae172fea6c4",
+        "src/hw06_shared/config.py": "de9bc156d28413ad351c580844321f197f95b0fb063c86c5fbeecfc7aef5c150",
+        "src/model_client.py": "b4c3df9db89310c7c5861bdbd0d3603551cd388ca179ff99e29ed79fe6b1581f"
+      },
+      "file_memory_enabled": false,
+      "pilot": {
+        "kind": "one unscored N30 workload plus five unscored probes; excluded from measurements",
+        "n30_context_fit": true,
+        "no_prompt_truncation": true,
+        "checks": {
+          "35_correlated_main_events": true,
+          "all_events_successful": true,
+          "model_usage_reported": true,
+          "context_fits": true,
+          "no_output_cutoff": true,
+          "N30_reached": true,
+          "components_recomputed": true,
+          "residuals_correct": true,
+          "current_message_once": true,
+          "auxiliary_extraction_and_query": true,
+          "summary_cadence": true
+        },
+        "max_prompt_tokens": 2356,
+        "max_completion_tokens": 342,
+        "source_commit": "e08241887636514df6da5124984539659c1ffc46",
+        "source_sha256": "baf6ed1a45eb00e121b0c2091bb5c4f0fbc62c0469d386696fab381056543eba",
+        "evidence": "reports/hw06/raw/part3/pilot-N30/unscored-pilot.json",
+        "no_prompt_truncation_basis": "Model-compatible preflight, actual N30 retained window, reported prompt totals plus reserved output within context; normal backend finish reasons and no output-limit touch verified."
+      },
+      "accepted_checks": {
+        "kind": "integrated_acceptance_not_final_homework",
+        "student": "Pragya Apurva",
+        "tested_code_commit": "e08241887636514df6da5124984539659c1ffc46",
+        "application_source_sha256": "baf6ed1a45eb00e121b0c2091bb5c4f0fbc62c0469d386696fab381056543eba",
+        "part1": {
+          "five_operations": true,
+          "defaults": true,
+          "utc_dates": true,
+          "server_timestamps": true,
+          "created_at_preserved": true,
+          "invalid_create_and_put": true,
+          "malformed_id": true,
+          "missing_record": true,
+          "stored_validation": true
+        },
+        "part2": {
+          "32_messages": true,
+          "session_summaries_2_plus_1": true,
+          "lifetime_summary": true,
+          "lifetime_used": true,
+          "episodes_saved": true,
+          "different_namespace_empty": true,
+          "other_owner_denied": true,
+          "mongo_restart_persistence": true
+        },
+        "two_authenticated_users": {
+          "first_owner_denied_second_memory": true,
+          "second_owner_denied_first_memory": true,
+          "second_owner_can_read_own": true
+        },
+        "file": {
+          "independent_audit": true,
+          "counts": {
+            "entries": 27,
+            "physical_lines": 28,
+            "counted_lines": 27
+          },
+          "restart": true
+        },
+        "comparison": {
+          "mongo_current_correction_and_facts": true,
+          "file_current_correction_and_facts": true
+        },
+        "policy": {
+          "configured_policy": true,
+          "budget": true,
+          "evicted": true,
+          "history_preserved": true,
+          "source_capture_unchanged": true
+        },
+        "unscored_pilot": {
+          "35_correlated_main_events": true,
+          "all_events_successful": true,
+          "model_usage_reported": true,
+          "context_fits": true,
+          "no_output_cutoff": true,
+          "N30_reached": true,
+          "components_recomputed": true,
+          "residuals_correct": true,
+          "current_message_once": true,
+          "auxiliary_extraction_and_query": true,
+          "summary_cadence": true
+        },
+        "pilot_max_prompt_tokens": 2356,
+        "pilot_max_completion_tokens": 342,
+        "browser_checks_passed": 8,
+        "regression": "434 passed, 11 destructive migration DDL checks skipped; 151 focused checks passed after output-limit rejection and concise-summary refinement",
+        "smoke": [
+          {
+            "name": "mongodb_reachable",
+            "passed": true
+          },
+          {
+            "name": "https_health_on_8702",
+            "passed": true
+          },
+          {
+            "name": "existing_real_login",
+            "passed": true
+          },
+          {
+            "name": "document_create",
+            "passed": true
+          },
+          {
+            "name": "document_read",
+            "passed": true
+          },
+          {
+            "name": "document_update",
+            "passed": true
+          },
+          {
+            "name": "invalid_document_rejected",
+            "passed": true
+          },
+          {
+            "name": "document_delete",
+            "passed": true
+          },
+          {
+            "name": "chat_http_success",
+            "passed": true
+          },
+          {
+            "name": "chat_reply_and_memory_shape",
+            "passed": true
+          },
+          {
+            "name": "memory_endpoint",
+            "passed": true
+          },
+          {
+            "name": "aggregate_endpoint",
+            "passed": true
+          },
+          {
+            "name": "other_user_denied",
+            "passed": true
+          },
+          {
+            "name": "file_memory_load_commands",
+            "passed": true
+          },
+          {
+            "name": "application_source_unchanged",
+            "passed": true
+          }
+        ],
+        "source_substantiation": {
+          "core_tested_code_commit": "e08241887636514df6da5124984539659c1ffc46",
+          "core_API_source_hashes_match": true,
+          "file_implementation_source_hashes_match": true,
+          "file_substantiation": "E file service and helper source hashes unchanged since successful integrated file-02 capture; file outputs stayed below the former 512-token cap",
+          "file_branch_implementation": "unchanged E service/helper source; live integrated rerun captured"
+        },
+        "historical_attempts": {
+          "pilot_01": "Stopped unscored before freeze after long main replies",
+          "pilot_02": "Completed N30 but failed acceptance: two session summaries hit the former 512-token cap",
+          "policy_03": "Transient query embedding 503 before policy selection; fresh policy-04 passed",
+          "file_01": "Dream returned invalid empty model output; file preserved and corrected acceptance followed"
+        },
+        "part1_database_capture": "Genuine mongosh BSON sample, validator and collections; Compass GUI was unavailable",
+        "measured_sweep_run": false,
+        "final_report_complete": false,
+        "remaining_final_evidence": [
+          "D four-condition measured study, manual scoring and regenerated cost tables",
+          "Final terminal/Compass screenshots and concise code/output pairs; genuine mongosh BSON/validator output and browser API captures are already preserved",
+          "Final report assembly, evidence aggregation, and eventual tagged submission verification"
+        ],
+        "background_load_limit": "Unrelated Docker services remain running; automatic approval review rejected pausing them. The shared HW6 lease reserves model/app/shared-database jobs during D measurement."
+      },
+      "final_exact_commit_smoke": {
+        "commit": "4c0bd7c2dd0bedeab73d6a31d9f5c3a83a84e961",
+        "passed": true,
+        "checks": [
+          {
+            "name": "mongodb_reachable",
+            "passed": true
+          },
+          {
+            "name": "https_health_on_8702",
+            "passed": true
+          },
+          {
+            "name": "existing_real_login",
+            "passed": true
+          },
+          {
+            "name": "document_create",
+            "passed": true
+          },
+          {
+            "name": "document_read",
+            "passed": true
+          },
+          {
+            "name": "document_update",
+            "passed": true
+          },
+          {
+            "name": "invalid_document_rejected",
+            "passed": true
+          },
+          {
+            "name": "document_delete",
+            "passed": true
+          },
+          {
+            "name": "chat_http_success",
+            "passed": true
+          },
+          {
+            "name": "chat_reply_and_memory_shape",
+            "passed": true
+          },
+          {
+            "name": "memory_endpoint",
+            "passed": true
+          },
+          {
+            "name": "aggregate_endpoint",
+            "passed": true
+          },
+          {
+            "name": "other_user_denied",
+            "passed": true
+          },
+          {
+            "name": "file_memory_load_commands",
+            "passed": true
+          },
+          {
+            "name": "application_source_unchanged",
+            "passed": true
+          }
+        ],
+        "receipt": "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/integration/final-smoke/verification.json"
+      },
+      "runtime": {
+        "python": "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/runtime/venv/bin/python",
+        "python_version": "3.12.14",
+        "platform": "macOS-15.7.4-arm64-arm-64bit",
+        "packages": {
+          "fastapi": "0.109.0",
+          "starlette": "0.35.1",
+          "pydantic": "2.12.5",
+          "httpx": "0.27.2",
+          "pymongo": "4.10.1",
+          "langchain-ollama": "1.1.0",
+          "ollama": "0.6.3",
+          "tokenizers": "0.21.4",
+          "PyYAML": "6.0.2"
+        },
+        "ollama_version": "0.33.0",
+        "installed_models": {
+          "models": [
+            {
+              "name": "nomic-embed-text:v1.5",
+              "model": "nomic-embed-text:v1.5",
+              "modified_at": "2026-10-19T22:53:39.199512494-07:00",
+              "size": 274302450,
+              "digest": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+              "details": {
+                "parent_model": "",
+                "format": "gguf",
+                "family": "nomic-bert",
+                "families": [
+                  "nomic-bert"
+                ],
+                "parameter_size": "137M",
+                "quantization_level": "F16",
+                "context_length": 2048,
+                "embedding_length": 768
+              },
+              "capabilities": [
+                "embedding"
+              ]
+            },
+            {
+              "name": "qwen3:8b",
+              "model": "qwen3:8b",
+              "modified_at": "2026-10-18T00:21:07.180491041-07:00",
+              "size": 5225388164,
+              "digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+              "details": {
+                "parent_model": "",
+                "format": "gguf",
+                "family": "qwen3",
+                "families": [
+                  "qwen3"
+                ],
+                "parameter_size": "8.2B",
+                "quantization_level": "Q4_K_M",
+                "context_length": 40960,
+                "embedding_length": 4096
+              },
+              "capabilities": [
+                "completion",
+                "tools",
+                "thinking"
+              ]
+            },
+            {
+              "name": "qwen2.5:7b",
+              "model": "qwen2.5:7b",
+              "modified_at": "2026-09-27T22:31:25.018022161-07:00",
+              "size": 4683087332,
+              "digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+              "details": {
+                "parent_model": "",
+                "format": "gguf",
+                "family": "qwen2",
+                "families": [
+                  "qwen2"
+                ],
+                "parameter_size": "7.6B",
+                "quantization_level": "Q4_K_M",
+                "context_length": 32768,
+                "embedding_length": 3584
+              },
+              "capabilities": [
+                "completion",
+                "tools"
+              ]
+            },
+            {
+              "name": "qwen2.5:3b",
+              "model": "qwen2.5:3b",
+              "modified_at": "2026-09-27T21:37:10.221824375-07:00",
+              "size": 1929912432,
+              "digest": "357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b",
+              "details": {
+                "parent_model": "",
+                "format": "gguf",
+                "family": "qwen2",
+                "families": [
+                  "qwen2"
+                ],
+                "parameter_size": "3.1B",
+                "quantization_level": "Q4_K_M",
+                "context_length": 32768,
+                "embedding_length": 2048
+              },
+              "capabilities": [
+                "completion",
+                "tools"
+              ]
+            },
+            {
+              "name": "qwen3:4b",
+              "model": "qwen3:4b",
+              "modified_at": "2026-09-27T21:26:27.247323053-07:00",
+              "size": 2497293931,
+              "digest": "359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7",
+              "details": {
+                "parent_model": "",
+                "format": "gguf",
+                "family": "qwen3",
+                "families": [
+                  "qwen3"
+                ],
+                "parameter_size": "4.0B",
+                "quantization_level": "Q4_K_M",
+                "context_length": 262144,
+                "embedding_length": 2560
+              },
+              "capabilities": [
+                "completion",
+                "tools",
+                "thinking"
+              ]
+            },
+            {
+              "name": "qwen3:1.7b",
+              "model": "qwen3:1.7b",
+              "modified_at": "2026-08-30T16:29:42.051830714-07:00",
+              "size": 1359293444,
+              "digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+              "details": {
+                "parent_model": "",
+                "format": "gguf",
+                "family": "qwen3",
+                "families": [
+                  "qwen3"
+                ],
+                "parameter_size": "2.0B",
+                "quantization_level": "Q4_K_M",
+                "context_length": 40960,
+                "embedding_length": 2048
+              },
+              "capabilities": [
+                "completion",
+                "tools",
+                "thinking"
+              ]
+            }
+          ]
+        },
+        "observed_model_context_allocations": {
+          "models": [
+            {
+              "name": "qwen2.5:7b",
+              "model": "qwen2.5:7b",
+              "size": 4979792280,
+              "digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+              "details": {
+                "parent_model": "",
+                "format": "gguf",
+                "family": "qwen2",
+                "families": [
+                  "qwen2"
+                ],
+                "parameter_size": "7.6B",
+                "quantization_level": "Q4_K_M"
+              },
+              "expires_at": "2026-10-20T12:06:48.555589-07:00",
+              "size_vram": 4979792280,
+              "context_length": 8192
+            },
+            {
+              "name": "nomic-embed-text:v1.5",
+              "model": "nomic-embed-text:v1.5",
+              "size": 370031984,
+              "digest": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+              "details": {
+                "parent_model": "",
+                "format": "gguf",
+                "family": "nomic-bert",
+                "families": [
+                  "nomic-bert"
+                ],
+                "parameter_size": "137M",
+                "quantization_level": "F16"
+              },
+              "expires_at": "2026-10-20T12:06:48.588991-07:00",
+              "size_vram": 370031984,
+              "context_length": 2048
+            }
+          ]
+        },
+        "mongodb_version": "8.0.16",
+        "mongosh_version": "2.5.8",
+        "mysql_version": "8.4.11",
+        "mongodb_data_path": "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/runtime/mongodb/data",
+        "mysql_container": "data260-hw6-mysql",
+        "database": "s6102_doc",
+        "port": 8702,
+        "port_free": true,
+        "collection_index_counts": {
+          "rentals": 1,
+          "messages": 3,
+          "summaries": 2,
+          "episodes": 2
+        },
+        "lock_sha256": "8fd1a751b9f755bf8758d06dff2ea64d33e5a6ccbbeed2a5cf5e6e91889badd7",
+        "tokenizer_sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+        "embedding_model": "nomic-embed-text:v1.5",
+        "embedding_digest": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+        "embedding_dimension": 768
+      },
+      "frontend": {
+        "real_browser_checks_passed": 8,
+        "source_hashes": {
+          "frontend/index.html": "89e9b368b3ece7fbfd0e1a45f61bf3a87c30f19a88d5e55c46a2cbc321b122c3",
+          "frontend/package-lock.json": "a37333024872060cfee915cb5dbe1cf6b3b417071d6614ba1c0f2ba89ca8ede0",
+          "frontend/package.json": "a815561544d0ab84ef2e13e9d2ed4b73530e50ea88d8a19264955c6e760f4bc9",
+          "frontend/src/App.jsx": "3f22477cec5c55759f07a605d353037de36b000720fc025cc1cefaccc3b521be",
+          "frontend/src/api/client.js": "d5cfc717bd195f6af11ba2ef6fda12df3eaab86b411e1b02700664f7f500a3b6",
+          "frontend/src/auth/AuthContext.jsx": "d05b73deeed86020dfbd0f671ded019cb9ad9cc06100943dd7ff8b24d82bec5e",
+          "frontend/src/components/forms.jsx": "655e2405639133efb99fefb043adbb55dca81d4075b9779b1e16a4edee54880d",
+          "frontend/src/features/rentals/rentalsSlice.js": "1a2c40e1a240624a679e6185415f137fa3e7ac1dfb5d8057d46a11024b3f5324",
+          "frontend/src/main.jsx": "2e17c70f9bc0b8f9db08ab26c4f10ccd0efb765d327a4347246c1430471e0359",
+          "frontend/src/pages/CreateRecord.jsx": "5b93267fcce1dee3977b6b9a7a660a3e7dea9011949189ebbb3308c7f3525415",
+          "frontend/src/pages/DeleteRecord.jsx": "1910d108d6f58c9fe7d332ef260e8ea0314519fdfb515a0d9bea7c99fbbb910f",
+          "frontend/src/pages/Home.jsx": "14b57d19a219b6f56286a5c87a5cd6e1ea0c8cfca3b6cba15390ae5c32c32a60",
+          "frontend/src/pages/Login.jsx": "99c97544645656a30212e8d79f5417b572f4b5671c6d4b84f71b5c9b721bebb0",
+          "frontend/src/pages/UpdateRecord.jsx": "19d50ed9f37476c2eb8818e0a781987181212a2754e40afeeee030c4f9b5f432",
+          "frontend/src/store/store.js": "4ed583fc1180809d4f9c279386e199950a8ac95bbfc92688fa49c27ef1e41d10",
+          "frontend/src/styles.css": "5ecf3f7d0238bc8635b5389fef5dc2c55f92713dfc13eabcc9e50033c0d2c959",
+          "frontend/vite.config.js": "e0074b500074eb549063648ead9567ffffb125325eb0a0a9b1a29a12bce3837f"
+        },
+        "source_sha256": "45755b6efe86b4f9a2ed34daa63a3881a4a9a761f0ef32232e526554d3f59b56",
+        "build": "Existing locked frontend built with private npm 10.9.2 and Node 24.19.0; no frontend source change.",
+        "screenshots": [
+          "reports/hw06/raw/integration/screenshots/frontend-home.png",
+          "reports/hw06/raw/integration/screenshots/frontend-mobile.png"
+        ]
+      },
+      "external_configuration_paths": {
+        "sql_env": "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/runtime/sql.env",
+        "hw6_env": "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/runtime/hw06.env",
+        "certificate": "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/cert.pem",
+        "private_key": "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/key.pem"
+      },
+      "d_measurement": {
+        "prepared_commit": "3d2424d203c1234a3858fd6bd7ab6750467fa22d",
+        "preparation_is_ancestor": true,
+        "worktree": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW6/worktrees/part3-experiments",
+        "branch": "codex/hw6-part3-experiments",
+        "fast_forward_command": [
+          "git",
+          "merge",
+          "--ff-only",
+          "4c0bd7c2dd0bedeab73d6a31d9f5c3a83a84e961"
+        ],
+        "measurement_command_argv": [
+          "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/runtime/venv/bin/python",
+          "-B",
+          "-m",
+          "scripts.hw06.part3.run",
+          "--measurement-authorized",
+          "--gate",
+          "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/INTEGRATION_READY.json",
+          "--output",
+          "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/measurement-output-CHOOSE-FRESH-DIRECTORY",
+          "--runtime-dir",
+          "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/runtime",
+          "--env-file",
+          "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/runtime/sql.env",
+          "--env-file",
+          "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/runtime/hw06.env",
+          "--cert",
+          "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/cert.pem",
+          "--key",
+          "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/key.pem",
+          "--ca",
+          "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/cert.pem",
+          "--owner-id",
+          "1"
+        ],
+        "command_note": "Only after the user gives D prompt 07. Choose a fresh output directory. Credentials are read privately from sql.env.",
+        "script_inputs_are_frozen": true,
+        "measured_sweep_run_by_A": false
+      },
+      "benchmark_reservation": {
+        "reserved_for": "Session D prompt 07",
+        "runtime_root": "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/runtime",
+        "lease_helper": "scripts.hw06.runtime_lease.RuntimeLease",
+        "lease_currently_released": true,
+        "rule": "D acquires the one lease for the full warm-up/measurement/probe window. No unrelated Ollama, embeddings, load tests, app-port jobs or shared-database writes from cooperating HW6 sessions. A has stopped its app/model jobs and will not start competing work.",
+        "background_load_limit": "Unrelated Docker services remain running. Automatic approval review rejected pausing them because it could interrupt unrelated services; the action was not executed or retried."
+      },
+      "final_evidence_gaps": [
+        "D four-condition measured study, manual scoring and regenerated cost tables",
+        "Final terminal/Compass screenshots and concise code/output pairs; genuine mongosh BSON/validator output and browser API captures are already preserved",
+        "Final report assembly, evidence aggregation, and eventual tagged submission verification"
+      ],
+      "publication": {
+        "push": false,
+        "tag": false,
+        "published": false,
+        "final_report_completed": false
+      },
+      "contract": "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/INTEGRATION_CONTRACT.md",
+      "foundation_contract": "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/CONTRACT.md",
+      "code_handoffs": {
+        "B": "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/handoffs/B.json",
+        "C": "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/handoffs/C.json",
+        "D": "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/handoffs/D_PREPARE.json",
+        "E": "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/handoffs/E.json"
+      }
+    },
+    "installed_models": {
+      "models": [
+        {
+          "name": "nomic-embed-text:v1.5",
+          "model": "nomic-embed-text:v1.5",
+          "modified_at": "2026-10-19T22:53:39.199512494-07:00",
+          "size": 274302450,
+          "digest": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "nomic-bert",
+            "families": [
+              "nomic-bert"
+            ],
+            "parameter_size": "137M",
+            "quantization_level": "F16",
+            "context_length": 2048,
+            "embedding_length": 768
+          },
+          "capabilities": [
+            "embedding"
+          ]
+        },
+        {
+          "name": "qwen3:8b",
+          "model": "qwen3:8b",
+          "modified_at": "2026-10-18T00:21:07.180491041-07:00",
+          "size": 5225388164,
+          "digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "qwen3",
+            "families": [
+              "qwen3"
+            ],
+            "parameter_size": "8.2B",
+            "quantization_level": "Q4_K_M",
+            "context_length": 40960,
+            "embedding_length": 4096
+          },
+          "capabilities": [
+            "completion",
+            "tools",
+            "thinking"
+          ]
+        },
+        {
+          "name": "qwen2.5:7b",
+          "model": "qwen2.5:7b",
+          "modified_at": "2026-09-27T22:31:25.018022161-07:00",
+          "size": 4683087332,
+          "digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "qwen2",
+            "families": [
+              "qwen2"
+            ],
+            "parameter_size": "7.6B",
+            "quantization_level": "Q4_K_M",
+            "context_length": 32768,
+            "embedding_length": 3584
+          },
+          "capabilities": [
+            "completion",
+            "tools"
+          ]
+        },
+        {
+          "name": "qwen2.5:3b",
+          "model": "qwen2.5:3b",
+          "modified_at": "2026-09-27T21:37:10.221824375-07:00",
+          "size": 1929912432,
+          "digest": "357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b",
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "qwen2",
+            "families": [
+              "qwen2"
+            ],
+            "parameter_size": "3.1B",
+            "quantization_level": "Q4_K_M",
+            "context_length": 32768,
+            "embedding_length": 2048
+          },
+          "capabilities": [
+            "completion",
+            "tools"
+          ]
+        },
+        {
+          "name": "qwen3:4b",
+          "model": "qwen3:4b",
+          "modified_at": "2026-09-27T21:26:27.247323053-07:00",
+          "size": 2497293931,
+          "digest": "359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7",
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "qwen3",
+            "families": [
+              "qwen3"
+            ],
+            "parameter_size": "4.0B",
+            "quantization_level": "Q4_K_M",
+            "context_length": 262144,
+            "embedding_length": 2560
+          },
+          "capabilities": [
+            "completion",
+            "tools",
+            "thinking"
+          ]
+        },
+        {
+          "name": "qwen3:1.7b",
+          "model": "qwen3:1.7b",
+          "modified_at": "2026-08-30T16:29:42.051830714-07:00",
+          "size": 1359293444,
+          "digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "qwen3",
+            "families": [
+              "qwen3"
+            ],
+            "parameter_size": "2.0B",
+            "quantization_level": "Q4_K_M",
+            "context_length": 40960,
+            "embedding_length": 2048
+          },
+          "capabilities": [
+            "completion",
+            "tools",
+            "thinking"
+          ]
+        }
+      ]
+    },
+    "runtime_dir": "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/runtime",
+    "policy_factory": "src.hw06_experiments.policy.token_budget_window"
+  },
+  "warmup": "none; identical for all conditions",
+  "file_memory_enabled": false,
+  "probe_isolation": "sequential_fixed_order",
+  "sequential_probe_effects": "Earlier probes and their answers persist and may affect later probes, summaries and episodes. Order is fixed.",
+  "expected_primary_calls": 120,
+  "expected_probe_calls": 20,
+  "conditions": [
+    {
+      "id": "A",
+      "label": "N=4",
+      "user_id": "1:hw6:D:A:6cc4f421f3374968b08b9404304743e6",
+      "session_id": "1:hw6:D:session:A:bf4f0cb97b21413db50e383fdc417a45",
+      "config": {
+        "sid4": 6102,
+        "port": 8702,
+        "prefix": "s6102",
+        "seed": 6102,
+        "verify_seed": 266102,
+        "domain_id": 6,
+        "database_name": "s6102_doc",
+        "mongo_timeout_ms": 2000,
+        "model": "qwen2.5:7b",
+        "model_digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+        "source_commit": "4c0bd7c2dd0bedeab73d6a31d9f5c3a83a84e961",
+        "ollama_url": "http://127.0.0.1:11434",
+        "temperature": 0.0,
+        "context_window": 8192,
+        "output_limit": 1024,
+        "model_timeout": 180.0,
+        "short_term_n": 4,
+        "summarize_every_user_msgs": 5,
+        "top_k": 3,
+        "policy": "baseline",
+        "token_budget": 160,
+        "embedding_model": "nomic-embed-text:v1.5",
+        "embedding_digest": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+        "embedding_dimension": 768,
+        "tokenizer_path": "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/runtime/qwen2.5-tokenizer.json",
+        "tokenizer_sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+        "cors_origins": [
+          "https://localhost:8702",
+          "https://127.0.0.1:8702"
+        ]
+      },
+      "config_sha256": "6ca3b49ffe39bfe5ad0e231c8f7f7b3cf91e489793899b1604d36df005829b62",
+      "probe_clones": [],
+      "snapshot_id": null
+    },
+    {
+      "id": "B",
+      "label": "N=12",
+      "user_id": "1:hw6:D:B:7a4f2e34249c4647a56cfbc1693c4118",
+      "session_id": "1:hw6:D:session:B:213bee607de64c409bb7d0a4f6409361",
+      "config": {
+        "sid4": 6102,
+        "port": 8702,
+        "prefix": "s6102",
+        "seed": 6102,
+        "verify_seed": 266102,
+        "domain_id": 6,
+        "database_name": "s6102_doc",
+        "mongo_timeout_ms": 2000,
+        "model": "qwen2.5:7b",
+        "model_digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+        "source_commit": "4c0bd7c2dd0bedeab73d6a31d9f5c3a83a84e961",
+        "ollama_url": "http://127.0.0.1:11434",
+        "temperature": 0.0,
+        "context_window": 8192,
+        "output_limit": 1024,
+        "model_timeout": 180.0,
+        "short_term_n": 12,
+        "summarize_every_user_msgs": 5,
+        "top_k": 3,
+        "policy": "baseline",
+        "token_budget": 160,
+        "embedding_model": "nomic-embed-text:v1.5",
+        "embedding_digest": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+        "embedding_dimension": 768,
+        "tokenizer_path": "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/runtime/qwen2.5-tokenizer.json",
+        "tokenizer_sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+        "cors_origins": [
+          "https://localhost:8702",
+          "https://127.0.0.1:8702"
+        ]
+      },
+      "config_sha256": "520e8dbbff3bc8c51a77c7a096e0d4171b0f6bae2ba0c27186461ac76daf86f6",
+      "probe_clones": [],
+      "snapshot_id": null
+    },
+    {
+      "id": "C",
+      "label": "N=30",
+      "user_id": "1:hw6:D:C:51e0da5f521a4a098bf04e08cc417cf9",
+      "session_id": "1:hw6:D:session:C:61fbcc20f3534f8aa6c75e1fc735ea31",
+      "config": {
+        "sid4": 6102,
+        "port": 8702,
+        "prefix": "s6102",
+        "seed": 6102,
+        "verify_seed": 266102,
+        "domain_id": 6,
+        "database_name": "s6102_doc",
+        "mongo_timeout_ms": 2000,
+        "model": "qwen2.5:7b",
+        "model_digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+        "source_commit": "4c0bd7c2dd0bedeab73d6a31d9f5c3a83a84e961",
+        "ollama_url": "http://127.0.0.1:11434",
+        "temperature": 0.0,
+        "context_window": 8192,
+        "output_limit": 1024,
+        "model_timeout": 180.0,
+        "short_term_n": 30,
+        "summarize_every_user_msgs": 5,
+        "top_k": 3,
+        "policy": "baseline",
+        "token_budget": 160,
+        "embedding_model": "nomic-embed-text:v1.5",
+        "embedding_digest": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+        "embedding_dimension": 768,
+        "tokenizer_path": "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/runtime/qwen2.5-tokenizer.json",
+        "tokenizer_sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+        "cors_origins": [
+          "https://localhost:8702",
+          "https://127.0.0.1:8702"
+        ]
+      },
+      "config_sha256": "000c0783115e3f47fc3c8462a281a2af3d704d49f5fc1250ffa6aa0cb6095b32",
+      "probe_clones": [],
+      "snapshot_id": null
+    },
+    {
+      "id": "D",
+      "label": "N=12 + token-budget eviction",
+      "user_id": "1:hw6:D:D:e1218ec449084eb39c9ad9a952cb14ef",
+      "session_id": "1:hw6:D:session:D:b9366bcb169749dd95550bdcea624de1",
+      "config": {
+        "sid4": 6102,
+        "port": 8702,
+        "prefix": "s6102",
+        "seed": 6102,
+        "verify_seed": 266102,
+        "domain_id": 6,
+        "database_name": "s6102_doc",
+        "mongo_timeout_ms": 2000,
+        "model": "qwen2.5:7b",
+        "model_digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+        "source_commit": "4c0bd7c2dd0bedeab73d6a31d9f5c3a83a84e961",
+        "ollama_url": "http://127.0.0.1:11434",
+        "temperature": 0.0,
+        "context_window": 8192,
+        "output_limit": 1024,
+        "model_timeout": 180.0,
+        "short_term_n": 12,
+        "summarize_every_user_msgs": 5,
+        "top_k": 3,
+        "policy": "token_budget",
+        "token_budget": 160,
+        "embedding_model": "nomic-embed-text:v1.5",
+        "embedding_digest": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+        "embedding_dimension": 768,
+        "tokenizer_path": "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/runtime/qwen2.5-tokenizer.json",
+        "tokenizer_sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+        "cors_origins": [
+          "https://localhost:8702",
+          "https://127.0.0.1:8702"
+        ]
+      },
+      "config_sha256": "32edcdaa31f9c12dbbc25a1106ae60ad90600ec60956427a6ee4c95e6e85fb80",
+      "probe_clones": [],
+      "snapshot_id": null
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+schema_version: hw06.probes.v1
+conversation: scripts/hw06/part3/conversation.json
+frozen_before_measurement: true
+scoring_method: Manual assessment against these frozen criteria; never tune expectations from measured answers.
+probe_order: [budget, neighborhood, pet, move_in, accessibility]
+rubric:
+  1: Incorrect essential fact, missing answer, refusal, or unsupported guess.
+  2: Relevant fragment but major error or contradiction prevents a correct answer.
+  3: Partly correct with an important omission; no contradictory essential claim.
+  4: Correct essential fact with only the question-specific minor omission.
+  5: All criteria correct, current, explicit, and without contradictory additions.
+essential_fact_rule: Any incorrect essential fact makes the setting ineligible regardless of mean score. Missing or uncertain essential facts score at most 3. An incorrect essential claim scores at most 2. Assess the entire answer, including contradictory additions.
+selection:
+  quality_threshold: 4
+  best: Lowest main-plus-generative-memory cost among settings with mean quality >=4 and no incorrect essential fact; break ties by A,B,C,D order.
+  worst: Highest main-plus-generative-memory cost among complete settings; break ties by A,B,C,D order.
+  no_qualifier: Report no qualifying setting; do not lower the threshold. Also report lowest-quality setting.
+probes:
+  - id: budget
+    question: What is my current maximum monthly rent, and did it replace an earlier amount?
+    expected_answer: Current maximum monthly base rent is $2,400; it replaced the earlier $2,200 limit.
+    essential_criteria: [Current maximum is exactly $2400 per month, Never presents $2200 as the current maximum]
+    full_credit_criteria: [Explicitly identifies $2200 as superseded by $2400]
+    score_4_minor_omission: Correct $2400 current maximum but omits the earlier amount or its explicit replacement.
+    score_3_example: Mentions a budget increase without stating the current exact amount.
+    provenance:
+      - {turn: 1, quote: 'My initial maximum monthly rent is $2,200.'}
+      - {turn: 12, quote: 'my current maximum monthly rent is $2,400, replacing the old $2,200 limit.'}
+  - id: neighborhood
+    question: Which neighborhood am I targeting for my rental search?
+    expected_answer: Willow Glen in San Jose.
+    essential_criteria: [Willow Glen is the single target neighborhood]
+    full_credit_criteria: [Locates Willow Glen in San Jose, Does not offer another neighborhood as my target]
+    score_4_minor_omission: Says Willow Glen correctly but omits San Jose.
+    score_3_example: Recalls only San Jose without the neighborhood.
+    provenance:
+      - {turn: 2, quote: 'The one neighborhood I am targeting is Willow Glen in San Jose.'}
+  - id: pet
+    question: What pet accommodation do I need from the rental?
+    expected_answer: Explicit permission for one indoor cat named Juniper; no dog.
+    essential_criteria: [Permission for one indoor cat, Does not substitute a dog or a no-pet rental]
+    full_credit_criteria: [Names the cat Juniper, Explicit permission is required]
+    score_4_minor_omission: Correct permission for one indoor cat but omits the name Juniper.
+    score_3_example: Says pet-friendly without specifying one indoor cat or permission.
+    provenance:
+      - {turn: 3, quote: 'I will have one indoor cat named Juniper.'}
+      - {turn: 3, quote: 'I need a rental that explicitly permits one indoor cat; I do not have a dog.'}
+  - id: move_in
+    question: What exact date do I want to move in?
+    expected_answer: January 15, 2027 (2027-01-15).
+    essential_criteria: [January 15 with year 2027, No different date asserted]
+    full_credit_criteria: [States the full unambiguous date]
+    score_4_minor_omission: No minor omission is available for this single exact-date fact; correct full date scores 5.
+    score_3_example: January 15 with the year missing or uncertain.
+    provenance:
+      - {turn: 4, quote: 'My desired move-in date is January 15, 2027.'}
+  - id: accessibility
+    question: What accessibility feature is essential, including the rule for a unit above ground level?
+    expected_answer: A step-free route from the building entrance into the unit; an above-ground unit must have a working elevator and cannot rely on stairs alone.
+    essential_criteria: [Step-free route all the way into the unit, Working elevator required for above-ground unit, Stairs alone unacceptable]
+    full_credit_criteria: [Explicitly mentions building entrance as the route origin]
+    score_4_minor_omission: States the complete step-free route and conditional working elevator rule but omits the explicit building entrance origin.
+    score_3_example: Remembers step-free access but omits the conditional elevator requirement.
+    provenance:
+      - {turn: 16, quote: 'An essential accessibility requirement is a step-free route from the building entrance all the way into the unit.'}
+      - {turn: 16, quote: 'If the unit is above ground level, a working elevator is required; stairs alone are unacceptable.'}

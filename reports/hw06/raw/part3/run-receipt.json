@@ -1,0 +1,33 @@
+{
+  "command": [
+    "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/runtime/venv/bin/python",
+    "-B",
+    "-m",
+    "scripts.hw06.part3.run",
+    "--measurement-authorized",
+    "--gate",
+    "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/INTEGRATION_READY.json",
+    "--output",
+    "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/measurements/study-20261020-1911-01",
+    "--runtime-dir",
+    "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/runtime",
+    "--env-file",
+    "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/runtime/sql.env",
+    "--env-file",
+    "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/runtime/hw06.env",
+    "--cert",
+    "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/cert.pem",
+    "--key",
+    "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/key.pem",
+    "--ca",
+    "/Users/pragyaapurva/code/agent_outputs/data260-hw5/sessions/integration/runtime/cert.pem",
+    "--owner-id",
+    "1"
+  ],
+  "cwd": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW6/worktrees/part3-experiments",
+  "started_at": "2026-10-20T19:10:47.067692+00:00",
+  "output": "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/measurements/study-20261020-1911-01",
+  "source_commit": "4c0bd7c2dd0bedeab73d6a31d9f5c3a83a84e961",
+  "exit_code": 0,
+  "ended_at": "2026-10-20T20:07:23.020583+00:00"
+}

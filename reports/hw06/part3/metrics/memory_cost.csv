@@ -1,0 +1,5 @@
+condition,setting,primary_count,probe_count,prompt_total,completion_total,mean_prompt_tokens,mean_completion_tokens,mean_http_latency_ms,mean_quality,incorrect_essential_fact,auxiliary_generation_calls,auxiliary_prompt_total,auxiliary_completion_total,main_chat_cost_10000_usd,main_plus_generative_memory_cost_10000_usd,embedding_calls,embedding_input_count,embedding_latency_ms,embedding_cost_usd
+A,N=4,30,5,14800,1135,493.3333333333333,37.833333333333336,18576.51804034443,4.4,False,36,16897,2113,204.75,479.37,48,48,1632.8044962137938,
+B,N=12,30,5,22617,1199,753.9,39.96666666666667,23930.900245877758,4.4,False,36,16957,2139,286.12,562.64,48,48,1454.5204975875095,
+C,N=30,30,5,36033,1425,1201.1,47.5,31785.058174907073,4.8,False,36,17083,2132,431.58,709.01,48,48,1716.2643340416253,
+D,N=12 + token-budget eviction,30,5,16194,1127,539.8,37.56666666666667,23392.92155558166,4.8,False,36,16664,2436,218.29,506.73,48,48,1606.0921167954803,

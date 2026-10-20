@@ -1,0 +1,18 @@
+{
+  "checked_at": "2026-10-20T19:10:28.132469+00:00",
+  "port_8702_free": true,
+  "mongodb_ping": true,
+  "sql_select_one": true,
+  "model_digests_match": true,
+  "ollama_version": {
+    "version": "0.33.0"
+  },
+  "resident_models": {
+    "models": []
+  },
+  "generation_calls": 0,
+  "embedding_calls": 0,
+  "shared_writes": 0,
+  "background_load_limit": "Unrelated Docker services remain running as declared by A; no pause attempted.",
+  "earlier_preflight_error": "First read-only SQL check imported nonexistent engine symbol; corrected to published SessionLocal; no measured request had run."
+}
