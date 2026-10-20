@@ -1,0 +1,9 @@
+{
+  "consolidation_audit_passed": true,
+  "corrected_budget_date_and_ambiguous_parking_recall_passed": true,
+  "dream_added_entries": 1,
+  "dream_file_survived_restart": true,
+  "dream_stove_recall_passed": false,
+  "failure": "The model treated a persisted user stove preference as a listing detail. Its earlier conversational reply also invented F55, which was not persisted.",
+  "correction": "Persist the verbatim user evidence and source-message ID in each dream entry; clarify their meaning in the system prompt; repeat the same restart question."
+}

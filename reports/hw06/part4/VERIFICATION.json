@@ -1,0 +1,109 @@
+{
+  "role": "E",
+  "scope": "Standalone branch verification only",
+  "status": "ready_for_integration",
+  "student": "Pragya Apurva",
+  "created_at_utc": "2026-10-20T06:20:47.107644+00:00",
+  "foundation_commit": "51cfd410400683acf7cf9f7bb88a9581ba3834bb",
+  "original_snapshot_commit": "8423cbd32ca052e9760f174a6e994870d79dcf1a",
+  "tested_code_commit": "761d48cb36577fdc31b3b68855f2ae0a8bd57f9e",
+  "source_hashes": {
+    "src/hw06_memory_files/service.py": "0ea08a5332027b78f79fb5a1f0ad0ea1d9ed036255b9a2e2c01b4a615cf39c20",
+    "src/hw06_memory_files/__init__.py": "3a0217f9bcd2e08c9da1f0069495b04f4b07ac743702afb9a2c250bcd61f4a44",
+    "scripts/hw06/part4/fixture.py": "112080951272c63c0784b86b1aad36b1d68b2e9409a6e2b9cd7734222b37181a",
+    "scripts/hw06/part4/audit.py": "b07e55a39ed4a3fe04aab2fbf0a3dedf06f5cafac0b22d07b0b6bd0705aced4d",
+    "scripts/hw06/part4/cli.py": "c6a9e58280c4758fb7fa86b71a4698b60d8b00c643b1313961e2ff5ca24a7d32",
+    "tests/test_hw06_file_memory.py": "5b8f33874475a65e98b517adeb76c736857dfa81202e61202a2da9dd01c742d6",
+    "AGENT.md": "e58ae979423150ebadb2da9221a8ef0240c021995f178f9c9e747e13fc5e959f"
+  },
+  "source_bytes_match_tested_commit": true,
+  "runtime_final_matches_snapshot": true,
+  "offline_tests": {
+    "passed": 61,
+    "part4_cases": 22,
+    "shared_hw1_cases": 39,
+    "failed": 0,
+    "skipped": 0,
+    "warnings": 3,
+    "log": "reports/hw06/part4/OFFLINE_TEST_LOG.txt",
+    "mock_vs_live": "Injected fake models and clocks; real CLI read subprocesses; no local generation in pytest."
+  },
+  "syntax_check": {
+    "ast_parsed_files": 6,
+    "passed": true
+  },
+  "whitespace_check": "git diff --check passed",
+  "original_counts": {
+    "physical_lines": 55,
+    "counted_lines": 54,
+    "entries": 54
+  },
+  "final_counts": {
+    "physical_lines": 28,
+    "counted_lines": 27,
+    "entries": 27
+  },
+  "source_ids_preserved": 54,
+  "duplicate_groups_merged": 3,
+  "conflict_pairs_audited": 3,
+  "incorrectly_resolved_contradictions": 0,
+  "rejected_incorrect_model_proposals": 1,
+  "prior_failed_dream_recall": true,
+  "live_model": [
+    {
+      "name": "qwen2.5:7b",
+      "digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e"
+    }
+  ],
+  "generation_options": {
+    "model": "qwen2.5:7b",
+    "temperature": 0.0,
+    "context_window": 4096,
+    "output_limit": 512,
+    "seed": 6102,
+    "model_timeout": 180.0
+  },
+  "configuration_note": "Runtime env source_commit still names the foundation. The CLI records actual Git HEAD in RequestContext; tested_code_commit and content hashes above are authoritative for this evidence.",
+  "live_commands": [
+    {
+      "record": "reports/hw06/raw/part4/attempt-03/dream.command.json",
+      "returncode": 0
+    },
+    {
+      "record": "reports/hw06/raw/part4/attempt-03/commands-and-compact.command.json",
+      "returncode": 0
+    },
+    {
+      "record": "reports/hw06/raw/part4/attempt-03/restart-recall.command.json",
+      "returncode": 0
+    },
+    {
+      "record": "reports/hw06/raw/part4/attempt-03/dream-restart.command.json",
+      "returncode": 0
+    }
+  ],
+  "live_generation_events": 7,
+  "all_live_events_have_reported_usage": true,
+  "max_reported_prompt_tokens": 1364,
+  "final_live_checks": {
+    "all_four_commands": true,
+    "local_model_compact": true,
+    "independent_conflict_audit": true,
+    "restart_bytes_and_timestamp": true,
+    "restart_corrected_budget_date_and_unresolved_parking": true,
+    "dream_fact_with_user_quote_persisted": true,
+    "dream_recall_after_restart": true,
+    "shared_fact_correction_restart_file_side": true
+  },
+  "prior_attempts": {
+    "attempt-01": "Invalid model parking correction rejected; no write; all originals preserved.",
+    "attempt-02": "Consolidation passed; storage persisted; stove recall failed. Full evidence retained.",
+    "attempt-03": "Prompt/evidence fixes; all standalone final checks passed."
+  },
+  "pending": [
+    "A cherry-pick/integration and final acceptance",
+    "Observed comparison with MongoDB on the common scenario",
+    "Real terminal/application captures; show Pragya Apurva in every terminal screenshot",
+    "A final report and submission packaging; outside E scope"
+  ]
+}

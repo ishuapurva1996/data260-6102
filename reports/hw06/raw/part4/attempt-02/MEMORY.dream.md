@@ -1,0 +1,29 @@
+<!-- last_consolidated_utc: 2026-10-20T06:16:56.055115+00:00 -->
+- [F01] budget: 2200 USD | status=superseded | by=F02
+- [F02] budget: 2400 USD | corrects=F01 | status=current
+- [F03] move_in: 2026-11-01 | status=superseded | by=F04
+- [F04] move_in: 2026-12-01 | corrects=F03 | status=current
+- [F05] parking: required | status=unresolved
+- [F06] parking: unnecessary | status=unresolved
+- [F07,F08,F09,F10,F11,F12,F13,F14,F15,F16] neighborhood: Willow Glen
+- [F17,F18,F19,F20,F21,F22,F23,F24,F25,F26] pet: one cat
+- [F27,F28,F29,F30,F31,F32,F33,F34,F35,F36] access: step-free entry
+- [F37] bedrooms: two
+- [F38] lease: 12 months
+- [F39] smoking: non-smoking
+- [F40] laundry: in unit
+- [F41] commute: under 30 minutes
+- [F42] tour: Saturday morning
+- [F43] contact: email
+- [F44] deposit: at most one month rent
+- [F45] utilities: ask for itemization
+- [F46] noise: quiet evenings
+- [F47] floor: ground floor or elevator
+- [F48] bike: secure storage
+- [F49] documents: rental application checklist
+- [F50] listing_status: verify before touring
+- [F51] transit: near bus stop
+- [F52] workspace: desk space
+- [F53] sunlight: natural light
+- [F54] internet: reliable connection
+- [D07a290e291d0] stove: induction stove
