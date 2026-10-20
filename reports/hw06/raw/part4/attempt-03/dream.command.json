@@ -1,0 +1,23 @@
+{
+  "command": [
+    "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/runtime/venv/bin/python",
+    "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW6/worktrees/part4-memory-files/scripts/hw06/part4/cli.py",
+    "--agent-file",
+    "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW6/worktrees/part4-memory-files/AGENT.md",
+    "--memory-file",
+    "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/session-E/live-03/dream/MEMORY.md",
+    "--env-file",
+    "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/runtime/hw06.env",
+    "--runtime-dir",
+    "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/runtime",
+    "--telemetry-file",
+    "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/session-E/live-03/dream.telemetry.jsonl",
+    "--message",
+    "Please remember: I require an induction stove.",
+    "--message",
+    "/dream",
+    "--message",
+    "/memory"
+  ],
+  "returncode": 0
+}

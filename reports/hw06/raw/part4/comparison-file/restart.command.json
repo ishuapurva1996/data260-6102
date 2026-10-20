@@ -1,0 +1,22 @@
+{
+  "command": [
+    "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/runtime/venv/bin/python",
+    "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW6/worktrees/part4-memory-files/scripts/hw06/part4/cli.py",
+    "--agent-file",
+    "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW6/worktrees/part4-memory-files/AGENT.md",
+    "--memory-file",
+    "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/session-E/comparison-file-01/MEMORY.md",
+    "--env-file",
+    "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/runtime/hw06.env",
+    "--runtime-dir",
+    "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/runtime",
+    "--telemetry-file",
+    "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/session-E/comparison-file-01/restart.telemetry.jsonl",
+    "--message",
+    "/memory",
+    "--message",
+    "What are my current budget, neighborhood and pet requirement?"
+  ],
+  "returncode": 0,
+  "source_commit": "761d48cb36577fdc31b3b68855f2ae0a8bd57f9e"
+}

@@ -1,0 +1,14 @@
+{
+  "file_side_only": true,
+  "facts": [
+    "budget 2200 USD",
+    "neighborhood Willow Glen",
+    "pet one cat"
+  ],
+  "correction": "budget now 2400 USD replacing 2200 USD",
+  "fresh_process_restart": true,
+  "reloaded_bytes_equal_runtime": true,
+  "reply": "Based on the remembered data, your current requirements are:\n\n- Budget: 2400 USD (This replaces the previous budget of 2200 USD, as indicated in the evidence field.)\n- Neighborhood: Willow Glen\n- Pet: One cat\n\nIf you need to make any changes to these requirements, please let me know!",
+  "manual_assessment": "Correct: 2400 USD current; 2200 USD replaced; Willow Glen; one cat.",
+  "mongodb_side_observed": false
+}

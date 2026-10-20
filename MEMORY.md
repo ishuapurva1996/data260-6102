@@ -1,40 +1,13 @@
-<!-- last_consolidated_utc: 2026-10-19T06:00:00+00:00 -->
-- [F01] budget: 2200 USD
-- [F02] budget: 2400 USD | corrects=F01
-- [F03] move_in: 2026-11-01
-- [F04] move_in: 2026-12-01 | corrects=F03
-- [F05] parking: required
-- [F06] parking: unnecessary
-- [F07] neighborhood: Willow Glen
-- [F08] neighborhood: Willow Glen
-- [F09] neighborhood: Willow Glen
-- [F10] neighborhood: Willow Glen
-- [F11] neighborhood: Willow Glen
-- [F12] neighborhood: Willow Glen
-- [F13] neighborhood: Willow Glen
-- [F14] neighborhood: Willow Glen
-- [F15] neighborhood: Willow Glen
-- [F16] neighborhood: Willow Glen
-- [F17] pet: one cat
-- [F18] pet: one cat
-- [F19] pet: one cat
-- [F20] pet: one cat
-- [F21] pet: one cat
-- [F22] pet: one cat
-- [F23] pet: one cat
-- [F24] pet: one cat
-- [F25] pet: one cat
-- [F26] pet: one cat
-- [F27] access: step-free entry
-- [F28] access: step-free entry
-- [F29] access: step-free entry
-- [F30] access: step-free entry
-- [F31] access: step-free entry
-- [F32] access: step-free entry
-- [F33] access: step-free entry
-- [F34] access: step-free entry
-- [F35] access: step-free entry
-- [F36] access: step-free entry
+<!-- last_consolidated_utc: 2026-10-20T06:18:40.980911+00:00 -->
+- [F01] budget: 2200 USD | status=superseded | by=F02
+- [F02] budget: 2400 USD | corrects=F01 | status=current
+- [F03] move_in: 2026-11-01 | status=superseded | by=F04
+- [F04] move_in: 2026-12-01 | corrects=F03 | status=current
+- [F05] parking: required | status=unresolved
+- [F06] parking: unnecessary | status=unresolved
+- [F07,F08,F09,F10,F11,F12,F13,F14,F15,F16] neighborhood: Willow Glen
+- [F17,F18,F19,F20,F21,F22,F23,F24,F25,F26] pet: one cat
+- [F27,F28,F29,F30,F31,F32,F33,F34,F35,F36] access: step-free entry
 - [F37] bedrooms: two
 - [F38] lease: 12 months
 - [F39] smoking: non-smoking
