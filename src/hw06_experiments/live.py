@@ -18,7 +18,7 @@ from .runner import RequestFailed, StudyRunner, write_json
 from .validation import require
 
 SOURCE_PATHS = ("src", "code/web_application", "scripts", "tests", "memory_probes.yaml",
-                "requirements-hw06.txt", "requirements-hw06.lock.txt", "AGENT.md", "MEMORY.md")
+                "requirements-hw06.txt", "requirements-hw06.lock.txt", "AGENT.md", "MEMORY.md", "Makefile")
 RUNTIME_ROOT = Path("/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/runtime")
 
 

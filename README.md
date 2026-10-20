@@ -227,5 +227,29 @@ preserve the previous implementations and their results.
 
 The shared HW6 contracts and runtime setup are described in
 [HW6_FOUNDATION.md](docs/HW6_FOUNDATION.md). The four homework parts and integrated
-routes are developed after this foundation; the earlier application remains the
-baseline.
+routes extend the existing FastAPI factory. File memory stays a separate CLI.
+Launch the integrated service with external configuration and TLS:
+
+```sh
+python scripts/run_hw06_web.py --env-file /private/sql.env --env-file /private/hw06.env \
+  --runtime-dir /private/runtime --cert /private/cert.pem --key /private/key.pem \
+  --events /private/runtime/events.jsonl
+```
+
+The launcher holds the shared runtime lease and binds HTTPS port 8702. Existing
+login protects the document, chat, inspection, aggregate and configuration APIs.
+The objective smoke command starts its own leased instance, so stop an instance
+you own before using it:
+
+```sh
+python scripts/verify_hw06.py --env-file /private/sql.env --env-file /private/hw06.env \
+  --runtime-dir /private/runtime --cert /private/cert.pem --key /private/key.pem \
+  --work-dir /private/fresh-smoke-directory
+```
+
+It writes reports/hw06/verification.json, uses disposable namespaced records, and
+checks the declared application/experiment source hash before and after. Source
+must be committed first. Real acceptance and a single unscored N30 pilot use
+scripts/hw06/acceptance.py with the same arguments and --stage core, file,
+comparison, or pilot. These acceptance runs are separate from the four-condition
+measurement command documented in scripts/hw06/part3/README.md.

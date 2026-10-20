@@ -71,6 +71,7 @@ class CallEvent(BaseModel):
     completion_tokens: int | None = Field(default=None, ge=0)
     total_tokens: int | None = Field(default=None, ge=0)
     usage_source: Literal["model_reported", "missing", "not_applicable"] = "missing"
+    finish_reason: str | None = None
     components: TokenComponents | None = None
     component_text: PromptText | None = None
     config: dict[str, Any] = Field(default_factory=dict)

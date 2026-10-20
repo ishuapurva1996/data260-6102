@@ -4,7 +4,8 @@ import math
 from pathlib import Path
 import sys
 
-from fastapi import FastAPI
+from fastapi import Depends, FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import FileResponse, HTMLResponse, RedirectResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
@@ -28,7 +29,9 @@ def utc_now():
 
 
 def create_app(*, session_factory=None, clock=utc_now, idle_timeout=300,
-               frontend_dist=None) -> FastAPI:
+               frontend_dist=None, hw6_config=None, hw6_window_policy=None,
+               hw6_telemetry=None, hw6_connection=None, hw6_model=None,
+               hw6_embedder=None, hw6_count_tokens=None) -> FastAPI:
     if not math.isfinite(idle_timeout) or idle_timeout <= 0:
         raise ValueError("idle timeout must be positive and finite")
     app = FastAPI(title="Rental Housing Listings", version="5.0.0")
@@ -51,6 +54,28 @@ def create_app(*, session_factory=None, clock=utc_now, idle_timeout=300,
     app.include_router(performance.router)
     app.include_router(rentals.router)
     app.include_router(property_managers.router)
+
+    if hw6_config is not None:
+        from src.hw06_shared.runtime import build_runtime
+        from src.hw06_shared.errors import install_error_handlers
+        from web_application.routers import doc_rentals, chat
+        runtime = build_runtime(hw6_config, connection=hw6_connection,
+            model=hw6_model, embedder=hw6_embedder, count_tokens=hw6_count_tokens,
+            telemetry=hw6_telemetry, window_policy=hw6_window_policy)
+        app.state.hw6_runtime = runtime
+        app.add_event_handler('shutdown', runtime.close)
+        install_error_handlers(app)
+        app.add_middleware(CORSMiddleware, allow_origins=list(runtime.config.cors_origins),
+            allow_credentials=True, allow_methods=['GET', 'POST', 'PUT', 'DELETE'],
+            allow_headers=['Content-Type', 'X-HW6-Request-ID', 'X-HW6-Run-ID',
+                           'X-HW6-Condition', 'X-HW6-Turn-ID', 'X-HW6-Probe-ID', 'X-HW6-Phase'])
+        app.include_router(doc_rentals.create_router(runtime.document_service))
+        app.include_router(chat.create_router(runtime.chat_service))
+
+        @app.get('/api/hw06/config', dependencies=[Depends(auth.require_user)])
+        def hw6_configuration():
+            return {'config': runtime.config.public_dict(),
+                    'source_commit': runtime.config.source_commit, 'file_memory_enabled': False}
 
     @app.middleware("http")
     async def no_store_api(request, call_next):

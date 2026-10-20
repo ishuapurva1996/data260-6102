@@ -63,12 +63,18 @@ class MongoMemoryService:
                 counts['prompt_tokens'] + self.config.output_limit > self.config.context_window):
             raise ContextLimitExceeded()
 
+    @staticmethod
+    def _counts(result):
+        metadata = getattr(result.raw_response, 'response_metadata', None) or {}
+        return {**asdict(usage_counts(result)),
+                'finish_reason': metadata.get('done_reason', metadata.get('finish_reason'))}
+
     def _auxiliary(self, operation, system, data, context, user_id, session_id):
         started_at, timer, counts, error = self.clock(), perf_counter(), {}, None
         try:
             result = self._complete([('system', system),
                                      ('user', json.dumps(json_value(data), ensure_ascii=False))])
-            counts = asdict(usage_counts(result))
+            counts = self._counts(result)
             self._validate_result(result, counts)
             return result.content.strip()
         except HW6Error as exc:
@@ -154,7 +160,7 @@ class MongoMemoryService:
                     for name, text in parts.model_dump().items()},
                     tokenizer_identity=getattr(self.count_tokens, 'identity', None))
                 result = self._complete(messages)
-                counts = asdict(usage_counts(result))
+                counts = self._counts(result)
                 if counts['prompt_tokens'] is not None:
                     component_sum = sum(getattr(components, key) for key in type(parts).model_fields)
                     components.template_residual = counts['prompt_tokens'] - component_sum
