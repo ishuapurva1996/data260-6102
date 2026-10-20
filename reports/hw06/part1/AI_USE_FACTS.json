@@ -1,0 +1,10 @@
+{
+  "part": 1,
+  "student": "Pragya Apurva",
+  "recorded_at": "2026-10-20T06:16:04.984272+00:00",
+  "assistance": "Codex implemented the rental document models, validator, service, router, focused tests, capture command and these part-specific evidence notes. The user supplied the bounded Session B prompt, assignment and ownership rules. No unobserved human verification is claimed.",
+  "independently_verified_result": "The BSON encode/decode fixture independently exercises millisecond datetime storage. The actual in-process POST/GET/PUT checks require JSON responses to roundtrip consistently and require created_at to survive updates.",
+  "verification_method": "Recorded proof-first import failure before implementation, then ran 124 Part 1 cases plus shared/HW1/HW5 regressions: 255 passed, 45 SQL-dependent skipped. A separate shared-lease MongoDB ping timed out; a later committed-source probe honored another role lease and did not connect.",
+  "change_and_why": "Normalize timezone-aware inputs and server clocks to UTC milliseconds before writing, matching BSON precision. Reject client timestamps and update only user fields plus server updated_at so created_at remains unchanged.",
+  "limits": "Offline checks are not live assignment results. MongoDB CRUD/validator enforcement, existing HTTPS login, CORS, Compass/mongosh and successful operation screenshots remain for A after integration."
+}
