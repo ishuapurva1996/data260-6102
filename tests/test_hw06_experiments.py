@@ -4,6 +4,7 @@ from copy import deepcopy
 from datetime import datetime, timezone
 from decimal import Decimal
 import json
+from pathlib import Path
 
 import pytest
 
@@ -161,6 +162,30 @@ def test_scoring_export_is_unfilled_and_preserves_answers_and_rules(study, tmp_p
     with pytest.raises(ValueError, match="Offline fixtures"):
         export_metrics(path, target, tmp_path / "forbidden-table")
     assert not (tmp_path / "forbidden-table").exists()
+
+
+def test_public_export_reproduces_saved_measured_results_from_json(tmp_path):
+    """The saved scored JSON must work through the ordinary exporter, without an adapter."""
+    root = Path(__file__).resolve().parents[1]
+    study = root / "reports/hw06/raw/part3/measured-study"
+    scores = root / "reports/hw06/raw/part3/scores.json"
+    expected = root / "reports/hw06/part3/metrics"
+    output = tmp_path / "exported"
+    result = export_metrics(study, scores, output)
+    assert result["source_commit"] == "4c0bd7c2dd0bedeab73d6a31d9f5c3a83a84e961"
+    names = {"metrics.json", "memory_cost.csv", "memory_cost.md", "per_turn.csv",
+             "scores.json", "auxiliary_generation.json", "embeddings.json"}
+    assert {p.name for p in output.iterdir()} == names
+    assert all((output / name).read_bytes() == (expected / name).read_bytes() for name in names)
+
+
+def test_json_rubric_key_normalization_does_not_accept_changed_values(study):
+    path, _, _ = study
+    manifest, probes, joined = validate_study(path)
+    scores = json.loads(json.dumps(scored(manifest, probes, joined)))
+    scores["rubric"]["1"] = "changed scoring rule"
+    with pytest.raises(ValueError, match="Scoring design changed"):
+        calculate_metrics(manifest, probes, joined, scores)
 
 
 def test_arithmetic_excludes_probes_and_auxiliary_is_separate(study):

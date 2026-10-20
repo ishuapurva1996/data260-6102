@@ -2,7 +2,16 @@
 
 Use the repository root and A's pinned HW6 Python environment. These commands read stored evidence and the local frozen tokenizer; they do not contact the model or rerun the study. Use a fresh output directory each time.
 
-The accepted source's ordinary metrics CLI currently rejects a scored JSON round trip: JSON changes rubric integer keys into strings. The following in-process adapter converts exactly the five rubric key types back to integers and then calls the original validator and exporter. It leaves rubric values, answers, criteria, assigned scores and all calculation code unchanged. The adapter was used after measurement; measured source remained frozen.
+The measured application commit `4c0bd7c2dd0bedeab73d6a31d9f5c3a83a84e961` rejected a scored JSON round trip because JSON changes rubric integer keys into strings. The coordinator later fixed only that key-type comparison in `validate_scores`; the ordinary CLI now reproduces all seven saved exports byte for byte, without running the model or changing frozen inputs. Use a fresh external output directory:
+
+```bash
+python -B -m scripts.hw06.part3.export metrics \
+  --study reports/hw06/raw/part3/measured-study \
+  --scores reports/hw06/raw/part3/scores.json \
+  --output /absolute/new-export-directory
+```
+
+The in-process adapter below records how D verified results before that coordinator repair. It converts exactly the five rubric key types back to integers, then calls the original validator and exporter. It leaves rubric values, answers, criteria, assigned scores and calculation code unchanged. The adapter was used after measurement; measured application source remained frozen.
 
 ```bash
 PYTHONPATH=.:code python -B - metrics \
@@ -33,4 +42,4 @@ The output directory contains `metrics.json`, `memory_cost.csv`, `memory_cost.md
 
 The exported table uses only 30 primary requests for token/latency means and five probes for quality. Costs use primary main generation and primary extraction/session/lifetime summarization; embeddings have no assigned price. All raw records, including probes, remain available. No failed measured attempt was discarded: this study had zero failed attempts and zero reruns.
 
-Required coordinator repair: normalize rubric key types before the top-level equality comparison in `src/hw06_experiments/metrics.py:validate_scores`, and test a filled scoring template saved to JSON and loaded again through the public export entry point. That repair is separate from the frozen measured app.
+The coordinator repair and scored-JSON public-export regression check are separate from the frozen measured app. The seven regenerated files were byte-identical to the committed D exports.

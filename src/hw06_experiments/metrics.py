@@ -32,8 +32,16 @@ def scoring_template(manifest, probes, joined):
 
 
 def validate_scores(scores, template, probes):
-    require({k: v for k, v in scores.items() if k != "rows"} ==
-            {k: v for k, v in template.items() if k != "rows"}, "Scoring design changed")
+    score_design = {k: v for k, v in scores.items() if k != "rows"}
+    frozen_design = {k: v for k, v in template.items() if k != "rows"}
+    rubric = score_design.get("rubric")
+    frozen_rubric = frozen_design.get("rubric")
+    # JSON permits only string object keys; YAML preserves the frozen 1..5 integers.
+    if (isinstance(rubric, dict) and isinstance(frozen_rubric, dict)
+            and all(type(key) is int for key in frozen_rubric)
+            and set(rubric) == {str(key) for key in frozen_rubric}):
+        score_design["rubric"] = {int(key): value for key, value in rubric.items()}
+    require(score_design == frozen_design, "Scoring design changed")
     require(len(scores["rows"]) == 20, "Need exactly 20 scored probe answers")
     for row, frozen in zip(scores["rows"], template["rows"], strict=True):
         for key in ("condition", "probe_id", "request_id", "answer", "answer_sha256", "expected_answer"):
