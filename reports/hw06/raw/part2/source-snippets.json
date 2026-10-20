@@ -1,0 +1,58 @@
+[
+  {
+    "path": "code/web_application/routers/chat.py",
+    "function": "create_router",
+    "start": 11,
+    "end": 45,
+    "sha256": "04d88880ed5921652302fc1264644f685b09aabfdbed01a9708fb3d0516423ac",
+    "source": "def create_router(service, *, current_user_dependency=require_user):\n    router = APIRouter(prefix='/api', tags=['conversation memory'])\n    config = getattr(service, 'config', None)\n\n    @router.post('/chat', response_model=ChatResponse)\n    def chat(payload: ChatRequest, request: Request, response: Response,\n             principal=Depends(current_user_dependency)):\n        authorize_memory_user(payload.user_id, principal)\n        try:\n            context = request_context_from_headers(request.headers,\n                source_commit=getattr(config, 'source_commit', None))\n        except ValidationError:\n            raise HTTPException(422, 'Invalid HW6 experiment headers.') from None\n        response.headers['Cache-Control'] = 'no-store'\n        return service.chat(payload, context=context)\n\n    @router.get('/memory/{user_id}', response_model=MemorySnapshot,\n                description='Latest 16 records in the selected/latest session, latest summaries '\n                            'and last 20 user episodes. Lists oldest first.')\n    def memory(user_id: str, response: Response,\n               session_id: str | None = Query(None, min_length=1, max_length=200),\n               principal=Depends(current_user_dependency)):\n        authorize_memory_user(user_id, principal)\n        response.headers['Cache-Control'] = 'no-store'\n        return service.memory(user_id, session_id=session_id)\n\n    @router.get('/aggregate/{user_id}', response_model=AggregateResponse,\n                description='UTC daily counts of stored user AND assistant messages across '\n                            'all user sessions; latest 10 summaries newest first.')\n    def aggregate(user_id: str, response: Response, principal=Depends(current_user_dependency)):\n        authorize_memory_user(user_id, principal)\n        response.headers['Cache-Control'] = 'no-store'\n        return service.aggregate(user_id)\n\n    return router"
+  },
+  {
+    "path": "src/hw06_memory_mongo/service.py",
+    "function": "_window",
+    "start": 98,
+    "end": 111,
+    "sha256": "be9fa556a096faedafe0c5387ed61243a28bef591916ae8b9a2380fb5a2ba970",
+    "source": "    def _window(self, user_id, session_id, current):\n        candidates = self.storage.recent_messages(user_id, session_id,\n            self.config.short_term_n, exclude_id=current['id'])\n        if self.window_policy is None:\n            return candidates\n        selected = self.window_policy(deepcopy(candidates),\n            short_term_n=self.config.short_term_n, token_budget=self.config.token_budget,\n            count_tokens=self.count_tokens)\n        # Verify seam integrity, without implementing D's choice of retention.\n        remaining = iter(candidates)\n        for row in selected:\n            if not any(candidate == row for candidate in remaining):\n                raise HW6Error('Window policy changed or reordered source records')\n        return selected"
+  },
+  {
+    "path": "src/hw06_memory_mongo/service.py",
+    "function": "_update_summaries",
+    "start": 113,
+    "end": 133,
+    "sha256": "be9fa556a096faedafe0c5387ed61243a28bef591916ae8b9a2380fb5a2ba970",
+    "source": "    def _update_summaries(self, user_id, session_id, context):\n        count = self.storage.user_message_count(user_id, session_id)\n        if count % self.config.summarize_every_user_msgs:\n            return\n        previous = self.storage.latest_summary(user_id, 'session', session_id)\n        if previous and previous.get('user_message_count') == count:\n            return\n        messages = self.storage.summary_messages(user_id, session_id, previous)\n        text = self._auxiliary('session_summary', SESSION_PRIMER,\n            {'previous_summary': previous['text'] if previous else None,\n             'new_records': messages}, context, user_id, session_id)\n        self.storage.add_summary(user_id, session_id, 'session', text, self.clock(),\n            user_message_count=count, through_message={\n                'id': messages[-1]['id'], 'created_at': messages[-1]['created_at']})\n        sessions = self.storage.latest_session_summaries(user_id)\n        if len(sessions) < 2:\n            return\n        text = self._auxiliary('lifetime_summary', LIFETIME_PRIMER,\n            {'latest_session_summaries': sessions}, context, user_id, session_id)\n        self.storage.add_summary(user_id, None, 'user', text, self.clock(),\n            source_summary_ids=[row['id'] for row in sessions])"
+  },
+  {
+    "path": "src/hw06_memory_mongo/service.py",
+    "function": "_embed",
+    "start": 81,
+    "end": 96,
+    "sha256": "be9fa556a096faedafe0c5387ed61243a28bef591916ae8b9a2380fb5a2ba970",
+    "source": "    def _embed(self, text, operation, context, user_id, session_id):\n        started_at, timer, error, dimension = self.clock(), perf_counter(), None, None\n        try:\n            try:\n                vector = valid_vector(self.embedder(text), self.config.embedding_dimension)\n            except Exception:\n                raise ModelUnavailable() from None\n            dimension = len(vector)\n            return vector\n        except HW6Error as exc:\n            error = exc\n            raise\n        finally:\n            self._event(context, user_id, session_id, 'embedding', operation,\n                started_at, timer, error=error, usage_source='not_applicable',\n                input_count=1, embedding_dimension=dimension)"
+  },
+  {
+    "path": "src/hw06_memory_mongo/logic.py",
+    "function": "extract_facts",
+    "start": 41,
+    "end": 61,
+    "sha256": "04063d66077372c2ed83c7611dbe858bd87efabe65c6a5a409e6e6d7c738e782",
+    "source": "def extract_facts(text, user_message):\n    \"\"\"Reject malformed output and unsupported quotes; never ingest assistant text.\"\"\"\n    try:\n        data = json.loads(text)\n    except (ValueError, TypeError):\n        return []\n    if not isinstance(data, dict) or not isinstance(data.get('facts'), list):\n        return []\n    result, seen = [], set()\n    for item in data['facts']:\n        try:\n            fact = ExtractedFact.model_validate(item)\n        except ValidationError:\n            continue\n        if fact.evidence not in user_message or fact.fact.casefold() in seen:\n            continue\n        result.append(fact)\n        seen.add(fact.fact.casefold())\n        if len(result) == 3:\n            break\n    return result"
+  },
+  {
+    "path": "src/hw06_memory_mongo/logic.py",
+    "function": "rank_episodes",
+    "start": 84,
+    "end": 96,
+    "sha256": "04063d66077372c2ed83c7611dbe858bd87efabe65c6a5a409e6e6d7c738e782",
+    "source": "def rank_episodes(query, episodes, *, dimension, top_k):\n    unit_query = unit_vector(query, dimension)\n    scored = []\n    for episode in episodes:\n        try:\n            vector = unit_vector(episode['embedding'], dimension)\n            similarity = max(-1.0, min(1.0, sum(a * b for a, b in zip(unit_query, vector))))\n            scored.append(EpisodeUsed(**{key: episode[key] for key in\n                ('id', 'fact', 'importance', 'created_at')}, similarity=similarity))\n        except (ValueError, KeyError, TypeError):\n            continue\n    scored.sort(key=lambda row: (row.similarity, row.created_at, row.id), reverse=True)\n    return scored[:top_k]"
+  },
+  {
+    "path": "src/hw06_memory_mongo/logic.py",
+    "function": "assemble_prompt",
+    "start": 99,
+    "end": 106,
+    "sha256": "04063d66077372c2ed83c7611dbe858bd87efabe65c6a5a409e6e6d7c738e782",
+    "source": "def assemble_prompt(window, session_summary, lifetime_summary, episodes, message):\n    parts = PromptText(system=SYSTEM_PRIMER,\n        session_summary=session_summary['text'] if session_summary else '',\n        lifetime_summary=lifetime_summary['text'] if lifetime_summary else '',\n        window=render_window(window),\n        episodes='\\n'.join(row.fact for row in episodes), current_message=message)\n    data = {key: value for key, value in parts.model_dump().items() if key != 'system'}\n    return [('system', parts.system), ('user', json.dumps(data, ensure_ascii=False))], parts"
+  }
+]

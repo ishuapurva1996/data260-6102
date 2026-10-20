@@ -1,0 +1,22 @@
+{
+  "student": "Pragya Apurva",
+  "kind": "part2_live_acceptance",
+  "started_at": "2026-10-20T06:14:01.945897+00:00",
+  "runner_source_commit": "16453295470c81cc2300c1efd3ffa92181390568",
+  "status": "blocked",
+  "checks": {
+    "mongodb": {
+      "ok": false,
+      "error_type": "ServerSelectionTimeoutError"
+    }
+  },
+  "http_calls": [],
+  "pending": [
+    "A must provision the configured s6102_doc MongoDB instance.",
+    "Mount C routes with the shared database and real SQL authentication.",
+    "Rerun this command with HTTPS/login; capture 10+5+1 real replies, memory, aggregate, collection documents, restart persistence, second-user isolation and screenshots."
+  ],
+  "count_semantics": "UTC daily counts include stored user and assistant messages, all user sessions",
+  "latency_semantics": "http_latency_ms includes transport/auth/serialization and all memory work",
+  "finished_at": "2026-10-20T06:14:03.985033+00:00"
+}
