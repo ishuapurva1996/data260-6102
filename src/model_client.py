@@ -13,6 +13,7 @@ class TokenUsage:
     input_tokens: int
     output_tokens: int
     total_tokens: int
+    reported: bool = True
 
 
 @dataclass
@@ -58,7 +59,14 @@ def _token_usage(response: Any) -> TokenUsage:
     if total_tokens == 0:
         total_tokens = input_tokens + output_tokens
 
-    return TokenUsage(input_tokens, output_tokens, total_tokens)
+    reported = all(
+        isinstance(usage.get(key, metadata.get(legacy)), int)
+        and not isinstance(usage.get(key, metadata.get(legacy)), bool)
+        and usage.get(key, metadata.get(legacy)) >= 0
+        for key, legacy in (("input_tokens", "prompt_eval_count"),
+                            ("output_tokens", "eval_count"))
+    )
+    return TokenUsage(input_tokens, output_tokens, total_tokens, reported=reported)
 
 
 class OllamaModelClient:
@@ -98,9 +106,14 @@ def build_ollama_client(
     *,
     response_format: str | None = None,
     reasoning: bool | None = None,
+    context_window: int = 4096,
+    output_limit: int | None = None,
+    seed: int | None = None,
 ) -> OllamaModelClient:
     """Create the LangChain Ollama implementation behind the stable adapter."""
 
+    if context_window <= 0 or (output_limit is not None and not 0 < output_limit < context_window):
+        raise ValueError("Context/output limits must be positive and output must fit context")
     try:
         from langchain_ollama import ChatOllama
     except ImportError as exc:
@@ -113,10 +126,14 @@ def build_ollama_client(
         "model": model_name,
         "temperature": temperature,
         "base_url": base_url,
-        "num_ctx": 4096,
+        "num_ctx": context_window,
         "sync_client_kwargs": {"timeout": timeout},
         "async_client_kwargs": {"timeout": timeout},
     }
+    if output_limit is not None:
+        kwargs["num_predict"] = output_limit
+    if seed is not None:
+        kwargs["seed"] = seed
     if response_format is not None:
         kwargs["format"] = response_format
     if reasoning is not None:

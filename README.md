@@ -222,3 +222,10 @@ The [HW4 report](reports/hw04/report.pdf), [metrics](reports/hw04/METRICS.md),
 form the previous HW4 submission. The [HW3 report](reports/hw03/report.pdf),
 [HW3 verification](reports/hw03/verification.json), and earlier homework tags
 preserve the previous implementations and their results.
+
+# HW6 foundation
+
+The shared HW6 contracts and runtime setup are described in
+[HW6_FOUNDATION.md](docs/HW6_FOUNDATION.md). The four homework parts and integrated
+routes are developed after this foundation; the earlier application remains the
+baseline.

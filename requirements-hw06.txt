@@ -1,0 +1,6 @@
+# Compatible web + HW1 adapter environment. Python 3.12.
+-r requirements.txt
+langchain-ollama==1.1.0
+pymongo==4.10.1
+tokenizers==0.21.4
+PyYAML==6.0.2
