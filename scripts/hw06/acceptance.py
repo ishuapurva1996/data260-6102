@@ -74,9 +74,12 @@ def file_checks(config, work):
     result['independent_conflict_audit'] = audit(original, consolidated, expected)
     if not result['independent_conflict_audit']['passed']:
         raise RuntimeError('Independent consolidation audit failed')
-    user = {'id':'integrated-stove', 'role':'user', 'content':'I require an induction stove in any rental.',
+    user = {'id':uuid4().hex, 'role':'user', 'content':'Please remember: I require an induction stove.',
             'user_id':'file-local','session_id':'file-local','created_at':utc_now()}
-    dream = engine.handle('/dream', recent_messages=[user])
+    reply = engine.handle(user['content'])
+    result['conversation'] = {'user':user['content'], 'response':reply}
+    assistant = {**user, 'id':uuid4().hex, 'role':'assistant','content':reply['reply']}
+    dream = engine.handle('/dream', recent_messages=[user,assistant])
     result['commands'].append({'command':'/dream','result':dream})
     if 'error' in dream or dream.get('added_entries',0) < 1:
         save(work/'file-result.json', result)
