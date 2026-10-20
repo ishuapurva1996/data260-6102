@@ -1,0 +1,64 @@
+{
+  "student": "Pragya Apurva",
+  "part": 1,
+  "started_at": "2026-10-20T06:12:26.078387Z",
+  "status": "blocked",
+  "evidence_kind": "real_availability_probe",
+  "source": {
+    "commit": "51cfd410400683acf7cf9f7bb88a9581ba3834bb",
+    "sha256": {
+      "src/hw06_documents/__init__.py": "722a58fe24196163ca686a456ff893185148e00e01b936c1d576f6f1dc937ddd",
+      "src/hw06_documents/schemas.py": "612f75882d313effdc1650adc1e9303088b3265268a047e6e89e38a9afc34c3b",
+      "src/hw06_documents/service.py": "76a8beb1595f5dcef53904128781d891842db35d21fdcc1af9b2f63e2ac5bd02",
+      "src/hw06_documents/validation.py": "a349a8ed43243b8f7b007639b058d8987402f635b75b8d0e85299643f69d5ee9",
+      "code/web_application/routers/doc_rentals.py": "911d12dc4fb44f6f0921dc4591f94ff2e729d0b835e153b5fd629f57dff4b057",
+      "scripts/hw06/part1/verify.py": "84eed458e504e35d4a59afd44f22847710c17bd03e7c3bd8a57596e78534c168"
+    }
+  },
+  "tools": {
+    "mongosh": null,
+    "mongod": null
+  },
+  "config": {
+    "sid4": 6102,
+    "port": 8702,
+    "prefix": "s6102",
+    "seed": 6102,
+    "verify_seed": 266102,
+    "domain_id": 6,
+    "database_name": "s6102_doc",
+    "mongo_timeout_ms": 2000,
+    "model": "qwen2.5:7b",
+    "model_digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+    "source_commit": "51cfd410400683acf7cf9f7bb88a9581ba3834bb",
+    "ollama_url": "http://127.0.0.1:11434",
+    "temperature": 0.0,
+    "context_window": 4096,
+    "output_limit": 512,
+    "model_timeout": 180.0,
+    "short_term_n": 12,
+    "summarize_every_user_msgs": 5,
+    "top_k": 3,
+    "policy": "baseline",
+    "token_budget": 160,
+    "embedding_model": "nomic-embed-text:v1.5",
+    "embedding_digest": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+    "embedding_dimension": 768,
+    "tokenizer_path": "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/runtime/qwen2.5-tokenizer.json",
+    "tokenizer_sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+    "cors_origins": [
+      "https://localhost:8702",
+      "https://127.0.0.1:8702"
+    ]
+  },
+  "mongodb": {
+    "reachable": false,
+    "database": "s6102_doc",
+    "error_type": "ServerSelectionTimeoutError"
+  },
+  "pending": [
+    "A must provision/start shared MongoDB and rerun full acceptance.",
+    "Capture actual CRUD/invalid responses and Compass or mongosh sample view."
+  ],
+  "finished_at": "2026-10-20T06:12:28.112726Z"
+}

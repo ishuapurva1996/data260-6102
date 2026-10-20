@@ -1,0 +1,85 @@
+{
+  "tested_code_commit": "af1dc160918d8e8ba9e04dbba1a6f099580d4791",
+  "snippets": [
+    {
+      "requirement": "Input rules and UTC normalization",
+      "path": "src/hw06_documents/schemas.py",
+      "start_line": 14,
+      "end_line": 48,
+      "sha256": "612f75882d313effdc1650adc1e9303088b3265268a047e6e89e38a9afc34c3b",
+      "snippet": "def bson_utc(value: datetime) -> datetime:\n    \"\"\"Match PyMongo's millisecond storage so POST, PUT and GET agree exactly.\"\"\"\n    if value.tzinfo is None or value.utcoffset() is None:\n        raise ValueError(\"Date/time must include a timezone\")\n    value = value.astimezone(timezone.utc)\n    return value.replace(microsecond=value.microsecond // 1000 * 1000)\n\n\nclass RentalFields(BaseModel):\n    model_config = ConfigDict(extra=\"forbid\")\n\n    listingTitle: Annotated[str, Field(strict=True, min_length=1, max_length=100)]\n    description: Annotated[str | None, Field(strict=True, max_length=5000)] = None\n    status: Status = \"available\"\n    propertyType: PropertyType\n    availableFrom: AwareDatetime\n\n    @field_validator(\"listingTitle\", mode=\"before\")\n    @classmethod\n    def trim_title(cls, value):\n        return value.strip() if isinstance(value, str) else value\n\n    @field_validator(\"availableFrom\", mode=\"before\")\n    @classmethod\n    def require_iso_datetime(cls, value):\n        if isinstance(value, datetime):\n            return value\n        if not isinstance(value, str) or ISO_DATETIME.fullmatch(value) is None:\n            raise ValueError(\"Use ISO 8601 YYYY-MM-DDTHH:MM:SS[.ffffff]Z or an explicit \u00b1HH:MM offset\")\n        return value\n\n    @field_validator(\"availableFrom\")\n    @classmethod\n    def normalize_utc(cls, value):\n        return bson_utc(value)",
+      "corresponding_available_output": "reports/hw06/raw/part1/offline-regression.txt",
+      "pending_output": "Real integrated HTTP/MongoDB response and screenshot required."
+    },
+    {
+      "requirement": "Create/update/response schemas",
+      "path": "src/hw06_documents/schemas.py",
+      "start_line": 51,
+      "end_line": 62,
+      "sha256": "612f75882d313effdc1650adc1e9303088b3265268a047e6e89e38a9afc34c3b",
+      "snippet": "class RentalCreate(RentalFields):\n    \"\"\"Server assigns the identifier and both timestamps; those inputs are forbidden.\"\"\"\n\n\nclass RentalUpdate(RentalFields):\n    \"\"\"Full PUT: all required fields; omitted status/description reset to defaults.\"\"\"\n\n\nclass RentalResponse(RentalFields):\n    id: str = Field(pattern=r\"^[0-9a-f]{24}$\")\n    created_at: AwareDatetime\n    updated_at: AwareDatetime",
+      "corresponding_available_output": "reports/hw06/raw/part1/offline-regression.txt",
+      "pending_output": "Real integrated HTTP/MongoDB response and screenshot required."
+    },
+    {
+      "requirement": "Stored BSON validation",
+      "path": "src/hw06_documents/validation.py",
+      "start_line": 3,
+      "end_line": 29,
+      "sha256": "a349a8ed43243b8f7b007639b058d8987402f635b75b8d0e85299643f69d5ee9",
+      "snippet": "# Python str.strip()'s whitespace set, explicit because MongoDB's PCRE defaults\n# need not classify Unicode whitespace the same way as Python.\nNONSPACE = (r\"[^\\x09-\\x0d\\x1c-\\x20\" \"\\u0085\\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000]\")\n\nRENTAL_VALIDATOR = {\n    \"$jsonSchema\": {\n        \"bsonType\": \"object\",\n        \"title\": \"Rental listing\",\n        \"additionalProperties\": False,\n        \"required\": [\"listingTitle\", \"status\", \"propertyType\", \"availableFrom\", \"created_at\", \"updated_at\"],\n        \"properties\": {\n            \"_id\": {\"bsonType\": \"objectId\"},\n            \"listingTitle\": {\n                \"bsonType\": \"string\", \"minLength\": 1, \"maxLength\": 100,\n                # The negative lookahead anchors the absolute end, including a final newline.\n                \"pattern\": rf\"\\A{NONSPACE}(?:[\\s\\S]*{NONSPACE})?(?![\\s\\S])\",\n                \"description\": \"Required trimmed nonblank title, at most 100 characters\",\n            },\n            \"description\": {\"bsonType\": [\"string\", \"null\"], \"maxLength\": 5000},\n            \"status\": {\"bsonType\": \"string\", \"enum\": [\"available\", \"reserved\", \"rented\"]},\n            \"propertyType\": {\"bsonType\": \"string\", \"enum\": [\"apartment\", \"house\", \"condo\", \"townhouse\"]},\n            \"availableFrom\": {\"bsonType\": \"date\"},\n            \"created_at\": {\"bsonType\": \"date\"},\n            \"updated_at\": {\"bsonType\": \"date\"},\n        },\n    }\n}",
+      "corresponding_available_output": "reports/hw06/raw/part1/offline-regression.txt",
+      "pending_output": "Real integrated HTTP/MongoDB response and screenshot required."
+    },
+    {
+      "requirement": "Storage and unexpected errors",
+      "path": "src/hw06_documents/service.py",
+      "start_line": 45,
+      "end_line": 61,
+      "sha256": "0e37c8c3d86caa5242a37232a8be9e24514f15cce02a9f9821db16f43156b541",
+      "snippet": "    @contextmanager\n    def _operation(self, operation):\n        try:\n            yield\n        except HW6Error:\n            raise\n        except Exception as error:\n            if isinstance(error, OperationFailure) and error.code == 121:\n                public_error = DocumentValidationFailed()\n            elif isinstance(error, PyMongoError):\n                public_error = StorageUnavailable()\n            else:\n                public_error = HW6Error()\n            # Never log exception text or traceback: driver errors can contain credentials.\n            logger.error(\"hw06_documents operation=%s code=%s error_type=%s\", operation,\n                         public_error.code, type(error).__name__)\n            raise public_error from None",
+      "corresponding_available_output": "reports/hw06/raw/part1/offline-regression.txt",
+      "pending_output": "Real integrated HTTP/MongoDB response and screenshot required."
+    },
+    {
+      "requirement": "Collection setup preserving existing data",
+      "path": "src/hw06_documents/service.py",
+      "start_line": 63,
+      "end_line": 81,
+      "sha256": "0e37c8c3d86caa5242a37232a8be9e24514f15cce02a9f9821db16f43156b541",
+      "snippet": "    def prepare_collection(self):\n        \"\"\"Create or update validation without deleting/migrating any existing rows.\n\n        Lazy and retryable on failure. A may also call this explicitly at startup.\n        Existing invalid records are not retroactively rewritten by collMod.\n        \"\"\"\n        with self._operation(\"prepare_collection\"), self._prepare_lock:\n            if self._prepared:\n                return\n            options = dict(validator=RENTAL_VALIDATOR, validationLevel=\"strict\", validationAction=\"error\")\n            try:\n                self.database.create_collection(\"rentals\", **options)\n            except CollectionInvalid:\n                self.database.command(\"collMod\", \"rentals\", **options)\n            except OperationFailure as error:\n                if error.code != 48:  # Concurrent creator: NamespaceExists.\n                    raise\n                self.database.command(\"collMod\", \"rentals\", **options)\n            self._prepared = True",
+      "corresponding_available_output": "reports/hw06/raw/part1/offline-regression.txt",
+      "pending_output": "Real integrated HTTP/MongoDB response and screenshot required."
+    },
+    {
+      "requirement": "Create, list and detail",
+      "path": "src/hw06_documents/service.py",
+      "start_line": 98,
+      "end_line": 117,
+      "sha256": "0e37c8c3d86caa5242a37232a8be9e24514f15cce02a9f9821db16f43156b541",
+      "snippet": "    def create(self, payload: RentalCreate) -> RentalResponse:\n        with self._operation(\"create\"):\n            self.prepare_collection()\n            now = bson_utc(self.clock())\n            document = {**payload.model_dump(), \"created_at\": now, \"updated_at\": now}\n            result = self.collection.insert_one(document)\n            document[\"_id\"] = result.inserted_id\n            return self._response(document)\n\n    def list(self) -> list[RentalResponse]:\n        with self._operation(\"list\"):\n            self.prepare_collection()\n            return [self._response(document) for document in\n                    self.collection.find().sort([(\"created_at\", 1), (\"_id\", 1)])]\n\n    def get(self, identifier: str) -> RentalResponse:\n        oid = self._object_id(identifier)\n        with self._operation(\"get\"):\n            self.prepare_collection()\n            return self._response(self.collection.find_one({\"_id\": oid}))",
+      "corresponding_available_output": "reports/hw06/raw/part1/offline-regression.txt",
+      "pending_output": "Real integrated HTTP/MongoDB response and screenshot required."
+    },
+    {
+      "requirement": "Full PUT preserving created_at and DELETE",
+      "path": "src/hw06_documents/service.py",
+      "start_line": 119,
+      "end_line": 133,
+      "sha256": "0e37c8c3d86caa5242a37232a8be9e24514f15cce02a9f9821db16f43156b541",
+      "snippet": "    def update(self, identifier: str, payload: RentalUpdate) -> RentalResponse:\n        oid = self._object_id(identifier)\n        with self._operation(\"update\"):\n            self.prepare_collection()\n            document = self.collection.find_one_and_update(\n                {\"_id\": oid}, {\"$set\": {**payload.model_dump(), \"updated_at\": bson_utc(self.clock())}},\n                return_document=ReturnDocument.AFTER)\n            return self._response(document)\n\n    def delete(self, identifier: str) -> None:\n        oid = self._object_id(identifier)\n        with self._operation(\"delete\"):\n            self.prepare_collection()\n            if self.collection.delete_one({\"_id\": oid}).deleted_count == 0:\n                raise DocumentNotFound()",
+      "corresponding_available_output": "reports/hw06/raw/part1/offline-regression.txt",
+      "pending_output": "Real integrated HTTP/MongoDB response and screenshot required."
+    },
+    {
+      "requirement": "Authenticated five-route router",
+      "path": "code/web_application/routers/doc_rentals.py",
+      "start_line": 10,
+      "end_line": 35,
+      "sha256": "911d12dc4fb44f6f0921dc4591f94ff2e729d0b835e153b5fd629f57dff4b057",
+      "snippet": "def create_router(service: DocumentService, *, current_user_dependency=require_user) -> APIRouter:\n    router = APIRouter(prefix=\"/api/doc-rentals\", tags=[\"document rentals\"],\n                       dependencies=[Depends(current_user_dependency)])\n\n    @router.post(\"\", response_model=RentalResponse, status_code=201)\n    def create_rental(payload: RentalCreate):\n        return service.create(payload)\n\n    @router.get(\"\", response_model=list[RentalResponse])\n    def list_rentals():\n        return service.list()\n\n    @router.get(\"/{rental_id}\", response_model=RentalResponse)\n    def get_rental(rental_id: str):\n        return service.get(rental_id)\n\n    @router.put(\"/{rental_id}\", response_model=RentalResponse)\n    def update_rental(rental_id: str, payload: RentalUpdate):\n        return service.update(rental_id, payload)\n\n    @router.delete(\"/{rental_id}\", status_code=204)\n    def delete_rental(rental_id: str):\n        service.delete(rental_id)\n        return Response(status_code=204)\n\n    return router",
+      "corresponding_available_output": "reports/hw06/raw/part1/offline-regression.txt",
+      "pending_output": "Real integrated HTTP/MongoDB response and screenshot required."
+    }
+  ]
+}

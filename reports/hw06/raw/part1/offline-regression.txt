@@ -1,0 +1,30 @@
+Pragya Apurva | Session B | final-regression
+Started UTC: 2026-10-20T06:15:17.541584+00:00
+Command: ['/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/runtime/venv/bin/python', '-m', 'pytest', 'tests/test_hw06_documents.py', 'tests/test_hw06_documents_edges.py', 'tests/test_hw06_foundation.py', 'reports/hw01/tests/test_model_client.py', 'reports/hw01/tests/test_hw1_client.py', 'reports/hw01/tests/test_agents_demo.py', 'tests/test_hw04_serving.py', 'tests/test_hw05_api.py', 'tests/test_hw05_agent.py', '-q', '-p', 'no:cacheprovider', '--junitxml', '/Users/pragyaapurva/code/agent_outputs/data260-hw6/part1-documents/final-regression.junit.xml']
+........................................................................ [ 24%]
+........................................................................ [ 48%]
+......................................ssssssssssssssssssssssssssssssssss [ 72%]
+sssssssssss............................................................. [ 96%]
+............                                                             [100%]
+=============================== warnings summary ===============================
+../../../../../../code/agent_outputs/data260-hw6/parallel-prompts/runtime/venv/lib/python3.12/site-packages/starlette/formparsers.py:10
+  /Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/runtime/venv/lib/python3.12/site-packages/starlette/formparsers.py:10: PendingDeprecationWarning: Please use `import python_multipart` instead.
+    import multipart
+
+../../../../../../code/agent_outputs/data260-hw6/parallel-prompts/runtime/venv/lib/python3.12/site-packages/starlette/testclient.py:31
+  /Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/runtime/venv/lib/python3.12/site-packages/starlette/testclient.py:31: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    [], typing.ContextManager[anyio.abc.BlockingPortal]
+
+tests/test_hw06_documents.py: 86 warnings
+tests/test_hw06_documents_edges.py: 1 warning
+tests/test_hw06_foundation.py: 1 warning
+tests/test_hw04_serving.py: 14 warnings
+  /Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/runtime/venv/lib/python3.12/site-packages/httpx/_client.py:690: DeprecationWarning: The 'app' shortcut is now deprecated. Use the explicit style 'transport=WSGITransport(app=...)' instead.
+    warnings.warn(message, DeprecationWarning)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /Users/pragyaapurva/code/agent_outputs/data260-hw6/part1-documents/final-regression.junit.xml -
+255 passed, 45 skipped, 104 warnings in 1.29s
+
+Exit: 0
+Finished UTC: 2026-10-20T06:15:19.221440+00:00

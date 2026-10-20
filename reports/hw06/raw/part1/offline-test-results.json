@@ -1,0 +1,674 @@
+{
+  "label": "final-regression",
+  "command": [
+    "/Users/pragyaapurva/code/agent_outputs/data260-hw6/parallel-prompts/runtime/venv/bin/python",
+    "-m",
+    "pytest",
+    "tests/test_hw06_documents.py",
+    "tests/test_hw06_documents_edges.py",
+    "tests/test_hw06_foundation.py",
+    "reports/hw01/tests/test_model_client.py",
+    "reports/hw01/tests/test_hw1_client.py",
+    "reports/hw01/tests/test_agents_demo.py",
+    "tests/test_hw04_serving.py",
+    "tests/test_hw05_api.py",
+    "tests/test_hw05_agent.py",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "--junitxml",
+    "/Users/pragyaapurva/code/agent_outputs/data260-hw6/part1-documents/final-regression.junit.xml"
+  ],
+  "cwd": "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW6/worktrees/part1-documents",
+  "started_at": "2026-10-20T06:15:17.541584+00:00",
+  "finished_at": "2026-10-20T06:15:19.221752+00:00",
+  "exit_code": 0,
+  "log": "reports/hw06/raw/part1/offline-regression.txt",
+  "evidence_kind": "offline_engineering_check",
+  "source_commit": "af1dc160918d8e8ba9e04dbba1a6f099580d4791",
+  "source_sha256": {
+    "src/hw06_documents/service.py": "0e37c8c3d86caa5242a37232a8be9e24514f15cce02a9f9821db16f43156b541",
+    "src/hw06_documents/__init__.py": "722a58fe24196163ca686a456ff893185148e00e01b936c1d576f6f1dc937ddd",
+    "src/hw06_documents/schemas.py": "612f75882d313effdc1650adc1e9303088b3265268a047e6e89e38a9afc34c3b",
+    "src/hw06_documents/validation.py": "a349a8ed43243b8f7b007639b058d8987402f635b75b8d0e85299643f69d5ee9",
+    "scripts/hw06/part1/__init__.py": "a824a4b3690d95a599489a6b5a604d13c3a2cce5ad6763da6a2c5a03d8b21a2f",
+    "scripts/hw06/part1/verify.py": "01970f4bcdd976607e1277e0fbe03640da24a5ee3399f4aaa4f352eaae258d1c",
+    "code/web_application/routers/doc_rentals.py": "911d12dc4fb44f6f0921dc4591f94ff2e729d0b835e153b5fd629f57dff4b057"
+  },
+  "summary": {
+    "passed": 255,
+    "skipped": 45,
+    "failed": 0
+  },
+  "focused_part1": {
+    "passed": 124,
+    "failed": 0,
+    "cases": [
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_happy_crud_defaults_utc_and_full_put",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_defaults_and_millisecond_roundtrip",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_invalid_input_does_not_write[listingTitle-None-POST]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_invalid_input_does_not_write[listingTitle-None-PUT]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_invalid_input_does_not_write[listingTitle--POST]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_invalid_input_does_not_write[listingTitle--PUT]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_invalid_input_does_not_write[listingTitle- \\t\\n-POST]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_invalid_input_does_not_write[listingTitle- \\t\\n-PUT]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_invalid_input_does_not_write[listingTitle-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-POST]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_invalid_input_does_not_write[listingTitle-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-PUT]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_invalid_input_does_not_write[listingTitle-123-POST]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_invalid_input_does_not_write[listingTitle-123-PUT]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_invalid_input_does_not_write[listingTitle-value5-POST]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_invalid_input_does_not_write[listingTitle-value5-PUT]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_invalid_input_does_not_write[description-123-POST]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_invalid_input_does_not_write[description-123-PUT]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_invalid_input_does_not_write[description-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-POST]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_invalid_input_does_not_write[description-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-PUT]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_invalid_input_does_not_write[status-pending-POST]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_invalid_input_does_not_write[status-pending-PUT]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_invalid_input_does_not_write[status-None-POST]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_invalid_input_does_not_write[status-None-PUT]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_invalid_input_does_not_write[status-1-POST]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_invalid_input_does_not_write[status-1-PUT]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_invalid_input_does_not_write[propertyType-castle-POST]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_invalid_input_does_not_write[propertyType-castle-PUT]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_invalid_input_does_not_write[propertyType-None-POST]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_invalid_input_does_not_write[propertyType-None-PUT]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_invalid_input_does_not_write[propertyType-value13-POST]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_invalid_input_does_not_write[propertyType-value13-PUT]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_invalid_input_does_not_write[availableFrom-None-POST]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_invalid_input_does_not_write[availableFrom-None-PUT]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_invalid_input_does_not_write[availableFrom-bad-date-POST]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_invalid_input_does_not_write[availableFrom-bad-date-PUT]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_invalid_input_does_not_write[availableFrom-2026-02-30T12:00:00Z-POST]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_invalid_input_does_not_write[availableFrom-2026-02-30T12:00:00Z-PUT]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_invalid_input_does_not_write[availableFrom-2026-11-01-POST]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_invalid_input_does_not_write[availableFrom-2026-11-01-PUT]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_invalid_input_does_not_write[availableFrom-2026-11-01T09:30:00-POST]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_invalid_input_does_not_write[availableFrom-2026-11-01T09:30:00-PUT]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_invalid_input_does_not_write[availableFrom-1793520000-POST]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_invalid_input_does_not_write[availableFrom-1793520000-PUT]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_invalid_input_does_not_write[availableFrom-True-POST]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_invalid_input_does_not_write[availableFrom-True-PUT]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_invalid_input_does_not_write[availableFrom-value21-POST]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_invalid_input_does_not_write[availableFrom-value21-PUT]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_invalid_input_does_not_write[created_at-2000-01-01T00:00:00Z-POST]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_invalid_input_does_not_write[created_at-2000-01-01T00:00:00Z-PUT]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_invalid_input_does_not_write[updated_at-2000-01-01T00:00:00Z-POST]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_invalid_input_does_not_write[updated_at-2000-01-01T00:00:00Z-PUT]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_invalid_input_does_not_write[id-507f1f77bcf86cd799439011-POST]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_invalid_input_does_not_write[id-507f1f77bcf86cd799439011-PUT]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_invalid_input_does_not_write[_id-507f1f77bcf86cd799439011-POST]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_invalid_input_does_not_write[_id-507f1f77bcf86cd799439011-PUT]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_required_fields[listingTitle-POST]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_required_fields[listingTitle-PUT]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_required_fields[propertyType-POST]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_required_fields[propertyType-PUT]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_required_fields[availableFrom-POST]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_required_fields[availableFrom-PUT]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_malformed_ids[bad-GET]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_malformed_ids[bad-PUT]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_malformed_ids[bad-DELETE]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_malformed_ids[00000000000000000000000-GET]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_malformed_ids[00000000000000000000000-PUT]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_malformed_ids[00000000000000000000000-DELETE]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_malformed_ids[zzzzzzzzzzzzzzzzzzzzzzzz-GET]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_malformed_ids[zzzzzzzzzzzzzzzzzzzzzzzz-PUT]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_malformed_ids[zzzzzzzzzzzzzzzzzzzzzzzz-DELETE]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_missing_records[GET]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_missing_records[PUT]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_missing_records[DELETE]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_title_limit_is_after_trimming_and_unicode_is_text",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_unavailable_storage_is_sanitized[POST-setup]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_unavailable_storage_is_sanitized[POST-crud]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_unavailable_storage_is_sanitized[GET-setup]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_unavailable_storage_is_sanitized[GET-crud]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_unavailable_storage_is_sanitized[PUT-setup]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_unavailable_storage_is_sanitized[PUT-crud]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_unavailable_storage_is_sanitized[DELETE-setup]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_unavailable_storage_is_sanitized[DELETE-crud]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_storage_validation_error_and_unexpected_failure",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_collection_validator_installed_without_removing_documents[False]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_collection_validator_installed_without_removing_documents[True]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_all_routes_require_authentication",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents",
+        "name": "test_invalid_json_is_rejected_before_storage",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents_edges",
+        "name": "test_all_categorical_options[apartment-available-RentalCreate]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents_edges",
+        "name": "test_all_categorical_options[apartment-available-RentalUpdate]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents_edges",
+        "name": "test_all_categorical_options[apartment-reserved-RentalCreate]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents_edges",
+        "name": "test_all_categorical_options[apartment-reserved-RentalUpdate]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents_edges",
+        "name": "test_all_categorical_options[apartment-rented-RentalCreate]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents_edges",
+        "name": "test_all_categorical_options[apartment-rented-RentalUpdate]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents_edges",
+        "name": "test_all_categorical_options[house-available-RentalCreate]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents_edges",
+        "name": "test_all_categorical_options[house-available-RentalUpdate]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents_edges",
+        "name": "test_all_categorical_options[house-reserved-RentalCreate]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents_edges",
+        "name": "test_all_categorical_options[house-reserved-RentalUpdate]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents_edges",
+        "name": "test_all_categorical_options[house-rented-RentalCreate]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents_edges",
+        "name": "test_all_categorical_options[house-rented-RentalUpdate]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents_edges",
+        "name": "test_all_categorical_options[condo-available-RentalCreate]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents_edges",
+        "name": "test_all_categorical_options[condo-available-RentalUpdate]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents_edges",
+        "name": "test_all_categorical_options[condo-reserved-RentalCreate]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents_edges",
+        "name": "test_all_categorical_options[condo-reserved-RentalUpdate]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents_edges",
+        "name": "test_all_categorical_options[condo-rented-RentalCreate]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents_edges",
+        "name": "test_all_categorical_options[condo-rented-RentalUpdate]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents_edges",
+        "name": "test_all_categorical_options[townhouse-available-RentalCreate]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents_edges",
+        "name": "test_all_categorical_options[townhouse-available-RentalUpdate]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents_edges",
+        "name": "test_all_categorical_options[townhouse-reserved-RentalCreate]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents_edges",
+        "name": "test_all_categorical_options[townhouse-reserved-RentalUpdate]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents_edges",
+        "name": "test_all_categorical_options[townhouse-rented-RentalCreate]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents_edges",
+        "name": "test_all_categorical_options[townhouse-rented-RentalUpdate]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents_edges",
+        "name": "test_stored_title_pattern_matches_trim_contract[\\xa0]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents_edges",
+        "name": "test_stored_title_pattern_matches_trim_contract[\\u2003]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents_edges",
+        "name": "test_stored_title_pattern_matches_trim_contract[\\x1c]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents_edges",
+        "name": "test_stored_title_pattern_matches_trim_contract[\\u3000]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents_edges",
+        "name": "test_stored_title_pattern_matches_trim_contract[\\n]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents_edges",
+        "name": "test_stored_title_pattern_matches_trim_contract[ title]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents_edges",
+        "name": "test_stored_title_pattern_matches_trim_contract[title\\n]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents_edges",
+        "name": "test_stored_title_pattern_accepts_trimmed_text[a]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents_edges",
+        "name": "test_stored_title_pattern_accepts_trimmed_text[Bright home]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents_edges",
+        "name": "test_stored_title_pattern_accepts_trimmed_text[\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9\\xe9]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents_edges",
+        "name": "test_stored_title_pattern_accepts_trimmed_text[Two\\nlines]",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents_edges",
+        "name": "test_real_default_auth_dependency_is_injectable_without_changing_routes",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents_edges",
+        "name": "test_capture_cleans_own_fixture_even_when_a_later_check_fails",
+        "status": "passed"
+      },
+      {
+        "module": "tests.test_hw06_documents_edges",
+        "name": "test_connection_retains_one_shared_database_for_service",
+        "status": "passed"
+      }
+    ]
+  },
+  "skip_reason": "45 SQL-dependent tests require explicitly configured real MySQL.",
+  "limitations": [
+    "Disposable in-process fixtures, not live MongoDB/HTTPS/CORS acceptance.",
+    "No project lint/typecheck command configured; Python AST and git diff --check passed."
+  ]
+}
