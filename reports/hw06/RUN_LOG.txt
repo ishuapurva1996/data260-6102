@@ -1,0 +1,61 @@
+Pragya Apurva | DATA 260 Homework 6 | selected real run receipts
+
+This index quotes saved run output and timestamps. Complete request, model,
+embedding, command, and verification records are retained under raw/ and part3/.
+No fresh model or database run was made to assemble this report.
+
+Integrated acceptance and objective smoke check
+Source: raw/integration/acceptance-summary.json; verification.json;
+raw/integration/regression.txt
+Tested application commit: e08241887636514df6da5124984539659c1ffc46
+Smoke started: 2026-10-20T19:00:32.271082+00:00
+Smoke finished: 2026-10-20T19:00:41.674407+00:00
+Smoke: 15 of 15 named checks passed (MongoDB, HTTPS, login, document CRUD and
+invalid input, chat, memory, aggregate, isolation, file commands, source unchanged).
+Saved regression terminal summary:
+434 passed, 11 skipped, 197 warnings in 14.50s
+
+Part 3 measured run
+Source: raw/part3/run-receipt.json; raw/part3/run-console.txt;
+part3/RUN_LOG.txt; raw/part3/measured-study/*/{requests,events}.jsonl
+Measured application commit: 4c0bd7c2dd0bedeab73d6a31d9f5c3a83a84e961
+Started: 2026-10-20T19:10:47.067692+00:00
+Ended: 2026-10-20T20:07:23.020583+00:00
+Run command exit code: 0
+Actual saved console line:
+Collected 120 primary and 20 probe requests; validate events and manually score before export.
+Saved runner audit: 140 successful requests, 0 failures, 0 reruns; 520 correlated
+request/auxiliary/embedding events; 308 normal generation stops and no output cap.
+Integrated offline terminal summary before measurement:
+224 passed, 102 warnings in 9.62s
+The probe scores were subsequently assigned against frozen criteria by Codex;
+they were not independently human graded. Initial exporter JSON rubric-key
+failure and byte-identical corrected exports are recorded in part3/RUN_LOG.txt
+and part3/REPRODUCE.md.
+
+Part 4 file-memory commands and restart
+Source: raw/part4/attempt-03/*.stdout.jsonl;
+raw/part4/integrated/acceptance.json; part4/RUN_LOG.txt
+Selected fields from the saved actual command/reply receipts:
+/memory: 54 entries, 55 physical lines, 54 counted lines before consolidation.
+/compact: Memory entries 54 -> 27; physical lines 55 -> 28; counted lines 54 -> 27.
+/dream: Added 1 durable entries.
+Fresh-process restart: induction-stove fact recalled; saved file bytes unchanged.
+The independent audit retained 54/54 source IDs and found 0 incorrectly
+resolved contradictions. Earlier failed proposals remain in raw/part4/attempt-01
+and attempt-02; the accepted command receipts are in attempt-03.
+
+Functional MongoDB-versus-file restart comparison
+Source: raw/part4/integrated/comparison.json;
+raw/part4/integrated/comparison-*.jsonl
+Comparison run: f95719b73396410a94a88087dd537c98
+Both systems recalled the small corrected-budget, neighborhood and cat case
+after restart. The file's two budget rows still had unresolved status; its
+reply nevertheless used the corrected $2,400 budget. No many-session throughput
+or scalability benchmark was run.
+
+Report preparation provenance
+Post-measurement evidence commit: 5b7ba2a. JSON rubric-key exporter repair:
+b7956e7, with two focused regression checks passing. These were not new
+measurements. The required hw6 tag and remote collaborator access were not
+verified or changed during report preparation.
