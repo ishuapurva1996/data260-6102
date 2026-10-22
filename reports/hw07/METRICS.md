@@ -40,3 +40,42 @@ pre-commit passed after a genuine rejected commit and correction. See
 | Part 4 scenario cost comparison | Not run |
 | Part 5 attack/defense matrix | Not run |
 | Part 6 safety/integration matrix | Not run |
+
+
+---
+
+## Parts 2 and 3 — completed checkpoint
+
+The preceding Part 1 tables are the preserved historical checkpoint. The later-part status rows above describe that earlier checkpoint. Parts 2/3 results below supersede only those status entries. Parts 4–6 remain pending.
+
+Tested application: `996c476ac4d52d13f9712913df488b9c8b966158`. Fixed seven repetitions each of A/B/C in each mode; real local Ollama/MySQL, with mocked tests excluded.
+
+| Original-loop measure | Result |
+| --- | --- |
+| Complete tasks | 21/21 |
+| First-pass valid proposals | 70 / 70 (100.0%) |
+| Valid after the single repair opportunity | 70 / 70 (100.0%) |
+| Tool-operation repairs | 0 |
+
+| Failure category (overlapping case counts) | Original / 21 | Reflexion / 21 |
+| --- | --- | --- |
+| malformed arguments | 0 | 0 |
+| unknown tool | 0 | 0 |
+| text when a tool was required | 0 | 0 |
+| lost multi-step chain | 0 | 0 |
+
+| Metric | Original loop | Reflexion loop |
+| --- | --- | --- |
+| Task success | 21/21 | 21/21 |
+| Unsupported final claims, independently audited | 0 | 0 |
+| Cases entering a Reflexion retry | 0/21 (0.0%) | 0/21 (0.0%) |
+| Actual tool calls, total | 70 | 70 |
+| Actual tool calls, mean | 3.3 | 3.3 |
+| Reported input tokens, total | 48076 | 48076 |
+| Reported output tokens, total | 4186 | 4186 |
+| Model tokens, total | 52262 | 52262 |
+| Model tokens, mean | 2,488.7 | 2,488.7 |
+| End-to-end latency, mean ms | 20,888.5 | 20,990.7 |
+| Verifier false rejections, cases | 0 | 0 |
+
+All denominators, scoring rules and budgets were frozen before scoring. Required raw data: [reliability](raw/part2/reliability.csv), [comparison](raw/part3/comparison.csv), [metrics](raw/parts2-3/metrics.json), [independent audit](raw/parts2-3/audit.json). See [Parts 2/3 checkpoint](PARTS2_3.md) for provenance, cost definitions, controlled-fault distinction and limitations.

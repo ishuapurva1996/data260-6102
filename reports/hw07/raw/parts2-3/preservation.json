@@ -1,0 +1,21 @@
+{
+  "student": "Pragya Apurva",
+  "checked_at": "2026-10-22T02:37:18.195987+00:00",
+  "source_commit": "996c476ac4d52d13f9712913df488b9c8b966158",
+  "evidence_kind": "live read-only database preservation check after Parts 2/3 fixture cleanup",
+  "legacy_password_hashes_and_ids_preserved": true,
+  "counts": {
+    "users": 5,
+    "rentals": 1,
+    "property_managers": 1,
+    "sessions": 37
+  },
+  "part1_counts_preserved": true,
+  "mongo_counts": {
+    "summaries": 57,
+    "messages": 617,
+    "rentals": 0,
+    "episodes": 155
+  },
+  "part1_mongo_counts_preserved": true
+}

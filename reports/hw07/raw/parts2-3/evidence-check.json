@@ -1,0 +1,36 @@
+{
+  "student": "Pragya Apurva",
+  "checked_at": "2026-10-22T02:38:16.842713+00:00",
+  "source_commit": "996c476ac4d52d13f9712913df488b9c8b966158",
+  "evidence_kind": "read-only saved evidence/provenance and private-value scan; no model or database measurement",
+  "source_freeze_and_raw_consistent": true,
+  "summaries": {
+    "original": {
+      "cases": 21,
+      "successes": 21,
+      "proposal_denominator": 70,
+      "actual_tool_results": 70,
+      "not_found_tool_results": 7,
+      "retries": 0
+    },
+    "reflexion": {
+      "cases": 21,
+      "successes": 21,
+      "proposal_denominator": 70,
+      "actual_tool_results": 70,
+      "not_found_tool_results": 7,
+      "retries": 0
+    }
+  },
+  "part1_files_preserved": 17,
+  "part1_append_only_files": [
+    "reports/hw07/AI_USE.md",
+    "reports/hw07/METRICS.md",
+    "reports/hw07/RUN_LOG.txt"
+  ],
+  "screenshot_sha256_verified": 5,
+  "secrets_or_full_jwts_found": 0,
+  "agent_workflow_artifacts_selected": false,
+  "markdown_local_links_exist": true,
+  "scored_audit_cases": 42
+}

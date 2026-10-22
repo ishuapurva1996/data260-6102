@@ -35,3 +35,51 @@ existing dedicated MCP environment. The final web dependency check found all
 passed 156. Real HTTPS, MySQL, MongoDB, Ollama and browser checks then passed on
 the committed application. This verifies the corrected environment without
 claiming that the initial install or failed runs were successful.
+
+
+---
+
+# AI use — Parts 2 and 3 checkpoint
+
+## 1. What AI helped with and what I supplied
+
+I supplied the authoritative assignment, execution plan, Part 1 checkpoint,
+personal configuration and the instruction to complete Parts 2 and 3. The AI
+assistant implemented the hand-written loop and bounded Reflexion, wrote and ran
+controlled-response tests, reviewed the adapter's real HTTP serialization,
+executed the local Ollama/MySQL study, computed tables from retained raw records,
+and rendered the saved genuine execution transcripts into labeled screenshots.
+A separate AI-assisted trace review checked the scored outcomes against frozen
+facts and actual observations. These are agent-performed checks; I do not claim
+that I manually performed the experiments or independently audited the answers.
+
+## 2. One unsuitable AI-produced choice
+
+The first controlled fixtures used rental codes such as `S6102-HW7-AGENT-308`.
+The existing shared API requires the established `S6102-R-<id>` format. The AI's
+initial fixture naming was unsuitable for this application.
+
+## 3. How the problem was detected
+
+A genuine broad regression run failed 30 tests while serializing those fixture
+rows through the existing API. The failed command and results remain in
+`RUN_LOG.txt`. Investigation identified the fixture codes as the cause; the API
+contract and historical rental records were valid.
+
+## 4. What changed and why it works now
+
+Only the three owned course fixtures were corrected to `S6102-R-308`,
+`S6102-R-309` and `S6102-R-310`. Existing validation and historical data were
+preserved. The affected regression tests and the final full web-compatible
+suite passed. The fixtures, prompts, model settings, scoring and budgets were
+then frozen before the 42 scored original/Reflexion cases. The raw results,
+computed tables, separate independent AI-assisted audit, controlled-fault label,
+and post-cleanup preservation check are linked in `PARTS2_3.md`.
+
+Mocked/controlled-response tests establish edge-case behavior and are excluded
+from model measurements. The failed-then-retried illustration is explicitly an
+unscored injected final-count fault; its tool calls and both retries used the
+real local model. The retries still failed the fixed task checks and stopped at
+`human_review` after the two-retry ceiling. It is not successful recovery, a
+natural scored failure, or evidence of a general quality improvement. Parts 4–6
+and the final submission remain pending.

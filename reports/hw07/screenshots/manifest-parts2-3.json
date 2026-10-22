@@ -1,0 +1,52 @@
+[
+  {
+    "file": "p2-task-a.png",
+    "sha256": "9732507a1022416fe41e56531fd838516fc1f929f702393b80519a43fbae4cc7",
+    "kind": "screenshot_of_recorded_live_agent_transcript",
+    "captured_at": "2026-10-22T02:36:47.309Z",
+    "source": "raw/part2/attempts.jsonl + traces.jsonl",
+    "run_id": "3f15683e2f7f43a0ab3a73802722056d",
+    "task_id": "A",
+    "application_commit": "996c476ac4d52d13f9712913df488b9c8b966158"
+  },
+  {
+    "file": "p2-task-b.png",
+    "sha256": "675c7d4007ea87166b87f04738a8002e78d6d5fab14c320d84e166a5358c246f",
+    "kind": "screenshot_of_recorded_live_agent_transcript",
+    "captured_at": "2026-10-22T02:36:47.370Z",
+    "source": "raw/part2/attempts.jsonl + traces.jsonl",
+    "run_id": "34644eaf2af7491bbb25244b95ea6aaa",
+    "task_id": "B",
+    "application_commit": "996c476ac4d52d13f9712913df488b9c8b966158"
+  },
+  {
+    "file": "p2-task-c.png",
+    "sha256": "80b96ab553902c84dc64ce16ed4e2d2df080766e1c2adb9e30f9081aec6882f8",
+    "kind": "screenshot_of_recorded_live_agent_transcript",
+    "captured_at": "2026-10-22T02:36:47.441Z",
+    "source": "raw/part2/attempts.jsonl + traces.jsonl",
+    "run_id": "17230895e22845f0a0be4591e6bdb543",
+    "task_id": "C",
+    "application_commit": "996c476ac4d52d13f9712913df488b9c8b966158"
+  },
+  {
+    "file": "p2-missing-id.png",
+    "sha256": "1f10d32b288d4a1689e7f2f61560be1249ca3cb3d7289a14164a832ac29ef306",
+    "kind": "screenshot_of_recorded_live_agent_transcript",
+    "captured_at": "2026-10-22T02:36:47.477Z",
+    "source": "raw/part2/recovery/",
+    "run_id": "a329465168784ebc8299c1b00a5e4441",
+    "application_commit": "996c476ac4d52d13f9712913df488b9c8b966158"
+  },
+  {
+    "file": "p3-controlled-retry.png",
+    "sha256": "c37474f7ad395d0f7f780f7562f2f05fdd43765b1005babcb6a5b9d185c34cd3",
+    "kind": "screenshot_of_recorded_live_agent_transcript",
+    "captured_at": "2026-10-22T02:36:47.567Z",
+    "source": "raw/part3/controlled-fault/",
+    "run_id": "8082517c75364fa1b6053f691ca09553",
+    "controlled_fault": true,
+    "scored": false,
+    "application_commit": "996c476ac4d52d13f9712913df488b9c8b966158"
+  }
+]

@@ -1,0 +1,379 @@
+{
+  "student": "Pragya Apurva",
+  "audit_kind": "AI-assisted independent trace review",
+  "checked_at": "2026-10-22T02:36:52.008122+00:00",
+  "source_commit": "996c476ac4d52d13f9712913df488b9c8b966158",
+  "scored": false,
+  "controlled_demonstration": true,
+  "method": "Read frozen B/missing-ID contracts, every terminal JSON, actual tool observations/order, native histories, explicit before/after controlled fault, stored reflections and shared ledger. No application verifier, model, database, test or network invoked. Existing verifier labels are compared after independent decisions. This unscored demonstration is separate from the 42-case scored study.",
+  "global_checks": {
+    "unscored_source_and_frozen_configuration_match": true,
+    "source_hashes_still_match_frozen": true,
+    "control_native_history_and_budget_checks_passed": true,
+    "recovery_native_history_and_budget_checks_passed": true,
+    "reflection_scope_and_evidence_checks_passed": true,
+    "all_three_controlled_rejections_justified": true,
+    "no_false_rejections": true,
+    "control_audit_errors": [],
+    "recovery_audit_errors": [],
+    "reflection_errors": []
+  },
+  "missing_id_recovery": {
+    "run_id": "a329465168784ebc8299c1b00a5e4441",
+    "scored": false,
+    "controlled_fault": false,
+    "actual_success": true,
+    "verifier_agrees": true,
+    "terminal_answer": {
+      "rental_id": 2147483000,
+      "found": false
+    },
+    "supported_claims": [
+      {
+        "path": "rental_id",
+        "reason": "Copies the single requested/tool-input ID 2147483000."
+      },
+      {
+        "path": "found",
+        "reason": "False matches the actual not-found tool result for that ID."
+      }
+    ],
+    "unsupported_claims": [],
+    "unsupported_final_claims": 0,
+    "invented_rental_fields": false,
+    "tool_calls": 1,
+    "model_responses": 2,
+    "charged_tokens": 1120,
+    "budget": {
+      "max_tools": 8,
+      "max_tokens": 24000,
+      "tools": 1,
+      "charged_tokens": 1120,
+      "reported_input_tokens": 1059,
+      "reported_output_tokens": 61,
+      "unknown_usage_calls": 0,
+      "total_tokens": 1120,
+      "overrun": false
+    },
+    "evidence": [
+      "recovery-demo/traces.jsonl:7 (a329465168784ebc8299c1b00a5e4441 seq 7)",
+      "recovery-demo/traces.jsonl:11 (a329465168784ebc8299c1b00a5e4441 seq 11)",
+      "recovery-demo/result.json"
+    ]
+  },
+  "controlled_fault_demo": {
+    "run_id": "8082517c75364fa1b6053f691ca09553",
+    "task_id": "B",
+    "repetition": 0,
+    "scored": false,
+    "controlled_fault": true,
+    "actual_success": false,
+    "preserved_stop_reason": "human_review",
+    "retries": 2,
+    "retry_limit_and_all_failures_preserved": true,
+    "actual_executor_accounting_matches": true,
+    "tool_calls": 6,
+    "model_responses": 6,
+    "charged_tokens": 7050,
+    "final_budget": {
+      "max_tools": 24,
+      "max_tokens": 24000,
+      "tools": 6,
+      "charged_tokens": 7050,
+      "reported_input_tokens": 6646,
+      "reported_output_tokens": 404,
+      "unknown_usage_calls": 0,
+      "total_tokens": 7050,
+      "overrun": false
+    },
+    "shared_ledger_terminal_snapshots": [
+      {
+        "attempt_id": "de5bf23651f74578a3e74794ec74b648",
+        "tools": 2,
+        "charged_tokens": 1628
+      },
+      {
+        "attempt_id": "d06524b61be74a53b0d7e8c207f77535",
+        "tools": 4,
+        "charged_tokens": 4344
+      },
+      {
+        "attempt_id": "0f8d880bcb3f457c99a048b8c4ed55d2",
+        "tools": 6,
+        "charged_tokens": 7050
+      }
+    ],
+    "shared_ledger_not_reset": true,
+    "reflection_generation_model_calls": 0,
+    "false_rejections": 0,
+    "supported_factual_claims_all_three_terminals": 22,
+    "unsupported_factual_claims_all_three_terminals": 1,
+    "fault_evidence_audit": {
+      "kind": "controlled_fault_not_scored",
+      "only_first_final_count_changed_by_one": true,
+      "original_generated_answer": {
+        "rentals": [
+          {
+            "id": 308,
+            "listingTitle": "HW7 6102 Garden Apartment",
+            "propertyAddress": "101 Course Garden Lane",
+            "propertyType": "apartment",
+            "managerId": 98
+          }
+        ],
+        "count": 3
+      },
+      "altered_first_terminal_answer": {
+        "rentals": [
+          {
+            "id": 308,
+            "listingTitle": "HW7 6102 Garden Apartment",
+            "propertyAddress": "101 Course Garden Lane",
+            "propertyType": "apartment",
+            "managerId": 98
+          }
+        ],
+        "count": 4
+      },
+      "unmodified_answer_has_correct_facts_format_and_initial_chain": true,
+      "altered_answer_equals_first_terminal": true,
+      "unsupported_count_attribution": "Controlled alteration; do not attribute this injected error to the unmodified live model or scored study.",
+      "frozen_fault_wrapper_review": "scripts/hw07/agent_study.py:180-209 changes only the first terminal integer count, stores before/after evidence, then returns later live responses unchanged.",
+      "evidence": [
+        "controlled-fault-demo/reflexion/attempts.jsonl:1",
+        "controlled-fault-demo/reflexion/traces.jsonl:15 (de5bf23651f74578a3e74794ec74b648 seq 14)"
+      ]
+    },
+    "attempts": [
+      {
+        "run_id": "de5bf23651f74578a3e74794ec74b648",
+        "retry_index": 0,
+        "actual_success": false,
+        "recorded_stop_reason": "verification_failed",
+        "rejection_justified": true,
+        "false_rejection": false,
+        "facts_supported": false,
+        "supported_factual_claims": 5,
+        "unsupported_claims": [
+          {
+            "path": "count",
+            "value": 4,
+            "reason": "Observed manager-98 count is 3; terminal asserts 4. This is the documented controlled alteration."
+          }
+        ],
+        "unsupported_final_claims": 1,
+        "required_chain_complete": true,
+        "required_answer_content_and_format": false,
+        "semantically_correct_but_chain_incomplete": false,
+        "format_issues": [],
+        "actual_tool_order": [
+          {
+            "name": "count_rentals",
+            "inputs": {
+              "manager_id": 98
+            },
+            "model_response_index": 1,
+            "evidence": "controlled-fault-demo/reflexion/traces.jsonl:9 (de5bf23651f74578a3e74794ec74b648 seq 8)"
+          },
+          {
+            "name": "search_rentals",
+            "inputs": {
+              "limit": 5,
+              "query": "HW7 6102 Garden"
+            },
+            "model_response_index": 1,
+            "evidence": "controlled-fault-demo/reflexion/traces.jsonl:11 (de5bf23651f74578a3e74794ec74b648 seq 10)"
+          }
+        ],
+        "tool_calls": 2,
+        "cumulative_budget": {
+          "max_tools": 24,
+          "max_tokens": 24000,
+          "tools": 2,
+          "charged_tokens": 1628,
+          "reported_input_tokens": 1509,
+          "reported_output_tokens": 119,
+          "unknown_usage_calls": 0,
+          "total_tokens": 1628,
+          "overrun": false
+        },
+        "decision_reasons": [
+          "Controlled final count 4 contradicts successful count_rentals(manager_id=98), which returned integer 3."
+        ],
+        "evidence": [
+          "controlled-fault-demo/reflexion/traces.jsonl:15 (de5bf23651f74578a3e74794ec74b648 seq 14)"
+        ]
+      },
+      {
+        "run_id": "d06524b61be74a53b0d7e8c207f77535",
+        "retry_index": 1,
+        "actual_success": false,
+        "recorded_stop_reason": "verification_failed",
+        "rejection_justified": true,
+        "false_rejection": false,
+        "facts_supported": true,
+        "supported_factual_claims": 6,
+        "unsupported_claims": [],
+        "unsupported_final_claims": 0,
+        "required_chain_complete": false,
+        "required_answer_content_and_format": true,
+        "semantically_correct_but_chain_incomplete": true,
+        "format_issues": [],
+        "actual_tool_order": [
+          {
+            "name": "get_rental",
+            "inputs": {
+              "include_contact": false,
+              "rental_id": 308
+            },
+            "model_response_index": 1,
+            "evidence": "controlled-fault-demo/reflexion/traces.jsonl:24 (d06524b61be74a53b0d7e8c207f77535 seq 8)"
+          },
+          {
+            "name": "count_rentals",
+            "inputs": {
+              "manager_id": 98
+            },
+            "model_response_index": 1,
+            "evidence": "controlled-fault-demo/reflexion/traces.jsonl:26 (d06524b61be74a53b0d7e8c207f77535 seq 10)"
+          }
+        ],
+        "tool_calls": 2,
+        "cumulative_budget": {
+          "max_tools": 24,
+          "max_tokens": 24000,
+          "tools": 4,
+          "charged_tokens": 4344,
+          "reported_input_tokens": 4109,
+          "reported_output_tokens": 235,
+          "unknown_usage_calls": 0,
+          "total_tokens": 4344,
+          "overrun": false
+        },
+        "decision_reasons": [
+          "No search_rentals call in this attempt; get_rental(308) then count_rentals(98) does not complete the required count-then-search chain. The final facts and one-example format are correct."
+        ],
+        "evidence": [
+          "controlled-fault-demo/reflexion/traces.jsonl:30 (d06524b61be74a53b0d7e8c207f77535 seq 14)"
+        ]
+      },
+      {
+        "run_id": "0f8d880bcb3f457c99a048b8c4ed55d2",
+        "retry_index": 2,
+        "actual_success": false,
+        "recorded_stop_reason": "verification_failed",
+        "rejection_justified": true,
+        "false_rejection": false,
+        "facts_supported": true,
+        "supported_factual_claims": 11,
+        "unsupported_claims": [],
+        "unsupported_final_claims": 0,
+        "required_chain_complete": false,
+        "required_answer_content_and_format": false,
+        "semantically_correct_but_chain_incomplete": true,
+        "format_issues": [
+          "Two examples emitted; exactly one is required."
+        ],
+        "actual_tool_order": [
+          {
+            "name": "search_rentals",
+            "inputs": {
+              "limit": 5,
+              "query": "HW7 6102 Garden"
+            },
+            "model_response_index": 1,
+            "evidence": "controlled-fault-demo/reflexion/traces.jsonl:39 (0f8d880bcb3f457c99a048b8c4ed55d2 seq 8)"
+          },
+          {
+            "name": "count_rentals",
+            "inputs": {
+              "manager_id": 98
+            },
+            "model_response_index": 1,
+            "evidence": "controlled-fault-demo/reflexion/traces.jsonl:41 (0f8d880bcb3f457c99a048b8c4ed55d2 seq 10)"
+          }
+        ],
+        "tool_calls": 2,
+        "cumulative_budget": {
+          "max_tools": 24,
+          "max_tokens": 24000,
+          "tools": 6,
+          "charged_tokens": 7050,
+          "reported_input_tokens": 6646,
+          "reported_output_tokens": 404,
+          "unknown_usage_calls": 0,
+          "total_tokens": 7050,
+          "overrun": false
+        },
+        "decision_reasons": [
+          "Actual search_rentals precedes count_rentals, contrary to B order; final JSON contains two examples although exactly one is required. All eleven factual fields are supported."
+        ],
+        "evidence": [
+          "controlled-fault-demo/reflexion/traces.jsonl:45 (0f8d880bcb3f457c99a048b8c4ed55d2 seq 14)"
+        ]
+      }
+    ],
+    "reflections": [
+      {
+        "retry_index": 1,
+        "failed_attempt_id": "de5bf23651f74578a3e74794ec74b648",
+        "recorded_assertions": [
+          "answer.count",
+          "claims.supported"
+        ],
+        "assertions_justified": true,
+        "evidence_and_failed_answer_match_actual_trace": true,
+        "scope": {
+          "user_id": "s6102-study",
+          "run_id": "8082517c75364fa1b6053f691ca09553",
+          "task_id": "B"
+        },
+        "deterministic": true,
+        "generation_tokens": 0,
+        "strategy_keeps_original_instruction_tools_and_budgets": true,
+        "evidence": [
+          "controlled-fault-demo/reflexion/reflections.jsonl:1",
+          "controlled-fault-demo/reflexion/traces.jsonl:16 (8082517c75364fa1b6053f691ca09553 seq 2)"
+        ]
+      },
+      {
+        "retry_index": 2,
+        "failed_attempt_id": "d06524b61be74a53b0d7e8c207f77535",
+        "recorded_assertions": [
+          "trace.search",
+          "trace.chain"
+        ],
+        "assertions_justified": true,
+        "evidence_and_failed_answer_match_actual_trace": true,
+        "scope": {
+          "user_id": "s6102-study",
+          "run_id": "8082517c75364fa1b6053f691ca09553",
+          "task_id": "B"
+        },
+        "deterministic": true,
+        "generation_tokens": 0,
+        "strategy_keeps_original_instruction_tools_and_budgets": true,
+        "evidence": [
+          "controlled-fault-demo/reflexion/reflections.jsonl:2",
+          "controlled-fault-demo/reflexion/traces.jsonl:31 (8082517c75364fa1b6053f691ca09553 seq 3)"
+        ]
+      }
+    ],
+    "conclusion": "Bounded failure handling demonstrated. No complete task recovery occurred: final disposition remains human_review after the two permitted retries. Factually correct retries do not satisfy the missing/reordered chain and exact-one-example contract.",
+    "evidence": [
+      "controlled-fault-demo/manifest.json",
+      "controlled-fault-demo/reflexion/attempts.jsonl:1",
+      "controlled-fault-demo/reflexion/traces.jsonl:46 (8082517c75364fa1b6053f691ca09553 seq 4)"
+    ]
+  },
+  "source_evidence_sha256": {
+    "controlled-fault-demo/manifest.json": "7bb55c5922816a5aae93dfc6a7061b3088fcb83155a59f5aadc87d3e30c0ea75",
+    "controlled-fault-demo/reflexion/proposals.jsonl": "4e55012abfd57266691c8599abc9dc37be2091b8afa1777d3b9a4a82d9a9dbb6",
+    "controlled-fault-demo/reflexion/traces.jsonl": "9cbafc05beaf8b075a18804f7c38e43d4d9c7cecf673579c09cc11b338d01135",
+    "controlled-fault-demo/reflexion/reflections.jsonl": "c12b4446a510b4bba3646abbb7298b85de6c169f7489ec507b43a18fa140ccba",
+    "controlled-fault-demo/reflexion/attempts.jsonl": "b2108ae68aea555aae1c31494e340449de1a8e89b541d59c75e1311bd865ffe5",
+    "recovery-demo/result.json": "fe8080c4e54eb61e3bf47dfc05748b0d8d4e090e6975964c025fca375f151ef1",
+    "recovery-demo/traces.jsonl": "6faf5e051c1f298ec4c985ae58afe6803edae06e9843c8ee76943e329032ef80",
+    "recovery-demo/manifest.json": "b10bdf08164b8899f1250304cf5e87bd5b6dbb40e0b6c886629f548f298cf414"
+  }
+}
