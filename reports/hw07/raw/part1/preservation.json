@@ -1,0 +1,25 @@
+{
+  "checked_at": "2026-10-22T00:17:23.420853+00:00",
+  "source_commit": "c0c8e8671657cf94a03ecaadcdfe0124c5be11f9",
+  "evidence_kind": "live read-only database preservation check",
+  "legacy_password_hashes_and_ids_preserved": true,
+  "original_user_ids": [
+    "1",
+    "70"
+  ],
+  "counts": {
+    "users": 5,
+    "rentals": 1,
+    "property_managers": 1,
+    "sessions": 37
+  },
+  "baseline_rental_manager_counts_preserved": true,
+  "mongo_counts": {
+    "summaries": 57,
+    "messages": 617,
+    "rentals": 0,
+    "episodes": 155
+  },
+  "original_mongo_counts_preserved": true,
+  "session_note": "Original baseline login created one genuine legacy session after counting 36; the retained total is 37. Current JWT login creates no sessions."
+}

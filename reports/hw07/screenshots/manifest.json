@@ -1,0 +1,105 @@
+[
+  {
+    "file": "p1-login.png",
+    "kind": "screenshot_of_recorded_live_HTTP_transcript",
+    "source": "raw/part1/acceptance.json",
+    "case_names": [
+      "reader login",
+      "invalid login"
+    ],
+    "application_commit": "c0c8e8671657cf94a03ecaadcdfe0124c5be11f9",
+    "captured_at": "2026-10-22T00:16:22.961Z",
+    "redactions": [
+      "JWT signatures",
+      "passwords"
+    ],
+    "sha256": "e7606e23bf34ad4ee2e39843b5d1c8fd363d76e3a497b4f68cf20b8650c46e61"
+  },
+  {
+    "file": "p1-missing-token.png",
+    "kind": "screenshot_of_recorded_live_HTTP_transcript",
+    "source": "raw/part1/acceptance.json",
+    "case_names": [
+      "missing token /auth/me"
+    ],
+    "application_commit": "c0c8e8671657cf94a03ecaadcdfe0124c5be11f9",
+    "captured_at": "2026-10-22T00:16:23.001Z",
+    "redactions": [
+      "JWT signatures",
+      "passwords"
+    ],
+    "sha256": "32bdf9da126ff9fd35f293bda389abeffc5d0f210b4dea0e723fd582f58a13fe"
+  },
+  {
+    "file": "p1-invalid-token.png",
+    "kind": "screenshot_of_recorded_live_HTTP_transcript",
+    "source": "raw/part1/acceptance.json",
+    "case_names": [
+      "corrupted token /auth/me",
+      "expired signed token"
+    ],
+    "application_commit": "c0c8e8671657cf94a03ecaadcdfe0124c5be11f9",
+    "captured_at": "2026-10-22T00:16:23.038Z",
+    "redactions": [
+      "JWT signatures",
+      "passwords"
+    ],
+    "sha256": "98ec410d8314a2eaf9305fa90c134ffc782b1695d28c33ad9b1e1010e96e457a"
+  },
+  {
+    "file": "p1-create.png",
+    "kind": "screenshot_of_recorded_live_HTTP_transcript",
+    "source": "raw/part1/acceptance.json",
+    "case_names": [
+      "reader create /api/rentals",
+      "writer create /api/rentals"
+    ],
+    "application_commit": "c0c8e8671657cf94a03ecaadcdfe0124c5be11f9",
+    "captured_at": "2026-10-22T00:16:23.077Z",
+    "redactions": [
+      "JWT signatures",
+      "passwords"
+    ],
+    "sha256": "f592b13163e6d13ad8d81208f4b2302a1688baedeec4eee0b7f57c15d0fd3dc6"
+  },
+  {
+    "file": "p1-delete.png",
+    "kind": "screenshot_of_recorded_live_HTTP_transcript",
+    "source": "raw/part1/acceptance.json",
+    "case_names": [
+      "writer delete /api/rentals",
+      "moderator delete /api/rentals"
+    ],
+    "application_commit": "c0c8e8671657cf94a03ecaadcdfe0124c5be11f9",
+    "captured_at": "2026-10-22T00:16:23.121Z",
+    "redactions": [
+      "JWT signatures",
+      "passwords"
+    ],
+    "sha256": "e555240e753e841216ecdbedf4c0de5269e3d0149ff618ce370f4cac840390b7"
+  },
+  {
+    "file": "p1-read.png",
+    "kind": "screenshot_of_recorded_live_HTTP_transcript",
+    "source": "raw/part1/acceptance.json",
+    "case_names": [
+      "reader read /api/rentals"
+    ],
+    "application_commit": "c0c8e8671657cf94a03ecaadcdfe0124c5be11f9",
+    "captured_at": "2026-10-22T00:16:23.158Z",
+    "redactions": [
+      "JWT signatures",
+      "passwords"
+    ],
+    "sha256": "0c93211b759a95cd8f423805bbdf6dbfa43647a8d681d6494c7cd02153438f9b"
+  },
+  {
+    "file": "p1-lint-terminal.png",
+    "kind": "screenshot_of_live_local_PTY_terminal",
+    "content": "Explicitly labeled replay of genuine failed/fixed/successful commit output from RUN_LOG.txt, followed by current git log and Ruff checks. This is a browser-hosted terminal, not a native Terminal window.",
+    "source": "../RUN_LOG.txt",
+    "application_commit": "c0c8e8671657cf94a03ecaadcdfe0124c5be11f9",
+    "captured_at": "2026-10-22T00:20:49.940711+00:00",
+    "sha256": "86b00bceaa636208d8e2c90f09c8006c3ab14b919397f23ef51e42da2d3a582f"
+  }
+]

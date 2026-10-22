@@ -1,0 +1,31 @@
+{
+  "checked_at": "2026-10-21T23:47:10.126197+00:00",
+  "kind": "live baseline storage and in-process HTTP; no mocked services",
+  "baseline": "d232421f0e49d4f6a1cc425bb5e485ceffb90f2d",
+  "python": "3.12.13 (main, Apr  7 2026, 21:09:58) [Clang 22.1.1 ]",
+  "mysql_version": "8.4.11",
+  "counts": {
+    "users": 2,
+    "rentals": 1,
+    "property_managers": 1,
+    "sessions": 36
+  },
+  "legacy_hash_fingerprints": {
+    "1": "80d270700e9b95894915b2d9229369effc35e2ec252b1d167c5c391bb4df3ce7",
+    "70": "f3b0e499ec5f254a20eeb5485e238405134c9093b102d07c301db14f5f1336c8"
+  },
+  "mongo_ping": 1.0,
+  "mongo_counts": {
+    "summaries": 57,
+    "messages": 617,
+    "rentals": 0,
+    "episodes": 155
+  },
+  "old_login": 200,
+  "old_rental_list": 200,
+  "old_me": 200,
+  "hardware": {
+    "cpu": "Apple M4",
+    "memory_bytes": 25769803776
+  }
+}

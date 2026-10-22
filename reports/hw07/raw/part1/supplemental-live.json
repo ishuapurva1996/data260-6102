@@ -1,0 +1,66 @@
+{
+  "student": "Pragya Apurva",
+  "kind": "live HTTPS renewal and Vite proxy checks; no mocked responses",
+  "source_commit": "c0c8e8671657cf94a03ecaadcdfe0124c5be11f9",
+  "started_at": "2026-10-22T00:16:29.944197+00:00",
+  "checks": [
+    {
+      "name": "temporary TTL=2 initial identity",
+      "actual": 200,
+      "expected": 200,
+      "passed": true,
+      "at": "2026-10-22T00:16:30.996778+00:00"
+    },
+    {
+      "name": "actual signed token expires after 2 seconds",
+      "actual": 401,
+      "expected": 401,
+      "passed": true,
+      "at": "2026-10-22T00:16:33.207186+00:00"
+    },
+    {
+      "name": "client renews and reads identity after expiry",
+      "actual": 200,
+      "expected": 200,
+      "passed": true,
+      "at": "2026-10-22T00:16:33.259220+00:00"
+    },
+    {
+      "name": "renewal replaces expired credential",
+      "actual": true,
+      "expected": true,
+      "passed": true,
+      "at": "2026-10-22T00:16:33.259237+00:00"
+    },
+    {
+      "name": "Vite serves existing frontend",
+      "actual": 200,
+      "expected": 200,
+      "passed": true,
+      "at": "2026-10-22T00:16:34.674320+00:00"
+    },
+    {
+      "name": "Vite proxies exact POST /auth/login",
+      "actual": 200,
+      "expected": 200,
+      "passed": true,
+      "at": "2026-10-22T00:16:34.744657+00:00"
+    },
+    {
+      "name": "Vite proxies bearer GET /auth/me",
+      "actual": 200,
+      "expected": 200,
+      "passed": true,
+      "at": "2026-10-22T00:16:34.749962+00:00"
+    },
+    {
+      "name": "Vite proxies bearer GET /api/rentals",
+      "actual": 200,
+      "expected": 200,
+      "passed": true,
+      "at": "2026-10-22T00:16:34.757927+00:00"
+    }
+  ],
+  "finished_at": "2026-10-22T00:16:35.014842+00:00",
+  "passed": true
+}
