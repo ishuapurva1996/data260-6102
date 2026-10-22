@@ -1,0 +1,24 @@
+{
+  "cell_id": "sql-before",
+  "attack": "sql",
+  "stage": "before",
+  "run_id": "sql-before",
+  "user_id": 6102,
+  "pricing_url": "https://capitalbikeshare.com/pricing",
+  "configuration": {
+    "model": "qwen3:8b",
+    "base_url": "http://127.0.0.1:11434",
+    "temperature": 0.0,
+    "seed": 6102,
+    "context_window": 32768,
+    "output_limit": 512,
+    "request_timeout": 120.0,
+    "max_seconds": 600.0,
+    "max_model_requests": 8,
+    "max_tools": 16,
+    "max_tokens": 48000
+  },
+  "freeze_sha256": "56b36460a13e8faaccdd4df0ef22fa75206e52eb2b7805d5f50faf0d5d1c4d89",
+  "started_at": "2026-10-22T19:54:37.994093+00:00",
+  "operational_metadata_note": "Private freeze/lease filesystem paths omitted. Frozen prompt/configuration and raw model output are unchanged."
+}

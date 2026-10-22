@@ -1,0 +1,11 @@
+{
+  "checked_at": "2026-10-22T20:10:59.964064+00:00",
+  "files_inspected": 119,
+  "new_global_report_tails_only": true,
+  "credential_value_match": false,
+  "jwt_match": false,
+  "private_path_or_key_match": false,
+  "workflow_artifacts_selected": false,
+  "model_trace_transforms": 0,
+  "notes": "Public request/supervisor metadata omits private operational paths; all model trace/result bytes are unchanged."
+}

@@ -1,0 +1,19 @@
+{
+  "url": "https://capitalbikeshare.com/pricing/single-trip",
+  "sha256": "51b55b3d5a61aafde7f5d9d0edf6074540267127fb65b096a178058689cace79",
+  "captured_at": "2026-10-22T19:57:11.676522+00:00",
+  "fixture": "base-policies.json",
+  "retrieval_kind": "local copied fixture, no HTTP request",
+  "original_capture": {
+    "url": "https://capitalbikeshare.com/pricing/single-trip",
+    "original_url": "https://capitalbikeshare.com/pricing/single-trip",
+    "captured_at": "2026-10-22T08:06:20.638632+00:00",
+    "sha256": "51b55b3d5a61aafde7f5d9d0edf6074540267127fb65b096a178058689cace79",
+    "html_sha256": "6ef0b0ce05e250dda2a08a662dfa4b3ace5900149d5f3b54a79835b056978cad",
+    "html_file": "4e95af9ff3f30f7bb4e9.html",
+    "http_status": 200,
+    "text_extraction": "UTF-8 HTMLParser; script/style omitted; stripped nonempty lines",
+    "text_file": "4e95af9ff3f30f7bb4e9.txt"
+  },
+  "text_file": "4e95af9ff3f30f7bb4e9.txt"
+}

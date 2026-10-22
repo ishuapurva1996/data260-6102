@@ -1,0 +1,43 @@
+{
+  "checked_at": "2026-10-22T19:49:04.314392+00:00",
+  "baseline": "af8e9123d2dd4466b4496bbf052879d8acaf9f57",
+  "source_commit": "485d737b3c55b638ab9d6818952f2505d8496694",
+  "checks": [
+    {
+      "file": "src/bikeshare/tools.py",
+      "unchanged": true,
+      "sha256": "af44a09172cd146eb0a92cefeda33c947c55667371c75dc1345eed794591fd6d"
+    },
+    {
+      "file": "src/bikeshare/policies.py",
+      "unchanged": true,
+      "sha256": "e098b38331c92f2ea3cdd3886bed24bbd4376dc673ade7e1bdc4127bdd5bface"
+    },
+    {
+      "file": "src/bikeshare/guidance.py",
+      "unchanged": true,
+      "sha256": "f7ddb775edb88f92f5e95df0b5168f31fb2b0813b4e1250830830e3243ec2b86"
+    },
+    {
+      "file": "src/bikeshare/pricing.py",
+      "unchanged": true,
+      "sha256": "2f020cb022ceec04b7b54402189df315cc067dec1d3e1c352d51faba6220fe6d"
+    },
+    {
+      "file": "src/bikeshare/costs.py",
+      "unchanged": true,
+      "sha256": "95e1fc197043c04edae3eae5e51a09e288f913cf31c91a52f5e7f1bf0ca2c8c3"
+    },
+    {
+      "file": "src/model_client.py",
+      "unchanged": true,
+      "sha256": "2b9c517a706e7c9e9191eb88794c17f5684e8d286877c2fbfa6a9b9061118c67"
+    },
+    {
+      "file": "requirements-hw07-part4.lock.txt",
+      "unchanged": true,
+      "sha256": "5b523d06bc28577f7c51549094836a6a4869e3e4aa2bc388056a3d63e5742396"
+    }
+  ],
+  "normal_app_imports_experiments": false
+}

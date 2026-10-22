@@ -1,0 +1,7 @@
+{
+  "timed_out": false,
+  "returncode": 0,
+  "latency_ms": 146956.5,
+  "finished_at": "2026-10-22T20:01:38.115117+00:00",
+  "operational_metadata_note": "Private interpreter/request paths omitted. Actual entry point: scripts/hw07/injection_experiment.py --cell; source worker log retained externally, model request/response is in trace.jsonl unchanged."
+}

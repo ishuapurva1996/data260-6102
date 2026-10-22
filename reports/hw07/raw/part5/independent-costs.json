@@ -1,0 +1,16 @@
+{
+  "student": "Pragya Apurva",
+  "computed_at": "2026-10-22T19:54:14.443023+00:00",
+  "method": "independent standard-library integer-cent computation from original timestamps, not application cost functions and not a model run",
+  "input_sha256": "5c259574dc8707558115aa18ade7919216b465a51385bfbd74fd2620773132d2",
+  "rows": 500,
+  "hypothetical_accounts": 10,
+  "billable_minutes": 7351,
+  "overage_minutes": 117,
+  "pay_per_use_cents": 160265,
+  "membership_fee_cents": 25000,
+  "residual_cents": 585,
+  "membership_total_cents": 25585,
+  "decision": "Buy Monthly Membership",
+  "basis": "Copied Part 4 captured classic-bike rates: 100-cent unlock plus 15 cents per ceil minute; 2500 cents per hypothetical account/30 days; 45 included minutes per ride then 5 cents per ceil extra minute. No new public pricing request."
+}

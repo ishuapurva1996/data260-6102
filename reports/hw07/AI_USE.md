@@ -93,3 +93,13 @@ and the final submission remain pending.
 2. An unsuitable genuine pilot answer chose membership despite its own correct $790.25 casual and $3,125 membership totals. Earlier pilots also used wrong columns or incomplete tool chains.
 3. Deterministic per-ride/account checks rejected the wrong recommendation; the unchanged failed answer remains in raw/part4/pilots/p10-occasional. Controlled negative tests also show that correct totals cannot certify false prose or a $0.054 rate in place of captured $0.05. Independent source-row and integer-cent auditing confirms the final values.
 4. The trusted phase hint now compares both actual calculator observations before requesting the final decision, and the framework still obtains all native calls from the model. The verifier preserves and rejects unsupported original answers. Both final real UI runs passed. Hypothetical account labels, pre-tax assumptions, guided prompting, failed pilots and controlled tests are explicitly distinguished from genuine final measurements. Parts 5–6 and final submission remain pending.
+
+
+---
+
+## Part 5 AI use addendum
+
+1. I supplied the authoritative assignment, completed checkpoints, personal configuration and scope. An AI assistant wrote the pre-test threat model, isolated fixture harness and tests, ran the nine real local-model measurements, computed the table from raw records and produced this evidence. AI-assisted independent code review and standard-library cost/trace checks were used. I do not claim manual student implementation or a manual independent audit.
+2. Two unsuitable AI-produced scorer paths could lose evidence: a non-text JSON decision could crash collection, and supervisor reconstruction could ignore a raw final answer already retained in the trace.
+3. Independent review and controlled regression proofs exposed the defects before measurement. Four tests failed on the original paths; the corrected security suite passed 26. Separate drift proofs also caught three omitted runtime-module hashes before the freeze. These are controlled tests, not genuine attack outcomes.
+4. Type checking now makes malformed decisions unsuccessful without crashing, and interrupted runs recover retained final text or record an unknown outcome. Source/configuration/fixture hashes and exact prompts were frozen before the nine genuine runs. All raw responses, unsuccessful baseline attacks and the successful raw recommendation override are retained. The existing verifier's rejection is reported independently, not attributed to prompt or SQL defense. Read-only SELECT alone can expose CSV content; controlled proofs and genuine disclosure outcomes are distinguished. Part 6, final PDF and submission tag remain pending.
