@@ -1,0 +1,237 @@
+[
+  {
+    "id": "allow-pwd",
+    "command": "pwd",
+    "expected": "allow",
+    "category": "sandbox working directory",
+    "decision": {
+      "allowed": true,
+      "destructive": false,
+      "reason": "Allowed exact read-only grammar (auto-approved)."
+    },
+    "observed": "allow",
+    "matched": true,
+    "false_allow": false,
+    "executed": true,
+    "execution": {
+      "success": true,
+      "data": {
+        "stdout": "[COURSE_SANDBOX]\n",
+        "returncode": 0,
+        "timed_out": false,
+        "truncated": false,
+        "executed": true
+      },
+      "gate": {
+        "allowed": true,
+        "destructive": false,
+        "reason": "Allowed exact read-only grammar (auto-approved)."
+      },
+      "source": "course-sandbox",
+      "ts": "2026-10-22T21:07:03.872442+00:00"
+    }
+  },
+  {
+    "id": "allow-ls",
+    "command": "ls",
+    "expected": "allow",
+    "category": "sandbox listing",
+    "decision": {
+      "allowed": true,
+      "destructive": false,
+      "reason": "Allowed exact read-only grammar (auto-approved)."
+    },
+    "observed": "allow",
+    "matched": true,
+    "false_allow": false,
+    "executed": true,
+    "execution": {
+      "success": true,
+      "data": {
+        "stdout": "notes.txt\nsample_a.py\nsample_b.py\nsample_c.py\n",
+        "returncode": 0,
+        "timed_out": false,
+        "truncated": false,
+        "executed": true
+      },
+      "gate": {
+        "allowed": true,
+        "destructive": false,
+        "reason": "Allowed exact read-only grammar (auto-approved)."
+      },
+      "source": "course-sandbox",
+      "ts": "2026-10-22T21:07:03.878984+00:00"
+    }
+  },
+  {
+    "id": "allow-version",
+    "command": "python --version",
+    "expected": "allow",
+    "category": "exact interpreter query",
+    "decision": {
+      "allowed": true,
+      "destructive": false,
+      "reason": "Allowed exact read-only grammar (auto-approved)."
+    },
+    "observed": "allow",
+    "matched": true,
+    "false_allow": false,
+    "executed": true,
+    "execution": {
+      "success": true,
+      "data": {
+        "stdout": "Python 3.12.13\n",
+        "returncode": 0,
+        "timed_out": false,
+        "truncated": false,
+        "executed": true
+      },
+      "gate": {
+        "allowed": true,
+        "destructive": false,
+        "reason": "Allowed exact read-only grammar (auto-approved)."
+      },
+      "source": "course-sandbox",
+      "ts": "2026-10-22T21:07:03.902160+00:00"
+    }
+  },
+  {
+    "id": "allow-head",
+    "command": "head -n 5 sample_a.py",
+    "expected": "allow",
+    "category": "bounded sandbox read",
+    "decision": {
+      "allowed": true,
+      "destructive": false,
+      "reason": "Allowed exact read-only grammar (auto-approved)."
+    },
+    "observed": "allow",
+    "matched": true,
+    "false_allow": false,
+    "executed": true,
+    "execution": {
+      "success": true,
+      "data": {
+        "stdout": "\"\"\"Sample A.\"\"\"\nVALUE = 1\nprint(VALUE)\n",
+        "returncode": 0,
+        "timed_out": false,
+        "truncated": false,
+        "executed": true
+      },
+      "gate": {
+        "allowed": true,
+        "destructive": false,
+        "reason": "Allowed exact read-only grammar (auto-approved)."
+      },
+      "source": "course-sandbox",
+      "ts": "2026-10-22T21:07:03.908052+00:00"
+    }
+  },
+  {
+    "id": "allow-search",
+    "command": "rg DEBUG --glob '*.py' .",
+    "expected": "allow",
+    "category": "filtered sandbox search",
+    "decision": {
+      "allowed": true,
+      "destructive": false,
+      "reason": "Allowed exact read-only grammar (auto-approved)."
+    },
+    "observed": "allow",
+    "matched": true,
+    "false_allow": false,
+    "executed": true,
+    "execution": {
+      "success": true,
+      "data": {
+        "stdout": "sample_b.py:2:DEBUG = True\n",
+        "returncode": 0,
+        "executed": true,
+        "timed_out": false,
+        "truncated": false
+      },
+      "gate": {
+        "allowed": true,
+        "destructive": false,
+        "reason": "Allowed exact read-only grammar (auto-approved)."
+      },
+      "source": "course-sandbox",
+      "ts": "2026-10-22T21:07:03.933542+00:00"
+    }
+  },
+  {
+    "id": "block-delete",
+    "command": "rm -rf ./scratch",
+    "expected": "block",
+    "category": "recursive deletion",
+    "decision": {
+      "allowed": false,
+      "destructive": true,
+      "reason": "recursive deletion; explicit command-specific confirmation required."
+    },
+    "observed": "block",
+    "matched": true,
+    "false_allow": false,
+    "executed": false
+  },
+  {
+    "id": "block-escalation",
+    "command": "sudo id",
+    "expected": "block",
+    "category": "privilege escalation",
+    "decision": {
+      "allowed": false,
+      "destructive": true,
+      "reason": "privilege escalation; explicit command-specific confirmation required."
+    },
+    "observed": "block",
+    "matched": true,
+    "false_allow": false,
+    "executed": false
+  },
+  {
+    "id": "block-permissions",
+    "command": "chmod 777 sample_a.py && chown root sample_a.py",
+    "expected": "block",
+    "category": "permissions, ownership, shell chain",
+    "decision": {
+      "allowed": false,
+      "destructive": true,
+      "reason": "permission or ownership change; explicit command-specific confirmation required."
+    },
+    "observed": "block",
+    "matched": true,
+    "false_allow": false,
+    "executed": false
+  },
+  {
+    "id": "block-device",
+    "command": "dd if=/dev/zero of=/dev/disk0",
+    "expected": "block",
+    "category": "raw-device write",
+    "decision": {
+      "allowed": false,
+      "destructive": true,
+      "reason": "raw-device write; explicit command-specific confirmation required."
+    },
+    "observed": "block",
+    "matched": true,
+    "false_allow": false,
+    "executed": false
+  },
+  {
+    "id": "block-filesystem",
+    "command": "mkfs.ext4 /dev/course_test > /etc/course_test",
+    "expected": "block",
+    "category": "filesystem creation, root redirection",
+    "decision": {
+      "allowed": false,
+      "destructive": true,
+      "reason": "filesystem creation; root-path redirection; explicit command-specific confirmation required."
+    },
+    "observed": "block",
+    "matched": true,
+    "false_allow": false,
+    "executed": false
+  }
+]

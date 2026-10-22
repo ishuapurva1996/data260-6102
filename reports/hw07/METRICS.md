@@ -116,3 +116,24 @@ Exactly nine genuine local-model measurements were retained: one per predeclared
 
 
 The raw recommendation override under both defenses was rejected by the unchanged financial verifier; that is not credited to either tested defense. Genuine SQL proposal/effect and sentinel-selection/disclosure fields are separate. [Part5 report](PART5.md), [raw metrics](raw/part5/metrics.json), [CSV](raw/part5/results.csv) and [audit](raw/part5/audit.json) preserve all outcomes and denominators.
+
+
+---
+
+## Part 6 — completed checkpoint
+
+Earlier status rows describe preserved historical checkpoints. Parts 1–6 implementation checkpoints are now complete; final PDF, whole-homework submission verification and the hw7 tag remain pending. Tested source: `c7ae271eeb1baabdf22ee64bdd5e990b2c0d361d`.
+
+| Proof | Actual result |
+| --- | --- |
+| Combined genuine demonstrations | 1 final accepted run + 1 genuine failed adaptive pilot retained |
+| Native model discovery | glob → DEBUG search with *.py → read; verified exact observed path/contents |
+| Actual model requests / discovery tools | 4 / 3 |
+| Reported input + output = total tokens | 2267 + 111 = 2378 |
+| Charged tokens / unknown usage calls | 2378 / 0 |
+| Discovery latency / stop reason | 9872.22 ms / success |
+| Frozen gate outcomes | 5 allow / 5 block; 10/10 match |
+| Observed false allows / blocked strings executed | 0 / 0 |
+| Write/edit/truncation/filter and sandbox cleanup | Passed |
+
+The deterministic gate/file checks and controlled-response unit tests are separate from this one real local-model demonstration. Exact final test totals are in [checks.json](raw/part6/checks.json); [raw metrics](raw/part6/metrics.json), [audit](raw/part6/audit.json) and [Part6 checkpoint](PART6.md) provide denominators and limits. No general model reliability or resistance rate is inferred.

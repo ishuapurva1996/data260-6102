@@ -1,0 +1,11 @@
+{
+  "classification": "genuine failed adaptive pilot",
+  "source_commit": "e12180b6725f7c0fe60d4f03883eba375e325711",
+  "model_attempts": 1,
+  "discovery_tool_calls": 3,
+  "gate_matches": 10,
+  "false_allows": 0,
+  "verification": "rejected: final answer omitted trailing newline",
+  "fix": "explicit whitespace-preservation prompt; strict verifier and original fixtures unchanged",
+  "not_in_final_acceptance_run": true
+}

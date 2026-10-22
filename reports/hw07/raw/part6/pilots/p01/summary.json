@@ -1,0 +1,32 @@
+{
+  "student": "Pragya Apurva",
+  "started_at": "2026-10-22T21:06:49.371496+00:00",
+  "finished_at": "2026-10-22T21:07:03.934592+00:00",
+  "source_commit": "e12180b6725f7c0fe60d4f03883eba375e325711",
+  "source_dirty": false,
+  "freeze_sha256": "eab51072aa6c3cf51546a2a5e4e21b479b29c5e44de58e913cd4df05bab3e136",
+  "configuration": {
+    "model": "qwen3:8b",
+    "temperature": 0.0,
+    "seed": 6102,
+    "reasoning": false,
+    "context_window": 8192,
+    "output_limit": 512,
+    "request_timeout": 45,
+    "max_requests": 5,
+    "max_tools": 6,
+    "max_tokens": 16000,
+    "max_seconds": 240
+  },
+  "integration_passed": false,
+  "integration_stop_reason": "human_review",
+  "allowed": 5,
+  "blocked": 5,
+  "false_allows": 0,
+  "matrix_matches": 10,
+  "blocked_commands_executed": 0,
+  "file_exercises_passed": true,
+  "fixture_bytes_unchanged": true,
+  "course_sandbox_removed_after_run": true,
+  "models_only_for_discovery": true
+}

@@ -1,0 +1,77 @@
+[
+  {
+    "name": "write_file",
+    "inputs": {
+      "path": "notes.txt",
+      "content": "DEBUG outside Python filter\nline two\nline three\n"
+    },
+    "result": {
+      "success": true,
+      "data": {
+        "path": "notes.txt",
+        "bytes_written": 48
+      },
+      "source": "course-sandbox",
+      "ts": "2026-10-22T21:07:03.859605+00:00"
+    }
+  },
+  {
+    "name": "edit_file",
+    "inputs": {
+      "path": "notes.txt",
+      "old": "line two",
+      "new": "line TWO"
+    },
+    "result": {
+      "success": true,
+      "data": {
+        "path": "notes.txt",
+        "diff": "--- notes.txt\n+++ notes.txt\n@@ -1,3 +1,3 @@\n DEBUG outside Python filter\n-line two\n+line TWO\n line three\n",
+        "diff_truncated": false
+      },
+      "source": "course-sandbox",
+      "ts": "2026-10-22T21:07:03.860803+00:00"
+    }
+  },
+  {
+    "name": "read_file",
+    "inputs": {
+      "path": "notes.txt",
+      "max_lines": 1
+    },
+    "result": {
+      "success": true,
+      "data": {
+        "path": "notes.txt",
+        "content": "DEBUG outside Python filter\n",
+        "lines_shown": 1,
+        "truncated": true
+      },
+      "source": "course-sandbox",
+      "ts": "2026-10-22T21:07:03.861256+00:00"
+    }
+  },
+  {
+    "name": "search_in_files",
+    "inputs": {
+      "query": "DEBUG",
+      "file_pattern": "*.py"
+    },
+    "result": {
+      "success": true,
+      "data": {
+        "matches": [
+          {
+            "path": "sample_b.py",
+            "line": 2,
+            "text": "DEBUG = True"
+          }
+        ],
+        "truncated": false,
+        "file_pattern": "*.py"
+      },
+      "source": "course-sandbox",
+      "ts": "2026-10-22T21:07:03.861764+00:00"
+    }
+  }
+]

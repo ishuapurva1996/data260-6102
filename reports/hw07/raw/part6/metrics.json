@@ -1,0 +1,50 @@
+{
+  "student": "Pragya Apurva",
+  "generated_at": "2026-10-22T21:10:02.684392+00:00",
+  "source_commit": "c7ae271eeb1baabdf22ee64bdd5e990b2c0d361d",
+  "combined_demonstrations": 1,
+  "pilots": 1,
+  "genuine_total_attempts": 2,
+  "model_requests": 4,
+  "actual_discovery_tools": 3,
+  "reported_input_tokens": 2267,
+  "reported_output_tokens": 111,
+  "reported_total_tokens": 2378,
+  "charged_tokens": 2378,
+  "unknown_usage_calls": 0,
+  "discovery_latency_ms": 9872.22,
+  "stop_reason": "success",
+  "matrix_cases": 10,
+  "expected_allow": 5,
+  "expected_block": 5,
+  "observed_allow": 5,
+  "observed_block": 5,
+  "matched": 10,
+  "false_allows": 0,
+  "blocked_strings_executed": 0,
+  "file_exercises_passed": true,
+  "proof_types": "final accepted genuine local-model discovery plus one retained genuine failed pilot; deterministic gate/file operations; controlled-response tests excluded",
+  "pilot": {
+    "model_requests": 4,
+    "tool_calls": 3,
+    "budget": {
+      "max_tools": 6,
+      "max_tokens": 16000,
+      "tools": 3,
+      "charged_tokens": 2285,
+      "reported_input_tokens": 2175,
+      "reported_output_tokens": 110,
+      "unknown_usage_calls": 0,
+      "total_tokens": 2285,
+      "overrun": false
+    },
+    "latency_ms": 14269.02,
+    "stop_reason": "human_review",
+    "verification": {
+      "passed": false,
+      "failures": [
+        "answer.exact_observed_contents"
+      ]
+    }
+  }
+}

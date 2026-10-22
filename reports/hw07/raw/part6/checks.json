@@ -1,0 +1,49 @@
+{
+  "student": "Pragya Apurva",
+  "recorded_at": "2026-10-22T21:13:00.685541+00:00",
+  "source_commit": "c7ae271eeb1baabdf22ee64bdd5e990b2c0d361d",
+  "focused": {
+    "passed": 69,
+    "failed": 0,
+    "proof_type": "controlled model replies plus real temporary filesystem and harmless subprocesses; no local-model measurement"
+  },
+  "broad": {
+    "passed": 1350,
+    "skipped": 25,
+    "warnings": 253,
+    "seconds": 32.67,
+    "failed": 0,
+    "command": "python -m pytest tests reports/hw01/tests/test_model_client.py reports/hw01/tests/test_agents_demo.py -q --tb=line --ignore=tests/retrieval --ignore=tests/test_hw05_mcp_stdio.py --ignore=tests/test_hw05_domain_tools.py --ignore=tests/test_hw05_fault_experiment.py --ignore=tests/test_hw05_meals.py --ignore=tests/test_hw05_runtime.py -p no:cacheprovider --basetemp=[PRIVATE_TEMP_ROOT]",
+    "limits": "Web-compatible inherited environment; legacy retrieval/dedicated MCP suites excluded;25 existing opt-in skips are not passes. Includes real transactional MySQL and explicit test doubles. This is not whole-homework submission verification.",
+    "exact_measured_source": true,
+    "started_at": "2026-10-22T21:08:46.711565+00:00",
+    "finished_at": "2026-10-22T21:09:20.045731+00:00"
+  },
+  "ruff_precommit": {
+    "check": "passed",
+    "format": "passed",
+    "implementation_commit_hooks": "passed"
+  },
+  "dependencies": {
+    "inherited_packages_checked": 88,
+    "compatible": true,
+    "installed_or_changed": 0
+  },
+  "review": {
+    "status": "complete",
+    "run_id": "20261022-204809-a5df4f26",
+    "primary_findings_applied": 4,
+    "advisory_test_gaps_applied": 2,
+    "unresolved": 0,
+    "cross_model": "not run: npx/acpx runtime absent; local adversarial fallback, no external-model independence claim"
+  },
+  "negative_proofs": {
+    "macos_initial_process_checks": "47 passed/2 failed, then49 passed after descriptor fchdir correction",
+    "discovery_wrong_query_proof": "2 passed/1 failed before exact search validation",
+    "review_fix_proofs": "60 passed/6 failed before fixes,66 passed after fixes;69 passed after additional advisory coverage",
+    "destructive_false_allows_observed": 0,
+    "storage_failure": "controlled injection only; no real storage failure incidence measured",
+    "genuine_pilot": "One real model final response omitted trailing newline; strict verifier rejected. Prompt-only clarification then passed, unchanged verifier/fixtures/settings/budgets."
+  },
+  "submission_verification": "deferred to subsequent session"
+}

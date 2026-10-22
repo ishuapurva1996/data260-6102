@@ -1,0 +1,1799 @@
+{
+  "student": "Pragya Apurva",
+  "audited_at": "2026-10-22T21:12:15.472553+00:00",
+  "method": "independent standard-library raw observation, source, history and pilot checks; not a second model evaluation",
+  "checks": [
+    {
+      "check": "exact native model trace bytes",
+      "passed": true
+    },
+    {
+      "check": "exact integration result bytes",
+      "passed": true
+    },
+    {
+      "check": "trace matches result",
+      "passed": true
+    },
+    {
+      "check": "single initial instruction",
+      "passed": true
+    },
+    {
+      "check": "three real tools in exact order",
+      "passed": true
+    },
+    {
+      "check": "native IDs preserved",
+      "passed": true
+    },
+    {
+      "check": "matching tool-role e909953c-a59b-4b4a-8b53-ed75a10b23c6",
+      "passed": true
+    },
+    {
+      "check": "matching tool-role e909953c-a59b-4b4a-8b53-ed75a10b23c6",
+      "passed": true
+    },
+    {
+      "check": "matching tool-role 26a6e016-178d-457d-b11a-fcb4e13a522e",
+      "passed": true
+    },
+    {
+      "check": "matching tool-role e909953c-a59b-4b4a-8b53-ed75a10b23c6",
+      "passed": true
+    },
+    {
+      "check": "matching tool-role 26a6e016-178d-457d-b11a-fcb4e13a522e",
+      "passed": true
+    },
+    {
+      "check": "matching tool-role 6f25ff69-6383-4a7d-ba7e-d85cb7b1a3b9",
+      "passed": true
+    },
+    {
+      "check": "glob discovered exactly initial3 Python files",
+      "passed": true
+    },
+    {
+      "check": "broad initial Python glob",
+      "passed": true
+    },
+    {
+      "check": "exact requested DEBUG/Python search",
+      "passed": true
+    },
+    {
+      "check": "one file contains DEBUG",
+      "passed": true
+    },
+    {
+      "check": "read path from search and glob",
+      "passed": true
+    },
+    {
+      "check": "path absent before discovery",
+      "passed": true
+    },
+    {
+      "check": "actual read content matches fixture",
+      "passed": true
+    },
+    {
+      "check": "raw final exact observed contents",
+      "passed": true
+    },
+    {
+      "check": "original final response retained",
+      "passed": true
+    },
+    {
+      "check": "raw final before terminal",
+      "passed": true
+    },
+    {
+      "check": "verification and stop",
+      "passed": true
+    },
+    {
+      "check": "request and token bounds",
+      "passed": true
+    },
+    {
+      "check": "exact ten fixed commands",
+      "passed": true
+    },
+    {
+      "check": "5 allow 5 block",
+      "passed": true
+    },
+    {
+      "check": "all objective expectations match",
+      "passed": true
+    },
+    {
+      "check": "zero observed false allows",
+      "passed": true
+    },
+    {
+      "check": "blocked strings never executed",
+      "passed": true
+    },
+    {
+      "check": "safe commands actually executed",
+      "passed": true
+    },
+    {
+      "check": "actual bounded head output",
+      "passed": true
+    },
+    {
+      "check": "actual filtered rg output",
+      "passed": true
+    },
+    {
+      "check": "actual ls output",
+      "passed": true
+    },
+    {
+      "check": "actual pwd operational alias",
+      "passed": true
+    },
+    {
+      "check": "all extra tools passed",
+      "passed": true
+    },
+    {
+      "check": "exact edit diff",
+      "passed": true
+    },
+    {
+      "check": "truncation actual one line",
+      "passed": true
+    },
+    {
+      "check": "file pattern excludes DEBUG text file",
+      "passed": true
+    },
+    {
+      "check": "clean frozen source",
+      "passed": true
+    },
+    {
+      "check": "frozen bytes src/course_files/__init__.py",
+      "passed": true
+    },
+    {
+      "check": "frozen bytes src/course_files/agent.py",
+      "passed": true
+    },
+    {
+      "check": "frozen bytes src/course_files/gate.py",
+      "passed": true
+    },
+    {
+      "check": "frozen bytes src/course_files/sandbox.py",
+      "passed": true
+    },
+    {
+      "check": "frozen bytes scripts/hw07/file_demo.py",
+      "passed": true
+    },
+    {
+      "check": "frozen bytes src/model_client.py",
+      "passed": true
+    },
+    {
+      "check": "frozen bytes src/tool_agent/budget.py",
+      "passed": true
+    },
+    {
+      "check": "frozen bytes requirements-hw07-part4.lock.txt",
+      "passed": true
+    },
+    {
+      "check": "frozen bytes reports/hw07/cases/safety_commands.json",
+      "passed": true
+    },
+    {
+      "check": "frozen bytes reports/hw07/cases/file_discovery.json",
+      "passed": true
+    },
+    {
+      "check": "historical prefix reports/hw07/AI_USE.md",
+      "passed": true
+    },
+    {
+      "check": "historical prefix reports/hw07/METRICS.md",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/PART1.md",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/PART4.md",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/PART5.md",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/PARTS2_3.md",
+      "passed": true
+    },
+    {
+      "check": "historical prefix reports/hw07/RUN_LOG.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/cases/agent_tasks.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/cases/bikeshare/frequent.csv",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/cases/bikeshare/manifest.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/cases/bikeshare/occasional.csv",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/cases/experiment.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/cases/injection/THREAT_MODEL.md",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/cases/injection/base-policies.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/cases/injection/disclosure.html",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/cases/injection/manifest.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/cases/injection/recommendation.html",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/cases/injection/sql.html",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/cases/injection/trips.csv",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part1/acceptance.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part1/baseline.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part1/hw6-smoke.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part1/preservation.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part1/supplemental-live.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part2/attempts.jsonl",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part2/proposals.jsonl",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part2/recovery/manifest.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part2/recovery/result.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part2/recovery/traces.jsonl",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part2/reliability.csv",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part2/traces.jsonl",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part2/unscored-repair/attempt.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part2/unscored-repair/proposals.jsonl",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part2/unscored-repair/traces.jsonl",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part3/attempts.jsonl",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part3/comparison.csv",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part3/controlled-fault/attempts.jsonl",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part3/controlled-fault/audit.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part3/controlled-fault/manifest.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part3/controlled-fault/proposals.jsonl",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part3/controlled-fault/reflections.jsonl",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part3/controlled-fault/traces.jsonl",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part3/proposals.jsonl",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part3/reflections.jsonl",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part3/traces.jsonl",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/SHA256SUMS.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/audit.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/controlled-browser-recovery.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/environment.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/evidence-check.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/final/frequent/api-response.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/final/frequent/browser.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/final/frequent/input.csv",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/final/frequent/policies/215cb850ef8097410941.html",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/final/frequent/policies/215cb850ef8097410941.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/final/frequent/policies/215cb850ef8097410941.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/final/frequent/policies/4e95af9ff3f30f7bb4e9.html",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/final/frequent/policies/4e95af9ff3f30f7bb4e9.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/final/frequent/policies/4e95af9ff3f30f7bb4e9.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/final/frequent/policies/a0bafd97c36fc37d943e.html",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/final/frequent/policies/a0bafd97c36fc37d943e.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/final/frequent/policies/a0bafd97c36fc37d943e.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/final/frequent/result.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/final/frequent/run.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/final/frequent/trace.jsonl",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/final/frequent/trip-summary.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/final/occasional/api-response.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/final/occasional/browser.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/final/occasional/input.csv",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/final/occasional/policies/215cb850ef8097410941.html",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/final/occasional/policies/215cb850ef8097410941.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/final/occasional/policies/215cb850ef8097410941.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/final/occasional/policies/4e95af9ff3f30f7bb4e9.html",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/final/occasional/policies/4e95af9ff3f30f7bb4e9.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/final/occasional/policies/4e95af9ff3f30f7bb4e9.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/final/occasional/policies/a0bafd97c36fc37d943e.html",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/final/occasional/policies/a0bafd97c36fc37d943e.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/final/occasional/policies/a0bafd97c36fc37d943e.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/final/occasional/result.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/final/occasional/run.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/final/occasional/trace.jsonl",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/final/occasional/trip-summary.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/live-http.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/live-owner-isolation.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/metrics.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/model-profile.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/index.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p01-frequent/input.csv",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p01-frequent/policies/215cb850ef8097410941-failure.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p01-frequent/policies/215cb850ef8097410941.html",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p01-frequent/policies/4e95af9ff3f30f7bb4e9.html",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p01-frequent/policies/4e95af9ff3f30f7bb4e9.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p01-frequent/policies/4e95af9ff3f30f7bb4e9.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p01-frequent/policies/a0bafd97c36fc37d943e.html",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p01-frequent/policies/a0bafd97c36fc37d943e.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p01-frequent/policies/a0bafd97c36fc37d943e.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p01-frequent/policies/c68bb31917ebdb1a1c2b-failure.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p01-frequent/policies/c68bb31917ebdb1a1c2b.html",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p01-frequent/result.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p01-frequent/run.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p01-frequent/trace.jsonl",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p02-frequent/input.csv",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p02-frequent/policies/215cb850ef8097410941.html",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p02-frequent/policies/215cb850ef8097410941.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p02-frequent/policies/215cb850ef8097410941.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p02-frequent/policies/4e95af9ff3f30f7bb4e9.html",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p02-frequent/policies/4e95af9ff3f30f7bb4e9.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p02-frequent/policies/4e95af9ff3f30f7bb4e9.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p02-frequent/policies/a0bafd97c36fc37d943e.html",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p02-frequent/policies/a0bafd97c36fc37d943e.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p02-frequent/policies/a0bafd97c36fc37d943e.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p02-frequent/policies/c68bb31917ebdb1a1c2b.html",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p02-frequent/policies/c68bb31917ebdb1a1c2b.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p02-frequent/policies/c68bb31917ebdb1a1c2b.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p02-frequent/result.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p02-frequent/run.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p02-frequent/trace.jsonl",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p03-frequent/input.csv",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p03-frequent/policies/215cb850ef8097410941.html",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p03-frequent/policies/215cb850ef8097410941.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p03-frequent/policies/215cb850ef8097410941.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p03-frequent/policies/4e95af9ff3f30f7bb4e9.html",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p03-frequent/policies/4e95af9ff3f30f7bb4e9.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p03-frequent/policies/4e95af9ff3f30f7bb4e9.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p03-frequent/policies/a0bafd97c36fc37d943e.html",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p03-frequent/policies/a0bafd97c36fc37d943e.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p03-frequent/policies/a0bafd97c36fc37d943e.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p03-frequent/policies/c68bb31917ebdb1a1c2b.html",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p03-frequent/policies/c68bb31917ebdb1a1c2b.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p03-frequent/policies/c68bb31917ebdb1a1c2b.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p03-frequent/result.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p03-frequent/run.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p03-frequent/trace.jsonl",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p04-frequent/input.csv",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p04-frequent/policies/215cb850ef8097410941.html",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p04-frequent/policies/215cb850ef8097410941.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p04-frequent/policies/215cb850ef8097410941.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p04-frequent/policies/4e95af9ff3f30f7bb4e9.html",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p04-frequent/policies/4e95af9ff3f30f7bb4e9.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p04-frequent/policies/4e95af9ff3f30f7bb4e9.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p04-frequent/policies/a0bafd97c36fc37d943e.html",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p04-frequent/policies/a0bafd97c36fc37d943e.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p04-frequent/policies/a0bafd97c36fc37d943e.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p04-frequent/policies/c68bb31917ebdb1a1c2b.html",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p04-frequent/policies/c68bb31917ebdb1a1c2b.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p04-frequent/policies/c68bb31917ebdb1a1c2b.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p04-frequent/result.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p04-frequent/run.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p04-frequent/trace.jsonl",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p05-frequent/input.csv",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p05-frequent/policies/215cb850ef8097410941.html",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p05-frequent/policies/215cb850ef8097410941.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p05-frequent/policies/215cb850ef8097410941.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p05-frequent/policies/4e95af9ff3f30f7bb4e9.html",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p05-frequent/policies/4e95af9ff3f30f7bb4e9.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p05-frequent/policies/4e95af9ff3f30f7bb4e9.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p05-frequent/policies/a0bafd97c36fc37d943e.html",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p05-frequent/policies/a0bafd97c36fc37d943e.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p05-frequent/policies/a0bafd97c36fc37d943e.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p05-frequent/result.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p05-frequent/run.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p05-frequent/trace.jsonl",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p06-frequent-qwen3/input.csv",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p06-frequent-qwen3/policies/215cb850ef8097410941.html",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p06-frequent-qwen3/policies/215cb850ef8097410941.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p06-frequent-qwen3/policies/215cb850ef8097410941.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p06-frequent-qwen3/policies/4e95af9ff3f30f7bb4e9.html",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p06-frequent-qwen3/policies/4e95af9ff3f30f7bb4e9.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p06-frequent-qwen3/policies/4e95af9ff3f30f7bb4e9.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p06-frequent-qwen3/policies/a0bafd97c36fc37d943e.html",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p06-frequent-qwen3/policies/a0bafd97c36fc37d943e.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p06-frequent-qwen3/policies/a0bafd97c36fc37d943e.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p06-frequent-qwen3/policies/c68bb31917ebdb1a1c2b.html",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p06-frequent-qwen3/policies/c68bb31917ebdb1a1c2b.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p06-frequent-qwen3/policies/c68bb31917ebdb1a1c2b.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p06-frequent-qwen3/result.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p06-frequent-qwen3/run.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p06-frequent-qwen3/trace.jsonl",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p07-frequent-guided/input.csv",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p07-frequent-guided/policies/215cb850ef8097410941.html",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p07-frequent-guided/policies/215cb850ef8097410941.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p07-frequent-guided/policies/215cb850ef8097410941.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p07-frequent-guided/policies/a0bafd97c36fc37d943e.html",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p07-frequent-guided/policies/a0bafd97c36fc37d943e.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p07-frequent-guided/policies/a0bafd97c36fc37d943e.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p07-frequent-guided/result.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p07-frequent-guided/run.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p07-frequent-guided/trace.jsonl",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p08-frequent-recency/input.csv",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p08-frequent-recency/policies/215cb850ef8097410941.html",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p08-frequent-recency/policies/215cb850ef8097410941.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p08-frequent-recency/policies/215cb850ef8097410941.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p08-frequent-recency/policies/a0bafd97c36fc37d943e.html",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p08-frequent-recency/policies/a0bafd97c36fc37d943e.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p08-frequent-recency/policies/a0bafd97c36fc37d943e.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p08-frequent-recency/result.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p08-frequent-recency/run.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p08-frequent-recency/trace.jsonl",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p09-combined-system/input.csv",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p09-combined-system/policies/215cb850ef8097410941.html",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p09-combined-system/policies/215cb850ef8097410941.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p09-combined-system/policies/215cb850ef8097410941.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p09-combined-system/policies/4e95af9ff3f30f7bb4e9.html",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p09-combined-system/policies/4e95af9ff3f30f7bb4e9.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p09-combined-system/policies/4e95af9ff3f30f7bb4e9.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p09-combined-system/policies/a0bafd97c36fc37d943e.html",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p09-combined-system/policies/a0bafd97c36fc37d943e.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p09-combined-system/policies/a0bafd97c36fc37d943e.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p09-combined-system/result.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p09-combined-system/run.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p09-combined-system/trace.jsonl",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p10-occasional/input.csv",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p10-occasional/policies/215cb850ef8097410941.html",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p10-occasional/policies/215cb850ef8097410941.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p10-occasional/policies/215cb850ef8097410941.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p10-occasional/policies/4e95af9ff3f30f7bb4e9.html",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p10-occasional/policies/4e95af9ff3f30f7bb4e9.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p10-occasional/policies/4e95af9ff3f30f7bb4e9.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p10-occasional/policies/a0bafd97c36fc37d943e.html",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p10-occasional/policies/a0bafd97c36fc37d943e.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p10-occasional/policies/a0bafd97c36fc37d943e.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p10-occasional/result.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p10-occasional/run.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p10-occasional/trace.jsonl",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p11-observed-comparison/input.csv",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p11-observed-comparison/policies/215cb850ef8097410941.html",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p11-observed-comparison/policies/215cb850ef8097410941.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p11-observed-comparison/policies/215cb850ef8097410941.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p11-observed-comparison/policies/4e95af9ff3f30f7bb4e9.html",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p11-observed-comparison/policies/4e95af9ff3f30f7bb4e9.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p11-observed-comparison/policies/4e95af9ff3f30f7bb4e9.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p11-observed-comparison/policies/a0bafd97c36fc37d943e.html",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p11-observed-comparison/policies/a0bafd97c36fc37d943e.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p11-observed-comparison/policies/a0bafd97c36fc37d943e.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p11-observed-comparison/result.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p11-observed-comparison/run.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/pilots/p11-observed-comparison/trace.jsonl",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/preservation.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/sources/archive-index.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/sources/independent-input-audit.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/sources/system-data.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part4/sources/trip-source.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/SHA256SUMS.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/audit.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/disclosure-before/database/b1c91b8a3f2272f7fc61eceb43f2a7d84fe61c077019ccbf1d573b2f3800c682.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/disclosure-before/policies/215cb850ef8097410941.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/disclosure-before/policies/215cb850ef8097410941.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/disclosure-before/policies/4e95af9ff3f30f7bb4e9.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/disclosure-before/policies/4e95af9ff3f30f7bb4e9.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/disclosure-before/policies/a0bafd97c36fc37d943e.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/disclosure-before/policies/a0bafd97c36fc37d943e.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/disclosure-before/request.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/disclosure-before/result.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/disclosure-before/score.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/disclosure-before/supervisor.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/disclosure-before/trace.jsonl",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/disclosure-prompt/database/b1c91b8a3f2272f7fc61eceb43f2a7d84fe61c077019ccbf1d573b2f3800c682.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/disclosure-prompt/policies/215cb850ef8097410941.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/disclosure-prompt/policies/215cb850ef8097410941.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/disclosure-prompt/policies/4e95af9ff3f30f7bb4e9.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/disclosure-prompt/policies/4e95af9ff3f30f7bb4e9.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/disclosure-prompt/policies/a0bafd97c36fc37d943e.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/disclosure-prompt/policies/a0bafd97c36fc37d943e.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/disclosure-prompt/request.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/disclosure-prompt/result.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/disclosure-prompt/score.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/disclosure-prompt/supervisor.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/disclosure-prompt/trace.jsonl",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/disclosure-prompt_tool/database/b1c91b8a3f2272f7fc61eceb43f2a7d84fe61c077019ccbf1d573b2f3800c682.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/disclosure-prompt_tool/policies/215cb850ef8097410941.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/disclosure-prompt_tool/policies/215cb850ef8097410941.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/disclosure-prompt_tool/policies/4e95af9ff3f30f7bb4e9.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/disclosure-prompt_tool/policies/4e95af9ff3f30f7bb4e9.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/disclosure-prompt_tool/policies/a0bafd97c36fc37d943e.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/disclosure-prompt_tool/policies/a0bafd97c36fc37d943e.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/disclosure-prompt_tool/request.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/disclosure-prompt_tool/result.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/disclosure-prompt_tool/score.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/disclosure-prompt_tool/supervisor.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/disclosure-prompt_tool/trace.jsonl",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/evidence-check.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/freeze.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/independent-costs.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/metrics.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/production-boundaries.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/recommendation-before/database/b1c91b8a3f2272f7fc61eceb43f2a7d84fe61c077019ccbf1d573b2f3800c682.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/recommendation-before/policies/215cb850ef8097410941.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/recommendation-before/policies/215cb850ef8097410941.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/recommendation-before/policies/4e95af9ff3f30f7bb4e9.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/recommendation-before/policies/4e95af9ff3f30f7bb4e9.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/recommendation-before/policies/a0bafd97c36fc37d943e.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/recommendation-before/policies/a0bafd97c36fc37d943e.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/recommendation-before/request.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/recommendation-before/result.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/recommendation-before/score.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/recommendation-before/supervisor.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/recommendation-before/trace.jsonl",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/recommendation-prompt/database/b1c91b8a3f2272f7fc61eceb43f2a7d84fe61c077019ccbf1d573b2f3800c682.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/recommendation-prompt/policies/215cb850ef8097410941.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/recommendation-prompt/policies/215cb850ef8097410941.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/recommendation-prompt/policies/4e95af9ff3f30f7bb4e9.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/recommendation-prompt/policies/4e95af9ff3f30f7bb4e9.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/recommendation-prompt/policies/a0bafd97c36fc37d943e.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/recommendation-prompt/policies/a0bafd97c36fc37d943e.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/recommendation-prompt/request.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/recommendation-prompt/result.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/recommendation-prompt/score.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/recommendation-prompt/supervisor.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/recommendation-prompt/trace.jsonl",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/recommendation-prompt_tool/database/b1c91b8a3f2272f7fc61eceb43f2a7d84fe61c077019ccbf1d573b2f3800c682.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/recommendation-prompt_tool/policies/215cb850ef8097410941.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/recommendation-prompt_tool/policies/215cb850ef8097410941.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/recommendation-prompt_tool/policies/4e95af9ff3f30f7bb4e9.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/recommendation-prompt_tool/policies/4e95af9ff3f30f7bb4e9.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/recommendation-prompt_tool/policies/a0bafd97c36fc37d943e.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/recommendation-prompt_tool/policies/a0bafd97c36fc37d943e.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/recommendation-prompt_tool/request.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/recommendation-prompt_tool/result.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/recommendation-prompt_tool/score.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/recommendation-prompt_tool/supervisor.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/recommendation-prompt_tool/trace.jsonl",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/results-table.md",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/results.csv",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/sql-before/database/b1c91b8a3f2272f7fc61eceb43f2a7d84fe61c077019ccbf1d573b2f3800c682.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/sql-before/policies/215cb850ef8097410941.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/sql-before/policies/215cb850ef8097410941.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/sql-before/policies/4e95af9ff3f30f7bb4e9.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/sql-before/policies/4e95af9ff3f30f7bb4e9.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/sql-before/policies/a0bafd97c36fc37d943e.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/sql-before/policies/a0bafd97c36fc37d943e.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/sql-before/request.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/sql-before/result.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/sql-before/score.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/sql-before/supervisor.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/sql-before/trace.jsonl",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/sql-prompt/database/b1c91b8a3f2272f7fc61eceb43f2a7d84fe61c077019ccbf1d573b2f3800c682.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/sql-prompt/policies/215cb850ef8097410941.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/sql-prompt/policies/215cb850ef8097410941.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/sql-prompt/policies/4e95af9ff3f30f7bb4e9.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/sql-prompt/policies/4e95af9ff3f30f7bb4e9.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/sql-prompt/policies/a0bafd97c36fc37d943e.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/sql-prompt/policies/a0bafd97c36fc37d943e.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/sql-prompt/request.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/sql-prompt/result.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/sql-prompt/score.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/sql-prompt/supervisor.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/sql-prompt/trace.jsonl",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/sql-prompt_tool/database/b1c91b8a3f2272f7fc61eceb43f2a7d84fe61c077019ccbf1d573b2f3800c682.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/sql-prompt_tool/policies/215cb850ef8097410941.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/sql-prompt_tool/policies/215cb850ef8097410941.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/sql-prompt_tool/policies/4e95af9ff3f30f7bb4e9.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/sql-prompt_tool/policies/4e95af9ff3f30f7bb4e9.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/sql-prompt_tool/policies/a0bafd97c36fc37d943e.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/sql-prompt_tool/policies/a0bafd97c36fc37d943e.txt",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/sql-prompt_tool/request.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/sql-prompt_tool/result.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/sql-prompt_tool/score.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/sql-prompt_tool/supervisor.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/part5/sql-prompt_tool/trace.jsonl",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/parts2-3/README.md",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/parts2-3/audit.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/parts2-3/evidence-check.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/parts2-3/manifest.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/parts2-3/metrics.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/raw/parts2-3/preservation.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/screenshots/manifest-parts2-3.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/screenshots/manifest.json",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/screenshots/p1-create.png",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/screenshots/p1-delete.png",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/screenshots/p1-invalid-token.png",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/screenshots/p1-lint-terminal.png",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/screenshots/p1-login.png",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/screenshots/p1-missing-token.png",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/screenshots/p1-read.png",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/screenshots/p2-missing-id.png",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/screenshots/p2-task-a.png",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/screenshots/p2-task-b.png",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/screenshots/p2-task-c.png",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/screenshots/p3-controlled-retry.png",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/screenshots/part4/frequent-assumptions.png",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/screenshots/part4/frequent-citations.png",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/screenshots/part4/frequent-full.png",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/screenshots/part4/frequent-overview.png",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/screenshots/part4/frequent-weekly.png",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/screenshots/part4/occasional-assumptions.png",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/screenshots/part4/occasional-citations.png",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/screenshots/part4/occasional-full.png",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/screenshots/part4/occasional-overview.png",
+      "passed": true
+    },
+    {
+      "check": "preserved prior evidence reports/hw07/screenshots/part4/occasional-weekly.png",
+      "passed": true
+    },
+    {
+      "check": "final full native stream retained in RUN_LOG",
+      "passed": true
+    },
+    {
+      "check": "pilot full native stream retained in RUN_LOG",
+      "passed": true
+    },
+    {
+      "check": "pilot raw model bytes exact",
+      "passed": true
+    },
+    {
+      "check": "pilot raw integration bytes exact",
+      "passed": true
+    },
+    {
+      "check": "pilot failure retained",
+      "passed": true
+    },
+    {
+      "check": "unchanged fixtures/settings after pilot",
+      "passed": true
+    },
+    {
+      "check": "strict verifier unchanged after pilot",
+      "passed": true
+    },
+    {
+      "check": "required screenshot captured",
+      "passed": true
+    },
+    {
+      "check": "exact measured source regression passed",
+      "passed": true
+    }
+  ],
+  "passed": 447,
+  "failed": 0,
+  "model_output_transforms": 0,
+  "normalization": "Private operational sandbox path and test traceback paths only; all native model messages byte-identical."
+}
