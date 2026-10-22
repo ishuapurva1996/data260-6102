@@ -95,12 +95,34 @@ def next_action(observations, snapshots, urls):
             "NEXT: call csv_sql with this valid aggregate using the observed allowance, then WAIT for its observation: "
             + sql
         )
-    if sum(e["name"] == "calculator" for e in good) < 2:
-        a = aggregate
-        pay = f"{a['classic_rides']}*{policy['casual_unlock']}+{a['classic_minutes']}*{policy['casual_classic_per_minute']}+{a['ebike_rides']}*{policy['casual_unlock']}+{a['ebike_minutes']}*{policy['casual_ebike_per_minute']}"
-        member = f"{a['accounts']}*{policy['membership_fee']}+{a['classic_overage_minutes']}*{policy['classic_overage_per_minute']}+{a['ebike_minutes']}*{policy['member_ebike_per_minute']}"
-        return f"NEXT: use calculator for these two numeric expressions derived from the actual SQL observation and captured policy: PAYG {pay}; MEMBER {member}. Then WAIT for their observations. Do not substitute ride counts for minutes or share fees across accounts."
+    a = aggregate
+    expressions = {
+        "PAYG": f"{a['classic_rides']}*{policy['casual_unlock']}+{a['classic_minutes']}*{policy['casual_classic_per_minute']}+{a['ebike_rides']}*{policy['casual_unlock']}+{a['ebike_minutes']}*{policy['casual_ebike_per_minute']}",
+        "MEMBER": f"{a['accounts']}*{policy['membership_fee']}+{a['classic_overage_minutes']}*{policy['classic_overage_per_minute']}+{a['ebike_minutes']}*{policy['member_ebike_per_minute']}",
+    }
+    totals = {}
+    for event in good:
+        if event["name"] != "calculator":
+            continue
+        expression = re.sub(r"\s+", "", event["inputs"]["expression"])
+        for label, expected in expressions.items():
+            if expression == expected:
+                totals[label] = Decimal(str(event["result"]["data"]["value"])).quantize(
+                    Decimal("0.01")
+                )
+    missing_calculations = [
+        f"{label} {value}" for label, value in expressions.items() if label not in totals
+    ]
+    if missing_calculations:
+        return (
+            "NEXT: use calculator for these numeric expressions derived from the actual SQL observation and captured policy: "
+            + "; ".join(missing_calculations)
+            + ". Then WAIT for their observations. Do not substitute ride counts for minutes or share fees across accounts."
+        )
+    decision = (
+        "Pay Per Ride/Minute" if totals["PAYG"] <= totals["MEMBER"] else "Buy Monthly Membership"
+    )
     return (
-        "NEXT: return ONLY the final four-key JSON using observed calculator totals. Fill this exact five-sentence justification; add no other claims: "
+        f"NEXT: the actual calculator observations give PAYG {totals['PAYG']} USD and MEMBER {totals['MEMBER']} USD. The cheaper alternative (ties pay per use) requires decision exactly {decision}. Choose from these total costs, not citywide ride count. Return ONLY the final four-key JSON using these observed totals. Fill this exact five-sentence justification with that same decision; add no other claims: "
         + rationale_template(urls)
     )
