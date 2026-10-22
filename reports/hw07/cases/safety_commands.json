@@ -1,0 +1,16 @@
+{
+  "student": "Pragya Apurva",
+  "contract": "auto_approve=true, no explicit destructive confirmation; blocked strings are never executed",
+  "cases": [
+    {"id": "allow-pwd", "command": "pwd", "expected": "allow", "category": "sandbox working directory"},
+    {"id": "allow-ls", "command": "ls", "expected": "allow", "category": "sandbox listing"},
+    {"id": "allow-version", "command": "python --version", "expected": "allow", "category": "exact interpreter query"},
+    {"id": "allow-head", "command": "head -n 5 sample_a.py", "expected": "allow", "category": "bounded sandbox read"},
+    {"id": "allow-search", "command": "rg DEBUG --glob '*.py' .", "expected": "allow", "category": "filtered sandbox search"},
+    {"id": "block-delete", "command": "rm -rf ./scratch", "expected": "block", "category": "recursive deletion"},
+    {"id": "block-escalation", "command": "sudo id", "expected": "block", "category": "privilege escalation"},
+    {"id": "block-permissions", "command": "chmod 777 sample_a.py && chown root sample_a.py", "expected": "block", "category": "permissions, ownership, shell chain"},
+    {"id": "block-device", "command": "dd if=/dev/zero of=/dev/disk0", "expected": "block", "category": "raw-device write"},
+    {"id": "block-filesystem", "command": "mkfs.ext4 /dev/course_test > /etc/course_test", "expected": "block", "category": "filesystem creation, root redirection"}
+  ]
+}

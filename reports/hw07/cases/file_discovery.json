@@ -1,0 +1,9 @@
+{
+  "student": "Pragya Apurva",
+  "instruction": "Find the Python file containing DEBUG and show its complete contents. First discover Python files with glob_files; then search DEBUG with search_in_files filtered to Python files; then read the matching path returned by search_in_files. Do not guess a filename.",
+  "files": {
+    "sample_a.py": "\"\"\"Sample A.\"\"\"\nVALUE = 1\nprint(VALUE)\n",
+    "sample_b.py": "\"\"\"Sample B.\"\"\"\nDEBUG = True\nVALUE = 2\n",
+    "sample_c.py": "\"\"\"Sample C.\"\"\"\nVALUE = 3\n"
+  }
+}
