@@ -4,7 +4,7 @@ repos:
     hooks:
       - id: ruff-check
         types_or: [python, pyi]
-        files: ^(code/web_application/.*\.py|scripts/hw07/.*\.py|tests/test_hw07.*\.py|src/bikeshare/.*\.py|src/tool_agent/.*\.py|src/model_client\.py|src/rental_tools/executor\.py)$
+        files: ^(code/web_application/.*\.py|scripts/hw07/.*\.py|tests/test_hw07.*\.py|src/bikeshare/.*\.py|experiments/hw07/.*\.py|src/tool_agent/.*\.py|src/model_client\.py|src/rental_tools/executor\.py)$
       - id: ruff-format
         types_or: [python, pyi]
-        files: ^(code/web_application/.*\.py|scripts/hw07/.*\.py|tests/test_hw07.*\.py|src/bikeshare/.*\.py|src/tool_agent/.*\.py|src/model_client\.py|src/rental_tools/executor\.py)$
+        files: ^(code/web_application/.*\.py|scripts/hw07/.*\.py|tests/test_hw07.*\.py|src/bikeshare/.*\.py|experiments/hw07/.*\.py|src/tool_agent/.*\.py|src/model_client\.py|src/rental_tools/executor\.py)$
