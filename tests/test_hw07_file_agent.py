@@ -90,6 +90,11 @@ def test_search_must_use_requested_debug_literal_and_python_filter(tmp_path):
         assert not verify(answer, observations)["passed"]
         observations[1]["inputs"] = {"query": "DEBUG", "file_pattern": "*"}
         assert not verify(answer, observations)["passed"]
+        observations[1]["inputs"] = {"query": "DEBUG", "file_pattern": "*.py"}
+        assert verify(answer, observations)["passed"]
+        assert not verify(json.dumps({"path": "a.py", "content": "DEBUG = True"}), observations)[
+            "passed"
+        ]
 
 
 @pytest.mark.parametrize(
