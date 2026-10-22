@@ -3,6 +3,7 @@
 import argparse
 from dataclasses import asdict
 import json
+import os
 from pathlib import Path
 import shutil
 import sys
@@ -103,12 +104,14 @@ def file_checks(config, work):
 
 
 def core(args, config, lease):
+    credentials = (os.environ['HW7_MODERATOR_USERNAME'], os.environ['HW7_MODERATOR_PASSWORD'])
     result = {'kind':'integrated_part2_acceptance', 'run_id':uuid4().hex, 'source':source_state(), 'requests':[]}
     output = args.work_dir/'part2-result.json'
     with MongoConnection(config) as mongo:
         mongo.ping()
         with running_app(config, lease=lease, directory=args.work_dir/'core-app',
-                env_files=args.env_file, cert=args.cert, key=args.key) as (client, owner):
+                env_files=args.env_file, cert=args.cert, key=args.key,
+                credentials=credentials) as (client, owner):
             part1 = {'kind':'integrated_part1_acceptance', 'source':source_state()}
             run_api_checks(client, mongo.database, part1, keep_sample=True)
             save(args.work_dir/'part1-result.json', json_value(part1))
@@ -133,7 +136,8 @@ def core(args, config, lease):
                 'other_owner_denied':client.get('/api/memory/999:hw6:foreign').status_code == 403}
             save(output,result)
         with running_app(config, lease=lease, directory=args.work_dir/'restart-app',
-                env_files=args.env_file, cert=args.cert, key=args.key) as (client,owner):
+                env_files=args.env_file, cert=args.cert, key=args.key,
+                credentials=credentials) as (client,owner):
             after = client.get('/api/memory/'+user,params={'session_id':sessions[1]}).json()
             result['checks']['mongo_restart_persistence'] = after == result['memory']
         result['passed'] = all(result['checks'].values())

@@ -78,7 +78,7 @@ def test_real_mysql_has_required_schema_and_relations(hw4_engine):
 
 def test_unique_email_is_enforced_and_failed_write_rolls_back(hw4_session_factory, hw4_user, hw4_password_hash):
     with hw4_session_factory() as db:
-        db.add(User(name="Duplicate", email=hw4_user["email"], password_hash=hw4_password_hash))
+        db.add(User(name="Duplicate", email=hw4_user["email"], username=f"duplicate_{uuid4().hex}", password_hash=hw4_password_hash))
         with pytest.raises(IntegrityError):
             db.commit()
         db.rollback()

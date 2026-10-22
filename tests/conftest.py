@@ -17,6 +17,7 @@ import pytest
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "code"))
+os.environ.setdefault("HW7_JWT_SECRET", "test-only-hw7-key-6102-" + "x" * 32)
 
 
 
@@ -76,11 +77,12 @@ def hw4_password_hash():
 def hw4_user(hw4_session_factory, hw4_password_hash):
     from web_application.models import User
     with hw4_session_factory() as db:
-        user = User(name="HW4 test user", email=f"hw4-{uuid4().hex}@example.com",
-                    password_hash=hw4_password_hash)
+        username = f"test_{uuid4().hex}"
+        user = User(name="Shared API test user", email=f"hw4-{uuid4().hex}@example.com",
+                    username=username, role="moderator", password_hash=hw4_password_hash)
         db.add(user)
         db.commit()
-        return {"id": user.id, "name": user.name, "email": user.email,
+        return {"id": user.id, "name": user.name, "email": user.email, "username": username,
                 "password": "local-test-password-6102"}
 
 
@@ -90,9 +92,9 @@ def hw4_clock():
 
 
 @pytest.fixture
-def hw4_app(hw4_session_factory, hw4_clock, tmp_path):
+def hw4_app(hw4_session_factory, tmp_path):
     from web_application.main import create_app
-    return create_app(session_factory=hw4_session_factory, clock=hw4_clock,
+    return create_app(session_factory=hw4_session_factory,
                       frontend_dist=tmp_path / "missing-dist")
 
 
@@ -105,9 +107,10 @@ def hw4_client(hw4_app):
 
 @pytest.fixture
 def hw4_logged_in(hw4_client, hw4_user):
-    response = hw4_client.post("/api/auth/login", json={
-        "email": hw4_user["email"], "password": hw4_user["password"]})
+    response = hw4_client.post("/auth/login", json={
+        "username": hw4_user["username"], "password": hw4_user["password"]})
     assert response.status_code == 200
+    hw4_client.headers["Authorization"] = "Bearer " + response.json()["access_token"]
     return hw4_client
 
 

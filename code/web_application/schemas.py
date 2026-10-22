@@ -1,9 +1,9 @@
 """Strict camelCase HTTP schemas, separate from snake_case database models."""
+
 from datetime import datetime, timezone
 from typing import Annotated, Literal
 
 from pydantic import BaseModel, ConfigDict, EmailStr, Field, StrictBool, field_validator
-
 
 ListingCode = Annotated[str, Field(pattern=r"^S6102-R-[1-9][0-9]*$", max_length=64)]
 AvailableUnits = Annotated[int, Field(strict=True, ge=0, le=2147483647)]
@@ -23,8 +23,15 @@ class RentalUpdate(BaseModel):
     propertyType: PropertyType | None = None
     termsAccepted: StrictBool | None = None
 
-    @field_validator("listingCode", "availableUnits", "submitterEmail", "description",
-                     "propertyType", "termsAccepted", mode="before")
+    @field_validator(
+        "listingCode",
+        "availableUnits",
+        "submitterEmail",
+        "description",
+        "propertyType",
+        "termsAccepted",
+        mode="before",
+    )
     @classmethod
     def reject_explicit_null(cls, value):
         if value is None:
@@ -74,19 +81,37 @@ class ManagerResponse(ManagerCreate):
 
 def as_utc(value):
     """Stored naive MySQL datetimes represent UTC, exposed with a UTC offset."""
-    return value.replace(tzinfo=timezone.utc) if value.tzinfo is None else value.astimezone(timezone.utc)
+    return (
+        value.replace(tzinfo=timezone.utc)
+        if value.tzinfo is None
+        else value.astimezone(timezone.utc)
+    )
 
 
 def rental_json(row):
     """Shared explicit serialization; performance routes append a manager field."""
-    return {"id": row.id, "listingTitle": row.listing_title,
-            "propertyAddress": row.property_address, "submitterEmail": row.submitter_email,
-            "description": row.description, "propertyType": row.property_type,
-            "termsAccepted": row.terms_accepted, "listingCode": row.listing_code,
-            "availableUnits": row.available_units, "managerId": row.manager_id,
-            "createdAt": as_utc(row.created_at), "updatedAt": as_utc(row.updated_at)}
+    return {
+        "id": row.id,
+        "listingTitle": row.listing_title,
+        "propertyAddress": row.property_address,
+        "submitterEmail": row.submitter_email,
+        "description": row.description,
+        "propertyType": row.property_type,
+        "termsAccepted": row.terms_accepted,
+        "listingCode": row.listing_code,
+        "availableUnits": row.available_units,
+        "managerId": row.manager_id,
+        "createdAt": as_utc(row.created_at),
+        "updatedAt": as_utc(row.updated_at),
+    }
 
 
 def manager_json(row):
-    return {"id": row.id, "name": row.name, "company": row.company, "email": row.email,
-            "createdAt": as_utc(row.created_at), "updatedAt": as_utc(row.updated_at)}
+    return {
+        "id": row.id,
+        "name": row.name,
+        "company": row.company,
+        "email": row.email,
+        "createdAt": as_utc(row.created_at),
+        "updatedAt": as_utc(row.updated_at),
+    }

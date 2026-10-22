@@ -95,7 +95,7 @@ def rig():
     service = DocumentService(database, clock=clock)
     app = FastAPI()
     install_error_handlers(app)
-    app.include_router(create_router(service, current_user_dependency=lambda: SimpleNamespace(id=6102)))
+    app.include_router(create_router(service, current_user_dependency=lambda: SimpleNamespace(id=6102, role="moderator")))
     with TestClient(app, raise_server_exceptions=False) as client:
         yield SimpleNamespace(client=client, database=database, clock=clock, service=service, app=app)
 

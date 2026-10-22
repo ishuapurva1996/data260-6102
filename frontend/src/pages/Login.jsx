@@ -5,10 +5,10 @@ import { ErrorNotice, useSubmission } from "../components/forms.jsx";
 
 export default function Login() {
   const auth = useAuth();
-  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const { pending, error, submit } = useSubmission(
-    () => auth.login(email.trim(), password),
+    () => auth.login(username.trim(), password),
     "You are logged in.",
   );
   if (auth.user) return <Navigate to="/" replace />;
@@ -19,20 +19,20 @@ export default function Login() {
       <p>Login required to view and manage rental listings.</p>
       {auth.status === "expired" && (
         <p className="notice" role="status">
-          Your session expired or is no longer valid. Please log in again.
+          Your access token expired or is no longer valid. Please log in again.
         </p>
       )}
       <form onSubmit={submit}>
         <fieldset disabled={pending}>
           <label>
-            Email
+            Username
             <input
-              name="email"
-              type="email"
+              name="username"
+              type="text"
               required
               autoComplete="username"
-              value={email}
-              onChange={(event) => setEmail(event.target.value)}
+              value={username}
+              onChange={(event) => setUsername(event.target.value)}
             />
           </label>
           <label>

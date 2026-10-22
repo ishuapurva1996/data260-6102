@@ -6,7 +6,16 @@ are UTC with ``tzinfo`` removed before storage; naive stored values mean UTC.
 
 from datetime import datetime, timezone
 
-from sqlalchemy import Boolean, CheckConstraint, ForeignKey, Integer, String, Text, UniqueConstraint, text
+from sqlalchemy import (
+    Boolean,
+    CheckConstraint,
+    ForeignKey,
+    Integer,
+    String,
+    Text,
+    UniqueConstraint,
+    text,
+)
 from sqlalchemy.dialects.mysql import DATETIME, VARCHAR
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
 
@@ -22,23 +31,33 @@ class Base(DeclarativeBase):
 
 class User(Base):
     __tablename__ = "users"
+    __table_args__ = (
+        CheckConstraint("role IN ('reader', 'writer', 'moderator')", name="ck_users_role"),
+        CheckConstraint("CHAR_LENGTH(TRIM(username)) > 0", name="ck_users_username"),
+    )
 
     id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
     name: Mapped[str] = mapped_column(String(255), nullable=False)
     email: Mapped[str] = mapped_column(String(320), nullable=False, unique=True)
     password_hash: Mapped[str] = mapped_column(String(255), nullable=False)
+    username: Mapped[str] = mapped_column(String(64), nullable=False, unique=True)
+    role: Mapped[str] = mapped_column(String(16), nullable=False, server_default="reader")
 
 
 class SessionToken(Base):
     __tablename__ = "sessions"
 
-    id: Mapped[str] = mapped_column(VARCHAR(128, charset="ascii", collation="ascii_bin"), primary_key=True)
+    id: Mapped[str] = mapped_column(
+        VARCHAR(128, charset="ascii", collation="ascii_bin"), primary_key=True
+    )
     user_id: Mapped[int] = mapped_column(
         ForeignKey("users.id", ondelete="CASCADE"), nullable=False, index=True
     )
     created_at: Mapped[datetime] = mapped_column(DATETIME(fsp=6), nullable=False, default=utc_now)
     expires_at: Mapped[datetime] = mapped_column(DATETIME(fsp=6), nullable=False)
-    last_activity_at: Mapped[datetime] = mapped_column(DATETIME(fsp=6), nullable=False, default=utc_now)
+    last_activity_at: Mapped[datetime] = mapped_column(
+        DATETIME(fsp=6), nullable=False, default=utc_now
+    )
     user: Mapped[User] = relationship()
 
 
@@ -52,10 +71,17 @@ class PropertyManager(Base):
     company: Mapped[str] = mapped_column(String(255), nullable=False)
     email: Mapped[str] = mapped_column(String(320), nullable=False)
     created_at: Mapped[datetime] = mapped_column(
-        DATETIME(fsp=6), nullable=False, default=utc_now, server_default=text("CURRENT_TIMESTAMP(6)"))
+        DATETIME(fsp=6),
+        nullable=False,
+        default=utc_now,
+        server_default=text("CURRENT_TIMESTAMP(6)"),
+    )
     updated_at: Mapped[datetime] = mapped_column(
-        DATETIME(fsp=6), nullable=False, default=utc_now,
-        server_default=text("CURRENT_TIMESTAMP(6)"))
+        DATETIME(fsp=6),
+        nullable=False,
+        default=utc_now,
+        server_default=text("CURRENT_TIMESTAMP(6)"),
+    )
     # Even loaded children must reach MySQL's RESTRICT constraint on deletion.
     rentals: Mapped[list["Rental"]] = relationship(back_populates="manager", passive_deletes="all")
 
@@ -83,14 +109,24 @@ class Rental(Base):
     property_type: Mapped[str] = mapped_column(String(20), nullable=False)
     terms_accepted: Mapped[bool] = mapped_column(Boolean, nullable=False)
     listing_code: Mapped[str] = mapped_column(String(64), nullable=False)
-    available_units: Mapped[int] = mapped_column(Integer, nullable=False, default=1, server_default=text("1"))
+    available_units: Mapped[int] = mapped_column(
+        Integer, nullable=False, default=1, server_default=text("1")
+    )
     created_at: Mapped[datetime] = mapped_column(
-        DATETIME(fsp=6), nullable=False, default=utc_now, server_default=text("CURRENT_TIMESTAMP(6)"))
+        DATETIME(fsp=6),
+        nullable=False,
+        default=utc_now,
+        server_default=text("CURRENT_TIMESTAMP(6)"),
+    )
     updated_at: Mapped[datetime] = mapped_column(
-        DATETIME(fsp=6), nullable=False, default=utc_now,
-        server_default=text("CURRENT_TIMESTAMP(6)"))
+        DATETIME(fsp=6),
+        nullable=False,
+        default=utc_now,
+        server_default=text("CURRENT_TIMESTAMP(6)"),
+    )
     manager_id: Mapped[int | None] = mapped_column(
         ForeignKey("property_managers.id", name="fk_rentals_manager", ondelete="RESTRICT"),
-        nullable=True, index=True
+        nullable=True,
+        index=True,
     )
     manager: Mapped[PropertyManager | None] = relationship(back_populates="rentals")

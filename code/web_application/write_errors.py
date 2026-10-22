@@ -1,4 +1,5 @@
 """Translate constraint races without leaking database statements or parameters."""
+
 from fastapi import HTTPException
 
 

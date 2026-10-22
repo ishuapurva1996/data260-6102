@@ -7,8 +7,8 @@ is launched, no authentication is bypassed, and cleanup uses only captured IDs.
 import argparse
 from datetime import datetime, timezone
 import hashlib
-from http.cookiejar import MozillaCookieJar
 import json
+import os
 from pathlib import Path
 import shutil
 import subprocess
@@ -65,15 +65,13 @@ def capture(args, result):
                 result["status"] = "availability_only"
                 result["pending"] = ["Full integrated API and stored-validator acceptance not attempted."]
                 return 0
-            require(args.cookie_file is not None, "Supply --cookie-file from a real HTTPS login.")
-            jar = MozillaCookieJar(str(args.cookie_file))
-            jar.load(ignore_discard=True, ignore_expires=False)
             verify = str(args.ca_file) if args.ca_file else True
-            with httpx.Client(base_url=args.base_url, cookies=jar, verify=verify, timeout=15,
+            with httpx.Client(base_url=args.base_url, verify=verify, timeout=15,
                               follow_redirects=False, trust_env=False) as client:
-                require(client.get("/api/auth/me").status_code == 200,
-                        "Existing application login unavailable; refresh the private cookie file.")
-                result["auth"] = "existing HTTPS login verified; cookies not recorded"
+                from scripts.hw07.client_auth import authenticate
+                authenticate(client, os.environ['HW7_MODERATOR_USERNAME'],
+                             os.environ['HW7_MODERATOR_PASSWORD'])
+                result["auth"] = "JWT bearer login verified; token not recorded"
                 server_config = client.get("/api/hw06/config")
                 result["server_config_status"] = server_config.status_code
                 require(server_config.status_code == 200, "A's integrated configuration endpoint is unavailable.")
@@ -204,7 +202,6 @@ def main():
     parser.add_argument("--probe-only", action="store_true")
     parser.add_argument("--keep-sample", action="store_true", help="Retain one new synthetic document for Compass capture")
     parser.add_argument("--base-url", default="https://localhost:8702")
-    parser.add_argument("--cookie-file", type=Path, help="Private Netscape cookie jar from existing HTTPS login")
     parser.add_argument("--ca-file", type=Path, help="Local HTTPS CA/certificate; TLS verification remains enabled")
     args = parser.parse_args()
     args.output_dir.mkdir(parents=True, exist_ok=False)

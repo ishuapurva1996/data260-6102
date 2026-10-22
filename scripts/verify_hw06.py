@@ -3,6 +3,7 @@
 import argparse
 from datetime import datetime, timezone
 import json
+import os
 from pathlib import Path
 import sys
 from uuid import uuid4
@@ -42,9 +43,11 @@ def verify(args):
                 check('mongodb_reachable', True)
                 try:
                     with running_app(config, lease=lease, directory=args.work_dir/'app',
-                            env_files=args.env_file, cert=args.cert, key=args.key) as (client, owner):
+                            env_files=args.env_file, cert=args.cert, key=args.key,
+                            credentials=(os.environ['HW7_MODERATOR_USERNAME'],
+                                         os.environ['HW7_MODERATOR_PASSWORD'])) as (client, owner):
                         check('https_health_on_8702', client.get('/api/health').status_code == 200)
-                        check('existing_real_login', client.get('/api/auth/me').status_code == 200)
+                        check('existing_real_login', client.get('/auth/me').status_code == 200)
                         payload = {'listingTitle':'Smoke '+uuid4().hex, 'propertyType':'apartment',
                                    'availableFrom':'2027-01-15T00:00:00Z'}
                         created = client.post('/api/doc-rentals', json=payload)

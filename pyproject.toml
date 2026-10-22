@@ -1,0 +1,9 @@
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+include = ["code/web_application/**/*.py", "scripts/hw07/**/*.py", "tests/test_hw07*.py"]
+extend-exclude = ["reports", "docs", "code/agents", "code/local_llm_chatbot", "code/retrieval"]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
+ignore = ["E402"] # Entry points intentionally establish the shared import path.

@@ -92,10 +92,10 @@ def port_in_use():
 
 class LiveFactory:
     """One freshly configured integrated app process per condition, no hot mutation."""
-    def __init__(self, *, env_files, cert, key, ca, runtime_dir, lease, owner_id, email, password, root=ROOT):
+    def __init__(self, *, env_files, cert, key, ca, runtime_dir, lease, owner_id, username, password, root=ROOT):
         self.env_files, self.cert, self.key, self.ca = env_files, cert, key, ca
         self.runtime_dir, self.lease, self.owner_id = runtime_dir, lease, str(owner_id)
-        self.email, self.password, self.root = email, password, root
+        self.username, self.password, self.root = username, password, root
 
     @contextmanager
     def __call__(self, config, directory):
@@ -123,10 +123,10 @@ class LiveFactory:
                 tls = ssl.create_default_context(cafile=str(self.ca))
                 with httpx.Client(base_url="https://127.0.0.1:8702", verify=tls,
                                   timeout=config.model_timeout * 12, trust_env=False) as client:
-                    response = client.post("/api/auth/login", json={"email": self.email, "password": self.password})
-                    require(response.status_code == 200, "Real HTTPS login failed")
-                    require(str(response.json()["user"]["id"]) == self.owner_id, "Authenticated owner differs from namespace")
-                    # Cookie/password/login response are deliberately not written to evidence.
+                    from scripts.hw07.client_auth import authenticate
+                    user = authenticate(client, self.username, self.password)
+                    require(str(user["id"]) == self.owner_id, "Authenticated owner differs from namespace")
+                    # Credentials and bearer tokens are never written to evidence.
                     yield HttpEndpoint(client)
             finally:
                 if process.poll() is None:
@@ -138,7 +138,7 @@ class LiveFactory:
                         process.wait(timeout=10)
 
 
-def run_live(*, gate_path, output, runtime_dir, env_files, cert, key, ca, owner_id, email, password):
+def run_live(*, gate_path, output, runtime_dir, env_files, cert, key, ca, owner_id, username, password):
     """Caller has explicit later measurement authorization; CLI enforces its flag."""
     from dotenv import load_dotenv
     require(Path(runtime_dir).resolve() == RUNTIME_ROOT, "Use A's one shared runtime lease directory")
@@ -157,7 +157,7 @@ def run_live(*, gate_path, output, runtime_dir, env_files, cert, key, ca, owner_
             before.raise_for_status()
             verify_model_identities(before.json(), config)
         factory = LiveFactory(env_files=env_files, cert=cert, key=key, ca=ca, runtime_dir=runtime_dir,
-                              lease=lease, owner_id=owner_id, email=email, password=password)
+                              lease=lease, owner_id=owner_id, username=username, password=password)
         provenance = dict(**state, gate_sha256=file_hash(Path(gate_path)), gate=gate,
                           installed_models=before.json(), runtime_dir=str(Path(runtime_dir).resolve()),
                           policy_factory="src.hw06_experiments.policy.token_budget_window")

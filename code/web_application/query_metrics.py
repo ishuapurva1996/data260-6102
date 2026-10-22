@@ -6,6 +6,7 @@ updates the same object; concurrent requests receive different objects. We count
 SQLAlchemy cursor executions, not DBAPI protocol operations (BEGIN/COMMIT/ROLLBACK
 or pool ping). No statement text, parameters, passwords or tokens are retained.
 """
+
 from contextvars import ContextVar
 from dataclasses import dataclass, field
 from threading import Lock
@@ -21,8 +22,8 @@ class _Counts:
     lock: Lock = field(default_factory=Lock)
 
 
-_counts: ContextVar[_Counts | None] = ContextVar('hw4_sql_counts', default=None)
-_PATHS = {'/api/rentals/naive', '/api/rentals/fixed'}
+_counts: ContextVar[_Counts | None] = ContextVar("hw4_sql_counts", default=None)
+_PATHS = {"/api/rentals/naive", "/api/rentals/fixed"}
 
 
 def before_cursor_execute(conn, cursor, statement, parameters, context, executemany):
@@ -30,14 +31,14 @@ def before_cursor_execute(conn, cursor, statement, parameters, context, executem
     if counts is not None:
         with counts.lock:
             counts.total += 1
-            if context.execution_options.get('hw4_data_query', False):
+            if context.execution_options.get("hw4_data_query", False):
                 counts.data += 1
 
 
 def install_query_counter():
     """Install once for the app's shared SQLAlchemy engines, including test binds."""
-    if not event.contains(Engine, 'before_cursor_execute', before_cursor_execute):
-        event.listen(Engine, 'before_cursor_execute', before_cursor_execute)
+    if not event.contains(Engine, "before_cursor_execute", before_cursor_execute):
+        event.listen(Engine, "before_cursor_execute", before_cursor_execute)
 
 
 class QueryMetricsMiddleware:
@@ -45,21 +46,23 @@ class QueryMetricsMiddleware:
         self.app = app
 
     async def __call__(self, scope, receive, send):
-        if scope['type'] != 'http' or scope.get('path') not in _PATHS:
+        if scope["type"] != "http" or scope.get("path") not in _PATHS:
             return await self.app(scope, receive, send)
         counts = _Counts()
         token = _counts.set(counts)
 
         async def send_counted(message):
-            if message['type'] == 'http.response.start':
+            if message["type"] == "http.response.start":
                 # These JSON endpoints have finished materializing and serializing
                 # before response.start. Streaming endpoints are outside the scope.
-                headers = list(message.get('headers', []))
-                headers.extend([
-                    (b'x-sql-statements', str(counts.total).encode('ascii')),
-                    (b'x-data-sql-statements', str(counts.data).encode('ascii')),
-                ])
-                message = {**message, 'headers': headers}
+                headers = list(message.get("headers", []))
+                headers.extend(
+                    [
+                        (b"x-sql-statements", str(counts.total).encode("ascii")),
+                        (b"x-data-sql-statements", str(counts.data).encode("ascii")),
+                    ]
+                )
+                message = {**message, "headers": headers}
             await send(message)
 
         try:

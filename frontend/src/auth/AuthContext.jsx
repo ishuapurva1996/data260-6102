@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useEffect, useRef, useState } from "react";
 import { useDispatch } from "react-redux";
-import { advanceAuthEpoch, getAuthEpoch, request } from "../api/client.js";
+import { advanceAuthEpoch, getAuthEpoch, request, setAccessToken } from "../api/client.js";
 import { clearRentals } from "../features/rentals/rentalsSlice.js";
 
 const AuthContext = createContext(null);
@@ -8,65 +8,47 @@ export const useAuth = () => useContext(AuthContext);
 
 export function AuthProvider({ children }) {
   const dispatch = useDispatch();
-  const [auth, setAuth] = useState({ status: "checking", user: null });
-  const [attempt, setAttempt] = useState(0);
-  const cookieRequests = useRef(Promise.resolve());
-  // The browser applies Set-Cookie before JavaScript handles the response.
-  // Serialize both auth writes so an older response cannot replace a newer cookie.
-  function changeCookie(operation) {
-    const result = cookieRequests.current.then(operation);
-    cookieRequests.current = result.catch(() => {});
-    return result;
-  }
+  const [auth, setAuth] = useState({ status: "anonymous", user: null });
+  const expiry = useRef(null);
   function resetSession() {
-    const epoch = advanceAuthEpoch();
+    clearTimeout(expiry.current);
+    setAccessToken(null);
     dispatch(clearRentals());
-    return epoch;
+    return advanceAuthEpoch();
   }
   useEffect(() => {
-    const controller = new AbortController();
-    const epoch = getAuthEpoch();
     const expired = () => {
-      advanceAuthEpoch();
-      dispatch(clearRentals());
+      resetSession();
       setAuth({ status: "expired", user: null });
     };
-    window.addEventListener("session-expired", expired);
-    request("/auth/me", { signal: controller.signal, notifyUnauthorized: false })
-      .then(({ user }) => {
-        if (!controller.signal.aborted && epoch === getAuthEpoch())
-          setAuth({ status: "authenticated", user });
-      })
-      .catch((error) => {
-        if (controller.signal.aborted || epoch !== getAuthEpoch()) return;
-        dispatch(clearRentals());
-        setAuth({ status: error.status === 401 ? "anonymous" : "error", user: null, error: error.message });
-      });
+    window.addEventListener("token-expired", expired);
     return () => {
-      controller.abort();
-      window.removeEventListener("session-expired", expired);
+      clearTimeout(expiry.current);
+      window.removeEventListener("token-expired", expired);
     };
-  }, [attempt, dispatch]);
-  async function login(email, password) {
-    const epoch = resetSession();
-    const { user } = await changeCookie(() => request("/auth/login", {
-      method: "POST", body: { email, password }, notifyUnauthorized: false,
-    }));
-    if (epoch !== getAuthEpoch()) throw new Error("This login was superseded. Please try again.");
-    setAuth({ status: "authenticated", user });
-  }
-  async function logout() {
+  }, [dispatch]);
+  async function login(username, password) {
     const epoch = resetSession();
     setAuth({ status: "anonymous", user: null });
-    try { await changeCookie(() => request("/auth/logout", { method: "POST", notifyUnauthorized: false })); }
-    catch (error) {
-      if (epoch === getAuthEpoch()) throw new Error(`Local data cleared, but logout could not be confirmed. ${error.message}`);
+    try {
+      const { access_token, expires_in } = await request("/auth/login", {
+        method: "POST", body: { username, password }, authenticate: false, notifyUnauthorized: false,
+      });
+      if (epoch !== getAuthEpoch()) throw new Error("This login was superseded. Please try again.");
+      setAccessToken(access_token);
+      const { user } = await request("/auth/me", { notifyUnauthorized: false });
+      if (epoch !== getAuthEpoch()) throw new Error("This login was superseded. Please try again.");
+      setAuth({ status: "authenticated", user });
+      expiry.current = setTimeout(() => window.dispatchEvent(new Event("token-expired")),
+        expires_in * 1000);
+    } catch (error) {
+      if (epoch === getAuthEpoch()) resetSession();
+      throw error;
     }
   }
-  function retry() {
+  async function logout() {
     resetSession();
-    setAuth({ status: "checking", user: null });
-    setAttempt((value) => value + 1);
+    setAuth({ status: "anonymous", user: null });
   }
-  return <AuthContext.Provider value={{ ...auth, login, logout, retry }}>{children}</AuthContext.Provider>;
+  return <AuthContext.Provider value={{ ...auth, login, logout }}>{children}</AuthContext.Provider>;
 }

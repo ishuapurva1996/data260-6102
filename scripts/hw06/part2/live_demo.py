@@ -86,13 +86,13 @@ def capture(args):
                 receipt['checks']['mongodb'] = {'ok': True}
                 with httpx.Client(base_url=args.base_url, verify=str(args.ca_cert), timeout=args.timeout,
                                   follow_redirects=False) as client:
-                    email = os.environ.get('HW6_DEMO_EMAIL')
+                    username = os.environ.get('HW6_DEMO_USERNAME')
                     password = os.environ.get('HW6_DEMO_PASSWORD')
-                    if not email or not password:
+                    if not username or not password:
                         raise RuntimeError('demo_credentials_missing')
-                    login = client.post('/api/auth/login', json={'email': email, 'password': password})
-                    login.raise_for_status()
-                    owner = str(login.json()['user']['id'])
+                    from scripts.hw07.client_auth import authenticate
+                    user = authenticate(client, username, password)
+                    owner = str(user['id'])
                     receipt['checks']['real_login'] = {'ok': True, 'owner_id': owner}
                     installed = client.get('/api/hw06/config')
                     installed.raise_for_status()

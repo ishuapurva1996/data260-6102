@@ -16,8 +16,15 @@ import CreateRecord from "./pages/CreateRecord.jsx";
 import UpdateRecord from "./pages/UpdateRecord.jsx";
 import DeleteRecord from "./pages/DeleteRecord.jsx";
 
-function RequireAuth({ children }) {
+function RequireAuth({ children, roles }) {
   const { user } = useAuth();
+  if (user && roles && !roles.includes(user.role)) return (
+    <section className="panel form-panel">
+      <h1>Permission required</h1>
+      <p role="alert">Your {user.role} role cannot perform this action.</p>
+      <Link to="/">Back to listings</Link>
+    </section>
+  );
   return user ? (
     children
   ) : (
@@ -99,7 +106,7 @@ export default function App() {
             </NavLink>
             {auth.user ? (
               <>
-                <NavLink to="/create">Add listing</NavLink>
+                {["writer", "moderator"].includes(auth.user.role) && <NavLink to="/create">Add listing</NavLink>}
                 <button
                   className="secondary"
                   onClick={logout}
@@ -117,19 +124,10 @@ export default function App() {
       <main id="main" ref={main} tabIndex={-1}>
         <div className="session-line">
           {auth.user
-            ? `Signed in as ${auth.user.name}`
+            ? `Signed in as ${auth.user.name} · ${auth.user.role}`
             : "A place to find your next home"}
         </div>
         <ErrorNotice error={error} />
-        {auth.status === "checking" ? (
-          <p role="status">Checking your session…</p>
-        ) : auth.status === "error" ? (
-          <section className="panel">
-            <h1>Unable to check your session</h1>
-            <ErrorNotice error={auth.error} />
-            <button onClick={auth.retry}>Try again</button>
-          </section>
-        ) : (
           <Routes>
             <Route path="/login" element={<Login />} />
             <Route
@@ -143,7 +141,7 @@ export default function App() {
             <Route
               path="/create"
               element={
-                <RequireAuth>
+                <RequireAuth roles={["writer", "moderator"]}>
                   <CreateRecord />
                 </RequireAuth>
               }
@@ -151,7 +149,7 @@ export default function App() {
             <Route
               path="/update"
               element={
-                <RequireAuth>
+                <RequireAuth roles={["writer", "moderator"]}>
                   <SelectedRecord kind="update" />
                 </RequireAuth>
               }
@@ -159,7 +157,7 @@ export default function App() {
             <Route
               path="/delete"
               element={
-                <RequireAuth>
+                <RequireAuth roles={["moderator"]}>
                   <SelectedRecord kind="delete" />
                 </RequireAuth>
               }
@@ -174,7 +172,6 @@ export default function App() {
               }
             />
           </Routes>
-        )}
       </main>
       <footer>Rental Housing Listings · DATA 260 · s6102</footer>
     </>

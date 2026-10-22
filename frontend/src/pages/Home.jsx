@@ -3,8 +3,12 @@ import { Link, useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteRental, fetchRentals } from "../features/rentals/rentalsSlice.js";
 import { ErrorNotice } from "../components/forms.jsx";
+import { useAuth } from "../auth/AuthContext.jsx";
 
 export default function Home() {
+  const { user } = useAuth();
+  const canWrite = ["writer", "moderator"].includes(user.role);
+  const canDelete = user.role === "moderator";
   const location = useLocation();
   const [search, setSearch] = useState("");
   const [query, setQuery] = useState("");
@@ -30,9 +34,9 @@ export default function Home() {
           <h1>Rental listings</h1>
           <p>Find and manage homes, one listing at a time.</p>
         </div>
-        <Link className="button" to="/create">
+        {canWrite && <Link className="button" to="/create">
           Add listing
-        </Link>
+        </Link>}
       </div>
       {location.state?.notice && (!state.lastMutation || location.state.notice === {
         Added: "Listing added.", Updated: "Listing updated.", Deleted: "Listing deleted.",
@@ -134,12 +138,12 @@ export default function Home() {
                     </a>
                   </p>
                   <div className="actions">
-                    <Link to={`/update?id=${record.id}`}>Update</Link>
-                    <button className="danger" disabled={state.mutations[`record:${record.id}`]?.status === "pending"}
+                    {canWrite && <Link to={`/update?id=${record.id}`}>Update</Link>}
+                    {canDelete && <button className="danger" disabled={state.mutations[`record:${record.id}`]?.status === "pending"}
                       onClick={() => dispatch(deleteRental(record.id))}>
                       {state.mutations[`record:${record.id}`]?.status === "pending" ? "Deleting…" : "Delete"}
-                    </button>
-                    <Link className="danger-link" to={`/delete?id=${record.id}`}>Review deletion</Link>
+                    </button>}
+                    {canDelete && <Link className="danger-link" to={`/delete?id=${record.id}`}>Review deletion</Link>}
                   </div>
                   <ErrorNotice error={state.mutations[`record:${record.id}`]?.error} />
                 </article>

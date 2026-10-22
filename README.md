@@ -1,6 +1,18 @@
 # Rental Housing Listings
 
-A React and FastAPI application for managing rental listings, with MySQL persistence and cookie-based login. HW5 adds Redux state management, MCP tools, bounded retries, and a local rental assistant.
+A React and FastAPI application for managing rental listings, with MySQL persistence and JWT bearer login. HW6 adds MongoDB documents and conversation memory; HW7 Part 1 adds reader, writer, and moderator permissions.
+
+## Homework 7 Part 1
+
+Use the [current setup and authentication guide](docs/HW7_PART1.md). It covers the
+additive user migration, private signing key, role accounts, frontend build,
+tests, Ruff, and live acceptance on HTTPS port 8702. The current API uses
+`POST /auth/login` with username/password and `GET /auth/me`. All domain and HW6
+memory routes use a bearer token. Earlier cookie authentication exists only in
+Git history; historical reports and database rows are preserved.
+
+The [Part 1 checkpoint](reports/hw07/PART1.md) distinguishes live checks from
+automated tests. Parts 2–6, the final PDF, and the submission tag are pending.
 
 ## Homework 5
 
@@ -37,18 +49,21 @@ experiments, AI-use answers, and verification procedure. The upload copy,
 ## Features
 
 - Create, edit, delete, and search rental listings by title or address.
-- Log in and out with a server-managed session and a secure cookie.
+- Log in using a username and password, send a JWT bearer token, and clear it on logout.
 - Compare naive and joined MySQL list queries at page sizes 10, 50, and 200.
 - Compare No-RAG, Basic-RAG, and Context-RAG answers against five housing documents.
 - Compare token, semantic, and sentence-window chunking on a housing-document corpus.
 - Draft listing metadata with a Planner–Reviewer graph, schema validation, and a configurable limit on revision turns.
 
-The current HW4 web interface uses React, FastAPI and MySQL. Rental records and
-login sessions persist across server restarts. Every rental endpoint requires a
-valid login; the browser holds an opaque, HTTP-only cookie. The historical HW3
-report remains unchanged and describes the earlier in-memory implementation.
+The shared web interface uses React, FastAPI and MySQL. Rental records persist
+across restarts. The browser keeps its JWT in memory and requires a new login
+after a reload. Readers can list/read; writers can also create/update;
+moderators can also delete. Historical reports retain their original behavior.
 
-## Run the HW4 application locally
+## Historical HW4 application setup
+
+These instructions document the HW4 foundation. For the current application,
+follow [HW7 Part 1](docs/HW7_PART1.md), including its JWT configuration and migration.
 
 Use Python 3.12, Node.js 22.12 or newer, and a dedicated MySQL 8 instance containing `s6102_rel`.
 Keep your connection and teaching-account values outside tracked source; see

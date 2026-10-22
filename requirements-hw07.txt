@@ -1,0 +1,4 @@
+# Compatible shared application, HW6 memory, and HW7 Part 1 tooling. Python 3.12.
+-r requirements-hw06.txt
+ruff==0.15.6
+pre-commit==4.5.1

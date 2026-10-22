@@ -151,7 +151,9 @@ def seed_account(
     with Session(engine) as session, session.begin():
         if session.scalar(select(User.id).where(User.email == email)) is not None:
             return False
-        session.add(User(name=name, email=email, password_hash=PasswordHasher().hash(password)))
+        session.add(User(name=name, email=email,
+                         username="account_" + hashlib.sha256(email.encode()).hexdigest()[:24],
+                         role="reader", password_hash=PasswordHasher().hash(password)))
     return True
 
 

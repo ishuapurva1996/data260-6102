@@ -1,9 +1,7 @@
 """Historical HW3 evidence-verifier unit tests remain supported.
 
-The active HW3 signed-cookie/Jinja/public-API tests were deliberately superseded
-by test_hw04_auth.py and test_api.py. HW4 requires opaque MySQL-backed sessions,
-JSON login by email, authenticated CRUD, and persistence across app instances;
-asserting the former runtime behavior would enforce the wrong assignment.
+Active authentication contracts are now covered by test_hw07_auth.py.
+The old cookie/session contracts live in the earlier homework Git history.
 Historical HW3 report evidence is unchanged.
 """
 import importlib.util

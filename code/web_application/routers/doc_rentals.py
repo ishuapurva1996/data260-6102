@@ -1,17 +1,25 @@
 """Mountable authenticated MongoDB routes; A owns shared app/CORS configuration."""
+
 from fastapi import APIRouter, Depends, Response
 
 from src.hw06_documents.schemas import RentalCreate, RentalResponse, RentalUpdate
 from src.hw06_documents.service import DocumentService
 
-from .auth import require_user
+from .auth import require_roles, require_user
 
 
 def create_router(service: DocumentService, *, current_user_dependency=require_user) -> APIRouter:
-    router = APIRouter(prefix="/api/doc-rentals", tags=["document rentals"],
-                       dependencies=[Depends(current_user_dependency)])
+    can_write = require_roles("writer", "moderator", user_dependency=current_user_dependency)
+    can_delete = require_roles("moderator", user_dependency=current_user_dependency)
+    router = APIRouter(
+        prefix="/api/doc-rentals",
+        tags=["document rentals"],
+        dependencies=[Depends(current_user_dependency)],
+    )
 
-    @router.post("", response_model=RentalResponse, status_code=201)
+    @router.post(
+        "", response_model=RentalResponse, status_code=201, dependencies=[Depends(can_write)]
+    )
     def create_rental(payload: RentalCreate):
         return service.create(payload)
 
@@ -23,11 +31,11 @@ def create_router(service: DocumentService, *, current_user_dependency=require_u
     def get_rental(rental_id: str):
         return service.get(rental_id)
 
-    @router.put("/{rental_id}", response_model=RentalResponse)
+    @router.put("/{rental_id}", response_model=RentalResponse, dependencies=[Depends(can_write)])
     def update_rental(rental_id: str, payload: RentalUpdate):
         return service.update(rental_id, payload)
 
-    @router.delete("/{rental_id}", status_code=204)
+    @router.delete("/{rental_id}", status_code=204, dependencies=[Depends(can_delete)])
     def delete_rental(rental_id: str):
         service.delete(rental_id)
         return Response(status_code=204)

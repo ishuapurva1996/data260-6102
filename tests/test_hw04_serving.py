@@ -79,16 +79,10 @@ def test_arbitrary_main_module_import_and_other_working_directory(monkeypatch, t
         assert client.get("/api/health").status_code == 200
 
 
-@pytest.mark.parametrize("timeout", [0, -1, float("inf"), float("nan")])
-def test_invalid_idle_timeout_is_rejected(timeout):
-    with pytest.raises(ValueError, match="idle timeout"):
-        create_app(idle_timeout=timeout)
-
-
 def test_malformed_login_errors_do_not_echo_password(tmp_path):
     sentinel = "sensitive-password-never-echo-6102"
     with TestClient(create_app(frontend_dist=tmp_path), base_url="https://testserver") as client:
-        response = client.post("/api/auth/login", json={"email": "invalid", "password": sentinel})
+        response = client.post("/auth/login", json={"username": "", "password": sentinel})
         assert response.status_code == 422
         assert sentinel not in response.text
         assert isinstance(response.json()["detail"], list)

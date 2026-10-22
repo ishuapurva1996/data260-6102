@@ -110,7 +110,7 @@ def test_live_orchestrator_holds_one_lease_over_whole_study_without_live_work(tm
     monkeypatch.setattr(live, "StudyRunner", DummyRunner)
     manifest = live.run_live(gate_path=gate, output=tmp_path / "spy", runtime_dir=runtime,
             env_files=[], cert=tmp_path / "unused", key=tmp_path / "unused", ca=tmp_path / "unused",
-            owner_id="7", email="offline@example.com", password="offline")
+            owner_id="7", username="offline_user", password="offline")
     assert manifest["status"] == "no_requests"
     assert not (runtime / "owner.json").exists()
     assert len(observed) == 1

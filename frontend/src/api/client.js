@@ -17,16 +17,22 @@ export class ApiError extends Error {
   }
 }
 
-// A UI session generation is never a credential. Old 401s cannot expire a new login.
+// Tokens stay in memory. Old 401s cannot expire a newer login.
 let authEpoch = 0;
+let accessToken = null;
+export function setAccessToken(value) { accessToken = value; }
 export const getAuthEpoch = () => authEpoch;
 export function advanceAuthEpoch() { return ++authEpoch; }
-const client = axios.create({ baseURL: "/api", withCredentials: true, timeout: 30000 });
+const client = axios.create({ baseURL: "/api", withCredentials: false, timeout: 30000 });
 
-export async function request(path, { body, notifyUnauthorized = true, page = false, ...options } = {}) {
+export async function request(path, { body, notifyUnauthorized = true, page = false, authenticate = true, ...options } = {}) {
   const epoch = getAuthEpoch();
   try {
-    const response = await client.request({ url: path, data: body, ...options });
+    const response = await client.request({ url: path, data: body, ...options,
+      ...(path.startsWith("/auth/") ? { baseURL: "" } : {}),
+      headers: { ...options.headers, ...(authenticate && accessToken
+        ? { Authorization: `Bearer ${accessToken}` } : {}) },
+    });
     if (response.status === 204) return undefined;
     if (response.data === null || typeof response.data !== "object")
       throw new Error("The server returned an unreadable response. Please reload.");
@@ -41,7 +47,7 @@ export async function request(path, { body, notifyUnauthorized = true, page = fa
     if (!error.response)
       throw new Error("Cannot reach the server. Check your connection and try again.");
     if (error.response.status === 401 && notifyUnauthorized && epoch === getAuthEpoch())
-      window.dispatchEvent(new Event("session-expired"));
+      window.dispatchEvent(new Event("token-expired"));
     throw new ApiError(error.response.status, error.response.data?.detail);
   }
 }

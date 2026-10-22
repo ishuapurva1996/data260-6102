@@ -25,7 +25,7 @@ def port_busy():
 
 
 @contextmanager
-def running_app(config, *, lease, directory, env_files, cert, key):
+def running_app(config, *, lease, directory, env_files, cert, key, credentials=None):
     if not lease.token or port_busy():
         raise RuntimeError('Hold the shared lease and use an unowned port 8702')
     directory = Path(directory)
@@ -51,11 +51,11 @@ def running_app(config, *, lease, directory, env_files, cert, key):
             tls = ssl.create_default_context(cafile=str(cert))
             with httpx.Client(base_url='https://127.0.0.1:8702', verify=tls,
                               timeout=config.model_timeout*12, trust_env=False) as client:
-                login = client.post('/api/auth/login', json={
-                    'email': os.environ['HW6_EXPERIMENT_EMAIL'],
-                    'password': os.environ['HW6_EXPERIMENT_PASSWORD']})
-                login.raise_for_status()
-                yield client, str(login.json()['user']['id'])
+                from scripts.hw07.client_auth import authenticate
+                username, password = credentials or (os.environ['HW6_EXPERIMENT_USERNAME'],
+                                                     os.environ['HW6_EXPERIMENT_PASSWORD'])
+                user = authenticate(client, username, password)
+                yield client, str(user['id'])
         finally:
             if process.poll() is None:
                 process.terminate()
