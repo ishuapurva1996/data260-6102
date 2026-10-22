@@ -1,0 +1,9 @@
+# Separate Python 3.12 environment for the HW7 framework bike-share agent.
+# Preserve the shared application's web and model-adapter compatibility pins.
+-r requirements-hw07.txt
+langchain-core==1.6.13
+langgraph==1.0.8
+# 1.0.13 imports runtime APIs absent from langgraph 1.0.8 despite permissive metadata.
+langgraph-prebuilt==1.0.7
+langgraph-checkpoint==4.3.0
+langgraph-sdk==0.3.15
