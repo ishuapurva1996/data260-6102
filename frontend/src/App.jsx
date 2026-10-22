@@ -15,6 +15,8 @@ import Login from "./pages/Login.jsx";
 import CreateRecord from "./pages/CreateRecord.jsx";
 import UpdateRecord from "./pages/UpdateRecord.jsx";
 import DeleteRecord from "./pages/DeleteRecord.jsx";
+import BikeShare from "./pages/BikeShare.jsx";
+import { BikeRunSession } from "./BikeRunContext.jsx";
 
 function RequireAuth({ children, roles }) {
   const { user } = useAuth();
@@ -107,6 +109,7 @@ export default function App() {
             {auth.user ? (
               <>
                 {["writer", "moderator"].includes(auth.user.role) && <NavLink to="/create">Add listing</NavLink>}
+                <NavLink to="/bikeshare">Bike-share</NavLink>
                 <button
                   className="secondary"
                   onClick={logout}
@@ -128,6 +131,7 @@ export default function App() {
             : "A place to find your next home"}
         </div>
         <ErrorNotice error={error} />
+          <BikeRunSession key={auth.user?.id ?? "guest"}>
           <Routes>
             <Route path="/login" element={<Login />} />
             <Route
@@ -135,6 +139,14 @@ export default function App() {
               element={
                 <RequireAuth>
                   <Home />
+                </RequireAuth>
+              }
+            />
+            <Route
+              path="/bikeshare"
+              element={
+                <RequireAuth>
+                  <BikeShare key={auth.user?.id} />
                 </RequireAuth>
               }
             />
@@ -172,6 +184,7 @@ export default function App() {
               }
             />
           </Routes>
+          </BikeRunSession>
       </main>
       <footer>Rental Housing Listings · DATA 260 · s6102</footer>
     </>

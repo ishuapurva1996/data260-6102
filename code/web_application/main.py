@@ -1,6 +1,8 @@
 """The shared homework service: MySQL API and same-origin React application."""
 
+import os
 import sys
+import tempfile
 from pathlib import Path
 
 from fastapi import Depends, FastAPI
@@ -34,8 +36,9 @@ def create_app(
     hw6_model=None,
     hw6_embedder=None,
     hw6_count_tokens=None,
+    bike_service=None,
 ) -> FastAPI:
-    app = FastAPI(title="Rental Housing Listings", version="7.1.0")
+    app = FastAPI(title="Rental Housing Listings", version="7.4.0")
     app.state.jwt_settings = JWTSettings.from_env()
     app.state.session_factory = session_factory or SessionLocal
 
@@ -56,6 +59,23 @@ def create_app(
     app.include_router(performance.router)
     app.include_router(rentals.router)
     app.include_router(property_managers.router)
+
+    from web_application.routers import bikeshare
+
+    from src.bikeshare.service import BikeService
+
+    temporary_bike_store = None
+    if bike_service is None:
+        bike_root = os.environ.get("HW7_BIKE_RUN_ROOT")
+        if not bike_root:
+            temporary_bike_store = tempfile.TemporaryDirectory(prefix="s6102-bike-")
+            bike_root = temporary_bike_store.name
+        bike_service = BikeService(bike_root)
+    app.state.bike_service = bike_service
+    app.include_router(bikeshare.create_router(bike_service))
+    app.add_event_handler("shutdown", bike_service.close)
+    if temporary_bike_store is not None:
+        app.add_event_handler("shutdown", temporary_bike_store.cleanup)
 
     if hw6_config is not None:
         from web_application.routers import chat, doc_rentals
@@ -127,7 +147,7 @@ def create_app(
             )
         return FileResponse(dist / "index.html", headers={"Cache-Control": "no-store"})
 
-    for route in ("/", "/login", "/create", "/update", "/delete"):
+    for route in ("/", "/login", "/create", "/update", "/delete", "/bikeshare"):
         app.add_api_route(route, frontend, methods=["GET"], include_in_schema=False)
 
     @app.get("/dashboard", include_in_schema=False)
