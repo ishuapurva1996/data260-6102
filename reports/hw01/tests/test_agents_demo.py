@@ -284,7 +284,12 @@ class AgentsDemoTests(unittest.TestCase):
                 "qwen3:1.7b", "http://localhost:11434", 0.0, 45.0
             )
 
-        self.assertEqual(captured["sync_client_kwargs"], {"timeout": 45.0})
+        self.assertEqual(set(captured["sync_client_kwargs"]), {"timeout", "event_hooks", "auth"})
+        self.assertEqual(captured["sync_client_kwargs"]["timeout"], 45.0)
+        self.assertTrue(callable(captured["sync_client_kwargs"]["auth"].auth_flow))
+        response_hooks = captured["sync_client_kwargs"]["event_hooks"]["response"]
+        self.assertEqual(len(response_hooks), 1)
+        self.assertTrue(callable(response_hooks[0]))
         self.assertEqual(captured["async_client_kwargs"], {"timeout": 45.0})
         self.assertTrue(hasattr(model, "complete"))
 

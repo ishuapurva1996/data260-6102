@@ -12,7 +12,9 @@ memory routes use a bearer token. Earlier cookie authentication exists only in
 Git history; historical reports and database rows are preserved.
 
 The [Part 1 checkpoint](reports/hw07/PART1.md) distinguishes live checks from
-automated tests. Parts 2–6, the final PDF, and the submission tag are pending.
+automated tests. The [Parts 2–3 guide](docs/HW7_PARTS2_3.md) covers the shared
+hand-written loop, one-operation repair, deterministic verification and bounded
+Reflexion study. Parts 4–6, the final PDF, and the submission tag are pending.
 
 ## Homework 5
 

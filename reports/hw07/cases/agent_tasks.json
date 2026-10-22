@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "sid4": 6102,
+  "seed": 6102,
+  "verify_seed": 266102,
+  "fixture": {
+    "manager_id": 98,
+    "query": "HW7 6102 Garden",
+    "rentals": [
+      {
+        "id": 308,
+        "listingTitle": "HW7 6102 Garden Apartment",
+        "propertyAddress": "101 Course Garden Lane",
+        "propertyType": "apartment",
+        "managerId": 98,
+        "description": "A bright apartment beside a community garden."
+      },
+      {
+        "id": 309,
+        "listingTitle": "HW7 6102 Garden House",
+        "propertyAddress": "202 Course Garden Lane",
+        "propertyType": "house",
+        "managerId": 98,
+        "description": "A detached house with a fenced private garden."
+      },
+      {
+        "id": 310,
+        "listingTitle": "HW7 6102 Downtown Condo",
+        "propertyAddress": "303 Course Market Street",
+        "propertyType": "condo",
+        "managerId": 98,
+        "description": "A compact condo near the downtown public library."
+      }
+    ]
+  },
+  "tasks": [
+    {
+      "id": "A",
+      "query": "HW7 6102 Garden",
+      "manager_id": 98,
+      "prompt": "Search rentals for the literal term 'HW7 6102 Garden' with limit 5, then get full details for the FIRST returned rental. Return only one JSON object with keys \"rentals\" and \"count\". Each rental must copy id, listingTitle, propertyAddress, propertyType and managerId from tools. Include its description, emit exactly that one rental, and use \"count\": null. Complete the tool chain from this single instruction; do not ask a follow-up.",
+      "expected": {
+        "rentals": [
+          {
+            "id": 308,
+            "listingTitle": "HW7 6102 Garden Apartment",
+            "propertyAddress": "101 Course Garden Lane",
+            "propertyType": "apartment",
+            "managerId": 98,
+            "description": "A bright apartment beside a community garden."
+          }
+        ],
+        "count": null
+      }
+    },
+    {
+      "id": "B",
+      "query": "HW7 6102 Garden",
+      "manager_id": 98,
+      "prompt": "Count rentals for manager 98, then search the literal term 'HW7 6102 Garden' with limit 5 and select ONE supporting example belonging to manager 98. Return only one JSON object with keys \"rentals\" and \"count\". Each rental must copy id, listingTitle, propertyAddress, propertyType and managerId from tools. Use the observed integer count and exactly one example, without a description. Complete both tool operations from this single instruction; do not ask a follow-up.",
+      "expected": {
+        "rentals": [
+          {
+            "id": 308,
+            "listingTitle": "HW7 6102 Garden Apartment",
+            "propertyAddress": "101 Course Garden Lane",
+            "propertyType": "apartment",
+            "managerId": 98
+          },
+          {
+            "id": 309,
+            "listingTitle": "HW7 6102 Garden House",
+            "propertyAddress": "202 Course Garden Lane",
+            "propertyType": "house",
+            "managerId": 98
+          }
+        ],
+        "count": 3
+      }
+    },
+    {
+      "id": "C",
+      "query": "HW7 6102 Garden",
+      "manager_id": 98,
+      "prompt": "Search rentals for the literal term 'HW7 6102 Garden' with limit 5. Get full details for BOTH of the first two returned rentals to compare their public fields. Return only one JSON object with keys \"rentals\" and \"count\". Each rental must copy id, listingTitle, propertyAddress, propertyType and managerId from tools. Include both descriptions, emit the two rentals in search order, and use \"count\": null. Complete all three tool operations from this single instruction; do not ask a follow-up.",
+      "expected": {
+        "rentals": [
+          {
+            "id": 308,
+            "listingTitle": "HW7 6102 Garden Apartment",
+            "propertyAddress": "101 Course Garden Lane",
+            "propertyType": "apartment",
+            "managerId": 98,
+            "description": "A bright apartment beside a community garden."
+          },
+          {
+            "id": 309,
+            "listingTitle": "HW7 6102 Garden House",
+            "propertyAddress": "202 Course Garden Lane",
+            "propertyType": "house",
+            "managerId": 98,
+            "description": "A detached house with a fenced private garden."
+          }
+        ],
+        "count": null
+      }
+    }
+  ],
+  "missing_id": 2147483000
+}

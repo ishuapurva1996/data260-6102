@@ -10,6 +10,9 @@ sys.path.insert(0, str(ROOT))
 from src.tool_agent import AgentLogError, run_agent
 
 EXPLANATIONS = {
+    "repair_failed": "The single correction did not produce a valid operation.",
+    "budget_exhausted": "The shared token or tool allowance cannot fit another operation.",
+    "verification_failed": "The required task chain or supported final facts did not pass verification.",
     "safety_block": "The executor blocked disclosure of private rental contact information.",
     "max_steps": "The response budget was reached before a final model answer.",
     "model_error": "The local model could not complete the request.",

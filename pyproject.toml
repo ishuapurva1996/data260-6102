@@ -1,7 +1,7 @@
 [tool.ruff]
 target-version = "py312"
 line-length = 100
-include = ["code/web_application/**/*.py", "scripts/hw07/**/*.py", "tests/test_hw07*.py"]
+include = ["code/web_application/**/*.py", "scripts/hw07/**/*.py", "tests/test_hw07*.py", "src/tool_agent/*.py", "src/model_client.py", "src/rental_tools/executor.py"]
 extend-exclude = ["reports", "docs", "code/agents", "code/local_llm_chatbot", "code/retrieval"]
 
 [tool.ruff.lint]

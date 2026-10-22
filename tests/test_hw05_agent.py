@@ -110,9 +110,9 @@ def test_invalid_contact_flags_are_executor_errors_and_not_safety_blocks(flag):
     model = MockModel([response(calls=[call("get_rental", {"rental_id": 1, "include_contact": flag})]),
                        response("The request had invalid arguments.")])
     result, events = run(model, executor=lambda name, args: execute_tool(name, args, service=RentalService(reader)))
-    assert result.stop_reason == "completed" and result.steps == 2 and result.tool_calls == 1
+    assert result.stop_reason == "repair_failed" and result.steps == 2 and result.tool_calls == 0
     assert reader.calls == []
-    failure = next(e["result"] for e in events if e["event"] == "tool_result")
+    failure = next(e["result"] for e in events if e["event"] == "proposal_rejected")
     assert failure["ok"] is False and failure["error"].startswith("Invalid input:")
 
 
@@ -139,7 +139,7 @@ def test_safety_short_circuit_preserves_order_and_stops_later_calls():
     assert PRIVATE_SENTINEL not in json.dumps(events)
 
 
-def test_unknown_name_flows_through_default_production_executor(monkeypatch):
+def test_unknown_name_is_rejected_by_shared_validation_before_executor(monkeypatch):
     invoked = []
     def recording(name, inputs):
         invoked.append(name)
@@ -147,9 +147,9 @@ def test_unknown_name_flows_through_default_production_executor(monkeypatch):
     monkeypatch.setattr(loop, "execute_tool", recording)
     result, events = run(MockModel([response(calls=[call("not_a_tool", {})]),
                                     response("That tool is unavailable.")]))
-    assert invoked == ["not_a_tool"]
-    assert result.tool_calls == 1 and result.steps == 2 and result.stop_reason == "completed"
-    assert next(e["result"]["error"] for e in events if e["event"] == "tool_result") == "Unknown rental tool."
+    assert invoked == []
+    assert result.tool_calls == 0 and result.steps == 2 and result.stop_reason == "repair_failed"
+    assert next(e["result"]["error"] for e in events if e["event"] == "proposal_rejected") == "Unknown rental tool."
 
 
 def test_tool_domain_error_is_available_to_next_model_turn():
@@ -186,9 +186,14 @@ def test_multiple_calls_count_each_executor_invocation_in_order():
 def test_malformed_batch_consumes_one_step_and_executes_nothing(bad_response, category):
     model = MockModel([bad_response] * 5)
     result, events = run(model, executor=lambda *args: pytest.fail("Rejected batch must not execute"))
-    assert (result.answer, result.steps, result.tool_calls, result.stop_reason) == (None, 1, 0, "malformed_response")
-    assert len(model.requests) == 1
-    assert next(e["error"] for e in events if e["event"] == "response_error") == category
+    repairable = bool(bad_response.raw_response.invalid_tool_calls) or (
+        len(bad_response.raw_response.tool_calls) == 1 and
+        isinstance(bad_response.raw_response.tool_calls[0].get("args"), str))
+    expected = (None, 2, 0, "repair_failed") if repairable else (None, 1, 0, "malformed_response")
+    assert (result.answer, result.steps, result.tool_calls, result.stop_reason) == expected
+    assert len(model.requests) == expected[1]
+    if not repairable:
+        assert next(e["error"] for e in events if e["event"] == "response_error") == category
     assert "dependency-secret" not in json.dumps(events)
 
 
@@ -255,7 +260,8 @@ def test_live_factory_receives_finite_timeout_and_explicit_tag(monkeypatch):
     monkeypatch.setattr(loop, "current_revision", lambda: "a" * 40)
     stream = io.StringIO()
     result = run_agent("Count.", model_name="installed:test", log_stream=stream, timeout=17)
-    assert received == [(("installed:test", "http://127.0.0.1:11434", 0.0, 17), {"reasoning": False})]
+    assert received == [(("installed:test", "http://127.0.0.1:11434", 0.0, 17),
+                         {"reasoning": False, "context_window": 8192, "output_limit": 512, "seed": 6102})]
     assert result.stop_reason == "completed"
     start = json.loads(stream.getvalue().splitlines()[0])
     assert start["code_revision"] == "a" * 40 and start["configuration"]["timeout_seconds"] == 17
