@@ -1,0 +1,1845 @@
+{
+  "run_id": "f155219ea5c2491ea7ad3b292820c227",
+  "status": "completed",
+  "error": null,
+  "events": [
+    {
+      "run_id": "f155219ea5c2491ea7ad3b292820c227",
+      "user_id": 71,
+      "source_commit": "22c673db820a56ca4fb12ec1f27a175db6825a6f",
+      "sequence": 9,
+      "timestamp_utc": "2026-10-22T08:10:09.997424+00:00",
+      "event": "tool_request",
+      "call_id": "66429738-8479-4450-8ae4-9db68b675e61",
+      "name": "policy_retriever",
+      "inputs": {
+        "k": 3,
+        "query": "classic unlock per minute membership included overage rounded up",
+        "url": "https://capitalbikeshare.com/pricing"
+      }
+    },
+    {
+      "run_id": "f155219ea5c2491ea7ad3b292820c227",
+      "user_id": 71,
+      "source_commit": "22c673db820a56ca4fb12ec1f27a175db6825a6f",
+      "sequence": 10,
+      "timestamp_utc": "2026-10-22T08:10:10.662963+00:00",
+      "event": "tool_result",
+      "call_id": "66429738-8479-4450-8ae4-9db68b675e61",
+      "name": "policy_retriever",
+      "inputs": {
+        "k": 3,
+        "query": "classic unlock per minute membership included overage rounded up",
+        "url": "https://capitalbikeshare.com/pricing"
+      },
+      "result": {
+        "success": true,
+        "source": "https://capitalbikeshare.com/pricing",
+        "ts": "2026-10-22T08:10:10.662628+00:00",
+        "data": {
+          "passages": [
+            {
+              "text": "When you’ve got lots to do. $10/day includes unlimited 45-min classic bike rides within a 24-hour period. Ride longer than 45 minutes and pay $0.05/minute. No unlock fees and a discounted rate of $0.15/min on ebikes.\n$10/day\nOther membership options",
+              "source": "https://capitalbikeshare.com/pricing",
+              "score": 0.7222222222222222
+            },
+            {
+              "text": "Great for one-way trips. Just download the Capital Bikeshare or Lyft app and you’re ready to roll. Just $1 to unlock plus $0.15/minute for classic bikes or $0.35/minute for ebikes.\n$1 + $0.15/ mins\nDay pass",
+              "source": "https://capitalbikeshare.com/pricing",
+              "score": 0.6666666666666666
+            },
+            {
+              "text": "Great for one-way trips. Just download the Capital Bikeshare or Lyft app and you’re ready to roll. Just $1 to unlock plus $0.15/minute for classic bikes or $0.35/minute for ebikes.",
+              "source": "https://capitalbikeshare.com/pricing",
+              "score": 0.6666666666666666
+            }
+          ]
+        }
+      }
+    },
+    {
+      "run_id": "f155219ea5c2491ea7ad3b292820c227",
+      "user_id": 71,
+      "source_commit": "22c673db820a56ca4fb12ec1f27a175db6825a6f",
+      "sequence": 11,
+      "timestamp_utc": "2026-10-22T08:10:10.664761+00:00",
+      "event": "tool_request",
+      "call_id": "86d0a83d-6a2d-48c8-9c53-f13da4724bfb",
+      "name": "policy_retriever",
+      "inputs": {
+        "k": 3,
+        "query": "classic unlock per minute membership included overage rounded up",
+        "url": "https://capitalbikeshare.com/pricing/single-trip"
+      }
+    },
+    {
+      "run_id": "f155219ea5c2491ea7ad3b292820c227",
+      "user_id": 71,
+      "source_commit": "22c673db820a56ca4fb12ec1f27a175db6825a6f",
+      "sequence": 13,
+      "timestamp_utc": "2026-10-22T08:10:12.131034+00:00",
+      "event": "tool_result",
+      "call_id": "86d0a83d-6a2d-48c8-9c53-f13da4724bfb",
+      "name": "policy_retriever",
+      "inputs": {
+        "k": 3,
+        "query": "classic unlock per minute membership included overage rounded up",
+        "url": "https://capitalbikeshare.com/pricing/single-trip"
+      },
+      "result": {
+        "success": true,
+        "source": "https://capitalbikeshare.com/pricing/single-trip",
+        "ts": "2026-10-22T08:10:12.130660+00:00",
+        "data": {
+          "passages": [
+            {
+              "text": "With a pedal-assist motor to supercharge your ride, our ebikes are the easiest way to get around the metro DC area. Pricing starts at $1 to unlock plus $0.35/minute.\nEbike parking is free at Capital Bikeshare stations. You’ll be charged $3 for parking an ebike at a public bike rack in the service area.\nA $25 fee will be applied to any ebike that is not docked at a station or secured to a public bike rack with its cable lock, if it remains inactive for over 30 minutes after the ride concludes. This fee is in addition to the standard per-minute rate.",
+              "source": "https://capitalbikeshare.com/pricing/single-trip",
+              "score": 0.6666666666666666
+            },
+            {
+              "text": "The Single Trip costs $1 to unlock and $0.15/min on a classic bike or $0.35/min on an ebike.\nBuy a pass through the app\nInterested in Ebikes?",
+              "source": "https://capitalbikeshare.com/pricing/single-trip",
+              "score": 0.6111111111111112
+            },
+            {
+              "text": "The Single Trip costs $1 to unlock and $0.15/min on a classic bike or $0.35/min on an ebike.",
+              "source": "https://capitalbikeshare.com/pricing/single-trip",
+              "score": 0.6111111111111112
+            }
+          ]
+        }
+      }
+    },
+    {
+      "run_id": "f155219ea5c2491ea7ad3b292820c227",
+      "user_id": 71,
+      "source_commit": "22c673db820a56ca4fb12ec1f27a175db6825a6f",
+      "sequence": 15,
+      "timestamp_utc": "2026-10-22T08:10:12.133072+00:00",
+      "event": "tool_request",
+      "call_id": "981a0c1b-4e9b-44a9-b2ec-c1a8c76fd251",
+      "name": "policy_retriever",
+      "inputs": {
+        "url": "https://help.capitalbikeshare.com/hc/en-us/articles/360039401111-30-Day-Membership",
+        "k": 3,
+        "query": "classic unlock per minute membership included over,age rounded up"
+      }
+    },
+    {
+      "run_id": "f155219ea5c2491ea7ad3b292820c227",
+      "user_id": 71,
+      "source_commit": "22c673db820a56ca4fb12ec1f27a175db6825a6f",
+      "sequence": 16,
+      "timestamp_utc": "2026-10-22T08:10:12.221763+00:00",
+      "event": "tool_result",
+      "call_id": "981a0c1b-4e9b-44a9-b2ec-c1a8c76fd251",
+      "name": "policy_retriever",
+      "inputs": {
+        "url": "https://help.capitalbikeshare.com/hc/en-us/articles/360039401111-30-Day-Membership",
+        "k": 3,
+        "query": "classic unlock per minute membership included over,age rounded up"
+      },
+      "result": {
+        "success": true,
+        "source": "https://help.capitalbikeshare.com/hc/en-us/articles/360039401111-30-Day-Membership",
+        "ts": "2026-10-22T08:10:12.221589+00:00",
+        "data": {
+          "passages": [
+            {
+              "text": "Unlimited 45-minute rides on classic bikes for 30 days from purchase. Members pay $0.15 per minute for ebikes and avoid unlock fees.\n24/7 access to thousands of bikes in Washington, DC; Arlington, VA; Alexandria, VA; Montgomery County, MD; Prince George's County, MD; Fairfax County, VA; City of Fairfax; and the City of Falls Church, VA.\nIf you need more time than what’s covered, pay $0.05 per minute. All per minute ride prices are rounded up to the nearest minute.",
+              "source": "https://help.capitalbikeshare.com/hc/en-us/articles/360039401111-30-Day-Membership",
+              "score": 0.8
+            },
+            {
+              "text": "The 30-Day Membership offers a flexible way to ride with Capital Bikeshare when you need it.\n$25 / 30-Day Membership includes:\nUnlimited 45-minute rides on classic bikes for 30 days from purchase. Members pay $0.15 per minute for ebikes and avoid unlock fees.",
+              "source": "https://help.capitalbikeshare.com/hc/en-us/articles/360039401111-30-Day-Membership",
+              "score": 0.75
+            },
+            {
+              "text": "$25 / 30-Day Membership includes:\nUnlimited 45-minute rides on classic bikes for 30 days from purchase. Members pay $0.15 per minute for ebikes and avoid unlock fees.\n24/7 access to thousands of bikes in Washington, DC; Arlington, VA; Alexandria, VA; Montgomery County, MD; Prince George's County, MD; Fairfax County, VA; City of Fairfax; and the City of Falls Church, VA.",
+              "source": "https://help.capitalbikeshare.com/hc/en-us/articles/360039401111-30-Day-Membership",
+              "score": 0.75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "run_id": "f155219ea5c2491ea7ad3b292820c227",
+      "user_id": 71,
+      "source_commit": "22c673db820a56ca4fb12ec1f27a175db6825a6f",
+      "sequence": 23,
+      "timestamp_utc": "2026-10-22T08:11:01.649240+00:00",
+      "event": "tool_request",
+      "call_id": "af97b9ac-644c-4970-b93f-0450fbdba233",
+      "name": "csv_sql",
+      "inputs": {
+        "sql": "SELECT COUNT(*) AS rides, COUNT(DISTINCT scenario_account_id) AS accounts, SUM(CASE WHEN rideable_type='classic_bike' THEN 1 ELSE 0 END) AS classic_rides, SUM(CASE WHEN rideable_type='electric_bike' THEN 1 ELSE 0 END) AS ebike_rides, SUM(CASE WHEN rideable_type='classic_bike' THEN billable_minutes ELSE 0 END) AS classic_minutes, SUM(CASE WHEN rideable_type='electric_bike' THEN billable_minutes ELSE 0 END) AS ebike_minutes, SUM(CASE WHEN rideable_type='classic_bike' THEN MAX(billable_minutes-45,0) ELSE 0 END) AS classic_overage_minutes FROM trips"
+      }
+    },
+    {
+      "run_id": "f155219ea5c2491ea7ad3b292820c227",
+      "user_id": 71,
+      "source_commit": "22c673db820a56ca4fb12ec1f27a175db6825a6f",
+      "sequence": 24,
+      "timestamp_utc": "2026-10-22T08:11:01.657654+00:00",
+      "event": "tool_result",
+      "call_id": "af97b9ac-644c-4970-b93f-0450fbdba233",
+      "name": "csv_sql",
+      "inputs": {
+        "sql": "SELECT COUNT(*) AS rides, COUNT(DISTINCT scenario_account_id) AS accounts, SUM(CASE WHEN rideable_type='classic_bike' THEN 1 ELSE 0 END) AS classic_rides, SUM(CASE WHEN rideable_type='electric_bike' THEN 1 ELSE 0 END) AS ebike_rides, SUM(CASE WHEN rideable_type='classic_bike' THEN billable_minutes ELSE 0 END) AS classic_minutes, SUM(CASE WHEN rideable_type='electric_bike' THEN billable_minutes ELSE 0 END) AS ebike_minutes, SUM(CASE WHEN rideable_type='classic_bike' THEN MAX(billable_minutes-45,0) ELSE 0 END) AS classic_overage_minutes FROM trips"
+      },
+      "result": {
+        "success": true,
+        "source": "uploaded.csv",
+        "ts": "2026-10-22T08:11:01.657316+00:00",
+        "data": {
+          "rows": [
+            {
+              "rides": 500,
+              "accounts": 125,
+              "classic_rides": 500,
+              "ebike_rides": 0,
+              "classic_minutes": 1935,
+              "ebike_minutes": 0,
+              "classic_overage_minutes": 0
+            }
+          ],
+          "row_count": 1,
+          "source": "uploaded.csv"
+        }
+      }
+    },
+    {
+      "run_id": "f155219ea5c2491ea7ad3b292820c227",
+      "user_id": 71,
+      "source_commit": "22c673db820a56ca4fb12ec1f27a175db6825a6f",
+      "sequence": 31,
+      "timestamp_utc": "2026-10-22T08:11:40.433160+00:00",
+      "event": "tool_request",
+      "call_id": "efe6b190-14ac-4b97-9460-f5a566077997",
+      "name": "calculator",
+      "inputs": {
+        "units": "USD",
+        "expression": "500*1.00+1935*0.15+0*1.00+0*0.35"
+      }
+    },
+    {
+      "run_id": "f155219ea5c2491ea7ad3b292820c227",
+      "user_id": 71,
+      "source_commit": "22c673db820a56ca4fb12ec1f27a175db6825a6f",
+      "sequence": 32,
+      "timestamp_utc": "2026-10-22T08:11:40.436837+00:00",
+      "event": "tool_result",
+      "call_id": "efe6b190-14ac-4b97-9460-f5a566077997",
+      "name": "calculator",
+      "inputs": {
+        "units": "USD",
+        "expression": "500*1.00+1935*0.15+0*1.00+0*0.35"
+      },
+      "result": {
+        "success": true,
+        "source": "calculator",
+        "ts": "2026-10-22T08:11:40.436538+00:00",
+        "data": {
+          "value": 790.25,
+          "units": "USD"
+        }
+      }
+    },
+    {
+      "run_id": "f155219ea5c2491ea7ad3b292820c227",
+      "user_id": 71,
+      "source_commit": "22c673db820a56ca4fb12ec1f27a175db6825a6f",
+      "sequence": 39,
+      "timestamp_utc": "2026-10-22T08:12:18.936384+00:00",
+      "event": "tool_request",
+      "call_id": "dbfeb4a1-98d1-4ea7-a3b3-f717e6e2c4d7",
+      "name": "calculator",
+      "inputs": {
+        "expression": "125*25.00+0*0.05+0*0.15",
+        "units": "USD"
+      }
+    },
+    {
+      "run_id": "f155219ea5c2491ea7ad3b292820c227",
+      "user_id": 71,
+      "source_commit": "22c673db820a56ca4fb12ec1f27a175db6825a6f",
+      "sequence": 40,
+      "timestamp_utc": "2026-10-22T08:12:18.941812+00:00",
+      "event": "tool_result",
+      "call_id": "dbfeb4a1-98d1-4ea7-a3b3-f717e6e2c4d7",
+      "name": "calculator",
+      "inputs": {
+        "expression": "125*25.00+0*0.05+0*0.15",
+        "units": "USD"
+      },
+      "result": {
+        "success": true,
+        "source": "calculator",
+        "ts": "2026-10-22T08:12:18.941439+00:00",
+        "data": {
+          "value": 3125,
+          "units": "USD"
+        }
+      }
+    }
+  ],
+  "result": {
+    "row_count": 500,
+    "account_count": 125,
+    "coverage_start": "2024-01-01T00:00:00",
+    "coverage_end": "2024-01-31T00:00:00",
+    "summary": {
+      "billed_minutes": 1935,
+      "classic_overage_minutes": 0,
+      "classic_overage_ride_count": 0,
+      "classic_ride_count": 500,
+      "ebike_ride_count": 0,
+      "duration_seconds": 102226,
+      "average_duration_minutes": "3.41"
+    },
+    "pay_per_use_total": "790.25",
+    "membership_fee_total": "3125.00",
+    "membership_residual_total": "0.00",
+    "membership_total": "3125.00",
+    "savings": "-2334.75",
+    "decision": "Pay Per Ride/Minute",
+    "weekly": [
+      {
+        "week_start": "2024-01-01",
+        "ride_count": 119,
+        "average_duration_minutes": "3.52",
+        "billed_minutes": 470,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "189.50",
+        "member_residual": "0.00",
+        "allocated_membership_fee": "3125.00",
+        "membership_total": "3125.00"
+      },
+      {
+        "week_start": "2024-01-08",
+        "ride_count": 119,
+        "average_duration_minutes": "3.29",
+        "billed_minutes": 446,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "185.90",
+        "member_residual": "0.00",
+        "allocated_membership_fee": "0.00",
+        "membership_total": "0.00"
+      },
+      {
+        "week_start": "2024-01-15",
+        "ride_count": 118,
+        "average_duration_minutes": "3.41",
+        "billed_minutes": 454,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "186.10",
+        "member_residual": "0.00",
+        "allocated_membership_fee": "0.00",
+        "membership_total": "0.00"
+      },
+      {
+        "week_start": "2024-01-22",
+        "ride_count": 112,
+        "average_duration_minutes": "3.34",
+        "billed_minutes": 432,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "176.80",
+        "member_residual": "0.00",
+        "allocated_membership_fee": "0.00",
+        "membership_total": "0.00"
+      },
+      {
+        "week_start": "2024-01-29",
+        "ride_count": 32,
+        "average_duration_minutes": "3.66",
+        "billed_minutes": 133,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "51.95",
+        "member_residual": "0.00",
+        "allocated_membership_fee": "0.00",
+        "membership_total": "0.00"
+      }
+    ],
+    "per_account": [
+      {
+        "account_id": "occasional-001",
+        "ride_count": 4,
+        "average_duration_minutes": "3.29",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-002",
+        "ride_count": 4,
+        "average_duration_minutes": "2.76",
+        "billed_minutes": 13,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "5.95",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-003",
+        "ride_count": 4,
+        "average_duration_minutes": "3.98",
+        "billed_minutes": 17,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.55",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-004",
+        "ride_count": 4,
+        "average_duration_minutes": "3.54",
+        "billed_minutes": 16,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.40",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-005",
+        "ride_count": 4,
+        "average_duration_minutes": "3.15",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-006",
+        "ride_count": 4,
+        "average_duration_minutes": "2.80",
+        "billed_minutes": 14,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.10",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-007",
+        "ride_count": 4,
+        "average_duration_minutes": "3.45",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-008",
+        "ride_count": 4,
+        "average_duration_minutes": "3.68",
+        "billed_minutes": 16,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.40",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-009",
+        "ride_count": 4,
+        "average_duration_minutes": "3.18",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-010",
+        "ride_count": 4,
+        "average_duration_minutes": "4.29",
+        "billed_minutes": 18,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.70",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-011",
+        "ride_count": 4,
+        "average_duration_minutes": "2.67",
+        "billed_minutes": 12,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "5.80",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-012",
+        "ride_count": 4,
+        "average_duration_minutes": "3.33",
+        "billed_minutes": 16,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.40",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-013",
+        "ride_count": 4,
+        "average_duration_minutes": "2.72",
+        "billed_minutes": 13,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "5.95",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-014",
+        "ride_count": 4,
+        "average_duration_minutes": "3.05",
+        "billed_minutes": 14,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.10",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-015",
+        "ride_count": 4,
+        "average_duration_minutes": "3.35",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-016",
+        "ride_count": 4,
+        "average_duration_minutes": "3.88",
+        "billed_minutes": 17,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.55",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-017",
+        "ride_count": 4,
+        "average_duration_minutes": "3.68",
+        "billed_minutes": 16,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.40",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-018",
+        "ride_count": 4,
+        "average_duration_minutes": "3.76",
+        "billed_minutes": 17,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.55",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-019",
+        "ride_count": 4,
+        "average_duration_minutes": "3.50",
+        "billed_minutes": 16,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.40",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-020",
+        "ride_count": 4,
+        "average_duration_minutes": "3.04",
+        "billed_minutes": 14,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.10",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-021",
+        "ride_count": 4,
+        "average_duration_minutes": "2.74",
+        "billed_minutes": 13,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "5.95",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-022",
+        "ride_count": 4,
+        "average_duration_minutes": "3.67",
+        "billed_minutes": 17,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.55",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-023",
+        "ride_count": 4,
+        "average_duration_minutes": "4.20",
+        "billed_minutes": 18,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.70",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-024",
+        "ride_count": 4,
+        "average_duration_minutes": "3.83",
+        "billed_minutes": 17,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.55",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-025",
+        "ride_count": 4,
+        "average_duration_minutes": "3.35",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-026",
+        "ride_count": 4,
+        "average_duration_minutes": "3.16",
+        "billed_minutes": 14,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.10",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-027",
+        "ride_count": 4,
+        "average_duration_minutes": "3.11",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-028",
+        "ride_count": 4,
+        "average_duration_minutes": "3.10",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-029",
+        "ride_count": 4,
+        "average_duration_minutes": "3.58",
+        "billed_minutes": 16,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.40",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-030",
+        "ride_count": 4,
+        "average_duration_minutes": "3.00",
+        "billed_minutes": 14,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.10",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-031",
+        "ride_count": 4,
+        "average_duration_minutes": "2.97",
+        "billed_minutes": 14,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.10",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-032",
+        "ride_count": 4,
+        "average_duration_minutes": "3.73",
+        "billed_minutes": 16,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.40",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-033",
+        "ride_count": 4,
+        "average_duration_minutes": "3.59",
+        "billed_minutes": 17,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.55",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-034",
+        "ride_count": 4,
+        "average_duration_minutes": "3.26",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-035",
+        "ride_count": 4,
+        "average_duration_minutes": "3.48",
+        "billed_minutes": 16,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.40",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-036",
+        "ride_count": 4,
+        "average_duration_minutes": "2.88",
+        "billed_minutes": 13,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "5.95",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-037",
+        "ride_count": 4,
+        "average_duration_minutes": "3.54",
+        "billed_minutes": 16,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.40",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-038",
+        "ride_count": 4,
+        "average_duration_minutes": "4.10",
+        "billed_minutes": 18,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.70",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-039",
+        "ride_count": 4,
+        "average_duration_minutes": "3.93",
+        "billed_minutes": 18,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.70",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-040",
+        "ride_count": 4,
+        "average_duration_minutes": "2.59",
+        "billed_minutes": 12,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "5.80",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-041",
+        "ride_count": 4,
+        "average_duration_minutes": "3.72",
+        "billed_minutes": 17,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.55",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-042",
+        "ride_count": 4,
+        "average_duration_minutes": "3.26",
+        "billed_minutes": 16,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.40",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-043",
+        "ride_count": 4,
+        "average_duration_minutes": "4.04",
+        "billed_minutes": 18,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.70",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-044",
+        "ride_count": 4,
+        "average_duration_minutes": "3.79",
+        "billed_minutes": 17,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.55",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-045",
+        "ride_count": 4,
+        "average_duration_minutes": "2.12",
+        "billed_minutes": 11,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "5.65",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-046",
+        "ride_count": 4,
+        "average_duration_minutes": "2.94",
+        "billed_minutes": 13,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "5.95",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-047",
+        "ride_count": 4,
+        "average_duration_minutes": "3.53",
+        "billed_minutes": 16,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.40",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-048",
+        "ride_count": 4,
+        "average_duration_minutes": "3.17",
+        "billed_minutes": 14,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.10",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-049",
+        "ride_count": 4,
+        "average_duration_minutes": "3.17",
+        "billed_minutes": 14,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.10",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-050",
+        "ride_count": 4,
+        "average_duration_minutes": "2.92",
+        "billed_minutes": 14,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.10",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-051",
+        "ride_count": 4,
+        "average_duration_minutes": "3.80",
+        "billed_minutes": 16,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.40",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-052",
+        "ride_count": 4,
+        "average_duration_minutes": "2.51",
+        "billed_minutes": 12,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "5.80",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-053",
+        "ride_count": 4,
+        "average_duration_minutes": "3.43",
+        "billed_minutes": 16,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.40",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-054",
+        "ride_count": 4,
+        "average_duration_minutes": "3.62",
+        "billed_minutes": 17,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.55",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-055",
+        "ride_count": 4,
+        "average_duration_minutes": "3.48",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-056",
+        "ride_count": 4,
+        "average_duration_minutes": "2.98",
+        "billed_minutes": 14,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.10",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-057",
+        "ride_count": 4,
+        "average_duration_minutes": "3.41",
+        "billed_minutes": 16,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.40",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-058",
+        "ride_count": 4,
+        "average_duration_minutes": "3.40",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-059",
+        "ride_count": 4,
+        "average_duration_minutes": "4.02",
+        "billed_minutes": 17,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.55",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-060",
+        "ride_count": 4,
+        "average_duration_minutes": "4.11",
+        "billed_minutes": 18,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.70",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-061",
+        "ride_count": 4,
+        "average_duration_minutes": "3.15",
+        "billed_minutes": 14,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.10",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-062",
+        "ride_count": 4,
+        "average_duration_minutes": "3.03",
+        "billed_minutes": 14,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.10",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-063",
+        "ride_count": 4,
+        "average_duration_minutes": "3.48",
+        "billed_minutes": 16,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.40",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-064",
+        "ride_count": 4,
+        "average_duration_minutes": "3.82",
+        "billed_minutes": 17,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.55",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-065",
+        "ride_count": 4,
+        "average_duration_minutes": "2.92",
+        "billed_minutes": 14,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.10",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-066",
+        "ride_count": 4,
+        "average_duration_minutes": "3.55",
+        "billed_minutes": 16,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.40",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-067",
+        "ride_count": 4,
+        "average_duration_minutes": "4.30",
+        "billed_minutes": 19,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.85",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-068",
+        "ride_count": 4,
+        "average_duration_minutes": "3.40",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-069",
+        "ride_count": 4,
+        "average_duration_minutes": "3.82",
+        "billed_minutes": 17,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.55",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-070",
+        "ride_count": 4,
+        "average_duration_minutes": "2.85",
+        "billed_minutes": 13,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "5.95",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-071",
+        "ride_count": 4,
+        "average_duration_minutes": "4.03",
+        "billed_minutes": 18,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.70",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-072",
+        "ride_count": 4,
+        "average_duration_minutes": "3.21",
+        "billed_minutes": 14,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.10",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-073",
+        "ride_count": 4,
+        "average_duration_minutes": "3.62",
+        "billed_minutes": 17,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.55",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-074",
+        "ride_count": 4,
+        "average_duration_minutes": "3.79",
+        "billed_minutes": 16,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.40",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-075",
+        "ride_count": 4,
+        "average_duration_minutes": "3.54",
+        "billed_minutes": 16,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.40",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-076",
+        "ride_count": 4,
+        "average_duration_minutes": "3.46",
+        "billed_minutes": 16,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.40",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-077",
+        "ride_count": 4,
+        "average_duration_minutes": "3.27",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-078",
+        "ride_count": 4,
+        "average_duration_minutes": "2.72",
+        "billed_minutes": 13,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "5.95",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-079",
+        "ride_count": 4,
+        "average_duration_minutes": "3.49",
+        "billed_minutes": 16,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.40",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-080",
+        "ride_count": 4,
+        "average_duration_minutes": "4.22",
+        "billed_minutes": 19,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.85",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-081",
+        "ride_count": 4,
+        "average_duration_minutes": "3.13",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-082",
+        "ride_count": 4,
+        "average_duration_minutes": "3.11",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-083",
+        "ride_count": 4,
+        "average_duration_minutes": "3.59",
+        "billed_minutes": 16,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.40",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-084",
+        "ride_count": 4,
+        "average_duration_minutes": "3.11",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-085",
+        "ride_count": 4,
+        "average_duration_minutes": "2.49",
+        "billed_minutes": 11,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "5.65",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-086",
+        "ride_count": 4,
+        "average_duration_minutes": "4.02",
+        "billed_minutes": 18,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.70",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-087",
+        "ride_count": 4,
+        "average_duration_minutes": "3.21",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-088",
+        "ride_count": 4,
+        "average_duration_minutes": "2.88",
+        "billed_minutes": 13,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "5.95",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-089",
+        "ride_count": 4,
+        "average_duration_minutes": "3.35",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-090",
+        "ride_count": 4,
+        "average_duration_minutes": "3.53",
+        "billed_minutes": 17,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.55",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-091",
+        "ride_count": 4,
+        "average_duration_minutes": "3.46",
+        "billed_minutes": 16,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.40",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-092",
+        "ride_count": 4,
+        "average_duration_minutes": "3.56",
+        "billed_minutes": 16,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.40",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-093",
+        "ride_count": 4,
+        "average_duration_minutes": "3.29",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-094",
+        "ride_count": 4,
+        "average_duration_minutes": "4.13",
+        "billed_minutes": 18,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.70",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-095",
+        "ride_count": 4,
+        "average_duration_minutes": "4.34",
+        "billed_minutes": 19,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.85",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-096",
+        "ride_count": 4,
+        "average_duration_minutes": "3.60",
+        "billed_minutes": 16,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.40",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-097",
+        "ride_count": 4,
+        "average_duration_minutes": "3.74",
+        "billed_minutes": 17,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.55",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-098",
+        "ride_count": 4,
+        "average_duration_minutes": "3.30",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-099",
+        "ride_count": 4,
+        "average_duration_minutes": "3.30",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-100",
+        "ride_count": 4,
+        "average_duration_minutes": "3.09",
+        "billed_minutes": 14,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.10",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-101",
+        "ride_count": 4,
+        "average_duration_minutes": "4.07",
+        "billed_minutes": 18,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.70",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-102",
+        "ride_count": 4,
+        "average_duration_minutes": "3.88",
+        "billed_minutes": 17,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.55",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-103",
+        "ride_count": 4,
+        "average_duration_minutes": "3.20",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-104",
+        "ride_count": 4,
+        "average_duration_minutes": "4.01",
+        "billed_minutes": 18,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.70",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-105",
+        "ride_count": 4,
+        "average_duration_minutes": "3.18",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-106",
+        "ride_count": 4,
+        "average_duration_minutes": "3.03",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-107",
+        "ride_count": 4,
+        "average_duration_minutes": "3.16",
+        "billed_minutes": 14,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.10",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-108",
+        "ride_count": 4,
+        "average_duration_minutes": "3.46",
+        "billed_minutes": 16,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.40",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-109",
+        "ride_count": 4,
+        "average_duration_minutes": "2.88",
+        "billed_minutes": 13,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "5.95",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-110",
+        "ride_count": 4,
+        "average_duration_minutes": "4.30",
+        "billed_minutes": 19,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.85",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-111",
+        "ride_count": 4,
+        "average_duration_minutes": "4.08",
+        "billed_minutes": 18,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.70",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-112",
+        "ride_count": 4,
+        "average_duration_minutes": "3.52",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-113",
+        "ride_count": 4,
+        "average_duration_minutes": "4.28",
+        "billed_minutes": 18,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.70",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-114",
+        "ride_count": 4,
+        "average_duration_minutes": "4.24",
+        "billed_minutes": 18,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.70",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-115",
+        "ride_count": 4,
+        "average_duration_minutes": "2.87",
+        "billed_minutes": 13,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "5.95",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-116",
+        "ride_count": 4,
+        "average_duration_minutes": "2.98",
+        "billed_minutes": 14,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.10",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-117",
+        "ride_count": 4,
+        "average_duration_minutes": "3.71",
+        "billed_minutes": 18,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.70",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-118",
+        "ride_count": 4,
+        "average_duration_minutes": "3.12",
+        "billed_minutes": 14,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.10",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-119",
+        "ride_count": 4,
+        "average_duration_minutes": "3.13",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-120",
+        "ride_count": 4,
+        "average_duration_minutes": "2.71",
+        "billed_minutes": 13,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "5.95",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-121",
+        "ride_count": 4,
+        "average_duration_minutes": "3.33",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-122",
+        "ride_count": 4,
+        "average_duration_minutes": "3.37",
+        "billed_minutes": 16,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.40",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-123",
+        "ride_count": 4,
+        "average_duration_minutes": "3.33",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-124",
+        "ride_count": 4,
+        "average_duration_minutes": "2.65",
+        "billed_minutes": 12,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "5.80",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-125",
+        "ride_count": 4,
+        "average_duration_minutes": "3.23",
+        "billed_minutes": 16,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.40",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      }
+    ],
+    "break_even": {
+      "rides_at_sample_mix": 16,
+      "strictly_cheaper_rides_at_sample_mix": 16,
+      "minutes_at_sample_mix": "61.92",
+      "actual_rides_per_account": {
+        "min": 4,
+        "max": 4
+      },
+      "average_saving_per_ride": "1.580500",
+      "method": "Per account: membership fee / sample-average (casual ride cost minus member residual). Ceiling gives weak break-even; ties recommend Pay Per Ride/Minute. The strict threshold is floor + 1. Minutes use sample-average billed minutes. This repeated sample-mix approximation is not a guarantee for every ordering of heterogeneous rides."
+    },
+    "assumptions": [
+      "hypothetical assigned account; not observed rider history",
+      "Each scenario account purchases its own 30-day membership at coverage_start; fees cannot be shared between accounts.",
+      "The coverage end is exclusive for trip starts; every trip must finish within coverage.",
+      "Offset-free trip timestamps are interpreted in America/New_York local time; no observed rider identity is inferred.",
+      "Pre-tax base transportation comparison: location-dependent sales taxes are excluded.",
+      "Parking, damages, lost-bike and other penalties are excluded because the trip CSV does not observe them; ebike totals include transportation only.",
+      "Current captured prices are applied counterfactually to the uploaded trip durations.",
+      "The entire membership fee is allocated to the calendar week containing coverage_start; later weeks include only residual charges.",
+      "Original member_casual describes the public source trip and is not a scenario identity or the product selected for this counterfactual comparison.",
+      "A tie recommends Pay Per Ride/Minute; comparison savings are pay-per-use minus membership total."
+    ],
+    "justification": "Pay per use costs $790.25 for 500 rides across 125 hypothetical accounts [2]. The membership alternative totals $3125.00 including ride charges for 125 separate accounts [3]. Each account pays $25 for a 30-day membership with 45 included classic minutes per ride and $0.05 per extra minute [3]. Ride minutes are rounded up separately for every ride [3]. Pay Per Ride/Minute is the recommendation for this assumed 30-day cohort [2][3].",
+    "run_id": "f155219ea5c2491ea7ad3b292820c227",
+    "user_id": 71,
+    "source_commit": "22c673db820a56ca4fb12ec1f27a175db6825a6f",
+    "source_dirty": false,
+    "configuration": {
+      "model": "qwen3:8b",
+      "base_url": "http://127.0.0.1:11434",
+      "temperature": 0,
+      "seed": 6102,
+      "context_window": 32768,
+      "output_limit": 512,
+      "request_timeout": 120,
+      "max_seconds": 600,
+      "max_model_requests": 8,
+      "max_tools": 16,
+      "max_tokens": 48000
+    },
+    "started_at": "2026-10-22T08:09:41.504636+00:00",
+    "finished_at": "2026-10-22T08:13:31.766637+00:00",
+    "input_sha256": "8ba2b6b723fcdef6b9805a6a5b543c1278f72939d9ba9b693e0c57ae87e758bc",
+    "model_answer": "{\"decision\":\"Pay Per Ride/Minute\",\"pay_per_use_total\":\"790.25\",\"membership_total\":\"3125.00\",\"justification\":\"Pay per use costs $790.25 for 500 rides across 125 hypothetical accounts [2]. The membership alternative totals $3125.00 including ride charges for 125 separate accounts [3]. Each account pays $25 for a 30-day membership with 45 included classic minutes per ride and $0.05 per extra minute [3]. Ride minutes are rounded up separately for every ride [3]. Pay Per Ride/Minute is the recommendation for this assumed 30-day cohort [2][3].\"}",
+    "verification": {
+      "passed": true,
+      "failures": [],
+      "parsed": {
+        "decision": "Pay Per Ride/Minute",
+        "pay_per_use_total": "790.25",
+        "membership_total": "3125.00",
+        "justification": "Pay per use costs $790.25 for 500 rides across 125 hypothetical accounts [2]. The membership alternative totals $3125.00 including ride charges for 125 separate accounts [3]. Each account pays $25 for a 30-day membership with 45 included classic minutes per ride and $0.05 per extra minute [3]. Ride minutes are rounded up separately for every ride [3]. Pay Per Ride/Minute is the recommendation for this assumed 30-day cohort [2][3]."
+      }
+    },
+    "citations": [
+      {
+        "number": 1,
+        "url": "https://capitalbikeshare.com/pricing",
+        "captured_at": "2026-10-22T08:10:10.659109+00:00",
+        "sha256": "fc7a546f6983bb9d9f956ae43ffd81e1ef9ae1a845c69e0d21fbaf1534998d52",
+        "excerpt": "When you’ve got lots to do. $10/day includes unlimited 45-min classic bike rides within a 24-hour period. Ride longer than 45 minutes and pay $0.05/minute. No unlock fees and a discounted rate of $0.15/min on ebikes.\n$10/day\nOther membership options\nGreat for one-way trips. Just download the Capital Bikeshare or Lyft app and you’re ready to roll. Just $1 to unlock plus $0.15/minute for classic bikes or $0.35/minute for ebikes.\n$1 + $0.15/ mins\nDay pass\nGreat for one-way trips. Just download the Capital Bikeshare or Lyft app and you’re ready to roll. Just $1 to unlock plus $0.15/minute for classic bikes or $0.35/minute for ebikes."
+      },
+      {
+        "number": 2,
+        "url": "https://capitalbikeshare.com/pricing/single-trip",
+        "captured_at": "2026-10-22T08:10:12.126419+00:00",
+        "sha256": "51b55b3d5a61aafde7f5d9d0edf6074540267127fb65b096a178058689cace79",
+        "excerpt": "With a pedal-assist motor to supercharge your ride, our ebikes are the easiest way to get around the metro DC area. Pricing starts at $1 to unlock plus $0.35/minute.\nEbike parking is free at Capital Bikeshare stations. You’ll be charged $3 for parking an ebike at a public bike rack in the service area.\nA $25 fee will be applied to any ebike that is not docked at a station or secured to a public bike rack with its cable lock, if it remains inactive for over 30 minutes after the ride concludes. This fee is in addition to the standard per-minute rate.\nThe Single Trip costs $1 to unlock and $0.15/min on a classic bike or $0.35/min on an ebike.\nBuy a pass through the app\nInterested in Ebikes?\nThe Single Trip costs $1 to unlock and $0.15/min on a classic bike or $0.35/min on an ebike."
+      },
+      {
+        "number": 3,
+        "url": "https://help.capitalbikeshare.com/hc/en-us/articles/360039401111-30-Day-Membership",
+        "captured_at": "2026-10-22T08:10:12.219970+00:00",
+        "sha256": "57da4ba91dab5fd4062770c227bb4dafef8bffc4b37661f713161266bb276919",
+        "excerpt": "Unlimited 45-minute rides on classic bikes for 30 days from purchase. Members pay $0.15 per minute for ebikes and avoid unlock fees.\n24/7 access to thousands of bikes in Washington, DC; Arlington, VA; Alexandria, VA; Montgomery County, MD; Prince George's County, MD; Fairfax County, VA; City of Fairfax; and the City of Falls Church, VA.\nIf you need more time than what’s covered, pay $0.05 per minute. All per minute ride prices are rounded up to the nearest minute.\nThe 30-Day Membership offers a flexible way to ride with Capital Bikeshare when you need it.\n$25 / 30-Day Membership includes:\nUnlimited 45-minute rides on classic bikes for 30 days from purchase. Members pay $0.15 per minute for ebikes and avoid unlock fees.\n$25 / 30-Day Membership includes:\nUnlimited 45-minute rides on classic bikes for 30 days from purchase. Members pay $0.15 per minute for ebikes and avoid unlock fees.\n24/7 access to thousands of bikes in Washington, DC; Arlington, VA; Alexandria, VA; Montgomery County, MD; Prince George's County, MD; Fairfax County, VA; City of Fairfax; and the City of Falls Church, VA."
+      }
+    ],
+    "error": null,
+    "metrics": {
+      "steps": 11,
+      "model_requests": 5,
+      "tool_calls": 6,
+      "tool_proposals": 6,
+      "input_tokens": 14484,
+      "output_tokens": 615,
+      "total_tokens": 15099,
+      "budget": {
+        "max_tools": 16,
+        "max_tokens": 48000,
+        "tools": 6,
+        "charged_tokens": 15099,
+        "reported_input_tokens": 14484,
+        "reported_output_tokens": 615,
+        "unknown_usage_calls": 0,
+        "total_tokens": 15099,
+        "overrun": false
+      },
+      "latency_ms": 230260.84366696887,
+      "stop_reason": "success"
+    }
+  }
+}

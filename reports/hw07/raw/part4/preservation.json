@@ -1,0 +1,71 @@
+{
+  "baseline": "f897b1c3d1c9ad087d0ab67aaaf1b1d490c507da",
+  "application_commit": "22c673db820a56ca4fb12ec1f27a175db6825a6f",
+  "unchanged_historical_files": {
+    "reports/hw07/PART1.md": "58e1e391ffeacf6dbf1bc397b6cc2c93b8d44d8211c8b5df5d15256ebb0ad2d0",
+    "reports/hw07/PARTS2_3.md": "30e141283dc8453cd3a5a5485d39d7041138b94219ffdf7b09a6681b4a8155fb",
+    "reports/hw07/cases/agent_tasks.json": "ea623177efdb5a3e3446b9def2b7b2649b104f7df3e78ab3252284f060f39d3e",
+    "reports/hw07/cases/experiment.json": "68a6bbb952c8225dce94dd35169103f7a614fbe8ef15413584244da26c52f955",
+    "reports/hw07/raw/part1/acceptance.json": "f5e8d48a7e4ed57a619ef04748306bca1048b835f23f2ca9328cf23af5aaae60",
+    "reports/hw07/raw/part1/baseline.json": "d78547ae98ac205df75b81f8f685adc506083390e8ed7fa68c811ac3ab6db9d2",
+    "reports/hw07/raw/part1/hw6-smoke.json": "a14b527117a79eaa003ab83e356a63c101470e83967419f7bf282a77d3c58563",
+    "reports/hw07/raw/part1/preservation.json": "fc36c570af76105399d3a276bbee1eff789ac4011e81d2169f0b010d49065993",
+    "reports/hw07/raw/part1/supplemental-live.json": "8e01220c01cc5da6ba5f7455526a122246cfbd7330abdcf6a5224142602d6505",
+    "reports/hw07/raw/part2/attempts.jsonl": "b99b608800977c9eec499173c74b47e4de0607ad298709b4736f5cb4c1ee0a6a",
+    "reports/hw07/raw/part2/proposals.jsonl": "f7b1ed7a73258e0fdb0bc1afd0ab6abef315f7a99e5d299b2dc094505f5fe843",
+    "reports/hw07/raw/part2/recovery/manifest.json": "b10bdf08164b8899f1250304cf5e87bd5b6dbb40e0b6c886629f548f298cf414",
+    "reports/hw07/raw/part2/recovery/result.json": "fe8080c4e54eb61e3bf47dfc05748b0d8d4e090e6975964c025fca375f151ef1",
+    "reports/hw07/raw/part2/recovery/traces.jsonl": "6faf5e051c1f298ec4c985ae58afe6803edae06e9843c8ee76943e329032ef80",
+    "reports/hw07/raw/part2/reliability.csv": "c44d6b2cad184ccf51622d9665191625e5fe5108eb267f4e6cb93e9bf27c41e3",
+    "reports/hw07/raw/part2/traces.jsonl": "450b6ca2701b88c081f3bde3de5599ac1e1b9754bd4d9577eb3169277ec3065b",
+    "reports/hw07/raw/part2/unscored-repair/attempt.json": "3f1e565d186fab26c80e8c2c943fece8352e880a79886f6765dfd5a0655bb876",
+    "reports/hw07/raw/part2/unscored-repair/proposals.jsonl": "f2c1828a524418b02518b203242fda592d61be8fbd69032f3086590f58d7cb52",
+    "reports/hw07/raw/part2/unscored-repair/traces.jsonl": "48095833e7aa2fa5c1ccc5a8b4c24d5567f9f141354dce22a7426857f92bfaa2",
+    "reports/hw07/raw/part3/attempts.jsonl": "301df372be2649e5e6f4da9161be6f9fe6406e606c846739bcee29e575e40d7d",
+    "reports/hw07/raw/part3/comparison.csv": "952d6ebad95664ee13bee9f84d0f751a6a12dcd62171b1f621c1209f12f20d4c",
+    "reports/hw07/raw/part3/controlled-fault/attempts.jsonl": "b2108ae68aea555aae1c31494e340449de1a8e89b541d59c75e1311bd865ffe5",
+    "reports/hw07/raw/part3/controlled-fault/audit.json": "eda1116281ddd734710935917fcb285b29bc4e5d66578b34678b59e447cb7487",
+    "reports/hw07/raw/part3/controlled-fault/manifest.json": "7bb55c5922816a5aae93dfc6a7061b3088fcb83155a59f5aadc87d3e30c0ea75",
+    "reports/hw07/raw/part3/controlled-fault/proposals.jsonl": "4e55012abfd57266691c8599abc9dc37be2091b8afa1777d3b9a4a82d9a9dbb6",
+    "reports/hw07/raw/part3/controlled-fault/reflections.jsonl": "c12b4446a510b4bba3646abbb7298b85de6c169f7489ec507b43a18fa140ccba",
+    "reports/hw07/raw/part3/controlled-fault/traces.jsonl": "9cbafc05beaf8b075a18804f7c38e43d4d9c7cecf673579c09cc11b338d01135",
+    "reports/hw07/raw/part3/proposals.jsonl": "4e0093f8690730ff8a5e5a117839d1d9dfca155e09548278220b183219030aab",
+    "reports/hw07/raw/part3/reflections.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reports/hw07/raw/part3/traces.jsonl": "c1222fcd3ad9a5bb073963bfef3f04b4460ff408f36c038ae89ec689cd711524",
+    "reports/hw07/raw/parts2-3/README.md": "dcc3a3f3b863cbff33709a77deb9d9454058e3d351cb5dc54a6fcd2dfff00870",
+    "reports/hw07/raw/parts2-3/audit.json": "ebb1ac5007e5c42c2f33089a6eb9c8b69a9199f34d92812432dc2cabd60ba322",
+    "reports/hw07/raw/parts2-3/evidence-check.json": "6f39f86165ad6cd662138aca405b03047738572af7e76e1c35a0270e90fc5da6",
+    "reports/hw07/raw/parts2-3/manifest.json": "f8394c00f018ac484b396d15f0e7f954c2a40a17525bdb43ce5834d4ea8f80af",
+    "reports/hw07/raw/parts2-3/metrics.json": "01880aba75251b1eb739127c539c87026770eee84fed73aeb46b29013f787291",
+    "reports/hw07/raw/parts2-3/preservation.json": "2f41b88fd29e7c06d6a7d73e6b70a57a83ca7dc90b8ea2194aee235584ac8c5b",
+    "reports/hw07/screenshots/manifest-parts2-3.json": "4da110cefd6839badc21410b0180a7f45cf69eb06f9ccd84e580a00a45007386",
+    "reports/hw07/screenshots/manifest.json": "9508654c5ca68c14f700551805d2d059e8813cb72167833e419f93f54bf2b7cb",
+    "reports/hw07/screenshots/p1-create.png": "f592b13163e6d13ad8d81208f4b2302a1688baedeec4eee0b7f57c15d0fd3dc6",
+    "reports/hw07/screenshots/p1-delete.png": "e555240e753e841216ecdbedf4c0de5269e3d0149ff618ce370f4cac840390b7",
+    "reports/hw07/screenshots/p1-invalid-token.png": "98ec410d8314a2eaf9305fa90c134ffc782b1695d28c33ad9b1e1010e96e457a",
+    "reports/hw07/screenshots/p1-lint-terminal.png": "86b00bceaa636208d8e2c90f09c8006c3ab14b919397f23ef51e42da2d3a582f",
+    "reports/hw07/screenshots/p1-login.png": "e7606e23bf34ad4ee2e39843b5d1c8fd363d76e3a497b4f68cf20b8650c46e61",
+    "reports/hw07/screenshots/p1-missing-token.png": "32bdf9da126ff9fd35f293bda389abeffc5d0f210b4dea0e723fd582f58a13fe",
+    "reports/hw07/screenshots/p1-read.png": "0c93211b759a95cd8f423805bbdf6dbfa43647a8d681d6494c7cd02153438f9b",
+    "reports/hw07/screenshots/p2-missing-id.png": "1f10d32b288d4a1689e7f2f61560be1249ca3cb3d7289a14164a832ac29ef306",
+    "reports/hw07/screenshots/p2-task-a.png": "9732507a1022416fe41e56531fd838516fc1f929f702393b80519a43fbae4cc7",
+    "reports/hw07/screenshots/p2-task-b.png": "675c7d4007ea87166b87f04738a8002e78d6d5fab14c320d84e166a5358c246f",
+    "reports/hw07/screenshots/p2-task-c.png": "80b96ab553902c84dc64ce16ed4e2d2df080766e1c2adb9e30f9081aec6882f8",
+    "reports/hw07/screenshots/p3-controlled-retry.png": "c37474f7ad395d0f7f780f7562f2f05fdd43765b1005babcb6a5b9d185c34cd3"
+  },
+  "append_only_files": {
+    "reports/hw07/AI_USE.md": {
+      "historical_prefix_sha256": "ce797b4497e712b6b81abcd69d632262ff352310153930d8ebc58eaaa000e2c7",
+      "prefix_bytes": 4320
+    },
+    "reports/hw07/METRICS.md": {
+      "historical_prefix_sha256": "43064f548d8bfa48e5235884c80f7eda82192eca4e0d95385256ed093633807a",
+      "prefix_bytes": 3647
+    },
+    "reports/hw07/RUN_LOG.txt": {
+      "historical_prefix_sha256": "c46c1c78230a71cebc4e7022492a255468179b2344e5bd6cc39bb95f63ee81c6",
+      "prefix_bytes": 1409563
+    }
+  },
+  "handwritten_agent_and_HW6_report_unchanged": true
+}

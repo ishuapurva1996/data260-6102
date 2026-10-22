@@ -79,3 +79,22 @@ Tested application: `996c476ac4d52d13f9712913df488b9c8b966158`. Fixed seven repe
 | Verifier false rejections, cases | 0 | 0 |
 
 All denominators, scoring rules and budgets were frozen before scoring. Required raw data: [reliability](raw/part2/reliability.csv), [comparison](raw/part3/comparison.csv), [metrics](raw/parts2-3/metrics.json), [independent audit](raw/parts2-3/audit.json). See [Parts 2/3 checkpoint](PARTS2_3.md) for provenance, cost definitions, controlled-fault distinction and limitations.
+
+
+---
+
+## Part 4 — completed checkpoint
+
+The earlier status rows are preserved historical checkpoints. Parts 1–4 are now complete; Parts 5–6 remain pending. Actual clean application: `22c673db820a56ca4fb12ec1f27a175db6825a6f`. Each final UI case used 500 genuine rows; account assignments are explicitly hypothetical.
+
+| Scenario | Rows / accounts | Pay per use | Membership fees + residual = total | Decision |
+| --- | --- | --- | --- | --- |
+| frequent | 500 / 10 | $1602.65 | $250.00 + $5.85 = $255.85 | Buy Monthly Membership |
+| occasional | 500 / 125 | $790.25 | $3125.00 + $0.00 = $3125.00 | Pay Per Ride/Minute |
+
+| Final run | Steps | Model requests | Actual tools | Reported tokens | Agent latency ms | Stop reason |
+| --- | --- | --- | --- | --- | --- | --- |
+| frequent | 11 | 5 | 6 | 14969 | 198865.38 | success |
+| occasional | 11 | 5 | 6 | 15099 | 230260.84 | success |
+
+These are two guided acceptance demonstrations, not a reliability benchmark. Eleven adaptive pilots are separate. [Raw metrics](raw/part4/metrics.json), [independent audit](raw/part4/audit.json), and [Part 4 checkpoint](PART4.md) give costs, capture hashes, assumptions and proof boundaries. Final regression: 1255 passed / 25 skipped; focused Part 4: 123 passed; live HTTP/owner checks: 28 passed.

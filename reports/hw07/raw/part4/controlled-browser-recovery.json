@@ -1,0 +1,14 @@
+{
+  "student": "Pragya Apurva",
+  "kind": "real Chromium with controlled bike HTTP responses; real login; no model calls",
+  "started_at": "2026-10-22T07:47:09.750Z",
+  "checks": [
+    "transient GET failure retries same run with Run disabled",
+    "navigation returns to same terminal run without another POST",
+    "account switch clears in-memory run handle and result; no browser storage"
+  ],
+  "posts": 1,
+  "polls": 3,
+  "passed": true,
+  "finished_at": "2026-10-22T07:47:13.852Z"
+}

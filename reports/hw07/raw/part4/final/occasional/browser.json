@@ -1,0 +1,3215 @@
+{
+  "student": "Pragya Apurva",
+  "evidence_kind": "live Chromium + HTTPS + MySQL authentication; real framework/model when scenario is supplied",
+  "scenario": "occasional",
+  "started_at": "2026-10-22T08:09:39.921Z",
+  "checks": [
+    "real UI login, bearer authentication, one CSV field, one URL field, one Run button",
+    "no document overflow at 1440px",
+    "no document overflow at 740px",
+    "no document overflow at 390px",
+    "one genuine UI submission, real worker, verified expected decision, all result panels, responsive result layout"
+  ],
+  "requests": [
+    {
+      "method": "POST",
+      "path": "/auth/login",
+      "status": 200,
+      "bearer": false,
+      "at": "2026-10-22T08:09:40.679Z"
+    },
+    {
+      "method": "GET",
+      "path": "/auth/me",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:09:40.688Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:09:40.722Z"
+    },
+    {
+      "method": "POST",
+      "path": "/api/bikeshare/runs",
+      "status": 202,
+      "bearer": true,
+      "at": "2026-10-22T08:09:40.855Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:09:40.882Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:09:41.960Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:09:42.982Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:09:44.007Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:09:45.021Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:09:46.038Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:09:47.052Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:09:48.069Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:09:49.083Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:09:50.097Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:09:51.115Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:09:52.153Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:09:53.163Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:09:54.202Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:09:55.262Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:09:56.372Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:09:57.397Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:09:58.441Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:09:59.509Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:00.552Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:01.575Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:02.595Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:03.610Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:04.632Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:05.656Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:06.683Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:07.711Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:08.817Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:09.837Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:10.908Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:11.916Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:12.980Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:14.002Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:15.011Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:16.199Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:17.254Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:18.306Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:19.328Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:20.344Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:21.363Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:22.377Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:23.390Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:24.403Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:25.423Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:26.441Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:27.458Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:28.473Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:29.480Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:30.504Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:31.526Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:32.538Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:33.551Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:34.573Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:35.595Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:36.624Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:37.653Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:38.669Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:39.684Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:40.703Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:41.723Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:42.748Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:43.767Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:44.787Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:45.838Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:46.893Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:47.913Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:48.956Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:49.981Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:50.998Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:52.026Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:53.178Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:54.210Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:55.227Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:56.241Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:57.264Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:58.288Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:10:59.303Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:00.323Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:01.359Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:02.450Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:03.477Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:04.489Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:05.505Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:06.520Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:07.535Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:08.552Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:09.568Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:10.612Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:11.622Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:12.640Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:13.653Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:14.666Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:15.708Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:16.754Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:17.784Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:18.836Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:19.857Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:20.879Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:21.916Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:23.120Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:24.161Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:25.333Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:26.373Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:27.399Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:28.431Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:29.456Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:30.474Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:31.487Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:32.505Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:33.520Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:34.542Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:35.556Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:36.585Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:37.613Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:38.645Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:39.670Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:40.786Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:41.764Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:42.779Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:43.792Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:44.829Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:45.856Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:46.870Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:47.912Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:48.969Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:50.042Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:51.082Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:52.129Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:53.150Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:54.164Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:55.182Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:56.197Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:57.214Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:58.228Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:11:59.244Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:00.256Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:01.272Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:02.310Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:03.336Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:04.351Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:05.369Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:06.387Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:07.402Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:08.416Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:09.500Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:10.517Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:11.533Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:12.551Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:13.563Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:14.607Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:15.651Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:16.670Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:17.686Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:18.737Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:19.867Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:20.924Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:21.979Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:23.001Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:24.117Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:25.156Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:26.175Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:27.192Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:28.208Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:29.220Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:30.243Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:31.266Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:32.309Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:33.326Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:34.361Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:35.440Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:36.481Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:37.604Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:38.621Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:39.657Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:40.683Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:41.698Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:42.709Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:43.719Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:44.935Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:46.063Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:48.223Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:49.568Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:50.747Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:51.842Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:52.896Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:53.915Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:54.931Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:55.955Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:56.972Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:57.987Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:12:59.001Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:13:00.028Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:13:01.040Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:13:02.064Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:13:03.076Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:13:04.089Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:13:05.106Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:13:06.145Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:13:07.157Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:13:08.179Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:13:09.196Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:13:10.213Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:13:11.240Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:13:12.262Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:13:13.289Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:13:14.467Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:13:15.540Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:13:16.651Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:13:17.693Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:13:18.804Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:13:19.901Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:13:21.003Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:13:22.047Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:13:23.070Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:13:24.101Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:13:25.116Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:13:26.141Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:13:27.162Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:13:28.181Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:13:29.201Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:13:30.224Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:13:31.255Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/f155219ea5c2491ea7ad3b292820c227",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:13:32.278Z"
+    }
+  ],
+  "screenshots": [
+    {
+      "file": "overview.png",
+      "sha256": "cd7ccab339d5bf6f840f705ecb5cf00a9c468e291267a20a1b97d5f330081931",
+      "captured_at": "2026-10-22T08:13:32.762Z",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "full_page": false
+    },
+    {
+      "file": "full.png",
+      "sha256": "bbd9061f605ccd941a9e73d36a73069b38b8228ccbf2bd46abb371b7b41b4d9d",
+      "captured_at": "2026-10-22T08:13:33.217Z",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "full_page": true
+    },
+    {
+      "file": "weekly.png",
+      "sha256": "2fb91e8758c216984562bc6e2a5179fcdfd5c1f6f97fb6e70fff15eb56ca2fa6",
+      "captured_at": "2026-10-22T08:13:33.323Z",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "full_page": false
+    },
+    {
+      "file": "assumptions.png",
+      "sha256": "2fb91e8758c216984562bc6e2a5179fcdfd5c1f6f97fb6e70fff15eb56ca2fa6",
+      "captured_at": "2026-10-22T08:13:33.416Z",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "full_page": false
+    },
+    {
+      "file": "citations.png",
+      "sha256": "559e41b72446cf783427063e559c49c51f50092cb4f02ccddc58978c9ec9ed60",
+      "captured_at": "2026-10-22T08:13:33.514Z",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "full_page": false
+    }
+  ],
+  "errors": [],
+  "run_id": "f155219ea5c2491ea7ad3b292820c227",
+  "result": {
+    "row_count": 500,
+    "account_count": 125,
+    "coverage_start": "2024-01-01T00:00:00",
+    "coverage_end": "2024-01-31T00:00:00",
+    "summary": {
+      "billed_minutes": 1935,
+      "classic_overage_minutes": 0,
+      "classic_overage_ride_count": 0,
+      "classic_ride_count": 500,
+      "ebike_ride_count": 0,
+      "duration_seconds": 102226,
+      "average_duration_minutes": "3.41"
+    },
+    "pay_per_use_total": "790.25",
+    "membership_fee_total": "3125.00",
+    "membership_residual_total": "0.00",
+    "membership_total": "3125.00",
+    "savings": "-2334.75",
+    "decision": "Pay Per Ride/Minute",
+    "weekly": [
+      {
+        "week_start": "2024-01-01",
+        "ride_count": 119,
+        "average_duration_minutes": "3.52",
+        "billed_minutes": 470,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "189.50",
+        "member_residual": "0.00",
+        "allocated_membership_fee": "3125.00",
+        "membership_total": "3125.00"
+      },
+      {
+        "week_start": "2024-01-08",
+        "ride_count": 119,
+        "average_duration_minutes": "3.29",
+        "billed_minutes": 446,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "185.90",
+        "member_residual": "0.00",
+        "allocated_membership_fee": "0.00",
+        "membership_total": "0.00"
+      },
+      {
+        "week_start": "2024-01-15",
+        "ride_count": 118,
+        "average_duration_minutes": "3.41",
+        "billed_minutes": 454,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "186.10",
+        "member_residual": "0.00",
+        "allocated_membership_fee": "0.00",
+        "membership_total": "0.00"
+      },
+      {
+        "week_start": "2024-01-22",
+        "ride_count": 112,
+        "average_duration_minutes": "3.34",
+        "billed_minutes": 432,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "176.80",
+        "member_residual": "0.00",
+        "allocated_membership_fee": "0.00",
+        "membership_total": "0.00"
+      },
+      {
+        "week_start": "2024-01-29",
+        "ride_count": 32,
+        "average_duration_minutes": "3.66",
+        "billed_minutes": 133,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "51.95",
+        "member_residual": "0.00",
+        "allocated_membership_fee": "0.00",
+        "membership_total": "0.00"
+      }
+    ],
+    "per_account": [
+      {
+        "account_id": "occasional-001",
+        "ride_count": 4,
+        "average_duration_minutes": "3.29",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-002",
+        "ride_count": 4,
+        "average_duration_minutes": "2.76",
+        "billed_minutes": 13,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "5.95",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-003",
+        "ride_count": 4,
+        "average_duration_minutes": "3.98",
+        "billed_minutes": 17,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.55",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-004",
+        "ride_count": 4,
+        "average_duration_minutes": "3.54",
+        "billed_minutes": 16,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.40",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-005",
+        "ride_count": 4,
+        "average_duration_minutes": "3.15",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-006",
+        "ride_count": 4,
+        "average_duration_minutes": "2.80",
+        "billed_minutes": 14,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.10",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-007",
+        "ride_count": 4,
+        "average_duration_minutes": "3.45",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-008",
+        "ride_count": 4,
+        "average_duration_minutes": "3.68",
+        "billed_minutes": 16,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.40",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-009",
+        "ride_count": 4,
+        "average_duration_minutes": "3.18",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-010",
+        "ride_count": 4,
+        "average_duration_minutes": "4.29",
+        "billed_minutes": 18,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.70",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-011",
+        "ride_count": 4,
+        "average_duration_minutes": "2.67",
+        "billed_minutes": 12,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "5.80",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-012",
+        "ride_count": 4,
+        "average_duration_minutes": "3.33",
+        "billed_minutes": 16,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.40",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-013",
+        "ride_count": 4,
+        "average_duration_minutes": "2.72",
+        "billed_minutes": 13,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "5.95",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-014",
+        "ride_count": 4,
+        "average_duration_minutes": "3.05",
+        "billed_minutes": 14,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.10",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-015",
+        "ride_count": 4,
+        "average_duration_minutes": "3.35",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-016",
+        "ride_count": 4,
+        "average_duration_minutes": "3.88",
+        "billed_minutes": 17,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.55",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-017",
+        "ride_count": 4,
+        "average_duration_minutes": "3.68",
+        "billed_minutes": 16,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.40",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-018",
+        "ride_count": 4,
+        "average_duration_minutes": "3.76",
+        "billed_minutes": 17,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.55",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-019",
+        "ride_count": 4,
+        "average_duration_minutes": "3.50",
+        "billed_minutes": 16,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.40",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-020",
+        "ride_count": 4,
+        "average_duration_minutes": "3.04",
+        "billed_minutes": 14,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.10",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-021",
+        "ride_count": 4,
+        "average_duration_minutes": "2.74",
+        "billed_minutes": 13,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "5.95",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-022",
+        "ride_count": 4,
+        "average_duration_minutes": "3.67",
+        "billed_minutes": 17,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.55",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-023",
+        "ride_count": 4,
+        "average_duration_minutes": "4.20",
+        "billed_minutes": 18,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.70",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-024",
+        "ride_count": 4,
+        "average_duration_minutes": "3.83",
+        "billed_minutes": 17,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.55",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-025",
+        "ride_count": 4,
+        "average_duration_minutes": "3.35",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-026",
+        "ride_count": 4,
+        "average_duration_minutes": "3.16",
+        "billed_minutes": 14,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.10",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-027",
+        "ride_count": 4,
+        "average_duration_minutes": "3.11",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-028",
+        "ride_count": 4,
+        "average_duration_minutes": "3.10",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-029",
+        "ride_count": 4,
+        "average_duration_minutes": "3.58",
+        "billed_minutes": 16,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.40",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-030",
+        "ride_count": 4,
+        "average_duration_minutes": "3.00",
+        "billed_minutes": 14,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.10",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-031",
+        "ride_count": 4,
+        "average_duration_minutes": "2.97",
+        "billed_minutes": 14,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.10",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-032",
+        "ride_count": 4,
+        "average_duration_minutes": "3.73",
+        "billed_minutes": 16,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.40",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-033",
+        "ride_count": 4,
+        "average_duration_minutes": "3.59",
+        "billed_minutes": 17,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.55",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-034",
+        "ride_count": 4,
+        "average_duration_minutes": "3.26",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-035",
+        "ride_count": 4,
+        "average_duration_minutes": "3.48",
+        "billed_minutes": 16,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.40",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-036",
+        "ride_count": 4,
+        "average_duration_minutes": "2.88",
+        "billed_minutes": 13,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "5.95",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-037",
+        "ride_count": 4,
+        "average_duration_minutes": "3.54",
+        "billed_minutes": 16,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.40",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-038",
+        "ride_count": 4,
+        "average_duration_minutes": "4.10",
+        "billed_minutes": 18,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.70",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-039",
+        "ride_count": 4,
+        "average_duration_minutes": "3.93",
+        "billed_minutes": 18,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.70",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-040",
+        "ride_count": 4,
+        "average_duration_minutes": "2.59",
+        "billed_minutes": 12,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "5.80",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-041",
+        "ride_count": 4,
+        "average_duration_minutes": "3.72",
+        "billed_minutes": 17,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.55",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-042",
+        "ride_count": 4,
+        "average_duration_minutes": "3.26",
+        "billed_minutes": 16,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.40",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-043",
+        "ride_count": 4,
+        "average_duration_minutes": "4.04",
+        "billed_minutes": 18,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.70",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-044",
+        "ride_count": 4,
+        "average_duration_minutes": "3.79",
+        "billed_minutes": 17,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.55",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-045",
+        "ride_count": 4,
+        "average_duration_minutes": "2.12",
+        "billed_minutes": 11,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "5.65",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-046",
+        "ride_count": 4,
+        "average_duration_minutes": "2.94",
+        "billed_minutes": 13,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "5.95",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-047",
+        "ride_count": 4,
+        "average_duration_minutes": "3.53",
+        "billed_minutes": 16,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.40",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-048",
+        "ride_count": 4,
+        "average_duration_minutes": "3.17",
+        "billed_minutes": 14,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.10",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-049",
+        "ride_count": 4,
+        "average_duration_minutes": "3.17",
+        "billed_minutes": 14,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.10",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-050",
+        "ride_count": 4,
+        "average_duration_minutes": "2.92",
+        "billed_minutes": 14,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.10",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-051",
+        "ride_count": 4,
+        "average_duration_minutes": "3.80",
+        "billed_minutes": 16,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.40",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-052",
+        "ride_count": 4,
+        "average_duration_minutes": "2.51",
+        "billed_minutes": 12,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "5.80",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-053",
+        "ride_count": 4,
+        "average_duration_minutes": "3.43",
+        "billed_minutes": 16,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.40",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-054",
+        "ride_count": 4,
+        "average_duration_minutes": "3.62",
+        "billed_minutes": 17,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.55",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-055",
+        "ride_count": 4,
+        "average_duration_minutes": "3.48",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-056",
+        "ride_count": 4,
+        "average_duration_minutes": "2.98",
+        "billed_minutes": 14,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.10",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-057",
+        "ride_count": 4,
+        "average_duration_minutes": "3.41",
+        "billed_minutes": 16,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.40",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-058",
+        "ride_count": 4,
+        "average_duration_minutes": "3.40",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-059",
+        "ride_count": 4,
+        "average_duration_minutes": "4.02",
+        "billed_minutes": 17,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.55",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-060",
+        "ride_count": 4,
+        "average_duration_minutes": "4.11",
+        "billed_minutes": 18,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.70",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-061",
+        "ride_count": 4,
+        "average_duration_minutes": "3.15",
+        "billed_minutes": 14,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.10",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-062",
+        "ride_count": 4,
+        "average_duration_minutes": "3.03",
+        "billed_minutes": 14,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.10",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-063",
+        "ride_count": 4,
+        "average_duration_minutes": "3.48",
+        "billed_minutes": 16,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.40",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-064",
+        "ride_count": 4,
+        "average_duration_minutes": "3.82",
+        "billed_minutes": 17,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.55",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-065",
+        "ride_count": 4,
+        "average_duration_minutes": "2.92",
+        "billed_minutes": 14,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.10",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-066",
+        "ride_count": 4,
+        "average_duration_minutes": "3.55",
+        "billed_minutes": 16,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.40",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-067",
+        "ride_count": 4,
+        "average_duration_minutes": "4.30",
+        "billed_minutes": 19,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.85",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-068",
+        "ride_count": 4,
+        "average_duration_minutes": "3.40",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-069",
+        "ride_count": 4,
+        "average_duration_minutes": "3.82",
+        "billed_minutes": 17,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.55",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-070",
+        "ride_count": 4,
+        "average_duration_minutes": "2.85",
+        "billed_minutes": 13,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "5.95",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-071",
+        "ride_count": 4,
+        "average_duration_minutes": "4.03",
+        "billed_minutes": 18,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.70",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-072",
+        "ride_count": 4,
+        "average_duration_minutes": "3.21",
+        "billed_minutes": 14,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.10",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-073",
+        "ride_count": 4,
+        "average_duration_minutes": "3.62",
+        "billed_minutes": 17,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.55",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-074",
+        "ride_count": 4,
+        "average_duration_minutes": "3.79",
+        "billed_minutes": 16,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.40",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-075",
+        "ride_count": 4,
+        "average_duration_minutes": "3.54",
+        "billed_minutes": 16,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.40",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-076",
+        "ride_count": 4,
+        "average_duration_minutes": "3.46",
+        "billed_minutes": 16,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.40",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-077",
+        "ride_count": 4,
+        "average_duration_minutes": "3.27",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-078",
+        "ride_count": 4,
+        "average_duration_minutes": "2.72",
+        "billed_minutes": 13,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "5.95",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-079",
+        "ride_count": 4,
+        "average_duration_minutes": "3.49",
+        "billed_minutes": 16,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.40",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-080",
+        "ride_count": 4,
+        "average_duration_minutes": "4.22",
+        "billed_minutes": 19,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.85",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-081",
+        "ride_count": 4,
+        "average_duration_minutes": "3.13",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-082",
+        "ride_count": 4,
+        "average_duration_minutes": "3.11",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-083",
+        "ride_count": 4,
+        "average_duration_minutes": "3.59",
+        "billed_minutes": 16,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.40",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-084",
+        "ride_count": 4,
+        "average_duration_minutes": "3.11",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-085",
+        "ride_count": 4,
+        "average_duration_minutes": "2.49",
+        "billed_minutes": 11,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "5.65",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-086",
+        "ride_count": 4,
+        "average_duration_minutes": "4.02",
+        "billed_minutes": 18,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.70",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-087",
+        "ride_count": 4,
+        "average_duration_minutes": "3.21",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-088",
+        "ride_count": 4,
+        "average_duration_minutes": "2.88",
+        "billed_minutes": 13,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "5.95",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-089",
+        "ride_count": 4,
+        "average_duration_minutes": "3.35",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-090",
+        "ride_count": 4,
+        "average_duration_minutes": "3.53",
+        "billed_minutes": 17,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.55",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-091",
+        "ride_count": 4,
+        "average_duration_minutes": "3.46",
+        "billed_minutes": 16,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.40",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-092",
+        "ride_count": 4,
+        "average_duration_minutes": "3.56",
+        "billed_minutes": 16,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.40",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-093",
+        "ride_count": 4,
+        "average_duration_minutes": "3.29",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-094",
+        "ride_count": 4,
+        "average_duration_minutes": "4.13",
+        "billed_minutes": 18,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.70",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-095",
+        "ride_count": 4,
+        "average_duration_minutes": "4.34",
+        "billed_minutes": 19,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.85",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-096",
+        "ride_count": 4,
+        "average_duration_minutes": "3.60",
+        "billed_minutes": 16,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.40",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-097",
+        "ride_count": 4,
+        "average_duration_minutes": "3.74",
+        "billed_minutes": 17,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.55",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-098",
+        "ride_count": 4,
+        "average_duration_minutes": "3.30",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-099",
+        "ride_count": 4,
+        "average_duration_minutes": "3.30",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-100",
+        "ride_count": 4,
+        "average_duration_minutes": "3.09",
+        "billed_minutes": 14,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.10",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-101",
+        "ride_count": 4,
+        "average_duration_minutes": "4.07",
+        "billed_minutes": 18,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.70",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-102",
+        "ride_count": 4,
+        "average_duration_minutes": "3.88",
+        "billed_minutes": 17,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.55",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-103",
+        "ride_count": 4,
+        "average_duration_minutes": "3.20",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-104",
+        "ride_count": 4,
+        "average_duration_minutes": "4.01",
+        "billed_minutes": 18,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.70",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-105",
+        "ride_count": 4,
+        "average_duration_minutes": "3.18",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-106",
+        "ride_count": 4,
+        "average_duration_minutes": "3.03",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-107",
+        "ride_count": 4,
+        "average_duration_minutes": "3.16",
+        "billed_minutes": 14,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.10",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-108",
+        "ride_count": 4,
+        "average_duration_minutes": "3.46",
+        "billed_minutes": 16,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.40",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-109",
+        "ride_count": 4,
+        "average_duration_minutes": "2.88",
+        "billed_minutes": 13,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "5.95",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-110",
+        "ride_count": 4,
+        "average_duration_minutes": "4.30",
+        "billed_minutes": 19,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.85",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-111",
+        "ride_count": 4,
+        "average_duration_minutes": "4.08",
+        "billed_minutes": 18,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.70",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-112",
+        "ride_count": 4,
+        "average_duration_minutes": "3.52",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-113",
+        "ride_count": 4,
+        "average_duration_minutes": "4.28",
+        "billed_minutes": 18,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.70",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-114",
+        "ride_count": 4,
+        "average_duration_minutes": "4.24",
+        "billed_minutes": 18,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.70",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-115",
+        "ride_count": 4,
+        "average_duration_minutes": "2.87",
+        "billed_minutes": 13,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "5.95",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-116",
+        "ride_count": 4,
+        "average_duration_minutes": "2.98",
+        "billed_minutes": 14,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.10",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-117",
+        "ride_count": 4,
+        "average_duration_minutes": "3.71",
+        "billed_minutes": 18,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.70",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-118",
+        "ride_count": 4,
+        "average_duration_minutes": "3.12",
+        "billed_minutes": 14,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.10",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-119",
+        "ride_count": 4,
+        "average_duration_minutes": "3.13",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-120",
+        "ride_count": 4,
+        "average_duration_minutes": "2.71",
+        "billed_minutes": 13,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "5.95",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-121",
+        "ride_count": 4,
+        "average_duration_minutes": "3.33",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-122",
+        "ride_count": 4,
+        "average_duration_minutes": "3.37",
+        "billed_minutes": 16,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.40",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-123",
+        "ride_count": 4,
+        "average_duration_minutes": "3.33",
+        "billed_minutes": 15,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.25",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-124",
+        "ride_count": 4,
+        "average_duration_minutes": "2.65",
+        "billed_minutes": 12,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "5.80",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "occasional-125",
+        "ride_count": 4,
+        "average_duration_minutes": "3.23",
+        "billed_minutes": 16,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "6.40",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      }
+    ],
+    "break_even": {
+      "rides_at_sample_mix": 16,
+      "strictly_cheaper_rides_at_sample_mix": 16,
+      "minutes_at_sample_mix": "61.92",
+      "actual_rides_per_account": {
+        "min": 4,
+        "max": 4
+      },
+      "average_saving_per_ride": "1.580500",
+      "method": "Per account: membership fee / sample-average (casual ride cost minus member residual). Ceiling gives weak break-even; ties recommend Pay Per Ride/Minute. The strict threshold is floor + 1. Minutes use sample-average billed minutes. This repeated sample-mix approximation is not a guarantee for every ordering of heterogeneous rides."
+    },
+    "assumptions": [
+      "hypothetical assigned account; not observed rider history",
+      "Each scenario account purchases its own 30-day membership at coverage_start; fees cannot be shared between accounts.",
+      "The coverage end is exclusive for trip starts; every trip must finish within coverage.",
+      "Offset-free trip timestamps are interpreted in America/New_York local time; no observed rider identity is inferred.",
+      "Pre-tax base transportation comparison: location-dependent sales taxes are excluded.",
+      "Parking, damages, lost-bike and other penalties are excluded because the trip CSV does not observe them; ebike totals include transportation only.",
+      "Current captured prices are applied counterfactually to the uploaded trip durations.",
+      "The entire membership fee is allocated to the calendar week containing coverage_start; later weeks include only residual charges.",
+      "Original member_casual describes the public source trip and is not a scenario identity or the product selected for this counterfactual comparison.",
+      "A tie recommends Pay Per Ride/Minute; comparison savings are pay-per-use minus membership total."
+    ],
+    "justification": "Pay per use costs $790.25 for 500 rides across 125 hypothetical accounts [2]. The membership alternative totals $3125.00 including ride charges for 125 separate accounts [3]. Each account pays $25 for a 30-day membership with 45 included classic minutes per ride and $0.05 per extra minute [3]. Ride minutes are rounded up separately for every ride [3]. Pay Per Ride/Minute is the recommendation for this assumed 30-day cohort [2][3].",
+    "run_id": "f155219ea5c2491ea7ad3b292820c227",
+    "user_id": 71,
+    "source_commit": "22c673db820a56ca4fb12ec1f27a175db6825a6f",
+    "source_dirty": false,
+    "configuration": {
+      "model": "qwen3:8b",
+      "base_url": "http://127.0.0.1:11434",
+      "temperature": 0,
+      "seed": 6102,
+      "context_window": 32768,
+      "output_limit": 512,
+      "request_timeout": 120,
+      "max_seconds": 600,
+      "max_model_requests": 8,
+      "max_tools": 16,
+      "max_tokens": 48000
+    },
+    "started_at": "2026-10-22T08:09:41.504636+00:00",
+    "finished_at": "2026-10-22T08:13:31.766637+00:00",
+    "input_sha256": "8ba2b6b723fcdef6b9805a6a5b543c1278f72939d9ba9b693e0c57ae87e758bc",
+    "model_answer": "{\"decision\":\"Pay Per Ride/Minute\",\"pay_per_use_total\":\"790.25\",\"membership_total\":\"3125.00\",\"justification\":\"Pay per use costs $790.25 for 500 rides across 125 hypothetical accounts [2]. The membership alternative totals $3125.00 including ride charges for 125 separate accounts [3]. Each account pays $25 for a 30-day membership with 45 included classic minutes per ride and $0.05 per extra minute [3]. Ride minutes are rounded up separately for every ride [3]. Pay Per Ride/Minute is the recommendation for this assumed 30-day cohort [2][3].\"}",
+    "verification": {
+      "passed": true,
+      "failures": [],
+      "parsed": {
+        "decision": "Pay Per Ride/Minute",
+        "pay_per_use_total": "790.25",
+        "membership_total": "3125.00",
+        "justification": "Pay per use costs $790.25 for 500 rides across 125 hypothetical accounts [2]. The membership alternative totals $3125.00 including ride charges for 125 separate accounts [3]. Each account pays $25 for a 30-day membership with 45 included classic minutes per ride and $0.05 per extra minute [3]. Ride minutes are rounded up separately for every ride [3]. Pay Per Ride/Minute is the recommendation for this assumed 30-day cohort [2][3]."
+      }
+    },
+    "citations": [
+      {
+        "number": 1,
+        "url": "https://capitalbikeshare.com/pricing",
+        "captured_at": "2026-10-22T08:10:10.659109+00:00",
+        "sha256": "fc7a546f6983bb9d9f956ae43ffd81e1ef9ae1a845c69e0d21fbaf1534998d52",
+        "excerpt": "When you’ve got lots to do. $10/day includes unlimited 45-min classic bike rides within a 24-hour period. Ride longer than 45 minutes and pay $0.05/minute. No unlock fees and a discounted rate of $0.15/min on ebikes.\n$10/day\nOther membership options\nGreat for one-way trips. Just download the Capital Bikeshare or Lyft app and you’re ready to roll. Just $1 to unlock plus $0.15/minute for classic bikes or $0.35/minute for ebikes.\n$1 + $0.15/ mins\nDay pass\nGreat for one-way trips. Just download the Capital Bikeshare or Lyft app and you’re ready to roll. Just $1 to unlock plus $0.15/minute for classic bikes or $0.35/minute for ebikes."
+      },
+      {
+        "number": 2,
+        "url": "https://capitalbikeshare.com/pricing/single-trip",
+        "captured_at": "2026-10-22T08:10:12.126419+00:00",
+        "sha256": "51b55b3d5a61aafde7f5d9d0edf6074540267127fb65b096a178058689cace79",
+        "excerpt": "With a pedal-assist motor to supercharge your ride, our ebikes are the easiest way to get around the metro DC area. Pricing starts at $1 to unlock plus $0.35/minute.\nEbike parking is free at Capital Bikeshare stations. You’ll be charged $3 for parking an ebike at a public bike rack in the service area.\nA $25 fee will be applied to any ebike that is not docked at a station or secured to a public bike rack with its cable lock, if it remains inactive for over 30 minutes after the ride concludes. This fee is in addition to the standard per-minute rate.\nThe Single Trip costs $1 to unlock and $0.15/min on a classic bike or $0.35/min on an ebike.\nBuy a pass through the app\nInterested in Ebikes?\nThe Single Trip costs $1 to unlock and $0.15/min on a classic bike or $0.35/min on an ebike."
+      },
+      {
+        "number": 3,
+        "url": "https://help.capitalbikeshare.com/hc/en-us/articles/360039401111-30-Day-Membership",
+        "captured_at": "2026-10-22T08:10:12.219970+00:00",
+        "sha256": "57da4ba91dab5fd4062770c227bb4dafef8bffc4b37661f713161266bb276919",
+        "excerpt": "Unlimited 45-minute rides on classic bikes for 30 days from purchase. Members pay $0.15 per minute for ebikes and avoid unlock fees.\n24/7 access to thousands of bikes in Washington, DC; Arlington, VA; Alexandria, VA; Montgomery County, MD; Prince George's County, MD; Fairfax County, VA; City of Fairfax; and the City of Falls Church, VA.\nIf you need more time than what’s covered, pay $0.05 per minute. All per minute ride prices are rounded up to the nearest minute.\nThe 30-Day Membership offers a flexible way to ride with Capital Bikeshare when you need it.\n$25 / 30-Day Membership includes:\nUnlimited 45-minute rides on classic bikes for 30 days from purchase. Members pay $0.15 per minute for ebikes and avoid unlock fees.\n$25 / 30-Day Membership includes:\nUnlimited 45-minute rides on classic bikes for 30 days from purchase. Members pay $0.15 per minute for ebikes and avoid unlock fees.\n24/7 access to thousands of bikes in Washington, DC; Arlington, VA; Alexandria, VA; Montgomery County, MD; Prince George's County, MD; Fairfax County, VA; City of Fairfax; and the City of Falls Church, VA."
+      }
+    ],
+    "error": null,
+    "metrics": {
+      "steps": 11,
+      "model_requests": 5,
+      "tool_calls": 6,
+      "tool_proposals": 6,
+      "input_tokens": 14484,
+      "output_tokens": 615,
+      "total_tokens": 15099,
+      "budget": {
+        "max_tools": 16,
+        "max_tokens": 48000,
+        "tools": 6,
+        "charged_tokens": 15099,
+        "reported_input_tokens": 14484,
+        "reported_output_tokens": 615,
+        "unknown_usage_calls": 0,
+        "total_tokens": 15099,
+        "overrun": false
+      },
+      "latency_ms": 230260.84366696887,
+      "stop_reason": "success"
+    }
+  },
+  "finished_at": "2026-10-22T08:13:33.564Z"
+}

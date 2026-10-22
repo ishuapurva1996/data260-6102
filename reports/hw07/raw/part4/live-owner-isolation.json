@@ -1,0 +1,70 @@
+{
+  "student": "Pragya Apurva",
+  "evidence_kind": "live HTTPS/MySQL authentication; actual two owner run IDs; no model request",
+  "checks": [
+    {
+      "run_id": "e9e5f180674c4cf29d8fb1951d612df9",
+      "role": "reader",
+      "status": 200,
+      "expected": 200,
+      "passed": true,
+      "at": "2026-10-22T08:11:28.830703+00:00"
+    },
+    {
+      "run_id": "e9e5f180674c4cf29d8fb1951d612df9",
+      "role": "writer",
+      "status": 404,
+      "expected": 404,
+      "passed": true,
+      "at": "2026-10-22T08:11:28.849110+00:00"
+    },
+    {
+      "run_id": "e9e5f180674c4cf29d8fb1951d612df9",
+      "role": "moderator",
+      "status": 404,
+      "expected": 404,
+      "passed": true,
+      "at": "2026-10-22T08:11:28.861600+00:00"
+    },
+    {
+      "run_id": "e9e5f180674c4cf29d8fb1951d612df9",
+      "role": "missing",
+      "status": 401,
+      "expected": 401,
+      "passed": true,
+      "at": "2026-10-22T08:11:28.865784+00:00"
+    },
+    {
+      "run_id": "f155219ea5c2491ea7ad3b292820c227",
+      "role": "reader",
+      "status": 200,
+      "expected": 200,
+      "passed": true,
+      "at": "2026-10-22T08:11:28.880295+00:00"
+    },
+    {
+      "run_id": "f155219ea5c2491ea7ad3b292820c227",
+      "role": "writer",
+      "status": 404,
+      "expected": 404,
+      "passed": true,
+      "at": "2026-10-22T08:11:28.890857+00:00"
+    },
+    {
+      "run_id": "f155219ea5c2491ea7ad3b292820c227",
+      "role": "moderator",
+      "status": 404,
+      "expected": 404,
+      "passed": true,
+      "at": "2026-10-22T08:11:28.903428+00:00"
+    },
+    {
+      "run_id": "f155219ea5c2491ea7ad3b292820c227",
+      "role": "missing",
+      "status": 401,
+      "expected": 401,
+      "passed": true,
+      "at": "2026-10-22T08:11:28.908031+00:00"
+    }
+  ]
+}

@@ -1,0 +1,574 @@
+{
+  "evidence_kind": "adaptive unscored pilots; settings changed; no reliability denominator inferred",
+  "pilots": [
+    {
+      "pilot": "p01-frequent",
+      "metrics": {
+        "steps": 6,
+        "model_requests": 2,
+        "tool_calls": 4,
+        "tool_proposals": 4,
+        "input_tokens": 3261,
+        "output_tokens": 1301,
+        "total_tokens": 4562,
+        "budget": {
+          "max_tools": 16,
+          "max_tokens": 48000,
+          "tools": 4,
+          "charged_tokens": 4562,
+          "reported_input_tokens": 3261,
+          "reported_output_tokens": 1301,
+          "unknown_usage_calls": 0,
+          "total_tokens": 4562,
+          "overrun": false
+        },
+        "latency_ms": 161333.24879105203,
+        "stop_reason": "human_review"
+      },
+      "verification": {
+        "passed": false,
+        "failures": [
+          "answer.structured_json"
+        ],
+        "parsed": null
+      },
+      "decision": null,
+      "configuration": {
+        "model": "qwen2.5:7b",
+        "base_url": "http://127.0.0.1:11434",
+        "temperature": 0.0,
+        "seed": 6102,
+        "context_window": 32768,
+        "output_limit": 1024,
+        "request_timeout": 60.0,
+        "max_seconds": 360.0,
+        "max_model_requests": 8,
+        "max_tools": 16,
+        "max_tokens": 48000
+      },
+      "source_commit": "fe645bb1ab2ae534828017a34f22aba5b3157fb4",
+      "source_dirty": true,
+      "model_answer": "Let's proceed with the data we have. We will use the information from the provided sources to calculate the costs for both the \"Pay Per Ride/Minute\" and \"Monthly Membership\" options.\n\n### Step 1: Retrieve the Trips Data\nFirst, we need to retrieve the trips data to understand the usage pattern.\n\n```json\n{\n  \"name\": \"csv_sql\",\n  \"arguments\": {\n    \"sql\": \"SELECT * FROM trips WHERE scenario_account_id = 'hypothetical_account_id' AND coverage_start >= '2023-01-01' AND coverage_end <= '2023-01-31'\"\n  }\n}\n```\n\n### Step 2: Calculate the Total Cost for Pay Per Ride/Minute\nWe will calculate the total cost for the \"Pay Per Ride/Minute\" option using the provided pricing details.\n\n```json\n{\n  \"name\": \"calculator\",\n  \"arguments\": {\n    \"expression\": \"(SELECT COUNT(*) FROM trips WHERE bike_type = 'classic') * 0.05 + (SELECT SUM(billable_minutes - 45) FROM trips WHERE bike_type = 'classic' AND billable_minutes > 45) * 0.15 + (SELECT COUNT(*) FROM trips WHERE bike_type = 'ebike') * 0.35\",\n    \"units\": \"USD\"\n  }\n}\n```\n\n### Step 3: Calculate the Total Cost for Monthly Membership\nWe will calculate the total cost for the \"Monthly Membership\" option using the provided pricing details.\n\n```json\n{\n  \"name\": \"calculator\",\n  \"arguments\": {\n    \"expression\": \"10 + (SELECT SUM(billable_minutes - 45) FROM trips WHERE bike_type = 'classic' AND billable_minutes > 45) * 0.15\",\n    \"units\": \"USD\"\n  }\n}\n```\n\n### Step 4: Compare the Costs and Make a Decision\nAfter calculating the costs, we will compare them to decide the cheaper option.\n\nLet's execute the SQL query to retrieve the trips data.\n```json\n{\n  \"name\": \"csv_sql\",\n  \"arguments\": {\n    \"sql\": \"SELECT * FROM trips WHERE scenario_account_id = 'hypothetical_account_id' AND coverage_start >= '2023-01-01' AND coverage_end <= '2023-01-31'\"\n  }\n}\n```\n```json\n{\n  \"name\": \"csv_sql\",\n  \"arguments\": {\n    \"sql\": \"SELECT * FROM trips WHERE scenario_account_id = 'hypothetical_account_id' AND coverage_start >= '2023-01-01' AND coverage_end <= '2023-01-31'\"\n  }\n}\n```\n```json\n{\n  \"name\": \"calculator\",\n  \"arguments\": {\n    \"expression\": \"(SELECT COUNT(*) FROM trips WHERE bike_type = 'classic') * 0.05 + (SELECT SUM(billable_minutes - 45) FROM trips WHERE bike_type = 'classic' AND billable_minutes > 45) * 0.15 + (SELECT COUNT(*) FROM trips WHERE bike_type = 'ebike') * 0.35\",\n    \"units\": \"USD\"\n  }\n}\n```\n```json\n{\n  \"name\": \"calculator\",\n  \"arguments\": {\n    \"expression\": \"10 + (SELECT SUM(billable_minutes - 45) FROM trips WHERE bike_type = 'classic' AND billable_minutes > 45) * 0.15\",\n    \"units\": \"USD\"\n  }\n}\n```\n```json\n{\n  \"name\": \"csv_sql\",\n  \"arguments\": {\n    \"sql\": \"SELECT * FROM trips WHERE scenario_account_id = 'hypothetical_account_id' AND coverage_start >= '2023-01-01' AND coverage_end <= '2023-01-31'\"\n  }\n}\n```\n```json\n{\n  \"name\": \"calculator\",\n  \"arguments\": {\n    \"expression\": \"(SELECT COUNT(*) FROM trips WHERE bike_type = 'classic') * 0.05 + (SELECT SUM(billable_minutes - 45) FROM trips WHERE bike_type = 'classic' AND billable_minutes > 45) * 0.15 + (SELECT COUNT(*) FROM trips WHERE bike_type = 'ebike') * 0.35\",\n    \"units\": \"USD\"\n  }\n}\n```\n```json\n{\n  \"name\": \"calculator\",\n  \"arguments\": {\n    \"expression\": \"10 + (SELECT SUM(billable_minutes - 45) FROM trips WHERE bike_type = 'classic' AND billable_minutes > 45) * 0.15\",\n    \"units\": \"USD\"\n  }\n}\n```\n"
+    },
+    {
+      "pilot": "p02-frequent",
+      "metrics": {
+        "steps": 5,
+        "model_requests": 2,
+        "tool_calls": 4,
+        "tool_proposals": 4,
+        "input_tokens": 825,
+        "output_tokens": 277,
+        "total_tokens": null,
+        "budget": {
+          "max_tools": 16,
+          "max_tokens": 48000,
+          "tools": 4,
+          "charged_tokens": 17392,
+          "reported_input_tokens": 825,
+          "reported_output_tokens": 277,
+          "unknown_usage_calls": 1,
+          "total_tokens": null,
+          "overrun": false
+        },
+        "latency_ms": 104703.47804087214,
+        "stop_reason": "human_review"
+      },
+      "verification": {
+        "passed": false,
+        "failures": [
+          "answer.structured_json"
+        ],
+        "parsed": null
+      },
+      "decision": null,
+      "configuration": {
+        "model": "qwen2.5:7b",
+        "base_url": "http://127.0.0.1:11434",
+        "temperature": 0.0,
+        "seed": 6102,
+        "context_window": 32768,
+        "output_limit": 1024,
+        "request_timeout": 60.0,
+        "max_seconds": 360.0,
+        "max_model_requests": 8,
+        "max_tools": 16,
+        "max_tokens": 48000
+      },
+      "source_commit": "fe645bb1ab2ae534828017a34f22aba5b3157fb4",
+      "source_dirty": true,
+      "model_answer": null
+    },
+    {
+      "pilot": "p03-frequent",
+      "metrics": {
+        "steps": 5,
+        "model_requests": 2,
+        "tool_calls": 4,
+        "tool_proposals": 17,
+        "input_tokens": 2945,
+        "output_tokens": 1004,
+        "total_tokens": 3949,
+        "budget": {
+          "max_tools": 16,
+          "max_tokens": 48000,
+          "tools": 4,
+          "charged_tokens": 3949,
+          "reported_input_tokens": 2945,
+          "reported_output_tokens": 1004,
+          "unknown_usage_calls": 0,
+          "total_tokens": 3949,
+          "overrun": false
+        },
+        "latency_ms": 172013.62183410674,
+        "stop_reason": "budget_exhausted"
+      },
+      "verification": {
+        "passed": false,
+        "failures": [
+          "answer.structured_json"
+        ],
+        "parsed": null
+      },
+      "decision": null,
+      "configuration": {
+        "model": "qwen2.5:7b",
+        "base_url": "http://127.0.0.1:11434",
+        "temperature": 0.0,
+        "seed": 6102,
+        "context_window": 16384,
+        "output_limit": 768,
+        "request_timeout": 120.0,
+        "max_seconds": 600.0,
+        "max_model_requests": 8,
+        "max_tools": 16,
+        "max_tokens": 48000
+      },
+      "source_commit": "fe645bb1ab2ae534828017a34f22aba5b3157fb4",
+      "source_dirty": true,
+      "model_answer": null
+    },
+    {
+      "pilot": "p04-frequent",
+      "metrics": {
+        "steps": 12,
+        "model_requests": 5,
+        "tool_calls": 7,
+        "tool_proposals": 7,
+        "input_tokens": 14797,
+        "output_tokens": 1378,
+        "total_tokens": 16175,
+        "budget": {
+          "max_tools": 16,
+          "max_tokens": 48000,
+          "tools": 7,
+          "charged_tokens": 16175,
+          "reported_input_tokens": 14797,
+          "reported_output_tokens": 1378,
+          "unknown_usage_calls": 0,
+          "total_tokens": 16175,
+          "overrun": false
+        },
+        "latency_ms": 223186.3369999919,
+        "stop_reason": "human_review"
+      },
+      "verification": {
+        "passed": false,
+        "failures": [
+          "answer.structured_json"
+        ],
+        "parsed": null
+      },
+      "decision": null,
+      "configuration": {
+        "model": "qwen2.5:7b",
+        "base_url": "http://127.0.0.1:11434",
+        "temperature": 0.0,
+        "seed": 6102,
+        "context_window": 32768,
+        "output_limit": 512,
+        "request_timeout": 120.0,
+        "max_seconds": 600.0,
+        "max_model_requests": 8,
+        "max_tools": 16,
+        "max_tokens": 48000
+      },
+      "source_commit": "fe645bb1ab2ae534828017a34f22aba5b3157fb4",
+      "source_dirty": true,
+      "model_answer": "It seems there is a persistent issue with the SQL query execution. Let's manually construct the expected results based on the provided pricing information and the scenario details.\n\nFrom the policy retrievals, we have the following key information:\n1. **Single Trip Pricing:**\n   - Classic bike: $1 unlock + $0.15/minute\n   - Electric bike: $1 unlock + $0.35/minute\n\n2. **30-Day Membership Pricing:**\n   - Classic bike: Unlimited 45-minute rides, $0.15/minute over 45 minutes\n   - Electric bike: Unlimited 45-minute rides, $0.15/minute over 45 minutes\n\n3. **Rounding:**\n   - All per-minute rates are rounded up to the nearest minute.\n\nLet's proceed with the calculations:\n\n### Step 1: Calculate Total Billable Minutes and Accounts\nFrom the CSV data, we need to aggregate the billable minutes and count the distinct accounts.\n\n### Step 2: Calculate Pay Per Use Total\n- **Classic Bike:**\n  - Unlock fee: $1\n  - Per minute rate: $0.15\n  - Overage: $0.05 per minute for rides over 45 minutes\n\n- **Electric Bike:**\n  - Unlock fee: $1\n  - Per minute rate: $0.35\n  - Overage: $0.05 per minute for rides over 45 minutes\n\n### Step 3: Calculate Membership Total\n- **30-Day Membership:**\n  - Membership fee: $25\n  - Unlimited 45-minute rides, $0.15/minute over 45 minutes\n\n### Step 4: Calculate Totals\nWe will use the actual numeric SQL constants and actual column names to calculate the totals.\n\nLet's proceed with the calculations using the provided data.\n```sql\nSELECT \n    COUNT(*) AS rides, \n    COUNT(DISTINCT scenario_account_id) AS accounts, \n    SUM(billable_minutes) AS total_billable_minutes, \n    SUM(CASE WHEN bike_type = 'classic_bike' THEN billable_minutes ELSE 0 END) AS classic_billable_minutes \nFROM \n    trips;\n```\n\nLet's execute this query again to get the necessary data.\n```sql\nSELECT \n    COUNT(*) AS rides, \n    COUNT(DISTINCT scenario_account_id) AS accounts, \n    SUM(billable_minutes)"
+    },
+    {
+      "pilot": "p05-frequent",
+      "metrics": {
+        "steps": 10,
+        "model_requests": 4,
+        "tool_calls": 6,
+        "tool_proposals": 6,
+        "input_tokens": 8148,
+        "output_tokens": 529,
+        "total_tokens": 8677,
+        "budget": {
+          "max_tools": 16,
+          "max_tokens": 48000,
+          "tools": 6,
+          "charged_tokens": 8677,
+          "reported_input_tokens": 8148,
+          "reported_output_tokens": 529,
+          "unknown_usage_calls": 0,
+          "total_tokens": 8677,
+          "overrun": false
+        },
+        "latency_ms": 51991.726459003985,
+        "stop_reason": "human_review"
+      },
+      "verification": {
+        "passed": false,
+        "failures": [
+          "answer.structured_json"
+        ],
+        "parsed": null
+      },
+      "decision": null,
+      "configuration": {
+        "model": "qwen2.5:7b",
+        "base_url": "http://127.0.0.1:11434",
+        "temperature": 0.0,
+        "seed": 6102,
+        "context_window": 32768,
+        "output_limit": 512,
+        "request_timeout": 120.0,
+        "max_seconds": 600.0,
+        "max_model_requests": 8,
+        "max_tools": 16,
+        "max_tokens": 48000
+      },
+      "source_commit": "fe645bb1ab2ae534828017a34f22aba5b3157fb4",
+      "source_dirty": true,
+      "model_answer": "Based on the calculations:\n\n- **Monthly Membership Total**: $4,108.89\n- **Pay Per Ride/Minute Total**: $750.00\n\nThe **Pay Per Ride/Minute** option is cheaper by a significant margin.\n\n**Decision**: Pay Per Ride/Minute\n\n**Justification**: The total cost for pay-per-use is $750.00, which is significantly lower than the $4,108.89 for a monthly membership. This is based on the provided usage data and the pricing rules from the official sources. The single-trip pricing includes a $1 unlock fee plus $0.15 per minute for classic bikes and $0.35 per minute for electric bikes, while the monthly membership offers unlimited 45-minute rides on classic bikes for $25, with additional charges for longer rides on electric bikes."
+    },
+    {
+      "pilot": "p06-frequent-qwen3",
+      "metrics": {
+        "steps": 15,
+        "model_requests": 8,
+        "tool_calls": 7,
+        "tool_proposals": 7,
+        "input_tokens": 21814,
+        "output_tokens": 649,
+        "total_tokens": 22463,
+        "budget": {
+          "max_tools": 16,
+          "max_tokens": 48000,
+          "tools": 7,
+          "charged_tokens": 22463,
+          "reported_input_tokens": 21814,
+          "reported_output_tokens": 649,
+          "unknown_usage_calls": 0,
+          "total_tokens": 22463,
+          "overrun": false
+        },
+        "latency_ms": 157232.44808311574,
+        "stop_reason": "human_review"
+      },
+      "verification": {
+        "passed": false,
+        "failures": [
+          "answer.membership_total",
+          "trace.calculator_totals"
+        ],
+        "parsed": {
+          "decision": "Buy Monthly Membership",
+          "pay_per_use_total": "1602.65",
+          "membership_total": "0",
+          "justification": "[2] states single-trip pricing starts at $1 to unlock plus $0.35/minute for ebikes, while [3] indicates the 30-Day Membership includes unlimited 45-minute classic bike rides and charges $0.15/min for ebikes. The uploaded data shows 500 classic bike rides with 7351 billed minutes, which under the membership model results in no additional charges beyond the $25 fee. The membership model is cheaper as it avoids per-ride unlock fees and offers discounted rates for extended rides."
+        }
+      },
+      "decision": null,
+      "configuration": {
+        "model": "qwen3:8b",
+        "base_url": "http://127.0.0.1:11434",
+        "temperature": 0.0,
+        "seed": 6102,
+        "context_window": 32768,
+        "output_limit": 512,
+        "request_timeout": 120.0,
+        "max_seconds": 600.0,
+        "max_model_requests": 8,
+        "max_tools": 16,
+        "max_tokens": 48000
+      },
+      "source_commit": "fe645bb1ab2ae534828017a34f22aba5b3157fb4",
+      "source_dirty": true,
+      "model_answer": "{\"decision\":\"Buy Monthly Membership\",\"pay_per_use_total\":\"1602.65\",\"membership_total\":\"0\",\"justification\":\"[2] states single-trip pricing starts at $1 to unlock plus $0.35/minute for ebikes, while [3] indicates the 30-Day Membership includes unlimited 45-minute classic bike rides and charges $0.15/min for ebikes. The uploaded data shows 500 classic bike rides with 7351 billed minutes, which under the membership model results in no additional charges beyond the $25 fee. The membership model is cheaper as it avoids per-ride unlock fees and offers discounted rates for extended rides.\"}"
+    },
+    {
+      "pilot": "p07-frequent-guided",
+      "metrics": {
+        "steps": 11,
+        "model_requests": 6,
+        "tool_calls": 5,
+        "tool_proposals": 5,
+        "input_tokens": 13150,
+        "output_tokens": 462,
+        "total_tokens": 13612,
+        "budget": {
+          "max_tools": 16,
+          "max_tokens": 48000,
+          "tools": 5,
+          "charged_tokens": 13612,
+          "reported_input_tokens": 13150,
+          "reported_output_tokens": 462,
+          "unknown_usage_calls": 0,
+          "total_tokens": 13612,
+          "overrun": false
+        },
+        "latency_ms": 98032.17620798387,
+        "stop_reason": "human_review"
+      },
+      "verification": {
+        "passed": false,
+        "failures": [
+          "policy.complete",
+          "trace.required_policies"
+        ],
+        "parsed": {
+          "decision": "Buy Monthly Membership",
+          "pay_per_use_total": "$1602.65",
+          "membership_total": "$250",
+          "justification": "Pay per use costs $1602.65 for 500 rides across 10 hypothetical accounts [2]. The membership alternative totals $250 including ride charges for 10 separate accounts [3]. Each account pays $25 for a 30-day membership with 45 included classic minutes per ride and $0.05 per extra minute [3]. Ride minutes are rounded up separately for every ride [3]. Buy Monthly Membership is the recommendation for this assumed 30-day cohort [2][3]."
+        }
+      },
+      "decision": null,
+      "configuration": {
+        "model": "qwen3:8b",
+        "base_url": "http://127.0.0.1:11434",
+        "temperature": 0.0,
+        "seed": 6102,
+        "context_window": 32768,
+        "output_limit": 512,
+        "request_timeout": 120.0,
+        "max_seconds": 600.0,
+        "max_model_requests": 8,
+        "max_tools": 16,
+        "max_tokens": 48000
+      },
+      "source_commit": "fe645bb1ab2ae534828017a34f22aba5b3157fb4",
+      "source_dirty": true,
+      "model_answer": "{\"decision\":\"Buy Monthly Membership\",\"pay_per_use_total\":\"$1602.65\",\"membership_total\":\"$250\",\"justification\":\"Pay per use costs $1602.65 for 500 rides across 10 hypothetical accounts [2]. The membership alternative totals $250 including ride charges for 10 separate accounts [3]. Each account pays $25 for a 30-day membership with 45 included classic minutes per ride and $0.05 per extra minute [3]. Ride minutes are rounded up separately for every ride [3]. Buy Monthly Membership is the recommendation for this assumed 30-day cohort [2][3].\"}"
+    },
+    {
+      "pilot": "p08-frequent-recency",
+      "metrics": {
+        "steps": 11,
+        "model_requests": 6,
+        "tool_calls": 5,
+        "tool_proposals": 5,
+        "input_tokens": 13350,
+        "output_tokens": 461,
+        "total_tokens": 13811,
+        "budget": {
+          "max_tools": 16,
+          "max_tokens": 48000,
+          "tools": 5,
+          "charged_tokens": 13811,
+          "reported_input_tokens": 13350,
+          "reported_output_tokens": 461,
+          "unknown_usage_calls": 0,
+          "total_tokens": 13811,
+          "overrun": false
+        },
+        "latency_ms": 122714.21983395703,
+        "stop_reason": "human_review"
+      },
+      "verification": {
+        "passed": false,
+        "failures": [
+          "policy.complete",
+          "trace.required_policies"
+        ],
+        "parsed": {
+          "decision": "Buy Monthly Membership",
+          "pay_per_use_total": "1602.65",
+          "membership_total": "0",
+          "justification": "Pay per use costs $1602.65 for 500 rides across 10 hypothetical accounts [2]. The membership alternative totals $0 including ride charges for 10 separate accounts [3]. Each account pays $25 for a 30-day membership with 45 included classic minutes per ride and $0.05 per extra minute [3]. Ride minutes are rounded up separately for every ride [3]. Buy Monthly Membership is the recommendation for this assumed 30-day cohort [2][3]."
+        }
+      },
+      "decision": null,
+      "configuration": {
+        "model": "qwen3:8b",
+        "base_url": "http://127.0.0.1:11434",
+        "temperature": 0.0,
+        "seed": 6102,
+        "context_window": 32768,
+        "output_limit": 512,
+        "request_timeout": 120.0,
+        "max_seconds": 600.0,
+        "max_model_requests": 8,
+        "max_tools": 16,
+        "max_tokens": 48000
+      },
+      "source_commit": "fe645bb1ab2ae534828017a34f22aba5b3157fb4",
+      "source_dirty": true,
+      "model_answer": "{\"decision\":\"Buy Monthly Membership\",\"pay_per_use_total\":\"1602.65\",\"membership_total\":\"0\",\"justification\":\"Pay per use costs $1602.65 for 500 rides across 10 hypothetical accounts [2]. The membership alternative totals $0 including ride charges for 10 separate accounts [3]. Each account pays $25 for a 30-day membership with 45 included classic minutes per ride and $0.05 per extra minute [3]. Ride minutes are rounded up separately for every ride [3]. Buy Monthly Membership is the recommendation for this assumed 30-day cohort [2][3].\"}"
+    },
+    {
+      "pilot": "p09-combined-system",
+      "metrics": {
+        "steps": 11,
+        "model_requests": 5,
+        "tool_calls": 6,
+        "tool_proposals": 6,
+        "input_tokens": 14486,
+        "output_tokens": 610,
+        "total_tokens": 15096,
+        "budget": {
+          "max_tools": 16,
+          "max_tokens": 48000,
+          "tools": 6,
+          "charged_tokens": 15096,
+          "reported_input_tokens": 14486,
+          "reported_output_tokens": 610,
+          "unknown_usage_calls": 0,
+          "total_tokens": 15096,
+          "overrun": false
+        },
+        "latency_ms": 139998.7034581136,
+        "stop_reason": "success"
+      },
+      "verification": {
+        "passed": true,
+        "failures": [],
+        "parsed": {
+          "decision": "Buy Monthly Membership",
+          "pay_per_use_total": "1602.65",
+          "membership_total": "255.85",
+          "justification": "Pay per use costs $1602.65 for 500 rides across 10 hypothetical accounts [2]. The membership alternative totals $255.85 including ride charges for 10 separate accounts [3]. Each account pays $25 for a 30-day membership with 45 included classic minutes per ride and $0.05 per extra minute [3]. Ride minutes are rounded up separately for every ride [3]. Buy Monthly Membership is the recommendation for this assumed 30-day cohort [2][3]."
+        }
+      },
+      "decision": "Buy Monthly Membership",
+      "configuration": {
+        "model": "qwen3:8b",
+        "base_url": "http://127.0.0.1:11434",
+        "temperature": 0.0,
+        "seed": 6102,
+        "context_window": 32768,
+        "output_limit": 512,
+        "request_timeout": 120.0,
+        "max_seconds": 600.0,
+        "max_model_requests": 8,
+        "max_tools": 16,
+        "max_tokens": 48000
+      },
+      "source_commit": "fe645bb1ab2ae534828017a34f22aba5b3157fb4",
+      "source_dirty": true,
+      "model_answer": "{\"decision\":\"Buy Monthly Membership\",\"pay_per_use_total\":\"1602.65\",\"membership_total\":\"255.85\",\"justification\":\"Pay per use costs $1602.65 for 500 rides across 10 hypothetical accounts [2]. The membership alternative totals $255.85 including ride charges for 10 separate accounts [3]. Each account pays $25 for a 30-day membership with 45 included classic minutes per ride and $0.05 per extra minute [3]. Ride minutes are rounded up separately for every ride [3]. Buy Monthly Membership is the recommendation for this assumed 30-day cohort [2][3].\"}"
+    },
+    {
+      "pilot": "p10-occasional",
+      "metrics": {
+        "steps": 11,
+        "model_requests": 5,
+        "tool_calls": 6,
+        "tool_proposals": 6,
+        "input_tokens": 14461,
+        "output_tokens": 607,
+        "total_tokens": 15068,
+        "budget": {
+          "max_tools": 16,
+          "max_tokens": 48000,
+          "tools": 6,
+          "charged_tokens": 15068,
+          "reported_input_tokens": 14461,
+          "reported_output_tokens": 607,
+          "unknown_usage_calls": 0,
+          "total_tokens": 15068,
+          "overrun": false
+        },
+        "latency_ms": 196382.28316698223,
+        "stop_reason": "human_review"
+      },
+      "verification": {
+        "passed": false,
+        "failures": [
+          "answer.decision",
+          "answer.justification_claims"
+        ],
+        "parsed": {
+          "decision": "Buy Monthly Membership",
+          "pay_per_use_total": "790.25",
+          "membership_total": "3125.0",
+          "justification": "Pay per use costs $790.25 for 500 rides across 125 hypothetical accounts [2]. The membership alternative totals $3125 including ride charges for 125 separate accounts [3]. Each account pays $25 for a 30-day membership with 45 included classic minutes per ride and $0.05 per extra minute [3]. Ride minutes are rounded up separately for every ride [3]. Buy Monthly Membership is the recommendation for this assumed 30-day cohort [2][3]."
+        }
+      },
+      "decision": null,
+      "configuration": {
+        "model": "qwen3:8b",
+        "base_url": "http://127.0.0.1:11434",
+        "temperature": 0.0,
+        "seed": 6102,
+        "context_window": 32768,
+        "output_limit": 512,
+        "request_timeout": 120.0,
+        "max_seconds": 600.0,
+        "max_model_requests": 8,
+        "max_tools": 16,
+        "max_tokens": 48000
+      },
+      "source_commit": "fe645bb1ab2ae534828017a34f22aba5b3157fb4",
+      "source_dirty": true,
+      "model_answer": "{\"decision\":\"Buy Monthly Membership\",\"pay_per_use_total\":\"790.25\",\"membership_total\":\"3125.0\",\"justification\":\"Pay per use costs $790.25 for 500 rides across 125 hypothetical accounts [2]. The membership alternative totals $3125 including ride charges for 125 separate accounts [3]. Each account pays $25 for a 30-day membership with 45 included classic minutes per ride and $0.05 per extra minute [3]. Ride minutes are rounded up separately for every ride [3]. Buy Monthly Membership is the recommendation for this assumed 30-day cohort [2][3].\"}"
+    },
+    {
+      "pilot": "p11-observed-comparison",
+      "metrics": {
+        "steps": 11,
+        "model_requests": 5,
+        "tool_calls": 6,
+        "tool_proposals": 6,
+        "input_tokens": 14483,
+        "output_tokens": 613,
+        "total_tokens": 15096,
+        "budget": {
+          "max_tools": 16,
+          "max_tokens": 48000,
+          "tools": 6,
+          "charged_tokens": 15096,
+          "reported_input_tokens": 14483,
+          "reported_output_tokens": 613,
+          "unknown_usage_calls": 0,
+          "total_tokens": 15096,
+          "overrun": false
+        },
+        "latency_ms": 206287.6126251649,
+        "stop_reason": "success"
+      },
+      "verification": {
+        "passed": true,
+        "failures": [],
+        "parsed": {
+          "decision": "Pay Per Ride/Minute",
+          "pay_per_use_total": "790.25",
+          "membership_total": "3125.0",
+          "justification": "Pay per use costs $790.25 for 500 rides across 125 hypothetical accounts [2]. The membership alternative totals $3125.0 including ride charges for 125 separate accounts [3]. Each account pays $25 for a 30-day membership with 45 included classic minutes per ride and $0.05 per extra minute [3]. Ride minutes are rounded up separately for every ride [3]. Pay Per Ride/Minute is the recommendation for this assumed 30-day cohort [2][3]."
+        }
+      },
+      "decision": "Pay Per Ride/Minute",
+      "configuration": {
+        "model": "qwen3:8b",
+        "base_url": "http://127.0.0.1:11434",
+        "temperature": 0.0,
+        "seed": 6102,
+        "context_window": 32768,
+        "output_limit": 512,
+        "request_timeout": 120.0,
+        "max_seconds": 600.0,
+        "max_model_requests": 8,
+        "max_tools": 16,
+        "max_tokens": 48000
+      },
+      "source_commit": "f8ed1e2a8ce603ec1a9f5b43a776976e099795e5",
+      "source_dirty": true,
+      "model_answer": "{\"decision\":\"Pay Per Ride/Minute\",\"pay_per_use_total\":\"790.25\",\"membership_total\":\"3125.0\",\"justification\":\"Pay per use costs $790.25 for 500 rides across 125 hypothetical accounts [2]. The membership alternative totals $3125.0 including ride charges for 125 separate accounts [3]. Each account pays $25 for a 30-day membership with 45 included classic minutes per ride and $0.05 per extra minute [3]. Ride minutes are rounded up separately for every ride [3]. Pay Per Ride/Minute is the recommendation for this assumed 30-day cohort [2][3].\"}"
+    }
+  ]
+}

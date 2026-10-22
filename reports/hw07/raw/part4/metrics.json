@@ -1,0 +1,120 @@
+{
+  "evidence_kind": "two final acceptance demonstrations; not a reliability benchmark",
+  "application_commit": "22c673db820a56ca4fb12ec1f27a175db6825a6f",
+  "cases": {
+    "frequent": {
+      "decision": "Buy Monthly Membership",
+      "rows": 500,
+      "accounts": 10,
+      "pay_per_use_total": "1602.65",
+      "membership_fee_total": "250.00",
+      "membership_residual_total": "5.85",
+      "membership_total": "255.85",
+      "source_commit": "22c673db820a56ca4fb12ec1f27a175db6825a6f",
+      "metrics": {
+        "steps": 11,
+        "model_requests": 5,
+        "tool_calls": 6,
+        "tool_proposals": 6,
+        "input_tokens": 14364,
+        "output_tokens": 605,
+        "total_tokens": 14969,
+        "budget": {
+          "max_tools": 16,
+          "max_tokens": 48000,
+          "tools": 6,
+          "charged_tokens": 14969,
+          "reported_input_tokens": 14364,
+          "reported_output_tokens": 605,
+          "unknown_usage_calls": 0,
+          "total_tokens": 14969,
+          "overrun": false
+        },
+        "latency_ms": 198865.38258288056,
+        "stop_reason": "success"
+      },
+      "input_sha256": "bc7ebd49dedd8d2b2fe528d14fc30b6cc8d8e0c8a3f0908f1f1cb36da2866c7c",
+      "run_id": "e9e5f180674c4cf29d8fb1951d612df9",
+      "citations": [
+        {
+          "number": 1,
+          "url": "https://capitalbikeshare.com/pricing",
+          "captured_at": "2026-10-22T08:06:20.126106+00:00",
+          "sha256": "fc7a546f6983bb9d9f956ae43ffd81e1ef9ae1a845c69e0d21fbaf1534998d52",
+          "excerpt": "When you\u2019ve got lots to do. $10/day includes unlimited 45-min classic bike rides within a 24-hour period. Ride longer than 45 minutes and pay $0.05/minute. No unlock fees and a discounted rate of $0.15/min on ebikes.\n$10/day\nOther membership options\nGreat for one-way trips. Just download the Capital Bikeshare or Lyft app and you\u2019re ready to roll. Just $1 to unlock plus $0.15/minute for classic bikes or $0.35/minute for ebikes.\n$1 + $0.15/ mins\nDay pass\nGreat for one-way trips. Just download the Capital Bikeshare or Lyft app and you\u2019re ready to roll. Just $1 to unlock plus $0.15/minute for classic bikes or $0.35/minute for ebikes."
+        },
+        {
+          "number": 2,
+          "url": "https://capitalbikeshare.com/pricing/single-trip",
+          "captured_at": "2026-10-22T08:06:20.638632+00:00",
+          "sha256": "51b55b3d5a61aafde7f5d9d0edf6074540267127fb65b096a178058689cace79",
+          "excerpt": "With a pedal-assist motor to supercharge your ride, our ebikes are the easiest way to get around the metro DC area. Pricing starts at $1 to unlock plus $0.35/minute.\nEbike parking is free at Capital Bikeshare stations. You\u2019ll be charged $3 for parking an ebike at a public bike rack in the service area.\nA $25 fee will be applied to any ebike that is not docked at a station or secured to a public bike rack with its cable lock, if it remains inactive for over 30 minutes after the ride concludes. This fee is in addition to the standard per-minute rate.\nThe Single Trip costs $1 to unlock and $0.15/min on a classic bike or $0.35/min on an ebike.\nBuy a pass through the app\nInterested in Ebikes?\nThe Single Trip costs $1 to unlock and $0.15/min on a classic bike or $0.35/min on an ebike."
+        },
+        {
+          "number": 3,
+          "url": "https://help.capitalbikeshare.com/hc/en-us/articles/360039401111-30-Day-Membership",
+          "captured_at": "2026-10-22T08:06:20.844154+00:00",
+          "sha256": "57da4ba91dab5fd4062770c227bb4dafef8bffc4b37661f713161266bb276919",
+          "excerpt": "Unlimited 45-minute rides on classic bikes for 30 days from purchase. Members pay $0.15 per minute for ebikes and avoid unlock fees.\n24/7 access to thousands of bikes in Washington, DC; Arlington, VA; Alexandria, VA; Montgomery County, MD; Prince George's County, MD; Fairfax County, VA; City of Fairfax; and the City of Falls Church, VA.\nIf you need more time than what\u2019s covered, pay $0.05 per minute. All per minute ride prices are rounded up to the nearest minute.\nThe 30-Day Membership offers a flexible way to ride with Capital Bikeshare when you need it.\n$25 / 30-Day Membership includes:\nUnlimited 45-minute rides on classic bikes for 30 days from purchase. Members pay $0.15 per minute for ebikes and avoid unlock fees.\n$25 / 30-Day Membership includes:\nUnlimited 45-minute rides on classic bikes for 30 days from purchase. Members pay $0.15 per minute for ebikes and avoid unlock fees.\n24/7 access to thousands of bikes in Washington, DC; Arlington, VA; Alexandria, VA; Montgomery County, MD; Prince George's County, MD; Fairfax County, VA; City of Fairfax; and the City of Falls Church, VA."
+        }
+      ]
+    },
+    "occasional": {
+      "decision": "Pay Per Ride/Minute",
+      "rows": 500,
+      "accounts": 125,
+      "pay_per_use_total": "790.25",
+      "membership_fee_total": "3125.00",
+      "membership_residual_total": "0.00",
+      "membership_total": "3125.00",
+      "source_commit": "22c673db820a56ca4fb12ec1f27a175db6825a6f",
+      "metrics": {
+        "steps": 11,
+        "model_requests": 5,
+        "tool_calls": 6,
+        "tool_proposals": 6,
+        "input_tokens": 14484,
+        "output_tokens": 615,
+        "total_tokens": 15099,
+        "budget": {
+          "max_tools": 16,
+          "max_tokens": 48000,
+          "tools": 6,
+          "charged_tokens": 15099,
+          "reported_input_tokens": 14484,
+          "reported_output_tokens": 615,
+          "unknown_usage_calls": 0,
+          "total_tokens": 15099,
+          "overrun": false
+        },
+        "latency_ms": 230260.84366696887,
+        "stop_reason": "success"
+      },
+      "input_sha256": "8ba2b6b723fcdef6b9805a6a5b543c1278f72939d9ba9b693e0c57ae87e758bc",
+      "run_id": "f155219ea5c2491ea7ad3b292820c227",
+      "citations": [
+        {
+          "number": 1,
+          "url": "https://capitalbikeshare.com/pricing",
+          "captured_at": "2026-10-22T08:10:10.659109+00:00",
+          "sha256": "fc7a546f6983bb9d9f956ae43ffd81e1ef9ae1a845c69e0d21fbaf1534998d52",
+          "excerpt": "When you\u2019ve got lots to do. $10/day includes unlimited 45-min classic bike rides within a 24-hour period. Ride longer than 45 minutes and pay $0.05/minute. No unlock fees and a discounted rate of $0.15/min on ebikes.\n$10/day\nOther membership options\nGreat for one-way trips. Just download the Capital Bikeshare or Lyft app and you\u2019re ready to roll. Just $1 to unlock plus $0.15/minute for classic bikes or $0.35/minute for ebikes.\n$1 + $0.15/ mins\nDay pass\nGreat for one-way trips. Just download the Capital Bikeshare or Lyft app and you\u2019re ready to roll. Just $1 to unlock plus $0.15/minute for classic bikes or $0.35/minute for ebikes."
+        },
+        {
+          "number": 2,
+          "url": "https://capitalbikeshare.com/pricing/single-trip",
+          "captured_at": "2026-10-22T08:10:12.126419+00:00",
+          "sha256": "51b55b3d5a61aafde7f5d9d0edf6074540267127fb65b096a178058689cace79",
+          "excerpt": "With a pedal-assist motor to supercharge your ride, our ebikes are the easiest way to get around the metro DC area. Pricing starts at $1 to unlock plus $0.35/minute.\nEbike parking is free at Capital Bikeshare stations. You\u2019ll be charged $3 for parking an ebike at a public bike rack in the service area.\nA $25 fee will be applied to any ebike that is not docked at a station or secured to a public bike rack with its cable lock, if it remains inactive for over 30 minutes after the ride concludes. This fee is in addition to the standard per-minute rate.\nThe Single Trip costs $1 to unlock and $0.15/min on a classic bike or $0.35/min on an ebike.\nBuy a pass through the app\nInterested in Ebikes?\nThe Single Trip costs $1 to unlock and $0.15/min on a classic bike or $0.35/min on an ebike."
+        },
+        {
+          "number": 3,
+          "url": "https://help.capitalbikeshare.com/hc/en-us/articles/360039401111-30-Day-Membership",
+          "captured_at": "2026-10-22T08:10:12.219970+00:00",
+          "sha256": "57da4ba91dab5fd4062770c227bb4dafef8bffc4b37661f713161266bb276919",
+          "excerpt": "Unlimited 45-minute rides on classic bikes for 30 days from purchase. Members pay $0.15 per minute for ebikes and avoid unlock fees.\n24/7 access to thousands of bikes in Washington, DC; Arlington, VA; Alexandria, VA; Montgomery County, MD; Prince George's County, MD; Fairfax County, VA; City of Fairfax; and the City of Falls Church, VA.\nIf you need more time than what\u2019s covered, pay $0.05 per minute. All per minute ride prices are rounded up to the nearest minute.\nThe 30-Day Membership offers a flexible way to ride with Capital Bikeshare when you need it.\n$25 / 30-Day Membership includes:\nUnlimited 45-minute rides on classic bikes for 30 days from purchase. Members pay $0.15 per minute for ebikes and avoid unlock fees.\n$25 / 30-Day Membership includes:\nUnlimited 45-minute rides on classic bikes for 30 days from purchase. Members pay $0.15 per minute for ebikes and avoid unlock fees.\n24/7 access to thousands of bikes in Washington, DC; Arlington, VA; Alexandria, VA; Montgomery County, MD; Prince George's County, MD; Fairfax County, VA; City of Fairfax; and the City of Falls Church, VA."
+        }
+      ]
+    }
+  }
+}

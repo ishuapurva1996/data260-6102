@@ -1,0 +1,22 @@
+{
+  "run_id": "f155219ea5c2491ea7ad3b292820c227",
+  "user_id": 71,
+  "pricing_url": "https://capitalbikeshare.com/pricing",
+  "configuration": {
+    "model": "qwen3:8b",
+    "base_url": "http://127.0.0.1:11434",
+    "temperature": 0.0,
+    "seed": 6102,
+    "context_window": 32768,
+    "output_limit": 512,
+    "request_timeout": 120.0,
+    "max_seconds": 600.0,
+    "max_model_requests": 8,
+    "max_tools": 16,
+    "max_tokens": 48000
+  },
+  "evidence_kind": "genuine UI upload + HTTPS bearer auth + real LangGraph/Ollama tools",
+  "source_commit": "22c673db820a56ca4fb12ec1f27a175db6825a6f",
+  "input_sha256": "8ba2b6b723fcdef6b9805a6a5b543c1278f72939d9ba9b693e0c57ae87e758bc",
+  "private_runtime_lease_path_omitted": true
+}

@@ -1,0 +1,65 @@
+{
+  "archive_sha256": "48d11e148db00bd53c47fe419b166f37862faefac61a1ce9503b87017573ed34",
+  "csv_archive_member": "202401-capitalbikeshare-tripdata.csv",
+  "csv_bytes": 45822829,
+  "csv_sha256": "bb189909da35620f98191dab9a4ba6ca36162d92917bfee174d91ad5704336b9",
+  "extracted_at": "2026-10-22T06:45:30.078073+00:00",
+  "source_link_chain": [
+    "https://capitalbikeshare.com/system-data",
+    "https://s3.amazonaws.com/capitalbikeshare-data/index.html",
+    "https://s3.amazonaws.com/capitalbikeshare-data?prefix=202401",
+    "https://s3.amazonaws.com/capitalbikeshare-data/202401-capitalbikeshare-tripdata.zip"
+  ],
+  "student": "Pragya Apurva",
+  "capture_kind": "official trip-source fetch and extraction; not a model acceptance run",
+  "captures": [
+    {
+      "original_url": "https://capitalbikeshare.com/system-data",
+      "final_url": "https://capitalbikeshare.com/system-data",
+      "started_at": "2026-10-22T06:45:27.471491+00:00",
+      "captured_at": "2026-10-22T06:45:28.041648+00:00",
+      "http_status": 200,
+      "error": null,
+      "body_sha256": "eab96eace6657c24cd25b95ef6081abfb4eedfaa2975573fa45de40d7672425e",
+      "body_bytes": 129456,
+      "text_sha256": "b3b55ff1fb0a3ee492b91a3a1a7425a43c51cb0be859e5200ff4557159b433f7",
+      "text_bytes": 3008,
+      "text_extraction": "UTF-8 HTMLParser, scripts/styles omitted, stripped nonempty lines",
+      "text_path": "system-data.txt"
+    },
+    {
+      "original_url": "https://s3.amazonaws.com/capitalbikeshare-data/index.html",
+      "final_url": "https://s3.amazonaws.com/capitalbikeshare-data/index.html",
+      "started_at": "2026-10-22T06:45:28.513566+00:00",
+      "captured_at": "2026-10-22T06:45:28.779207+00:00",
+      "http_status": 200,
+      "error": null,
+      "body_sha256": "95437ba0b0da9aba2cba454c13b45e9a824cec6f387a53b887bc71a65ef370ad",
+      "body_bytes": 6430,
+      "text_sha256": "3d3a739980b70ad05e527b0a023350ac7336181f0bb50568c648372d08c05fe5",
+      "text_bytes": 65,
+      "text_extraction": "UTF-8 HTMLParser, scripts/styles omitted, stripped nonempty lines",
+      "text_path": "archive-index.txt"
+    },
+    {
+      "original_url": "https://s3.amazonaws.com/capitalbikeshare-data?prefix=202401",
+      "final_url": "https://s3.amazonaws.com/capitalbikeshare-data?prefix=202401",
+      "started_at": "2026-10-22T06:45:28.781866+00:00",
+      "captured_at": "2026-10-22T06:45:29.033320+00:00",
+      "http_status": 200,
+      "error": null,
+      "body_sha256": "3dbe7041a0e1849f70c9a7603742162b439fe922a6b56bb197213c9310c57fdb",
+      "body_bytes": 488
+    },
+    {
+      "original_url": "https://s3.amazonaws.com/capitalbikeshare-data/202401-capitalbikeshare-tripdata.zip",
+      "final_url": "https://s3.amazonaws.com/capitalbikeshare-data/202401-capitalbikeshare-tripdata.zip",
+      "started_at": "2026-10-22T06:45:29.034397+00:00",
+      "captured_at": "2026-10-22T06:45:29.984478+00:00",
+      "http_status": 200,
+      "error": null,
+      "body_sha256": "48d11e148db00bd53c47fe419b166f37862faefac61a1ce9503b87017573ed34",
+      "body_bytes": 8837907
+    }
+  ]
+}

@@ -83,3 +83,13 @@ real local model. The retries still failed the fixed task checks and stopped at
 `human_review` after the two-retry ceiling. It is not successful recovery, a
 natural scored failure, or evidence of a general quality improvement. Parts 4–6
 and the final submission remain pending.
+
+
+---
+
+## Part 4 AI use addendum
+
+1. I supplied the authoritative assignment, personal configuration, scope and account-assumption requirements. An AI assistant implemented the framework integration, tools, UI and tests, ran the real local-model demonstrations, and produced the evidence. A separate AI-assisted standard-library computation audited the source values and costs; this is not a claim of manual student coding.
+2. An unsuitable genuine pilot answer chose membership despite its own correct $790.25 casual and $3,125 membership totals. Earlier pilots also used wrong columns or incomplete tool chains.
+3. Deterministic per-ride/account checks rejected the wrong recommendation; the unchanged failed answer remains in raw/part4/pilots/p10-occasional. Controlled negative tests also show that correct totals cannot certify false prose or a $0.054 rate in place of captured $0.05. Independent source-row and integer-cent auditing confirms the final values.
+4. The trusted phase hint now compares both actual calculator observations before requesting the final decision, and the framework still obtains all native calls from the model. The verifier preserves and rejects unsupported original answers. Both final real UI runs passed. Hypothetical account labels, pre-tax assumptions, guided prompting, failed pilots and controlled tests are explicitly distinguished from genuine final measurements. Parts 5–6 and final submission remain pending.

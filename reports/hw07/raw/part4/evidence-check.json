@@ -1,0 +1,25 @@
+{
+  "student": "Pragya Apurva",
+  "checked_at": "2026-10-22T08:19:13.751686+00:00",
+  "application_commit": "22c673db820a56ca4fb12ec1f27a175db6825a6f",
+  "genuine_final_cases": 2,
+  "same_config": true,
+  "policy_text_and_HTML_pairs_verified": 6,
+  "screenshots_SHA256_verified": 10,
+  "independent_audit_all_checks_pass": true,
+  "independent_audit_check_count": 940,
+  "historical_files_unchanged": 50,
+  "historical_prefixes_preserved": 3,
+  "secrets_or_full_JWTs_found": 0,
+  "private_workflow_files_selected": false,
+  "markdown_targets_exist": true,
+  "new_part4_source_dirty": false,
+  "model_digest_unchanged": true,
+  "final_regression": {
+    "passed": 1255,
+    "skipped": 25
+  },
+  "part4_tests_passed": 123,
+  "live_HTTP_checks": 28,
+  "pilot_runs_retained": 11
+}

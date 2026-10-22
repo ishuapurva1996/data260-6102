@@ -1,0 +1,208 @@
+{
+  "row_count": 500,
+  "account_count": 10,
+  "coverage_start": "2024-01-01T00:00:00",
+  "coverage_end": "2024-01-31T00:00:00",
+  "summary": {
+    "billed_minutes": 7351,
+    "classic_overage_minutes": 117,
+    "classic_overage_ride_count": 11,
+    "classic_ride_count": 500,
+    "ebike_ride_count": 0,
+    "duration_seconds": 425626,
+    "average_duration_minutes": "14.19"
+  },
+  "weekly": [
+    {
+      "week_start": "2024-01-01",
+      "ride_count": 119,
+      "average_duration_minutes": "16.75",
+      "billed_minutes": 2057,
+      "classic_overage_minutes": 44,
+      "pay_per_use": "427.55",
+      "member_residual": "2.20",
+      "allocated_membership_fee": "250.00",
+      "membership_total": "252.20"
+    },
+    {
+      "week_start": "2024-01-08",
+      "ride_count": 119,
+      "average_duration_minutes": "13.61",
+      "billed_minutes": 1681,
+      "classic_overage_minutes": 25,
+      "pay_per_use": "371.15",
+      "member_residual": "1.25",
+      "allocated_membership_fee": "0.00",
+      "membership_total": "1.25"
+    },
+    {
+      "week_start": "2024-01-15",
+      "ride_count": 118,
+      "average_duration_minutes": "12.09",
+      "billed_minutes": 1484,
+      "classic_overage_minutes": 28,
+      "pay_per_use": "340.60",
+      "member_residual": "1.40",
+      "allocated_membership_fee": "0.00",
+      "membership_total": "1.40"
+    },
+    {
+      "week_start": "2024-01-22",
+      "ride_count": 112,
+      "average_duration_minutes": "14.32",
+      "billed_minutes": 1663,
+      "classic_overage_minutes": 20,
+      "pay_per_use": "361.45",
+      "member_residual": "1.00",
+      "allocated_membership_fee": "0.00",
+      "membership_total": "1.00"
+    },
+    {
+      "week_start": "2024-01-29",
+      "ride_count": 32,
+      "average_duration_minutes": "14.08",
+      "billed_minutes": 466,
+      "classic_overage_minutes": 0,
+      "pay_per_use": "101.90",
+      "member_residual": "0.00",
+      "allocated_membership_fee": "0.00",
+      "membership_total": "0.00"
+    }
+  ],
+  "per_account": [
+    {
+      "account_id": "frequent-001",
+      "ride_count": 50,
+      "average_duration_minutes": "13.56",
+      "billed_minutes": 700,
+      "classic_overage_minutes": 6,
+      "pay_per_use": "155.00",
+      "member_residual": "0.30",
+      "membership_fee": "25.00",
+      "membership_total": "25.30"
+    },
+    {
+      "account_id": "frequent-002",
+      "ride_count": 50,
+      "average_duration_minutes": "16.22",
+      "billed_minutes": 837,
+      "classic_overage_minutes": 26,
+      "pay_per_use": "175.55",
+      "member_residual": "1.30",
+      "membership_fee": "25.00",
+      "membership_total": "26.30"
+    },
+    {
+      "account_id": "frequent-003",
+      "ride_count": 50,
+      "average_duration_minutes": "15.27",
+      "billed_minutes": 790,
+      "classic_overage_minutes": 0,
+      "pay_per_use": "168.50",
+      "member_residual": "0.00",
+      "membership_fee": "25.00",
+      "membership_total": "25.00"
+    },
+    {
+      "account_id": "frequent-004",
+      "ride_count": 50,
+      "average_duration_minutes": "13.62",
+      "billed_minutes": 708,
+      "classic_overage_minutes": 11,
+      "pay_per_use": "156.20",
+      "member_residual": "0.55",
+      "membership_fee": "25.00",
+      "membership_total": "25.55"
+    },
+    {
+      "account_id": "frequent-005",
+      "ride_count": 50,
+      "average_duration_minutes": "14.29",
+      "billed_minutes": 742,
+      "classic_overage_minutes": 13,
+      "pay_per_use": "161.30",
+      "member_residual": "0.65",
+      "membership_fee": "25.00",
+      "membership_total": "25.65"
+    },
+    {
+      "account_id": "frequent-006",
+      "ride_count": 50,
+      "average_duration_minutes": "12.84",
+      "billed_minutes": 671,
+      "classic_overage_minutes": 12,
+      "pay_per_use": "150.65",
+      "member_residual": "0.60",
+      "membership_fee": "25.00",
+      "membership_total": "25.60"
+    },
+    {
+      "account_id": "frequent-007",
+      "ride_count": 50,
+      "average_duration_minutes": "14.12",
+      "billed_minutes": 734,
+      "classic_overage_minutes": 7,
+      "pay_per_use": "160.10",
+      "member_residual": "0.35",
+      "membership_fee": "25.00",
+      "membership_total": "25.35"
+    },
+    {
+      "account_id": "frequent-008",
+      "ride_count": 50,
+      "average_duration_minutes": "13.82",
+      "billed_minutes": 718,
+      "classic_overage_minutes": 15,
+      "pay_per_use": "157.70",
+      "member_residual": "0.75",
+      "membership_fee": "25.00",
+      "membership_total": "25.75"
+    },
+    {
+      "account_id": "frequent-009",
+      "ride_count": 50,
+      "average_duration_minutes": "14.10",
+      "billed_minutes": 726,
+      "classic_overage_minutes": 13,
+      "pay_per_use": "158.90",
+      "member_residual": "0.65",
+      "membership_fee": "25.00",
+      "membership_total": "25.65"
+    },
+    {
+      "account_id": "frequent-010",
+      "ride_count": 50,
+      "average_duration_minutes": "14.04",
+      "billed_minutes": 725,
+      "classic_overage_minutes": 14,
+      "pay_per_use": "158.75",
+      "member_residual": "0.70",
+      "membership_fee": "25.00",
+      "membership_total": "25.70"
+    }
+  ],
+  "break_even": {
+    "rides_at_sample_mix": 8,
+    "strictly_cheaper_rides_at_sample_mix": 8,
+    "minutes_at_sample_mix": "117.62",
+    "actual_rides_per_account": {
+      "min": 50,
+      "max": 50
+    },
+    "average_saving_per_ride": "3.193600",
+    "method": "Per account: membership fee / sample-average (casual ride cost minus member residual). Ceiling gives weak break-even; ties recommend Pay Per Ride/Minute. The strict threshold is floor + 1. Minutes use sample-average billed minutes. This repeated sample-mix approximation is not a guarantee for every ordering of heterogeneous rides."
+  },
+  "assumptions": [
+    "hypothetical assigned account; not observed rider history",
+    "Each scenario account purchases its own 30-day membership at coverage_start; fees cannot be shared between accounts.",
+    "The coverage end is exclusive for trip starts; every trip must finish within coverage.",
+    "Offset-free trip timestamps are interpreted in America/New_York local time; no observed rider identity is inferred.",
+    "Pre-tax base transportation comparison: location-dependent sales taxes are excluded.",
+    "Parking, damages, lost-bike and other penalties are excluded because the trip CSV does not observe them; ebike totals include transportation only.",
+    "Current captured prices are applied counterfactually to the uploaded trip durations.",
+    "The entire membership fee is allocated to the calendar week containing coverage_start; later weeks include only residual charges.",
+    "Original member_casual describes the public source trip and is not a scenario identity or the product selected for this counterfactual comparison.",
+    "A tie recommends Pay Per Ride/Minute; comparison savings are pay-per-use minus membership total."
+  ],
+  "input_sha256": "bc7ebd49dedd8d2b2fe528d14fc30b6cc8d8e0c8a3f0908f1f1cb36da2866c7c"
+}

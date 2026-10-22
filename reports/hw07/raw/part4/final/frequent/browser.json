@@ -1,0 +1,1747 @@
+{
+  "student": "Pragya Apurva",
+  "evidence_kind": "live Chromium + HTTPS + MySQL authentication; real framework/model when scenario is supplied",
+  "scenario": "frequent",
+  "started_at": "2026-10-22T08:05:52.565Z",
+  "checks": [
+    "real UI login, bearer authentication, one CSV field, one URL field, one Run button",
+    "no document overflow at 1440px",
+    "no document overflow at 740px",
+    "no document overflow at 390px",
+    "one genuine UI submission, real worker, verified expected decision, all result panels, responsive result layout"
+  ],
+  "requests": [
+    {
+      "method": "POST",
+      "path": "/auth/login",
+      "status": 200,
+      "bearer": false,
+      "at": "2026-10-22T08:05:53.394Z"
+    },
+    {
+      "method": "GET",
+      "path": "/auth/me",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:05:53.401Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/rentals",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:05:53.414Z"
+    },
+    {
+      "method": "POST",
+      "path": "/api/bikeshare/runs",
+      "status": 202,
+      "bearer": true,
+      "at": "2026-10-22T08:05:53.535Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:05:53.549Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:05:54.559Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:05:55.580Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:05:56.599Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:05:57.622Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:05:58.661Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:05:59.687Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:00.701Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:01.716Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:02.754Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:03.925Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:05.051Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:06.148Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:07.445Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:08.536Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:09.560Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:10.576Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:11.635Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:12.642Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:13.656Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:14.669Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:15.683Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:16.704Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:17.718Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:18.738Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:19.751Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:20.772Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:21.791Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:22.800Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:23.827Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:24.862Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:25.881Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:26.901Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:27.916Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:28.930Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:29.939Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:30.954Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:31.963Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:32.977Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:33.988Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:35.000Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:36.018Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:37.058Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:38.084Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:39.110Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:40.150Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:41.161Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:42.180Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:43.194Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:44.235Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:45.253Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:46.287Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:47.307Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:48.344Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:49.354Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:50.375Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:51.414Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:52.424Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:53.444Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:54.460Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:55.480Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:56.521Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:57.595Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:58.621Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:06:59.690Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:00.734Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:01.762Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:02.781Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:03.815Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:04.842Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:05.897Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:06.938Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:07.968Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:08.991Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:10.012Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:11.028Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:12.040Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:13.053Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:14.075Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:15.120Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:16.138Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:17.157Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:18.183Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:19.198Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:20.210Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:21.227Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:22.236Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:23.284Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:24.309Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:25.325Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:26.340Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:27.362Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:28.382Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:29.394Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:30.410Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:31.426Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:32.440Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:33.478Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:34.504Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:35.553Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:36.654Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:37.766Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:38.773Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:39.796Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:40.824Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:41.840Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:42.858Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:43.887Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:44.907Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:45.922Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:46.935Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:47.968Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:48.987Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:50.014Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:51.018Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:52.031Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:53.053Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:54.073Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:55.097Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:56.115Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:57.134Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:58.371Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:07:59.364Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:00.385Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:01.419Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:02.460Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:03.485Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:04.521Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:05.546Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:06.561Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:07.578Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:08.596Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:09.610Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:10.628Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:11.643Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:12.668Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:13.681Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:14.697Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:15.715Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:16.740Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:17.753Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:18.774Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:19.788Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:20.824Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:21.849Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:22.874Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:23.921Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:24.958Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:25.978Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:27.007Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:28.023Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:29.057Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:30.106Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:31.224Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:32.288Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:33.309Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:34.345Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:35.362Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:36.379Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:37.391Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:38.410Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:39.429Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:40.441Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:41.459Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:42.487Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:43.500Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:44.515Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:45.529Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:46.557Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:47.649Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:48.664Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:49.700Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:50.733Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:51.753Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:52.775Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:53.811Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:54.832Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:55.878Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:57.009Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:58.042Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:08:59.215Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:09:00.337Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:09:01.352Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:09:02.382Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:09:03.537Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:09:04.564Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:09:05.580Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:09:06.602Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:09:07.620Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:09:08.637Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:09:09.734Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:09:10.830Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:09:12.053Z"
+    },
+    {
+      "method": "GET",
+      "path": "/api/bikeshare/runs/e9e5f180674c4cf29d8fb1951d612df9",
+      "status": 200,
+      "bearer": true,
+      "at": "2026-10-22T08:09:13.192Z"
+    }
+  ],
+  "screenshots": [
+    {
+      "file": "overview.png",
+      "sha256": "a481cb892cfdeed1f5722f51da997f86200f3594ac6f068eb511b29511c85528",
+      "captured_at": "2026-10-22T08:09:13.845Z",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "full_page": false
+    },
+    {
+      "file": "full.png",
+      "sha256": "645d3a32011f2ae14fbf0d075062267e40a3d0cd46f4d582a4d8d3228f1355a2",
+      "captured_at": "2026-10-22T08:09:14.335Z",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "full_page": true
+    },
+    {
+      "file": "weekly.png",
+      "sha256": "b7fc48a59e0731f02b52454a8cb0be4a05ec0b5ce0ae196d4c6f027c13e027b5",
+      "captured_at": "2026-10-22T08:09:14.443Z",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "full_page": false
+    },
+    {
+      "file": "assumptions.png",
+      "sha256": "b7fc48a59e0731f02b52454a8cb0be4a05ec0b5ce0ae196d4c6f027c13e027b5",
+      "captured_at": "2026-10-22T08:09:14.558Z",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "full_page": false
+    },
+    {
+      "file": "citations.png",
+      "sha256": "767fca4ddfee7a86bcbeedd23dd3081ea051812617fe56d0d81d79cafd85d35e",
+      "captured_at": "2026-10-22T08:09:14.690Z",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "full_page": false
+    }
+  ],
+  "errors": [],
+  "run_id": "e9e5f180674c4cf29d8fb1951d612df9",
+  "result": {
+    "row_count": 500,
+    "account_count": 10,
+    "coverage_start": "2024-01-01T00:00:00",
+    "coverage_end": "2024-01-31T00:00:00",
+    "summary": {
+      "billed_minutes": 7351,
+      "classic_overage_minutes": 117,
+      "classic_overage_ride_count": 11,
+      "classic_ride_count": 500,
+      "ebike_ride_count": 0,
+      "duration_seconds": 425626,
+      "average_duration_minutes": "14.19"
+    },
+    "pay_per_use_total": "1602.65",
+    "membership_fee_total": "250.00",
+    "membership_residual_total": "5.85",
+    "membership_total": "255.85",
+    "savings": "1346.80",
+    "decision": "Buy Monthly Membership",
+    "weekly": [
+      {
+        "week_start": "2024-01-01",
+        "ride_count": 119,
+        "average_duration_minutes": "16.75",
+        "billed_minutes": 2057,
+        "classic_overage_minutes": 44,
+        "pay_per_use": "427.55",
+        "member_residual": "2.20",
+        "allocated_membership_fee": "250.00",
+        "membership_total": "252.20"
+      },
+      {
+        "week_start": "2024-01-08",
+        "ride_count": 119,
+        "average_duration_minutes": "13.61",
+        "billed_minutes": 1681,
+        "classic_overage_minutes": 25,
+        "pay_per_use": "371.15",
+        "member_residual": "1.25",
+        "allocated_membership_fee": "0.00",
+        "membership_total": "1.25"
+      },
+      {
+        "week_start": "2024-01-15",
+        "ride_count": 118,
+        "average_duration_minutes": "12.09",
+        "billed_minutes": 1484,
+        "classic_overage_minutes": 28,
+        "pay_per_use": "340.60",
+        "member_residual": "1.40",
+        "allocated_membership_fee": "0.00",
+        "membership_total": "1.40"
+      },
+      {
+        "week_start": "2024-01-22",
+        "ride_count": 112,
+        "average_duration_minutes": "14.32",
+        "billed_minutes": 1663,
+        "classic_overage_minutes": 20,
+        "pay_per_use": "361.45",
+        "member_residual": "1.00",
+        "allocated_membership_fee": "0.00",
+        "membership_total": "1.00"
+      },
+      {
+        "week_start": "2024-01-29",
+        "ride_count": 32,
+        "average_duration_minutes": "14.08",
+        "billed_minutes": 466,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "101.90",
+        "member_residual": "0.00",
+        "allocated_membership_fee": "0.00",
+        "membership_total": "0.00"
+      }
+    ],
+    "per_account": [
+      {
+        "account_id": "frequent-001",
+        "ride_count": 50,
+        "average_duration_minutes": "13.56",
+        "billed_minutes": 700,
+        "classic_overage_minutes": 6,
+        "pay_per_use": "155.00",
+        "member_residual": "0.30",
+        "membership_fee": "25.00",
+        "membership_total": "25.30"
+      },
+      {
+        "account_id": "frequent-002",
+        "ride_count": 50,
+        "average_duration_minutes": "16.22",
+        "billed_minutes": 837,
+        "classic_overage_minutes": 26,
+        "pay_per_use": "175.55",
+        "member_residual": "1.30",
+        "membership_fee": "25.00",
+        "membership_total": "26.30"
+      },
+      {
+        "account_id": "frequent-003",
+        "ride_count": 50,
+        "average_duration_minutes": "15.27",
+        "billed_minutes": 790,
+        "classic_overage_minutes": 0,
+        "pay_per_use": "168.50",
+        "member_residual": "0.00",
+        "membership_fee": "25.00",
+        "membership_total": "25.00"
+      },
+      {
+        "account_id": "frequent-004",
+        "ride_count": 50,
+        "average_duration_minutes": "13.62",
+        "billed_minutes": 708,
+        "classic_overage_minutes": 11,
+        "pay_per_use": "156.20",
+        "member_residual": "0.55",
+        "membership_fee": "25.00",
+        "membership_total": "25.55"
+      },
+      {
+        "account_id": "frequent-005",
+        "ride_count": 50,
+        "average_duration_minutes": "14.29",
+        "billed_minutes": 742,
+        "classic_overage_minutes": 13,
+        "pay_per_use": "161.30",
+        "member_residual": "0.65",
+        "membership_fee": "25.00",
+        "membership_total": "25.65"
+      },
+      {
+        "account_id": "frequent-006",
+        "ride_count": 50,
+        "average_duration_minutes": "12.84",
+        "billed_minutes": 671,
+        "classic_overage_minutes": 12,
+        "pay_per_use": "150.65",
+        "member_residual": "0.60",
+        "membership_fee": "25.00",
+        "membership_total": "25.60"
+      },
+      {
+        "account_id": "frequent-007",
+        "ride_count": 50,
+        "average_duration_minutes": "14.12",
+        "billed_minutes": 734,
+        "classic_overage_minutes": 7,
+        "pay_per_use": "160.10",
+        "member_residual": "0.35",
+        "membership_fee": "25.00",
+        "membership_total": "25.35"
+      },
+      {
+        "account_id": "frequent-008",
+        "ride_count": 50,
+        "average_duration_minutes": "13.82",
+        "billed_minutes": 718,
+        "classic_overage_minutes": 15,
+        "pay_per_use": "157.70",
+        "member_residual": "0.75",
+        "membership_fee": "25.00",
+        "membership_total": "25.75"
+      },
+      {
+        "account_id": "frequent-009",
+        "ride_count": 50,
+        "average_duration_minutes": "14.10",
+        "billed_minutes": 726,
+        "classic_overage_minutes": 13,
+        "pay_per_use": "158.90",
+        "member_residual": "0.65",
+        "membership_fee": "25.00",
+        "membership_total": "25.65"
+      },
+      {
+        "account_id": "frequent-010",
+        "ride_count": 50,
+        "average_duration_minutes": "14.04",
+        "billed_minutes": 725,
+        "classic_overage_minutes": 14,
+        "pay_per_use": "158.75",
+        "member_residual": "0.70",
+        "membership_fee": "25.00",
+        "membership_total": "25.70"
+      }
+    ],
+    "break_even": {
+      "rides_at_sample_mix": 8,
+      "strictly_cheaper_rides_at_sample_mix": 8,
+      "minutes_at_sample_mix": "117.62",
+      "actual_rides_per_account": {
+        "min": 50,
+        "max": 50
+      },
+      "average_saving_per_ride": "3.193600",
+      "method": "Per account: membership fee / sample-average (casual ride cost minus member residual). Ceiling gives weak break-even; ties recommend Pay Per Ride/Minute. The strict threshold is floor + 1. Minutes use sample-average billed minutes. This repeated sample-mix approximation is not a guarantee for every ordering of heterogeneous rides."
+    },
+    "assumptions": [
+      "hypothetical assigned account; not observed rider history",
+      "Each scenario account purchases its own 30-day membership at coverage_start; fees cannot be shared between accounts.",
+      "The coverage end is exclusive for trip starts; every trip must finish within coverage.",
+      "Offset-free trip timestamps are interpreted in America/New_York local time; no observed rider identity is inferred.",
+      "Pre-tax base transportation comparison: location-dependent sales taxes are excluded.",
+      "Parking, damages, lost-bike and other penalties are excluded because the trip CSV does not observe them; ebike totals include transportation only.",
+      "Current captured prices are applied counterfactually to the uploaded trip durations.",
+      "The entire membership fee is allocated to the calendar week containing coverage_start; later weeks include only residual charges.",
+      "Original member_casual describes the public source trip and is not a scenario identity or the product selected for this counterfactual comparison.",
+      "A tie recommends Pay Per Ride/Minute; comparison savings are pay-per-use minus membership total."
+    ],
+    "justification": "Pay per use costs $1602.65 for 500 rides across 10 hypothetical accounts [2]. The membership alternative totals $255.85 including ride charges for 10 separate accounts [3]. Each account pays $25 for a 30-day membership with 45 included classic minutes per ride and $0.05 per extra minute [3]. Ride minutes are rounded up separately for every ride [3]. Buy Monthly Membership is the recommendation for this assumed 30-day cohort [2][3].",
+    "run_id": "e9e5f180674c4cf29d8fb1951d612df9",
+    "user_id": 71,
+    "source_commit": "22c673db820a56ca4fb12ec1f27a175db6825a6f",
+    "source_dirty": false,
+    "configuration": {
+      "model": "qwen3:8b",
+      "base_url": "http://127.0.0.1:11434",
+      "temperature": 0,
+      "seed": 6102,
+      "context_window": 32768,
+      "output_limit": 512,
+      "request_timeout": 120,
+      "max_seconds": 600,
+      "max_model_requests": 8,
+      "max_tools": 16,
+      "max_tokens": 48000
+    },
+    "started_at": "2026-10-22T08:05:53.979189+00:00",
+    "finished_at": "2026-10-22T08:09:12.845217+00:00",
+    "input_sha256": "bc7ebd49dedd8d2b2fe528d14fc30b6cc8d8e0c8a3f0908f1f1cb36da2866c7c",
+    "model_answer": "{\"decision\":\"Buy Monthly Membership\",\"pay_per_use_total\":\"$1602.65\",\"membership_total\":\"$255.85\",\"justification\":\"Pay per use costs $1602.65 for 500 rides across 10 hypothetical accounts [2]. The membership alternative totals $255.85 including ride charges for 10 separate accounts [3]. Each account pays $25 for a 30-day membership with 45 included classic minutes per ride and $0.05 per extra minute [3]. Ride minutes are rounded up separately for every ride [3]. Buy Monthly Membership is the recommendation for this assumed 30-day cohort [2][3].\"}",
+    "verification": {
+      "passed": true,
+      "failures": [],
+      "parsed": {
+        "decision": "Buy Monthly Membership",
+        "pay_per_use_total": "$1602.65",
+        "membership_total": "$255.85",
+        "justification": "Pay per use costs $1602.65 for 500 rides across 10 hypothetical accounts [2]. The membership alternative totals $255.85 including ride charges for 10 separate accounts [3]. Each account pays $25 for a 30-day membership with 45 included classic minutes per ride and $0.05 per extra minute [3]. Ride minutes are rounded up separately for every ride [3]. Buy Monthly Membership is the recommendation for this assumed 30-day cohort [2][3]."
+      }
+    },
+    "citations": [
+      {
+        "number": 1,
+        "url": "https://capitalbikeshare.com/pricing",
+        "captured_at": "2026-10-22T08:06:20.126106+00:00",
+        "sha256": "fc7a546f6983bb9d9f956ae43ffd81e1ef9ae1a845c69e0d21fbaf1534998d52",
+        "excerpt": "When you’ve got lots to do. $10/day includes unlimited 45-min classic bike rides within a 24-hour period. Ride longer than 45 minutes and pay $0.05/minute. No unlock fees and a discounted rate of $0.15/min on ebikes.\n$10/day\nOther membership options\nGreat for one-way trips. Just download the Capital Bikeshare or Lyft app and you’re ready to roll. Just $1 to unlock plus $0.15/minute for classic bikes or $0.35/minute for ebikes.\n$1 + $0.15/ mins\nDay pass\nGreat for one-way trips. Just download the Capital Bikeshare or Lyft app and you’re ready to roll. Just $1 to unlock plus $0.15/minute for classic bikes or $0.35/minute for ebikes."
+      },
+      {
+        "number": 2,
+        "url": "https://capitalbikeshare.com/pricing/single-trip",
+        "captured_at": "2026-10-22T08:06:20.638632+00:00",
+        "sha256": "51b55b3d5a61aafde7f5d9d0edf6074540267127fb65b096a178058689cace79",
+        "excerpt": "With a pedal-assist motor to supercharge your ride, our ebikes are the easiest way to get around the metro DC area. Pricing starts at $1 to unlock plus $0.35/minute.\nEbike parking is free at Capital Bikeshare stations. You’ll be charged $3 for parking an ebike at a public bike rack in the service area.\nA $25 fee will be applied to any ebike that is not docked at a station or secured to a public bike rack with its cable lock, if it remains inactive for over 30 minutes after the ride concludes. This fee is in addition to the standard per-minute rate.\nThe Single Trip costs $1 to unlock and $0.15/min on a classic bike or $0.35/min on an ebike.\nBuy a pass through the app\nInterested in Ebikes?\nThe Single Trip costs $1 to unlock and $0.15/min on a classic bike or $0.35/min on an ebike."
+      },
+      {
+        "number": 3,
+        "url": "https://help.capitalbikeshare.com/hc/en-us/articles/360039401111-30-Day-Membership",
+        "captured_at": "2026-10-22T08:06:20.844154+00:00",
+        "sha256": "57da4ba91dab5fd4062770c227bb4dafef8bffc4b37661f713161266bb276919",
+        "excerpt": "Unlimited 45-minute rides on classic bikes for 30 days from purchase. Members pay $0.15 per minute for ebikes and avoid unlock fees.\n24/7 access to thousands of bikes in Washington, DC; Arlington, VA; Alexandria, VA; Montgomery County, MD; Prince George's County, MD; Fairfax County, VA; City of Fairfax; and the City of Falls Church, VA.\nIf you need more time than what’s covered, pay $0.05 per minute. All per minute ride prices are rounded up to the nearest minute.\nThe 30-Day Membership offers a flexible way to ride with Capital Bikeshare when you need it.\n$25 / 30-Day Membership includes:\nUnlimited 45-minute rides on classic bikes for 30 days from purchase. Members pay $0.15 per minute for ebikes and avoid unlock fees.\n$25 / 30-Day Membership includes:\nUnlimited 45-minute rides on classic bikes for 30 days from purchase. Members pay $0.15 per minute for ebikes and avoid unlock fees.\n24/7 access to thousands of bikes in Washington, DC; Arlington, VA; Alexandria, VA; Montgomery County, MD; Prince George's County, MD; Fairfax County, VA; City of Fairfax; and the City of Falls Church, VA."
+      }
+    ],
+    "error": null,
+    "metrics": {
+      "steps": 11,
+      "model_requests": 5,
+      "tool_calls": 6,
+      "tool_proposals": 6,
+      "input_tokens": 14364,
+      "output_tokens": 605,
+      "total_tokens": 14969,
+      "budget": {
+        "max_tools": 16,
+        "max_tokens": 48000,
+        "tools": 6,
+        "charged_tokens": 14969,
+        "reported_input_tokens": 14364,
+        "reported_output_tokens": 605,
+        "unknown_usage_calls": 0,
+        "total_tokens": 14969,
+        "overrun": false
+      },
+      "latency_ms": 198865.38258288056,
+      "stop_reason": "success"
+    }
+  },
+  "finished_at": "2026-10-22T08:09:14.774Z"
+}

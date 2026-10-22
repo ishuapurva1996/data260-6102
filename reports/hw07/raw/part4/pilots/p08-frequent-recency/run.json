@@ -1,0 +1,20 @@
+{
+  "run_id": "5d75b6cd32f84941bb41cd34f8ee56ab",
+  "user_id": 1,
+  "pricing_url": "https://capitalbikeshare.com/pricing",
+  "configuration": {
+    "model": "qwen3:8b",
+    "base_url": "http://127.0.0.1:11434",
+    "temperature": 0.0,
+    "seed": 6102,
+    "context_window": 32768,
+    "output_limit": 512,
+    "request_timeout": 120.0,
+    "max_seconds": 600.0,
+    "max_model_requests": 8,
+    "max_tools": 16,
+    "max_tokens": 48000
+  },
+  "evidence_kind": "adaptive unscored pilot; excluded from final acceptance",
+  "source_dirty": true
+}
