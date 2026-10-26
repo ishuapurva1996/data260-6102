@@ -1,0 +1,56 @@
+{
+  "figure": 14,
+  "kind": "fresh user-captured native Terminal screenshot with genuine local-model discovery and deterministic real-process safety-gate checks",
+  "screenshot": "screenshots/fresh/figure-14-files-gate.png",
+  "sha256": "57da652d3b83c113baa83d121aa81ec65b8a049503f21a92273af6154cb59cd3",
+  "raw_files": [
+    {
+      "path": "raw/fresh/figure-14-files-gate/freeze.json",
+      "sha256": "621943b7cdb92fc34ac1fc062d81d6c5c7822d168bbf6e50bcf698e39dbd68b3"
+    },
+    {
+      "path": "raw/fresh/figure-14-files-gate/console.txt",
+      "sha256": "a88e859bce1bd40d1c9f8dd0265e53f02f075c0d5b60b837b1f0a95b5e6ed26d"
+    },
+    {
+      "path": "raw/fresh/figure-14-files-gate/supervisor.json",
+      "sha256": "afb352d5d3e5d6dfc57342db6b604d8b7be55f92bbdc4e8f8d0983d497e5d3a2"
+    },
+    {
+      "path": "raw/fresh/figure-14-files-gate/integration.json",
+      "sha256": "0890e0cc147c7b507096600b3df47bcdaf5737ec670e58dee751dccfaa664016"
+    },
+    {
+      "path": "raw/fresh/figure-14-files-gate/model-trace.jsonl",
+      "sha256": "d56fd7a3155d126a07b95eede2309132ebc0779edec1940fbfc1ed5142d7a03e"
+    },
+    {
+      "path": "raw/fresh/figure-14-files-gate/events.jsonl",
+      "sha256": "512bd192998b36ad50987f3c1d023ac81938319d0244ef3eaf4be37627b10487"
+    },
+    {
+      "path": "raw/fresh/figure-14-files-gate/file-exercises.json",
+      "sha256": "aa904308017d2e719e2cd8562fc55378a49311a18b71087b78b87a6f859ee43d"
+    },
+    {
+      "path": "raw/fresh/figure-14-files-gate/safety-gate.json",
+      "sha256": "1c0e963fae86254f48d0a2c08a0b8f12614345f45c0d4261915db48fcce024a4"
+    },
+    {
+      "path": "raw/fresh/figure-14-files-gate/summary.json",
+      "sha256": "3f310f42edb7df2803eb0b48e925b60c2773a85cabb7901c3dbf3548f099cc25"
+    }
+  ],
+  "source_commit": "15b305ff341aff83fb0107f9f4c12245376fe785",
+  "run_timestamp_utc": "2026-10-24T08:19:58.246317+00:00",
+  "actual_discovery_tool_calls": 3,
+  "model_verification_passed": true,
+  "allowed": 5,
+  "blocked": 5,
+  "false_allows": 0,
+  "blocked_commands_executed": 0,
+  "matrix_matches": 10,
+  "stop_reason": "success",
+  "scored_study": false,
+  "prior_failed_attempt": "raw/fresh/figure-14-files-gate/failed-20261024T081612/manifest.json"
+}

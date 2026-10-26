@@ -1,0 +1,43 @@
+{
+  "figure": 14,
+  "kind": "failed fresh user-captured native Terminal screenshot with genuine local-model execution",
+  "outcome": "Model discovery passed; gate demonstration stopped during its fifth safe execution; helper then raised FileNotFoundError for the incomplete gate matrix. Not accepted combined-run evidence.",
+  "screenshot": "screenshots/fresh/figure-14-failed-files-gate.png",
+  "sha256": "1a2fa08d1106c30510ca50de90d6a1d51ce923c78d514619d0504a84e9f7d94f",
+  "raw_files": [
+    {
+      "path": "raw/fresh/figure-14-files-gate/failed-20261024T081612/freeze.json",
+      "sha256": "389ddb6afeef94b07af0487082aed848bef58b4c2770f2ef4122e8ca2c1fb96d"
+    },
+    {
+      "path": "raw/fresh/figure-14-files-gate/failed-20261024T081612/console.txt",
+      "sha256": "ab471adfcacd39f8513e58712a8f28aff577c1ec6d1aa2a99b950d7877efca6d"
+    },
+    {
+      "path": "raw/fresh/figure-14-files-gate/failed-20261024T081612/supervisor.json",
+      "sha256": "c5d44e05e885f2c679fb3fbcb0fbe5c0919f31d2c2397fe2f40698261f74f388"
+    },
+    {
+      "path": "raw/fresh/figure-14-files-gate/failed-20261024T081612/integration.json",
+      "sha256": "a4fc78a4f7cff78b5c7721c030f9be00ceacc2ce8f6bf9af2c34c1d391d3e854"
+    },
+    {
+      "path": "raw/fresh/figure-14-files-gate/failed-20261024T081612/model-trace.jsonl",
+      "sha256": "a8eec34693d2cb95010ab627b69dbdb92e2b24d12916f69a99536f1bd9234f6c"
+    },
+    {
+      "path": "raw/fresh/figure-14-files-gate/failed-20261024T081612/events.jsonl",
+      "sha256": "142d11542c06a731cdc13fa7ce6ea2717d9e3251ef71e597086aeebc19598bce"
+    },
+    {
+      "path": "raw/fresh/figure-14-files-gate/failed-20261024T081612/file-exercises.json",
+      "sha256": "e6df931d23f128f8b18bf3626a65c38184f6e5bf4809ea9fa7942cdc9bef78ef"
+    }
+  ],
+  "source_commit": "15b305ff341aff83fb0107f9f4c12245376fe785",
+  "run_timestamp_utc": "2026-10-24T08:16:12.798657+00:00",
+  "model_verification_passed": true,
+  "gate_matrix_complete": false,
+  "recorded_gate_cases": 4,
+  "scored_study": false
+}

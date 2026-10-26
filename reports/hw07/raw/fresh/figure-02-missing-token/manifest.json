@@ -1,0 +1,13 @@
+{
+  "figure": 2,
+  "kind": "fresh user-captured native Terminal screenshot",
+  "screenshot": "screenshots/fresh/figure-02-missing-token.png",
+  "sha256": "61d70d364a04f8239c3ad2aea42c6cb38386ac8059edd2df6f2f35c9c5411712",
+  "raw_log": "raw/fresh/figure-02-missing-token/http-checks.json",
+  "raw_log_sha256": "976f9e21bcaa3fa5f759d3bb8d196369169e2d197fa106b26cca0c0dc5df9b5d",
+  "observed_http_statuses": [
+    401
+  ],
+  "run_timestamp_utc": "2026-10-24T07:37:28",
+  "scored_study": false
+}

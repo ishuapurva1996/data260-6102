@@ -1,0 +1,64 @@
+{
+  "kind": "fresh live HTTPS; not scored model study",
+  "checks": [
+    {
+      "at": "2026-10-24T07:39:30.206403+00:00",
+      "label": "reader login",
+      "method": "POST",
+      "path": "/auth/login",
+      "expected": 200,
+      "actual": 200,
+      "response": {
+        "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3MSIsImlhdCI6MTc5MjgyNzU3MCwiZXhwIjoxNzkyODI4NDcwLCJpc3MiOiJzNjEwMiIsImF1ZCI6InM2MTAyLXJlbnRhbHMifQ.[signature redacted]",
+        "token_type": "bearer",
+        "expires_in": 900
+      }
+    },
+    {
+      "at": "2026-10-24T07:39:30.212938+00:00",
+      "label": "reader role",
+      "method": "POST",
+      "path": "/api/rentals",
+      "expected": 403,
+      "actual": 403,
+      "response": {
+        "detail": "Your role does not permit this action."
+      }
+    },
+    {
+      "at": "2026-10-24T07:39:30.248848+00:00",
+      "label": "writer login",
+      "method": "POST",
+      "path": "/auth/login",
+      "expected": 200,
+      "actual": 200,
+      "response": {
+        "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3MiIsImlhdCI6MTc5MjgyNzU3MCwiZXhwIjoxNzkyODI4NDcwLCJpc3MiOiJzNjEwMiIsImF1ZCI6InM2MTAyLXJlbnRhbHMifQ.[signature redacted]",
+        "token_type": "bearer",
+        "expires_in": 900
+      }
+    },
+    {
+      "at": "2026-10-24T07:39:30.276961+00:00",
+      "label": "writer role",
+      "method": "POST",
+      "path": "/api/rentals",
+      "expected": 201,
+      "actual": 201,
+      "response": {
+        "listingTitle": "HW7 fresh screenshot ff44a323",
+        "propertyAddress": "10 Course Test Lane, San Jose, CA",
+        "listingCode": "S6102-R-1154",
+        "availableUnits": 1,
+        "managerId": null,
+        "submitterEmail": "hw7-fixture@example.com",
+        "description": "Owned fresh screenshot fixture.",
+        "propertyType": "apartment",
+        "termsAccepted": true,
+        "id": 1154,
+        "createdAt": "2026-10-24T07:39:30.252960Z",
+        "updatedAt": "2026-10-24T07:39:30.252960Z"
+      }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "figure": 4,
+  "kind": "fresh user-captured native Terminal screenshot",
+  "screenshot": "screenshots/fresh/figure-04-create.png",
+  "sha256": "371d5dd3d81d5d41605fa325f842b3018ccebe1c556f184fdc6047706198fab2",
+  "raw_log": "raw/fresh/figure-04-create/http-checks.json",
+  "raw_log_sha256": "49948db31e76ffdefb02d7d3cd33d599c5761d7add780c33749dcb2b3a3d120b",
+  "observed_http_statuses": [
+    403,
+    201
+  ],
+  "created_rental_id": 1154,
+  "run_timestamp_utc": "2026-10-24T07:39:30",
+  "scored_study": false
+}

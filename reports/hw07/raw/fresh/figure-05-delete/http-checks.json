@@ -1,0 +1,86 @@
+{
+  "kind": "fresh live HTTPS; not scored model study",
+  "checks": [
+    {
+      "at": "2026-10-24T07:40:33.836437+00:00",
+      "label": "reader login",
+      "method": "POST",
+      "path": "/auth/login",
+      "expected": 200,
+      "actual": 200,
+      "response": {
+        "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3MSIsImlhdCI6MTc5MjgyNzYzMywiZXhwIjoxNzkyODI4NTMzLCJpc3MiOiJzNjEwMiIsImF1ZCI6InM2MTAyLXJlbnRhbHMifQ.[signature redacted]",
+        "token_type": "bearer",
+        "expires_in": 900
+      }
+    },
+    {
+      "at": "2026-10-24T07:40:33.841323+00:00",
+      "label": "verify owned capture fixture",
+      "method": "GET",
+      "path": "/api/rentals/1154",
+      "expected": 200,
+      "actual": 200,
+      "response": {
+        "listingTitle": "HW7 fresh screenshot ff44a323",
+        "propertyAddress": "10 Course Test Lane, San Jose, CA",
+        "listingCode": "S6102-R-1154",
+        "availableUnits": 1,
+        "managerId": null,
+        "submitterEmail": "hw7-fixture@example.com",
+        "description": "Owned fresh screenshot fixture.",
+        "propertyType": "apartment",
+        "termsAccepted": true,
+        "id": 1154,
+        "createdAt": "2026-10-24T07:39:30.252960Z",
+        "updatedAt": "2026-10-24T07:39:30.252960Z"
+      }
+    },
+    {
+      "at": "2026-10-24T07:40:33.882770+00:00",
+      "label": "writer login",
+      "method": "POST",
+      "path": "/auth/login",
+      "expected": 200,
+      "actual": 200,
+      "response": {
+        "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3MiIsImlhdCI6MTc5MjgyNzYzMywiZXhwIjoxNzkyODI4NTMzLCJpc3MiOiJzNjEwMiIsImF1ZCI6InM2MTAyLXJlbnRhbHMifQ.[signature redacted]",
+        "token_type": "bearer",
+        "expires_in": 900
+      }
+    },
+    {
+      "at": "2026-10-24T07:40:33.885607+00:00",
+      "label": "writer role",
+      "method": "DELETE",
+      "path": "/api/rentals/1154",
+      "expected": 403,
+      "actual": 403,
+      "response": {
+        "detail": "Your role does not permit this action."
+      }
+    },
+    {
+      "at": "2026-10-24T07:40:33.927144+00:00",
+      "label": "moderator login",
+      "method": "POST",
+      "path": "/auth/login",
+      "expected": 200,
+      "actual": 200,
+      "response": {
+        "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3MyIsImlhdCI6MTc5MjgyNzYzMywiZXhwIjoxNzkyODI4NTMzLCJpc3MiOiJzNjEwMiIsImF1ZCI6InM2MTAyLXJlbnRhbHMifQ.[signature redacted]",
+        "token_type": "bearer",
+        "expires_in": 900
+      }
+    },
+    {
+      "at": "2026-10-24T07:40:33.932946+00:00",
+      "label": "moderator role",
+      "method": "DELETE",
+      "path": "/api/rentals/1154",
+      "expected": 204,
+      "actual": 204,
+      "response": null
+    }
+  ]
+}

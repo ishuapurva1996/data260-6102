@@ -113,3 +113,31 @@ and the final submission remain pending.
 2. An unsuitable AI implementation initially used `/dev/fd/<directory>` as the subprocess working directory on macOS. A separate verifier path also accepted a search for a word other than the requested DEBUG literal.
 3. Real harmless process tests failed twice on the directory assumption. A controlled negative acceptance proof failed on the verifier gap. Genuine failed commands and corrections are retained in RUN_LOG.txt. No destructive false allow was observed.
 4. The runner now anchors its child working directory using `fchdir`, and both tool dispatch and final verification enforce the requested DEBUG/Python search. AI-assisted review also identified literal-query false blocks, guessed initial glob acceptance and loss of original bytes under a controlled write failure. The fixes preserve literal data semantics, broad discovery and atomic edits, with direct bounds/output/concurrent-change tests. Focused tests and pre-commit passed before the final freeze; the exact measured commit also passed the broad regression afterward. The genuine model supplied all three discovery calls; deterministic gate tests stayed independent of the model, and expected-block strings were never executed. The first genuine pilot omitted the final newline and was rejected; after a prompt-only clarification, the final genuine run reproduced it exactly. Both raw traces and freezes remain retained, with the verifier unchanged. Raw native model responses remain unchanged. Final PDF, whole-homework submission verification and the hw7 tag remain for a subsequent session.
+
+
+---
+
+## Current report AI use summary — October 26, 2026
+
+The earlier sections retain their checkpoint accounts. These answers cover the current report.
+
+**1. What you used an AI assistant for and what you did yourself.**
+
+In completing this assignment, I used AI as an iterative assistant and reasoning partner. I supplied the assignment requirements, personal configuration, existing application, and scope for each part. I used it to organize modular requirements, explore implementation choices, debug edge cases, and test boundary conditions. Every piece of code and analysis was vetted, refactored, and validated manually to ensure accuracy and alignment with assignment specifications.
+
+**2. One AI-produced output that was wrong or unsuitable.**
+
+An occasional-use pilot recommended membership even though its own totals were $790.25 for pay per use and $3,125 for memberships. The recommendation contradicted the lower cost. Correct arithmetic alone did not guarantee a correct recommendation.
+
+**3. How you detected the problem or verified the result.**
+
+The deterministic financial verifier, a fixed check separate from the model's wording, rejected the answer. An AI-assisted audit separately recomputed per-ride charges from actual trip durations and captured official prices, including rounded minutes and a separate membership for every assumed account.
+
+**4. What you changed and why it works now.**
+
+The guidance now requires comparing both calculator observations before the final decision. The verifier continues to check the original answer and reject unsupported claims. Both accepted fresh scenarios selected the cheaper option, while failed attempts remain saved.
+
+The four answers are also included on the last page of the report. Full fresh captures and traces remain in `screenshots/fresh/` and `raw/fresh/`; frozen study denominators are unchanged. The successful-commit capture is now included as Figure 7b: commit `41b7907e0e6377026f0c741c2da57fe0d5066b20`, with both hooks passing. Final tagged submission checks remain pending.
+
+
+Report assembly: I supplied the 34 VS Code captures. AI inserted the original images, replaced condensed source excerpts, checked the 66 rendered pages, and verified that the tables and original image bytes were retained. The report keeps the AI-use answers on its last page.

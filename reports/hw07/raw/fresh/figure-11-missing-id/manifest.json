@@ -1,0 +1,26 @@
+{
+  "figure": 11,
+  "kind": "fresh user-captured native Terminal screenshot with genuine local-model demonstration",
+  "screenshot": "screenshots/fresh/figure-11-missing-id.png",
+  "sha256": "e075b11619c3f344e51daaccdde2d492384fb4080d2b7793e1cb52e9ab6a9b44",
+  "raw_files": [
+    {
+      "path": "raw/fresh/figure-11-missing-id/result.json",
+      "sha256": "51e2a8c16bfd21b0e70ca8aa9dac162e4d1cfd639080231e1cf4445c0294c339"
+    },
+    {
+      "path": "raw/fresh/figure-11-missing-id/trace.jsonl",
+      "sha256": "6542c3c7fd7c20c1566168e1826e60763a8c2e171c4b7a4586c73fb420e13ce5"
+    }
+  ],
+  "run_id": "02ed11dbed184b0eb4e1d87f95a9ab70",
+  "run_timestamp_utc": "2026-10-24T07:50:24.695430+00:00",
+  "model": "qwen2.5:7b",
+  "source_commit": "15b305ff341aff83fb0107f9f4c12245376fe785",
+  "actual_tool_calls": 1,
+  "verification_passed": true,
+  "stop_reason": "completed",
+  "missing_id": 2147483000,
+  "found": false,
+  "scored_study": false
+}

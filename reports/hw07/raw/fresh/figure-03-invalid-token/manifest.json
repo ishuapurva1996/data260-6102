@@ -1,0 +1,13 @@
+{
+  "figure": 3,
+  "kind": "fresh user-captured native Terminal screenshot",
+  "screenshot": "screenshots/fresh/figure-03-invalid-token.png",
+  "sha256": "b7a04a071e3f9fc3337f6fda91e0816147c0ae0f92cb1ab3991b17614dc95912",
+  "raw_log": "raw/fresh/figure-03-invalid-token/http-checks.json",
+  "raw_log_sha256": "cf333556c2b4710718f35a30a23d36ee154db23dc635fb8f24c753aa83da1740",
+  "observed_http_statuses": [
+    401
+  ],
+  "run_timestamp_utc": "2026-10-24T07:38:32",
+  "scored_study": false
+}

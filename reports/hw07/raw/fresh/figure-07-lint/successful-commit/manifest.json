@@ -1,0 +1,38 @@
+{
+  "figure": "7b",
+  "kind": "fresh user-captured native Terminal screenshot; actual local Git commit and installed hooks",
+  "screenshot": "screenshots/fresh/figure-07b-lint-success.png",
+  "sha256": "0c05f22b49599b7ec77085c9e9e5497f4ec6364faf6ec52fdcfde2d68059f0a2",
+  "commit": "41b7907e0e6377026f0c741c2da57fe0d5066b20",
+  "committed_files": [
+    "src/course_files/gate.py"
+  ],
+  "commit_created": true,
+  "ruff_check": "passed",
+  "ruff_format": "passed",
+  "hooks_during_commit": [
+    "ruff-check: passed",
+    "ruff-format: passed"
+  ],
+  "captured_run_timestamp_utc": "2026-10-26T18:06:06.341268+00:00",
+  "raw_files": [
+    {
+      "path": "raw/fresh/figure-07-lint/successful-commit/console.txt",
+      "sha256": "a8a3d1e0d055ee128c9a18a44d7957b19864152c8ae2af75db557d558ee64522"
+    },
+    {
+      "path": "raw/fresh/figure-07-lint/successful-commit/result.json",
+      "sha256": "5328c14f7aee7ab68710de2cbf25ea0d4b7456e8920e9e01f2380149a4aff5b8"
+    },
+    {
+      "path": "raw/fresh/figure-07-lint/successful-commit/staged.patch",
+      "sha256": "beabbde4f825e9885508544bc0ee4be39aa5b95ebded2b3ca29304c978fbedbe"
+    },
+    {
+      "path": "raw/fresh/figure-07-lint/successful-commit/commit.txt",
+      "sha256": "f39cb6fbc9f58975bf55d014fd8d6a584513edd5c41fadd0e8c463bffa05a6be"
+    }
+  ],
+  "report_or_evidence_committed": false,
+  "scored_study": false
+}

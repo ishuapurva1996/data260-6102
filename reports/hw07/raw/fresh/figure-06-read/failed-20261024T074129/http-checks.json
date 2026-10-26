@@ -1,0 +1,29 @@
+{
+  "kind": "fresh live HTTPS; not scored model study",
+  "checks": [
+    {
+      "at": "2026-10-24T07:41:29.819220+00:00",
+      "label": "reader login",
+      "method": "POST",
+      "path": "/auth/login",
+      "expected": 200,
+      "actual": 200,
+      "response": {
+        "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3MSIsImlhdCI6MTc5MjgyNzY4OSwiZXhwIjoxNzkyODI4NTg5LCJpc3MiOiJzNjEwMiIsImF1ZCI6InM2MTAyLXJlbnRhbHMifQ.[signature redacted]",
+        "token_type": "bearer",
+        "expires_in": 900
+      }
+    },
+    {
+      "at": "2026-10-24T07:41:29.825671+00:00",
+      "label": "authenticated reader",
+      "method": "GET",
+      "path": "/api/rentals/308",
+      "expected": 200,
+      "actual": 404,
+      "response": {
+        "detail": "Rental listing ID 308 was not found."
+      }
+    }
+  ]
+}

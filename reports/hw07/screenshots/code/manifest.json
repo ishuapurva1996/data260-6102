@@ -1,0 +1,625 @@
+{
+  "kind": "User-supplied original VS Code code captures",
+  "source_commit": "41b7907e0e6377026f0c741c2da57fe0d5066b20",
+  "captures": [
+    {
+      "number": 1,
+      "screenshot_name": "code-01-migration.png",
+      "sha256": "e727d68d6427931461e60a3a87d5b3a1bf1986aaccb2620714fe611af1193fd5",
+      "source": "code/web_application/migrations/005_users_jwt.sql",
+      "source_sha256": "a76f68900dfcb892e7995ac48eb458e964038666b5bc115caa6065da5a7cd13d",
+      "source_lines": [
+        3,
+        9
+      ],
+      "capture_timestamp": null,
+      "received_at_utc": "2026-10-26T19:09:05.105179+00:00",
+      "cropping_or_image_editing_applied": false,
+      "status": "accepted",
+      "review": "Visible source lines match the checked repository file.",
+      "path": "reports/hw07/screenshots/code/code-01-migration.png",
+      "report_page": 2
+    },
+    {
+      "number": 2,
+      "screenshot_name": "code-02-login.png",
+      "sha256": "f4db56912e1162bc3f79ad4aba299d41820007076d7b2d32e63b8ce0485f36fb",
+      "source": "code/web_application/routers/auth.py",
+      "source_sha256": "d2e4f1a64593ce65ef6bb5298c49fc77bfd95057f9f22624d88b7df994504deb",
+      "source_lines": [
+        87,
+        100
+      ],
+      "capture_timestamp": null,
+      "received_at_utc": "2026-10-26T19:09:05.106166+00:00",
+      "cropping_or_image_editing_applied": false,
+      "status": "accepted",
+      "review": "Visible source lines match the checked repository file.",
+      "path": "reports/hw07/screenshots/code/code-02-login.png",
+      "report_page": 2
+    },
+    {
+      "number": 3,
+      "screenshot_name": "code-03-bearer-roles.png",
+      "sha256": "787bcb38c7d6014b9a03423f6d85657927a4541d295f574c23784c23a4d9fe5d",
+      "source": "code/web_application/routers/auth.py",
+      "source_sha256": "d2e4f1a64593ce65ef6bb5298c49fc77bfd95057f9f22624d88b7df994504deb",
+      "source_lines": [
+        57,
+        84
+      ],
+      "capture_timestamp": null,
+      "received_at_utc": "2026-10-26T19:09:05.106958+00:00",
+      "cropping_or_image_editing_applied": false,
+      "status": "accepted",
+      "review": "Visible source lines match the checked repository file.",
+      "path": "reports/hw07/screenshots/code/code-03-bearer-roles.png",
+      "report_page": 4
+    },
+    {
+      "number": 4,
+      "screenshot_name": "code-04-precommit.png",
+      "sha256": "f68a0bab6804b1fcb9395afa4dd0a01ea9d0bef5e103d59827f7f920d411ebf7",
+      "source": ".pre-commit-config.yaml",
+      "source_sha256": "315275b22dd26ac9116abb039d20b0344937fd6783c3eead31a1f87c9456343d",
+      "source_lines": [
+        1,
+        10
+      ],
+      "capture_timestamp": null,
+      "received_at_utc": "2026-10-26T19:09:05.107847+00:00",
+      "cropping_or_image_editing_applied": false,
+      "status": "accepted_as_provided",
+      "review": "User explicitly accepted minor right-edge clipping. Hook names and version are visible; full files patterns are not entirely visible. Original image is unchanged.",
+      "accepted_at_utc": "2026-10-26T19:10:28.318461+00:00",
+      "path": "reports/hw07/screenshots/code/code-04-precommit.png",
+      "report_page": 10
+    },
+    {
+      "number": 5,
+      "screenshot_name": "code-05-model-loop.png",
+      "path": "reports/hw07/screenshots/code/code-05-model-loop.png",
+      "sha256": "73cc366a9414b836f71864db27d1db899cbe6161bcbd0f5c530a4c7e1d8fa10f",
+      "source": "src/tool_agent/loop.py",
+      "source_sha256": "3b156d5dbc32b373a0808b92b9b1d33375c41bba7059c35861e52730fb36d080",
+      "source_lines": [
+        404,
+        431
+      ],
+      "capture_timestamp": null,
+      "received_at_utc": "2026-10-26T19:12:58.396549+00:00",
+      "cropping_or_image_editing_applied": false,
+      "status": "accepted",
+      "review": "The requested line range is readable and matches the checked source. Original user-supplied frame preserved.",
+      "report_page": 13
+    },
+    {
+      "number": 6,
+      "screenshot_name": "code-06-tool-dispatch.png",
+      "path": "reports/hw07/screenshots/code/code-06-tool-dispatch.png",
+      "sha256": "999e6bed1cb99ea7e007b0ee8f544b0b41ce730dbd539a832fec8967149c7faf",
+      "source": "src/tool_agent/loop.py",
+      "source_sha256": "3b156d5dbc32b373a0808b92b9b1d33375c41bba7059c35861e52730fb36d080",
+      "source_lines": [
+        510,
+        538
+      ],
+      "capture_timestamp": null,
+      "received_at_utc": "2026-10-26T19:12:58.398336+00:00",
+      "cropping_or_image_editing_applied": false,
+      "status": "accepted",
+      "review": "The requested line range is readable and matches the checked source. Original user-supplied frame preserved.",
+      "report_page": 14
+    },
+    {
+      "number": 7,
+      "screenshot_name": "code-07-tool-observation.png",
+      "path": "reports/hw07/screenshots/code/code-07-tool-observation.png",
+      "sha256": "5af5b28fa6649298f08cbf6b479054147cb073f94171905c718ef2875cb75295",
+      "source": "src/tool_agent/loop.py",
+      "source_sha256": "3b156d5dbc32b373a0808b92b9b1d33375c41bba7059c35861e52730fb36d080",
+      "source_lines": [
+        539,
+        557
+      ],
+      "capture_timestamp": null,
+      "received_at_utc": "2026-10-26T19:12:58.399057+00:00",
+      "cropping_or_image_editing_applied": false,
+      "status": "accepted",
+      "review": "The requested line range is readable and matches the checked source. Original user-supplied frame preserved.",
+      "report_page": 15
+    },
+    {
+      "number": 8,
+      "screenshot_name": "code-08-repair.png",
+      "path": "reports/hw07/screenshots/code/code-08-repair.png",
+      "sha256": "357051611fa4b9ba13d87e904db1719aff80295e0b9015885ad04aa51defb257",
+      "source": "src/tool_agent/loop.py",
+      "source_sha256": "3b156d5dbc32b373a0808b92b9b1d33375c41bba7059c35861e52730fb36d080",
+      "source_lines": [
+        558,
+        567
+      ],
+      "capture_timestamp": null,
+      "received_at_utc": "2026-10-26T19:12:58.399820+00:00",
+      "cropping_or_image_editing_applied": false,
+      "status": "accepted",
+      "review": "The requested line range is readable and matches the checked source. Original user-supplied frame preserved.",
+      "report_page": 20
+    },
+    {
+      "number": 9,
+      "screenshot_name": "code-09-retry-loop.png",
+      "path": "reports/hw07/screenshots/code/code-09-retry-loop.png",
+      "sha256": "86ca9a4342556c11a6c3f1d2ccc45c1b3ca303b48b7eca65ef48d8856cafbbb8",
+      "source": "src/tool_agent/reflexion.py",
+      "source_sha256": "27478da5a17025c23d024d17ac33fb9cb09ed8b4ff09fb30f9f7afea95dbf13b",
+      "source_lines": [
+        106,
+        140
+      ],
+      "capture_timestamp": null,
+      "received_at_utc": "2026-10-26T19:15:59.414969+00:00",
+      "cropping_or_image_editing_applied": false,
+      "status": "accepted",
+      "review": "Requested source range is readable and matches the checked repository source. The original user-supplied frame is preserved.",
+      "report_page": 22
+    },
+    {
+      "number": 10,
+      "screenshot_name": "code-10-reflection.png",
+      "path": "reports/hw07/screenshots/code/code-10-reflection.png",
+      "sha256": "1ec3c0e50255c0ef88f7725992a197a3dc349e9fbfbc5a0c13d628e3d28a3e0e",
+      "source": "src/tool_agent/reflexion.py",
+      "source_sha256": "27478da5a17025c23d024d17ac33fb9cb09ed8b4ff09fb30f9f7afea95dbf13b",
+      "source_lines": [
+        141,
+        171
+      ],
+      "capture_timestamp": null,
+      "received_at_utc": "2026-10-26T19:15:59.415954+00:00",
+      "cropping_or_image_editing_applied": false,
+      "status": "accepted",
+      "review": "Requested source range is readable and matches the checked repository source. The original user-supplied frame is preserved.",
+      "report_page": 23
+    },
+    {
+      "number": 11,
+      "screenshot_name": "code-11-claim-verifier.png",
+      "path": "reports/hw07/screenshots/code/code-11-claim-verifier.png",
+      "sha256": "631d01a7e69ea0430dde169acfc0f1e80329013b05c02d46e7f333145d3eeb99",
+      "source": "src/tool_agent/verification.py",
+      "source_sha256": "d2d78dc606c8b2c94680fca3846c7b5c02c5eab413c3d360b56360e85387c4f8",
+      "source_lines": [
+        215,
+        220
+      ],
+      "capture_timestamp": null,
+      "received_at_utc": "2026-10-26T19:15:59.416507+00:00",
+      "cropping_or_image_editing_applied": false,
+      "status": "accepted",
+      "review": "Requested source range is readable and matches the checked repository source. The original user-supplied frame is preserved.",
+      "report_page": 24
+    },
+    {
+      "number": 12,
+      "screenshot_name": "code-12-sql-policy-schemas.png",
+      "path": "reports/hw07/screenshots/code/code-12-sql-policy-schemas.png",
+      "sha256": "e761862b1caac1d770f414fae3e7288d707c45d6a2e2058573bdac79305ee0c0",
+      "source": "src/bikeshare/tools.py",
+      "source_sha256": "af44a09172cd146eb0a92cefeda33c947c55667371c75dc1345eed794591fd6d",
+      "source_lines": [
+        55,
+        87
+      ],
+      "capture_timestamp": null,
+      "received_at_utc": "2026-10-26T19:15:59.417862+00:00",
+      "cropping_or_image_editing_applied": false,
+      "status": "accepted",
+      "review": "Requested source range is readable and matches the checked repository source. The original user-supplied frame is preserved.",
+      "report_page": 27
+    },
+    {
+      "number": 13,
+      "screenshot_name": "code-13-calculator-schema.png",
+      "path": "reports/hw07/screenshots/code/code-13-calculator-schema.png",
+      "sha256": "88450b25b5e6e2b29ed1c57bd26619bd90180a71215819d2a6428b45a437e2a6",
+      "source": "src/bikeshare/tools.py",
+      "source_sha256": "af44a09172cd146eb0a92cefeda33c947c55667371c75dc1345eed794591fd6d",
+      "source_lines": [
+        88,
+        109
+      ],
+      "capture_timestamp": null,
+      "received_at_utc": "2026-10-26T19:18:32.371981+00:00",
+      "cropping_or_image_editing_applied": false,
+      "status": "accepted",
+      "review": "Requested source range is readable and matches the checked repository source. Original user-supplied frame preserved.",
+      "report_page": 36
+    },
+    {
+      "number": 14,
+      "screenshot_name": "code-14-tool-envelope.png",
+      "path": "reports/hw07/screenshots/code/code-14-tool-envelope.png",
+      "sha256": "baee4fe9d7ce75a04f944e09c3f00793f0bb4b629dd0a7d035f4c42136cab97f",
+      "source": "src/bikeshare/tools.py",
+      "source_sha256": "af44a09172cd146eb0a92cefeda33c947c55667371c75dc1345eed794591fd6d",
+      "source_lines": [
+        112,
+        127
+      ],
+      "capture_timestamp": null,
+      "received_at_utc": "2026-10-26T19:18:32.372664+00:00",
+      "cropping_or_image_editing_applied": false,
+      "status": "accepted",
+      "review": "Requested source range is readable and matches the checked repository source. Original user-supplied frame preserved.",
+      "report_page": 28
+    },
+    {
+      "number": 15,
+      "screenshot_name": "code-15-sql-validation.png",
+      "path": "reports/hw07/screenshots/code/code-15-sql-validation.png",
+      "sha256": "d4bbb320cd5b2da94e20df57464bfa1249b2383d209feac5411a80d17767158c",
+      "source": "src/bikeshare/tools.py",
+      "source_sha256": "af44a09172cd146eb0a92cefeda33c947c55667371c75dc1345eed794591fd6d",
+      "source_lines": [
+        130,
+        154
+      ],
+      "capture_timestamp": null,
+      "received_at_utc": "2026-10-26T19:18:32.373511+00:00",
+      "cropping_or_image_editing_applied": false,
+      "status": "accepted",
+      "review": "Requested source range is readable and matches the checked repository source. Original user-supplied frame preserved.",
+      "report_page": 29
+    },
+    {
+      "number": 16,
+      "screenshot_name": "code-16-sql-authorizer.png",
+      "path": "reports/hw07/screenshots/code/code-16-sql-authorizer.png",
+      "sha256": "0f6ae7102af0f288686e67eb3276554cb206507b1c9ba7283448e4acf887812f",
+      "source": "src/bikeshare/tools.py",
+      "source_sha256": "af44a09172cd146eb0a92cefeda33c947c55667371c75dc1345eed794591fd6d",
+      "source_lines": [
+        161,
+        181
+      ],
+      "capture_timestamp": null,
+      "received_at_utc": "2026-10-26T19:18:32.374292+00:00",
+      "cropping_or_image_editing_applied": false,
+      "status": "accepted",
+      "review": "Requested source range is readable and matches the checked repository source. Original user-supplied frame preserved.",
+      "report_page": 30
+    },
+    {
+      "number": 17,
+      "screenshot_name": "code-17-sql-execution.png",
+      "path": "reports/hw07/screenshots/code/code-17-sql-execution.png",
+      "sha256": "bef311a36045e7547627b9c5a7c737800feb990c64bf1556bae867a4acc827d7",
+      "source": "src/bikeshare/tools.py",
+      "source_sha256": "af44a09172cd146eb0a92cefeda33c947c55667371c75dc1345eed794591fd6d",
+      "source_lines": [
+        183,
+        220
+      ],
+      "capture_timestamp": null,
+      "received_at_utc": "2026-10-26T19:20:34.667906+00:00",
+      "cropping_or_image_editing_applied": false,
+      "status": "accepted",
+      "review": "Requested source range is readable and matches the checked repository source. Original user-supplied frame preserved.",
+      "report_page": 31
+    },
+    {
+      "number": 18,
+      "screenshot_name": "code-18-policy-fetch.png",
+      "path": "reports/hw07/screenshots/code/code-18-policy-fetch.png",
+      "sha256": "2770e94a42bdf649b91171769f827214f78d813c83c0734969a421b1d71c86c6",
+      "source": "src/bikeshare/tools.py",
+      "source_sha256": "af44a09172cd146eb0a92cefeda33c947c55667371c75dc1345eed794591fd6d",
+      "source_lines": [
+        319,
+        347
+      ],
+      "capture_timestamp": null,
+      "received_at_utc": "2026-10-26T19:20:34.669508+00:00",
+      "cropping_or_image_editing_applied": false,
+      "status": "accepted",
+      "review": "Requested source range is readable and matches the checked repository source. Original user-supplied frame preserved.",
+      "report_page": 33
+    },
+    {
+      "number": 19,
+      "screenshot_name": "code-19-policy-ranking.png",
+      "path": "reports/hw07/screenshots/code/code-19-policy-ranking.png",
+      "sha256": "f65788166d2ea4def319ad94b26df3e0b20ec709a84bc9d4ef45f8b35964ac61",
+      "source": "src/bikeshare/tools.py",
+      "source_sha256": "af44a09172cd146eb0a92cefeda33c947c55667371c75dc1345eed794591fd6d",
+      "source_lines": [
+        348,
+        367
+      ],
+      "capture_timestamp": null,
+      "received_at_utc": "2026-10-26T19:20:34.670630+00:00",
+      "cropping_or_image_editing_applied": false,
+      "status": "accepted",
+      "review": "Requested source range is readable and matches the checked repository source. Original user-supplied frame preserved.",
+      "report_page": 34
+    },
+    {
+      "number": 20,
+      "screenshot_name": "code-20-arithmetic.png",
+      "path": "reports/hw07/screenshots/code/code-20-arithmetic.png",
+      "sha256": "b73eb54ce39a4f99978eed1d66eb5f1f5bbaee9f9f04a3ee1e3bbe07f737de8d",
+      "source": "src/bikeshare/tools.py",
+      "source_sha256": "af44a09172cd146eb0a92cefeda33c947c55667371c75dc1345eed794591fd6d",
+      "source_lines": [
+        370,
+        393
+      ],
+      "capture_timestamp": null,
+      "received_at_utc": "2026-10-26T19:20:34.671606+00:00",
+      "cropping_or_image_editing_applied": false,
+      "status": "accepted",
+      "review": "Requested source range is readable and matches the checked repository source. Original user-supplied frame preserved.",
+      "report_page": 37
+    },
+    {
+      "number": 21,
+      "screenshot_name": "code-21-calculator-validation.png",
+      "path": "reports/hw07/screenshots/code/code-21-calculator-validation.png",
+      "sha256": "ac4eb62c39c49e2c244db24e31523a7b251ca77c2dbd4cf3bde449c90ffef164",
+      "source": "src/bikeshare/tools.py",
+      "source_sha256": "af44a09172cd146eb0a92cefeda33c947c55667371c75dc1345eed794591fd6d",
+      "source_lines": [
+        396,
+        419
+      ],
+      "capture_timestamp": null,
+      "received_at_utc": "2026-10-26T19:24:15.300919+00:00",
+      "cropping_or_image_editing_applied": false,
+      "status": "accepted",
+      "review": "Requested source range is readable and matches the checked repository source. Original user-supplied frame preserved.",
+      "report_page": 38
+    },
+    {
+      "number": 22,
+      "screenshot_name": "code-22-calculator-result.png",
+      "path": "reports/hw07/screenshots/code/code-22-calculator-result.png",
+      "sha256": "ddd6ab761803946ab06eacbe03ddf168900ce5ba7b7c203045728d42b05df0c1",
+      "source": "src/bikeshare/tools.py",
+      "source_sha256": "af44a09172cd146eb0a92cefeda33c947c55667371c75dc1345eed794591fd6d",
+      "source_lines": [
+        420,
+        438
+      ],
+      "capture_timestamp": null,
+      "received_at_utc": "2026-10-26T19:24:15.300919+00:00",
+      "cropping_or_image_editing_applied": false,
+      "status": "accepted",
+      "review": "Requested source range is readable and matches the checked repository source. Original user-supplied frame preserved.",
+      "report_page": 39
+    },
+    {
+      "number": 23,
+      "screenshot_name": "code-23-framework.png",
+      "path": "reports/hw07/screenshots/code/code-23-framework.png",
+      "sha256": "11a5eb1cfacec6d81798063adf79e0a5c344d94e43eba7fbb0ba42d23514e8d4",
+      "source": "src/bikeshare/agent.py",
+      "source_sha256": "a3b4b5b295b28aaa8ebbb7190629a445b1dbd657133f59e3c4e984df72cfeded",
+      "source_lines": [
+        417,
+        434
+      ],
+      "capture_timestamp": null,
+      "received_at_utc": "2026-10-26T19:24:15.300919+00:00",
+      "cropping_or_image_editing_applied": false,
+      "status": "accepted",
+      "review": "Requested source range is readable and matches the checked repository source. Original user-supplied frame preserved.",
+      "report_page": 25
+    },
+    {
+      "number": 24,
+      "screenshot_name": "code-24-untrusted-prompt.png",
+      "path": "reports/hw07/screenshots/code/code-24-untrusted-prompt.png",
+      "sha256": "2f934d82e70dbd30ee3d4cb172f844e170b4badfc30d29635ad37e62415788ce",
+      "source": "src/bikeshare/agent.py",
+      "source_sha256": "a3b4b5b295b28aaa8ebbb7190629a445b1dbd657133f59e3c4e984df72cfeded",
+      "source_lines": [
+        24,
+        31
+      ],
+      "capture_timestamp": null,
+      "received_at_utc": "2026-10-26T19:24:15.300919+00:00",
+      "cropping_or_image_editing_applied": false,
+      "status": "accepted",
+      "review": "Prompt defense is visible; minor right-edge clipping retained as supplied. Source checked against the frozen repository version.",
+      "report_page": 53
+    },
+    {
+      "number": 25,
+      "screenshot_name": "code-25-read-file.png",
+      "path": "reports/hw07/screenshots/code/code-25-read-file.png",
+      "sha256": "e7f13c4ce2299bd35fac276bc3912b780eaac4c7e624cb1946fd542114a41185",
+      "source": "src/course_files/sandbox.py",
+      "source_sha256": "5c872671652c4ee993809d2e345c3c21676bc2509ab94029063870a36bbc7850",
+      "source_lines": [
+        118,
+        128
+      ],
+      "capture_timestamp": null,
+      "received_at_utc": "2026-10-26T19:26:45.871942+00:00",
+      "cropping_or_image_editing_applied": false,
+      "status": "accepted",
+      "review": "Requested source range is readable and matches the checked repository source. Original user-supplied frame preserved.",
+      "report_page": 55
+    },
+    {
+      "number": 26,
+      "screenshot_name": "code-26-write-file.png",
+      "path": "reports/hw07/screenshots/code/code-26-write-file.png",
+      "sha256": "033ab176694e4ca1cc2f3dc857337730dc16291380863f9b37c27d36ffea790e",
+      "source": "src/course_files/sandbox.py",
+      "source_sha256": "5c872671652c4ee993809d2e345c3c21676bc2509ab94029063870a36bbc7850",
+      "source_lines": [
+        147,
+        174
+      ],
+      "capture_timestamp": null,
+      "received_at_utc": "2026-10-26T19:26:45.871942+00:00",
+      "cropping_or_image_editing_applied": false,
+      "status": "accepted",
+      "review": "Requested source range is readable and matches the checked repository source. Original user-supplied frame preserved.",
+      "report_page": 56
+    },
+    {
+      "number": 27,
+      "screenshot_name": "code-27-edit-file.png",
+      "path": "reports/hw07/screenshots/code/code-27-edit-file.png",
+      "sha256": "22a14e2367857d2a09acb9eff2425823f770e684519898a7d76fed996bc7cb0c",
+      "source": "src/course_files/sandbox.py",
+      "source_sha256": "5c872671652c4ee993809d2e345c3c21676bc2509ab94029063870a36bbc7850",
+      "source_lines": [
+        176,
+        195
+      ],
+      "capture_timestamp": null,
+      "received_at_utc": "2026-10-26T19:26:45.871942+00:00",
+      "cropping_or_image_editing_applied": false,
+      "status": "accepted",
+      "review": "Requested source range is readable and matches the checked repository source. Original user-supplied frame preserved.",
+      "report_page": 57
+    },
+    {
+      "number": 28,
+      "screenshot_name": "code-28-glob-search.png",
+      "path": "reports/hw07/screenshots/code/code-28-glob-search.png",
+      "sha256": "3b10d4835c8b84d8878a3ddc4c3eda85aa480c2e08a641f609af510bb24e495f",
+      "source": "src/course_files/sandbox.py",
+      "source_sha256": "5c872671652c4ee993809d2e345c3c21676bc2509ab94029063870a36bbc7850",
+      "source_lines": [
+        232,
+        249
+      ],
+      "capture_timestamp": null,
+      "received_at_utc": "2026-10-26T19:26:45.871942+00:00",
+      "cropping_or_image_editing_applied": false,
+      "status": "accepted",
+      "review": "Requested source range is readable and matches the checked repository source. Original user-supplied frame preserved.",
+      "report_page": 58
+    },
+    {
+      "number": 29,
+      "screenshot_name": "code-29-bash-gate.png",
+      "path": "reports/hw07/screenshots/code/code-29-bash-gate.png",
+      "sha256": "5c201750e706c468a0a397d38ac05a2168c15a587c5a4ac0081ea1e56d85b85c",
+      "source": "src/course_files/sandbox.py",
+      "source_sha256": "5c872671652c4ee993809d2e345c3c21676bc2509ab94029063870a36bbc7850",
+      "source_lines": [
+        313,
+        331
+      ],
+      "capture_timestamp": null,
+      "received_at_utc": "2026-10-26T19:28:48.092810+00:00",
+      "cropping_or_image_editing_applied": false,
+      "status": "accepted",
+      "review": "Requested source range is readable and matches the checked repository source. Original user-supplied frame preserved.",
+      "report_page": 59
+    },
+    {
+      "number": 30,
+      "screenshot_name": "code-30-safe-prefixes.png",
+      "path": "reports/hw07/screenshots/code/code-30-safe-prefixes.png",
+      "sha256": "0ed51caecc01578d922ff797a4b525e13a53aed7d7d24cc668272ae68ee2b3ba",
+      "source": "src/course_files/gate.py",
+      "source_sha256": "fae1512f1c1ed88826889e873a0c543c4e4e3c0ba189981eca0b451bab8a8d85",
+      "source_lines": [
+        1,
+        15
+      ],
+      "capture_timestamp": null,
+      "received_at_utc": "2026-10-26T19:28:48.092810+00:00",
+      "cropping_or_image_editing_applied": false,
+      "status": "accepted",
+      "review": "Requested source range is readable and matches the checked repository source. Original user-supplied frame preserved.",
+      "report_page": 60
+    },
+    {
+      "number": 31,
+      "screenshot_name": "code-31-destructive-a.png",
+      "path": "reports/hw07/screenshots/code/code-31-destructive-a.png",
+      "sha256": "c64bfb57b2caf36b82987fae28018496342fb9c4964f46ca8dfc68045a625e5a",
+      "source": "src/course_files/gate.py",
+      "source_sha256": "fae1512f1c1ed88826889e873a0c543c4e4e3c0ba189981eca0b451bab8a8d85",
+      "source_lines": [
+        33,
+        56
+      ],
+      "capture_timestamp": null,
+      "received_at_utc": "2026-10-26T19:28:48.092810+00:00",
+      "cropping_or_image_editing_applied": false,
+      "status": "accepted",
+      "review": "Requested source range is readable and matches the checked repository source. Original user-supplied frame preserved.",
+      "report_page": 61
+    },
+    {
+      "number": 32,
+      "screenshot_name": "code-32-destructive-b.png",
+      "path": "reports/hw07/screenshots/code/code-32-destructive-b.png",
+      "sha256": "a1165cebd1fb23610f5fdd133af179dd0fee9744d381393c56af63998b798ef4",
+      "source": "src/course_files/gate.py",
+      "source_sha256": "fae1512f1c1ed88826889e873a0c543c4e4e3c0ba189981eca0b451bab8a8d85",
+      "source_lines": [
+        57,
+        77
+      ],
+      "capture_timestamp": null,
+      "received_at_utc": "2026-10-26T19:28:48.092810+00:00",
+      "cropping_or_image_editing_applied": false,
+      "status": "accepted",
+      "review": "Requested source range is readable and matches the checked repository source. Original user-supplied frame preserved.",
+      "report_page": 62
+    },
+    {
+      "number": 33,
+      "screenshot_name": "code-33-confirmation-a.png",
+      "path": "reports/hw07/screenshots/code/code-33-confirmation-a.png",
+      "sha256": "5d64589ab069b336409a46c129bf90aa8e6ae559c70ffdc7c3b1cc323117e28e",
+      "source": "src/course_files/gate.py",
+      "source_sha256": "fae1512f1c1ed88826889e873a0c543c4e4e3c0ba189981eca0b451bab8a8d85",
+      "source_lines": [
+        96,
+        118
+      ],
+      "capture_timestamp": null,
+      "received_at_utc": "2026-10-26T19:31:32.353100+00:00",
+      "cropping_or_image_editing_applied": false,
+      "status": "accepted",
+      "review": "Requested source range is readable and matches the checked repository source. Original user-supplied frame preserved.",
+      "report_page": 63
+    },
+    {
+      "number": 34,
+      "screenshot_name": "code-34-confirmation-b.png",
+      "path": "reports/hw07/screenshots/code/code-34-confirmation-b.png",
+      "sha256": "5406a172a4feebc5e5dffc99c56007387d58884894d1f75fe584a082145463a7",
+      "source": "src/course_files/gate.py",
+      "source_sha256": "fae1512f1c1ed88826889e873a0c543c4e4e3c0ba189981eca0b451bab8a8d85",
+      "source_lines": [
+        119,
+        139
+      ],
+      "capture_timestamp": null,
+      "received_at_utc": "2026-10-26T19:31:32.353100+00:00",
+      "cropping_or_image_editing_applied": false,
+      "status": "accepted",
+      "review": "Requested source range is readable and matches the checked repository source. Original user-supplied frame preserved.",
+      "report_page": 64
+    }
+  ],
+  "report_path": "reports/hw07/Apurva_HW7.docx",
+  "report_pdf_path": "reports/hw07/Apurva_HW7_draft.pdf",
+  "report_sha256": {
+    "Apurva_HW7.docx": "0914c138ce4d772a684d5ae57a78d8e41d0f70a210a1e5f0019c219d9c4ede75",
+    "Apurva_HW7_draft.pdf": "78196c240675d22d0f34fcadadc5238da1edbdaa253e7d72901a313e921abd9d"
+  }
+}

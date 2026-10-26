@@ -1,0 +1,34 @@
+{
+  "figure": 10,
+  "kind": "paired fresh user-captured native Terminal screenshots with genuine local-model demonstration",
+  "screenshots": [
+    {
+      "path": "screenshots/fresh/figure-10-task-c-tools.png",
+      "sha256": "3bc10bb1c38ce968c12d9c95010329e8c82f4e1d24373916ee4d02c08e72c29c"
+    },
+    {
+      "path": "screenshots/fresh/figure-10-task-c-result.png",
+      "sha256": "07a4141568c87b161911ca053a79f7019b3eb464057d5b4167a4ffd22d75cb8a"
+    }
+  ],
+  "raw_files": [
+    {
+      "path": "raw/fresh/figure-10-task-c/result.json",
+      "sha256": "9828e270c73ee7176f47d725b32296f97a505dd3eb3462018f5a1727af6f48eb"
+    },
+    {
+      "path": "raw/fresh/figure-10-task-c/trace.jsonl",
+      "sha256": "321f735d9bae3e3cf6e9f165d8c3578cb93dd7423a75b1b122be79c4e0b76bb6"
+    }
+  ],
+  "task_id": "C",
+  "run_id": "a0860eb841be40849041a377c5a90818",
+  "run_timestamp_utc": "2026-10-24T07:47:58.573516+00:00",
+  "model": "qwen2.5:7b",
+  "source_commit": "15b305ff341aff83fb0107f9f4c12245376fe785",
+  "actual_tool_calls": 6,
+  "verification_passed": true,
+  "stop_reason": "success",
+  "observed_recovery": "Initial detail calls used IDs 1 and 2; ID 2 was not found. Subsequent search and detail calls used returned IDs 308 and 309.",
+  "scored_study": false
+}

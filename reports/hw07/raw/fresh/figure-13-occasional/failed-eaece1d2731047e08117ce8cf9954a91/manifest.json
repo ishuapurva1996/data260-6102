@@ -1,0 +1,105 @@
+{
+  "figure": 13,
+  "kind": "failed fresh user-captured Chrome screenshots with genuine framework-agent execution",
+  "outcome": "Verification rejected incomplete pricing capture and missing required tool observations; not accepted scenario evidence.",
+  "screenshots": [
+    {
+      "path": "screenshots/fresh/figure-13-failed-a-overview.png",
+      "sha256": "fca6171f806de6d09be48b7f5683138857399e32422e70ba05f2d47e6c638afd"
+    },
+    {
+      "path": "screenshots/fresh/figure-13-failed-b-metrics.png",
+      "sha256": "cc54a3fe0b9a574be07dee9435c1bddd5e6e7676bde673950c78430c1d633215"
+    },
+    {
+      "path": "screenshots/fresh/figure-13-failed-c-pricing.png",
+      "sha256": "3c0c640204bf87f066e81bd6ecd221b2d7cd6379cd99fb88ed26a672e3b14215"
+    }
+  ],
+  "raw_files": [
+    {
+      "path": "raw/fresh/figure-13-occasional/failed-eaece1d2731047e08117ce8cf9954a91/result.json",
+      "sha256": "4b067b951b2101a210cf86ec7c03f83d711e87953216a131a4fc9dffbe3a2fae"
+    },
+    {
+      "path": "raw/fresh/figure-13-occasional/failed-eaece1d2731047e08117ce8cf9954a91/trace.jsonl",
+      "sha256": "5df170bb49caf15c1a3dd12b34c8bba0485ac34a65bbe63810e8f09e5a0707cc"
+    },
+    {
+      "path": "raw/fresh/figure-13-occasional/failed-eaece1d2731047e08117ce8cf9954a91/input.csv",
+      "sha256": "8ba2b6b723fcdef6b9805a6a5b543c1278f72939d9ba9b693e0c57ae87e758bc"
+    },
+    {
+      "path": "raw/fresh/figure-13-occasional/failed-eaece1d2731047e08117ce8cf9954a91/policies/215cb850ef8097410941-failure.json",
+      "sha256": "bea34b25f7f9644d135ca1bfed17a6013956f4d041d467b736b0c52e7b84f697"
+    },
+    {
+      "path": "raw/fresh/figure-13-occasional/failed-eaece1d2731047e08117ce8cf9954a91/policies/215cb850ef8097410941.html",
+      "sha256": "fb6f304e185315e410bebd230a217a0c64106e840fbaa5100c5029c9912e60f1"
+    },
+    {
+      "path": "raw/fresh/figure-13-occasional/failed-eaece1d2731047e08117ce8cf9954a91/policies/4e95af9ff3f30f7bb4e9.html",
+      "sha256": "5e080393a93fe82b5ab120df6c9f55446e5e4ad52655ea9aafd0b7a45f36e997"
+    },
+    {
+      "path": "raw/fresh/figure-13-occasional/failed-eaece1d2731047e08117ce8cf9954a91/policies/4e95af9ff3f30f7bb4e9.json",
+      "sha256": "e26418a2d53e42be4500097304be9115efde663169748faf46992a636c4feea7"
+    },
+    {
+      "path": "raw/fresh/figure-13-occasional/failed-eaece1d2731047e08117ce8cf9954a91/policies/4e95af9ff3f30f7bb4e9.txt",
+      "sha256": "51b55b3d5a61aafde7f5d9d0edf6074540267127fb65b096a178058689cace79"
+    },
+    {
+      "path": "raw/fresh/figure-13-occasional/failed-eaece1d2731047e08117ce8cf9954a91/policies/a0bafd97c36fc37d943e.html",
+      "sha256": "e7047245adc7d0fb96349dabc86bba555615af952d31d68e4eb27f560b8729aa"
+    },
+    {
+      "path": "raw/fresh/figure-13-occasional/failed-eaece1d2731047e08117ce8cf9954a91/policies/a0bafd97c36fc37d943e.json",
+      "sha256": "66d385851dc9fee8ad496062c0ed264a6c138f5891522cfabaaf00928860ce4f"
+    },
+    {
+      "path": "raw/fresh/figure-13-occasional/failed-eaece1d2731047e08117ce8cf9954a91/policies/a0bafd97c36fc37d943e.txt",
+      "sha256": "fc7a546f6983bb9d9f956ae43ffd81e1ef9ae1a845c69e0d21fbaf1534998d52"
+    }
+  ],
+  "run_id": "eaece1d2731047e08117ce8cf9954a91",
+  "run_timestamp_utc": "2026-10-24T08:00:11.596065+00:00",
+  "source_commit": "15b305ff341aff83fb0107f9f4c12245376fe785",
+  "metrics": {
+    "steps": 7,
+    "model_requests": 3,
+    "tool_calls": 4,
+    "tool_proposals": 4,
+    "input_tokens": 6480,
+    "output_tokens": 472,
+    "total_tokens": 6952,
+    "budget": {
+      "max_tools": 16,
+      "max_tokens": 48000,
+      "tools": 4,
+      "charged_tokens": 6952,
+      "reported_input_tokens": 6480,
+      "reported_output_tokens": 472,
+      "unknown_usage_calls": 0,
+      "total_tokens": 6952,
+      "overrun": false
+    },
+    "latency_ms": 87708.05229106918,
+    "stop_reason": "human_review"
+  },
+  "verification": {
+    "passed": false,
+    "failures": [
+      "policy.complete",
+      "trace.required_tools",
+      "trace.required_policies"
+    ],
+    "parsed": {
+      "decision": "Buy Monthly Membership",
+      "pay_per_use_total": "$76.50",
+      "membership_total": "$30.00",
+      "justification": "Pay per use costs $76.50 for 500 rides across 125 hypothetical accounts [2]. The membership alternative totals $30.00 including ride charges for 125 separate accounts [3]. Each account pays $30.00 for a 30-day membership with 120 included classic minutes per ride and $0.05 per extra minute [3]. Ride minutes are rounded up separately for every ride [3]. Buy Monthly Membership is the recommendation for this assumed 30-day cohort [2][3]."
+    }
+  },
+  "scored_study": false
+}

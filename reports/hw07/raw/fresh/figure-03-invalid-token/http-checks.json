@@ -1,0 +1,16 @@
+{
+  "kind": "fresh live HTTPS; not scored model study",
+  "checks": [
+    {
+      "at": "2026-10-24T07:38:32.248998+00:00",
+      "label": "invalid bearer token",
+      "method": "GET",
+      "path": "/auth/me",
+      "expected": 401,
+      "actual": 401,
+      "response": {
+        "detail": "Invalid or expired access token."
+      }
+    }
+  ]
+}

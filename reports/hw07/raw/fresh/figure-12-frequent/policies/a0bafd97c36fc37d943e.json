@@ -1,0 +1,11 @@
+{
+  "url": "https://capitalbikeshare.com/pricing",
+  "original_url": "https://capitalbikeshare.com/pricing",
+  "captured_at": "2026-10-24T07:55:01.663224+00:00",
+  "sha256": "fc7a546f6983bb9d9f956ae43ffd81e1ef9ae1a845c69e0d21fbaf1534998d52",
+  "html_sha256": "fc42802ac82e6eb5a2600ce523fbf2575351d58c46cd7a9228bcb3aa6c55afb8",
+  "html_file": "a0bafd97c36fc37d943e.html",
+  "http_status": 200,
+  "text_extraction": "UTF-8 HTMLParser; script/style omitted; stripped nonempty lines",
+  "text_file": "a0bafd97c36fc37d943e.txt"
+}

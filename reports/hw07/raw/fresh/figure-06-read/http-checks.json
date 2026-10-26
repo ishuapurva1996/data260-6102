@@ -1,0 +1,64 @@
+{
+  "kind": "fresh live HTTPS; not scored model study",
+  "checks": [
+    {
+      "at": "2026-10-24T07:44:08.480203+00:00",
+      "label": "reader login",
+      "method": "POST",
+      "path": "/auth/login",
+      "expected": 200,
+      "actual": 200,
+      "response": {
+        "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3MSIsImlhdCI6MTc5MjgyNzg0OCwiZXhwIjoxNzkyODI4NzQ4LCJpc3MiOiJzNjEwMiIsImF1ZCI6InM2MTAyLXJlbnRhbHMifQ.[signature redacted]",
+        "token_type": "bearer",
+        "expires_in": 900
+      }
+    },
+    {
+      "at": "2026-10-24T07:44:08.484528+00:00",
+      "label": "select current rental",
+      "method": "GET",
+      "path": "/api/rentals?limit=1",
+      "expected": 200,
+      "actual": 200,
+      "response": [
+        {
+          "listingTitle": "Sunny Campus Apartment",
+          "propertyAddress": "6102 Example Avenue, San Jose, CA",
+          "listingCode": "S6102-R-1",
+          "availableUnits": 1,
+          "managerId": 1,
+          "submitterEmail": "demo-owner@example.com",
+          "description": "A demonstration apartment close to campus and public transit.",
+          "propertyType": "apartment",
+          "termsAccepted": true,
+          "id": 1,
+          "createdAt": "2026-10-20T06:37:51.065812Z",
+          "updatedAt": "2026-10-20T06:37:51.065812Z"
+        }
+      ]
+    },
+    {
+      "at": "2026-10-24T07:44:08.487265+00:00",
+      "label": "authenticated reader",
+      "method": "GET",
+      "path": "/api/rentals/1",
+      "expected": 200,
+      "actual": 200,
+      "response": {
+        "listingTitle": "Sunny Campus Apartment",
+        "propertyAddress": "6102 Example Avenue, San Jose, CA",
+        "listingCode": "S6102-R-1",
+        "availableUnits": 1,
+        "managerId": 1,
+        "submitterEmail": "demo-owner@example.com",
+        "description": "A demonstration apartment close to campus and public transit.",
+        "propertyType": "apartment",
+        "termsAccepted": true,
+        "id": 1,
+        "createdAt": "2026-10-20T06:37:51.065812Z",
+        "updatedAt": "2026-10-20T06:37:51.065812Z"
+      }
+    }
+  ]
+}

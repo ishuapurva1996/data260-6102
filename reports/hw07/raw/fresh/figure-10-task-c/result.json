@@ -1,0 +1,61 @@
+{
+  "run_id": "a0860eb841be40849041a377c5a90818",
+  "task_id": "C",
+  "mode": "original",
+  "started_at": "2026-10-24T07:47:58.573516+00:00",
+  "finished_at": "2026-10-24T07:48:19.658791+00:00",
+  "source_commit": "15b305ff341aff83fb0107f9f4c12245376fe785",
+  "source_dirty": false,
+  "evidence_kind": "real Ollama and MySQL; no mocked responses",
+  "controlled_fault": false,
+  "success": true,
+  "stop_reason": "success",
+  "internal_stop_reason": "success",
+  "answer": "{\n    \"rentals\": [\n        {\n            \"id\": 308,\n            \"listingTitle\": \"HW7 6102 Garden Apartment\",\n            \"propertyAddress\": \"101 Course Garden Lane\",\n            \"propertyType\": \"apartment\",\n            \"managerId\": 98,\n            \"description\": \"A bright apartment beside a community garden.\"\n        },\n        {\n            \"id\": 309,\n            \"listingTitle\": \"HW7 6102 Garden House\",\n            \"propertyAddress\": \"202 Course Garden Lane\",\n            \"propertyType\": \"house\",\n            \"managerId\": 98,\n            \"description\": \"A detached house with a fenced private garden.\"\n        }\n    ],\n    \"count\": null\n}",
+  "verification": {
+    "passed": true,
+    "failures": [],
+    "unsupported_claims": [],
+    "parsed": {
+      "rentals": [
+        {
+          "id": 308,
+          "listingTitle": "HW7 6102 Garden Apartment",
+          "propertyAddress": "101 Course Garden Lane",
+          "propertyType": "apartment",
+          "managerId": 98,
+          "description": "A bright apartment beside a community garden."
+        },
+        {
+          "id": 309,
+          "listingTitle": "HW7 6102 Garden House",
+          "propertyAddress": "202 Course Garden Lane",
+          "propertyType": "house",
+          "managerId": 98,
+          "description": "A detached house with a fenced private garden."
+        }
+      ],
+      "count": null
+    }
+  },
+  "retries": 0,
+  "tool_calls": 6,
+  "latency_ms": 21085.14920901507,
+  "budget": {
+    "max_tools": 8,
+    "max_tokens": 24000,
+    "tools": 6,
+    "charged_tokens": 3348,
+    "reported_input_tokens": 3008,
+    "reported_output_tokens": 340,
+    "unknown_usage_calls": 0,
+    "total_tokens": 3348,
+    "overrun": false
+  },
+  "proposal_count": 6,
+  "initial_valid": 6,
+  "final_valid": 6,
+  "repair_operations": 0,
+  "failure_categories": [],
+  "scored": false
+}

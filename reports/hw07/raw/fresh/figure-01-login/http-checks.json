@@ -1,0 +1,29 @@
+{
+  "kind": "fresh live HTTPS; not scored model study",
+  "checks": [
+    {
+      "at": "2026-10-24T07:31:48.917493+00:00",
+      "label": "reader login",
+      "method": "POST",
+      "path": "/auth/login",
+      "expected": 200,
+      "actual": 200,
+      "response": {
+        "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3MSIsImlhdCI6MTc5MjgyNzEwOCwiZXhwIjoxNzkyODI4MDA4LCJpc3MiOiJzNjEwMiIsImF1ZCI6InM2MTAyLXJlbnRhbHMifQ.[signature redacted]",
+        "token_type": "bearer",
+        "expires_in": 900
+      }
+    },
+    {
+      "at": "2026-10-24T07:31:48.962696+00:00",
+      "label": "invalid credentials",
+      "method": "POST",
+      "path": "/auth/login",
+      "expected": 401,
+      "actual": 401,
+      "response": {
+        "detail": "Invalid username or password."
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "figure": 8,
+  "kind": "fresh user-captured native Terminal screenshot with genuine local-model demonstration",
+  "screenshot": "screenshots/fresh/figure-08-task-a.png",
+  "sha256": "04bfa0bf909a9ded78236cb6a8feb1836fe847534607535b38c092f1ea0042aa",
+  "raw_files": [
+    {
+      "path": "raw/fresh/figure-08-task-a/result.json",
+      "sha256": "a06b1757174614d059c39280624deac9b85fe08ce61b5283a740e94419c42741"
+    },
+    {
+      "path": "raw/fresh/figure-08-task-a/trace.jsonl",
+      "sha256": "5d0d6faac953ca1557ece60d4342fab55544442ea9e59e3330361447dac5edac"
+    }
+  ],
+  "task_id": "A",
+  "run_id": "a8d78ff23b44421885f6d5a99d8b9b11",
+  "run_timestamp_utc": "2026-10-24T07:45:10.713090+00:00",
+  "model": "qwen2.5:7b",
+  "source_commit": "15b305ff341aff83fb0107f9f4c12245376fe785",
+  "actual_tool_calls": 2,
+  "verification_passed": true,
+  "stop_reason": "success",
+  "scored_study": false
+}

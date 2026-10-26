@@ -1,0 +1,14 @@
+{
+  "figure": 6,
+  "kind": "fresh user-captured native Terminal screenshot",
+  "screenshot": "screenshots/fresh/figure-06-read.png",
+  "sha256": "b2e931110cb193c78d86f4c805c82cc66a196f363ca9c1a0df0da66fee1d83be",
+  "raw_log": "raw/fresh/figure-06-read/http-checks.json",
+  "raw_log_sha256": "9ef50009bbf6f878296a41309175189e677e89cc61ef091c8438ed0c61711db6",
+  "observed_http_statuses": [
+    200
+  ],
+  "rental_id": 1,
+  "run_timestamp_utc": "2026-10-24T07:44:08.487265+00:00",
+  "scored_study": false
+}

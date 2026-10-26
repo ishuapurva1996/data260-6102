@@ -1,0 +1,15 @@
+{
+  "figure": 1,
+  "kind": "fresh user-captured native Terminal screenshot",
+  "screenshot": "screenshots/fresh/figure-01-login.png",
+  "sha256": "4ac951c6c987e3735d0592eb94fff1201bf1ae67b5a2897511df0474bb2817f4",
+  "raw_log": "raw/fresh/figure-01-login/http-checks.json",
+  "raw_log_sha256": "c6e874ec9d4527c0849ab23c87a08bc490edbb304f4105efab11389627e31db6",
+  "observed_http_statuses": [
+    200,
+    401
+  ],
+  "jwt_signature_redacted": true,
+  "run_timestamp_utc": "2026-10-24T07:31:48",
+  "scored_study": false
+}

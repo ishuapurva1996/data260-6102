@@ -1,0 +1,52 @@
+{
+  "run_id": "057e335b84f74263b95ceb1b3fc753f0",
+  "task_id": "B",
+  "mode": "original",
+  "started_at": "2026-10-24T07:47:13.523724+00:00",
+  "finished_at": "2026-10-24T07:47:22.049574+00:00",
+  "source_commit": "15b305ff341aff83fb0107f9f4c12245376fe785",
+  "source_dirty": false,
+  "evidence_kind": "real Ollama and MySQL; no mocked responses",
+  "controlled_fault": false,
+  "success": true,
+  "stop_reason": "success",
+  "internal_stop_reason": "success",
+  "answer": "{\"rentals\": [{\"id\": 308, \"listingTitle\": \"HW7 6102 Garden Apartment\", \"propertyAddress\": \"101 Course Garden Lane\", \"propertyType\": \"apartment\", \"managerId\": 98}], \"count\": 3}",
+  "verification": {
+    "passed": true,
+    "failures": [],
+    "unsupported_claims": [],
+    "parsed": {
+      "rentals": [
+        {
+          "id": 308,
+          "listingTitle": "HW7 6102 Garden Apartment",
+          "propertyAddress": "101 Course Garden Lane",
+          "propertyType": "apartment",
+          "managerId": 98
+        }
+      ],
+      "count": 3
+    }
+  },
+  "retries": 0,
+  "tool_calls": 2,
+  "latency_ms": 8525.783833116293,
+  "budget": {
+    "max_tools": 8,
+    "max_tokens": 24000,
+    "tools": 2,
+    "charged_tokens": 1628,
+    "reported_input_tokens": 1509,
+    "reported_output_tokens": 119,
+    "unknown_usage_calls": 0,
+    "total_tokens": 1628,
+    "overrun": false
+  },
+  "proposal_count": 2,
+  "initial_valid": 2,
+  "final_valid": 2,
+  "repair_operations": 0,
+  "failure_categories": [],
+  "scored": false
+}

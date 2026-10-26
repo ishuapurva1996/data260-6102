@@ -1,0 +1,15 @@
+{
+  "answer": "{\"rental_id\": 2147483000, \"found\": false}",
+  "verification": {
+    "passed": true,
+    "failures": [],
+    "unsupported_claims": [],
+    "parsed": {
+      "rental_id": 2147483000,
+      "found": false
+    }
+  },
+  "stop_reason": "completed",
+  "source_commit": "15b305ff341aff83fb0107f9f4c12245376fe785",
+  "scored": false
+}

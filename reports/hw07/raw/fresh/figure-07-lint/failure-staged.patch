@@ -1,0 +1,11 @@
+diff --git a/src/course_files/gate.py b/src/course_files/gate.py
+index efee5a5..7b54ae3 100644
+--- a/src/course_files/gate.py
++++ b/src/course_files/gate.py
+@@ -1,3 +1,6 @@
++"""Classify course-sandbox commands before any execution."""
++
++import fractions
+ import posixpath
+ import re
+ import shlex

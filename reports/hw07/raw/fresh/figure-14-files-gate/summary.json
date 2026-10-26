@@ -1,0 +1,33 @@
+{
+  "student": "Pragya Apurva",
+  "started_at": "2026-10-24T08:19:58.656278+00:00",
+  "finished_at": "2026-10-24T08:20:07.038241+00:00",
+  "source_commit": "15b305ff341aff83fb0107f9f4c12245376fe785",
+  "source_dirty": false,
+  "freeze_sha256": "621943b7cdb92fc34ac1fc062d81d6c5c7822d168bbf6e50bcf698e39dbd68b3",
+  "configuration": {
+    "model": "qwen3:8b",
+    "temperature": 0.0,
+    "seed": 6102,
+    "reasoning": false,
+    "context_window": 8192,
+    "output_limit": 512,
+    "request_timeout": 45,
+    "max_requests": 5,
+    "max_tools": 6,
+    "max_tokens": 16000,
+    "max_seconds": 240
+  },
+  "integration_passed": true,
+  "integration_stop_reason": "success",
+  "allowed": 5,
+  "blocked": 5,
+  "false_allows": 0,
+  "matrix_matches": 10,
+  "blocked_commands_executed": 0,
+  "file_exercises_passed": true,
+  "fixture_bytes_unchanged": true,
+  "course_sandbox_removed_after_run": true,
+  "private_sandbox_root": "/Users/pragyaapurva/code/agent_outputs/data260-hw7-planning/execution/screenshots/fresh-runs/files-20261024-011957-0199e0/supervised/run/data260-hw7-course-h9i7y6lt",
+  "models_only_for_discovery": true
+}

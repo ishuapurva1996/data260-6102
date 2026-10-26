@@ -1,0 +1,119 @@
+{
+  "figure": 13,
+  "kind": "fresh user-captured Chrome screenshots with genuine framework-agent execution",
+  "screenshots": [
+    {
+      "path": "screenshots/fresh/figure-13a-occasional-overview.png",
+      "sha256": "f27be4c60d0dc6d88977db1adfc114b4d3f079a231c236117dcadba452bf4bf4"
+    },
+    {
+      "path": "screenshots/fresh/figure-13b-occasional-costs-weekly.png",
+      "sha256": "f8ccd83452884d6a5cca7f70893e0040af9571f23c44286b39638960767d8828"
+    },
+    {
+      "path": "screenshots/fresh/figure-13c-occasional-assumptions.png",
+      "sha256": "a2db6de1d3ecc00155f8625452af8c5d5595f5c8291db7a6383f755e1095f13a"
+    },
+    {
+      "path": "screenshots/fresh/figure-13d-occasional-citations.png",
+      "sha256": "83caf9924ef4518adaf37600d53f99385f60c39cafff43d01d26fb285c62093a"
+    }
+  ],
+  "raw_files": [
+    {
+      "path": "raw/fresh/figure-13-occasional/result.json",
+      "sha256": "b0e98d42c1b3e266b63b89927aec5ce5fce04a5d3134db5d2061a73002102c00"
+    },
+    {
+      "path": "raw/fresh/figure-13-occasional/trace.jsonl",
+      "sha256": "a52b42d5511b2c44d4f18bc853e924272cb4a6a60a4ffa8567411d99db994260"
+    },
+    {
+      "path": "raw/fresh/figure-13-occasional/input.csv",
+      "sha256": "8ba2b6b723fcdef6b9805a6a5b543c1278f72939d9ba9b693e0c57ae87e758bc"
+    },
+    {
+      "path": "raw/fresh/figure-13-occasional/policies/215cb850ef8097410941.html",
+      "sha256": "b767b17f999b35a801e7d4d08d9de54e12466458a8a65e527931671b4b81d955"
+    },
+    {
+      "path": "raw/fresh/figure-13-occasional/policies/215cb850ef8097410941.json",
+      "sha256": "a068988af1c6d83372ca80d6f9a300c3d52cc114712a68d67fb379ea3d33e8d8"
+    },
+    {
+      "path": "raw/fresh/figure-13-occasional/policies/215cb850ef8097410941.txt",
+      "sha256": "57da4ba91dab5fd4062770c227bb4dafef8bffc4b37661f713161266bb276919"
+    },
+    {
+      "path": "raw/fresh/figure-13-occasional/policies/4e95af9ff3f30f7bb4e9.html",
+      "sha256": "71231b72787f2371277f41a7e75a2bbbda931da9a3b348446e62b3488cd927aa"
+    },
+    {
+      "path": "raw/fresh/figure-13-occasional/policies/4e95af9ff3f30f7bb4e9.json",
+      "sha256": "0fc317b574c5d3b7f7ad0ee15730568b5b762ab4e6a0f528fd302e9b3645e52a"
+    },
+    {
+      "path": "raw/fresh/figure-13-occasional/policies/4e95af9ff3f30f7bb4e9.txt",
+      "sha256": "51b55b3d5a61aafde7f5d9d0edf6074540267127fb65b096a178058689cace79"
+    },
+    {
+      "path": "raw/fresh/figure-13-occasional/policies/a0bafd97c36fc37d943e.html",
+      "sha256": "efbc140354b212da8896789bd7884f0f3bba3b7330a6305871b099e3fa9c66a0"
+    },
+    {
+      "path": "raw/fresh/figure-13-occasional/policies/a0bafd97c36fc37d943e.json",
+      "sha256": "81029bfb181f3cdb111aba337832bcdd8a2e255d701fd4f65566f2f8b925f84e"
+    },
+    {
+      "path": "raw/fresh/figure-13-occasional/policies/a0bafd97c36fc37d943e.txt",
+      "sha256": "fc7a546f6983bb9d9f956ae43ffd81e1ef9ae1a845c69e0d21fbaf1534998d52"
+    }
+  ],
+  "run_id": "2add7c23b80847deab2c44821d232490",
+  "run_timestamp_utc": "2026-10-24T08:09:29.568642+00:00",
+  "finished_at": "2026-10-24T08:12:47.196886+00:00",
+  "model": "qwen3:8b",
+  "source_commit": "15b305ff341aff83fb0107f9f4c12245376fe785",
+  "input_case": "cases/bikeshare/occasional.csv",
+  "input_sha256": "8ba2b6b723fcdef6b9805a6a5b543c1278f72939d9ba9b693e0c57ae87e758bc",
+  "decision": "Pay Per Ride/Minute",
+  "pay_per_use_total": "790.25",
+  "membership_total": "3125.00",
+  "savings": "-2334.75",
+  "metrics": {
+    "steps": 11,
+    "model_requests": 5,
+    "tool_calls": 6,
+    "tool_proposals": 6,
+    "input_tokens": 14484,
+    "output_tokens": 615,
+    "total_tokens": 15099,
+    "budget": {
+      "max_tools": 16,
+      "max_tokens": 48000,
+      "tools": 6,
+      "charged_tokens": 15099,
+      "reported_input_tokens": 14484,
+      "reported_output_tokens": 615,
+      "unknown_usage_calls": 0,
+      "total_tokens": 15099,
+      "overrun": false
+    },
+    "latency_ms": 197626.85433286242,
+    "stop_reason": "success"
+  },
+  "verification_passed": true,
+  "independent_arithmetic_check": {
+    "method": "Recomputed each classic ride rounded up to a minute from exact uploaded CSV, then applied captured $1 unlock + $0.15/minute versus $25/account + $0.05/minute over 45.",
+    "trip_rows": 500,
+    "hypothetical_accounts": 125,
+    "billed_minutes": 1935,
+    "overage_minutes": 0,
+    "pay_per_use_total": "790.25",
+    "membership_total": "3125.00",
+    "passed": true
+  },
+  "pricing_snapshot_hashes_verified": true,
+  "prior_failed_run": "raw/fresh/figure-13-occasional/failed-eaece1d2731047e08117ce8cf9954a91/manifest.json",
+  "scored_study": false
+}

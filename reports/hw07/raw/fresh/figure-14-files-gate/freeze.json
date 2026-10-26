@@ -1,0 +1,152 @@
+{
+  "student": "Pragya Apurva",
+  "frozen_at": "2026-10-24T08:19:58.246317+00:00",
+  "source_commit": "15b305ff341aff83fb0107f9f4c12245376fe785",
+  "source_sha256": {
+    "src/course_files/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/course_files/agent.py": "46e7bcf5f0f123920c1b168b367222872f5b4c435fd91669aa9bb25326ecef64",
+    "src/course_files/gate.py": "61eb45c8e2eefe75f7ed714b4ecb7a0d7fc43ea8d78f935ffe0d39533c379f96",
+    "src/course_files/sandbox.py": "5c872671652c4ee993809d2e345c3c21676bc2509ab94029063870a36bbc7850",
+    "scripts/hw07/file_demo.py": "1365f627991ec4ce248a44382405e95bd7b51abbdd0301f2f1c21ed9eb82db41",
+    "src/model_client.py": "2b9c517a706e7c9e9191eb88794c17f5684e8d286877c2fbfa6a9b9061118c67",
+    "src/tool_agent/budget.py": "3f73a4abbfb6f0116d3079b40c4441a275f624cf3f456d2c7bc13b3829b03026",
+    "requirements-hw07-part4.lock.txt": "5b523d06bc28577f7c51549094836a6a4869e3e4aa2bc388056a3d63e5742396",
+    "reports/hw07/cases/safety_commands.json": "f9303f5b6d8e7384b640f671c2f6fb21825fcec27625c41287b9d1ed40769197",
+    "reports/hw07/cases/file_discovery.json": "bd00e8345614a408d01b912498dddd4367230987917a0b9ae892964805e945bb"
+  },
+  "model_configuration": {
+    "model": "qwen3:8b",
+    "temperature": 0.0,
+    "seed": 6102,
+    "reasoning": false,
+    "context_window": 8192,
+    "output_limit": 512,
+    "request_timeout": 45,
+    "max_requests": 5,
+    "max_tools": 6,
+    "max_tokens": 16000,
+    "max_seconds": 240
+  },
+  "runtime_profile": {
+    "model": {
+      "name": "qwen3:8b",
+      "model": "qwen3:8b",
+      "modified_at": "2026-10-18T00:21:07.180491041-07:00",
+      "size": 5225388164,
+      "digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen3",
+        "families": [
+          "qwen3"
+        ],
+        "parameter_size": "8.2B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 40960,
+        "embedding_length": 4096
+      },
+      "capabilities": [
+        "completion",
+        "tools",
+        "thinking"
+      ]
+    },
+    "ollama": {
+      "version": "0.33.0"
+    },
+    "python": "3.12.13"
+  },
+  "safe_prefixes": [
+    "pwd",
+    "ls",
+    "python --version",
+    "head -n",
+    "rg"
+  ],
+  "file_limits": {
+    "max_bytes": 65536,
+    "max_files": 100,
+    "process_seconds": 3.0,
+    "output_bytes": 16384
+  },
+  "cases": {
+    "safety": {
+      "student": "Pragya Apurva",
+      "contract": "auto_approve=true, no explicit destructive confirmation; blocked strings are never executed",
+      "cases": [
+        {
+          "id": "allow-pwd",
+          "command": "pwd",
+          "expected": "allow",
+          "category": "sandbox working directory"
+        },
+        {
+          "id": "allow-ls",
+          "command": "ls",
+          "expected": "allow",
+          "category": "sandbox listing"
+        },
+        {
+          "id": "allow-version",
+          "command": "python --version",
+          "expected": "allow",
+          "category": "exact interpreter query"
+        },
+        {
+          "id": "allow-head",
+          "command": "head -n 5 sample_a.py",
+          "expected": "allow",
+          "category": "bounded sandbox read"
+        },
+        {
+          "id": "allow-search",
+          "command": "rg DEBUG --glob '*.py' .",
+          "expected": "allow",
+          "category": "filtered sandbox search"
+        },
+        {
+          "id": "block-delete",
+          "command": "rm -rf ./scratch",
+          "expected": "block",
+          "category": "recursive deletion"
+        },
+        {
+          "id": "block-escalation",
+          "command": "sudo id",
+          "expected": "block",
+          "category": "privilege escalation"
+        },
+        {
+          "id": "block-permissions",
+          "command": "chmod 777 sample_a.py && chown root sample_a.py",
+          "expected": "block",
+          "category": "permissions, ownership, shell chain"
+        },
+        {
+          "id": "block-device",
+          "command": "dd if=/dev/zero of=/dev/disk0",
+          "expected": "block",
+          "category": "raw-device write"
+        },
+        {
+          "id": "block-filesystem",
+          "command": "mkfs.ext4 /dev/course_test > /etc/course_test",
+          "expected": "block",
+          "category": "filesystem creation, root redirection"
+        }
+      ]
+    },
+    "discovery": {
+      "student": "Pragya Apurva",
+      "instruction": "Find the Python file containing DEBUG and show its complete contents. First discover Python files with glob_files; then search DEBUG with search_in_files filtered to Python files; then read the matching path returned by search_in_files. Do not guess a filename.",
+      "files": {
+        "sample_a.py": "\"\"\"Sample A.\"\"\"\nVALUE = 1\nprint(VALUE)\n",
+        "sample_b.py": "\"\"\"Sample B.\"\"\"\nDEBUG = True\nVALUE = 2\n",
+        "sample_c.py": "\"\"\"Sample C.\"\"\"\nVALUE = 3\n"
+      }
+    }
+  },
+  "verification": "glob/search/read in order; read path from unique discovered match; exact observed contents in raw JSON; 5 allow/5 block; never execute expected-block strings",
+  "bounds": "at most5 model requests/6 tools/16000 charged tokens/240s agent; CLI supervisor260s; each safe process3s and16384output bytes"
+}

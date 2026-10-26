@@ -1,0 +1,32 @@
+{
+  "figure": 7,
+  "phase": "genuine pre-commit lint failure",
+  "screenshot": "screenshots/fresh/figure-07a-lint-failure.png",
+  "sha256": "6cfce0e624d5f1dea8d775c03c21ca730d556347f8793457aaf9748d4f9cc19c",
+  "observed_at_utc": "2026-10-24T08:24:19+00:00",
+  "branch": "codex/hw7-fresh-screenshots",
+  "head_after_rejected_commit": "15b305ff341aff83fb0107f9f4c12245376fe785",
+  "staged_files": [
+    "src/course_files/gate.py"
+  ],
+  "hook_id": "ruff-check",
+  "hook_exit_code_observed": 1,
+  "finding": "F401 fractions imported but unused at src/course_files/gate.py:3:8",
+  "staged_patch": "raw/fresh/figure-07-lint/failure-staged.patch",
+  "staged_patch_sha256": "1486c755e9a8068f8859945356b4f61cbbb5c5b6e764277a7127d735da23e749",
+  "separate_live_recheck": {
+    "kind": "Additional live Ruff invocation of the unchanged invalid source; not a copy of the original hook stdout",
+    "at_utc": "2026-10-24T08:25:31.920559+00:00",
+    "arguments": [
+      "check",
+      "--no-cache",
+      "--output-format",
+      "json",
+      "src/course_files/gate.py"
+    ],
+    "ruff_version": "0.15.6",
+    "exit_code": 1,
+    "raw_file": "raw/fresh/figure-07-lint/failure-ruff-recheck.json",
+    "sha256": "2f3d2f42e9de328efebd57d2e2eb5bcdfa71cce6e22f666c067708eadba94a2f"
+  }
+}

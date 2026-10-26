@@ -1,0 +1,14 @@
+{
+  "figure": 6,
+  "kind": "failed fresh user-captured native Terminal screenshot",
+  "outcome": "HTTP 404; obsolete hardcoded rental ID; not accepted read evidence",
+  "screenshot": "raw/fresh/figure-06-read/failed-20261024T074129/screenshot.png",
+  "sha256": "753ab6f62d9a9066e3b2345915bcf6c42fe8fb7425baf88820f8f1827c6c8cc4",
+  "raw_log": "raw/fresh/figure-06-read/failed-20261024T074129/http-checks.json",
+  "raw_log_sha256": "34683e3df19710273cacef64e165dac55a24612e900b52f54c35c36e32ba1a5a",
+  "observed_http_statuses": [
+    404
+  ],
+  "run_timestamp_utc": "2026-10-24T07:41:29.825671+00:00",
+  "scored_study": false
+}

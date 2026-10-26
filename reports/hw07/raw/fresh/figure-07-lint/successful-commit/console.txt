@@ -1,0 +1,25 @@
+Pragya Apurva | DATA 260 HW7 | lint correction and commit
+FRESH EXECUTION | 2026-10-26T18:06:06.341268+00:00
+Corrected source: unused fractions import removed (compare Figure 7a).
+"""Classify course-sandbox commands before any execution."""
+
+import posixpath
+import re
+import shlex
+
+$ ruff check src/course_files/gate.py
+All checks passed!
+$ ruff format --check src/course_files/gate.py
+1 file already formatted
+$ git diff --cached --check
+Verified commit selection: src/course_files/gate.py only; two-line module docstring.
+$ git commit -m 'docs(hw7): describe the course command safety gate' -- src/course_files/gate.py
+[WARNING] Unstaged files detected.
+[INFO] Stashing unstaged files to /Users/pragyaapurva/code/agent_outputs/data260-hw7-planning/execution/part1/pre-commit-cache/patch1793037966-4007.
+ruff check...............................................................Passed
+ruff format..............................................................Passed
+[INFO] Restored changes from /Users/pragyaapurva/code/agent_outputs/data260-hw7-planning/execution/part1/pre-commit-cache/patch1793037966-4007.
+[codex/hw7-fresh-screenshots 41b7907] docs(hw7): describe the course command safety gate
+ 1 file changed, 2 insertions(+)
+SUCCESSFUL COMMIT | 41b7907e0e6377026f0c741c2da57fe0d5066b20
+Report, screenshots and raw evidence remain uncommitted for report assembly.
