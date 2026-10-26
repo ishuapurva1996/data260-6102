@@ -1,3 +1,5 @@
+"""Classify course-sandbox commands before any execution."""
+
 import posixpath
 import re
 import shlex
