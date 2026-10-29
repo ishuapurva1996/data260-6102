@@ -213,9 +213,7 @@ def test_planner_and_reviewer_preserve_identity_and_final_answer(tmp_path):
         planner = StageProcessor(
             "planner", ReceiptStore(tmp_path / "planner.sqlite3"), model="fixture"
         )
-        plan = await planner.generate(
-            {k: v for k, v in original.items() if k != "plan"}
-        )
+        plan = await planner.generate({k: v for k, v in original.items() if k != "plan"})
         assert plan["correlation_id"] == original["correlation_id"]
         assert plan["question"] == original["question"]
         writer = processor(tmp_path)

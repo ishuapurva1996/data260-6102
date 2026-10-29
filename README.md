@@ -270,3 +270,10 @@ must be committed first. Real acceptance and a single unscored N30 pilot use
 scripts/hw06/acceptance.py with the same arguments and --stage core, file,
 comparison, or pilot. These acceptance runs are separate from the four-condition
 measurement command documented in scripts/hw06/part3/README.md.
+
+## HW8 Kafka services
+
+HW8 extends the shared rental application with correlated Kafka CREATE/GET and
+separate Planner, Writer and Reviewer processes. See [setup and verification](docs/HW8.md)
+and the evidence in `reports/hw08/`. The local single-broker experiments cover
+replay, Writer death, bounded retries/dead letters and entity-keyed ordering.

@@ -60,9 +60,7 @@ class Harness:
         ).strip()
 
     async def start(self):
-        self.producer = AIOKafkaProducer(
-            bootstrap_servers=self.bootstrap, enable_idempotence=True
-        )
+        self.producer = AIOKafkaProducer(bootstrap_servers=self.bootstrap, enable_idempotence=True)
         await self.producer.start()
 
     async def prime(self, topic, group):
@@ -134,9 +132,7 @@ class Harness:
             "HW8_SOURCE_COMMIT": self.source,
             "PYTHONUNBUFFERED": "1",
         }
-        process = subprocess.Popen(
-            cmd, cwd=ROOT, env=env, stdout=stream, stderr=subprocess.STDOUT
-        )
+        process = subprocess.Popen(cmd, cwd=ROOT, env=env, stdout=stream, stderr=subprocess.STDOUT)
         self.processes.append((process, stream, log))
         event(
             "experiment_process_started",
@@ -221,9 +217,7 @@ class Harness:
     def save(self, name, rows):
         path = self.output / name
         if name.endswith(".jsonl"):
-            path.write_text(
-                "".join(json.dumps(row, sort_keys=True) + "\n" for row in rows)
-            )
+            path.write_text("".join(json.dumps(row, sort_keys=True) + "\n" for row in rows))
         else:
             path.write_text(json.dumps(rows, indent=2, sort_keys=True) + "\n")
 
@@ -250,9 +244,7 @@ class Harness:
         first = await self.send(payload, partition=0)
         await self.wait_event(writer_log, "offset_committed", payload["correlation_id"])
         second = await self.send(payload, partition=0)
-        outputs = await self.collect(
-            observer, {payload["correlation_id"]}, timeout=4, count=None
-        )
+        outputs = await self.collect(observer, {payload["correlation_id"]}, timeout=4, count=None)
         await self.stop(writer)
         await self.stop(reviewer)
         await observer.stop()
@@ -270,26 +262,18 @@ class Harness:
         await self.prime(TASKS, group)
         await self.prime(DRAFTS, group + "-reviewer")
         observer = await self.observer(FINAL)
-        reviewer, rl = self.spawn(
-            "reviewer-boundary", group + "-reviewer", "boundary-review"
-        )
-        writer, wl = self.spawn(
-            "writer-boundary", group, "boundary-write", after_publish=2
-        )
+        reviewer, rl = self.spawn("reviewer-boundary", group + "-reviewer", "boundary-review")
+        writer, wl = self.spawn("writer-boundary", group, "boundary-write", after_publish=2)
         await self.wait_event(rl, "consumer_ready")
         await self.wait_event(wl, "consumer_ready")
         payload = self.task("publish-boundary")
         sent = await self.send(payload, partition=0)
-        barrier = await self.wait_event(
-            wl, "after_publish_barrier", payload["correlation_id"]
-        )
+        barrier = await self.wait_event(wl, "after_publish_barrier", payload["correlation_id"])
         await self.stop(writer, signal.SIGKILL)
         restarted, rwl = self.spawn("writer-boundary-restart", group, "boundary-write")
         await self.wait_event(rwl, "consumer_ready")
         await self.wait_event(rwl, "offset_committed", payload["correlation_id"])
-        outputs = await self.collect(
-            observer, {payload["correlation_id"]}, timeout=3, count=None
-        )
+        outputs = await self.collect(observer, {payload["correlation_id"]}, timeout=3, count=None)
         await self.stop(restarted)
         await self.stop(reviewer)
         await observer.stop()
@@ -314,13 +298,9 @@ class Harness:
         await self.wait_event(log, "consumer_ready")
         payload = self.task("death-" + label, delay_seconds=1.0)
         sent = await self.send(payload, partition=0)
-        started = await self.wait_event(
-            log, "processing_started", payload["correlation_id"]
-        )
+        started = await self.wait_event(log, "processing_started", payload["correlation_id"])
         await self.stop(process, signal.SIGKILL)
-        restarted, restart_log = self.spawn(
-            "writer-restart-" + label, group, "death-" + label
-        )
+        restarted, restart_log = self.spawn("writer-restart-" + label, group, "death-" + label)
         await self.wait_event(restart_log, "consumer_ready")
         outputs = await self.collect(
             observer,
@@ -329,9 +309,7 @@ class Harness:
             count=None if baseline else 1,
         )
         if not baseline:
-            await self.wait_event(
-                restart_log, "offset_committed", payload["correlation_id"]
-            )
+            await self.wait_event(restart_log, "offset_committed", payload["correlation_id"])
         await self.stop(restarted)
         await observer.stop()
         rows = [
@@ -407,8 +385,7 @@ class Harness:
     async def ordering(self):
         rng = random.Random(VERIFY_SEED)
         delays = [
-            round(rng.uniform(0.02, 0.08) + (0.20 if n % 2 == 1 else 0), 4)
-            for n in range(1, 21)
+            round(rng.uniform(0.02, 0.08) + (0.20 if n % 2 == 1 else 0), 4) for n in range(1, 21)
         ]
         manifest = {
             "verify_seed": VERIFY_SEED,
@@ -421,21 +398,15 @@ class Harness:
             group = f"{self.run_id}-ordering-{mode}"
             await self.prime(TASKS, group)
             observer = await self.observer(DRAFTS)
-            p1, l1 = self.spawn(
-                "writer-order-" + mode, group, "order-" + mode, instance="writer-A"
-            )
+            p1, l1 = self.spawn("writer-order-" + mode, group, "order-" + mode, instance="writer-A")
             await self.wait_event(l1, "consumer_ready")
-            p2, l2 = self.spawn(
-                "writer-order-" + mode, group, "order-" + mode, instance="writer-B"
-            )
+            p2, l2 = self.spawn("writer-order-" + mode, group, "order-" + mode, instance="writer-B")
             await self.wait_event(l2, "consumer_ready")
             # Wait for the two-member rebalance to settle before publishing.
             await asyncio.sleep(2)
             sent = {}
             for sequence, delay in enumerate(delays, 1):
-                payload = self.task(
-                    f"{mode}-{sequence}", sequence=sequence, delay_seconds=delay
-                )
+                payload = self.task(f"{mode}-{sequence}", sequence=sequence, delay_seconds=delay)
                 meta = await self.send(
                     payload,
                     partition=(sequence - 1) % 2 if mode == "unkeyed" else None,
@@ -463,8 +434,7 @@ class Harness:
                 matching = [
                     e
                     for e in events
-                    if e.get("correlation_id") == cid
-                    and e.get("event") == "processing_started"
+                    if e.get("correlation_id") == cid and e.get("event") == "processing_started"
                 ]
                 rows.append(
                     {

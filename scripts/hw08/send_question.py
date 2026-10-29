@@ -15,9 +15,7 @@ from src.kafka_service.config import FINAL, INBOX, PREFIX, KafkaSettings
 from src.kafka_service.logging import event
 
 
-async def send_question(
-    question, *, run_id=None, correlation_id=None, timeout=180, rental_id=None
-):
+async def send_question(question, *, run_id=None, correlation_id=None, timeout=180, rental_id=None):
     settings = KafkaSettings.from_env()
     identity = correlation_id or str(uuid4())
     payload = {

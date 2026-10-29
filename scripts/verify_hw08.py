@@ -52,9 +52,7 @@ def evidence_checks(root):
             and observed["killed_pid"] != observed["restart_pid"]
         )
         if label == "after":
-            passed &= (
-                len(received) == 2 and received[0]["offset"] == received[1]["offset"]
-            )
+            passed &= len(received) == 2 and received[0]["offset"] == received[1]["offset"]
         passed &= bool(committed) and all(
             r["committed_offset"] == r["offset"] + 1 for r in committed
         )
@@ -72,15 +70,9 @@ def evidence_checks(root):
         failed = [r for r in rows if r.get("event") == "processing_failed"]
         passed = len(observed["later_outputs"]) == expected
         if label == "after":
-            passed &= (
-                len(failed) == 3
-                and len(dead) == 1
-                and dead[0]["value"]["attempts"] == 3
-            )
+            passed &= len(failed) == 3 and len(dead) == 1 and dead[0]["value"]["attempts"] == 3
             good_source = observed["later_outputs"][0]["value"]["input_source"]
-            passed &= (
-                good_source["partition"] == dead[0]["value"]["source"]["partition"]
-            )
+            passed &= good_source["partition"] == dead[0]["value"]["source"]["partition"]
             passed &= good_source["offset"] > dead[0]["value"]["source"]["offset"]
         else:
             passed &= observed["exit_code"] != 0 and len(failed) == 1 and not dead
@@ -168,10 +160,7 @@ async def pipeline_smoke(runtime, output, model):
         journey = [r for r in events if r.get("correlation_id") == cid]
         output.mkdir(parents=True, exist_ok=True)
         (output / "journey.jsonl").write_text(
-            "".join(
-                json.dumps(r) + "\n"
-                for r in sorted(journey, key=lambda r: r["timestamp"])
-            )
+            "".join(json.dumps(r) + "\n" for r in sorted(journey, key=lambda r: r["timestamp"]))
         )
         (output / "final.json").write_text(json.dumps(result, indent=2) + "\n")
         ready = [r for r in events if r.get("event") == "consumer_ready"]
@@ -244,9 +233,7 @@ async def http_smoke(base_url, evidence_dir):
 
 
 async def verify(args):
-    commit = subprocess.check_output(
-        ["git", "rev-parse", "HEAD"], cwd=ROOT, text=True
-    ).strip()
+    commit = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
     os.environ["HW8_SOURCE_COMMIT"] = commit
     checks = []
     if args.require_ref:
@@ -261,17 +248,13 @@ async def verify(args):
                 {"ref": args.require_ref, "target": target},
             )
         )
-    admin = AIOKafkaAdminClient(
-        bootstrap_servers=KafkaSettings.from_env().bootstrap_servers
-    )
+    admin = AIOKafkaAdminClient(bootstrap_servers=KafkaSettings.from_env().bootstrap_servers)
     await admin.start()
     try:
         topics = await admin.describe_topics(list(TOPICS))
         actual = {t["topic"]: len(t["partitions"]) for t in topics}
         checks.append(
-            check_record(
-                "seven_topic_partitions", "live Kafka", actual == TOPICS, actual
-            )
+            check_record("seven_topic_partitions", "live Kafka", actual == TOPICS, actual)
         )
     finally:
         await admin.close()
@@ -296,8 +279,7 @@ async def verify(args):
             check_record(
                 "rental_replay_same_uuid",
                 "live Kafka",
-                replay["rental_id"]
-                == roundtrip["exchanges"][0]["response"]["rental_id"],
+                replay["rental_id"] == roundtrip["exchanges"][0]["response"]["rental_id"],
                 replay,
             )
         )
@@ -321,9 +303,7 @@ async def verify(args):
                 and response.get("correlation_id") == cid
                 and bool(response.get("error"))
             )
-            validation.append(
-                {"request": request, "response": response, "passed": passed}
-            )
+            validation.append({"request": request, "response": response, "passed": passed})
         (output / "validation.json").write_text(json.dumps(validation, indent=2) + "\n")
         checks.append(
             check_record(
@@ -349,17 +329,13 @@ async def verify(args):
             )
     if not args.skip_pipeline:
         checks.append(
-            await pipeline_smoke(
-                args.runtime_dir, args.evidence_dir / "raw/part2", args.model
-            )
+            await pipeline_smoke(args.runtime_dir, args.evidence_dir / "raw/part2", args.model)
         )
     if not args.skip_artifacts:
         try:
             checks.extend(evidence_checks(args.evidence_dir))
         except (OSError, ValueError, KeyError, StopIteration) as exc:
-            checks.append(
-                check_record("failure_artifacts", "artifact", False, str(exc))
-            )
+            checks.append(check_record("failure_artifacts", "artifact", False, str(exc)))
     result = {
         "homework": 8,
         "sid4": 6102,
@@ -390,9 +366,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--runtime-dir", type=Path, required=True)
     parser.add_argument("--evidence-dir", type=Path, default=ROOT / "reports/hw08")
-    parser.add_argument(
-        "--output", type=Path, default=ROOT / "reports/hw08/verification.json"
-    )
+    parser.add_argument("--output", type=Path, default=ROOT / "reports/hw08/verification.json")
     parser.add_argument("--model", default="qwen2.5:7b")
     parser.add_argument("--require-ref")
     parser.add_argument("--skip-pipeline", action="store_true")

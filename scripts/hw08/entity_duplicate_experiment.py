@@ -56,9 +56,7 @@ async def run(args):
             }
             sends = []
             for _ in range(2):
-                meta = await h.producer.send_and_wait(
-                    ENTITY_REQUESTS, json.dumps(payload).encode()
-                )
+                meta = await h.producer.send_and_wait(ENTITY_REQUESTS, json.dumps(payload).encode())
                 sends.append(
                     {
                         "topic": meta.topic,

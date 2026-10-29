@@ -172,9 +172,7 @@ class StageProcessor:
     async def commit(self, record, consumer, **fields):
         position = record.offset + 1
         try:
-            await consumer.commit(
-                {TopicPartition(record.topic, record.partition): position}
-            )
+            await consumer.commit({TopicPartition(record.topic, record.partition): position})
         except Exception as exc:
             self.log(
                 "commit_failed",
@@ -200,9 +198,7 @@ class StageProcessor:
             "partition": record.partition,
             "offset": record.offset,
         }
-        source_key = (
-            f"{self.group_id}/{record.topic}/{record.partition}/{record.offset}"
-        )
+        source_key = f"{self.group_id}/{record.topic}/{record.partition}/{record.offset}"
         try:
             diagnostic = json.loads(record.value)
         except (ValueError, UnicodeDecodeError):
@@ -220,9 +216,7 @@ class StageProcessor:
             raw_bytes=len(record.value),
         )
         if self.baseline == "early-commit":
-            await self.commit(
-                record, consumer, **ids, reason="baseline_before_processing"
-            )
+            await self.commit(record, consumer, **ids, reason="baseline_before_processing")
         output = None
         published = False
         last_error = "Processing exhausted its three-attempt budget"
@@ -231,14 +225,10 @@ class StageProcessor:
         if self.baseline != "no-dedup":
             try:
                 cached_data = decode_payload(record.value, self.stage)
-                cached = self.store.lookup(
-                    cached_data["correlation_id"], fingerprint(cached_data)
-                )
+                cached = self.store.lookup(cached_data["correlation_id"], fingerprint(cached_data))
                 if cached:
                     output, published = cached
-                    self.log(
-                        "duplicate_cached", **source, **ids, already_published=published
-                    )
+                    self.log("duplicate_cached", **source, **ids, already_published=published)
             except ValueError:
                 pass  # Decode/conflict errors receive the normal bounded attempts below.
         while output is None:
@@ -251,15 +241,11 @@ class StageProcessor:
                 identity = data["correlation_id"]
                 digest = fingerprint(data)
                 receipt = (
-                    None
-                    if self.baseline == "no-dedup"
-                    else self.store.lookup(identity, digest)
+                    None if self.baseline == "no-dedup" else self.store.lookup(identity, digest)
                 )
                 if receipt:
                     output, published = receipt
-                    self.log(
-                        "duplicate_cached", **source, **ids, already_published=published
-                    )
+                    self.log("duplicate_cached", **source, **ids, already_published=published)
                 else:
                     self.log(
                         "processing_started",
@@ -274,9 +260,7 @@ class StageProcessor:
                     output = await self.generate(data)
                     output["input_source"] = source
                     if self.baseline != "no-dedup":
-                        output, published = self.store.remember(
-                            identity, digest, output
-                        )
+                        output, published = self.store.remember(identity, digest, output)
                     self.log(
                         "processing_completed",
                         **source,
@@ -314,9 +298,7 @@ class StageProcessor:
                 "raw_utf8": record.value.decode("utf-8", errors="replace"),
                 "error": last_error,
             }
-            metadata = await producer.send_and_wait(
-                DEAD_LETTER, json.dumps(dead).encode()
-            )
+            metadata = await producer.send_and_wait(DEAD_LETTER, json.dumps(dead).encode())
             self.log(
                 "dead_letter_published",
                 **source,
@@ -364,17 +346,13 @@ class AssignmentLogger(ConsumerRebalanceListener):
     async def on_partitions_revoked(self, revoked):
         self.processor.log(
             "partitions_revoked",
-            partitions=[
-                {"topic": p.topic, "partition": p.partition} for p in sorted(revoked)
-            ],
+            partitions=[{"topic": p.topic, "partition": p.partition} for p in sorted(revoked)],
         )
 
     async def on_partitions_assigned(self, assigned):
         self.processor.log(
             "partitions_assigned",
-            partitions=[
-                {"topic": p.topic, "partition": p.partition} for p in sorted(assigned)
-            ],
+            partitions=[{"topic": p.topic, "partition": p.partition} for p in sorted(assigned)],
         )
 
 
