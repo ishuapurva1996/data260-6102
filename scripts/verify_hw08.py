@@ -122,6 +122,35 @@ def evidence_checks(root):
                 },
             )
         )
+    for label in ("before", "after"):
+        rows = read_events(p / f"duplicate_{label}.jsonl")
+        observed = next(r for r in rows if r.get("event") == "observed_result")
+        ids = [r["value"]["rental_id"] for r in observed["responses"]]
+        count = 2 if label == "before" else 1
+        passed = len(ids) == 2 and len(set(ids)) == count and observed["rental_count"] == count
+        checks.append(
+            check_record(
+                "entity_duplicate_" + label,
+                "artifact",
+                passed,
+                {"rental_count": observed["rental_count"], "uuids": ids},
+            )
+        )
+    rows = read_events(p / "publish_commit_boundary.jsonl")
+    observed = next(r for r in rows if r.get("event") == "observed_result")
+    passed = len(observed["final_outputs"]) == 1
+    passed &= any(r.get("event") == "duplicate_cached" and r.get("stage") == "writer" for r in rows)
+    passed &= any(
+        r.get("event") == "duplicate_suppressed" and r.get("stage") == "reviewer" for r in rows
+    )
+    checks.append(
+        check_record(
+            "publish_commit_boundary",
+            "artifact",
+            passed,
+            {"final_outputs": len(observed["final_outputs"])},
+        )
+    )
     manifest = json.loads((p / "ordering_manifest.json").read_text())
     checks.append(
         check_record(
