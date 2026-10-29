@@ -328,6 +328,10 @@ class Harness:
             timeout=4 if baseline else 15,
             count=None if baseline else 1,
         )
+        if not baseline:
+            await self.wait_event(
+                restart_log, "offset_committed", payload["correlation_id"]
+            )
         await self.stop(restarted)
         await observer.stop()
         rows = [
@@ -375,6 +379,8 @@ class Harness:
             count=None if baseline else 1,
         )
         dead = await self.collect(dlq, {bad["correlation_id"]}, timeout=1, count=None)
+        if not baseline:
+            await self.wait_event(log, "offset_committed", good["correlation_id"])
         await self.stop(process)
         await observer.stop()
         await dlq.stop()
