@@ -14,6 +14,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from uuid import uuid4
 
+import httpx
+
 ROOT = Path(__file__).resolve().parents[1]
 sys.path[:0] = [str(ROOT), str(ROOT / "code"), str(ROOT / "scripts/hw08")]
 from aiokafka.admin import AIOKafkaAdminClient
@@ -190,6 +192,57 @@ async def pipeline_smoke(runtime, output, model):
         await h.close()
 
 
+async def http_smoke(base_url, evidence_dir):
+    async with httpx.AsyncClient(base_url=base_url, timeout=30) as client:
+        health = await client.get("/api/health")
+        health.raise_for_status()
+        denied = await client.post("/api/kafka/rentals", json={})
+        if denied.status_code != 401:
+            return check_record(
+                "authenticated_fastapi_wrapper",
+                "live HTTP",
+                False,
+                {"unauthorized_status": denied.status_code},
+            )
+        token = os.getenv("HW8_TOKEN")
+        if not token:
+            username, password = os.getenv("HW8_USERNAME"), os.getenv("HW8_PASSWORD")
+            if not username or not password:
+                return check_record(
+                    "authenticated_fastapi_wrapper",
+                    "live HTTP",
+                    False,
+                    "HW8 credentials were not configured",
+                )
+            login = await client.post(
+                "/auth/login", json={"username": username, "password": password}
+            )
+            login.raise_for_status()
+            token = login.json()["access_token"]
+
+        async def send(payload):
+            response = await client.post(
+                "/api/kafka/rentals",
+                json=payload,
+                headers={"Authorization": "Bearer " + token},
+            )
+            response.raise_for_status()
+            return response.json()
+
+        result = await demonstrate(send)
+        path = evidence_dir / "raw/part1/roundtrip_http.json"
+        path.write_text(json.dumps(result, indent=2) + "\n")
+        return check_record(
+            "authenticated_fastapi_wrapper",
+            "live HTTP + Kafka",
+            result["passed"],
+            {
+                "unauthorized_status": denied.status_code,
+                "correlation_id": result["correlation_id"],
+            },
+        )
+
+
 async def verify(args):
     commit = subprocess.check_output(
         ["git", "rev-parse", "HEAD"], cwd=ROOT, text=True
@@ -282,6 +335,18 @@ async def verify(args):
         )
     finally:
         await rpc.stop()
+    if not args.skip_http:
+        try:
+            checks.append(await http_smoke(args.base_url, args.evidence_dir))
+        except (httpx.HTTPError, ValueError) as exc:
+            checks.append(
+                check_record(
+                    "authenticated_fastapi_wrapper",
+                    "live HTTP",
+                    False,
+                    type(exc).__name__,
+                )
+            )
     if not args.skip_pipeline:
         checks.append(
             await pipeline_smoke(
@@ -331,5 +396,7 @@ if __name__ == "__main__":
     parser.add_argument("--model", default="qwen2.5:7b")
     parser.add_argument("--require-ref")
     parser.add_argument("--skip-pipeline", action="store_true")
+    parser.add_argument("--skip-http", action="store_true")
+    parser.add_argument("--base-url", default="http://127.0.0.1:8702")
     parser.add_argument("--skip-artifacts", action="store_true")
     raise SystemExit(0 if asyncio.run(verify(parser.parse_args())) else 1)
