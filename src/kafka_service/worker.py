@@ -13,7 +13,12 @@ from pydantic import ValidationError
 
 from .config import ENTITY_REQUESTS, ENTITY_RESPONSES, PREFIX, KafkaSettings
 from .logging import event
-from .schemas import RentalRequest, clean_validation_error, error_response, validate_data
+from .schemas import (
+    RentalRequest,
+    clean_validation_error,
+    error_response,
+    validate_data,
+)
 
 
 class RentalWorker:
@@ -32,11 +37,15 @@ class RentalWorker:
             return error_response(payload, str(exc))
 
         identity = (envelope.operation, envelope.correlation_id)
-        fingerprint = hashlib.sha256(json.dumps(data, sort_keys=True).encode()).hexdigest()
+        fingerprint = hashlib.sha256(
+            json.dumps(data, sort_keys=True).encode()
+        ).hexdigest()
         if self.idempotency and identity in self.responses:
             original_fingerprint, response = self.responses[identity]
             if original_fingerprint != fingerprint:
-                return error_response(payload, "Correlation ID already used with different data")
+                return error_response(
+                    payload, "Correlation ID already used with different data"
+                )
             event(
                 "duplicate_cached",
                 stage="entity_worker",
@@ -126,13 +135,17 @@ async def run_worker(*, group_id=f"{PREFIX}_entity_worker", idempotency=True):
             else:
                 event("request_received", **metadata, message=payload)
 
-            if isinstance(payload, dict) and isinstance(payload.get("correlation_id"), str):
+            if isinstance(payload, dict) and isinstance(
+                payload.get("correlation_id"), str
+            ):
                 response = worker.process_request(payload)
                 # Invalid reply destinations receive their clean error on the one allowed topic.
                 reply_to = payload.get("reply_to")
                 if reply_to != ENTITY_RESPONSES:
                     reply_to = ENTITY_RESPONSES
-                sent = await producer.send_and_wait(reply_to, json.dumps(response).encode())
+                sent = await producer.send_and_wait(
+                    reply_to, json.dumps(response).encode()
+                )
                 event(
                     "response_sent",
                     **metadata,

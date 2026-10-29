@@ -37,10 +37,14 @@ def test_roundtrip_replay_and_sequential_get_share_correlation():
     assert created["success"] and UUID(created["rental_id"]).version == 4
     assert worker.process_request(request()) == created
     assert len(worker.rentals) == 1
-    got = worker.process_request(request("GET_RENTAL", {"rental_id": created["rental_id"]}))
+    got = worker.process_request(
+        request("GET_RENTAL", {"rental_id": created["rental_id"]})
+    )
     assert got["success"] and got["correlation_id"] == created["correlation_id"]
     assert all(got["rental"][k] == v for k, v in PAYLOAD.items())
-    changed = worker.process_request(request(data={**PAYLOAD, "listingTitle": "Different"}))
+    changed = worker.process_request(
+        request(data={**PAYLOAD, "listingTitle": "Different"})
+    )
     assert not changed["success"] and len(worker.rentals) == 1
 
 
@@ -111,7 +115,9 @@ class ResponseConsumer:
 
     async def __anext__(self):
         value = await self.queue.get()
-        return SimpleNamespace(value=value, topic=ENTITY_RESPONSES, partition=0, offset=0)
+        return SimpleNamespace(
+            value=value, topic=ENTITY_RESPONSES, partition=0, offset=0
+        )
 
 
 class ResponseProducer:
@@ -146,7 +152,9 @@ class ResponseProducer:
                 "rental": {"rental_id": "correct"},
             }
             if payload["operation"] == "GET_RENTAL":
-                await self.rpc.consumer.queue.put(__import__("json").dumps(stale).encode())
+                await self.rpc.consumer.queue.put(
+                    __import__("json").dumps(stale).encode()
+                )
             await self.rpc.consumer.queue.put(__import__("json").dumps(wanted).encode())
         return SimpleNamespace(topic=topic, partition=0, offset=1)
 
@@ -165,7 +173,9 @@ def test_rpc_preserves_full_response_and_does_not_match_other_operation():
         rpc = make_rpc()
         await rpc.start()
         rpc.producer.rpc = rpc
-        result = await rpc.make_request(request("GET_RENTAL", {"rental_id": str(uuid4())}))
+        result = await rpc.make_request(
+            request("GET_RENTAL", {"rental_id": str(uuid4())})
+        )
         assert result["success"] and result["operation"] == "GET_RENTAL"
         assert result["rental"]["rental_id"] == "correct"
         assert not rpc.pending
@@ -240,7 +250,8 @@ def test_wrapper_preserves_auth_and_roles_and_lifecycle(monkeypatch):
         assert client.post("/api/kafka/rentals", json=request()).status_code == 403
         assert not rpc.calls
         got = client.post(
-            "/api/kafka/rentals", json=request("GET_RENTAL", {"rental_id": str(uuid4())})
+            "/api/kafka/rentals",
+            json=request("GET_RENTAL", {"rental_id": str(uuid4())}),
         )
         assert got.status_code == 200 and got.json()["correlation_id"] == "journey-6102"
         app.dependency_overrides[require_user] = lambda: SimpleNamespace(role="writer")

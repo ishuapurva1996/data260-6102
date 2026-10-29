@@ -15,7 +15,11 @@ from .schemas import RentalRequest, clean_validation_error, error_response
 
 class KafkaRPC:
     def __init__(
-        self, settings=None, *, producer_factory=AIOKafkaProducer, consumer_factory=AIOKafkaConsumer
+        self,
+        settings=None,
+        *,
+        producer_factory=AIOKafkaProducer,
+        consumer_factory=AIOKafkaConsumer,
     ):
         self.settings = settings or KafkaSettings.from_env()
         self.producer_factory = producer_factory
@@ -82,7 +86,10 @@ class KafkaRPC:
             async for record in self.consumer:
                 try:
                     response = json.loads(record.value.decode())
-                    if not isinstance(response, dict) or type(response.get("success")) is not bool:
+                    if (
+                        not isinstance(response, dict)
+                        or type(response.get("success")) is not bool
+                    ):
                         raise ValueError("Response must contain Boolean success")
                     key = (response.get("correlation_id"), response.get("operation"))
                     future = self.pending.get(key)
@@ -132,7 +139,9 @@ class KafkaRPC:
             return error_response(payload, "Kafka RPC is not ready", transport=True)
         key = (envelope["correlation_id"], envelope["operation"])
         if key in self.pending:
-            return error_response(payload, "This correlation ID and operation are already pending")
+            return error_response(
+                payload, "This correlation ID and operation are already pending"
+            )
         future = asyncio.get_running_loop().create_future()
         self.pending[key] = future  # Register before a fast worker can reply.
         try:
@@ -178,7 +187,9 @@ class KafkaRPC:
                 operation=key[1],
                 error=type(exc).__name__,
             )
-            return error_response(payload, "Kafka request transport failed", transport=True)
+            return error_response(
+                payload, "Kafka request transport failed", transport=True
+            )
         finally:
             self.pending.pop(key, None)
             if not future.done():

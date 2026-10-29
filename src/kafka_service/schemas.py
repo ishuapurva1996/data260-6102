@@ -36,7 +36,9 @@ class RentalLookup(BaseModel):
 
 def validate_data(operation: str, data: dict) -> dict:
     if operation == "CREATE_RENTAL":
-        return RentalCreate.model_validate(data).model_dump(mode="json", exclude_none=True)
+        return RentalCreate.model_validate(data).model_dump(
+            mode="json", exclude_none=True
+        )
     if operation == "GET_RENTAL":
         return RentalLookup.model_validate(data).model_dump()
     raise ValueError("Unknown operation")
@@ -45,7 +47,8 @@ def validate_data(operation: str, data: dict) -> dict:
 def clean_validation_error(exc) -> str:
     """Keep field explanations without raw inputs or Pydantic implementation URLs."""
     return "; ".join(
-        f"{'.'.join(str(p) for p in item['loc'])}: {item['msg']}" for item in exc.errors()
+        f"{'.'.join(str(p) for p in item['loc'])}: {item['msg']}"
+        for item in exc.errors()
     )
 
 

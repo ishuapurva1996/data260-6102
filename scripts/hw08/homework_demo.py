@@ -101,7 +101,10 @@ async def run(args):
         async with httpx.AsyncClient(base_url=args.base_url, timeout=30) as client:
             token = os.getenv("HW8_TOKEN")
             if not token:
-                username, password = os.getenv("HW8_USERNAME"), os.getenv("HW8_PASSWORD")
+                username, password = (
+                    os.getenv("HW8_USERNAME"),
+                    os.getenv("HW8_PASSWORD"),
+                )
                 if not username or not password:
                     raise SystemExit(
                         "Set HW8_TOKEN or HW8_USERNAME/HW8_PASSWORD for the authenticated API"
@@ -114,7 +117,9 @@ async def run(args):
 
             async def send(payload):
                 response = await client.post(
-                    "/api/kafka/rentals", json=payload, headers={"Authorization": f"Bearer {token}"}
+                    "/api/kafka/rentals",
+                    json=payload,
+                    headers={"Authorization": f"Bearer {token}"},
                 )
                 response.raise_for_status()
                 return response.json()
