@@ -1,0 +1,56 @@
+name: s6102-hw8
+services:
+  kafka:
+    image: apache/kafka:3.9.2
+    ports: ["127.0.0.1:9092:9092"]
+    environment:
+      KAFKA_NODE_ID: 1
+      KAFKA_PROCESS_ROLES: broker,controller
+      KAFKA_LISTENERS: INTERNAL://:19092,EXTERNAL://:9092,CONTROLLER://:9093
+      KAFKA_ADVERTISED_LISTENERS: INTERNAL://kafka:19092,EXTERNAL://127.0.0.1:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: INTERNAL:PLAINTEXT,EXTERNAL:PLAINTEXT,CONTROLLER:PLAINTEXT
+      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+      KAFKA_INTER_BROKER_LISTENER_NAME: INTERNAL
+      KAFKA_CONTROLLER_QUORUM_VOTERS: 1@kafka:9093
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "false"
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
+    healthcheck:
+      test: ["CMD", "/opt/kafka/bin/kafka-broker-api-versions.sh", "--bootstrap-server", "kafka:19092"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+    volumes: ["kafka-data:/var/lib/kafka/data"]
+  kafka-init:
+    image: apache/kafka:3.9.2
+    depends_on:
+      kafka: {condition: service_healthy}
+    volumes: ["./create_topics.sh:/create_topics.sh:ro"]
+    entrypoint: ["/bin/bash", "/create_topics.sh"]
+  worker:
+    build: {context: ../../.., dockerfile: code/docker/hw08/Dockerfile}
+    command: ["python", "-m", "src.kafka_service.worker"]
+    environment:
+      KAFKA_BOOTSTRAP_SERVERS: kafka:19092
+      HW8_SOURCE_COMMIT: ${HW8_SOURCE_COMMIT:-unrecorded}
+    depends_on:
+      kafka-init: {condition: service_completed_successfully}
+  fastapi:
+    build: {context: ../../.., dockerfile: code/docker/hw08/Dockerfile}
+    ports: ["127.0.0.1:8702:8702"]
+    env_file: ["${HW8_PRIVATE_ENV:?Set HW8_PRIVATE_ENV to your external private environment file}"]
+    environment:
+      KAFKA_BOOTSTRAP_SERVERS: kafka:19092
+      HW8_KAFKA_ENABLED: "1"
+      HW8_SOURCE_COMMIT: ${HW8_SOURCE_COMMIT:-unrecorded}
+    depends_on:
+      kafka-init: {condition: service_completed_successfully}
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8702/api/health')"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+volumes:
+  kafka-data:
