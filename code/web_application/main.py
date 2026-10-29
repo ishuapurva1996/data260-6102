@@ -37,6 +37,7 @@ def create_app(
     hw6_embedder=None,
     hw6_count_tokens=None,
     bike_service=None,
+    kafka_rpc=None,
 ) -> FastAPI:
     app = FastAPI(title="Rental Housing Listings", version="7.4.0")
     app.state.jwt_settings = JWTSettings.from_env()
@@ -59,6 +60,17 @@ def create_app(
     app.include_router(performance.router)
     app.include_router(rentals.router)
     app.include_router(property_managers.router)
+
+    if kafka_rpc is not None or os.getenv("HW8_KAFKA_ENABLED") == "1":
+        from web_application.routers import kafka_rentals
+
+        from src.kafka_service.kafka_rpc import KafkaRPC
+
+        kafka_rpc = kafka_rpc if kafka_rpc is not None else KafkaRPC()
+        app.state.kafka_rpc = kafka_rpc
+        app.add_event_handler("startup", kafka_rpc.start)
+        app.add_event_handler("shutdown", kafka_rpc.stop)
+        app.include_router(kafka_rentals.create_router(kafka_rpc))
 
     from web_application.routers import bikeshare
 
