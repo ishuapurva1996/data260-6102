@@ -100,6 +100,11 @@ With Kafka, worker and FastAPI running, and independent pipeline processes stopp
 python scripts/verify_hw08.py --runtime-dir "$HW8_RUNTIME/verify" --require-ref hw8
 ```
 
+The full verifier needs privately configured `HW8_READER_USERNAME` / `HW8_READER_PASSWORD`,
+`HW8_WRITER_USERNAME` / `HW8_WRITER_PASSWORD`, and `HW8_MODERATOR_USERNAME` /
+`HW8_MODERATOR_PASSWORD`. Writer credentials also accept the demo
+`HW8_USERNAME` / `HW8_PASSWORD` names. Tokens and account credentials are never emitted.
+
 The verifier starts its own three separate stage processes, checks live topic
 metadata, CREATE/GET, replay, clean errors, authenticated HTTP, and machine-readable
 failure evidence. It writes `reports/hw08/verification.json`. Use a fresh external
@@ -109,3 +114,21 @@ Keep a post-tag receipt outside the checkout if preserving a clean tagged state.
 The script changes evidence files, never application code.
 
 `reports/hw08/` contains the report, raw evidence, metrics and AI-use disclosure.
+
+For a complete post-tag check without changing tracked evidence, first copy the
+recorded failure data into an external evidence directory, then use all three
+output/runtime options:
+
+```bash
+mkdir -p "$HW8_RUNTIME/tag-evidence/raw"
+cp -R reports/hw08/raw/part3 "$HW8_RUNTIME/tag-evidence/raw/part3"
+python scripts/verify_hw08.py --require-ref hw8 \
+  --runtime-dir "$HW8_RUNTIME/tag-runtime" \
+  --evidence-dir "$HW8_RUNTIME/tag-evidence" \
+  --output "$HW8_RUNTIME/tag-verification.json"
+```
+
+The tracked receipt records the tested source commit. The local upload package
+contains `TAG_TARGET.json` and the full post-tag receipt identifying the final
+evidence commit. Application directories are verified identical between those
+commits; the report never claims to contain its own containing commit hash.

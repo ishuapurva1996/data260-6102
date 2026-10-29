@@ -1,0 +1,75 @@
+{
+  "student": "Pragya Apurva",
+  "images": [
+    {
+      "file": "client.png",
+      "capture_kind": "browser-rendered source/log view; not a terminal capture",
+      "sha256": "758ab510ff09c73d1c3b81f0057eef9372d89fff8bad24912f4f059e7a6ea3d6"
+    },
+    {
+      "file": "death.png",
+      "capture_kind": "browser-rendered source/log view; not a terminal capture",
+      "sha256": "423654e42c1125f54a7584790e64dd838164e24496dcae3986d946bf1d0d7b41"
+    },
+    {
+      "file": "demo.png",
+      "capture_kind": "browser-rendered source/log view; not a terminal capture",
+      "sha256": "0b548230722e53a0c125f3fd8772efc8cd613f1337947bc5d56143a9b69edc66"
+    },
+    {
+      "file": "duplicate.png",
+      "capture_kind": "browser-rendered source/log view; not a terminal capture",
+      "sha256": "6512b7e33caaed1d930466203bedda8a9f0f5cb1733b3de7bbec980f6a4e98c3"
+    },
+    {
+      "file": "ordering.png",
+      "capture_kind": "browser-rendered source/log view; not a terminal capture",
+      "sha256": "39ee7ad3550343bf52bf463e21a334592a1999fb4ffd39aba15d6c0e4eb593ed"
+    },
+    {
+      "file": "pipeline.png",
+      "capture_kind": "browser-rendered source/log view; not a terminal capture",
+      "sha256": "178a18f4c4192423044bff722375a2d44bdf26f1cdf3c94d73a61c803ec96fb0"
+    },
+    {
+      "file": "poison.png",
+      "capture_kind": "browser-rendered source/log view; not a terminal capture",
+      "sha256": "03247191e69bb606b0cab1152875b4da54a85552da580a8d6107a4e38979852e"
+    },
+    {
+      "file": "setup.png",
+      "capture_kind": "actual interactive PTY terminal, displayed in loopback terminal client",
+      "sha256": "27c542e9469e60cbfcf06afcadcaccd0b14d47d91a788e658b4cacbcd165d334"
+    },
+    {
+      "file": "terminal_flow.png",
+      "capture_kind": "actual interactive PTY terminal, displayed in loopback terminal client",
+      "sha256": "6f8f8b331842f82713e731abb7e376fe9133d9eaacf2badce96456b01f8fb934"
+    },
+    {
+      "file": "terminal_http.png",
+      "capture_kind": "actual interactive PTY terminal, displayed in loopback terminal client",
+      "sha256": "f013129144ab4da5c439a1516806740f9f56482b2431299acee79cb933c72f67"
+    },
+    {
+      "file": "terminal_roles.png",
+      "capture_kind": "actual interactive PTY terminal, displayed in loopback terminal client",
+      "sha256": "03b3660292696a92cf1f75080e0d9a058b0ea4e900b2f0a3a99b31578f0b3b7a"
+    },
+    {
+      "file": "terminal_tests.png",
+      "capture_kind": "actual interactive PTY terminal, displayed in loopback terminal client",
+      "sha256": "dac692a7568fdfc8aae7e55486cd039b33ae5e98e03a4243e1cea8ac2b9ff8f8"
+    },
+    {
+      "file": "worker.png",
+      "capture_kind": "browser-rendered source/log view; not a terminal capture",
+      "sha256": "2bbc5e4fc137574347e9835da0b58f88513763dcee0f7e8bcb3ef28fb4539c53"
+    },
+    {
+      "file": "wrapper.png",
+      "capture_kind": "browser-rendered source/log view; not a terminal capture",
+      "sha256": "06bc4d241a99d1138d4893d8636ec930ffd4726ad219cbf1f6c64c3b82095454"
+    }
+  ]
+}

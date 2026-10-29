@@ -1,0 +1,57 @@
+{
+  "timestamp": "2026-10-29T20:20:27.549144+00:00",
+  "before": {
+    "hw05_migration_progress": {
+      "count": 1,
+      "sha256": "d7c6e294b978ce7c70f908cd947368b14c8af69dd5dc1684b9d27e0103edac63"
+    },
+    "property_managers": {
+      "count": 2,
+      "sha256": "9445edecc16a787b9836a3c94c31e3d35c59a861d0e811168f01b591341cce76"
+    },
+    "rentals": {
+      "count": 4,
+      "sha256": "12a6a9fc0d9e0d6e3d903e94544cb00a6a45f025112351e672f9278bedfd7f2a"
+    },
+    "schema_migrations": {
+      "count": 3,
+      "sha256": "1583e613d3ad12f1b05cf52b0312fe1d977c555b8ab57437e4faee328d4832c2"
+    },
+    "sessions": {
+      "count": 37,
+      "sha256": "10e501f0c73689f427eaeeadae05fc37fdc2159051a00ac29a22024276d13fc5"
+    },
+    "users": {
+      "count": 5,
+      "sha256": "edf8c1bfd2796fc705bad7751e2178a60e959458e093c54ee76d192bac6344f1"
+    }
+  },
+  "after": {
+    "hw05_migration_progress": {
+      "count": 1,
+      "sha256": "d7c6e294b978ce7c70f908cd947368b14c8af69dd5dc1684b9d27e0103edac63"
+    },
+    "property_managers": {
+      "count": 2,
+      "sha256": "9445edecc16a787b9836a3c94c31e3d35c59a861d0e811168f01b591341cce76"
+    },
+    "rentals": {
+      "count": 4,
+      "sha256": "12a6a9fc0d9e0d6e3d903e94544cb00a6a45f025112351e672f9278bedfd7f2a"
+    },
+    "schema_migrations": {
+      "count": 3,
+      "sha256": "1583e613d3ad12f1b05cf52b0312fe1d977c555b8ab57437e4faee328d4832c2"
+    },
+    "sessions": {
+      "count": 37,
+      "sha256": "10e501f0c73689f427eaeeadae05fc37fdc2159051a00ac29a22024276d13fc5"
+    },
+    "users": {
+      "count": 5,
+      "sha256": "edf8c1bfd2796fc705bad7751e2178a60e959458e093c54ee76d192bac6344f1"
+    }
+  },
+  "passed": true,
+  "note": "Row values/counts compared; AUTO_INCREMENT counters are not claimed unchanged."
+}

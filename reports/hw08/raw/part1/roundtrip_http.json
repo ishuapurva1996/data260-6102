@@ -1,0 +1,55 @@
+{
+  "run_id": "part1-14a9bec61494",
+  "sid4": 6102,
+  "correlation_id": "9f93b86d-ba40-4df2-97e1-025fe556349b",
+  "passed": true,
+  "exchanges": [
+    {
+      "request": {
+        "correlation_id": "9f93b86d-ba40-4df2-97e1-025fe556349b",
+        "reply_to": "s6102_entity_responses",
+        "operation": "CREATE_RENTAL",
+        "data": {
+          "listingTitle": "HW8 synthetic apartment",
+          "propertyAddress": "100 Example Street, San Jose, CA",
+          "submitterEmail": "hw8@example.com",
+          "description": "Synthetic rental listing for the Kafka homework demonstration.",
+          "propertyType": "apartment",
+          "termsAccepted": true
+        }
+      },
+      "response": {
+        "correlation_id": "9f93b86d-ba40-4df2-97e1-025fe556349b",
+        "operation": "CREATE_RENTAL",
+        "success": true,
+        "rental_id": "006bb888-51a8-4ebd-9a46-d221c784f4d5",
+        "message": "Rental created"
+      }
+    },
+    {
+      "request": {
+        "correlation_id": "9f93b86d-ba40-4df2-97e1-025fe556349b",
+        "reply_to": "s6102_entity_responses",
+        "operation": "GET_RENTAL",
+        "data": {
+          "rental_id": "006bb888-51a8-4ebd-9a46-d221c784f4d5"
+        }
+      },
+      "response": {
+        "correlation_id": "9f93b86d-ba40-4df2-97e1-025fe556349b",
+        "operation": "GET_RENTAL",
+        "success": true,
+        "rental": {
+          "rental_id": "006bb888-51a8-4ebd-9a46-d221c784f4d5",
+          "listingTitle": "HW8 synthetic apartment",
+          "propertyAddress": "100 Example Street, San Jose, CA",
+          "availableUnits": 1,
+          "submitterEmail": "hw8@example.com",
+          "description": "Synthetic rental listing for the Kafka homework demonstration.",
+          "propertyType": "apartment",
+          "termsAccepted": true
+        }
+      }
+    }
+  ]
+}

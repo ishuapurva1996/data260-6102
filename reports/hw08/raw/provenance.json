@@ -1,0 +1,10 @@
+{
+  "tested_source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9",
+  "submission_tag": "hw8",
+  "final_tag_target_record": "external upload package TAG_TARGET.json; resolve git rev-parse hw8^{commit}",
+  "terminal_http_run": "c08bff2e-edb7-4b57-95cf-a7b7d0167ace",
+  "verifier_http_run": "9f93b86d-ba40-4df2-97e1-025fe556349b",
+  "verifier_checks": 23,
+  "verifier_passed": true,
+  "failure_source_commit": "6f309a36a1491146686cafbba647c2226cdaa654"
+}

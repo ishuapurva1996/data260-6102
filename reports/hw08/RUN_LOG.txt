@@ -9690,3 +9690,841 @@ tests/test_hw08_part1.py::test_wrapper_preserves_auth_and_roles_and_lifecycle
 {"baseline": "reliable", "correlation_id": "96ebb1c2-4751-492d-8741-3f7fe9757e22", "event": "output_published", "group_id": "verify-8ffff234875c458696f4370abf28e813-writer", "instance": "writer-live", "model": "qwen2.5:7b", "offset": 22, "output": {"correlation_id": "96ebb1c2-4751-492d-8741-3f7fe9757e22", "draft": "Kafka ensures message ordering within partitions, which is crucial for maintaining consistent updates to rental listings. By publishing updates to the same partition, you ensure they are processed in the order they are sent. This prevents race conditions and guarantees that updates to a listing are applied sequentially, maintaining data integrity.", "from_stage": "writer", "input_source": {"offset": 22, "partition": 0, "topic": "s6102_tasks"}, "plan": "To understand how Kafka message ordering affects updates to the same rental listing, follow these steps:\n\n1. **Identify Message Order**: Determine the sequence in which messages are sent and received in Kafka. Messages are ordered based on the partition they are published to.\n2. **Track Listing Updates**: Monitor the updates to the rental listing as they are published to Kafka. Ensure that updates are processed in the order they were sent to maintain consistency.\n3. **Verify Order Compliance**: Confirm that the system consuming messages from Kafka processes the updates to the rental listing in the correct order, preventing any race conditions or inconsistencies.", "question": "How does Kafka message ordering affect updates to the same rental listing?", "rental_id": "hw8-synthetic-6102", "run_id": "hw8-20261029T191524Z", "writer_instance": "writer-live"}, "output_offset": 47, "output_partition": 0, "output_topic": "s6102_drafts", "partition": 0, "pid": 74461, "rental_id": "hw8-synthetic-6102", "run_id": "hw8-20261029T191524Z", "source_commit": "6f309a36a1491146686cafbba647c2226cdaa654", "stage": "writer", "student": "Pragya Apurva", "timestamp": "2026-10-29T19:15:39.340027+00:00", "topic": "s6102_tasks"}
 {"baseline": "reliable", "committed_offset": 23, "correlation_id": "96ebb1c2-4751-492d-8741-3f7fe9757e22", "event": "offset_committed", "group_id": "verify-8ffff234875c458696f4370abf28e813-writer", "instance": "writer-live", "model": "qwen2.5:7b", "offset": 22, "partition": 0, "pid": 74461, "reason": "after_output_ack", "rental_id": "hw8-synthetic-6102", "run_id": "hw8-20261029T191524Z", "source_commit": "6f309a36a1491146686cafbba647c2226cdaa654", "stage": "writer", "student": "Pragya Apurva", "timestamp": "2026-10-29T19:15:39.341442+00:00", "topic": "s6102_tasks"}
 
+
+===== FINAL AUTHORIZED LOCAL ACCEPTANCE | 2026-10-29T20:24:48.291585+00:00 =====
+Historical blocked checks above are superseded by this complete passing run.
+
+===== compose-start.log | captured UTC 2026-10-29T20:16:44.047408+00:00 =====
+ Image s6102-hw8-worker Building
+ Image s6102-hw8-fastapi Building
+#1 [internal] load local bake definitions
+#1 reading from stdin 1.14kB done
+#1 DONE 0.0s
+
+#2 [worker internal] load build definition from Dockerfile
+#2 transferring dockerfile: 310B done
+#2 DONE 0.0s
+
+#3 [worker internal] load metadata for docker.io/library/python:3.12.13-slim
+#3 DONE 0.7s
+
+#4 [fastapi internal] load .dockerignore
+#4 transferring context: 118B done
+#4 DONE 0.0s
+
+#5 [fastapi 1/7] FROM docker.io/library/python:3.12.13-slim@sha256:229a2c5bfa27522db7815ea81f9bed70af17ccb9de9fc7ad142b1877b5830d36
+#5 DONE 0.0s
+
+#6 [worker internal] load build context
+#6 transferring context: 31.16kB 0.0s done
+#6 DONE 0.0s
+
+#7 [worker 3/7] COPY requirements*.txt ./
+#7 CACHED
+
+#8 [worker 4/7] RUN pip install --no-cache-dir -r requirements-hw08.lock.txt
+#8 CACHED
+
+#9 [worker 2/7] WORKDIR /app
+#9 CACHED
+
+#10 [worker 5/7] COPY src ./src
+#10 CACHED
+
+#11 [worker 6/7] COPY code ./code
+#11 DONE 0.0s
+
+#12 [worker 7/7] COPY scripts ./scripts
+#12 DONE 0.0s
+
+#13 [fastapi] exporting to image
+#13 exporting layers 0.0s done
+#13 writing image sha256:a23cd7c0e98aeb41f9b5dfa588dd257be469086e7c6db1b100b2bad4fbc742f8
+#13 writing image sha256:a23cd7c0e98aeb41f9b5dfa588dd257be469086e7c6db1b100b2bad4fbc742f8 done
+#13 naming to docker.io/library/s6102-hw8-fastapi done
+#13 DONE 0.0s
+
+#14 [worker] exporting to image
+#14 exporting layers 0.0s done
+#14 writing image sha256:47a22e20b8bf1876add6e4841148424b6cd16a056a322a649f097f011cbe9e69 done
+#14 naming to docker.io/library/s6102-hw8-worker done
+#14 DONE 0.0s
+
+#15 [fastapi] resolving provenance for metadata file
+#15 DONE 0.0s
+
+#16 [worker] resolving provenance for metadata file
+#16 DONE 0.0s
+ Image s6102-hw8-worker Built
+ Image s6102-hw8-fastapi Built
+ Container s6102-hw8-kafka-1 Running
+ Container s6102-hw8-fastapi-1 Creating
+ Container s6102-hw8-worker-1 Recreate
+ Container s6102-hw8-fastapi-1 Created
+ Container s6102-hw8-worker-1 Recreated
+ Container s6102-hw8-kafka-1 Waiting
+ Container s6102-hw8-kafka-1 Healthy
+ Container s6102-hw8-kafka-init-1 Starting
+ Container s6102-hw8-kafka-init-1 Started
+ Container s6102-hw8-kafka-init-1 Waiting
+ Container s6102-hw8-kafka-init-1 Waiting
+ Container s6102-hw8-kafka-init-1 Exited
+ Container s6102-hw8-kafka-init-1 Exited
+ Container s6102-hw8-fastapi-1 Starting
+ Container s6102-hw8-worker-1 Starting
+ Container s6102-hw8-fastapi-1 Started
+ Container s6102-hw8-worker-1 Started
+
+
+===== frozen-stack.log | captured UTC 2026-10-29T20:20:41.658285+00:00 =====
+ Image s6102-hw8-worker Building
+ Image s6102-hw8-fastapi Building
+#1 [internal] load local bake definitions
+#1 reading from stdin 1.14kB done
+#1 DONE 0.0s
+
+#2 [fastapi internal] load build definition from Dockerfile
+#2 DONE 0.0s
+
+#2 [worker internal] load build definition from Dockerfile
+#2 transferring dockerfile: 310B done
+#2 DONE 0.0s
+
+#3 [fastapi internal] load metadata for docker.io/library/python:3.12.13-slim
+#3 DONE 0.4s
+
+#4 [fastapi internal] load .dockerignore
+#4 transferring context: 118B done
+#4 DONE 0.0s
+
+#5 [worker 1/7] FROM docker.io/library/python:3.12.13-slim@sha256:229a2c5bfa27522db7815ea81f9bed70af17ccb9de9fc7ad142b1877b5830d36
+#5 DONE 0.0s
+
+#6 [worker internal] load build context
+#6 transferring context: 33.70kB 0.0s done
+#6 DONE 0.0s
+
+#7 [worker 4/7] RUN pip install --no-cache-dir -r requirements-hw08.lock.txt
+#7 CACHED
+
+#8 [worker 5/7] COPY src ./src
+#8 CACHED
+
+#9 [worker 2/7] WORKDIR /app
+#9 CACHED
+
+#10 [worker 3/7] COPY requirements*.txt ./
+#10 CACHED
+
+#11 [worker 6/7] COPY code ./code
+#11 CACHED
+
+#12 [worker 7/7] COPY scripts ./scripts
+#12 DONE 0.0s
+
+#13 [worker] exporting to image
+#13 exporting layers done
+#13 writing image sha256:d7c35a108f492b650ed2e0fe18b72677feb4dd6c2add8a8c36d088d080eee45d done
+#13 naming to docker.io/library/s6102-hw8-worker done
+#13 DONE 0.0s
+
+#14 [fastapi] exporting to image
+#14 exporting layers done
+#14 writing image sha256:f044c1d6cb5b6732d66b6ff09de74752511566d40adcbf5f1c76bd77dd87f8b3 done
+#14 naming to docker.io/library/s6102-hw8-fastapi done
+#14 DONE 0.0s
+
+#15 [worker] resolving provenance for metadata file
+#15 DONE 0.0s
+
+#16 [fastapi] resolving provenance for metadata file
+#16 DONE 0.0s
+ Image s6102-hw8-worker Built
+ Image s6102-hw8-fastapi Built
+ Container s6102-hw8-kafka-1 Running
+ Container s6102-hw8-fastapi-1 Recreate
+ Container s6102-hw8-worker-1 Recreate
+ Container s6102-hw8-fastapi-1 Recreated
+ Container s6102-hw8-worker-1 Recreated
+ Container s6102-hw8-kafka-1 Waiting
+ Container s6102-hw8-kafka-1 Healthy
+ Container s6102-hw8-kafka-init-1 Starting
+ Container s6102-hw8-kafka-init-1 Started
+ Container s6102-hw8-kafka-init-1 Waiting
+ Container s6102-hw8-kafka-init-1 Waiting
+ Container s6102-hw8-kafka-init-1 Exited
+ Container s6102-hw8-kafka-init-1 Exited
+ Container s6102-hw8-fastapi-1 Starting
+ Container s6102-hw8-worker-1 Starting
+ Container s6102-hw8-fastapi-1 Started
+ Container s6102-hw8-worker-1 Started
+
+
+===== http-initial.log | captured UTC 2026-10-29T20:18:43.379370+00:00 =====
+{"correlation_id": "9afbdd59-c52d-4494-a1cd-85327fd8d079", "event": "demo_request", "message": {"correlation_id": "9afbdd59-c52d-4494-a1cd-85327fd8d079", "data": {"description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "submitterEmail": "hw8@example.com", "termsAccepted": true}, "operation": "CREATE_RENTAL", "reply_to": "s6102_entity_responses"}, "operation": "CREATE_RENTAL", "pid": 77834, "run_id": "part1-6a5afc835610", "source_commit": "b72d8f10e200aaa6e70d4d8d31173337cdf07918", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:18:43.349437+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "9afbdd59-c52d-4494-a1cd-85327fd8d079", "event": "demo_response", "operation": "CREATE_RENTAL", "pid": 77834, "response": {"correlation_id": "9afbdd59-c52d-4494-a1cd-85327fd8d079", "message": "Rental created", "operation": "CREATE_RENTAL", "rental_id": "985fc595-ddbb-4753-9bc1-8a00c3b840ab", "success": true}, "run_id": "part1-6a5afc835610", "source_commit": "b72d8f10e200aaa6e70d4d8d31173337cdf07918", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:18:43.356896+00:00"}
+{"correlation_id": "9afbdd59-c52d-4494-a1cd-85327fd8d079", "event": "demo_request", "message": {"correlation_id": "9afbdd59-c52d-4494-a1cd-85327fd8d079", "data": {"rental_id": "985fc595-ddbb-4753-9bc1-8a00c3b840ab"}, "operation": "GET_RENTAL", "reply_to": "s6102_entity_responses"}, "operation": "GET_RENTAL", "pid": 77834, "run_id": "part1-6a5afc835610", "source_commit": "b72d8f10e200aaa6e70d4d8d31173337cdf07918", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:18:43.356968+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "9afbdd59-c52d-4494-a1cd-85327fd8d079", "event": "demo_response", "operation": "GET_RENTAL", "pid": 77834, "response": {"correlation_id": "9afbdd59-c52d-4494-a1cd-85327fd8d079", "operation": "GET_RENTAL", "rental": {"availableUnits": 1, "description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "rental_id": "985fc595-ddbb-4753-9bc1-8a00c3b840ab", "submitterEmail": "hw8@example.com", "termsAccepted": true}, "success": true}, "run_id": "part1-6a5afc835610", "source_commit": "b72d8f10e200aaa6e70d4d8d31173337cdf07918", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:18:43.362320+00:00"}
+{"correlation_id": "9afbdd59-c52d-4494-a1cd-85327fd8d079", "event": "demo_complete", "passed": true, "pid": 77834, "rental": {"availableUnits": 1, "description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "rental_id": "985fc595-ddbb-4753-9bc1-8a00c3b840ab", "submitterEmail": "hw8@example.com", "termsAccepted": true}, "run_id": "part1-6a5afc835610", "source_commit": "b72d8f10e200aaa6e70d4d8d31173337cdf07918", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:18:43.362415+00:00"}
+{"base_url": "http://127.0.0.1:8702", "checks": [{"detail": {"statuses": {"moderator": 200, "reader": 200, "writer": 200}}, "name": "http_role_logins", "passed": true}, {"detail": {"statuses": [401, 401, 401]}, "name": "http_missing_invalid_token", "passed": true}, {"detail": {"status": 401}, "name": "http_wrong_password", "passed": true}, {"detail": {"correlation_id": "9afbdd59-c52d-4494-a1cd-85327fd8d079", "create_status": 200, "get_status": 200, "rental_id": "985fc595-ddbb-4753-9bc1-8a00c3b840ab"}, "name": "authenticated_fastapi_wrapper", "passed": true}, {"detail": {"create_status": 403, "get_status": 200}, "name": "http_reader_permissions", "passed": true}, {"detail": {"create_status": 200, "get_status": 200}, "name": "http_moderator_permissions", "passed": true}], "event": "http_acceptance_complete", "passed": true, "pid": 77834, "source_commit": "b72d8f10e200aaa6e70d4d8d31173337cdf07918", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:18:43.378993+00:00"}
+
+
+===== terminal-http.log | captured UTC 2026-10-29T20:21:19.424891+00:00 =====
+{"correlation_id": "c08bff2e-edb7-4b57-95cf-a7b7d0167ace", "event": "demo_request", "message": {"correlation_id": "c08bff2e-edb7-4b57-95cf-a7b7d0167ace", "data": {"description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "submitterEmail": "hw8@example.com", "termsAccepted": true}, "operation": "CREATE_RENTAL", "reply_to": "s6102_entity_responses"}, "operation": "CREATE_RENTAL", "pid": 78041, "run_id": "part1-d7cd58db4d2e", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:19.392403+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "c08bff2e-edb7-4b57-95cf-a7b7d0167ace", "event": "demo_response", "operation": "CREATE_RENTAL", "pid": 78041, "response": {"correlation_id": "c08bff2e-edb7-4b57-95cf-a7b7d0167ace", "message": "Rental created", "operation": "CREATE_RENTAL", "rental_id": "2dec69ef-a001-49ff-9dd9-8145d8397104", "success": true}, "run_id": "part1-d7cd58db4d2e", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:19.399172+00:00"}
+{"correlation_id": "c08bff2e-edb7-4b57-95cf-a7b7d0167ace", "event": "demo_request", "message": {"correlation_id": "c08bff2e-edb7-4b57-95cf-a7b7d0167ace", "data": {"rental_id": "2dec69ef-a001-49ff-9dd9-8145d8397104"}, "operation": "GET_RENTAL", "reply_to": "s6102_entity_responses"}, "operation": "GET_RENTAL", "pid": 78041, "run_id": "part1-d7cd58db4d2e", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:19.399227+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "c08bff2e-edb7-4b57-95cf-a7b7d0167ace", "event": "demo_response", "operation": "GET_RENTAL", "pid": 78041, "response": {"correlation_id": "c08bff2e-edb7-4b57-95cf-a7b7d0167ace", "operation": "GET_RENTAL", "rental": {"availableUnits": 1, "description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "rental_id": "2dec69ef-a001-49ff-9dd9-8145d8397104", "submitterEmail": "hw8@example.com", "termsAccepted": true}, "success": true}, "run_id": "part1-d7cd58db4d2e", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:19.404163+00:00"}
+{"correlation_id": "c08bff2e-edb7-4b57-95cf-a7b7d0167ace", "event": "demo_complete", "passed": true, "pid": 78041, "rental": {"availableUnits": 1, "description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "rental_id": "2dec69ef-a001-49ff-9dd9-8145d8397104", "submitterEmail": "hw8@example.com", "termsAccepted": true}, "run_id": "part1-d7cd58db4d2e", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:19.404216+00:00"}
+{"base_url": "http://127.0.0.1:8702", "checks": [{"detail": {"statuses": {"moderator": 200, "reader": 200, "writer": 200}}, "name": "http_role_logins", "passed": true}, {"detail": {"statuses": [401, 401, 401]}, "name": "http_missing_invalid_token", "passed": true}, {"detail": {"status": 401}, "name": "http_wrong_password", "passed": true}, {"detail": {"correlation_id": "c08bff2e-edb7-4b57-95cf-a7b7d0167ace", "create_status": 200, "get_status": 200, "rental_id": "2dec69ef-a001-49ff-9dd9-8145d8397104"}, "name": "authenticated_fastapi_wrapper", "passed": true}, {"detail": {"create_status": 403, "get_status": 200}, "name": "http_reader_permissions", "passed": true}, {"detail": {"create_status": 200, "get_status": 200}, "name": "http_moderator_permissions", "passed": true}], "event": "http_acceptance_complete", "passed": true, "pid": 78041, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:19.424722+00:00"}
+
+
+===== pytest-database.log | captured UTC 2026-10-29T20:21:45.947052+00:00 =====
+....................................................................     [100%]
+=============================== warnings summary ===============================
+../../../../../../code/agent_outputs/data260-hw8-planning/runtime/venv/lib/python3.12/site-packages/starlette/formparsers.py:10
+  /Users/pragyaapurva/code/agent_outputs/data260-hw8-planning/runtime/venv/lib/python3.12/site-packages/starlette/formparsers.py:10: PendingDeprecationWarning: Please use `import python_multipart` instead.
+    import multipart
+
+../../../../../../code/agent_outputs/data260-hw8-planning/runtime/venv/lib/python3.12/site-packages/starlette/testclient.py:31
+  /Users/pragyaapurva/code/agent_outputs/data260-hw8-planning/runtime/venv/lib/python3.12/site-packages/starlette/testclient.py:31: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    [], typing.ContextManager[anyio.abc.BlockingPortal]
+
+tests/test_hw08_part1.py: 1 warning
+tests/test_hw07_auth.py: 31 warnings
+  /Users/pragyaapurva/code/agent_outputs/data260-hw8-planning/runtime/venv/lib/python3.12/site-packages/httpx/_client.py:690: DeprecationWarning: The 'app' shortcut is now deprecated. Use the explicit style 'transport=WSGITransport(app=...)' instead.
+    warnings.warn(message, DeprecationWarning)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+68 passed, 34 warnings in 1.60s
+
+
+===== complete-verifier.log | captured UTC 2026-10-29T20:22:06.802306+00:00 =====
+{"event": "rpc_ready", "pid": 78078, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.218751+00:00", "topic": "s6102_entity_responses"}
+{"correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6", "event": "demo_request", "message": {"correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6", "data": {"description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "submitterEmail": "hw8@example.com", "termsAccepted": true}, "operation": "CREATE_RENTAL", "reply_to": "s6102_entity_responses"}, "operation": "CREATE_RENTAL", "pid": 78078, "run_id": "part1-55d4fa3f9acb", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.219053+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6", "event": "request_sending", "message": {"correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6", "data": {"description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "submitterEmail": "hw8@example.com", "termsAccepted": true}, "operation": "CREATE_RENTAL", "reply_to": "s6102_entity_responses"}, "operation": "CREATE_RENTAL", "pid": 78078, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.219163+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6", "event": "request_sent", "offset": 17, "operation": "CREATE_RENTAL", "partition": 0, "pid": 78078, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.220314+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6", "event": "response_received", "matched": true, "offset": 17, "operation": "CREATE_RENTAL", "partition": 0, "pid": 78078, "response": {"correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6", "message": "Rental created", "operation": "CREATE_RENTAL", "rental_id": "556c4adc-cada-4685-bbe4-c7a6fd55096d", "success": true}, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.222466+00:00", "topic": "s6102_entity_responses"}
+{"correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6", "event": "response_returned", "operation": "CREATE_RENTAL", "pid": 78078, "response": {"correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6", "message": "Rental created", "operation": "CREATE_RENTAL", "rental_id": "556c4adc-cada-4685-bbe4-c7a6fd55096d", "success": true}, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.222565+00:00"}
+{"correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6", "event": "demo_response", "operation": "CREATE_RENTAL", "pid": 78078, "response": {"correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6", "message": "Rental created", "operation": "CREATE_RENTAL", "rental_id": "556c4adc-cada-4685-bbe4-c7a6fd55096d", "success": true}, "run_id": "part1-55d4fa3f9acb", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.222590+00:00"}
+{"correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6", "event": "demo_request", "message": {"correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6", "data": {"rental_id": "556c4adc-cada-4685-bbe4-c7a6fd55096d"}, "operation": "GET_RENTAL", "reply_to": "s6102_entity_responses"}, "operation": "GET_RENTAL", "pid": 78078, "run_id": "part1-55d4fa3f9acb", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.222613+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6", "event": "request_sending", "message": {"correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6", "data": {"rental_id": "556c4adc-cada-4685-bbe4-c7a6fd55096d"}, "operation": "GET_RENTAL", "reply_to": "s6102_entity_responses"}, "operation": "GET_RENTAL", "pid": 78078, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.222675+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6", "event": "request_sent", "offset": 18, "operation": "GET_RENTAL", "partition": 0, "pid": 78078, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.223498+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6", "event": "response_received", "matched": true, "offset": 18, "operation": "GET_RENTAL", "partition": 0, "pid": 78078, "response": {"correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6", "operation": "GET_RENTAL", "rental": {"availableUnits": 1, "description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "rental_id": "556c4adc-cada-4685-bbe4-c7a6fd55096d", "submitterEmail": "hw8@example.com", "termsAccepted": true}, "success": true}, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.224640+00:00", "topic": "s6102_entity_responses"}
+{"correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6", "event": "response_returned", "operation": "GET_RENTAL", "pid": 78078, "response": {"correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6", "operation": "GET_RENTAL", "rental": {"availableUnits": 1, "description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "rental_id": "556c4adc-cada-4685-bbe4-c7a6fd55096d", "submitterEmail": "hw8@example.com", "termsAccepted": true}, "success": true}, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.224741+00:00"}
+{"correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6", "event": "demo_response", "operation": "GET_RENTAL", "pid": 78078, "response": {"correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6", "operation": "GET_RENTAL", "rental": {"availableUnits": 1, "description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "rental_id": "556c4adc-cada-4685-bbe4-c7a6fd55096d", "submitterEmail": "hw8@example.com", "termsAccepted": true}, "success": true}, "run_id": "part1-55d4fa3f9acb", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.224764+00:00"}
+{"correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6", "event": "demo_complete", "passed": true, "pid": 78078, "rental": {"availableUnits": 1, "description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "rental_id": "556c4adc-cada-4685-bbe4-c7a6fd55096d", "submitterEmail": "hw8@example.com", "termsAccepted": true}, "run_id": "part1-55d4fa3f9acb", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.224779+00:00"}
+{"correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6", "event": "request_sending", "message": {"correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6", "data": {"description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "submitterEmail": "hw8@example.com", "termsAccepted": true}, "operation": "CREATE_RENTAL", "reply_to": "s6102_entity_responses"}, "operation": "CREATE_RENTAL", "pid": 78078, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.225142+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6", "event": "request_sent", "offset": 19, "operation": "CREATE_RENTAL", "partition": 0, "pid": 78078, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.225915+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6", "event": "response_received", "matched": true, "offset": 19, "operation": "CREATE_RENTAL", "partition": 0, "pid": 78078, "response": {"correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6", "message": "Rental created", "operation": "CREATE_RENTAL", "rental_id": "556c4adc-cada-4685-bbe4-c7a6fd55096d", "success": true}, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.226904+00:00", "topic": "s6102_entity_responses"}
+{"correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6", "event": "response_returned", "operation": "CREATE_RENTAL", "pid": 78078, "response": {"correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6", "message": "Rental created", "operation": "CREATE_RENTAL", "rental_id": "556c4adc-cada-4685-bbe4-c7a6fd55096d", "success": true}, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.226974+00:00"}
+{"correlation_id": "7fbaaad1-3ce4-4355-a99f-712abe0cb7f1", "event": "request_sending", "message": {"correlation_id": "7fbaaad1-3ce4-4355-a99f-712abe0cb7f1", "data": {}, "operation": "CREATE_RENTAL", "reply_to": "s6102_entity_responses"}, "operation": "CREATE_RENTAL", "pid": 78078, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.227050+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "7fbaaad1-3ce4-4355-a99f-712abe0cb7f1", "event": "request_sent", "offset": 20, "operation": "CREATE_RENTAL", "partition": 0, "pid": 78078, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.227908+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "7fbaaad1-3ce4-4355-a99f-712abe0cb7f1", "event": "response_received", "matched": true, "offset": 20, "operation": "CREATE_RENTAL", "partition": 0, "pid": 78078, "response": {"correlation_id": "7fbaaad1-3ce4-4355-a99f-712abe0cb7f1", "error": "listingTitle: Field required; propertyAddress: Field required; submitterEmail: Field required; description: Field required; propertyType: Field required; termsAccepted: Field required", "operation": "CREATE_RENTAL", "success": false}, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.228604+00:00", "topic": "s6102_entity_responses"}
+{"correlation_id": "7fbaaad1-3ce4-4355-a99f-712abe0cb7f1", "event": "response_returned", "operation": "CREATE_RENTAL", "pid": 78078, "response": {"correlation_id": "7fbaaad1-3ce4-4355-a99f-712abe0cb7f1", "error": "listingTitle: Field required; propertyAddress: Field required; submitterEmail: Field required; description: Field required; propertyType: Field required; termsAccepted: Field required", "operation": "CREATE_RENTAL", "success": false}, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.228668+00:00"}
+{"correlation_id": "313c61e2-4f7a-4966-b4d8-d7885f0ada12", "event": "request_sending", "message": {"correlation_id": "313c61e2-4f7a-4966-b4d8-d7885f0ada12", "data": {"description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "submitterEmail": "hw8@example.com", "termsAccepted": false}, "operation": "CREATE_RENTAL", "reply_to": "s6102_entity_responses"}, "operation": "CREATE_RENTAL", "pid": 78078, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.228729+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "313c61e2-4f7a-4966-b4d8-d7885f0ada12", "event": "request_sent", "offset": 21, "operation": "CREATE_RENTAL", "partition": 0, "pid": 78078, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.229414+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "313c61e2-4f7a-4966-b4d8-d7885f0ada12", "event": "response_received", "matched": true, "offset": 21, "operation": "CREATE_RENTAL", "partition": 0, "pid": 78078, "response": {"correlation_id": "313c61e2-4f7a-4966-b4d8-d7885f0ada12", "error": "termsAccepted: Value error, Please agree to the terms and conditions.", "operation": "CREATE_RENTAL", "success": false}, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.230293+00:00", "topic": "s6102_entity_responses"}
+{"correlation_id": "313c61e2-4f7a-4966-b4d8-d7885f0ada12", "event": "response_returned", "operation": "CREATE_RENTAL", "pid": 78078, "response": {"correlation_id": "313c61e2-4f7a-4966-b4d8-d7885f0ada12", "error": "termsAccepted: Value error, Please agree to the terms and conditions.", "operation": "CREATE_RENTAL", "success": false}, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.230341+00:00"}
+{"correlation_id": "3db9f3d2-13d3-446c-8974-6547838688fc", "event": "request_sending", "message": {"correlation_id": "3db9f3d2-13d3-446c-8974-6547838688fc", "data": {}, "operation": "UNKNOWN", "reply_to": "s6102_entity_responses"}, "operation": "UNKNOWN", "pid": 78078, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.230388+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "3db9f3d2-13d3-446c-8974-6547838688fc", "event": "request_sent", "offset": 22, "operation": "UNKNOWN", "partition": 0, "pid": 78078, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.231098+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "3db9f3d2-13d3-446c-8974-6547838688fc", "event": "response_received", "matched": true, "offset": 22, "operation": "UNKNOWN", "partition": 0, "pid": 78078, "response": {"correlation_id": "3db9f3d2-13d3-446c-8974-6547838688fc", "error": "Unknown operation", "operation": "UNKNOWN", "success": false}, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.231912+00:00", "topic": "s6102_entity_responses"}
+{"correlation_id": "3db9f3d2-13d3-446c-8974-6547838688fc", "event": "response_returned", "operation": "UNKNOWN", "pid": 78078, "response": {"correlation_id": "3db9f3d2-13d3-446c-8974-6547838688fc", "error": "Unknown operation", "operation": "UNKNOWN", "success": false}, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.231974+00:00"}
+{"correlation_id": "3d54b89c-4690-452c-a071-b03766013e45", "event": "request_sending", "message": {"correlation_id": "3d54b89c-4690-452c-a071-b03766013e45", "data": {"rental_id": "a1b16c16-18e2-458b-99b8-9da967315d6b"}, "operation": "GET_RENTAL", "reply_to": "s6102_entity_responses"}, "operation": "GET_RENTAL", "pid": 78078, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.232023+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "3d54b89c-4690-452c-a071-b03766013e45", "event": "request_sent", "offset": 23, "operation": "GET_RENTAL", "partition": 0, "pid": 78078, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.232918+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "3d54b89c-4690-452c-a071-b03766013e45", "event": "response_received", "matched": true, "offset": 23, "operation": "GET_RENTAL", "partition": 0, "pid": 78078, "response": {"correlation_id": "3d54b89c-4690-452c-a071-b03766013e45", "error": "Rental not found", "operation": "GET_RENTAL", "success": false}, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.233587+00:00", "topic": "s6102_entity_responses"}
+{"correlation_id": "3d54b89c-4690-452c-a071-b03766013e45", "event": "response_returned", "operation": "GET_RENTAL", "pid": 78078, "response": {"correlation_id": "3d54b89c-4690-452c-a071-b03766013e45", "error": "Rental not found", "operation": "GET_RENTAL", "success": false}, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.233655+00:00"}
+{"correlation_id": "9f93b86d-ba40-4df2-97e1-025fe556349b", "event": "demo_request", "message": {"correlation_id": "9f93b86d-ba40-4df2-97e1-025fe556349b", "data": {"description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "submitterEmail": "hw8@example.com", "termsAccepted": true}, "operation": "CREATE_RENTAL", "reply_to": "s6102_entity_responses"}, "operation": "CREATE_RENTAL", "pid": 78078, "run_id": "part1-14a9bec61494", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.434514+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "9f93b86d-ba40-4df2-97e1-025fe556349b", "event": "demo_response", "operation": "CREATE_RENTAL", "pid": 78078, "response": {"correlation_id": "9f93b86d-ba40-4df2-97e1-025fe556349b", "message": "Rental created", "operation": "CREATE_RENTAL", "rental_id": "006bb888-51a8-4ebd-9a46-d221c784f4d5", "success": true}, "run_id": "part1-14a9bec61494", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.441855+00:00"}
+{"correlation_id": "9f93b86d-ba40-4df2-97e1-025fe556349b", "event": "demo_request", "message": {"correlation_id": "9f93b86d-ba40-4df2-97e1-025fe556349b", "data": {"rental_id": "006bb888-51a8-4ebd-9a46-d221c784f4d5"}, "operation": "GET_RENTAL", "reply_to": "s6102_entity_responses"}, "operation": "GET_RENTAL", "pid": 78078, "run_id": "part1-14a9bec61494", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.441917+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "9f93b86d-ba40-4df2-97e1-025fe556349b", "event": "demo_response", "operation": "GET_RENTAL", "pid": 78078, "response": {"correlation_id": "9f93b86d-ba40-4df2-97e1-025fe556349b", "operation": "GET_RENTAL", "rental": {"availableUnits": 1, "description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "rental_id": "006bb888-51a8-4ebd-9a46-d221c784f4d5", "submitterEmail": "hw8@example.com", "termsAccepted": true}, "success": true}, "run_id": "part1-14a9bec61494", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.447685+00:00"}
+{"correlation_id": "9f93b86d-ba40-4df2-97e1-025fe556349b", "event": "demo_complete", "passed": true, "pid": 78078, "rental": {"availableUnits": 1, "description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "rental_id": "006bb888-51a8-4ebd-9a46-d221c784f4d5", "submitterEmail": "hw8@example.com", "termsAccepted": true}, "run_id": "part1-14a9bec61494", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.447762+00:00"}
+{"base_url": "http://127.0.0.1:8702", "checks": [{"detail": {"statuses": {"moderator": 200, "reader": 200, "writer": 200}}, "name": "http_role_logins", "passed": true}, {"detail": {"statuses": [401, 401, 401]}, "name": "http_missing_invalid_token", "passed": true}, {"detail": {"status": 401}, "name": "http_wrong_password", "passed": true}, {"detail": {"correlation_id": "9f93b86d-ba40-4df2-97e1-025fe556349b", "create_status": 200, "get_status": 200, "rental_id": "006bb888-51a8-4ebd-9a46-d221c784f4d5"}, "name": "authenticated_fastapi_wrapper", "passed": true}, {"detail": {"create_status": 403, "get_status": 200}, "name": "http_reader_permissions", "passed": true}, {"detail": {"create_status": 200, "get_status": 200}, "name": "http_moderator_permissions", "passed": true}], "event": "http_acceptance_complete", "passed": true, "pid": 78078, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.471899+00:00"}
+{"event": "experiment_group_primed", "group": "verify-831280319398425fb8e62543fe93e6cd-planner", "offsets": {"s6102_inbox:0": 1}, "pid": 78078, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.503325+00:00"}
+{"child_pid": 78081, "command": ["/Users/pragyaapurva/code/agent_outputs/data260-hw8-planning/runtime/venv/bin/python", "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW8/worktrees/integration/scripts/hw08/planner.py", "--state-dir", "/Users/pragyaapurva/code/agent_outputs/data260-hw8-planning/runtime/acceptance/verifier-runtime/live-planner", "--group-id", "verify-831280319398425fb8e62543fe93e6cd-planner", "--model", "qwen2.5:7b", "--instance", "planner-live", "--baseline", "reliable", "--after-publish-delay", "0"], "event": "experiment_process_started", "log": "/Users/pragyaapurva/code/agent_outputs/data260-hw8-planning/runtime/acceptance/verifier-runtime/planner-live-db95f0.jsonl", "pid": 78078, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.506915+00:00"}
+{"event": "experiment_group_primed", "group": "verify-afad074222454328a6f24888b9f92970-writer", "offsets": {"s6102_tasks:0": 23, "s6102_tasks:1": 30}, "pid": 78078, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.617907+00:00"}
+{"child_pid": 78082, "command": ["/Users/pragyaapurva/code/agent_outputs/data260-hw8-planning/runtime/venv/bin/python", "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW8/worktrees/integration/scripts/hw08/writer.py", "--state-dir", "/Users/pragyaapurva/code/agent_outputs/data260-hw8-planning/runtime/acceptance/verifier-runtime/live-writer", "--group-id", "verify-afad074222454328a6f24888b9f92970-writer", "--model", "qwen2.5:7b", "--instance", "writer-live", "--baseline", "reliable", "--after-publish-delay", "0"], "event": "experiment_process_started", "log": "/Users/pragyaapurva/code/agent_outputs/data260-hw8-planning/runtime/acceptance/verifier-runtime/writer-live-49d205.jsonl", "pid": 78078, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.620337+00:00"}
+{"event": "experiment_group_primed", "group": "verify-91e25f89f64f43ac819a8ffe200f0498-reviewer", "offsets": {"s6102_drafts:0": 48}, "pid": 78078, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.730271+00:00"}
+{"child_pid": 78083, "command": ["/Users/pragyaapurva/code/agent_outputs/data260-hw8-planning/runtime/venv/bin/python", "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW8/worktrees/integration/scripts/hw08/reviewer.py", "--state-dir", "/Users/pragyaapurva/code/agent_outputs/data260-hw8-planning/runtime/acceptance/verifier-runtime/live-reviewer", "--group-id", "verify-91e25f89f64f43ac819a8ffe200f0498-reviewer", "--model", "qwen2.5:7b", "--instance", "reviewer-live", "--baseline", "reliable", "--after-publish-delay", "0"], "event": "experiment_process_started", "log": "/Users/pragyaapurva/code/agent_outputs/data260-hw8-planning/runtime/acceptance/verifier-runtime/reviewer-live-f25c60.jsonl", "pid": 78078, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.732965+00:00"}
+{"correlation_id": "a52151f5-9c3c-4e3e-ba39-c63df17dd84e", "event": "question_sent", "offset": 1, "partition": 0, "payload": {"correlation_id": "a52151f5-9c3c-4e3e-ba39-c63df17dd84e", "question": "How does Kafka message ordering affect updates to the same rental listing?", "rental_id": "hw8-synthetic-6102", "run_id": "hw8-20261029T202146Z"}, "pid": 78078, "run_id": "hw8-20261029T202146Z", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:47.348559+00:00", "topic": "s6102_inbox"}
+{"correlation_id": "a52151f5-9c3c-4e3e-ba39-c63df17dd84e", "event": "final_received", "final": {"answer": "Kafka ensures message ordering within partitions, which is crucial for maintaining consistent updates to rental listings. By publishing updates to the same partition, they are processed in the order they are sent, preventing race conditions and ensuring that updates to a listing are applied sequentially, maintaining data integrity.", "correlation_id": "a52151f5-9c3c-4e3e-ba39-c63df17dd84e", "draft": "Kafka ensures message ordering within partitions, which is crucial for maintaining consistent updates to rental listings. By publishing updates to the same partition, you ensure they are processed in the order they are sent. This prevents race conditions and guarantees that updates to a listing are applied sequentially, maintaining data integrity.", "from_stage": "reviewer", "input_source": {"offset": 48, "partition": 0, "topic": "s6102_drafts"}, "plan": "To understand how Kafka message ordering affects updates to the same rental listing, follow these steps:\n\n1. **Identify Message Order**: Determine the sequence in which messages are sent and received in Kafka. Messages are ordered based on the partition they are published to.\n2. **Track Listing Updates**: Monitor the updates to the rental listing as they are published to Kafka. Ensure that updates are processed in the order they were sent to maintain consistency.\n3. **Verify Order Compliance**: Confirm that the system consuming messages from Kafka processes the updates to the rental listing in the correct order, preventing any race conditions or inconsistencies.", "question": "How does Kafka message ordering affect updates to the same rental listing?", "rental_id": "hw8-synthetic-6102", "run_id": "hw8-20261029T202146Z", "status": "approved", "writer_instance": "writer-live"}, "offset": 5, "partition": 0, "pid": 78078, "run_id": "hw8-20261029T202146Z", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:22:06.621384+00:00", "topic": "s6102_final"}
+{"child_pid": 78081, "event": "experiment_process_stopped", "exit_code": -15, "pid": 78078, "signal": "SIGTERM", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:22:06.685356+00:00"}
+{"child_pid": 78082, "event": "experiment_process_stopped", "exit_code": -15, "pid": 78078, "signal": "SIGTERM", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:22:06.737945+00:00"}
+{"child_pid": 78083, "event": "experiment_process_stopped", "exit_code": -15, "pid": 78078, "signal": "SIGTERM", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:22:06.790619+00:00"}
+{
+  "homework": 8,
+  "sid4": 6102,
+  "commit_hash": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9",
+  "timestamp": "2026-10-29T20:22:06.798947+00:00",
+  "seed": 6102,
+  "verify_seed": 266102,
+  "configuration": {
+    "port_base": 8702,
+    "prefix": "s6102",
+    "domain_id": 6,
+    "model": "qwen2.5:7b",
+    "temperature": 0,
+    "context_window": 4096,
+    "output_limit": 256,
+    "retry_attempts": 3
+  },
+  "checks": [
+    {
+      "name": "seven_topic_partitions",
+      "kind": "live Kafka",
+      "passed": true,
+      "detail": {
+        "s6102_inbox": 1,
+        "s6102_entity_responses": 1,
+        "s6102_dead_letter": 1,
+        "s6102_final": 1,
+        "s6102_entity_requests": 1,
+        "s6102_tasks": 2,
+        "s6102_drafts": 1
+      }
+    },
+    {
+      "name": "rental_create_get",
+      "kind": "live Kafka",
+      "passed": true,
+      "detail": {
+        "correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6"
+      }
+    },
+    {
+      "name": "rental_replay_same_uuid",
+      "kind": "live Kafka",
+      "passed": true,
+      "detail": {
+        "correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6",
+        "operation": "CREATE_RENTAL",
+        "success": true,
+        "rental_id": "556c4adc-cada-4685-bbe4-c7a6fd55096d",
+        "message": "Rental created"
+      }
+    },
+    {
+      "name": "clean_domain_errors",
+      "kind": "live Kafka",
+      "passed": true,
+      "detail": [
+        {
+          "request": {
+            "correlation_id": "7fbaaad1-3ce4-4355-a99f-712abe0cb7f1",
+            "reply_to": "s6102_entity_responses",
+            "operation": "CREATE_RENTAL",
+            "data": {}
+          },
+          "response": {
+            "correlation_id": "7fbaaad1-3ce4-4355-a99f-712abe0cb7f1",
+            "operation": "CREATE_RENTAL",
+            "success": false,
+            "error": "listingTitle: Field required; propertyAddress: Field required; submitterEmail: Field required; description: Field required; propertyType: Field required; termsAccepted: Field required"
+          },
+          "passed": true
+        },
+        {
+          "request": {
+            "correlation_id": "313c61e2-4f7a-4966-b4d8-d7885f0ada12",
+            "reply_to": "s6102_entity_responses",
+            "operation": "CREATE_RENTAL",
+            "data": {
+              "listingTitle": "HW8 synthetic apartment",
+              "propertyAddress": "100 Example Street, San Jose, CA",
+              "submitterEmail": "hw8@example.com",
+              "description": "Synthetic rental listing for the Kafka homework demonstration.",
+              "propertyType": "apartment",
+              "termsAccepted": false
+            }
+          },
+          "response": {
+            "correlation_id": "313c61e2-4f7a-4966-b4d8-d7885f0ada12",
+            "operation": "CREATE_RENTAL",
+            "success": false,
+            "error": "termsAccepted: Value error, Please agree to the terms and conditions."
+          },
+          "passed": true
+        },
+        {
+          "request": {
+            "correlation_id": "3db9f3d2-13d3-446c-8974-6547838688fc",
+            "reply_to": "s6102_entity_responses",
+            "operation": "UNKNOWN",
+            "data": {}
+          },
+          "response": {
+            "correlation_id": "3db9f3d2-13d3-446c-8974-6547838688fc",
+            "operation": "UNKNOWN",
+            "success": false,
+            "error": "Unknown operation"
+          },
+          "passed": true
+        },
+        {
+          "request": {
+            "correlation_id": "3d54b89c-4690-452c-a071-b03766013e45",
+            "reply_to": "s6102_entity_responses",
+            "operation": "GET_RENTAL",
+            "data": {
+              "rental_id": "a1b16c16-18e2-458b-99b8-9da967315d6b"
+            }
+          },
+          "response": {
+            "correlation_id": "3d54b89c-4690-452c-a071-b03766013e45",
+            "operation": "GET_RENTAL",
+            "success": false,
+            "error": "Rental not found"
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "name": "http_role_logins",
+      "kind": "live HTTP + Kafka",
+      "passed": true,
+      "detail": {
+        "statuses": {
+          "reader": 200,
+          "writer": 200,
+          "moderator": 200
+        }
+      }
+    },
+    {
+      "name": "http_missing_invalid_token",
+      "kind": "live HTTP + Kafka",
+      "passed": true,
+      "detail": {
+        "statuses": [
+          401,
+          401,
+          401
+        ]
+      }
+    },
+    {
+      "name": "http_wrong_password",
+      "kind": "live HTTP + Kafka",
+      "passed": true,
+      "detail": {
+        "status": 401
+      }
+    },
+    {
+      "name": "authenticated_fastapi_wrapper",
+      "kind": "live HTTP + Kafka",
+      "passed": true,
+      "detail": {
+        "correlation_id": "9f93b86d-ba40-4df2-97e1-025fe556349b",
+        "rental_id": "006bb888-51a8-4ebd-9a46-d221c784f4d5",
+        "create_status": 200,
+        "get_status": 200
+      }
+    },
+    {
+      "name": "http_reader_permissions",
+      "kind": "live HTTP + Kafka",
+      "passed": true,
+      "detail": {
+        "create_status": 403,
+        "get_status": 200
+      }
+    },
+    {
+      "name": "http_moderator_permissions",
+      "kind": "live HTTP + Kafka",
+      "passed": true,
+      "detail": {
+        "create_status": 200,
+        "get_status": 200
+      }
+    },
+    {
+      "name": "three_process_pipeline",
+      "kind": "live Kafka + qwen2.5:7b",
+      "passed": true,
+      "detail": {
+        "correlation_id": "a52151f5-9c3c-4e3e-ba39-c63df17dd84e",
+        "process_ids": [
+          78081,
+          78082,
+          78083
+        ]
+      }
+    },
+    {
+      "name": "writer_death_before",
+      "kind": "artifact",
+      "passed": true,
+      "detail": {
+        "receipts": 1,
+        "outputs": 0
+      }
+    },
+    {
+      "name": "poison_before",
+      "kind": "artifact",
+      "passed": true,
+      "detail": {
+        "failed_attempts": 1,
+        "dead_letters": 0
+      }
+    },
+    {
+      "name": "pipeline_duplicate_before",
+      "kind": "artifact",
+      "passed": true,
+      "detail": {
+        "final_outputs": 2
+      }
+    },
+    {
+      "name": "writer_death_after",
+      "kind": "artifact",
+      "passed": true,
+      "detail": {
+        "receipts": 2,
+        "outputs": 1
+      }
+    },
+    {
+      "name": "poison_after",
+      "kind": "artifact",
+      "passed": true,
+      "detail": {
+        "failed_attempts": 3,
+        "dead_letters": 1
+      }
+    },
+    {
+      "name": "pipeline_duplicate_after",
+      "kind": "artifact",
+      "passed": true,
+      "detail": {
+        "final_outputs": 1
+      }
+    },
+    {
+      "name": "ordering_unkeyed",
+      "kind": "artifact",
+      "passed": true,
+      "detail": {
+        "count": 20,
+        "partitions": [
+          0,
+          1
+        ],
+        "observed_sequence": [
+          2,
+          4,
+          6,
+          8,
+          1,
+          10,
+          12,
+          14,
+          16,
+          3,
+          18,
+          20,
+          5,
+          7,
+          9,
+          11,
+          13,
+          15,
+          17,
+          19
+        ]
+      }
+    },
+    {
+      "name": "ordering_keyed",
+      "kind": "artifact",
+      "passed": true,
+      "detail": {
+        "count": 20,
+        "partitions": [
+          1
+        ],
+        "observed_sequence": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ]
+      }
+    },
+    {
+      "name": "entity_duplicate_before",
+      "kind": "artifact",
+      "passed": true,
+      "detail": {
+        "rental_count": 2,
+        "uuids": [
+          "3e82db42-afd2-4e60-9e5a-75d8a673a8d4",
+          "eebb3f73-41c9-4741-9418-42dd5d30ff11"
+        ]
+      }
+    },
+    {
+      "name": "entity_duplicate_after",
+      "kind": "artifact",
+      "passed": true,
+      "detail": {
+        "rental_count": 1,
+        "uuids": [
+          "35501319-199d-4b0c-b003-b678ff24eace",
+          "35501319-199d-4b0c-b003-b678ff24eace"
+        ]
+      }
+    },
+    {
+      "name": "publish_commit_boundary",
+      "kind": "artifact",
+      "passed": true,
+      "detail": {
+        "final_outputs": 1
+      }
+    },
+    {
+      "name": "ordering_seed",
+      "kind": "artifact",
+      "passed": true,
+      "detail": 266102
+    }
+  ],
+  "passed": true
+}
+
+
+===== worker-full.log | captured UTC 2026-10-29T20:22:23.097640+00:00 =====
+{"assignments": [{"partition": 0, "topic": "s6102_entity_requests"}], "event": "worker_ready", "group_id": "s6102_entity_worker", "idempotency": true, "message": "Consumer is ready and listening...", "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:20:41.824517+00:00", "topic": "s6102_entity_requests"}
+{"event": "request_received", "message": {"correlation_id": "c08bff2e-edb7-4b57-95cf-a7b7d0167ace", "data": {"description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "submitterEmail": "hw8@example.com", "termsAccepted": true}, "operation": "CREATE_RENTAL", "reply_to": "s6102_entity_responses"}, "offset": 12, "partition": 0, "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:19.395447+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "c08bff2e-edb7-4b57-95cf-a7b7d0167ace", "event": "request_processed", "operation": "CREATE_RENTAL", "pid": 1, "rental_count": 1, "response": {"correlation_id": "c08bff2e-edb7-4b57-95cf-a7b7d0167ace", "message": "Rental created", "operation": "CREATE_RENTAL", "rental_id": "2dec69ef-a001-49ff-9dd9-8145d8397104", "success": true}, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:19.395849+00:00"}
+{"correlation_id": "c08bff2e-edb7-4b57-95cf-a7b7d0167ace", "event": "response_sent", "offset": 12, "operation": "CREATE_RENTAL", "partition": 0, "pid": 1, "rental_count": 1, "response": {"correlation_id": "c08bff2e-edb7-4b57-95cf-a7b7d0167ace", "message": "Rental created", "operation": "CREATE_RENTAL", "rental_id": "2dec69ef-a001-49ff-9dd9-8145d8397104", "success": true}, "response_offset": 12, "response_partition": 0, "response_topic": "s6102_entity_responses", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:19.396376+00:00", "topic": "s6102_entity_requests"}
+{"committed_offset": 13, "event": "offset_committed", "offset": 12, "partition": 0, "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:19.396947+00:00", "topic": "s6102_entity_requests"}
+{"event": "request_received", "message": {"correlation_id": "c08bff2e-edb7-4b57-95cf-a7b7d0167ace", "data": {"rental_id": "2dec69ef-a001-49ff-9dd9-8145d8397104"}, "operation": "GET_RENTAL", "reply_to": "s6102_entity_responses"}, "offset": 13, "partition": 0, "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:19.401063+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "c08bff2e-edb7-4b57-95cf-a7b7d0167ace", "event": "request_processed", "operation": "GET_RENTAL", "pid": 1, "rental_count": 1, "response": {"correlation_id": "c08bff2e-edb7-4b57-95cf-a7b7d0167ace", "operation": "GET_RENTAL", "rental": {"availableUnits": 1, "description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "rental_id": "2dec69ef-a001-49ff-9dd9-8145d8397104", "submitterEmail": "hw8@example.com", "termsAccepted": true}, "success": true}, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:19.401146+00:00"}
+{"correlation_id": "c08bff2e-edb7-4b57-95cf-a7b7d0167ace", "event": "response_sent", "offset": 13, "operation": "GET_RENTAL", "partition": 0, "pid": 1, "rental_count": 1, "response": {"correlation_id": "c08bff2e-edb7-4b57-95cf-a7b7d0167ace", "operation": "GET_RENTAL", "rental": {"availableUnits": 1, "description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "rental_id": "2dec69ef-a001-49ff-9dd9-8145d8397104", "submitterEmail": "hw8@example.com", "termsAccepted": true}, "success": true}, "response_offset": 13, "response_partition": 0, "response_topic": "s6102_entity_responses", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:19.401532+00:00", "topic": "s6102_entity_requests"}
+{"committed_offset": 14, "event": "offset_committed", "offset": 13, "partition": 0, "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:19.401990+00:00", "topic": "s6102_entity_requests"}
+{"event": "request_received", "message": {"correlation_id": "ec32d2de-0664-458e-bdc0-baa1e2ea1de3", "data": {"rental_id": "2dec69ef-a001-49ff-9dd9-8145d8397104"}, "operation": "GET_RENTAL", "reply_to": "s6102_entity_responses"}, "offset": 14, "partition": 0, "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:19.410302+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "ec32d2de-0664-458e-bdc0-baa1e2ea1de3", "event": "request_processed", "operation": "GET_RENTAL", "pid": 1, "rental_count": 1, "response": {"correlation_id": "ec32d2de-0664-458e-bdc0-baa1e2ea1de3", "operation": "GET_RENTAL", "rental": {"availableUnits": 1, "description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "rental_id": "2dec69ef-a001-49ff-9dd9-8145d8397104", "submitterEmail": "hw8@example.com", "termsAccepted": true}, "success": true}, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:19.410388+00:00"}
+{"correlation_id": "ec32d2de-0664-458e-bdc0-baa1e2ea1de3", "event": "response_sent", "offset": 14, "operation": "GET_RENTAL", "partition": 0, "pid": 1, "rental_count": 1, "response": {"correlation_id": "ec32d2de-0664-458e-bdc0-baa1e2ea1de3", "operation": "GET_RENTAL", "rental": {"availableUnits": 1, "description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "rental_id": "2dec69ef-a001-49ff-9dd9-8145d8397104", "submitterEmail": "hw8@example.com", "termsAccepted": true}, "success": true}, "response_offset": 14, "response_partition": 0, "response_topic": "s6102_entity_responses", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:19.410835+00:00", "topic": "s6102_entity_requests"}
+{"committed_offset": 15, "event": "offset_committed", "offset": 14, "partition": 0, "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:19.411394+00:00", "topic": "s6102_entity_requests"}
+{"event": "request_received", "message": {"correlation_id": "c015b283-b7b6-446a-9e01-2287984e3c78", "data": {"description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "submitterEmail": "hw8@example.com", "termsAccepted": true}, "operation": "CREATE_RENTAL", "reply_to": "s6102_entity_responses"}, "offset": 15, "partition": 0, "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:19.415067+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "c015b283-b7b6-446a-9e01-2287984e3c78", "event": "request_processed", "operation": "CREATE_RENTAL", "pid": 1, "rental_count": 2, "response": {"correlation_id": "c015b283-b7b6-446a-9e01-2287984e3c78", "message": "Rental created", "operation": "CREATE_RENTAL", "rental_id": "0279c4be-7a12-41f3-b164-2583282fd63e", "success": true}, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:19.415238+00:00"}
+{"correlation_id": "c015b283-b7b6-446a-9e01-2287984e3c78", "event": "response_sent", "offset": 15, "operation": "CREATE_RENTAL", "partition": 0, "pid": 1, "rental_count": 2, "response": {"correlation_id": "c015b283-b7b6-446a-9e01-2287984e3c78", "message": "Rental created", "operation": "CREATE_RENTAL", "rental_id": "0279c4be-7a12-41f3-b164-2583282fd63e", "success": true}, "response_offset": 15, "response_partition": 0, "response_topic": "s6102_entity_responses", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:19.415622+00:00", "topic": "s6102_entity_requests"}
+{"committed_offset": 16, "event": "offset_committed", "offset": 15, "partition": 0, "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:19.416137+00:00", "topic": "s6102_entity_requests"}
+{"event": "request_received", "message": {"correlation_id": "f254c80f-9c58-47f9-9ff5-8b5a4d19a916", "data": {"rental_id": "0279c4be-7a12-41f3-b164-2583282fd63e"}, "operation": "GET_RENTAL", "reply_to": "s6102_entity_responses"}, "offset": 16, "partition": 0, "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:19.419727+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "f254c80f-9c58-47f9-9ff5-8b5a4d19a916", "event": "request_processed", "operation": "GET_RENTAL", "pid": 1, "rental_count": 2, "response": {"correlation_id": "f254c80f-9c58-47f9-9ff5-8b5a4d19a916", "operation": "GET_RENTAL", "rental": {"availableUnits": 1, "description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "rental_id": "0279c4be-7a12-41f3-b164-2583282fd63e", "submitterEmail": "hw8@example.com", "termsAccepted": true}, "success": true}, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:19.419886+00:00"}
+{"correlation_id": "f254c80f-9c58-47f9-9ff5-8b5a4d19a916", "event": "response_sent", "offset": 16, "operation": "GET_RENTAL", "partition": 0, "pid": 1, "rental_count": 2, "response": {"correlation_id": "f254c80f-9c58-47f9-9ff5-8b5a4d19a916", "operation": "GET_RENTAL", "rental": {"availableUnits": 1, "description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "rental_id": "0279c4be-7a12-41f3-b164-2583282fd63e", "submitterEmail": "hw8@example.com", "termsAccepted": true}, "success": true}, "response_offset": 16, "response_partition": 0, "response_topic": "s6102_entity_responses", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:19.421021+00:00", "topic": "s6102_entity_requests"}
+{"committed_offset": 17, "event": "offset_committed", "offset": 16, "partition": 0, "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:19.421869+00:00", "topic": "s6102_entity_requests"}
+{"event": "request_received", "message": {"correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6", "data": {"description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "submitterEmail": "hw8@example.com", "termsAccepted": true}, "operation": "CREATE_RENTAL", "reply_to": "s6102_entity_responses"}, "offset": 17, "partition": 0, "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.220200+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6", "event": "request_processed", "operation": "CREATE_RENTAL", "pid": 1, "rental_count": 3, "response": {"correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6", "message": "Rental created", "operation": "CREATE_RENTAL", "rental_id": "556c4adc-cada-4685-bbe4-c7a6fd55096d", "success": true}, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.220568+00:00"}
+{"correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6", "event": "response_sent", "offset": 17, "operation": "CREATE_RENTAL", "partition": 0, "pid": 1, "rental_count": 3, "response": {"correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6", "message": "Rental created", "operation": "CREATE_RENTAL", "rental_id": "556c4adc-cada-4685-bbe4-c7a6fd55096d", "success": true}, "response_offset": 17, "response_partition": 0, "response_topic": "s6102_entity_responses", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.221180+00:00", "topic": "s6102_entity_requests"}
+{"committed_offset": 18, "event": "offset_committed", "offset": 17, "partition": 0, "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.222030+00:00", "topic": "s6102_entity_requests"}
+{"event": "request_received", "message": {"correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6", "data": {"rental_id": "556c4adc-cada-4685-bbe4-c7a6fd55096d"}, "operation": "GET_RENTAL", "reply_to": "s6102_entity_responses"}, "offset": 18, "partition": 0, "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.223317+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6", "event": "request_processed", "operation": "GET_RENTAL", "pid": 1, "rental_count": 3, "response": {"correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6", "operation": "GET_RENTAL", "rental": {"availableUnits": 1, "description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "rental_id": "556c4adc-cada-4685-bbe4-c7a6fd55096d", "submitterEmail": "hw8@example.com", "termsAccepted": true}, "success": true}, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.223413+00:00"}
+{"correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6", "event": "response_sent", "offset": 18, "operation": "GET_RENTAL", "partition": 0, "pid": 1, "rental_count": 3, "response": {"correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6", "operation": "GET_RENTAL", "rental": {"availableUnits": 1, "description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "rental_id": "556c4adc-cada-4685-bbe4-c7a6fd55096d", "submitterEmail": "hw8@example.com", "termsAccepted": true}, "success": true}, "response_offset": 18, "response_partition": 0, "response_topic": "s6102_entity_responses", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.223847+00:00", "topic": "s6102_entity_requests"}
+{"committed_offset": 19, "event": "offset_committed", "offset": 18, "partition": 0, "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.224364+00:00", "topic": "s6102_entity_requests"}
+{"event": "request_received", "message": {"correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6", "data": {"description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "submitterEmail": "hw8@example.com", "termsAccepted": true}, "operation": "CREATE_RENTAL", "reply_to": "s6102_entity_responses"}, "offset": 19, "partition": 0, "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.225664+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6", "event": "duplicate_cached", "operation": "CREATE_RENTAL", "pid": 1, "rental_count": 3, "response": {"correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6", "message": "Rental created", "operation": "CREATE_RENTAL", "rental_id": "556c4adc-cada-4685-bbe4-c7a6fd55096d", "success": true}, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.225829+00:00"}
+{"correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6", "event": "response_sent", "offset": 19, "operation": "CREATE_RENTAL", "partition": 0, "pid": 1, "rental_count": 3, "response": {"correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6", "message": "Rental created", "operation": "CREATE_RENTAL", "rental_id": "556c4adc-cada-4685-bbe4-c7a6fd55096d", "success": true}, "response_offset": 19, "response_partition": 0, "response_topic": "s6102_entity_responses", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.226399+00:00", "topic": "s6102_entity_requests"}
+{"committed_offset": 20, "event": "offset_committed", "offset": 19, "partition": 0, "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.226929+00:00", "topic": "s6102_entity_requests"}
+{"event": "request_received", "message": {"correlation_id": "7fbaaad1-3ce4-4355-a99f-712abe0cb7f1", "data": {}, "operation": "CREATE_RENTAL", "reply_to": "s6102_entity_responses"}, "offset": 20, "partition": 0, "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.227577+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "7fbaaad1-3ce4-4355-a99f-712abe0cb7f1", "event": "response_sent", "offset": 20, "operation": "CREATE_RENTAL", "partition": 0, "pid": 1, "rental_count": 3, "response": {"correlation_id": "7fbaaad1-3ce4-4355-a99f-712abe0cb7f1", "error": "listingTitle: Field required; propertyAddress: Field required; submitterEmail: Field required; description: Field required; propertyType: Field required; termsAccepted: Field required", "operation": "CREATE_RENTAL", "success": false}, "response_offset": 20, "response_partition": 0, "response_topic": "s6102_entity_responses", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.227947+00:00", "topic": "s6102_entity_requests"}
+{"committed_offset": 21, "event": "offset_committed", "offset": 20, "partition": 0, "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.228407+00:00", "topic": "s6102_entity_requests"}
+{"event": "request_received", "message": {"correlation_id": "313c61e2-4f7a-4966-b4d8-d7885f0ada12", "data": {"description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "submitterEmail": "hw8@example.com", "termsAccepted": false}, "operation": "CREATE_RENTAL", "reply_to": "s6102_entity_responses"}, "offset": 21, "partition": 0, "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.229134+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "313c61e2-4f7a-4966-b4d8-d7885f0ada12", "event": "response_sent", "offset": 21, "operation": "CREATE_RENTAL", "partition": 0, "pid": 1, "rental_count": 3, "response": {"correlation_id": "313c61e2-4f7a-4966-b4d8-d7885f0ada12", "error": "termsAccepted: Value error, Please agree to the terms and conditions.", "operation": "CREATE_RENTAL", "success": false}, "response_offset": 21, "response_partition": 0, "response_topic": "s6102_entity_responses", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.229589+00:00", "topic": "s6102_entity_requests"}
+{"committed_offset": 22, "event": "offset_committed", "offset": 21, "partition": 0, "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.229985+00:00", "topic": "s6102_entity_requests"}
+{"event": "request_received", "message": {"correlation_id": "3db9f3d2-13d3-446c-8974-6547838688fc", "data": {}, "operation": "UNKNOWN", "reply_to": "s6102_entity_responses"}, "offset": 22, "partition": 0, "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.230773+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "3db9f3d2-13d3-446c-8974-6547838688fc", "event": "response_sent", "offset": 22, "operation": "UNKNOWN", "partition": 0, "pid": 1, "rental_count": 3, "response": {"correlation_id": "3db9f3d2-13d3-446c-8974-6547838688fc", "error": "Unknown operation", "operation": "UNKNOWN", "success": false}, "response_offset": 22, "response_partition": 0, "response_topic": "s6102_entity_responses", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.231442+00:00", "topic": "s6102_entity_requests"}
+{"committed_offset": 23, "event": "offset_committed", "offset": 22, "partition": 0, "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.232145+00:00", "topic": "s6102_entity_requests"}
+{"event": "request_received", "message": {"correlation_id": "3d54b89c-4690-452c-a071-b03766013e45", "data": {"rental_id": "a1b16c16-18e2-458b-99b8-9da967315d6b"}, "operation": "GET_RENTAL", "reply_to": "s6102_entity_responses"}, "offset": 23, "partition": 0, "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.232478+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "3d54b89c-4690-452c-a071-b03766013e45", "event": "response_sent", "offset": 23, "operation": "GET_RENTAL", "partition": 0, "pid": 1, "rental_count": 3, "response": {"correlation_id": "3d54b89c-4690-452c-a071-b03766013e45", "error": "Rental not found", "operation": "GET_RENTAL", "success": false}, "response_offset": 23, "response_partition": 0, "response_topic": "s6102_entity_responses", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.232877+00:00", "topic": "s6102_entity_requests"}
+{"committed_offset": 24, "event": "offset_committed", "offset": 23, "partition": 0, "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.233349+00:00", "topic": "s6102_entity_requests"}
+{"event": "request_received", "message": {"correlation_id": "9f93b86d-ba40-4df2-97e1-025fe556349b", "data": {"description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "submitterEmail": "hw8@example.com", "termsAccepted": true}, "operation": "CREATE_RENTAL", "reply_to": "s6102_entity_responses"}, "offset": 24, "partition": 0, "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.438386+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "9f93b86d-ba40-4df2-97e1-025fe556349b", "event": "request_processed", "operation": "CREATE_RENTAL", "pid": 1, "rental_count": 4, "response": {"correlation_id": "9f93b86d-ba40-4df2-97e1-025fe556349b", "message": "Rental created", "operation": "CREATE_RENTAL", "rental_id": "006bb888-51a8-4ebd-9a46-d221c784f4d5", "success": true}, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.438586+00:00"}
+{"correlation_id": "9f93b86d-ba40-4df2-97e1-025fe556349b", "event": "response_sent", "offset": 24, "operation": "CREATE_RENTAL", "partition": 0, "pid": 1, "rental_count": 4, "response": {"correlation_id": "9f93b86d-ba40-4df2-97e1-025fe556349b", "message": "Rental created", "operation": "CREATE_RENTAL", "rental_id": "006bb888-51a8-4ebd-9a46-d221c784f4d5", "success": true}, "response_offset": 24, "response_partition": 0, "response_topic": "s6102_entity_responses", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.439324+00:00", "topic": "s6102_entity_requests"}
+{"committed_offset": 25, "event": "offset_committed", "offset": 24, "partition": 0, "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.439985+00:00", "topic": "s6102_entity_requests"}
+{"event": "request_received", "message": {"correlation_id": "9f93b86d-ba40-4df2-97e1-025fe556349b", "data": {"rental_id": "006bb888-51a8-4ebd-9a46-d221c784f4d5"}, "operation": "GET_RENTAL", "reply_to": "s6102_entity_responses"}, "offset": 25, "partition": 0, "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.444682+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "9f93b86d-ba40-4df2-97e1-025fe556349b", "event": "request_processed", "operation": "GET_RENTAL", "pid": 1, "rental_count": 4, "response": {"correlation_id": "9f93b86d-ba40-4df2-97e1-025fe556349b", "operation": "GET_RENTAL", "rental": {"availableUnits": 1, "description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "rental_id": "006bb888-51a8-4ebd-9a46-d221c784f4d5", "submitterEmail": "hw8@example.com", "termsAccepted": true}, "success": true}, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.444769+00:00"}
+{"correlation_id": "9f93b86d-ba40-4df2-97e1-025fe556349b", "event": "response_sent", "offset": 25, "operation": "GET_RENTAL", "partition": 0, "pid": 1, "rental_count": 4, "response": {"correlation_id": "9f93b86d-ba40-4df2-97e1-025fe556349b", "operation": "GET_RENTAL", "rental": {"availableUnits": 1, "description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "rental_id": "006bb888-51a8-4ebd-9a46-d221c784f4d5", "submitterEmail": "hw8@example.com", "termsAccepted": true}, "success": true}, "response_offset": 25, "response_partition": 0, "response_topic": "s6102_entity_responses", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.445200+00:00", "topic": "s6102_entity_requests"}
+{"committed_offset": 26, "event": "offset_committed", "offset": 25, "partition": 0, "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.445887+00:00", "topic": "s6102_entity_requests"}
+{"event": "request_received", "message": {"correlation_id": "0038e636-2c30-443f-bff9-60b0474919a8", "data": {"rental_id": "006bb888-51a8-4ebd-9a46-d221c784f4d5"}, "operation": "GET_RENTAL", "reply_to": "s6102_entity_responses"}, "offset": 26, "partition": 0, "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.454922+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "0038e636-2c30-443f-bff9-60b0474919a8", "event": "request_processed", "operation": "GET_RENTAL", "pid": 1, "rental_count": 4, "response": {"correlation_id": "0038e636-2c30-443f-bff9-60b0474919a8", "operation": "GET_RENTAL", "rental": {"availableUnits": 1, "description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "rental_id": "006bb888-51a8-4ebd-9a46-d221c784f4d5", "submitterEmail": "hw8@example.com", "termsAccepted": true}, "success": true}, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.455017+00:00"}
+{"correlation_id": "0038e636-2c30-443f-bff9-60b0474919a8", "event": "response_sent", "offset": 26, "operation": "GET_RENTAL", "partition": 0, "pid": 1, "rental_count": 4, "response": {"correlation_id": "0038e636-2c30-443f-bff9-60b0474919a8", "operation": "GET_RENTAL", "rental": {"availableUnits": 1, "description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "rental_id": "006bb888-51a8-4ebd-9a46-d221c784f4d5", "submitterEmail": "hw8@example.com", "termsAccepted": true}, "success": true}, "response_offset": 26, "response_partition": 0, "response_topic": "s6102_entity_responses", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.455505+00:00", "topic": "s6102_entity_requests"}
+{"committed_offset": 27, "event": "offset_committed", "offset": 26, "partition": 0, "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.456088+00:00", "topic": "s6102_entity_requests"}
+{"event": "request_received", "message": {"correlation_id": "2293b48d-de6e-45c1-a433-8bbd8f9ea425", "data": {"description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "submitterEmail": "hw8@example.com", "termsAccepted": true}, "operation": "CREATE_RENTAL", "reply_to": "s6102_entity_responses"}, "offset": 27, "partition": 0, "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.460842+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "2293b48d-de6e-45c1-a433-8bbd8f9ea425", "event": "request_processed", "operation": "CREATE_RENTAL", "pid": 1, "rental_count": 5, "response": {"correlation_id": "2293b48d-de6e-45c1-a433-8bbd8f9ea425", "message": "Rental created", "operation": "CREATE_RENTAL", "rental_id": "4fc8c788-cc17-4142-bbcd-a123c72afa60", "success": true}, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.461006+00:00"}
+{"correlation_id": "2293b48d-de6e-45c1-a433-8bbd8f9ea425", "event": "response_sent", "offset": 27, "operation": "CREATE_RENTAL", "partition": 0, "pid": 1, "rental_count": 5, "response": {"correlation_id": "2293b48d-de6e-45c1-a433-8bbd8f9ea425", "message": "Rental created", "operation": "CREATE_RENTAL", "rental_id": "4fc8c788-cc17-4142-bbcd-a123c72afa60", "success": true}, "response_offset": 27, "response_partition": 0, "response_topic": "s6102_entity_responses", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.461415+00:00", "topic": "s6102_entity_requests"}
+{"committed_offset": 28, "event": "offset_committed", "offset": 27, "partition": 0, "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.461928+00:00", "topic": "s6102_entity_requests"}
+{"event": "request_received", "message": {"correlation_id": "cc027a53-43d0-4264-81b0-9ebab1e328a5", "data": {"rental_id": "4fc8c788-cc17-4142-bbcd-a123c72afa60"}, "operation": "GET_RENTAL", "reply_to": "s6102_entity_responses"}, "offset": 28, "partition": 0, "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.466849+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "cc027a53-43d0-4264-81b0-9ebab1e328a5", "event": "request_processed", "operation": "GET_RENTAL", "pid": 1, "rental_count": 5, "response": {"correlation_id": "cc027a53-43d0-4264-81b0-9ebab1e328a5", "operation": "GET_RENTAL", "rental": {"availableUnits": 1, "description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "rental_id": "4fc8c788-cc17-4142-bbcd-a123c72afa60", "submitterEmail": "hw8@example.com", "termsAccepted": true}, "success": true}, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.466933+00:00"}
+{"correlation_id": "cc027a53-43d0-4264-81b0-9ebab1e328a5", "event": "response_sent", "offset": 28, "operation": "GET_RENTAL", "partition": 0, "pid": 1, "rental_count": 5, "response": {"correlation_id": "cc027a53-43d0-4264-81b0-9ebab1e328a5", "operation": "GET_RENTAL", "rental": {"availableUnits": 1, "description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "rental_id": "4fc8c788-cc17-4142-bbcd-a123c72afa60", "submitterEmail": "hw8@example.com", "termsAccepted": true}, "success": true}, "response_offset": 28, "response_partition": 0, "response_topic": "s6102_entity_responses", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.467343+00:00", "topic": "s6102_entity_requests"}
+{"committed_offset": 29, "event": "offset_committed", "offset": 28, "partition": 0, "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "entity_worker", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.467847+00:00", "topic": "s6102_entity_requests"}
+
+
+
+===== fastapi-full.log | captured UTC 2026-10-29T20:22:23.117610+00:00 =====
+{"bind": "0.0.0.0:8702", "event": "web_host_url", "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:20:41.757340+00:00", "url": "http://127.0.0.1:8702"}
+{"event": "rpc_ready", "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:20:42.080218+00:00", "topic": "s6102_entity_responses"}
+INFO:     127.0.0.1:59968 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59984 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59068 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59084 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33894 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33902 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54780 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     172.23.0.1:64332 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     172.23.0.1:64332 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     172.23.0.1:64332 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     172.23.0.1:64332 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     172.23.0.1:64332 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     172.23.0.1:64332 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     172.23.0.1:64332 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     172.23.0.1:64332 - "POST /api/kafka/rentals HTTP/1.1" 401 Unauthorized
+INFO:     172.23.0.1:64332 - "POST /api/kafka/rentals HTTP/1.1" 401 Unauthorized
+INFO:     172.23.0.1:64332 - "POST /api/kafka/rentals HTTP/1.1" 401 Unauthorized
+INFO:     172.23.0.1:64332 - "POST /auth/login HTTP/1.1" 401 Unauthorized
+{"correlation_id": "c08bff2e-edb7-4b57-95cf-a7b7d0167ace", "event": "request_sending", "message": {"correlation_id": "c08bff2e-edb7-4b57-95cf-a7b7d0167ace", "data": {"description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "submitterEmail": "hw8@example.com", "termsAccepted": true}, "operation": "CREATE_RENTAL", "reply_to": "s6102_entity_responses"}, "operation": "CREATE_RENTAL", "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:19.394409+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "c08bff2e-edb7-4b57-95cf-a7b7d0167ace", "event": "request_sent", "offset": 12, "operation": "CREATE_RENTAL", "partition": 0, "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:19.395184+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "c08bff2e-edb7-4b57-95cf-a7b7d0167ace", "event": "response_received", "matched": true, "offset": 12, "operation": "CREATE_RENTAL", "partition": 0, "pid": 1, "response": {"correlation_id": "c08bff2e-edb7-4b57-95cf-a7b7d0167ace", "message": "Rental created", "operation": "CREATE_RENTAL", "rental_id": "2dec69ef-a001-49ff-9dd9-8145d8397104", "success": true}, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:19.396563+00:00", "topic": "s6102_entity_responses"}
+{"correlation_id": "c08bff2e-edb7-4b57-95cf-a7b7d0167ace", "event": "response_returned", "operation": "CREATE_RENTAL", "pid": 1, "response": {"correlation_id": "c08bff2e-edb7-4b57-95cf-a7b7d0167ace", "message": "Rental created", "operation": "CREATE_RENTAL", "rental_id": "2dec69ef-a001-49ff-9dd9-8145d8397104", "success": true}, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:19.396612+00:00"}
+INFO:     172.23.0.1:64332 - "POST /api/kafka/rentals HTTP/1.1" 200 OK
+{"correlation_id": "c08bff2e-edb7-4b57-95cf-a7b7d0167ace", "event": "request_sending", "message": {"correlation_id": "c08bff2e-edb7-4b57-95cf-a7b7d0167ace", "data": {"rental_id": "2dec69ef-a001-49ff-9dd9-8145d8397104"}, "operation": "GET_RENTAL", "reply_to": "s6102_entity_responses"}, "operation": "GET_RENTAL", "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:19.400297+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "c08bff2e-edb7-4b57-95cf-a7b7d0167ace", "event": "request_sent", "offset": 13, "operation": "GET_RENTAL", "partition": 0, "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:19.400870+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "c08bff2e-edb7-4b57-95cf-a7b7d0167ace", "event": "response_received", "matched": true, "offset": 13, "operation": "GET_RENTAL", "partition": 0, "pid": 1, "response": {"correlation_id": "c08bff2e-edb7-4b57-95cf-a7b7d0167ace", "operation": "GET_RENTAL", "rental": {"availableUnits": 1, "description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "rental_id": "2dec69ef-a001-49ff-9dd9-8145d8397104", "submitterEmail": "hw8@example.com", "termsAccepted": true}, "success": true}, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:19.401602+00:00", "topic": "s6102_entity_responses"}
+{"correlation_id": "c08bff2e-edb7-4b57-95cf-a7b7d0167ace", "event": "response_returned", "operation": "GET_RENTAL", "pid": 1, "response": {"correlation_id": "c08bff2e-edb7-4b57-95cf-a7b7d0167ace", "operation": "GET_RENTAL", "rental": {"availableUnits": 1, "description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "rental_id": "2dec69ef-a001-49ff-9dd9-8145d8397104", "submitterEmail": "hw8@example.com", "termsAccepted": true}, "success": true}, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:19.401635+00:00"}
+INFO:     172.23.0.1:64332 - "POST /api/kafka/rentals HTTP/1.1" 200 OK
+INFO:     172.23.0.1:64332 - "POST /api/kafka/rentals HTTP/1.1" 403 Forbidden
+{"correlation_id": "ec32d2de-0664-458e-bdc0-baa1e2ea1de3", "event": "request_sending", "message": {"correlation_id": "ec32d2de-0664-458e-bdc0-baa1e2ea1de3", "data": {"rental_id": "2dec69ef-a001-49ff-9dd9-8145d8397104"}, "operation": "GET_RENTAL", "reply_to": "s6102_entity_responses"}, "operation": "GET_RENTAL", "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:19.409438+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "ec32d2de-0664-458e-bdc0-baa1e2ea1de3", "event": "request_sent", "offset": 14, "operation": "GET_RENTAL", "partition": 0, "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:19.410092+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "ec32d2de-0664-458e-bdc0-baa1e2ea1de3", "event": "response_received", "matched": true, "offset": 14, "operation": "GET_RENTAL", "partition": 0, "pid": 1, "response": {"correlation_id": "ec32d2de-0664-458e-bdc0-baa1e2ea1de3", "operation": "GET_RENTAL", "rental": {"availableUnits": 1, "description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "rental_id": "2dec69ef-a001-49ff-9dd9-8145d8397104", "submitterEmail": "hw8@example.com", "termsAccepted": true}, "success": true}, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:19.410926+00:00", "topic": "s6102_entity_responses"}
+{"correlation_id": "ec32d2de-0664-458e-bdc0-baa1e2ea1de3", "event": "response_returned", "operation": "GET_RENTAL", "pid": 1, "response": {"correlation_id": "ec32d2de-0664-458e-bdc0-baa1e2ea1de3", "operation": "GET_RENTAL", "rental": {"availableUnits": 1, "description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "rental_id": "2dec69ef-a001-49ff-9dd9-8145d8397104", "submitterEmail": "hw8@example.com", "termsAccepted": true}, "success": true}, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:19.410965+00:00"}
+INFO:     172.23.0.1:64332 - "POST /api/kafka/rentals HTTP/1.1" 200 OK
+{"correlation_id": "c015b283-b7b6-446a-9e01-2287984e3c78", "event": "request_sending", "message": {"correlation_id": "c015b283-b7b6-446a-9e01-2287984e3c78", "data": {"description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "submitterEmail": "hw8@example.com", "termsAccepted": true}, "operation": "CREATE_RENTAL", "reply_to": "s6102_entity_responses"}, "operation": "CREATE_RENTAL", "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:19.414401+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "c015b283-b7b6-446a-9e01-2287984e3c78", "event": "request_sent", "offset": 15, "operation": "CREATE_RENTAL", "partition": 0, "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:19.414915+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "c015b283-b7b6-446a-9e01-2287984e3c78", "event": "response_received", "matched": true, "offset": 15, "operation": "CREATE_RENTAL", "partition": 0, "pid": 1, "response": {"correlation_id": "c015b283-b7b6-446a-9e01-2287984e3c78", "message": "Rental created", "operation": "CREATE_RENTAL", "rental_id": "0279c4be-7a12-41f3-b164-2583282fd63e", "success": true}, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:19.415681+00:00", "topic": "s6102_entity_responses"}
+{"correlation_id": "c015b283-b7b6-446a-9e01-2287984e3c78", "event": "response_returned", "operation": "CREATE_RENTAL", "pid": 1, "response": {"correlation_id": "c015b283-b7b6-446a-9e01-2287984e3c78", "message": "Rental created", "operation": "CREATE_RENTAL", "rental_id": "0279c4be-7a12-41f3-b164-2583282fd63e", "success": true}, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:19.415715+00:00"}
+INFO:     172.23.0.1:64332 - "POST /api/kafka/rentals HTTP/1.1" 200 OK
+{"correlation_id": "f254c80f-9c58-47f9-9ff5-8b5a4d19a916", "event": "request_sending", "message": {"correlation_id": "f254c80f-9c58-47f9-9ff5-8b5a4d19a916", "data": {"rental_id": "0279c4be-7a12-41f3-b164-2583282fd63e"}, "operation": "GET_RENTAL", "reply_to": "s6102_entity_responses"}, "operation": "GET_RENTAL", "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:19.418950+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "f254c80f-9c58-47f9-9ff5-8b5a4d19a916", "event": "request_sent", "offset": 16, "operation": "GET_RENTAL", "partition": 0, "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:19.419478+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "f254c80f-9c58-47f9-9ff5-8b5a4d19a916", "event": "response_received", "matched": true, "offset": 16, "operation": "GET_RENTAL", "partition": 0, "pid": 1, "response": {"correlation_id": "f254c80f-9c58-47f9-9ff5-8b5a4d19a916", "operation": "GET_RENTAL", "rental": {"availableUnits": 1, "description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "rental_id": "0279c4be-7a12-41f3-b164-2583282fd63e", "submitterEmail": "hw8@example.com", "termsAccepted": true}, "success": true}, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:19.421210+00:00", "topic": "s6102_entity_responses"}
+{"correlation_id": "f254c80f-9c58-47f9-9ff5-8b5a4d19a916", "event": "response_returned", "operation": "GET_RENTAL", "pid": 1, "response": {"correlation_id": "f254c80f-9c58-47f9-9ff5-8b5a4d19a916", "operation": "GET_RENTAL", "rental": {"availableUnits": 1, "description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "rental_id": "0279c4be-7a12-41f3-b164-2583282fd63e", "submitterEmail": "hw8@example.com", "termsAccepted": true}, "success": true}, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:19.421266+00:00"}
+INFO:     172.23.0.1:64332 - "POST /api/kafka/rentals HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54782 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41086 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41096 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53296 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53306 - "GET /api/health HTTP/1.1" 200 OK
+{"correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6", "event": "response_received", "matched": false, "offset": 17, "operation": "CREATE_RENTAL", "partition": 0, "pid": 1, "response": {"correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6", "message": "Rental created", "operation": "CREATE_RENTAL", "rental_id": "556c4adc-cada-4685-bbe4-c7a6fd55096d", "success": true}, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.221409+00:00", "topic": "s6102_entity_responses"}
+{"correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6", "event": "response_received", "matched": false, "offset": 18, "operation": "GET_RENTAL", "partition": 0, "pid": 1, "response": {"correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6", "operation": "GET_RENTAL", "rental": {"availableUnits": 1, "description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "rental_id": "556c4adc-cada-4685-bbe4-c7a6fd55096d", "submitterEmail": "hw8@example.com", "termsAccepted": true}, "success": true}, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.223983+00:00", "topic": "s6102_entity_responses"}
+{"correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6", "event": "response_received", "matched": false, "offset": 19, "operation": "CREATE_RENTAL", "partition": 0, "pid": 1, "response": {"correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6", "message": "Rental created", "operation": "CREATE_RENTAL", "rental_id": "556c4adc-cada-4685-bbe4-c7a6fd55096d", "success": true}, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.226466+00:00", "topic": "s6102_entity_responses"}
+{"correlation_id": "7fbaaad1-3ce4-4355-a99f-712abe0cb7f1", "event": "response_received", "matched": false, "offset": 20, "operation": "CREATE_RENTAL", "partition": 0, "pid": 1, "response": {"correlation_id": "7fbaaad1-3ce4-4355-a99f-712abe0cb7f1", "error": "listingTitle: Field required; propertyAddress: Field required; submitterEmail: Field required; description: Field required; propertyType: Field required; termsAccepted: Field required", "operation": "CREATE_RENTAL", "success": false}, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.228167+00:00", "topic": "s6102_entity_responses"}
+{"correlation_id": "313c61e2-4f7a-4966-b4d8-d7885f0ada12", "event": "response_received", "matched": false, "offset": 21, "operation": "CREATE_RENTAL", "partition": 0, "pid": 1, "response": {"correlation_id": "313c61e2-4f7a-4966-b4d8-d7885f0ada12", "error": "termsAccepted: Value error, Please agree to the terms and conditions.", "operation": "CREATE_RENTAL", "success": false}, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.229774+00:00", "topic": "s6102_entity_responses"}
+{"correlation_id": "3db9f3d2-13d3-446c-8974-6547838688fc", "event": "response_received", "matched": false, "offset": 22, "operation": "UNKNOWN", "partition": 0, "pid": 1, "response": {"correlation_id": "3db9f3d2-13d3-446c-8974-6547838688fc", "error": "Unknown operation", "operation": "UNKNOWN", "success": false}, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.231449+00:00", "topic": "s6102_entity_responses"}
+{"correlation_id": "3d54b89c-4690-452c-a071-b03766013e45", "event": "response_received", "matched": false, "offset": 23, "operation": "GET_RENTAL", "partition": 0, "pid": 1, "response": {"correlation_id": "3d54b89c-4690-452c-a071-b03766013e45", "error": "Rental not found", "operation": "GET_RENTAL", "success": false}, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.233079+00:00", "topic": "s6102_entity_responses"}
+INFO:     172.23.0.1:57126 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     172.23.0.1:57126 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     172.23.0.1:57126 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     172.23.0.1:57126 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     172.23.0.1:57126 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     172.23.0.1:57126 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     172.23.0.1:57126 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     172.23.0.1:57126 - "POST /api/kafka/rentals HTTP/1.1" 401 Unauthorized
+INFO:     172.23.0.1:57126 - "POST /api/kafka/rentals HTTP/1.1" 401 Unauthorized
+INFO:     172.23.0.1:57126 - "POST /api/kafka/rentals HTTP/1.1" 401 Unauthorized
+INFO:     172.23.0.1:57126 - "POST /auth/login HTTP/1.1" 401 Unauthorized
+{"correlation_id": "9f93b86d-ba40-4df2-97e1-025fe556349b", "event": "request_sending", "message": {"correlation_id": "9f93b86d-ba40-4df2-97e1-025fe556349b", "data": {"description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "submitterEmail": "hw8@example.com", "termsAccepted": true}, "operation": "CREATE_RENTAL", "reply_to": "s6102_entity_responses"}, "operation": "CREATE_RENTAL", "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.437190+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "9f93b86d-ba40-4df2-97e1-025fe556349b", "event": "request_sent", "offset": 24, "operation": "CREATE_RENTAL", "partition": 0, "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.438120+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "9f93b86d-ba40-4df2-97e1-025fe556349b", "event": "response_received", "matched": true, "offset": 24, "operation": "CREATE_RENTAL", "partition": 0, "pid": 1, "response": {"correlation_id": "9f93b86d-ba40-4df2-97e1-025fe556349b", "message": "Rental created", "operation": "CREATE_RENTAL", "rental_id": "006bb888-51a8-4ebd-9a46-d221c784f4d5", "success": true}, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.439732+00:00", "topic": "s6102_entity_responses"}
+{"correlation_id": "9f93b86d-ba40-4df2-97e1-025fe556349b", "event": "response_returned", "operation": "CREATE_RENTAL", "pid": 1, "response": {"correlation_id": "9f93b86d-ba40-4df2-97e1-025fe556349b", "message": "Rental created", "operation": "CREATE_RENTAL", "rental_id": "006bb888-51a8-4ebd-9a46-d221c784f4d5", "success": true}, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.439783+00:00"}
+INFO:     172.23.0.1:57126 - "POST /api/kafka/rentals HTTP/1.1" 200 OK
+{"correlation_id": "9f93b86d-ba40-4df2-97e1-025fe556349b", "event": "request_sending", "message": {"correlation_id": "9f93b86d-ba40-4df2-97e1-025fe556349b", "data": {"rental_id": "006bb888-51a8-4ebd-9a46-d221c784f4d5"}, "operation": "GET_RENTAL", "reply_to": "s6102_entity_responses"}, "operation": "GET_RENTAL", "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.443852+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "9f93b86d-ba40-4df2-97e1-025fe556349b", "event": "request_sent", "offset": 25, "operation": "GET_RENTAL", "partition": 0, "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.444472+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "9f93b86d-ba40-4df2-97e1-025fe556349b", "event": "response_received", "matched": true, "offset": 25, "operation": "GET_RENTAL", "partition": 0, "pid": 1, "response": {"correlation_id": "9f93b86d-ba40-4df2-97e1-025fe556349b", "operation": "GET_RENTAL", "rental": {"availableUnits": 1, "description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "rental_id": "006bb888-51a8-4ebd-9a46-d221c784f4d5", "submitterEmail": "hw8@example.com", "termsAccepted": true}, "success": true}, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.445282+00:00", "topic": "s6102_entity_responses"}
+{"correlation_id": "9f93b86d-ba40-4df2-97e1-025fe556349b", "event": "response_returned", "operation": "GET_RENTAL", "pid": 1, "response": {"correlation_id": "9f93b86d-ba40-4df2-97e1-025fe556349b", "operation": "GET_RENTAL", "rental": {"availableUnits": 1, "description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "rental_id": "006bb888-51a8-4ebd-9a46-d221c784f4d5", "submitterEmail": "hw8@example.com", "termsAccepted": true}, "success": true}, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.445326+00:00"}
+INFO:     172.23.0.1:57126 - "POST /api/kafka/rentals HTTP/1.1" 200 OK
+INFO:     172.23.0.1:57126 - "POST /api/kafka/rentals HTTP/1.1" 403 Forbidden
+{"correlation_id": "0038e636-2c30-443f-bff9-60b0474919a8", "event": "request_sending", "message": {"correlation_id": "0038e636-2c30-443f-bff9-60b0474919a8", "data": {"rental_id": "006bb888-51a8-4ebd-9a46-d221c784f4d5"}, "operation": "GET_RENTAL", "reply_to": "s6102_entity_responses"}, "operation": "GET_RENTAL", "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.453973+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "0038e636-2c30-443f-bff9-60b0474919a8", "event": "request_sent", "offset": 26, "operation": "GET_RENTAL", "partition": 0, "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.454686+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "0038e636-2c30-443f-bff9-60b0474919a8", "event": "response_received", "matched": true, "offset": 26, "operation": "GET_RENTAL", "partition": 0, "pid": 1, "response": {"correlation_id": "0038e636-2c30-443f-bff9-60b0474919a8", "operation": "GET_RENTAL", "rental": {"availableUnits": 1, "description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "rental_id": "006bb888-51a8-4ebd-9a46-d221c784f4d5", "submitterEmail": "hw8@example.com", "termsAccepted": true}, "success": true}, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.455557+00:00", "topic": "s6102_entity_responses"}
+{"correlation_id": "0038e636-2c30-443f-bff9-60b0474919a8", "event": "response_returned", "operation": "GET_RENTAL", "pid": 1, "response": {"correlation_id": "0038e636-2c30-443f-bff9-60b0474919a8", "operation": "GET_RENTAL", "rental": {"availableUnits": 1, "description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "rental_id": "006bb888-51a8-4ebd-9a46-d221c784f4d5", "submitterEmail": "hw8@example.com", "termsAccepted": true}, "success": true}, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.455596+00:00"}
+INFO:     172.23.0.1:57126 - "POST /api/kafka/rentals HTTP/1.1" 200 OK
+{"correlation_id": "2293b48d-de6e-45c1-a433-8bbd8f9ea425", "event": "request_sending", "message": {"correlation_id": "2293b48d-de6e-45c1-a433-8bbd8f9ea425", "data": {"description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "submitterEmail": "hw8@example.com", "termsAccepted": true}, "operation": "CREATE_RENTAL", "reply_to": "s6102_entity_responses"}, "operation": "CREATE_RENTAL", "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.460057+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "2293b48d-de6e-45c1-a433-8bbd8f9ea425", "event": "request_sent", "offset": 27, "operation": "CREATE_RENTAL", "partition": 0, "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.460654+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "2293b48d-de6e-45c1-a433-8bbd8f9ea425", "event": "response_received", "matched": true, "offset": 27, "operation": "CREATE_RENTAL", "partition": 0, "pid": 1, "response": {"correlation_id": "2293b48d-de6e-45c1-a433-8bbd8f9ea425", "message": "Rental created", "operation": "CREATE_RENTAL", "rental_id": "4fc8c788-cc17-4142-bbcd-a123c72afa60", "success": true}, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.461507+00:00", "topic": "s6102_entity_responses"}
+{"correlation_id": "2293b48d-de6e-45c1-a433-8bbd8f9ea425", "event": "response_returned", "operation": "CREATE_RENTAL", "pid": 1, "response": {"correlation_id": "2293b48d-de6e-45c1-a433-8bbd8f9ea425", "message": "Rental created", "operation": "CREATE_RENTAL", "rental_id": "4fc8c788-cc17-4142-bbcd-a123c72afa60", "success": true}, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.461538+00:00"}
+INFO:     172.23.0.1:57126 - "POST /api/kafka/rentals HTTP/1.1" 200 OK
+{"correlation_id": "cc027a53-43d0-4264-81b0-9ebab1e328a5", "event": "request_sending", "message": {"correlation_id": "cc027a53-43d0-4264-81b0-9ebab1e328a5", "data": {"rental_id": "4fc8c788-cc17-4142-bbcd-a123c72afa60"}, "operation": "GET_RENTAL", "reply_to": "s6102_entity_responses"}, "operation": "GET_RENTAL", "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.466015+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "cc027a53-43d0-4264-81b0-9ebab1e328a5", "event": "request_sent", "offset": 28, "operation": "GET_RENTAL", "partition": 0, "pid": 1, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.466639+00:00", "topic": "s6102_entity_requests"}
+{"correlation_id": "cc027a53-43d0-4264-81b0-9ebab1e328a5", "event": "response_received", "matched": true, "offset": 28, "operation": "GET_RENTAL", "partition": 0, "pid": 1, "response": {"correlation_id": "cc027a53-43d0-4264-81b0-9ebab1e328a5", "operation": "GET_RENTAL", "rental": {"availableUnits": 1, "description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "rental_id": "4fc8c788-cc17-4142-bbcd-a123c72afa60", "submitterEmail": "hw8@example.com", "termsAccepted": true}, "success": true}, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.467490+00:00", "topic": "s6102_entity_responses"}
+{"correlation_id": "cc027a53-43d0-4264-81b0-9ebab1e328a5", "event": "response_returned", "operation": "GET_RENTAL", "pid": 1, "response": {"correlation_id": "cc027a53-43d0-4264-81b0-9ebab1e328a5", "operation": "GET_RENTAL", "rental": {"availableUnits": 1, "description": "Synthetic rental listing for the Kafka homework demonstration.", "listingTitle": "HW8 synthetic apartment", "propertyAddress": "100 Example Street, San Jose, CA", "propertyType": "apartment", "rental_id": "4fc8c788-cc17-4142-bbcd-a123c72afa60", "submitterEmail": "hw8@example.com", "termsAccepted": true}, "success": true}, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.467526+00:00"}
+INFO:     172.23.0.1:57126 - "POST /api/kafka/rentals HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40596 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40608 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34456 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34466 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40092 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40104 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60988 - "GET /api/health HTTP/1.1" 200 OK
+
+INFO:     Started server process [1]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8702 (Press CTRL+C to quit)
+
+
+===== planner-live-db95f0.jsonl | captured UTC 2026-10-29T20:21:58.036353+00:00 =====
+{"baseline": "reliable", "event": "partitions_revoked", "group_id": "verify-831280319398425fb8e62543fe93e6cd-planner", "instance": "planner-live", "model": "qwen2.5:7b", "partitions": [], "pid": 78081, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "planner", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.567195+00:00"}
+{"baseline": "reliable", "event": "partitions_assigned", "group_id": "verify-831280319398425fb8e62543fe93e6cd-planner", "instance": "planner-live", "model": "qwen2.5:7b", "partitions": [{"partition": 0, "topic": "s6102_inbox"}], "pid": 78081, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "planner", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.569103+00:00"}
+{"baseline": "reliable", "configuration": {"context_window": 4096, "model_timeout": 180, "output_limit": 256, "retry_attempts": 3, "retry_backoff": 0.2, "seed": 6102, "temperature": 0}, "event": "consumer_ready", "group_id": "verify-831280319398425fb8e62543fe93e6cd-planner", "instance": "planner-live", "message": "Planner is ready and listening...", "model": "qwen2.5:7b", "output_topic": "s6102_tasks", "pid": 78081, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "planner", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.569186+00:00", "topic": "s6102_inbox"}
+{"baseline": "reliable", "correlation_id": "a52151f5-9c3c-4e3e-ba39-c63df17dd84e", "event": "message_received", "group_id": "verify-831280319398425fb8e62543fe93e6cd-planner", "instance": "planner-live", "model": "qwen2.5:7b", "offset": 1, "partition": 0, "payload": {"correlation_id": "a52151f5-9c3c-4e3e-ba39-c63df17dd84e", "question": "How does Kafka message ordering affect updates to the same rental listing?", "rental_id": "hw8-synthetic-6102", "run_id": "hw8-20261029T202146Z"}, "pid": 78081, "raw_bytes": 217, "rental_id": "hw8-synthetic-6102", "run_id": "hw8-20261029T202146Z", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "planner", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:47.348820+00:00", "topic": "s6102_inbox"}
+{"attempt": 1, "baseline": "reliable", "correlation_id": "a52151f5-9c3c-4e3e-ba39-c63df17dd84e", "delay_seconds": 0, "event": "processing_started", "group_id": "verify-831280319398425fb8e62543fe93e6cd-planner", "instance": "planner-live", "max_attempts": 3, "model": "qwen2.5:7b", "offset": 1, "partition": 0, "pid": 78081, "rental_id": "hw8-synthetic-6102", "run_id": "hw8-20261029T202146Z", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "planner", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:47.349466+00:00", "topic": "s6102_inbox"}
+{"baseline": "reliable", "content": "To understand how Kafka message ordering affects updates to the same rental listing, follow these steps:\n\n1. **Identify Message Order**: Determine the sequence in which messages are sent and received in Kafka. Messages are ordered based on the partition they are published to.\n2. **Track Listing Updates**: Monitor the updates to the rental listing as they are published to Kafka. Ensure that updates are processed in the order they were sent to maintain consistency.\n3. **Verify Order Compliance**: Confirm that the system consuming messages from Kafka processes the updates to the rental listing in the correct order, preventing any race conditions or inconsistencies.", "correlation_id": "a52151f5-9c3c-4e3e-ba39-c63df17dd84e", "event": "model_result", "fixture": false, "group_id": "verify-831280319398425fb8e62543fe93e6cd-planner", "instance": "planner-live", "model": "qwen2.5:7b", "pid": 78081, "run_id": "hw8-20261029T202146Z", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "planner", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:58.020521+00:00", "usage": {"input_tokens": 59, "output_tokens": 122, "reported": true, "total_tokens": 181}}
+{"attempt": 1, "baseline": "reliable", "correlation_id": "a52151f5-9c3c-4e3e-ba39-c63df17dd84e", "event": "processing_completed", "group_id": "verify-831280319398425fb8e62543fe93e6cd-planner", "instance": "planner-live", "model": "qwen2.5:7b", "offset": 1, "output": {"correlation_id": "a52151f5-9c3c-4e3e-ba39-c63df17dd84e", "from_stage": "planner", "input_source": {"offset": 1, "partition": 0, "topic": "s6102_inbox"}, "plan": "To understand how Kafka message ordering affects updates to the same rental listing, follow these steps:\n\n1. **Identify Message Order**: Determine the sequence in which messages are sent and received in Kafka. Messages are ordered based on the partition they are published to.\n2. **Track Listing Updates**: Monitor the updates to the rental listing as they are published to Kafka. Ensure that updates are processed in the order they were sent to maintain consistency.\n3. **Verify Order Compliance**: Confirm that the system consuming messages from Kafka processes the updates to the rental listing in the correct order, preventing any race conditions or inconsistencies.", "question": "How does Kafka message ordering affect updates to the same rental listing?", "rental_id": "hw8-synthetic-6102", "run_id": "hw8-20261029T202146Z"}, "partition": 0, "pid": 78081, "rental_id": "hw8-synthetic-6102", "run_id": "hw8-20261029T202146Z", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "planner", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:58.022367+00:00", "topic": "s6102_inbox"}
+{"baseline": "reliable", "correlation_id": "a52151f5-9c3c-4e3e-ba39-c63df17dd84e", "event": "output_published", "group_id": "verify-831280319398425fb8e62543fe93e6cd-planner", "instance": "planner-live", "model": "qwen2.5:7b", "offset": 1, "output": {"correlation_id": "a52151f5-9c3c-4e3e-ba39-c63df17dd84e", "from_stage": "planner", "input_source": {"offset": 1, "partition": 0, "topic": "s6102_inbox"}, "plan": "To understand how Kafka message ordering affects updates to the same rental listing, follow these steps:\n\n1. **Identify Message Order**: Determine the sequence in which messages are sent and received in Kafka. Messages are ordered based on the partition they are published to.\n2. **Track Listing Updates**: Monitor the updates to the rental listing as they are published to Kafka. Ensure that updates are processed in the order they were sent to maintain consistency.\n3. **Verify Order Compliance**: Confirm that the system consuming messages from Kafka processes the updates to the rental listing in the correct order, preventing any race conditions or inconsistencies.", "question": "How does Kafka message ordering affect updates to the same rental listing?", "rental_id": "hw8-synthetic-6102", "run_id": "hw8-20261029T202146Z"}, "output_offset": 23, "output_partition": 0, "output_topic": "s6102_tasks", "partition": 0, "pid": 78081, "rental_id": "hw8-synthetic-6102", "run_id": "hw8-20261029T202146Z", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "planner", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:58.031899+00:00", "topic": "s6102_inbox"}
+{"baseline": "reliable", "committed_offset": 2, "correlation_id": "a52151f5-9c3c-4e3e-ba39-c63df17dd84e", "event": "offset_committed", "group_id": "verify-831280319398425fb8e62543fe93e6cd-planner", "instance": "planner-live", "model": "qwen2.5:7b", "offset": 1, "partition": 0, "pid": 78081, "reason": "after_output_ack", "rental_id": "hw8-synthetic-6102", "run_id": "hw8-20261029T202146Z", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "planner", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:58.036295+00:00", "topic": "s6102_inbox"}
+
+
+===== reviewer-live-f25c60.jsonl | captured UTC 2026-10-29T20:22:06.623728+00:00 =====
+{"baseline": "reliable", "event": "partitions_revoked", "group_id": "verify-91e25f89f64f43ac819a8ffe200f0498-reviewer", "instance": "reviewer-live", "model": "qwen2.5:7b", "partitions": [], "pid": 78083, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "reviewer", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.789125+00:00"}
+{"baseline": "reliable", "event": "partitions_assigned", "group_id": "verify-91e25f89f64f43ac819a8ffe200f0498-reviewer", "instance": "reviewer-live", "model": "qwen2.5:7b", "partitions": [{"partition": 0, "topic": "s6102_drafts"}], "pid": 78083, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "reviewer", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.791775+00:00"}
+{"baseline": "reliable", "configuration": {"context_window": 4096, "model_timeout": 180, "output_limit": 256, "retry_attempts": 3, "retry_backoff": 0.2, "seed": 6102, "temperature": 0}, "event": "consumer_ready", "group_id": "verify-91e25f89f64f43ac819a8ffe200f0498-reviewer", "instance": "reviewer-live", "message": "Reviewer is ready and listening...", "model": "qwen2.5:7b", "output_topic": "s6102_final", "pid": 78083, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "reviewer", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.791868+00:00", "topic": "s6102_drafts"}
+{"baseline": "reliable", "correlation_id": "a52151f5-9c3c-4e3e-ba39-c63df17dd84e", "event": "message_received", "group_id": "verify-91e25f89f64f43ac819a8ffe200f0498-reviewer", "instance": "reviewer-live", "model": "qwen2.5:7b", "offset": 48, "partition": 0, "payload": {"correlation_id": "a52151f5-9c3c-4e3e-ba39-c63df17dd84e", "draft": "Kafka ensures message ordering within partitions, which is crucial for maintaining consistent updates to rental listings. By publishing updates to the same partition, you ensure they are processed in the order they are sent. This prevents race conditions and guarantees that updates to a listing are applied sequentially, maintaining data integrity.", "from_stage": "writer", "input_source": {"offset": 23, "partition": 0, "topic": "s6102_tasks"}, "plan": "To understand how Kafka message ordering affects updates to the same rental listing, follow these steps:\n\n1. **Identify Message Order**: Determine the sequence in which messages are sent and received in Kafka. Messages are ordered based on the partition they are published to.\n2. **Track Listing Updates**: Monitor the updates to the rental listing as they are published to Kafka. Ensure that updates are processed in the order they were sent to maintain consistency.\n3. **Verify Order Compliance**: Confirm that the system consuming messages from Kafka processes the updates to the rental listing in the correct order, preventing any race conditions or inconsistencies.", "question": "How does Kafka message ordering affect updates to the same rental listing?", "rental_id": "hw8-synthetic-6102", "run_id": "hw8-20261029T202146Z", "writer_instance": "writer-live"}, "pid": 78083, "raw_bytes": 1395, "rental_id": "hw8-synthetic-6102", "run_id": "hw8-20261029T202146Z", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "reviewer", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:22:02.421495+00:00", "topic": "s6102_drafts"}
+{"attempt": 1, "baseline": "reliable", "correlation_id": "a52151f5-9c3c-4e3e-ba39-c63df17dd84e", "delay_seconds": 0, "event": "processing_started", "group_id": "verify-91e25f89f64f43ac819a8ffe200f0498-reviewer", "instance": "reviewer-live", "max_attempts": 3, "model": "qwen2.5:7b", "offset": 48, "partition": 0, "pid": 78083, "rental_id": "hw8-synthetic-6102", "run_id": "hw8-20261029T202146Z", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "reviewer", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:22:02.423386+00:00", "topic": "s6102_drafts"}
+{"baseline": "reliable", "content": "Kafka ensures message ordering within partitions, which is crucial for maintaining consistent updates to rental listings. By publishing updates to the same partition, they are processed in the order they are sent, preventing race conditions and ensuring that updates to a listing are applied sequentially, maintaining data integrity.", "correlation_id": "a52151f5-9c3c-4e3e-ba39-c63df17dd84e", "event": "model_result", "fixture": false, "group_id": "verify-91e25f89f64f43ac819a8ffe200f0498-reviewer", "instance": "reviewer-live", "model": "qwen2.5:7b", "pid": 78083, "run_id": "hw8-20261029T202146Z", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "reviewer", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:22:06.614546+00:00", "usage": {"input_tokens": 256, "output_tokens": 56, "reported": true, "total_tokens": 312}}
+{"attempt": 1, "baseline": "reliable", "correlation_id": "a52151f5-9c3c-4e3e-ba39-c63df17dd84e", "event": "processing_completed", "group_id": "verify-91e25f89f64f43ac819a8ffe200f0498-reviewer", "instance": "reviewer-live", "model": "qwen2.5:7b", "offset": 48, "output": {"answer": "Kafka ensures message ordering within partitions, which is crucial for maintaining consistent updates to rental listings. By publishing updates to the same partition, they are processed in the order they are sent, preventing race conditions and ensuring that updates to a listing are applied sequentially, maintaining data integrity.", "correlation_id": "a52151f5-9c3c-4e3e-ba39-c63df17dd84e", "draft": "Kafka ensures message ordering within partitions, which is crucial for maintaining consistent updates to rental listings. By publishing updates to the same partition, you ensure they are processed in the order they are sent. This prevents race conditions and guarantees that updates to a listing are applied sequentially, maintaining data integrity.", "from_stage": "reviewer", "input_source": {"offset": 48, "partition": 0, "topic": "s6102_drafts"}, "plan": "To understand how Kafka message ordering affects updates to the same rental listing, follow these steps:\n\n1. **Identify Message Order**: Determine the sequence in which messages are sent and received in Kafka. Messages are ordered based on the partition they are published to.\n2. **Track Listing Updates**: Monitor the updates to the rental listing as they are published to Kafka. Ensure that updates are processed in the order they were sent to maintain consistency.\n3. **Verify Order Compliance**: Confirm that the system consuming messages from Kafka processes the updates to the rental listing in the correct order, preventing any race conditions or inconsistencies.", "question": "How does Kafka message ordering affect updates to the same rental listing?", "rental_id": "hw8-synthetic-6102", "run_id": "hw8-20261029T202146Z", "status": "approved", "writer_instance": "writer-live"}, "partition": 0, "pid": 78083, "rental_id": "hw8-synthetic-6102", "run_id": "hw8-20261029T202146Z", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "reviewer", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:22:06.615370+00:00", "topic": "s6102_drafts"}
+{"baseline": "reliable", "correlation_id": "a52151f5-9c3c-4e3e-ba39-c63df17dd84e", "event": "output_published", "group_id": "verify-91e25f89f64f43ac819a8ffe200f0498-reviewer", "instance": "reviewer-live", "model": "qwen2.5:7b", "offset": 48, "output": {"answer": "Kafka ensures message ordering within partitions, which is crucial for maintaining consistent updates to rental listings. By publishing updates to the same partition, they are processed in the order they are sent, preventing race conditions and ensuring that updates to a listing are applied sequentially, maintaining data integrity.", "correlation_id": "a52151f5-9c3c-4e3e-ba39-c63df17dd84e", "draft": "Kafka ensures message ordering within partitions, which is crucial for maintaining consistent updates to rental listings. By publishing updates to the same partition, you ensure they are processed in the order they are sent. This prevents race conditions and guarantees that updates to a listing are applied sequentially, maintaining data integrity.", "from_stage": "reviewer", "input_source": {"offset": 48, "partition": 0, "topic": "s6102_drafts"}, "plan": "To understand how Kafka message ordering affects updates to the same rental listing, follow these steps:\n\n1. **Identify Message Order**: Determine the sequence in which messages are sent and received in Kafka. Messages are ordered based on the partition they are published to.\n2. **Track Listing Updates**: Monitor the updates to the rental listing as they are published to Kafka. Ensure that updates are processed in the order they were sent to maintain consistency.\n3. **Verify Order Compliance**: Confirm that the system consuming messages from Kafka processes the updates to the rental listing in the correct order, preventing any race conditions or inconsistencies.", "question": "How does Kafka message ordering affect updates to the same rental listing?", "rental_id": "hw8-synthetic-6102", "run_id": "hw8-20261029T202146Z", "status": "approved", "writer_instance": "writer-live"}, "output_offset": 5, "output_partition": 0, "output_topic": "s6102_final", "partition": 0, "pid": 78083, "rental_id": "hw8-synthetic-6102", "run_id": "hw8-20261029T202146Z", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "reviewer", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:22:06.620022+00:00", "topic": "s6102_drafts"}
+{"baseline": "reliable", "committed_offset": 49, "correlation_id": "a52151f5-9c3c-4e3e-ba39-c63df17dd84e", "event": "offset_committed", "group_id": "verify-91e25f89f64f43ac819a8ffe200f0498-reviewer", "instance": "reviewer-live", "model": "qwen2.5:7b", "offset": 48, "partition": 0, "pid": 78083, "reason": "after_output_ack", "rental_id": "hw8-synthetic-6102", "run_id": "hw8-20261029T202146Z", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "reviewer", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:22:06.623600+00:00", "topic": "s6102_drafts"}
+
+
+===== writer-live-49d205.jsonl | captured UTC 2026-10-29T20:22:02.424049+00:00 =====
+{"baseline": "reliable", "event": "partitions_revoked", "group_id": "verify-afad074222454328a6f24888b9f92970-writer", "instance": "writer-live", "model": "qwen2.5:7b", "partitions": [], "pid": 78082, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "writer", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.675956+00:00"}
+{"baseline": "reliable", "event": "partitions_assigned", "group_id": "verify-afad074222454328a6f24888b9f92970-writer", "instance": "writer-live", "model": "qwen2.5:7b", "partitions": [{"partition": 0, "topic": "s6102_tasks"}, {"partition": 1, "topic": "s6102_tasks"}], "pid": 78082, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "writer", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.677788+00:00"}
+{"baseline": "reliable", "configuration": {"context_window": 4096, "model_timeout": 180, "output_limit": 256, "retry_attempts": 3, "retry_backoff": 0.2, "seed": 6102, "temperature": 0}, "event": "consumer_ready", "group_id": "verify-afad074222454328a6f24888b9f92970-writer", "instance": "writer-live", "message": "Writer is ready and listening...", "model": "qwen2.5:7b", "output_topic": "s6102_drafts", "pid": 78082, "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "writer", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:46.677869+00:00", "topic": "s6102_tasks"}
+{"baseline": "reliable", "correlation_id": "a52151f5-9c3c-4e3e-ba39-c63df17dd84e", "event": "message_received", "group_id": "verify-afad074222454328a6f24888b9f92970-writer", "instance": "writer-live", "model": "qwen2.5:7b", "offset": 23, "partition": 0, "payload": {"correlation_id": "a52151f5-9c3c-4e3e-ba39-c63df17dd84e", "from_stage": "planner", "input_source": {"offset": 1, "partition": 0, "topic": "s6102_inbox"}, "plan": "To understand how Kafka message ordering affects updates to the same rental listing, follow these steps:\n\n1. **Identify Message Order**: Determine the sequence in which messages are sent and received in Kafka. Messages are ordered based on the partition they are published to.\n2. **Track Listing Updates**: Monitor the updates to the rental listing as they are published to Kafka. Ensure that updates are processed in the order they were sent to maintain consistency.\n3. **Verify Order Compliance**: Confirm that the system consuming messages from Kafka processes the updates to the rental listing in the correct order, preventing any race conditions or inconsistencies.", "question": "How does Kafka message ordering affect updates to the same rental listing?", "rental_id": "hw8-synthetic-6102", "run_id": "hw8-20261029T202146Z"}, "pid": 78082, "raw_bytes": 999, "rental_id": "hw8-synthetic-6102", "run_id": "hw8-20261029T202146Z", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "writer", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:58.033587+00:00", "topic": "s6102_tasks"}
+{"attempt": 1, "baseline": "reliable", "correlation_id": "a52151f5-9c3c-4e3e-ba39-c63df17dd84e", "delay_seconds": 0, "event": "processing_started", "group_id": "verify-afad074222454328a6f24888b9f92970-writer", "instance": "writer-live", "max_attempts": 3, "model": "qwen2.5:7b", "offset": 23, "partition": 0, "pid": 78082, "rental_id": "hw8-synthetic-6102", "run_id": "hw8-20261029T202146Z", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "writer", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:21:58.035431+00:00", "topic": "s6102_tasks"}
+{"baseline": "reliable", "content": "Kafka ensures message ordering within partitions, which is crucial for maintaining consistent updates to rental listings. By publishing updates to the same partition, you ensure they are processed in the order they are sent. This prevents race conditions and guarantees that updates to a listing are applied sequentially, maintaining data integrity.", "correlation_id": "a52151f5-9c3c-4e3e-ba39-c63df17dd84e", "event": "model_result", "fixture": false, "group_id": "verify-afad074222454328a6f24888b9f92970-writer", "instance": "writer-live", "model": "qwen2.5:7b", "pid": 78082, "run_id": "hw8-20261029T202146Z", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "writer", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:22:02.413565+00:00", "usage": {"input_tokens": 190, "output_tokens": 59, "reported": true, "total_tokens": 249}}
+{"attempt": 1, "baseline": "reliable", "correlation_id": "a52151f5-9c3c-4e3e-ba39-c63df17dd84e", "event": "processing_completed", "group_id": "verify-afad074222454328a6f24888b9f92970-writer", "instance": "writer-live", "model": "qwen2.5:7b", "offset": 23, "output": {"correlation_id": "a52151f5-9c3c-4e3e-ba39-c63df17dd84e", "draft": "Kafka ensures message ordering within partitions, which is crucial for maintaining consistent updates to rental listings. By publishing updates to the same partition, you ensure they are processed in the order they are sent. This prevents race conditions and guarantees that updates to a listing are applied sequentially, maintaining data integrity.", "from_stage": "writer", "input_source": {"offset": 23, "partition": 0, "topic": "s6102_tasks"}, "plan": "To understand how Kafka message ordering affects updates to the same rental listing, follow these steps:\n\n1. **Identify Message Order**: Determine the sequence in which messages are sent and received in Kafka. Messages are ordered based on the partition they are published to.\n2. **Track Listing Updates**: Monitor the updates to the rental listing as they are published to Kafka. Ensure that updates are processed in the order they were sent to maintain consistency.\n3. **Verify Order Compliance**: Confirm that the system consuming messages from Kafka processes the updates to the rental listing in the correct order, preventing any race conditions or inconsistencies.", "question": "How does Kafka message ordering affect updates to the same rental listing?", "rental_id": "hw8-synthetic-6102", "run_id": "hw8-20261029T202146Z", "writer_instance": "writer-live"}, "partition": 0, "pid": 78082, "rental_id": "hw8-synthetic-6102", "run_id": "hw8-20261029T202146Z", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "writer", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:22:02.414635+00:00", "topic": "s6102_tasks"}
+{"baseline": "reliable", "correlation_id": "a52151f5-9c3c-4e3e-ba39-c63df17dd84e", "event": "output_published", "group_id": "verify-afad074222454328a6f24888b9f92970-writer", "instance": "writer-live", "model": "qwen2.5:7b", "offset": 23, "output": {"correlation_id": "a52151f5-9c3c-4e3e-ba39-c63df17dd84e", "draft": "Kafka ensures message ordering within partitions, which is crucial for maintaining consistent updates to rental listings. By publishing updates to the same partition, you ensure they are processed in the order they are sent. This prevents race conditions and guarantees that updates to a listing are applied sequentially, maintaining data integrity.", "from_stage": "writer", "input_source": {"offset": 23, "partition": 0, "topic": "s6102_tasks"}, "plan": "To understand how Kafka message ordering affects updates to the same rental listing, follow these steps:\n\n1. **Identify Message Order**: Determine the sequence in which messages are sent and received in Kafka. Messages are ordered based on the partition they are published to.\n2. **Track Listing Updates**: Monitor the updates to the rental listing as they are published to Kafka. Ensure that updates are processed in the order they were sent to maintain consistency.\n3. **Verify Order Compliance**: Confirm that the system consuming messages from Kafka processes the updates to the rental listing in the correct order, preventing any race conditions or inconsistencies.", "question": "How does Kafka message ordering affect updates to the same rental listing?", "rental_id": "hw8-synthetic-6102", "run_id": "hw8-20261029T202146Z", "writer_instance": "writer-live"}, "output_offset": 48, "output_partition": 0, "output_topic": "s6102_drafts", "partition": 0, "pid": 78082, "rental_id": "hw8-synthetic-6102", "run_id": "hw8-20261029T202146Z", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "writer", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:22:02.420601+00:00", "topic": "s6102_tasks"}
+{"baseline": "reliable", "committed_offset": 24, "correlation_id": "a52151f5-9c3c-4e3e-ba39-c63df17dd84e", "event": "offset_committed", "group_id": "verify-afad074222454328a6f24888b9f92970-writer", "instance": "writer-live", "model": "qwen2.5:7b", "offset": 23, "partition": 0, "pid": 78082, "reason": "after_output_ack", "rental_id": "hw8-synthetic-6102", "run_id": "hw8-20261029T202146Z", "source_commit": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9", "stage": "writer", "student": "Pragya Apurva", "timestamp": "2026-10-29T20:22:02.423967+00:00", "topic": "s6102_tasks"}
+

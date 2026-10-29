@@ -1,3 +1,4 @@
-NAMES                IMAGE                STATUS                   PORTS
-s6102-hw8-kafka-1    apache/kafka:3.9.2   Up 3 minutes (healthy)   127.0.0.1:9092->9092/tcp
-s6102-hw8-worker-1   s6102-hw8-worker     Up 4 minutes             
+NAMES                 STATUS                       PORTS
+s6102-hw8-fastapi-1   Up 4 minutes (healthy)       127.0.0.1:8702->8702/tcp
+s6102-hw8-worker-1    Up 4 minutes
+s6102-hw8-kafka-1     Up About an hour (healthy)   127.0.0.1:9092->9092/tcp

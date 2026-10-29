@@ -1,8 +1,8 @@
 {
   "homework": 8,
   "sid4": 6102,
-  "commit_hash": "6f309a36a1491146686cafbba647c2226cdaa654",
-  "timestamp": "2026-10-29T19:15:43.676606+00:00",
+  "commit_hash": "45d6327d222f8d17811a3e576f5bdf087ed2d5b9",
+  "timestamp": "2026-10-29T20:22:06.798947+00:00",
   "seed": 6102,
   "verify_seed": 266102,
   "configuration": {
@@ -35,7 +35,7 @@
       "kind": "live Kafka",
       "passed": true,
       "detail": {
-        "correlation_id": "539d2554-6478-4cc8-b243-fac42bb32d1e"
+        "correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6"
       }
     },
     {
@@ -43,10 +43,10 @@
       "kind": "live Kafka",
       "passed": true,
       "detail": {
-        "correlation_id": "539d2554-6478-4cc8-b243-fac42bb32d1e",
+        "correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6",
         "operation": "CREATE_RENTAL",
         "success": true,
-        "rental_id": "42be98c7-0b28-4a8b-9fe6-3c8e2586697d",
+        "rental_id": "556c4adc-cada-4685-bbe4-c7a6fd55096d",
         "message": "Rental created"
       }
     },
@@ -57,13 +57,13 @@
       "detail": [
         {
           "request": {
-            "correlation_id": "67c16459-e10e-4f7f-ab8b-714019d377b0",
+            "correlation_id": "7fbaaad1-3ce4-4355-a99f-712abe0cb7f1",
             "reply_to": "s6102_entity_responses",
             "operation": "CREATE_RENTAL",
             "data": {}
           },
           "response": {
-            "correlation_id": "67c16459-e10e-4f7f-ab8b-714019d377b0",
+            "correlation_id": "7fbaaad1-3ce4-4355-a99f-712abe0cb7f1",
             "operation": "CREATE_RENTAL",
             "success": false,
             "error": "listingTitle: Field required; propertyAddress: Field required; submitterEmail: Field required; description: Field required; propertyType: Field required; termsAccepted: Field required"
@@ -72,7 +72,7 @@
         },
         {
           "request": {
-            "correlation_id": "64576df0-3efc-40ba-bd62-ee53a51f53a1",
+            "correlation_id": "313c61e2-4f7a-4966-b4d8-d7885f0ada12",
             "reply_to": "s6102_entity_responses",
             "operation": "CREATE_RENTAL",
             "data": {
@@ -85,7 +85,7 @@
             }
           },
           "response": {
-            "correlation_id": "64576df0-3efc-40ba-bd62-ee53a51f53a1",
+            "correlation_id": "313c61e2-4f7a-4966-b4d8-d7885f0ada12",
             "operation": "CREATE_RENTAL",
             "success": false,
             "error": "termsAccepted: Value error, Please agree to the terms and conditions."
@@ -94,13 +94,13 @@
         },
         {
           "request": {
-            "correlation_id": "b2cd9fd8-a517-4eed-a900-5571559c07db",
+            "correlation_id": "3db9f3d2-13d3-446c-8974-6547838688fc",
             "reply_to": "s6102_entity_responses",
             "operation": "UNKNOWN",
             "data": {}
           },
           "response": {
-            "correlation_id": "b2cd9fd8-a517-4eed-a900-5571559c07db",
+            "correlation_id": "3db9f3d2-13d3-446c-8974-6547838688fc",
             "operation": "UNKNOWN",
             "success": false,
             "error": "Unknown operation"
@@ -109,15 +109,15 @@
         },
         {
           "request": {
-            "correlation_id": "e6c913f3-3a11-4c14-b615-46b794f58818",
+            "correlation_id": "3d54b89c-4690-452c-a071-b03766013e45",
             "reply_to": "s6102_entity_responses",
             "operation": "GET_RENTAL",
             "data": {
-              "rental_id": "ca27a846-48c8-46f1-8940-ad57b600cf9a"
+              "rental_id": "a1b16c16-18e2-458b-99b8-9da967315d6b"
             }
           },
           "response": {
-            "correlation_id": "e6c913f3-3a11-4c14-b615-46b794f58818",
+            "correlation_id": "3d54b89c-4690-452c-a071-b03766013e45",
             "operation": "GET_RENTAL",
             "success": false,
             "error": "Rental not found"
@@ -127,21 +127,76 @@
       ]
     },
     {
+      "name": "http_role_logins",
+      "kind": "live HTTP + Kafka",
+      "passed": true,
+      "detail": {
+        "statuses": {
+          "reader": 200,
+          "writer": 200,
+          "moderator": 200
+        }
+      }
+    },
+    {
+      "name": "http_missing_invalid_token",
+      "kind": "live HTTP + Kafka",
+      "passed": true,
+      "detail": {
+        "statuses": [
+          401,
+          401,
+          401
+        ]
+      }
+    },
+    {
+      "name": "http_wrong_password",
+      "kind": "live HTTP + Kafka",
+      "passed": true,
+      "detail": {
+        "status": 401
+      }
+    },
+    {
       "name": "authenticated_fastapi_wrapper",
-      "kind": "live HTTP",
-      "passed": false,
-      "detail": "RemoteProtocolError"
+      "kind": "live HTTP + Kafka",
+      "passed": true,
+      "detail": {
+        "correlation_id": "9f93b86d-ba40-4df2-97e1-025fe556349b",
+        "rental_id": "006bb888-51a8-4ebd-9a46-d221c784f4d5",
+        "create_status": 200,
+        "get_status": 200
+      }
+    },
+    {
+      "name": "http_reader_permissions",
+      "kind": "live HTTP + Kafka",
+      "passed": true,
+      "detail": {
+        "create_status": 403,
+        "get_status": 200
+      }
+    },
+    {
+      "name": "http_moderator_permissions",
+      "kind": "live HTTP + Kafka",
+      "passed": true,
+      "detail": {
+        "create_status": 200,
+        "get_status": 200
+      }
     },
     {
       "name": "three_process_pipeline",
       "kind": "live Kafka + qwen2.5:7b",
       "passed": true,
       "detail": {
-        "correlation_id": "96ebb1c2-4751-492d-8741-3f7fe9757e22",
+        "correlation_id": "a52151f5-9c3c-4e3e-ba39-c63df17dd84e",
         "process_ids": [
-          74460,
-          74461,
-          74462
+          78081,
+          78082,
+          78083
         ]
       }
     },
@@ -303,5 +358,5 @@
       "detail": 266102
     }
   ],
-  "passed": false
+  "passed": true
 }

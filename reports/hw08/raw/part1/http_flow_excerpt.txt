@@ -1,0 +1,16 @@
+Pragya Apurva | HTTP/Kafka observed order
+correlation_id=c08bff2e-edb7-4b57-95cf-a7b7d0167ace
+20:21:19.394 CREATE rpc request_sending
+20:21:19.395 CREATE rpc request_sent p0/o12
+20:21:19.395 CREATE entity_worker request_received p0/o12
+20:21:19.395 CREATE entity_worker request_processed
+20:21:19.396 CREATE entity_worker response_sent p0/o12
+20:21:19.396 CREATE rpc response_received p0/o12
+20:21:19.396 CREATE rpc response_returned
+20:21:19.400 GET rpc request_sending
+20:21:19.400 GET rpc request_sent p0/o13
+20:21:19.401 GET entity_worker request_received p0/o13
+20:21:19.401 GET entity_worker request_processed
+20:21:19.401 GET entity_worker response_sent p0/o13
+20:21:19.401 GET rpc response_received p0/o13
+20:21:19.401 GET rpc response_returned

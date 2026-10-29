@@ -2,7 +2,7 @@
 
 Pragya Apurva | SID4=6102 | SEED=6102 | VERIFY_SEED=266102
 
-Tested source: `6f309a36a1491146686cafbba647c2226cdaa654`. Failure source: `6f309a36a1491146686cafbba647c2226cdaa654`.
+Tested source: `45d6327d222f8d17811a3e576f5bdf087ed2d5b9`. Failure source: `6f309a36a1491146686cafbba647c2226cdaa654`.
 Entity replay source: `e1e445e77246948987f86e6e74b3ea16c62493bb` (same worker behavior; before final Docker volume fix).
 Real-model journey: qwen2.5:7b. Transport failure runs: explicitly labeled fixture prose.
 
@@ -26,14 +26,14 @@ Local Kafka-volume check: a real task record survived broker-container replaceme
 
 ## Verification and limits
 
-- Objective smoke/evidence checks: 17/18 passed.
-- Live authenticated FastAPI check: blocked/failing while setup approval is pending.
-- Focused HW8/shared-auth tests: 37 passed; 31 real-MySQL tests skipped.
+- Objective smoke/evidence checks: 23/23 passed, without skip flags.
+- Live authenticated FastAPI: reader/writer/moderator login 200; missing/invalid tokens 401; wrong password 401; reader CREATE 403 and GET 200; writer/moderator CREATE/GET 200.
+- Focused HW8/shared-auth tests: 68 passed; zero skipped, with real MySQL enabled. All six database tables retained identical row counts and value fingerprints.
 - Ruff and whitespace checks passed.
 - Kafka, dictionary worker, real three-process local-model journey and all four failure experiments were observed.
-- FastAPI startup screenshot and authenticated HTTP round trip are pending; direct Kafka outputs must not be represented as HTTP outputs.
+- Real PTY captures show all three containers, startup/readiness, HTTP round trip, role results and correlated flow. Source-excerpt / Part 3 log views are separately labeled browser-rendered evidence.
 - GitHub link loaded; collaborator membership requires GitHub reauthentication.
-- `hw8` tag is pending successful remaining acceptance work. No push/publication/submission occurred.
+- Local `hw8` tags the final evidence commit after acceptance; exact target and a complete post-tag receipt are saved in the accompanying external upload package. The checked-in receipt identifies the tested source above. No push/publication/submission occurred.
 
 The first harness run stopped recovered Writer before its commit acknowledgment
 was captured. Its verifier failed. The harness now waits for offset_committed;

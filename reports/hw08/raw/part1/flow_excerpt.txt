@@ -1,19 +1,16 @@
-Pragya Apurva | actual UTC event order
-correlation_id=539d2554-6478-4cc8-b243-fac42bb32d1e
-19:15:24.588 CREATE request_sending entity_requests
-19:15:24.588 CREATE request_received entity_requests
-19:15:24.589 CREATE request_sent entity_requests
-19:15:24.590 CREATE request_processed 
-19:15:24.592 CREATE response_sent entity_requests
-19:15:24.593 GET request_received entity_requests
-19:15:24.594 GET request_processed 
-19:15:24.594 CREATE response_received entity_responses
-19:15:24.594 CREATE response_returned 
-19:15:24.594 CREATE demo_response 
-19:15:24.594 GET request_sending entity_requests
-19:15:24.594 GET response_sent entity_requests
-19:15:24.595 GET request_sent entity_requests
-19:15:24.596 CREATE request_received entity_requests
-19:15:24.596 GET response_received entity_responses
-19:15:24.596 GET response_returned 
-19:15:24.596 GET demo_response 
+Pragya Apurva | HTTP/Kafka observed order
+correlation_id=c08bff2e-edb7-4b57-95cf-a7b7d0167ace
+20:21:19.394 CREATE rpc request_sending
+20:21:19.395 CREATE rpc request_sent p0/o12
+20:21:19.395 CREATE entity_worker request_received p0/o12
+20:21:19.395 CREATE entity_worker request_processed
+20:21:19.396 CREATE entity_worker response_sent p0/o12
+20:21:19.396 CREATE rpc response_received p0/o12
+20:21:19.396 CREATE rpc response_returned
+20:21:19.400 GET rpc request_sending
+20:21:19.400 GET rpc request_sent p0/o13
+20:21:19.401 GET entity_worker request_received p0/o13
+20:21:19.401 GET entity_worker request_processed
+20:21:19.401 GET entity_worker response_sent p0/o13
+20:21:19.401 GET rpc response_received p0/o13
+20:21:19.401 GET rpc response_returned
