@@ -1,11 +1,23 @@
 {
-  "checked_at": "2026-10-29T20:24:48.311138+00:00",
+  "checked_at": "2026-10-29T21:20:15.194842+00:00",
   "repository_url": "https://github.com/ishuapurva1996/data260-6102",
   "repository_accessible": true,
-  "membership_verified": false,
-  "accounts": [
-    "Sbnikitha",
-    "supriyaselvanganesan"
+  "repository_visibility": "public",
+  "membership_verified": true,
+  "direct_access_entities": 2,
+  "collaborators": [
+    {
+      "login": "Sbnikitha",
+      "display_name": "Nikitha Seelam Balaji",
+      "observed_status": "Collaborator"
+    },
+    {
+      "login": "supriyaselvanganesan",
+      "display_name": "Supriya Selvan Ganesan",
+      "observed_status": "Collaborator"
+    }
   ],
-  "observed": "GitHub Confirm access requires user identity verification; no email, invitation or permission mutation triggered."
+  "observed": "GitHub Manage access page: 2 collaborators, both listed under direct access after user identity verification.",
+  "access_or_invitation_changes_made": false,
+  "screenshot": "screenshots/collaborator_access.png"
 }

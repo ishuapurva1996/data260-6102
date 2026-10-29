@@ -70,6 +70,11 @@
       "file": "wrapper.png",
       "capture_kind": "browser-rendered source/log view; not a terminal capture",
       "sha256": "06bc4d241a99d1138d4893d8636ec930ffd4726ad219cbf1f6c64c3b82095454"
+    },
+    {
+      "file": "collaborator_access.png",
+      "capture_kind": "Actual GitHub Manage access UI screenshot; not a terminal or source/log rendering",
+      "sha256": "803c5746d2b234544f3001383b686233814749110238723e0c513bba176f22b8"
     }
   ]
 }

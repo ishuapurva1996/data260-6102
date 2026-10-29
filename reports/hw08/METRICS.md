@@ -32,7 +32,7 @@ Local Kafka-volume check: a real task record survived broker-container replaceme
 - Ruff and whitespace checks passed.
 - Kafka, dictionary worker, real three-process local-model journey and all four failure experiments were observed.
 - Real PTY captures show all three containers, startup/readiness, HTTP round trip, role results and correlated flow. Source-excerpt / Part 3 log views are separately labeled browser-rendered evidence.
-- GitHub link loaded; collaborator membership requires GitHub reauthentication.
+- GitHub link works; Sbnikitha and supriyaselvanganesan are verified as collaborators with direct access after user identity verification. No invitation or permission change was made.
 - Local `hw8` tags the final evidence commit after acceptance; exact target and a complete post-tag receipt are saved in the accompanying external upload package. The checked-in receipt identifies the tested source above. No push/publication/submission occurred.
 
 The first harness run stopped recovered Writer before its commit acknowledgment
