@@ -21,6 +21,7 @@ sys.path[:0] = [str(ROOT), str(ROOT / "code"), str(ROOT / "scripts/hw08")]
 from aiokafka.admin import AIOKafkaAdminClient
 from failure_experiments import Harness, read_events
 from homework_demo import RENTAL, demonstrate
+from http_acceptance import accept_http
 from send_question import send_question
 
 from src.kafka_service.config import (
@@ -211,54 +212,11 @@ async def pipeline_smoke(runtime, output, model):
 
 
 async def http_smoke(base_url, evidence_dir):
-    async with httpx.AsyncClient(base_url=base_url, timeout=30) as client:
-        health = await client.get("/api/health")
-        health.raise_for_status()
-        denied = await client.post("/api/kafka/rentals", json={})
-        if denied.status_code != 401:
-            return check_record(
-                "authenticated_fastapi_wrapper",
-                "live HTTP",
-                False,
-                {"unauthorized_status": denied.status_code},
-            )
-        token = os.getenv("HW8_TOKEN")
-        if not token:
-            username, password = os.getenv("HW8_USERNAME"), os.getenv("HW8_PASSWORD")
-            if not username or not password:
-                return check_record(
-                    "authenticated_fastapi_wrapper",
-                    "live HTTP",
-                    False,
-                    "HW8 credentials were not configured",
-                )
-            login = await client.post(
-                "/auth/login", json={"username": username, "password": password}
-            )
-            login.raise_for_status()
-            token = login.json()["access_token"]
-
-        async def send(payload):
-            response = await client.post(
-                "/api/kafka/rentals",
-                json=payload,
-                headers={"Authorization": "Bearer " + token},
-            )
-            response.raise_for_status()
-            return response.json()
-
-        result = await demonstrate(send)
-        path = evidence_dir / "raw/part1/roundtrip_http.json"
-        path.write_text(json.dumps(result, indent=2) + "\n")
-        return check_record(
-            "authenticated_fastapi_wrapper",
-            "live HTTP + Kafka",
-            result["passed"],
-            {
-                "unauthorized_status": denied.status_code,
-                "correlation_id": result["correlation_id"],
-            },
-        )
+    result = await accept_http(base_url, evidence_dir)
+    return [
+        check_record(c["name"], "live HTTP + Kafka", c["passed"], c["detail"])
+        for c in result["checks"]
+    ]
 
 
 async def verify(args):
@@ -346,7 +304,7 @@ async def verify(args):
         await rpc.stop()
     if not args.skip_http:
         try:
-            checks.append(await http_smoke(args.base_url, args.evidence_dir))
+            checks.extend(await http_smoke(args.base_url, args.evidence_dir))
         except (httpx.HTTPError, ValueError) as exc:
             checks.append(
                 check_record(
