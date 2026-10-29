@@ -1,0 +1,3 @@
+# Python 3.12. Extend the existing web app and local model adapter.
+-r requirements-hw07.txt
+aiokafka==0.12.0
