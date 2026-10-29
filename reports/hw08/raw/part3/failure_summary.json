@@ -1,0 +1,111 @@
+{
+  "completed_at": "2026-10-29T19:14:09.832314+00:00",
+  "consumer_death": {
+    "after": {
+      "input_offset": 7,
+      "input_partition": 0,
+      "killed_pid": 74341,
+      "outputs": 1,
+      "restart_pid": 74342
+    },
+    "before": {
+      "input_offset": 6,
+      "input_partition": 0,
+      "killed_pid": 74331,
+      "outputs": 0,
+      "restart_pid": 74332
+    }
+  },
+  "model": "fixture (transport experiments only)",
+  "ordering": {
+    "keyed": {
+      "count": 20,
+      "in_send_order": true,
+      "observed_sequences": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "partitions": [
+        1
+      ]
+    },
+    "unkeyed": {
+      "count": 20,
+      "in_send_order": false,
+      "observed_sequences": [
+        2,
+        4,
+        6,
+        8,
+        1,
+        10,
+        12,
+        14,
+        16,
+        3,
+        18,
+        20,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15,
+        17,
+        19
+      ],
+      "partitions": [
+        0,
+        1
+      ]
+    }
+  },
+  "pipeline_duplicate": {
+    "after": {
+      "correlation_id": "hw8-20261029T191258Z-duplicate-after-ec50bc",
+      "final_outputs": 1
+    },
+    "before": {
+      "correlation_id": "hw8-20261029T191258Z-duplicate-before-f3adc9",
+      "final_outputs": 2
+    }
+  },
+  "poison": {
+    "after": {
+      "dead_letters": 1,
+      "exit_code": -15,
+      "later_outputs": 1
+    },
+    "before": {
+      "dead_letters": 0,
+      "exit_code": 1,
+      "later_outputs": 0
+    }
+  },
+  "publish_commit_boundary": {
+    "cached_on_restart": true,
+    "final_outputs": 1
+  },
+  "run_id": "hw8-20261029T191258Z",
+  "source_commit": "6f309a36a1491146686cafbba647c2226cdaa654",
+  "started_at": "2026-10-29T19:12:59.041073+00:00",
+  "verify_seed": 266102
+}

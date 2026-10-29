@@ -1,0 +1,15 @@
+Topic: s6102_drafts	TopicId: ZvNVwubcTEux78Ca2o-KWQ	PartitionCount: 1	ReplicationFactor: 1	Configs: 
+	Topic: s6102_drafts	Partition: 0	Leader: 1	Replicas: 1	Isr: 1	Elr: 	LastKnownElr: 
+Topic: s6102_dead_letter	TopicId: 1z2MGeFjQHmHWvz1OGhW-Q	PartitionCount: 1	ReplicationFactor: 1	Configs: 
+	Topic: s6102_dead_letter	Partition: 0	Leader: 1	Replicas: 1	Isr: 1	Elr: 	LastKnownElr: 
+Topic: s6102_entity_requests	TopicId: _JeD0exRSFS1b4L295Vf8g	PartitionCount: 1	ReplicationFactor: 1	Configs: 
+	Topic: s6102_entity_requests	Partition: 0	Leader: 1	Replicas: 1	Isr: 1	Elr: 	LastKnownElr: 
+Topic: s6102_final	TopicId: a9qkcf_FSeeimFekWACenA	PartitionCount: 1	ReplicationFactor: 1	Configs: 
+	Topic: s6102_final	Partition: 0	Leader: 1	Replicas: 1	Isr: 1	Elr: 	LastKnownElr: 
+Topic: s6102_entity_responses	TopicId: at1W-AcnS0WCBooblMiMZg	PartitionCount: 1	ReplicationFactor: 1	Configs: 
+	Topic: s6102_entity_responses	Partition: 0	Leader: 1	Replicas: 1	Isr: 1	Elr: 	LastKnownElr: 
+Topic: s6102_inbox	TopicId: KWVaRXoOQXilCLfqZaS4lg	PartitionCount: 1	ReplicationFactor: 1	Configs: 
+	Topic: s6102_inbox	Partition: 0	Leader: 1	Replicas: 1	Isr: 1	Elr: 	LastKnownElr: 
+Topic: s6102_tasks	TopicId: qbZaIeUfT_iBh46u7gJEmw	PartitionCount: 2	ReplicationFactor: 1	Configs: 
+	Topic: s6102_tasks	Partition: 0	Leader: 1	Replicas: 1	Isr: 1	Elr: 	LastKnownElr: 
+	Topic: s6102_tasks	Partition: 1	Leader: 1	Replicas: 1	Isr: 1	Elr: 	LastKnownElr: 

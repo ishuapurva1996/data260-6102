@@ -1,0 +1,35 @@
+{
+  "request": {
+    "correlation_id": "96ebb1c2-4751-492d-8741-3f7fe9757e22",
+    "run_id": "hw8-20261029T191524Z",
+    "question": "How does Kafka message ordering affect updates to the same rental listing?",
+    "rental_id": "hw8-synthetic-6102"
+  },
+  "final": {
+    "answer": "Kafka ensures message ordering within partitions, which is crucial for maintaining consistent updates to rental listings. By publishing updates to the same partition, they are processed in the order they are sent, preventing race conditions and ensuring that updates to a listing are applied sequentially, maintaining data integrity.",
+    "correlation_id": "96ebb1c2-4751-492d-8741-3f7fe9757e22",
+    "draft": "Kafka ensures message ordering within partitions, which is crucial for maintaining consistent updates to rental listings. By publishing updates to the same partition, you ensure they are processed in the order they are sent. This prevents race conditions and guarantees that updates to a listing are applied sequentially, maintaining data integrity.",
+    "from_stage": "reviewer",
+    "input_source": {
+      "offset": 47,
+      "partition": 0,
+      "topic": "s6102_drafts"
+    },
+    "plan": "To understand how Kafka message ordering affects updates to the same rental listing, follow these steps:\n\n1. **Identify Message Order**: Determine the sequence in which messages are sent and received in Kafka. Messages are ordered based on the partition they are published to.\n2. **Track Listing Updates**: Monitor the updates to the rental listing as they are published to Kafka. Ensure that updates are processed in the order they were sent to maintain consistency.\n3. **Verify Order Compliance**: Confirm that the system consuming messages from Kafka processes the updates to the rental listing in the correct order, preventing any race conditions or inconsistencies.",
+    "question": "How does Kafka message ordering affect updates to the same rental listing?",
+    "rental_id": "hw8-synthetic-6102",
+    "run_id": "hw8-20261029T191524Z",
+    "status": "approved",
+    "writer_instance": "writer-live"
+  },
+  "sent": {
+    "topic": "s6102_inbox",
+    "partition": 0,
+    "offset": 0
+  },
+  "received": {
+    "topic": "s6102_final",
+    "partition": 0,
+    "offset": 4
+  }
+}

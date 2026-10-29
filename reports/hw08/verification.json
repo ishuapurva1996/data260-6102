@@ -1,0 +1,307 @@
+{
+  "homework": 8,
+  "sid4": 6102,
+  "commit_hash": "6f309a36a1491146686cafbba647c2226cdaa654",
+  "timestamp": "2026-10-29T19:15:43.676606+00:00",
+  "seed": 6102,
+  "verify_seed": 266102,
+  "configuration": {
+    "port_base": 8702,
+    "prefix": "s6102",
+    "domain_id": 6,
+    "model": "qwen2.5:7b",
+    "temperature": 0,
+    "context_window": 4096,
+    "output_limit": 256,
+    "retry_attempts": 3
+  },
+  "checks": [
+    {
+      "name": "seven_topic_partitions",
+      "kind": "live Kafka",
+      "passed": true,
+      "detail": {
+        "s6102_inbox": 1,
+        "s6102_entity_responses": 1,
+        "s6102_dead_letter": 1,
+        "s6102_final": 1,
+        "s6102_entity_requests": 1,
+        "s6102_tasks": 2,
+        "s6102_drafts": 1
+      }
+    },
+    {
+      "name": "rental_create_get",
+      "kind": "live Kafka",
+      "passed": true,
+      "detail": {
+        "correlation_id": "539d2554-6478-4cc8-b243-fac42bb32d1e"
+      }
+    },
+    {
+      "name": "rental_replay_same_uuid",
+      "kind": "live Kafka",
+      "passed": true,
+      "detail": {
+        "correlation_id": "539d2554-6478-4cc8-b243-fac42bb32d1e",
+        "operation": "CREATE_RENTAL",
+        "success": true,
+        "rental_id": "42be98c7-0b28-4a8b-9fe6-3c8e2586697d",
+        "message": "Rental created"
+      }
+    },
+    {
+      "name": "clean_domain_errors",
+      "kind": "live Kafka",
+      "passed": true,
+      "detail": [
+        {
+          "request": {
+            "correlation_id": "67c16459-e10e-4f7f-ab8b-714019d377b0",
+            "reply_to": "s6102_entity_responses",
+            "operation": "CREATE_RENTAL",
+            "data": {}
+          },
+          "response": {
+            "correlation_id": "67c16459-e10e-4f7f-ab8b-714019d377b0",
+            "operation": "CREATE_RENTAL",
+            "success": false,
+            "error": "listingTitle: Field required; propertyAddress: Field required; submitterEmail: Field required; description: Field required; propertyType: Field required; termsAccepted: Field required"
+          },
+          "passed": true
+        },
+        {
+          "request": {
+            "correlation_id": "64576df0-3efc-40ba-bd62-ee53a51f53a1",
+            "reply_to": "s6102_entity_responses",
+            "operation": "CREATE_RENTAL",
+            "data": {
+              "listingTitle": "HW8 synthetic apartment",
+              "propertyAddress": "100 Example Street, San Jose, CA",
+              "submitterEmail": "hw8@example.com",
+              "description": "Synthetic rental listing for the Kafka homework demonstration.",
+              "propertyType": "apartment",
+              "termsAccepted": false
+            }
+          },
+          "response": {
+            "correlation_id": "64576df0-3efc-40ba-bd62-ee53a51f53a1",
+            "operation": "CREATE_RENTAL",
+            "success": false,
+            "error": "termsAccepted: Value error, Please agree to the terms and conditions."
+          },
+          "passed": true
+        },
+        {
+          "request": {
+            "correlation_id": "b2cd9fd8-a517-4eed-a900-5571559c07db",
+            "reply_to": "s6102_entity_responses",
+            "operation": "UNKNOWN",
+            "data": {}
+          },
+          "response": {
+            "correlation_id": "b2cd9fd8-a517-4eed-a900-5571559c07db",
+            "operation": "UNKNOWN",
+            "success": false,
+            "error": "Unknown operation"
+          },
+          "passed": true
+        },
+        {
+          "request": {
+            "correlation_id": "e6c913f3-3a11-4c14-b615-46b794f58818",
+            "reply_to": "s6102_entity_responses",
+            "operation": "GET_RENTAL",
+            "data": {
+              "rental_id": "ca27a846-48c8-46f1-8940-ad57b600cf9a"
+            }
+          },
+          "response": {
+            "correlation_id": "e6c913f3-3a11-4c14-b615-46b794f58818",
+            "operation": "GET_RENTAL",
+            "success": false,
+            "error": "Rental not found"
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "name": "authenticated_fastapi_wrapper",
+      "kind": "live HTTP",
+      "passed": false,
+      "detail": "RemoteProtocolError"
+    },
+    {
+      "name": "three_process_pipeline",
+      "kind": "live Kafka + qwen2.5:7b",
+      "passed": true,
+      "detail": {
+        "correlation_id": "96ebb1c2-4751-492d-8741-3f7fe9757e22",
+        "process_ids": [
+          74460,
+          74461,
+          74462
+        ]
+      }
+    },
+    {
+      "name": "writer_death_before",
+      "kind": "artifact",
+      "passed": true,
+      "detail": {
+        "receipts": 1,
+        "outputs": 0
+      }
+    },
+    {
+      "name": "poison_before",
+      "kind": "artifact",
+      "passed": true,
+      "detail": {
+        "failed_attempts": 1,
+        "dead_letters": 0
+      }
+    },
+    {
+      "name": "pipeline_duplicate_before",
+      "kind": "artifact",
+      "passed": true,
+      "detail": {
+        "final_outputs": 2
+      }
+    },
+    {
+      "name": "writer_death_after",
+      "kind": "artifact",
+      "passed": true,
+      "detail": {
+        "receipts": 2,
+        "outputs": 1
+      }
+    },
+    {
+      "name": "poison_after",
+      "kind": "artifact",
+      "passed": true,
+      "detail": {
+        "failed_attempts": 3,
+        "dead_letters": 1
+      }
+    },
+    {
+      "name": "pipeline_duplicate_after",
+      "kind": "artifact",
+      "passed": true,
+      "detail": {
+        "final_outputs": 1
+      }
+    },
+    {
+      "name": "ordering_unkeyed",
+      "kind": "artifact",
+      "passed": true,
+      "detail": {
+        "count": 20,
+        "partitions": [
+          0,
+          1
+        ],
+        "observed_sequence": [
+          2,
+          4,
+          6,
+          8,
+          1,
+          10,
+          12,
+          14,
+          16,
+          3,
+          18,
+          20,
+          5,
+          7,
+          9,
+          11,
+          13,
+          15,
+          17,
+          19
+        ]
+      }
+    },
+    {
+      "name": "ordering_keyed",
+      "kind": "artifact",
+      "passed": true,
+      "detail": {
+        "count": 20,
+        "partitions": [
+          1
+        ],
+        "observed_sequence": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ]
+      }
+    },
+    {
+      "name": "entity_duplicate_before",
+      "kind": "artifact",
+      "passed": true,
+      "detail": {
+        "rental_count": 2,
+        "uuids": [
+          "3e82db42-afd2-4e60-9e5a-75d8a673a8d4",
+          "eebb3f73-41c9-4741-9418-42dd5d30ff11"
+        ]
+      }
+    },
+    {
+      "name": "entity_duplicate_after",
+      "kind": "artifact",
+      "passed": true,
+      "detail": {
+        "rental_count": 1,
+        "uuids": [
+          "35501319-199d-4b0c-b003-b678ff24eace",
+          "35501319-199d-4b0c-b003-b678ff24eace"
+        ]
+      }
+    },
+    {
+      "name": "publish_commit_boundary",
+      "kind": "artifact",
+      "passed": true,
+      "detail": {
+        "final_outputs": 1
+      }
+    },
+    {
+      "name": "ordering_seed",
+      "kind": "artifact",
+      "passed": true,
+      "detail": 266102
+    }
+  ],
+  "passed": false
+}
