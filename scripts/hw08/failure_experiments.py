@@ -100,7 +100,14 @@ class Harness:
         return c
 
     def spawn(
-        self, label, group, state, baseline="reliable", instance=None, after_publish=0
+        self,
+        label,
+        group,
+        state,
+        baseline="reliable",
+        instance=None,
+        after_publish=0,
+        model="fixture",
     ):
         log = self.runtime / f"{label}-{uuid4().hex[:6]}.jsonl"
         stream = log.open("w")
@@ -113,7 +120,7 @@ class Harness:
             "--group-id",
             group,
             "--model",
-            "fixture",
+            model,
             "--instance",
             instance or label,
             "--baseline",
