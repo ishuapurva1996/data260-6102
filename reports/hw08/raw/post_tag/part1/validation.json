@@ -1,0 +1,71 @@
+[
+  {
+    "request": {
+      "correlation_id": "56586d8d-3710-4369-aee8-e8c657f77e30",
+      "reply_to": "s6102_entity_responses",
+      "operation": "CREATE_RENTAL",
+      "data": {}
+    },
+    "response": {
+      "correlation_id": "56586d8d-3710-4369-aee8-e8c657f77e30",
+      "operation": "CREATE_RENTAL",
+      "success": false,
+      "error": "listingTitle: Field required; propertyAddress: Field required; submitterEmail: Field required; description: Field required; propertyType: Field required; termsAccepted: Field required"
+    },
+    "passed": true
+  },
+  {
+    "request": {
+      "correlation_id": "6c6b85f1-f02c-4684-83d0-16c12ed14031",
+      "reply_to": "s6102_entity_responses",
+      "operation": "CREATE_RENTAL",
+      "data": {
+        "listingTitle": "HW8 synthetic apartment",
+        "propertyAddress": "100 Example Street, San Jose, CA",
+        "submitterEmail": "hw8@example.com",
+        "description": "Synthetic rental listing for the Kafka homework demonstration.",
+        "propertyType": "apartment",
+        "termsAccepted": false
+      }
+    },
+    "response": {
+      "correlation_id": "6c6b85f1-f02c-4684-83d0-16c12ed14031",
+      "operation": "CREATE_RENTAL",
+      "success": false,
+      "error": "termsAccepted: Value error, Please agree to the terms and conditions."
+    },
+    "passed": true
+  },
+  {
+    "request": {
+      "correlation_id": "e11436df-1f6a-42af-aeb9-457fced0b6d1",
+      "reply_to": "s6102_entity_responses",
+      "operation": "UNKNOWN",
+      "data": {}
+    },
+    "response": {
+      "correlation_id": "e11436df-1f6a-42af-aeb9-457fced0b6d1",
+      "operation": "UNKNOWN",
+      "success": false,
+      "error": "Unknown operation"
+    },
+    "passed": true
+  },
+  {
+    "request": {
+      "correlation_id": "2273cb5c-ca5d-4505-842e-7330b7b0a1f0",
+      "reply_to": "s6102_entity_responses",
+      "operation": "GET_RENTAL",
+      "data": {
+        "rental_id": "d23b3beb-4fe7-49af-842d-3f12203286d2"
+      }
+    },
+    "response": {
+      "correlation_id": "2273cb5c-ca5d-4505-842e-7330b7b0a1f0",
+      "operation": "GET_RENTAL",
+      "success": false,
+      "error": "Rental not found"
+    },
+    "passed": true
+  }
+]

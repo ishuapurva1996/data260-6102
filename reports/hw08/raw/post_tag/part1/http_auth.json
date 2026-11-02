@@ -1,0 +1,63 @@
+{
+  "timestamp": "2026-11-02T19:56:34.459487+00:00",
+  "source_commit": "474e1cfbd9e959393a4f7b6e5c793d45bb195042",
+  "base_url": "http://127.0.0.1:8702",
+  "checks": [
+    {
+      "name": "http_role_logins",
+      "passed": true,
+      "detail": {
+        "statuses": {
+          "reader": 200,
+          "writer": 200,
+          "moderator": 200
+        }
+      }
+    },
+    {
+      "name": "http_missing_invalid_token",
+      "passed": true,
+      "detail": {
+        "statuses": [
+          401,
+          401,
+          401
+        ]
+      }
+    },
+    {
+      "name": "http_wrong_password",
+      "passed": true,
+      "detail": {
+        "status": 401
+      }
+    },
+    {
+      "name": "authenticated_fastapi_wrapper",
+      "passed": true,
+      "detail": {
+        "correlation_id": "2245a29e-2fb5-495e-82ed-60fbd3732f39",
+        "rental_id": "80162901-572b-43f8-8e02-bfa380be995e",
+        "create_status": 200,
+        "get_status": 200
+      }
+    },
+    {
+      "name": "http_reader_permissions",
+      "passed": true,
+      "detail": {
+        "create_status": 403,
+        "get_status": 200
+      }
+    },
+    {
+      "name": "http_moderator_permissions",
+      "passed": true,
+      "detail": {
+        "create_status": 200,
+        "get_status": 200
+      }
+    }
+  ],
+  "passed": true
+}

@@ -94,7 +94,8 @@ are never compared as a global clock.
 
 ## Verification
 
-With Kafka, worker and FastAPI running, and independent pipeline processes stopped:
+With Kafka, worker and FastAPI running, and independent pipeline processes stopped,
+run from a checkout at the `hw8` tag when using `--require-ref hw8`:
 
 ```bash
 python scripts/verify_hw08.py --runtime-dir "$HW8_RUNTIME/verify" --require-ref hw8
@@ -128,7 +129,9 @@ python scripts/verify_hw08.py --require-ref hw8 \
   --output "$HW8_RUNTIME/tag-verification.json"
 ```
 
-The tracked receipt records the tested source commit. The local upload package
-contains `TAG_TARGET.json` and the full post-tag receipt identifying the final
-evidence commit. Application directories are verified identical between those
-commits; the report never claims to contain its own containing commit hash.
+The current `reports/hw08/verification.json` records a full smoke test at the final
+`hw8` snapshot. `SUBMISSION.json` resolves the tag and identifies the report.
+Screenshot runs retain their original source commit; the application files are
+identical. The publication branch may add post-tag receipts and resolve the tag
+hash on the report's first page. Those reporting updates do not change application
+code. The tag already includes the approved 23-page report and capture assets.

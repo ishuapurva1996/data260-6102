@@ -2,9 +2,10 @@
 
 Pragya Apurva | SID4=6102 | SEED=6102 | VERIFY_SEED=266102
 
-Tested code and resolved `hw8` target: `8caf32f200a8411db513a784e2f3f7073e8339c5`.
+Final `hw8` submission snapshot and tagged smoke-test target: `474e1cfbd9e959393a4f7b6e5c793d45bb195042`.
+Screenshot and failure measurements used application source `8caf32f200a8411db513a784e2f3f7073e8339c5`; the application files are identical.
 Evidence refreshed November 2, 2026. Report: 23 pages, 21 original native Terminal captures and 2 VS Code snippets.
-The PDF refresh and new captures are later evidence; they are not claimed to be inside the existing tag.
+The tag contains the approved 23-page report and all capture evidence. The publication branch also records post-tag verification and the resolved submission hash in the report metadata.
 Real-model journey: qwen2.5:7b, fixture=false. Failure tests: real Kafka/processes with fixture prose.
 
 | Failure scenario | Before fix: observed | After fix: observed | Evidence under raw/part3/ |
@@ -26,7 +27,7 @@ A prior broker-container replacement test confirmed volume persistence, not high
 
 ## Verification
 
-- Full verifier: 24/24 checks passed without skip flags at the `hw8` target.
+- Full verifier: all 24 checks passed in a fresh run without skip flags at the final `hw8` target. Live receipts are in raw/post_tag/; the original captured receipt is raw/capture_verification.json.
 - HTTP roles: reader/writer/moderator login 200; missing or invalid tokens and wrong password 401; reader CREATE 403 / GET 200; writer and moderator CREATE/GET 200.
 - Focused HW8/shared-auth tests: 68 passed, zero skipped, 34 dependency deprecation warnings in 1.68 seconds, with real MySQL enabled.
 - All six database tables kept identical row counts and content hashes during the focused tests.
@@ -39,4 +40,4 @@ A prior broker-container replacement test confirmed volume persistence, not high
 Entity rentals and replay cache disappear on worker restart. Pipeline receipts require intact local SQLite state.
 Kafka publication and SQLite updates are not atomic; delivery is at least once with application deduplication.
 A single broker with replication factor 1 does not demonstrate high availability. No throughput or latency benchmark is claimed.
-Earlier failed/corrected runs remain in RUN_LOG.txt. Application code and the existing tag are unchanged by this report refresh.
+Earlier failed/corrected runs remain in RUN_LOG.txt. Application code is unchanged. The unpublished local hw8 tag was updated to the final approved submission snapshot.

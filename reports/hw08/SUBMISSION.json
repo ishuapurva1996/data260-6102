@@ -1,0 +1,19 @@
+{
+  "homework": 8,
+  "tag": "hw8",
+  "tag_target_commit": "474e1cfbd9e959393a4f7b6e5c793d45bb195042",
+  "measured_application_source": "8caf32f200a8411db513a784e2f3f7073e8339c5",
+  "application_objects_identical": true,
+  "report": "report.pdf",
+  "report_pages": 23,
+  "report_sha256": "79d30f3a17dbfc14e8d9c33addc4f77ca13fda0aa8aee019be2ce0a9304b1b27",
+  "report_metadata_resolved_after_tag": true,
+  "verification": "verification.json",
+  "verification_commit": "474e1cfbd9e959393a4f7b6e5c793d45bb195042",
+  "verification_passed": true,
+  "verification_checks": 24,
+  "verification_timestamp": "2026-11-02T19:56:55.280784+00:00",
+  "verification_live_evidence": "raw/post_tag/",
+  "capture_verification": "raw/capture_verification.json",
+  "publication_branch": "codex/hw8-integration"
+}

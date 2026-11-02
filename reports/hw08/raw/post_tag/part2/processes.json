@@ -1,0 +1,74 @@
+[
+  {
+    "baseline": "reliable",
+    "configuration": {
+      "context_window": 4096,
+      "model_timeout": 180,
+      "output_limit": 256,
+      "retry_attempts": 3,
+      "retry_backoff": 0.2,
+      "seed": 6102,
+      "temperature": 0
+    },
+    "event": "consumer_ready",
+    "group_id": "verify-c6f17b0603a546d08ce1886a80c0445f-planner",
+    "instance": "planner-live",
+    "message": "Planner is ready and listening...",
+    "model": "qwen2.5:7b",
+    "output_topic": "s6102_tasks",
+    "pid": 2819,
+    "source_commit": "474e1cfbd9e959393a4f7b6e5c793d45bb195042",
+    "stage": "planner",
+    "student": "Pragya Apurva",
+    "timestamp": "2026-11-02T19:56:34.561681+00:00",
+    "topic": "s6102_inbox"
+  },
+  {
+    "baseline": "reliable",
+    "configuration": {
+      "context_window": 4096,
+      "model_timeout": 180,
+      "output_limit": 256,
+      "retry_attempts": 3,
+      "retry_backoff": 0.2,
+      "seed": 6102,
+      "temperature": 0
+    },
+    "event": "consumer_ready",
+    "group_id": "verify-299fa6fb17924ef4b43b9b5a6858eb68-writer",
+    "instance": "writer-live",
+    "message": "Writer is ready and listening...",
+    "model": "qwen2.5:7b",
+    "output_topic": "s6102_drafts",
+    "pid": 2820,
+    "source_commit": "474e1cfbd9e959393a4f7b6e5c793d45bb195042",
+    "stage": "writer",
+    "student": "Pragya Apurva",
+    "timestamp": "2026-11-02T19:56:34.675687+00:00",
+    "topic": "s6102_tasks"
+  },
+  {
+    "baseline": "reliable",
+    "configuration": {
+      "context_window": 4096,
+      "model_timeout": 180,
+      "output_limit": 256,
+      "retry_attempts": 3,
+      "retry_backoff": 0.2,
+      "seed": 6102,
+      "temperature": 0
+    },
+    "event": "consumer_ready",
+    "group_id": "verify-0fc8156fb3c048b4b704b180873e4d86-reviewer",
+    "instance": "reviewer-live",
+    "message": "Reviewer is ready and listening...",
+    "model": "qwen2.5:7b",
+    "output_topic": "s6102_final",
+    "pid": 2821,
+    "source_commit": "474e1cfbd9e959393a4f7b6e5c793d45bb195042",
+    "stage": "reviewer",
+    "student": "Pragya Apurva",
+    "timestamp": "2026-11-02T19:56:34.790249+00:00",
+    "topic": "s6102_drafts"
+  }
+]
