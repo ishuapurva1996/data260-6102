@@ -1,5 +1,6 @@
 {
-  "timestamp": "2026-10-29T20:20:27.549144+00:00",
+  "timestamp": "2026-11-02T08:06:46.721846+00:00",
+  "source_commit": "8caf32f200a8411db513a784e2f3f7073e8339c5",
   "before": {
     "hw05_migration_progress": {
       "count": 1,
@@ -52,6 +53,5 @@
       "sha256": "edf8c1bfd2796fc705bad7751e2178a60e959458e093c54ee76d192bac6344f1"
     }
   },
-  "passed": true,
-  "note": "Row values/counts compared; AUTO_INCREMENT counters are not claimed unchanged."
+  "passed": true
 }

@@ -1,0 +1,8 @@
+{
+  "confirmed_at": "2026-11-02T17:30:56.611542+00:00",
+  "model": "qwen2.5:7b",
+  "digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+  "hardware_model": "Mac16,12",
+  "memory_bytes": 25769803776,
+  "matched_local_ollama_and_sysctl": true
+}

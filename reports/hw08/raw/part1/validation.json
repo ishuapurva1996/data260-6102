@@ -1,13 +1,13 @@
 [
   {
     "request": {
-      "correlation_id": "7fbaaad1-3ce4-4355-a99f-712abe0cb7f1",
+      "correlation_id": "dcc9abf6-082e-4f3e-ae74-a99dd7d8dbd5",
       "reply_to": "s6102_entity_responses",
       "operation": "CREATE_RENTAL",
       "data": {}
     },
     "response": {
-      "correlation_id": "7fbaaad1-3ce4-4355-a99f-712abe0cb7f1",
+      "correlation_id": "dcc9abf6-082e-4f3e-ae74-a99dd7d8dbd5",
       "operation": "CREATE_RENTAL",
       "success": false,
       "error": "listingTitle: Field required; propertyAddress: Field required; submitterEmail: Field required; description: Field required; propertyType: Field required; termsAccepted: Field required"
@@ -16,7 +16,7 @@
   },
   {
     "request": {
-      "correlation_id": "313c61e2-4f7a-4966-b4d8-d7885f0ada12",
+      "correlation_id": "4f0a26d8-da3a-478e-b1ae-764f563d472b",
       "reply_to": "s6102_entity_responses",
       "operation": "CREATE_RENTAL",
       "data": {
@@ -29,7 +29,7 @@
       }
     },
     "response": {
-      "correlation_id": "313c61e2-4f7a-4966-b4d8-d7885f0ada12",
+      "correlation_id": "4f0a26d8-da3a-478e-b1ae-764f563d472b",
       "operation": "CREATE_RENTAL",
       "success": false,
       "error": "termsAccepted: Value error, Please agree to the terms and conditions."
@@ -38,13 +38,13 @@
   },
   {
     "request": {
-      "correlation_id": "3db9f3d2-13d3-446c-8974-6547838688fc",
+      "correlation_id": "99d55878-70b5-46e1-bbbb-0d2da6ea5828",
       "reply_to": "s6102_entity_responses",
       "operation": "UNKNOWN",
       "data": {}
     },
     "response": {
-      "correlation_id": "3db9f3d2-13d3-446c-8974-6547838688fc",
+      "correlation_id": "99d55878-70b5-46e1-bbbb-0d2da6ea5828",
       "operation": "UNKNOWN",
       "success": false,
       "error": "Unknown operation"
@@ -53,15 +53,15 @@
   },
   {
     "request": {
-      "correlation_id": "3d54b89c-4690-452c-a071-b03766013e45",
+      "correlation_id": "0581b892-fa1d-4c37-8b97-44d6fc40f5ba",
       "reply_to": "s6102_entity_responses",
       "operation": "GET_RENTAL",
       "data": {
-        "rental_id": "a1b16c16-18e2-458b-99b8-9da967315d6b"
+        "rental_id": "0b827d57-f9ca-49e2-8b1b-7d0e9d23bc16"
       }
     },
     "response": {
-      "correlation_id": "3d54b89c-4690-452c-a071-b03766013e45",
+      "correlation_id": "0581b892-fa1d-4c37-8b97-44d6fc40f5ba",
       "operation": "GET_RENTAL",
       "success": false,
       "error": "Rental not found"

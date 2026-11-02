@@ -1,0 +1,72 @@
+{
+  "homework": 8,
+  "student": "Pragya Apurva",
+  "report_pages": 23,
+  "captures": [
+    {
+      "id": "22_vscode_worker",
+      "file": "22_vscode_worker.png",
+      "source": "User-captured VS Code editor source excerpt, supplied in chat",
+      "received_at": "2026-11-02T18:50:01.572246+00:00",
+      "sha256": "c6d17f79c408b5e3c8d73cb5ee745ddab11e50bf1bd03382336ae1a405ef4a98",
+      "pixels": [
+        1940,
+        738
+      ],
+      "accepted": true,
+      "source_commit": "8caf32f200a8411db513a784e2f3f7073e8339c5",
+      "source_code": "src/kafka_service/worker.py",
+      "source_lines": [
+        55,
+        71
+      ],
+      "raw_evidence": [
+        "raw/part1/user_roundtrip_http.json"
+      ],
+      "requirements": [
+        "CREATE_RENTAL UUID generation",
+        "Worker dictionary storage and GET lookup",
+        "Clean missing-rental error",
+        "Preserved correlation ID",
+        "Response cached after processing"
+      ],
+      "caption": "src/kafka_service/worker.py, lines 55-71. CREATE generates a UUID and stores the rental; GET returns the saved rental or a clean error.",
+      "report_page": 3,
+      "report_label": "Code 01",
+      "asset": "screenshots/vscode/22_vscode_worker.png"
+    },
+    {
+      "id": "23_vscode_client",
+      "file": "23_vscode_client.png",
+      "source": "User-captured VS Code editor source excerpt, supplied in chat",
+      "received_at": "2026-11-02T18:54:12.884005+00:00",
+      "sha256": "f4241f53d3de3a7e521ab5746410bc09b2c3ec2870ffb0fefb636f2266f7073a",
+      "pixels": [
+        1844,
+        1352
+      ],
+      "accepted": true,
+      "source_commit": "8caf32f200a8411db513a784e2f3f7073e8339c5",
+      "source_code": "src/kafka_service/kafka_rpc.py",
+      "source_lines": [
+        137,
+        172
+      ],
+      "raw_evidence": [
+        "raw/part1/user_flow.jsonl",
+        "raw/part1/user_roundtrip_http.json"
+      ],
+      "requirements": [
+        "Pending future registered before publication",
+        "Correlation and operation matching key",
+        "Kafka request publication",
+        "Await complete response",
+        "Return response to caller"
+      ],
+      "caption": "src/kafka_service/kafka_rpc.py, lines 137-172. Register the pending request, publish to Kafka, await the matching reply, and return the response.",
+      "report_page": 3,
+      "report_label": "Code 02",
+      "asset": "screenshots/vscode/23_vscode_client.png"
+    }
+  ]
+}

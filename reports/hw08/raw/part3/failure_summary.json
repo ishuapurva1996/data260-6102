@@ -1,19 +1,19 @@
 {
-  "completed_at": "2026-10-29T19:14:09.832314+00:00",
+  "completed_at": "2026-11-02T08:06:13.633836+00:00",
   "consumer_death": {
     "after": {
-      "input_offset": 7,
+      "input_offset": 32,
       "input_partition": 0,
-      "killed_pid": 74341,
+      "killed_pid": 87975,
       "outputs": 1,
-      "restart_pid": 74342
+      "restart_pid": 87978
     },
     "before": {
-      "input_offset": 6,
+      "input_offset": 31,
       "input_partition": 0,
-      "killed_pid": 74331,
+      "killed_pid": 87957,
       "outputs": 0,
-      "restart_pid": 74332
+      "restart_pid": 87958
     }
   },
   "model": "fixture (transport experiments only)",
@@ -80,11 +80,11 @@
   },
   "pipeline_duplicate": {
     "after": {
-      "correlation_id": "hw8-20261029T191258Z-duplicate-after-ec50bc",
+      "correlation_id": "hw8-20261102T080502Z-duplicate-after-c9f437",
       "final_outputs": 1
     },
     "before": {
-      "correlation_id": "hw8-20261029T191258Z-duplicate-before-f3adc9",
+      "correlation_id": "hw8-20261102T080502Z-duplicate-before-2d9d2f",
       "final_outputs": 2
     }
   },
@@ -104,8 +104,8 @@
     "cached_on_restart": true,
     "final_outputs": 1
   },
-  "run_id": "hw8-20261029T191258Z",
-  "source_commit": "6f309a36a1491146686cafbba647c2226cdaa654",
-  "started_at": "2026-10-29T19:12:59.041073+00:00",
+  "run_id": "hw8-20261102T080502Z",
+  "source_commit": "8caf32f200a8411db513a784e2f3f7073e8339c5",
+  "started_at": "2026-11-02T08:05:02.647106+00:00",
   "verify_seed": 266102
 }

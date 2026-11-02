@@ -2,44 +2,41 @@
 
 Pragya Apurva | SID4=6102 | SEED=6102 | VERIFY_SEED=266102
 
-Tested source: `45d6327d222f8d17811a3e576f5bdf087ed2d5b9`. Failure source: `6f309a36a1491146686cafbba647c2226cdaa654`.
-Entity replay source: `e1e445e77246948987f86e6e74b3ea16c62493bb` (same worker behavior; before final Docker volume fix).
-Real-model journey: qwen2.5:7b. Transport failure runs: explicitly labeled fixture prose.
+Tested code and resolved `hw8` target: `8caf32f200a8411db513a784e2f3f7073e8339c5`.
+Evidence refreshed November 2, 2026. Report: 23 pages, 21 original native Terminal captures and 2 VS Code snippets.
+The PDF refresh and new captures are later evidence; they are not claimed to be inside the existing tag.
+Real-model journey: qwen2.5:7b, fixture=false. Failure tests: real Kafka/processes with fixture prose.
 
 | Failure scenario | Before fix: observed | After fix: observed | Evidence under raw/part3/ |
 |---|---|---|---|
-| Duplicate delivery | 2 dictionary rentals / distinct UUIDs; 2 pipeline final outputs | 1 dictionary rental; same UUID twice; 1 pipeline final output | duplicate_*.jsonl; pipeline_duplicate_*.jsonl |
-| Writer killed mid-work | Early commit at offset 6; 0 outputs during 4-second observation after restart | Same offset 7 redelivered; 1 output then commit 8 | consumer_death_*.jsonl |
-| Poison task | Writer exit 1 after attempt 1; later task has 0 outputs | 3 total attempts, 1 consumed DLQ record; later same-partition task completes | poison_*.jsonl |
-| Two partitions / two Writers | 20 distinct outputs over partitions 0 and 1; not in send order | 20 distinct outputs in partition 1; sequence 1-20 | ordering_unkeyed.csv; ordering_keyed.csv |
+| Duplicate delivery | 2 dictionary rentals / distinct UUIDs; 2 pipeline final outputs | 1 dictionary rental; same UUID twice; 1 final logical output | duplicate_*.jsonl; pipeline_duplicate_*.jsonl |
+| Writer killed mid-work | Early commit 32 for task offset 31; 0 outputs during 4-second observation after restart | Task offset 32 redelivered to restarted PID; 1 output then commit 33 | consumer_death_*.jsonl |
+| Poison task | Exit 1 at first failed attempt; no DLQ or later output | 3 attempts, 1 DLQ record; later task at offset 36 completes and commits 37 | poison_*.jsonl |
+| Two partitions / two Writers | 20 outputs over partitions 0 and 1; not in send order | 20 outputs in partition 1; sequence 1-20 | ordering_unkeyed.csv; ordering_keyed.csv |
 
-Unkeyed observed order: [2, 4, 6, 8, 1, 10, 12, 14, 16, 3, 18, 20, 5, 7, 9, 11, 13, 15, 17, 19].
-Keyed observed order: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20].
-Unkeyed distribution deliberately alternated explicit partitions with no key.
-Both runs used the same seeded delay schedule and unique per-run correlation IDs.
-Draft-topic offsets establish observation order; source offsets from different partitions are not a global clock.
+Unkeyed observed sequence: [2, 4, 6, 8, 1, 10, 12, 14, 16, 3, 18, 20, 5, 7, 9, 11, 13, 15, 17, 19].
+Keyed observed sequence: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20].
+The baseline explicitly alternates partitions without a key. Both runs reuse the VERIFY_SEED delay schedule.
+Draft offsets define observed completion order; task offsets in separate partitions are not a global clock.
+Pipeline experiment run: `hw8-20261102T080502Z`, 08:05:02-08:06:13 UTC.
+Dictionary replay was recorded separately at 08:06:15 UTC on the same code.
 
-Publish-before-commit boundary: cached Writer output recovered after SIGKILL;
-Reviewer suppressed the repeated Kafka record; one final logical output.
-Local Kafka-volume check: a real task record survived broker-container replacement
-(end offset 1 before and after). This is not a high-availability experiment.
+Publish-before-commit boundary: Writer recovered cached work after termination; downstream receipts retained one final logical output.
+A prior broker-container replacement test confirmed volume persistence, not high availability.
 
-## Verification and limits
+## Verification
 
-- Objective smoke/evidence checks: 23/23 passed, without skip flags.
-- Live authenticated FastAPI: reader/writer/moderator login 200; missing/invalid tokens 401; wrong password 401; reader CREATE 403 and GET 200; writer/moderator CREATE/GET 200.
-- Focused HW8/shared-auth tests: 68 passed; zero skipped, with real MySQL enabled. All six database tables retained identical row counts and value fingerprints.
-- Ruff and whitespace checks passed.
-- Kafka, dictionary worker, real three-process local-model journey and all four failure experiments were observed.
-- Real PTY captures show all three containers, startup/readiness, HTTP round trip, role results and correlated flow. Source-excerpt / Part 3 log views are separately labeled browser-rendered evidence.
-- GitHub link works; Sbnikitha and supriyaselvanganesan are verified as collaborators with direct access after user identity verification. No invitation or permission change was made.
-- Local `hw8` tags the final evidence commit after acceptance; exact target and a complete post-tag receipt are saved in the accompanying external upload package. The checked-in receipt identifies the tested source above. No push/publication/submission occurred.
+- Full verifier: 24/24 checks passed without skip flags at the `hw8` target.
+- HTTP roles: reader/writer/moderator login 200; missing or invalid tokens and wrong password 401; reader CREATE 403 / GET 200; writer and moderator CREATE/GET 200.
+- Focused HW8/shared-auth tests: 68 passed, zero skipped, 34 dependency deprecation warnings in 1.68 seconds, with real MySQL enabled.
+- All six database tables kept identical row counts and content hashes during the focused tests.
+- Twenty-one original Terminal captures and two VS Code snippets are indexed in screenshots/current_manifest.json with SHA-256 hashes and report locations.
+- Local model digest and hardware were confirmed against Ollama and sysctl during report finalization.
+- GitHub link and both required collaborators were verified October 29; the dated receipt is retained.
 
-The first harness run stopped recovered Writer before its commit acknowledgment
-was captured. Its verifier failed. The harness now waits for offset_committed;
-RUN_LOG.txt retains the failed and corrected runs. Kafka log.dirs was also corrected
-to the mounted volume and tested by actual container replacement.
+## Limits
 
-Dictionary rentals and their replay cache disappear on entity-worker restart.
-Pipeline receipts require intact local state. Kafka/SQLite are not an atomic transaction;
-transport is at least once with application deduplication. No latency or throughput benchmark is claimed.
+Entity rentals and replay cache disappear on worker restart. Pipeline receipts require intact local SQLite state.
+Kafka publication and SQLite updates are not atomic; delivery is at least once with application deduplication.
+A single broker with replication factor 1 does not demonstrate high availability. No throughput or latency benchmark is claimed.
+Earlier failed/corrected runs remain in RUN_LOG.txt. Application code and the existing tag are unchanged by this report refresh.

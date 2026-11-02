@@ -1,0 +1,674 @@
+{
+  "homework": 8,
+  "student": "Pragya Apurva",
+  "captures": [
+    {
+      "id": "01_containers",
+      "file": "01_containers.png",
+      "source": "User-captured native Terminal screenshot, supplied in chat",
+      "received_at": "2026-11-02T08:16:23.668181+00:00",
+      "sha256": "566d1f435243a893ea7e3d1d3e4740952c5957f08f7e1b9844387ea32b6b8608",
+      "pixels": [
+        1486,
+        422
+      ],
+      "accepted": true,
+      "requirements": [
+        "Kafka, worker and FastAPI containers running",
+        "FastAPI published on 127.0.0.1:8702",
+        "Student name visible"
+      ],
+      "caption": "Running Kafka, rental worker and FastAPI containers; FastAPI is available on port 8702.",
+      "report_figure": 1,
+      "raw_evidence": [
+        "raw/container_status.txt"
+      ],
+      "report_page": 2,
+      "report_label": "Figure 1"
+    },
+    {
+      "id": "02_startup_readiness",
+      "file": "02_startup_readiness.png",
+      "source": "User-captured native Terminal screenshot, supplied in chat",
+      "received_at": "2026-11-02T08:19:38.685555+00:00",
+      "sha256": "2bf11cc6daed6774bc64809275b1b5aa20990f473713d4a998a51122db77cf4c",
+      "pixels": [
+        2934,
+        494
+      ],
+      "accepted": true,
+      "requirements": [
+        "Worker Consumer is ready and listening message",
+        "FastAPI application startup complete",
+        "Local host URL http://127.0.0.1:8702",
+        "Student name visible"
+      ],
+      "caption": "Worker readiness and FastAPI startup logs, including the host URL and Uvicorn bind address.",
+      "layout_note": "Wide original; retain unchanged and typeset the key readiness messages alongside it for readability.",
+      "report_figure": 2,
+      "raw_evidence": [
+        "RUN_LOG.txt"
+      ],
+      "report_page": 2,
+      "report_label": "Figure 2"
+    },
+    {
+      "id": "03_kafka_topics",
+      "file": "03_kafka_topics.png",
+      "source": "User-captured native Terminal screenshot, supplied in chat",
+      "received_at": "2026-11-02T08:21:00.217329+00:00",
+      "sha256": "615880e13099f5eeba5c32bdd795f0e499c113835b975fee2a363c6b8e723ba1",
+      "pixels": [
+        1214,
+        662
+      ],
+      "accepted": true,
+      "requirements": [
+        "Seven PREFIX-prefixed application topics",
+        "s6102_tasks has two partitions",
+        "Other topics have one partition",
+        "Replication factor one",
+        "Student name visible"
+      ],
+      "caption": "Kafka topic configuration: two entity-service topics, four pipeline topics and one dead-letter topic; tasks has two partitions.",
+      "report_figure": 3,
+      "raw_evidence": [
+        "raw/topics.txt"
+      ],
+      "report_page": 2,
+      "report_label": "Figure 3"
+    },
+    {
+      "id": "04_create_get",
+      "file": "04_create_get.png",
+      "source": "User-captured native Terminal execution, supplied in chat",
+      "received_at": "2026-11-02T08:25:57.723824+00:00",
+      "sha256": "056ba97e2c558cb2cdd5187d42dd8ecd531a8d727be25fe08feae28a4f15a9a5",
+      "pixels": [
+        2060,
+        1728
+      ],
+      "accepted": true,
+      "correlation_id": "2ca087a3-99ad-4868-ad02-ab077d03b5f5",
+      "rental_id": "ebc9fc34-6fc3-44ac-b4b2-601995ac6c41",
+      "raw_evidence": [
+        "raw/part1/user_roundtrip_http.json"
+      ],
+      "requirements": [
+        "Actual authenticated CREATE_RENTAL and GET_RENTAL",
+        "Required rental fields",
+        "Worker UUID returned and used by GET",
+        "Success flags",
+        "Unchanged caller correlation ID",
+        "Student name visible"
+      ],
+      "caption": "Authenticated HTTP/Kafka CREATE then GET: the worker-generated rental UUID is reused, and both operations preserve the caller correlation ID.",
+      "report_figure": 4,
+      "report_page": 4,
+      "report_label": "Figure 4"
+    },
+    {
+      "id": "05_message_flow",
+      "file": "05_message_flow.png",
+      "source": "User-captured native Terminal log query, supplied in chat",
+      "received_at": "2026-11-02T08:27:47.007782+00:00",
+      "sha256": "0cb205abe2ab019411d80c303e70962a6bc16ec1cd76601e1e93da1b6685a3c4",
+      "pixels": [
+        1864,
+        1384
+      ],
+      "accepted": true,
+      "correlation_id": "2ca087a3-99ad-4868-ad02-ab077d03b5f5",
+      "rental_id": "ebc9fc34-6fc3-44ac-b4b2-601995ac6c41",
+      "raw_evidence": [
+        "raw/part1/user_flow.jsonl"
+      ],
+      "requirements": [
+        "Complete CREATE followed by GET",
+        "Client send, worker receive/process/reply, RPC receive/return, client response",
+        "Exact request and response topic names",
+        "Unchanged correlation ID",
+        "Student name visible"
+      ],
+      "caption": "Complete logged CREATE/GET journey for the same rental and correlation ID, with actual UTC timestamps and Kafka partition/offset metadata.",
+      "report_figure": 5,
+      "report_page": 5,
+      "report_label": "Figure 5"
+    },
+    {
+      "id": "06_kafka_client_code",
+      "file": "06_kafka_client_code.png",
+      "source": "User-captured native Terminal source/results view, supplied in chat",
+      "received_at": "2026-11-02T08:29:21.753122+00:00",
+      "sha256": "8d10d218a382317a8fbee28eb1515a914741411364ed523e0aa297c82b6bfffc",
+      "pixels": [
+        2088,
+        1530
+      ],
+      "accepted": true,
+      "correlation_id": "2ca087a3-99ad-4868-ad02-ab077d03b5f5",
+      "raw_evidence": [
+        "raw/part1/user_roundtrip_http.json"
+      ],
+      "source_code": "src/kafka_service/kafka_rpc.py",
+      "requirements": [
+        "Kafka client source screenshot",
+        "Pending registration before publication",
+        "Acknowledged request publication",
+        "Reply matching by correlation ID and operation",
+        "Complete response returned",
+        "Matching output below source",
+        "Student name visible"
+      ],
+      "caption": "KafkaRPC source excerpts register the pending request before publication, match replies by correlation ID and operation, and return the complete response; the recorded CREATE/GET results appear below.",
+      "report_figure": 6,
+      "report_page": 6,
+      "report_label": "Figure 6"
+    },
+    {
+      "id": "07_homework_demo_code",
+      "file": "07_homework_demo_code.png",
+      "source": "User-captured native Terminal source/results view, supplied in chat",
+      "received_at": "2026-11-02T08:32:04.468504+00:00",
+      "sha256": "cefae22cd788d0e0f9927704a2e72967d4056c5aea03951779fb40aca10c1fa1",
+      "pixels": [
+        1668,
+        1574
+      ],
+      "accepted": true,
+      "source_commit": "8caf32f200a8411db513a784e2f3f7073e8339c5",
+      "correlation_id": "2ca087a3-99ad-4868-ad02-ab077d03b5f5",
+      "raw_evidence": [
+        "raw/part1/user_roundtrip_http.json"
+      ],
+      "source_code": "scripts/hw08/homework_demo.py",
+      "requirements": [
+        "homework_demo.py source screenshot",
+        "One caller-created correlation ID",
+        "CREATE followed by GET using returned UUID",
+        "Success, correlation, operation, UUID and field checks",
+        "Matching output below source",
+        "Student name visible"
+      ],
+      "caption": "The homework demo creates one correlation ID, feeds the CREATE response UUID into GET, and checks UUID format, success, identity preservation and rental-field equality.",
+      "report_figure": 7,
+      "report_page": 7,
+      "report_label": "Figure 7"
+    },
+    {
+      "id": "08_worker_code",
+      "file": "08_worker_code.png",
+      "source": "User-captured native Terminal source/results view, supplied in chat",
+      "received_at": "2026-11-02T08:36:59.699988+00:00",
+      "sha256": "a8d693c6f5104f5a5a489e2abd6f33f3d9eb9e6a0219f81550ba4182cb16ab1c",
+      "pixels": [
+        1914,
+        1636
+      ],
+      "accepted": true,
+      "source_commit": "8caf32f200a8411db513a784e2f3f7073e8339c5",
+      "correlation_id": "2ca087a3-99ad-4868-ad02-ab077d03b5f5",
+      "raw_evidence": [
+        "raw/part1/user_roundtrip_http.json"
+      ],
+      "source_code": "src/kafka_service/worker.py",
+      "requirements": [
+        "Worker source screenshot",
+        "Plain Python dictionary entity store",
+        "Envelope/domain validation and clean errors",
+        "UUID creation and GET lookup",
+        "Matching output below source",
+        "Student name visible"
+      ],
+      "caption": "The worker validates the request, stores rentals in a plain dictionary, generates a UUID for CREATE, and returns the corresponding rental for GET.",
+      "report_figure": 8,
+      "report_page": 8,
+      "report_label": "Figure 8"
+    },
+    {
+      "id": "09_fastapi_wrapper",
+      "file": "09_fastapi_wrapper.png",
+      "source": "User-captured native Terminal source/results view, supplied in chat",
+      "received_at": "2026-11-02T08:45:24.553956+00:00",
+      "sha256": "cbaf7c9197248488f84c79e9e673387a690e79bf7d38939c8a3908ee9ed32d38",
+      "pixels": [
+        2274,
+        1672
+      ],
+      "accepted": true,
+      "source_commit": "8caf32f200a8411db513a784e2f3f7073e8339c5",
+      "raw_evidence": [
+        "raw/part1/http_auth.json"
+      ],
+      "observation_timestamp": "2026-11-02T08:06:23.851520+00:00",
+      "source_code": [
+        "code/web_application/routers/kafka_rentals.py",
+        "code/web_application/main.py"
+      ],
+      "requirements": [
+        "API wrapper source screenshot",
+        "Existing JWT dependency and writer/moderator CREATE authorization",
+        "Kafka request delegation",
+        "RPC startup/shutdown integration",
+        "Matching actual HTTP authentication and role checks",
+        "Student name visible"
+      ],
+      "caption": "The FastAPI wrapper delegates operations to KafkaRPC and enforces existing JWT roles; the independent HTTP acceptance batch confirms authentication failures and role permissions.",
+      "report_figure": 9,
+      "report_page": 9,
+      "report_label": "Figure 9"
+    },
+    {
+      "id": "10_planner",
+      "file": "10_planner.png",
+      "source": "User-captured native Terminal source/recorded-model-output view, supplied in chat",
+      "received_at": "2026-11-02T16:14:51.576279+00:00",
+      "sha256": "60746823c194163a01adc18725638c95fed1655c3f0bc504bec1927a0c4942c7",
+      "pixels": [
+        2734,
+        1846
+      ],
+      "accepted": true,
+      "source_commit": "8caf32f200a8411db513a784e2f3f7073e8339c5",
+      "correlation_id": "8b30711f-3912-40fa-9747-93b1ffa46d8a",
+      "observation_timestamp": "2026-11-02T08:06:35.305628+00:00",
+      "stage": "planner",
+      "observed_pid": 88057,
+      "model": "qwen2.5:7b",
+      "fixture": false,
+      "raw_evidence": [
+        "raw/part2/journey.jsonl",
+        "raw/part2/processes.json"
+      ],
+      "source_code": [
+        "src/kafka_agents/planner.py",
+        "src/kafka_agents/common.py"
+      ],
+      "requirements": [
+        "Planner code",
+        "Separate recorded process",
+        "s6102_inbox to s6102_tasks routing",
+        "Preserved correlation ID",
+        "Actual generated plan",
+        "Student name visible"
+      ],
+      "caption": "The separate Planner process reads inbox and publishes its generated plan to tasks, preserving the pipeline correlation ID.",
+      "report_figure": 11,
+      "report_page": 11,
+      "report_label": "Figure 11"
+    },
+    {
+      "id": "11_writer",
+      "file": "11_writer.png",
+      "source": "User-captured native Terminal source/recorded-model-output view, supplied in chat",
+      "received_at": "2026-11-02T16:33:17.426424+00:00",
+      "sha256": "688b1b8299e9027192a12c3fc438c9890e00d1f6f492723a289308e725ec6e34",
+      "pixels": [
+        2190,
+        1716
+      ],
+      "accepted": true,
+      "source_commit": "8caf32f200a8411db513a784e2f3f7073e8339c5",
+      "correlation_id": "8b30711f-3912-40fa-9747-93b1ffa46d8a",
+      "observation_timestamp": "2026-11-02T08:06:39.511149+00:00",
+      "stage": "writer",
+      "observed_pid": 88058,
+      "model": "qwen2.5:7b",
+      "fixture": false,
+      "raw_evidence": [
+        "raw/part2/journey.jsonl",
+        "raw/part2/processes.json"
+      ],
+      "source_code": [
+        "src/kafka_agents/writer.py",
+        "src/kafka_agents/common.py"
+      ],
+      "requirements": [
+        "Writer code",
+        "Separate recorded process",
+        "s6102_tasks to s6102_drafts routing",
+        "Preserved correlation ID",
+        "Actual generated draft",
+        "Student name visible"
+      ],
+      "caption": "The separate Writer process consumes the plan from tasks and publishes its draft to drafts, preserving the same pipeline correlation ID.",
+      "report_figure": 12,
+      "report_page": 12,
+      "report_label": "Figure 12"
+    },
+    {
+      "id": "12_reviewer_final",
+      "file": "12_reviewer_final.png",
+      "source": "User-captured native Terminal source/recorded-model-output view, supplied in chat",
+      "received_at": "2026-11-02T16:40:02.272294+00:00",
+      "sha256": "cb64cc2c09f89c9449adaf8564d1f35db7c1a065b6c918bd2afecb77e4dc509a",
+      "pixels": [
+        2938,
+        1704
+      ],
+      "accepted": true,
+      "source_commit": "8caf32f200a8411db513a784e2f3f7073e8339c5",
+      "correlation_id": "8b30711f-3912-40fa-9747-93b1ffa46d8a",
+      "observation_timestamp": "2026-11-02T08:06:43.987820+00:00",
+      "stage": "reviewer",
+      "observed_pid": 88059,
+      "model": "qwen2.5:7b",
+      "fixture": false,
+      "raw_evidence": [
+        "raw/part2/journey.jsonl",
+        "raw/part2/processes.json",
+        "raw/part2/final.json"
+      ],
+      "source_code": [
+        "src/kafka_agents/reviewer.py",
+        "src/kafka_agents/common.py"
+      ],
+      "requirements": [
+        "Reviewer code",
+        "Separate recorded process",
+        "s6102_drafts to s6102_final routing",
+        "Preserved correlation ID",
+        "Actual final JSON status and answer",
+        "Student name visible"
+      ],
+      "caption": "Reviewer consumes the draft and publishes the final JSON to final, preserving the pipeline correlation ID and including approval status and the answer.",
+      "report_figure": 13,
+      "report_page": 13,
+      "report_label": "Figure 13"
+    },
+    {
+      "id": "13_pipeline_journey",
+      "file": "13_pipeline_journey.png",
+      "source": "User-captured native Terminal query of recorded process logs, supplied in chat",
+      "received_at": "2026-11-02T16:41:47.628988+00:00",
+      "sha256": "21c61f087e96fb6ce3bc5f9403d6ae2246451bbb88ddd3ef2accc218b1818a61",
+      "pixels": [
+        1612,
+        1578
+      ],
+      "accepted": true,
+      "source_commit": "8caf32f200a8411db513a784e2f3f7073e8339c5",
+      "correlation_id": "8b30711f-3912-40fa-9747-93b1ffa46d8a",
+      "observed_pids": {
+        "planner": 88057,
+        "writer": 88058,
+        "reviewer": 88059
+      },
+      "model": "qwen2.5:7b",
+      "raw_evidence": [
+        "raw/part2/journey.jsonl",
+        "raw/part2/processes.json",
+        "raw/part2/final.json"
+      ],
+      "requirements": [
+        "Complete inbox-to-final message journey",
+        "All three distinct recorded process IDs",
+        "Timestamped stage receive/process/publish/commit events",
+        "Preserved correlation ID",
+        "Final status and nonempty answer",
+        "Student name visible"
+      ],
+      "caption": "A complete inbox-to-final journey, including the three recorded PIDs, real model events, Kafka publications and successful offset commits.",
+      "report_figure": 14,
+      "report_page": 14,
+      "report_label": "Figure 14"
+    },
+    {
+      "id": "14_duplicate_delivery",
+      "file": "14_duplicate_delivery.png",
+      "source": "User-captured native Terminal code/recorded-experiment view, supplied in chat",
+      "received_at": "2026-11-02T16:44:47.445988+00:00",
+      "sha256": "f94703b90535265919784e550115cc295272854d839a2bb8a2a7d80d7ba1153e",
+      "pixels": [
+        1986,
+        1652
+      ],
+      "accepted": true,
+      "source_commit": "8caf32f200a8411db513a784e2f3f7073e8339c5",
+      "raw_evidence": [
+        "raw/part3/duplicate_before.jsonl",
+        "raw/part3/duplicate_after.jsonl",
+        "raw/part3/entity_duplicate_summary.json",
+        "raw/part3/pipeline_duplicate_before.jsonl",
+        "raw/part3/pipeline_duplicate_after.jsonl"
+      ],
+      "source_code": "src/kafka_service/worker.py",
+      "requirements": [
+        "Idempotency code",
+        "Same-correlation duplicate replay",
+        "Two dictionary rentals before fix",
+        "One dictionary rental and cached original UUID after fix",
+        "Cache-hit log",
+        "Before/after pipeline logical-output counts",
+        "Student name visible"
+      ],
+      "caption": "Replaying the same CREATE twice creates two rentals without idempotency; the corrected worker returns one cached UUID and retains one rental. Pipeline replay similarly drops from two final logical outputs to one.",
+      "report_figure": 15,
+      "report_page": 16,
+      "report_label": "Figure 15"
+    },
+    {
+      "id": "15_writer_restart",
+      "file": "15_writer_restart.png",
+      "source": "User-captured native Terminal code/recorded-experiment view, supplied in chat",
+      "received_at": "2026-11-02T16:51:11.428428+00:00",
+      "sha256": "68cc031851a4f998fc9cd083d2740a84ee429c0af69fc043bb22232ea5af880d",
+      "pixels": [
+        2332,
+        1830
+      ],
+      "accepted": true,
+      "source_commit": "8caf32f200a8411db513a784e2f3f7073e8339c5",
+      "raw_evidence": [
+        "raw/part3/consumer_death_before.jsonl",
+        "raw/part3/consumer_death_after.jsonl"
+      ],
+      "source_code": "src/kafka_agents/common.py",
+      "requirements": [
+        "Manual commit code and disabled automatic commit",
+        "Writer termination and restart PIDs",
+        "Same task offset redelivered after restart",
+        "Output acknowledged before offset commit",
+        "Before/after output counts with bounded observation windows",
+        "Student name visible"
+      ],
+      "caption": "An early commit leaves zero observed draft outputs after the Writer is killed. With commit after publication, the restarted Writer receives the same offset, publishes one draft, and then commits the next offset.",
+      "report_figure": 17,
+      "report_page": 18,
+      "report_label": "Figure 17"
+    },
+    {
+      "id": "16_poison_message",
+      "file": "16_poison_message.png",
+      "source": "User-captured native Terminal code/recorded-experiment view, supplied in chat",
+      "received_at": "2026-11-02T17:02:25.310778+00:00",
+      "sha256": "e7f10761b83e3e00bc866879acbaf613ce46102f36e507b6170f513ae9a75905",
+      "pixels": [
+        1844,
+        1626
+      ],
+      "accepted": true,
+      "source_commit": "8caf32f200a8411db513a784e2f3f7073e8339c5",
+      "raw_evidence": [
+        "raw/part3/poison_before.jsonl",
+        "raw/part3/poison_after.jsonl"
+      ],
+      "source_code": "src/kafka_agents/common.py",
+      "requirements": [
+        "Retry budget code and backoff",
+        "Dead-letter publication code",
+        "Three failed attempts on malformed plan",
+        "Original input and diagnostic retained in dead-letter record",
+        "Later valid message succeeds",
+        "Before/after results",
+        "Student name visible"
+      ],
+      "caption": "Without retry handling the malformed task ends the Writer and blocks later work. The corrected Writer makes three attempts, acknowledges a dead-letter record, commits the failed task, and publishes the next valid draft.",
+      "report_figure": 18,
+      "report_page": 19,
+      "report_label": "Figure 18"
+    },
+    {
+      "id": "17_ordering_unkeyed",
+      "file": "17_ordering_unkeyed.png",
+      "source": "User-captured native Terminal code/recorded-experiment view, supplied in chat",
+      "received_at": "2026-11-02T17:06:05.615249+00:00",
+      "sha256": "a10b18e3e0976df303fdf1d4411b59dffea69debe1547e4c39cf9a38b09f8209",
+      "pixels": [
+        1790,
+        1746
+      ],
+      "accepted": true,
+      "source_commit": "8caf32f200a8411db513a784e2f3f7073e8339c5",
+      "raw_evidence": [
+        "raw/part3/ordering_unkeyed.csv",
+        "raw/part3/ordering_unkeyed_events.jsonl",
+        "raw/part3/ordering_manifest.json"
+      ],
+      "source_code": "scripts/hw08/failure_experiments.py",
+      "requirements": [
+        "VERIFY_SEED 266102",
+        "Twenty related messages",
+        "Two Writers in one group",
+        "Two task partitions and settled assignments",
+        "Explicit controlled alternating unkeyed baseline",
+        "Actual observed order with offsets and timestamps",
+        "Student name visible"
+      ],
+      "caption": "Twenty messages for the same synthetic rental are explicitly alternated across two partitions without a key. Two Writers in one group process all twenty, but the merged draft arrival order differs from the send sequence.",
+      "report_figure": 19,
+      "report_page": 20,
+      "report_label": "Figure 19"
+    },
+    {
+      "id": "18_ordering_keyed",
+      "file": "18_ordering_keyed.png",
+      "source": "User-captured native Terminal code/recorded-experiment view, supplied in chat",
+      "received_at": "2026-11-02T17:09:14.829802+00:00",
+      "sha256": "81372c6fccb4f8e59e727eaf8ede04ce87ce4ced37a126cbd918aec657c90246",
+      "pixels": [
+        2198,
+        1848
+      ],
+      "accepted": true,
+      "source_commit": "8caf32f200a8411db513a784e2f3f7073e8339c5",
+      "raw_evidence": [
+        "raw/part3/ordering_keyed.csv",
+        "raw/part3/ordering_keyed_events.jsonl",
+        "raw/part3/ordering_manifest.json"
+      ],
+      "source_code": "src/kafka_agents/common.py",
+      "requirements": [
+        "Rental key publication code",
+        "VERIFY_SEED 266102",
+        "Twenty related messages",
+        "Two Writers in one group",
+        "Settled partition assignments",
+        "Same rental maps to one partition",
+        "All twenty sequences arrive in send order",
+        "Student name visible"
+      ],
+      "caption": "Using rental_id as the Kafka key places all twenty updates for this rental in partition 1. Writer B processes them in sequence 1 through 20 while Writer A remains assigned partition 0.",
+      "report_figure": 20,
+      "report_page": 21,
+      "report_label": "Figure 20"
+    },
+    {
+      "id": "19_verification",
+      "file": "19_verification.png",
+      "source": "User-captured native Terminal view of recorded verifier and tests, supplied in chat",
+      "received_at": "2026-11-02T17:17:16.379259+00:00",
+      "sha256": "d0a3b085970c19ea15234e264a9882b4203da360c2330d43aaf61237899ae914",
+      "pixels": [
+        2072,
+        1648
+      ],
+      "accepted": true,
+      "source_commit": "8caf32f200a8411db513a784e2f3f7073e8339c5",
+      "raw_evidence": [
+        "verification.json",
+        "raw/focused_tests.txt",
+        "raw/database_preservation.json"
+      ],
+      "requirements": [
+        "Tagged source hash",
+        "Six personal configuration values",
+        "Twenty-four objective checks and individual statuses",
+        "Sixty-eight tests passed and zero skipped",
+        "Database fingerprints unchanged",
+        "Student name visible"
+      ],
+      "caption": "The recorded verifier passed 24 of 24 checks on the hw8 tag. The focused test run passed 68 tests with zero skipped; six database table counts and content hashes remained unchanged.",
+      "report_figure": 21,
+      "report_page": 22,
+      "report_label": "Figure 21"
+    },
+    {
+      "id": "20_pipeline_idempotency",
+      "file": "20_pipeline_idempotency.png",
+      "source": "User-captured native Terminal source/recorded-result view, supplied in chat",
+      "received_at": "2026-11-02T17:18:35.670811+00:00",
+      "sha256": "d026f9c7cd995af6dd3a01a7ff6bb5a1a6943d051d17b466ddebd102bc567ff5",
+      "pixels": [
+        2148,
+        1716
+      ],
+      "accepted": true,
+      "source_commit": "8caf32f200a8411db513a784e2f3f7073e8339c5",
+      "raw_evidence": [
+        "raw/part3/pipeline_duplicate_before.jsonl",
+        "raw/part3/pipeline_duplicate_after.jsonl",
+        "raw/part3/publish_commit_boundary.jsonl"
+      ],
+      "source_code": [
+        "src/kafka_agents/reliability.py",
+        "src/kafka_agents/common.py"
+      ],
+      "requirements": [
+        "Stage-local SQLite receipts",
+        "Correlation identity and payload fingerprint",
+        "Cached result and publication status",
+        "Replay logical-output count",
+        "Publish-before-commit crash result",
+        "Student name visible"
+      ],
+      "caption": "Stage-local SQLite receipts retain the first logical result and whether it was published. The replay test produces two final logical outputs before deduplication and one after it; the publish-before-commit crash test also produces one final logical output.",
+      "report_figure": 16,
+      "report_page": 17,
+      "report_label": "Figure 16"
+    },
+    {
+      "id": "21_kafka_wiring",
+      "file": "21_kafka_wiring.png",
+      "source": "User-captured native Terminal source/recorded-result view, supplied in chat",
+      "received_at": "2026-11-02T17:21:17.392995+00:00",
+      "sha256": "68892787d1d88fceb9cffa5ab83d5ef3527d9ce8701a0c94303a2579616720d5",
+      "pixels": [
+        1960,
+        1716
+      ],
+      "accepted": true,
+      "source_commit": "8caf32f200a8411db513a784e2f3f7073e8339c5",
+      "raw_evidence": [
+        "raw/part2/journey.jsonl",
+        "raw/part2/processes.json",
+        "raw/part2/final.json"
+      ],
+      "source_code": "src/kafka_agents/common.py",
+      "requirements": [
+        "Kafka-only stage routes",
+        "Separate producer and consumer per process",
+        "Stage-local receipt storage",
+        "Manual commit configuration",
+        "Consumer loop and shutdown",
+        "Three distinct recorded processes",
+        "Student name visible"
+      ],
+      "caption": "Each stage subscribes to its own Kafka input topic and runs a separate consumer loop. The real-model journey records three distinct process IDs and preserves one correlation ID through the final result.",
+      "report_figure": 10,
+      "report_page": 10,
+      "report_label": "Figure 10"
+    }
+  ],
+  "report_pages": 23
+}

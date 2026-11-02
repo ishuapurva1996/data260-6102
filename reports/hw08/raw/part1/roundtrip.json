@@ -1,12 +1,12 @@
 {
-  "run_id": "part1-55d4fa3f9acb",
+  "run_id": "part1-a7a5f4a5def5",
   "sid4": 6102,
-  "correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6",
+  "correlation_id": "19fe91f1-05d3-47a7-8b62-85a3cbf2ffd1",
   "passed": true,
   "exchanges": [
     {
       "request": {
-        "correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6",
+        "correlation_id": "19fe91f1-05d3-47a7-8b62-85a3cbf2ffd1",
         "reply_to": "s6102_entity_responses",
         "operation": "CREATE_RENTAL",
         "data": {
@@ -19,28 +19,28 @@
         }
       },
       "response": {
-        "correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6",
+        "correlation_id": "19fe91f1-05d3-47a7-8b62-85a3cbf2ffd1",
         "operation": "CREATE_RENTAL",
         "success": true,
-        "rental_id": "556c4adc-cada-4685-bbe4-c7a6fd55096d",
+        "rental_id": "a136813a-44f8-46af-ab7e-be0bfc89f101",
         "message": "Rental created"
       }
     },
     {
       "request": {
-        "correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6",
+        "correlation_id": "19fe91f1-05d3-47a7-8b62-85a3cbf2ffd1",
         "reply_to": "s6102_entity_responses",
         "operation": "GET_RENTAL",
         "data": {
-          "rental_id": "556c4adc-cada-4685-bbe4-c7a6fd55096d"
+          "rental_id": "a136813a-44f8-46af-ab7e-be0bfc89f101"
         }
       },
       "response": {
-        "correlation_id": "fdb74b3c-538a-4b31-a0ad-2c62c3ce80f6",
+        "correlation_id": "19fe91f1-05d3-47a7-8b62-85a3cbf2ffd1",
         "operation": "GET_RENTAL",
         "success": true,
         "rental": {
-          "rental_id": "556c4adc-cada-4685-bbe4-c7a6fd55096d",
+          "rental_id": "a136813a-44f8-46af-ab7e-be0bfc89f101",
           "listingTitle": "HW8 synthetic apartment",
           "propertyAddress": "100 Example Street, San Jose, CA",
           "availableUnits": 1,

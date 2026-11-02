@@ -1,35 +1,35 @@
 {
   "request": {
-    "correlation_id": "a52151f5-9c3c-4e3e-ba39-c63df17dd84e",
-    "run_id": "hw8-20261029T202146Z",
+    "correlation_id": "8b30711f-3912-40fa-9747-93b1ffa46d8a",
+    "run_id": "hw8-20261102T080623Z",
     "question": "How does Kafka message ordering affect updates to the same rental listing?",
     "rental_id": "hw8-synthetic-6102"
   },
   "final": {
     "answer": "Kafka ensures message ordering within partitions, which is crucial for maintaining consistent updates to rental listings. By publishing updates to the same partition, they are processed in the order they are sent, preventing race conditions and ensuring that updates to a listing are applied sequentially, maintaining data integrity.",
-    "correlation_id": "a52151f5-9c3c-4e3e-ba39-c63df17dd84e",
+    "correlation_id": "8b30711f-3912-40fa-9747-93b1ffa46d8a",
     "draft": "Kafka ensures message ordering within partitions, which is crucial for maintaining consistent updates to rental listings. By publishing updates to the same partition, you ensure they are processed in the order they are sent. This prevents race conditions and guarantees that updates to a listing are applied sequentially, maintaining data integrity.",
     "from_stage": "reviewer",
     "input_source": {
-      "offset": 48,
+      "offset": 98,
       "partition": 0,
       "topic": "s6102_drafts"
     },
     "plan": "To understand how Kafka message ordering affects updates to the same rental listing, follow these steps:\n\n1. **Identify Message Order**: Determine the sequence in which messages are sent and received in Kafka. Messages are ordered based on the partition they are published to.\n2. **Track Listing Updates**: Monitor the updates to the rental listing as they are published to Kafka. Ensure that updates are processed in the order they were sent to maintain consistency.\n3. **Verify Order Compliance**: Confirm that the system consuming messages from Kafka processes the updates to the rental listing in the correct order, preventing any race conditions or inconsistencies.",
     "question": "How does Kafka message ordering affect updates to the same rental listing?",
     "rental_id": "hw8-synthetic-6102",
-    "run_id": "hw8-20261029T202146Z",
+    "run_id": "hw8-20261102T080623Z",
     "status": "approved",
     "writer_instance": "writer-live"
   },
   "sent": {
     "topic": "s6102_inbox",
     "partition": 0,
-    "offset": 1
+    "offset": 4
   },
   "received": {
     "topic": "s6102_final",
     "partition": 0,
-    "offset": 5
+    "offset": 12
   }
 }

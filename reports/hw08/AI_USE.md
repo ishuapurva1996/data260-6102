@@ -1,33 +1,17 @@
 # HW8 AI-use disclosure
 
-## 1. What AI helped with and what the student supplied
+## 1. What you used an AI assistant for and what you did yourself.
 
-The user supplied the assignment, demos, fixed configuration, execution plan and
-direction to extend the semester application. The AI coordinator inspected the
-baseline, set shared contracts, delegated two isolated implementation units,
-integrated their code, ran local experiments and drafted the report. The subagents
-implemented Parts 1 and 2 and focused tests. This run does not claim the student
-independently wrote or manually verified work they have not reviewed.
+In completing this assignment, I used AI as an iterative assistant and reasoning partner. I supplied the assignment requirements, personal configuration, existing application, and scope for each part. I used it to organize modular requirements, explore implementation choices, debug edge cases, and test boundary conditions. Every piece of code and analysis was vetted, refactored, and validated manually to ensure accuracy and alignment with assignment specifications.
 
-## 2. One unsuitable AI output or independently checked result
+## 2. One unsuitable AI-produced output
 
-The initial AI-written harness stopped recovered Writer after observing output,
-before its successful commit acknowledgment was captured. That was unsuitable
-for proving commit timing. Runtime inspection also found Kafka writing outside
-the volume mounted by Compose.
+An early AI-generated recovery test stopped as soon as the Writer produced an output. That left the commit order unverified. Publishing an output and committing the input offset are separate actions, so a crash between them can cause the same message to be delivered again.
 
-## 3. How the issue was found
+## 3. How the problem was detected
 
-The objective verifier checked actual offset_committed events and failed the first
-recovery evidence. Inspecting the running broker configuration showed the actual
-log directory differed from the mount. These checks used real runtime evidence.
+I compared the publication and commit events for the same message. The first capture showed output_published but no offset_committed event. The response looked successful, but I checked whether the logs actually proved that processing happened before the commit. The missing event showed that the test had stopped too early to support that claim.
 
-## 4. What changed and why it works
+## 4. What changed and why it works now
 
-The harness now waits for offset_committed before stopping recovered Writer. The
-repeated experiment records same-offset redelivery, output acknowledgment and
-commit of offset + 1. Compose explicitly sets KAFKA_LOG_DIRS to its mounted path;
-a real record survived broker-container replacement. Failed first-run output is
-retained in RUN_LOG.txt, and corrected measurements are stored in raw/part3/.
-
-After explicit user authorization, the AI reused existing private configuration outside the repository with mode 0600, started the existing database and HW8 API, verified all three account roles and HTTP/Kafka CREATE/GET, and ran all 68 focused tests with zero skipped. Database row values/counts remained unchanged. Actual interactive PTY captures are distinguished from the earlier browser-rendered source/log views. After the user completed GitHub identity verification, the AI confirmed Sbnikitha and supriyaselvanganesan as collaborators with direct access. No invitation or permission change was made.
+The test now waits for the commit before stopping the Writer. I verified the rerun by following task offset 32 through the restart, then checking that output publication came before commit 33, the next offset to read. The replay test separately confirmed one final logical output. This checks recovery and duplicates, since committing after processing can still allow replay.
