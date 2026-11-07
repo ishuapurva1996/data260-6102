@@ -1,0 +1,15 @@
+# Overlay for the HW8 broker and topic initializer. Run HW9 FastAPI and stages
+# on the host to use the existing local Ollama runtime.
+services:
+  kafka:
+    ports: !override ["127.0.0.1:${HW9_KAFKA_PORT:-19094}:9092"]
+    environment:
+      KAFKA_ADVERTISED_LISTENERS: INTERNAL://kafka:19092,EXTERNAL://127.0.0.1:${HW9_KAFKA_PORT:-19094}
+  redis:
+    image: redis:8.2.3@sha256:0908d9af26bf9b985e984a40a5eb82eed229b07a3317eee6843832c3cc3a9619
+    ports: ["127.0.0.1:${HW9_REDIS_PORT:-6389}:6379"]
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes: ["redis-data:/data"]
+
+volumes:
+  redis-data:

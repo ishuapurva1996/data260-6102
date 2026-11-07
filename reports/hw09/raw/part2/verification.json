@@ -1,0 +1,358 @@
+{
+  "student": "Pragya Apurva",
+  "homework": 9,
+  "part": 2,
+  "sid4": 6102,
+  "source_commit": "4bc060d11adbd2b8a13bbb525b23cc0280b0ab5d",
+  "captured_at": "2026-11-07T02:56:17.680784+00:00",
+  "hardware": {
+    "chip": "Apple M4",
+    "memory_bytes": 25769803776
+  },
+  "redis_version": "8.2.3",
+  "ollama_version": "0.33.0",
+  "index": {
+    "index_name": "s6102:hw9:semantic:b-part2-01:index",
+    "index_definition": [
+      "key_type",
+      "HASH",
+      "prefixes",
+      [
+        "s6102:hw9:semantic:b-part2-01:entry:"
+      ],
+      "default_score",
+      "1",
+      "indexes_all",
+      "false"
+    ],
+    "attributes": [
+      [
+        "identifier",
+        "dataset_id",
+        "attribute",
+        "dataset_id",
+        "type",
+        "TAG",
+        "SEPARATOR",
+        ","
+      ],
+      [
+        "identifier",
+        "data_version",
+        "attribute",
+        "data_version",
+        "type",
+        "TAG",
+        "SEPARATOR",
+        ","
+      ],
+      [
+        "identifier",
+        "user_id",
+        "attribute",
+        "user_id",
+        "type",
+        "TAG",
+        "SEPARATOR",
+        ","
+      ],
+      [
+        "identifier",
+        "embedding",
+        "attribute",
+        "embedding",
+        "type",
+        "VECTOR",
+        "algorithm",
+        "FLAT",
+        "data_type",
+        "FLOAT32",
+        "dim",
+        768,
+        "distance_metric",
+        "COSINE"
+      ]
+    ],
+    "num_docs": 5
+  },
+  "generation_model": "qwen2.5:7b",
+  "generation_model_digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+  "generation_temperature": 0,
+  "generation_seed": 6102,
+  "generation_context": 4096,
+  "generation_output_limit": 256,
+  "embedding_model": "nomic-embed-text:v1.5",
+  "embedding_digest": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+  "threshold": 0.85,
+  "data_version": 5,
+  "measured": {
+    "errors": 0,
+    "event": "summary",
+    "hit_rate": 0.5833333333333334,
+    "hits": 7,
+    "mean_hit_ms": 27.445,
+    "mean_miss_ms": 9012.847,
+    "misses": 5,
+    "total": 12
+  },
+  "broker_scan": {
+    "end_offsets": {
+      "s6102_inbox": 8,
+      "s6102_final": 8
+    },
+    "records_scanned": {
+      "s6102_inbox": 8,
+      "s6102_final": 8
+    },
+    "matches": {
+      "s6102_inbox": [
+        {
+          "request_id": "c19efbee-a3e8-4ce2-af36-92faa71f0572",
+          "topic": "s6102_inbox",
+          "partition": 0,
+          "offset": 2
+        },
+        {
+          "request_id": "37ac30ca-e7e8-4594-845f-26592352be1b",
+          "topic": "s6102_inbox",
+          "partition": 0,
+          "offset": 3
+        },
+        {
+          "request_id": "196ee06b-c326-4290-afcf-61bffe76e0ad",
+          "topic": "s6102_inbox",
+          "partition": 0,
+          "offset": 4
+        },
+        {
+          "request_id": "3f57e5f1-8692-4074-8dc7-8cf4244bb399",
+          "topic": "s6102_inbox",
+          "partition": 0,
+          "offset": 5
+        },
+        {
+          "request_id": "4a1d70a2-ff1e-41df-8eec-19fe4d335aaa",
+          "topic": "s6102_inbox",
+          "partition": 0,
+          "offset": 6
+        }
+      ],
+      "s6102_final": [
+        {
+          "request_id": "c19efbee-a3e8-4ce2-af36-92faa71f0572",
+          "topic": "s6102_final",
+          "partition": 0,
+          "offset": 2
+        },
+        {
+          "request_id": "37ac30ca-e7e8-4594-845f-26592352be1b",
+          "topic": "s6102_final",
+          "partition": 0,
+          "offset": 3
+        },
+        {
+          "request_id": "196ee06b-c326-4290-afcf-61bffe76e0ad",
+          "topic": "s6102_final",
+          "partition": 0,
+          "offset": 4
+        },
+        {
+          "request_id": "3f57e5f1-8692-4074-8dc7-8cf4244bb399",
+          "topic": "s6102_final",
+          "partition": 0,
+          "offset": 5
+        },
+        {
+          "request_id": "4a1d70a2-ff1e-41df-8eec-19fe4d335aaa",
+          "topic": "s6102_final",
+          "partition": 0,
+          "offset": 6
+        }
+      ]
+    }
+  },
+  "cases": [
+    {
+      "case": 1,
+      "category": "new",
+      "request_id": "c19efbee-a3e8-4ce2-af36-92faa71f0572",
+      "is_cached": false,
+      "similarity": null,
+      "latency_ms": 4017.534,
+      "matched_request_id": null,
+      "matched_question": null,
+      "inbox_offset": 2,
+      "final_offset": 2,
+      "generative_model_stages": [
+        "planner",
+        "writer",
+        "reviewer"
+      ]
+    },
+    {
+      "case": 2,
+      "category": "exact",
+      "request_id": "12da59ae-4ae2-4471-b0d4-bf11d7e2ab48",
+      "is_cached": true,
+      "similarity": 1.0,
+      "latency_ms": 32.281,
+      "matched_request_id": "c19efbee-a3e8-4ce2-af36-92faa71f0572",
+      "matched_question": "How many units are available at S6102-R-9201?",
+      "inbox_offset": null,
+      "final_offset": null,
+      "generative_model_stages": []
+    },
+    {
+      "case": 3,
+      "category": "paraphrase",
+      "request_id": "04410b11-e337-464c-92fa-05164d95b31f",
+      "is_cached": true,
+      "similarity": 0.9734960794449,
+      "latency_ms": 26.601,
+      "matched_request_id": "c19efbee-a3e8-4ce2-af36-92faa71f0572",
+      "matched_question": "How many units are available at S6102-R-9201?",
+      "inbox_offset": null,
+      "final_offset": null,
+      "generative_model_stages": []
+    },
+    {
+      "case": 4,
+      "category": "new",
+      "request_id": "37ac30ca-e7e8-4594-845f-26592352be1b",
+      "is_cached": false,
+      "similarity": 0.830965459347,
+      "latency_ms": 7549.527,
+      "matched_request_id": "c19efbee-a3e8-4ce2-af36-92faa71f0572",
+      "matched_question": "How many units are available at S6102-R-9201?",
+      "inbox_offset": 3,
+      "final_offset": 3,
+      "generative_model_stages": [
+        "planner",
+        "writer",
+        "reviewer"
+      ]
+    },
+    {
+      "case": 5,
+      "category": "exact",
+      "request_id": "9c09d954-9a5b-47b5-a5bb-2ee077d588ce",
+      "is_cached": true,
+      "similarity": 0.9999998807907104,
+      "latency_ms": 32.187,
+      "matched_request_id": "37ac30ca-e7e8-4594-845f-26592352be1b",
+      "matched_question": "What property type is S6102-R-9202 classified as?",
+      "inbox_offset": null,
+      "final_offset": null,
+      "generative_model_stages": []
+    },
+    {
+      "case": 6,
+      "category": "paraphrase",
+      "request_id": "77842fd6-decd-4b05-a8b5-696a659cace4",
+      "is_cached": true,
+      "similarity": 0.9795377254486,
+      "latency_ms": 27.829,
+      "matched_request_id": "37ac30ca-e7e8-4594-845f-26592352be1b",
+      "matched_question": "What property type is S6102-R-9202 classified as?",
+      "inbox_offset": null,
+      "final_offset": null,
+      "generative_model_stages": []
+    },
+    {
+      "case": 7,
+      "category": "new",
+      "request_id": "7558cf55-b8f2-45ee-ba12-f667986654b3",
+      "is_cached": true,
+      "similarity": 0.863349556923,
+      "latency_ms": 24.268,
+      "matched_request_id": "37ac30ca-e7e8-4594-845f-26592352be1b",
+      "matched_question": "What property type is S6102-R-9202 classified as?",
+      "inbox_offset": null,
+      "final_offset": null,
+      "generative_model_stages": []
+    },
+    {
+      "case": 8,
+      "category": "exact",
+      "request_id": "16f846c5-1585-4401-aef2-3fd3157fd51b",
+      "is_cached": true,
+      "similarity": 0.863349556923,
+      "latency_ms": 23.692,
+      "matched_request_id": "37ac30ca-e7e8-4594-845f-26592352be1b",
+      "matched_question": "What property type is S6102-R-9202 classified as?",
+      "inbox_offset": null,
+      "final_offset": null,
+      "generative_model_stages": []
+    },
+    {
+      "case": 9,
+      "category": "paraphrase",
+      "request_id": "df220cbd-9cbd-4934-81e8-d471d1a83861",
+      "is_cached": true,
+      "similarity": 0.878786742687,
+      "latency_ms": 25.258,
+      "matched_request_id": "37ac30ca-e7e8-4594-845f-26592352be1b",
+      "matched_question": "What property type is S6102-R-9202 classified as?",
+      "inbox_offset": null,
+      "final_offset": null,
+      "generative_model_stages": []
+    },
+    {
+      "case": 10,
+      "category": "new",
+      "request_id": "196ee06b-c326-4290-afcf-61bffe76e0ad",
+      "is_cached": false,
+      "similarity": 0.6896156668660001,
+      "latency_ms": 12046.652,
+      "matched_request_id": "37ac30ca-e7e8-4594-845f-26592352be1b",
+      "matched_question": "What property type is S6102-R-9202 classified as?",
+      "inbox_offset": 4,
+      "final_offset": 4,
+      "generative_model_stages": [
+        "planner",
+        "writer",
+        "reviewer"
+      ]
+    },
+    {
+      "case": 11,
+      "category": "new",
+      "request_id": "3f57e5f1-8692-4074-8dc7-8cf4244bb399",
+      "is_cached": false,
+      "similarity": 0.76562833786,
+      "latency_ms": 13055.684,
+      "matched_request_id": "196ee06b-c326-4290-afcf-61bffe76e0ad",
+      "matched_question": "What are the usual responsibilities of a rental property manager?",
+      "inbox_offset": 5,
+      "final_offset": 5,
+      "generative_model_stages": [
+        "planner",
+        "writer",
+        "reviewer"
+      ]
+    },
+    {
+      "case": 12,
+      "category": "new",
+      "request_id": "4a1d70a2-ff1e-41df-8eec-19fe4d335aaa",
+      "is_cached": false,
+      "similarity": 0.818479418755,
+      "latency_ms": 8394.838,
+      "matched_request_id": "c19efbee-a3e8-4ce2-af36-92faa71f0572",
+      "matched_question": "How many units are available at S6102-R-9201?",
+      "inbox_offset": 6,
+      "final_offset": 6,
+      "generative_model_stages": [
+        "planner",
+        "writer",
+        "reviewer"
+      ]
+    }
+  ],
+  "bypass_proven_for_all_hits": true,
+  "observed_wrong_listing_hits": [
+    7,
+    8,
+    9
+  ]
+}

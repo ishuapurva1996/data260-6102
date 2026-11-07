@@ -1,0 +1,17 @@
+Pragya Apurva | DATA 260 HW9 Part 2 | Recorded live run
+Source 4bc060d11adbd2b8a13bbb525b23cc0280b0ab5d | Redis cosine 0.85
+
+12 HTTP requests | 7 hits (58.33%) | 5 misses | 0 errors
+Mean hit 27.445 ms | mean miss 9,012.847 ms
+
+How many units are available at S6102-R-9201?
+MISS c19efbee-a3e8-4ce2-af36-92faa71f0572 | 4,017.534 ms
+  Kafka inbox offset 2 | final offset 2
+  Local generation ran Planner, Writer, Reviewer.
+  At S6102-R-9201, there are 3 units available.
+HIT  12da59ae-4ae2-4471-b0d4-bf11d7e2ab48 | 32.281 ms
+  Same answer from Redis | cosine 1.000000
+  No Kafka inbox or final record. Zero generative stage calls.
+
+Across the run: 5 broker journeys, 15 model results, 5 indexed answers.
+Cases 7-9 reused a house answer for a different listing and fact.
