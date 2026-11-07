@@ -1,0 +1,60 @@
+{
+  "started_at_utc": "2026-11-07T03:00:34+00:00",
+  "source_commit": "4738560fb54eb8490c762d692bf73a932ccea92e",
+  "primary_listing": "S6102-R-117",
+  "secondary_listing": "S6102-R-118",
+  "recovery_listing": "S6102-R-119",
+  "missing_id": 2147483647,
+  "counts": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25
+  ],
+  "mysql_checkpoints": {
+    "9": 0,
+    "10": 10,
+    "20": 20,
+    "25": 20
+  },
+  "secondary_final": {
+    "redis": 2,
+    "mysql": 0
+  },
+  "resumed_counts": [
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28
+  ],
+  "recovered_from_newer_checkpoint": 31,
+  "final": {
+    "redis": 25,
+    "mysql": 20
+  }
+}
