@@ -86,6 +86,22 @@ def grade(answer, expected):
     return bool(re.search(rf"\b{re.escape(value)}\b", answer, re.I))
 
 
+def unambiguous_units(answer, units):
+    text = re.sub(r"S6102-R-\d+", "", answer, flags=re.I).lower()
+    word_values = {word: number for number, word in WORDS.items()}
+    tokens = re.findall(r"\b(?:\d+|" + "|".join(word_values) + r")\b", text)
+    values = {int(t) if t.isdecimal() else word_values[t] for t in tokens}
+    return (
+        values == {units}
+        and not re.search(r"\b(?:not|incorrect|unavailable|no)\b", text)
+        and bool(
+            re.search(
+                rf"\b(?:{units}|{WORDS[units]})\s+(?:available\s+)?units?\b", text
+            )
+        )
+    )
+
+
 def summarize(rows, costs):
     hits = sum(r["is_cached"] for r in rows)
     wrong_hits = sum(r["is_cached"] and not r["correct"] for r in rows)
@@ -201,18 +217,32 @@ def api(runtime, namespace, threshold, stale=False):
 
 def request(client, question, log_path):
     started = time.perf_counter()
-    response = client.post("/api/kafka/questions", json={"question": question})
-    elapsed = round((time.perf_counter() - started) * 1000, 3)
+    response = None
+    try:
+        response = client.post("/api/kafka/questions", json={"question": question})
+        elapsed = round((time.perf_counter() - started) * 1000, 3)
+        body = response.json()
+    except (httpx.HTTPError, ValueError) as exc:
+        append(
+            log_path,
+            {
+                "timestamp": stamp(),
+                "question": question,
+                "error": type(exc).__name__,
+                "http_latency_ms": round((time.perf_counter() - started) * 1000, 3),
+                "status_code": response.status_code if response is not None else None,
+                "response_text": response.text if response is not None else None,
+            },
+        )
+        raise
     row = {
         "timestamp": stamp(),
         "question": question,
         "status_code": response.status_code,
         "http_latency_ms": elapsed,
-        "response": response.json(),
+        "response": body,
     }
-    append(
-        log_path, row
-    )  # Retain failures before raising; never silently retry a case.
+    append(log_path, row)
     response.raise_for_status()
     return row
 
@@ -381,6 +411,7 @@ def stale_demo(runtime):
             row["response"]["answer"],
             {"listing_code": "S6102-R-9199", "field": "available_units", "value": 3},
         )
+        assert unambiguous_units(row["response"]["answer"], 3)
         traces.append(row)
         response = client.put(
             f"/api/rentals/{fixture['id']}",
@@ -427,6 +458,7 @@ def stale_demo(runtime):
                     "value": 1,
                 },
             )
+            assert unambiguous_units(row["response"]["answer"], 1)
             traces.append(row)
     write_json(runtime / "stale-trace.json", traces)
     chosen = json.loads((runtime / "chosen-threshold.json").read_text())["threshold"]

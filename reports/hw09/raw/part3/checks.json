@@ -1,0 +1,43 @@
+{
+  "experiment_verification": "passed",
+  "targeted_pytest": {
+    "passed": 49,
+    "command": "python -m pytest tests/test_hw09_experiments.py tests/test_hw09_experiment_integrity.py tests/test_hw08_part1.py tests/test_hw08_part2.py -q",
+    "log": "pytest-targeted.log"
+  },
+  "configured_ruff": "passed",
+  "explicit_hw09_ruff": "passed",
+  "full_repository_pytest": {
+    "status": "collection_failed",
+    "exit_code": 2,
+    "collection_errors": 17,
+    "missing_older_homework_dependencies": [
+      "jsonschema",
+      "langgraph",
+      "llama_index",
+      "mcp",
+      "numpy"
+    ],
+    "log": "pytest-full.log"
+  },
+  "code_review": {
+    "status": "complete",
+    "run_id": "20261107-review-c-part3",
+    "findings_confirmed": 6,
+    "findings_applied": 6,
+    "unresolved_findings": 0
+  },
+  "negative_control_baseline": {
+    "failed": 10,
+    "passed": 1
+  },
+  "post_measurement_changes": "Failure retention, unambiguous demo assertions, offline evidence verification, and report rendering. The measured endpoint/cache/vector search/agent/model code is unchanged.",
+  "code_sha256": {
+    "scripts/hw09/cache_experiments.py": "648fe1b55328007909794204e691ba7cb23300558b8e84d7b592edfc121ae399",
+    "scripts/hw09/analyze_cache_experiments.py": "7db6e77799d1adf8acd937b880a165b012f14fe90926f3fd6f9a13d111279f84",
+    "tests/test_hw09_experiments.py": "2e7f7d10403e80752dc7e9320f4d1fe466818bd091aa47a379292c97c3570f8e",
+    "tests/test_hw09_experiment_integrity.py": "655ccb205b5c1d22e595adf70d040db644841254495e241d14e13facf260fd54"
+  },
+  "screenshots_visually_checked": true,
+  "frozen_labels_changed": false
+}

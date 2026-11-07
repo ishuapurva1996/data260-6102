@@ -1,0 +1,4 @@
+{
+  "rule": "Choose the higher threshold among equal minimum total costs.",
+  "threshold": 0.85
+}

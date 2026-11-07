@@ -1,0 +1,180 @@
+[
+  {
+    "cache_event": {
+      "cache_write": "stored",
+      "correlation_id": "df8c44a4-1add-4284-be07-8598bbb82460",
+      "data_version": 12,
+      "dataset_id": "0e586d72da6211f1ae011ab4cc3919df",
+      "error": null,
+      "event": "semantic_cache_result",
+      "is_cached": false,
+      "latency_ms": 8578.59,
+      "matched_data_version": null,
+      "matched_question": null,
+      "matched_request_id": null,
+      "namespace": "stale-demo-c-01",
+      "pid": 9015,
+      "pipeline_attempted": true,
+      "question": "How many units are available at S6102-R-9199?",
+      "request_id": "df8c44a4-1add-4284-be07-8598bbb82460",
+      "similarity": null,
+      "source_commit": "52c8ef470b124605a0fc51dd8c5821b4a5f3738b",
+      "student": "Pragya Apurva",
+      "threshold": 0.95,
+      "timestamp": "2026-11-07T04:30:50.802302+00:00",
+      "timings_ms": {
+        "cache_write_ms": 9.605,
+        "embed_ms": 55.527,
+        "facts_ms": 1.746,
+        "kafka_agent_ms": 8507.109,
+        "lookup_ms": 0.59,
+        "version_ms": 1.661
+      },
+      "version_enforced": false
+    },
+    "http_latency_ms": 8583.171,
+    "question": "How many units are available at S6102-R-9199?",
+    "response": {
+      "answer": "At S6102-R-9199, there are 3 units available.",
+      "is_cached": false,
+      "latency_ms": 8578.59,
+      "request_id": "df8c44a4-1add-4284-be07-8598bbb82460",
+      "similarity": null
+    },
+    "status_code": 200,
+    "step": "prime_3",
+    "timestamp": "2026-11-07T04:30:50.806630+00:00"
+  },
+  {
+    "cache_event": {
+      "cache_write": null,
+      "correlation_id": "2e6af6c5-7644-4ed9-aebd-ac3bad64bc9d",
+      "data_version": 13,
+      "dataset_id": "0e586d72da6211f1ae011ab4cc3919df",
+      "error": null,
+      "event": "semantic_cache_result",
+      "is_cached": true,
+      "latency_ms": 37.2,
+      "matched_data_version": 12,
+      "matched_question": "How many units are available at S6102-R-9199?",
+      "matched_request_id": "df8c44a4-1add-4284-be07-8598bbb82460",
+      "namespace": "stale-demo-c-01",
+      "pid": 9015,
+      "pipeline_attempted": false,
+      "question": "How many units are available at S6102-R-9199?",
+      "request_id": "2e6af6c5-7644-4ed9-aebd-ac3bad64bc9d",
+      "similarity": 1.0,
+      "source_commit": "52c8ef470b124605a0fc51dd8c5821b4a5f3738b",
+      "student": "Pragya Apurva",
+      "threshold": 0.95,
+      "timestamp": "2026-11-07T04:30:50.879825+00:00",
+      "timings_ms": {
+        "embed_ms": 28.286,
+        "lookup_ms": 1.081,
+        "version_ms": 2.173
+      },
+      "version_enforced": false
+    },
+    "http_latency_ms": 40.188,
+    "question": "How many units are available at S6102-R-9199?",
+    "response": {
+      "answer": "At S6102-R-9199, there are 3 units available.",
+      "is_cached": true,
+      "latency_ms": 37.2,
+      "request_id": "2e6af6c5-7644-4ed9-aebd-ac3bad64bc9d",
+      "similarity": 1.0
+    },
+    "status_code": 200,
+    "step": "stale_hit_3_after_update_to_1",
+    "timestamp": "2026-11-07T04:30:50.881674+00:00"
+  },
+  {
+    "cache_event": {
+      "cache_write": "stored",
+      "correlation_id": "a03b1e3c-0aff-442e-96ac-26669bc40055",
+      "data_version": 13,
+      "dataset_id": "0e586d72da6211f1ae011ab4cc3919df",
+      "error": null,
+      "event": "semantic_cache_result",
+      "is_cached": false,
+      "latency_ms": 7733.509,
+      "matched_data_version": null,
+      "matched_question": null,
+      "matched_request_id": null,
+      "namespace": "stale-demo-c-01",
+      "pid": 9038,
+      "pipeline_attempted": true,
+      "question": "How many units are available at S6102-R-9199?",
+      "request_id": "a03b1e3c-0aff-442e-96ac-26669bc40055",
+      "similarity": null,
+      "source_commit": "52c8ef470b124605a0fc51dd8c5821b4a5f3738b",
+      "student": "Pragya Apurva",
+      "threshold": 0.95,
+      "timestamp": "2026-11-07T04:30:59.580361+00:00",
+      "timings_ms": {
+        "cache_write_ms": 4.417,
+        "embed_ms": 30.943,
+        "facts_ms": 3.581,
+        "kafka_agent_ms": 7688.041,
+        "lookup_ms": 0.692,
+        "version_ms": 1.678
+      },
+      "version_enforced": true
+    },
+    "http_latency_ms": 7736.088,
+    "question": "How many units are available at S6102-R-9199?",
+    "response": {
+      "answer": "At S6102-R-9199, there is 1 unit available.",
+      "is_cached": false,
+      "latency_ms": 7733.509,
+      "request_id": "a03b1e3c-0aff-442e-96ac-26669bc40055",
+      "similarity": null
+    },
+    "status_code": 200,
+    "step": "enforced_fresh_miss_1",
+    "timestamp": "2026-11-07T04:30:59.582638+00:00"
+  },
+  {
+    "cache_event": {
+      "cache_write": null,
+      "correlation_id": "d6376880-a904-4fd4-bff8-6915502d3357",
+      "data_version": 13,
+      "dataset_id": "0e586d72da6211f1ae011ab4cc3919df",
+      "error": null,
+      "event": "semantic_cache_result",
+      "is_cached": true,
+      "latency_ms": 30.883,
+      "matched_data_version": 13,
+      "matched_question": "How many units are available at S6102-R-9199?",
+      "matched_request_id": "a03b1e3c-0aff-442e-96ac-26669bc40055",
+      "namespace": "stale-demo-c-01",
+      "pid": 9038,
+      "pipeline_attempted": false,
+      "question": "How many units are available at S6102-R-9199?",
+      "request_id": "d6376880-a904-4fd4-bff8-6915502d3357",
+      "similarity": 1.0,
+      "source_commit": "52c8ef470b124605a0fc51dd8c5821b4a5f3738b",
+      "student": "Pragya Apurva",
+      "threshold": 0.95,
+      "timestamp": "2026-11-07T04:30:59.615576+00:00",
+      "timings_ms": {
+        "embed_ms": 23.009,
+        "lookup_ms": 0.813,
+        "version_ms": 1.952
+      },
+      "version_enforced": true
+    },
+    "http_latency_ms": 33.787,
+    "question": "How many units are available at S6102-R-9199?",
+    "response": {
+      "answer": "At S6102-R-9199, there is 1 unit available.",
+      "is_cached": true,
+      "latency_ms": 30.883,
+      "request_id": "d6376880-a904-4fd4-bff8-6915502d3357",
+      "similarity": 1.0
+    },
+    "status_code": 200,
+    "step": "enforced_fresh_hit_1",
+    "timestamp": "2026-11-07T04:30:59.617757+00:00"
+  }
+]

@@ -1,0 +1,6 @@
+{"data_version": 12, "dataset_id": "0e586d72da6211f1ae011ab4cc3919df", "entries": 10, "index": "s6102:hw9:semantic:c-seed-01:index", "namespace": "c-seed-01", "operation": "export", "user_id": "3"}
+{"data_version": 12, "dataset_id": "0e586d72da6211f1ae011ab4cc3919df", "entries": 10, "index": "s6102:hw9:semantic:c-sweep-075-01:index", "namespace": "c-sweep-075-01", "operation": "restore", "user_id": "3"}
+{"data_version": 12, "dataset_id": "0e586d72da6211f1ae011ab4cc3919df", "entries": 10, "index": "s6102:hw9:semantic:c-sweep-080-01:index", "namespace": "c-sweep-080-01", "operation": "restore", "user_id": "3"}
+{"data_version": 12, "dataset_id": "0e586d72da6211f1ae011ab4cc3919df", "entries": 10, "index": "s6102:hw9:semantic:c-sweep-085-01:index", "namespace": "c-sweep-085-01", "operation": "restore", "user_id": "3"}
+{"data_version": 12, "dataset_id": "0e586d72da6211f1ae011ab4cc3919df", "entries": 10, "index": "s6102:hw9:semantic:c-sweep-090-01:index", "namespace": "c-sweep-090-01", "operation": "restore", "user_id": "3"}
+{"data_version": 12, "dataset_id": "0e586d72da6211f1ae011ab4cc3919df", "entries": 10, "index": "s6102:hw9:semantic:c-sweep-095-01:index", "namespace": "c-sweep-095-01", "operation": "restore", "user_id": "3"}

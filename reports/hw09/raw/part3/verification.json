@@ -1,0 +1,32 @@
+{
+  "authoritative_response_events_verified": 206,
+  "automatic_scoring_corrections": 2,
+  "cases_per_threshold": 40,
+  "categories_each": 10,
+  "chosen_smoke_verified": true,
+  "chosen_threshold": 0.85,
+  "demonstration_answers_audited": 6,
+  "fixed_markers": [
+    [
+      "0e586d72da6211f1ae011ab4cc3919df",
+      12
+    ]
+  ],
+  "frozen_case_bindings_verified": 200,
+  "generative_calls": 120,
+  "hit_generative_calls": 0,
+  "http_errors": 0,
+  "label_changes": 0,
+  "model_calls_per_miss": 3,
+  "passed": true,
+  "requests": 200,
+  "restored_seed_entries_verified": 50,
+  "seed_sha256": "627a1b5fe84eddfba366a032888a7ce4aa9c9694203f2da7b1b59dd9c62c1920",
+  "stale_demo_passed": true,
+  "supplemental_diagnostic_requests": 0,
+  "thresholds": 5,
+  "unique_request_ids": 200,
+  "wrong_live_answers": 0,
+  "yaml_commit": "3511ae67588f61eeff4199aa8f4db294aca04c57",
+  "yaml_sha256": "4c180dd5a8b5dbd007797225889d1cb7e0921339d0670683b225674ee76f0c26"
+}

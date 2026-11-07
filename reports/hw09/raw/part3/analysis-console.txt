@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "requests": 200,
+  "thresholds": 5,
+  "cases_per_threshold": 40,
+  "categories_each": 10,
+  "unique_request_ids": 200,
+  "http_errors": 0,
+  "yaml_commit": "3511ae67588f61eeff4199aa8f4db294aca04c57",
+  "yaml_sha256": "4c180dd5a8b5dbd007797225889d1cb7e0921339d0670683b225674ee76f0c26",
+  "seed_sha256": "627a1b5fe84eddfba366a032888a7ce4aa9c9694203f2da7b1b59dd9c62c1920",
+  "restored_seed_entries_verified": 50,
+  "fixed_markers": [
+    [
+      "0e586d72da6211f1ae011ab4cc3919df",
+      12
+    ]
+  ],
+  "generative_calls": 120,
+  "hit_generative_calls": 0,
+  "model_calls_per_miss": 3,
+  "wrong_live_answers": 0,
+  "chosen_threshold": 0.85,
+  "stale_demo_passed": true,
+  "label_changes": 0,
+  "automatic_scoring_corrections": 2,
+  "frozen_case_bindings_verified": 200,
+  "authoritative_response_events_verified": 206,
+  "demonstration_answers_audited": 6,
+  "chosen_smoke_verified": true,
+  "supplemental_diagnostic_requests": 0
+}

@@ -1,0 +1,1809 @@
+{
+  "reviewer": "Codex Session C output audit for Pragya Apurva",
+  "timestamp": "2026-11-07T04:31:03.196399+00:00",
+  "basis": "Full expected facts and rubrics from frozen YAML; no expected facts or should-hit labels changed. Repeated identical outputs checked as groups, every request decision recorded.",
+  "yaml_sha256": "4c180dd5a8b5dbd007797225889d1cb7e0921339d0670683b225674ee76f0c26",
+  "decisions": [
+    {
+      "request_id": "3432b184-231d-4b19-a6e2-5c9c3f53e330",
+      "threshold": 0.75,
+      "case_id": "E01",
+      "answer_sha256": "fa416f6ea1656fdd640437b1fea874a1a91aa808102a84a6201b149fe68835c3",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "5c135b40-748a-422d-abfa-69ddee689327",
+      "threshold": 0.75,
+      "case_id": "E02",
+      "answer_sha256": "a76fd8371dba34fbadf9dbb0397ea0c3f2f1c2281a8615c4bbc2714998f237f0",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "715e0629-b25c-40c9-83cc-d408caba6789",
+      "threshold": 0.75,
+      "case_id": "E03",
+      "answer_sha256": "c7876060e894980664aaa9bac723d8a6650fce85b72536990d6fcf26ef829782",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "a99a8d91-44b7-4ece-bd96-faa0f04a1e3b",
+      "threshold": 0.75,
+      "case_id": "E04",
+      "answer_sha256": "550f6b2714ca067508cd2ba2325b4c6d4d7cac6c740ea71cad595ccfd5067983",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "aabfd5a8-6613-45e5-8fc0-776733d802ae",
+      "threshold": 0.75,
+      "case_id": "E05",
+      "answer_sha256": "a33664b3a21c99788faea95f409d0c10817b374e6e84932450967b8de309d485",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "68c78be4-b090-44a8-b2e2-84dc5dacc080",
+      "threshold": 0.75,
+      "case_id": "E06",
+      "answer_sha256": "4c9686a61dedae3a3491d3b2cbebede685e4d133c4a93af6b35471e7065d82e5",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "efd558a7-eb2d-4ed3-8fa1-b5d3a9b6847d",
+      "threshold": 0.75,
+      "case_id": "E07",
+      "answer_sha256": "c82b134b10152206dacdb116d686fa9ed17b34310fd259d70e3d0903158dfe81",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "8d8d31e0-1561-409b-8ef1-02c29a28b50a",
+      "threshold": 0.75,
+      "case_id": "E08",
+      "answer_sha256": "806fa2aee8ef89d9a525e5ab4ab7aac1265288507e8b92abcd59f1cf9c296e30",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "64b90cef-4676-4d9b-a129-067b859a686a",
+      "threshold": 0.75,
+      "case_id": "E09",
+      "answer_sha256": "668c8d2eef155aaadcaa2f71782333949cbeb0542fc13d18bae502145db85d0a",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "5438c690-0317-4927-aac3-f8fa9b666576",
+      "threshold": 0.75,
+      "case_id": "E10",
+      "answer_sha256": "4e6facb31ba9eabd2732ae6e52e776cc68b9f80acb83a4a264378c31adaaa14b",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "1057005e-69bf-42b7-80fc-72cd4a259df4",
+      "threshold": 0.75,
+      "case_id": "P01",
+      "answer_sha256": "c7876060e894980664aaa9bac723d8a6650fce85b72536990d6fcf26ef829782",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "4c86e9c1-b9ee-4a69-a758-bd48a29b6049",
+      "threshold": 0.75,
+      "case_id": "P02",
+      "answer_sha256": "4e6facb31ba9eabd2732ae6e52e776cc68b9f80acb83a4a264378c31adaaa14b",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "f2685976-3d5d-49e2-b8ce-e614f5420360",
+      "threshold": 0.75,
+      "case_id": "P03",
+      "answer_sha256": "c7876060e894980664aaa9bac723d8a6650fce85b72536990d6fcf26ef829782",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "a44b0238-cbf0-42c3-a382-88536956a47a",
+      "threshold": 0.75,
+      "case_id": "P04",
+      "answer_sha256": "4e6facb31ba9eabd2732ae6e52e776cc68b9f80acb83a4a264378c31adaaa14b",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "e9f702a2-05e9-4bea-b4cb-00617c94434a",
+      "threshold": 0.75,
+      "case_id": "P05",
+      "answer_sha256": "a33664b3a21c99788faea95f409d0c10817b374e6e84932450967b8de309d485",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "87f9ba0f-2786-413d-bb4e-9a66ad435148",
+      "threshold": 0.75,
+      "case_id": "P06",
+      "answer_sha256": "4c9686a61dedae3a3491d3b2cbebede685e4d133c4a93af6b35471e7065d82e5",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "b34cfc5a-1885-48e3-a6df-c2fb37450540",
+      "threshold": 0.75,
+      "case_id": "P07",
+      "answer_sha256": "c82b134b10152206dacdb116d686fa9ed17b34310fd259d70e3d0903158dfe81",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "c208f0c6-e242-4ae9-b10f-3dc2ee515d5c",
+      "threshold": 0.75,
+      "case_id": "P08",
+      "answer_sha256": "806fa2aee8ef89d9a525e5ab4ab7aac1265288507e8b92abcd59f1cf9c296e30",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "9883fab9-aa8f-45c3-8a06-5eb2d16fabb4",
+      "threshold": 0.75,
+      "case_id": "P09",
+      "answer_sha256": "668c8d2eef155aaadcaa2f71782333949cbeb0542fc13d18bae502145db85d0a",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "8f37daa4-a5e7-4b65-9a3f-92eb6d7a2a2e",
+      "threshold": 0.75,
+      "case_id": "P10",
+      "answer_sha256": "4e6facb31ba9eabd2732ae6e52e776cc68b9f80acb83a4a264378c31adaaa14b",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "a7addf33-a822-4a41-ab64-28f722691ec0",
+      "threshold": 0.75,
+      "case_id": "N01",
+      "answer_sha256": "c7876060e894980664aaa9bac723d8a6650fce85b72536990d6fcf26ef829782",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "f4e63c37-ccce-44a8-a3fc-cf9f41a192d7",
+      "threshold": 0.75,
+      "case_id": "N02",
+      "answer_sha256": "550f6b2714ca067508cd2ba2325b4c6d4d7cac6c740ea71cad595ccfd5067983",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "2aebd295-b202-482d-a0c9-d14b222b560c",
+      "threshold": 0.75,
+      "case_id": "N03",
+      "answer_sha256": "c7876060e894980664aaa9bac723d8a6650fce85b72536990d6fcf26ef829782",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "bcea49e0-b2bc-4419-9905-c3f81f493f41",
+      "threshold": 0.75,
+      "case_id": "N04",
+      "answer_sha256": "550f6b2714ca067508cd2ba2325b4c6d4d7cac6c740ea71cad595ccfd5067983",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "67286e9d-a75b-4a18-83fe-0c0f25afb309",
+      "threshold": 0.75,
+      "case_id": "N05",
+      "answer_sha256": "c7876060e894980664aaa9bac723d8a6650fce85b72536990d6fcf26ef829782",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "da1586ef-f9f8-4a0f-bbfc-66a917230a05",
+      "threshold": 0.75,
+      "case_id": "N06",
+      "answer_sha256": "550f6b2714ca067508cd2ba2325b4c6d4d7cac6c740ea71cad595ccfd5067983",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "1db648eb-21ae-4ebb-b09d-8fa6f319d93d",
+      "threshold": 0.75,
+      "case_id": "N07",
+      "answer_sha256": "c7876060e894980664aaa9bac723d8a6650fce85b72536990d6fcf26ef829782",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "84563484-afe2-4201-a754-e6b02de354f2",
+      "threshold": 0.75,
+      "case_id": "N08",
+      "answer_sha256": "550f6b2714ca067508cd2ba2325b4c6d4d7cac6c740ea71cad595ccfd5067983",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "b7704b5b-d7d6-4afe-80ae-c12f27b1843c",
+      "threshold": 0.75,
+      "case_id": "N09",
+      "answer_sha256": "fa416f6ea1656fdd640437b1fea874a1a91aa808102a84a6201b149fe68835c3",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "872b625f-1741-44f7-aab7-abd988eed013",
+      "threshold": 0.75,
+      "case_id": "N10",
+      "answer_sha256": "a76fd8371dba34fbadf9dbb0397ea0c3f2f1c2281a8615c4bbc2714998f237f0",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "e642a3ec-2b50-4257-869c-31a0f111e816",
+      "threshold": 0.75,
+      "case_id": "U01",
+      "answer_sha256": "9d778d27255cd063e6ed072cf72e3d60669c23b4eb99c231627e77494a546831",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen concept rubric; it explains the requested concept."
+    },
+    {
+      "request_id": "ccce8e5b-af56-4389-a0f4-d24e08ecee0f",
+      "threshold": 0.75,
+      "case_id": "U02",
+      "answer_sha256": "9d778d27255cd063e6ed072cf72e3d60669c23b4eb99c231627e77494a546831",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen concept rubric; it answers a different concept and does not satisfy the requested definition."
+    },
+    {
+      "request_id": "84b8a20d-a6e9-4bc0-9425-6afdd798b8de",
+      "threshold": 0.75,
+      "case_id": "U03",
+      "answer_sha256": "a08cef4e04077b44807da38d3df765942fdb8dcc16f025f4fd7a42bba8792652",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen concept rubric; it explains the requested concept."
+    },
+    {
+      "request_id": "2795f496-cf52-4dc0-bdbb-e90cc7615915",
+      "threshold": 0.75,
+      "case_id": "U04",
+      "answer_sha256": "9d778d27255cd063e6ed072cf72e3d60669c23b4eb99c231627e77494a546831",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen concept rubric; it answers a different concept and does not satisfy the requested definition."
+    },
+    {
+      "request_id": "8383f5f5-23ba-4255-a884-bd31cf95aee5",
+      "threshold": 0.75,
+      "case_id": "U05",
+      "answer_sha256": "9d778d27255cd063e6ed072cf72e3d60669c23b4eb99c231627e77494a546831",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen concept rubric; it answers a different concept and does not satisfy the requested definition."
+    },
+    {
+      "request_id": "9a1a8832-0c20-48b8-930d-bb4b81336aa2",
+      "threshold": 0.75,
+      "case_id": "U06",
+      "answer_sha256": "9d778d27255cd063e6ed072cf72e3d60669c23b4eb99c231627e77494a546831",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen concept rubric; it answers a different concept and does not satisfy the requested definition."
+    },
+    {
+      "request_id": "2fe7dc31-0ac3-49aa-a362-3cf750987bbc",
+      "threshold": 0.75,
+      "case_id": "U07",
+      "answer_sha256": "9d778d27255cd063e6ed072cf72e3d60669c23b4eb99c231627e77494a546831",
+      "automatic_correct": true,
+      "correct": false,
+      "reason": "The answer defines a security deposit and only mentions normal wear and tear as an exclusion; it does not define normal wear and tear."
+    },
+    {
+      "request_id": "c05a9efb-3f22-40fd-9c97-ea5eaa8bf835",
+      "threshold": 0.75,
+      "case_id": "U08",
+      "answer_sha256": "9d778d27255cd063e6ed072cf72e3d60669c23b4eb99c231627e77494a546831",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen concept rubric; it answers a different concept and does not satisfy the requested definition."
+    },
+    {
+      "request_id": "51dd986c-b651-4767-a2c8-f58d2bff5694",
+      "threshold": 0.75,
+      "case_id": "U09",
+      "answer_sha256": "9d778d27255cd063e6ed072cf72e3d60669c23b4eb99c231627e77494a546831",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen concept rubric; it answers a different concept and does not satisfy the requested definition."
+    },
+    {
+      "request_id": "55e0ebb6-0d50-4a60-890f-88660510ab3e",
+      "threshold": 0.75,
+      "case_id": "U10",
+      "answer_sha256": "9d778d27255cd063e6ed072cf72e3d60669c23b4eb99c231627e77494a546831",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen concept rubric; it answers a different concept and does not satisfy the requested definition."
+    },
+    {
+      "request_id": "433909b2-bce3-4eb1-9bdb-49c0573c4b6f",
+      "threshold": 0.8,
+      "case_id": "E01",
+      "answer_sha256": "fa416f6ea1656fdd640437b1fea874a1a91aa808102a84a6201b149fe68835c3",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "fd7512c6-8c2f-4905-80f9-f9aeca9660a4",
+      "threshold": 0.8,
+      "case_id": "E02",
+      "answer_sha256": "a76fd8371dba34fbadf9dbb0397ea0c3f2f1c2281a8615c4bbc2714998f237f0",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "073a9333-1b63-42eb-9be3-89343b976e12",
+      "threshold": 0.8,
+      "case_id": "E03",
+      "answer_sha256": "c7876060e894980664aaa9bac723d8a6650fce85b72536990d6fcf26ef829782",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "aaecab68-4930-47c7-950f-b176d1e0049b",
+      "threshold": 0.8,
+      "case_id": "E04",
+      "answer_sha256": "550f6b2714ca067508cd2ba2325b4c6d4d7cac6c740ea71cad595ccfd5067983",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "50906107-efd1-4f21-b5db-045ddfd7bfc9",
+      "threshold": 0.8,
+      "case_id": "E05",
+      "answer_sha256": "a33664b3a21c99788faea95f409d0c10817b374e6e84932450967b8de309d485",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "7f2ce36f-c175-4cde-9523-0356061c389e",
+      "threshold": 0.8,
+      "case_id": "E06",
+      "answer_sha256": "4c9686a61dedae3a3491d3b2cbebede685e4d133c4a93af6b35471e7065d82e5",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "88339446-2f8f-4af9-9e67-5582d4d2c0ec",
+      "threshold": 0.8,
+      "case_id": "E07",
+      "answer_sha256": "c82b134b10152206dacdb116d686fa9ed17b34310fd259d70e3d0903158dfe81",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "19a4f85b-ef23-4f63-903c-8dd3c1ed5e4a",
+      "threshold": 0.8,
+      "case_id": "E08",
+      "answer_sha256": "806fa2aee8ef89d9a525e5ab4ab7aac1265288507e8b92abcd59f1cf9c296e30",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "7d3d5cfa-dcfc-4d0f-8ed2-528eb3e38092",
+      "threshold": 0.8,
+      "case_id": "E09",
+      "answer_sha256": "668c8d2eef155aaadcaa2f71782333949cbeb0542fc13d18bae502145db85d0a",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "3bcf1824-0559-4c7f-8d25-38aa6286f69e",
+      "threshold": 0.8,
+      "case_id": "E10",
+      "answer_sha256": "4e6facb31ba9eabd2732ae6e52e776cc68b9f80acb83a4a264378c31adaaa14b",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "5c32320f-fe20-4499-a149-39b4dfb5890e",
+      "threshold": 0.8,
+      "case_id": "P01",
+      "answer_sha256": "c7876060e894980664aaa9bac723d8a6650fce85b72536990d6fcf26ef829782",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "d897c980-691a-4419-be81-15fad5b3a42c",
+      "threshold": 0.8,
+      "case_id": "P02",
+      "answer_sha256": "4e6facb31ba9eabd2732ae6e52e776cc68b9f80acb83a4a264378c31adaaa14b",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "5320467f-d1ab-4416-bec6-752a807ac8d5",
+      "threshold": 0.8,
+      "case_id": "P03",
+      "answer_sha256": "c7876060e894980664aaa9bac723d8a6650fce85b72536990d6fcf26ef829782",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "42df740c-0d62-4b82-9c0b-4fc4c7eff40e",
+      "threshold": 0.8,
+      "case_id": "P04",
+      "answer_sha256": "4e6facb31ba9eabd2732ae6e52e776cc68b9f80acb83a4a264378c31adaaa14b",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "e96399c6-8dfc-47b9-907f-c75551c7bcd5",
+      "threshold": 0.8,
+      "case_id": "P05",
+      "answer_sha256": "a33664b3a21c99788faea95f409d0c10817b374e6e84932450967b8de309d485",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "bd368d2f-a19f-4846-8706-53e17a6234ef",
+      "threshold": 0.8,
+      "case_id": "P06",
+      "answer_sha256": "4c9686a61dedae3a3491d3b2cbebede685e4d133c4a93af6b35471e7065d82e5",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "3bf68d9c-8d19-4703-8184-cf2198221d6c",
+      "threshold": 0.8,
+      "case_id": "P07",
+      "answer_sha256": "c82b134b10152206dacdb116d686fa9ed17b34310fd259d70e3d0903158dfe81",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "822c3f72-ba78-40eb-9dfa-5ee3da6f91d4",
+      "threshold": 0.8,
+      "case_id": "P08",
+      "answer_sha256": "806fa2aee8ef89d9a525e5ab4ab7aac1265288507e8b92abcd59f1cf9c296e30",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "52bf0185-a611-4ad3-b66a-d81341ffd8ce",
+      "threshold": 0.8,
+      "case_id": "P09",
+      "answer_sha256": "668c8d2eef155aaadcaa2f71782333949cbeb0542fc13d18bae502145db85d0a",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "d6739d3d-bc37-422c-bd48-2247840aaff9",
+      "threshold": 0.8,
+      "case_id": "P10",
+      "answer_sha256": "4e6facb31ba9eabd2732ae6e52e776cc68b9f80acb83a4a264378c31adaaa14b",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "ce392f7b-dd7b-43fc-b79d-b7df7c36049e",
+      "threshold": 0.8,
+      "case_id": "N01",
+      "answer_sha256": "c7876060e894980664aaa9bac723d8a6650fce85b72536990d6fcf26ef829782",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "c80be9d4-ce02-4f3f-958a-4a366fa839d6",
+      "threshold": 0.8,
+      "case_id": "N02",
+      "answer_sha256": "550f6b2714ca067508cd2ba2325b4c6d4d7cac6c740ea71cad595ccfd5067983",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "0d34e6a2-8d2b-430a-9915-a598d46c8d5b",
+      "threshold": 0.8,
+      "case_id": "N03",
+      "answer_sha256": "c7876060e894980664aaa9bac723d8a6650fce85b72536990d6fcf26ef829782",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "f3b31a4c-c578-4a17-88a5-3431705a9f2b",
+      "threshold": 0.8,
+      "case_id": "N04",
+      "answer_sha256": "550f6b2714ca067508cd2ba2325b4c6d4d7cac6c740ea71cad595ccfd5067983",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "b9bcc6ba-8850-4bd1-b922-8501be8bd9cb",
+      "threshold": 0.8,
+      "case_id": "N05",
+      "answer_sha256": "c7876060e894980664aaa9bac723d8a6650fce85b72536990d6fcf26ef829782",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "4c7e3272-0d7b-4a17-ac01-c35101464629",
+      "threshold": 0.8,
+      "case_id": "N06",
+      "answer_sha256": "550f6b2714ca067508cd2ba2325b4c6d4d7cac6c740ea71cad595ccfd5067983",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "10641d23-1b42-4698-92ee-a19d0fe8431a",
+      "threshold": 0.8,
+      "case_id": "N07",
+      "answer_sha256": "c7876060e894980664aaa9bac723d8a6650fce85b72536990d6fcf26ef829782",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "b85347e9-5d55-45c3-9117-21cf07ab5c2c",
+      "threshold": 0.8,
+      "case_id": "N08",
+      "answer_sha256": "550f6b2714ca067508cd2ba2325b4c6d4d7cac6c740ea71cad595ccfd5067983",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "e43136a3-c290-4fc9-b9ec-0c1d58dc9787",
+      "threshold": 0.8,
+      "case_id": "N09",
+      "answer_sha256": "fa416f6ea1656fdd640437b1fea874a1a91aa808102a84a6201b149fe68835c3",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "1045acd5-a886-4770-b626-a3bb4e38c28c",
+      "threshold": 0.8,
+      "case_id": "N10",
+      "answer_sha256": "a76fd8371dba34fbadf9dbb0397ea0c3f2f1c2281a8615c4bbc2714998f237f0",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "27b7d1bc-c924-4536-91cf-251a4b962eba",
+      "threshold": 0.8,
+      "case_id": "U01",
+      "answer_sha256": "9d778d27255cd063e6ed072cf72e3d60669c23b4eb99c231627e77494a546831",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen concept rubric; it explains the requested concept."
+    },
+    {
+      "request_id": "98004c11-b21b-49a6-a2dc-1516c0e2da8d",
+      "threshold": 0.8,
+      "case_id": "U02",
+      "answer_sha256": "49f6f03d3cd7228dd2b669a6f2dcef3aefd0f97c8b8bb42c809782935e807734",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen concept rubric; it explains the requested concept."
+    },
+    {
+      "request_id": "cc0ef81a-dee7-4f5a-8378-734043b8e4b6",
+      "threshold": 0.8,
+      "case_id": "U03",
+      "answer_sha256": "a08cef4e04077b44807da38d3df765942fdb8dcc16f025f4fd7a42bba8792652",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen concept rubric; it explains the requested concept."
+    },
+    {
+      "request_id": "03054d8d-6db1-48b5-ab3c-f6183a0de712",
+      "threshold": 0.8,
+      "case_id": "U04",
+      "answer_sha256": "49f6f03d3cd7228dd2b669a6f2dcef3aefd0f97c8b8bb42c809782935e807734",
+      "automatic_correct": true,
+      "correct": false,
+      "reason": "The answer defines a lease and mentions responsibilities, but never explains a co-signer guaranteeing tenant obligations."
+    },
+    {
+      "request_id": "0ebef32f-7bfd-44ed-a63e-836836782e2a",
+      "threshold": 0.8,
+      "case_id": "U05",
+      "answer_sha256": "9d778d27255cd063e6ed072cf72e3d60669c23b4eb99c231627e77494a546831",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen concept rubric; it answers a different concept and does not satisfy the requested definition."
+    },
+    {
+      "request_id": "8c04bf86-9783-40f6-b93c-5a0482a6d8ea",
+      "threshold": 0.8,
+      "case_id": "U06",
+      "answer_sha256": "862f8c1c40d3fad2e76f06b4bc3933c7cdb046bf25f2f69c4bd3e99d774872eb",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen concept rubric; it explains the requested concept."
+    },
+    {
+      "request_id": "7e0f30a0-2bc6-4bb1-8996-d964580bd7d3",
+      "threshold": 0.8,
+      "case_id": "U07",
+      "answer_sha256": "564339174d17a00df24c33db306ad52d3d7452c7430e887ef601067bd9375ee0",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen concept rubric; it explains the requested concept."
+    },
+    {
+      "request_id": "6d33a9e0-ad06-46b5-a43d-599330fe13e0",
+      "threshold": 0.8,
+      "case_id": "U08",
+      "answer_sha256": "663903ff58e51240d110f836640aa1f0fb716991d6d8a5fa2e0222c25b1dee45",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen concept rubric; it explains the requested concept."
+    },
+    {
+      "request_id": "b133755f-5869-4a94-b8f1-4b1c620a0c10",
+      "threshold": 0.8,
+      "case_id": "U09",
+      "answer_sha256": "49f6f03d3cd7228dd2b669a6f2dcef3aefd0f97c8b8bb42c809782935e807734",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen concept rubric; it answers a different concept and does not satisfy the requested definition."
+    },
+    {
+      "request_id": "1a8f9801-d2ff-40d0-bdc5-af9ac1bbaf68",
+      "threshold": 0.8,
+      "case_id": "U10",
+      "answer_sha256": "564339174d17a00df24c33db306ad52d3d7452c7430e887ef601067bd9375ee0",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen concept rubric; it answers a different concept and does not satisfy the requested definition."
+    },
+    {
+      "request_id": "da68dea2-d751-4c8a-8317-14dc9f44577b",
+      "threshold": 0.85,
+      "case_id": "E01",
+      "answer_sha256": "fa416f6ea1656fdd640437b1fea874a1a91aa808102a84a6201b149fe68835c3",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "29057d6d-287a-4457-b951-d1c73f92717c",
+      "threshold": 0.85,
+      "case_id": "E02",
+      "answer_sha256": "a76fd8371dba34fbadf9dbb0397ea0c3f2f1c2281a8615c4bbc2714998f237f0",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "5360bd99-af8e-4752-a3c6-9fde79920b3b",
+      "threshold": 0.85,
+      "case_id": "E03",
+      "answer_sha256": "c7876060e894980664aaa9bac723d8a6650fce85b72536990d6fcf26ef829782",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "a59a230c-1d44-47e3-9f1f-4eead6a00ba8",
+      "threshold": 0.85,
+      "case_id": "E04",
+      "answer_sha256": "550f6b2714ca067508cd2ba2325b4c6d4d7cac6c740ea71cad595ccfd5067983",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "5a7ef528-75c6-44ec-ada8-590feb62ef68",
+      "threshold": 0.85,
+      "case_id": "E05",
+      "answer_sha256": "a33664b3a21c99788faea95f409d0c10817b374e6e84932450967b8de309d485",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "c62b488d-0dea-4f47-bc6d-244ea8163369",
+      "threshold": 0.85,
+      "case_id": "E06",
+      "answer_sha256": "4c9686a61dedae3a3491d3b2cbebede685e4d133c4a93af6b35471e7065d82e5",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "e5d261d7-8b6f-4872-ac84-d91831055625",
+      "threshold": 0.85,
+      "case_id": "E07",
+      "answer_sha256": "c82b134b10152206dacdb116d686fa9ed17b34310fd259d70e3d0903158dfe81",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "7f0bb27c-9c04-4674-93aa-d9bec21181aa",
+      "threshold": 0.85,
+      "case_id": "E08",
+      "answer_sha256": "806fa2aee8ef89d9a525e5ab4ab7aac1265288507e8b92abcd59f1cf9c296e30",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "011ec9a7-a6a5-4f0f-9973-1c54d96ebc05",
+      "threshold": 0.85,
+      "case_id": "E09",
+      "answer_sha256": "668c8d2eef155aaadcaa2f71782333949cbeb0542fc13d18bae502145db85d0a",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "ba6c8134-4e5d-4f1c-aa35-24a5e01f026f",
+      "threshold": 0.85,
+      "case_id": "E10",
+      "answer_sha256": "4e6facb31ba9eabd2732ae6e52e776cc68b9f80acb83a4a264378c31adaaa14b",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "587f2aad-b2ba-41bb-b871-f4211eb20655",
+      "threshold": 0.85,
+      "case_id": "P01",
+      "answer_sha256": "c7876060e894980664aaa9bac723d8a6650fce85b72536990d6fcf26ef829782",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "c19ee11e-e0ed-486e-b28e-0a119761442e",
+      "threshold": 0.85,
+      "case_id": "P02",
+      "answer_sha256": "4e6facb31ba9eabd2732ae6e52e776cc68b9f80acb83a4a264378c31adaaa14b",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "f2ee1259-0a2c-4cc6-be7b-8f714d4d9f28",
+      "threshold": 0.85,
+      "case_id": "P03",
+      "answer_sha256": "c7876060e894980664aaa9bac723d8a6650fce85b72536990d6fcf26ef829782",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "e087f82d-f7fd-4d3a-947d-2604abebf7ca",
+      "threshold": 0.85,
+      "case_id": "P04",
+      "answer_sha256": "4e6facb31ba9eabd2732ae6e52e776cc68b9f80acb83a4a264378c31adaaa14b",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "bf6b003a-705a-4aa7-88e7-d68e8231cc02",
+      "threshold": 0.85,
+      "case_id": "P05",
+      "answer_sha256": "a33664b3a21c99788faea95f409d0c10817b374e6e84932450967b8de309d485",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "7c07a670-e5fc-4359-8a66-c5ecadb6d6fe",
+      "threshold": 0.85,
+      "case_id": "P06",
+      "answer_sha256": "4c9686a61dedae3a3491d3b2cbebede685e4d133c4a93af6b35471e7065d82e5",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "b2f22581-d6fe-4fe2-ae08-d1a2f065ba3b",
+      "threshold": 0.85,
+      "case_id": "P07",
+      "answer_sha256": "c82b134b10152206dacdb116d686fa9ed17b34310fd259d70e3d0903158dfe81",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "6b2dea32-a667-42f9-93ba-7ce337574633",
+      "threshold": 0.85,
+      "case_id": "P08",
+      "answer_sha256": "806fa2aee8ef89d9a525e5ab4ab7aac1265288507e8b92abcd59f1cf9c296e30",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "2511f21e-250d-42e6-85de-ebb39662d8ef",
+      "threshold": 0.85,
+      "case_id": "P09",
+      "answer_sha256": "668c8d2eef155aaadcaa2f71782333949cbeb0542fc13d18bae502145db85d0a",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "9c62ffe8-bf38-4bbd-8996-6dd5f890db04",
+      "threshold": 0.85,
+      "case_id": "P10",
+      "answer_sha256": "4e6facb31ba9eabd2732ae6e52e776cc68b9f80acb83a4a264378c31adaaa14b",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "6ba23eef-65ff-4923-bc05-0f44a16969b1",
+      "threshold": 0.85,
+      "case_id": "N01",
+      "answer_sha256": "c7876060e894980664aaa9bac723d8a6650fce85b72536990d6fcf26ef829782",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "d280d048-ba32-48eb-9293-4e69a30118d9",
+      "threshold": 0.85,
+      "case_id": "N02",
+      "answer_sha256": "550f6b2714ca067508cd2ba2325b4c6d4d7cac6c740ea71cad595ccfd5067983",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "33ce209f-d09c-4cc7-8726-69283d65ae4d",
+      "threshold": 0.85,
+      "case_id": "N03",
+      "answer_sha256": "c7876060e894980664aaa9bac723d8a6650fce85b72536990d6fcf26ef829782",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "d527b40b-9dbc-4064-b87d-d64047cf1e4d",
+      "threshold": 0.85,
+      "case_id": "N04",
+      "answer_sha256": "550f6b2714ca067508cd2ba2325b4c6d4d7cac6c740ea71cad595ccfd5067983",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "2d3bd35d-73e2-4000-b880-e7c46be04183",
+      "threshold": 0.85,
+      "case_id": "N05",
+      "answer_sha256": "c7876060e894980664aaa9bac723d8a6650fce85b72536990d6fcf26ef829782",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "41002abe-1e78-4870-88b7-f734894dea0c",
+      "threshold": 0.85,
+      "case_id": "N06",
+      "answer_sha256": "550f6b2714ca067508cd2ba2325b4c6d4d7cac6c740ea71cad595ccfd5067983",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "c91f5e8c-a9d4-4c19-8b8f-dd6f99b3d471",
+      "threshold": 0.85,
+      "case_id": "N07",
+      "answer_sha256": "c7876060e894980664aaa9bac723d8a6650fce85b72536990d6fcf26ef829782",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "ca849f7e-31c1-4070-a632-4a9f22132547",
+      "threshold": 0.85,
+      "case_id": "N08",
+      "answer_sha256": "550f6b2714ca067508cd2ba2325b4c6d4d7cac6c740ea71cad595ccfd5067983",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "1c3b7094-b6ba-4d68-b870-ca7266f43bf4",
+      "threshold": 0.85,
+      "case_id": "N09",
+      "answer_sha256": "fa416f6ea1656fdd640437b1fea874a1a91aa808102a84a6201b149fe68835c3",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "c097d846-73c3-4291-b6e7-9c2ca112d908",
+      "threshold": 0.85,
+      "case_id": "N10",
+      "answer_sha256": "a76fd8371dba34fbadf9dbb0397ea0c3f2f1c2281a8615c4bbc2714998f237f0",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "1aecc280-6c6a-4564-8201-6cf6cbff18f2",
+      "threshold": 0.85,
+      "case_id": "U01",
+      "answer_sha256": "9d778d27255cd063e6ed072cf72e3d60669c23b4eb99c231627e77494a546831",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen concept rubric; it explains the requested concept."
+    },
+    {
+      "request_id": "391bd7ba-60de-4a1a-85a7-afa4b83231cf",
+      "threshold": 0.85,
+      "case_id": "U02",
+      "answer_sha256": "49f6f03d3cd7228dd2b669a6f2dcef3aefd0f97c8b8bb42c809782935e807734",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen concept rubric; it explains the requested concept."
+    },
+    {
+      "request_id": "2f5c6e85-208d-45fc-b66a-38fe636e2650",
+      "threshold": 0.85,
+      "case_id": "U03",
+      "answer_sha256": "a08cef4e04077b44807da38d3df765942fdb8dcc16f025f4fd7a42bba8792652",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen concept rubric; it explains the requested concept."
+    },
+    {
+      "request_id": "c663fe44-f39a-4f24-ab7f-f2d9c450601b",
+      "threshold": 0.85,
+      "case_id": "U04",
+      "answer_sha256": "317b4c5e118a11c43b5a657c3556b8485d4103ff581c53166a611f24d869aa34",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen concept rubric; it explains the requested concept."
+    },
+    {
+      "request_id": "376e274a-e7f7-4c4a-a867-f6aff142ca53",
+      "threshold": 0.85,
+      "case_id": "U05",
+      "answer_sha256": "1a5eb26fd5e50ac43f6d28eb460d913abfd954274e9ffcac30265ab0f9b1344b",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen concept rubric; it explains the requested concept."
+    },
+    {
+      "request_id": "867a96ec-e59f-4185-9117-b1c37696317b",
+      "threshold": 0.85,
+      "case_id": "U06",
+      "answer_sha256": "862f8c1c40d3fad2e76f06b4bc3933c7cdb046bf25f2f69c4bd3e99d774872eb",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen concept rubric; it explains the requested concept."
+    },
+    {
+      "request_id": "aeca2025-5ce5-4758-bb5e-ec0a06976e18",
+      "threshold": 0.85,
+      "case_id": "U07",
+      "answer_sha256": "564339174d17a00df24c33db306ad52d3d7452c7430e887ef601067bd9375ee0",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen concept rubric; it explains the requested concept."
+    },
+    {
+      "request_id": "a4203c43-47f7-45a8-9559-af2d0d103067",
+      "threshold": 0.85,
+      "case_id": "U08",
+      "answer_sha256": "663903ff58e51240d110f836640aa1f0fb716991d6d8a5fa2e0222c25b1dee45",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen concept rubric; it explains the requested concept."
+    },
+    {
+      "request_id": "a8c38fcc-706a-40d9-b071-23fd819f41ae",
+      "threshold": 0.85,
+      "case_id": "U09",
+      "answer_sha256": "652eba6dce34af8f2f272ade8ad0f328a9162c49b7b0c44551165b910fb80a7d",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen concept rubric; it explains the requested concept."
+    },
+    {
+      "request_id": "2fd5227f-76f0-4913-ae1d-af1c9bfc3641",
+      "threshold": 0.85,
+      "case_id": "U10",
+      "answer_sha256": "26eb0969f437895e2cf61841b689b807fbe6af8df3c6eca9629ef378d463bbdf",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen concept rubric; it explains the requested concept."
+    },
+    {
+      "request_id": "d0a2decc-f6da-4c26-93c9-052c3ff613c4",
+      "threshold": 0.9,
+      "case_id": "E01",
+      "answer_sha256": "fa416f6ea1656fdd640437b1fea874a1a91aa808102a84a6201b149fe68835c3",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "66393c42-b059-4bde-91cc-82b2e15a9814",
+      "threshold": 0.9,
+      "case_id": "E02",
+      "answer_sha256": "a76fd8371dba34fbadf9dbb0397ea0c3f2f1c2281a8615c4bbc2714998f237f0",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "eefff35f-56a7-4775-8498-7d722e8f42ce",
+      "threshold": 0.9,
+      "case_id": "E03",
+      "answer_sha256": "c7876060e894980664aaa9bac723d8a6650fce85b72536990d6fcf26ef829782",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "1aaea2d0-c6bd-44a4-8323-e3d7183a8e05",
+      "threshold": 0.9,
+      "case_id": "E04",
+      "answer_sha256": "550f6b2714ca067508cd2ba2325b4c6d4d7cac6c740ea71cad595ccfd5067983",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "4c73b0c9-53c4-4bb7-9c21-a305e7d6545c",
+      "threshold": 0.9,
+      "case_id": "E05",
+      "answer_sha256": "a33664b3a21c99788faea95f409d0c10817b374e6e84932450967b8de309d485",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "a026f13c-c922-48a3-81ac-bc3f1bf9fcfb",
+      "threshold": 0.9,
+      "case_id": "E06",
+      "answer_sha256": "4c9686a61dedae3a3491d3b2cbebede685e4d133c4a93af6b35471e7065d82e5",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "98f95a66-7ecf-444e-8b7b-f44505366c2c",
+      "threshold": 0.9,
+      "case_id": "E07",
+      "answer_sha256": "c82b134b10152206dacdb116d686fa9ed17b34310fd259d70e3d0903158dfe81",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "3894599f-df04-473e-a84b-05a9cc28eb4a",
+      "threshold": 0.9,
+      "case_id": "E08",
+      "answer_sha256": "806fa2aee8ef89d9a525e5ab4ab7aac1265288507e8b92abcd59f1cf9c296e30",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "89a40198-c401-4b48-81e3-092e5cb94fec",
+      "threshold": 0.9,
+      "case_id": "E09",
+      "answer_sha256": "668c8d2eef155aaadcaa2f71782333949cbeb0542fc13d18bae502145db85d0a",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "74427aaf-07ca-458c-ac59-b2d157869823",
+      "threshold": 0.9,
+      "case_id": "E10",
+      "answer_sha256": "4e6facb31ba9eabd2732ae6e52e776cc68b9f80acb83a4a264378c31adaaa14b",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "f1a34688-7cc1-4bbd-a79d-41bbaf63f125",
+      "threshold": 0.9,
+      "case_id": "P01",
+      "answer_sha256": "c7876060e894980664aaa9bac723d8a6650fce85b72536990d6fcf26ef829782",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "1d355ada-ed6d-44a7-8735-757410fdb1dc",
+      "threshold": 0.9,
+      "case_id": "P02",
+      "answer_sha256": "852ecc8986991eceb8133d603109ce647f9b10f09a26a0251175573a69e5536c",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "c3f93589-0cad-4c44-9e2f-15e4719d1d0f",
+      "threshold": 0.9,
+      "case_id": "P03",
+      "answer_sha256": "c7876060e894980664aaa9bac723d8a6650fce85b72536990d6fcf26ef829782",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "f7c7e0b7-3a7d-4f71-b803-a1d4e3277f33",
+      "threshold": 0.9,
+      "case_id": "P04",
+      "answer_sha256": "852ecc8986991eceb8133d603109ce647f9b10f09a26a0251175573a69e5536c",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "9b5d2237-b658-4ff4-9248-ae02db16ff9a",
+      "threshold": 0.9,
+      "case_id": "P05",
+      "answer_sha256": "a33664b3a21c99788faea95f409d0c10817b374e6e84932450967b8de309d485",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "c61caf63-d392-4d90-b334-78406c31e439",
+      "threshold": 0.9,
+      "case_id": "P06",
+      "answer_sha256": "852ecc8986991eceb8133d603109ce647f9b10f09a26a0251175573a69e5536c",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "0667d452-8643-473d-abca-bc635837bb30",
+      "threshold": 0.9,
+      "case_id": "P07",
+      "answer_sha256": "c82b134b10152206dacdb116d686fa9ed17b34310fd259d70e3d0903158dfe81",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "9dd51fc0-2e6d-4b8f-8bcf-292c535ed947",
+      "threshold": 0.9,
+      "case_id": "P08",
+      "answer_sha256": "852ecc8986991eceb8133d603109ce647f9b10f09a26a0251175573a69e5536c",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "b2771495-e531-4156-a986-1334c72a3159",
+      "threshold": 0.9,
+      "case_id": "P09",
+      "answer_sha256": "668c8d2eef155aaadcaa2f71782333949cbeb0542fc13d18bae502145db85d0a",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "0d7672a7-f1da-4ba7-a8a5-2863276418bc",
+      "threshold": 0.9,
+      "case_id": "P10",
+      "answer_sha256": "852ecc8986991eceb8133d603109ce647f9b10f09a26a0251175573a69e5536c",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "a5186ee5-f50a-4983-ab72-15bb79b948ba",
+      "threshold": 0.9,
+      "case_id": "N01",
+      "answer_sha256": "c7876060e894980664aaa9bac723d8a6650fce85b72536990d6fcf26ef829782",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "549b4832-190d-4d0d-ae0d-20b16d9b228e",
+      "threshold": 0.9,
+      "case_id": "N02",
+      "answer_sha256": "550f6b2714ca067508cd2ba2325b4c6d4d7cac6c740ea71cad595ccfd5067983",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "8aa0bf90-6f95-4d91-81b5-fd0688aa3d0c",
+      "threshold": 0.9,
+      "case_id": "N03",
+      "answer_sha256": "c7876060e894980664aaa9bac723d8a6650fce85b72536990d6fcf26ef829782",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "993044b8-2b6b-4672-97ba-e3809a10286b",
+      "threshold": 0.9,
+      "case_id": "N04",
+      "answer_sha256": "550f6b2714ca067508cd2ba2325b4c6d4d7cac6c740ea71cad595ccfd5067983",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "c0d62443-c348-4eff-860e-1747fea7ed2b",
+      "threshold": 0.9,
+      "case_id": "N05",
+      "answer_sha256": "c7876060e894980664aaa9bac723d8a6650fce85b72536990d6fcf26ef829782",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "6a256496-0096-402d-85cc-9cdef6d29693",
+      "threshold": 0.9,
+      "case_id": "N06",
+      "answer_sha256": "550f6b2714ca067508cd2ba2325b4c6d4d7cac6c740ea71cad595ccfd5067983",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "35805e5a-feb0-4dd2-b5b8-f71fb2b6266c",
+      "threshold": 0.9,
+      "case_id": "N07",
+      "answer_sha256": "c7876060e894980664aaa9bac723d8a6650fce85b72536990d6fcf26ef829782",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "1637cf76-0aa2-4c7b-996b-cf33ca809743",
+      "threshold": 0.9,
+      "case_id": "N08",
+      "answer_sha256": "550f6b2714ca067508cd2ba2325b4c6d4d7cac6c740ea71cad595ccfd5067983",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "2b1f19ea-de89-4199-8d78-8c600a4ee212",
+      "threshold": 0.9,
+      "case_id": "N09",
+      "answer_sha256": "fa416f6ea1656fdd640437b1fea874a1a91aa808102a84a6201b149fe68835c3",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "ff361b5d-6d5a-417c-b213-b36fcdec227c",
+      "threshold": 0.9,
+      "case_id": "N10",
+      "answer_sha256": "a76fd8371dba34fbadf9dbb0397ea0c3f2f1c2281a8615c4bbc2714998f237f0",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "faf38c23-fc10-409c-a9d7-cffa4e40ac53",
+      "threshold": 0.9,
+      "case_id": "U01",
+      "answer_sha256": "9d778d27255cd063e6ed072cf72e3d60669c23b4eb99c231627e77494a546831",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen concept rubric; it explains the requested concept."
+    },
+    {
+      "request_id": "0ffaaa1a-5ffd-43cd-a63b-79a14e1d4e3f",
+      "threshold": 0.9,
+      "case_id": "U02",
+      "answer_sha256": "49f6f03d3cd7228dd2b669a6f2dcef3aefd0f97c8b8bb42c809782935e807734",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen concept rubric; it explains the requested concept."
+    },
+    {
+      "request_id": "eec8cc18-67a7-4b06-92ef-16705de2f313",
+      "threshold": 0.9,
+      "case_id": "U03",
+      "answer_sha256": "a08cef4e04077b44807da38d3df765942fdb8dcc16f025f4fd7a42bba8792652",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen concept rubric; it explains the requested concept."
+    },
+    {
+      "request_id": "159b5e58-e3a6-4bf0-8f5a-c222d287e84f",
+      "threshold": 0.9,
+      "case_id": "U04",
+      "answer_sha256": "317b4c5e118a11c43b5a657c3556b8485d4103ff581c53166a611f24d869aa34",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen concept rubric; it explains the requested concept."
+    },
+    {
+      "request_id": "316a048f-9435-45ab-bb38-da051ae271ba",
+      "threshold": 0.9,
+      "case_id": "U05",
+      "answer_sha256": "1a5eb26fd5e50ac43f6d28eb460d913abfd954274e9ffcac30265ab0f9b1344b",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen concept rubric; it explains the requested concept."
+    },
+    {
+      "request_id": "ad8c75cd-118d-4a01-a2c5-cf8619f110c2",
+      "threshold": 0.9,
+      "case_id": "U06",
+      "answer_sha256": "862f8c1c40d3fad2e76f06b4bc3933c7cdb046bf25f2f69c4bd3e99d774872eb",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen concept rubric; it explains the requested concept."
+    },
+    {
+      "request_id": "4f98ef19-0fe0-46a2-ae12-32149ed0b163",
+      "threshold": 0.9,
+      "case_id": "U07",
+      "answer_sha256": "564339174d17a00df24c33db306ad52d3d7452c7430e887ef601067bd9375ee0",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen concept rubric; it explains the requested concept."
+    },
+    {
+      "request_id": "cc6b7c7d-05f4-4b24-852f-55d9e7e9b687",
+      "threshold": 0.9,
+      "case_id": "U08",
+      "answer_sha256": "663903ff58e51240d110f836640aa1f0fb716991d6d8a5fa2e0222c25b1dee45",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen concept rubric; it explains the requested concept."
+    },
+    {
+      "request_id": "27acdfa6-ee35-4068-8fe2-9dad19631ad1",
+      "threshold": 0.9,
+      "case_id": "U09",
+      "answer_sha256": "652eba6dce34af8f2f272ade8ad0f328a9162c49b7b0c44551165b910fb80a7d",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen concept rubric; it explains the requested concept."
+    },
+    {
+      "request_id": "d31b9ecd-6ff0-4341-b84d-f92ce4442f33",
+      "threshold": 0.9,
+      "case_id": "U10",
+      "answer_sha256": "26eb0969f437895e2cf61841b689b807fbe6af8df3c6eca9629ef378d463bbdf",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen concept rubric; it explains the requested concept."
+    },
+    {
+      "request_id": "9d0ad47c-4503-40ac-b297-7abe74b81c54",
+      "threshold": 0.95,
+      "case_id": "E01",
+      "answer_sha256": "fa416f6ea1656fdd640437b1fea874a1a91aa808102a84a6201b149fe68835c3",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "a05f1165-2a7b-47f2-b4aa-d04829b43f6f",
+      "threshold": 0.95,
+      "case_id": "E02",
+      "answer_sha256": "a76fd8371dba34fbadf9dbb0397ea0c3f2f1c2281a8615c4bbc2714998f237f0",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "15bfc37c-1631-48d8-bad4-58ebfe23acad",
+      "threshold": 0.95,
+      "case_id": "E03",
+      "answer_sha256": "c7876060e894980664aaa9bac723d8a6650fce85b72536990d6fcf26ef829782",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "274a0d0c-33c3-4284-9f2c-8cb532700f51",
+      "threshold": 0.95,
+      "case_id": "E04",
+      "answer_sha256": "550f6b2714ca067508cd2ba2325b4c6d4d7cac6c740ea71cad595ccfd5067983",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "ff84a334-4cfb-4f6b-90a5-87df249f86c7",
+      "threshold": 0.95,
+      "case_id": "E05",
+      "answer_sha256": "a33664b3a21c99788faea95f409d0c10817b374e6e84932450967b8de309d485",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "8c6c20a9-547c-445f-8eab-d7afc8fe13e7",
+      "threshold": 0.95,
+      "case_id": "E06",
+      "answer_sha256": "4c9686a61dedae3a3491d3b2cbebede685e4d133c4a93af6b35471e7065d82e5",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "05e4408a-ae0d-4682-8acb-76e55dfd1b43",
+      "threshold": 0.95,
+      "case_id": "E07",
+      "answer_sha256": "c82b134b10152206dacdb116d686fa9ed17b34310fd259d70e3d0903158dfe81",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "ac8e16c7-eff4-4737-96e2-a72ed5cba56b",
+      "threshold": 0.95,
+      "case_id": "E08",
+      "answer_sha256": "806fa2aee8ef89d9a525e5ab4ab7aac1265288507e8b92abcd59f1cf9c296e30",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "0d2429c6-c2be-49bd-841a-5371ba8e64a7",
+      "threshold": 0.95,
+      "case_id": "E09",
+      "answer_sha256": "668c8d2eef155aaadcaa2f71782333949cbeb0542fc13d18bae502145db85d0a",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "4ceed821-1eb9-4d76-bfcd-f012b81fdef3",
+      "threshold": 0.95,
+      "case_id": "E10",
+      "answer_sha256": "4e6facb31ba9eabd2732ae6e52e776cc68b9f80acb83a4a264378c31adaaa14b",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "9d305703-f05d-4cc1-a62a-1b1e6a067ad4",
+      "threshold": 0.95,
+      "case_id": "P01",
+      "answer_sha256": "c7876060e894980664aaa9bac723d8a6650fce85b72536990d6fcf26ef829782",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "d208ffc5-ab5f-4f2d-9e84-997e00d7475c",
+      "threshold": 0.95,
+      "case_id": "P02",
+      "answer_sha256": "852ecc8986991eceb8133d603109ce647f9b10f09a26a0251175573a69e5536c",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "93a063b3-0190-4843-976d-bdc1ca162b70",
+      "threshold": 0.95,
+      "case_id": "P03",
+      "answer_sha256": "c7876060e894980664aaa9bac723d8a6650fce85b72536990d6fcf26ef829782",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "fbf8166c-8f67-4063-b94e-0bff00927be1",
+      "threshold": 0.95,
+      "case_id": "P04",
+      "answer_sha256": "852ecc8986991eceb8133d603109ce647f9b10f09a26a0251175573a69e5536c",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "252f878c-d1f4-4fed-9935-eed2d9696cb8",
+      "threshold": 0.95,
+      "case_id": "P05",
+      "answer_sha256": "a33664b3a21c99788faea95f409d0c10817b374e6e84932450967b8de309d485",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "eb02fa47-8814-4d7c-84a8-615dbb2ce968",
+      "threshold": 0.95,
+      "case_id": "P06",
+      "answer_sha256": "852ecc8986991eceb8133d603109ce647f9b10f09a26a0251175573a69e5536c",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "557c0497-6ffe-4c12-acbd-10dbe9207e36",
+      "threshold": 0.95,
+      "case_id": "P07",
+      "answer_sha256": "c82b134b10152206dacdb116d686fa9ed17b34310fd259d70e3d0903158dfe81",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "9f36079a-a6fb-4018-9bf2-57d354ddc48b",
+      "threshold": 0.95,
+      "case_id": "P08",
+      "answer_sha256": "852ecc8986991eceb8133d603109ce647f9b10f09a26a0251175573a69e5536c",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "59c75ef8-c39e-475e-915e-181090814e6a",
+      "threshold": 0.95,
+      "case_id": "P09",
+      "answer_sha256": "668c8d2eef155aaadcaa2f71782333949cbeb0542fc13d18bae502145db85d0a",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; identity and value agree."
+    },
+    {
+      "request_id": "32c98024-1907-4496-89e8-d59f5bb54133",
+      "threshold": 0.95,
+      "case_id": "P10",
+      "answer_sha256": "852ecc8986991eceb8133d603109ce647f9b10f09a26a0251175573a69e5536c",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "1d0b1018-b92b-4496-abd8-3ba63f7c65a9",
+      "threshold": 0.95,
+      "case_id": "N01",
+      "answer_sha256": "c7876060e894980664aaa9bac723d8a6650fce85b72536990d6fcf26ef829782",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "4649a399-be5b-45b6-916d-91a52ce0e077",
+      "threshold": 0.95,
+      "case_id": "N02",
+      "answer_sha256": "550f6b2714ca067508cd2ba2325b4c6d4d7cac6c740ea71cad595ccfd5067983",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "c5599fb3-e3df-447b-9a9a-92181e2814a0",
+      "threshold": 0.95,
+      "case_id": "N03",
+      "answer_sha256": "c7876060e894980664aaa9bac723d8a6650fce85b72536990d6fcf26ef829782",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "88a8ce97-da54-4d07-a779-e5343ac62237",
+      "threshold": 0.95,
+      "case_id": "N04",
+      "answer_sha256": "550f6b2714ca067508cd2ba2325b4c6d4d7cac6c740ea71cad595ccfd5067983",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "437c8d0f-e08e-49bf-ba7f-efd6ae63e3cc",
+      "threshold": 0.95,
+      "case_id": "N05",
+      "answer_sha256": "c7876060e894980664aaa9bac723d8a6650fce85b72536990d6fcf26ef829782",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "cbe54ffc-53ed-44da-bdaf-c7ef8c0fc3c2",
+      "threshold": 0.95,
+      "case_id": "N06",
+      "answer_sha256": "550f6b2714ca067508cd2ba2325b4c6d4d7cac6c740ea71cad595ccfd5067983",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "044b7b8f-dd6d-4d93-bea4-7ff34a601018",
+      "threshold": 0.95,
+      "case_id": "N07",
+      "answer_sha256": "c7876060e894980664aaa9bac723d8a6650fce85b72536990d6fcf26ef829782",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "f31188bf-2b28-4ffb-9037-c2383b608b2c",
+      "threshold": 0.95,
+      "case_id": "N08",
+      "answer_sha256": "550f6b2714ca067508cd2ba2325b4c6d4d7cac6c740ea71cad595ccfd5067983",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "46f487bb-06e7-4381-8b8a-948f506102ef",
+      "threshold": 0.95,
+      "case_id": "N09",
+      "answer_sha256": "fa416f6ea1656fdd640437b1fea874a1a91aa808102a84a6201b149fe68835c3",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "118487b1-6b95-48a7-be08-0ad8651cabf1",
+      "threshold": 0.95,
+      "case_id": "N10",
+      "answer_sha256": "a76fd8371dba34fbadf9dbb0397ea0c3f2f1c2281a8615c4bbc2714998f237f0",
+      "automatic_correct": false,
+      "correct": false,
+      "reason": "Complete answer checked against the frozen listing identity and requested fact; it explicitly names a different listing and/or gives a different requested value."
+    },
+    {
+      "request_id": "f1ac2ea5-3c4d-4db8-b50e-0982c544a43f",
+      "threshold": 0.95,
+      "case_id": "U01",
+      "answer_sha256": "9d778d27255cd063e6ed072cf72e3d60669c23b4eb99c231627e77494a546831",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen concept rubric; it explains the requested concept."
+    },
+    {
+      "request_id": "97769990-7c38-41cd-ae6d-a234ecbde324",
+      "threshold": 0.95,
+      "case_id": "U02",
+      "answer_sha256": "49f6f03d3cd7228dd2b669a6f2dcef3aefd0f97c8b8bb42c809782935e807734",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen concept rubric; it explains the requested concept."
+    },
+    {
+      "request_id": "d2fd40bf-5b76-40ab-a530-fa683005fe64",
+      "threshold": 0.95,
+      "case_id": "U03",
+      "answer_sha256": "a08cef4e04077b44807da38d3df765942fdb8dcc16f025f4fd7a42bba8792652",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen concept rubric; it explains the requested concept."
+    },
+    {
+      "request_id": "620fe0a4-76ca-49bd-8b5f-10d175c92a09",
+      "threshold": 0.95,
+      "case_id": "U04",
+      "answer_sha256": "317b4c5e118a11c43b5a657c3556b8485d4103ff581c53166a611f24d869aa34",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen concept rubric; it explains the requested concept."
+    },
+    {
+      "request_id": "af8c7cc8-6b4d-4036-a48a-1bec3c566b12",
+      "threshold": 0.95,
+      "case_id": "U05",
+      "answer_sha256": "1a5eb26fd5e50ac43f6d28eb460d913abfd954274e9ffcac30265ab0f9b1344b",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen concept rubric; it explains the requested concept."
+    },
+    {
+      "request_id": "15ff5b72-08e0-4eb0-b24f-0055bbd84667",
+      "threshold": 0.95,
+      "case_id": "U06",
+      "answer_sha256": "862f8c1c40d3fad2e76f06b4bc3933c7cdb046bf25f2f69c4bd3e99d774872eb",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen concept rubric; it explains the requested concept."
+    },
+    {
+      "request_id": "3c0372d8-df0c-49d3-89e1-dd7cc54a9857",
+      "threshold": 0.95,
+      "case_id": "U07",
+      "answer_sha256": "564339174d17a00df24c33db306ad52d3d7452c7430e887ef601067bd9375ee0",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen concept rubric; it explains the requested concept."
+    },
+    {
+      "request_id": "7e459aac-6fbd-4781-8147-d953ea03ad2b",
+      "threshold": 0.95,
+      "case_id": "U08",
+      "answer_sha256": "663903ff58e51240d110f836640aa1f0fb716991d6d8a5fa2e0222c25b1dee45",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen concept rubric; it explains the requested concept."
+    },
+    {
+      "request_id": "c68acfcc-38b8-44b5-aa59-c0ac6df043f9",
+      "threshold": 0.95,
+      "case_id": "U09",
+      "answer_sha256": "652eba6dce34af8f2f272ade8ad0f328a9162c49b7b0c44551165b910fb80a7d",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen concept rubric; it explains the requested concept."
+    },
+    {
+      "request_id": "23c5421c-aae3-4514-955c-f08552ed7bd3",
+      "threshold": 0.95,
+      "case_id": "U10",
+      "answer_sha256": "26eb0969f437895e2cf61841b689b807fbe6af8df3c6eca9629ef378d463bbdf",
+      "automatic_correct": true,
+      "correct": true,
+      "reason": "Complete answer checked against the frozen concept rubric; it explains the requested concept."
+    }
+  ],
+  "automatic_scoring_corrections": 2
+}
