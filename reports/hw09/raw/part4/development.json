@@ -1,0 +1,356 @@
+{
+  "started_at": "2026-11-07T03:05:00.400531+00:00",
+  "finished_at": "2026-11-07T03:05:15.023508+00:00",
+  "model": {
+    "adapter_settings": {
+      "model_name": "qwen2.5:7b",
+      "base_url": "http://127.0.0.1:11434",
+      "temperature": 0,
+      "timeout": 90,
+      "response_format": "json",
+      "context_window": 4096,
+      "output_limit": 256,
+      "seed": 6102
+    },
+    "digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+    "quantization": "Q4_K_M",
+    "ollama_version": "0.33.0"
+  },
+  "training_runs": [
+    {
+      "question": {
+        "listing_id": "S6102-R-9401",
+        "question": "How many units at this listing can a tenant move into now?",
+        "requested_fields": [
+          "available_units"
+        ]
+      },
+      "lesson_ids": [],
+      "attempts": [
+        {
+          "answer": {
+            "raw": "{\"available_units\": 7}",
+            "claims": {
+              "available_units": 7
+            }
+          },
+          "grade": {
+            "result": "REVISE",
+            "explanation": "Missing or incorrect: available_units.",
+            "feedback": "Set these requested fields to the reference values: {\"available_units\": 2}",
+            "incorrect_fields": [
+              "available_units"
+            ],
+            "unsupported_claims": [
+              "{\"available_units\": 7}"
+            ]
+          }
+        },
+        {
+          "answer": {
+            "raw": "{\"available_units\": 2}",
+            "claims": {
+              "available_units": 2
+            }
+          },
+          "grade": {
+            "result": "PASS",
+            "explanation": "All requested fields agree with the reference.",
+            "feedback": null,
+            "incorrect_fields": [],
+            "unsupported_claims": []
+          }
+        }
+      ],
+      "final_response": "Available units: 2",
+      "latency_ms": 5673.602167,
+      "attempt_count": 2,
+      "final_evaluation": {
+        "result": "PASS",
+        "explanation": "All requested fields agree with the reference.",
+        "feedback": null,
+        "incorrect_fields": [],
+        "unsupported_claims": []
+      }
+    },
+    {
+      "question": {
+        "listing_id": "S6102-R-9402",
+        "question": "Tell me the monthly rent and the number of units ready for immediate move-in.",
+        "requested_fields": [
+          "rent_usd",
+          "available_units"
+        ]
+      },
+      "lesson_ids": [],
+      "attempts": [
+        {
+          "answer": {
+            "raw": "{\"rent_usd\": 1900, \"available_units\": 5}",
+            "claims": {
+              "rent_usd": 1900,
+              "available_units": 5
+            }
+          },
+          "grade": {
+            "result": "REVISE",
+            "explanation": "Missing or incorrect: available_units.",
+            "feedback": "Set these requested fields to the reference values: {\"available_units\": 4}",
+            "incorrect_fields": [
+              "available_units"
+            ],
+            "unsupported_claims": [
+              "{\"available_units\": 5}"
+            ]
+          }
+        },
+        {
+          "answer": {
+            "raw": "{\"rent_usd\": 1900, \"available_units\": 4}",
+            "claims": {
+              "rent_usd": 1900,
+              "available_units": 4
+            }
+          },
+          "grade": {
+            "result": "PASS",
+            "explanation": "All requested fields agree with the reference.",
+            "feedback": null,
+            "incorrect_fields": [],
+            "unsupported_claims": []
+          }
+        }
+      ],
+      "final_response": "Rent usd: 1900\nAvailable units: 4",
+      "latency_ms": 2827.777625,
+      "attempt_count": 2,
+      "final_evaluation": {
+        "result": "PASS",
+        "explanation": "All requested fields agree with the reference.",
+        "feedback": null,
+        "incorrect_fields": [],
+        "unsupported_claims": []
+      }
+    },
+    {
+      "question": {
+        "listing_id": "S6102-R-9404",
+        "question": "How many bedrooms does a unit have?",
+        "requested_fields": [
+          "bedrooms"
+        ]
+      },
+      "lesson_ids": [],
+      "attempts": [
+        {
+          "answer": {
+            "raw": "{\"bedrooms\": 1}",
+            "claims": {
+              "bedrooms": 1
+            }
+          },
+          "grade": {
+            "result": "PASS",
+            "explanation": "All requested fields agree with the reference.",
+            "feedback": null,
+            "incorrect_fields": [],
+            "unsupported_claims": []
+          }
+        }
+      ],
+      "final_response": "Bedrooms: 1",
+      "latency_ms": 800.93475,
+      "attempt_count": 1,
+      "final_evaluation": {
+        "result": "PASS",
+        "explanation": "All requested fields agree with the reference.",
+        "feedback": null,
+        "incorrect_fields": [],
+        "unsupported_claims": []
+      }
+    }
+  ],
+  "repeated_failure_listing_ids": [
+    "S6102-R-9401",
+    "S6102-R-9402"
+  ],
+  "controlled_revision": {
+    "question": {
+      "listing_id": "S6102-R-9402",
+      "question": "Tell me the monthly rent and the number of units ready for immediate move-in.",
+      "requested_fields": [
+        "rent_usd",
+        "available_units"
+      ]
+    },
+    "lesson_ids": [],
+    "attempts": [
+      {
+        "answer": {
+          "raw": "{\"rent_usd\": 1900}",
+          "claims": {
+            "rent_usd": 1900
+          }
+        },
+        "grade": {
+          "result": "REVISE",
+          "explanation": "Missing or incorrect: available_units.",
+          "feedback": "Set these requested fields to the reference values: {\"available_units\": 4}",
+          "incorrect_fields": [
+            "available_units"
+          ],
+          "unsupported_claims": []
+        }
+      },
+      {
+        "answer": {
+          "raw": "{\n  \"rent_usd\": 1900,\n  \"available_units\": 4\n}",
+          "claims": {
+            "rent_usd": 1900,
+            "available_units": 4
+          }
+        },
+        "grade": {
+          "result": "PASS",
+          "explanation": "All requested fields agree with the reference.",
+          "feedback": null,
+          "incorrect_fields": [],
+          "unsupported_claims": []
+        }
+      }
+    ],
+    "final_response": "Rent usd: 1900\nAvailable units: 4",
+    "latency_ms": 2995.951792,
+    "attempt_count": 2,
+    "final_evaluation": {
+      "result": "PASS",
+      "explanation": "All requested fields agree with the reference.",
+      "feedback": null,
+      "incorrect_fields": [],
+      "unsupported_claims": []
+    },
+    "omission_injected_on_attempts": [
+      1
+    ],
+    "original_model_drafts": [
+      "{\"rent_usd\": 1900, \"available_units\": 5}",
+      "{\n  \"rent_usd\": 1900,\n  \"available_units\": 4\n}"
+    ]
+  },
+  "controlled_stop": {
+    "question": {
+      "listing_id": "S6102-R-9401",
+      "question": "How many units at this listing can a tenant move into now?",
+      "requested_fields": [
+        "available_units"
+      ]
+    },
+    "lesson_ids": [],
+    "attempts": [
+      {
+        "answer": {
+          "raw": "{}",
+          "claims": {}
+        },
+        "grade": {
+          "result": "REVISE",
+          "explanation": "Missing or incorrect: available_units.",
+          "feedback": "Set these requested fields to the reference values: {\"available_units\": 2}",
+          "incorrect_fields": [
+            "available_units"
+          ],
+          "unsupported_claims": []
+        }
+      },
+      {
+        "answer": {
+          "raw": "{}",
+          "claims": {}
+        },
+        "grade": {
+          "result": "REVISE",
+          "explanation": "Missing or incorrect: available_units.",
+          "feedback": "Set these requested fields to the reference values: {\"available_units\": 2}",
+          "incorrect_fields": [
+            "available_units"
+          ],
+          "unsupported_claims": []
+        }
+      }
+    ],
+    "final_response": "",
+    "latency_ms": 1212.988542,
+    "attempt_count": 2,
+    "final_evaluation": {
+      "result": "REVISE",
+      "explanation": "Missing or incorrect: available_units.",
+      "feedback": "Set these requested fields to the reference values: {\"available_units\": 2}",
+      "incorrect_fields": [
+        "available_units"
+      ],
+      "unsupported_claims": []
+    },
+    "omission_injected_on_attempts": [
+      1,
+      2
+    ],
+    "original_model_drafts": [
+      "{\"available_units\": 7}",
+      "{\"available_units\": 2}"
+    ]
+  },
+  "lesson_reuse": {
+    "question": {
+      "listing_id": "S6102-R-9403",
+      "question": "How many move-in-ready homes are currently available here?",
+      "requested_fields": [
+        "available_units"
+      ]
+    },
+    "lesson_ids": [
+      "rental-ready-units-v1"
+    ],
+    "attempts": [
+      {
+        "answer": {
+          "raw": "{\"available_units\": 1}",
+          "claims": {
+            "available_units": 1
+          }
+        },
+        "grade": {
+          "result": "PASS",
+          "explanation": "All requested fields agree with the reference.",
+          "feedback": null,
+          "incorrect_fields": [],
+          "unsupported_claims": []
+        }
+      }
+    ],
+    "final_response": "Available units: 1",
+    "latency_ms": 1107.899042,
+    "attempt_count": 1,
+    "final_evaluation": {
+      "result": "PASS",
+      "explanation": "All requested fields agree with the reference.",
+      "feedback": null,
+      "incorrect_fields": [],
+      "unsupported_claims": []
+    },
+    "loaded_from": "training_memory/lessons.json",
+    "loaded_lesson": {
+      "lesson_id": "rental-ready-units-v1",
+      "failure_pattern": "Answers omit or misstate immediate availability in the rental export.",
+      "correction": "For available_units use inventory_export.bucket_b, including zero. Bucket_a is in turnover. Advertised_vacancies is the total of both buckets.",
+      "created_at": "2026-11-07T03:05:09.703027+00:00",
+      "use_count": 0,
+      "scope": {
+        "requested_field": "available_units",
+        "source_field": "inventory_export"
+      }
+    },
+    "use_counts_after": {
+      "rental-ready-units-v1": 1
+    }
+  }
+}

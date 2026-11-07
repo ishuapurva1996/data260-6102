@@ -1,0 +1,647 @@
+{
+  "decided_at": "2026-11-07T03:05:31.815545+00:00",
+  "candidate": {
+    "lesson_id": "rental-ready-units-v1",
+    "failure_pattern": "Answers omit or misstate immediate availability in the rental export.",
+    "correction": "For available_units use inventory_export.bucket_b, including zero. Bucket_a is in turnover. Advertised_vacancies is the total of both buckets.",
+    "created_at": "2026-11-07T03:05:09.703027+00:00",
+    "use_count": 1,
+    "scope": {
+      "requested_field": "available_units",
+      "source_field": "inventory_export"
+    }
+  },
+  "accepted": true,
+  "before": [
+    {
+      "question": {
+        "listing_id": "S6102-R-9405",
+        "question": "How many units are ready for a new tenant today?",
+        "requested_fields": [
+          "available_units"
+        ]
+      },
+      "lesson_ids": [],
+      "attempts": [
+        {
+          "answer": {
+            "raw": "{\"available_units\": 4}",
+            "claims": {
+              "available_units": 4
+            }
+          },
+          "grade": {
+            "result": "REVISE",
+            "explanation": "Missing or incorrect: available_units.",
+            "feedback": "Set these requested fields to the reference values: {\"available_units\": 3}",
+            "incorrect_fields": [
+              "available_units"
+            ],
+            "unsupported_claims": [
+              "{\"available_units\": 4}"
+            ]
+          }
+        },
+        {
+          "answer": {
+            "raw": "{\"available_units\": 3}",
+            "claims": {
+              "available_units": 3
+            }
+          },
+          "grade": {
+            "result": "PASS",
+            "explanation": "All requested fields agree with the reference.",
+            "feedback": null,
+            "incorrect_fields": [],
+            "unsupported_claims": []
+          }
+        }
+      ],
+      "final_response": "Available units: 3",
+      "latency_ms": 1634.711208,
+      "attempt_count": 2,
+      "final_evaluation": {
+        "result": "PASS",
+        "explanation": "All requested fields agree with the reference.",
+        "feedback": null,
+        "incorrect_fields": [],
+        "unsupported_claims": []
+      }
+    },
+    {
+      "question": {
+        "listing_id": "S6102-R-9406",
+        "question": "I need the price per month and the current move-in-ready unit count.",
+        "requested_fields": [
+          "rent_usd",
+          "available_units"
+        ]
+      },
+      "lesson_ids": [],
+      "attempts": [
+        {
+          "answer": {
+            "raw": "{\"rent_usd\": 2200, \"available_units\": 7}",
+            "claims": {
+              "rent_usd": 2200,
+              "available_units": 7
+            }
+          },
+          "grade": {
+            "result": "REVISE",
+            "explanation": "Missing or incorrect: available_units.",
+            "feedback": "Set these requested fields to the reference values: {\"available_units\": 2}",
+            "incorrect_fields": [
+              "available_units"
+            ],
+            "unsupported_claims": [
+              "{\"available_units\": 7}"
+            ]
+          }
+        },
+        {
+          "answer": {
+            "raw": "{\n  \"rent_usd\": 2200,\n  \"available_units\": 2\n}",
+            "claims": {
+              "rent_usd": 2200,
+              "available_units": 2
+            }
+          },
+          "grade": {
+            "result": "PASS",
+            "explanation": "All requested fields agree with the reference.",
+            "feedback": null,
+            "incorrect_fields": [],
+            "unsupported_claims": []
+          }
+        }
+      ],
+      "final_response": "Rent usd: 2200\nAvailable units: 2",
+      "latency_ms": 2888.888875,
+      "attempt_count": 2,
+      "final_evaluation": {
+        "result": "PASS",
+        "explanation": "All requested fields agree with the reference.",
+        "feedback": null,
+        "incorrect_fields": [],
+        "unsupported_claims": []
+      }
+    },
+    {
+      "question": {
+        "listing_id": "S6102-R-9407",
+        "question": "What is the count of units available for immediate occupancy?",
+        "requested_fields": [
+          "available_units"
+        ]
+      },
+      "lesson_ids": [],
+      "attempts": [
+        {
+          "answer": {
+            "raw": "{\"available_units\": 3}",
+            "claims": {
+              "available_units": 3
+            }
+          },
+          "grade": {
+            "result": "REVISE",
+            "explanation": "Missing or incorrect: available_units.",
+            "feedback": "Set these requested fields to the reference values: {\"available_units\": 0}",
+            "incorrect_fields": [
+              "available_units"
+            ],
+            "unsupported_claims": [
+              "{\"available_units\": 3}"
+            ]
+          }
+        },
+        {
+          "answer": {
+            "raw": "{\"available_units\": 0}",
+            "claims": {
+              "available_units": 0
+            }
+          },
+          "grade": {
+            "result": "PASS",
+            "explanation": "All requested fields agree with the reference.",
+            "feedback": null,
+            "incorrect_fields": [],
+            "unsupported_claims": []
+          }
+        }
+      ],
+      "final_response": "Available units: 0",
+      "latency_ms": 1677.305792,
+      "attempt_count": 2,
+      "final_evaluation": {
+        "result": "PASS",
+        "explanation": "All requested fields agree with the reference.",
+        "feedback": null,
+        "incorrect_fields": [],
+        "unsupported_claims": []
+      }
+    },
+    {
+      "question": {
+        "listing_id": "S6102-R-9408",
+        "question": "Is parking included in the monthly rent?",
+        "requested_fields": [
+          "parking_included"
+        ]
+      },
+      "lesson_ids": [],
+      "attempts": [
+        {
+          "answer": {
+            "raw": "{\"parking_included\": true}",
+            "claims": {
+              "parking_included": true
+            }
+          },
+          "grade": {
+            "result": "PASS",
+            "explanation": "All requested fields agree with the reference.",
+            "feedback": null,
+            "incorrect_fields": [],
+            "unsupported_claims": []
+          }
+        }
+      ],
+      "final_response": "Parking included: True",
+      "latency_ms": 1066.417916,
+      "attempt_count": 1,
+      "final_evaluation": {
+        "result": "PASS",
+        "explanation": "All requested fields agree with the reference.",
+        "feedback": null,
+        "incorrect_fields": [],
+        "unsupported_claims": []
+      }
+    },
+    {
+      "question": {
+        "listing_id": "S6102-R-9409",
+        "question": "Does the listing say whether an elevator is available?",
+        "requested_fields": [
+          "elevator"
+        ]
+      },
+      "lesson_ids": [],
+      "attempts": [
+        {
+          "answer": {
+            "raw": "{\"elevator\": null}",
+            "claims": {
+              "elevator": null
+            }
+          },
+          "grade": {
+            "result": "PASS",
+            "explanation": "All requested fields agree with the reference.",
+            "feedback": null,
+            "incorrect_fields": [],
+            "unsupported_claims": []
+          }
+        }
+      ],
+      "final_response": "Elevator: unknown from the listing",
+      "latency_ms": 941.817583,
+      "attempt_count": 1,
+      "final_evaluation": {
+        "result": "PASS",
+        "explanation": "All requested fields agree with the reference.",
+        "feedback": null,
+        "incorrect_fields": [],
+        "unsupported_claims": []
+      }
+    },
+    {
+      "question": {
+        "listing_id": "S6102-R-9410",
+        "question": "What neighborhood is the property in and what is the monthly rent?",
+        "requested_fields": [
+          "neighborhood",
+          "rent_usd"
+        ]
+      },
+      "lesson_ids": [],
+      "attempts": [
+        {
+          "answer": {
+            "raw": "{\"neighborhood\": \"Berryessa\", \"rent_usd\": 2500}",
+            "claims": {
+              "neighborhood": "Berryessa",
+              "rent_usd": 2500
+            }
+          },
+          "grade": {
+            "result": "PASS",
+            "explanation": "All requested fields agree with the reference.",
+            "feedback": null,
+            "incorrect_fields": [],
+            "unsupported_claims": []
+          }
+        }
+      ],
+      "final_response": "Neighborhood: Berryessa\nRent usd: 2500",
+      "latency_ms": 1596.953125,
+      "attempt_count": 1,
+      "final_evaluation": {
+        "result": "PASS",
+        "explanation": "All requested fields agree with the reference.",
+        "feedback": null,
+        "incorrect_fields": [],
+        "unsupported_claims": []
+      }
+    }
+  ],
+  "after": [
+    {
+      "question": {
+        "listing_id": "S6102-R-9405",
+        "question": "How many units are ready for a new tenant today?",
+        "requested_fields": [
+          "available_units"
+        ]
+      },
+      "lesson_ids": [
+        "rental-ready-units-v1"
+      ],
+      "attempts": [
+        {
+          "answer": {
+            "raw": "{\"available_units\": 3}",
+            "claims": {
+              "available_units": 3
+            }
+          },
+          "grade": {
+            "result": "PASS",
+            "explanation": "All requested fields agree with the reference.",
+            "feedback": null,
+            "incorrect_fields": [],
+            "unsupported_claims": []
+          }
+        }
+      ],
+      "final_response": "Available units: 3",
+      "latency_ms": 707.300041,
+      "attempt_count": 1,
+      "final_evaluation": {
+        "result": "PASS",
+        "explanation": "All requested fields agree with the reference.",
+        "feedback": null,
+        "incorrect_fields": [],
+        "unsupported_claims": []
+      }
+    },
+    {
+      "question": {
+        "listing_id": "S6102-R-9406",
+        "question": "I need the price per month and the current move-in-ready unit count.",
+        "requested_fields": [
+          "rent_usd",
+          "available_units"
+        ]
+      },
+      "lesson_ids": [
+        "rental-ready-units-v1"
+      ],
+      "attempts": [
+        {
+          "answer": {
+            "raw": "{\"rent_usd\": 2200, \"available_units\": 2}",
+            "claims": {
+              "rent_usd": 2200,
+              "available_units": 2
+            }
+          },
+          "grade": {
+            "result": "PASS",
+            "explanation": "All requested fields agree with the reference.",
+            "feedback": null,
+            "incorrect_fields": [],
+            "unsupported_claims": []
+          }
+        }
+      ],
+      "final_response": "Rent usd: 2200\nAvailable units: 2",
+      "latency_ms": 1234.545541,
+      "attempt_count": 1,
+      "final_evaluation": {
+        "result": "PASS",
+        "explanation": "All requested fields agree with the reference.",
+        "feedback": null,
+        "incorrect_fields": [],
+        "unsupported_claims": []
+      }
+    },
+    {
+      "question": {
+        "listing_id": "S6102-R-9407",
+        "question": "What is the count of units available for immediate occupancy?",
+        "requested_fields": [
+          "available_units"
+        ]
+      },
+      "lesson_ids": [
+        "rental-ready-units-v1"
+      ],
+      "attempts": [
+        {
+          "answer": {
+            "raw": "{\"available_units\": 3}",
+            "claims": {
+              "available_units": 3
+            }
+          },
+          "grade": {
+            "result": "REVISE",
+            "explanation": "Missing or incorrect: available_units.",
+            "feedback": "Set these requested fields to the reference values: {\"available_units\": 0}",
+            "incorrect_fields": [
+              "available_units"
+            ],
+            "unsupported_claims": [
+              "{\"available_units\": 3}"
+            ]
+          }
+        },
+        {
+          "answer": {
+            "raw": "{\"available_units\": 0}",
+            "claims": {
+              "available_units": 0
+            }
+          },
+          "grade": {
+            "result": "PASS",
+            "explanation": "All requested fields agree with the reference.",
+            "feedback": null,
+            "incorrect_fields": [],
+            "unsupported_claims": []
+          }
+        }
+      ],
+      "final_response": "Available units: 0",
+      "latency_ms": 1350.820833,
+      "attempt_count": 2,
+      "final_evaluation": {
+        "result": "PASS",
+        "explanation": "All requested fields agree with the reference.",
+        "feedback": null,
+        "incorrect_fields": [],
+        "unsupported_claims": []
+      }
+    },
+    {
+      "question": {
+        "listing_id": "S6102-R-9408",
+        "question": "Is parking included in the monthly rent?",
+        "requested_fields": [
+          "parking_included"
+        ]
+      },
+      "lesson_ids": [],
+      "attempts": [
+        {
+          "answer": {
+            "raw": "{\"parking_included\": true}",
+            "claims": {
+              "parking_included": true
+            }
+          },
+          "grade": {
+            "result": "PASS",
+            "explanation": "All requested fields agree with the reference.",
+            "feedback": null,
+            "incorrect_fields": [],
+            "unsupported_claims": []
+          }
+        }
+      ],
+      "final_response": "Parking included: True",
+      "latency_ms": 1084.821833,
+      "attempt_count": 1,
+      "final_evaluation": {
+        "result": "PASS",
+        "explanation": "All requested fields agree with the reference.",
+        "feedback": null,
+        "incorrect_fields": [],
+        "unsupported_claims": []
+      }
+    },
+    {
+      "question": {
+        "listing_id": "S6102-R-9409",
+        "question": "Does the listing say whether an elevator is available?",
+        "requested_fields": [
+          "elevator"
+        ]
+      },
+      "lesson_ids": [],
+      "attempts": [
+        {
+          "answer": {
+            "raw": "{\"elevator\": null}",
+            "claims": {
+              "elevator": null
+            }
+          },
+          "grade": {
+            "result": "PASS",
+            "explanation": "All requested fields agree with the reference.",
+            "feedback": null,
+            "incorrect_fields": [],
+            "unsupported_claims": []
+          }
+        }
+      ],
+      "final_response": "Elevator: unknown from the listing",
+      "latency_ms": 965.961375,
+      "attempt_count": 1,
+      "final_evaluation": {
+        "result": "PASS",
+        "explanation": "All requested fields agree with the reference.",
+        "feedback": null,
+        "incorrect_fields": [],
+        "unsupported_claims": []
+      }
+    },
+    {
+      "question": {
+        "listing_id": "S6102-R-9410",
+        "question": "What neighborhood is the property in and what is the monthly rent?",
+        "requested_fields": [
+          "neighborhood",
+          "rent_usd"
+        ]
+      },
+      "lesson_ids": [],
+      "attempts": [
+        {
+          "answer": {
+            "raw": "{\"neighborhood\": \"Berryessa\", \"rent_usd\": 2500}",
+            "claims": {
+              "neighborhood": "Berryessa",
+              "rent_usd": 2500
+            }
+          },
+          "grade": {
+            "result": "PASS",
+            "explanation": "All requested fields agree with the reference.",
+            "feedback": null,
+            "incorrect_fields": [],
+            "unsupported_claims": []
+          }
+        }
+      ],
+      "final_response": "Neighborhood: Berryessa\nRent usd: 2500",
+      "latency_ms": 1636.193417,
+      "attempt_count": 1,
+      "final_evaluation": {
+        "result": "PASS",
+        "explanation": "All requested fields agree with the reference.",
+        "feedback": null,
+        "incorrect_fields": [],
+        "unsupported_claims": []
+      }
+    }
+  ],
+  "pairs": [
+    {
+      "listing_id": "S6102-R-9405",
+      "targeted": true,
+      "scope_preserved": true,
+      "before_initial": "REVISE",
+      "after_initial": "PASS",
+      "before_final": "PASS",
+      "after_final": "PASS",
+      "before_attempts": 2,
+      "after_attempts": 1,
+      "target_maintained": true,
+      "previously_correct_preserved": true,
+      "no_new_unsupported_claims": true,
+      "new_unsupported_claims": []
+    },
+    {
+      "listing_id": "S6102-R-9406",
+      "targeted": true,
+      "scope_preserved": true,
+      "before_initial": "REVISE",
+      "after_initial": "PASS",
+      "before_final": "PASS",
+      "after_final": "PASS",
+      "before_attempts": 2,
+      "after_attempts": 1,
+      "target_maintained": true,
+      "previously_correct_preserved": true,
+      "no_new_unsupported_claims": true,
+      "new_unsupported_claims": []
+    },
+    {
+      "listing_id": "S6102-R-9407",
+      "targeted": true,
+      "scope_preserved": true,
+      "before_initial": "REVISE",
+      "after_initial": "REVISE",
+      "before_final": "PASS",
+      "after_final": "PASS",
+      "before_attempts": 2,
+      "after_attempts": 2,
+      "target_maintained": true,
+      "previously_correct_preserved": true,
+      "no_new_unsupported_claims": true,
+      "new_unsupported_claims": []
+    },
+    {
+      "listing_id": "S6102-R-9408",
+      "targeted": false,
+      "scope_preserved": true,
+      "before_initial": "PASS",
+      "after_initial": "PASS",
+      "before_final": "PASS",
+      "after_final": "PASS",
+      "before_attempts": 1,
+      "after_attempts": 1,
+      "target_maintained": true,
+      "previously_correct_preserved": true,
+      "no_new_unsupported_claims": true,
+      "new_unsupported_claims": []
+    },
+    {
+      "listing_id": "S6102-R-9409",
+      "targeted": false,
+      "scope_preserved": true,
+      "before_initial": "PASS",
+      "after_initial": "PASS",
+      "before_final": "PASS",
+      "after_final": "PASS",
+      "before_attempts": 1,
+      "after_attempts": 1,
+      "target_maintained": true,
+      "previously_correct_preserved": true,
+      "no_new_unsupported_claims": true,
+      "new_unsupported_claims": []
+    },
+    {
+      "listing_id": "S6102-R-9410",
+      "targeted": false,
+      "scope_preserved": true,
+      "before_initial": "PASS",
+      "after_initial": "PASS",
+      "before_final": "PASS",
+      "after_final": "PASS",
+      "before_attempts": 1,
+      "after_attempts": 1,
+      "target_maintained": true,
+      "previously_correct_preserved": true,
+      "no_new_unsupported_claims": true,
+      "new_unsupported_claims": []
+    }
+  ],
+  "regressions": []
+}

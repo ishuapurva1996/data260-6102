@@ -1,0 +1,9 @@
+{
+  "file": "terminal_evidence.png",
+  "sha256": "d8bf4a2634381e4df324ba8e2425ee03ac80c54e50d843d34042986e28b475e2",
+  "captured_at": "2026-11-07T03:07:21.968868+00:00",
+  "capture_method": "macOS screencapture of dedicated native Terminal window",
+  "content": "Terminal display of the saved live-run transcript and measured table",
+  "student_name": "Pragya Apurva",
+  "name_visually_verified": true
+}
