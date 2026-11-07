@@ -1,0 +1,600 @@
+{
+  "schema_version": 1,
+  "student": "Pragya Apurva",
+  "fixture_file": "rental_fixtures.json",
+  "design": "Ten exact and ten paraphrase positives reference ten live seeds. Ten negatives change the listing while keeping the requested field and wording. Ten unrelated negatives ask general rental concepts. Case order is fixed; successful misses may populate the cache within each pass.",
+  "cost_model": {
+    "unit": "seconds-equivalent",
+    "miss_cost": 5,
+    "false_hit_cost": 300,
+    "justification": "5 seconds represents a rounded local three-stage generation budget, charged only on misses. 300 seconds represents an assumed five-minute support interaction to identify and correct a wrong cached answer. Both are fixed assumptions, not monetary charges or measured support effort. Actual latency is reported separately.",
+    "formula": "misses * 5 + incorrect_cached_answers * 300",
+    "tie_break": "Choose the higher threshold among equal minimum total costs."
+  },
+  "seeds": [
+    {
+      "id": "S01",
+      "question": "How many units are available at S6102-R-9101?",
+      "listing_code": "S6102-R-9101",
+      "field": "available_units",
+      "expected": 2
+    },
+    {
+      "id": "S02",
+      "question": "What property type is S6102-R-9101?",
+      "listing_code": "S6102-R-9101",
+      "field": "property_type",
+      "expected": "apartment"
+    },
+    {
+      "id": "S03",
+      "question": "How many units are available at S6102-R-9102?",
+      "listing_code": "S6102-R-9102",
+      "field": "available_units",
+      "expected": 4
+    },
+    {
+      "id": "S04",
+      "question": "What property type is S6102-R-9102?",
+      "listing_code": "S6102-R-9102",
+      "field": "property_type",
+      "expected": "house"
+    },
+    {
+      "id": "S05",
+      "question": "How many units are available at S6102-R-9103?",
+      "listing_code": "S6102-R-9103",
+      "field": "available_units",
+      "expected": 6
+    },
+    {
+      "id": "S06",
+      "question": "What property type is S6102-R-9103?",
+      "listing_code": "S6102-R-9103",
+      "field": "property_type",
+      "expected": "condo"
+    },
+    {
+      "id": "S07",
+      "question": "How many units are available at S6102-R-9104?",
+      "listing_code": "S6102-R-9104",
+      "field": "available_units",
+      "expected": 8
+    },
+    {
+      "id": "S08",
+      "question": "What property type is S6102-R-9104?",
+      "listing_code": "S6102-R-9104",
+      "field": "property_type",
+      "expected": "townhouse"
+    },
+    {
+      "id": "S09",
+      "question": "How many units are available at S6102-R-9105?",
+      "listing_code": "S6102-R-9105",
+      "field": "available_units",
+      "expected": 10
+    },
+    {
+      "id": "S10",
+      "question": "What property type is S6102-R-9105?",
+      "listing_code": "S6102-R-9105",
+      "field": "property_type",
+      "expected": "apartment"
+    }
+  ],
+  "cases": [
+    {
+      "id": "E01",
+      "category": "exact",
+      "should_hit": true,
+      "question": "How many units are available at S6102-R-9101?",
+      "comparison_seed": "S01",
+      "expected": {
+        "listing_code": "S6102-R-9101",
+        "field": "available_units",
+        "value": 2
+      }
+    },
+    {
+      "id": "E02",
+      "category": "exact",
+      "should_hit": true,
+      "question": "What property type is S6102-R-9101?",
+      "comparison_seed": "S02",
+      "expected": {
+        "listing_code": "S6102-R-9101",
+        "field": "property_type",
+        "value": "apartment"
+      }
+    },
+    {
+      "id": "E03",
+      "category": "exact",
+      "should_hit": true,
+      "question": "How many units are available at S6102-R-9102?",
+      "comparison_seed": "S03",
+      "expected": {
+        "listing_code": "S6102-R-9102",
+        "field": "available_units",
+        "value": 4
+      }
+    },
+    {
+      "id": "E04",
+      "category": "exact",
+      "should_hit": true,
+      "question": "What property type is S6102-R-9102?",
+      "comparison_seed": "S04",
+      "expected": {
+        "listing_code": "S6102-R-9102",
+        "field": "property_type",
+        "value": "house"
+      }
+    },
+    {
+      "id": "E05",
+      "category": "exact",
+      "should_hit": true,
+      "question": "How many units are available at S6102-R-9103?",
+      "comparison_seed": "S05",
+      "expected": {
+        "listing_code": "S6102-R-9103",
+        "field": "available_units",
+        "value": 6
+      }
+    },
+    {
+      "id": "E06",
+      "category": "exact",
+      "should_hit": true,
+      "question": "What property type is S6102-R-9103?",
+      "comparison_seed": "S06",
+      "expected": {
+        "listing_code": "S6102-R-9103",
+        "field": "property_type",
+        "value": "condo"
+      }
+    },
+    {
+      "id": "E07",
+      "category": "exact",
+      "should_hit": true,
+      "question": "How many units are available at S6102-R-9104?",
+      "comparison_seed": "S07",
+      "expected": {
+        "listing_code": "S6102-R-9104",
+        "field": "available_units",
+        "value": 8
+      }
+    },
+    {
+      "id": "E08",
+      "category": "exact",
+      "should_hit": true,
+      "question": "What property type is S6102-R-9104?",
+      "comparison_seed": "S08",
+      "expected": {
+        "listing_code": "S6102-R-9104",
+        "field": "property_type",
+        "value": "townhouse"
+      }
+    },
+    {
+      "id": "E09",
+      "category": "exact",
+      "should_hit": true,
+      "question": "How many units are available at S6102-R-9105?",
+      "comparison_seed": "S09",
+      "expected": {
+        "listing_code": "S6102-R-9105",
+        "field": "available_units",
+        "value": 10
+      }
+    },
+    {
+      "id": "E10",
+      "category": "exact",
+      "should_hit": true,
+      "question": "What property type is S6102-R-9105?",
+      "comparison_seed": "S10",
+      "expected": {
+        "listing_code": "S6102-R-9105",
+        "field": "property_type",
+        "value": "apartment"
+      }
+    },
+    {
+      "id": "P01",
+      "category": "paraphrase",
+      "should_hit": true,
+      "question": "What is the current number of available units for listing S6102-R-9101?",
+      "comparison_seed": "S01",
+      "expected": {
+        "listing_code": "S6102-R-9101",
+        "field": "available_units",
+        "value": 2
+      }
+    },
+    {
+      "id": "P02",
+      "category": "paraphrase",
+      "should_hit": true,
+      "question": "Which kind of residential property is listing S6102-R-9101 classified as?",
+      "comparison_seed": "S02",
+      "expected": {
+        "listing_code": "S6102-R-9101",
+        "field": "property_type",
+        "value": "apartment"
+      }
+    },
+    {
+      "id": "P03",
+      "category": "paraphrase",
+      "should_hit": true,
+      "question": "What is the current number of available units for listing S6102-R-9102?",
+      "comparison_seed": "S03",
+      "expected": {
+        "listing_code": "S6102-R-9102",
+        "field": "available_units",
+        "value": 4
+      }
+    },
+    {
+      "id": "P04",
+      "category": "paraphrase",
+      "should_hit": true,
+      "question": "Which kind of residential property is listing S6102-R-9102 classified as?",
+      "comparison_seed": "S04",
+      "expected": {
+        "listing_code": "S6102-R-9102",
+        "field": "property_type",
+        "value": "house"
+      }
+    },
+    {
+      "id": "P05",
+      "category": "paraphrase",
+      "should_hit": true,
+      "question": "What is the current number of available units for listing S6102-R-9103?",
+      "comparison_seed": "S05",
+      "expected": {
+        "listing_code": "S6102-R-9103",
+        "field": "available_units",
+        "value": 6
+      }
+    },
+    {
+      "id": "P06",
+      "category": "paraphrase",
+      "should_hit": true,
+      "question": "Which kind of residential property is listing S6102-R-9103 classified as?",
+      "comparison_seed": "S06",
+      "expected": {
+        "listing_code": "S6102-R-9103",
+        "field": "property_type",
+        "value": "condo"
+      }
+    },
+    {
+      "id": "P07",
+      "category": "paraphrase",
+      "should_hit": true,
+      "question": "What is the current number of available units for listing S6102-R-9104?",
+      "comparison_seed": "S07",
+      "expected": {
+        "listing_code": "S6102-R-9104",
+        "field": "available_units",
+        "value": 8
+      }
+    },
+    {
+      "id": "P08",
+      "category": "paraphrase",
+      "should_hit": true,
+      "question": "Which kind of residential property is listing S6102-R-9104 classified as?",
+      "comparison_seed": "S08",
+      "expected": {
+        "listing_code": "S6102-R-9104",
+        "field": "property_type",
+        "value": "townhouse"
+      }
+    },
+    {
+      "id": "P09",
+      "category": "paraphrase",
+      "should_hit": true,
+      "question": "What is the current number of available units for listing S6102-R-9105?",
+      "comparison_seed": "S09",
+      "expected": {
+        "listing_code": "S6102-R-9105",
+        "field": "available_units",
+        "value": 10
+      }
+    },
+    {
+      "id": "P10",
+      "category": "paraphrase",
+      "should_hit": true,
+      "question": "Which kind of residential property is listing S6102-R-9105 classified as?",
+      "comparison_seed": "S10",
+      "expected": {
+        "listing_code": "S6102-R-9105",
+        "field": "property_type",
+        "value": "apartment"
+      }
+    },
+    {
+      "id": "N01",
+      "category": "similar_different",
+      "should_hit": false,
+      "question": "How many units are available at S6102-R-9106?",
+      "comparison_seed": "S01",
+      "expected": {
+        "listing_code": "S6102-R-9106",
+        "field": "available_units",
+        "value": 1
+      },
+      "label_reason": "The comparison seed is about a different listing with a different value for the requested field."
+    },
+    {
+      "id": "N02",
+      "category": "similar_different",
+      "should_hit": false,
+      "question": "What property type is S6102-R-9106?",
+      "comparison_seed": "S02",
+      "expected": {
+        "listing_code": "S6102-R-9106",
+        "field": "property_type",
+        "value": "house"
+      },
+      "label_reason": "The comparison seed is about a different listing with a different value for the requested field."
+    },
+    {
+      "id": "N03",
+      "category": "similar_different",
+      "should_hit": false,
+      "question": "How many units are available at S6102-R-9107?",
+      "comparison_seed": "S03",
+      "expected": {
+        "listing_code": "S6102-R-9107",
+        "field": "available_units",
+        "value": 3
+      },
+      "label_reason": "The comparison seed is about a different listing with a different value for the requested field."
+    },
+    {
+      "id": "N04",
+      "category": "similar_different",
+      "should_hit": false,
+      "question": "What property type is S6102-R-9107?",
+      "comparison_seed": "S04",
+      "expected": {
+        "listing_code": "S6102-R-9107",
+        "field": "property_type",
+        "value": "condo"
+      },
+      "label_reason": "The comparison seed is about a different listing with a different value for the requested field."
+    },
+    {
+      "id": "N05",
+      "category": "similar_different",
+      "should_hit": false,
+      "question": "How many units are available at S6102-R-9108?",
+      "comparison_seed": "S05",
+      "expected": {
+        "listing_code": "S6102-R-9108",
+        "field": "available_units",
+        "value": 5
+      },
+      "label_reason": "The comparison seed is about a different listing with a different value for the requested field."
+    },
+    {
+      "id": "N06",
+      "category": "similar_different",
+      "should_hit": false,
+      "question": "What property type is S6102-R-9108?",
+      "comparison_seed": "S06",
+      "expected": {
+        "listing_code": "S6102-R-9108",
+        "field": "property_type",
+        "value": "townhouse"
+      },
+      "label_reason": "The comparison seed is about a different listing with a different value for the requested field."
+    },
+    {
+      "id": "N07",
+      "category": "similar_different",
+      "should_hit": false,
+      "question": "How many units are available at S6102-R-9109?",
+      "comparison_seed": "S07",
+      "expected": {
+        "listing_code": "S6102-R-9109",
+        "field": "available_units",
+        "value": 7
+      },
+      "label_reason": "The comparison seed is about a different listing with a different value for the requested field."
+    },
+    {
+      "id": "N08",
+      "category": "similar_different",
+      "should_hit": false,
+      "question": "What property type is S6102-R-9109?",
+      "comparison_seed": "S08",
+      "expected": {
+        "listing_code": "S6102-R-9109",
+        "field": "property_type",
+        "value": "apartment"
+      },
+      "label_reason": "The comparison seed is about a different listing with a different value for the requested field."
+    },
+    {
+      "id": "N09",
+      "category": "similar_different",
+      "should_hit": false,
+      "question": "How many units are available at S6102-R-9110?",
+      "comparison_seed": "S09",
+      "expected": {
+        "listing_code": "S6102-R-9110",
+        "field": "available_units",
+        "value": 9
+      },
+      "label_reason": "The comparison seed is about a different listing with a different value for the requested field."
+    },
+    {
+      "id": "N10",
+      "category": "similar_different",
+      "should_hit": false,
+      "question": "What property type is S6102-R-9110?",
+      "comparison_seed": "S10",
+      "expected": {
+        "listing_code": "S6102-R-9110",
+        "field": "property_type",
+        "value": "house"
+      },
+      "label_reason": "The comparison seed is about a different listing with a different value for the requested field."
+    },
+    {
+      "id": "U01",
+      "category": "unrelated",
+      "should_hit": false,
+      "question": "Define a rental security deposit in one sentence.",
+      "expected": {
+        "rubric": "Money held by a landlord as security for damage or unpaid obligations.",
+        "all_regex": [
+          "deposit|money|fund",
+          "damage|unpaid|security|held"
+        ]
+      },
+      "label_reason": "General rental concept; no seeded listing count or property type answers this question."
+    },
+    {
+      "id": "U02",
+      "category": "unrelated",
+      "should_hit": false,
+      "question": "What is a residential lease agreement?",
+      "expected": {
+        "rubric": "A contract between landlord and tenant setting rental terms.",
+        "all_regex": [
+          "contract|agreement",
+          "landlord|tenant",
+          "term|rent"
+        ]
+      },
+      "label_reason": "General rental concept; no seeded listing count or property type answers this question."
+    },
+    {
+      "id": "U03",
+      "category": "unrelated",
+      "should_hit": false,
+      "question": "Explain the purpose of a move-in inspection checklist.",
+      "expected": {
+        "rubric": "Document the property condition at move-in to identify existing damage.",
+        "all_regex": [
+          "condition|damage",
+          "record|document|check|inspect"
+        ]
+      },
+      "label_reason": "General rental concept; no seeded listing count or property type answers this question."
+    },
+    {
+      "id": "U04",
+      "category": "unrelated",
+      "should_hit": false,
+      "question": "What does a co-signer do on a rental lease?",
+      "expected": {
+        "rubric": "Guarantees rent or obligations if the tenant does not pay.",
+        "all_regex": [
+          "guarantee|responsib|liable|pay",
+          "rent|tenant|obligation"
+        ]
+      },
+      "label_reason": "General rental concept; no seeded listing count or property type answers this question."
+    },
+    {
+      "id": "U05",
+      "category": "unrelated",
+      "should_hit": false,
+      "question": "Define subletting in rental housing.",
+      "expected": {
+        "rubric": "An existing tenant rents some or all of their rented space to another tenant.",
+        "all_regex": [
+          "tenant",
+          "another|other|third",
+          "rent|lease"
+        ]
+      },
+      "label_reason": "General rental concept; no seeded listing count or property type answers this question."
+    },
+    {
+      "id": "U06",
+      "category": "unrelated",
+      "should_hit": false,
+      "question": "What is renters insurance intended to protect?",
+      "expected": {
+        "rubric": "A tenant personal belongings and liability, subject to policy coverage.",
+        "all_regex": [
+          "belonging|personal property|possession",
+          "liability"
+        ]
+      },
+      "label_reason": "General rental concept; no seeded listing count or property type answers this question."
+    },
+    {
+      "id": "U07",
+      "category": "unrelated",
+      "should_hit": false,
+      "question": "Explain normal wear and tear in a rented home.",
+      "expected": {
+        "rubric": "Deterioration from ordinary use over time, distinct from damage.",
+        "all_regex": [
+          "ordinary|normal|everyday|regular",
+          "use|aging|age|time"
+        ]
+      },
+      "label_reason": "General rental concept; no seeded listing count or property type answers this question."
+    },
+    {
+      "id": "U08",
+      "category": "unrelated",
+      "should_hit": false,
+      "question": "What is a rental application used for?",
+      "expected": {
+        "rubric": "Collect information to assess a prospective tenant before renting.",
+        "all_regex": [
+          "tenant|applicant",
+          "screen|assess|evaluat|information|eligib"
+        ]
+      },
+      "label_reason": "General rental concept; no seeded listing count or property type answers this question."
+    },
+    {
+      "id": "U09",
+      "category": "unrelated",
+      "should_hit": false,
+      "question": "Define a month-to-month tenancy.",
+      "expected": {
+        "rubric": "A rental arrangement that renews each month until ended with notice.",
+        "all_regex": [
+          "month",
+          "renew|notice|terminat|end"
+        ]
+      },
+      "label_reason": "General rental concept; no seeded listing count or property type answers this question."
+    },
+    {
+      "id": "U10",
+      "category": "unrelated",
+      "should_hit": false,
+      "question": "What is a maintenance request in a rental property?",
+      "expected": {
+        "rubric": "A tenant report asking the landlord or manager to repair a problem.",
+        "all_regex": [
+          "repair|fix|upkeep",
+          "request|report|ask|notify"
+        ]
+      },
+      "label_reason": "General rental concept; no seeded listing count or property type answers this question."
+    }
+  ]
+}
