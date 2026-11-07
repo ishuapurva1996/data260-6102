@@ -145,7 +145,13 @@ In a separate fixture phase use `S6102-R-9199` with three available units.
 Start with `HW9_CACHE_NAMESPACE=stale-demo-c-01` and
 `HW9_CACHE_DEMO_ALLOW_STALE=1`. Ask the exact unit-count question, verify the
 live answer of three and confirm its Redis write. Update the fixture via
-authenticated `PUT /api/rentals/<numeric-id>` with `{"availableUnits":1}`.
+authenticated `PUT /api/rentals/<numeric-id>`. Read the fixture first and
+copy its current title and address into the required PUT fields:
+
+```json
+{"listingTitle":"<current title>","propertyAddress":"<current address>","availableUnits":1}
+```
+
 Repeat the question and record the old answer and both data versions. Stop the
 web process and restart in the **same namespace** with
 `HW9_CACHE_DEMO_ALLOW_STALE=0`. Repeat twice and capture a miss followed by a
