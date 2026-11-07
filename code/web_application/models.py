@@ -7,6 +7,7 @@ are UTC with ``tzinfo`` removed before storage; naive stored values mean UTC.
 from datetime import datetime, timezone
 
 from sqlalchemy import (
+    BigInteger,
     Boolean,
     CheckConstraint,
     ForeignKey,
@@ -112,6 +113,7 @@ class Rental(Base):
     available_units: Mapped[int] = mapped_column(
         Integer, nullable=False, default=1, server_default=text("1")
     )
+    view_count: Mapped[int] = mapped_column(BigInteger, nullable=False, server_default=text("0"))
     created_at: Mapped[datetime] = mapped_column(
         DATETIME(fsp=6),
         nullable=False,
