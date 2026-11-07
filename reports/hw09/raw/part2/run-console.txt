@@ -1,0 +1,23 @@
+Pragya Apurva | DATA 260 HW9 Part 2
+01 new        MISS  4017.534 ms
+02 exact      HIT   32.281 ms
+03 paraphrase HIT   26.601 ms
+04 new        MISS  7549.527 ms
+05 exact      HIT   32.187 ms
+06 paraphrase HIT   27.829 ms
+07 new        HIT   24.268 ms
+08 exact      HIT   23.692 ms
+09 paraphrase HIT   25.258 ms
+10 new        MISS  12046.652 ms
+11 new        MISS  13055.684 ms
+12 new        MISS  8394.838 ms
+{
+  "event": "summary",
+  "total": 12,
+  "errors": 0,
+  "hits": 7,
+  "misses": 5,
+  "hit_rate": 0.5833333333333334,
+  "mean_hit_ms": 27.445,
+  "mean_miss_ms": 9012.847
+}

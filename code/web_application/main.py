@@ -72,6 +72,19 @@ def create_app(
         app.add_event_handler("shutdown", kafka_rpc.stop)
         app.include_router(kafka_rentals.create_router(kafka_rpc))
 
+        if os.getenv("HW9_CACHE_ENABLED") == "1":
+            from time import perf_counter
+
+            from web_application.routers import kafka_questions
+
+            @app.middleware("http")
+            async def start_question_timer(request, call_next):
+                if request.method == "POST" and request.url.path == "/api/kafka/questions":
+                    request.state.hw9_question_started = perf_counter()
+                return await call_next(request)
+
+            app.include_router(kafka_questions.create_router(app.state.session_factory))
+
     from web_application.routers import bikeshare
 
     from src.bikeshare.service import BikeService

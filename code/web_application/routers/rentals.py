@@ -58,6 +58,8 @@ def list_rentals(
 
 @router.post("", response_model=RentalResponse, status_code=201, dependencies=[Depends(can_write)])
 def create_rental(payload: RentalCreate, db: Session = Depends(get_db)):
+    from ..rental_facts import advance_rental_version
+
     validate_manager(db, payload.managerId)
     now = utc_now()
     row = Rental(
@@ -81,6 +83,7 @@ def create_rental(payload: RentalCreate, db: Session = Depends(get_db)):
             # transaction. Concurrent requests never depend on SELECT MAX(id).
             row.listing_code = f"S6102-R-{row.id}"
             row.updated_at = now
+        advance_rental_version(db)
         db.commit()
     except IntegrityError as error:
         raise_write_conflict(db, error, "A rental with this listing code already exists.")
@@ -89,10 +92,13 @@ def create_rental(payload: RentalCreate, db: Session = Depends(get_db)):
 
 @router.delete("/highest", status_code=204, dependencies=[Depends(can_delete)])
 def delete_highest(db: Session = Depends(get_db)):
+    from ..rental_facts import advance_rental_version
+
     row = db.scalar(select(Rental).order_by(Rental.id.desc()).limit(1).with_for_update())
     if row is None:
         raise HTTPException(404, "There are no rental listings to delete.")
     db.delete(row)
+    advance_rental_version(db)
     db.commit()
     return Response(status_code=204)
 
@@ -104,6 +110,8 @@ def get_rental(rental_id: RecordId, db: Session = Depends(get_db)):
 
 @router.put("/{rental_id}", response_model=RentalResponse, dependencies=[Depends(can_write)])
 def update_rental(rental_id: RecordId, payload: RentalUpdate, db: Session = Depends(get_db)):
+    from ..rental_facts import advance_rental_version
+
     row = find_rental(db, rental_id)
     if "managerId" in payload.model_fields_set:
         validate_manager(db, payload.managerId)
@@ -122,6 +130,7 @@ def update_rental(rental_id: RecordId, payload: RentalUpdate, db: Session = Depe
         setattr(row, columns[key], value)
     row.updated_at = utc_now()
     try:
+        advance_rental_version(db)
         db.commit()
     except IntegrityError as error:
         raise_write_conflict(db, error, "A rental with this listing code already exists.")
@@ -130,6 +139,9 @@ def update_rental(rental_id: RecordId, payload: RentalUpdate, db: Session = Depe
 
 @router.delete("/{rental_id}", status_code=204, dependencies=[Depends(can_delete)])
 def delete_rental(rental_id: RecordId, db: Session = Depends(get_db)):
+    from ..rental_facts import advance_rental_version
+
     db.delete(find_rental(db, rental_id))
+    advance_rental_version(db)
     db.commit()
     return Response(status_code=204)
