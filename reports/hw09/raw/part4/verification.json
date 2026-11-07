@@ -1,0 +1,37 @@
+{
+  "student": "Pragya Apurva",
+  "homework": 9,
+  "part": 4,
+  "verified_source": "7767adc8fdc4afa8ba2157ea9ecda15f41162266",
+  "verified": [
+    "distinct two-attempt repair and stop traces",
+    "later lesson reload, first-answer pass and use count",
+    "paired validation and approved lesson snapshot",
+    "freeze digest and source-code hashes",
+    "reference field consistency and all four dataset hashes",
+    "identical case order, variant settings, scoring and metric totals",
+    "dedicated timing request audit",
+    "independent recomputation of every final answer against canonical facts",
+    "tampered lesson snapshot rejected before held-out read"
+  ],
+  "focused_checks": {
+    "passed": 42,
+    "warnings": 3
+  },
+  "lint": {
+    "repository_configured": "PASS",
+    "part4_explicit": "PASS",
+    "part4_format": "PASS"
+  },
+  "broader_suite": {
+    "status": "collection blocked",
+    "missing_modules": [
+      "langgraph",
+      "llama_index",
+      "numpy",
+      "mcp",
+      "jsonschema"
+    ],
+    "collection_errors": 15
+  }
+}

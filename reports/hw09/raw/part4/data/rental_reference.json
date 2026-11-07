@@ -1,0 +1,422 @@
+{
+  "S6102-R-9401": {
+    "source": {
+      "rent_usd": 1825,
+      "bedrooms": 1,
+      "parking_included": false,
+      "neighborhood": "Japantown",
+      "advertised_vacancies": 7,
+      "inventory_export": {
+        "bucket_a": 5,
+        "bucket_b": 2
+      }
+    },
+    "facts": {
+      "rent_usd": 1825,
+      "bedrooms": 1,
+      "parking_included": false,
+      "neighborhood": "Japantown",
+      "advertised_vacancies": 7,
+      "available_units": 2
+    }
+  },
+  "S6102-R-9402": {
+    "source": {
+      "rent_usd": 1900,
+      "bedrooms": 2,
+      "parking_included": true,
+      "neighborhood": "Rose Garden",
+      "advertised_vacancies": 5,
+      "inventory_export": {
+        "bucket_a": 1,
+        "bucket_b": 4
+      }
+    },
+    "facts": {
+      "rent_usd": 1900,
+      "bedrooms": 2,
+      "parking_included": true,
+      "neighborhood": "Rose Garden",
+      "advertised_vacancies": 5,
+      "available_units": 4
+    }
+  },
+  "S6102-R-9403": {
+    "source": {
+      "rent_usd": 1975,
+      "bedrooms": 3,
+      "parking_included": false,
+      "neighborhood": "Alum Rock",
+      "advertised_vacancies": 5,
+      "inventory_export": {
+        "bucket_a": 4,
+        "bucket_b": 1
+      }
+    },
+    "facts": {
+      "rent_usd": 1975,
+      "bedrooms": 3,
+      "parking_included": false,
+      "neighborhood": "Alum Rock",
+      "advertised_vacancies": 5,
+      "available_units": 1
+    }
+  },
+  "S6102-R-9404": {
+    "source": {
+      "rent_usd": 2050,
+      "bedrooms": 1,
+      "parking_included": false,
+      "neighborhood": "Willow Glen",
+      "advertised_vacancies": 5,
+      "inventory_export": {
+        "bucket_a": 2,
+        "bucket_b": 3
+      }
+    },
+    "facts": {
+      "rent_usd": 2050,
+      "bedrooms": 1,
+      "parking_included": false,
+      "neighborhood": "Willow Glen",
+      "advertised_vacancies": 5,
+      "available_units": 3
+    }
+  },
+  "S6102-R-9405": {
+    "source": {
+      "rent_usd": 2125,
+      "bedrooms": 2,
+      "parking_included": true,
+      "neighborhood": "Berryessa",
+      "advertised_vacancies": 4,
+      "inventory_export": {
+        "bucket_a": 1,
+        "bucket_b": 3
+      }
+    },
+    "facts": {
+      "rent_usd": 2125,
+      "bedrooms": 2,
+      "parking_included": true,
+      "neighborhood": "Berryessa",
+      "advertised_vacancies": 4,
+      "available_units": 3
+    }
+  },
+  "S6102-R-9406": {
+    "source": {
+      "rent_usd": 2200,
+      "bedrooms": 3,
+      "parking_included": false,
+      "neighborhood": "Japantown",
+      "advertised_vacancies": 7,
+      "inventory_export": {
+        "bucket_a": 5,
+        "bucket_b": 2
+      }
+    },
+    "facts": {
+      "rent_usd": 2200,
+      "bedrooms": 3,
+      "parking_included": false,
+      "neighborhood": "Japantown",
+      "advertised_vacancies": 7,
+      "available_units": 2
+    }
+  },
+  "S6102-R-9407": {
+    "source": {
+      "rent_usd": 2275,
+      "bedrooms": 1,
+      "parking_included": false,
+      "neighborhood": "Rose Garden",
+      "advertised_vacancies": 3,
+      "inventory_export": {
+        "bucket_a": 3,
+        "bucket_b": 0
+      }
+    },
+    "facts": {
+      "rent_usd": 2275,
+      "bedrooms": 1,
+      "parking_included": false,
+      "neighborhood": "Rose Garden",
+      "advertised_vacancies": 3,
+      "available_units": 0
+    }
+  },
+  "S6102-R-9408": {
+    "source": {
+      "rent_usd": 2350,
+      "bedrooms": 2,
+      "parking_included": true,
+      "neighborhood": "Alum Rock",
+      "advertised_vacancies": 4,
+      "inventory_export": {
+        "bucket_a": 2,
+        "bucket_b": 2
+      }
+    },
+    "facts": {
+      "rent_usd": 2350,
+      "bedrooms": 2,
+      "parking_included": true,
+      "neighborhood": "Alum Rock",
+      "advertised_vacancies": 4,
+      "available_units": 2
+    }
+  },
+  "S6102-R-9409": {
+    "source": {
+      "rent_usd": 2425,
+      "bedrooms": 3,
+      "parking_included": false,
+      "neighborhood": "Willow Glen",
+      "advertised_vacancies": 5,
+      "inventory_export": {
+        "bucket_a": 2,
+        "bucket_b": 3
+      }
+    },
+    "facts": {
+      "rent_usd": 2425,
+      "bedrooms": 3,
+      "parking_included": false,
+      "neighborhood": "Willow Glen",
+      "advertised_vacancies": 5,
+      "available_units": 3
+    }
+  },
+  "S6102-R-9410": {
+    "source": {
+      "rent_usd": 2500,
+      "bedrooms": 1,
+      "parking_included": false,
+      "neighborhood": "Berryessa",
+      "advertised_vacancies": 4,
+      "inventory_export": {
+        "bucket_a": 3,
+        "bucket_b": 1
+      }
+    },
+    "facts": {
+      "rent_usd": 2500,
+      "bedrooms": 1,
+      "parking_included": false,
+      "neighborhood": "Berryessa",
+      "advertised_vacancies": 4,
+      "available_units": 1
+    }
+  },
+  "S6102-R-9411": {
+    "source": {
+      "rent_usd": 2575,
+      "bedrooms": 2,
+      "parking_included": true,
+      "neighborhood": "Japantown",
+      "advertised_vacancies": 5,
+      "inventory_export": {
+        "bucket_a": 1,
+        "bucket_b": 4
+      }
+    },
+    "facts": {
+      "rent_usd": 2575,
+      "bedrooms": 2,
+      "parking_included": true,
+      "neighborhood": "Japantown",
+      "advertised_vacancies": 5,
+      "available_units": 4
+    }
+  },
+  "S6102-R-9412": {
+    "source": {
+      "rent_usd": 1825,
+      "bedrooms": 3,
+      "parking_included": false,
+      "neighborhood": "Rose Garden",
+      "advertised_vacancies": 5,
+      "inventory_export": {
+        "bucket_a": 4,
+        "bucket_b": 1
+      }
+    },
+    "facts": {
+      "rent_usd": 1825,
+      "bedrooms": 3,
+      "parking_included": false,
+      "neighborhood": "Rose Garden",
+      "advertised_vacancies": 5,
+      "available_units": 1
+    }
+  },
+  "S6102-R-9413": {
+    "source": {
+      "rent_usd": 1900,
+      "bedrooms": 1,
+      "parking_included": false,
+      "neighborhood": "Alum Rock",
+      "advertised_vacancies": 2,
+      "inventory_export": {
+        "bucket_a": 2,
+        "bucket_b": 0
+      }
+    },
+    "facts": {
+      "rent_usd": 1900,
+      "bedrooms": 1,
+      "parking_included": false,
+      "neighborhood": "Alum Rock",
+      "advertised_vacancies": 2,
+      "available_units": 0
+    }
+  },
+  "S6102-R-9414": {
+    "source": {
+      "rent_usd": 1975,
+      "bedrooms": 2,
+      "parking_included": true,
+      "neighborhood": "Willow Glen",
+      "advertised_vacancies": 6,
+      "inventory_export": {
+        "bucket_a": 4,
+        "bucket_b": 2
+      }
+    },
+    "facts": {
+      "rent_usd": 1975,
+      "bedrooms": 2,
+      "parking_included": true,
+      "neighborhood": "Willow Glen",
+      "advertised_vacancies": 6,
+      "available_units": 2
+    }
+  },
+  "S6102-R-9415": {
+    "source": {
+      "rent_usd": 2050,
+      "bedrooms": 3,
+      "parking_included": false,
+      "neighborhood": "Berryessa",
+      "advertised_vacancies": 4,
+      "inventory_export": {
+        "bucket_a": 1,
+        "bucket_b": 3
+      }
+    },
+    "facts": {
+      "rent_usd": 2050,
+      "bedrooms": 3,
+      "parking_included": false,
+      "neighborhood": "Berryessa",
+      "advertised_vacancies": 4,
+      "available_units": 3
+    }
+  },
+  "S6102-R-9416": {
+    "source": {
+      "rent_usd": 2125,
+      "bedrooms": 1,
+      "parking_included": false,
+      "neighborhood": "Japantown",
+      "advertised_vacancies": 4,
+      "inventory_export": {
+        "bucket_a": 3,
+        "bucket_b": 1
+      }
+    },
+    "facts": {
+      "rent_usd": 2125,
+      "bedrooms": 1,
+      "parking_included": false,
+      "neighborhood": "Japantown",
+      "advertised_vacancies": 4,
+      "available_units": 1
+    }
+  },
+  "S6102-R-9417": {
+    "source": {
+      "rent_usd": 2200,
+      "bedrooms": 2,
+      "parking_included": true,
+      "neighborhood": "Rose Garden",
+      "advertised_vacancies": 3,
+      "inventory_export": {
+        "bucket_a": 1,
+        "bucket_b": 2
+      }
+    },
+    "facts": {
+      "rent_usd": 2200,
+      "bedrooms": 2,
+      "parking_included": true,
+      "neighborhood": "Rose Garden",
+      "advertised_vacancies": 3,
+      "available_units": 2
+    }
+  },
+  "S6102-R-9418": {
+    "source": {
+      "rent_usd": 2275,
+      "bedrooms": 3,
+      "parking_included": false,
+      "neighborhood": "Alum Rock",
+      "advertised_vacancies": 5,
+      "inventory_export": {
+        "bucket_a": 2,
+        "bucket_b": 3
+      }
+    },
+    "facts": {
+      "rent_usd": 2275,
+      "bedrooms": 3,
+      "parking_included": false,
+      "neighborhood": "Alum Rock",
+      "advertised_vacancies": 5,
+      "available_units": 3
+    }
+  },
+  "S6102-R-9419": {
+    "source": {
+      "rent_usd": 2350,
+      "bedrooms": 1,
+      "parking_included": false,
+      "neighborhood": "Willow Glen",
+      "advertised_vacancies": 7,
+      "inventory_export": {
+        "bucket_a": 2,
+        "bucket_b": 5
+      }
+    },
+    "facts": {
+      "rent_usd": 2350,
+      "bedrooms": 1,
+      "parking_included": false,
+      "neighborhood": "Willow Glen",
+      "advertised_vacancies": 7,
+      "available_units": 5
+    }
+  },
+  "S6102-R-9420": {
+    "source": {
+      "rent_usd": 2425,
+      "bedrooms": 2,
+      "parking_included": true,
+      "neighborhood": "Berryessa",
+      "advertised_vacancies": 5,
+      "inventory_export": {
+        "bucket_a": 3,
+        "bucket_b": 2
+      }
+    },
+    "facts": {
+      "rent_usd": 2425,
+      "bedrooms": 2,
+      "parking_included": true,
+      "neighborhood": "Berryessa",
+      "advertised_vacancies": 5,
+      "available_units": 2
+    }
+  }
+}

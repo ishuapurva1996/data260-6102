@@ -1,0 +1,5 @@
+{
+  "check": "tampered baseline lesson snapshot rejected before held-out read",
+  "passed": true,
+  "message": "The pre-test freeze receipt does not match the frozen configuration"
+}

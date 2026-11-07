@@ -1,0 +1,24 @@
+Pragya Apurva  |  DATA 260 HW9 Part 4  |  Saved local Ollama run
+
+4.1  Controlled repair  S6102-R-9402
+Tell me the monthly rent and the number of units ready for immediate move-in.
+Attempt 1 (availability removed)  {"rent_usd": 1900}
+Evaluator  REVISE  |  Missing or incorrect: available_units.
+Set these requested fields to the reference values: {"available_units": 4}
+Attempt 2  {"available_units": 4, "rent_usd": 1900}
+Final  PASS after 2 attempts  |  Rent usd: 1900  |  Available units: 4
+Stop control  S6102-R-9401  REVISE -> REVISE  |  Stopped after 2 attempts
+
+4.2  Later question  S6102-R-9403
+How many move-in-ready homes are currently available here?
+Loaded rental-ready-units-v1 from lessons.json  |  use_count 0 -> 1
+First answer  {"available_units": 1}  |  PASS
+
+4.3  Validation retained lesson  |  Target first passes 0/3 -> 2/3  |  Regressions 0
+
+4.4  Held-out results  |  10 identical questions per variant  |  Cache bypassed
+Variant                    Correct   Wrong   Attempts      Mean ms
+Baseline                         5       5       1.00      1,296.2
+Evaluator Repair                10       0       1.50      1,625.0
+Lesson Memory                   10       0       1.10      1,313.6
+Validated Improvement           10       0       1.10      1,242.6
