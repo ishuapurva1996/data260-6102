@@ -10,6 +10,7 @@ from sqlalchemy.orm import Session
 
 from ..database import get_db
 from ..models import PropertyManager, Rental, utc_now
+from ..rental_facts import advance_rental_version
 from ..schemas import RentalCreate, RentalResponse, RentalUpdate, rental_json
 from ..write_errors import raise_write_conflict
 from .auth import can_delete, can_write, require_user
@@ -81,6 +82,7 @@ def create_rental(payload: RentalCreate, db: Session = Depends(get_db)):
             # transaction. Concurrent requests never depend on SELECT MAX(id).
             row.listing_code = f"S6102-R-{row.id}"
             row.updated_at = now
+        advance_rental_version(db)
         db.commit()
     except IntegrityError as error:
         raise_write_conflict(db, error, "A rental with this listing code already exists.")
@@ -93,6 +95,7 @@ def delete_highest(db: Session = Depends(get_db)):
     if row is None:
         raise HTTPException(404, "There are no rental listings to delete.")
     db.delete(row)
+    advance_rental_version(db)
     db.commit()
     return Response(status_code=204)
 
@@ -122,6 +125,7 @@ def update_rental(rental_id: RecordId, payload: RentalUpdate, db: Session = Depe
         setattr(row, columns[key], value)
     row.updated_at = utc_now()
     try:
+        advance_rental_version(db)
         db.commit()
     except IntegrityError as error:
         raise_write_conflict(db, error, "A rental with this listing code already exists.")
@@ -131,5 +135,6 @@ def update_rental(rental_id: RecordId, payload: RentalUpdate, db: Session = Depe
 @router.delete("/{rental_id}", status_code=204, dependencies=[Depends(can_delete)])
 def delete_rental(rental_id: RecordId, db: Session = Depends(get_db)):
     db.delete(find_rental(db, rental_id))
+    advance_rental_version(db)
     db.commit()
     return Response(status_code=204)

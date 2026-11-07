@@ -1,0 +1,2 @@
+-r requirements-hw08.lock.txt
+redis==6.4.0
