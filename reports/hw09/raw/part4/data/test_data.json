@@ -1,0 +1,78 @@
+[
+  {
+    "listing_id": "S6102-R-9417",
+    "question": "How many vacancies does the listing advertise, including units still in turnover?",
+    "requested_fields": [
+      "advertised_vacancies"
+    ]
+  },
+  {
+    "listing_id": "S6102-R-9411",
+    "question": "How many vacant units could a renter occupy right away?",
+    "requested_fields": [
+      "available_units"
+    ]
+  },
+  {
+    "listing_id": "S6102-R-9420",
+    "question": "Can you confirm whether the building has an elevator and where it is located?",
+    "requested_fields": [
+      "elevator",
+      "neighborhood"
+    ]
+  },
+  {
+    "listing_id": "S6102-R-9418",
+    "question": "Does the property include parking, and what does it cost per month to rent?",
+    "requested_fields": [
+      "parking_included",
+      "rent_usd"
+    ]
+  },
+  {
+    "listing_id": "S6102-R-9413",
+    "question": "Can you give me the immediate availability count, even if it is zero?",
+    "requested_fields": [
+      "available_units"
+    ]
+  },
+  {
+    "listing_id": "S6102-R-9416",
+    "question": "Is there a gym at this property?",
+    "requested_fields": [
+      "gym"
+    ]
+  },
+  {
+    "listing_id": "S6102-R-9412",
+    "question": "Give the rent and the number of homes I could move into immediately.",
+    "requested_fields": [
+      "rent_usd",
+      "available_units"
+    ]
+  },
+  {
+    "listing_id": "S6102-R-9415",
+    "question": "What is the neighborhood and how many bedrooms are in the units?",
+    "requested_fields": [
+      "neighborhood",
+      "bedrooms"
+    ]
+  },
+  {
+    "listing_id": "S6102-R-9419",
+    "question": "What is the listing’s advertised vacancy count and immediate availability?",
+    "requested_fields": [
+      "advertised_vacancies",
+      "available_units"
+    ]
+  },
+  {
+    "listing_id": "S6102-R-9414",
+    "question": "How many units are currently move-in ready, and is parking included?",
+    "requested_fields": [
+      "available_units",
+      "parking_included"
+    ]
+  }
+]

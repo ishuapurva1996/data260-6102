@@ -1,0 +1,31 @@
+[
+  {
+    "listing_id": "S6102-R-9401",
+    "question": "How many units at this listing can a tenant move into now?",
+    "requested_fields": [
+      "available_units"
+    ]
+  },
+  {
+    "listing_id": "S6102-R-9402",
+    "question": "Tell me the monthly rent and the number of units ready for immediate move-in.",
+    "requested_fields": [
+      "rent_usd",
+      "available_units"
+    ]
+  },
+  {
+    "listing_id": "S6102-R-9403",
+    "question": "How many move-in-ready homes are currently available here?",
+    "requested_fields": [
+      "available_units"
+    ]
+  },
+  {
+    "listing_id": "S6102-R-9404",
+    "question": "How many bedrooms does a unit have?",
+    "requested_fields": [
+      "bedrooms"
+    ]
+  }
+]

@@ -1,0 +1,46 @@
+[
+  {
+    "listing_id": "S6102-R-9405",
+    "question": "How many units are ready for a new tenant today?",
+    "requested_fields": [
+      "available_units"
+    ]
+  },
+  {
+    "listing_id": "S6102-R-9406",
+    "question": "I need the price per month and the current move-in-ready unit count.",
+    "requested_fields": [
+      "rent_usd",
+      "available_units"
+    ]
+  },
+  {
+    "listing_id": "S6102-R-9407",
+    "question": "What is the count of units available for immediate occupancy?",
+    "requested_fields": [
+      "available_units"
+    ]
+  },
+  {
+    "listing_id": "S6102-R-9408",
+    "question": "Is parking included in the monthly rent?",
+    "requested_fields": [
+      "parking_included"
+    ]
+  },
+  {
+    "listing_id": "S6102-R-9409",
+    "question": "Does the listing say whether an elevator is available?",
+    "requested_fields": [
+      "elevator"
+    ]
+  },
+  {
+    "listing_id": "S6102-R-9410",
+    "question": "What neighborhood is the property in and what is the monthly rent?",
+    "requested_fields": [
+      "neighborhood",
+      "rent_usd"
+    ]
+  }
+]
