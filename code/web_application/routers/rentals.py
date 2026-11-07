@@ -10,6 +10,7 @@ from sqlalchemy.orm import Session
 
 from ..database import get_db
 from ..models import PropertyManager, Rental, utc_now
+from ..rental_views import get_rental_view_counter
 from ..schemas import RentalCreate, RentalResponse, RentalUpdate, rental_json
 from ..write_errors import raise_write_conflict
 from .auth import can_delete, can_write, require_user
@@ -98,8 +99,15 @@ def delete_highest(db: Session = Depends(get_db)):
 
 
 @router.get("/{rental_id}", response_model=RentalResponse)
-def get_rental(rental_id: RecordId, db: Session = Depends(get_db)):
-    return rental_json(find_rental(db, rental_id))
+def get_rental(rental_id: RecordId, response: Response, db: Session = Depends(get_db)):
+    row = find_rental(db, rental_id)
+    rental = rental_json(row)
+    counter = get_rental_view_counter()
+    if counter is not None:
+        count = counter.increment_rental_views(db, row.id)
+        if count is not None:
+            response.headers["X-View-Count"] = str(count)
+    return rental
 
 
 @router.put("/{rental_id}", response_model=RentalResponse, dependencies=[Depends(can_write)])
