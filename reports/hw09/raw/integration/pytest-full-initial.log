@@ -1,0 +1,231 @@
+
+==================================== ERRORS ====================================
+________________ ERROR collecting tests/agent_graph/test_cli.py ________________
+ImportError while importing test module '/Users/pragyaapurva/Documents/SJSU/DATA 260/HW9/worktrees/integration/tests/agent_graph/test_cli.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+../../../../../../.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/agent_graph/test_cli.py:25: in <module>
+    spec.loader.exec_module(cli)
+code/agents_graph.py:25: in <module>
+    from src.agent_graph.state import create_initial_state
+src/agent_graph/__init__.py:4: in <module>
+    from .workflow import build_graph, recursion_limit
+src/agent_graph/workflow.py:3: in <module>
+    from langgraph.graph import END, START, StateGraph
+E   ModuleNotFoundError: No module named 'langgraph'
+____________ ERROR collecting tests/agent_graph/test_evaluation.py _____________
+ImportError while importing test module '/Users/pragyaapurva/Documents/SJSU/DATA 260/HW9/worktrees/integration/tests/agent_graph/test_evaluation.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+../../../../../../.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/agent_graph/test_evaluation.py:20: in <module>
+    spec.loader.exec_module(cli)
+code/agents_graph.py:26: in <module>
+    from src.agent_graph.workflow import build_graph, recursion_limit
+src/agent_graph/__init__.py:4: in <module>
+    from .workflow import build_graph, recursion_limit
+src/agent_graph/workflow.py:3: in <module>
+    from langgraph.graph import END, START, StateGraph
+E   ModuleNotFoundError: No module named 'langgraph'
+____________ ERROR collecting tests/agent_graph/test_experiments.py ____________
+ImportError while importing test module '/Users/pragyaapurva/Documents/SJSU/DATA 260/HW9/worktrees/integration/tests/agent_graph/test_experiments.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+../../../../../../.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/agent_graph/test_experiments.py:12: in <module>
+    from code import agents_experiments as batch
+code/agents_experiments.py:25: in <module>
+    from src.agent_graph.evaluation import IntegrityError, aggregate_records, classify_result
+src/agent_graph/__init__.py:4: in <module>
+    from .workflow import build_graph, recursion_limit
+src/agent_graph/workflow.py:3: in <module>
+    from langgraph.graph import END, START, StateGraph
+E   ModuleNotFoundError: No module named 'langgraph'
+_______________ ERROR collecting tests/agent_graph/test_nodes.py _______________
+ImportError while importing test module '/Users/pragyaapurva/Documents/SJSU/DATA 260/HW9/worktrees/integration/tests/agent_graph/test_nodes.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+../../../../../../.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/agent_graph/test_nodes.py:10: in <module>
+    from src.agent_graph.contracts import (
+src/agent_graph/__init__.py:4: in <module>
+    from .workflow import build_graph, recursion_limit
+src/agent_graph/workflow.py:3: in <module>
+    from langgraph.graph import END, START, StateGraph
+E   ModuleNotFoundError: No module named 'langgraph'
+___________ ERROR collecting tests/agent_graph/test_verify_part4.py ____________
+ImportError while importing test module '/Users/pragyaapurva/Documents/SJSU/DATA 260/HW9/worktrees/integration/tests/agent_graph/test_verify_part4.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+../../../../../../.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/agent_graph/test_verify_part4.py:24: in <module>
+    verifier = module("part4_verifier_test", "scripts/verify_part4.py")
+tests/agent_graph/test_verify_part4.py:20: in module
+    spec.loader.exec_module(value)
+scripts/verify_part4.py:24: in <module>
+    _spec.loader.exec_module(experiments)
+code/agents_experiments.py:25: in <module>
+    from src.agent_graph.evaluation import IntegrityError, aggregate_records, classify_result
+src/agent_graph/__init__.py:4: in <module>
+    from .workflow import build_graph, recursion_limit
+src/agent_graph/workflow.py:3: in <module>
+    from langgraph.graph import END, START, StateGraph
+E   ModuleNotFoundError: No module named 'langgraph'
+_____________ ERROR collecting tests/agent_graph/test_workflow.py ______________
+ImportError while importing test module '/Users/pragyaapurva/Documents/SJSU/DATA 260/HW9/worktrees/integration/tests/agent_graph/test_workflow.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+../../../../../../.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/agent_graph/test_workflow.py:10: in <module>
+    from src.agent_graph.workflow import build_graph, recursion_limit
+src/agent_graph/__init__.py:4: in <module>
+    from .workflow import build_graph, recursion_limit
+src/agent_graph/workflow.py:3: in <module>
+    from langgraph.graph import END, START, StateGraph
+E   ModuleNotFoundError: No module named 'langgraph'
+______________ ERROR collecting tests/retrieval/test_chunking.py _______________
+ImportError while importing test module '/Users/pragyaapurva/Documents/SJSU/DATA 260/HW9/worktrees/integration/tests/retrieval/test_chunking.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+../../../../../../.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/retrieval/test_chunking.py:5: in <module>
+    from llama_index.core import Document
+E   ModuleNotFoundError: No module named 'llama_index'
+_________ ERROR collecting tests/retrieval/test_embedding_contract.py __________
+ImportError while importing test module '/Users/pragyaapurva/Documents/SJSU/DATA 260/HW9/worktrees/integration/tests/retrieval/test_embedding_contract.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+../../../../../../.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/retrieval/test_embedding_contract.py:1: in <module>
+    import numpy as np
+E   ModuleNotFoundError: No module named 'numpy'
+__________ ERROR collecting tests/retrieval/test_retrieval_records.py __________
+ImportError while importing test module '/Users/pragyaapurva/Documents/SJSU/DATA 260/HW9/worktrees/integration/tests/retrieval/test_retrieval_records.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+../../../../../../.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/retrieval/test_retrieval_records.py:5: in <module>
+    import numpy as np
+E   ModuleNotFoundError: No module named 'numpy'
+____________ ERROR collecting tests/retrieval/test_verification.py _____________
+ImportError while importing test module '/Users/pragyaapurva/Documents/SJSU/DATA 260/HW9/worktrees/integration/tests/retrieval/test_verification.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+../../../../../../.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/retrieval/test_verification.py:7: in <module>
+    spec.loader.exec_module(verify)
+scripts/verify_hw03_part2.py:9: in <module>
+    import numpy as np
+E   ModuleNotFoundError: No module named 'numpy'
+___________________ ERROR collecting tests/test_hw04_rag.py ____________________
+import file mismatch:
+imported module 'test_hw04_rag' has this __file__ attribute:
+  /Users/pragyaapurva/Documents/SJSU/DATA 260/HW9/worktrees/integration/reports/hw04/raw/part4/followup-setup-20260928/before/tests/test_hw04_rag.py
+which is not the same as the test file we want to collect:
+  /Users/pragyaapurva/Documents/SJSU/DATA 260/HW9/worktrees/integration/tests/test_hw04_rag.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules
+______________ ERROR collecting tests/test_hw04_rag_evaluation.py ______________
+import file mismatch:
+imported module 'test_hw04_rag_evaluation' has this __file__ attribute:
+  /Users/pragyaapurva/Documents/SJSU/DATA 260/HW9/worktrees/integration/reports/hw04/raw/part4/followup-setup-20260928/before/tests/test_hw04_rag_evaluation.py
+which is not the same as the test file we want to collect:
+  /Users/pragyaapurva/Documents/SJSU/DATA 260/HW9/worktrees/integration/tests/test_hw04_rag_evaluation.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules
+________________ ERROR collecting tests/test_hw05_mcp_stdio.py _________________
+ImportError while importing test module '/Users/pragyaapurva/Documents/SJSU/DATA 260/HW9/worktrees/integration/tests/test_hw05_mcp_stdio.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+../../../../../../.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_hw05_mcp_stdio.py:10: in <module>
+    from mcp import ClientSession, StdioServerParameters
+E   ModuleNotFoundError: No module named 'mcp'
+________________ ERROR collecting tests/test_hw07_bike_agent.py ________________
+ImportError while importing test module '/Users/pragyaapurva/Documents/SJSU/DATA 260/HW9/worktrees/integration/tests/test_hw07_bike_agent.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+../../../../../../.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_hw07_bike_agent.py:12: in <module>
+    from src.bikeshare.agent import BikeConfig, run_bike_agent
+src/bikeshare/agent.py:13: in <module>
+    from jsonschema import Draft202012Validator, FormatChecker
+E   ModuleNotFoundError: No module named 'jsonschema'
+_________________ ERROR collecting tests/test_hw07_bike_api.py _________________
+ImportError while importing test module '/Users/pragyaapurva/Documents/SJSU/DATA 260/HW9/worktrees/integration/tests/test_hw07_bike_api.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+../../../../../../.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_hw07_bike_api.py:13: in <module>
+    from tests.test_hw07_bike_agent import csv_input
+tests/test_hw07_bike_agent.py:12: in <module>
+    from src.bikeshare.agent import BikeConfig, run_bike_agent
+src/bikeshare/agent.py:13: in <module>
+    from jsonschema import Draft202012Validator, FormatChecker
+E   ModuleNotFoundError: No module named 'jsonschema'
+_______________ ERROR collecting tests/test_hw07_bike_service.py _______________
+ImportError while importing test module '/Users/pragyaapurva/Documents/SJSU/DATA 260/HW9/worktrees/integration/tests/test_hw07_bike_service.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+../../../../../../.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_hw07_bike_service.py:12: in <module>
+    from tests.test_hw07_bike_agent import csv_input
+tests/test_hw07_bike_agent.py:12: in <module>
+    from src.bikeshare.agent import BikeConfig, run_bike_agent
+src/bikeshare/agent.py:13: in <module>
+    from jsonschema import Draft202012Validator, FormatChecker
+E   ModuleNotFoundError: No module named 'jsonschema'
+________________ ERROR collecting tests/test_hw07_file_agent.py ________________
+ImportError while importing test module '/Users/pragyaapurva/Documents/SJSU/DATA 260/HW9/worktrees/integration/tests/test_hw07_file_agent.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+../../../../../../.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_hw07_file_agent.py:8: in <module>
+    from src.course_files.agent import run_file_agent
+src/course_files/agent.py:6: in <module>
+    from jsonschema import Draft202012Validator
+E   ModuleNotFoundError: No module named 'jsonschema'
+=============================== warnings summary ===============================
+../../../../../../code/agent_outputs/data260-hw9-planning/cache-runtime/venv312/lib/python3.12/site-packages/starlette/formparsers.py:10
+  /Users/pragyaapurva/code/agent_outputs/data260-hw9-planning/cache-runtime/venv312/lib/python3.12/site-packages/starlette/formparsers.py:10: PendingDeprecationWarning: Please use `import python_multipart` instead.
+    import multipart
+
+../../../../../../code/agent_outputs/data260-hw9-planning/cache-runtime/venv312/lib/python3.12/site-packages/starlette/testclient.py:31
+  /Users/pragyaapurva/code/agent_outputs/data260-hw9-planning/cache-runtime/venv312/lib/python3.12/site-packages/starlette/testclient.py:31: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    [], typing.ContextManager[anyio.abc.BlockingPortal]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+ERROR tests/agent_graph/test_cli.py
+ERROR tests/agent_graph/test_evaluation.py
+ERROR tests/agent_graph/test_experiments.py
+ERROR tests/agent_graph/test_nodes.py
+ERROR tests/agent_graph/test_verify_part4.py
+ERROR tests/agent_graph/test_workflow.py
+ERROR tests/retrieval/test_chunking.py
+ERROR tests/retrieval/test_embedding_contract.py
+ERROR tests/retrieval/test_retrieval_records.py
+ERROR tests/retrieval/test_verification.py
+ERROR tests/test_hw04_rag.py
+ERROR tests/test_hw04_rag_evaluation.py
+ERROR tests/test_hw05_mcp_stdio.py
+ERROR tests/test_hw07_bike_agent.py
+ERROR tests/test_hw07_bike_api.py
+ERROR tests/test_hw07_bike_service.py
+ERROR tests/test_hw07_file_agent.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 17 errors during collection !!!!!!!!!!!!!!!!!!!
+2 warnings, 17 errors in 1.69s

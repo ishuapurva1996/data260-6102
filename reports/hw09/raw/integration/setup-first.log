@@ -1,0 +1,4 @@
+HW4/HW5 prerequisites: ['004_hw5_related_entities']
+HW7 migration 005: applied
+Numbered migrations through 007: ['003_listing_title_index.sql', '006_rental_view_count.sql', '007_rental_data_version.sql']
+Teaching accounts: {'reader': 'created', 'writer': 'created', 'moderator': 'created'}

@@ -1,0 +1,40 @@
+FFF                                                                      [100%]
+=================================== FAILURES ===================================
+____________ test_development_inputs_cannot_be_rebound_after_freeze ____________
+tests/test_hw09_release_checks.py:24: in test_development_inputs_cannot_be_rebound_after_freeze
+    with pytest.raises(AssertionError):
+E   Failed: DID NOT RAISE <class 'AssertionError'>
+____________ test_live_check_rejects_a_server_from_another_revision ____________
+tests/test_hw09_release_checks.py:34: in test_live_check_rejects_a_server_from_another_revision
+    verifier.verify_live(args, tmp_path)
+scripts/verify_hw09.py:212: in verify_live
+    redis = Redis.from_url(os.environ["HW9_REDIS_URL"])
+<frozen os>:714: in __getitem__
+    ???
+E   KeyError: 'HW9_REDIS_URL'
+___________ test_setup_validation_error_does_not_echo_private_input ____________
+tests/test_hw09_release_checks.py:54: in test_setup_validation_error_does_not_echo_private_input
+    assert setup.main() == 1
+scripts/hw09/setup.py:36: in main
+    print("Teaching accounts:", seed_accounts(engine))
+scripts/hw07/db_setup.py:65: in seed_accounts
+    payload = LoginInput(
+E   pydantic_core._pydantic_core.ValidationError: 1 validation error for LoginInput
+E   password
+E     String should have at most 1024 characters [type=string_too_long, input_value='PRIVATE_SETUP_SENTINELPR...LPRIVATE_SETUP_SENTINEL', input_type=str]
+E       For further information visit https://errors.pydantic.dev/2.12/v/string_too_long
+----------------------------- Captured stdout call -----------------------------
+HW4/HW5 prerequisites: []
+HW7 migration 005: current
+Numbered migrations through 007: []
+=============================== warnings summary ===============================
+tests/test_hw09_release_checks.py::test_live_check_rejects_a_server_from_another_revision
+  /Users/pragyaapurva/code/agent_outputs/data260-hw9-planning/integration-runtime/venv/lib/python3.12/site-packages/starlette/formparsers.py:10: PendingDeprecationWarning: Please use `import python_multipart` instead.
+    import multipart
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_hw09_release_checks.py::test_development_inputs_cannot_be_rebound_after_freeze
+FAILED tests/test_hw09_release_checks.py::test_live_check_rejects_a_server_from_another_revision
+FAILED tests/test_hw09_release_checks.py::test_setup_validation_error_does_not_echo_private_input
+3 failed, 1 warning in 0.32s

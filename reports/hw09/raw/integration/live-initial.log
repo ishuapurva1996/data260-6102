@@ -1,0 +1,50 @@
+Pragya Apurva | DATA 260 HW9 verifier | 2026-11-07T17:38:23.592342+00:00
+Auth 401, missing 404, and collection GET left counters untouched.
+=== Testing Counter | S6102-R-62 ===
+Access #01: Total = 1
+Access #02: Total = 2
+Access #03: Total = 3
+Access #04: Total = 4
+Access #05: Total = 5
+Access #06: Total = 6
+Access #07: Total = 7
+Access #08: Total = 8
+Access #09: Total = 9
+  MySQL checkpoint after #9: 0
+Access #10: Total = 10
+  MySQL checkpoint after #10: 10
+Access #11: Total = 11
+Access #12: Total = 12
+Access #13: Total = 13
+Access #14: Total = 14
+Access #15: Total = 15
+Access #16: Total = 16
+Access #17: Total = 17
+Access #18: Total = 18
+Access #19: Total = 19
+Access #20: Total = 20
+  MySQL checkpoint after #20: 20
+Access #21: Total = 21
+Access #22: Total = 22
+Access #23: Total = 23
+Access #24: Total = 24
+Access #25: Total = 25
+  MySQL checkpoint after #25: 20
+Separate listing S6102-R-63: Redis=2, MySQL=0
+Delayed sync at 10 preserved MySQL=20. Eight concurrent cold reads returned 21–28.
+An older SQL snapshot resumed from the latest checkpoint 30 and returned 31.
+Final S6102-R-62: Redis=25, MySQL=20
+fresh_miss_3: cached=False similarity=None answer=At S6102-R-65, there are 3 units available.
+exact_hit_3: cached=True similarity=1.0 answer=At S6102-R-65, there are 3 units available.
+hit_after_view_checkpoint_3: cached=True similarity=1.0 answer=At S6102-R-65, there are 3 units available.
+HW9 verification: FAIL | /Users/pragyaapurva/code/agent_outputs/data260-hw9-planning/integration-runtime/live-initial.json
+Traceback (most recent call last):
+  File "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW9/worktrees/integration/scripts/verify_hw09.py", line 432, in <module>
+    main()
+  File "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW9/worktrees/integration/scripts/verify_hw09.py", line 415, in main
+    receipt["live"] = verify_live(args, runtime)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pragyaapurva/Documents/SJSU/DATA 260/HW9/worktrees/integration/scripts/verify_hw09.py", line 289, in verify_live
+    assert changed.status_code == 200 and version() == v + 1
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

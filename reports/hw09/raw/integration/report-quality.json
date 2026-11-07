@@ -1,0 +1,59 @@
+{
+  "report_sha256": "f7caefdb0967bf2750fcdeb863d352915d3c3617cf07dbdd24a74048838ab119",
+  "pages": 7,
+  "rendering": "Poppler pdftoppm, 130 dpi; all final pages inspected",
+  "font_check": "PASS",
+  "pages_checked": [
+    {
+      "page": 1,
+      "main_heading": "14-point bold",
+      "subheadings": "12-point bold",
+      "body_and_code": "11-point",
+      "visual_inspection": "PASS: no clipping, overlap, or orphaned headings; screenshot name and saved-record labels checked"
+    },
+    {
+      "page": 2,
+      "main_heading": "14-point bold",
+      "subheadings": "12-point bold",
+      "body_and_code": "11-point",
+      "visual_inspection": "PASS: no clipping, overlap, or orphaned headings; screenshot name and saved-record labels checked"
+    },
+    {
+      "page": 3,
+      "main_heading": "14-point bold",
+      "subheadings": "12-point bold",
+      "body_and_code": "11-point",
+      "visual_inspection": "PASS: no clipping, overlap, or orphaned headings; screenshot name and saved-record labels checked"
+    },
+    {
+      "page": 4,
+      "main_heading": "14-point bold",
+      "subheadings": "12-point bold",
+      "body_and_code": "11-point",
+      "visual_inspection": "PASS: no clipping, overlap, or orphaned headings; screenshot name and saved-record labels checked"
+    },
+    {
+      "page": 5,
+      "main_heading": "14-point bold",
+      "subheadings": "12-point bold",
+      "body_and_code": "11-point",
+      "visual_inspection": "PASS: no clipping, overlap, or orphaned headings; screenshot name and saved-record labels checked"
+    },
+    {
+      "page": 6,
+      "main_heading": "14-point bold",
+      "subheadings": "12-point bold",
+      "body_and_code": "11-point",
+      "visual_inspection": "PASS: no clipping, overlap, or orphaned headings; screenshot name and saved-record labels checked"
+    },
+    {
+      "page": 7,
+      "main_heading": "14-point bold",
+      "subheadings": "12-point bold",
+      "body_and_code": "11-point",
+      "visual_inspection": "PASS: no clipping, overlap, or orphaned headings; screenshot name and saved-record labels checked"
+    }
+  ],
+  "terminal_screenshot_name": "Pragya Apurva visible in every included capture",
+  "saved_record_labels": "All four figures accurately identify saved run records"
+}

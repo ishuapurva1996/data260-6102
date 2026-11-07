@@ -1,0 +1,54 @@
+{
+  "student": "Pragya Apurva",
+  "configuration": {
+    "SID4": 6102,
+    "PORT_BASE": 8702,
+    "PREFIX": "s6102",
+    "SEED": 6102,
+    "VERIFY_SEED": 266102,
+    "DOMAIN_ID": 6,
+    "threshold": 0.85,
+    "version_enforced": true,
+    "mysql_port": 3399,
+    "kafka_port": 19099,
+    "redis_port": 6399
+  },
+  "tests": {
+    "active_suite": {
+      "passed": 1528,
+      "skipped": 25,
+      "command": "pytest -q tests --ignore=tests/test_hw05_meals.py --ignore=tests/test_hw05_mcp_stdio.py",
+      "environment": "HW7_JWT_TTL_SECONDS=900; real dedicated MySQL; counter disabled in inherited fixtures"
+    },
+    "dedicated_mcp": {
+      "passed": 56,
+      "requirements": "requirements-mcp.txt"
+    },
+    "total_passed": 1584,
+    "limitations": [
+      "25 prior-homework opt-in MySQL performance/schema mutation checks skipped",
+      "Run active tests under tests/; root collection also sees archived evidence test copies",
+      "Historical MCP tests require their own environment because the app pins older HTTPX/Starlette"
+    ],
+    "review_negative_controls": {
+      "red": 3,
+      "green": 3
+    }
+  },
+  "measurement_preservation": {
+    "part3_service_source": "52c8ef470b124605a0fc51dd8c5821b4a5f3738b",
+    "part4_source": "7767adc8fdc4afa8ba2157ea9ecda15f41162266",
+    "measured_cache_and_agent_paths_unchanged": true,
+    "rerun_required": false,
+    "reason": "Integration adds the independent detail-GET counter and setup/verifier paths; Q&A request/cache/embedding/generation paths and Part4 code remain byte-identical."
+  },
+  "publication": "Local only; remote push and Canvas submission await a separate instruction",
+  "collaborator_access": "Rechecked November 7: both required users appear as direct collaborators; no access changes made.",
+  "review": {
+    "status": "complete",
+    "confirmed_findings": 3,
+    "applied": 3,
+    "unresolved": 0
+  },
+  "integration_code_commit": "958af31b31a54fb6dc928f54a6c41d73e3f82d46"
+}

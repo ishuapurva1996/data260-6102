@@ -1,0 +1,13 @@
+[
+  {
+    "lesson_id": "rental-ready-units-v1",
+    "failure_pattern": "Answers omit or misstate immediate availability in the rental export.",
+    "correction": "For available_units use inventory_export.bucket_b, including zero. Bucket_a is in turnover. Advertised_vacancies is the total of both buckets.",
+    "created_at": "2026-11-07T19:04:08.677842+00:00",
+    "use_count": 1,
+    "scope": {
+      "requested_field": "available_units",
+      "source_field": "inventory_export"
+    }
+  }
+]

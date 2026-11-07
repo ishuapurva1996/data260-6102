@@ -1,0 +1,46 @@
+Pragya Apurva | DATA 260 HW9 verifier | 2026-11-07T17:39:24.562569+00:00
+Auth 401, missing 404, and collection GET left counters untouched.
+=== Testing Counter | S6102-R-66 ===
+Access #01: Total = 1
+Access #02: Total = 2
+Access #03: Total = 3
+Access #04: Total = 4
+Access #05: Total = 5
+Access #06: Total = 6
+Access #07: Total = 7
+Access #08: Total = 8
+Access #09: Total = 9
+  MySQL checkpoint after #9: 0
+Access #10: Total = 10
+  MySQL checkpoint after #10: 10
+Access #11: Total = 11
+Access #12: Total = 12
+Access #13: Total = 13
+Access #14: Total = 14
+Access #15: Total = 15
+Access #16: Total = 16
+Access #17: Total = 17
+Access #18: Total = 18
+Access #19: Total = 19
+Access #20: Total = 20
+  MySQL checkpoint after #20: 20
+Access #21: Total = 21
+Access #22: Total = 22
+Access #23: Total = 23
+Access #24: Total = 24
+Access #25: Total = 25
+  MySQL checkpoint after #25: 20
+Separate listing S6102-R-67: Redis=2, MySQL=0
+Delayed sync at 10 preserved MySQL=20. Eight concurrent cold reads returned 21–28.
+An older SQL snapshot resumed from the latest checkpoint 30 and returned 31.
+Final S6102-R-66: Redis=25, MySQL=20
+fresh_miss_3: cached=False similarity=None answer=At S6102-R-69, there are 3 units available.
+exact_hit_3: cached=True similarity=1.0 answer=At S6102-R-69, there are 3 units available.
+hit_after_view_checkpoint_3: cached=True similarity=1.0 answer=At S6102-R-69, there are 3 units available.
+invalidated_miss_1: cached=False similarity=None answer=At S6102-R-69, there is 1 unit available.
+fresh_hit_1: cached=True similarity=1.0 answer=At S6102-R-69, there is 1 unit available.
+2026-11-07T17:39:38.046155+00:00 | Pragya Apurva | Training and controlled revision
+2026-11-07T17:39:50.564013+00:00 | repeated failures ['S6102-R-9401', 'S6102-R-9402']; repair PASS; stop REVISE; reuse PASS
+2026-11-07T17:40:10.349933+00:00 | Validation accepted rental-ready-units-v1
+2026-11-07T17:40:10.398393+00:00 | Prompts, rubric, code hashes and lesson snapshots frozen
+HW9 verification: PASS | /Users/pragyaapurva/code/agent_outputs/data260-hw9-planning/integration-runtime/live-corrected.json

@@ -1,2 +1,5 @@
 # Integrated web app, Redis counter/cache, Kafka stages, and Part 4 adapter.
 -r requirements-hw09-cache.txt
+# Inherited bike/file-agent paths and their schema validation.
+langgraph==1.2.20
+jsonschema==4.26.0

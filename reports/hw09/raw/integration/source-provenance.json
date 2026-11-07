@@ -1,0 +1,21 @@
+{
+  "integration_code_commit": "958af31b31a54fb6dc928f54a6c41d73e3f82d46",
+  "combined_rental_handlers": {
+    "detail_get_ast_matches_A": true,
+    "create_update_delete_and_delete_highest_asts_match_B": true
+  },
+  "part3_measured_paths_unchanged_sha256": {
+    "code/web_application/main.py": "33936a5f2474b387fb65fb5158df1f6696dad5c308f4e2590c9d69bab8a836e5",
+    "code/web_application/rental_facts.py": "50939b8f2381854e6fd871f3381b7edaba85fd1c6df80867d7e4c6b72bea0da5",
+    "code/web_application/routers/kafka_questions.py": "6d46452b087909e8c5042f9983d93d0cf26f097dd639aedc491936174cbc5231",
+    "src/hw09/semantic_cache.py": "45bb5a539be1e8c30ddd815edc370d27e2c35090023921445e73888fcfc364c0",
+    "src/kafka_agents/common.py": "7fab3007293747b6674f6f7428737aeec4cdbd4d134de0fbff0d3e7886f31862",
+    "src/kafka_agents/question_client.py": "9e8ea696acfb9efa21dcb65de0637ecc0fa493b4e083d877cd373aeab7306a6e",
+    "src/model_client.py": "2b9c517a706e7c9e9191eb88794c17f5684e8d286877c2fbfa6a9b9061118c67"
+  },
+  "part3_measured_source": "52c8ef470b124605a0fc51dd8c5821b4a5f3738b",
+  "part4_frozen_source": "7767adc8fdc4afa8ba2157ea9ecda15f41162266",
+  "frozen_cache_cases_commit": "3511ae67588f61eeff4199aa8f4db294aca04c57",
+  "frozen_cache_cases_sha256": "4c180dd5a8b5dbd007797225889d1cb7e0921339d0670683b225674ee76f0c26",
+  "affected_benchmark_rerun_required": false
+}

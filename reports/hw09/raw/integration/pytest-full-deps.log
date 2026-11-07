@@ -1,0 +1,31 @@
+
+==================================== ERRORS ====================================
+___________________ ERROR collecting tests/test_hw04_rag.py ____________________
+import file mismatch:
+imported module 'test_hw04_rag' has this __file__ attribute:
+  /Users/pragyaapurva/Documents/SJSU/DATA 260/HW9/worktrees/integration/reports/hw04/raw/part4/followup-setup-20260928/before/tests/test_hw04_rag.py
+which is not the same as the test file we want to collect:
+  /Users/pragyaapurva/Documents/SJSU/DATA 260/HW9/worktrees/integration/tests/test_hw04_rag.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules
+______________ ERROR collecting tests/test_hw04_rag_evaluation.py ______________
+import file mismatch:
+imported module 'test_hw04_rag_evaluation' has this __file__ attribute:
+  /Users/pragyaapurva/Documents/SJSU/DATA 260/HW9/worktrees/integration/reports/hw04/raw/part4/followup-setup-20260928/before/tests/test_hw04_rag_evaluation.py
+which is not the same as the test file we want to collect:
+  /Users/pragyaapurva/Documents/SJSU/DATA 260/HW9/worktrees/integration/tests/test_hw04_rag_evaluation.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules
+=============================== warnings summary ===============================
+../../../../../../code/agent_outputs/data260-hw9-planning/integration-runtime/venv/lib/python3.12/site-packages/starlette/formparsers.py:10
+  /Users/pragyaapurva/code/agent_outputs/data260-hw9-planning/integration-runtime/venv/lib/python3.12/site-packages/starlette/formparsers.py:10: PendingDeprecationWarning: Please use `import python_multipart` instead.
+    import multipart
+
+../../../../../../code/agent_outputs/data260-hw9-planning/integration-runtime/venv/lib/python3.12/site-packages/starlette/testclient.py:31
+  /Users/pragyaapurva/code/agent_outputs/data260-hw9-planning/integration-runtime/venv/lib/python3.12/site-packages/starlette/testclient.py:31: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    [], typing.ContextManager[anyio.abc.BlockingPortal]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+ERROR tests/test_hw04_rag.py
+ERROR tests/test_hw04_rag_evaluation.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 2 errors during collection !!!!!!!!!!!!!!!!!!!!
+2 warnings, 2 errors in 5.12s

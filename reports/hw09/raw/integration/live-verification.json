@@ -1,0 +1,434 @@
+{
+  "student": "Pragya Apurva",
+  "homework": 9,
+  "SID4": "6102",
+  "PREFIX": "s6102",
+  "SEED": 6102,
+  "VERIFY_SEED": 266102,
+  "DOMAIN_ID": 6,
+  "started_at_utc": "2026-11-07T19:03:42.897892+00:00",
+  "source_commit": "958af31b31a54fb6dc928f54a6c41d73e3f82d46",
+  "model": "qwen2.5:7b",
+  "threshold": 0.85,
+  "version_enforced": true,
+  "sources": {
+    "ancestry": "PASS",
+    "frozen_yaml_sha256": "4c180dd5a8b5dbd007797225889d1cb7e0921339d0670683b225674ee76f0c26",
+    "measured_cache_and_agent_code_unchanged": true,
+    "sources": {
+      "counter": "bd82926172d80afbb4e80f10b02f9adc1d7930f0",
+      "cache": "6938c71110845b7b73c53b795b709399f8a523a1",
+      "experiments": "f7e5af838ede505db39860be7b6d0b0977b0752c",
+      "agents": "c00f72e9dc1e11c1aa361179732dd98ca4dda466"
+    }
+  },
+  "saved_evidence": {
+    "part1_saved_counter": "PASS",
+    "part3_requests": 200,
+    "scoring_corrections": 2,
+    "part3_audited_results": [
+      {
+        "threshold": 0.75,
+        "requests": 40,
+        "hits": 38,
+        "misses": 2,
+        "incorrect_cached_answers": 21,
+        "hit_rate": 0.95,
+        "false_hit_rate": 0.525,
+        "negative_acceptance_rate": 0.9,
+        "wrong_live_answers": 0,
+        "mean_http_latency_ms": 663.398425,
+        "total_cost": 6310
+      },
+      {
+        "threshold": 0.8,
+        "requests": 40,
+        "hits": 34,
+        "misses": 6,
+        "incorrect_cached_answers": 17,
+        "hit_rate": 0.85,
+        "false_hit_rate": 0.425,
+        "negative_acceptance_rate": 0.7,
+        "wrong_live_answers": 0,
+        "mean_http_latency_ms": 2078.906425,
+        "total_cost": 5130
+      },
+      {
+        "threshold": 0.85,
+        "requests": 40,
+        "hits": 30,
+        "misses": 10,
+        "incorrect_cached_answers": 13,
+        "hit_rate": 0.75,
+        "false_hit_rate": 0.325,
+        "negative_acceptance_rate": 0.5,
+        "wrong_live_answers": 0,
+        "mean_http_latency_ms": 3832.833275,
+        "total_cost": 3950
+      },
+      {
+        "threshold": 0.9,
+        "requests": 40,
+        "hits": 29,
+        "misses": 11,
+        "incorrect_cached_answers": 15,
+        "hit_rate": 0.725,
+        "false_hit_rate": 0.375,
+        "negative_acceptance_rate": 0.5,
+        "wrong_live_answers": 0,
+        "mean_http_latency_ms": 4131.69075,
+        "total_cost": 4555
+      },
+      {
+        "threshold": 0.95,
+        "requests": 40,
+        "hits": 29,
+        "misses": 11,
+        "incorrect_cached_answers": 15,
+        "hit_rate": 0.725,
+        "false_hit_rate": 0.375,
+        "negative_acceptance_rate": 0.5,
+        "wrong_live_answers": 0,
+        "mean_http_latency_ms": 4254.44185,
+        "total_cost": 4555
+      }
+    ],
+    "part4": {
+      "held_out_sha256": "49c667b18a848fdb3756805bcaf6d27a658c307f6b38a2c943ed270a96f615b3",
+      "independently_regraded": 40,
+      "identical_inputs": true,
+      "max_attempts": 2,
+      "revision_stop_reuse_validation": "PASS",
+      "results": [
+        {
+          "variant": "Baseline",
+          "correct": 5,
+          "incorrect": 5,
+          "average_attempts": 1,
+          "average_latency_ms": 1296.1898668000001
+        },
+        {
+          "variant": "Evaluator Repair",
+          "correct": 10,
+          "incorrect": 0,
+          "average_attempts": 1.5,
+          "average_latency_ms": 1624.983829
+        },
+        {
+          "variant": "Lesson Memory",
+          "correct": 10,
+          "incorrect": 0,
+          "average_attempts": 1.1,
+          "average_latency_ms": 1313.579825
+        },
+        {
+          "variant": "Validated Improvement",
+          "correct": 10,
+          "incorrect": 0,
+          "average_attempts": 1.1,
+          "average_latency_ms": 1242.55485
+        }
+      ]
+    }
+  },
+  "live": {
+    "counter": {
+      "primary_listing": "S6102-R-192",
+      "secondary_listing": "S6102-R-193",
+      "recovery_listing": "S6102-R-194",
+      "missing_id": 2147483647,
+      "counts": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "mysql_checkpoints": {
+        "9": 0,
+        "10": 10,
+        "20": 20,
+        "25": 20
+      },
+      "secondary_final": {
+        "redis": 2,
+        "mysql": 0
+      },
+      "resumed_counts": [
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28
+      ],
+      "recovered_from_newer_checkpoint": 31,
+      "final": {
+        "redis": 25,
+        "mysql": 20
+      }
+    },
+    "view_checkpoints_preserve_fact_version": true,
+    "create_update_delete_advance_version": true,
+    "failed_write_rolls_back_version": true,
+    "hit_broker_offsets_before": {
+      "s6102_inbox": 4,
+      "s6102_final": 4
+    },
+    "hit_broker_offsets_after": {
+      "s6102_inbox": 4,
+      "s6102_final": 4
+    },
+    "cache_keys": [
+      "s6102:hw9:semantic:integration:entry:64072617-8373-4b34-9e89-9341ee1dedbf",
+      "s6102:hw9:semantic:integration:entry:870e2651-3a5f-4142-b438-9faf4ad92812",
+      "s6102:hw9:semantic:integration:entry:5c1e75b5-7197-4394-a8e3-836f1784a041",
+      "s6102:hw9:semantic:integration:entry:aa735282-9dfe-4f53-b679-7f8424aab888",
+      "s6102:hw9:semantic:integration:entry:e9581adc-77cd-4e7b-9924-1bf543551232"
+    ],
+    "requests": [
+      {
+        "label": "fresh_miss_3",
+        "question": "How many units are available at S6102-R-195?",
+        "response": {
+          "answer": "At S6102-R-195, there are 3 units available.",
+          "is_cached": false,
+          "similarity": null,
+          "latency_ms": 12645.315,
+          "request_id": "aa735282-9dfe-4f53-b679-7f8424aab888"
+        },
+        "cache_event": {
+          "cache_write": "stored",
+          "correlation_id": "aa735282-9dfe-4f53-b679-7f8424aab888",
+          "data_version": 15,
+          "dataset_id": "d2efd3e4dad111f1ae8e0ec2961aa921",
+          "error": null,
+          "event": "semantic_cache_result",
+          "is_cached": false,
+          "latency_ms": 12645.315,
+          "matched_data_version": null,
+          "matched_question": null,
+          "matched_request_id": null,
+          "namespace": "integration",
+          "pid": 27866,
+          "pipeline_attempted": true,
+          "question": "How many units are available at S6102-R-195?",
+          "request_id": "aa735282-9dfe-4f53-b679-7f8424aab888",
+          "similarity": null,
+          "source_commit": "958af31b31a54fb6dc928f54a6c41d73e3f82d46",
+          "student": "Pragya Apurva",
+          "threshold": 0.85,
+          "timestamp": "2026-11-07T19:03:56.464549+00:00",
+          "timings_ms": {
+            "cache_write_ms": 20.482,
+            "embed_ms": 545.175,
+            "facts_ms": 6.006,
+            "kafka_agent_ms": 12065.124,
+            "lookup_ms": 1.884,
+            "version_ms": 3.261
+          },
+          "version_enforced": true
+        },
+        "generative_model_calls": 3
+      },
+      {
+        "label": "exact_hit_3",
+        "question": "How many units are available at S6102-R-195?",
+        "response": {
+          "answer": "At S6102-R-195, there are 3 units available.",
+          "is_cached": true,
+          "similarity": 0.9999999403953552,
+          "latency_ms": 542.135,
+          "request_id": "9cd151b8-29b2-4edc-8395-bd85476c1caf"
+        },
+        "cache_event": {
+          "cache_write": null,
+          "correlation_id": "9cd151b8-29b2-4edc-8395-bd85476c1caf",
+          "data_version": 15,
+          "dataset_id": "d2efd3e4dad111f1ae8e0ec2961aa921",
+          "error": null,
+          "event": "semantic_cache_result",
+          "is_cached": true,
+          "latency_ms": 542.135,
+          "matched_data_version": 15,
+          "matched_question": "How many units are available at S6102-R-195?",
+          "matched_request_id": "aa735282-9dfe-4f53-b679-7f8424aab888",
+          "namespace": "integration",
+          "pid": 27866,
+          "pipeline_attempted": false,
+          "question": "How many units are available at S6102-R-195?",
+          "request_id": "9cd151b8-29b2-4edc-8395-bd85476c1caf",
+          "similarity": 0.9999999403953552,
+          "source_commit": "958af31b31a54fb6dc928f54a6c41d73e3f82d46",
+          "student": "Pragya Apurva",
+          "threshold": 0.85,
+          "timestamp": "2026-11-07T19:03:57.074318+00:00",
+          "timings_ms": {
+            "embed_ms": 535.367,
+            "lookup_ms": 0.794,
+            "version_ms": 1.676
+          },
+          "version_enforced": true
+        },
+        "generative_model_calls": 0
+      },
+      {
+        "label": "hit_after_view_checkpoint_3",
+        "question": "How many units are available at S6102-R-195?",
+        "response": {
+          "answer": "At S6102-R-195, there are 3 units available.",
+          "is_cached": true,
+          "similarity": 0.9999999403953552,
+          "latency_ms": 26.607,
+          "request_id": "0e871a93-23a1-4cf0-8784-2874943ee2af"
+        },
+        "cache_event": {
+          "cache_write": null,
+          "correlation_id": "0e871a93-23a1-4cf0-8784-2874943ee2af",
+          "data_version": 15,
+          "dataset_id": "d2efd3e4dad111f1ae8e0ec2961aa921",
+          "error": null,
+          "event": "semantic_cache_result",
+          "is_cached": true,
+          "latency_ms": 26.607,
+          "matched_data_version": 15,
+          "matched_question": "How many units are available at S6102-R-195?",
+          "matched_request_id": "aa735282-9dfe-4f53-b679-7f8424aab888",
+          "namespace": "integration",
+          "pid": 27866,
+          "pipeline_attempted": false,
+          "question": "How many units are available at S6102-R-195?",
+          "request_id": "0e871a93-23a1-4cf0-8784-2874943ee2af",
+          "similarity": 0.9999999403953552,
+          "source_commit": "958af31b31a54fb6dc928f54a6c41d73e3f82d46",
+          "student": "Pragya Apurva",
+          "threshold": 0.85,
+          "timestamp": "2026-11-07T19:03:57.203635+00:00",
+          "timings_ms": {
+            "embed_ms": 19.519,
+            "lookup_ms": 0.685,
+            "version_ms": 1.556
+          },
+          "version_enforced": true
+        },
+        "generative_model_calls": 0
+      },
+      {
+        "label": "invalidated_miss_1",
+        "question": "How many units are available at S6102-R-195?",
+        "response": {
+          "answer": "At S6102-R-195, there is 1 unit available.",
+          "is_cached": false,
+          "similarity": null,
+          "latency_ms": 5296.17,
+          "request_id": "64072617-8373-4b34-9e89-9341ee1dedbf"
+        },
+        "cache_event": {
+          "cache_write": "stored",
+          "correlation_id": "64072617-8373-4b34-9e89-9341ee1dedbf",
+          "data_version": 16,
+          "dataset_id": "d2efd3e4dad111f1ae8e0ec2961aa921",
+          "error": null,
+          "event": "semantic_cache_result",
+          "is_cached": false,
+          "latency_ms": 5296.17,
+          "matched_data_version": null,
+          "matched_question": null,
+          "matched_request_id": null,
+          "namespace": "integration",
+          "pid": 27866,
+          "pipeline_attempted": true,
+          "question": "How many units are available at S6102-R-195?",
+          "request_id": "64072617-8373-4b34-9e89-9341ee1dedbf",
+          "similarity": null,
+          "source_commit": "958af31b31a54fb6dc928f54a6c41d73e3f82d46",
+          "student": "Pragya Apurva",
+          "threshold": 0.85,
+          "timestamp": "2026-11-07T19:04:02.520772+00:00",
+          "timings_ms": {
+            "cache_write_ms": 2.904,
+            "embed_ms": 24.336,
+            "facts_ms": 3.092,
+            "kafka_agent_ms": 5258.591,
+            "lookup_ms": 0.767,
+            "version_ms": 1.545
+          },
+          "version_enforced": true
+        },
+        "generative_model_calls": 3
+      },
+      {
+        "label": "fresh_hit_1",
+        "question": "How many units are available at S6102-R-195?",
+        "response": {
+          "answer": "At S6102-R-195, there is 1 unit available.",
+          "is_cached": true,
+          "similarity": 0.9999999403953552,
+          "latency_ms": 29.825,
+          "request_id": "e6b7d9e3-4ecc-407e-8194-ffada3fd9dcd"
+        },
+        "cache_event": {
+          "cache_write": null,
+          "correlation_id": "e6b7d9e3-4ecc-407e-8194-ffada3fd9dcd",
+          "data_version": 16,
+          "dataset_id": "d2efd3e4dad111f1ae8e0ec2961aa921",
+          "error": null,
+          "event": "semantic_cache_result",
+          "is_cached": true,
+          "latency_ms": 29.825,
+          "matched_data_version": 16,
+          "matched_question": "How many units are available at S6102-R-195?",
+          "matched_request_id": "64072617-8373-4b34-9e89-9341ee1dedbf",
+          "namespace": "integration",
+          "pid": 27866,
+          "pipeline_attempted": false,
+          "question": "How many units are available at S6102-R-195?",
+          "request_id": "e6b7d9e3-4ecc-407e-8194-ffada3fd9dcd",
+          "similarity": 0.9999999403953552,
+          "source_commit": "958af31b31a54fb6dc928f54a6c41d73e3f82d46",
+          "student": "Pragya Apurva",
+          "threshold": 0.85,
+          "timestamp": "2026-11-07T19:04:02.552253+00:00",
+          "timings_ms": {
+            "embed_ms": 24.028,
+            "lookup_ms": 0.772,
+            "version_ms": 1.514
+          },
+          "version_enforced": true
+        },
+        "generative_model_calls": 0
+      }
+    ],
+    "part4_live_controlled_development": "PASS",
+    "configuration": {
+      "port": 8702,
+      "threshold": 0.85,
+      "version_enforced": true
+    }
+  },
+  "status": "PASS",
+  "scope": "saved evidence and live integration",
+  "finished_at_utc": "2026-11-07T19:04:32.600141+00:00"
+}

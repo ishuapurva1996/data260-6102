@@ -2,6 +2,21 @@
 
 A React and FastAPI application for managing rental listings, with MySQL persistence and JWT bearer login. HW6 adds MongoDB documents and conversation memory; HW7 Part 1 adds reader, writer, and moderator permissions.
 
+## Homework 9
+
+Use the [integrated HW9 setup and verifier](docs/HW9.md) for the current application
+on port 8702. It adds Redis rental-detail views, semantic Q&A caching at threshold
+0.85 with data-version enforcement, threshold economics, and a two-agent repair
+and lesson workflow. One setup command applies the existing database prerequisites
+before migrations 006 and 007.
+
+The [seven-page report](reports/hw09/report.pdf), [measured results](reports/hw09/METRICS.md),
+[raw evidence](reports/hw09/README.md), and [verification](reports/hw09/verification.json)
+preserve the original source revisions and frozen inputs. At threshold 0.85,
+13 of 40 sweep questions received incorrect cached answers. Run
+`make verify-hw09` using the guide's external runtime and private environment.
+The final local submission tag is `hw9`; publication is a separate step.
+
 ## Homework 7 Part 1
 
 Use the [current setup and authentication guide](docs/HW7_PART1.md). It covers the

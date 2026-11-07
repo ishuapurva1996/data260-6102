@@ -1,0 +1,129 @@
+INFO:     Started server process [27866]
+INFO:     Waiting for application startup.
+2026-11-07 11:03:29,283 aiokafka.consumer.subscription_state Updating subscribed topics to: frozenset({'s6102_entity_responses'})
+2026-11-07 11:03:29,294 aiokafka.consumer.group_coordinator Discovered coordinator 1 for group s6102_rpc_8c3dd9a92fa949f189883daa88e376c3
+2026-11-07 11:03:29,294 aiokafka.consumer.group_coordinator Revoking previously assigned partitions set() for group s6102_rpc_8c3dd9a92fa949f189883daa88e376c3
+2026-11-07 11:03:29,294 aiokafka.consumer.group_coordinator (Re-)joining group s6102_rpc_8c3dd9a92fa949f189883daa88e376c3
+2026-11-07 11:03:29,296 aiokafka.consumer.group_coordinator Joined group 's6102_rpc_8c3dd9a92fa949f189883daa88e376c3' (generation 1) with member_id aiokafka-0.12.0-126f4a38-d7c4-4b21-93ec-bda6a5c789ef
+2026-11-07 11:03:29,296 aiokafka.consumer.group_coordinator Elected group leader -- performing partition assignments using roundrobin
+2026-11-07 11:03:29,297 aiokafka.consumer.group_coordinator Successfully synced group s6102_rpc_8c3dd9a92fa949f189883daa88e376c3 with generation 1
+2026-11-07 11:03:29,297 aiokafka.consumer.group_coordinator Setting newly assigned partitions {TopicPartition(topic='s6102_entity_responses', partition=0)} for group s6102_rpc_8c3dd9a92fa949f189883daa88e376c3
+{"event": "rpc_ready", "pid": 27866, "source_commit": "958af31b31a54fb6dc928f54a6c41d73e3f82d46", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-11-07T19:03:29.297906+00:00", "topic": "s6102_entity_responses"}
+2026-11-07 11:03:29,309 httpx HTTP Request: GET http://127.0.0.1:11434/api/tags "HTTP/1.1 200 OK"
+{"allow_stale": false, "embedding_digest": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f", "embedding_dimension": 768, "embedding_model": "nomic-embed-text:v1.5", "event": "semantic_cache_ready", "index": "s6102:hw9:semantic:integration:index", "namespace": "integration", "pid": 27866, "source_commit": "958af31b31a54fb6dc928f54a6c41d73e3f82d46", "student": "Pragya Apurva", "threshold": 0.85, "timestamp": "2026-11-07T19:03:29.317043+00:00"}
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8702 (Press CTRL+C to quit)
+INFO:     127.0.0.1:58245 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58245 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58245 - "POST /api/kafka/questions HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:58246 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58246 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58246 - "POST /api/rentals HTTP/1.1" 201 Created
+INFO:     127.0.0.1:58246 - "POST /api/rentals HTTP/1.1" 201 Created
+INFO:     127.0.0.1:58246 - "POST /api/rentals HTTP/1.1" 201 Created
+INFO:     127.0.0.1:58246 - "GET /api/rentals/192 HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:58246 - "GET /api/rentals HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58246 - "GET /api/rentals/2147483647 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:58246 - "GET /api/rentals/192 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58246 - "GET /api/rentals/192 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58246 - "GET /api/rentals/192 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58246 - "GET /api/rentals/192 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58246 - "GET /api/rentals/192 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58246 - "GET /api/rentals/192 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58246 - "GET /api/rentals/192 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58246 - "GET /api/rentals/192 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58246 - "GET /api/rentals/192 HTTP/1.1" 200 OK
+2026-11-07 11:03:43,594 web_application.rental_views Synced views to database | rental_id=192 count=10
+INFO:     127.0.0.1:58246 - "GET /api/rentals/192 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58246 - "GET /api/rentals/192 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58246 - "GET /api/rentals/192 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58246 - "GET /api/rentals/193 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58246 - "GET /api/rentals/192 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58246 - "GET /api/rentals/192 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58246 - "GET /api/rentals/192 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58246 - "GET /api/rentals/192 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58246 - "GET /api/rentals/192 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58246 - "GET /api/rentals/192 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58246 - "GET /api/rentals/192 HTTP/1.1" 200 OK
+2026-11-07 11:03:43,638 web_application.rental_views Synced views to database | rental_id=192 count=20
+INFO:     127.0.0.1:58246 - "GET /api/rentals/192 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58246 - "GET /api/rentals/192 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58246 - "GET /api/rentals/192 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58246 - "GET /api/rentals/192 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58246 - "GET /api/rentals/192 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58246 - "GET /api/rentals/192 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58246 - "GET /api/rentals/193 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58246 - "GET /api/rentals/194 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58246 - "GET /api/rentals/194 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58255 - "GET /api/rentals/194 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58251 - "GET /api/rentals/194 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58253 - "GET /api/rentals/194 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58252 - "GET /api/rentals/194 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58256 - "GET /api/rentals/194 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58250 - "GET /api/rentals/194 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58254 - "GET /api/rentals/194 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58245 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58245 - "GET /api/rentals/192 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58245 - "GET /api/rentals/192 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58245 - "GET /api/rentals/192 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58245 - "GET /api/rentals/192 HTTP/1.1" 200 OK
+2026-11-07 11:03:43,794 web_application.rental_views Synced views to database | rental_id=192 count=30
+INFO:     127.0.0.1:58245 - "GET /api/rentals/192 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58245 - "GET /api/rentals/192 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58245 - "GET /api/rentals/192 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58245 - "GET /api/rentals/192 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58245 - "GET /api/rentals/192 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58245 - "GET /api/rentals/192 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58245 - "POST /api/rentals HTTP/1.1" 201 Created
+2026-11-07 11:03:44,364 httpx HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2026-11-07 11:03:44,379 aiokafka.consumer.subscription_state Updating subscribed topics to: frozenset({'s6102_final'})
+2026-11-07 11:03:44,387 aiokafka.consumer.group_coordinator Discovered coordinator 1 for group s6102_result_4a7052ab-f628-48bb-8eea-75c4f3b1dbdb
+2026-11-07 11:03:44,387 aiokafka.consumer.group_coordinator Revoking previously assigned partitions set() for group s6102_result_4a7052ab-f628-48bb-8eea-75c4f3b1dbdb
+2026-11-07 11:03:44,388 aiokafka.consumer.group_coordinator (Re-)joining group s6102_result_4a7052ab-f628-48bb-8eea-75c4f3b1dbdb
+2026-11-07 11:03:44,390 aiokafka.consumer.group_coordinator Joined group 's6102_result_4a7052ab-f628-48bb-8eea-75c4f3b1dbdb' (generation 1) with member_id aiokafka-0.12.0-cb377f43-2e5e-43c5-8755-abc8915b7136
+2026-11-07 11:03:44,390 aiokafka.consumer.group_coordinator Elected group leader -- performing partition assignments using roundrobin
+2026-11-07 11:03:44,392 aiokafka.consumer.group_coordinator Successfully synced group s6102_result_4a7052ab-f628-48bb-8eea-75c4f3b1dbdb with generation 1
+2026-11-07 11:03:44,392 aiokafka.consumer.group_coordinator Setting newly assigned partitions {TopicPartition(topic='s6102_final', partition=0)} for group s6102_result_4a7052ab-f628-48bb-8eea-75c4f3b1dbdb
+{"correlation_id": "aa735282-9dfe-4f53-b679-7f8424aab888", "event": "question_sent", "offset": 3, "partition": 0, "payload": {"correlation_id": "aa735282-9dfe-4f53-b679-7f8424aab888", "question": "How many units are available at S6102-R-195?", "rental_context": {"data_version": 15, "dataset_id": "d2efd3e4dad111f1ae8e0ec2961aa921", "listings": [{"available_units": 3, "listing_code": "S6102-R-195", "listing_title": "HW9 Integrated Version Fixture", "property_type": "apartment"}], "requested_codes": ["S6102-R-195"]}, "run_id": "question-aa735282-9dfe-4f53-b679-7f8424aab888"}, "pid": 27866, "run_id": "question-aa735282-9dfe-4f53-b679-7f8424aab888", "source_commit": "958af31b31a54fb6dc928f54a6c41d73e3f82d46", "student": "Pragya Apurva", "timestamp": "2026-11-07T19:03:44.899156+00:00", "topic": "s6102_inbox"}
+{"correlation_id": "aa735282-9dfe-4f53-b679-7f8424aab888", "event": "final_received", "final": {"answer": "At S6102-R-195, there are 3 units available.", "correlation_id": "aa735282-9dfe-4f53-b679-7f8424aab888", "draft": "At S6102-R-195, there are 3 units available.", "from_stage": "reviewer", "input_source": {"offset": 3, "partition": 0, "topic": "s6102_drafts"}, "plan": "At S6102-R-195, there are 3 units available.", "question": "How many units are available at S6102-R-195?", "rental_context": {"data_version": 15, "dataset_id": "d2efd3e4dad111f1ae8e0ec2961aa921", "listings": [{"available_units": 3, "listing_code": "S6102-R-195", "listing_title": "HW9 Integrated Version Fixture", "property_type": "apartment"}], "requested_codes": ["S6102-R-195"]}, "run_id": "question-aa735282-9dfe-4f53-b679-7f8424aab888", "status": "approved", "writer_instance": "writer-27863"}, "offset": 3, "partition": 0, "pid": 27866, "run_id": "question-aa735282-9dfe-4f53-b679-7f8424aab888", "source_commit": "958af31b31a54fb6dc928f54a6c41d73e3f82d46", "student": "Pragya Apurva", "timestamp": "2026-11-07T19:03:56.429926+00:00", "topic": "s6102_final"}
+2026-11-07 11:03:56,442 aiokafka.consumer.group_coordinator LeaveGroup request succeeded
+{"cache_write": "stored", "correlation_id": "aa735282-9dfe-4f53-b679-7f8424aab888", "data_version": 15, "dataset_id": "d2efd3e4dad111f1ae8e0ec2961aa921", "error": null, "event": "semantic_cache_result", "is_cached": false, "latency_ms": 12645.315, "matched_data_version": null, "matched_question": null, "matched_request_id": null, "namespace": "integration", "pid": 27866, "pipeline_attempted": true, "question": "How many units are available at S6102-R-195?", "request_id": "aa735282-9dfe-4f53-b679-7f8424aab888", "similarity": null, "source_commit": "958af31b31a54fb6dc928f54a6c41d73e3f82d46", "student": "Pragya Apurva", "threshold": 0.85, "timestamp": "2026-11-07T19:03:56.464549+00:00", "timings_ms": {"cache_write_ms": 20.482, "embed_ms": 545.175, "facts_ms": 6.006, "kafka_agent_ms": 12065.124, "lookup_ms": 1.884, "version_ms": 3.261}, "version_enforced": true}
+INFO:     127.0.0.1:58245 - "POST /api/kafka/questions HTTP/1.1" 200 OK
+2026-11-07 11:03:57,070 httpx HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+{"cache_write": null, "correlation_id": "9cd151b8-29b2-4edc-8395-bd85476c1caf", "data_version": 15, "dataset_id": "d2efd3e4dad111f1ae8e0ec2961aa921", "error": null, "event": "semantic_cache_result", "is_cached": true, "latency_ms": 542.135, "matched_data_version": 15, "matched_question": "How many units are available at S6102-R-195?", "matched_request_id": "aa735282-9dfe-4f53-b679-7f8424aab888", "namespace": "integration", "pid": 27866, "pipeline_attempted": false, "question": "How many units are available at S6102-R-195?", "request_id": "9cd151b8-29b2-4edc-8395-bd85476c1caf", "similarity": 0.9999999403953552, "source_commit": "958af31b31a54fb6dc928f54a6c41d73e3f82d46", "student": "Pragya Apurva", "threshold": 0.85, "timestamp": "2026-11-07T19:03:57.074318+00:00", "timings_ms": {"embed_ms": 535.367, "lookup_ms": 0.794, "version_ms": 1.676}, "version_enforced": true}
+INFO:     127.0.0.1:58245 - "POST /api/kafka/questions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58245 - "GET /api/rentals/195 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58245 - "GET /api/rentals/195 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58245 - "GET /api/rentals/195 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58245 - "GET /api/rentals/195 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58245 - "GET /api/rentals/195 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58245 - "GET /api/rentals/195 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58245 - "GET /api/rentals/195 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58245 - "GET /api/rentals/195 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58245 - "GET /api/rentals/195 HTTP/1.1" 200 OK
+2026-11-07 11:03:57,172 web_application.rental_views Synced views to database | rental_id=195 count=10
+INFO:     127.0.0.1:58245 - "GET /api/rentals/195 HTTP/1.1" 200 OK
+2026-11-07 11:03:57,199 httpx HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+{"cache_write": null, "correlation_id": "0e871a93-23a1-4cf0-8784-2874943ee2af", "data_version": 15, "dataset_id": "d2efd3e4dad111f1ae8e0ec2961aa921", "error": null, "event": "semantic_cache_result", "is_cached": true, "latency_ms": 26.607, "matched_data_version": 15, "matched_question": "How many units are available at S6102-R-195?", "matched_request_id": "aa735282-9dfe-4f53-b679-7f8424aab888", "namespace": "integration", "pid": 27866, "pipeline_attempted": false, "question": "How many units are available at S6102-R-195?", "request_id": "0e871a93-23a1-4cf0-8784-2874943ee2af", "similarity": 0.9999999403953552, "source_commit": "958af31b31a54fb6dc928f54a6c41d73e3f82d46", "student": "Pragya Apurva", "threshold": 0.85, "timestamp": "2026-11-07T19:03:57.203635+00:00", "timings_ms": {"embed_ms": 19.519, "lookup_ms": 0.685, "version_ms": 1.556}, "version_enforced": true}
+INFO:     127.0.0.1:58245 - "POST /api/kafka/questions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58245 - "PUT /api/rentals/195 HTTP/1.1" 200 OK
+2026-11-07 11:03:57,252 httpx HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2026-11-07 11:03:57,259 aiokafka.consumer.subscription_state Updating subscribed topics to: frozenset({'s6102_final'})
+2026-11-07 11:03:57,270 aiokafka.consumer.group_coordinator Discovered coordinator 1 for group s6102_result_50c712bf-c162-458a-b5a9-a6ee7604c80a
+2026-11-07 11:03:57,270 aiokafka.consumer.group_coordinator Revoking previously assigned partitions set() for group s6102_result_50c712bf-c162-458a-b5a9-a6ee7604c80a
+2026-11-07 11:03:57,270 aiokafka.consumer.group_coordinator (Re-)joining group s6102_result_50c712bf-c162-458a-b5a9-a6ee7604c80a
+2026-11-07 11:03:57,275 aiokafka.consumer.group_coordinator Joined group 's6102_result_50c712bf-c162-458a-b5a9-a6ee7604c80a' (generation 1) with member_id aiokafka-0.12.0-0baabd07-501b-4f92-8b16-12123190b40a
+2026-11-07 11:03:57,275 aiokafka.consumer.group_coordinator Elected group leader -- performing partition assignments using roundrobin
+2026-11-07 11:03:57,278 aiokafka.consumer.group_coordinator Successfully synced group s6102_result_50c712bf-c162-458a-b5a9-a6ee7604c80a with generation 1
+2026-11-07 11:03:57,278 aiokafka.consumer.group_coordinator Setting newly assigned partitions {TopicPartition(topic='s6102_final', partition=0)} for group s6102_result_50c712bf-c162-458a-b5a9-a6ee7604c80a
+{"correlation_id": "64072617-8373-4b34-9e89-9341ee1dedbf", "event": "question_sent", "offset": 4, "partition": 0, "payload": {"correlation_id": "64072617-8373-4b34-9e89-9341ee1dedbf", "question": "How many units are available at S6102-R-195?", "rental_context": {"data_version": 16, "dataset_id": "d2efd3e4dad111f1ae8e0ec2961aa921", "listings": [{"available_units": 1, "listing_code": "S6102-R-195", "listing_title": "HW9 Integrated Version Fixture", "property_type": "apartment"}], "requested_codes": ["S6102-R-195"]}, "run_id": "question-64072617-8373-4b34-9e89-9341ee1dedbf"}, "pid": 27866, "run_id": "question-64072617-8373-4b34-9e89-9341ee1dedbf", "source_commit": "958af31b31a54fb6dc928f54a6c41d73e3f82d46", "student": "Pragya Apurva", "timestamp": "2026-11-07T19:03:57.786994+00:00", "topic": "s6102_inbox"}
+{"correlation_id": "64072617-8373-4b34-9e89-9341ee1dedbf", "event": "final_received", "final": {"answer": "At S6102-R-195, there is 1 unit available.", "correlation_id": "64072617-8373-4b34-9e89-9341ee1dedbf", "draft": "At S6102-R-195, there is 1 unit available.", "from_stage": "reviewer", "input_source": {"offset": 4, "partition": 0, "topic": "s6102_drafts"}, "plan": "At S6102-R-195, there is 1 unit available.", "question": "How many units are available at S6102-R-195?", "rental_context": {"data_version": 16, "dataset_id": "d2efd3e4dad111f1ae8e0ec2961aa921", "listings": [{"available_units": 1, "listing_code": "S6102-R-195", "listing_title": "HW9 Integrated Version Fixture", "property_type": "apartment"}], "requested_codes": ["S6102-R-195"]}, "run_id": "question-64072617-8373-4b34-9e89-9341ee1dedbf", "status": "approved", "writer_instance": "writer-27863"}, "offset": 4, "partition": 0, "pid": 27866, "run_id": "question-64072617-8373-4b34-9e89-9341ee1dedbf", "source_commit": "958af31b31a54fb6dc928f54a6c41d73e3f82d46", "student": "Pragya Apurva", "timestamp": "2026-11-07T19:04:02.514529+00:00", "topic": "s6102_final"}
+2026-11-07 11:04:02,517 aiokafka.consumer.group_coordinator LeaveGroup request succeeded
+{"cache_write": "stored", "correlation_id": "64072617-8373-4b34-9e89-9341ee1dedbf", "data_version": 16, "dataset_id": "d2efd3e4dad111f1ae8e0ec2961aa921", "error": null, "event": "semantic_cache_result", "is_cached": false, "latency_ms": 5296.17, "matched_data_version": null, "matched_question": null, "matched_request_id": null, "namespace": "integration", "pid": 27866, "pipeline_attempted": true, "question": "How many units are available at S6102-R-195?", "request_id": "64072617-8373-4b34-9e89-9341ee1dedbf", "similarity": null, "source_commit": "958af31b31a54fb6dc928f54a6c41d73e3f82d46", "student": "Pragya Apurva", "threshold": 0.85, "timestamp": "2026-11-07T19:04:02.520772+00:00", "timings_ms": {"cache_write_ms": 2.904, "embed_ms": 24.336, "facts_ms": 3.092, "kafka_agent_ms": 5258.591, "lookup_ms": 0.767, "version_ms": 1.545}, "version_enforced": true}
+INFO:     127.0.0.1:58245 - "POST /api/kafka/questions HTTP/1.1" 200 OK
+2026-11-07 11:04:02,548 httpx HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+{"cache_write": null, "correlation_id": "e6b7d9e3-4ecc-407e-8194-ffada3fd9dcd", "data_version": 16, "dataset_id": "d2efd3e4dad111f1ae8e0ec2961aa921", "error": null, "event": "semantic_cache_result", "is_cached": true, "latency_ms": 29.825, "matched_data_version": 16, "matched_question": "How many units are available at S6102-R-195?", "matched_request_id": "64072617-8373-4b34-9e89-9341ee1dedbf", "namespace": "integration", "pid": 27866, "pipeline_attempted": false, "question": "How many units are available at S6102-R-195?", "request_id": "e6b7d9e3-4ecc-407e-8194-ffada3fd9dcd", "similarity": 0.9999999403953552, "source_commit": "958af31b31a54fb6dc928f54a6c41d73e3f82d46", "student": "Pragya Apurva", "threshold": 0.85, "timestamp": "2026-11-07T19:04:02.552253+00:00", "timings_ms": {"embed_ms": 24.028, "lookup_ms": 0.772, "version_ms": 1.514}, "version_enforced": true}
+INFO:     127.0.0.1:58245 - "POST /api/kafka/questions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58245 - "PUT /api/rentals/195 HTTP/1.1" 409 Conflict
+INFO:     127.0.0.1:58245 - "GET /api/rentals/195 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58245 - "DELETE /api/rentals/195 HTTP/1.1" 204 No Content
