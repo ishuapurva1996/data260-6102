@@ -1,0 +1,27 @@
+[
+  {
+    "namespace": "c-sweep-075-01",
+    "seed_entries_byte_identical": 10,
+    "seed_sha256": "627a1b5fe84eddfba366a032888a7ce4aa9c9694203f2da7b1b59dd9c62c1920"
+  },
+  {
+    "namespace": "c-sweep-080-01",
+    "seed_entries_byte_identical": 10,
+    "seed_sha256": "627a1b5fe84eddfba366a032888a7ce4aa9c9694203f2da7b1b59dd9c62c1920"
+  },
+  {
+    "namespace": "c-sweep-085-01",
+    "seed_entries_byte_identical": 10,
+    "seed_sha256": "627a1b5fe84eddfba366a032888a7ce4aa9c9694203f2da7b1b59dd9c62c1920"
+  },
+  {
+    "namespace": "c-sweep-090-01",
+    "seed_entries_byte_identical": 10,
+    "seed_sha256": "627a1b5fe84eddfba366a032888a7ce4aa9c9694203f2da7b1b59dd9c62c1920"
+  },
+  {
+    "namespace": "c-sweep-095-01",
+    "seed_entries_byte_identical": 10,
+    "seed_sha256": "627a1b5fe84eddfba366a032888a7ce4aa9c9694203f2da7b1b59dd9c62c1920"
+  }
+]

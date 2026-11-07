@@ -1,0 +1,67 @@
+[
+  {
+    "false_hit_rate": 0.525,
+    "hit_rate": 0.95,
+    "hits": 38,
+    "incorrect_cached_answers": 21,
+    "mean_http_latency_ms": 663.398425,
+    "misses": 2,
+    "negative_acceptance_rate": 0.9,
+    "requests": 40,
+    "threshold": 0.75,
+    "total_cost": 6310,
+    "wrong_live_answers": 0
+  },
+  {
+    "false_hit_rate": 0.425,
+    "hit_rate": 0.85,
+    "hits": 34,
+    "incorrect_cached_answers": 17,
+    "mean_http_latency_ms": 2078.906425,
+    "misses": 6,
+    "negative_acceptance_rate": 0.7,
+    "requests": 40,
+    "threshold": 0.8,
+    "total_cost": 5130,
+    "wrong_live_answers": 0
+  },
+  {
+    "false_hit_rate": 0.325,
+    "hit_rate": 0.75,
+    "hits": 30,
+    "incorrect_cached_answers": 13,
+    "mean_http_latency_ms": 3832.833275,
+    "misses": 10,
+    "negative_acceptance_rate": 0.5,
+    "requests": 40,
+    "threshold": 0.85,
+    "total_cost": 3950,
+    "wrong_live_answers": 0
+  },
+  {
+    "false_hit_rate": 0.375,
+    "hit_rate": 0.725,
+    "hits": 29,
+    "incorrect_cached_answers": 15,
+    "mean_http_latency_ms": 4131.69075,
+    "misses": 11,
+    "negative_acceptance_rate": 0.5,
+    "requests": 40,
+    "threshold": 0.9,
+    "total_cost": 4555,
+    "wrong_live_answers": 0
+  },
+  {
+    "false_hit_rate": 0.375,
+    "hit_rate": 0.725,
+    "hits": 29,
+    "incorrect_cached_answers": 15,
+    "mean_http_latency_ms": 4254.44185,
+    "misses": 11,
+    "negative_acceptance_rate": 0.5,
+    "requests": 40,
+    "threshold": 0.95,
+    "total_cost": 4555,
+    "wrong_live_answers": 0
+  }
+]

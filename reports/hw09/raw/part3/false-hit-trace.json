@@ -1,0 +1,18 @@
+{
+  "cached_query": "How many units are available at S6102-R-9102?",
+  "case_id": "N01",
+  "correct_answer": "S6102-R-9106 has 1 available unit.",
+  "correct_fact": {
+    "field": "available_units",
+    "listing_code": "S6102-R-9106",
+    "value": 1
+  },
+  "explanation": "Likely embedding confusion: the question template and requested field are identical; only the listing code changes. Their vectors are nearly identical, so cosine similarity does not preserve record identity.",
+  "incoming_query": "How many units are available at S6102-R-9106?",
+  "request_id": "a7addf33-a822-4a41-ab64-28f722691ec0",
+  "returned_answer": "The rental housing draft is clear and accurate. Here is the final answer: At S6102-R-9102, there are 4 units available.",
+  "scope": "observed frozen sweep, no supplemental diagnostic",
+  "similarity": 0.999333381652832,
+  "source_request_id": "8d0fd353-76cc-4f5d-be5f-277db87e0bab",
+  "threshold": 0.75
+}

@@ -1,0 +1,24 @@
+INFO:     Started server process [6652]
+INFO:     Waiting for application startup.
+{"event": "rpc_ready", "pid": 6652, "source_commit": "3511ae67588f61eeff4199aa8f4db294aca04c57", "stage": "rpc", "student": "Pragya Apurva", "timestamp": "2026-11-07T04:18:33.790371+00:00", "topic": "s6102_entity_responses"}
+{"allow_stale": false, "embedding_digest": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f", "embedding_dimension": 768, "embedding_model": "nomic-embed-text:v1.5", "event": "semantic_cache_ready", "index": "s6102:hw9:semantic:c-fixtures-01:index", "namespace": "c-fixtures-01", "pid": 6652, "source_commit": "3511ae67588f61eeff4199aa8f4db294aca04c57", "student": "Pragya Apurva", "threshold": 1.0, "timestamp": "2026-11-07T04:18:33.808242+00:00"}
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:18708 (Press CTRL+C to quit)
+INFO:     127.0.0.1:50658 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50658 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50658 - "GET /api/rentals HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50658 - "POST /api/rentals HTTP/1.1" 201 Created
+INFO:     127.0.0.1:50658 - "POST /api/rentals HTTP/1.1" 201 Created
+INFO:     127.0.0.1:50658 - "POST /api/rentals HTTP/1.1" 201 Created
+INFO:     127.0.0.1:50658 - "POST /api/rentals HTTP/1.1" 201 Created
+INFO:     127.0.0.1:50658 - "POST /api/rentals HTTP/1.1" 201 Created
+INFO:     127.0.0.1:50658 - "POST /api/rentals HTTP/1.1" 201 Created
+INFO:     127.0.0.1:50658 - "POST /api/rentals HTTP/1.1" 201 Created
+INFO:     127.0.0.1:50658 - "POST /api/rentals HTTP/1.1" 201 Created
+INFO:     127.0.0.1:50658 - "POST /api/rentals HTTP/1.1" 201 Created
+INFO:     127.0.0.1:50658 - "POST /api/rentals HTTP/1.1" 201 Created
+INFO:     127.0.0.1:50658 - "POST /api/rentals HTTP/1.1" 201 Created
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [6652]

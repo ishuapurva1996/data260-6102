@@ -1,0 +1,71 @@
+{
+  "synthetic": true,
+  "fixtures": [
+    {
+      "listing_code": "S6102-R-9101",
+      "listing_title": "Cedar Court",
+      "property_type": "apartment",
+      "available_units": 2
+    },
+    {
+      "listing_code": "S6102-R-9102",
+      "listing_title": "Juniper Grove",
+      "property_type": "house",
+      "available_units": 4
+    },
+    {
+      "listing_code": "S6102-R-9103",
+      "listing_title": "Maple Terrace",
+      "property_type": "condo",
+      "available_units": 6
+    },
+    {
+      "listing_code": "S6102-R-9104",
+      "listing_title": "Willow Place",
+      "property_type": "townhouse",
+      "available_units": 8
+    },
+    {
+      "listing_code": "S6102-R-9105",
+      "listing_title": "Aspen Walk",
+      "property_type": "apartment",
+      "available_units": 10
+    },
+    {
+      "listing_code": "S6102-R-9106",
+      "listing_title": "Birch Landing",
+      "property_type": "house",
+      "available_units": 1
+    },
+    {
+      "listing_code": "S6102-R-9107",
+      "listing_title": "Oak Crossing",
+      "property_type": "condo",
+      "available_units": 3
+    },
+    {
+      "listing_code": "S6102-R-9108",
+      "listing_title": "Pine Haven",
+      "property_type": "townhouse",
+      "available_units": 5
+    },
+    {
+      "listing_code": "S6102-R-9109",
+      "listing_title": "Elm Square",
+      "property_type": "apartment",
+      "available_units": 7
+    },
+    {
+      "listing_code": "S6102-R-9110",
+      "listing_title": "Spruce Point",
+      "property_type": "house",
+      "available_units": 9
+    }
+  ],
+  "stale_fixture": {
+    "listing_code": "S6102-R-9199",
+    "listing_title": "Stale Demo Court",
+    "property_type": "apartment",
+    "available_units": 3
+  }
+}

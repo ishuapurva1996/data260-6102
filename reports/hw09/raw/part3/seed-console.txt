@@ -1,0 +1,13 @@
+Pragya Apurva | DATA 260 HW9 Part 3 | seed 2026-11-07T04:18:32.234924+00:00
+S01 At Cedar Court (S6102-R-9101), there are 2 units available.
+S02 The property type for S6102-R-9101 (Cedar Court) is an apartment. There are 2 units available.
+S03 The rental housing draft is clear and accurate. Here is the final answer: At S6102-R-9102, there are 4 units available.
+S04 The property type for S6102-R-9102 (Juniper Grove) is a house, with 4 units available.
+S05 At S6102-R-9103, there are 6 units available.
+S06 S6102-R-9103 (Maple Terrace) is a condo with 6 units available.
+S07 At Willow Place (S6102-R-9104), there are 8 units available.
+S08 The property type for S6102-R-9104 (Willow Place) is a townhouse, with 8 units available.
+S09 At S6102-R-9105, there are 10 units available.
+S10 S6102-R-9105 is an apartment property type. There are 10 units available.
+{"data_version": 12, "dataset_id": "0e586d72da6211f1ae011ab4cc3919df", "entries": 10, "index": "s6102:hw9:semantic:c-seed-01:index", "namespace": "c-seed-01", "operation": "export", "user_id": "3"}
+Seed SHA256 627a1b5fe84eddfba366a032888a7ce4aa9c9694203f2da7b1b59dd9c62c1920

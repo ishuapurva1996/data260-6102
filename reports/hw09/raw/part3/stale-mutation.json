@@ -1,0 +1,31 @@
+{
+  "after": {
+    "availableUnits": 1,
+    "createdAt": "2026-11-07T04:18:34.007810Z",
+    "description": "Synthetic rental fixture for the frozen HW9 threshold study.",
+    "id": 11,
+    "listingCode": "S6102-R-9199",
+    "listingTitle": "Stale Demo Court",
+    "managerId": null,
+    "propertyAddress": "9199 Synthetic Way, San Jose",
+    "propertyType": "apartment",
+    "submitterEmail": "hw9-experiment@example.com",
+    "termsAccepted": true,
+    "updatedAt": "2026-11-07T04:30:50.817481Z"
+  },
+  "before": {
+    "availableUnits": 3,
+    "createdAt": "2026-11-07T04:18:34.007810Z",
+    "description": "Synthetic rental fixture for the frozen HW9 threshold study.",
+    "id": 11,
+    "listingCode": "S6102-R-9199",
+    "listingTitle": "Stale Demo Court",
+    "managerId": null,
+    "propertyAddress": "9199 Synthetic Way, San Jose",
+    "propertyType": "apartment",
+    "submitterEmail": "hw9-experiment@example.com",
+    "termsAccepted": true,
+    "updatedAt": "2026-11-07T04:18:34.007810Z"
+  },
+  "timestamp": "2026-11-07T04:30:50.840882+00:00"
+}

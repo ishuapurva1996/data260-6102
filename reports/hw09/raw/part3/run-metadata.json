@@ -1,0 +1,55 @@
+{
+  "student": "Pragya Apurva",
+  "b_commit": "6938c71110845b7b73c53b795b709399f8a523a1",
+  "pre_sweep_yaml_commit": "3511ae67588f61eeff4199aa8f4db294aca04c57",
+  "yaml_sha256": "4c180dd5a8b5dbd007797225889d1cb7e0921339d0670683b225674ee76f0c26",
+  "fixture_sha256": "1677ca2e00f86b979dca0a7085961692b566181397dc762226aedb515c7cbdf5",
+  "platform": "macOS-15.7.4-arm64-arm-64bit",
+  "machine": "arm64",
+  "hardware": "Hardware:\n\n    Hardware Overview:\n\n      Model Name: MacBook Air\n      Model Identifier: Mac16,12\n      Model Number: MC6C4LL/A\n      Chip: Apple M4\n      Total Number of Cores: 10 (4 performance and 6 efficiency)\n      Memory: 24 GB\n      System Firmware Version: 13822.81.10\n      OS Loader Version: 11881.140.96",
+  "python": "3.12.13 (main, Apr  7 2026, 21:09:58) [Clang 22.1.1 ]",
+  "libraries": {
+    "httpx": "0.27.2",
+    "redis": "6.4.0",
+    "aiokafka": "0.12.0",
+    "langchain-ollama": "1.1.0",
+    "sqlalchemy": "2.0.43"
+  },
+  "models": [
+    {
+      "name": "nomic-embed-text:v1.5",
+      "digest": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f"
+    },
+    {
+      "name": "qwen2.5:7b",
+      "digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e"
+    }
+  ],
+  "model_configuration": {
+    "temperature": 0,
+    "seed": 6102,
+    "num_ctx": 4096,
+    "num_predict": 256
+  },
+  "services": {
+    "compose_project": "s6102-hw9-experiments",
+    "mysql_port": 3398,
+    "kafka_port": 19098,
+    "redis_port": 6398,
+    "http_port": 18708
+  },
+  "account": "hw9c_moderator",
+  "timing": "perf_counter around authenticated POST; body includes separate server latency; serial fixed order",
+  "cost_model_frozen_in_yaml": true,
+  "ollama_coordination": "D confirmed its timed jobs are complete; C holds shared RuntimeLease for each model phase",
+  "runner_commit": "52c8ef470b124605a0fc51dd8c5821b4a5f3738b",
+  "fixture_writes_complete_before_seed": true,
+  "measured_threshold_order": [
+    0.75,
+    0.8,
+    0.85,
+    0.9,
+    0.95
+  ],
+  "case_order": "E01-E10, P01-P10, N01-N10, U01-U10"
+}

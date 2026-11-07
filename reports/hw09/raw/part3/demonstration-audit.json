@@ -1,0 +1,71 @@
+{
+  "reviewer": "Codex Session C output audit for Pragya Apurva",
+  "decisions": [
+    {
+      "request_id": "df8c44a4-1add-4284-be07-8598bbb82460",
+      "answer_sha256": "4ab854bca82bea00188a97af2bf13462b1df7badd8566e1be27b9a94c7a48ef3",
+      "expected": {
+        "listing_code": "S6102-R-9199",
+        "field": "available_units",
+        "value": 3
+      },
+      "correct": true,
+      "reason": "Complete answer explicitly states the expected available-unit count for S6102-R-9199, without negation, another count, or another listing."
+    },
+    {
+      "request_id": "2e6af6c5-7644-4ed9-aebd-ac3bad64bc9d",
+      "answer_sha256": "4ab854bca82bea00188a97af2bf13462b1df7badd8566e1be27b9a94c7a48ef3",
+      "expected": {
+        "listing_code": "S6102-R-9199",
+        "field": "available_units",
+        "value": 3
+      },
+      "correct": true,
+      "reason": "Complete answer explicitly states the expected available-unit count for S6102-R-9199, without negation, another count, or another listing."
+    },
+    {
+      "request_id": "a03b1e3c-0aff-442e-96ac-26669bc40055",
+      "answer_sha256": "e5766d816f262412fc56bee998188040cd9d801beb1354acff3cdf31e37102af",
+      "expected": {
+        "listing_code": "S6102-R-9199",
+        "field": "available_units",
+        "value": 1
+      },
+      "correct": true,
+      "reason": "Complete answer explicitly states the expected available-unit count for S6102-R-9199, without negation, another count, or another listing."
+    },
+    {
+      "request_id": "d6376880-a904-4fd4-bff8-6915502d3357",
+      "answer_sha256": "e5766d816f262412fc56bee998188040cd9d801beb1354acff3cdf31e37102af",
+      "expected": {
+        "listing_code": "S6102-R-9199",
+        "field": "available_units",
+        "value": 1
+      },
+      "correct": true,
+      "reason": "Complete answer explicitly states the expected available-unit count for S6102-R-9199, without negation, another count, or another listing."
+    },
+    {
+      "request_id": "98a503a7-4b3b-4dc4-b257-2d7ed7d7ff69",
+      "answer_sha256": "e5766d816f262412fc56bee998188040cd9d801beb1354acff3cdf31e37102af",
+      "expected": {
+        "listing_code": "S6102-R-9199",
+        "field": "available_units",
+        "value": 1
+      },
+      "correct": true,
+      "reason": "Complete answer explicitly states the expected available-unit count for S6102-R-9199, without negation, another count, or another listing."
+    },
+    {
+      "request_id": "7e903f27-1a41-44b1-bc04-763ab6ed7f22",
+      "answer_sha256": "e5766d816f262412fc56bee998188040cd9d801beb1354acff3cdf31e37102af",
+      "expected": {
+        "listing_code": "S6102-R-9199",
+        "field": "available_units",
+        "value": 1
+      },
+      "correct": true,
+      "reason": "Complete answer explicitly states the expected available-unit count for S6102-R-9199, without negation, another count, or another listing."
+    }
+  ]
+}
