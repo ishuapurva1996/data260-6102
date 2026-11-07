@@ -1,0 +1,2 @@
+# Integrated web app, Redis counter/cache, Kafka stages, and Part 4 adapter.
+-r requirements-hw09-cache.txt

@@ -1,0 +1,16 @@
+# Add to the HW8 compose file and compose.cache.yml. Secrets stay external.
+services:
+  mysql:
+    image: mysql:8.4
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:?Set a private test database password}
+      MYSQL_DATABASE: s6102_rel
+    ports: ["127.0.0.1:${HW9_MYSQL_PORT:-3399}:3306"]
+    volumes: ["mysql-data:/var/lib/mysql"]
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h 127.0.0.1 --silent"]
+      interval: 5s
+      timeout: 3s
+      retries: 30
+volumes:
+  mysql-data:
