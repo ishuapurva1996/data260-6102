@@ -10,7 +10,6 @@ from sqlalchemy.orm import Session
 
 from ..database import get_db
 from ..models import PropertyManager, Rental, utc_now
-from ..rental_facts import advance_rental_version
 from ..schemas import RentalCreate, RentalResponse, RentalUpdate, rental_json
 from ..write_errors import raise_write_conflict
 from .auth import can_delete, can_write, require_user
@@ -59,6 +58,8 @@ def list_rentals(
 
 @router.post("", response_model=RentalResponse, status_code=201, dependencies=[Depends(can_write)])
 def create_rental(payload: RentalCreate, db: Session = Depends(get_db)):
+    from ..rental_facts import advance_rental_version
+
     validate_manager(db, payload.managerId)
     now = utc_now()
     row = Rental(
@@ -91,6 +92,8 @@ def create_rental(payload: RentalCreate, db: Session = Depends(get_db)):
 
 @router.delete("/highest", status_code=204, dependencies=[Depends(can_delete)])
 def delete_highest(db: Session = Depends(get_db)):
+    from ..rental_facts import advance_rental_version
+
     row = db.scalar(select(Rental).order_by(Rental.id.desc()).limit(1).with_for_update())
     if row is None:
         raise HTTPException(404, "There are no rental listings to delete.")
@@ -107,6 +110,8 @@ def get_rental(rental_id: RecordId, db: Session = Depends(get_db)):
 
 @router.put("/{rental_id}", response_model=RentalResponse, dependencies=[Depends(can_write)])
 def update_rental(rental_id: RecordId, payload: RentalUpdate, db: Session = Depends(get_db)):
+    from ..rental_facts import advance_rental_version
+
     row = find_rental(db, rental_id)
     if "managerId" in payload.model_fields_set:
         validate_manager(db, payload.managerId)
@@ -134,6 +139,8 @@ def update_rental(rental_id: RecordId, payload: RentalUpdate, db: Session = Depe
 
 @router.delete("/{rental_id}", status_code=204, dependencies=[Depends(can_delete)])
 def delete_rental(rental_id: RecordId, db: Session = Depends(get_db)):
+    from ..rental_facts import advance_rental_version
+
     db.delete(find_rental(db, rental_id))
     advance_rental_version(db)
     db.commit()
