@@ -49,9 +49,11 @@ def test_attempt_budget_survives_restart(tmp_path):
 class Producer:
     def __init__(self):
         self.sent = []
+        self.headers = []
 
     async def send_and_wait(self, topic, value, **kwargs):
         self.sent.append((topic, json.loads(value)))
+        self.headers.append(kwargs.get("headers", ()))
         return SimpleNamespace(topic=topic, partition=0, offset=len(self.sent) - 1)
 
 
@@ -97,6 +99,45 @@ def test_duplicate_has_one_logical_output_and_commits_both_records(tmp_path):
         stage.store.close()
 
     asyncio.run(run())
+
+
+def test_trace_matches_publish_to_receipt_and_closes_retries(tmp_path, capsys):
+    async def run():
+        writer, reviewer = (
+            processor(tmp_path),
+            StageProcessor(
+                "reviewer", ReceiptStore(tmp_path / "reviewer.sqlite3"), model="fixture"
+            ),
+        )
+        drafts, finals, consumer = Producer(), Producer(), Consumer()
+        await writer.handle(record(task()), consumer, drafts)
+        draft = record(drafts.sent[0][1])
+        draft.topic = drafts.sent[0][0]
+        draft.headers = drafts.headers[0]
+        await reviewer.handle(draft, consumer, finals)
+
+        invalid = {**task("failed"), "plan": ""}
+        await writer.handle(record(invalid, 1), consumer, drafts)
+        writer.store.close()
+        reviewer.store.close()
+
+    asyncio.run(run())
+    rows = [json.loads(line) for line in capsys.readouterr().out.splitlines()]
+    published = next(row for row in rows if row["event"] == "output_published")
+    queue = next(row for row in rows if row["event"] == "trace_span" and row["stage"] == "drafts")
+    assert queue["trace_id"] == published["correlation_id"] == "journey-1"
+    assert queue["enqueue_time"] == published["enqueue_time"]
+    assert queue["receive_time"] == queue["end_time"]
+    assert (queue["topic"], queue["partition"], queue["offset"]) == (
+        published["output_topic"],
+        published["output_partition"],
+        published["output_offset"],
+    )
+    assert queue["status"] == "ok" and queue["duration_ms"] >= 0
+    errors = [row for row in rows if row["event"] == "trace_span" and row["trace_id"] == "failed"]
+    assert [row["attempt"] for row in errors] == [1, 2, 3]
+    assert all(row["stage"] == "writer" and row["status"] == "error" for row in errors)
+    assert all(row["end_time"] and "plan must be" in row["error"] for row in errors)
 
 
 def test_poison_three_attempts_then_dlq_and_next_record_succeeds(tmp_path):

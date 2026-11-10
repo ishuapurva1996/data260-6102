@@ -74,14 +74,31 @@ def create_app(
 
         if os.getenv("HW9_CACHE_ENABLED") == "1":
             from time import perf_counter
+            from uuid import uuid4
 
             from web_application.routers import kafka_questions
 
+            from src.kafka_service.logging import timed_span
+
             @app.middleware("http")
             async def start_question_timer(request, call_next):
-                if request.method == "POST" and request.url.path == "/api/kafka/questions":
-                    request.state.hw9_question_started = perf_counter()
-                return await call_next(request)
+                if request.method != "POST" or request.url.path != "/api/kafka/questions":
+                    return await call_next(request)
+                request_id = str(uuid4())
+                request.state.hw9_question_started = perf_counter()
+                request.state.question_request_id = request_id
+                with timed_span(
+                    request_id, "api_request", cache_outcome=None, request_outcome="error"
+                ) as span:
+                    request.state.question_span = span
+                    response = await call_next(request)
+                    span["http_status"] = response.status_code
+                    if response.status_code >= 400:
+                        span.setdefault("error", f"HTTP {response.status_code}")
+                    else:
+                        span["request_outcome"] = "success"
+                    response.headers["X-Trace-ID"] = request_id
+                    return response
 
             app.include_router(kafka_questions.create_router(app.state.session_factory))
 

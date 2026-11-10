@@ -2,7 +2,6 @@
 
 import asyncio
 from time import perf_counter
-from uuid import uuid4
 
 import httpx
 from aiokafka.errors import KafkaError
@@ -24,7 +23,7 @@ from src.hw09.semantic_cache import (
     verify_embedding_model,
 )
 from src.kafka_agents.question_client import send_question
-from src.kafka_service.logging import event
+from src.kafka_service.logging import event, timed_span
 
 from ..database import get_db
 from ..rental_facts import rental_fact_snapshot, rental_version
@@ -113,7 +112,8 @@ def create_router(session_factory):
         await asyncio.to_thread(auth_db.close)
         start_time = request.state.hw9_question_started
         question = payload.question
-        request_id = str(uuid4())
+        request_id = request.state.question_request_id
+        api_span = request.state.question_span
         timings = {}
         candidate = None
         marker = (None, None)
@@ -122,13 +122,18 @@ def create_router(session_factory):
         is_cached = False
         error = None
         try:
-            started = perf_counter()
-            vector = await asyncio.to_thread(
-                lambda: VECTOR.pack(*embed(MODEL_INPUT_PREFIX + question))
-            )
-            timings["embed_ms"] = elapsed(started)
-            marker, candidate = await asyncio.to_thread(lookup, vector, user_id, timings)
-            is_cached = candidate is not None and candidate["similarity"] >= settings.threshold
+            with timed_span(request_id, "cache_lookup", cache_outcome=None) as cache_span:
+                started = perf_counter()
+                vector = await asyncio.to_thread(
+                    lambda: VECTOR.pack(*embed(MODEL_INPUT_PREFIX + question))
+                )
+                timings["embed_ms"] = elapsed(started)
+                marker, candidate = await asyncio.to_thread(lookup, vector, user_id, timings)
+                is_cached = candidate is not None and candidate["similarity"] >= settings.threshold
+                cache_outcome = "hit" if is_cached else "miss"
+                cache_span["cache_outcome"] = api_span["cache_outcome"] = cache_outcome
+                if is_cached:
+                    cache_span["source_request_id"] = candidate["source_request_id"]
             if is_cached:
                 answer = candidate["answer"]
             else:
@@ -170,9 +175,11 @@ def create_router(session_factory):
                 timings["cache_write_ms"] = elapsed(started)
         except TimeoutError as exc:
             error = type(exc).__name__
+            api_span["error"] = error
             raise HTTPException(504, "The question pipeline timed out.") from exc
         except (KafkaError, RedisError, SQLAlchemyError, httpx.HTTPError, ValueError) as exc:
             error = type(exc).__name__
+            api_span["error"] = error
             raise HTTPException(503, "The question service is temporarily unavailable.") from exc
         finally:
             latency_ms = elapsed(start_time)

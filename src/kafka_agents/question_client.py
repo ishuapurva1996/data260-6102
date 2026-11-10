@@ -6,9 +6,11 @@ from uuid import uuid4
 
 from aiokafka import AIOKafkaConsumer, AIOKafkaProducer
 
-from src.kafka_agents.common import wait_assignment
 from src.kafka_service.config import FINAL, INBOX, PREFIX, KafkaSettings
-from src.kafka_service.logging import event
+from src.kafka_service.logging import event, utc_now
+
+from .common import wait_assignment
+from .transport import coordinates, send_traced, trace_receipt
 
 
 async def send_question(
@@ -48,20 +50,20 @@ async def send_question(
         # Resolve a concrete tail before publication; old final records cannot be
         # mistaken for this question, even when the topic already contains work.
         await consumer.seek_to_end()
-        sent = await producer.send_and_wait(
-            INBOX, json.dumps(payload).encode(), key=str(rental_id or identity).encode()
+        sent, timing = await send_traced(
+            producer, INBOX, payload, key=str(rental_id or identity).encode()
         )
         event(
             "question_sent",
-            topic=sent.topic,
-            partition=sent.partition,
-            offset=sent.offset,
+            **coordinates(sent),
+            **timing,
             correlation_id=identity,
             run_id=payload["run_id"],
             payload=payload,
         )
         async with asyncio.timeout(timeout):
             async for record in consumer:
+                received = utc_now()
                 result = json.loads(record.value)
                 if result.get("correlation_id") != identity:
                     continue
@@ -70,12 +72,14 @@ async def send_question(
                     or not result["answer"].strip()
                     or not result.get("status")
                 ):
-                    raise ValueError("Final result is missing status or answer")
+                    error = "Final result is missing status or answer"
+                    trace_receipt(record, identity, received, error=error)
+                    raise ValueError(error)
+                trace_receipt(record, identity, received)
                 event(
                     "final_received",
-                    topic=record.topic,
-                    partition=record.partition,
-                    offset=record.offset,
+                    **coordinates(record),
+                    receive_time=received.isoformat(),
                     correlation_id=identity,
                     run_id=payload["run_id"],
                     final=result,
@@ -83,16 +87,8 @@ async def send_question(
                 return {
                     "request": payload,
                     "final": result,
-                    "sent": {
-                        "topic": sent.topic,
-                        "partition": sent.partition,
-                        "offset": sent.offset,
-                    },
-                    "received": {
-                        "topic": record.topic,
-                        "partition": record.partition,
-                        "offset": record.offset,
-                    },
+                    "sent": coordinates(sent),
+                    "received": coordinates(record),
                 }
     finally:
         await consumer.stop()
