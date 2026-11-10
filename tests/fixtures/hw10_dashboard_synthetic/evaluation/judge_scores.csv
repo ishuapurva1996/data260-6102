@@ -1,0 +1,13 @@
+case_id,pass_id,score,reason
+synthetic-draft-01,synthetic-pass-1,1,Illustrative helpfulness score of 1.
+synthetic-draft-02,synthetic-pass-1,3,Illustrative helpfulness score of 3.
+synthetic-draft-03,synthetic-pass-1,4,Illustrative helpfulness score of 4.
+synthetic-draft-04,synthetic-pass-1,4,Illustrative helpfulness score of 4.
+synthetic-draft-01,synthetic-pass-2,1,Illustrative helpfulness score of 1.
+synthetic-draft-02,synthetic-pass-2,3,Illustrative helpfulness score of 3.
+synthetic-draft-03,synthetic-pass-2,4,Illustrative helpfulness score of 4.
+synthetic-draft-04,synthetic-pass-2,5,Illustrative helpfulness score of 5.
+synthetic-draft-01,synthetic-pass-3,1,Illustrative helpfulness score of 1.
+synthetic-draft-02,synthetic-pass-3,3,Illustrative helpfulness score of 3.
+synthetic-draft-03,synthetic-pass-3,4,Illustrative helpfulness score of 4.
+synthetic-draft-04,synthetic-pass-3,4,Illustrative helpfulness score of 4.

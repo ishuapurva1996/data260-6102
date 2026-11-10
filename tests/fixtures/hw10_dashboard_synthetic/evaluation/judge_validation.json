@@ -1,0 +1,83 @@
+{
+  "study_id": "synthetic-validation",
+  "status": "ok",
+  "case_count": 4,
+  "scored_count": 12,
+  "primary_pass": 1,
+  "passes": [
+    {
+      "pass": 1,
+      "run_id": "synthetic-pass-1",
+      "status": "ok",
+      "scored_count": 4
+    },
+    {
+      "pass": 2,
+      "run_id": "synthetic-pass-2",
+      "status": "ok",
+      "scored_count": 4
+    },
+    {
+      "pass": 3,
+      "run_id": "synthetic-pass-3",
+      "status": "ok",
+      "scored_count": 4
+    }
+  ],
+  "spearman": 0.9486832980505138,
+  "mean_absolute_difference": 0.25,
+  "repeatability": {
+    "changed_count": 1,
+    "changed_rate": 0.25,
+    "mean_score_change": 0.25,
+    "max_score_change": 1
+  },
+  "freeze_sha": null,
+  "interpretation": "These invented scores demonstrate the display for comparison and repeatability.",
+  "comparisons": [
+    {
+      "case_id": "synthetic-draft-01",
+      "human_score": 1,
+      "judge_scores": [
+        1,
+        1,
+        1
+      ],
+      "pass_1_absolute_difference": 0,
+      "score_change": 0
+    },
+    {
+      "case_id": "synthetic-draft-02",
+      "human_score": 3,
+      "judge_scores": [
+        3,
+        3,
+        3
+      ],
+      "pass_1_absolute_difference": 0,
+      "score_change": 0
+    },
+    {
+      "case_id": "synthetic-draft-03",
+      "human_score": 4,
+      "judge_scores": [
+        4,
+        4,
+        4
+      ],
+      "pass_1_absolute_difference": 0,
+      "score_change": 0
+    },
+    {
+      "case_id": "synthetic-draft-04",
+      "human_score": 5,
+      "judge_scores": [
+        4,
+        5,
+        4
+      ],
+      "pass_1_absolute_difference": 1,
+      "score_change": 1
+    }
+  ]
+}
