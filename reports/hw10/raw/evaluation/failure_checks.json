@@ -1,0 +1,44 @@
+{
+  "malformed_case": {
+    "exit_code": 1,
+    "elapsed_seconds": 0.061,
+    "case_timeout_seconds": 4,
+    "request_timeout_seconds": 2,
+    "link_timeout_seconds": 1,
+    "error_code": "malformed_evidence",
+    "span": {
+      "case_id": null,
+      "duration_ms": 0.153,
+      "end_time": "2026-11-13T06:12:06.424694+00:00",
+      "error": "writer.draft must be a nonempty string",
+      "error_code": "malformed_evidence",
+      "evaluation_id": "98ef8662-415c-4fa0-8090-0d8d01c81fae",
+      "stage": "evaluation",
+      "start_time": "2026-11-13T06:12:06.424407+00:00",
+      "status": "error",
+      "trace_id": "103f3e33-f9bb-459e-9e6d-5dda37f24b45"
+    },
+    "ollama_port": 11434
+  },
+  "unavailable_judge": {
+    "exit_code": 1,
+    "elapsed_seconds": 0.055,
+    "case_timeout_seconds": 4,
+    "request_timeout_seconds": 2,
+    "link_timeout_seconds": 1,
+    "error_code": "judge_unavailable",
+    "span": {
+      "case_id": "case-103f3e33-f9bb-459e-9e6d-5dda37f24b45",
+      "duration_ms": 5.979,
+      "end_time": "2026-11-13T06:12:06.478677+00:00",
+      "error": "Could not read Ollama model metadata",
+      "error_code": "judge_unavailable",
+      "evaluation_id": "0f53ab2e-56c1-4b1c-9e6a-5917d1c0db10",
+      "stage": "evaluation",
+      "start_time": "2026-11-13T06:12:06.472505+00:00",
+      "status": "error",
+      "trace_id": "103f3e33-f9bb-459e-9e6d-5dda37f24b45"
+    },
+    "ollama_port": 1
+  }
+}

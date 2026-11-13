@@ -90,6 +90,7 @@ def run_pipeline(args, judge_factory, output):
             delta = scores["reviewer"]["score"] - scores["writer"]["score"]
             result = {
                 **case,
+                "final": case["final_answer"],
                 "evaluation_id": evaluation_id,
                 "scores": scores,
                 "final_minus_draft": delta,

@@ -107,6 +107,7 @@ def test_scores_exact_linked_outputs_and_logs_evaluation_span(tmp_path):
     (span,) = read_rows(tmp_path, "spans.jsonl")
     assert score["messages"] == case["messages"]
     assert score["final_answer"] == FINAL
+    assert score["final"] == FINAL
     assert [score["scores"][stage]["score"] for stage in ("planner", "writer", "reviewer")] == [
         4,
         2,

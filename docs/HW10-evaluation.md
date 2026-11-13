@@ -16,7 +16,8 @@ Pass `--output-dir` to put evaluation output in a different directory.
 
 - `pipeline_scores.jsonl` contains one record per successful evaluation with
   `trace_id`, `correlation_id`, `case_id`, `evaluation_id`, `question`,
-  `reference_facts`, `plan`, `draft`, `final_answer`, and `messages`. Each entry
+  `reference_facts`, `plan`, `draft`, `final_answer`, and `messages`. The
+  `final` alias supplies the same answer text to the dashboard. Each entry
   under `scores.planner`, `scores.writer`, and `scores.reviewer` has a
   `score` (1–5), `normalized_score` (0–1), and `reason`. The
   `final_minus_draft` and `interpretation` fields compare the two answers.
