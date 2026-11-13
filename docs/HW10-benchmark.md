@@ -71,6 +71,7 @@ evaluation before sending the next request.
 python -m scripts.hw10.benchmark \
   --a1 "$A1_SHA" --b1 "$B1_SHA" --exclusive-runtime \
   --judge-model "$JUDGE_MODEL" --judge-digest "$JUDGE_DIGEST" \
+  --evaluator-python "$HW10_EVAL_RUNTIME/venv/bin/python" \
   --log-dir "$D_LOG_DIR" --output "$D_RUNTIME/measure-01"
 ```
 

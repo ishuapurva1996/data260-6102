@@ -302,7 +302,8 @@ def test_cache_reset_cannot_delete_an_unexpected_entry():
 
 
 def test_evaluator_command_reads_the_same_trace_and_case(tmp_path, monkeypatch):
-    def run(module, args, _log, timeout):
+    def run(module, args, _log, timeout, *, python):
+        assert python == "/judge/bin/python"
         assert module == "scripts.hw10.evaluate"
         assert args == [
             "pipeline",
@@ -329,7 +330,11 @@ def test_evaluator_command_reads_the_same_trace_and_case(tmp_path, monkeypatch):
         return 0
 
     monkeypatch.setattr(benchmark, "run_command", run)
-    [result] = benchmark.evaluate_trace(attempt(), tmp_path, "judge:test", "test-digest")
+    [result] = benchmark.evaluate_trace(
+        attempt(), tmp_path, "judge:test", "test-digest", python="/judge/bin/python"
+    )
     assert result["evaluation_id"] == "eval-1"
     with pytest.raises(EvidenceError, match="linked score and span"):
-        benchmark.evaluate_trace(attempt(), tmp_path, "judge:test", "test-digest")
+        benchmark.evaluate_trace(
+            attempt(), tmp_path, "judge:test", "test-digest", python="/judge/bin/python"
+        )

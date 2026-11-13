@@ -127,11 +127,11 @@ def read_spans(path, trace_id):
     return records
 
 
-def run_command(module, args, log_path, timeout):
+def run_command(module, args, log_path, timeout, *, python=sys.executable):
     with log_path.open("ab") as log:
         try:
             return subprocess.run(
-                [sys.executable, "-m", module, *args],
+                [python, "-m", module, *args],
                 cwd=ROOT,
                 stdout=log,
                 stderr=subprocess.STDOUT,
@@ -169,7 +169,7 @@ def export_trace(attempt, directory, log_dir, source_sha):
     raise EvidenceError("trace export did not complete within 5 seconds")
 
 
-def evaluate_trace(attempt, directory, judge_model, judge_digest):
+def evaluate_trace(attempt, directory, judge_model, judge_digest, *, python=sys.executable):
     output = directory / "evaluation"
     code = run_command(
         "scripts.hw10.evaluate",
@@ -186,6 +186,7 @@ def evaluate_trace(attempt, directory, judge_model, judge_digest):
         ],
         directory / "evaluation.log",
         190,
+        python=python,
     )
     if code != 0:
         raise EvidenceError(f"evaluator exited with status {code}")
@@ -365,6 +366,7 @@ def main():
     parser.add_argument("--log-dir", required=True, type=Path)
     parser.add_argument("--judge-model", required=True)
     parser.add_argument("--judge-digest", required=True)
+    parser.add_argument("--evaluator-python", default=sys.executable)
     parser.add_argument("--a1", required=True)
     parser.add_argument("--b1", required=True)
     parser.add_argument("--max-attempts", type=int, default=75)
@@ -422,6 +424,7 @@ def main():
                     directory,
                     args.judge_model,
                     args.judge_digest,
+                    python=args.evaluator_python,
                 ),
             )
     finally:
