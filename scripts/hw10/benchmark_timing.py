@@ -9,6 +9,7 @@ from src.kafka_service.config import DRAFTS, FINAL, INBOX, TASKS
 QUEUE_TOPICS = {"inbox": INBOX, "tasks": TASKS, "drafts": DRAFTS, "final": FINAL}
 STAGES = ("cache_lookup", "planner", "writer", "reviewer", "queue_wait", "evaluation")
 PATH = ("cache_lookup", "inbox", "planner", "tasks", "writer", "drafts", "reviewer", "final")
+MAX_CLOCK_DIFFERENCE_MS = 100
 
 
 class EvidenceError(ValueError):
@@ -66,6 +67,8 @@ def completed_span(spans, stage):
             raise ValueError("negative wall-clock interval")
     except (KeyError, TypeError, ValueError) as exc:
         raise EvidenceError(f"invalid {stage} timing") from exc
+    if abs((end - start).total_seconds() * 1000 - elapsed) > MAX_CLOCK_DIFFERENCE_MS:
+        raise EvidenceError(f"{stage} wall and recorded durations disagree")
     return span, start, end, elapsed
 
 

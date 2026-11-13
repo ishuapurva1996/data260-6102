@@ -1,0 +1,30 @@
+{
+  "standalone": {
+    "trace_id": "1aeef4b4-0316-4716-b590-4e504bcc33d2",
+    "case_id": "hw10-benchmark-pilot",
+    "api_latency_ms": 13649.738,
+    "response_latency_ms": 13648.203,
+    "http_latency_ms": 13654.682749998756,
+    "cache_lookup_ms": 556.764,
+    "planner_ms": 6746.751,
+    "writer_ms": 2832.193,
+    "reviewer_ms": 2913.998,
+    "queue_wait_ms": 35.86,
+    "evaluation_ms": 20075.364,
+    "full_trace_ms": 33824.708999999995
+  },
+  "warmup": {
+    "trace_id": "5ea88cd3-21e1-4717-927c-35c3ecd9dc65",
+    "case_id": "hw10-benchmark-pilot",
+    "api_latency_ms": 7676.111,
+    "response_latency_ms": 7675.64,
+    "http_latency_ms": 7677.233374997741,
+    "cache_lookup_ms": 21.912,
+    "planner_ms": 2284.616,
+    "writer_ms": 2358.681,
+    "reviewer_ms": 2472.116,
+    "queue_wait_ms": 11.048,
+    "evaluation_ms": 20092.546,
+    "full_trace_ms": 27866.214
+  }
+}

@@ -1,0 +1,396 @@
+{
+  "http": {
+    "hit": {
+      "case_id": "hw10-example-hit",
+      "question": "How many units are available at S6102-R-9101?",
+      "status_code": 200,
+      "trace_id": "bdf62b55-6040-4701-8eae-3c0e6db8bf53",
+      "is_cached": true,
+      "api_latency_ms": 577.469,
+      "http_latency_ms": 584.7535420034546,
+      "error": null
+    },
+    "miss": {
+      "case_id": "hw10-example-miss",
+      "question": "How many units are available at S6102-R-9101?",
+      "status_code": 200,
+      "trace_id": "813b4e22-6b35-4f5c-a163-5350c18652d6",
+      "is_cached": false,
+      "api_latency_ms": 11794.796,
+      "http_latency_ms": 11796.526459002052,
+      "error": null
+    },
+    "failed": {
+      "case_id": "hw10-example-failed",
+      "question": "What type of property is S6102-R-9103?",
+      "status_code": 504,
+      "trace_id": "05a689b3-b160-4fcb-a383-fb2c58aff1d3",
+      "is_cached": null,
+      "api_latency_ms": null,
+      "http_latency_ms": 180057.28641699534,
+      "error": null
+    },
+    "recovery": {
+      "case_id": "hw10-example-recovery",
+      "question": "What type of property is S6102-R-9103?",
+      "status_code": 200,
+      "trace_id": "ce24f3d8-608d-4e7f-a834-7953c5acd6d0",
+      "is_cached": false,
+      "api_latency_ms": 7897.713,
+      "http_latency_ms": 7899.952249994385,
+      "error": null
+    }
+  },
+  "recovery_spans": [
+    {
+      "cache_outcome": "miss",
+      "correlation_id": "ce24f3d8-608d-4e7f-a834-7953c5acd6d0",
+      "duration_ms": 7898.188,
+      "end_time": "2026-11-13T08:21:25.834090+00:00",
+      "error": null,
+      "event": "trace_span",
+      "http_status": 200,
+      "pid": 81381,
+      "request_outcome": "success",
+      "source_commit": "d14796a39f8934965913c84fb7217f2b6dbd11c4",
+      "stage": "api_request",
+      "start_time": "2026-11-13T08:21:17.935941+00:00",
+      "status": "ok",
+      "student": "Pragya Apurva",
+      "timestamp": "2026-11-13T08:21:25.834105+00:00",
+      "trace_id": "ce24f3d8-608d-4e7f-a834-7953c5acd6d0"
+    },
+    {
+      "cache_outcome": "miss",
+      "correlation_id": "ce24f3d8-608d-4e7f-a834-7953c5acd6d0",
+      "duration_ms": 30.246,
+      "end_time": "2026-11-13T08:21:17.970625+00:00",
+      "error": null,
+      "event": "trace_span",
+      "pid": 81381,
+      "source_commit": "d14796a39f8934965913c84fb7217f2b6dbd11c4",
+      "stage": "cache_lookup",
+      "start_time": "2026-11-13T08:21:17.940380+00:00",
+      "status": "ok",
+      "student": "Pragya Apurva",
+      "timestamp": "2026-11-13T08:21:17.970671+00:00",
+      "trace_id": "ce24f3d8-608d-4e7f-a834-7953c5acd6d0"
+    },
+    {
+      "correlation_id": "ce24f3d8-608d-4e7f-a834-7953c5acd6d0",
+      "duration_ms": 2.213,
+      "end_time": "2026-11-13T08:21:18.495247+00:00",
+      "enqueue_time": "2026-11-13T08:21:18.493034+00:00",
+      "error": null,
+      "event": "trace_span",
+      "offset": 3,
+      "operation": "queue_wait",
+      "partition": 0,
+      "pid": 81200,
+      "receive_time": "2026-11-13T08:21:18.495247+00:00",
+      "source_commit": "d14796a39f8934965913c84fb7217f2b6dbd11c4",
+      "stage": "inbox",
+      "start_time": "2026-11-13T08:21:18.493034+00:00",
+      "status": "ok",
+      "student": "Pragya Apurva",
+      "timestamp": "2026-11-13T08:21:18.495406+00:00",
+      "topic": "s6102_inbox",
+      "trace_id": "ce24f3d8-608d-4e7f-a834-7953c5acd6d0",
+      "ack_time": "2026-11-13T08:21:18.494619+00:00"
+    },
+    {
+      "attempt": 1,
+      "correlation_id": "ce24f3d8-608d-4e7f-a834-7953c5acd6d0",
+      "duration_ms": 1565.431,
+      "end_time": "2026-11-13T08:21:20.062996+00:00",
+      "error": null,
+      "event": "trace_span",
+      "model": "qwen2.5:7b",
+      "offset": 3,
+      "partition": 0,
+      "pid": 81200,
+      "processing_outcome": "generated",
+      "source_commit": "d14796a39f8934965913c84fb7217f2b6dbd11c4",
+      "stage": "planner",
+      "start_time": "2026-11-13T08:21:18.497572+00:00",
+      "status": "ok",
+      "student": "Pragya Apurva",
+      "timestamp": "2026-11-13T08:21:20.063018+00:00",
+      "topic": "s6102_inbox",
+      "trace_id": "ce24f3d8-608d-4e7f-a834-7953c5acd6d0"
+    },
+    {
+      "correlation_id": "ce24f3d8-608d-4e7f-a834-7953c5acd6d0",
+      "duration_ms": 5.2,
+      "end_time": "2026-11-13T08:21:20.068291+00:00",
+      "enqueue_time": "2026-11-13T08:21:20.063091+00:00",
+      "error": null,
+      "event": "trace_span",
+      "offset": 2,
+      "operation": "queue_wait",
+      "partition": 1,
+      "pid": 81912,
+      "receive_time": "2026-11-13T08:21:20.068291+00:00",
+      "source_commit": "d14796a39f8934965913c84fb7217f2b6dbd11c4",
+      "stage": "tasks",
+      "start_time": "2026-11-13T08:21:20.063091+00:00",
+      "status": "ok",
+      "student": "Pragya Apurva",
+      "timestamp": "2026-11-13T08:21:20.068498+00:00",
+      "topic": "s6102_tasks",
+      "trace_id": "ce24f3d8-608d-4e7f-a834-7953c5acd6d0",
+      "ack_time": "2026-11-13T08:21:20.067646+00:00"
+    },
+    {
+      "attempt": 1,
+      "correlation_id": "ce24f3d8-608d-4e7f-a834-7953c5acd6d0",
+      "duration_ms": 3029.113,
+      "end_time": "2026-11-13T08:21:23.098670+00:00",
+      "error": null,
+      "event": "trace_span",
+      "model": "qwen2.5:7b",
+      "offset": 2,
+      "partition": 1,
+      "pid": 81912,
+      "processing_outcome": "generated",
+      "source_commit": "d14796a39f8934965913c84fb7217f2b6dbd11c4",
+      "stage": "writer",
+      "start_time": "2026-11-13T08:21:20.069569+00:00",
+      "status": "ok",
+      "student": "Pragya Apurva",
+      "timestamp": "2026-11-13T08:21:23.098690+00:00",
+      "topic": "s6102_tasks",
+      "trace_id": "ce24f3d8-608d-4e7f-a834-7953c5acd6d0"
+    },
+    {
+      "correlation_id": "ce24f3d8-608d-4e7f-a834-7953c5acd6d0",
+      "duration_ms": 2.153,
+      "end_time": "2026-11-13T08:21:23.100895+00:00",
+      "enqueue_time": "2026-11-13T08:21:23.098742+00:00",
+      "error": null,
+      "event": "trace_span",
+      "offset": 2,
+      "operation": "queue_wait",
+      "partition": 0,
+      "pid": 81202,
+      "receive_time": "2026-11-13T08:21:23.100895+00:00",
+      "source_commit": "d14796a39f8934965913c84fb7217f2b6dbd11c4",
+      "stage": "drafts",
+      "start_time": "2026-11-13T08:21:23.098742+00:00",
+      "status": "ok",
+      "student": "Pragya Apurva",
+      "timestamp": "2026-11-13T08:21:23.101113+00:00",
+      "topic": "s6102_drafts",
+      "trace_id": "ce24f3d8-608d-4e7f-a834-7953c5acd6d0",
+      "ack_time": "2026-11-13T08:21:23.100404+00:00"
+    },
+    {
+      "attempt": 1,
+      "correlation_id": "ce24f3d8-608d-4e7f-a834-7953c5acd6d0",
+      "duration_ms": 2722.618,
+      "end_time": "2026-11-13T08:21:25.825380+00:00",
+      "error": null,
+      "event": "trace_span",
+      "model": "qwen2.5:7b",
+      "offset": 2,
+      "partition": 0,
+      "pid": 81202,
+      "processing_outcome": "generated",
+      "source_commit": "d14796a39f8934965913c84fb7217f2b6dbd11c4",
+      "stage": "reviewer",
+      "start_time": "2026-11-13T08:21:23.102774+00:00",
+      "status": "ok",
+      "student": "Pragya Apurva",
+      "timestamp": "2026-11-13T08:21:25.825397+00:00",
+      "topic": "s6102_drafts",
+      "trace_id": "ce24f3d8-608d-4e7f-a834-7953c5acd6d0"
+    },
+    {
+      "correlation_id": "ce24f3d8-608d-4e7f-a834-7953c5acd6d0",
+      "duration_ms": 2.611,
+      "end_time": "2026-11-13T08:21:25.828061+00:00",
+      "enqueue_time": "2026-11-13T08:21:25.825450+00:00",
+      "error": null,
+      "event": "trace_span",
+      "offset": 2,
+      "operation": "queue_wait",
+      "partition": 0,
+      "pid": 81381,
+      "receive_time": "2026-11-13T08:21:25.828061+00:00",
+      "source_commit": "d14796a39f8934965913c84fb7217f2b6dbd11c4",
+      "stage": "final",
+      "start_time": "2026-11-13T08:21:25.825450+00:00",
+      "status": "ok",
+      "student": "Pragya Apurva",
+      "timestamp": "2026-11-13T08:21:25.828145+00:00",
+      "topic": "s6102_final",
+      "trace_id": "ce24f3d8-608d-4e7f-a834-7953c5acd6d0",
+      "ack_time": "2026-11-13T08:21:25.827717+00:00"
+    }
+  ],
+  "recovery_linked_case": {
+    "case_id": "hw10-example-recovery",
+    "trace_id": "ce24f3d8-608d-4e7f-a834-7953c5acd6d0",
+    "correlation_id": "ce24f3d8-608d-4e7f-a834-7953c5acd6d0",
+    "question": "What type of property is S6102-R-9103?",
+    "reference_facts": {
+      "data_version": 11,
+      "dataset_id": "580cdaecdf3a11f1925ab68095cb902a",
+      "listings": [
+        {
+          "available_units": 6,
+          "listing_code": "S6102-R-9103",
+          "listing_title": "Maple Terrace",
+          "property_type": "condo"
+        }
+      ],
+      "requested_codes": [
+        "S6102-R-9103"
+      ]
+    },
+    "plan": "The property type for listing S6102-R-9103, Maple Terrace, is a condo. There are 6 units available.",
+    "draft": "S6102-R-9103, Maple Terrace, is a condo with 6 units available.",
+    "final_answer": "S6102-R-9103, Maple Terrace, is a condo with 6 units available.",
+    "messages": {
+      "reviewer": {
+        "topic": "s6102_final",
+        "partition": 0,
+        "offset": 2,
+        "payload": {
+          "answer": "S6102-R-9103, Maple Terrace, is a condo with 6 units available.",
+          "correlation_id": "ce24f3d8-608d-4e7f-a834-7953c5acd6d0",
+          "draft": "S6102-R-9103, Maple Terrace, is a condo with 6 units available.",
+          "from_stage": "reviewer",
+          "input_source": {
+            "offset": 2,
+            "partition": 0,
+            "topic": "s6102_drafts"
+          },
+          "plan": "The property type for listing S6102-R-9103, Maple Terrace, is a condo. There are 6 units available.",
+          "question": "What type of property is S6102-R-9103?",
+          "rental_context": {
+            "data_version": 11,
+            "dataset_id": "580cdaecdf3a11f1925ab68095cb902a",
+            "listings": [
+              {
+                "available_units": 6,
+                "listing_code": "S6102-R-9103",
+                "listing_title": "Maple Terrace",
+                "property_type": "condo"
+              }
+            ],
+            "requested_codes": [
+              "S6102-R-9103"
+            ]
+          },
+          "run_id": "question-ce24f3d8-608d-4e7f-a834-7953c5acd6d0",
+          "status": "approved",
+          "writer_instance": "writer-81912"
+        },
+        "enqueue_time": "2026-11-13T08:21:25.825450+00:00",
+        "ack_time": "2026-11-13T08:21:25.827717+00:00",
+        "receive_time": "2026-11-13T08:21:25.828061+00:00"
+      },
+      "writer": {
+        "topic": "s6102_drafts",
+        "partition": 0,
+        "offset": 2,
+        "payload": {
+          "correlation_id": "ce24f3d8-608d-4e7f-a834-7953c5acd6d0",
+          "draft": "S6102-R-9103, Maple Terrace, is a condo with 6 units available.",
+          "from_stage": "writer",
+          "input_source": {
+            "offset": 2,
+            "partition": 1,
+            "topic": "s6102_tasks"
+          },
+          "plan": "The property type for listing S6102-R-9103, Maple Terrace, is a condo. There are 6 units available.",
+          "question": "What type of property is S6102-R-9103?",
+          "rental_context": {
+            "data_version": 11,
+            "dataset_id": "580cdaecdf3a11f1925ab68095cb902a",
+            "listings": [
+              {
+                "available_units": 6,
+                "listing_code": "S6102-R-9103",
+                "listing_title": "Maple Terrace",
+                "property_type": "condo"
+              }
+            ],
+            "requested_codes": [
+              "S6102-R-9103"
+            ]
+          },
+          "run_id": "question-ce24f3d8-608d-4e7f-a834-7953c5acd6d0",
+          "writer_instance": "writer-81912"
+        },
+        "enqueue_time": "2026-11-13T08:21:23.098742+00:00",
+        "ack_time": "2026-11-13T08:21:23.100404+00:00",
+        "receive_time": "2026-11-13T08:21:23.100895+00:00"
+      },
+      "planner": {
+        "topic": "s6102_tasks",
+        "partition": 1,
+        "offset": 2,
+        "payload": {
+          "correlation_id": "ce24f3d8-608d-4e7f-a834-7953c5acd6d0",
+          "from_stage": "planner",
+          "input_source": {
+            "offset": 3,
+            "partition": 0,
+            "topic": "s6102_inbox"
+          },
+          "plan": "The property type for listing S6102-R-9103, Maple Terrace, is a condo. There are 6 units available.",
+          "question": "What type of property is S6102-R-9103?",
+          "rental_context": {
+            "data_version": 11,
+            "dataset_id": "580cdaecdf3a11f1925ab68095cb902a",
+            "listings": [
+              {
+                "available_units": 6,
+                "listing_code": "S6102-R-9103",
+                "listing_title": "Maple Terrace",
+                "property_type": "condo"
+              }
+            ],
+            "requested_codes": [
+              "S6102-R-9103"
+            ]
+          },
+          "run_id": "question-ce24f3d8-608d-4e7f-a834-7953c5acd6d0"
+        },
+        "enqueue_time": "2026-11-13T08:21:20.063091+00:00",
+        "ack_time": "2026-11-13T08:21:20.067646+00:00",
+        "receive_time": "2026-11-13T08:21:20.068291+00:00"
+      },
+      "inbox": {
+        "topic": "s6102_inbox",
+        "partition": 0,
+        "offset": 3,
+        "payload": {
+          "correlation_id": "ce24f3d8-608d-4e7f-a834-7953c5acd6d0",
+          "question": "What type of property is S6102-R-9103?",
+          "rental_context": {
+            "data_version": 11,
+            "dataset_id": "580cdaecdf3a11f1925ab68095cb902a",
+            "listings": [
+              {
+                "available_units": 6,
+                "listing_code": "S6102-R-9103",
+                "listing_title": "Maple Terrace",
+                "property_type": "condo"
+              }
+            ],
+            "requested_codes": [
+              "S6102-R-9103"
+            ]
+          },
+          "run_id": "question-ce24f3d8-608d-4e7f-a834-7953c5acd6d0"
+        },
+        "enqueue_time": "2026-11-13T08:21:18.493034+00:00",
+        "ack_time": "2026-11-13T08:21:18.494619+00:00",
+        "receive_time": "2026-11-13T08:21:18.495247+00:00"
+      }
+    }
+  }
+}

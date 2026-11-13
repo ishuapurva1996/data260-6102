@@ -1,0 +1,115 @@
+{
+  "a1": "2cfb15d5eaa589c195c3f8b42168fd9fe5caec41",
+  "b1": "fc375db61d24243b7a54d900ec6245f043c2afe2",
+  "measured_source_sha": "d14796a39f8934965913c84fb7217f2b6dbd11c4",
+  "pipeline_settings": {
+    "embedding_model": "nomic-embed-text:v1.5",
+    "embedding_digest": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+    "agents": {
+      "planner": {
+        "model": "qwen2.5:7b",
+        "context_window": 4096,
+        "model_timeout": 180,
+        "output_limit": 256,
+        "retry_attempts": 3,
+        "retry_backoff": 0.2,
+        "seed": 6102,
+        "temperature": 0
+      },
+      "writer": {
+        "model": "qwen2.5:7b",
+        "context_window": 4096,
+        "model_timeout": 180,
+        "output_limit": 256,
+        "retry_attempts": 3,
+        "retry_backoff": 0.2,
+        "seed": 6102,
+        "temperature": 0
+      },
+      "reviewer": {
+        "model": "qwen2.5:7b",
+        "context_window": 4096,
+        "model_timeout": 180,
+        "output_limit": 256,
+        "retry_attempts": 3,
+        "retry_backoff": 0.2,
+        "seed": 6102,
+        "temperature": 0
+      }
+    }
+  },
+  "synthetic": false,
+  "started_at": "2026-11-13T08:21:36.240482+00:00",
+  "cache_namespace": "hw10-benchmark-measure-01",
+  "cache_threshold": 0.85,
+  "version_enforced": true,
+  "judge_model": "qwen2.5:7b",
+  "judge_model_digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+  "stages": [
+    {
+      "stage": "cache_lookup",
+      "p50_ms": 547.109,
+      "p95_ms": 824.7547500000001,
+      "percent_of_full_trace": 1.0298437872830952
+    },
+    {
+      "stage": "planner",
+      "p50_ms": 7192.895,
+      "p95_ms": 10559.487449999999,
+      "percent_of_full_trace": 13.132986678656794
+    },
+    {
+      "stage": "writer",
+      "p50_ms": 5640.523499999999,
+      "p95_ms": 7880.568949999998,
+      "percent_of_full_trace": 10.260574106446343
+    },
+    {
+      "stage": "reviewer",
+      "p50_ms": 6198.5895,
+      "p95_ms": 8509.4579,
+      "percent_of_full_trace": 11.077843296940483
+    },
+    {
+      "stage": "queue_wait",
+      "p50_ms": 16.554000000000002,
+      "p95_ms": 63.249749999999985,
+      "percent_of_full_trace": 0.04524180884915532
+    },
+    {
+      "stage": "evaluation",
+      "p50_ms": 34246.0135,
+      "p95_ms": 43386.9393,
+      "percent_of_full_trace": 62.981055591465044
+    }
+  ],
+  "api_latency": {
+    "p50_ms": 20489.159,
+    "p95_ms": 27301.058149999997
+  },
+  "http_latency": {
+    "p50_ms": 20491.16872849845,
+    "p95_ms": 27305.154346056224
+  },
+  "full_trace": {
+    "p50_ms": 54400.9685,
+    "p95_ms": 71289.30545
+  },
+  "full_trace_total_ms": 2728867.46,
+  "stage_share_total_percent": 98.52754526964091,
+  "unallocated_or_overlapping_percent": 1.4724547303590896,
+  "dominant_stage": "evaluation",
+  "target_count": 50,
+  "admitted_count": 50,
+  "exclusion_count": 7,
+  "complete": true,
+  "pilot_only": false,
+  "finished_at": "2026-11-13T09:59:13.046028+00:00",
+  "clock_check_max_difference_ms": 100,
+  "a2": "7893184b8296862a4bfb04f9e8c6461aa89a6de8",
+  "host": {
+    "chip": "Apple M4",
+    "memory_gib": 24,
+    "ollama": "0.33.0"
+  }
+}

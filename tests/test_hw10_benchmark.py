@@ -120,6 +120,7 @@ def test_sums_waits_per_trace_and_uses_ingress_to_evaluation_for_share():
         ("final", {"ack_time": None}, "final"),
         ("final", None, "final"),
         ("evaluation", {"status": "error"}, "evaluation"),
+        ("evaluation", {"duration_ms": 900_000}, "evaluation wall and recorded durations disagree"),
         ("evaluation", {"trace_id": "another"}, "evaluation"),
     ],
 )

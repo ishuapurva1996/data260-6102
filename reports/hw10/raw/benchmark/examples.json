@@ -1,0 +1,27 @@
+{
+  "hit": "bdf62b55-6040-4701-8eae-3c0e6db8bf53",
+  "miss": "813b4e22-6b35-4f5c-a163-5350c18652d6",
+  "failure": "05a689b3-b160-4fcb-a383-fb2c58aff1d3",
+  "details": {
+    "hit": {
+      "trace_id": "bdf62b55-6040-4701-8eae-3c0e6db8bf53",
+      "api_latency_ms": 578.69
+    },
+    "miss": {
+      "trace_id": "813b4e22-6b35-4f5c-a163-5350c18652d6",
+      "api_latency_ms": 11795.221
+    },
+    "failed": {
+      "trace_id": "05a689b3-b160-4fcb-a383-fb2c58aff1d3",
+      "stage": "writer",
+      "error": "ResponseError: model 'hw10-writer-failure:missing' not found (status code: 404)",
+      "http_status": 504,
+      "dead_letter": {
+        "topic": "s6102_dead_letter",
+        "partition": 0,
+        "offset": 0
+      },
+      "attempts": 3
+    }
+  }
+}

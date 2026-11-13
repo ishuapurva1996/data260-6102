@@ -67,6 +67,11 @@ warm-up. The runner invokes A's exporter as soon as the HTTP call returns and
 B's evaluator as soon as the linked messages are available. It finishes
 evaluation before sending the next request.
 
+Keep the host awake for the run. On macOS, wrap the command in `caffeinate -is`.
+The timing validator rejects spans with more than 100 ms difference between
+UTC elapsed time and the recorded duration. If a request times out, check its
+agent logs for late inference and exclude any overlapping attempt.
+
 ```bash
 python -m scripts.hw10.benchmark \
   --a1 "$A1_SHA" --b1 "$B1_SHA" --exclusive-runtime \
@@ -108,8 +113,8 @@ After a complete run, curate the following files under
 
 - `spans.jsonl` contains the 50 admitted traces and the three separately
   captured examples, one copy of each span.
-- `examples.json` maps the hit, successful miss, and failed case to their
-  trace IDs, with the Writer error on the failed case.
+- `examples.json` exposes the trace IDs under `hit`, `miss`, and `failure`.
+  Its `details` includes the Writer error and dead-letter location.
 - `latency_rows.csv` contains one row per admitted request.
 - `latency_summary.json` contains the six aggregates, separate API and full
   trace distributions, exclusions count, cache and model settings, and source SHAs.
