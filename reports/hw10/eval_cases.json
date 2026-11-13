@@ -1,0 +1,485 @@
+[
+  {
+    "case_id": "hw10-01",
+    "trace_id": "468ac4f8-0fb4-4c8a-bc7c-4343d914d206",
+    "correlation_id": "468ac4f8-0fb4-4c8a-bc7c-4343d914d206",
+    "question": "How many units are currently available at S6102-R-9102?",
+    "reference_facts": {
+      "data_version": 11,
+      "dataset_id": "357b9ecddcc011f18d947ec44a251068",
+      "listings": [
+        {
+          "available_units": 4,
+          "listing_code": "S6102-R-9102",
+          "listing_title": "Juniper Grove",
+          "property_type": "house"
+        }
+      ],
+      "requested_codes": [
+        "S6102-R-9102"
+      ]
+    },
+    "draft": "At S6102-R-9102, there are currently 4 units available."
+  },
+  {
+    "case_id": "hw10-02",
+    "trace_id": "18fe22ea-e3f5-43dd-9255-a318e364f224",
+    "correlation_id": "18fe22ea-e3f5-43dd-9255-a318e364f224",
+    "question": "What is the advertised title of S6102-R-9103?",
+    "reference_facts": {
+      "data_version": 11,
+      "dataset_id": "357b9ecddcc011f18d947ec44a251068",
+      "listings": [
+        {
+          "available_units": 6,
+          "listing_code": "S6102-R-9103",
+          "listing_title": "Maple Terrace",
+          "property_type": "condo"
+        }
+      ],
+      "requested_codes": [
+        "S6102-R-9103"
+      ]
+    },
+    "draft": "The advertised title of S6102-R-9103 is \"Maple Terrace\"."
+  },
+  {
+    "case_id": "hw10-03",
+    "trace_id": "4eed7046-2d95-4b97-8b62-34f8f2823b4c",
+    "correlation_id": "4eed7046-2d95-4b97-8b62-34f8f2823b4c",
+    "question": "Is S6102-R-9104 listed as a townhouse?",
+    "reference_facts": {
+      "data_version": 11,
+      "dataset_id": "357b9ecddcc011f18d947ec44a251068",
+      "listings": [
+        {
+          "available_units": 8,
+          "listing_code": "S6102-R-9104",
+          "listing_title": "Willow Place",
+          "property_type": "townhouse"
+        }
+      ],
+      "requested_codes": [
+        "S6102-R-9104"
+      ]
+    },
+    "draft": "Yes, S6102-R-9104 is listed as a townhouse. There are 8 units available."
+  },
+  {
+    "case_id": "hw10-04",
+    "trace_id": "b38886f4-5a81-492d-aa50-03e6d0897eb9",
+    "correlation_id": "b38886f4-5a81-492d-aa50-03e6d0897eb9",
+    "question": "Give me the property type and number of available units at S6102-R-9105.",
+    "reference_facts": {
+      "data_version": 11,
+      "dataset_id": "357b9ecddcc011f18d947ec44a251068",
+      "listings": [
+        {
+          "available_units": 10,
+          "listing_code": "S6102-R-9105",
+          "listing_title": "Aspen Walk",
+          "property_type": "apartment"
+        }
+      ],
+      "requested_codes": [
+        "S6102-R-9105"
+      ]
+    },
+    "draft": "The property type is apartment, and there are 10 available units at S6102-R-9105."
+  },
+  {
+    "case_id": "hw10-05",
+    "trace_id": "6819891b-2745-4fb3-a5f8-905224f380f5",
+    "correlation_id": "6819891b-2745-4fb3-a5f8-905224f380f5",
+    "question": "Does S6102-R-9106 have at least two units available?",
+    "reference_facts": {
+      "data_version": 11,
+      "dataset_id": "357b9ecddcc011f18d947ec44a251068",
+      "listings": [
+        {
+          "available_units": 1,
+          "listing_code": "S6102-R-9106",
+          "listing_title": "Birch Landing",
+          "property_type": "house"
+        }
+      ],
+      "requested_codes": [
+        "S6102-R-9106"
+      ]
+    },
+    "draft": "No, S6102-R-9106 has only 1 unit available, which is less than the required 2 units."
+  },
+  {
+    "case_id": "hw10-06",
+    "trace_id": "265414d0-4197-4666-9f5a-0404c671973d",
+    "correlation_id": "265414d0-4197-4666-9f5a-0404c671973d",
+    "question": "What is the listing title and property type for S6102-R-9107?",
+    "reference_facts": {
+      "data_version": 11,
+      "dataset_id": "357b9ecddcc011f18d947ec44a251068",
+      "listings": [
+        {
+          "available_units": 3,
+          "listing_code": "S6102-R-9107",
+          "listing_title": "Oak Crossing",
+          "property_type": "condo"
+        }
+      ],
+      "requested_codes": [
+        "S6102-R-9107"
+      ]
+    },
+    "draft": "The listing title for S6102-R-9107 is \"Oak Crossing\" and the property type is \"condo\"."
+  },
+  {
+    "case_id": "hw10-07",
+    "trace_id": "186719d0-a94d-49e1-9309-4d61956c6256",
+    "correlation_id": "186719d0-a94d-49e1-9309-4d61956c6256",
+    "question": "How many total units are available across S6102-R-9108 and S6102-R-9109?",
+    "reference_facts": {
+      "data_version": 11,
+      "dataset_id": "357b9ecddcc011f18d947ec44a251068",
+      "listings": [
+        {
+          "available_units": 5,
+          "listing_code": "S6102-R-9108",
+          "listing_title": "Pine Haven",
+          "property_type": "townhouse"
+        },
+        {
+          "available_units": 7,
+          "listing_code": "S6102-R-9109",
+          "listing_title": "Elm Square",
+          "property_type": "apartment"
+        }
+      ],
+      "requested_codes": [
+        "S6102-R-9108",
+        "S6102-R-9109"
+      ]
+    },
+    "draft": "The total number of available units across S6102-R-9108 and S6102-R-9109 is 12. S6102-R-9108 has 5 available townhouses, and S6102-R-9109 has 7 available apartments."
+  },
+  {
+    "case_id": "hw10-08",
+    "trace_id": "eaea227b-33e3-40d1-8b70-9f7b1fa99009",
+    "correlation_id": "eaea227b-33e3-40d1-8b70-9f7b1fa99009",
+    "question": "Which has more available units, S6102-R-9110 or S6102-R-9101, and by how many?",
+    "reference_facts": {
+      "data_version": 11,
+      "dataset_id": "357b9ecddcc011f18d947ec44a251068",
+      "listings": [
+        {
+          "available_units": 2,
+          "listing_code": "S6102-R-9101",
+          "listing_title": "Cedar Court",
+          "property_type": "apartment"
+        },
+        {
+          "available_units": 9,
+          "listing_code": "S6102-R-9110",
+          "listing_title": "Spruce Point",
+          "property_type": "house"
+        }
+      ],
+      "requested_codes": [
+        "S6102-R-9110",
+        "S6102-R-9101"
+      ]
+    },
+    "draft": "S6102-R-9110 has more available units than S6102-R-9101. S6102-R-9110 has 9 available units, while S6102-R-9101 has 2 available units. The difference is 7 units."
+  },
+  {
+    "case_id": "hw10-09",
+    "trace_id": "91da05d3-c788-4958-a47d-e0805f2826ca",
+    "correlation_id": "91da05d3-c788-4958-a47d-e0805f2826ca",
+    "question": "Which of S6102-R-9102 and S6102-R-9103 is a condo?",
+    "reference_facts": {
+      "data_version": 11,
+      "dataset_id": "357b9ecddcc011f18d947ec44a251068",
+      "listings": [
+        {
+          "available_units": 4,
+          "listing_code": "S6102-R-9102",
+          "listing_title": "Juniper Grove",
+          "property_type": "house"
+        },
+        {
+          "available_units": 6,
+          "listing_code": "S6102-R-9103",
+          "listing_title": "Maple Terrace",
+          "property_type": "condo"
+        }
+      ],
+      "requested_codes": [
+        "S6102-R-9102",
+        "S6102-R-9103"
+      ]
+    },
+    "draft": "S6102-R-9103 is a condo."
+  },
+  {
+    "case_id": "hw10-10",
+    "trace_id": "4baa94cf-ed06-466a-bc21-db4150577181",
+    "correlation_id": "4baa94cf-ed06-466a-bc21-db4150577181",
+    "question": "I need an apartment with at least five units available. Does S6102-R-9105 qualify?",
+    "reference_facts": {
+      "data_version": 11,
+      "dataset_id": "357b9ecddcc011f18d947ec44a251068",
+      "listings": [
+        {
+          "available_units": 10,
+          "listing_code": "S6102-R-9105",
+          "listing_title": "Aspen Walk",
+          "property_type": "apartment"
+        }
+      ],
+      "requested_codes": [
+        "S6102-R-9105"
+      ]
+    },
+    "draft": "Yes, S6102-R-9105 (Aspen Walk) qualifies because it has 10 units available, meeting the requirement of at least five units."
+  },
+  {
+    "case_id": "hw10-11",
+    "trace_id": "8ee5e4f4-796d-4a43-9ba4-0e0302e15323",
+    "correlation_id": "8ee5e4f4-796d-4a43-9ba4-0e0302e15323",
+    "question": "What is the monthly rent for S6102-R-9104, and how many units are available?",
+    "reference_facts": {
+      "data_version": 11,
+      "dataset_id": "357b9ecddcc011f18d947ec44a251068",
+      "listings": [
+        {
+          "available_units": 8,
+          "listing_code": "S6102-R-9104",
+          "listing_title": "Willow Place",
+          "property_type": "townhouse"
+        }
+      ],
+      "requested_codes": [
+        "S6102-R-9104"
+      ]
+    },
+    "draft": "The monthly rent for S6102-R-9104 (Willow Place) is not provided. There are 8 units available."
+  },
+  {
+    "case_id": "hw10-12",
+    "trace_id": "7ce0264e-1d1a-4ef0-98b9-df71c6c2c0b3",
+    "correlation_id": "7ce0264e-1d1a-4ef0-98b9-df71c6c2c0b3",
+    "question": "Is parking included at S6102-R-9107?",
+    "reference_facts": {
+      "data_version": 11,
+      "dataset_id": "357b9ecddcc011f18d947ec44a251068",
+      "listings": [
+        {
+          "available_units": 3,
+          "listing_code": "S6102-R-9107",
+          "listing_title": "Oak Crossing",
+          "property_type": "condo"
+        }
+      ],
+      "requested_codes": [
+        "S6102-R-9107"
+      ]
+    },
+    "draft": "Parking is not specified as included at S6102-R-9107 (Oak Crossing). The listing shows 3 available units but does not mention parking details."
+  },
+  {
+    "case_id": "hw10-13",
+    "trace_id": "4975dec0-dbb1-4c22-9f5f-f2f0e0e3c012",
+    "correlation_id": "4975dec0-dbb1-4c22-9f5f-f2f0e0e3c012",
+    "question": "Can you confirm whether S6102-R-9998 exists in the listing records?",
+    "reference_facts": {
+      "data_version": 11,
+      "dataset_id": "357b9ecddcc011f18d947ec44a251068",
+      "listings": [],
+      "requested_codes": [
+        "S6102-R-9998"
+      ]
+    },
+    "draft": "S6102-R-9998 does not exist in the listing records."
+  },
+  {
+    "case_id": "hw10-14",
+    "trace_id": "dfce28b2-5f08-4ac2-95a1-174e5395c7c1",
+    "correlation_id": "dfce28b2-5f08-4ac2-95a1-174e5395c7c1",
+    "question": "Compare availability for S6102-R-9109 and S6102-R-9998.",
+    "reference_facts": {
+      "data_version": 11,
+      "dataset_id": "357b9ecddcc011f18d947ec44a251068",
+      "listings": [
+        {
+          "available_units": 7,
+          "listing_code": "S6102-R-9109",
+          "listing_title": "Elm Square",
+          "property_type": "apartment"
+        }
+      ],
+      "requested_codes": [
+        "S6102-R-9109",
+        "S6102-R-9998"
+      ]
+    },
+    "draft": "S6102-R-9109 (Elm Square) has 7 available units. The availability for S6102-R-9998 is unavailable with the given data."
+  },
+  {
+    "case_id": "hw10-15",
+    "trace_id": "032e1f1c-2871-479b-aa98-0660e9697b15",
+    "correlation_id": "032e1f1c-2871-479b-aa98-0660e9697b15",
+    "question": "List the advertised titles and unit counts for S6102-R-9101 and S6102-R-9106.",
+    "reference_facts": {
+      "data_version": 11,
+      "dataset_id": "357b9ecddcc011f18d947ec44a251068",
+      "listings": [
+        {
+          "available_units": 2,
+          "listing_code": "S6102-R-9101",
+          "listing_title": "Cedar Court",
+          "property_type": "apartment"
+        },
+        {
+          "available_units": 1,
+          "listing_code": "S6102-R-9106",
+          "listing_title": "Birch Landing",
+          "property_type": "house"
+        }
+      ],
+      "requested_codes": [
+        "S6102-R-9101",
+        "S6102-R-9106"
+      ]
+    },
+    "draft": "Cedar Court (apartment): 2 units available.\nBirch Landing (house): 1 unit available."
+  },
+  {
+    "case_id": "hw10-16",
+    "trace_id": "76fc35f8-220e-473d-a716-e290fc75212b",
+    "correlation_id": "76fc35f8-220e-473d-a716-e290fc75212b",
+    "question": "Does S6102-R-9108 have more than five available units?",
+    "reference_facts": {
+      "data_version": 11,
+      "dataset_id": "357b9ecddcc011f18d947ec44a251068",
+      "listings": [
+        {
+          "available_units": 5,
+          "listing_code": "S6102-R-9108",
+          "listing_title": "Pine Haven",
+          "property_type": "townhouse"
+        }
+      ],
+      "requested_codes": [
+        "S6102-R-9108"
+      ]
+    },
+    "draft": "No, S6102-R-9108 has 5 available units, which is not more than five."
+  },
+  {
+    "case_id": "hw10-17",
+    "trace_id": "3dc59da7-a236-4fd3-8787-822a507c7969",
+    "correlation_id": "3dc59da7-a236-4fd3-8787-822a507c7969",
+    "question": "What type of home is S6102-R-9110, and does it have a pet policy on record?",
+    "reference_facts": {
+      "data_version": 11,
+      "dataset_id": "357b9ecddcc011f18d947ec44a251068",
+      "listings": [
+        {
+          "available_units": 9,
+          "listing_code": "S6102-R-9110",
+          "listing_title": "Spruce Point",
+          "property_type": "house"
+        }
+      ],
+      "requested_codes": [
+        "S6102-R-9110"
+      ]
+    },
+    "draft": "S6102-R-9110 is a house. Unfortunately, a pet policy is not on record for this listing."
+  },
+  {
+    "case_id": "hw10-18",
+    "trace_id": "bc1ffe69-28b5-4541-a2f8-084ec958236f",
+    "correlation_id": "bc1ffe69-28b5-4541-a2f8-084ec958236f",
+    "question": "Put S6102-R-9102, S6102-R-9104, and S6102-R-9106 in order from most to fewest available units.",
+    "reference_facts": {
+      "data_version": 11,
+      "dataset_id": "357b9ecddcc011f18d947ec44a251068",
+      "listings": [
+        {
+          "available_units": 4,
+          "listing_code": "S6102-R-9102",
+          "listing_title": "Juniper Grove",
+          "property_type": "house"
+        },
+        {
+          "available_units": 8,
+          "listing_code": "S6102-R-9104",
+          "listing_title": "Willow Place",
+          "property_type": "townhouse"
+        },
+        {
+          "available_units": 1,
+          "listing_code": "S6102-R-9106",
+          "listing_title": "Birch Landing",
+          "property_type": "house"
+        }
+      ],
+      "requested_codes": [
+        "S6102-R-9102",
+        "S6102-R-9104",
+        "S6102-R-9106"
+      ]
+    },
+    "draft": "The order from most to fewest available units is: S6102-R-9104 (8 units), S6102-R-9102 (4 units), S6102-R-9106 (1 unit)."
+  },
+  {
+    "case_id": "hw10-19",
+    "trace_id": "eaeea90e-f766-4f0e-94ab-6985a7bb1d20",
+    "correlation_id": "eaeea90e-f766-4f0e-94ab-6985a7bb1d20",
+    "question": "Is S6102-R-9103 advertised as Maple Terrace, and are exactly six units available?",
+    "reference_facts": {
+      "data_version": 11,
+      "dataset_id": "357b9ecddcc011f18d947ec44a251068",
+      "listings": [
+        {
+          "available_units": 6,
+          "listing_code": "S6102-R-9103",
+          "listing_title": "Maple Terrace",
+          "property_type": "condo"
+        }
+      ],
+      "requested_codes": [
+        "S6102-R-9103"
+      ]
+    },
+    "draft": "Yes, S6102-R-9103 is advertised as Maple Terrace, and exactly six units are available."
+  },
+  {
+    "case_id": "hw10-20",
+    "trace_id": "9766ada7-d89c-4b58-9d39-c83b1bbc7a91",
+    "correlation_id": "9766ada7-d89c-4b58-9d39-c83b1bbc7a91",
+    "question": "Which of S6102-R-9101 and S6102-R-9105 are apartments with at least three available units?",
+    "reference_facts": {
+      "data_version": 11,
+      "dataset_id": "357b9ecddcc011f18d947ec44a251068",
+      "listings": [
+        {
+          "available_units": 2,
+          "listing_code": "S6102-R-9101",
+          "listing_title": "Cedar Court",
+          "property_type": "apartment"
+        },
+        {
+          "available_units": 10,
+          "listing_code": "S6102-R-9105",
+          "listing_title": "Aspen Walk",
+          "property_type": "apartment"
+        }
+      ],
+      "requested_codes": [
+        "S6102-R-9101",
+        "S6102-R-9105"
+      ]
+    },
+    "draft": "S6102-R-9105 (Aspen Walk) has at least three available units, with 10 units currently available. S6102-R-9101 (Cedar Court) does not meet this criterion, as it only has 2 units available."
+  }
+]

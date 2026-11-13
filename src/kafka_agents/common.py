@@ -27,10 +27,11 @@ from src.kafka_service.config import (
     TASKS,
     KafkaSettings,
 )
-from src.kafka_service.logging import event
+from src.kafka_service.logging import event, timed_span, utc_now
 from src.model_client import build_ollama_client
 
 from .reliability import ReceiptStore
+from .transport import coordinates, send_traced, trace_receipt
 
 STAGES = {
     "planner": (INBOX, TASKS),
@@ -205,11 +206,8 @@ class StageProcessor:
         )
 
     async def handle(self, record, consumer, producer):
-        source = {
-            "topic": record.topic,
-            "partition": record.partition,
-            "offset": record.offset,
-        }
+        received = utc_now()
+        source = coordinates(record)
         source_key = f"{self.group_id}/{record.topic}/{record.partition}/{record.offset}"
         try:
             diagnostic = json.loads(record.value)
@@ -220,11 +218,14 @@ class StageProcessor:
             for k in ("correlation_id", "run_id", "rental_id", "sequence")
             if isinstance(diagnostic, dict) and k in diagnostic
         }
+        trace_id = ids.get("correlation_id")
+        trace_receipt(record, trace_id, received)
         self.log(
             "message_received",
             **source,
             **ids,
             payload=diagnostic,
+            receive_time=received.isoformat(),
             raw_bytes=len(record.value),
         )
         if self.baseline == "early-commit":
@@ -249,37 +250,42 @@ class StageProcessor:
                 break
             attempt = self.store.next_attempt(source_key)
             try:
-                data = decode_payload(record.value, self.stage)
-                identity = data["correlation_id"]
-                digest = fingerprint(data)
-                receipt = (
-                    None if self.baseline == "no-dedup" else self.store.lookup(identity, digest)
-                )
-                if receipt:
-                    output, published = receipt
-                    self.log("duplicate_cached", **source, **ids, already_published=published)
-                else:
-                    self.log(
-                        "processing_started",
-                        **source,
-                        **ids,
-                        attempt=attempt,
-                        max_attempts=3,
-                        delay_seconds=data.get("delay_seconds", 0),
+                with timed_span(
+                    trace_id, self.stage, attempt=attempt, model=self.model, **source
+                ) as span:
+                    data = decode_payload(record.value, self.stage)
+                    identity = data["correlation_id"]
+                    digest = fingerprint(data)
+                    receipt = (
+                        None if self.baseline == "no-dedup" else self.store.lookup(identity, digest)
                     )
-                    if self.stage == "writer":
-                        await asyncio.sleep(data.get("delay_seconds", 0))
-                    output = await self.generate(data)
-                    output["input_source"] = source
-                    if self.baseline != "no-dedup":
-                        output, published = self.store.remember(identity, digest, output)
-                    self.log(
-                        "processing_completed",
-                        **source,
-                        **ids,
-                        attempt=attempt,
-                        output=output,
-                    )
+                    if receipt:
+                        span["processing_outcome"] = "receipt_reused"
+                        output, published = receipt
+                        self.log("duplicate_cached", **source, **ids, already_published=published)
+                    else:
+                        self.log(
+                            "processing_started",
+                            **source,
+                            **ids,
+                            attempt=attempt,
+                            max_attempts=3,
+                            delay_seconds=data.get("delay_seconds", 0),
+                        )
+                        if self.stage == "writer":
+                            await asyncio.sleep(data.get("delay_seconds", 0))
+                        output = await self.generate(data)
+                        output["input_source"] = source
+                        if self.baseline != "no-dedup":
+                            output, published = self.store.remember(identity, digest, output)
+                        span["processing_outcome"] = "generated"
+                        self.log(
+                            "processing_completed",
+                            **source,
+                            **ids,
+                            attempt=attempt,
+                            output=output,
+                        )
             except Exception as exc:
                 output, published = None, False
                 last_error = f"{type(exc).__name__}: {exc}"
@@ -323,9 +329,7 @@ class StageProcessor:
             )
         elif not published:
             key = str(output.get("rental_id") or output["correlation_id"]).encode()
-            metadata = await producer.send_and_wait(
-                STAGES[self.stage][1], json.dumps(output).encode(), key=key
-            )
+            metadata, timing = await send_traced(producer, STAGES[self.stage][1], output, key)
             self.log(
                 "output_published",
                 **source,
@@ -333,6 +337,7 @@ class StageProcessor:
                 output_topic=metadata.topic,
                 output_partition=metadata.partition,
                 output_offset=metadata.offset,
+                **timing,
                 output=output,
             )
             if self.after_publish_delay:
