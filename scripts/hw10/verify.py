@@ -54,6 +54,11 @@ SCREENSHOTS = (
     "03-trace-cache-hit.png",
     "04-trace-successful-miss.png",
     "05-trace-writer-failure.png",
+    "code-01-summary.png",
+    "code-02-evaluation.png",
+    "code-03-judge-validation.png",
+    "code-04-tracing.png",
+    "code-05-latency.png",
 )
 
 

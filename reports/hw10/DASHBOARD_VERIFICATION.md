@@ -38,3 +38,14 @@ source milestones.
 3. [Cache hit](screenshots/03-trace-cache-hit.png)
 4. [Successful cache miss](screenshots/04-trace-successful-miss.png)
 5. [Writer failure](screenshots/05-trace-writer-failure.png)
+
+## Code screenshots
+
+Pragya Apurva captured these excerpts from the HW10 source. The report pairs
+them with the relevant dashboard view or results table.
+
+1. [Dashboard summary](screenshots/code-01-summary.png)
+2. [Pipeline scoring](screenshots/code-02-evaluation.png)
+3. [Judge validation](screenshots/code-03-judge-validation.png)
+4. [Kafka queue tracing](screenshots/code-04-tracing.png)
+5. [Latency aggregation](screenshots/code-05-latency.png)

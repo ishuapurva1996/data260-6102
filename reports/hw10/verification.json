@@ -1,8 +1,8 @@
 {
   "status": "passed",
-  "verified_at_utc": "2026-11-14T03:16:00.355375+00:00",
+  "verified_at_utc": "2026-11-14T03:26:09.680322+00:00",
   "provenance": {
-    "verified_checkout": "24631475bd8777ee75b68391e9ecfb680dfa3cac",
+    "verified_checkout": "d618d0dc8e4fe3229193600c3e0d1567de7e7967",
     "hw9_base": "53af679f111016ca4b6b0614274cbf11dcd88faf",
     "milestones": {
       "A1": "2cfb15d5eaa589c195c3f8b42168fd9fe5caec41",
@@ -30,7 +30,12 @@
       "02-evaluation.png": "9cfc658f9e6e34addf715d364ffdd87e73d4b3e6e58c1b4210a7c34beb480986",
       "03-trace-cache-hit.png": "bf9b34c88b38c71241dc2ea0d2943c44a86daf4efc5e6fc045e6275884adbf4a",
       "04-trace-successful-miss.png": "cff29fe453ee2b502ceb1bdcf17e96dc0be27c75f7da7698c90fdaf4ae0cbc3b",
-      "05-trace-writer-failure.png": "59571e0f0d5275dc829f4aaf2d7738073746ef19675f643650497c6fc62e8e29"
+      "05-trace-writer-failure.png": "59571e0f0d5275dc829f4aaf2d7738073746ef19675f643650497c6fc62e8e29",
+      "code-01-summary.png": "007b06dee39284bd3092315ec8fc1f3fa1aa9b26b6a2d99cf4a91da8aca9aebd",
+      "code-02-evaluation.png": "7fdcee54a69db713e3c2846182f6cdc626d0745f619e0784603dd9d02284faf4",
+      "code-03-judge-validation.png": "a0cd271ae2f3c5cb985019cb480ab4271edd95bbb5c31845fcce14c2b53e35f8",
+      "code-04-tracing.png": "640e73068d547e373635e76b9b3874a21242268d8bb64aa67963d181f6e6069e",
+      "code-05-latency.png": "ec06a1153347301cb9607a5e8014bd94d2728e4ff87fc2fab5364d9553f0da5d"
     }
   },
   "judge_validation": {

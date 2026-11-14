@@ -4,7 +4,7 @@
 
 I gave Codex the assignment and integration scope, supplied the exact milestone
 commits, and personally assigned the helpfulness labels for all 20 Writer drafts
-before seeing any judge scores. I also took the five dashboard screenshots
+before seeing any judge scores. I also took the dashboard and code screenshots
 in the report. Codex assisted with the tracing, evaluator,
 dashboard, benchmark, evidence checks, integration, and report preparation.
 The local Qwen model generated the agent responses and also served as the
