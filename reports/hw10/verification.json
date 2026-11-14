@@ -1,8 +1,8 @@
 {
   "status": "passed",
-  "verified_at_utc": "2026-11-14T02:31:50.443639+00:00",
+  "verified_at_utc": "2026-11-14T03:16:00.355375+00:00",
   "provenance": {
-    "verified_checkout": "5ea93111e92a19452986fc1b925afad7b2aee864",
+    "verified_checkout": "24631475bd8777ee75b68391e9ecfb680dfa3cac",
     "hw9_base": "53af679f111016ca4b6b0614274cbf11dcd88faf",
     "milestones": {
       "A1": "2cfb15d5eaa589c195c3f8b42168fd9fe5caec41",
@@ -26,11 +26,11 @@
     "measured_execution_files_match": true,
     "benchmark_admission_matches": "5e227abbe5576af032fab1e5794517c31e2d1ee7",
     "screenshots": {
-      "01-summary.jpg": "e7c5ba54cd08f86cc94dfc5a28e014a836f662d7d03df03714d30f1abca6d2ca",
-      "02-evaluation.jpg": "be52f0c08b20d030aa1f6383fdf2f48267ebf8aa7aefb5c7b0d108d06dacdb7b",
-      "03-trace-cache-hit.jpg": "0f24fe0eee873333e157f9e6789cb87640be6feb3adc794bc7e8fce8647377cc",
-      "04-trace-successful-miss.jpg": "7948e23facf950468120947433949ffe86f1454d86be28d27d80f880c573760a",
-      "05-trace-writer-failure.jpg": "83657957461335beac5b57be4da85081a49bf4a42fd924250b785a5585d9cc7e"
+      "01-summary.png": "3de2eef53766e4a23a08ab0b7d9e0f5b1e3e086dd7de4f5f0333559234edb07b",
+      "02-evaluation.png": "9cfc658f9e6e34addf715d364ffdd87e73d4b3e6e58c1b4210a7c34beb480986",
+      "03-trace-cache-hit.png": "bf9b34c88b38c71241dc2ea0d2943c44a86daf4efc5e6fc045e6275884adbf4a",
+      "04-trace-successful-miss.png": "cff29fe453ee2b502ceb1bdcf17e96dc0be27c75f7da7698c90fdaf4ae0cbc3b",
+      "05-trace-writer-failure.png": "59571e0f0d5275dc829f4aaf2d7738073746ef19675f643650497c6fc62e8e29"
     }
   },
   "judge_validation": {

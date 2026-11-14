@@ -48,6 +48,13 @@ EXECUTION = (
     "requirements-hw10-evaluation.txt",
 )
 HANDOFF_MESSAGES = dict(zip(QUEUE_TOPICS, ("inbox", "planner", "writer", "reviewer")))
+SCREENSHOTS = (
+    "01-summary.png",
+    "02-evaluation.png",
+    "03-trace-cache-hit.png",
+    "04-trace-successful-miss.png",
+    "05-trace-writer-failure.png",
+)
 
 
 def require(condition, message):
@@ -111,7 +118,6 @@ def verify_provenance(study, benchmark):
         (
             C1,
             (
-                "reports/hw10/screenshots",
                 "scripts/hw10/dashboard.py",
                 "scripts/hw10/dashboard_evidence.py",
             ),
@@ -135,8 +141,12 @@ def verify_provenance(study, benchmark):
         digest = hashlib.sha256(data).hexdigest()
         require(digest == study["input_sha256"][path], f"Wrong frozen checksum: {name}")
         frozen[name] = {"blob": git("rev-parse", f"{A2}:{path}").decode().strip(), "sha256": digest}
-    screenshots = sorted((REPORT / "screenshots").glob("*.jpg"))
-    require(len(screenshots) == 5, "Expected five source screenshots")
+    screenshot_dir = REPORT / "screenshots"
+    screenshots = {}
+    for name in SCREENSHOTS:
+        data = (screenshot_dir / name).read_bytes()
+        require(data.startswith(b"\x89PNG\r\n\x1a\n"), f"Expected a PNG screenshot: {name}")
+        screenshots[name] = hashlib.sha256(data).hexdigest()
     return {
         "verified_checkout": head,
         "hw9_base": BASE,
@@ -146,7 +156,7 @@ def verify_provenance(study, benchmark):
         "benchmark_source": measured,
         "measured_execution_files_match": True,
         "benchmark_admission_matches": D1,
-        "screenshots": {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in screenshots},
+        "screenshots": screenshots,
     }
 
 

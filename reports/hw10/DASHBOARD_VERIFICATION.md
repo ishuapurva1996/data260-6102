@@ -1,9 +1,10 @@
 # Recorded dashboard verification
 
-The five figures were captured in Session C from dashboard commit
-`f08da13a9cff5ae915174b36a8b77da8484bc6c0` with the recorded A1, A2,
-B1 and D1 evidence. The combined verifier compares the five images and
-dashboard code with C1 and the recorded data with its source milestones.
+Pragya Apurva captured the five figures in the report from the integrated
+dashboard using the recorded HW10 evidence. The repository contains the
+original PNG files. The combined verifier records their SHA-256 checksums,
+checks the dashboard code against C1 and audits the raw evidence against its
+source milestones.
 
 - The default completion window was 2026-11-12 09:58:54.028 UTC through
   2026-11-13 09:58:54.028 UTC. It included 53 of 55 saved API completions
@@ -24,8 +25,7 @@ dashboard code with C1 and the recorded data with its source milestones.
   Displayed timestamps, durations, statuses, cache decisions, attempts
   and errors agreed with the source at displayed precision.
 - Session C passed all eight dashboard tests plus Ruff lint and format.
-  All five captures completed after the intentional server reload, with
-  zero new console errors.
+  Its initial dashboard verification preceded the student captures.
 - Integration repeated the three lookups in Chrome on the joined worktree
   with zero page errors. Streamlit AppTest checked the displayed rows against
   the raw trace rows. The integrated metrics and evidence checks are in
@@ -33,8 +33,8 @@ dashboard code with C1 and the recorded data with its source milestones.
 
 ## Figure files
 
-1. [Summary](screenshots/01-summary.jpg)
-2. [Evaluation](screenshots/02-evaluation.jpg)
-3. [Cache hit](screenshots/03-trace-cache-hit.jpg)
-4. [Successful cache miss](screenshots/04-trace-successful-miss.jpg)
-5. [Writer failure](screenshots/05-trace-writer-failure.jpg)
+1. [Summary](screenshots/01-summary.png)
+2. [Evaluation](screenshots/02-evaluation.png)
+3. [Cache hit](screenshots/03-trace-cache-hit.png)
+4. [Successful cache miss](screenshots/04-trace-successful-miss.png)
+5. [Writer failure](screenshots/05-trace-writer-failure.png)
