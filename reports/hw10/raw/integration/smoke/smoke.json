@@ -1,0 +1,17 @@
+{
+  "question": "How many units are available at S6102-R-9101?",
+  "miss": {
+    "answer": "At Cedar Court (S6102-R-9101), there are 2 units available.",
+    "is_cached": false,
+    "similarity": null,
+    "latency_ms": 12578.88,
+    "request_id": "442e41c3-20fc-477d-953a-0740c591fe39"
+  },
+  "hit": {
+    "answer": "At Cedar Court (S6102-R-9101), there are 2 units available.",
+    "is_cached": true,
+    "similarity": 1.0,
+    "latency_ms": 539.886,
+    "request_id": "141f70f9-d40f-4e56-987b-f60922c502d9"
+  }
+}

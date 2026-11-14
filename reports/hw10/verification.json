@@ -1,0 +1,385 @@
+{
+  "status": "passed",
+  "verified_at_utc": "2026-11-14T02:31:50.443639+00:00",
+  "provenance": {
+    "verified_checkout": "5ea93111e92a19452986fc1b925afad7b2aee864",
+    "hw9_base": "53af679f111016ca4b6b0614274cbf11dcd88faf",
+    "milestones": {
+      "A1": "2cfb15d5eaa589c195c3f8b42168fd9fe5caec41",
+      "A2": "7893184b8296862a4bfb04f9e8c6461aa89a6de8",
+      "B1": "fc375db61d24243b7a54d900ec6245f043c2afe2",
+      "C1": "f08da13a9cff5ae915174b36a8b77da8484bc6c0",
+      "D1": "5e227abbe5576af032fab1e5794517c31e2d1ee7"
+    },
+    "frozen": {
+      "eval_cases.json": {
+        "blob": "3f4bd6f834bb88b7cae0b4a89d7b08d0a4de039c",
+        "sha256": "f5bc096bd248b25a508fecf7d0992af5d8aafe7ac9077a8799c0ff086bab5fff"
+      },
+      "human_labels.csv": {
+        "blob": "8e99ddda371636e18f293cffc90a701efae11cdc",
+        "sha256": "2ae6c19e4ed25c99cc7384d02a276f3af913917ee7fde572974a58e986d6ddfb"
+      }
+    },
+    "judge_source": "6e8cceb1b6dd40ab8f19e4549aff14a54e52322f",
+    "benchmark_source": "d14796a39f8934965913c84fb7217f2b6dbd11c4",
+    "measured_execution_files_match": true,
+    "benchmark_admission_matches": "5e227abbe5576af032fab1e5794517c31e2d1ee7",
+    "screenshots": {
+      "01-summary.jpg": "e7c5ba54cd08f86cc94dfc5a28e014a836f662d7d03df03714d30f1abca6d2ca",
+      "02-evaluation.jpg": "be52f0c08b20d030aa1f6383fdf2f48267ebf8aa7aefb5c7b0d108d06dacdb7b",
+      "03-trace-cache-hit.jpg": "0f24fe0eee873333e157f9e6789cb87640be6feb3adc794bc7e8fce8647377cc",
+      "04-trace-successful-miss.jpg": "7948e23facf950468120947433949ffe86f1454d86be28d27d80f880c573760a",
+      "05-trace-writer-failure.jpg": "83657957461335beac5b57be4da85081a49bf4a42fd924250b785a5585d9cc7e"
+    }
+  },
+  "judge_validation": {
+    "case_count": 20,
+    "score_count": 60,
+    "spearman": 0.5402805998729168,
+    "mean_absolute_difference": 0.75,
+    "exact_agreements": 7,
+    "pass_1_score_counts": {
+      "2": 3,
+      "4": 15,
+      "5": 2
+    },
+    "repeatability": {
+      "changed_count": 0,
+      "changed_rate": 0.0,
+      "mean_score_change": 0,
+      "max_score_change": 0
+    },
+    "comparisons": [
+      {
+        "case_id": "hw10-01",
+        "human_score": 5,
+        "judge_scores": [
+          4,
+          4,
+          4
+        ],
+        "pass_1_absolute_difference": 1,
+        "score_change": 0
+      },
+      {
+        "case_id": "hw10-02",
+        "human_score": 3,
+        "judge_scores": [
+          4,
+          4,
+          4
+        ],
+        "pass_1_absolute_difference": 1,
+        "score_change": 0
+      },
+      {
+        "case_id": "hw10-03",
+        "human_score": 5,
+        "judge_scores": [
+          5,
+          5,
+          5
+        ],
+        "pass_1_absolute_difference": 0,
+        "score_change": 0
+      },
+      {
+        "case_id": "hw10-04",
+        "human_score": 5,
+        "judge_scores": [
+          5,
+          5,
+          5
+        ],
+        "pass_1_absolute_difference": 0,
+        "score_change": 0
+      },
+      {
+        "case_id": "hw10-05",
+        "human_score": 4,
+        "judge_scores": [
+          2,
+          2,
+          2
+        ],
+        "pass_1_absolute_difference": 2,
+        "score_change": 0
+      },
+      {
+        "case_id": "hw10-06",
+        "human_score": 4,
+        "judge_scores": [
+          4,
+          4,
+          4
+        ],
+        "pass_1_absolute_difference": 0,
+        "score_change": 0
+      },
+      {
+        "case_id": "hw10-07",
+        "human_score": 5,
+        "judge_scores": [
+          4,
+          4,
+          4
+        ],
+        "pass_1_absolute_difference": 1,
+        "score_change": 0
+      },
+      {
+        "case_id": "hw10-08",
+        "human_score": 4,
+        "judge_scores": [
+          4,
+          4,
+          4
+        ],
+        "pass_1_absolute_difference": 0,
+        "score_change": 0
+      },
+      {
+        "case_id": "hw10-09",
+        "human_score": 2,
+        "judge_scores": [
+          2,
+          2,
+          2
+        ],
+        "pass_1_absolute_difference": 0,
+        "score_change": 0
+      },
+      {
+        "case_id": "hw10-10",
+        "human_score": 3,
+        "judge_scores": [
+          4,
+          4,
+          4
+        ],
+        "pass_1_absolute_difference": 1,
+        "score_change": 0
+      },
+      {
+        "case_id": "hw10-11",
+        "human_score": 5,
+        "judge_scores": [
+          4,
+          4,
+          4
+        ],
+        "pass_1_absolute_difference": 1,
+        "score_change": 0
+      },
+      {
+        "case_id": "hw10-12",
+        "human_score": 4,
+        "judge_scores": [
+          4,
+          4,
+          4
+        ],
+        "pass_1_absolute_difference": 0,
+        "score_change": 0
+      },
+      {
+        "case_id": "hw10-13",
+        "human_score": 4,
+        "judge_scores": [
+          4,
+          4,
+          4
+        ],
+        "pass_1_absolute_difference": 0,
+        "score_change": 0
+      },
+      {
+        "case_id": "hw10-14",
+        "human_score": 3,
+        "judge_scores": [
+          4,
+          4,
+          4
+        ],
+        "pass_1_absolute_difference": 1,
+        "score_change": 0
+      },
+      {
+        "case_id": "hw10-15",
+        "human_score": 3,
+        "judge_scores": [
+          4,
+          4,
+          4
+        ],
+        "pass_1_absolute_difference": 1,
+        "score_change": 0
+      },
+      {
+        "case_id": "hw10-16",
+        "human_score": 2,
+        "judge_scores": [
+          4,
+          4,
+          4
+        ],
+        "pass_1_absolute_difference": 2,
+        "score_change": 0
+      },
+      {
+        "case_id": "hw10-17",
+        "human_score": 1,
+        "judge_scores": [
+          2,
+          2,
+          2
+        ],
+        "pass_1_absolute_difference": 1,
+        "score_change": 0
+      },
+      {
+        "case_id": "hw10-18",
+        "human_score": 3,
+        "judge_scores": [
+          4,
+          4,
+          4
+        ],
+        "pass_1_absolute_difference": 1,
+        "score_change": 0
+      },
+      {
+        "case_id": "hw10-19",
+        "human_score": 3,
+        "judge_scores": [
+          4,
+          4,
+          4
+        ],
+        "pass_1_absolute_difference": 1,
+        "score_change": 0
+      },
+      {
+        "case_id": "hw10-20",
+        "human_score": 5,
+        "judge_scores": [
+          4,
+          4,
+          4
+        ],
+        "pass_1_absolute_difference": 1,
+        "score_change": 0
+      }
+    ]
+  },
+  "latency": {
+    "stages": [
+      {
+        "stage": "cache_lookup",
+        "p50_ms": 547.109,
+        "p95_ms": 824.7547500000001,
+        "percent_of_full_trace": 1.0298437872830952
+      },
+      {
+        "stage": "planner",
+        "p50_ms": 7192.895,
+        "p95_ms": 10559.48745,
+        "percent_of_full_trace": 13.132986678656794
+      },
+      {
+        "stage": "writer",
+        "p50_ms": 5640.523499999999,
+        "p95_ms": 7880.568950000001,
+        "percent_of_full_trace": 10.260574106446343
+      },
+      {
+        "stage": "reviewer",
+        "p50_ms": 6198.5895,
+        "p95_ms": 8509.4579,
+        "percent_of_full_trace": 11.077843296940483
+      },
+      {
+        "stage": "queue_wait",
+        "p50_ms": 16.554000000000002,
+        "p95_ms": 63.24974999999999,
+        "percent_of_full_trace": 0.04524180884915532
+      },
+      {
+        "stage": "evaluation",
+        "p50_ms": 34246.0135,
+        "p95_ms": 43386.9393,
+        "percent_of_full_trace": 62.981055591465044
+      }
+    ],
+    "api_latency": {
+      "p50_ms": 20489.159,
+      "p95_ms": 27301.058149999997
+    },
+    "http_latency": {
+      "p50_ms": 20491.16872849845,
+      "p95_ms": 27305.154346056224
+    },
+    "full_trace": {
+      "p50_ms": 54400.9685,
+      "p95_ms": 71289.30545000001
+    },
+    "confirmed_misses": 50,
+    "excluded_attempts": 7,
+    "unallocated_percent": 1.4724547303590896
+  },
+  "streamlit": {
+    "summary_metrics": {
+      "Completed requests": "53",
+      "Cache hits": "1",
+      "Cache misses": "52",
+      "Cache hit rate": "1.9%",
+      "Request error rate": "1.9%",
+      "API latency (p50)": "20,417 ms",
+      "API latency (p95)": "27,596 ms",
+      "Cache-hit latency (p50)": "579 ms",
+      "Cache-hit latency (p95)": "579 ms"
+    },
+    "example_trace_lookup": {
+      "hit": {
+        "trace_id": "bdf62b55-6040-4701-8eae-3c0e6db8bf53",
+        "shown_spans": 2,
+        "outcome": "Cache hit"
+      },
+      "miss": {
+        "trace_id": "813b4e22-6b35-4f5c-a163-5350c18652d6",
+        "shown_spans": 10,
+        "outcome": "Successful cache miss"
+      },
+      "failure": {
+        "trace_id": "05a689b3-b160-4fcb-a383-fb2c58aff1d3",
+        "shown_spans": 8,
+        "outcome": "Failed request"
+      }
+    }
+  },
+  "live_smoke": {
+    "source_commit": "5ea93111e92a19452986fc1b925afad7b2aee864",
+    "question": "How many units are available at S6102-R-9101?",
+    "miss": {
+      "trace_id": "442e41c3-20fc-477d-953a-0740c591fe39",
+      "is_cached": false,
+      "spans": 10,
+      "api_ms": 12580.131,
+      "evaluation_ms": 20597.199
+    },
+    "hit": {
+      "trace_id": "141f70f9-d40f-4e56-987b-f60922c502d9",
+      "is_cached": true,
+      "spans": 2,
+      "api_ms": 540.261
+    },
+    "scores": {
+      "planner": 5,
+      "reviewer": 4,
+      "writer": 4
+    },
+    "model_digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+    "evaluation_end_utc": "2026-11-14T02:29:42.291626+00:00"
+  }
+}

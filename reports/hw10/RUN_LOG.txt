@@ -1,0 +1,47 @@
+DATA 260 HW10 | Pragya Apurva | Run log (UTC)
+
+Selected captured application output is included verbatim below. Structured
+scores, attempts, exclusions, and full span evidence are available under raw/.
+
+Recorded draft/hit trace (A1)
+{"cache_outcome": "miss", "correlation_id": "103f3e33-f9bb-459e-9e6d-5dda37f24b45", "duration_ms": 12860.595, "end_time": "2026-11-10T04:37:17.822517+00:00", "error": null, "event": "trace_span", "http_status": 200, "pid": 6088, "request_outcome": "success", "source_commit": "022766b646aedfa272f095348fad5d6256ce7ee1", "stage": "api_request", "start_time": "2026-11-10T04:37:04.961895+00:00", "status": "ok", "student": "Pragya Apurva", "timestamp": "2026-11-10T04:37:17.822526+00:00", "trace_id": "103f3e33-f9bb-459e-9e6d-5dda37f24b45"}
+{"cache_outcome": "hit", "correlation_id": "70f768e0-0aaa-4195-b52f-b4631668df45", "duration_ms": 19.194, "end_time": "2026-11-10T04:37:17.850020+00:00", "error": null, "event": "trace_span", "http_status": 200, "pid": 6088, "request_outcome": "success", "source_commit": "022766b646aedfa272f095348fad5d6256ce7ee1", "stage": "api_request", "start_time": "2026-11-10T04:37:17.830823+00:00", "status": "ok", "student": "Pragya Apurva", "timestamp": "2026-11-10T04:37:17.850026+00:00", "trace_id": "70f768e0-0aaa-4195-b52f-b4631668df45"}
+
+G-Eval validation | 2026-11-13T06:11:57.770640+00:00 to 2026-11-13T06:19:05.484352+00:00
+{"end_time": "2026-11-13T06:13:47.426586+00:00", "pass": 1, "run_id": "5bc1a226-6a3c-41aa-bec8-531d51d4fc9c", "scored_count": 20, "start_time": "2026-11-13T06:11:59.666826+00:00", "status": "ok"}
+{"end_time": "2026-11-13T06:16:27.514376+00:00", "pass": 2, "run_id": "1099e923-088a-4387-aa92-8c24b7d1cbfe", "scored_count": 20, "start_time": "2026-11-13T06:13:47.426691+00:00", "status": "ok"}
+{"end_time": "2026-11-13T06:19:05.484295+00:00", "pass": 3, "run_id": "cead4e6c-c171-45d1-8d3b-7a605dfc2816", "scored_count": 20, "start_time": "2026-11-13T06:16:27.514553+00:00", "status": "ok"}
+
+Benchmark | 2026-11-13T08:21:36.240482+00:00 to 2026-11-13T09:59:13.046028+00:00
+First admitted completion from captured API standard output:
+{"cache_outcome": "miss", "correlation_id": "d10f9337-c377-4f98-a5b6-d1edb7faf9bf", "duration_ms": 10847.794, "end_time": "2026-11-13T08:22:15.373222+00:00", "error": null, "event": "trace_span", "http_status": 200, "pid": 81983, "request_outcome": "success", "source_commit": "d14796a39f8934965913c84fb7217f2b6dbd11c4", "stage": "api_request", "start_time": "2026-11-13T08:22:04.525485+00:00", "status": "ok", "student": "Pragya Apurva", "timestamp": "2026-11-13T08:22:15.373238+00:00", "trace_id": "d10f9337-c377-4f98-a5b6-d1edb7faf9bf"}
+Recorded benchmark totals: 57 attempts, 50 admitted and 7 exclusions.
+See raw/benchmark/attempts.jsonl and exclusions.jsonl.
+
+Integrated live smoke | 2026-11-14T02:29:08Z to 02:29:42Z
+Runtime source 5ea93111e92a19452986fc1b925afad7b2aee864
+{"baseline": "reliable", "configuration": {"context_window": 4096, "model_timeout": 180, "output_limit": 256, "retry_attempts": 3, "retry_backoff": 0.2, "seed": 6102, "temperature": 0}, "event": "consumer_ready", "group_id": "s6102_planner", "instance": "planner-6576", "message": "Planner is ready and listening...", "model": "qwen2.5:7b", "output_topic": "s6102_tasks", "pid": 6576, "source_commit": "5ea93111e92a19452986fc1b925afad7b2aee864", "stage": "planner", "student": "Pragya Apurva", "timestamp": "2026-11-14T02:28:49.438443+00:00", "topic": "s6102_inbox"}
+{"baseline": "reliable", "configuration": {"context_window": 4096, "model_timeout": 180, "output_limit": 256, "retry_attempts": 3, "retry_backoff": 0.2, "seed": 6102, "temperature": 0}, "event": "consumer_ready", "group_id": "s6102_writer", "instance": "writer-6577", "message": "Writer is ready and listening...", "model": "qwen2.5:7b", "output_topic": "s6102_drafts", "pid": 6577, "source_commit": "5ea93111e92a19452986fc1b925afad7b2aee864", "stage": "writer", "student": "Pragya Apurva", "timestamp": "2026-11-14T02:28:49.438453+00:00", "topic": "s6102_tasks"}
+{"baseline": "reliable", "configuration": {"context_window": 4096, "model_timeout": 180, "output_limit": 256, "retry_attempts": 3, "retry_backoff": 0.2, "seed": 6102, "temperature": 0}, "event": "consumer_ready", "group_id": "s6102_reviewer", "instance": "reviewer-6578", "message": "Reviewer is ready and listening...", "model": "qwen2.5:7b", "output_topic": "s6102_final", "pid": 6578, "source_commit": "5ea93111e92a19452986fc1b925afad7b2aee864", "stage": "reviewer", "student": "Pragya Apurva", "timestamp": "2026-11-14T02:28:49.438438+00:00", "topic": "s6102_drafts"}
+{"allow_stale": false, "embedding_digest": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f", "embedding_dimension": 768, "embedding_model": "nomic-embed-text:v1.5", "event": "semantic_cache_ready", "index": "s6102:hw9:semantic:hw10-integration-smoke:index", "namespace": "hw10-integration-smoke", "pid": 6580, "source_commit": "5ea93111e92a19452986fc1b925afad7b2aee864", "student": "Pragya Apurva", "threshold": 0.85, "timestamp": "2026-11-14T02:28:49.471453+00:00"}
+{"cache_outcome": "miss", "correlation_id": "442e41c3-20fc-477d-953a-0740c591fe39", "duration_ms": 12580.131, "end_time": "2026-11-14T02:29:21.040595+00:00", "error": null, "event": "trace_span", "http_status": 200, "pid": 6580, "request_outcome": "success", "source_commit": "5ea93111e92a19452986fc1b925afad7b2aee864", "stage": "api_request", "start_time": "2026-11-14T02:29:08.460559+00:00", "status": "ok", "student": "Pragya Apurva", "timestamp": "2026-11-14T02:29:21.040609+00:00", "trace_id": "442e41c3-20fc-477d-953a-0740c591fe39"}
+{"cache_outcome": "hit", "correlation_id": "141f70f9-d40f-4e56-987b-f60922c502d9", "duration_ms": 540.261, "end_time": "2026-11-14T02:29:21.587326+00:00", "error": null, "event": "trace_span", "http_status": 200, "pid": 6580, "request_outcome": "success", "source_commit": "5ea93111e92a19452986fc1b925afad7b2aee864", "stage": "api_request", "start_time": "2026-11-14T02:29:21.047067+00:00", "status": "ok", "student": "Pragya Apurva", "timestamp": "2026-11-14T02:29:21.587338+00:00", "trace_id": "141f70f9-d40f-4e56-987b-f60922c502d9"}
+Verified miss 442e41c3-20fc-477d-953a-0740c591fe39 and hit 141f70f9-d40f-4e56-987b-f60922c502d9
+Exported 11 spans and 1 linked cases.
+{"case_id": "case-442e41c3-20fc-477d-953a-0740c591fe39", "duration_ms": 20597.199, "end_time": "2026-11-14T02:29:42.291626+00:00", "error": null, "error_code": null, "evaluation_id": "e34f5224-754b-4074-a8a5-7033aefbfa3a", "stage": "evaluation", "start_time": "2026-11-14T02:29:21.694490+00:00", "status": "ok", "trace_id": "442e41c3-20fc-477d-953a-0740c591fe39"}
+
+Combined evidence verifier | 2026-11-14T02:31:50.443639+00:00
+PASS 20 frozen cases, 60 scores, Spearman 0.5403, mean absolute difference 0.75
+PASS 50/50 confirmed misses and six latency rows
+PASS all three recorded trace IDs opened in Streamlit
+PASS live miss 442e41c3-20fc-477d-953a-0740c591fe39 and hit 141f70f9-d40f-4e56-987b-f60922c502d9
+
+Integrated Chrome trace lookup
+PASS browser hit bdf62b55-6040-4701-8eae-3c0e6db8bf53
+PASS browser miss 813b4e22-6b35-4f5c-a163-5350c18652d6
+PASS browser failure 05a689b3-b160-4fcb-a383-fb2c58aff1d3
+PASS no browser page errors
+
+Offline tests
+109 passed, 3 warnings in 2.02s (HW8, HW9, HW10 benchmark/evaluation)
+8 passed in 0.98s (Streamlit)
