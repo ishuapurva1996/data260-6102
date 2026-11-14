@@ -108,7 +108,7 @@ def render_summary(evidence):
     )
     st.caption(
         f"{hits + misses:,} known cache decisions · {len(selected) - hits - misses:,} without a decision"
-        f" · {errors:,} failed API requests. Hit rate uses known decisions. "
+        f" · {errors:,} API failures. Hit rate uses known decisions. "
         "Error rate uses all completed requests."
     )
 
@@ -283,10 +283,13 @@ def render_trace(evidence):
     if request is None:
         st.warning("Incomplete trace · no completed API span.")
     elif request.api_outcome in FAILED:
-        failed_at = failed_stages[-1].stage if failed_stages else "api_request"
-        st.error(
-            f"Failed request · {failed_at} recorded an error. Cache decision: {cache or 'unavailable'}."
+        failure = failed_stages[-1] if failed_stages else request
+        message = (
+            f"Failed request · {failure.stage} recorded an error · cache {cache or 'unknown'}."
         )
+        if failure.error:
+            message += f"\n\n{failure.error}"
+        st.error(message)
     elif cache == "hit":
         st.success("Cache hit · the API returned a saved answer.")
     elif cache == "miss":

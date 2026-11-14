@@ -115,6 +115,7 @@ def test_trace_lookup_orders_spans_and_distinguishes_outcomes(
     assert {"Start (UTC)", "End (UTC)", "Duration (ms)", "Status", "Error"} <= set(spans)
     if trace_id == "synthetic-failure":
         assert "Synthetic Writer failure" in spans["Error"].tolist()
+        assert any("Synthetic Writer failure" in error.value for error in app.error)
 
 
 def test_refresh_reads_new_evidence_and_handles_partial_files(tmp_path, monkeypatch):
