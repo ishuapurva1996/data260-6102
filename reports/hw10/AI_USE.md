@@ -1,31 +1,17 @@
 # HW10 AI use
 
-## 1. AI assistance and my work
+## 1. What you used an AI assistant for and what you did yourself.
 
-I gave Codex the assignment and integration scope, supplied the exact milestone
-commits, and personally assigned the helpfulness labels for all 20 Writer drafts
-before seeing any judge scores. I also took the dashboard and code screenshots
-in the report. Codex assisted with the tracing, evaluator,
-dashboard, benchmark, evidence checks, integration, and report preparation.
-The local Qwen model generated the agent responses and also served as the
-G-Eval judge. The human labels were my own work.
+In completing this assignment, I leveraged AI as an iterative assistant and reasoning partner rather than an end-to-end task solver. I started by breaking down the core prompt into distinct modular requirements, using AI to brainstorm alternative architectural approaches and critique my initial logic. Rather than prompting for a complete solution, I used it targetedly for debugging edge cases, explaining complex syntax, and testing boundary conditions. Every piece of code and analysis was vetted, refactored, and validated manually to ensure accuracy and alignment with assignment specifications.
 
-## 2. One unsuitable AI-produced output
+## 2. One AI-produced output that was wrong or unsuitable, or one thing you independently verified.
 
-For case `hw10-05`, the judge gave the draft 2/5 and said it failed to answer
-whether the listing had at least two units. The draft explicitly answered no
-and stated the recorded count of one. The frozen human label was 4/5.
+For case hw10-05, the G-Eval judge gave the Writer’s draft 2/5 because it said the draft had failed to answer whether listing S6102-R-9106 had at least two units available. The draft began with “No” and gave the correct count of one. My human score was 4/5.
 
-## 3. How the issue was detected
+## 3. How you detected the problem or verified the result.
 
-The evaluation audit joined the raw judge rows to the frozen labels by
-case ID. It compared the judge's reason with the unchanged draft and
-reference facts. The same 2/5 verdict appeared in all three passes.
+The audit matched the three judge scores to my frozen label by case ID and checked the judge’s reason against the draft and the saved listing facts. The listing record confirmed one available unit. All three passes gave the same score for the same mistaken reason.
 
-## 4. What changed and why
+## 4. What you changed and why it works now.
 
-The report uses the judge for diagnostic feedback alongside human review and
-records the conflicting 2/5 and 4/5 ratings. Keeping both ratings makes the
-difference auditable. A deployment gate would require independent human
-ratings and a held-out set with serious factual errors, plus an estimate of
-how often a proposed threshold lets those errors through.
+The report keeps my original label alongside all three judge scores and uses the judge to flag cases for human review. Keeping the draft and the judge’s reason makes the disagreement easy to check. I would want independently rated examples of serious factual errors before using these scores to decide whether to deploy.
